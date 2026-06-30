@@ -117,6 +117,22 @@
     .art-body th:first-child,.art-body td:first-child{width:22%;}
     @media(max-width:680px){.art-body table,.art-body thead,.art-body tbody,.art-body th,.art-body td,.art-body tr{display:block;}.art-body thead{display:none;}.art-body td{border-top:none;border-bottom:1px solid var(--border);}.art-body td:first-child{font-weight:700;background:var(--bg-apple);}}
     .lead{font-size:20px;color:var(--text2);line-height:1.55;}
+
+    .dec-search{background:var(--bg-apple);border:1px solid var(--border);border-radius:var(--radius);padding:18px 18px 14px;margin:8px 0 26px;}
+    .dec-search-label{display:block;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--blue-mid);margin-bottom:10px;}
+    .dec-search-row{display:flex;gap:10px;align-items:center;}
+    #dec-search-input{flex:1;font-size:16px;padding:12px 14px;border:1px solid var(--border);border-radius:10px;background:#fff;color:var(--text);outline:none;}
+    #dec-search-input:focus{border-color:var(--blue-mid);box-shadow:0 0 0 3px rgba(19,74,142,.12);}
+    #dec-search-clear{flex-shrink:0;width:42px;height:42px;border:1px solid var(--border);background:#fff;border-radius:10px;font-size:22px;line-height:1;color:var(--text2);cursor:pointer;}
+    #dec-search-clear:hover{color:var(--text);border-color:var(--blue-mid);}
+    .dec-chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;}
+    .dec-chip{font-size:14px;font-weight:600;padding:7px 14px;border-radius:99px;border:1px solid var(--border);background:#fff;color:var(--text2);cursor:pointer;transition:all .15s;}
+    .dec-chip:hover{border-color:var(--blue-mid);color:var(--blue-mid);}
+    .dec-chip.is-active{background:var(--blue-mid);border-color:var(--blue-mid);color:#fff;}
+    .dec-count{font-size:14px;color:var(--text2);margin:12px 0 0;min-height:1.2em;}
+    .vendor.dec-hidden{display:none;}
+    tr.dec-hidden{display:none;}
+    .dec-nohit{font-size:14px;color:var(--text2);padding:10px 2px;}
   
 </style>
   <link rel="stylesheet" href="../../assets/css/tokens.css?v=20260514j">
@@ -163,7 +179,7 @@
     <nav class="breadcrumb"><a href="/">TAGRA</a><span>›</span><a href="/articles/">Articles</a><span>›</span><span>Tachograph symbols &amp; error codes</span></nav>
     <div class="eyebrow">Driver knowledge base</div>
     <h1 class="art-title"><span class="grad">Tachograph symbols & error codes: a driver's guide</span></h1>
-    <div class="art-meta"><span>Truck Data Technology</span><span>Updated May 2026</span><span>18 min read</span></div>
+    <div class="art-meta"><span>Truck Data Technology</span><span>Updated June 2026</span><span>22 min read</span></div>
     <div class="art-hero-video" aria-label="Driver operating a digital tachograph">
       <video preload="metadata" muted autoplay loop playsinline webkit-playsinline poster="symboly-chybove-kody-hero-poster.webp" aria-label="Driver operating a digital tachograph">
         <source src="symboly-chybove-kody-hero.webm" type="video/webm">
@@ -185,7 +201,7 @@
   <ol>
     <li><a href="#activity-symbols">Four activity symbols every driver must know</a></li>
     <li><a href="#universal-warnings">Universal warning categories (events, faults, time, notes)</a></li>
-    <li><a href="#vendor-codes">120+ verified error codes by manufacturer</a></li>
+    <li><a href="#vendor-codes">200+ verified codes &amp; symbols (searchable)</a></li>
     <li><a href="#common-mistakes">Top 10 most common tachograph messages in practice</a></li>
     <li><a href="#crisis-workflow">Critical-error workflow: what to do roadside</a></li>
     <li><a href="#sources">Official sources &amp; manufacturer manuals</a></li>
@@ -257,11 +273,28 @@
 <!-- ===================================================================== -->
 <!-- SECTION 3: 120+ VERIFIED ERROR CODES BY MANUFACTURER                  -->
 <!-- ===================================================================== -->
-<h2 id="vendor-codes">120+ verified error codes from four manufacturer manuals</h2>
+<h2 id="vendor-codes">200+ verified error codes from four manufacturer manuals</h2>
 
 <p>The four most widely installed digital tachograph models in Europe are <strong>VDO DTCO 4.1</strong> (Continental — the dominant unit in Central Europe and the Czech / Slovak market), <strong>Stoneridge SE5000 Exakt Duo²</strong> (the UK and Scandinavian default), <strong>Actia SmarTach</strong> (popular in France and southern Europe) and <strong>EFAS-4</strong> (Intellic / Schneider, common in Germany and Poland). Each vendor uses a slightly different on-screen wording, but all conform to Annex I C — so the underlying meaning of an "internal fault", a "sensor fault" or a "card not closed" is identical regardless of the unit on your dashboard.</p>
 
 <p>The codes below are taken directly from the official, publicly downloadable user manuals — file references are listed in the <a href="#sources">sources section</a>. Where the manual gives an English wording, we use it verbatim; we have only added a plain-English "what to do" column where the manual leaves this to the driver's judgement.</p>
+
+<div class="dec-search" id="dec-search">
+  <label class="dec-search-label" for="dec-search-input">Quick lookup — type a code, message or symbol</label>
+  <div class="dec-search-row">
+    <input type="search" id="dec-search-input" placeholder="e.g. sensor fault, 042, 002E80, GNSS…" autocomplete="off" spellcheck="false">
+    <button type="button" id="dec-search-clear" aria-label="Clear search">×</button>
+  </div>
+  <div class="dec-chips" role="group" aria-label="Filter by manufacturer">
+    <button type="button" class="dec-chip is-active" data-vendor="all">All</button>
+    <button type="button" class="dec-chip" data-vendor="vdo">VDO DTCO</button>
+    <button type="button" class="dec-chip" data-vendor="stoneridge">Stoneridge</button>
+    <button type="button" class="dec-chip" data-vendor="actia">Actia</button>
+    <button type="button" class="dec-chip" data-vendor="efas">EFAS</button>
+    <button type="button" class="dec-chip" data-vendor="symbols">Symbols ↑</button>
+  </div>
+  <p class="dec-count" id="dec-count" aria-live="polite"></p>
+</div>
 
 <div class="vendor-stack">
 
@@ -560,6 +593,79 @@
         </tbody>
       </table>
     </div>
+
+    <h3>VDO numeric fault-memory codes (001–066)</h3>
+    <p style="font-size:14px;color:var(--text2);margin-bottom:12px;">These numeric codes are read from the unit's fault memory with a VDO workshop diagnostic tool (<strong>SDS</strong> / <strong>CTCII</strong>) — they are not shown to the driver during normal use. The numbering is consistent across DTCO generations (1381 and 4.1) and each number maps to one of the Annex I C events / faults described in the message tables above. Type a number such as <em>005</em> into the search box at the top of this section.</p>
+    <div class="code-table-wrap">
+      <table class="code-table">
+        <thead><tr><th style="width:24%;">Code</th><th style="width:58%;">Meaning</th><th style="width:18%;">Severity</th></tr></thead>
+        <tbody>
+          <tr><td>001–2, 004–5</td><td>Internal device error</td><td><span class="sev sev-crit">Critical</span></td></tr>
+          <tr><td>006</td><td>Time error</td><td><span class="sev sev-crit">Critical</span></td></tr>
+          <tr><td>007</td><td>Display fault</td><td><span class="sev sev-high">High</span></td></tr>
+          <tr><td>009</td><td>Calibration error</td><td><span class="sev sev-high">High</span></td></tr>
+          <tr><td>010</td><td>Speed-signal output (B7) fault</td><td><span class="sev sev-med">Medium</span></td></tr>
+          <tr><td>012</td><td>Download error</td><td><span class="sev sev-med">Medium</span></td></tr>
+          <tr><td>013–14</td><td>CAN bus fault</td><td><span class="sev sev-med">Medium</span></td></tr>
+          <tr><td>015</td><td>Display communication loss</td><td><span class="sev sev-med">Medium</span></td></tr>
+          <tr><td>016</td><td>Sensor fault (self-test)</td><td><span class="sev sev-crit">Critical</span></td></tr>
+          <tr><td>017–18</td><td>Sensor data integrity error</td><td><span class="sev sev-crit">Critical</span></td></tr>
+          <tr><td>019</td><td>Sensor power interruption</td><td><span class="sev sev-med">Medium</span></td></tr>
+          <tr><td>020–22</td><td>Sensor communication error</td><td><span class="sev sev-high">High</span></td></tr>
+          <tr><td>023</td><td>Sensor authentication / pairing error</td><td><span class="sev sev-high">High</span></td></tr>
+          <tr><td>024</td><td>Unknown sensor serial number</td><td><span class="sev sev-high">High</span></td></tr>
+          <tr><td>025</td><td>Data memory error</td><td><span class="sev sev-crit">Critical</span></td></tr>
+          <tr><td>026</td><td>Housing opened (security breach)</td><td><span class="sev sev-crit">Critical</span></td></tr>
+          <tr><td>028</td><td>Driving without card</td><td><span class="sev sev-crit">Critical</span></td></tr>
+          <tr><td>029</td><td>Cards conflict</td><td><span class="sev sev-med">Medium</span></td></tr>
+          <tr><td>030</td><td>Overspeed</td><td><span class="sev sev-high">High</span></td></tr>
+          <tr><td>031</td><td>Power interruption</td><td><span class="sev sev-med">Medium</span></td></tr>
+          <tr><td>034</td><td>Card ejection not possible</td><td><span class="sev sev-med">Medium</span></td></tr>
+          <tr><td>036</td><td>Printing / display not possible</td><td><span class="sev sev-med">Medium</span></td></tr>
+          <tr><td>037</td><td>Printing delayed</td><td><span class="sev sev-info">Info</span></td></tr>
+          <tr><td>038</td><td>Printer drawer open</td><td><span class="sev sev-med">Medium</span></td></tr>
+          <tr><td>039</td><td>Out of paper</td><td><span class="sev sev-med">Medium</span></td></tr>
+          <tr><td>040</td><td>Card mechanism fault, slot 1</td><td><span class="sev sev-high">High</span></td></tr>
+          <tr><td>041</td><td>Card communication error, slot 1</td><td><span class="sev sev-high">High</span></td></tr>
+          <tr><td>042</td><td>Card data authenticity, slot 1</td><td><span class="sev sev-high">High</span></td></tr>
+          <tr><td>043</td><td>Card missing, slot 1</td><td><span class="sev sev-high">High</span></td></tr>
+          <tr><td>044</td><td>Card not closed, slot 1</td><td><span class="sev sev-low">Low</span></td></tr>
+          <tr><td>045</td><td>Time overlap, slot 1</td><td><span class="sev sev-med">Medium</span></td></tr>
+          <tr><td>046</td><td>Insertion while driving, slot 1</td><td><span class="sev sev-low">Low</span></td></tr>
+          <tr><td>047</td><td>Card authentication, slot 1</td><td><span class="sev sev-high">High</span></td></tr>
+          <tr><td>048</td><td>Card not valid, slot 1</td><td><span class="sev sev-high">High</span></td></tr>
+          <tr><td>049</td><td>Record inconsistency, slot 1</td><td><span class="sev sev-med">Medium</span></td></tr>
+          <tr><td>050</td><td>Card cannot be read, slot 1</td><td><span class="sev sev-high">High</span></td></tr>
+          <tr><td>051</td><td>Wrong card type, slot 1</td><td><span class="sev sev-med">Medium</span></td></tr>
+          <tr><td>052</td><td>Card blocked, slot 1</td><td><span class="sev sev-high">High</span></td></tr>
+          <tr><td>053–66</td><td>Card faults, slot 2 (co-driver)</td><td><span class="sev sev-high">High</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>DTCO 4.0 / 4.1 — what a number on the display means (smart tachograph)</h3>
+    <p style="font-size:14px;color:var(--text2);margin-bottom:12px;">Newer VDO DTCO 4.0 and 4.1 units show a two-digit number next to the pictogram. Low numbers (001–066) are in the table above; the high numbers <strong>80–98</strong> belong to smart-tachograph functions (GNSS, DSRC, ITS). You can type any of them straight into the search box above.</p>
+    <div class="code-table-wrap">
+      <table class="code-table">
+        <thead><tr><th style="width:24%;">Display number</th><th style="width:58%;">Meaning</th><th style="width:18%;">Severity</th></tr></thead>
+        <tbody>
+          <tr><td>34</td><td>Card ejection not possible</td><td><span class="sev sev-med">Medium</span></td></tr>
+          <tr><td>80</td><td>Vehicle motion conflict</td><td><span class="sev sev-crit">Critical</span></td></tr>
+          <tr><td>82</td><td>Internal GNSS fault</td><td><span class="sev sev-med">Medium</span></td></tr>
+          <tr><td>83</td><td>Missing GNSS signal</td><td><span class="sev sev-med">Medium</span></td></tr>
+          <tr><td>84</td><td>Internal DSRC fault</td><td><span class="sev sev-low">Low</span></td></tr>
+          <tr><td>85</td><td>Communication error DSRC</td><td><span class="sev sev-low">Low</span></td></tr>
+          <tr><td>86</td><td>Time conflict</td><td><span class="sev sev-med">Medium</span></td></tr>
+          <tr><td>87</td><td>Sensor fault</td><td><span class="sev sev-high">High</span></td></tr>
+          <tr><td>96</td><td>GNSS anomaly (GNSS irregularities · anti-spoofing OSNMA)</td><td><span class="sev sev-high">High</span></td></tr>
+          <tr><td>97</td><td>Internal sensor fault</td><td><span class="sev sev-high">High</span></td></tr>
+          <tr><td>98</td><td>ITS / Bluetooth fault</td><td><span class="sev sev-low">Low</span></td></tr>
+          <tr><td>67, 99</td><td>Inconsistent record</td><td><span class="sev sev-med">Medium</span></td></tr>
+          <tr><td>68–72</td><td>Card / internal fault, slot 2 (co-driver)</td><td>Varies</td></tr>
+          <tr><td>88–95</td><td>Driving-time / rest operational note — not a fault</td><td><span class="sev sev-info">Info</span></td></tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 </details>
 
@@ -709,6 +815,47 @@
       </table>
     </div>
 
+    <h3>SE5000-8.1 Smart 2 — manufacturer-specific hex DTCs (ISO 16844-7)</h3>
+    <p style="font-size:14px;color:var(--text2);margin-bottom:12px;">The current SE5000-8.1 (Smart Tachograph 2) reports a 5-byte hexadecimal DTC per ISO 16844-7 in addition to the on-screen message. The codes below are reproduced from the <strong>Stoneridge SE5000-8.1 Control Manual, document 9000-103766P_0109</strong> (Stoneridge Electronics AB).</p>
+    <div class="code-table-wrap">
+      <table class="code-table">
+        <thead><tr><th style="width:13%;">DTC</th><th style="width:24%;">Message</th><th style="width:30%;">Cause</th><th style="width:21%;">What to do</th><th style="width:12%;">Severity</th></tr></thead>
+        <tbody>
+          <tr><td>0001C0</td><td>Printing stopped, out of paper</td><td>The printer has no paper.</td><td>Insert a new paper roll.</td><td><span class="sev sev-low">Low</span></td></tr>
+          <tr><td>000900</td><td>No ignition but speed pulses present</td><td>Ignition is off, yet the sensor detects speed pulses.</td><td>Check for vibration / interference; if recurring, workshop must check the sensor and pin B7.</td><td><span class="sev sev-high">High</span></td></tr>
+          <tr><td>000D40</td><td>Overspeeding pre-warning</td><td>Speed limit exceeded, but for less than 60 seconds.</td><td>Slow down. Driver-related — no workshop needed.</td><td><span class="sev sev-med">Medium</span></td></tr>
+          <tr><td>000B78</td><td>Calibration error</td><td>Two years have elapsed since the last calibration.</td><td>Recalibrate at an authorised workshop.</td><td><span class="sev sev-high">High</span></td></tr>
+          <tr><td>000C31</td><td>Internal GNSS fault</td><td>The internal GNSS receiver has stopped providing position data.</td><td>Power-cycle the tachograph and test-drive; if recurring, replace.</td><td><span class="sev sev-med">Medium</span></td></tr>
+          <tr><td>002B80</td><td>Time conflict (GNSS vs VU)</td><td>Internal and GNSS clocks differ by more than 1 minute after 12 hours.</td><td>Check the internal clock and GNSS time. Workshop.</td><td><span class="sev sev-med">Medium</span></td></tr>
+          <tr><td>002C80</td><td>Absence of GNSS position</td><td>No valid GNSS signal during 3 hours of cumulative driving.</td><td>Check GNSS reception and any obstructions around the antenna.</td><td><span class="sev sev-med">Medium</span></td></tr>
+          <tr><td>002D80</td><td>DSRC communication error</td><td>The vehicle unit cannot communicate correctly with the DSRC-VU module.</td><td>Check the DSRC-VU unit, cabling and CAN parameters.</td><td><span class="sev sev-med">Medium</span></td></tr>
+          <tr><td>002E80</td><td>GNSS Anomaly</td><td>GNSS detected an attack or message authentication failed (OSNMA).</td><td>Check for tampering. Restart and verify; replace if recurring.</td><td><span class="sev sev-crit">Critical</span></td></tr>
+          <tr><td>00FD0B</td><td>CAN bus off, TCO</td><td>The A-connector (TCO-CAN) is in "Bus Off" state.</td><td>Check the A-connector and cabling, CAN settings and termination (60 Ω).</td><td><span class="sev sev-high">High</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>General events &amp; security breach (SE5000-8.1)</h3>
+    <div class="code-table-wrap">
+      <table class="code-table">
+        <thead><tr><th style="width:24%;">Message</th><th style="width:34%;">Cause</th><th style="width:30%;">What to do</th><th style="width:12%;">Severity</th></tr></thead>
+        <tbody>
+          <tr><td>Card conflict</td><td>An invalid card combination is detected (e.g. company + control card).</td><td>Withdraw the offending card.</td><td><span class="sev sev-med">Medium</span></td></tr>
+          <tr><td>Driving without appropriate card</td><td>Driving with no valid card, or with an invalid card combination.</td><td>Stop, insert a valid card and remove the inappropriate one.</td><td><span class="sev sev-crit">Critical</span></td></tr>
+          <tr><td>Overspeeding</td><td>The speed limit was exceeded for at least 60 seconds.</td><td>Observe the permitted speed limit for the vehicle.</td><td><span class="sev sev-high">High</span></td></tr>
+          <tr><td>Power supply interruption (VU / MS)</td><td>Tachograph or sensor power was interrupted for more than 200 ms.</td><td>Check the vehicle power supply and wiring.</td><td><span class="sev sev-med">Medium</span></td></tr>
+          <tr><td>Motion data error (CNTR / No CNTR / Event)</td><td>The sensor reports speed without pulses, the counter disagrees, or a signature mismatch occurs.</td><td>Check the sensor, wiring and tampering; recalibrate if needed.</td><td><span class="sev sev-crit">Critical</span></td></tr>
+          <tr><td>Motion sensor authentication failure</td><td>A motion-sensor authentication attempt failed.</td><td>Check the sensor and wiring; re-pair and recalibrate.</td><td><span class="sev sev-crit">Critical</span></td></tr>
+          <tr><td>Unauthorised change of motion sensor</td><td>The sensor has been changed since the last pairing.</td><td>Inspect for tampering; repair and recalibrate.</td><td><span class="sev sev-crit">Critical</span></td></tr>
+          <tr><td>Stored data integrity error</td><td>Data in the 365-day memory is corrupted.</td><td>Decommission and replace the tachograph.</td><td><span class="sev sev-crit">Critical</span></td></tr>
+          <tr><td>Hardware sabotage</td><td>The card was removed by force.</td><td>Inspect the card reader. Decommission and replace.</td><td><span class="sev sev-crit">Critical</span></td></tr>
+          <tr><td>Security violation</td><td>Hardware tampering has been detected.</td><td>Decommission and replace the tachograph.</td><td><span class="sev sev-crit">Critical</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p style="font-size:14px;color:var(--text2);margin-bottom:18px;"><strong>Source:</strong> Stoneridge Electronics AB, SE5000-8.1 Smart 2 Control Manual, document 9000-103766P_0109, pp. 32–37.</p>
+
     <p style="font-size:14px;color:var(--text2);margin-top:18px;"><strong>Source:</strong> All Stoneridge messages above are reproduced from the SE5000 Exakt Duo² (Rev 7.6) Driver &amp; Company Manual published by Stoneridge Electronics AB. The complete table covers all messages a driver may see; messages specific to workshop (calibration) mode are not shown here. The SE5000-8.1 Smart Tachograph 2 unit uses the same Annex I C message family structure with minor wording updates.</p>
   </div>
 </details>
@@ -817,6 +964,12 @@
             <td>Remove the conflicting card.</td>
             <td><span class="sev sev-med">Medium</span></td>
           </tr>
+          <tr>
+            <td>Drive &gt; 4 h 30</td>
+            <td>Continuous driving has exceeded 4 h 30 min without a break (KITAS motion sensor).</td>
+            <td>Stop immediately and take the mandatory 45-minute break.</td>
+            <td><span class="sev sev-high">High</span></td>
+          </tr>
         </tbody>
       </table>
     </div>
@@ -868,6 +1021,28 @@
       </table>
     </div>
 
+    <h3>EFAS-4.10 / 4.11 — hex DTCs (ISO 16844-7), top 12</h3>
+    <p style="font-size:14px;color:var(--text2);margin-bottom:12px;">EFAS units expose three code types: <strong>EFT</strong> (event/fault type per ISO), <strong>DTC</strong> (5-byte hex per ISO 16844-7) and a manufacturer-specific <strong>Service ID</strong>. The most important DTCs below are reproduced from the <strong>Bosch Intellic EFAS-4.10 Workshop Manual, Table 18</strong> (DTCs and corresponding Service IDs).</p>
+    <div class="code-table-wrap">
+      <table class="code-table">
+        <thead><tr><th style="width:18%;">DTC</th><th style="width:42%;">Meaning</th><th style="width:28%;">What to do</th><th style="width:12%;">Severity</th></tr></thead>
+        <tbody>
+          <tr><td>80 00 002007</td><td>Motion sensor supply voltage above maximum</td><td>Check the sensor power supply and wiring.</td><td><span class="sev sev-high">High</span></td></tr>
+          <tr><td>80 00 002003</td><td>Motion sensor supply voltage below minimum</td><td>Check the sensor power supply and wiring.</td><td><span class="sev sev-high">High</span></td></tr>
+          <tr><td>80 00 002180</td><td>No real-time signal from the motion sensor (pin B3 interrupted)</td><td>Check pin B3 and the sensor power supply.</td><td><span class="sev sev-crit">Critical</span></td></tr>
+          <tr><td>80 00 002280</td><td>Faulty real-time sensor signal (pin B3 or IMS error)</td><td>Check pin B3 and the sensor checksum.</td><td><span class="sev sev-crit">Critical</span></td></tr>
+          <tr><td>80 00 002452</td><td>Distance-sensor data integrity error</td><td>Authorised workshop must check the sensor.</td><td><span class="sev sev-high">High</span></td></tr>
+          <tr><td>80 00 002508</td><td>Motion sensor fault</td><td>Authorised workshop — sensor replacement.</td><td><span class="sev sev-crit">Critical</span></td></tr>
+          <tr><td>40 00 000200</td><td>Card fault, slot 1</td><td>Clean the contacts and reinsert; if recurring, new card.</td><td><span class="sev sev-high">High</span></td></tr>
+          <tr><td>40 00 000300</td><td>Card fault, slot 2</td><td>Clean the contacts and reinsert.</td><td><span class="sev sev-high">High</span></td></tr>
+          <tr><td>80 00 000660</td><td>Printer out of paper</td><td>Insert a new paper roll.</td><td><span class="sev sev-low">Low</span></td></tr>
+          <tr><td>40 00 000900</td><td>Motion sensor pulses with ignition off</td><td>Check for vibration, the sensor and wiring.</td><td><span class="sev sev-high">High</span></td></tr>
+          <tr><td>40 00 000C31</td><td>Internal memory fault</td><td>Authorised workshop; replace if it cannot be repaired.</td><td><span class="sev sev-crit">Critical</span></td></tr>
+          <tr><td>80 00 000D40</td><td>Calibration data incorrect or incomplete</td><td>Recalibrate at an authorised workshop.</td><td><span class="sev sev-crit">Critical</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
     <p style="font-size:14px;color:var(--text2);margin-top:14px;"><em>EFAS-4 numeric codes (E01–E10, F01–F08) are the unit's internal mnemonics — the underlying Annex I C event/fault is the legally relevant identifier and is recorded the same way as on any other unit.</em></p>
   </div>
 </details>
@@ -887,7 +1062,7 @@
 <!-- ===================================================================== -->
 <h2 id="common-mistakes">Top 10 most common tachograph messages in practice</h2>
 
-<p>Of the 120+ messages above, ten account for the vast majority of what real drivers see day to day — and almost all of them are <strong>operational</strong> rather than catastrophic. Knowing how to react to these ten will keep most shifts running smoothly and most enforcement officers satisfied.</p>
+<p>Of the 200+ messages above, ten account for the vast majority of what real drivers see day to day — and almost all of them are <strong>operational</strong> rather than catastrophic. Knowing how to react to these ten will keep most shifts running smoothly and most enforcement officers satisfied.</p>
 
 <div class="code-table-wrap">
   <table class="code-table">
@@ -1158,6 +1333,21 @@
   <div class="faq-a">Yes — overspeed is an event, not a fault. The vehicle continues to record correctly; only the speed limit was exceeded. The event is visible on download, and repeated overspeed records on the same trip or across multiple trips are a common trigger for operator audits and roadside investigations.</div>
 </details>
 
+<details>
+  <summary>My VDO display shows a number like 80, 82 or 98 — what does it mean?</summary>
+  <div class="faq-a">On DTCO 4.0 / 4.1 a two-digit number next to the pictogram identifies the event or fault. Low numbers (001–066) are workshop fault-memory codes; high numbers belong to the smart-tachograph functions. The most common are <strong>80 — vehicle motion conflict</strong> (the motion sensor disagrees with the GNSS signal; a serious message — visit an authorised workshop), <strong>82 — internal GNSS fault</strong> (the receiver temporarily cannot fix a position; acknowledge and visit a workshop if it persists) and <strong>98 — ITS / Bluetooth fault</strong> (the remote-data interface; no effect on recording, fix at the next service). The full 34–98 list is in the VDO section above.</div>
+</details>
+
+<details>
+  <summary>What does "motion conflict" (code 80) mean, and can I keep driving?</summary>
+  <div class="faq-a">Code 80 is a <em>vehicle motion conflict</em>: the tachograph detected a contradiction between the motion sensor and an independent source (GNSS). A frequent harmless cause is forgetting to set the ferry/train mode during shipment. If it appears in normal driving it can indicate manipulation or a wiring fault — acknowledge the message, keep manual records, and have an authorised workshop inspect the unit.</div>
+</details>
+
+<details>
+  <summary>How do I look up a numeric or hex fault code from a workshop readout?</summary>
+  <div class="faq-a">Use the search box at the top of the manufacturer-codes section: type the number (e.g. <em>042</em>), a VDO display number (e.g. <em>82</em>), a Stoneridge or EFAS hex DTC (e.g. <em>002E80</em>) or any words from the message (e.g. <em>sensor fault</em>). The relevant manufacturer panel opens automatically and shows only the matching rows.</div>
+</details>
+
 </div><!-- /.faq-block -->
 
 </article>
@@ -1207,7 +1397,54 @@
   </div>
 </footer>
 <script>(function(){var bar=document.getElementById('scroll-progress');if(bar)window.addEventListener('scroll',function(){var t=document.documentElement.scrollTop||document.body.scrollTop;var h=document.documentElement.scrollHeight-document.documentElement.clientHeight;bar.style.width=(t/h*100)+'%';},{passive:true});var toggle=document.getElementById('nav-toggle'),links=document.getElementById('nav-links');if(toggle&&links)toggle.addEventListener('click',function(){var o=links.classList.toggle('open');toggle.setAttribute('aria-expanded',o);});})();</script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Tachograph fault codes & symbols explained: VDO, Stoneridge, Actia, EFAS guide", "description": "Complete driver guide to digital tachograph fault codes and warning symbols. Activity icons, warning pop-ups, VDO DTCO 4.1 / Stoneridge SE5000 / Actia / EFAS-4 fault codes, what each fault means and exactly what to do.", "image": "https://tagra.app/assets/img/og/digital-tachograph-symbols.jpg", "author": {"@type": "Organization", "name": "Truck Data Technology, s.r.o.", "url": "https://www.tdt.cz"}, "publisher": {"@type": "Organization", "name": "Truck Data Technology, s.r.o.", "logo": {"@type": "ImageObject", "url": "https://tagra.app/assets/img/logo.svg"}}, "datePublished": "2025-09-01", "dateModified": "2026-05-14", "inLanguage": "en", "mainEntityOfPage": "https://tagra.app/articles/digital-tachograph-symbols/", "articleSection": "Driver knowledge base", "wordCount": 7800, "keywords": "tachograph fault codes, tachograph warning symbols, digital tachograph error codes, VDO DTCO error codes, Stoneridge SE5000 errors, Actia SmarTach faults, EFAS-4 faults, Annex 1C events, smart tachograph GNSS fault, drivers hours, Regulation 165/2014"}</script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is the difference between an event and a fault on a digital tachograph?", "acceptedAnswer": {"@type": "Answer", "text": "An event is an operational occurrence — driving without a card, exceeding the speed limit, card insertion while driving, time overlap. The unit is working correctly; it is recording something the driver did. A fault is a hardware or software malfunction of the tachograph itself — sensor fault, internal fault, time fault, printer failure. Faults trigger the legal 7-day workshop rule. Both categories are defined by Annex I C of Regulation (EU) 2016/799."}}, {"@type": "Question", "name": "I see sensor fault on my VDO display — can I keep driving?", "acceptedAnswer": {"@type": "Answer", "text": "Briefly, yes — to reach a safe stopping place. Then you must acknowledge the message, print the day's activities, write manual records of every onward activity on the back of that printout, inform your fleet manager, and reach an authorised workshop within 7 days. Continuing to drive without manual records once you know about a sensor fault is a serious offence in every EU member state."}}, {"@type": "Question", "name": "What does GNSS anomaly mean on a Smart Tachograph 2?", "acceptedAnswer": {"@type": "Answer", "text": "Smart Tachograph 2 units check the GNSS signal for spoofing using the Galileo OSNMA service. A GNSS anomaly event means the unit detected either an attempted manipulation of the GPS/Galileo signal or that the signal failed authentication. The unit logs the event for enforcement. If it recurs on a specific vehicle, the antenna and immediate wiring should be checked for tampering."}}, {"@type": "Question", "name": "What is the difference between Other work and Period of availability?", "acceptedAnswer": {"@type": "Answer", "text": "Other work is paid work that is not driving: loading, unloading, fuelling, paperwork, helping passengers, vehicle checks. Period of availability is waiting time whose duration the driver knows in advance — ferry/train, queuing at a known appointment. Period of availability is not work, but it also is not a break under drivers' hours."}}, {"@type": "Question", "name": "Can Period of availability count as a break under EC 561/2006?", "acceptedAnswer": {"@type": "Answer", "text": "No. Annex 1 of Regulation 561/2006 lists only one category that resets the 4.5-hour continuous-driving clock and counts toward the 45-minute mandatory break: the break/rest activity. Drivers who set Availability while taking a break receive no break credit on download."}}, {"@type": "Question", "name": "What should I do if I forgot to switch to Rest during a break?", "acceptedAnswer": {"@type": "Answer", "text": "When you next insert your card in any vehicle, the tachograph offers a manual entry procedure for the period since your last card removal. Use the menu to set the correct activity for that interval. Manual entries are time-stamped on the card and accepted as a legitimate correction."}}, {"@type": "Question", "name": "How often must I download my driver card and the vehicle unit?", "acceptedAnswer": {"@type": "Answer", "text": "At least every 28 days for the driver card and every 90 days for the vehicle unit (Article 33 of Regulation 165/2014, in conjunction with Commission Regulation 581/2010). The downloaded data must be retained for at least one year."}}, {"@type": "Question", "name": "Does a card communication error affect my driving time records?", "acceptedAnswer": {"@type": "Answer", "text": "Not necessarily. Most communication errors are simply dirty chip contacts — the activity carried out before the error is already in the card's memory. If the error is brief and clears after a clean and reinsertion, no period is lost. If the card refuses to be read at all, the unit will print the last activity automatically."}}, {"@type": "Question", "name": "The display says country entry required — what do I have to do?", "acceptedAnswer": {"@type": "Answer", "text": "Smart tachographs require you to declare the country in which the shift begins and ends. With Smart Tachograph 2, the unit also asks you to confirm each border crossing. Use the menu: entry → driver 1 → begin country at the start, and end country at the end of the shift."}}, {"@type": "Question", "name": "Does TAGRA support all four manufacturer fault codes shown in this guide?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. TAGRA reads the Annex I C events and faults directly from any downloaded .DDD file — the data format is identical regardless of the unit that wrote it. Manufacturer-specific pop-up messages are mapped to their underlying Annex I C event."}}, {"@type": "Question", "name": "What does the official 7-day workshop rule actually require?", "acceptedAnswer": {"@type": "Answer", "text": "Article 37 of Regulation 165/2014 requires that, where the tachograph cannot record activities correctly because of a fault, the operator must have it repaired by an approved workshop as soon as the circumstances permit — interpreted in practice as within seven calendar days if the vehicle can return to base."}}, {"@type": "Question", "name": "Can I keep driving with the overspeed event recorded?", "acceptedAnswer": {"@type": "Answer", "text": "Yes — overspeed is an event, not a fault. The vehicle continues to record correctly; only the speed limit was exceeded. The event is visible on download, and repeated overspeed records are a common trigger for operator audits and roadside investigations."}}]}</script>
+<script>
+(function(){
+  var input=document.getElementById('dec-search-input');
+  var clearBtn=document.getElementById('dec-search-clear');
+  var count=document.getElementById('dec-count');
+  var chips=Array.prototype.slice.call(document.querySelectorAll('.dec-chip'));
+  var vendors=Array.prototype.slice.call(document.querySelectorAll('details.vendor'));
+  if(!input||!vendors.length)return;
+  vendors.forEach(function(v){v._defaultOpen=v.hasAttribute('open');});
+  var activeVendor='all';
+  function apply(){
+    var q=(input.value||'').trim().toLowerCase();
+    var total=0;
+    vendors.forEach(function(v){
+      var scoped=(activeVendor==='all'||activeVendor===v.id);
+      if(!scoped){v.classList.add('dec-hidden');return;}
+      v.classList.remove('dec-hidden');
+      var rows=v.querySelectorAll('.code-table tbody tr');
+      var hits=0;
+      Array.prototype.forEach.call(rows,function(r){
+        var m=(q===''||r.textContent.toLowerCase().indexOf(q)!==-1);
+        if(m){r.classList.remove('dec-hidden');hits++;}else{r.classList.add('dec-hidden');}
+      });
+      total+=hits;
+      var body=v.querySelector('.vendor-body');
+      var note=v.querySelector('.dec-nohit');
+      if(q!==''&&hits===0){
+        if(!note&&body){note=document.createElement('p');note.className='dec-nohit';note.textContent='No matching rows in this manufacturer.';body.appendChild(note);}
+        if(note)note.style.display='';
+      } else if(note){note.style.display='none';}
+      if(q!==''||activeVendor!=='all'){v.open=hits>0;}else{v.open=v._defaultOpen;}
+    });
+    if(q===''&&activeVendor==='all'){count.textContent='';}
+    else{count.textContent=total+(total===1?' match':' matches')+(activeVendor!=='all'?' \u00b7 '+activeVendor.toUpperCase():'');}
+  }
+  input.addEventListener('input',apply);
+  clearBtn.addEventListener('click',function(){input.value='';apply();input.focus();});
+  chips.forEach(function(c){c.addEventListener('click',function(){
+    var v=c.getAttribute('data-vendor');
+    if(v==='symbols'){var s=document.getElementById('activity-symbols');if(s)s.scrollIntoView({behavior:'smooth'});return;}
+    chips.forEach(function(x){x.classList.toggle('is-active',x===c&&v!=='symbols');});
+    activeVendor=v;apply();
+    var firstVisible=vendors.filter(function(x){return !x.classList.contains('dec-hidden');})[0];
+    if(firstVisible&&v!=='all')firstVisible.scrollIntoView({behavior:'smooth',block:'start'});
+  });});
+})();
+</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Tachograph fault codes & symbols explained: VDO, Stoneridge, Actia, EFAS guide", "description": "Complete driver guide to digital tachograph fault codes and warning symbols. Activity icons, warning pop-ups, VDO DTCO 4.1 / Stoneridge SE5000 / Actia / EFAS-4 fault codes, what each fault means and exactly what to do.", "image": "https://tagra.app/assets/img/og/digital-tachograph-symbols.jpg", "author": {"@type": "Organization", "name": "Truck Data Technology, s.r.o.", "url": "https://www.tdt.cz"}, "publisher": {"@type": "Organization", "name": "Truck Data Technology, s.r.o.", "logo": {"@type": "ImageObject", "url": "https://tagra.app/assets/img/logo.svg"}}, "datePublished": "2025-09-01", "dateModified": "2026-06-30", "inLanguage": "en", "mainEntityOfPage": "https://tagra.app/articles/digital-tachograph-symbols/", "articleSection": "Driver knowledge base", "wordCount": 9600, "keywords": "tachograph fault codes, tachograph warning symbols, digital tachograph error codes, VDO DTCO error codes, Stoneridge SE5000 errors, Actia SmarTach faults, EFAS-4 faults, Annex 1C events, smart tachograph GNSS fault, drivers hours, Regulation 165/2014"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is the difference between an event and a fault on a digital tachograph?", "acceptedAnswer": {"@type": "Answer", "text": "An event is an operational occurrence — driving without a card, exceeding the speed limit, card insertion while driving, time overlap. The unit is working correctly; it is recording something the driver did. A fault is a hardware or software malfunction of the tachograph itself — sensor fault, internal fault, time fault, printer failure. Faults trigger the legal 7-day workshop rule. Both categories are defined by Annex I C of Regulation (EU) 2016/799."}}, {"@type": "Question", "name": "I see sensor fault on my VDO display — can I keep driving?", "acceptedAnswer": {"@type": "Answer", "text": "Briefly, yes — to reach a safe stopping place. Then you must acknowledge the message, print the day's activities, write manual records of every onward activity on the back of that printout, inform your fleet manager, and reach an authorised workshop within 7 days. Continuing to drive without manual records once you know about a sensor fault is a serious offence in every EU member state."}}, {"@type": "Question", "name": "What does GNSS anomaly mean on a Smart Tachograph 2?", "acceptedAnswer": {"@type": "Answer", "text": "Smart Tachograph 2 units check the GNSS signal for spoofing using the Galileo OSNMA service. A GNSS anomaly event means the unit detected either an attempted manipulation of the GPS/Galileo signal or that the signal failed authentication. The unit logs the event for enforcement. If it recurs on a specific vehicle, the antenna and immediate wiring should be checked for tampering."}}, {"@type": "Question", "name": "What is the difference between Other work and Period of availability?", "acceptedAnswer": {"@type": "Answer", "text": "Other work is paid work that is not driving: loading, unloading, fuelling, paperwork, helping passengers, vehicle checks. Period of availability is waiting time whose duration the driver knows in advance — ferry/train, queuing at a known appointment. Period of availability is not work, but it also is not a break under drivers' hours."}}, {"@type": "Question", "name": "Can Period of availability count as a break under EC 561/2006?", "acceptedAnswer": {"@type": "Answer", "text": "No. Annex 1 of Regulation 561/2006 lists only one category that resets the 4.5-hour continuous-driving clock and counts toward the 45-minute mandatory break: the break/rest activity. Drivers who set Availability while taking a break receive no break credit on download."}}, {"@type": "Question", "name": "What should I do if I forgot to switch to Rest during a break?", "acceptedAnswer": {"@type": "Answer", "text": "When you next insert your card in any vehicle, the tachograph offers a manual entry procedure for the period since your last card removal. Use the menu to set the correct activity for that interval. Manual entries are time-stamped on the card and accepted as a legitimate correction."}}, {"@type": "Question", "name": "How often must I download my driver card and the vehicle unit?", "acceptedAnswer": {"@type": "Answer", "text": "At least every 28 days for the driver card and every 90 days for the vehicle unit (Article 33 of Regulation 165/2014, in conjunction with Commission Regulation 581/2010). The downloaded data must be retained for at least one year."}}, {"@type": "Question", "name": "Does a card communication error affect my driving time records?", "acceptedAnswer": {"@type": "Answer", "text": "Not necessarily. Most communication errors are simply dirty chip contacts — the activity carried out before the error is already in the card's memory. If the error is brief and clears after a clean and reinsertion, no period is lost. If the card refuses to be read at all, the unit will print the last activity automatically."}}, {"@type": "Question", "name": "The display says country entry required — what do I have to do?", "acceptedAnswer": {"@type": "Answer", "text": "Smart tachographs require you to declare the country in which the shift begins and ends. With Smart Tachograph 2, the unit also asks you to confirm each border crossing. Use the menu: entry → driver 1 → begin country at the start, and end country at the end of the shift."}}, {"@type": "Question", "name": "Does TAGRA support all four manufacturer fault codes shown in this guide?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. TAGRA reads the Annex I C events and faults directly from any downloaded .DDD file — the data format is identical regardless of the unit that wrote it. Manufacturer-specific pop-up messages are mapped to their underlying Annex I C event."}}, {"@type": "Question", "name": "What does the official 7-day workshop rule actually require?", "acceptedAnswer": {"@type": "Answer", "text": "Article 37 of Regulation 165/2014 requires that, where the tachograph cannot record activities correctly because of a fault, the operator must have it repaired by an approved workshop as soon as the circumstances permit — interpreted in practice as within seven calendar days if the vehicle can return to base."}}, {"@type": "Question", "name": "Can I keep driving with the overspeed event recorded?", "acceptedAnswer": {"@type": "Answer", "text": "Yes — overspeed is an event, not a fault. The vehicle continues to record correctly; only the speed limit was exceeded. The event is visible on download, and repeated overspeed records are a common trigger for operator audits and roadside investigations."}}, {"@type": "Question", "name": "My VDO display shows a number like 80, 82 or 98 — what does it mean?", "acceptedAnswer": {"@type": "Answer", "text": "On DTCO 4.0/4.1 a two-digit number next to the pictogram identifies the event or fault. Low numbers (001–066) are workshop fault-memory codes; high numbers belong to smart-tachograph functions. The most common are 80 — vehicle motion conflict (the motion sensor disagrees with the GNSS signal; visit an authorised workshop), 82 — internal GNSS fault (the receiver temporarily cannot fix a position) and 98 — ITS/Bluetooth fault (the remote-data interface; no effect on recording)."}}, {"@type": "Question", "name": "What does motion conflict (code 80) mean and can I keep driving?", "acceptedAnswer": {"@type": "Answer", "text": "Code 80 is a vehicle motion conflict: the tachograph detected a contradiction between the motion sensor and an independent source (GNSS). A frequent harmless cause is forgetting to set ferry/train mode during shipment. If it appears in normal driving it can indicate manipulation or a wiring fault — acknowledge the message, keep manual records, and have an authorised workshop inspect the unit."}}, {"@type": "Question", "name": "How do I look up a numeric or hex fault code from a workshop readout?", "acceptedAnswer": {"@type": "Answer", "text": "Use the search box at the top of the manufacturer-codes section: type the number (e.g. 042), a VDO display number (e.g. 82), a Stoneridge or EFAS hex DTC (e.g. 002E80) or any words from the message (e.g. sensor fault). The relevant manufacturer panel opens automatically and shows only the matching rows."}}]}</script>
 </body>
 </html>
