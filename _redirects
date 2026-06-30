@@ -1,6 +1,16 @@
 # Netlify redirects — TAGRA.EU
 
 # ──────────────────────────────────────────────────────────────────
+# tagra.eu is a domain alias only — tagra.app is the primary domain.
+# Send all tagra.eu/* traffic straight to the equivalent tagra.app/*
+# path (preserves the path; the path-specific rules further below
+# then catch any legacy tagra.eu-Drupal-era paths on the second hop).
+# Must come first so it wins before any path-only rule below.
+# ──────────────────────────────────────────────────────────────────
+https://www.tagra.eu/*    https://tagra.app/:splat   301!
+https://tagra.eu/*        https://tagra.app/:splat   301!
+
+# ──────────────────────────────────────────────────────────────────
 # Language fallbacks
 # DE/PL versions of these pages don't exist yet — redirect to EN
 # so the nav-lang switcher never lands on a 404.
