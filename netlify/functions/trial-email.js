@@ -6,11 +6,11 @@
  *
  * Configuration:
  *   - Resend API key in env var RESEND_API_KEY
- *   - From address: trials@tagra.app (needs DNS verification on tagra.app)
+ *   - From address: sales@tagra.app (needs DNS verification on tagra.app)
  *
  * Setup steps (manual, one-time):
  *   1. Sign up at https://resend.com (free tier 3,000 emails/month)
- *   2. Add domain tagra.app, copy DNS records to Wedos
+ *   2. Add domain tagra.app in Resend, copy DNS records to Webglobe DNS
  *   3. Wait for verification
  *   4. Create API key, paste into Netlify env vars as RESEND_API_KEY
  *   5. Configure Netlify form notification:
@@ -159,8 +159,8 @@ exports.handler = async (event) => {
     || SUBJECTS.en[finalAudience];
 
   // Send via Resend
-  const fromAddr = process.env.RESEND_FROM || "TAGRA <trials@tagra.app>";
-  const replyTo  = "obchod@tdt.cz";
+  const fromAddr = process.env.RESEND_FROM || "TAGRA <sales@tagra.app>";
+  const replyTo  = "sales@tagra.app";
 
   try {
     const resp = await fetch(RESEND_API, {
