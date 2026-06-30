@@ -143,15 +143,16 @@
     .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:48px;}
     @media(max-width:768px){.contact-grid{grid-template-columns:1fr;}}
     .contact-card{background:var(--bg-apple-solid);border-radius:var(--radius);padding:36px;border:1px solid rgba(19,74,142,.1);}
-    .contact-card--green{background:var(--green-bg);border-color:rgba(110,155,18,.2);}
+    .contact-card--gray{background:var(--bg-gray);border-color:rgba(11,44,74,.08);}
     .contact-card-title{font-size:20px;font-weight:800;color:var(--text-strong);margin-bottom:6px;}
     .contact-card-sub{font-size:15px;color:var(--text2);margin-bottom:24px;}
-    .contact-card-head{display:flex;align-items:center;gap:14px;margin-bottom:14px;}
-    .contact-card-avatar{width:60px;height:60px;border-radius:50%;object-fit:cover;flex-shrink:0;border:3px solid #fff;box-shadow:0 2px 10px rgba(11,44,74,.12);}
-    .contact-card-name{font-size:17px;font-weight:700;color:var(--text-strong);}
+    .contact-avatar-wrap{position:relative;width:64px;height:80px;flex-shrink:0;}
+    .contact-avatar-wrap::before{content:'';position:absolute;left:50%;bottom:0;width:64px;height:64px;border-radius:50%;background:#fff;box-shadow:0 2px 10px rgba(11,44,74,.12);transform:translateX(-50%);}
+    .contact-avatar-photo{position:relative;z-index:1;display:block;width:100%;height:100%;object-fit:contain;object-position:center bottom;}
+    .contact-avatar-wrap--lg{width:84px;height:104px;}
+    .contact-avatar-wrap--lg::before{width:84px;height:84px;}
     .contact-people{display:flex;flex-direction:column;gap:18px;margin-bottom:22px;}
     .contact-person{display:flex;align-items:center;gap:14px;}
-    .contact-person-avatar{width:56px;height:56px;border-radius:50%;object-fit:cover;flex-shrink:0;border:3px solid #fff;box-shadow:0 2px 10px rgba(11,44,74,.12);}
     .contact-person-phone{font-size:16px;font-weight:600;color:var(--text-strong);text-decoration:none;}
     .contact-person-phone:hover{color:var(--blue-mid);}
     .contact-item{display:flex;gap:14px;align-items:flex-start;margin-bottom:20px;}
@@ -270,18 +271,12 @@
 
         <div class="contact-people">
           <div class="contact-person">
-            <img class="contact-person-avatar" src="../assets/img/team/ivan-szabo.webp" alt="Ivan Szabó" width="56" height="56" loading="lazy">
-            <div>
-              <div class="contact-card-name">Ivan Szabó</div>
-              <a class="contact-person-phone" href="tel:+420739005345">+420 739 005 345</a>
-            </div>
+            <div class="contact-avatar-wrap"><img class="contact-avatar-photo" src="../assets/img/team/ivan-szabo.webp" alt="Sales contact" width="64" height="80" loading="lazy"></div>
+            <a class="contact-person-phone" href="tel:+420739005345">+420 739 005 345</a>
           </div>
           <div class="contact-person">
-            <img class="contact-person-avatar" src="../assets/img/team/martin-vojta.webp" alt="Martin Vojta" width="56" height="56" loading="lazy">
-            <div>
-              <div class="contact-card-name">Martin Vojta</div>
-              <a class="contact-person-phone" href="tel:+420739544322">+420 739 544 322</a>
-            </div>
+            <div class="contact-avatar-wrap"><img class="contact-avatar-photo" src="../assets/img/team/martin-vojta.webp" alt="Sales contact" width="64" height="80" loading="lazy"></div>
+            <a class="contact-person-phone" href="tel:+420739544322">+420 739 544 322</a>
           </div>
         </div>
 
@@ -307,13 +302,13 @@
       </div>
 
       <!-- Technical support -->
-      <div class="contact-card contact-card--green anim-up" style="transition-delay:.1s">
-        <div class="contact-card-head">
-          <img class="contact-card-avatar" src="../assets/img/team/tomas.webp" alt="Tomáš" width="60" height="60" loading="lazy">
-          <div class="contact-card-name">Tomáš</div>
-        </div>
+      <div class="contact-card contact-card--gray anim-up" style="transition-delay:.1s">
         <h3 class="card-title">Technical support</h3>
-        <div class="contact-card-sub">For questions about software setup and technical issues.</div>
+        <div class="contact-card-sub" style="margin-bottom:18px">For questions about software setup and technical issues.</div>
+
+        <div class="contact-avatar-wrap contact-avatar-wrap--lg" style="margin:0 auto 22px">
+          <img class="contact-avatar-photo" src="../assets/img/team/tomas.webp" alt="Technical support contact" width="84" height="104" loading="lazy">
+        </div>
 
         <div class="contact-item">
           <div class="contact-item-icon contact-item-icon--green">
