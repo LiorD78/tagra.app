@@ -603,6 +603,14 @@
     .showcase-row:first-of-type{border-top:none;padding-top:0;}
     .showcase-row strong{color:var(--text);font-weight:700;}
     .showcase-foot{margin-top:14px;font-size:12.5px;color:var(--text2);font-style:italic;}
+
+    /* ─── CUSTOMER NAME MARQUEE ────────────────────────────────────── */
+    .name-marquee-wrap{position:relative;width:100vw;left:50%;right:50%;margin-left:-50vw;margin-right:-50vw;overflow:hidden;mask-image:linear-gradient(to right,transparent 0%,black 6%,black 94%,transparent 100%);margin-top:28px;}
+    .name-marquee-label{text-align:center;font-size:13px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:rgba(255,255,255,.65);margin-bottom:14px;}
+    .name-marquee{display:flex;width:max-content;animation:tmx-marquee 38s linear infinite;}
+    .name-marquee:hover{animation-play-state:paused;}
+    .name-marquee span{flex:0 0 auto;padding:0 28px;font-size:16px;font-weight:600;color:rgba(255,255,255,.88);white-space:nowrap;border-right:1px solid rgba(255,255,255,.18);}
+    @keyframes tmx-marquee{from{transform:translateX(0);}to{transform:translateX(-50%);}}
 </style>
 
 <script type="application/ld+json">
@@ -943,6 +951,11 @@
         <div class="ref-name">Hundreds of fleet operators</div>
         <div class="ref-note">Haulage, bus &amp; coach, rental, municipal fleets, workshops.</div>
       </div>
+    </div>
+
+    <div class="name-marquee-wrap anim-up">
+      <p class="name-marquee-label">Among the fleets and operators already running TAGRA</p>
+      <div class="name-marquee"><span>FCC Group</span><span>CS Cargo a.s.</span><span>ČEDOK a.s.</span><span>AGRO SERVIS CZ</span><span>ČSAD Jihotrans</span><span>ČSAD Karviná</span><span>Pivovar Holba</span><span>PORR a.s.</span><span>Klaus Timber a.s.</span><span>Mátra Transport a.s.</span><span>KAFKA Transport a.s.</span><span>DKC s.r.o.</span><span>TQM Holding</span><span>Synergies Logistiques</span><span>ČSAD Autobusy České Budějovice</span><span>ČSAD POLKOST</span><span>Cargospol</span><span>Energie stavební a báňská a.s.</span><span>SAP Mimoň</span><span>FCC Group</span><span>CS Cargo a.s.</span><span>ČEDOK a.s.</span><span>AGRO SERVIS CZ</span><span>ČSAD Jihotrans</span><span>ČSAD Karviná</span><span>Pivovar Holba</span><span>PORR a.s.</span><span>Klaus Timber a.s.</span><span>Mátra Transport a.s.</span><span>KAFKA Transport a.s.</span><span>DKC s.r.o.</span><span>TQM Holding</span><span>Synergies Logistiques</span><span>ČSAD Autobusy České Budějovice</span><span>ČSAD POLKOST</span><span>Cargospol</span><span>Energie stavební a báňská a.s.</span><span>SAP Mimoň</span></div>
     </div>
   </div>
 </section>
