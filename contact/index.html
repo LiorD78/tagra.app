@@ -146,6 +146,9 @@
     .contact-card--green{background:var(--green-bg);border-color:rgba(110,155,18,.2);}
     .contact-card-title{font-size:20px;font-weight:800;color:var(--text-strong);margin-bottom:6px;}
     .contact-card-sub{font-size:15px;color:var(--text2);margin-bottom:24px;}
+    .contact-card-head{display:flex;align-items:center;gap:14px;margin-bottom:14px;}
+    .contact-card-avatar{width:60px;height:60px;border-radius:50%;object-fit:cover;flex-shrink:0;border:3px solid #fff;box-shadow:0 2px 10px rgba(11,44,74,.12);}
+    .contact-card-name{font-size:17px;font-weight:700;color:var(--text-strong);}
     .contact-item{display:flex;gap:14px;align-items:flex-start;margin-bottom:20px;}
     .contact-item-icon{width:40px;height:40px;border-radius:10px;background:linear-gradient(135deg,var(--blue-dark),var(--blue-mid));display:flex;align-items:center;justify-content:center;flex-shrink:0;}
     .contact-item-icon--green{background:linear-gradient(135deg,var(--green-cta),var(--green-brand));}
@@ -249,6 +252,10 @@
 
       <!-- Sales & support -->
       <div class="contact-card anim-up">
+        <div class="contact-card-head">
+          <img class="contact-card-avatar" src="../assets/img/team/ivan-szabo.webp" alt="Ivan Szabó" width="60" height="60" loading="lazy">
+          <div class="contact-card-name">Ivan Szabó</div>
+        </div>
         <h3 class="card-title">Sales &amp; general enquiries</h3>
         <div class="contact-card-sub">For questions about TAGRA software, pricing and ordering.</div>
 
@@ -285,6 +292,10 @@
 
       <!-- Training & technical -->
       <div class="contact-card contact-card--green anim-up" style="transition-delay:.1s">
+        <div class="contact-card-head">
+          <img class="contact-card-avatar" src="../assets/img/team/martin-vojta.webp" alt="Martin Vojta" width="60" height="60" loading="lazy">
+          <div class="contact-card-name">Martin Vojta</div>
+        </div>
         <h3 class="card-title">Training &amp; technical support</h3>
         <div class="contact-card-sub">For questions about software setup, training sessions and technical issues.</div>
 
@@ -305,16 +316,6 @@
           <div>
             <div class="contact-item-label">Email</div>
             <div class="contact-item-value"><a href="mailto:sales@tagra.app">sales@tagra.app</a></div>
-          </div>
-        </div>
-
-        <div class="contact-item">
-          <div class="contact-item-icon contact-item-icon--green">
-            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/><path d="M12 6v6l4 2"/></svg>
-          </div>
-          <div>
-            <div class="contact-item-label">Training</div>
-            <div class="contact-item-value" style="font-weight:400;font-size:16px">Individual training sessions available on request</div>
           </div>
         </div>
       </div>
