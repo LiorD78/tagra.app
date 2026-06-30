@@ -149,6 +149,11 @@
     .contact-card-head{display:flex;align-items:center;gap:14px;margin-bottom:14px;}
     .contact-card-avatar{width:60px;height:60px;border-radius:50%;object-fit:cover;flex-shrink:0;border:3px solid #fff;box-shadow:0 2px 10px rgba(11,44,74,.12);}
     .contact-card-name{font-size:17px;font-weight:700;color:var(--text-strong);}
+    .contact-people{display:flex;flex-direction:column;gap:18px;margin-bottom:22px;}
+    .contact-person{display:flex;align-items:center;gap:14px;}
+    .contact-person-avatar{width:56px;height:56px;border-radius:50%;object-fit:cover;flex-shrink:0;border:3px solid #fff;box-shadow:0 2px 10px rgba(11,44,74,.12);}
+    .contact-person-phone{font-size:16px;font-weight:600;color:var(--text-strong);text-decoration:none;}
+    .contact-person-phone:hover{color:var(--blue-mid);}
     .contact-item{display:flex;gap:14px;align-items:flex-start;margin-bottom:20px;}
     .contact-item-icon{width:40px;height:40px;border-radius:10px;background:linear-gradient(135deg,var(--blue-dark),var(--blue-mid));display:flex;align-items:center;justify-content:center;flex-shrink:0;}
     .contact-item-icon--green{background:linear-gradient(135deg,var(--green-cta),var(--green-brand));}
@@ -173,13 +178,21 @@
   "sameAs": [
     "https://www.tdt.cz"
   ],
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "telephone": "+420-739-005-345",
-    "email": "sales@tagra.app",
-    "contactType": "sales",
-    "availableLanguage": ["English", "Czech", "Slovak"]
-  }
+  "contactPoint": [
+    {
+      "@type": "ContactPoint",
+      "telephone": "+420-739-005-345",
+      "email": "sales@tagra.app",
+      "contactType": "sales",
+      "availableLanguage": ["English", "Czech", "Slovak"]
+    },
+    {
+      "@type": "ContactPoint",
+      "email": "helpdesk@tagra.app",
+      "contactType": "technical support",
+      "availableLanguage": ["English", "Czech", "Slovak"]
+    }
+  ]
 }
 </script>
 <script type="application/ld+json">
@@ -250,22 +263,25 @@
   <div class="container">
     <div class="contact-grid">
 
-      <!-- Sales & support -->
+      <!-- Sales -->
       <div class="contact-card anim-up">
-        <div class="contact-card-head">
-          <img class="contact-card-avatar" src="../assets/img/team/ivan-szabo.webp" alt="Ivan Szabó" width="60" height="60" loading="lazy">
-          <div class="contact-card-name">Ivan Szabó</div>
-        </div>
         <h3 class="card-title">Sales &amp; general enquiries</h3>
         <div class="contact-card-sub">For questions about TAGRA software, pricing and ordering.</div>
 
-        <div class="contact-item">
-          <div class="contact-item-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.7A2 2 0 012 .9h3a2 2 0 012 1.72c.127.96.36 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.34 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        <div class="contact-people">
+          <div class="contact-person">
+            <img class="contact-person-avatar" src="../assets/img/team/ivan-szabo.webp" alt="Ivan Szabó" width="56" height="56" loading="lazy">
+            <div>
+              <div class="contact-card-name">Ivan Szabó</div>
+              <a class="contact-person-phone" href="tel:+420739005345">+420 739 005 345</a>
+            </div>
           </div>
-          <div>
-            <div class="contact-item-label">Phone</div>
-            <div class="contact-item-value"><a href="tel:+420739005345">+420 739 005 345</a></div>
+          <div class="contact-person">
+            <img class="contact-person-avatar" src="../assets/img/team/martin-vojta.webp" alt="Martin Vojta" width="56" height="56" loading="lazy">
+            <div>
+              <div class="contact-card-name">Martin Vojta</div>
+              <a class="contact-person-phone" href="tel:+420739544322">+420 739 544 322</a>
+            </div>
           </div>
         </div>
 
@@ -290,24 +306,14 @@
         </div>
       </div>
 
-      <!-- Training & technical -->
+      <!-- Technical support -->
       <div class="contact-card contact-card--green anim-up" style="transition-delay:.1s">
         <div class="contact-card-head">
-          <img class="contact-card-avatar" src="../assets/img/team/martin-vojta.webp" alt="Martin Vojta" width="60" height="60" loading="lazy">
-          <div class="contact-card-name">Martin Vojta</div>
+          <img class="contact-card-avatar" src="../assets/img/team/tomas.webp" alt="Tomáš" width="60" height="60" loading="lazy">
+          <div class="contact-card-name">Tomáš</div>
         </div>
-        <h3 class="card-title">Training &amp; technical support</h3>
-        <div class="contact-card-sub">For questions about software setup, training sessions and technical issues.</div>
-
-        <div class="contact-item">
-          <div class="contact-item-icon contact-item-icon--green">
-            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.7A2 2 0 012 .9h3a2 2 0 012 1.72c.127.96.36 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.34 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-          </div>
-          <div>
-            <div class="contact-item-label">Phone</div>
-            <div class="contact-item-value"><a href="tel:+420739544322">+420 739 544 322</a></div>
-          </div>
-        </div>
+        <h3 class="card-title">Technical support</h3>
+        <div class="contact-card-sub">For questions about software setup and technical issues.</div>
 
         <div class="contact-item">
           <div class="contact-item-icon contact-item-icon--green">
@@ -315,7 +321,7 @@
           </div>
           <div>
             <div class="contact-item-label">Email</div>
-            <div class="contact-item-value"><a href="mailto:sales@tagra.app">sales@tagra.app</a></div>
+            <div class="contact-item-value"><a href="mailto:helpdesk@tagra.app">helpdesk@tagra.app</a></div>
           </div>
         </div>
       </div>
