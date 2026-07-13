@@ -1,67 +1,127 @@
 <!DOCTYPE html>
-<html lang="en"><head>
+<html lang="cs"><head>
 <meta charset="UTF-8">
-<title>TAGRA email previews</title>
+<title>TAGRA — sekvence e-mailů pro zkušební verzi</title>
 <meta name="robots" content="noindex,nofollow">
 <style>
-  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; max-width:900px; margin:40px auto; padding:0 24px; color:#0b2c4a; background:#eef4fa; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; max-width:960px; margin:40px auto; padding:0 24px; color:#0b2c4a; background:#eef4fa; }
   h1 { font-size:28px; margin-bottom:8px; }
-  .lead { color:#515154; margin-bottom:32px; }
-  .grid { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-bottom:32px; }
-  .grid a { display:block; padding:14px 16px; background:#fff; border:1px solid #e1ebf6; border-radius:10px; text-decoration:none; color:#134a8e; font-weight:600; font-size:14.5px; }
-  .grid a:hover { background:#f4f8fc; border-color:#134a8e; }
-  h2 { font-size:18px; margin-top:24px; color:#0b2c4a; text-transform:uppercase; letter-spacing:0.05em; font-weight:600; }
-  .audience { font-size:12px; color:#5C820F; text-transform:uppercase; letter-spacing:0.06em; font-weight:700; display:block; margin-bottom:4px; }
-  iframe { width:100%; height:600px; border:1px solid #e1ebf6; border-radius:12px; background:#fff; margin-top:8px; }
-  .note { background:#fff7e6; border:1px solid #f0c270; border-radius:10px; padding:14px 18px; font-size:14px; color:#7a5500; margin-bottom:24px; line-height:1.5; }
+  .lead { color:#515154; margin-bottom:28px; line-height:1.55; }
+  .step { background:#fff; border:1px solid #e1ebf6; border-radius:14px; padding:22px 24px; margin-bottom:22px; }
+  .step-head { display:flex; align-items:baseline; gap:12px; flex-wrap:wrap; margin-bottom:4px; }
+  .when { background:#5C820F; color:#fff; font-size:12px; font-weight:700; letter-spacing:0.05em; text-transform:uppercase; padding:4px 10px; border-radius:99px; white-space:nowrap; }
+  .when.manual { background:#134a8e; }
+  .step h2 { font-size:19px; margin:0; color:#0b2c4a; }
+  .step p { color:#515154; font-size:14.5px; line-height:1.55; margin:8px 0 16px; }
+  .grid { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; }
+  .grid a { display:block; padding:12px 14px; background:#f4f8fc; border:1px solid #e1ebf6; border-radius:9px; text-decoration:none; color:#134a8e; font-weight:600; font-size:14px; }
+  .grid a:hover { background:#fff; border-color:#134a8e; }
+  .audience { font-size:11px; color:#5C820F; text-transform:uppercase; letter-spacing:0.06em; font-weight:700; display:block; margin-bottom:3px; }
+  .note { background:#fff7e6; border:1px solid #f0c270; border-radius:10px; padding:14px 18px; font-size:14px; color:#7a5500; margin-bottom:24px; line-height:1.55; }
+  .note code { background:rgba(0,0,0,.05); padding:1px 5px; border-radius:4px; }
+  @media (max-width:700px) { .grid { grid-template-columns:1fr; } }
 </style>
 </head><body>
-<h1>TAGRA email previews</h1>
-<p class="lead">18 transactional email templates: 6 languages × 3 audiences (fleet / driver / enforcement). Click to preview in new tab.</p>
+
+<h1>TAGRA — sekvence e-mailů pro zkušební verzi</h1>
+<p class="lead">
+  Co zákazníkovi odejde poté, co si na tagra.app vyžádá zkušební verzi.
+  Tři maily, 6 jazyků, podepsaný Ivan Szabó. Kliknutím se otevře náhled v nové záložce.
+</p>
 
 <div class="note">
-  <strong>Preview only.</strong> These are static HTML samples with placeholder <code>{NAME}</code> — the real sending function will substitute the recipient's first name. Open each in a new tab and check the rendering.
+  <strong>Jde o náhledy.</strong> Místo jména je v nich zástupný <code>{NAME}</code> —
+  při skutečném odeslání se dosadí křestní jméno příjemce.
+  Zkušební verze běží <strong>30 dní</strong>, od toho se odvíjí i časování.
 </div>
 
-<h2>EN</h2>
-<div class="grid">
-  <a href="/try/email-preview/en-fleet.html" target="_blank"><span class="audience">fleet</span>EN · fleet</a>
-  <a href="/try/email-preview/en-driver.html" target="_blank"><span class="audience">driver</span>EN · driver</a>
-  <a href="/try/email-preview/en-enforcement.html" target="_blank"><span class="audience">enforcement</span>EN · enforcement</a>
+<!-- ═══ #1 ═══ -->
+<div class="step">
+  <div class="step-head">
+    <span class="when">hned</span>
+    <h2>#1 &nbsp;Uvítací e-mail</h2>
+  </div>
+  <p>Odchází okamžitě po odeslání formuláře. Fleet a driver dostanou odkaz ke stažení; enforcement potvrzení, že se ozve Ivan.</p>
+  <div class="grid">
+    <a href="/try/email-preview/en-fleet.html" target="_blank"><span class="audience">fleet</span>EN · fleet</a>
+    <a href="/try/email-preview/en-driver.html" target="_blank"><span class="audience">driver</span>EN · driver</a>
+    <a href="/try/email-preview/en-enforcement.html" target="_blank"><span class="audience">enforcement</span>EN · enforcement</a>
+    <a href="/try/email-preview/cz-fleet.html" target="_blank"><span class="audience">fleet</span>CZ · fleet</a>
+    <a href="/try/email-preview/cz-driver.html" target="_blank"><span class="audience">driver</span>CZ · driver</a>
+    <a href="/try/email-preview/cz-enforcement.html" target="_blank"><span class="audience">enforcement</span>CZ · enforcement</a>
+    <a href="/try/email-preview/sk-fleet.html" target="_blank"><span class="audience">fleet</span>SK · fleet</a>
+    <a href="/try/email-preview/sk-driver.html" target="_blank"><span class="audience">driver</span>SK · driver</a>
+    <a href="/try/email-preview/sk-enforcement.html" target="_blank"><span class="audience">enforcement</span>SK · enforcement</a>
+    <a href="/try/email-preview/de-fleet.html" target="_blank"><span class="audience">fleet</span>DE · fleet</a>
+    <a href="/try/email-preview/de-driver.html" target="_blank"><span class="audience">driver</span>DE · driver</a>
+    <a href="/try/email-preview/de-enforcement.html" target="_blank"><span class="audience">enforcement</span>DE · enforcement</a>
+    <a href="/try/email-preview/pl-fleet.html" target="_blank"><span class="audience">fleet</span>PL · fleet</a>
+    <a href="/try/email-preview/pl-driver.html" target="_blank"><span class="audience">driver</span>PL · driver</a>
+    <a href="/try/email-preview/pl-enforcement.html" target="_blank"><span class="audience">enforcement</span>PL · enforcement</a>
+    <a href="/try/email-preview/gr-fleet.html" target="_blank"><span class="audience">fleet</span>GR · fleet</a>
+    <a href="/try/email-preview/gr-driver.html" target="_blank"><span class="audience">driver</span>GR · driver</a>
+    <a href="/try/email-preview/gr-enforcement.html" target="_blank"><span class="audience">enforcement</span>GR · enforcement</a>
+  </div>
 </div>
 
-<h2>DE</h2>
-<div class="grid">
-  <a href="/try/email-preview/de-fleet.html" target="_blank"><span class="audience">fleet</span>DE · fleet</a>
-  <a href="/try/email-preview/de-driver.html" target="_blank"><span class="audience">driver</span>DE · driver</a>
-  <a href="/try/email-preview/de-enforcement.html" target="_blank"><span class="audience">enforcement</span>DE · enforcement</a>
+<!-- ═══ #2 ═══ -->
+<div class="step">
+  <div class="step-head">
+    <span class="when">3. den</span>
+    <h2>#2 &nbsp;Rychlý start</h2>
+  </div>
+  <p>Program je nainstalovaný, ale zákazník do něj možná ještě nedostal data. Tři kroky k prvnímu výkazu &mdash; a otázka na počet vozidel / čtečku karet, aby Ivan mohl doporučit správnou verzi.</p>
+  <div class="grid">
+    <a href="/try/email-preview/email2-fleet-en.html" target="_blank"><span class="audience">fleet</span>EN · fleet</a>
+    <a href="/try/email-preview/email2-driver-en.html" target="_blank"><span class="audience">driver</span>EN · driver</a>
+    <a href="/try/email-preview/email2-fleet-cz.html" target="_blank"><span class="audience">fleet</span>CZ · fleet</a>
+    <a href="/try/email-preview/email2-driver-cz.html" target="_blank"><span class="audience">driver</span>CZ · driver</a>
+    <a href="/try/email-preview/email2-fleet-sk.html" target="_blank"><span class="audience">fleet</span>SK · fleet</a>
+    <a href="/try/email-preview/email2-driver-sk.html" target="_blank"><span class="audience">driver</span>SK · driver</a>
+    <a href="/try/email-preview/email2-fleet-de.html" target="_blank"><span class="audience">fleet</span>DE · fleet</a>
+    <a href="/try/email-preview/email2-driver-de.html" target="_blank"><span class="audience">driver</span>DE · driver</a>
+    <a href="/try/email-preview/email2-fleet-pl.html" target="_blank"><span class="audience">fleet</span>PL · fleet</a>
+    <a href="/try/email-preview/email2-driver-pl.html" target="_blank"><span class="audience">driver</span>PL · driver</a>
+    <a href="/try/email-preview/email2-fleet-gr.html" target="_blank"><span class="audience">fleet</span>GR · fleet</a>
+    <a href="/try/email-preview/email2-driver-gr.html" target="_blank"><span class="audience">driver</span>GR · driver</a>
+  </div>
 </div>
 
-<h2>PL</h2>
-<div class="grid">
-  <a href="/try/email-preview/pl-fleet.html" target="_blank"><span class="audience">fleet</span>PL · fleet</a>
-  <a href="/try/email-preview/pl-driver.html" target="_blank"><span class="audience">driver</span>PL · driver</a>
-  <a href="/try/email-preview/pl-enforcement.html" target="_blank"><span class="audience">enforcement</span>PL · enforcement</a>
+<!-- ═══ #3 ═══ -->
+<div class="step">
+  <div class="step-head">
+    <span class="when">25. den</span>
+    <h2>#3 &nbsp;Zkušební verze končí za 5 dní</h2>
+  </div>
+  <p>Nejsilnější mail sekvence. Jádro: licenci zákazník aktivuje <strong>uvnitř programu</strong> (licenční nabídka &rarr; verze &rarr; QR kód nebo převod), takže o data naimportovaná během zkušební verze nepřijde. Zároveň se ptáme, jestli něco nefungovalo &mdash; poslední šance zachytit odchod.</p>
+  <div class="grid">
+    <a href="/try/email-preview/email3-fleet-en.html" target="_blank"><span class="audience">fleet</span>EN · fleet</a>
+    <a href="/try/email-preview/email3-driver-en.html" target="_blank"><span class="audience">driver</span>EN · driver</a>
+    <a href="/try/email-preview/email3-fleet-cz.html" target="_blank"><span class="audience">fleet</span>CZ · fleet</a>
+    <a href="/try/email-preview/email3-driver-cz.html" target="_blank"><span class="audience">driver</span>CZ · driver</a>
+    <a href="/try/email-preview/email3-fleet-sk.html" target="_blank"><span class="audience">fleet</span>SK · fleet</a>
+    <a href="/try/email-preview/email3-driver-sk.html" target="_blank"><span class="audience">driver</span>SK · driver</a>
+    <a href="/try/email-preview/email3-fleet-de.html" target="_blank"><span class="audience">fleet</span>DE · fleet</a>
+    <a href="/try/email-preview/email3-driver-de.html" target="_blank"><span class="audience">driver</span>DE · driver</a>
+    <a href="/try/email-preview/email3-fleet-pl.html" target="_blank"><span class="audience">fleet</span>PL · fleet</a>
+    <a href="/try/email-preview/email3-driver-pl.html" target="_blank"><span class="audience">driver</span>PL · driver</a>
+    <a href="/try/email-preview/email3-fleet-gr.html" target="_blank"><span class="audience">fleet</span>GR · fleet</a>
+    <a href="/try/email-preview/email3-driver-gr.html" target="_blank"><span class="audience">driver</span>GR · driver</a>
+  </div>
 </div>
 
-<h2>CZ</h2>
-<div class="grid">
-  <a href="/try/email-preview/cz-fleet.html" target="_blank"><span class="audience">fleet</span>CZ · fleet</a>
-  <a href="/try/email-preview/cz-driver.html" target="_blank"><span class="audience">driver</span>CZ · driver</a>
-  <a href="/try/email-preview/cz-enforcement.html" target="_blank"><span class="audience">enforcement</span>CZ · enforcement</a>
+<!-- ═══ enforcement ═══ -->
+<div class="step">
+  <div class="step-head">
+    <span class="when manual">ručně</span>
+    <h2>Enforcement &mdash; mimo sekvenci</h2>
+  </div>
+  <p>
+    Kontrolní orgány si verzi TAGRA Control nestahují samy &mdash; odkaz jim posílá Ivan.
+    Jejich zkušební verze proto nezačíná odesláním formuláře, ale až jeho zprávou, a ten okamžik systém nezná.
+    Časovaný follow-up by dorazil někomu, kdo program ještě nemá &mdash; proto jim <strong>#2 ani #3 nechodí</strong>.
+    Dostanou jen uvítací e-mail (výše) a dál komunikuje Ivan osobně.
+  </p>
 </div>
 
-<h2>SK</h2>
-<div class="grid">
-  <a href="/try/email-preview/sk-fleet.html" target="_blank"><span class="audience">fleet</span>SK · fleet</a>
-  <a href="/try/email-preview/sk-driver.html" target="_blank"><span class="audience">driver</span>SK · driver</a>
-  <a href="/try/email-preview/sk-enforcement.html" target="_blank"><span class="audience">enforcement</span>SK · enforcement</a>
-</div>
-
-<h2>GR</h2>
-<div class="grid">
-  <a href="/try/email-preview/gr-fleet.html" target="_blank"><span class="audience">fleet</span>GR · fleet</a>
-  <a href="/try/email-preview/gr-driver.html" target="_blank"><span class="audience">driver</span>GR · driver</a>
-  <a href="/try/email-preview/gr-enforcement.html" target="_blank"><span class="audience">enforcement</span>GR · enforcement</a>
-</div>
 </body></html>
