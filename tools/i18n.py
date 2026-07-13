@@ -275,8 +275,10 @@ def cmd_todo(page, lang):
     src = json.load(open(ef, encoding='utf-8'))
     gl = load_dict(lang)
     todo, seen = [], set()
-    for s in src['segments']:
-        en = s['en']
+    pool = [s['en'] for s in src['segments']]
+    for blk in src.get('ld', []):        # ld+json schema patří taky do překladu
+        pool += blk
+    for en in pool:
         if en in gl or en in seen:
             continue
         seen.add(en)
