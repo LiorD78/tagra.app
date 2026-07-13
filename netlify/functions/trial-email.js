@@ -1,42 +1,57 @@
 /**
  * Netlify Function: trial-email
  *
- * Triggered by Netlify Forms submission webhook (form: "tagra-trial").
- * Sends a beautifully designed transactional email to the trial user via Resend.com.
+ * Spouští ji webhook Netlify Forms (formulář "tagra-trial").
+ * Přes Resend odešle uvítací e-mail a NAPLÁNUJE zbytek sekvence.
  *
- * Configuration:
- *   - Resend API key in env var RESEND_API_KEY
- *   - From address: sales@tagra.app (needs DNS verification on tagra.app)
+ * ── SEKVENCE ──────────────────────────────────────────────────────────
+ *   #1  hned      uvítací mail (odkaz ke stažení / potvrzení poptávky)
+ *   #2  +3 dny    quick start — jak naimportovat data a spustit výkaz
+ *   #3  +25 dní   "zkušební verze končí za 5 dní" (z 30denního trialu)
  *
- * Setup steps (manual, one-time):
- *   1. Sign up at https://resend.com (free tier 3,000 emails/month)
- *   2. Add domain tagra.app in Resend, copy DNS records to Webglobe DNS
- *   3. Wait for verification
- *   4. Create API key, paste into Netlify env vars as RESEND_API_KEY
- *   5. Configure Netlify form notification:
- *      Settings → Forms → "Outgoing webhook" → URL:
- *      https://tagra.app/.netlify/functions/trial-email
- *      Event: "Submission created"
- *      Form: "tagra-trial"
+ * ENFORCEMENT je z #2 a #3 VYLOUČEN. Kontrolní orgány si Control verzi
+ * nestahují samy — musí kontaktovat Ivana a ten jim pošle odkaz. Trial
+ * jim tedy nezačíná odesláním formuláře, ale až Ivanovým mailem, a ten
+ * okamžik tenhle systém nezná. Časovaný follow-up by dorazil někomu,
+ * kdo program ještě nemá.
  *
- * Template loading:
- *   Templates live in repo at /try/email-preview/{lang}-{audience}.html.
- *   We fetch them at runtime via HTTPS (same Netlify deploy) and substitute {NAME}.
+ * ── PLÁNOVÁNÍ ─────────────────────────────────────────────────────────
+ * Resend `scheduled_at` (ISO 8601, max 30 dní dopředu). Naplánované maily
+ * jdou zrušit přes DELETE /emails/{id}/cancel — proto se jejich ID logují.
  *
- * Fallback:
- *   If Resend fails or env not set, function logs error and returns 200 so Netlify
- *   doesn't retry endlessly. User still got Netlify Forms thank-you + admin notification.
+ * Selhání naplánování NIKDY neshodí uvítací mail: #1 se odesílá první
+ * a funkce vždy vrací 200, aby Netlify webhook neopakoval donekonečna.
+ *
+ * ── ŠABLONY ──────────────────────────────────────────────────────────
+ *   /try/email-preview/{lang}-{audience}.html            → #1
+ *   /try/email-preview/email2-{audience}-{lang}.html     → #2
+ *   /try/email-preview/email3-{audience}-{lang}.html     → #3
+ * Načítají se runtime přes HTTPS ze stejného deploye, {NAME} se dosadí.
+ * Předmět #2/#3 se bere z <title> šablony — jediný zdroj pravdy, žádný drift.
+ *
+ * ── KONFIGURACE ──────────────────────────────────────────────────────
+ *   RESEND_API_KEY   povinné
+ *   RESEND_FROM      volitelné (výchozí "TAGRA <sales@tagra.app>")
  */
 
-const RESEND_API = "https://api.resend.com/emails";
+const RESEND_API    = "https://api.resend.com/emails";
 const TEMPLATE_BASE = "https://tagra.app/try/email-preview";
 
-const LANG_TO_HTML = {
-  en: "en", de: "de", pl: "pl", cz: "cz", sk: "sk", gr: "gr",
-};
-const VALID_AUDIENCES = ["fleet", "driver", "enforcement"];
+const DAY_MS = 24 * 60 * 60 * 1000;
 
-// Subject lines per (lang, audience) — extracted from templates' <title>
+// Kdy odeslat navazující maily (dny od registrace)
+const FOLLOWUP_SCHEDULE = [
+  { mail: "email2", days: 3,  campaign: "trial-followup-2" },
+  { mail: "email3", days: 25, campaign: "trial-followup-3" },
+];
+
+// Publika, kterým sekvence běží. Enforcement úmyslně chybí — viz hlavička.
+const SEQUENCE_AUDIENCES = ["fleet", "driver"];
+
+const VALID_AUDIENCES = ["fleet", "driver", "enforcement"];
+const VALID_LANGS     = ["en", "de", "pl", "cz", "sk", "gr"];
+
+// Předměty uvítacího mailu (#1). U #2/#3 se čtou z <title> šablony.
 const SUBJECTS = {
   en: {
     fleet:       "Your TAGRA trial is ready — Download inside",
@@ -70,43 +85,77 @@ const SUBJECTS = {
   },
 };
 
-function logInfo(msg, extra) {
-  console.log(`[trial-email] ${msg}`, extra || "");
-}
+const logInfo  = (msg, extra) => console.log(`[trial-email] ${msg}`, extra || "");
+const logError = (msg, extra) => console.error(`[trial-email] ERROR: ${msg}`, extra || "");
 
-function logError(msg, extra) {
-  console.error(`[trial-email] ERROR: ${msg}`, extra || "");
-}
-
-/**
- * Extract first name for personalized greeting.
- * "John Smith" → "John", "Anna" → "Anna", "" → "there"
- */
+/** "John Smith" → "John"; prázdné → "there" */
 function firstName(fullName) {
   if (!fullName || typeof fullName !== "string") return "there";
   const trimmed = fullName.trim();
-  if (!trimmed) return "there";
-  return trimmed.split(/\s+/)[0];
+  return trimmed ? trimmed.split(/\s+/)[0] : "there";
+}
+
+/** Dekóduje entity, které se reálně vyskytují v <title>. */
+function decodeEntities(s) {
+  return s
+    .replace(/&amp;/g, "&")
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&mdash;/g, "—")
+    .replace(/&ndash;/g, "–")
+    .replace(/&nbsp;/g, " ")
+    .replace(/&euro;/g, "€");
+}
+
+/** Předmět = <title> šablony. Jediný zdroj pravdy. */
+function subjectFromTemplate(html, fallback) {
+  const m = html.match(/<title>([\s\S]*?)<\/title>/i);
+  return m ? decodeEntities(m[1].trim()) : fallback;
+}
+
+async function fetchTemplate(url) {
+  const r = await fetch(url);
+  if (!r.ok) throw new Error(`${r.status} ${url}`);
+  return r.text();
+}
+
+/**
+ * Odešle e-mail přes Resend. Když je zadáno `scheduledAt`, Resend ho
+ * podrží a odešle až v daný čas.
+ */
+async function sendViaResend(apiKey, payload) {
+  const resp = await fetch(RESEND_API, {
+    method: "POST",
+    headers: {
+      "Authorization": `Bearer ${apiKey}`,
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(payload),
+  });
+
+  if (!resp.ok) {
+    const body = await resp.text();
+    throw new Error(`Resend ${resp.status}: ${body}`);
+  }
+  return resp.json();
 }
 
 exports.handler = async (event) => {
-  // Only POST allowed
   if (event.httpMethod !== "POST") {
     return { statusCode: 405, body: "Method Not Allowed" };
   }
 
-  // Parse Netlify form submission webhook payload
   let payload;
   try {
     payload = JSON.parse(event.body || "{}");
-  } catch (e) {
+  } catch {
     logError("Invalid JSON in webhook body");
     return { statusCode: 200, body: "Ignored: invalid JSON" };
   }
 
-  // Netlify forms webhook payload structure:
-  //   { form_name: "tagra-trial", data: { name, email, audience, language, ... } }
-  const data = payload.data || payload.payload || payload || {};
+  const data     = payload.data || payload.payload || payload || {};
   const formName = payload.form_name || data.form_name || "(unknown)";
 
   if (formName !== "tagra-trial") {
@@ -114,7 +163,6 @@ exports.handler = async (event) => {
     return { statusCode: 200, body: "Ignored: not tagra-trial" };
   }
 
-  // Extract fields
   const email    = (data.email || "").trim();
   const name     = (data.name || "").trim();
   const audience = (data.audience || "fleet").toLowerCase();
@@ -125,81 +173,97 @@ exports.handler = async (event) => {
     return { statusCode: 200, body: "Ignored: no email" };
   }
 
-  // Validate audience + lang
-  const finalAudience = VALID_AUDIENCES.includes(audience) ? audience : "fleet";
-  const finalLang     = LANG_TO_HTML[language] ? language : "en";
-
-  // Env check
   const apiKey = process.env.RESEND_API_KEY;
   if (!apiKey) {
-    logError("RESEND_API_KEY not configured — skipping email send");
-    return { statusCode: 200, body: "Configured: no API key" };
+    logError("RESEND_API_KEY not configured — skipping send");
+    return { statusCode: 200, body: "Not configured: no API key" };
   }
 
-  // Fetch the HTML template for this lang+audience
-  const templateUrl = `${TEMPLATE_BASE}/${finalLang}-${finalAudience}.html`;
-  let templateHtml;
-  try {
-    const r = await fetch(templateUrl);
-    if (!r.ok) {
-      logError(`Template fetch failed: ${r.status} ${templateUrl}`);
-      return { statusCode: 200, body: "Template unavailable" };
-    }
-    templateHtml = await r.text();
-  } catch (e) {
-    logError(`Template fetch error: ${e.message}`);
-    return { statusCode: 200, body: "Template fetch error" };
-  }
-
-  // Substitute {NAME} placeholder with the user's first name
+  const aud      = VALID_AUDIENCES.includes(audience) ? audience : "fleet";
+  const lang     = VALID_LANGS.includes(language) ? language : "en";
   const greeting = firstName(name);
-  const finalHtml = templateHtml.replaceAll("{NAME}", greeting);
 
-  const subject = (SUBJECTS[finalLang] && SUBJECTS[finalLang][finalAudience])
-    || SUBJECTS.en[finalAudience];
-
-  // Send via Resend
   const fromAddr = process.env.RESEND_FROM || "TAGRA <sales@tagra.app>";
   const replyTo  = "sales@tagra.app";
 
+  const result = { welcome: null, scheduled: [], failed: [] };
+
+  // ── #1 UVÍTACÍ MAIL (hned) ──────────────────────────────────────────
   try {
-    const resp = await fetch(RESEND_API, {
-      method: "POST",
-      headers: {
-        "Authorization": `Bearer ${apiKey}`,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
+    const html    = await fetchTemplate(`${TEMPLATE_BASE}/${lang}-${aud}.html`);
+    const subject = (SUBJECTS[lang] && SUBJECTS[lang][aud]) || SUBJECTS.en[aud];
+
+    const sent = await sendViaResend(apiKey, {
+      from: fromAddr,
+      to: [email],
+      reply_to: replyTo,
+      subject,
+      html: html.replaceAll("{NAME}", greeting),
+      tags: [
+        { name: "campaign", value: "trial-signup" },
+        { name: "audience", value: aud },
+        { name: "language", value: lang },
+      ],
+    });
+
+    result.welcome = sent.id;
+    logInfo(`#1 sent to ${email} (lang=${lang}, audience=${aud}, id=${sent.id})`);
+  } catch (e) {
+    logError(`#1 failed for ${email}: ${e.message}`);
+    // Bez uvítacího mailu nemá smysl plánovat zbytek sekvence.
+    return { statusCode: 200, body: "Welcome email failed" };
+  }
+
+  // ── #2 a #3 (naplánované) ───────────────────────────────────────────
+  // Enforcement přeskakujeme: trial jim začíná až Ivanovým mailem s odkazem.
+  if (!SEQUENCE_AUDIENCES.includes(aud)) {
+    logInfo(`Sequence skipped for audience=${aud} (handled manually)`);
+    return {
+      statusCode: 200,
+      body: JSON.stringify({ sent: true, id: result.welcome, sequence: "skipped" }),
+    };
+  }
+
+  const now = Date.now();
+
+  for (const step of FOLLOWUP_SCHEDULE) {
+    const tplUrl      = `${TEMPLATE_BASE}/${step.mail}-${aud}-${lang}.html`;
+    const scheduledAt = new Date(now + step.days * DAY_MS).toISOString();
+
+    try {
+      const html    = await fetchTemplate(tplUrl);
+      const subject = subjectFromTemplate(html, SUBJECTS.en[aud]);
+
+      const sent = await sendViaResend(apiKey, {
         from: fromAddr,
         to: [email],
         reply_to: replyTo,
-        subject: subject,
-        html: finalHtml,
-        // Track engagement (opens, clicks) — Resend handles this if enabled in dashboard
+        subject,
+        html: html.replaceAll("{NAME}", greeting),
+        scheduled_at: scheduledAt,
         tags: [
-          { name: "campaign", value: "trial-signup" },
-          { name: "audience", value: finalAudience },
-          { name: "language", value: finalLang },
+          { name: "campaign", value: step.campaign },
+          { name: "audience", value: aud },
+          { name: "language", value: lang },
         ],
-      }),
-    });
+      });
 
-    if (!resp.ok) {
-      const errBody = await resp.text();
-      logError(`Resend API ${resp.status}: ${errBody}`);
-      return { statusCode: 200, body: `Send failed: ${resp.status}` };
+      result.scheduled.push({ mail: step.mail, at: scheduledAt, id: sent.id });
+      logInfo(`${step.mail} scheduled for ${email} at ${scheduledAt} (id=${sent.id})`);
+    } catch (e) {
+      // Jeden neúspěšný krok nesmí shodit další ani uvítací mail.
+      result.failed.push(step.mail);
+      logError(`${step.mail} scheduling failed for ${email}: ${e.message}`);
     }
-
-    const result = await resp.json();
-    logInfo(`Email sent to ${email} (lang=${finalLang}, audience=${finalAudience}, resendId=${result.id})`);
-
-    return {
-      statusCode: 200,
-      body: JSON.stringify({ sent: true, id: result.id }),
-    };
-
-  } catch (e) {
-    logError(`Resend fetch error: ${e.message}`);
-    return { statusCode: 200, body: "Send error" };
   }
+
+  return {
+    statusCode: 200,
+    body: JSON.stringify({
+      sent: true,
+      id: result.welcome,
+      scheduled: result.scheduled,
+      failed: result.failed,
+    }),
+  };
 };
