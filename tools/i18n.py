@@ -31,6 +31,7 @@ LD_KEYS = {'name', 'description', 'text', 'headline', 'alternateName',
 LANGS = {
     'de': {'code': 'de', 'label': 'DE'},
     'pl': {'code': 'pl', 'label': 'PL'},
+    'gr': {'code': 'el', 'label': 'EL'},
 }
 
 # které stránky mají lokalizovanou variantu (pro přepis odkazů v navigaci)
@@ -38,6 +39,7 @@ LANGS = {
 LOCALIZED = {
     'de': set(),
     'pl': set(),
+    'gr': set(),
 }
 
 
@@ -234,7 +236,7 @@ def cmd_apply(page, lang):
     for tag in doc.find_all('meta', property='og:url'):
         tag['content'] = url
     for tag in doc.find_all('meta', property='og:locale'):
-        tag['content'] = {'de': 'de_DE', 'pl': 'pl_PL'}[lang]
+        tag['content'] = {'de': 'de_DE', 'pl': 'pl_PL', 'gr': 'el_GR'}[lang]
 
     # hreflang
     for tag in doc.find_all('link', rel='alternate'):
