@@ -172,6 +172,15 @@ def build_nav(doc, page, lang):
         return href
 
     for a in doc.select('nav a[href], .site-footer a[href], .sticky-cta a[href]'):
+        # jazykový přepínač NElokalizovat — jeho odkazy cílí na jednotlivé jazyky
+        if a.find_parent(class_='nav-lang-menu') or (a.parent and 'nav-lang-menu' in (a.parent.get('class') or [])):
+            continue
+        a['href'] = localize(a['href'])
+
+    # tělo: lokalizuj VŠECHNY /try CTA (role-card btn-cta apod.), přepínač vynech
+    for a in doc.select('a[href^="/try"]'):
+        if a.find_parent(class_='nav-lang-menu'):
+            continue
         a['href'] = localize(a['href'])
 
     # jazykový přepínač: aktivní stav
@@ -228,8 +237,9 @@ def cmd_apply(page, lang):
     # lang atribut
     doc.html['lang'] = LANGS[lang]['code']
 
-    # canonical + og:url
-    url = f"https://tagra.app/{page.strip('/')}/{lang}/"
+    # canonical + og:url  (page=="" → homepage, avoid double slash)
+    _seg = page.strip('/')
+    url = f"https://tagra.app/{_seg + '/' if _seg else ''}{lang}/"
     can = doc.find('link', rel='canonical')
     if can:
         can['href'] = url
@@ -243,7 +253,7 @@ def cmd_apply(page, lang):
         if tag.get('hreflang'):
             tag.decompose()
     head = doc.head
-    base = f"https://tagra.app/{page.strip('/')}/"
+    base = f"https://tagra.app/{_seg + '/' if _seg else ''}"
     alts = [('en', base), ('x-default', base)]
     for l in LANGS:
         if page.strip('/') in LOCALIZED[l] or l == lang:
@@ -341,7 +351,8 @@ def cmd_hreflang(page):
     for t in doc.find_all('link', rel='alternate'):
         if t.get('hreflang'):
             t.decompose()
-    base = f"https://tagra.app/{page.strip('/')}/"
+    _seg = page.strip('/')
+    base = f"https://tagra.app/{_seg + '/' if _seg else ''}"
     alts = [('en', base)]
     for l in LANGS:
         if os.path.exists(os.path.join(ROOT, page, l, 'index.html')):
