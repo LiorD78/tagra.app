@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <!-- TMX-ANALYTICS START -->
+  <meta name="msvalidate.01" content="7F7894081BE7FBB245FF03AF8810B22F">
+  <!-- Consent Mode v2 defaults (deny) + gtag stub — runs BEFORE gtag.js -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent','default',{
+      ad_storage:'denied', ad_user_data:'denied', ad_personalization:'denied',
+      analytics_storage:'denied', functionality_storage:'denied',
+      personalization_storage:'denied', security_storage:'granted',
+      wait_for_update:500
+    });
+    gtag('set','ads_data_redaction',true);
+    gtag('set','url_passthrough',false);
+  </script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-92253QFBNX"></script>
+  <script>
+    gtag('js', new Date());
+    gtag('config','G-92253QFBNX');
+  </script>
+  <!-- Cookie consent banner (self-hosted) + Microsoft Clarity gating -->
+  <style>
+    .tmx-cc{position:fixed;left:0;right:0;bottom:0;z-index:2147483000;background:linear-gradient(120deg,var(--blue-dark,#0b2c4a),var(--blue-mid,#134a8e) 62%,var(--blue-light,#1f5fa6));color:#fff;
+      font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+      padding:16px 20px;box-shadow:0 -4px 24px rgba(0,0,0,.18);display:flex;flex-wrap:wrap;
+      align-items:center;gap:14px;justify-content:center}
+    .tmx-cc__txt{flex:1 1 360px;max-width:760px}
+    .tmx-cc__txt a{color:#9ed0f5;text-decoration:underline}
+    .tmx-cc__btns{display:flex;gap:10px;flex:0 0 auto}
+    .tmx-cc__b{appearance:none;border:0;cursor:pointer;font:inherit;font-weight:600;
+      padding:10px 22px;border-radius:99px;transition:filter .15s;color:#fff}
+    .tmx-cc__b:hover{filter:brightness(1.08)}
+    .tmx-cc__b--no{background:rgba(255,255,255,.16)}
+    .tmx-cc__b--yes{background:var(--green-cta,#5C820F)}
+    @media(max-width:640px){.tmx-cc{padding:14px}.tmx-cc__btns{width:100%}.tmx-cc__b{flex:1}}
+  </style>
+  <script>
+  (function(){
+    var KEY='tmx-consent-v1', CL='wt18054m0r';
+    function lc(){var l=(document.documentElement.getAttribute('lang')||'en').toLowerCase().split('-')[0];
+      var m={cz:'cs',cs:'cs',sk:'sk',de:'de',pl:'pl',gr:'el',el:'el',en:'en'};return m[l]||'en';}
+    var T={
+      en:{t:'We use analytics cookies (Google Analytics, Microsoft Clarity) to understand site usage. They load only with your consent.',a:'Accept',r:'Reject',p:'Privacy &amp; cookies'},
+      cs:{t:'Používáme analytické cookies (Google Analytics, Microsoft Clarity) k pochopení používání webu. Načtou se jen s vaším souhlasem.',a:'Přijmout',r:'Odmítnout',p:'Soukromí a cookies'},
+      sk:{t:'Používame analytické cookies (Google Analytics, Microsoft Clarity) na pochopenie používania webu. Načítajú sa len s vaším súhlasom.',a:'Prijať',r:'Odmietnuť',p:'Súkromie a cookies'},
+      de:{t:'Wir verwenden Analyse-Cookies (Google Analytics, Microsoft Clarity), um die Nutzung der Website zu verstehen. Sie werden nur mit Ihrer Einwilligung geladen.',a:'Akzeptieren',r:'Ablehnen',p:'Datenschutz &amp; Cookies'},
+      pl:{t:'Używamy plików cookie do analityki (Google Analytics, Microsoft Clarity), aby zrozumieć korzystanie z witryny. Ładują się tylko za Twoją zgodą.',a:'Akceptuj',r:'Odrzuć',p:'Prywatność i cookies'},
+      el:{t:'Χρησιμοποιούμε cookies ανάλυσης (Google Analytics, Microsoft Clarity) για να κατανοήσουμε τη χρήση. Φορτώνονται μόνο με τη συγκατάθεσή σας.',a:'Αποδοχή',r:'Απόρριψη',p:'Απόρρητο &amp; cookies'}
+    };
+    function loadClarity(){if(!CL||window.__tmxCl)return;window.__tmxCl=1;
+      (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+       t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+       y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script",CL);}
+    function grant(){try{localStorage.setItem(KEY,'granted')}catch(e){}
+      gtag('consent','update',{analytics_storage:'granted'});loadClarity();}
+    function deny(){try{localStorage.setItem(KEY,'denied')}catch(e){}}
+    var saved=null;try{saved=localStorage.getItem(KEY)}catch(e){}
+    if(saved==='granted'){grant();return;} if(saved==='denied'){return;}
+    function show(){var tx=T[lc()]||T.en;
+      var b=document.createElement('div');b.className='tmx-cc';b.setAttribute('role','dialog');b.setAttribute('aria-live','polite');
+      b.innerHTML='<div class="tmx-cc__txt">'+tx.t+' <a href="/privacy/">'+tx.p+'</a></div>'+
+        '<div class="tmx-cc__btns"><button type="button" class="tmx-cc__b tmx-cc__b--no">'+tx.r+'</button>'+
+        '<button type="button" class="tmx-cc__b tmx-cc__b--yes">'+tx.a+'</button></div>';
+      document.body.appendChild(b);
+      b.querySelector('.tmx-cc__b--yes').addEventListener('click',function(){grant();b.remove();});
+      b.querySelector('.tmx-cc__b--no').addEventListener('click',function(){deny();b.remove();});}
+    if(document.body)show();else document.addEventListener('DOMContentLoaded',show);
+  })();
+  </script>
+  <!-- TMX-ANALYTICS END -->
+  <meta charset="utf-8">
+  <title>Tachograph für Transporter 2,5–3,5 t: Vorschriften, Ausnahmen &amp; Bußgelder 2026 | TAGRA</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Muss Ihr 2,5–3,5-t-Transporter seit dem 1. Juli 2026 einen Fahrtenschreiber nutzen? Erfahren Sie, wer ausgenommen ist (Eigenverkehr, Handwerker), die Vorschriften, Downloads und drohende Bußgelder.">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Tachograph für Transporter 2,5–3,5 t: Vorschriften, Ausnahmen &amp; Bußgelder 2026 | TAGRA">
+  <meta property="og:description" content="Muss Ihr 2,5–3,5-t-Transporter seit dem 1. Juli 2026 einen Fahrtenschreiber nutzen? Wer ausgenommen ist (Eigenverkehr, Handwerker), die G2v2-Vorschriften, Download-Pflichten und drohende Bußgelder.">
+  <meta property="og:image" content="https://tagra.app/assets/img/hero-poster.jpg">
+  <meta property="og:url" content="https://tagra.app/articles/tachographs-for-vans-new-obligation-july-2026/de/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Tachograph für Transporter 2,5–3,5 t: Vorschriften, Ausnahmen &amp; Bußgelder 2026 | TAGRA">
+  <meta name="twitter:description" content="Seit dem 1. Juli 2026 benötigen 2,5–3,5-t-Transporter im internationalen Verkehr oder bei Kabotage einen G2v2-Fahrtenschreiber. Wer ausgenommen ist, die Vorschriften und drohenden Bußgelder.">
+  <meta name="twitter:image" content="https://tagra.app/assets/img/hero-poster.jpg">
+  <link rel="canonical" href="https://tagra.app/articles/tachographs-for-vans-new-obligation-july-2026/de/">
+  <link rel="stylesheet" href="/assets/css/tokens.css?v=20260514j">
+  <link rel="stylesheet" href="/assets/css/base.css?v=20260514j">
+  <link rel="stylesheet" href="/assets/css/components.css?v=20260514j">
+  <link rel="stylesheet" href="/assets/css/nav.css?v=20260514j">
+  <link rel="stylesheet" href="/assets/css/footer.css?v=20260513d">
+  <link rel="alternate" hreflang="en" href="https://tagra.app/articles/tachographs-for-vans-new-obligation-july-2026/"><link rel="alternate" hreflang="de" href="https://tagra.app/articles/tachographs-for-vans-new-obligation-july-2026/de/"><link rel="alternate" hreflang="pl" href="https://tagra.app/articles/tachographs-for-vans-new-obligation-july-2026/pl/"><link rel="alternate" hreflang="el" href="https://tagra.app/articles/tachographs-for-vans-new-obligation-july-2026/gr/"><link rel="alternate" hreflang="x-default" href="https://tagra.app/articles/tachographs-for-vans-new-obligation-july-2026/">
+  <style>
+    .art-hero { background: var(--bg-apple-solid); padding: 32px 0 10px; border-bottom: 1px solid var(--border); }
+    .art-wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
+    .breadcrumbs { color: var(--text2); font-size: 13px; margin-bottom: 6px; }
+    .breadcrumbs a { color: var(--blue-mid); text-decoration: none; }
+    .breadcrumbs .sep { opacity: 0.45; padding: 0 6px; }
+    .art-eyebrow { display: inline-block; font-weight: 700; color: var(--green-brand); font-size: 12px; letter-spacing: .12em; text-transform: uppercase; margin-bottom: 12px; }
+    .art-title{font-size:38px;line-height:1.15;font-weight:800;margin-bottom:16px;letter-spacing:-.02em;padding-bottom:0.08em;color:var(--blue-dark);}
+    .art-title .grad{background:linear-gradient(90deg,var(--blue-dark) 0%,var(--blue-light) 50%,var(--blue-bright) 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;}
+    @media(max-width:700px){.art-title{font-size:26px;}}
+    .byline { color: var(--text2); font-size: 14px; margin-top: 4px; }
+    .hero-lede { font-size: 18px; line-height: 1.6; color: var(--text); max-width: 920px; margin-top: 16px; }
+    .band { padding: 60px 0; }
+    .band--gray { background: var(--bg-gray); }
+    .band--blue { background: var(--bg-apple-solid); }
+    .container { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
+    .h2-grad { background: var(--heading-gradient); -webkit-background-clip: text; background-clip: text; color: transparent; -webkit-text-fill-color: transparent; display: inline-block; font-weight: 800; text-transform: uppercase; font-size: 36px; line-height: 1.06; padding: 0.12em 0.15em 0.08em 0; margin: 0 0 12px; }
+    @media(max-width:700px){.h2-grad{font-size:28px;}}
+    .eyebrow { font-size: 14px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--green-brand); margin-bottom: 8px; display: block; }
+    .bento--hero { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; max-width: 1080px; margin: 32px 0; }
+    @media (max-width: 900px) { .bento--hero { grid-template-columns: 1fr; } }
+    .hero-card { background: #fff; border: 1px solid var(--border); border-radius: var(--radius-lg, 20px); padding: 24px; }
+    .hero-card--blue { background: rgba(31,95,166,0.06); }
+    .hero-card .eyebrow { color: var(--blue-mid); margin-bottom: 8px; }
+    .hero-card .big { font-size: 44px; font-weight: 800; color: var(--blue-dark); margin-bottom: 8px; letter-spacing: -0.02em; line-height: 1; }
+    .hero-card p { margin: 0; color: var(--text2); font-size: 15px; line-height: 1.5; }
+    .twocol { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 32px; }
+    @media (max-width: 900px) { .twocol { grid-template-columns: 1fr; } }
+    .card { background: #fff; border: 1px solid var(--border); border-radius: var(--radius-lg, 20px); padding: 28px; }
+    .card--blue { background: rgba(31,95,166,0.06); }
+    .card--green { background: rgba(110,155,18,0.07); }
+    .card h3 { margin: 6px 0 12px; font-size: 22px; color: var(--blue-dark); font-weight: 800; }
+    .card ul { margin: 8px 0 0 18px; color: var(--text); line-height: 1.65; }
+    .card ul li { margin: 6px 0; }
+    .info-card { margin-top: 24px; border-left: 4px solid var(--blue-bright); background: #fff; border-radius: var(--radius-lg, 20px); padding: 24px; box-shadow: 0 1px 0 var(--border); }
+    .info-card .badge { display: inline-block; font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: .08em; color: var(--blue-mid); background: rgba(31,95,166,0.09); padding: 5px 10px; border-radius: 999px; margin-bottom: 10px; }
+    .info-card h3 { margin: 4px 0 8px; font-size: 22px; color: var(--blue-dark); }
+    .info-card p { color: var(--text); line-height: 1.6; }
+    .doc-bento { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 24px; }
+    @media (max-width: 900px) { .doc-bento { grid-template-columns: 1fr; } }
+    .doc-card { background: #fff; border: 1px solid var(--border); border-radius: var(--radius-lg, 20px); padding: 24px; }
+    .doc-card h3 { font-size: 20px; margin: 4px 0 10px; color: var(--blue-dark); font-weight: 800; }
+    .doc-card .num { font-weight: 800; color: var(--blue-mid); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; }
+    .doc-card p { color: var(--text2); line-height: 1.6; }
+    .prep-bento { display: grid; grid-template-columns: repeat(6, 1fr); gap: 16px; margin-top: 24px; }
+    .prep-bento .s4 { grid-column: span 2; }
+    .prep-bento .s6 { grid-column: span 3; }
+    @media (max-width: 1080px) { .prep-bento { grid-template-columns: 1fr 1fr; } .prep-bento .s4, .prep-bento .s6 { grid-column: span 1; } }
+    @media (max-width: 700px) { .prep-bento { grid-template-columns: 1fr; } }
+    .prep-card { background: #fff; border: 1px solid var(--border); border-radius: var(--radius-lg, 20px); padding: 24px; }
+    .prep-card--blue { background: rgba(31,95,166,0.06); }
+    .prep-card--green { background: rgba(110,155,18,0.08); }
+    .prep-card .k { font-weight: 800; color: var(--blue-mid); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; }
+    .prep-card h3 { margin: 6px 0 10px; font-size: 22px; color: var(--blue-dark); font-weight: 800; }
+    .prep-card p { color: var(--text2); line-height: 1.6; }
+    .steps { display: grid; grid-template-columns: 1fr; gap: 14px; margin-top: 24px; }
+    .step { background: #fff; border: 1px solid var(--border); border-radius: var(--radius-lg, 20px); padding: 24px; }
+    .step .snum { font-weight: 800; color: var(--blue-mid); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; }
+    .step h3 { margin: 6px 0 8px; font-size: 22px; color: var(--blue-dark); font-weight: 800; }
+    .step p { color: var(--text2); line-height: 1.6; }
+    .step--urgent { border-color: var(--blue-mid); }
+    .snum--urgent { color: var(--warn); }
+    .art-wrap, .container { --warn: #c96a00; }
+    .warning-box { margin-top: 24px; border: 1px solid rgba(220,120,0,0.25); background: linear-gradient(180deg, rgba(255,190,120,0.14), rgba(255,190,120,0.06)); border-left: 4px solid var(--warn); border-radius: var(--radius-lg, 20px); padding: 24px; }
+    .warning-box--urgent { margin-top: 0; }
+    .warning-box .badge { display: inline-block; font-weight: 800; color: var(--warn); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; background: rgba(255,160,80,0.2); padding: 5px 10px; border-radius: 999px; margin-bottom: 8px; }
+    .warning-box__title { margin: 4px 0 8px; font-size: 22px; color: var(--blue-dark); font-weight: 800; line-height: 1.3; }
+    .warning-box p { color: var(--text); line-height: 1.6; }
+    .cta-row { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 16px; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 44px; padding: 0 18px; border-radius: 999px; text-decoration: none; font-weight: 700; font-size: 15px; }
+    .btn--primary { background: var(--green-cta); color: #fff; border: 1.5px solid var(--green-cta); }
+    .btn--primary:hover { background: var(--green-brand); border-color: var(--green-brand); }
+    .btn--outline { background: transparent; color: var(--blue-mid); border: 1.5px solid rgba(19,74,142,0.4); }
+    .btn--outline:hover { background: var(--bg-apple-solid); }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 32px; }
+    @media (max-width: 900px) { .contact-grid { grid-template-columns: 1fr; } }
+    .callout--green { border: 1px solid rgba(110,155,18,0.3); background: linear-gradient(180deg, rgba(110,155,18,0.08), rgba(110,155,18,0.03)); border-radius: var(--radius-lg, 20px); padding: 28px; }
+    .callout--green h3 { font-size: 24px; color: var(--green-cta); margin: 4px 0 12px; font-weight: 800; }
+    .callout--green ul { margin: 12px 0 12px 18px; color: var(--text); line-height: 1.7; }
+    .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 16px; }
+    @media (max-width: 900px) { .related-grid { grid-template-columns: 1fr; } }
+    .rel-card { background: #fff; border: 1px solid var(--border); border-radius: var(--radius-lg, 20px); padding: 24px; transition: border-color .15s, box-shadow .15s; }
+    .rel-card:hover { border-color: var(--blue-mid); box-shadow: 0 8px 22px rgba(0,0,0,0.06); }
+    .rel-card .rel-eyebrow { font-size: 11px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: var(--blue-mid); margin-bottom: 8px; }
+    .rel-card a { color: var(--blue-dark); text-decoration: none; font-weight: 700; font-size: 17px; line-height: 1.35; display: block; }
+    .rel-card a:hover { color: var(--blue-mid); }
+    .rel-card p { margin-top: 8px; color: var(--text2); font-size: 14px; line-height: 1.5; }
+    .rel-featured { background: linear-gradient(135deg, var(--blue-dark), var(--blue-mid)); color: #fff; border-radius: var(--radius-lg, 20px); padding: 32px; margin-bottom: 16px; }
+    .rel-featured .rel-eyebrow { color: rgba(255,255,255,0.7); font-size: 12px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; margin-bottom: 12px; }
+    .rel-featured h3 { margin: 0 0 16px; font-size: 24px; color: #fff; font-weight: 800; line-height: 1.25; }
+    .rel-featured a { color: #fff; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.4); padding-bottom: 2px; font-weight: 600; }
+    .rel-featured a:hover { border-bottom-color: #fff; }
+    .faq { max-width: 980px; margin: 32px auto 0; }
+    .faq details { border-bottom: 1px solid var(--border); padding: 16px 0; }
+    .faq summary { list-style: none; cursor: pointer; position: relative; padding-right: 32px; font-weight: 700; color: var(--blue-dark); font-size: 17px; line-height: 1.4; }
+    .faq summary::-webkit-details-marker { display: none; }
+    .faq summary::after { content: '+'; position: absolute; right: 0; top: 0; color: var(--blue-mid); font-weight: 400; font-size: 22px; line-height: 1; }
+    .faq details[open] summary::after { content: '–'; }
+    .faq-a { padding: 12px 0 4px; color: var(--text); line-height: 1.65; }
+    .author-block { background: #fff; border: 1px solid var(--border); border-radius: var(--radius-lg, 20px); padding: 28px; margin-top: 16px; }
+    .author-block p { margin: 6px 0; color: var(--text); line-height: 1.7; }
+  </style></head>
+<body>
+
+<nav class="site-nav" role="navigation" aria-label="Hauptnavigation">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo" aria-label="TAGRA – Startseite"><img src="/assets/img/logo-light.svg?v=20260513zh" alt="TAGRA" width="140" height="32" style="display:block;height:32px;width:auto;"></a>
+    <ul class="nav-links">
+            <li><a href="/fleet/de/">Für Unternehmen</a></li>
+            <li><a href="/driver/">Für Fahrer</a></li>
+            <li><a href="/enforcement/de/">Kontrollbehörden</a></li>
+            <li><a href="/articles/" aria-current="page">Artikel</a></li><li><a href="/manuals/">Anleitungen</a></li>
+            <li><a href="/faq/">FAQ</a></li>
+            <li><a href="/contact/de/">Kontakt</a></li>
+            <li class="nav-cta-li"><a class="nav-cta" href="/try/de/?audience=fleet">30 Tage kostenlos testen</a></li>
+          </ul>
+    <details class="nav-lang">
+      <summary aria-label="Language: DE">DE</summary>
+      <div class="nav-lang-menu" role="menu">
+        <a href="/articles/tachographs-for-vans-new-obligation-july-2026/">English</a>
+        <a href="/articles/tachographs-for-vans-new-obligation-july-2026/de/" class="active" aria-current="page">Deutsch</a>
+        <a href="/articles/tachographs-for-vans-new-obligation-july-2026/pl/">Polski</a>
+        <a href="/articles/tachographs-for-vans-new-obligation-july-2026/gr/" hreflang="el">Ελληνικά</a>
+        <a href="https://www.tdt.cz/" hreflang="cs" target="_blank" rel="noopener">Čeština</a>
+        <a href="https://www.tdt.sk/" hreflang="sk" target="_blank" rel="noopener">Slovenčina</a>
+      </div>
+    </details>
+    <a class="nav-cta-mobile" href="/try/de/?audience=fleet">Kostenlos testen</a>
+    <button class="nav-mobile-toggle" aria-label="Menü umschalten" aria-expanded="false" id="nav-toggle">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<header class="art-hero">
+  <div class="art-wrap">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <a href="/">TAGRA</a> <span class="sep">›</span> <a href="/articles/">Artikel</a> <span class="sep">›</span> Tachographen für Transporter
+    </nav>
+    <div class="art-eyebrow">Bereits in Kraft · Pflicht seit 1. Juli 2026</div>
+    <h1 class="art-title"><span class="grad">Fahrtenschreiberpflicht für Transporter 2,5–3,5 t gilt jetzt — der schnellste Weg zur Compliance</span></h1>
+    <div class="byline">Truck Data Technology · Aktualisiert im August 2026 · 12 Min. Lesezeit</div>
+    <p class="hero-lede">
+      <strong>Die Pflicht gilt bereits.</strong> Seit dem <strong>1. Juli 2026</strong> müssen Transporter von <strong>2,5–3,5 t</strong>, die im <strong>internationalen Güterverkehr oder bei Kabotage</strong> in der EU eingesetzt werden, einen <strong>intelligenten Fahrtenschreiber der zweiten Generation (G2v2)</strong> gemäß Verordnung (EG) Nr. 561/2006 in der durch Verordnung (EU) 2020/1054 geänderten Fassung nutzen. Die Frist ist bereits abgelaufen — jeder betroffene Transporter ohne funktionierenden Fahrtenschreiber ist bei jeder Straßenkontrolle dem Risiko einer Sanktion wegen &bdquo;besonders schwerwiegendem Verstoß&ldquo; ausgesetzt. Im Folgenden finden Sie den schnellsten Weg zur Compliance, wer ausgenommen ist und wie Sie Ihre Daten korrekt verwalten (inklusive Hinweisen zum Verkehr zwischen dem Vereinigten Königreich und der EU nach dem Brexit).
+    </p>
+
+    <div class="bento--hero">
+      <div class="hero-card">
+        <div class="eyebrow">In Kraft seit</div>
+        <div class="big">1. Juli 2026</div>
+        <p>Die Fahrtenschreiberpflicht für Transporter von 2,5–3,5 t im internationalen Verkehr und bei Kabotage ist jetzt in Kraft und wird durchgesetzt.</p>
+      </div>
+      <div class="hero-card hero-card--blue">
+        <div class="eyebrow">Ab Gesamtgewicht</div>
+        <div class="big">2,5 t</div>
+        <p>Gilt für Fahrzeuge oder Fahrzeugkombinationen mit einem zulässigen Gesamtgewicht von 2,5–3,5 t, sofern die EU-Voraussetzungen erfüllt sind.</p>
+      </div>
+      <div class="hero-card">
+        <div class="eyebrow">Fahrtenschreibertyp</div>
+        <div class="big">G2v2</div>
+        <p>Intelligenter Fahrtenschreiber Version 2, vorgeschrieben durch die Durchführungsverordnung (EU) 2021/1228 der Kommission.</p>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="band">
+  <div class="container">
+    <aside class="warning-box warning-box--urgent" aria-label="Dringlicher Compliance-Hinweis">
+      <div class="badge">Bereits in Kraft</div>
+      <p class="warning-box__title">Die Frist ist abgelaufen &mdash; handeln Sie jetzt, um Bußgelder zu vermeiden</p>
+      <p>Seit dem <strong>1. Juli 2026</strong> ist jeder 2,5&ndash;3,5-t-Transporter im internationalen Verkehr oder bei Kabotage in der EU ohne funktionierenden <strong>G2v2-Fahrtenschreiber</strong> bereits einem Risiko ausgesetzt. Ein fehlender Fahrtenschreiber, Fahren ohne Karte oder das Versäumnis, Daten herunterzuladen, gelten gemäß Richtlinie 2006/22/EG als <strong>besonders schwerwiegende Verstöße</strong> und können pro Verstoß mehrere tausend Euro kosten. Zwei Schritte im untenstehenden Plan hängen von Dritten ab und benötigen <strong>mehrere Wochen Vorlauf</strong> &mdash; beginnen Sie noch heute damit.</p>
+      <div class="cta-row">
+        <a class="btn btn--primary" href="/try/de/?audience=fleet">Mit TAGRA compliant werden &mdash; 30 Tage kostenlos</a>
+        <a class="btn btn--outline" href="#action-plan">Zum Maßnahmenplan springen &rarr;</a>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<section class="band band--blue">
+  <div class="container">
+    <div class="eyebrow">Schnelltest · Basierend auf ELA- &amp; EUR-Lex-Leitlinien</div>
+    <h2 class="h2-grad">Brauche ich einen Fahrtenschreiber?<br>Finden Sie es in einer Minute heraus</h2>
+    <p style="max-width:760px; color:var(--text2); font-size:17px; line-height:1.6; margin-top:8px;">
+      Dieser vierstufige Test basiert auf der Logik der Verordnung (EG) Nr. 561/2006 und der Übersicht der Europäischen Arbeitsbehörde <em>„Tachographs in light commercial vehicles from 2026“</em> (siehe <a href="https://www.ela.europa.eu/assets/lcv2026/index.html" target="_blank" rel="noopener" style="color:var(--blue-mid);">vollständiger ELA-Leitfaden</a>). Er dient nur zur Orientierung — bewerten Sie jeden Einzelfall individuell und konsultieren Sie die nationalen Vorschriften Ihres Einsatzlandes.
+    </p>
+    <div id="vansQuiz" class="vq-root" role="region" aria-live="polite" aria-label="Entscheidungshilfe zur Fahrtenschreiberpflicht"></div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="container">
+    <div class="eyebrow">Was jetzt zu tun ist</div>
+    <h2 class="h2-grad" id="action-plan">Maßnahmenplan zur Compliance: fünf Schritte</h2>
+    <p style="max-width:760px; color:var(--text); line-height:1.65; margin-top:8px;">
+      Geordnet nach Dringlichkeit, nicht nach Logik. <strong>Die Schritte 2 und 3 hängen von Dritten ab</strong> &mdash; nationalen Kartenausgabestellen und zugelassenen Werkstätten &mdash; und können Wochen dauern. Beginnen Sie daher beide am selben Tag.
+    </p>
+    <div class="steps">
+      <div class="step">
+        <div class="snum">Schritt 1 &middot; Geltungsbereich</div>
+        <h3>Prüfen, welche Transporter betroffen sind</h3>
+        <p>Prüfen Sie Zulassungsdokumente, zulässiges Gesamtgewicht und die tatsächliche Nutzung. Die Pflicht betrifft Transporter von <strong>2,5&ndash;3,5 t</strong>, die im internationalen Güterverkehr oder bei Kabotage eingesetzt werden &mdash; bei einem Anhänger zählt die <strong>Kombinationsmasse</strong>. Schließen Sie echte Eigenverkehrs- oder reine Inlandsfälle erst aus, nachdem Sie die untenstehenden Ausnahmen geprüft haben.</p>
+      </div>
+      <div class="step step--urgent">
+        <div class="snum snum--urgent">Schritt 2 &middot; Heute erledigen</div>
+        <h3>Fahrer- und Unternehmenskarte beantragen</h3>
+        <p>Die Ausstellung kann <strong>Wochen</strong> dauern. Jede Person, die einen betroffenen Transporter fahren darf, benötigt eine gültige <strong>Fahrerkarte</strong> der nationalen Ausgabestelle; der Unternehmer benötigt eine <strong>Unternehmenskarte</strong>, um Downloads zu autorisieren, die Daten zu sichern und Fahrzeuge dem Unternehmen zuzuordnen. Die Unternehmenskarte wird auch benötigt, bevor eine Werkstatt den Fahrtenschreiber auf Ihr Unternehmen sperren kann &mdash; beantragen Sie beide am selben Tag und behalten Sie die Ablaufdaten im Blick.</p>
+      </div>
+      <div class="step step--urgent">
+        <div class="snum snum--urgent">Schritt 3 &middot; Heute erledigen</div>
+        <h3>Werkstatttermin für G2v2 buchen</h3>
+        <p>Sie benötigen einen <strong>intelligenten Fahrtenschreiber Version 2</strong> gemäß Durchführungsverordnung (EU) 2021/1228 der Kommission &mdash; G1- und G2v1-Geräte reichen nicht aus. Fahrtenschreiber können <strong>nicht selbst eingebaut werden</strong>: Einbau, Aktivierung, Plombierung und Kalibrierung müssen durch eine <strong>zugelassene Fahrtenschreiberwerkstatt</strong> erfolgen (Durchführungsverordnung (EU) 2016/799 der Kommission, Artikel 22). Die Werkstattkapazität ist der eigentliche Engpass, reservieren Sie daher einen Termin parallel zu Ihren Kartenanträgen.</p>
+      </div>
+      <div class="step">
+        <div class="snum">Schritt 4 &middot; Daten</div>
+        <h3>Downloads, Auswertung und Archivierung einrichten</h3>
+        <p>Laden Sie <strong>Fahrerkarten mindestens alle 28 Tage</strong> und <strong>Fahrzeugeinheiten mindestens alle 90 Tage</strong> herunter. Sie benötigen ein Fahrerkarten-Lesegerät und einen Fahrzeug-Downloadschlüssel (oder Fernauslesung, sofern unterstützt) sowie eine verantwortliche Person für jede Aufgabe. Nutzen Sie <a href="/fleet/de/" style="color:var(--green-cta); font-weight:600;">TAGRA for Fleet</a> oder unseren Managed Service, um Verstöße zu prüfen, Berichte zu erstellen und Daten mindestens ein Jahr &mdash; je nach nationalen Vorschriften oft 2&ndash;3 Jahre &mdash; zu <strong>archivieren</strong>.</p>
+      </div>
+      <div class="step">
+        <div class="snum">Schritt 5 &middot; Fahrer</div>
+        <h3>Fahrer auf Straßenkontrollen vorbereiten</h3>
+        <p>Weisen Sie jeden Fahrer vor dem nächsten grenzüberschreitenden Einsatz ein: Karteneinlegen, <strong>manuelle Einträge</strong> für Zeiten außerhalb des Fahrzeugs sowie Länder-<strong>Ein-/Austragungen</strong>. Schulen Sie Disponenten, jeden grenzüberschreitenden Transportereinsatz zu kennzeichnen, damit keine betroffene Fahrt ohne gültige Karte und funktionierendes Gerät startet.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="container">
+    <div class="eyebrow">Geltungsbereich</div>
+    <h2 class="h2-grad">Wer betroffen ist — und wer nicht</h2>
+    <div class="twocol">
+      <div class="card">
+        <h3>Betroffen von den neuen Vorschriften</h3>
+        <ul>
+          <li>Unternehmen im <strong>grenzüberschreitenden Güterverkehr</strong> innerhalb der EU, des EWR und der Schweiz, die Transporter mit einem zulässigen Gesamtgewicht von <strong>2,5–3,5 t</strong> einsetzen.</li>
+          <li>Unternehmen, die mit solchen Transportern <strong>Kabotage</strong> in einem anderen Mitgliedstaat als dem Sitzstaat durchführen.</li>
+          <li>Fahrzeuge, bei denen die <strong>Kombinationsmasse (Fahrzeug + Anhänger)</strong> das Gesamtgewicht im Sinne der einschlägigen Definitionen auf 2,5 t oder mehr bringt.</li>
+          <li>Unternehmen, die grenzüberschreitend Güter <strong>gegen Entgelt</strong> befördern, oder Eigenverkehr, bei dem der Fahrer hauptberuflich als Fahrer tätig ist.</li>
+          <li>Für Unternehmen aus dem Vereinigten Königreich, die nach dem Brexit in die EU fahren, gelten die EU-Vorschriften auf dem EU-Streckenabschnitt; je nach Zulassung gelten AETR-Vorschriften auf grenzüberschreitenden Abschnitten in die Schweiz/den EWR.</li>
+        </ul>
+      </div>
+      <div class="card card--blue">
+        <h3>NICHT betroffen</h3>
+        <ul>
+          <li>Rein <strong>innerstaatliche Fahrten</strong> in einem Land (kein grenzüberschreitender Abschnitt, keine Kabotage), vorbehaltlich nationaler Vorschriften.</li>
+          <li><strong>Private, nicht gewerbliche</strong> Nutzung ohne Bezug zu einer wirtschaftlichen Tätigkeit.</li>
+          <li><strong>Eigenverkehr</strong>, bei dem das Fahren nicht die Haupttätigkeit des Fahrers ist, im Rahmen der Ausnahme nach Artikel 3(h) der Verordnung 561/2006.</li>
+          <li>Fahrzeuge mit einem zulässigen Gesamtgewicht <strong>≤ 2,5 t</strong> sowie Kombinationen, die unterhalb der Schwelle bleiben.</li>
+          <li>Fahrzeuge, die für die Beförderung von <strong>höchstens neun Personen einschließlich Fahrer</strong> ausgelegt sind, sofern sie für Personenbeförderung außerhalb des Güterverkehrs genutzt werden.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="info-card">
+      <div class="badge">Praxisbeispiel</div>
+      <h3>Ich überquere eine Grenze, um Material für mein eigenes Unternehmen abzuholen</h3>
+      <p>
+        Ein Handwerker fährt mit einem 3,2-t-Transporter von Land A nach Land B, um Werkzeug und Material für sein eigenes Unternehmen abzuholen. Handelt es sich dabei um <em>Eigenverkehr</em> und ist Fahren nicht die Haupttätigkeit des Fahrers, kann die Ausnahme nach <strong>Artikel 3(h) der Verordnung (EG) Nr. 561/2006</strong> gelten. Bei einer Straßenkontrolle erwarten die Kontrollbehörden, dass der <strong>Zweck</strong> der Fahrt und der <strong>Zusammenhang</strong> zwischen Fahrer, Unternehmen und Ware klar erkennbar sind. Halten Sie Unterlagen bereit und seien Sie darauf vorbereitet, die Fahrt kurz zu erläutern.
+      </p>
+      <p style="margin-top:10px;">
+        Weiterführende Informationen: <a href="https://www.ela.europa.eu/" target="_blank" rel="noopener" style="color:var(--blue-mid);">Europäische Arbeitsbehörde</a> und der konsolidierte Gesetzestext auf <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A02006R0561-20240522" target="_blank" rel="noopener" style="color:var(--blue-mid);">EUR-Lex (Verordnung 561/2006)</a>.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="band band--gray">
+  <div class="container">
+    <div class="eyebrow">Kontrollpraxis</div>
+    <h2 class="h2-grad">Eigenverkehr bei einer Straßenkontrolle</h2>
+    <p style="max-width:760px; color:var(--text); line-height:1.65; margin-top:8px;">
+      Wenn Sie sich auf die Eigenverkehrsausnahme berufen, sollten Sie diese zügig nachweisen können. Kontrollbeamte sind geschult, zu fragen, wem die Ware gehört, was der Zweck der Fahrt ist, ob die Beförderung eine Nebentätigkeit des Unternehmens ist und ob der Fahrer in einer anderen Funktion als der eines Berufskraftfahrers beschäftigt ist. Klarheit und Dokumentation entscheiden in der Regel über den Ausgang.
+    </p>
+    <div class="doc-bento">
+      <div class="doc-card">
+        <div class="num">Dokument Nr. 1</div>
+        <h3>Dokument zur Ware</h3>
+        <p>Rechnung, Lieferschein, Quittung oder Auftragsbestätigung, aus der hervorgeht, dass die Ware für Ihr Unternehmen bestimmt ist — nicht für die Beförderung für Dritte.</p>
+      </div>
+      <div class="doc-card">
+        <div class="num">Dokument Nr. 2</div>
+        <h3>Fahrtzweck</h3>
+        <p>Ein kurzer interner Vermerk für den Fahrer: woher, wohin und warum (z. B. „Abholung von Teilen zum Einbau beim Kunden vor Ort").</p>
+      </div>
+      <div class="doc-card">
+        <div class="num">Dokument Nr. 3</div>
+        <h3>Verbindung Fahrer–Unternehmen</h3>
+        <p>Arbeitsvertrag oder schriftliche Vollmacht des Unternehmens sowie Fahrzeugpapiere (Eigentum / Leasing / Miete), die dem Unternehmen zuzuordnen sind.</p>
+      </div>
+    </div>
+    <p style="margin-top: 24px; color:var(--text); line-height:1.6; max-width:760px;">
+      <strong>In der Praxis:</strong> Der Fahrer sollte kurz angeben können, was er transportiert, woher, wohin und für wen. Das entscheidet meist.
+    </p>
+  </div>
+</section>
+
+<section class="band band--gray">
+  <div class="container">
+    <div class="eyebrow">Brauchen Sie Unterstützung?</div>
+    <h2 class="h2-grad">Sprechen Sie mit einem TAGRA-Spezialisten</h2>
+    <div class="contact-grid">
+      <div class="card">
+        <h3 style="margin-bottom:12px;">Direkter Kontakt</h3>
+        <p style="color:var(--text); line-height:1.65;">
+          Unsere Spezialisten haben bereits Hunderte von Unternehmen bei der Einführung von Fahrtenschreibern begleitet. Wir helfen Ihnen, Fahrzeuge zu bewerten, den Einbau zu planen, Downloads zu konfigurieren und Ihr Personal zu schulen — egal ob Sie zwei oder zweihundert Transporter betreiben.
+        </p>
+        <p style="margin-top:16px; line-height:1.8;">
+          <strong>Telefon:</strong> <a href="tel:+420739005345" style="color:var(--blue-mid);">+420 739 005 345</a> · <a href="tel:+420739544322" style="color:var(--blue-mid);">+420 739 544 322</a><br>
+          <strong>E-Mail:</strong> <a href="mailto:sales@tagra.app" style="color:var(--blue-mid);">sales@tagra.app</a>
+        </p>
+        <div class="cta-row">
+          <a href="/try/de/" class="btn btn--primary">TAGRA 30 Tage kostenlos testen</a>
+          <a href="/contact/de/" class="btn btn--outline">Kontaktformular →</a>
+        </div>
+      </div>
+      <div class="callout--green">
+        <div class="eyebrow" style="color:var(--green-cta);">Managed Service</div>
+        <h3>Möchten Sie die Auswertung nicht selbst durchführen?</h3>
+        <ul>
+          <li><strong>Weniger Verwaltungsaufwand</strong> — wir laden und werten Ihre Daten für Sie aus</li>
+          <li><strong>Fristenüberwachung</strong> — wir behalten die 28/90-Tage-Regeln im Blick, damit Sie es nicht müssen</li>
+          <li><strong>Prüfungsbereite</strong> Berichte und sichere Archive, jederzeit verfügbar</li>
+          <li>Kompatibel mit DKV-LIVE-Telematik für die Fernauslesung</li>
+        </ul>
+        <p style="margin-top:16px; line-height:1.8;">
+          <strong>Telefon:</strong> <a href="tel:+420739005345" style="color:var(--green-cta);">+420 739 005 345</a><br>
+          <strong>E-Mail:</strong> <a href="mailto:sales@tagra.app" style="color:var(--green-cta);">sales@tagra.app</a>
+        </p>
+        <div class="cta-row">
+          <a href="/integrations/dkv-live/" class="btn btn--outline" style="border-color:var(--green-cta); color:var(--green-cta);">DKV-LIVE-Integration →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="container">
+    <div class="eyebrow">Weiterlesen</div>
+    <h2 class="h2-grad">Weiterführende Artikel</h2>
+
+    <div class="rel-featured">
+      <div class="rel-eyebrow">Vollständiger Leitfaden</div>
+      <h3>Digitaler Fahrtenschreiber: Daten korrekt herunterladen, auswerten und archivieren</h3>
+      <p style="color:rgba(255,255,255,0.85); margin-bottom:16px; line-height:1.6;">Fristen von 28/90 Tagen, was Sie benötigen, der richtige Ablauf und worauf Kontrolleure bei Straßen- und Unternehmensprüfungen tatsächlich achten.</p>
+      <a href="/articles/how-to-download-evaluate-archive-tachograph-data/">Zum vollständigen Leitfaden →</a>
+    </div>
+
+    <h3 style="margin: 32px 0 12px; font-size: 14px; color: var(--text2); text-transform: uppercase; letter-spacing: .1em; font-weight: 700;">Offizielle Quellen</h3>
+    <div class="related-grid">
+      <div class="rel-card">
+        <div class="rel-eyebrow">Offiziell · ELA (EU)</div>
+        <a href="https://www.ela.europa.eu/assets/lcv2026/index.html" target="_blank" rel="noopener">Tachographs in light commercial vehicles from 2026</a>
+        <p>Übersicht der Europäischen Arbeitsbehörde zur erweiterten Fahrtenschreiberpflicht für leichte Nutzfahrzeuge in der EU.</p>
+      </div>
+      <div class="rel-card">
+        <div class="rel-eyebrow">Offiziell · EUR-Lex</div>
+        <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=legissum%3A4382208" target="_blank" rel="noopener">Verordnung (EG) Nr. 561/2006 — Zusammenfassung</a>
+        <p>Lenk-, Pausen- und Ruhezeiten — die Grundlage für die Fahrtenschreibernutzung in der gesamten EU.</p>
+      </div>
+      <div class="rel-card">
+        <div class="rel-eyebrow">Offiziell · UK DVSA</div>
+        <a href="https://www.gov.uk/government/collections/drivers-hours-rules-and-regulations" target="_blank" rel="noopener">Lenkzeiten und Fahrtenschreibervorschriften</a>
+        <p>Offizielle britische Leitlinien der Driver and Vehicle Standards Agency, relevant für den Verkehr zwischen dem Vereinigten Königreich und der EU.</p>
+      </div>
+    </div>
+
+    <h3 style="margin: 32px 0 12px; font-size: 14px; color: var(--text2); text-transform: uppercase; letter-spacing: .1em; font-weight: 700;">Mehr von TAGRA</h3>
+    <div class="related-grid">
+      <div class="rel-card">
+        <div class="rel-eyebrow">Übersicht</div>
+        <a href="/articles/who-must-evaluate-tachograph-data-2026/">Wer ab 2026 Tachographendaten auswerten muss</a>
+        <p>Zuständigkeiten und praktische Modelle für Betreiber von Transportern, Lkw und Bussen in der gesamten EU.</p>
+      </div>
+      <div class="rel-card">
+        <div class="rel-eyebrow">Referenz</div>
+        <a href="/articles/digital-tachograph-symbols/">Fahrtenschreiber-Symbole &amp; Fehlercodes</a>
+        <p>Verstehen Sie Symbole, Fehlercodes und häufige Meldungen von VDO-, Stoneridge-, Actia- und EFAS-Geräten.</p>
+      </div>
+      <div class="rel-card">
+        <div class="rel-eyebrow">Integration</div>
+        <a href="/integrations/dkv-live/">DKV-LIVE-Integration mit TAGRA</a>
+        <p>Verbinden Sie Ihre Telematik für Fernauslesung, automatisierte Abläufe und betriebliche Einblicke.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band band--blue">
+  <div class="container">
+    <div class="eyebrow">FAQ</div>
+    <h2 class="h2-grad">Häufig gestellte Fragen</h2>
+    <div class="faq">
+      <details>
+        <summary>Wer unterliegt seit dem 1. Juli 2026 der Fahrtenschreiberpflicht?</summary>
+        <div class="faq-a">
+          Seit dem 1. Juli 2026 unterliegen <strong>leichte Nutzfahrzeuge (LCV) von 2,5–3,5 t</strong>, die für <strong>internationalen Güterverkehr</strong> oder <strong>Kabotage</strong> innerhalb der EU eingesetzt werden, der Fahrtenschreiberpflicht gemäß Verordnung (EU) 2020/1054 zur Änderung der Verordnung (EG) Nr. 561/2006. Ein <strong>intelligenter Fahrtenschreiber G2v2</strong>, Fahrer-/Unternehmenskarten und eine strukturierte Datenverwaltung sind erforderlich. Fahrzeuge über 3,5 t unterliegen der Pflicht bereits heute.
+        </div>
+      </details>
+      <details>
+        <summary>Benötigt ein Transporter einen Fahrtenschreiber, wenn er nur im Inland eingesetzt wird?</summary>
+        <div class="faq-a">
+          Grundsätzlich <strong>nein</strong>. Erfolgen Ihre Fahrten ausschließlich im Inland ohne grenzüberschreitenden Abschnitt und ohne Kabotage, gilt die EU-Pflicht für grenzüberschreitenden Verkehr nicht. Prüfen Sie stets die <strong>nationalen</strong> Vorschriften, da einige Mitgliedstaaten in bestimmten Fällen zusätzliche Anforderungen stellen (z. B. Gefahrgut, öffentliche Aufträge).
+        </div>
+      </details>
+      <details>
+        <summary>Gilt die Pflicht, wenn der Transporter selbst unter 2,5 t liegt, die Kombination diesen Wert aber überschreitet?</summary>
+        <div class="faq-a">
+          In den meisten Fällen <strong>ja</strong>. Die Kontrollbehörden berücksichtigen die maßgebliche <strong>Kombinationsmasse</strong> (Fahrzeug + Anhänger). Überschreitet Ihr kombiniertes zulässiges Gesamtgewicht die Schwelle und führen Sie gewerblichen internationalen Verkehr durch, gelten die Vorschriften. Prüfen Sie Ihre typischen Kombinationen und Strecken.
+        </div>
+      </details>
+      <details>
+        <summary>Was benötige ich zusätzlich zum Einbau des Fahrtenschreibers?</summary>
+        <div class="faq-a">
+          Neben dem Gerät selbst benötigen Sie <strong>Fahrerkarten</strong>, eine <strong>Unternehmenskarte</strong>, einen Prozess für <strong>regelmäßige Downloads</strong> (28/90 Tage), die <strong>Auswertung</strong> von Verstößen und die <strong>Archivierung</strong> für den gesetzlich vorgeschriebenen Zeitraum. Fahrerschulung und klare interne Zuständigkeiten sind unerlässlich. <a href="/fleet/de/" style="color:var(--blue-mid);">TAGRA for Fleet</a> deckt Download, Auswertung und Berichterstellung in einem Paket ab.
+        </div>
+      </details>
+      <details>
+        <summary>Wie oft müssen Daten heruntergeladen werden?</summary>
+        <div class="faq-a">
+          Laden Sie <strong>Fahrerkartendaten mindestens alle 28 Tage</strong> und <strong>Fahrzeugeinheitsdaten mindestens alle 90 Tage</strong> herunter. Viele Unternehmen laden häufiger herunter, um das Risiko zu senken und die Dokumentation zu vereinfachen. Bei der Fernauslesung (z. B. DKV LIVE) geschieht dies automatisch ohne Zutun des Fahrers.
+        </div>
+      </details>
+      <details>
+        <summary>Welche Karten werden benötigt?</summary>
+        <div class="faq-a">
+          Jeder Fahrer benötigt eine persönliche <strong>Fahrerkarte</strong>. Der Unternehmer benötigt eine <strong>Unternehmenskarte</strong> zur Autorisierung und sicheren Auslesung der Fahrzeugdaten. Werkstatt- und Kontrollkarten existieren ebenfalls, werden jedoch an zugelassene Werkstätten und Behörden ausgegeben, nicht an Unternehmer.
+        </div>
+      </details>
+      <details>
+        <summary>Ich bin kein Frachtführer — ich überquere gelegentlich eine Grenze für mein eigenes Unternehmen. Benötige ich einen Fahrtenschreiber?</summary>
+        <div class="faq-a">
+          Entscheidend sind das <strong>zulässige Gesamtgewicht</strong> (inklusive eines eventuellen Anhängers) und der <strong>Zweck</strong> der Beförderung. Handelt es sich nicht um gewerbliche Beförderung und ist Fahren nicht Ihre Haupttätigkeit, gilt in der Regel die <strong>Eigenverkehrsausnahme</strong> nach Artikel 3(h) der Verordnung 561/2006. Wir empfehlen, jeden Fall individuell zu prüfen — <a href="/contact/de/" style="color:var(--blue-mid);">kontaktieren Sie uns</a> für eine schnelle Einschätzung.
+        </div>
+      </details>
+      <details>
+        <summary>Wie wird Eigenverkehr in der Praxis nachgewiesen?</summary>
+        <div class="faq-a">
+          Es gibt keine einheitliche Standardform. Am häufigsten: ein <strong>Dokument zur Ware</strong> (Rechnung, Lieferschein, Auftrag), ein <strong>kurzer Vermerk zum Fahrtzweck</strong> (von–nach und warum) sowie die <strong>Verbindung zwischen Fahrer, Unternehmen und Fahrzeug</strong> (Vollmacht, Beschäftigungsverhältnis, Fahrzeugdokumentation).
+        </div>
+      </details>
+      <details>
+        <summary>Gibt es eine Ausnahme für Handwerker?</summary>
+        <div class="faq-a">
+          Ja — die sogenannte <strong>Handwerkerausnahme</strong> nach Artikel 3(aa) der Verordnung 561/2006. Ist Fahren nicht Ihre Haupttätigkeit und befördern Sie ausschließlich <em>Material, Ausrüstung oder Maschinen für den eigenen Gebrauch des Fahrers im Rahmen seiner Arbeit</em>, ist ein Fahrtenschreiber in der Regel nicht erforderlich. Die nationale Umsetzung kann Details ergänzen — prüfen Sie die Vorschriften Ihres Einsatzlandes.
+        </div>
+      </details>
+      <details>
+        <summary>Was ist Kabotage?</summary>
+        <div class="faq-a">
+          <strong>Kabotage</strong> ist die Beförderung von Gütern innerhalb eines EU-Landes durch ein Unternehmen mit Sitz in einem anderen EU-Land. <strong>Beispiel:</strong> Ein tschechischer Transporter entlädt Ware in Hamburg und übernimmt anschließend eine neue Sendung von Hamburg nach Berlin. Beide Fahrten sind Teil der Kabotage und lösen seit dem 1. Juli 2026 die Fahrtenschreiberpflicht für 2,5–3,5-t-Transporter aus.
+        </div>
+      </details>
+      <details>
+        <summary>Was, wenn ich nur einen Mietransporter habe? Wer kümmert sich um den Fahrtenschreiber?</summary>
+        <div class="faq-a">
+          Mieten Sie einen Transporter über 2,5 t für den internationalen gewerblichen Verkehr, muss dieser mit einem Fahrtenschreiber ausgestattet sein. Die <strong>Verantwortung für den korrekten Datendownload und die Einhaltung der Vorschriften liegt bei Ihnen als Unternehmer</strong>, nicht beim Vermieter. Denken Sie daran, den Fahrtenschreiber vor der Fahrt mit Ihrer Unternehmenskarte zu authentifizieren.
+        </div>
+      </details>
+      <details>
+        <summary>Kann ich den Fahrtenschreiber selbst einbauen, oder benötige ich eine Werkstatt?</summary>
+        <div class="faq-a">
+          Sie können einen Fahrtenschreiber <strong>nicht</strong> selbst einbauen, aktivieren oder kalibrieren. Einbau, Aktivierung, Plombierung und die regelmäßige Nachprüfung (Kalibrierung) müssen ausschließlich von einer <strong>zugelassenen Fahrtenschreiberwerkstatt</strong> mit gesicherten Werkzeugen und Werkstattkarten durchgeführt werden, gemäß Durchführungsverordnung (EU) 2016/799 der Kommission.
+        </div>
+      </details>
+      <details>
+        <summary>Welche Bußgelder drohen, wenn ich nach dem 1. Juli 2026 keinen Fahrtenschreiber habe?</summary>
+        <div class="faq-a">
+          Ein fehlender Fahrtenschreiber, Fahren ohne Karte oder das Versäumnis, Daten herunterzuladen, gelten EU-weit gemäß Richtlinie 2006/22/EG und dem Rahmenwerk für besonders schwerwiegende Verstöße (MSI) als <strong>besonders schwerwiegende Verstöße</strong>. Die Sanktionen variieren je nach Mitgliedstaat und können pro Verstoß <strong>mehrere tausend Euro</strong> betragen, mit möglicher Stilllegung des Fahrzeugs vor Ort und, bei wiederholten Verstößen, dem Verlust der Zuverlässigkeit des Unternehmers.
+        </div>
+      </details>
+      <details>
+        <summary>Was ändert sich für Unternehmen aus dem Vereinigten Königreich nach dem Brexit?</summary>
+        <div class="faq-a">
+          Im Vereinigten Königreich zugelassene Fahrzeuge, die in der EU verkehren, unterliegen auf dem EU-Streckenabschnitt weiterhin den EU-Vorschriften (bei bestimmten grenzüberschreitenden Szenarien gelten AETR-Vorschriften). Für leichte Nutzfahrzeuge von 2,5–3,5 t im internationalen Verkehr zwischen dem Vereinigten Königreich und der EU sollten Sie ab dem 1. Juli 2026 mit demselben G2v2-/Fahrerkarten-/28-90-Tage-Download-Regime wie EU-Unternehmen planen. Für den innerbritischen Verkehr gelten die GB-Domestic-Vorschriften nach dem DVSA-Rahmenwerk — siehe die <a href="https://www.gov.uk/government/collections/drivers-hours-rules-and-regulations" target="_blank" rel="noopener" style="color:var(--blue-mid);">Leitlinien der UK DVSA</a>.
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="container">
+    <div class="eyebrow">Autor &amp; Support</div>
+    <h2 class="h2-grad">Truck Data Technology, s.r.o.</h2>
+    <div class="author-block">
+      <p><strong>Büro &amp; Support:</strong> Tschechische Republik — Unterstützung für Unternehmen in der gesamten EU und im Vereinigten Königreich.</p>
+      <p><strong>Telefon:</strong> <a href="tel:+420739005345" style="color:var(--blue-mid);">+420 739 005 345</a> · <a href="tel:+420739544322" style="color:var(--blue-mid);">+420 739 544 322</a></p>
+      <p><strong>E-Mail:</strong> <a href="mailto:sales@tagra.app" style="color:var(--blue-mid);">sales@tagra.app</a></p>
+      <p><strong>Web:</strong> <a href="https://www.tdt.cz" target="_blank" rel="noopener" style="color:var(--blue-mid);">www.tdt.cz</a></p>
+      <p style="margin-top:12px; color:var(--text2); font-size:14px;">Artikel veröffentlicht am 17. März 2026 · Aktualisiert am 14. Mai 2026</p>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer" role="contentinfo">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-logo"><img src="/assets/img/logo-dark.svg?v=20260513zh" alt="TAGRA" width="140" height="32"></div>
+      <p class="footer-desc">Professionelle Software zur Fahrtenschreiberauswertung. Fahrerkarten-Download, digitale Tachographenanalyse, EU-Lenkzeiten und Lkw-Arbeitszeitrichtlinie. Entwickelt von Truck Data Technology, s.r.o.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Produkt</h4>
+      <ul>
+        <li><a href="/fleet/de/">Für Unternehmen</a></li>
+        <li><a href="/driver/">Für Berufskraftfahrer</a></li>
+        <li><a href="/enforcement/de/">Für Kontrollbehörden</a></li>
+        <li><a href="/how-it-works/de/">So funktioniert's</a></li>
+        <li><a href="/for-whom/de/">Für wen</a></li>
+        <li><a href="/faq/">FAQ</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Ressourcen</h4>
+      <ul>
+        <li><a href="/articles/">Artikel</a></li><li><a href="/manuals/">Anleitungen</a></li>
+        <li><a href="/articles/digital-tachograph-symbols/">Fahrtenschreiber-Symbole</a></li>
+        <li><a href="/integrations/dkv-live/">DKV LIVE&reg;</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Unternehmen</h4>
+      <ul>
+        <li><a href="/contact/de/">Kontakt</a></li>
+        <li><a href="https://www.tdt.cz" target="_blank" rel="noopener">Truck Data Technology</a></li>
+        <li><a href="/de/">Deutsch</a></li>
+         <li><a href="/pl/">Polski</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2026 Truck Data Technology, s.r.o. Alle Rechte vorbehalten.</span>
+    <span><a href="/contact/de/">Kontakt</a> &middot; <a href="https://www.tdt.cz" target="_blank" rel="noopener">tdt.cz</a></span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  const root = document.getElementById('vansQuiz');
+  if (!root) return;
+
+  const NODES = {
+    'start': {
+      step: 1, label: 'Fahrzeuggewicht',
+      question: 'Wie hoch ist das zulässige Gesamtgewicht Ihres Fahrzeugs oder Ihrer Fahrzeugkombination?',
+      hint: 'Prüfen Sie das zulässige Gesamtgewicht in Ihrem Zulassungsdokument — inklusive eines eventuellen Anhängers.',
+      options: [
+        { id: 'r-light', label: 'Bis 2,5 t' },
+        { id: 'q-trans-25', label: '2,5 – 3,5 t' },
+        { id: 'r-over-35', label: 'Über 3,5 t' }
+      ],
+      threeCol: true
+    },
+    'q-trans-25': {
+      step: 2, label: 'Verkehrsart',
+      question: 'Betreiben Sie mit dem Fahrzeug internationalen Güterverkehr?',
+      hint: 'Dies umfasst grenzüberschreitende Beförderung zwischen EU/EWR/UK sowie Kabotage (Inlandsverkehr in einem anderen Land).',
+      options: [
+        { id: 'r-domestic-25', label: 'Nein, nur im Inland' },
+        { id: 'q-purpose-25', label: 'Ja, grenzüberschreitend oder Kabotage' }
+      ]
+    },
+    'q-purpose-25': {
+      step: 3, label: 'Zweck der Beförderung',
+      question: 'Was ist der Zweck der grenzüberschreitenden Beförderung?',
+      hint: 'Gewerblich = Beförderung von Gütern für einen Kunden gegen Entgelt. Eigenverkehr = Beförderung eigener Güter für das eigene Unternehmen.',
+      options: [
+        { id: 'r-yes-25', label: 'Gewerblich (Beförderung fremder Güter gegen Entgelt)' },
+        { id: 'q-driver-main-25', label: 'Eigenverkehr (eigene Güter, eigenes Unternehmen)' }
+      ]
+    },
+    'q-driver-main-25': {
+      step: 4, label: 'Beruf des Fahrers',
+      question: 'Ist Fahren die Haupttätigkeit des Fahrers?',
+      hint: 'Arbeitet der Fahrer hauptsächlich als Berufskraftfahrer, gilt die Eigenverkehrsausnahme NICHT. Ist Fahren eine Nebentätigkeit (z. B. Handwerker, Techniker, Unternehmer), kann die Ausnahme gelten.',
+      options: [
+        { id: 'r-yes-25', label: 'Ja, Berufskraftfahrer' },
+        { id: 'r-own-account-25', label: 'Nein, Fahren ist Nebentätigkeit' }
+      ]
+    },
+    'r-light': {
+      kind: 'no',
+      title: 'Fahrtenschreiber in der Regel nicht erforderlich',
+      desc: 'Fahrzeuge und Kombinationen bis <strong>2,5 t</strong> zulässigem Gesamtgewicht fallen in der Regel nicht unter die Verordnung (EG) Nr. 561/2006 — auch nach Juli 2026 nicht.',
+      bullets: [
+        'Achten Sie auf die <strong>Kombinationsmasse</strong> — wenn Sie einen Anhänger anhängen und 2,5 t überschreiten, fallen Sie in die Klasse 2,5–3,5 t.',
+        'Um ganz sicherzugehen, prüfen Sie Ihre konkrete Situation anhand offizieller Quellen oder mit einem Fachexperten.'
+      ],
+      ctas: [
+        { href: 'https://www.ela.europa.eu/assets/lcv2026/index.html', label: 'ELA-Leitfaden lesen', ext: true, outline: true }
+      ]
+    },
+    'r-domestic-25': {
+      kind: 'no',
+      title: 'Fahrtenschreiber in der Regel nicht erforderlich',
+      desc: 'Wenn Sie einen Transporter mit 2,5–3,5 t <strong>ausschließlich im Inland</strong> betreiben (kein grenzüberschreitender Abschnitt, keine Kabotage), gilt die neue Pflicht ab Juli 2026 nicht für Sie. Die Änderung betrifft den internationalen gewerblichen Verkehr und Kabotage innerhalb der EU.',
+      bullets: [
+        'Sobald Sie grenzüberschreitende Fahrten aufnehmen, greift die Pflicht automatisch.',
+        'Andere Pflichten des Unternehmers (Arbeitszeit, Warendokumentation) gelten weiterhin nach nationalem Recht.'
+      ],
+      ctas: [
+        { href: 'https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=legissum%3A4382208', label: 'EUR-Lex-Zusammenfassung lesen', ext: true, outline: true }
+      ]
+    },
+    'q-purpose-25': null, // safety; will be redefined above
+    'r-own-account-25': {
+      kind: 'maybe',
+      title: 'Eigenverkehrsausnahme wahrscheinlich anwendbar',
+      desc: 'Erfolgt die Beförderung <strong>nicht gewerblich</strong> und ist <strong>Fahren nicht die Haupttätigkeit</strong> des Fahrers, gilt in der Regel die Ausnahme nach <strong>Artikel 3(h) der Verordnung 561/2006</strong>, und ein Fahrtenschreiber ist grundsätzlich nicht erforderlich. <strong>Wichtig:</strong> Die konkrete Situation und Dokumentation sind entscheidend.',
+      bullets: [
+        'Führen Sie im Fahrzeug mit: ein <strong>Dokument zur Ware</strong> (Rechnung, Lieferschein), einen <strong>kurzen Vermerk zum Fahrtzweck</strong> sowie einen Nachweis der <strong>Verbindung zwischen Fahrer, Unternehmen und Fahrzeug</strong>.',
+        'Seien Sie darauf vorbereitet, dass die Kontrollbehörde einen Nachweis verlangt, dass es sich nicht um gewerbliche Beförderung handelt.',
+        'Im Zweifelsfall lassen Sie den Einzelfall von einem Fachexperten prüfen.'
+      ],
+      ctas: [
+        { href: '/contact/de/', label: 'Mit einem TAGRA-Experten sprechen', primary: true },
+        { href: 'https://www.ela.europa.eu/assets/lcv2026/index.html', label: 'ELA-Leitfaden lesen', ext: true, outline: true }
+      ]
+    },
+    'r-yes-25': {
+      kind: 'yes',
+      title: 'Fahrtenschreiber ist erforderlich (seit 1. Juli 2026)',
+      desc: 'Sie betreiben einen 2,5–3,5-t-Transporter im <strong>gewerblichen internationalen Güterverkehr</strong> oder bei <strong>Kabotage</strong> innerhalb der EU. Seit <strong>1. Juli 2026</strong> benötigen Sie einen intelligenten Fahrtenschreiber Version 2 (G2v2).',
+      bullets: [
+        '<strong>Einbau:</strong> G2v2-Fahrtenschreiber bei einer zugelassenen Fahrtenschreiberwerkstatt.',
+        '<strong>Karten:</strong> Fahrerkarte für jeden Fahrer + Unternehmenskarte für den Unternehmer.',
+        '<strong>Datendownload:</strong> Fahrerkarten mindestens alle 28 Tage, Fahrzeugeinheiten mindestens alle 90 Tage.',
+        '<strong>Auswertung und Archivierung:</strong> per Software (z. B. TAGRA) oder Dienstleistung. Mindestens 1 Jahr archivieren.'
+      ],
+      ctas: [
+        { href: '/try/de/', label: 'TAGRA 30 Tage kostenlos testen', primary: true },
+        { href: '/integrations/dkv-live/', label: 'DKV-LIVE-Integration ansehen', outline: true }
+      ]
+    },
+    'r-over-35': {
+      kind: 'yes',
+      title: 'Fahrtenschreiber bereits heute erforderlich',
+      desc: 'Für Fahrzeuge <strong>über 3,5 t</strong> im Güterverkehr gilt die Fahrtenschreiberpflicht gemäß Verordnung (EG) Nr. 561/2006 bereits <strong>heute</strong> — nicht erst ab Juli 2026. Neufahrzeuge müssen mit dem intelligenten Fahrtenschreiber Version 2 (G2v2) ausgestattet sein.',
+      bullets: [
+        '<strong>Karten:</strong> Fahrerkarte für jeden Fahrer + Unternehmenskarte für den Unternehmer.',
+        '<strong>Datendownload:</strong> Fahrerkarten alle 28 Tage, Fahrzeugeinheiten alle 90 Tage.',
+        '<strong>Auswertung und Archivierung:</strong> per Software (z. B. TAGRA) oder Dienstleistung. Mindestens 1 Jahr archivieren.',
+        'Es gibt <strong>abschließende Ausnahmen</strong> nach Artikel 3 und 13 der Verordnung 561/2006 (Land- und Forstwirtschaft, Feuerwehr-/Rettungsfahrzeuge, Zugmaschinen bis 40 km/h usw.) — prüfen Sie eine mögliche Ausnahme mit den nationalen Behörden.'
+      ],
+      ctas: [
+        { href: '/try/de/', label: 'TAGRA 30 Tage kostenlos testen', primary: true },
+        { href: 'https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A02006R0561-20240522', label: 'Liste der Ausnahmen (EUR-Lex)', ext: true, outline: true }
+      ]
+    }
+  };
+  // Re-add q-purpose-25 properly
+  NODES['q-purpose-25'] = {
+    step: 3, label: 'Zweck der Beförderung',
+    question: 'Was ist der Zweck der grenzüberschreitenden Beförderung?',
+    hint: 'Gewerblich = Beförderung von Gütern für einen Kunden gegen Entgelt. Eigenverkehr = Beförderung eigener Güter für das eigene Unternehmen.',
+    options: [
+      { id: 'r-yes-25', label: 'Gewerblich (Beförderung fremder Güter gegen Entgelt)' },
+      { id: 'q-driver-main-25', label: 'Eigenverkehr (eigene Güter, eigenes Unternehmen)' }
+    ]
+  };
+
+  function escapeHtml(s){ return String(s).replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m])); }
+
+  let state = { nodeId: 'start', path: [] };
+
+  function progressDots(step){
+    let html = '<div class="vq-progress" aria-hidden="true">';
+    for(let i=1;i<=4;i++){
+      const cls = i < step ? 'vq-dot is-done' : (i===step ? 'vq-dot is-active' : 'vq-dot');
+      html += '<span class="'+cls+'"></span>';
+    }
+    html += '</div>';
+    return html;
+  }
+
+  function renderQuestion(node){
+    const optCols = node.threeCol ? 'vq-options vq-3col' : 'vq-options';
+    let html = '<div class="vq-stage">';
+    html += '<div class="vq-header">';
+    html += progressDots(node.step);
+    html += '<div class="vq-step">Schritt '+node.step+' · '+escapeHtml(node.label)+'</div>';
+    html += '</div>';
+    html += '<h3 class="vq-question">'+escapeHtml(node.question)+'</h3>';
+    if(node.hint) html += '<div class="vq-hint">'+escapeHtml(node.hint)+'</div>';
+    html += '<div class="'+optCols+'">';
+    node.options.forEach(o => {
+      html += '<button class="vq-opt" data-next="'+escapeHtml(o.id)+'">'+escapeHtml(o.label)+'</button>';
+    });
+    html += '</div>';
+    html += '<div class="vq-controls">';
+    html += '<button class="vq-btn-ctrl" data-act="back"'+(state.path.length===0?' disabled':'')+'>← Zurück</button>';
+    html += '<button class="vq-btn-ctrl" data-act="reset"'+(state.path.length===0?' disabled':'')+'>↻ Neu starten</button>';
+    html += '</div>';
+    html += '</div>';
+    root.innerHTML = html;
+    bind();
+  }
+
+  function renderResult(nodeId){
+    const res = NODES[nodeId];
+    const kindClass = 'vq-result vq-result--'+res.kind;
+    let badge;
+    if(res.kind === 'no') badge = '✓ Fahrtenschreiber nicht erforderlich';
+    else if(res.kind === 'yes') badge = '⚠ Fahrtenschreiber erforderlich';
+    else badge = 'ⓘ Kommt auf die Situation an';
+
+    let html = '<div class="vq-stage">';
+    html += '<div class="'+kindClass+'">';
+    html += '<div class="vq-result-badge">'+escapeHtml(badge)+'</div>';
+    html += '<h3 class="vq-result-title">'+escapeHtml(res.title)+'</h3>';
+    html += '<div class="vq-result-desc">'+res.desc+'</div>';
+    if(res.bullets && res.bullets.length){
+      html += '<ul class="vq-result-list">';
+      res.bullets.forEach(b => { html += '<li>'+b+'</li>'; });
+      html += '</ul>';
+    }
+    if(res.ctas && res.ctas.length){
+      html += '<div class="vq-result-cta">';
+      res.ctas.forEach(c => {
+        const cls = c.outline ? 'btn btn--outline' : 'btn btn--primary';
+        const attrs = c.ext ? ' target="_blank" rel="noopener"' : '';
+        html += '<a class="'+cls+'" href="'+escapeHtml(c.href)+'"'+attrs+'>'+escapeHtml(c.label)+'</a>';
+      });
+      html += '</div>';
+    }
+    html += '</div>';
+    if(state.path.length){
+      html += '<div class="vq-path"><strong>Ihr Weg:</strong> '+state.path.map(p => escapeHtml(p.choice)).join(' → ')+'</div>';
+    }
+    html += '<div class="vq-controls">';
+    html += '<button class="vq-btn-ctrl" data-act="back">← Zurück</button>';
+    html += '<button class="vq-btn-ctrl" data-act="reset">↻ Neu starten</button>';
+    html += '</div>';
+    html += '</div>';
+    root.innerHTML = html;
+    bind();
+  }
+
+  function go(nextId, label){
+    state.path.push({ nodeId: state.nodeId, choice: label });
+    state.nodeId = nextId;
+    const node = NODES[nextId];
+    if(!node) return;
+    if(node.kind) renderResult(nextId);
+    else renderQuestion(node);
+  }
+
+  function back(){
+    if(state.path.length === 0) return;
+    const last = state.path.pop();
+    state.nodeId = last.nodeId;
+    const node = NODES[state.nodeId];
+    if(node.kind) renderResult(state.nodeId);
+    else renderQuestion(node);
+  }
+
+  function reset(){
+    state = { nodeId: 'start', path: [] };
+    renderQuestion(NODES['start']);
+  }
+
+  function bind(){
+    root.querySelectorAll('.vq-opt').forEach(btn => {
+      btn.addEventListener('click', function(){
+        go(this.getAttribute('data-next'), this.textContent.trim());
+      });
+    });
+    root.querySelectorAll('.vq-btn-ctrl').forEach(b => {
+      b.addEventListener('click', function(){
+        const act = this.getAttribute('data-act');
+        if(act === 'back') back();
+        else if(act === 'reset') reset();
+      });
+    });
+  }
+
+  renderQuestion(NODES['start']);
+})();
+</script>
+
+<style>
+  /* Quiz inline styles since not in components.css */
+  .vq-root { max-width: 980px; margin: 32px 0 0; background: #fff; border-radius: var(--radius-lg, 20px); padding: 32px; box-shadow: 0 16px 48px rgba(19,74,142,0.08); border: 1px solid var(--border); }
+  @media(max-width:700px){ .vq-root { padding: 24px 20px; } }
+  .vq-header { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; flex-wrap: wrap; }
+  .vq-progress { display: inline-flex; gap: 6px; align-items: center; }
+  .vq-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--border); transition: background .25s, transform .25s; }
+  .vq-dot.is-done { background: var(--green-brand); }
+  .vq-dot.is-active { background: var(--blue-mid); transform: scale(1.3); }
+  .vq-step { margin-left: auto; color: var(--text2); font-size: 13px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; }
+  .vq-question { font-size: 26px; line-height: 1.3; font-weight: 800; color: var(--blue-dark); margin: 8px 0 8px; }
+  @media(max-width:700px){ .vq-question { font-size: 21px; } }
+  .vq-hint { font-size: 15px; color: var(--text2); margin-bottom: 24px; line-height: 1.55; }
+  .vq-options { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 20px; }
+  .vq-options.vq-3col { grid-template-columns: 1fr 1fr 1fr; }
+  @media(max-width:720px){ .vq-options, .vq-options.vq-3col { grid-template-columns: 1fr; } }
+  .vq-opt { background: #fff; color: var(--blue-dark); border: 2px solid var(--border); border-radius: 14px; padding: 18px 20px; font-size: 16px; font-weight: 700; cursor: pointer; text-align: left; line-height: 1.4; min-height: 60px; transition: all .15s; }
+  .vq-opt:hover { border-color: var(--green-brand); background: rgba(110,155,18,0.04); transform: translateY(-1px); box-shadow: 0 6px 14px rgba(110,155,18,0.1); }
+  .vq-controls { display: flex; gap: 10px; padding-top: 16px; border-top: 1px solid var(--border); }
+  .vq-btn-ctrl { background: transparent; color: var(--text2); border: 1px solid var(--border); border-radius: 999px; padding: 8px 16px; font-size: 13px; font-weight: 600; cursor: pointer; transition: all .15s; }
+  .vq-btn-ctrl:hover:not(:disabled) { border-color: var(--blue-mid); color: var(--blue-mid); background: var(--bg-apple-solid); }
+  .vq-btn-ctrl:disabled { opacity: 0.35; cursor: not-allowed; }
+  .vq-result { border-radius: 16px; padding: 28px; margin-bottom: 20px; border: 2px solid; }
+  .vq-result--no { background: linear-gradient(180deg, rgba(110,155,18,0.07), #fff); border-color: var(--green-brand); }
+  .vq-result--yes { background: linear-gradient(180deg, rgba(217,48,37,0.05), #fff); border-color: #d93025; }
+  .vq-result--maybe { background: linear-gradient(180deg, var(--bg-apple-solid), #fff); border-color: var(--blue-mid); }
+  .vq-result-badge { display: inline-flex; align-items: center; padding: 6px 14px; border-radius: 999px; font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: .06em; color: #fff; margin-bottom: 12px; }
+  .vq-result--no .vq-result-badge { background: var(--green-brand); }
+  .vq-result--yes .vq-result-badge { background: #d93025; }
+  .vq-result--maybe .vq-result-badge { background: var(--blue-mid); }
+  .vq-result-title { font-size: 28px; line-height: 1.2; font-weight: 800; color: var(--blue-dark); margin: 6px 0 10px; }
+  @media(max-width:700px){ .vq-result-title { font-size: 22px; } }
+  .vq-result-desc { font-size: 16px; line-height: 1.6; color: var(--text); margin-bottom: 12px; }
+  .vq-result-list { margin: 12px 0 0 20px; }
+  .vq-result-list li { font-size: 15px; line-height: 1.55; margin: 6px 0; color: var(--text); }
+  .vq-result-cta { margin-top: 20px; display: flex; gap: 12px; flex-wrap: wrap; }
+  .vq-path { background: rgba(0,0,0,0.03); border-radius: 12px; padding: 12px 16px; font-size: 13px; color: var(--text2); line-height: 1.5; margin-bottom: 12px; }
+  .vq-path strong { color: var(--blue-dark); }
+  .vq-stage { animation: vqfade 0.25s ease; }
+  @keyframes vqfade { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "https://tagra.app/articles/tachographs-for-vans-new-obligation-july-2026/de/" },
+  "headline": "Fahrtenschreiber für Transporter 2,5–3,5 t: Vorschriften, Ausnahmen und Bußgelder 2026",
+  "description": "Seit der Frist vom 1. Juli 2026 müssen Transporter von 2,5–3,5 t im internationalen Verkehr oder bei Kabotage einen G2v2-Fahrtenschreiber nutzen. Wer ausgenommen ist, die Vorschriften, Download-Pflichten und Bußgelder.",
+  "image": "https://tagra.app/assets/img/hero-poster.jpg",
+  "author": { "@type": "Organization", "name": "Truck Data Technology, s.r.o.", "url": "https://www.tdt.cz" },
+  "publisher": { "@type": "Organization", "name": "TAGRA", "logo": { "@type": "ImageObject", "url": "https://tagra.app/assets/img/logo-dark.svg" } },
+  "datePublished": "2026-03-17",
+  "dateModified": "2026-08-12",
+  "inLanguage": "de"
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "Wer unterliegt seit dem 1. Juli 2026 der Fahrtenschreiberpflicht?", "acceptedAnswer": { "@type": "Answer", "text": "Seit dem 1. Juli 2026 unterliegen leichte Nutzfahrzeuge (LCV) von 2,5–3,5 t, die für internationalen Güterverkehr oder Kabotage innerhalb der EU eingesetzt werden, der Fahrtenschreiberpflicht gemäß Verordnung (EU) 2020/1054 zur Änderung der Verordnung (EG) Nr. 561/2006. Ein intelligenter Fahrtenschreiber G2v2, Fahrer-/Unternehmenskarten und eine strukturierte Datenverwaltung sind erforderlich." } },
+    { "@type": "Question", "name": "Benötigt ein Transporter einen Fahrtenschreiber, wenn er nur im Inland eingesetzt wird?", "acceptedAnswer": { "@type": "Answer", "text": "Grundsätzlich nein. Erfolgen die Fahrten ausschließlich im Inland ohne grenzüberschreitenden Abschnitt und ohne Kabotage, gilt die EU-Pflicht für grenzüberschreitenden Verkehr nicht. Einige Mitgliedstaaten können in bestimmten Fällen zusätzliche nationale Anforderungen stellen." } },
+    { "@type": "Question", "name": "Gilt die Pflicht, wenn der Transporter selbst unter 2,5 t liegt, die Kombination diesen Wert aber überschreitet?", "acceptedAnswer": { "@type": "Answer", "text": "In den meisten Fällen ja. Die Kontrollbehörden berücksichtigen die maßgebliche Kombinationsmasse (Fahrzeug + Anhänger). Überschreitet das kombinierte zulässige Gesamtgewicht die Schwelle und wird gewerblicher internationaler Verkehr durchgeführt, gelten die Vorschriften." } },
+    { "@type": "Question", "name": "Was benötige ich zusätzlich zum Einbau des Fahrtenschreibers?", "acceptedAnswer": { "@type": "Answer", "text": "Neben dem Gerät selbst benötigen Sie Fahrerkarten, eine Unternehmenskarte, einen Prozess für regelmäßige Downloads (28/90 Tage), die Auswertung von Verstößen und die Archivierung für den gesetzlich vorgeschriebenen Zeitraum. Fahrerschulung und klare interne Zuständigkeiten sind unerlässlich." } },
+    { "@type": "Question", "name": "Wie oft müssen Daten heruntergeladen werden?", "acceptedAnswer": { "@type": "Answer", "text": "Laden Sie Fahrerkartendaten mindestens alle 28 Tage und Fahrzeugeinheitsdaten mindestens alle 90 Tage herunter. Viele Unternehmen laden häufiger herunter, um das Risiko zu senken." } },
+    { "@type": "Question", "name": "Welche Karten werden benötigt?", "acceptedAnswer": { "@type": "Answer", "text": "Jeder Fahrer benötigt eine persönliche Fahrerkarte. Der Unternehmer benötigt eine Unternehmenskarte zur Autorisierung und sicheren Auslesung der Fahrzeugdaten." } },
+    { "@type": "Question", "name": "Ich bin kein Frachtführer. Ich überquere gelegentlich eine Grenze für mein eigenes Unternehmen. Benötige ich einen Fahrtenschreiber?", "acceptedAnswer": { "@type": "Answer", "text": "Entscheidend sind das zulässige Gesamtgewicht (inklusive eines eventuellen Anhängers) und der Zweck der Beförderung. Handelt es sich nicht um gewerbliche Beförderung und ist Fahren nicht Ihre Haupttätigkeit, gilt in der Regel die Eigenverkehrsausnahme nach Artikel 3(h) der Verordnung 561/2006." } },
+    { "@type": "Question", "name": "Wie wird Eigenverkehr in der Praxis nachgewiesen?", "acceptedAnswer": { "@type": "Answer", "text": "Am häufigsten: ein Dokument zur Ware (Rechnung, Lieferschein, Auftrag), ein kurzer Vermerk zum Fahrtzweck (von-nach und warum) sowie die Verbindung zwischen Fahrer, Unternehmen und Fahrzeug (Vollmacht, Beschäftigungsverhältnis, Fahrzeugdokumentation)." } },
+    { "@type": "Question", "name": "Gibt es eine Ausnahme für Handwerker?", "acceptedAnswer": { "@type": "Answer", "text": "Ja, die Handwerkerausnahme nach Artikel 3(aa) der Verordnung 561/2006. Ist Fahren nicht die Haupttätigkeit und werden nur Material, Werkzeuge oder Ausrüstung für die eigene Berufsausübung transportiert, ist ein Fahrtenschreiber in der Regel nicht erforderlich." } },
+    { "@type": "Question", "name": "Was ist Kabotage?", "acceptedAnswer": { "@type": "Answer", "text": "Kabotage ist die Beförderung von Gütern innerhalb eines EU-Landes durch ein Unternehmen mit Sitz in einem anderen EU-Land. Beispiel: Ein tschechischer Transporter entlädt Ware in Hamburg und übernimmt anschließend eine neue Sendung von Hamburg nach Berlin." } },
+    { "@type": "Question", "name": "Was, wenn ich nur einen Mietransporter habe? Wer kümmert sich um den Fahrtenschreiber?", "acceptedAnswer": { "@type": "Answer", "text": "Wird ein Transporter über 2,5 t für den internationalen gewerblichen Verkehr gemietet, muss dieser mit einem Fahrtenschreiber ausgestattet sein. Die Verantwortung für den korrekten Datendownload und die Einhaltung der Vorschriften liegt beim Unternehmer, nicht beim Vermieter." } },
+    { "@type": "Question", "name": "Kann ich den Fahrtenschreiber selbst einbauen, oder benötige ich eine Werkstatt?", "acceptedAnswer": { "@type": "Answer", "text": "Sie können einen Fahrtenschreiber nicht selbst einbauen, aktivieren oder kalibrieren. Diese Tätigkeiten müssen ausschließlich von einer zugelassenen Fahrtenschreiberwerkstatt gemäß Durchführungsverordnung (EU) 2016/799 durchgeführt werden." } },
+    { "@type": "Question", "name": "Welche Bußgelder drohen, wenn ich nach dem 1. Juli 2026 keinen Fahrtenschreiber habe?", "acceptedAnswer": { "@type": "Answer", "text": "Ein fehlender Fahrtenschreiber, Fahren ohne Karte oder das Versäumnis, Daten herunterzuladen, gelten gemäß Richtlinie 2006/22/EG als besonders schwerwiegende Verstöße. Die Sanktionen variieren je nach Mitgliedstaat und können pro Verstoß mehrere tausend Euro betragen." } }
+  ]
+}
+</script>
+
+</body>
+</html>
