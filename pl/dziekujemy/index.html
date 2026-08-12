@@ -377,9 +377,10 @@
   document.querySelectorAll('.nav-lang a').forEach((a) => {
     a.classList.remove('active');
     a.removeAttribute('aria-current');
-    const href = a.getAttribute('href') || '';
-    // Match by language code in URL: /try/, /try/de/, etc.
-    const codeFromHref = href === '/try/' ? 'en' : (href.match(/\/try\/(\w+)\//) || [])[1];
+    // Match by hreflang attribute (robust to the localized slug per language)
+    const hreflangAttr = a.getAttribute('hreflang');
+    const HREFLANG_TO_CODE = { de: 'de', pl: 'pl', el: 'gr', cs: 'cz', sk: 'sk' };
+    const codeFromHref = hreflangAttr ? (HREFLANG_TO_CODE[hreflangAttr] || hreflangAttr) : 'en';
     if (codeFromHref === lang) {
       a.classList.add('active');
       a.setAttribute('aria-current', 'page');
@@ -436,7 +437,7 @@
   }
 
   if (typeof console !== 'undefined') {
-    console.info('[TAGRA /try/thanks/pl/] audience=' + audience + ' lang=' + lang);
+    console.info('[TAGRA /pl/dziekujemy/] audience=' + audience + ' lang=' + lang);
   }
 })();
 </script>
