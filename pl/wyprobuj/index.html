@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <!-- TMX-ANALYTICS START -->
+  <meta name="msvalidate.01" content="7F7894081BE7FBB245FF03AF8810B22F">
+  <!-- Consent Mode v2 defaults (deny) + gtag stub — runs BEFORE gtag.js -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent','default',{
+      ad_storage:'denied', ad_user_data:'denied', ad_personalization:'denied',
+      analytics_storage:'denied', functionality_storage:'denied',
+      personalization_storage:'denied', security_storage:'granted',
+      wait_for_update:500
+    });
+    gtag('set','ads_data_redaction',true);
+    gtag('set','url_passthrough',false);
+  </script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-92253QFBNX"></script>
+  <script>
+    gtag('js', new Date());
+    gtag('config','G-92253QFBNX');
+  </script>
+  <!-- Cookie consent banner (self-hosted) + Microsoft Clarity gating -->
+  <style>
+    .tmx-cc{position:fixed;left:0;right:0;bottom:0;z-index:2147483000;background:linear-gradient(120deg,var(--blue-dark,#0b2c4a),var(--blue-mid,#134a8e) 62%,var(--blue-light,#1f5fa6));color:#fff;
+      font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+      padding:16px 20px;box-shadow:0 -4px 24px rgba(0,0,0,.18);display:flex;flex-wrap:wrap;
+      align-items:center;gap:14px;justify-content:center}
+    .tmx-cc__txt{flex:1 1 360px;max-width:760px}
+    .tmx-cc__txt a{color:#9ed0f5;text-decoration:underline}
+    .tmx-cc__btns{display:flex;gap:10px;flex:0 0 auto}
+    .tmx-cc__b{appearance:none;border:0;cursor:pointer;font:inherit;font-weight:600;
+      padding:10px 22px;border-radius:99px;transition:filter .15s;color:#fff}
+    .tmx-cc__b:hover{filter:brightness(1.08)}
+    .tmx-cc__b--no{background:rgba(255,255,255,.16)}
+    .tmx-cc__b--yes{background:var(--green-cta,#5C820F)}
+    @media(max-width:640px){.tmx-cc{padding:14px}.tmx-cc__btns{width:100%}.tmx-cc__b{flex:1}}
+  </style>
+  <script>
+  (function(){
+    var KEY='tmx-consent-v1', CL='wt18054m0r';
+    function lc(){var l=(document.documentElement.getAttribute('lang')||'en').toLowerCase().split('-')[0];
+      var m={cz:'cs',cs:'cs',sk:'sk',de:'de',pl:'pl',gr:'el',el:'el',en:'en'};return m[l]||'en';}
+    var T={
+      en:{t:'We use analytics cookies (Google Analytics, Microsoft Clarity) to understand site usage. They load only with your consent.',a:'Accept',r:'Reject',p:'Privacy &amp; cookies'},
+      cs:{t:'Pou\u017e\u00edv\u00e1me analytick\u00e9 cookies (Google Analytics, Microsoft Clarity) k pochopen\u00ed pou\u017e\u00edv\u00e1n\u00ed webu. Na\u010dtou se jen s va\u0161\u00edm souhlasem.',a:'P\u0159ijmout',r:'Odm\u00edtnout',p:'Soukrom\u00ed a cookies'},
+      sk:{t:'Pou\u017e\u00edvame analytick\u00e9 cookies (Google Analytics, Microsoft Clarity) na pochopenie pou\u017e\u00edvania webu. Na\u010d\u00edtaj\u00fa sa len s va\u0161\u00edm s\u00fahlasom.',a:'Prija\u0165',r:'Odmietnu\u0165',p:'S\u00fakromie a cookies'},
+      de:{t:'Wir verwenden Analyse-Cookies (Google Analytics, Microsoft Clarity), um die Nutzung der Website zu verstehen. Sie werden nur mit Ihrer Einwilligung geladen.',a:'Akzeptieren',r:'Ablehnen',p:'Datenschutz &amp; Cookies'},
+      pl:{t:'U\u017cywamy plik\u00f3w cookie do analityki (Google Analytics, Microsoft Clarity), aby zrozumie\u0107 korzystanie z witryny. \u0141aduj\u0105 si\u0119 tylko za Twoj\u0105 zgod\u0105.',a:'Akceptuj',r:'Odrzu\u0107',p:'Prywatno\u015b\u0107 i cookies'},
+      el:{t:'\u03a7\u03c1\u03b7\u03c3\u03b9\u03bc\u03bf\u03c0\u03bf\u03b9\u03bf\u03cd\u03bc\u03b5 cookies \u03b1\u03bd\u03ac\u03bb\u03c5\u03c3\u03b7\u03c2 (Google Analytics, Microsoft Clarity) \u03b3\u03b9\u03b1 \u03bd\u03b1 \u03ba\u03b1\u03c4\u03b1\u03bd\u03bf\u03ae\u03c3\u03bf\u03c5\u03bc\u03b5 \u03c4\u03b7 \u03c7\u03c1\u03ae\u03c3\u03b7. \u03a6\u03bf\u03c1\u03c4\u03ce\u03bd\u03bf\u03bd\u03c4\u03b1\u03b9 \u03bc\u03cc\u03bd\u03bf \u03bc\u03b5 \u03c4\u03b7 \u03c3\u03c5\u03b3\u03ba\u03b1\u03c4\u03ac\u03b8\u03b5\u03c3\u03ae \u03c3\u03b1\u03c2.',a:'\u0391\u03c0\u03bf\u03b4\u03bf\u03c7\u03ae',r:'\u0391\u03c0\u03cc\u03c1\u03c1\u03b9\u03c8\u03b7',p:'\u0391\u03c0\u03cc\u03c1\u03c1\u03b7\u03c4\u03bf &amp; cookies'}
+    };
+    function loadClarity(){if(!CL||window.__tmxCl)return;window.__tmxCl=1;
+      (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+       t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+       y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script",CL);}
+    function grant(){try{localStorage.setItem(KEY,'granted')}catch(e){}
+      gtag('consent','update',{analytics_storage:'granted'});loadClarity();}
+    function deny(){try{localStorage.setItem(KEY,'denied')}catch(e){}}
+    var saved=null;try{saved=localStorage.getItem(KEY)}catch(e){}
+    if(saved==='granted'){grant();return;} if(saved==='denied'){return;}
+    function show(){var tx=T[lc()]||T.en;
+      var b=document.createElement('div');b.className='tmx-cc';b.setAttribute('role','dialog');b.setAttribute('aria-live','polite');
+      b.innerHTML='<div class="tmx-cc__txt">'+tx.t+' <a href="/privacy/">'+tx.p+'</a></div>'+
+        '<div class="tmx-cc__btns"><button type="button" class="tmx-cc__b tmx-cc__b--no">'+tx.r+'</button>'+
+        '<button type="button" class="tmx-cc__b tmx-cc__b--yes">'+tx.a+'</button></div>';
+      document.body.appendChild(b);
+      b.querySelector('.tmx-cc__b--yes').addEventListener('click',function(){grant();b.remove();});
+      b.querySelector('.tmx-cc__b--no').addEventListener('click',function(){deny();b.remove();});}
+    if(document.body)show();else document.addEventListener('DOMContentLoaded',show);
+  })();
+  </script>
+  <!-- TMX-ANALYTICS END -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wypróbuj TAGRA za darmo — 30-dniowy okres próbny | TAGRA</title>
+  <meta name="description" content="Wypróbuj oprogramowanie TAGRA do analizy tachografów bezpłatnie przez 30 dni. Pełna funkcjonalność, bez karty kredytowej. Pobierz natychmiast po wysłaniu formularza.">
+  <meta name="theme-color" content="#0b2c4a">
+  <meta name="robots" content="noindex,follow">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="canonical" href="https://tagra.app/pl/wyprobuj/">
+  <link rel="alternate" hreflang="en" href="https://tagra.app/try/">
+  <link rel="alternate" hreflang="de" href="https://tagra.app/de/testen/">
+  <link rel="alternate" hreflang="pl" href="https://tagra.app/pl/wyprobuj/">
+  <link rel="alternate" hreflang="cs" href="https://tagra.app/try/cz/">
+  <link rel="alternate" hreflang="sk" href="https://tagra.app/try/sk/">
+  <link rel="alternate" hreflang="el" href="https://tagra.app/el/dokimi/">
+  <link rel="alternate" hreflang="x-default" href="https://tagra.app/try/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pl_PL">
+  <meta property="og:site_name" content="TAGRA">
+  <meta property="og:title" content="Wypróbuj TAGRA za darmo — 30-dniowy okres próbny">
+  <meta property="og:description" content="Pełna funkcjonalność, bez karty kredytowej. Natychmiastowe pobieranie.">
+  <meta property="og:image" content="https://cdn.truckmall.cz/data/user-content/TDT_TAGRA_MAX_wh.jpg">
+  <meta property="og:url" content="https://tagra.app/pl/wyprobuj/">
+
+  <link rel="stylesheet" href="/assets/css/main.css?v=f">
+  <link rel="stylesheet" href="/assets/css/nav.css?v=20260514j">
+  <script src="/assets/js/nav.js?v=20260513j" defer></script>
+  <link rel="stylesheet" href="/assets/css/footer.css?v=20260513d">
+</head>
+<body>
+
+<nav class="site-nav" role="navigation" aria-label="Nawigacja główna">
+  <div class="nav-inner">
+    <a href="/pl/" class="nav-logo" aria-label="TAGRA – Strona główna"><img src="/assets/img/logo-light.svg" alt="TAGRA" width="140" height="32" style="display:block;height:32px;width:auto;"></a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="/fleet/">Dla firm</a></li>
+      <li><a href="/driver/">Dla kierowców</a></li>
+      <li><a href="/pl/organy-kontrolne/">Organy kontrolne</a></li>
+      <li><a href="/articles/">Artykuły</a></li><li><a href="/manuals/">Instrukcje</a></li>
+      <li><a href="/faq/">FAQ</a></li>
+      <li><a href="/pl/kontakt/">Kontakt</a></li>
+      <li class="nav-cta"><a href="/pl/wyprobuj/" aria-current="page" style="color:var(--blue-mid)">Wypróbuj 30 dni za darmo</a></li>
+    </ul>
+    <details class="nav-lang">
+      <summary aria-label="Language: PL">PL</summary>
+      <div class="nav-lang-menu" role="menu">
+        <a href="/try/" hreflang="en">English</a>
+        <a href="/de/testen/" hreflang="de">Deutsch</a>
+        <a href="/pl/wyprobuj/" class="active" aria-current="page">Polski</a>
+        <a href="/el/dokimi/" hreflang="el">Ελληνικά</a>
+        <a href="/try/cz/" hreflang="cs">Čeština</a>
+        <a href="/try/sk/" hreflang="sk">Slovenčina</a>
+      </div>
+    </details>
+    <button class="nav-mobile-toggle" aria-label="Przełącz menu" aria-expanded="false" id="nav-toggle">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<section class="try-hero">
+  <div class="container">
+    <p class="eyebrow">30-dniowy bezpłatny okres próbny · Bez karty kredytowej</p>
+    <h1>Wypróbuj TAGRA bezpłatnie przez 30 dni</h1>
+    <p class="lead">Pełna funkcjonalność. Rzeczywiste dane floty. Natychmiastowy dostęp. Wystarczy wypełnić formularz, a link otrzymasz od razu.</p>
+  </div>
+</section>
+
+<section class="try-form-section">
+  <div class="container try-grid">
+
+    <aside class="try-aside">
+      <h2 class="try-aside-h">Co otrzymasz</h2>
+      <ul class="try-bullets">
+        <li><strong>Nielimitowana liczba kierowców i pojazdów</strong> w okresie próbnym</li>
+        <li>Obsługa pobierania danych z <strong>karty kierowcy i pamięci masowej tachografu</strong></li>
+        <li>Analiza <strong>czasu pracy kierowców w UE</strong> (rozporządzenie (WE) nr 561/2006, AETR)</li>
+        <li>Raportowanie zgodne z <strong>dyrektywą o czasie pracy kierowców</strong></li>
+        <li><strong>Bezpłatne wsparcie techniczne</strong> naszego zespołu</li>
+      </ul>
+      <div class="try-trust">
+        <div class="try-stat"><strong>20+</strong><span>lat na rynku</span></div>
+        <div class="try-stat"><strong>6000+</strong><span>flot korzysta z TAGRA</span></div>
+      </div>
+      <p class="try-help">Potrzebujesz pomocy w podjęciu decyzji? Napisz do nas na <a href="mailto:sales@tagra.app">sales@tagra.app</a> lub zadzwoń pod numer <a href="tel:+420739005345">+420 739 005 345</a>.</p>
+    </aside>
+
+    <div class="try-form-wrap">
+
+      <!-- Hidden form for Netlify build-time form detection -->
+      <form name="tagra-trial" data-netlify="true" netlify-honeypot="bot-field" hidden>
+        <input type="text" name="name">
+        <input type="text" name="company">
+        <input type="email" name="email">
+        <input type="tel" name="phone">
+        <input type="text" name="country">
+        <textarea name="message"></textarea>
+        <input type="text" name="audience">
+        <input type="text" name="language">
+        <input type="text" name="source_url">
+      </form>
+
+      <form
+        id="trialForm"
+        name="tagra-trial"
+        method="POST"
+        action="/try/thanks/"
+        data-netlify="true"
+        netlify-honeypot="bot-field"
+        novalidate
+      >
+        <input type="hidden" name="form-name" value="tagra-trial">
+        <p hidden aria-hidden="true"><label>Don't fill this out: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+
+        <fieldset class="audience-picker">
+          <legend>Jestem</legend>
+          <label class="audience-opt">
+            <input type="radio" name="audience" value="fleet" required>
+            <div>
+              <strong>Zarządzający flotą</strong>
+              <span>Zarządzam pojazdami i kierowcami w firmie — otrzymam <em>TAGRA</em>.</span>
+            </div>
+          </label>
+          <label class="audience-opt">
+            <input type="radio" name="audience" value="driver" required>
+            <div>
+              <strong>Kierowca zawodowy</strong>
+              <span>Jestem kierowcą i samodzielnie zarządzam swoją ewidencją — otrzymam <em>TAGRA TRUCKER</em>.</span>
+            </div>
+          </label>
+          <label class="audience-opt">
+            <input type="radio" name="audience" value="enforcement" required>
+            <div>
+              <strong>Służby kontrolne / Urząd</strong>
+              <span>Pracuję w organach kontrolnych — skontaktujemy się z Tobą bezpośrednio.</span>
+            </div>
+          </label>
+        </fieldset>
+
+        <div class="form-row">
+          <label class="form-field">
+            <span class="form-label">Imię i nazwisko <em>*</em></span>
+            <input type="text" name="name" required autocomplete="name">
+          </label>
+          <label class="form-field">
+            <span class="form-label">Firma</span>
+            <input type="text" name="company" autocomplete="organization">
+          </label>
+        </div>
+
+        <div class="form-row">
+          <label class="form-field">
+            <span class="form-label">E-mail <em>*</em></span>
+            <input type="email" name="email" required autocomplete="email">
+          </label>
+          <label class="form-field">
+            <span class="form-label">Telefon <em>*</em></span>
+            <input type="tel" name="phone" required autocomplete="tel">
+          </label>
+        </div>
+
+        <label class="form-field">
+          <span class="form-label">Kraj <em>*</em></span>
+          <select name="country" required>
+              <option value="">— wybierz —</option>
+              <option value="AT">Austria</option>
+              <option value="BE">Belgia</option>
+              <option value="BG">Bułgaria</option>
+              <option value="HR">Chorwacja</option>
+              <option value="CY">Cypr</option>
+              <option value="CZ">Czechy</option>
+              <option value="DK">Dania</option>
+              <option value="EE">Estonia</option>
+              <option value="FI">Finlandia</option>
+              <option value="FR">Francja</option>
+              <option value="DE">Niemcy</option>
+              <option value="GR">Grecja</option>
+              <option value="HU">Węgry</option>
+              <option value="IE">Irlandia</option>
+              <option value="IT">Włochy</option>
+              <option value="LV">Łotwa</option>
+              <option value="LT">Litwa</option>
+              <option value="LU">Luksemburg</option>
+              <option value="MT">Malta</option>
+              <option value="NL">Holandia</option>
+              <option value="NO">Norwegia</option>
+              <option value="PL">Polska</option>
+              <option value="PT">Portugalia</option>
+              <option value="RO">Rumunia</option>
+              <option value="SK">Słowacja</option>
+              <option value="SI">Słowenia</option>
+              <option value="ES">Hiszpania</option>
+              <option value="SE">Szwecja</option>
+              <option value="CH">Szwajcaria</option>
+              <option value="GB">Wielka Brytania</option>
+              <option value="OTHER">Inny</option>
+          </select>
+        </label>
+
+        <label class="form-field">
+          <span class="form-label">Czy jest coś, o czym powinniśmy wiedzieć? <span class="form-hint">(opcjonalnie)</span></span>
+          <textarea name="message" rows="3" placeholder="Wielkość floty, specyficzne potrzeby, pytania…"></textarea>
+        </label>
+
+        <input type="hidden" name="language" value="pl">
+        <input type="hidden" name="source_url" id="source_url" value="">
+
+        <label class="gdpr-check">
+          <input type="checkbox" name="gdpr_consent" value="yes" required>
+          <span>Zgadzam się na przetwarzanie moich danych osobowych w celu kontaktu w sprawie oprogramowania TAGRA. Szczegóły w <a href="/privacy/" target="_blank" rel="noopener noreferrer">polityce prywatności</a>. <em>*</em></span>
+        </label>
+
+        <button type="submit" class="btn btn-primary btn-submit">
+          <span class="btn-text">Odbierz 30-dniowy okres próbny</span>
+          <span class="btn-loading" hidden>Wysyłanie…</span>
+        </button>
+
+        <p class="form-footnote">Po wysłaniu formularza otrzymasz link do pobrania w przeglądarce oraz w wiadomości e-mail.</p>
+      </form>
+    </div>
+
+  </div>
+</section>
+
+<footer class="site-footer" role="contentinfo">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-logo"><img src="/assets/img/logo-dark.svg" alt="TAGRA" width="140" height="32"></div>
+      <p class="footer-desc">Profesjonalne oprogramowanie do analizy tachografów. Pobieranie karty kierowcy, analiza tachografów cyfrowych, unijne czasy prowadzenia pojazdu i dyrektywa o czasie pracy. Opracowane przez Truck Data Technology, s.r.o.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Produkt</h4>
+      <ul>
+        <li><a href="/fleet/">Dla przewoźników</a></li>
+        <li><a href="/driver/">Dla kierowców zawodowych</a></li>
+        <li><a href="/pl/organy-kontrolne/">Dla organów kontrolnych</a></li>
+        <li><a href="/how-it-works/">Jak to działa</a></li>
+        <li><a href="/for-whom/">Dla kogo</a></li>
+        <li><a href="/faq/">FAQ</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Zasoby</h4>
+      <ul>
+        <li><a href="/articles/">Artykuły</a></li><li><a href="/manuals/">Instrukcje</a></li>
+        <li><a href="/articles/digital-tachograph-symbols/">Symbole tachografu</a></li>
+        <li><a href="/integrations/dkv-live/">DKV LIVE&reg;</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Firma</h4>
+      <ul>
+        <li><a href="/pl/kontakt/">Kontakt</a></li>
+        <li><a href="https://www.tdt.cz" target="_blank" rel="noopener">Truck Data Technology</a></li>
+        <li><a href="/de/">Deutsch</a></li>
+        <li><a href="/pl/">Polski</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2026 Truck Data Technology, s.r.o. Wszelkie prawa zastrzeżone.</span>
+    <span><a href="/pl/kontakt/">Kontakt</a> &middot; <a href="https://www.tdt.cz" target="_blank" rel="noopener">tdt.cz</a></span>
+  </div>
+</footer>
+
+<script src="/try/try.js?v=20260513c" defer></script>
+</body>
+</html>
