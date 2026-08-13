@@ -299,3 +299,16 @@ p.lead {
 @media (max-width: 768px) {
   p.lead { font-size: 18px; }
 }
+
+
+/* === Odkaz na přeskočení navigace (WCAG 2.4.1, úroveň A) ===
+   Skrytý mimo obrazovku, zviditelní se až při navigaci klávesnicí. */
+.skip-link {
+  position: absolute; left: -9999px; top: 0; z-index: 10000;
+  background: var(--blue-mid, #134a8e); color: #fff;
+  padding: 12px 20px; border-radius: 0 0 8px 0;
+  font-size: 15px; font-weight: 600; text-decoration: none;
+}
+.skip-link:focus {
+  left: 0; outline: 3px solid var(--green-brand, #6E9B12); outline-offset: 2px;
+}
