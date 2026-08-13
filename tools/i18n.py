@@ -235,7 +235,7 @@ def hu_extras(doc, page_id=None):
     # 4) nav: HU article/manual paths
     for a in doc.find_all('a', href='/articles/'): a['href']='/hu/cikkek/'
     for a in doc.find_all('a', href='/manuals/'): a['href']='/hu/kezikonyvek/'
-    # 5) contact: replace first two contact cards with HU partner cards (Rukon + Tachocontroll)
+    # 5) contact: replace sales card with HU partner card (Rukon)
     if page_id == 'contact':
         fp = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'i18n', 'hu_contact_cards.html')
         grid = doc.find('div', class_='contact-grid')
