@@ -99,7 +99,7 @@
     strong{font-weight:700;color:var(--text);}
     #scroll-progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--green-brand),var(--blue-light));width:0%;z-index:9999;pointer-events:none;}
 .nav-inner{max-width:1180px;margin:0 auto;padding:0 24px;height:100%;display:flex;align-items:center;justify-content:space-between;gap:24px;}
-    .nav-logo{font-size:22px;font-weight:900;background:linear-gradient(90deg,var(--blue-dark),var(--blue-mid));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;text-decoration:none;}
+    .nav-logo{display:flex;align-items:center;gap:8px;text-decoration:none;flex-shrink:0}
     .nav-links{display:flex;align-items:center;gap:4px;list-style:none;}
     .nav-links a{font-size:15px;font-weight:500;color:var(--text);padding:8px 12px;border-radius:8px;text-decoration:none;transition:background .15s;}
     .nav-links a:hover{background:var(--bg-apple);color:var(--blue-mid);}
@@ -236,7 +236,7 @@
 <details class="nav-lang">
 <summary aria-label="Language: DE">DE</summary>
 <div class="nav-lang-menu" role="menu">
-<a href="/" hreflang="en">English</a><a aria-current="page" class="active" href="/de/" hreflang="de">Deutsch</a><a href="/pl/" hreflang="pl">Polski</a><a href="/el/" hreflang="el">Ελληνικά</a><a href="/hu/" hreflang="hu">Magyar</a><a href="https://www.tdt.cz/" hreflang="cs" rel="noopener" target="_blank">Čeština</a><a href="https://www.tdt.sk/" hreflang="sk" rel="noopener" target="_blank">Slovenčina</a></div>
+<a href="/" hreflang="en">English</a><a aria-current="page" class="active" href="/de/" hreflang="de">Deutsch</a><a href="/pl/" hreflang="pl">Polski</a><a href="/el/" hreflang="el">Ελληνικά</a><a href="https://www.tdt.cz/" hreflang="cs" rel="noopener" target="_blank">Čeština</a><a href="https://www.tdt.sk/" hreflang="sk" rel="noopener" target="_blank">Slovenčina</a></div>
 </details>
 <a class="nav-cta-mobile" href="/de/testen/?audience=fleet">Kostenlos testen</a>
 <button aria-expanded="false" aria-label="Menü umschalten" class="nav-mobile-toggle" id="nav-toggle">
@@ -294,7 +294,7 @@
 <div class="activity-card">
 <div aria-hidden="true" class="ico ico--avail"><img alt="" height="28" src="icons/availability.svg?v=20260514c" width="28"/></div>
 <h3>BEREITSCHAFT (Raute)</h3>
-<p>Wartezeit, deren Dauer im Voraus bekannt ist: Fähre/Zug, Warteschlange bei einem Kunden, Begleitung eines abgeschleppten Fahrzeugs. Bereitschaftszeit zählt nicht als Unterbrechung im Rahmen der Lenk- und Ruhezeiten, zählt aber als Arbeitszeit nach der WTD.</p>
+<p>Wartezeit, deren Dauer im Voraus bekannt ist: Fähre/Zug, Warteschlange bei einem Kunden, Begleitung eines abgeschleppten Fahrzeugs. Die Bereitschaftszeit zählt nicht als Unterbrechung nach den Lenk- und Ruhezeiten und ist — wenn ihre Dauer im Voraus bekannt ist — auch von der Arbeitszeit nach der Arbeitszeitrichtlinie ausgenommen.</p>
 </div>
 <div class="activity-card">
 <div aria-hidden="true" class="ico ico--rest"><img alt="" height="28" src="icons/rest.svg?v=20260514c" width="28"/></div>
@@ -311,7 +311,7 @@
 <div class="warn-grid">
 <div class="warn-card warn-card--warn">
 <h3>! Ereignis</h3>
-<p>Ein<strong>Betriebsereignis</strong>, das vom Tachografen aufgezeichnet wird und nicht unbedingt ein Hardwarefehler ist — zum Beispiel Lenken ohne geeignete Karte, Überschreitung der Geschwindigkeitsbegrenzung oder das Einstecken der Karte während des Lenkens. Die meisten Ereignisse müssen mit der OK-Taste bestätigt werden. Die Fahrzeugeinheit (VU) schreibt einen Datensatz in den Massenspeicher<em>und</em>auf die Fahrerkarte.</p>
+<p>Ein<strong>Betriebsereignis</strong>, das vom Tachografen aufgezeichnet wird und nicht unbedingt ein Hardwarefehler ist — zum Beispiel Lenken ohne geeignete Karte, Geschwindigkeitsüberschreitung oder das Einstecken der Karte während des Lenkens. Die meisten Ereignisse müssen mit der OK-Taste bestätigt werden. Die Fahrzeugeinheit (VU) schreibt einen Datensatz in den Massenspeicher<em>und</em>auf die Fahrerkarte.</p>
 </div>
 <div class="warn-card warn-card--crit">
 <h3>x Störung</h3>
@@ -319,7 +319,7 @@
 </div>
 <div class="warn-card warn-card--info">
 <h3>↻ Lenkzeitwarnung</h3>
-<p>A<strong>Einhaltungsvorwarnung</strong>: durchgängiges Lenken nähert sich 4½ Stunden, tägliche/wöchentliche Lenkzeit nähert sich ihrem Limit, oder die nächste erforderliche Ruhezeit fällig ist. Das blinkende Hintergrundlicht ist das visuelle Signal. Diese Meldungen unterstützen Sie bei der Einhaltung der Verordnung 561/2006 – sie sind keine Störungen.</p>
+<p>A<strong>Einhaltungsvorwarnung</strong>: durchgängiges Lenken nähert sich 4½ Stunden, tägliche/wöchentliche Lenkzeit nähert sich ihrem Limit, oder die nächste erforderliche Ruhezeit ist fällig. Das blinkende Hintergrundlicht ist das visuelle Signal. Diese Meldungen unterstützen Sie bei der Einhaltung der Verordnung 561/2006 – sie sind keine Störungen.</p>
 </div>
 <div class="warn-card warn-card--ok">
 <h3>i Betriebshinweis</h3>
@@ -387,7 +387,7 @@
 <td><span class="sev sev-med">Mittel</span></td>
 </tr>
 <tr>
-<td>x Sensorstörung</td>
+<td>x Geberstörung</td>
 <td>Die Kommunikation mit dem Bewegungssensor ist unterbrochen. Die Meldung erscheint auch nach einer Spannungsunterbrechung.</td>
 <td>Meldung bestätigen. Bei wiederholtem Auftreten eine autorisierte Fachwerkstatt aufsuchen.</td>
 <td><span class="sev sev-crit">Kritisch</span></td>
@@ -465,19 +465,19 @@
 <td><span class="sev sev-high">Hoch</span></td>
 </tr>
 <tr>
-<td>§ Kalibrierung in ... Tagen ??</td>
+<td>§ Kalibrierung in Tagen ??</td>
 <td>Die turnusmäßige zweijährliche Prüfung des Tachografen steht bevor (Warnung erscheint 28 Tage im Voraus).</td>
 <td>Bestätigen. Vereinbaren Sie einen Termin mit einer autorisierten Werkstatt vor Ablauf der Frist.</td>
 <td><span class="sev sev-low">Low</span></td>
 </tr>
 <tr>
-<td>1 Download in ?? Tagen</td>
+<td>1 Download in Tagen ??</td>
 <td>Das nächste Auslesen der Fahrerkarte ist fällig (Warnung erscheint 14 Tage im Voraus).</td>
 <td>Führen Sie ein Auslesen der Fahrerkarte durch, bevor die Frist abläuft.</td>
 <td><span class="sev sev-low">Low</span></td>
 </tr>
 <tr>
-<td>1 Ungültig in ?? Tagen</td>
+<td>1 Ungültig in Tagen ??</td>
 <td>Die Fahrerkarte läuft bald ab (üblicherweise 28 Tage im Voraus gewarnt).</td>
 <td>Meldung bestätigen. Beantragen Sie die Erneuerung der Karte bei Ihrer nationalen Behörde.</td>
 <td><span class="sev sev-info">Info</span></td>
@@ -504,19 +504,19 @@
 </thead>
 <tbody>
 <tr>
-<td>x Gerätestörung</td>
+<td>x Gerätestörung xx</td>
 <td>Schwerwiegende Störung in der Fahrzeugeinheit (DTCO 4.1x). Mögliche Ursachen: unerwarteter Programm-/Prozesszeitfehler, blockierte Tasten, Kommunikationsfehlfunktion mit externen Geräten oder Instrumentenanzeige, Fehlfunktion am Impulsausgang.</td>
 <td>Bestätigen. Tasten prüfen. Anschlusskabel / angeschlossenes Kontrollgerät von einer autorisierten Werkstatt prüfen lassen.</td>
 <td><span class="sev sev-crit">Kritisch</span></td>
 </tr>
 <tr>
-<td>x1 Interne Störung der Fahrzeugeinheit</td>
+<td>x1 Gerätestörung xx</td>
 <td>Fehlfunktion in der Kartenmechanik (Schacht 1), z. B. verriegelt die Kartenverriegelung nicht.</td>
 <td>Tachografenkarte entnehmen und wieder einführen. Bei anhaltendem Problem eine Werkstatt konsultieren.</td>
 <td><span class="sev sev-high">Hoch</span></td>
 </tr>
 <tr>
-<td>x Uhrzeitstörung</td>
+<td>x Uhrzeitstörung xx</td>
 <td>Die UTC-Zeit des DTCO ist nicht plausibel oder die Echtzeituhr ist fehlerhaft. Neu eingeführte Fahrer-/Unternehmenskarten werden abgelehnt, um inkonsistente Daten zu vermeiden.</td>
 <td>Bestätigen. Der DTCO muss so schnell wie möglich von einer autorisierten Werkstatt ersetzt oder zurückgesetzt werden.</td>
 <td><span class="sev sev-crit">Kritisch</span></td>
@@ -546,19 +546,19 @@
 <td><span class="sev sev-med">Mittel</span></td>
 </tr>
 <tr>
-<td>x Interne GNSS Störung xx</td>
+<td>x interne GNSS Störung xx</td>
 <td>Fehler am GNSS-Gerät: interner Fehler, Kurzschluss der externen GNSS-Antenne (Option) oder keine Verbindung zur externen Antenne.</td>
 <td>Quittieren. Eine autorisierte Werkstatt konsultieren.</td>
 <td><span class="sev sev-high">Hoch</span></td>
 </tr>
 <tr>
-<td>x Interne DSRC Störung xx</td>
+<td>x interne DSRC Störung xx</td>
 <td>Interner Fehler am DSRC-Modul (Funkmodul für Fernkontrolle am Straßenrand) oder die Antenne ist defekt / nicht angeschlossen.</td>
 <td>Bestätigen. Die Werkstatt muss das DSRC-Modul, die Kabel und die externe Antenne überprüfen.</td>
 <td><span class="sev sev-med">Mittel</span></td>
 </tr>
 <tr>
-<td>x Interne Geberstörung xx</td>
+<td>x interne Sensorstörung xx</td>
 <td>Der Selbsttest des internen Beschleunigungssensors ist mehr als 10 Mal fehlgeschlagen und der Rücksetzversuch war fehlerhaft.</td>
 <td>Bestätigen. Wenden Sie sich unverzüglich an eine autorisierte Fachwerkstatt.</td>
 <td><span class="sev sev-crit">Kritisch</span></td>
@@ -632,9 +632,9 @@
 <tr><td>Druck verzögert</td><td>Druck unterbrochen, da der Thermokopf zu heiß ist. Warten Sie – der Druck wird nach dem Abkühlen automatisch fortgesetzt.</td></tr>
 <tr><td>Auswurf nicht möglich xx</td><td>Der Kartenauswurf wurde verweigert: Daten werden gelesen oder übertragen, Tageswechsel im Gange, Fahrzeug in Bewegung oder (ADR) Zündung ausgeschaltet.</td></tr>
 <tr><td>?1 Aufzeichnung inkonsistent xx</td><td>Inkonsistente Reihenfolge der Daten in den Fahrerkarte-Aufzeichnungen. Wird behoben, sobald neue Daten die fehlerhaften Einträge überschreiben.</td></tr>
-<tr><td>1 Bitte Karte auswerfen xx</td><td>Fehler beim Schreiben von Daten auf die Fahrerkarte. Die Karte wird ausgeworfen und erneut gelesen; schlägt dies erneut fehl, wird ein Ausdruck der letzten Aktivitäten gestartet.</td></tr>
-<tr><td>1 Kartenstörung xx</td><td>Beim Verarbeiten der eingelegten Tachografkarte ist ein Fehler aufgetreten. Die Karte wird abgewiesen und ausgeworfen. Kontakte reinigen und erneut einstecken.</td></tr>
-<tr><td>1 falscher Kartentyp xx</td><td>Die eingelegte Karte ist keine Tachografkarte. Legen Sie eine gültige Tachografkarte ein.</td></tr>
+<tr><td>1 Karte auswerfen xx</td><td>Fehler beim Schreiben von Daten auf die Fahrerkarte. Die Karte wird ausgeworfen und erneut gelesen; schlägt dies erneut fehl, wird ein Ausdruck der letzten Aktivitäten gestartet.</td></tr>
+<tr><td>1 Karte fehlerhaft xx</td><td>Beim Verarbeiten der eingelegten Tachografkarte ist ein Fehler aufgetreten. Die Karte wird abgewiesen und ausgeworfen. Kontakte reinigen und erneut einstecken.</td></tr>
+<tr><td>1 Falsche Karte xx</td><td>Die eingelegte Karte ist keine Tachografkarte. Legen Sie eine gültige Tachografkarte ein.</td></tr>
 <tr><td>1 Bitte Karte reinigen!</td><td>Der DTCO hatte Probleme beim Lesen oder Schreiben der Karte. Reinigen Sie sowohl die Karte als auch die Kartenschächte.</td></tr>
 </tbody>
 </table>
@@ -1144,7 +1144,7 @@
 </tr>
 <tr>
 <td>10</td>
-<td><strong>1 Download in ?? Tagen</strong></td>
+<td><strong>1 Download in Tagen ??</strong></td>
 <td>Das nächste obligatorische Auslesen der Fahrerkarte steht an (Warnung typischerweise 14 Tage im Voraus). EU-Vorschriften verlangen ein Auslesen mindestens alle 28 Tage.</td>
 <td>Geben Sie die Karte an den Fuhrpark weiter oder lesen Sie sie selbst aus. Wenn Sie die Frist versäumen, bleiben die Daten erhalten, aber das Büro kann Sie sanktionieren.</td>
 </tr>
@@ -1273,7 +1273,7 @@
 </details>
 <details>
 <summary>Was ist der Unterschied zwischen „Andere Arbeit“ und „Bereitschaftszeit“?</summary>
-<div class="faq-a"><strong>Andere Arbeit</strong>ist bezahlte Arbeit, die kein Lenken ist: Be- und Entladen, Tanken, Büroarbeiten, Fahrgästen helfen, Fahrzeugkontrollen. Sie zählt als Arbeitszeit gemäß der WTD und eine<em>nicht</em>als Unterbrechung.<strong>Bereitschaft</strong>ist Wartezeit, deren Dauer der Fahrer im Voraus kennt – Fähre/Zug, Warten bei einem bekannten Termin, Begleitung eines Fahrzeugs auf einem Transporter. BEREITSCHAFT ist keine ARBEIT, aber es ist auch<em>nicht</em>eine Unterbrechung nach den Lenk- und Ruhezeiten und zählt zur Arbeitszeit nach der Arbeitszeitrichtlinie.</div>
+<div class="faq-a"><strong>Andere Arbeit</strong>ist bezahlte Arbeit, die kein Lenken ist: Be- und Entladen, Tanken, Büroarbeiten, Fahrgästen helfen, Fahrzeugkontrollen. Sie zählt als Arbeitszeit gemäß der WTD und eine<em>nicht</em>als Unterbrechung.<strong>Bereitschaft</strong>ist Wartezeit, deren Dauer der Fahrer im Voraus kennt – Fähre/Zug, Warten bei einem bekannten Termin, Begleitung eines Fahrzeugs auf einem Transporter. BEREITSCHAFT ist keine ARBEIT, aber es ist auch<em>nicht</em>eine Unterbrechung nach den Lenk- und Ruhezeiten; nach der Arbeitszeitrichtlinie ist sie von der Arbeitszeit ausgenommen, wenn ihre Dauer im Voraus bekannt ist.</div>
 </details>
 <details>
 <summary>Kann „BEREITSCHAFT“ als UNTERBRECHUNG/RUHE gemäß EG 561/2006 zählen?</summary>

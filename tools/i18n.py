@@ -31,7 +31,7 @@ LANGS = {
     'de': {'code': 'de', 'label': 'DE', 'native': 'Deutsch',   'locale': 'de_DE'},
     'pl': {'code': 'pl', 'label': 'PL', 'native': 'Polski',    'locale': 'pl_PL'},
     'el': {'code': 'el', 'label': 'EL', 'native': 'Ελληνικά',  'locale': 'el_GR'},
-    'hu': {'code': 'hu', 'label': 'HU', 'native': 'Magyar',    'locale': 'hu_HU'},
+    # 'hu' přidat zpět při spuštění HU fáze (adresář /hu/ zatím neexistuje)
 }
 EXTERNAL_LANGS = [('cs', 'Čeština', 'https://www.tdt.cz/'),
                   ('sk', 'Slovenčina', 'https://www.tdt.sk/')]

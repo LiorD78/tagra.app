@@ -99,7 +99,7 @@
     strong{font-weight:700;color:var(--text);}
     #scroll-progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--green-brand),var(--blue-light));width:0%;z-index:9999;pointer-events:none;}
 .nav-inner{max-width:1180px;margin:0 auto;padding:0 24px;height:100%;display:flex;align-items:center;justify-content:space-between;gap:24px;}
-    .nav-logo{font-size:22px;font-weight:900;background:linear-gradient(90deg,var(--blue-dark),var(--blue-mid));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;text-decoration:none;}
+    .nav-logo{display:flex;align-items:center;gap:8px;text-decoration:none;flex-shrink:0}
     .nav-links{display:flex;align-items:center;gap:4px;list-style:none;}
     .nav-links a{font-size:15px;font-weight:500;color:var(--text);padding:8px 12px;border-radius:8px;text-decoration:none;transition:background .15s;}
     .nav-links a:hover{background:var(--bg-apple);color:var(--blue-mid);}
@@ -236,7 +236,7 @@
 <details class="nav-lang">
 <summary aria-label="Language: PL">PL</summary>
 <div class="nav-lang-menu" role="menu">
-<a href="/" hreflang="en">English</a><a href="/de/" hreflang="de">Deutsch</a><a aria-current="page" class="active" href="/pl/" hreflang="pl">Polski</a><a href="/el/" hreflang="el">Ελληνικά</a><a href="/hu/" hreflang="hu">Magyar</a><a href="https://www.tdt.cz/" hreflang="cs" rel="noopener" target="_blank">Čeština</a><a href="https://www.tdt.sk/" hreflang="sk" rel="noopener" target="_blank">Slovenčina</a></div>
+<a href="/" hreflang="en">English</a><a href="/de/" hreflang="de">Deutsch</a><a aria-current="page" class="active" href="/pl/" hreflang="pl">Polski</a><a href="/el/" hreflang="el">Ελληνικά</a><a href="https://www.tdt.cz/" hreflang="cs" rel="noopener" target="_blank">Čeština</a><a href="https://www.tdt.sk/" hreflang="sk" rel="noopener" target="_blank">Slovenčina</a></div>
 </details>
 <a class="nav-cta-mobile" href="/pl/wyprobuj/?audience=fleet">Wypróbuj za darmo</a>
 <button aria-expanded="false" aria-label="Przełącz menu" class="nav-mobile-toggle" id="nav-toggle">
@@ -289,32 +289,32 @@
 <div class="activity-card">
 <div aria-hidden="true" class="ico ico--work"><img alt="" height="28" src="icons/other-work.svg?v=20260514c" width="28"/></div>
 <h3>INNA PRACA (skrzyżowane młotki)</h3>
-<p>Cała płatna praca, która<strong>nie jest PROWADZENIEM</strong>: załadunek i rozładunek, tankowanie, dokumentacja, kontrola pojazdów, pomoc pasażerom. Wlicza się do czasu pracy zgodnie z Dyrektywą o czasie pracy. Nie<em>wlicza się</em>jako PRZERWA/ODPOCZYNEK.</p>
+<p>Cała płatna praca, która<strong>nie jest PROWADZENIEM</strong>: załadunek i rozładunek, tankowanie, dokumentacja, kontrola pojazdów, pomoc pasażerom. Wlicza się do czasu pracy zgodnie z Dyrektywą o czasie pracy. Nie<em>wlicza się</em>jako przerwa.</p>
 </div>
 <div class="activity-card">
 <div aria-hidden="true" class="ico ico--avail"><img alt="" height="28" src="icons/availability.svg?v=20260514c" width="28"/></div>
 <h3>GOTOWOŚĆ (kwadratowy romb)</h3>
-<p>Czas oczekiwania, którego długość jest z góry znana: PRZEPRAWA PROMOWA/POCIĄGOWA, stanie w kolejce u klienta, towarzyszenie holowanemu pojazdowi. Okres GOTOWOŚCI nie wlicza się do PRZERWA/ODPOCZYNEK w rozumieniu czasu pracy kierowców, ale wlicza się do czasu pracy w rozumieniu dyrektywy o czasie pracy (WTD).</p>
+<p>Czas oczekiwania, którego długość jest znana z góry: prom/kolej, oczekiwanie w kolejce u klienta, towarzyszenie pojazdowi holowanemu. Okres gotowości nie wlicza się do przerwy według norm czasu prowadzenia pojazdu, a gdy jego długość jest znana z góry — jest również wyłączony z czasu pracy według dyrektywy o czasie pracy.</p>
 </div>
 <div class="activity-card">
 <div aria-hidden="true" class="ico ico--rest"><img alt="" height="28" src="icons/rest.svg?v=20260514c" width="28"/></div>
 <h3>PRZERWA/ODPOCZYNEK (łóżko)</h3>
-<p>Prawdziwa PRZERWA/ODPOCZYNEK lub dzienny/tygodniowy odpoczynek. Kierowca nie może wykonywać żadnej pracy i musi mieć swobodę dysponowania swoim czasem. Jedyna kategoria, która resetuje licznik 4½-godzinnego ciągłego PROWADZENIA i wlicza się do obowiązkowego 11-godzinnego dziennego odpoczynku.</p>
+<p>Prawdziwa przerwa lub dzienny/tygodniowy odpoczynek. Kierowca nie może wykonywać żadnej pracy i musi mieć swobodę dysponowania swoim czasem. Jedyna kategoria, która resetuje licznik 4½-godzinnego ciągłego PROWADZENIA i wlicza się do obowiązkowego 11-godzinnego dziennego odpoczynku.</p>
 </div>
 </div>
-<p>Przyciski wyboru na przyrządzie rejestrującym (Kierowca 1 / Kierowca 2) pozwalają przełączać się między PRACA, GOTOWOŚĆ i PRZERWA/ODPOCZYNEK. PROWADZENIE jest zawsze ustawiane automatycznie przez czujnik ruchu — jeśli widzisz PROWADZENIE, gdy pojazd stoi, tachograf rejestruje usterka, a nie aktywność (więcej na ten temat poniżej). Typowe błędy kierowców związane z tymi czterema piktogramami — i dlaczego „GOTOWOŚĆ” nigdy prawnie nie może zastąpić PRZERWA/ODPOCZYNEK — omówiono w sekcji 4.</p>
+<p>Przyciski wyboru na przyrządzie rejestrującym (Kierowca 1 / Kierowca 2) pozwalają przełączać się między aktywnościami PRACA, GOTOWOŚĆ i PRZERWA/ODPOCZYNEK. PROWADZENIE jest zawsze ustawiane automatycznie przez czujnik ruchu — jeśli widzisz PROWADZENIE, gdy pojazd stoi, tachograf rejestruje usterka, a nie aktywność (więcej na ten temat poniżej). Typowe błędy kierowców związane z tymi czterema piktogramami — i dlaczego „GOTOWOŚĆ” nigdy prawnie nie może zastąpić PRZERWA/ODPOCZYNEK — omówiono w sekcji 4.</p>
 <!-- ===================================================================== -->
 <!-- SECTION 2: UNIVERSAL WARNING CATEGORIES                                -->
 <!-- ===================================================================== -->
 <h2 id="universal-warnings">Uniwersalne kategorie ostrzeżeń, których używa każdy tachograf</h2>
-<p>Gdy przejdziesz poza cztery piktogramy aktywności, wszystkie komunikaty ostrzegawcze wyświetlane przez tachograf cyfrowy należą do jednej z czterech rodzin. Instrukcja obsługi<strong>VDO DTCO 4.1 manual</strong>wymienia je wyraźnie (strona 109), a ta sama logika jest stosowana przez Stoneridge SE5000, Actia SmarTach i EFAS-4 — ponieważ<strong>Załącznik I C definiuje kategorie na poziomie rozporządzenia</strong>. Informacja o tym, do której rodziny należy komunikat, od razu wskazuje o jego powadze i o tym, czy możesz kontynuować swoją zmianę.</p>
+<p>Gdy przejdziesz poza cztery piktogramy aktywności, wszystkie komunikaty ostrzegawcze wyświetlane przez tachograf cyfrowy należą do jednej z czterech rodzin. Instrukcja obsługi<strong>VDO DTCO 4.1 manual</strong>wymienia je wyraźnie (strona 109), a ta sama logika jest stosowana przez Stoneridge SE5000, Actia SmarTach i EFAS-4 — ponieważ<strong>Załącznik I C definiuje kategorie na poziomie rozporządzenia</strong>. Informacja o tym, do której rodziny należy komunikat, od razu informuje o jego powadze i o tym, czy możesz kontynuować swoją zmianę.</p>
 <div class="warn-grid">
 <div class="warn-card warn-card--warn">
-<h3>! Zdarzenie</h3>
-<p>An <strong>zdarzenie operacyjne</strong>rejestrowane przez tachograf, które niekoniecznie oznacza awarię sprzętową — na przykład, prowadzenie pojazdu bez prawidłowej karty, przekroczenie prędkości lub włożenie karty podczas prowadzenia pojazdu. Większość zdarzeń należy potwierdzić przyciskiem OK. Przyrząd rejestrujący (VU) zapisuje rekord w pamięci masowej<em>i</em>i na kartę kierowcy.</p>
+<h3>! zdarzenie</h3>
+<p>To<strong>zdarzenie operacyjne</strong>rejestrowane przez tachograf, które niekoniecznie oznacza awarię sprzętową — na przykład, prowadzenie pojazdu bez prawidłowej karty, przekroczenie prędkości lub włożenie karty podczas prowadzenia pojazdu. Większość zdarzeń należy potwierdzić przyciskiem OK. Przyrząd rejestrujący (VU) zapisuje rekord w pamięci masowej<em>i</em>i na kartę kierowcy.</p>
 </div>
 <div class="warn-card warn-card--crit">
-<h3>x Usterka</h3>
+<h3>x usterka</h3>
 <p>Prawdziwa<strong>awaria sprzętu lub oprogramowania</strong>: awaria nadajnika, usterka drukarki, wewnętrzny błąd czasu, usterka pobierania danych, Anomalia GNSS. Usterki uruchamiają prawną zasadę siedmiu dni na naprawę w warsztacie — urządzenie musi zostać sprawdzone przez autoryzowany warsztat w ciągu<strong>jednego tygodnia</strong>. Prowadzenie pojazdu z rozpoznaną usterką jest dozwolone wyłącznie z udokumentowanymi zapisami ręcznymi.</p>
 </div>
 <div class="warn-card warn-card--info">
@@ -323,7 +323,7 @@
 </div>
 <div class="warn-card warn-card--ok">
 <h3>i Nota eksploatacyjna</h3>
-<p>An <strong>monit informacyjny</strong>: „proszę wprowadzić”, „brak papieru”, „błąd karty”, „kalibracja za 28 dni”. Noty eksploatacyjne pojawiają się bez migania i znikają automatycznie po kilku sekundach. Żadne dane nie są zapisywane w pamięci masowej; komunikat jest wyłącznie wskazówką interfejsu użytkownika.</p>
+<p>To<strong>monit informacyjny</strong>: „proszę wprowadzić”, „brak papieru”, „błąd karty”, „kalibracja za 28 dni”. Noty eksploatacyjne pojawiają się bez migania i znikają automatycznie po kilku sekundach. Żadne dane nie są zapisywane w pamięci masowej; komunikat jest wyłącznie wskazówką interfejsu użytkownika.</p>
 </div>
 </div>
 <p>Każdy komunikat o błędzie, który zobaczysz — czy to z VDO DTCO 4.0, Stoneridge SE5000 Exakt Duo², Actia SmarTach, czy innej jednostki homologowanej zgodnie z załącznikiem I C — należy do dokładnie jednej z tych czterech rodzin. Od tego momentu w przewodniku przyjrzymy się każdej rodzinie szczegółowo, z zweryfikowanym tekstem komunikatów z instrukcji producenta.</p>
@@ -387,7 +387,7 @@
 <td><span class="sev sev-med">Średni</span></td>
 </tr>
 <tr>
-<td>x awaria nadajnika</td>
+<td>x awaria</td>
 <td>Komunikacja z czujnikiem ruchu jest przerwana. Komunikat pojawia się również po przerwie w zasilaniu.</td>
 <td>Potwierdź komunikat. Jeśli powtarza się, skonsultuj się z autoryzowanym warsztatem specjalistycznym.</td>
 <td><span class="sev sev-crit">Krytyczny</span></td>
@@ -405,7 +405,7 @@
 <td><span class="sev sev-med">Średni</span></td>
 </tr>
 <tr>
-<td>!? Anomalia GNSS</td>
+<td>!? anomalia GNSS</td>
 <td>Wykryto manipulację lub zewnętrzny atak na sygnał GNSS (anti-spoofing OSNMA).</td>
 <td>Sprawdź przyczyny manipulacji. Zweryfikuj działanie GNSS. Wymień wadliwe komponenty, jeśli to konieczne.</td>
 <td><span class="sev sev-high">Wysoki</span></td>
@@ -465,25 +465,25 @@
 <td><span class="sev sev-high">Wysoki</span></td>
 </tr>
 <tr>
-<td>§ kalibracja za ... dni ??</td>
+<td>§ kalibracja za dni ??</td>
 <td>Zbliża się okresowa, dwuletnia kontrola tachografu (ostrzeżenie pojawia się z 28-dniowym wyprzedzeniem).</td>
 <td>Potwierdzić. Umówić się na wizytę w autoryzowanym warsztacie przed upływem terminu.</td>
 <td><span class="sev sev-low">Niski</span></td>
 </tr>
 <tr>
-<td>1 pobranie za ?? dni</td>
+<td>1 pobranie w dniach ??</td>
 <td>Termin następnego pobierania karty kierowcy zbliża się (ostrzeżenie pojawia się 14 dni wcześniej).</td>
 <td>Wykonaj pobieranie karty kierowcy przed upływem terminu.</td>
 <td><span class="sev sev-low">Niski</span></td>
 </tr>
 <tr>
-<td>1 wygaśnięcie za ?? dni</td>
+<td>1 wygaśnie za dni ??</td>
 <td>Karta kierowcy wkrótce wygasa (zazwyczaj ostrzega 28 dni wcześniej).</td>
 <td>Potwierdź wiadomość. Złóż wniosek o odnowienie karty do właściwego organu państwa członkowskiego.</td>
 <td><span class="sev sev-info">Informacje</span></td>
 </tr>
 <tr>
-<td>! koniec norm. pracy za ??</td>
+<td>! koniec normal. pracy za ??</td>
 <td>Świadectwo homologacji typu DTCO 4.1x wygasa. Wiadomość pojawia się 92 dni wcześniej po wyjęciu karty.</td>
 <td>Umów wizytę w swoim warsztacie w celu wymiany DTCO przed upływem terminu.</td>
 <td><span class="sev sev-med">Średni</span></td>
@@ -528,7 +528,7 @@
 <td><span class="sev sev-med">Średni</span></td>
 </tr>
 <tr>
-<td>x Usterka pobierania danych xx</td>
+<td>x awaria transmisji xx</td>
 <td>Usterka podczas pobierania danych do urządzenia zewnętrznego (klucza do pobierania danych lub zdalnego urządzenia do pobierania danych).</td>
 <td>Potwierdź. Powtórz pobieranie. Sprawdź kable połączeniowe (luźny styk?) lub urządzenie zewnętrzne.</td>
 <td><span class="sev sev-med">Średni</span></td>
@@ -558,7 +558,7 @@
 <td><span class="sev sev-med">Średni</span></td>
 </tr>
 <tr>
-<td>x Usterka czujnika wewnętrznego xx</td>
+<td>x wewnętrzna usterka czujnika xx</td>
 <td>Autotest wewnętrznego czujnika przyspieszenia nie powiódł się więcej niż 10 razy, a próba resetu była błędna.</td>
 <td>Potwierdź. Skonsultuj się z autoryzowanym specjalistycznym warsztatem bez zwłoki.</td>
 <td><span class="sev sev-crit">Krytyczny</span></td>
@@ -594,7 +594,7 @@
 <td>Zatrzymaj się i zrób przerwę (45 min lub 15 + 30 dzielony).</td>
 </tr>
 <tr>
-<td>1 czas jazdy 24h / | / ||</td>
+<td>1 Czas jazdy 24h / | / ||</td>
 <td>Zbliża się koniec dziennego (24h), tygodniowego (|) lub dwutygodniowego (||) czasu jazdy. Czas ostrzeżenia wstępnego jest konfigurowalny.</td>
 <td>Potwierdź. Zakończ jazdę i skorzystaj z wymaganego odpoczynku zgodnie z Rozporządzeniem 561/2006.</td>
 </tr>
@@ -604,12 +604,12 @@
 <td>Zaplanuj następny postój na odpoczynek z odpowiednim wyprzedzeniem.</td>
 </tr>
 <tr>
-<td>1 czas pracy 24h 09h30</td>
+<td>1 Czas pracy 24h 09h30</td>
 <td>Koniec dziennego (24h) lub tygodniowego (|) czasu pracy zgodnie z WTD zbliża się.</td>
 <td>Potwierdź. Zakończ dzień pracy i zrób wymagany odpoczynek.</td>
 </tr>
 <tr>
-<td>1 czas pracy 04h15</td>
+<td>1 Czas pracy 04h15</td>
 <td>Koniec maksymalnego nieprzerwanego czasu pracy (6 hours under WTD) zbliża się.</td>
 <td>Zaplanuj przerwę w ciągu następnych 15 minut.</td>
 </tr>
@@ -632,10 +632,10 @@
 <tr><td>wydruk opóźniony</td><td>Wydruk przerwany, ponieważ głowica termiczna jest zbyt gorąca. Poczekaj – wydruk zostanie wznowiony automatycznie po ostygnięciu.</td></tr>
 <tr><td>wysunięcie niemożliwe xx</td><td>Wysunięcie karty zostało odrzucone: dane są odczytywane lub transferowane, trwa zmiana dnia, pojazd jest w ruchu lub (ADR) zapłon jest wyłączony.</td></tr>
 <tr><td>!?1 zapis niezgodny xx</td><td>Niespójne uporządkowanie dat w rekordach karty kierowcy. Zniknie, gdy nowe dane nadpiszą wadliwe wpisy.</td></tr>
-<tr><td>1 proszę wysunąć kartę xx</td><td>Błąd podczas zapisu danych na kartę kierowcy. Karta jest wysuwana i ponownie odczytywana; jeśli ponownie wystąpi błąd, rozpoczyna się wydruk ostatnich aktywności.</td></tr>
-<tr><td>1 awaria karty xx</td><td>Wystąpił błąd podczas przetwarzania włożonej karty tachografu. Karta jest odrzucana i wysuwana. Wyczyść styki i włóż ponownie.</td></tr>
-<tr><td>1 nieprawidłowy typ karty xx</td><td>Włożona karta nie jest kartą tachografu. Włóż prawidłową kartę tachografu.</td></tr>
-<tr><td>1 proszę wyczyścić kartę!</td><td>DTCO miało problemy z odczytem lub zapisem karty. Wyczyść zarówno kartę, jak i szuflady karty.</td></tr>
+<tr><td>1 Wysuń kartę xx</td><td>Błąd podczas zapisu danych na kartę kierowcy. Karta jest wysuwana i ponownie odczytywana; jeśli ponownie wystąpi błąd, rozpoczyna się wydruk ostatnich aktywności.</td></tr>
+<tr><td>1 karta uszkodzona xx</td><td>Wystąpił błąd podczas przetwarzania włożonej karty tachografu. Karta jest odrzucana i wysuwana. Wyczyść styki i włóż ponownie.</td></tr>
+<tr><td>1 karta zła xx</td><td>Włożona karta nie jest kartą tachografu. Włóż prawidłową kartę tachografu.</td></tr>
+<tr><td>1 Wyczyść karte!</td><td>DTCO miało problemy z odczytem lub zapisem karty. Wyczyść zarówno kartę, jak i szuflady karty.</td></tr>
 </tbody>
 </table>
 </div>
@@ -1144,7 +1144,7 @@
 </tr>
 <tr>
 <td>10</td>
-<td><strong>1 pobranie za ?? dni</strong></td>
+<td><strong>1 pobranie w dniach ??</strong></td>
 <td>Zbliża się termin następnego obowiązkowego pobierania danych z karty kierowcy (ostrzeżenie zazwyczaj 14 dni wcześniej). Przepisy UE wymagają pobierania danych co najmniej co 28 dni.</td>
 <td>Przekaż kartę flocie lub pobierz dane samodzielnie. Jeśli przegapisz termin, dane są nadal zachowane, ale biuro może nałożyć na Ciebie kary.</td>
 </tr>
@@ -1155,7 +1155,7 @@
 <!-- SECTION 5: CRISIS WORKFLOW                                             -->
 <!-- ===================================================================== -->
 <h2 id="crisis-workflow">Krytyczna usterka: co zrobić, gdy na drodze pojawi się usterka</h2>
-<p>Prawdziwa<strong>x Usterka</strong>komunikat — ! awaria nadajnika, ! konflikt ruchu, x awaria wewnętrzna, ! przerwanie zabezp., ! konflikt czasowy — różni się od notatki operacyjnej: tachograf nie może już niezawodnie rejestrować Twojej aktywności, a Ty jesteś prawnie zobowiązany do prowadzenia ręcznych zapisów i zlecić kontrolę urządzenia przez<strong>autoryzowany warsztat tachografów w ciągu siedmiu dni</strong>(Article 37 of Regulation 165/2014). Poniższy pięcioetapowy proces jest oficjalną procedurą opisaną w instrukcji każdego producenta.</p>
+<p>Prawdziwa<strong>x usterka</strong>komunikat — ! awaria nadajnika, ! konflikt ruchu, x awaria wewnętrzna, ! przerwanie zabezp., ! konflikt czasowy — różni się od notatki operacyjnej: tachograf nie może już niezawodnie rejestrować Twojej aktywności, a Ty jesteś prawnie zobowiązany do prowadzenia ręcznych zapisów i zlecić kontrolę urządzenia przez<strong>autoryzowany warsztat tachografów w ciągu siedmiu dni</strong>(Article 37 of Regulation 165/2014). Poniższy pięcioetapowy proces jest oficjalną procedurą opisaną w instrukcji każdego producenta.</p>
 <ol class="crisis-steps">
 <li>
 <span class="num">1</span>
@@ -1261,7 +1261,7 @@
 <div class="faq-block">
 <details>
 <summary>Jaka jest różnica między „zdarzeniem” a „usterką” w tachografie cyfrowym?</summary>
-<div class="faq-a">An <strong>Zdarzenie</strong>to zdarzenie eksploatacyjne — prowadzenie pojazdu bez karty, przekroczenie prędkości, włożenie karty podczas prowadzenia pojazdu, nakładające się czasy. Przyrząd rejestrujący działa prawidłowo; rejestruje on czynność wykonaną przez kierowcę. Usterka<strong>Usterka</strong>to awaria sprzętu lub oprogramowania samego tachografu — usterka czujnika, usterka wewnętrzna przyrządu rejestrującego, konflikt czasu, usterka drukarki. Usterki uruchamiają prawną zasadę 7-dniowego terminu naprawy w warsztacie. Obie kategorie są zdefiniowane w załączniku I C do rozporządzenia (UE) 2016/799.</div>
+<div class="faq-a">To<strong>zdarzenie</strong>to zdarzenie eksploatacyjne — prowadzenie pojazdu bez karty, przekroczenie prędkości, włożenie karty podczas prowadzenia pojazdu, nakładające się czasy. Przyrząd rejestrujący działa prawidłowo; rejestruje on czynność wykonaną przez kierowcę. Usterka<strong>usterka</strong>to awaria sprzętu lub oprogramowania samego tachografu — usterka czujnika, usterka wewnętrzna przyrządu rejestrującego, konflikt czasu, usterka drukarki. Usterki uruchamiają prawną zasadę 7-dniowego terminu naprawy w warsztacie. Obie kategorie są zdefiniowane w załączniku I C do rozporządzenia (UE) 2016/799.</div>
 </details>
 <details>
 <summary>Widzę „awaria nadajnika” na moim wyświetlaczu VDO — czy mogę kontynuować jazdę?</summary>
@@ -1273,10 +1273,10 @@
 </details>
 <details>
 <summary>Jaka jest różnica między „Inna praca” a „Okres dyspozycyjności”?</summary>
-<div class="faq-a"><strong>PRACA</strong>to płatna praca, która nie jest prowadzeniem pojazdu: załadunek, rozładunek, tankowanie, wypełnianie dokumentów, pomoc pasażerom, kontrola pojazdu. Liczy się jako czas pracy zgodnie z Dyrektywą o czasie pracy (WTD) i nie jest traktowana jako<em>wlicza się</em>jako PRZERWA/ODPOCZYNEK.<strong>GOTOWOŚĆ</strong>jest czasem oczekiwania, którego czas trwania kierowca zna z wyprzedzeniem — przeprawa promowa/pociągowa, oczekiwanie w kolejce na ustalone spotkanie, towarzyszenie pojazdowi na lawecie. Okres GOTOWOŚĆ nie jest pracą, ale jest również<em>wlicza się</em>przerwą w rozumieniu czasu pracy kierowcy i wlicza się do czasu pracy zgodnie z dyrektywą o czasie pracy.</div>
+<div class="faq-a"><strong>PRACA</strong>to płatna praca, która nie jest prowadzeniem pojazdu: załadunek, rozładunek, tankowanie, wypełnianie dokumentów, pomoc pasażerom, kontrola pojazdu. Liczy się jako czas pracy zgodnie z Dyrektywą o czasie pracy (WTD) i nie jest traktowana jako<em>wlicza się</em>jako przerwa.<strong>GOTOWOŚĆ</strong>jest czasem oczekiwania, którego czas trwania kierowca zna z wyprzedzeniem — przeprawa promowa/pociągowa, oczekiwanie w kolejce na ustalone spotkanie, towarzyszenie pojazdowi na lawecie. Okres gotowości nie jest pracą, ale jest również<em>wlicza się</em>przerwą według norm czasu prowadzenia pojazdu; według dyrektywy o czasie pracy jest wyłączony z czasu pracy, gdy jego długość jest znana z góry.</div>
 </details>
 <details>
-<summary>Czy „Okres GOTOWOŚĆ” może być zaliczony jako PRZERWA/ODPOCZYNEK zgodnie z rozporządzeniem (WE) 561/2006?</summary>
+<summary>Czy „okres gotowości” może być zaliczony jako przerwa zgodnie z rozporządzeniem (WE) 561/2006?</summary>
 <div class="faq-a">Nie. Załącznik 1 do Rozporządzenia 561/2006 wymienia tylko jedną kategorię, która resetuje zegar 4½-godzinnego ciągłego PROWADZENIA i wlicza się do 45-minutowej obowiązkowej PRZERWY/ODPOCZYNKU:<em>PRZERWA/ODPOCZYNEK</em>aktywność (piktogram łóżka). Kierowcy, którzy ustawiają „GOTOWOŚĆ” podczas tego, co uważają za PRZERWĘ/ODPOCZYNEK, nie otrzymują kredytu za PRZERWĘ/ODPOCZYNEK po pobieraniu danych — a inspektorzy drogówki regularnie wystawiają kary za to.</div>
 </details>
 <details>
@@ -1476,15 +1476,15 @@
     },
     {
       "@type": "Question",
-      "name": "Czy Okres GOTOWOŚCI może być zaliczony jako PRZERWA/ODPOCZYNEK zgodnie z WE 561/2006?",
+      "name": "Czy okres gotowości może być zaliczony jako przerwa zgodnie z rozporządzeniem (WE) 561/2006?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Nie. Załącznik 1 do rozporządzenia 561/2006 wymienia tylko jedną kategorię, która resetuje 4,5-godzinny zegar ciągłego PROWADZENIE i zalicza się do 45-minutowej obowiązkowej PRZERWA/ODPOCZYNEK: aktywność PRZERWA/ODPOCZYNEK. Kierowcy, którzy ustawiają GOTOWOŚĆ podczas robienia PRZERWA/ODPOCZYNEK, nie otrzymują zaliczenia PRZERWA/ODPOCZYNEK podczas pobieranie."
+        "text": "Nie. Załącznik 1 do rozporządzenia 561/2006 wymienia tylko jedną kategorię, która resetuje 4,5-godzinny zegar ciągłej jazdy i zalicza się do 45-minutowej obowiązkowej przerwy: aktywność PRZERWA/ODPOCZYNEK. Kierowcy, którzy ustawiają GOTOWOŚĆ podczas przerwy, nie otrzymują zaliczenia przerwy przy pobraniu danych."
       }
     },
     {
       "@type": "Question",
-      "name": "Co powinienem zrobić, jeśli zapomniałem przełączyć się na Odpoczynek podczas PRZERWA/ODPOCZYNEK?",
+      "name": "Co powinienem zrobić, jeśli zapomniałem przełączyć się na Odpoczynek podczas przerwy?",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Przy następnym włożeniu karty kierowcy do dowolnego pojazdu, tachograf oferuje procedurę ręcznego wprowadzania danych za okres od ostatniego wyjęcia karty kierowcy. Użyj menu, aby ustawić prawidłową aktywność dla tego przedziału. Wpisy ręczne są oznaczone czasem na karcie kierowcy i akceptowane jako uzasadniona korekta."
