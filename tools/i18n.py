@@ -208,7 +208,7 @@ def set_hreflang(doc, page_id, self_lang=None):
 
 
 
-def hu_extras(doc):
+def hu_extras(doc, page_id=None):
     """HU-only: portfolio links (product pages exist only in /hu/). Runs after build_nav."""
     from bs4 import BeautifulSoup as _BS
     # 1) nav item "Eszközök" -> hub, before GYIK/FAQ item
@@ -224,7 +224,16 @@ def hu_extras(doc):
             for href, txt in [('/hu/letolto-eszkozok/', 'Letöltő eszközök'), ('/hu/gps-nyomkovetes/', 'GPS nyomkövetés')]:
                 li = _BS(f'<li><a href="{href}">{txt}</a></li>', 'html.parser').li
                 ul.append(li)
+    # 3) homepage: references section before footer
+    if page_id == 'home':
+        refp = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'i18n', 'hu_references.html')
+        if os.path.exists(refp) and not doc.find('section', id='referenciak'):
+            frag = BeautifulSoup(open(refp, encoding='utf-8').read(), 'html.parser')
+            ft = doc.find('footer')
+            if ft:
+                ft.insert_before(frag)
     return doc
+
 
 def cmd_apply(page_id, lang):
     tf = os.path.join(I18N, f'{page_id}.{lang}.json')
@@ -272,7 +281,7 @@ def cmd_apply(page_id, lang):
     doc = set_hreflang(doc, page_id, self_lang=lang)
     doc = build_nav(doc, page_id, lang)
     if lang == 'hu':
-        doc = hu_extras(doc)
+        doc = hu_extras(doc, page_id)
 
     dst = dst_file(page_id, lang)
     os.makedirs(os.path.dirname(dst), exist_ok=True)
