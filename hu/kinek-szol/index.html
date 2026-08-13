@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<!-- TMX-ANALYTICS START -->
+<meta content="7F7894081BE7FBB245FF03AF8810B22F" name="msvalidate.01"/>
+<!-- Consent Mode v2 defaults (deny) + gtag stub — runs BEFORE gtag.js -->
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent','default',{
+      ad_storage:'denied', ad_user_data:'denied', ad_personalization:'denied',
+      analytics_storage:'denied', functionality_storage:'denied',
+      personalization_storage:'denied', security_storage:'granted',
+      wait_for_update:500
+    });
+    gtag('set','ads_data_redaction',true);
+    gtag('set','url_passthrough',false);
+  </script>
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-92253QFBNX"></script>
+<script>
+    gtag('js', new Date());
+    gtag('config','G-92253QFBNX');
+  </script>
+<!-- Cookie consent banner (self-hosted) + Microsoft Clarity gating -->
+<style>
+    .tmx-cc{position:fixed;left:0;right:0;bottom:0;z-index:2147483000;background:linear-gradient(120deg,var(--blue-dark,#0b2c4a),var(--blue-mid,#134a8e) 62%,var(--blue-light,#1f5fa6));color:#fff;
+      font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+      padding:16px 20px;box-shadow:0 -4px 24px rgba(0,0,0,.18);display:flex;flex-wrap:wrap;
+      align-items:center;gap:14px;justify-content:center}
+    .tmx-cc__txt{flex:1 1 360px;max-width:760px}
+    .tmx-cc__txt a{color:#9ed0f5;text-decoration:underline}
+    .tmx-cc__btns{display:flex;gap:10px;flex:0 0 auto}
+    .tmx-cc__b{appearance:none;border:0;cursor:pointer;font:inherit;font-weight:600;
+      padding:10px 22px;border-radius:99px;transition:filter .15s;color:#fff}
+    .tmx-cc__b:hover{filter:brightness(1.08)}
+    .tmx-cc__b--no{background:rgba(255,255,255,.16)}
+    .tmx-cc__b--yes{background:var(--green-cta,#5C820F)}
+    @media(max-width:640px){.tmx-cc{padding:14px}.tmx-cc__btns{width:100%}.tmx-cc__b{flex:1}}
+  </style>
+<script>
+  (function(){
+    var KEY='tmx-consent-v1', CL='wt18054m0r';
+    function lc(){var l=(document.documentElement.getAttribute('lang')||'en').toLowerCase().split('-')[0];
+      var m={cz:'cs',cs:'cs',sk:'sk',de:'de',pl:'pl',gr:'el',el:'el',en:'en'};return m[l]||'en';}
+    var T={
+      en:{t:'We use analytics cookies (Google Analytics, Microsoft Clarity) to understand site usage. They load only with your consent.',a:'Accept',r:'Reject',p:'Privacy &amp; cookies'},
+      cs:{t:'Pou\u017e\u00edv\u00e1me analytick\u00e9 cookies (Google Analytics, Microsoft Clarity) k pochopen\u00ed pou\u017e\u00edv\u00e1n\u00ed webu. Na\u010dtou se jen s va\u0161\u00edm souhlasem.',a:'P\u0159ijmout',r:'Odm\u00edtnout',p:'Soukrom\u00ed a cookies'},
+      sk:{t:'Pou\u017e\u00edvame analytick\u00e9 cookies (Google Analytics, Microsoft Clarity) na pochopenie pou\u017e\u00edvania webu. Na\u010d\u00edtaj\u00fa sa len s va\u0161\u00edm s\u00fahlasom.',a:'Prija\u0165',r:'Odmietnu\u0165',p:'S\u00fakromie a cookies'},
+      de:{t:'Wir verwenden Analyse-Cookies (Google Analytics, Microsoft Clarity), um die Nutzung der Website zu verstehen. Sie werden nur mit Ihrer Einwilligung geladen.',a:'Akzeptieren',r:'Ablehnen',p:'Datenschutz &amp; Cookies'},
+      pl:{t:'U\u017cywamy plik\u00f3w cookie do analityki (Google Analytics, Microsoft Clarity), aby zrozumie\u0107 korzystanie z witryny. \u0141aduj\u0105 si\u0119 tylko za Twoj\u0105 zgod\u0105.',a:'Akceptuj',r:'Odrzu\u0107',p:'Prywatno\u015b\u0107 i cookies'},
+      el:{t:'\u03a7\u03c1\u03b7\u03c3\u03b9\u03bc\u03bf\u03c0\u03bf\u03b9\u03bf\u03cd\u03bc\u03b5 cookies \u03b1\u03bd\u03ac\u03bb\u03c5\u03c3\u03b7\u03c2 (Google Analytics, Microsoft Clarity) \u03b3\u03b9\u03b1 \u03bd\u03b1 \u03ba\u03b1\u03c4\u03b1\u03bd\u03bf\u03ae\u03c3\u03bf\u03c5\u03bc\u03b5 \u03c4\u03b7 \u03c7\u03c1\u03ae\u03c3\u03b7. \u03a6\u03bf\u03c1\u03c4\u03ce\u03bd\u03bf\u03bd\u03c4\u03b1\u03b9 \u03bc\u03cc\u03bd\u03bf \u03bc\u03b5 \u03c4\u03b7 \u03c3\u03c5\u03b3\u03ba\u03b1\u03c4\u03ac\u03b8\u03b5\u03c3\u03ae \u03c3\u03b1\u03c2.',a:'\u0391\u03c0\u03bf\u03b4\u03bf\u03c7\u03ae',r:'\u0391\u03c0\u03cc\u03c1\u03c1\u03b9\u03c8\u03b7',p:'\u0391\u03c0\u03cc\u03c1\u03c1\u03b7\u03c4\u03bf &amp; cookies'}
+    };
+    function loadClarity(){if(!CL||window.__tmxCl)return;window.__tmxCl=1;
+      (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+       t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+       y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script",CL);}
+    function grant(){try{localStorage.setItem(KEY,'granted')}catch(e){}
+      gtag('consent','update',{analytics_storage:'granted'});loadClarity();}
+    function deny(){try{localStorage.setItem(KEY,'denied')}catch(e){}}
+    var saved=null;try{saved=localStorage.getItem(KEY)}catch(e){}
+    if(saved==='granted'){grant();return;} if(saved==='denied'){return;}
+    function show(){var tx=T[lc()]||T.en;
+      var b=document.createElement('div');b.className='tmx-cc';b.setAttribute('role','dialog');b.setAttribute('aria-live','polite');
+      b.innerHTML='<div class="tmx-cc__txt">'+tx.t+' <a href="/privacy/">'+tx.p+'</a></div>'+
+        '<div class="tmx-cc__btns"><button type="button" class="tmx-cc__b tmx-cc__b--no">'+tx.r+'</button>'+
+        '<button type="button" class="tmx-cc__b tmx-cc__b--yes">'+tx.a+'</button></div>';
+      document.body.appendChild(b);
+      b.querySelector('.tmx-cc__b--yes').addEventListener('click',function(){grant();b.remove();});
+      b.querySelector('.tmx-cc__b--no').addEventListener('click',function(){deny();b.remove();});}
+    if(document.body)show();else document.addEventListener('DOMContentLoaded',show);
+  })();
+  </script>
+<!-- TMX-ANALYTICS END -->
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Kinek van szüksége TAGRA-ra – Flottakezelőknek, sofőröknek és ellenőrző hatóságoknak</title>
+<meta content="A TAGRA minden olyan fuvarozó vagy hivatásos sofőr számára készült, akinek az EU-jogszabályok értelmében le kell töltenie és ki kell értékelnie a tachográfadatokat. Tudja meg, hogy Önre is vonatkozik-e." name="description"/>
+<meta content="#0b2c4a" name="theme-color"/>
+<link href="/manifest.json" rel="manifest"/>
+<link href="https://tagra.app/hu/kinek-szol/" rel="canonical"/>
+<meta content="website" property="og:type"/>
+<meta content="hu_HU" property="og:locale"/>
+<meta content="TAGRA" property="og:site_name"/>
+<meta content="Kinek van szüksége TAGRA-ra – Fuvarozóknak és hivatásos sofőröknek" property="og:title"/>
+<meta content="Tudja meg, hogy Önre vonatkozik-e a tachográfadatok kiértékelési kötelezettsége — és hogyan segíthet a TAGRA." property="og:description"/>
+<meta content="https://cdn.truckmall.cz/data/user-content/TDT_TAGRA_MAX_wh.jpg" property="og:image"/>
+<meta content="https://tagra.app/hu/kinek-szol/" property="og:url"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    a{color:var(--green-brand);text-decoration:none;}
+    a:hover{color:var(--green-cta);text-decoration:underline;text-underline-offset:.18em;}
+    img{max-width:100%;height:auto;display:block;}
+    ul{list-style:none;}
+    p+p{margin-top:12px;}
+    p:empty{display:none;}
+    #scroll-progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--green-brand),var(--blue-light));width:0%;z-index:9999;pointer-events:none;transition:width .1s ease-out;}
+.nav-inner{max-width:var(--maxw);margin:0 auto;padding:0 24px;height:100%;display:flex;align-items:center;justify-content:space-between;gap:24px;}
+    .nav-logo{display:flex;align-items:center;gap:8px;text-decoration:none;flex-shrink:0}
+    .nav-links{display:flex;align-items:center;gap:4px;list-style:none;}
+    .nav-links li a{font-size:15px;font-weight:500;color:var(--text);padding:8px 12px;border-radius:8px;transition:background .15s,color .15s;text-decoration:none;}
+    .nav-links li a:hover{background:var(--bg-apple-solid);color:var(--blue-mid);}
+    .nav-links .nav-cta a{background:var(--green-cta);color:#fff!important;border-radius:99px;padding:8px 18px;font-weight:600;}
+    .nav-links .nav-cta a:hover{background:var(--green-brand);text-decoration:none;}
+    .nav-lang{display:flex;align-items:center;gap:4px;font-size:14px;font-weight:600;}
+    .nav-lang a{padding:5px 8px;border-radius:6px;color:var(--text2);text-decoration:none;transition:background .15s;}
+    .nav-lang a:hover,.nav-lang a.active{background:var(--bg-apple-solid);color:var(--blue-mid);}
+    .nav-lang span{color:var(--border);}
+    .nav-mobile-toggle{display:none;background:none;border:none;cursor:pointer;padding:8px;}
+    .nav-mobile-toggle span{display:block;width:22px;height:2px;background:var(--text);margin:5px 0;border-radius:2px;transition:.3s;}
+    @media(max-width:900px){.nav-links{display:none;}.nav-mobile-toggle{display:block;}.nav-links.open{display:flex;flex-direction:column;align-items:flex-start;gap:2px;position:absolute;top:var(--nav-h);left:0;right:0;background:rgba(255,255,255,0.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:12px 24px 20px;}}
+    
+    
+    
+    
+    .band--green{background:var(--green-bg);}
+    @media(max-width:768px){.band{padding:50px 0;}}
+    h2 {
+      font-size: 36px; font-weight: 800;
+      line-height: 1.1; letter-spacing: 0;
+      text-transform: uppercase;
+      color: var(--blue-mid, #134a8e);
+      background: linear-gradient(90deg, var(--blue-dark, #0b2c4a) 0%, var(--blue-mid, #134a8e) 55%, var(--blue-light, #1f5fa6) 100%);
+      -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block; max-width: 100%; margin-bottom: 14px;
+      padding: 0.12em 0.15em 0.08em 0;
+    }
+    @media(max-width:768px){h2 {
+      font-size: 36px; font-weight: 800;
+      line-height: 1.1; letter-spacing: 0;
+      text-transform: uppercase;
+      color: var(--blue-mid, #134a8e);
+      background: linear-gradient(90deg, var(--blue-dark, #0b2c4a) 0%, var(--blue-mid, #134a8e) 55%, var(--blue-light, #1f5fa6) 100%);
+      -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block; max-width: 100%; margin-bottom: 14px;
+      padding: 0.12em 0.15em 0.08em 0;
+    }}
+    h2.hero-h2{font-size:56px;line-height:1.15;letter-spacing:-.02em;display:block;text-transform:none;padding-bottom:0.08em;}
+    @media(max-width:768px){h2.hero-h2{font-size:36px;padding-bottom:0.08em;}}
+    .eyebrow{font-size:15px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--green-brand);margin-bottom:12px;}
+    
+    .btn-cta:hover{background:var(--green-brand);transform:scale(1.02);color:#fff!important;}
+    
+    
+    @media(max-width:900px){.g2{grid-template-columns:1fr;gap:32px;}}
+    .who-card{border-radius:var(--radius);padding:36px;border:1px solid var(--border);background:#fff;display:flex;flex-direction:column;gap:16px;}
+    .who-card--fleet{border-color:rgba(19,74,142,.2);background:var(--bg-apple-solid);}
+    .who-card--driver{border-color:rgba(110,155,18,.2);background:var(--green-bg);}
+    .check-list{display:flex;flex-direction:column;gap:10px;margin-top:8px;}
+    .check-list li{display:flex;gap:10px;align-items:flex-start;font-size:16px;line-height:1.5;}
+    .check-list li::before{content:"✓";font-weight:900;flex-shrink:0;}
+    .fleet .check-list li::before{color:var(--blue-mid);}
+    .driver .check-list li::before{color:var(--green-brand);}
+    .note-box{position:relative;background:linear-gradient(180deg,var(--green-bg) 0%,#fff 100%);border:2px solid var(--green-brand);border-radius:var(--radius);padding:36px 28px 28px;margin-top:40px;box-shadow:0 10px 26px rgba(110,155,18,.08);}
+    .note-badge{position:absolute;top:-16px;left:24px;background:var(--green-brand);color:#fff;font-size:14px;font-weight:800;text-transform:uppercase;padding:5px 14px;border-radius:999px;box-shadow:0 6px 14px rgba(110,155,18,.22);}
+    .note-title{font-size:22px;font-weight:800;line-height:1.2;margin:10px 0 12px;color:var(--text-strong);}
+    .anim-up{opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.16,1,.3,1),transform .8s cubic-bezier(.16,1,.3,1);}
+    .anim-up.on{opacity:1;transform:none;}
+    @media(prefers-reduced-motion:reduce){.anim-up{transition:none!important;opacity:1!important;transform:none!important;}}
+  
+    /* 3-col group grid */
+    /* who-card flex layout — CTA vždy dole, nadpis stejná výška */
+    /* Zarovnání nadpisů ve stejné výšce */
+    .who-card > div:first-child { min-height: 96px; display: flex; flex-direction: column; justify-content: flex-end; }
+
+    .who-card { display: flex; flex-direction: column; }
+    .who-card p { flex-shrink: 0; }
+    .who-card .check-list { flex: 1; }
+    .who-card > div:last-child { margin-top: auto; padding-top: 16px; }
+    /* check-list items white on dark */
+    .g3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+    @media (max-width: 900px) { .g3 { grid-template-columns: 1fr; } }
+    /* Enforcement 2-col responsive */
+    @media (max-width: 768px) {
+      .enf-2col { grid-template-columns: 1fr !important; }
+    }
+
+  
+    .who-card[style*="0b2c4a"] .check-list li { color: rgba(255,255,255,.9); }
+    .who-card[style*="0b2c4a"] .check-list li::before { color: rgba(255,255,255,.7); }
+  </style>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://tagra.app/#organization",
+  "name": "Truck Data Technology, s.r.o.",
+  "alternateName": "TDT",
+  "url": "https://www.tdt.cz",
+  "logo": "https://tagra.app/assets/img/logo-light.svg?v=20260513zh",
+  "sameAs": [
+    "https://www.tdt.cz"
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+420-739-005-345",
+    "email": "sales@tagra.app",
+    "contactType": "sales",
+    "availableLanguage": [
+      "English",
+      "Czech",
+      "Slovak"
+    ]
+  }
+}</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "url": "https://tagra.app/for-whom/",
+  "name": "Kinek van szüksége TAGRA-ra – Flottakezelőknek, sofőröknek és ellenőrző hatóságoknak",
+  "description": "A TAGRA minden olyan fuvarozó vagy hivatásos sofőr számára készült, akinek az EU-s jogszabályok értelmében tachográfadatokat kell letöltenie és kiértékelnie.",
+  "inLanguage": "en",
+  "isPartOf": {
+    "@id": "https://tagra.app/#website"
+  },
+  "about": {
+    "@id": "https://tagra.app/#organization"
+  },
+  "audience": [
+    {
+      "@type": "Audience",
+      "audienceType": "Fleet operators"
+    },
+    {
+      "@type": "Audience",
+      "audienceType": "Professional drivers"
+    },
+    {
+      "@type": "Audience",
+      "audienceType": "Enforcement authorities"
+    }
+  ]
+}</script>
+<link href="/assets/css/tokens.css?v=20260514j" rel="stylesheet"/>
+<link href="/assets/css/base.css?v=20260514j" rel="stylesheet"/>
+<link href="/assets/css/components.css?v=20260514j" rel="stylesheet"/>
+<link href="/assets/css/nav.css?v=20260514j" rel="stylesheet"/>
+<script defer="" src="/assets/js/nav.js?v=20260513q"></script>
+<link href="/assets/css/footer.css?v=20260513d" rel="stylesheet"/>
+<link href="https://tagra.app/for-whom/" hreflang="en" rel="alternate"/><link href="https://tagra.app/de/fuer-wen/" hreflang="de" rel="alternate"/><link href="https://tagra.app/pl/dla-kogo/" hreflang="pl" rel="alternate"/><link href="https://tagra.app/el/gia-poion/" hreflang="el" rel="alternate"/><link href="https://tagra.app/hu/kinek-szol/" hreflang="hu" rel="alternate"/><link href="https://tagra.app/for-whom/" hreflang="x-default" rel="alternate"/></head>
+<body>
+<div aria-hidden="true" id="scroll-progress"></div>
+<nav aria-label="Fő navigáció" class="site-nav" role="navigation">
+<div class="nav-inner">
+<a aria-label="TAGRA – Kezdőlap" class="nav-logo" href="/hu/"><img alt="TAGRA" height="32" src="/assets/img/logo-light.svg?v=20260513zh" style="display:block;height:32px;width:auto;" width="140"/></a>
+<ul class="nav-links">
+<li><a href="/hu/fuvarozoknak/">Cégeknek</a></li>
+<li><a href="/hu/soforoknek/">Sofőröknek</a></li>
+<li><a href="/hu/hatosagoknak/">Ellenőrzés</a></li>
+<li><a href="/articles/">Cikkek</a></li><li><a href="/manuals/">Kézikönyvek</a></li>
+<li><a href="/hu/gyakori-kerdesek/">GYIK</a></li>
+<li><a href="/hu/kapcsolat/">Kapcsolat</a></li>
+<li class="nav-cta-li"><a class="nav-cta" href="/hu/ingyenes-probaverzio/?audience=fleet">Próbálja ki 30 napig ingyen</a></li>
+</ul>
+<details class="nav-lang">
+<summary aria-label="Language: HU">HU</summary>
+<div class="nav-lang-menu" role="menu">
+<a href="/" hreflang="en">English</a><a href="/de/" hreflang="de">Deutsch</a><a href="/pl/" hreflang="pl">Polski</a><a href="/el/" hreflang="el">Ελληνικά</a><a aria-current="page" class="active" href="/hu/" hreflang="hu">Magyar</a><a href="https://www.tdt.cz/" hreflang="cs" rel="noopener" target="_blank">Čeština</a><a href="https://www.tdt.sk/" hreflang="sk" rel="noopener" target="_blank">Slovenčina</a></div>
+</details>
+<a class="nav-cta-mobile" href="/hu/ingyenes-probaverzio/?audience=fleet">Próbálja ki ingyen</a>
+<button aria-expanded="false" aria-label="Menü váltása" class="nav-mobile-toggle" id="nav-toggle">
+<span></span><span></span><span></span>
+</button>
+</div>
+</nav>
+<!-- HERO -->
+<section class="band band--hero">
+<div class="container">
+<div class="eyebrow anim-up">Kinek van szüksége TAGRA-ra</div>
+<h2 class="hero-h2 anim-up" style="transition-delay:.05s">Vonatkozik-e<br/>Önre?</h2>
+<p class="anim-up" style="font-size:20px;line-height:1.5;max-width:600px;margin:16px auto 0;color:var(--text2);transition-delay:.1s">Az EU-jogszabályok előírják a fuvarozók és bizonyos hivatásos sofőrök számára a tachográfadatok rendszeres letöltését, kiértékelését és archiválását. Íme, kiket érint.</p>
+</div>
+</section>
+<!-- TWO GROUPS -->
+<section class="band">
+<div class="container">
+<div class="g3">
+<!-- Fleet -->
+<div class="who-card who-card--fleet fleet anim-up">
+<div>
+<div class="eyebrow" style="color:var(--blue-mid)">Flottakezelők és cégek</div>
+<div style="font-size:24px;font-weight:800;color:var(--text-strong);line-height:1.2;margin-top:4px">TAGRA 1 / 2 / 4 / 6 / MAX</div>
+</div>
+<p style="color:var(--text2)">Önt érinti, ha cége az EU tachográf rendeleteinek hatálya alá tartozó járműveket üzemeltet — beleértve a teherautókat, buszokat és (2026. júliustól) bizonyos kisteherautókat.</p>
+<ul class="check-list">
+<li>Nemzetközi fuvarozók</li>
+<li>Belföldi fuvarozók 3,5 t feletti járművekkel</li>
+<li>Busz- és autóbusz-üzemeltetők</li>
+<li>Kisteherautó-üzemeltetők a nemzetközi fuvarozásban (2026. júliustól, 2,5–3,5 t járművek)</li>
+<li>A sofőrök megfelelőségéért felelős szállítmányozási vezetők</li>
+<li>A sofőrnyilvántartásokat kezelő logisztikai cégek</li>
+</ul>
+<div style="margin-top:8px">
+<a class="btn-cta btn-cta--sm" href="/hu/fuvarozoknak/">Flottakezelői megoldás →</a>
+</div>
+</div>
+<!-- Driver -->
+<div class="who-card who-card--driver driver anim-up" style="transition-delay:.1s">
+<div>
+<div class="eyebrow" style="color:var(--green-brand)">Professzionális sofőrök</div>
+<div style="font-size:24px;font-weight:800;color:var(--text-strong);line-height:1.2;margin-top:4px">A TAGRA Trucker</div>
+</div>
+<p style="color:var(--text2)">Önt érinti, ha hivatásos sofőrként dolgozik, és felelős saját sofőrkártya adataiért. A TAGRA Trucker egyetlen sofőr sofőrkártya letöltését és archiválását végzi.</p>
+<ul class="check-list">
+<li>Alkalmazott sofőrök, akik saját kártyaarchiválásukat kezelik</li>
+<li>Sofőrök, akik ellenőrzések előtt ellenőrizni szeretnék saját óráikat</li>
+<li>Sofőrök, akik munkahelyet váltanak, és meg szeretnék tartani a nyilvántartásaikat</li>
+</ul>
+<div style="margin-top:16px;padding:14px 18px;background:#fff7e6;border:1px solid #f0c270;border-radius:10px;font-size:14.5px;line-height:1.55;color:var(--text2)">
+<strong style="color:#a96100">Egyéni vállalkozó / fuvarozó?</strong>Ön egyszerre sofőr ÉS fuvarozó, ezért le kell töltenie a sofőrkártya adatait<em>és</em>és a járműegység (tachográf) adatait. A TAGRA Trucker önmagában nem elegendő — lásd a<a href="/hu/fuvarozoknak/" style="color:var(--blue-mid);font-weight:600">TAGRA 1</a>(egy jármű) verziót, amely mindkettőt lefedi.</div>
+<ul class="check-list">
+<li>Kisteherautó sofőrök a nemzetközi fuvarozásban (2026. júliustól) — az alkalmazott sofőrök használhatják a TAGRA Trucker-t személyes kártyamásolatokhoz; az egyéni vállalkozó kisteherautó-üzemeltetőknek a TAGRA 1-re van szükségük (kártya és jármű).</li>
+</ul>
+<div style="margin-top:8px">
+<a class="btn-cta btn-cta--sm" href="/hu/soforoknek/" style="background:var(--green-cta)">Sofőrmegoldás →</a>
+</div>
+</div>
+<!-- Enforcement -->
+<div class="who-card anim-up" style="background:linear-gradient(160deg,#0b2c4a 0%,#134a8e 100%);border-color:transparent;transition-delay:.2s">
+<div>
+<div class="eyebrow" style="color:rgba(255,255,255,.6)">Ellenőrző hatóságok</div>
+<div style="font-size:24px;font-weight:800;color:#ffffff;line-height:1.2;margin-top:4px">TAGRA Control</div>
+</div>
+<p style="color:rgba(255,255,255,.82)">A Rendőrség, a Vámhivatalok, a Munkaügyi Felügyelőségek és a Közlekedési Minisztériumok a TAGRA Controlt használják — célzott szoftver a közúti és üzembentartói ellenőrzésekhez.</p>
+<ul class="check-list">
+<li style="color:rgba(255,255,255,.9)">Azonnali szabálysértés-kiértékelés sofőrkártyákról és tachográfokról</li>
+<li style="color:rgba(255,255,255,.9)">Minden tachográf generáció: G1 és okos G2V2</li>
+<li style="color:rgba(255,255,255,.9)">EU 561/2006, 2020/1054, AETR — mindig naprakész</li>
+<li style="color:rgba(255,255,255,.9)">Közúti ellenőrzési űrlapok, eljárásokhoz készen</li>
+<li style="color:rgba(255,255,255,.9)">Cseh Rendőrség, Vámhivatalok, Szlovák Munkaügyi Felügyelőségek, Nemzeti Közlekedési Hatóság</li>
+<li style="color:rgba(255,255,255,.9)">Angol nyelvű képzés elérhető</li>
+</ul>
+<div style="margin-top:8px">
+<a class="btn-cta btn-cta--sm" href="/hu/hatosagoknak/" style="background:rgba(255,255,255,.15);color:#fff;border:1.5px solid rgba(255,255,255,.4)">Ellenőrzési megoldás →</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- VANS 2026 -->
+<section class="band band--blue">
+<div class="container">
+<div class="eyebrow anim-up">Új 2026. júliustól</div>
+<h2 class="anim-up">Kisteherautók a nemzetközi fuvarozásban</h2>
+<div class="g2" style="margin-top:24px">
+<div class="anim-up">
+<p>Már<strong>1 July 2026</strong>, a digitális tachográf beszerelésére, valamint az adatok rendszeres letöltésére és kiértékelésére vonatkozó kötelezettség kiterjed a<strong>2,5–3,5 t össztömegű kisteherautókra</strong>nemzetközi fuvarozásban való használat esetén.</p>
+<p style="margin-top:12px">Ez számos olyan fuvarozót és sofőrt érint, akik korábban mentesültek. Ha Ön kisteherautókat üzemeltet országhatárokon át – már most fel kell készülnie.</p>
+<p style="margin-top:12px">A TAGRA teljes mértékben felkészült erre a kötelezettségre. Mind a flottakezelő, mind a sofőr verzió az első naptól támogatja az új követelményeket.</p>
+</div>
+<div class="anim-up" style="transition-delay:.1s">
+<div style="background:#fff;border-radius:var(--radius);padding:28px;border:1px solid var(--border)">
+<div style="font-size:15px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--blue-mid);margin-bottom:16px">Kiket érint 2026. júliustól?</div>
+<ul style="list-style:none;display:flex;flex-direction:column;gap:10px">
+<li style="display:flex;gap:10px;align-items:flex-start;font-size:16px"><span style="color:var(--blue-mid);font-weight:900;flex-shrink:0">✓</span><span>2,5–3,5 t össztömegű járművek a nemzetközi fuvarozásban</span></li>
+<li style="display:flex;gap:10px;align-items:flex-start;font-size:16px"><span style="color:var(--blue-mid);font-weight:900;flex-shrink:0">✓</span><span>EU tagállamokban székhellyel rendelkező fuvarozók</span></li>
+<li style="display:flex;gap:10px;align-items:flex-start;font-size:16px"><span style="color:var(--blue-mid);font-weight:900;flex-shrink:0">✓</span><span>Önálló kisteherautó-sofőrök, akik átlépik a határokat</span></li>
+<li style="display:flex;gap:10px;align-items:flex-start;font-size:16px;color:var(--text2)"><span style="color:var(--border);font-weight:900;flex-shrink:0">✗</span><span>Tisztán belföldi fuvarozás — nem érintett</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- FOOTER -->
+<footer class="site-footer" role="contentinfo">
+<div class="footer-inner">
+<div>
+<div class="footer-logo"><img alt="TAGRA" height="32" src="/assets/img/logo-dark.svg?v=20260513zh" width="140"/></div>
+<p class="footer-desc">Professzionális tachográfadatok kiértékelésére szolgáló szoftver. Sofőrkártya letöltés, digitális tachográfadatok kiértékelése, (EU) vezetési és pihenőidő és nehézgépjármű munkaidő-irányelv. Fejlesztette a Truck Data Technology, s.r.o.</p>
+</div>
+<div class="footer-col">
+<h4>Termék</h4>
+<ul>
+<li><a href="/hu/fuvarozoknak/">Fuvarozók részére</a></li>
+<li><a href="/hu/soforoknek/">Professzionális sofőrök részére</a></li>
+<li><a href="/hu/hatosagoknak/">Ellenőrző hatóságok részére</a></li>
+<li><a href="/hu/hogyan-mukodik/">Hogyan működik</a></li>
+<li><a href="/hu/kinek-szol/">Kinek szól</a></li>
+<li><a href="/hu/gyakori-kerdesek/">GYIK</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h4>Források</h4>
+<ul>
+<li><a href="/articles/">Cikkek</a></li><li><a href="/manuals/">Kézikönyvek</a></li>
+<li><a href="/articles/digital-tachograph-symbols/">Tachográf szimbólumok</a></li>
+<li><a href="/integrations/dkv-live/">DKV LIVE®</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h4>Cég</h4>
+<ul>
+<li><a href="/hu/kapcsolat/">Kapcsolat</a></li>
+<li><a href="https://www.tdt.cz" rel="noopener" target="_blank">Truck Data Technology</a></li>
+<li><a href="/de/">Német</a></li>
+<li><a href="/pl/">Lengyel</a></li>
+</ul>
+</div>
+</div>
+<div class="footer-bottom">
+<span>© 2026 Truck Data Technology, s.r.o. Minden jog fenntartva.</span>
+<span><a href="/hu/kapcsolat/">Kapcsolat</a> · <a href="https://www.tdt.cz" rel="noopener" target="_blank">tdt.cz</a></span>
+</div>
+</footer>
+<script>
+(function() {
+  var bar = document.getElementById('scroll-progress');
+  if (bar) { window.addEventListener('scroll', function() { var top = document.documentElement.scrollTop || document.body.scrollTop; var h = document.documentElement.scrollHeight - document.documentElement.clientHeight; bar.style.width = (top / h * 100) + '%'; }, { passive: true }); }
+  var toggle = document.getElementById('nav-toggle'); var links = document.getElementById('nav-links');
+  if (toggle && links) { toggle.addEventListener('click', function() { var open = links.classList.toggle('open'); toggle.setAttribute('aria-expanded', open); }); }
+  if ('IntersectionObserver' in window) { var io = new IntersectionObserver(function(entries) { entries.forEach(function(e) { if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); } }); }, { threshold: 0.1 }); document.querySelectorAll('.anim-up').forEach(function(el) { io.observe(el); }); } else { document.querySelectorAll('.anim-up').forEach(function(el) { el.classList.add('on'); }); }
+})();
+</script>
+</body>
+</html>

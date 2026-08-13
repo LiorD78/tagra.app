@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+<!-- TMX-ANALYTICS START -->
+<meta content="7F7894081BE7FBB245FF03AF8810B22F" name="msvalidate.01"/>
+<!-- Consent Mode v2 defaults (deny) + gtag stub — runs BEFORE gtag.js -->
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent','default',{
+      ad_storage:'denied', ad_user_data:'denied', ad_personalization:'denied',
+      analytics_storage:'denied', functionality_storage:'denied',
+      personalization_storage:'denied', security_storage:'granted',
+      wait_for_update:500
+    });
+    gtag('set','ads_data_redaction',true);
+    gtag('set','url_passthrough',false);
+  </script>
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-92253QFBNX"></script>
+<script>
+    gtag('js', new Date());
+    gtag('config','G-92253QFBNX');
+  </script>
+<!-- Cookie consent banner (self-hosted) + Microsoft Clarity gating -->
+<style>
+    .tmx-cc{position:fixed;left:0;right:0;bottom:0;z-index:2147483000;background:linear-gradient(120deg,var(--blue-dark,#0b2c4a),var(--blue-mid,#134a8e) 62%,var(--blue-light,#1f5fa6));color:#fff;
+      font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+      padding:16px 20px;box-shadow:0 -4px 24px rgba(0,0,0,.18);display:flex;flex-wrap:wrap;
+      align-items:center;gap:14px;justify-content:center}
+    .tmx-cc__txt{flex:1 1 360px;max-width:760px}
+    .tmx-cc__txt a{color:#9ed0f5;text-decoration:underline}
+    .tmx-cc__btns{display:flex;gap:10px;flex:0 0 auto}
+    .tmx-cc__b{appearance:none;border:0;cursor:pointer;font:inherit;font-weight:600;
+      padding:10px 22px;border-radius:99px;transition:filter .15s;color:#fff}
+    .tmx-cc__b:hover{filter:brightness(1.08)}
+    .tmx-cc__b--no{background:rgba(255,255,255,.16)}
+    .tmx-cc__b--yes{background:var(--green-cta,#5C820F)}
+    @media(max-width:640px){.tmx-cc{padding:14px}.tmx-cc__btns{width:100%}.tmx-cc__b{flex:1}}
+  </style>
+<script>
+  (function(){
+    var KEY='tmx-consent-v1', CL='wt18054m0r';
+    function lc(){var l=(document.documentElement.getAttribute('lang')||'en').toLowerCase().split('-')[0];
+      var m={cz:'cs',cs:'cs',sk:'sk',de:'de',pl:'pl',gr:'el',el:'el',en:'en'};return m[l]||'en';}
+    var T={
+      en:{t:'We use analytics cookies (Google Analytics, Microsoft Clarity) to understand site usage. They load only with your consent.',a:'Accept',r:'Reject',p:'Privacy &amp; cookies'},
+      cs:{t:'Pou\u017e\u00edv\u00e1me analytick\u00e9 cookies (Google Analytics, Microsoft Clarity) k pochopen\u00ed pou\u017e\u00edv\u00e1n\u00ed webu. Na\u010dtou se jen s va\u0161\u00edm souhlasem.',a:'P\u0159ijmout',r:'Odm\u00edtnout',p:'Soukrom\u00ed a cookies'},
+      sk:{t:'Pou\u017e\u00edvame analytick\u00e9 cookies (Google Analytics, Microsoft Clarity) na pochopenie pou\u017e\u00edvania webu. Na\u010d\u00edtaj\u00fa sa len s va\u0161\u00edm s\u00fahlasom.',a:'Prija\u0165',r:'Odmietnu\u0165',p:'S\u00fakromie a cookies'},
+      de:{t:'Wir verwenden Analyse-Cookies (Google Analytics, Microsoft Clarity), um die Nutzung der Website zu verstehen. Sie werden nur mit Ihrer Einwilligung geladen.',a:'Akzeptieren',r:'Ablehnen',p:'Datenschutz &amp; Cookies'},
+      pl:{t:'U\u017cywamy plik\u00f3w cookie do analityki (Google Analytics, Microsoft Clarity), aby zrozumie\u0107 korzystanie z witryny. \u0141aduj\u0105 si\u0119 tylko za Twoj\u0105 zgod\u0105.',a:'Akceptuj',r:'Odrzu\u0107',p:'Prywatno\u015b\u0107 i cookies'},
+      el:{t:'\u03a7\u03c1\u03b7\u03c3\u03b9\u03bc\u03bf\u03c0\u03bf\u03b9\u03bf\u03cd\u03bc\u03b5 cookies \u03b1\u03bd\u03ac\u03bb\u03c5\u03c3\u03b7\u03c2 (Google Analytics, Microsoft Clarity) \u03b3\u03b9\u03b1 \u03bd\u03b1 \u03ba\u03b1\u03c4\u03b1\u03bd\u03bf\u03ae\u03c3\u03bf\u03c5\u03bc\u03b5 \u03c4\u03b7 \u03c7\u03c1\u03ae\u03c3\u03b7. \u03a6\u03bf\u03c1\u03c4\u03ce\u03bd\u03bf\u03bd\u03c4\u03b1\u03b9 \u03bc\u03cc\u03bd\u03bf \u03bc\u03b5 \u03c4\u03b7 \u03c3\u03c5\u03b3\u03ba\u03b1\u03c4\u03ac\u03b8\u03b5\u03c3\u03ae \u03c3\u03b1\u03c2.',a:'\u0391\u03c0\u03bf\u03b4\u03bf\u03c7\u03ae',r:'\u0391\u03c0\u03cc\u03c1\u03c1\u03b9\u03c8\u03b7',p:'\u0391\u03c0\u03cc\u03c1\u03c1\u03b7\u03c4\u03bf &amp; cookies'}
+    };
+    function loadClarity(){if(!CL||window.__tmxCl)return;window.__tmxCl=1;
+      (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+       t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+       y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script",CL);}
+    function grant(){try{localStorage.setItem(KEY,'granted')}catch(e){}
+      gtag('consent','update',{analytics_storage:'granted'});loadClarity();}
+    function deny(){try{localStorage.setItem(KEY,'denied')}catch(e){}}
+    var saved=null;try{saved=localStorage.getItem(KEY)}catch(e){}
+    if(saved==='granted'){grant();return;} if(saved==='denied'){return;}
+    function show(){var tx=T[lc()]||T.en;
+      var b=document.createElement('div');b.className='tmx-cc';b.setAttribute('role','dialog');b.setAttribute('aria-live','polite');
+      b.innerHTML='<div class="tmx-cc__txt">'+tx.t+' <a href="/privacy/">'+tx.p+'</a></div>'+
+        '<div class="tmx-cc__btns"><button type="button" class="tmx-cc__b tmx-cc__b--no">'+tx.r+'</button>'+
+        '<button type="button" class="tmx-cc__b tmx-cc__b--yes">'+tx.a+'</button></div>';
+      document.body.appendChild(b);
+      b.querySelector('.tmx-cc__b--yes').addEventListener('click',function(){grant();b.remove();});
+      b.querySelector('.tmx-cc__b--no').addEventListener('click',function(){deny();b.remove();});}
+    if(document.body)show();else document.addEventListener('DOMContentLoaded',show);
+  })();
+  </script>
+<!-- TMX-ANALYTICS END -->
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>TAGRA — DKV LIVE — Αυτόματη Εισαγωγή Δεδομένων Ταχογράφου</title>
+<meta content="Χρησιμοποιείτε ήδη το DKV LIVE για απομακρυσμένη λήψη δεδομένων ταχογράφου; Το TAGRA εισάγει τα δεδομένα αυτόματα μέσω SFTP — χωρίς χειροκίνητες μεταφορές αρχείων, χωρίς επιπλέον κλικ." name="description"/>
+<meta content="#0b2c4a" name="theme-color"/>
+<link href="/manifest.json" rel="manifest"/>
+<link href="https://tagra.app/el/ensomatoseis/dkv-live/" rel="canonical"/>
+<meta content="website" property="og:type"/>
+<meta content="el_GR" property="og:locale"/>
+<meta content="TAGRA" property="og:site_name"/>
+<meta content="TAGRA — DKV LIVE — Αυτόματη Εισαγωγή Δεδομένων Ταχογράφου" property="og:title"/>
+<meta content="Χρησιμοποιείτε ήδη το DKV LIVE για απομακρυσμένη λήψη δεδομένων ταχογράφου; Το TAGRA εισάγει τα δεδομένα αυτόματα μέσω SFTP — χωρίς χειροκίνητες μεταφορές αρχείων, χωρίς επιπλέον κλικ." property="og:description"/>
+<meta content="https://cdn.truckmall.cz/data/user-content/TDT_TAGRA_MAX_wh.jpg" property="og:image"/>
+<meta content="https://tagra.app/el/ensomatoseis/dkv-live/" property="og:url"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<style>
+    /* ─── DESIGN TOKENS ────────────────────────────────────────── */
+    /* ─── RESET & BASE ─────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    a { color: var(--green-brand); text-decoration: none; }
+    a:hover { color: var(--green-cta); text-decoration: underline; text-underline-offset: .18em; }
+    img { max-width: 100%; height: auto; display: block; }
+    ul { list-style: none; }
+    p + p { margin-top: 12px; }
+    p:empty { display: none; }
+
+    /* ─── SCROLL PROGRESS ──────────────────────────────────────── */
+    #scroll-progress {
+      position: fixed; top: 0; left: 0; height: 3px;
+      background: linear-gradient(90deg, var(--green-brand), var(--blue-light));
+      width: 0%; z-index: 9999; pointer-events: none;
+      transition: width .1s ease-out;
+    }
+
+    /* ─── NAVIGATION ───────────────────────────────────────────── */
+.nav-inner {
+      max-width: var(--maxw);
+      margin: 0 auto; padding: 0 24px;
+      height: 100%;
+      display: flex; align-items: center; justify-content: space-between; gap: 24px;
+    }
+    .nav-logo { display: flex; align-items: center; gap: 8px; text-decoration: none; flex-shrink: 0; }
+    .nav-links {
+      display: flex; align-items: center; gap: 4px;
+      list-style: none;
+    }
+    .nav-links li a {
+      font-size: 15px; font-weight: 500; color: var(--text);
+      padding: 8px 12px; border-radius: 8px;
+      transition: background .15s, color .15s;
+      text-decoration: none;
+    }
+    .nav-links li a:hover { background: var(--bg-apple-solid); color: var(--blue-mid); }
+    .nav-links .nav-cta a {
+      background: var(--green-cta); color: #fff !important;
+      border-radius: 99px; padding: 8px 18px; font-weight: 600;
+    }
+    .nav-links .nav-cta a:hover { background: var(--green-brand); }
+    .nav-lang {
+      display: flex; align-items: center; gap: 4px;
+      font-size: 14px; font-weight: 600;
+    }
+    .nav-lang a {
+      padding: 5px 8px; border-radius: 6px; color: var(--text2);
+      text-decoration: none; transition: background .15s;
+    }
+    .nav-lang a:hover, .nav-lang a.active { background: var(--bg-apple-solid); color: var(--blue-mid); }
+    .nav-lang span { color: var(--border); }
+    .nav-mobile-toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
+    .nav-mobile-toggle span { display: block; width: 22px; height: 2px; background: var(--text); margin: 5px 0; border-radius: 2px; transition: .3s; }
+
+    @media (max-width: 900px) {
+      .nav-links { display: none; }
+      .nav-mobile-toggle { display: block; }
+      .nav-links.open {
+        display: flex; flex-direction: column; align-items: flex-start; gap: 2px;
+        position: absolute; top: var(--nav-h); left: 0; right: 0;
+        background: rgba(255,255,255,0.97); backdrop-filter: blur(12px);
+        border-bottom: 1px solid var(--border); padding: 12px 24px 20px;
+      }
+    }
+
+    /* ─── LAYOUT ───────────────────────────────────────────────── */
+    
+    
+    
+    
+    .band--machero { background: linear-gradient(180deg, var(--bg-apple-solid) 0%, #fff 74%); padding: 60px 0; }
+    @media (max-width: 768px) { .band { padding: 50px 0; } }
+    /* ─── TYPOGRAPHY ───────────────────────────────────────────── */
+    h1, h2, h3 { font-weight: 800; }
+    h2 {
+      font-size: 36px; font-weight: 800;
+      line-height: 1.1; letter-spacing: 0;
+      text-transform: uppercase;
+      color: var(--blue-mid, #134a8e);
+      background: linear-gradient(90deg, var(--blue-dark, #0b2c4a) 0%, var(--blue-mid, #134a8e) 55%, var(--blue-light, #1f5fa6) 100%);
+      -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block; max-width: 100%; margin-bottom: 14px;
+      padding: 0.12em 0.15em 0.08em 0;
+    }
+    @media (max-width: 768px) { h2 {
+      font-size: 36px; font-weight: 800;
+      line-height: 1.1; letter-spacing: 0;
+      text-transform: uppercase;
+      color: var(--blue-mid, #134a8e);
+      background: linear-gradient(90deg, var(--blue-dark, #0b2c4a) 0%, var(--blue-mid, #134a8e) 55%, var(--blue-light, #1f5fa6) 100%);
+      -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block; max-width: 100%; margin-bottom: 14px;
+      padding: 0.12em 0.15em 0.08em 0;
+    } }
+    h2.hero-h2 {
+      font-size: 64px; line-height: 1.15; letter-spacing: -.02em;
+      display: block; text-transform: none; padding-bottom: 0.08em;
+    }
+    @media (max-width: 768px) { h2.hero-h2 { font-size: 42px; padding-bottom:0.08em;} }
+
+    .eyebrow {
+      font-size: 15px; font-weight: 700; letter-spacing: .1em;
+      text-transform: uppercase; color: var(--green-brand); margin-bottom: 12px;
+    }
+
+    /* ─── BUTTONS ──────────────────────────────────────────────── */
+    
+    .btn-cta:hover { background: var(--green-brand); transform: scale(1.02); color: #fff !important; }
+    
+
+    /* ─── BENTO GRID ───────────────────────────────────────────── */
+    
+    .bc {
+      background: var(--bg-white); border-radius: var(--radius);
+      padding: 32px; border: 1px solid var(--border); position: relative; overflow: hidden;
+    }
+    
+    
+    
+    
+    
+    
+    
+    @media (max-width: 900px) {
+      .bento { grid-template-columns: 1fr 1fr; }
+      .bc.s7, .bc.s5, .bc.s8 { grid-column: span 2; }
+      .bc.s4, .bc.s6 { grid-column: span 1; }
+    }
+    @media (max-width: 600px) {
+      .bento { grid-template-columns: 1fr; }
+      .bc { grid-column: span 1 !important; }
+    }
+    
+    
+    .bignum   { font-size: 110px; font-weight: 800; line-height: 1; letter-spacing: -.04em; color: rgba(19,74,142,.06); position: absolute; bottom: -16px; right: 16px; pointer-events: none; }
+
+    /* ─── 2-COL & 3-COL ────────────────────────────────────────── */
+    
+    
+    @media (max-width: 900px) { .g2 { grid-template-columns: 1fr; gap: 40px; } }
+
+    
+    @media (max-width: 860px) { .three-col { grid-template-columns: 1fr; } }
+    @media (min-width: 600px) and (max-width: 860px) { .three-col { grid-template-columns: 1fr 1fr; } }
+
+    .two-col { display: grid; grid-template-columns: 1fr; gap: 24px; align-items: start; }
+    @media (min-width: 992px) { .two-col { grid-template-columns: 1fr 1fr; gap: 38px; } }
+    @media (min-width: 992px) { .two-col.stretch { gap: 64px; align-items: stretch; } }
+
+    /* ─── CALLOUT CARDS ────────────────────────────────────────── */
+    .callout {
+      border-radius: var(--radius); background: var(--bg-white);
+      padding: 32px; box-shadow: 0 12px 32px rgba(0,0,0,.04);
+      border: 1px solid var(--border); position: relative;
+    }
+    
+    @media (min-width: 992px) { .stretch > .callout--plain { padding-top: 40px; } }
+
+    /* GREEN CALLOUT */
+    .callout--green {
+      background: linear-gradient(90deg,#74A81A,var(--green-brand) 55%,#638719);
+      border-radius: var(--radius); padding: 40px; position: relative; overflow: hidden;
+      box-shadow: 0 12px 32px rgba(0,0,0,.06);
+    }
+    .callout--green h2 {
+      background: linear-gradient(90deg,#052037,var(--blue-dark) 55%,#0e3a73);
+      -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent; color: transparent;
+      text-transform: none; margin-bottom: 8px;
+    padding-bottom:0.08em;}
+    .callout--green p, .callout--green li { color: #0b0b0c !important; }
+    .callout--green a { color: #052037 !important; }
+    .callout--green .cg-bg {
+      font-size: 200px; font-weight: 900; position: absolute;
+      right: -20px; bottom: -40px; color: rgba(255,255,255,.12);
+      line-height: 1; pointer-events: none;
+    }
+    ul li { padding: 3px 0; }
+
+    /* ─── FEATURE LIST ─────────────────────────────────────────── */
+    
+    
+    
+    .fck svg { flex-shrink: 0; }
+
+    /* ─── WARNING / NOTE BOXES ─────────────────────────────────── */
+    .note-box {
+      position: relative; background: linear-gradient(180deg,var(--green-bg) 0%,#fff 100%);
+      border: 2px solid var(--green-brand); border-radius: var(--radius);
+      padding: 36px 28px 28px; margin-top: 40px;
+      box-shadow: 0 10px 26px rgba(110,155,18,.08);
+    }
+    .note-badge {
+      position: absolute; top: -16px; left: 24px;
+      background: var(--green-brand); color: #fff;
+      font-size: 14px; font-weight: 800; text-transform: uppercase;
+      padding: 5px 14px; border-radius: 999px;
+      box-shadow: 0 6px 14px rgba(110,155,18,.22);
+    }
+    .note-title { font-size: 24px; font-weight: 800; line-height: 1.2; margin: 10px 0 12px; color: var(--text-strong); }
+    .note-box p  { font-size: 17px; line-height: 1.6; color: var(--text2); margin-bottom: 12px; }
+
+    /* ─── REVIEWS SLIDER ───────────────────────────────────────── */
+    .rev-rail-wrap {
+      overflow: hidden; margin-top: 24px;
+      mask-image: linear-gradient(to right, transparent 0%,black 6%,black 94%,transparent 100%);
+    }
+    
+    .rev-rail::-webkit-scrollbar { display: none; }
+    .rev-rail:active { cursor: grabbing; }
+    
+    
+    
+    
+
+    /* ─── METHOD CARDS ─────────────────────────────────────────── */
+    .method-card { display: flex; flex-direction: column; height: 100%; }
+    .method-frame {
+      background: var(--bg-white); aspect-ratio: 4/3; padding: 20px;
+      border: 1px solid var(--border); border-radius: var(--radius);
+      margin-bottom: 20px; overflow: hidden;
+    }
+    .method-frame img { width: 100%; height: 100%; object-fit: contain; }
+    .snum { font-size: 44px; font-weight: 800; color: rgba(19,74,142,.15); line-height: 1; margin-bottom: 8px; }
+    .stit { font-size: 20px; font-weight: 800; margin-bottom: 8px; color: var(--text-strong); }
+
+    /* ─── SPECS TABLE ──────────────────────────────────────────── */
+    .specs { margin-top: 24px; }
+    .spec { display: flex; justify-content: space-between; padding: 14px 0; border-bottom: 1px solid var(--border); }
+    .spec:last-child { border-bottom: none; }
+    .sk { color: var(--text2); }
+    .sv { font-weight: 600; text-align: right; }
+
+    /* ─── COMPARISON TABLE ─────────────────────────────────────── */
+    .compare-wrap { width: 100%; overflow-x: auto; margin-top: 14px; padding-top: 32px; -webkit-overflow-scrolling: touch; }
+    .compare-table { width: 100%; border-collapse: separate; border-spacing: 0; min-width: 680px; }
+    .compare-table th, .compare-table td { padding: 14px; border-bottom: 1px solid var(--border); vertical-align: middle; text-align: left; }
+    .compare-table th { font-weight: 700; font-size: 15px; color: var(--text2); border-bottom: 2px solid var(--border); vertical-align: top; }
+    .compare-table .col-blue { background: var(--bg-apple-solid); position: relative; }
+    .compare-table th.col-blue { padding-top: 48px !important; color: var(--blue-mid); border-top: 2px solid var(--blue-mid); border-left: 2px solid var(--blue-mid); border-right: 2px solid var(--blue-mid); border-top-left-radius: 16px; border-top-right-radius: 16px; border-bottom: 2px solid var(--border); }
+    .compare-table td.col-blue { border-left: 2px solid var(--blue-mid); border-right: 2px solid var(--blue-mid); border-bottom: 1px solid rgba(19,74,142,.1); }
+    .compare-table tr:last-child td.col-blue { border-bottom: 2px solid var(--blue-mid); border-bottom-left-radius: 16px; border-bottom-right-radius: 16px; }
+    .compare-table .col-green { background: #f4f9ea; position: relative; }
+    .compare-table th.col-green { padding-top: 48px !important; color: var(--green-brand); border-top: 2px solid var(--green-brand); border-left: 2px solid var(--green-brand); border-right: 2px solid var(--green-brand); border-top-left-radius: 16px; border-top-right-radius: 16px; border-bottom: 2px solid var(--border); }
+    .compare-table td.col-green { border-left: 2px solid var(--green-brand); border-right: 2px solid var(--green-brand); border-bottom: 1px solid rgba(110,155,18,.1); }
+    .compare-table tr:last-child td.col-green { border-bottom: 2px solid var(--green-brand); border-bottom-left-radius: 16px; border-bottom-right-radius: 16px; }
+    .winner-badge, .winner-badge-green {
+      position: absolute; top: -18px; left: 16px;
+      display: inline-flex; align-items: center; color: #fff;
+      font-size: 13px; font-weight: 800; text-transform: uppercase;
+      padding: 5px 12px; border-radius: 20px; letter-spacing: .05em;
+      box-shadow: 0 6px 14px rgba(0,0,0,.15); z-index: 2; white-space: nowrap;
+    }
+    .winner-badge       { background: var(--blue-mid); }
+    .winner-badge-green { background: var(--green-brand); }
+    .tc-val { display: flex; align-items: center; gap: 10px; font-size: 15px; font-weight: 500; color: var(--text2); }
+    td.col-blue .tc-val, td.col-green .tc-val { font-weight: 700; color: var(--text-strong); }
+    .tc-val.no-icon { padding-left: 0; }
+    .tb-icon { display: inline-flex; align-items: center; justify-content: center; width: 22px; height: 22px; border-radius: 50%; flex-shrink: 0; }
+    .tb-icon--blue  { background: linear-gradient(135deg,var(--blue-dark),var(--blue-mid)); }
+    .tb-icon--green { background: linear-gradient(135deg,#74A81A,var(--green-brand)); }
+    .tb-icon--gray  { background: #f2f2f7; }
+    .tb-icon--cross { background: #fff0f0; }
+    .tb-icon svg    { width: 12px; height: 12px; }
+
+    /* ─── FAQ ──────────────────────────────────────────────────── */
+    
+    
+    .faq summary {
+      list-style: none; cursor: pointer; padding: 18px 40px 18px 0;
+      font-weight: 800; font-size: 18px; line-height: 1.4;
+      position: relative; color: var(--text-strong);
+    }
+    
+    .faq summary::after { content: "+"; position: absolute; right: 4px; top: 50%; transform: translateY(-50%); font-size: 26px; font-weight: 300; color: var(--green-brand); }
+    
+    
+
+    /* ─── MAC STAGE ────────────────────────────────────────────── */
+    .mac-stage { position: relative; width: 100%; line-height: 0; }
+    .mac-stage img { width: 100%; display: block; object-fit: contain; transform-origin: center center; filter: drop-shadow(0 30px 70px rgba(0,0,0,.16)); }
+    .mac-stage::after { content: ""; position: absolute; left: 50%; bottom: 5%; transform: translateX(-50%); width: 80%; height: 60px; background: radial-gradient(50% 50%,rgba(0,0,0,.16) 0%,transparent 70%); filter: blur(15px); opacity: .6; pointer-events: none; z-index: -1; }
+
+    /* ─── MEDIA FRAME ──────────────────────────────────────────── */
+    .media-frame { width: 100%; border-radius: var(--radius); overflow: hidden; -webkit-mask-image: -webkit-radial-gradient(#fff,#000); }
+    .media-frame img, .media-frame video { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+    /* ─── RELATED / ARTICLE GRID ───────────────────────────────── */
+    .related-featured {
+      display: flex; flex-direction: column; position: relative;
+      margin-top: 34px; padding: 36px 28px 28px;
+      background: linear-gradient(180deg,var(--bg-apple-solid) 0%,#fff 100%);
+      border: 2px solid var(--blue-mid); border-radius: var(--radius);
+      text-decoration: none !important; color: inherit !important;
+      box-shadow: 0 10px 26px rgba(19,74,142,.08);
+      transition: transform .18s, box-shadow .18s;
+    }
+    .related-featured:hover { transform: translateY(-3px); box-shadow: 0 14px 28px rgba(19,74,142,.15); }
+    .related-badge, .article-eyebrow-badge {
+      position: absolute; top: -16px; left: 24px;
+      background: var(--blue-mid); color: #fff; font-size: 13px; font-weight: 800;
+      text-transform: uppercase; padding: 5px 12px; border-radius: 999px;
+      box-shadow: 0 6px 14px rgba(19,74,142,.22);
+    }
+    .related-title { font-size: 24px; font-weight: 800; line-height: 1.25; color: var(--text-strong) !important; margin: 8px 0; }
+    .related-text  { font-size: 17px; line-height: 1.6; color: var(--text2) !important; margin-bottom: 16px; }
+    
+    .article-card  {
+      position: relative; display: flex; flex-direction: column; height: 100%;
+      padding: 22px; background: var(--bg-white); border: 1.5px solid var(--border);
+      border-radius: var(--radius); text-decoration: none !important; color: inherit !important;
+      box-shadow: 0 8px 24px rgba(0,0,0,.04); transition: transform .18s, box-shadow .18s, border-color .18s;
+    }
+    .article-card:hover { transform: translateY(-3px); box-shadow: 0 14px 28px rgba(0,0,0,.08); border-color: rgba(110,155,18,.45); }
+    .article-eyebrow { font-size: 14px; font-weight: 800; text-transform: uppercase; color: var(--blue-mid) !important; margin-bottom: 8px; display: block; }
+    
+    
+    
+    .article-card:hover .article-chip, .related-featured:hover .article-chip { background: var(--green-brand); color: #fff !important; }
+
+    /* ─── ANIMATIONS ───────────────────────────────────────────── */
+    .anim-up   { opacity: 0; transform: translateY(28px); transition: opacity .8s cubic-bezier(.16,1,.3,1), transform .8s cubic-bezier(.16,1,.3,1); }
+    .fly-left  { opacity: 0; transform: translateX(-80px); transition: opacity 2.8s cubic-bezier(.16,1,.3,1), transform 2.8s cubic-bezier(.16,1,.3,1); }
+    .fly-right { opacity: 0; transform: translateX(80px);  transition: opacity 2.8s cubic-bezier(.16,1,.3,1), transform 2.8s cubic-bezier(.16,1,.3,1); }
+    .anim-up.on, .fly-left.on, .fly-right.on { opacity: 1; transform: none; }
+    @media (prefers-reduced-motion: reduce) { .anim-up, .fly-left, .fly-right { transition: none !important; opacity: 1 !important; transform: none !important; } }
+
+    /* ─── FOOTER ───────────────────────────────────────────────── */
+  </style>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Ποιες εκδόσεις TAGRA υποστηρίζουν το DKV LIVE;",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Όλες οι τρέχουσες εκδόσεις TAGRA — TAGRA 1, 2, 4, 6 και MAX — υποστηρίζουν εισαγωγή DKV LIVE από την έκδοση 345 και μετά. Ο αριθμός έκδοσης εμφανίζεται στο κάτω μέρος του παραθύρου TAGRA. Οι ενημερώσεις περιλαμβάνονται στην ετήσια άδειά σας."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Πού λαμβάνω τα διαπιστευτήριά μου για το DKV LIVE;",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Από τον διαχειριστή λογαριασμού σας DKV Mobility ή τον αντιπρόσωπο πωλήσεων. Το TAGRA χρειάζεται ένα έγκυρο όνομα χρήστη και κωδικό πρόσβασης SFTP για τον διακομιστή DKV LIVE."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Πόσο συχνά πρέπει το TAGRA να ανακτά δεδομένα από το DKV LIVE;",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Συνιστούμε τουλάχιστον μία φορά την ημέρα (διάστημα 1d). Αυτό διατηρεί τα δεδομένα σας ενημερωμένα και διασφαλίζει ότι βρίσκεστε εντός των νομικών περιθωρίων λήψης δεδομένων των 28 και 90 ημερών."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Τι συμβαίνει εάν η εισαγωγή αποτύχει ή εμφανίσει σφάλμα;",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ελέγξτε ξανά τον διακομιστή SFTP (sftp.styletronic.eu), τη θύρα (22) και τα διαπιστευτήριά σας. Εάν αυτά είναι σωστά και η εισαγωγή εξακολουθεί να αποτυγχάνει, επικοινωνήστε με την υποστήριξη TAGRA."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Χρειάζομαι το DKV LIVE για απομακρυσμένη λήψη δεδομένων ταχογράφου;",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Όχι. Το DKV LIVE είναι ένας από τους πολλούς τρόπους για την εισαγωγή δεδομένων ταχογράφου στο TAGRA. Το TAGRA δέχεται επίσης τυπικά αρχεία .DDD, .C1B και .V1B από οποιοδήποτε άλλο εργαλείο λήψης δεδομένων ταχογράφου."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Είναι η TAGRA επίσημα συνεργαζόμενη με την DKV;",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Το TAGRA εισάγει δεδομένα από την υπηρεσία SFTP του DKV LIVE χρησιμοποιώντας τα δικά σας διαπιστευτήρια DKV. Αυτή είναι μια λειτουργία τεχνικής διαλειτουργικότητας και όχι επίσημη συνεργασία ή υποστήριξη. Το DKV LIVE είναι εμπορικό σήμα της DKV Mobility."
+      }
+    }
+  ]
+}</script>
+<link href="/assets/css/tokens.css?v=20260514j" rel="stylesheet"/>
+<link href="/assets/css/base.css?v=20260514j" rel="stylesheet"/>
+<link href="/assets/css/components.css?v=20260514j" rel="stylesheet"/>
+<link href="/assets/css/nav.css?v=20260514j" rel="stylesheet"/>
+<script defer="" src="/assets/js/nav.js?v=20260513q"></script>
+<link href="/assets/css/footer.css?v=20260513d" rel="stylesheet"/>
+<link href="https://tagra.app/integrations/dkv-live/" hreflang="en" rel="alternate"/><link href="https://tagra.app/de/schnittstellen/dkv-live/" hreflang="de" rel="alternate"/><link href="https://tagra.app/pl/integracje/dkv-live/" hreflang="pl" rel="alternate"/><link href="https://tagra.app/el/ensomatoseis/dkv-live/" hreflang="el" rel="alternate"/><link href="https://tagra.app/integrations/dkv-live/" hreflang="x-default" rel="alternate"/></head>
+<body>
+<a class="skip-link" href="#content">Μετάβαση στο περιεχόμενο</a>
+<!-- ═══ NAVIGATION ═══════════════════════════════════════════════ -->
+<nav aria-label="Κύρια πλοήγηση" class="site-nav" role="navigation">
+<div class="nav-inner">
+<a aria-label="TAGRA – Αρχική" class="nav-logo" href="/el/"><img alt="TAGRA" height="32" src="/assets/img/logo-light.svg?v=20260513zh" style="display:block;height:32px;width:auto;" width="140"/></a>
+<ul class="nav-links">
+<li><a href="/el/stolos/">Για εταιρείες</a></li>
+<li><a href="/el/odigoi/">Για οδηγούς</a></li>
+<li><a href="/el/eleghos/">Ελεγκτικές Αρχές</a></li>
+<li><a href="/el/arthra/">Άρθρα</a></li><li><a href="/el/egcheiridia/">Εγχειρίδια</a></li>
+<li><a href="/el/faq/">FAQ</a></li>
+<li><a href="/el/epikoinonia/">Επικοινωνία</a></li>
+<li class="nav-cta-li"><a class="nav-cta" href="/el/dokimi/?audience=fleet">Δοκιμάστε 30 ημέρες δωρεάν</a></li>
+</ul>
+<details class="nav-lang">
+<summary aria-label="Language: EL">EL</summary>
+<div class="nav-lang-menu" role="menu">
+<a href="/" hreflang="en">English</a><a href="/de/" hreflang="de">Deutsch</a><a href="/pl/" hreflang="pl">Polski</a><a aria-current="page" class="active" href="/el/" hreflang="el">Ελληνικά</a><a href="/hu/" hreflang="hu">Magyar</a><a href="https://www.tdt.cz/" hreflang="cs" rel="noopener" target="_blank">Čeština</a><a href="https://www.tdt.sk/" hreflang="sk" rel="noopener" target="_blank">Slovenčina</a></div>
+</details>
+<a class="nav-cta-mobile" href="/el/dokimi/?audience=fleet">Δοκιμάστε δωρεάν</a>
+<button aria-expanded="false" aria-label="Εναλλαγή μενού" class="nav-mobile-toggle" id="nav-toggle">
+<span></span><span></span><span></span>
+</button>
+</div>
+</nav>
+<main id="content">
+<!-- ��� HERO ������������������������������������������� -->
+<section aria-label="Επισκόπηση ενσωμάτωσης DKV LIVE" class="band band--hero">
+<div class="container">
+<div class="eyebrow anim-up">Ενσωμάτωση</div>
+<h2 class="hero-h2 anim-up" style="transition-delay:.05s">Δεδομένα ταχογράφου<br/>απευθείας στο TAGRA</h2>
+<p class="anim-up" style="font-size:21px;line-height:1.5;max-width:680px;margin:16px auto 32px;color:var(--text-muted);transition-delay:.1s">Χρησιμοποιείτε ήδη<strong>DKV LIVE®</strong>για απομακρυσμένη λήψη δεδομένων ταχογράφου; Το TAGRA εισάγει τα δεδομένα αυτόματα — χωρίς χειροκίνητες μεταφορές αρχείων, χωρίς επιπλέον κλικ.</p>
+<div class="anim-up" style="margin-bottom:16px;transition-delay:.15s">
+<a class="btn-cta" href="/el/dokimi/?audience=fleet" rel="noopener" target="_blank">Δοκιμάστε το TAGRA 30 ημέρες δωρεάν</a>
+</div>
+<p class="anim-up" style="font-size:15px;color:var(--text-muted);transition-delay:.2s">Windows · Δωρεάν δοκιμή 30 ημερών · Έτοιμο για βαν από τον Ιούλιο του 2026</p>
+</div>
+</section>
+<!-- ��� WHAT THE INTEGRATION GIVES YOU ��������������� -->
+<section aria-label="Τι σας προσφέρει η ενσωμάτωση" class="band">
+<div class="container">
+<div class="g2 top">
+<div class="anim-up">
+<div class="eyebrow">Τι σας προσφέρει</div>
+<h2>Μηδενικές χειροκίνητες<br/>μεταφορές αρχείων</h2>
+<p style="margin-bottom:16px">Το DKV LIVE® είναι μια υπηρεσία τηλεματικής που ανακτά δεδομένα ταχογράφου και κάρτας οδηγού από τα οχήματά σας μέσω του κινητού δικτύου και τα αποθηκεύει σε έναν ασφαλή διακομιστή SFTP.</p>
+<p style="margin-bottom:16px">Το TAGRA συνδέεται σε αυτόν τον διακομιστή και εισάγει τα δεδομένα<strong>αυτόματα</strong>, σύμφωνα με το πρόγραμμα που επιλέγετε — από μία φορά την ημέρα έως κάθε λίγες ώρες.</p>
+<p>Το αποτέλεσμα: τα δεδομένα από κάθε όχημα του στόλου σας διοχετεύονται απευθείας στο TAGRA, έτοιμα για ανάλυση, αναφορές παραβάσεων και αρχειοθέτηση. Χωρίς κλειδιά λήψης δεδομένων, χωρίς μετακινήσεις στην αυλή, χωρίς χαμένες προθεσμίες.</p>
+</div>
+<div class="anim-up" style="transition-delay:.1s">
+<div class="note-box">
+<span class="note-badge">DKV LIVE®</span>
+<span class="note-title">Τηλεματική + TAGRA = πλήρης αυτοματοποίηση</span>
+<p>Εάν ήδη πληρώνετε για την τηλεματική DKV LIVE®, δεν χρειάζεστε επιπλέον υλικό για να εισαγάγετε δεδομένα ταχογράφου στο TAGRA. Απλώς καταχωρίστε τα διαπιστευτήριά σας για το DKV στην<strong>Εισαγωγή Δεδομένων</strong>οθόνη του TAGRA και είστε έτοιμοι.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ��� WHAT YOU'LL NEED ����������������������������� -->
+<section aria-label="Τι θα χρειαστείτε" class="band band--blue">
+<div class="container">
+<div class="eyebrow anim-up">Πριν ξεκινήσετε</div>
+<h2 class="anim-up">Τι θα χρειαστείτε</h2>
+<div class="bento" style="margin-top:32px">
+<div class="bc s4 anim-up">
+<div class="eyebrow" style="color:var(--blue-mid)">Λογισμικό</div>
+<div class="bc-title">TAGRA έκδοση 345 ή νεότερη</div>
+<div class="bc-text">Η λειτουργία εισαγωγής δεδομένων είναι διαθέσιμη από την έκδοση 345 και μετά. Θα βρείτε την τρέχουσα έκδοσή σας στο κάτω μέρος του παραθύρου του TAGRA. Οι ενημερώσεις περιλαμβάνονται στο ετήσιο τέλος άδειας χρήσης.</div>
+</div>
+<div class="bc s4 bluefill anim-up" style="transition-delay:.05s">
+<div class="eyebrow" style="color:var(--blue-mid)">Λογαριασμός DKV LIVE®</div>
+<div class="bc-title">Ενεργή συνδρομή<br/>+ διαπιστευτήρια</div>
+<div class="bc-text">Μια ενεργή συνδρομή DKV LIVE® με διαπιστευτήρια σύνδεσης (όνομα χρήστη και κωδικό πρόσβασης) που παρέχονται από τον εκπρόσωπο της DKV ή την επαφή πωλήσεών σας.</div>
+</div>
+<div class="bc s4 anim-up" style="transition-delay:.1s">
+<div class="eyebrow" style="color:var(--blue-mid)">Διακομιστής SFTP</div>
+<div class="bc-title">sftp.styletronic.eu<br/>θύρα 22</div>
+<div class="bc-text">Το τελικό σημείο SFTP της DKV LIVE® στο οποίο συνδέεται το TAGRA. Ίδια διεύθυνση για όλους τους πελάτες· τα διαπιστευτήριά σας σάς πιστοποιούν στον συγκεκριμένο φάκελο δεδομένων σας.</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ��� SETUP STEP BY STEP ��������������������������� -->
+<section aria-label="Οδηγός ρύθμισης βήμα προς βήμα" class="band band--gray">
+<div class="container">
+<div class="eyebrow anim-up">Οδηγός εγκατάστασης</div>
+<h2 class="anim-up">Βήμα προς βήμα</h2>
+<p class="anim-up" style="max-width:680px;margin:8px 0 40px;color:var(--text-muted)">Η ρύθμιση της εισαγωγής DKV LIVE® στο TAGRA διαρκεί περίπου δύο λεπτά. Το κάνετε μόνο μία φορά — από τότε και στο εξής, το TAGRA αντλεί δεδομένα αυτόματα.</p>
+<div class="three-col" style="grid-template-columns:1fr;gap:32px">
+<div class="anim-up" style="display:flex;gap:24px;align-items:flex-start">
+<div class="snum">01</div>
+<div>
+<div class="stit">Άνοιγμα Εισαγωγής Δεδομένων</div>
+<p>Στο κύριο παράθυρο του TAGRA, κάντε κλικ στο<strong>Εισαγωγή δεδ</strong>(Εισαγωγή Δεδομένων) στο αριστερό μενού. Εδώ μπορείτε να ρυθμίσετε τη γέφυρα μεταξύ DKV LIVE® και TAGRA.</p>
+</div>
+</div>
+<div class="anim-up" style="display:flex;gap:24px;align-items:flex-start;transition-delay:.05s">
+<div class="snum">02</div>
+<div>
+<div class="stit">Προσθήκη νέας εισαγωγής</div>
+<p>Στο αριστερό πλαίσιο της οθόνης Εισαγωγής Δεδομένων, κάντε κλικ<strong>Προσθήκη εισαγωγής</strong>. Ανοίγει ένα παράθυρο διαμόρφωσης.</p>
+</div>
+</div>
+<div class="anim-up" style="display:flex;gap:24px;align-items:flex-start;transition-delay:.1s">
+<div class="snum">03</div>
+<div>
+<div class="stit">Διαμόρφωση της σύνδεσης</div>
+<p style="margin-bottom:12px">Συμπληρώστε το παράθυρο διαμόρφωσης:</p>
+<ul style="margin-left:20px;color:var(--text-muted);font-size:16px;line-height:1.7">
+<li><strong>Όνομα εισαγωγής</strong>— οποιαδήποτε ετικέτα επιθυμείτε (π.χ. “DKV”)</li>
+<li><strong>Φάκελος</strong>— εισάγετε<code>/</code>(μία κάθετος)</li>
+<li><strong>Διάστημα εκτέλεσης</strong>— πόσο συχνά θα πρέπει το TAGRA να ανακτά δεδομένα (προτεινόμενο:<code>1d</code>για καθημερινά)</li>
+<li><strong>Διακομιστής SFTP</strong> — <code>sftp.styletronic.eu</code></li>
+<li><strong>Θύρα</strong> — <code>22</code></li>
+<li><strong>Όνομα χρήστη και κωδικός πρόσβασης</strong>— τα δικά σας διαπιστευτήρια DKV LIVE®</li>
+</ul>
+<p style="margin-top:12px">Επιβεβαιώστε με<strong>OK</strong>.</p>
+</div>
+</div>
+<div class="anim-up" style="display:flex;gap:24px;align-items:flex-start;transition-delay:.15s">
+<div class="snum">04</div>
+<div>
+<div class="stit">Εκτελέστε την πρώτη εισαγωγή</div>
+<p>Κάντε κλικ στην νέα σας σύνδεση (αυτή επισημαίνεται με μπλε χρώμα) και πατήστε<strong>Εκτέλεση εισαγωγής</strong>. Το TAGRA ανακτά τα πιο πρόσφατα αρχεία ταχογράφου και κάρτας οδηγού από τον διακομιστή DKV άμεσα. Όταν ολοκληρωθεί, επιστρέψτε στην κύρια οθόνη και ξεκινήστε την ανάλυσή σας.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ��� AUTOMATIC VS MANUAL �������������������������� -->
+<section aria-label="Αυτόματη έναντι χειροκίνητης" class="band">
+<div class="container">
+<div class="g2 top">
+<div class="anim-up">
+<div class="eyebrow">Αυτόματη ή μη αυτόματη;</div>
+<h2>Ρυθμίστε το μία φορά,<br/>ξεχάστε το</h2>
+<p style="margin-bottom:12px">Το<strong>Διάστημα εκτέλεσης</strong>πεδίο καθορίζει πόσο συχνά το TAGRA ανακτά δεδομένα από το DKV LIVE®:</p>
+<ul style="margin-left:20px;color:var(--text-muted);font-size:17px;line-height:1.7;margin-bottom:16px">
+<li><code>1d</code>— μία φορά την ημέρα (προτεινόμενο)</li>
+<li><code>12h</code>— κάθε 12 ώρες</li>
+<li><code>6h</code>, <code>3h</code>, <code>1h</code>— συχνότερα</li>
+<li><code>0s</code>— μόνο μη αυτόματη (κάνετε κλικ<em>Εκτέλεση εισαγωγής</em>εσείς)</li>
+</ul>
+<p>Συνιστούμε τουλάχιστον καθημερινά ώστε τα δεδομένα σας να παραμένουν ενημερωμένα και οι νομικές<strong>Περίοδοι λήψης δεδομένων 28 και 90 ημερών</strong>καλύπτονται πάντα.</p>
+</div>
+<div class="anim-up" style="transition-delay:.1s">
+<div class="note-box">
+<span class="note-badge">Γιατί έχει σημασία</span>
+<span class="note-title">Οι 28 και 90 ημέρες είναι νομικές προθεσμίες</span>
+<p style="margin-bottom:10px">Οι κανονισμοί της ΕΕ απαιτούν να γίνεται λήψη των δεδομένων της κάρτας οδηγού τουλάχιστον κάθε<strong>28 ημέρες</strong>και τα δεδομένα της μονάδας ταχογράφου τουλάχιστον κάθε<strong>90 ημέρες</strong>.</p>
+<p>Με το DKV LIVE® + TAGRA να λειτουργεί σε καθημερινό πρόγραμμα, αυτές οι προθεσμίες τηρούνται αυτόματα. Έχετε επίσης ένα καθαρό, αρχειοθετημένο ιστορικό για οποιονδήποτε έλεγχο.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ��� HELP / SUPPORT ������������������������������� -->
+<section aria-label="Χρειάζεστε βοήθεια" class="band band--blue">
+<div class="container">
+<div class="anim-up">
+<div class="eyebrow">Χρειάζεστε βοήθεια;</div>
+<h2>Έχετε κολλήσει στην εγκατάσταση;<br/>Θα σας βοηθήσουμε.</h2>
+<p style="max-width:680px;margin:16px 0 24px">Εάν η εισαγωγή δεν ξεκινά, εμφανίζει σφάλμα, ή απλά θέλετε μια δεύτερη γνώμη για τη διαμόρφωσή σας — είμαστε στην ευχάριστη θέση να σας βοηθήσουμε να το θέσετε σε λειτουργία.</p>
+<p style="margin-bottom:8px"><strong>Τηλέφωνο:</strong> <a href="tel:+420739005345">+420 739 005 345</a></p>
+<p><strong>Email:</strong> <a href="mailto:helpdesk@tagra.app">helpdesk@tagra.app</a></p>
+</div>
+</div>
+</section>
+<!-- ��� FAQ ������������������������������������������ -->
+<section aria-label="Συχνές ερωτήσεις" class="band">
+<div class="container">
+<div class="eyebrow anim-up">Συχνές ερωτήσεις</div>
+<h2 class="anim-up">FAQ</h2>
+<div class="faq" style="margin-top:24px">
+<details>
+<summary>Ποιες εκδόσεις TAGRA υποστηρίζουν το DKV LIVE®;</summary>
+<div class="faq-a">Όλες οι τρέχουσες εκδόσεις TAGRA — TAGRA 1, 2, 4, 6 και MAX — υποστηρίζουν εισαγωγή DKV LIVE® από<strong>την έκδοση 345 και μετά</strong>Ο αριθμός έκδοσης εμφανίζεται στο κάτω μέρος του παραθύρου TAGRA. Εάν διαθέτετε παλαιότερη έκδοση, πραγματοποιήστε ενημέρωση μέσω του ενσωματωμένου ενημερωτή της εφαρμογής — οι ενημερώσεις περιλαμβάνονται στην ετήσια άδειά σας.</div>
+</details>
+<details>
+<summary>Πού μπορώ να βρω τα διαπιστευτήριά μου για το DKV LIVE®;</summary>
+<div class="faq-a">Από τον υπεύθυνο λογαριασμού σας στην DKV Mobility ή τον εκπρόσωπο πωλήσεων. Το TAGRA χρειάζεται ένα έγκυρο όνομα χρήστη και κωδικό πρόσβασης SFTP για τον διακομιστή DKV LIVE® — τα ίδια που θα χρησιμοποιούσατε για να αποκτήσετε απευθείας πρόσβαση στην υπηρεσία. Δεν αναλαμβάνουμε την παροχή λογαριασμών DKV.</div>
+</details>
+<details>
+<summary>Πόσο συχνά πρέπει το TAGRA να ανακτά δεδομένα από το DKV LIVE®;</summary>
+<div class="faq-a">Συνιστούμε<strong>τουλάχιστον μία φορά την ημέρα</strong>(διάστημα<code>1d</code>). Αυτό διατηρεί τα δεδομένα σας ενημερωμένα και διασφαλίζει ότι βρίσκεστε εντός των νομικών προθεσμιών λήψης δεδομένων των 28 και 90 ημερών. Μπορείτε να το ρυθμίσετε να γίνεται κάθε λίγες ώρες, εάν προτιμάτε ανάλυση σχεδόν σε πραγματικό χρόνο — και οι δύο επιλογές λειτουργούν μια χαρά.</div>
+</details>
+<details>
+<summary>Τι συμβαίνει εάν η εισαγωγή αποτύχει ή εμφανίσει σφάλμα;</summary>
+<div class="faq-a">Πρώτα, ελέγξτε ξανά τον διακομιστή SFTP (<code>sftp.styletronic.eu</code>), τη θύρα (<code>22</code>) και τα διαπιστευτήριά σας. Εάν αυτά είναι σωστά και η εισαγωγή εξακολουθεί να αποτυγχάνει, επικοινωνήστε μαζί μας — τηλέφωνο<a href="tel:+420739005345">+420 739 005 345</a>ή email<a href="mailto:helpdesk@tagra.app">helpdesk@tagra.app</a>. Το μήνυμα σφάλματος στη λίστα εισαγωγής του TAGRA μας βοηθά να διαγνώσουμε γρήγορα το πρόβλημα.</div>
+</details>
+<details>
+<summary>Χρειάζομαι το DKV LIVE® για απομακρυσμένη λήψη δεδομένων ταχογράφου;</summary>
+<div class="faq-a">Όχι. Το DKV LIVE® είναι ένας από τους πολλούς τρόπους για να εισάγετε δεδομένα ταχογράφου στο TAGRA — είναι μια εξαιρετική επιλογή αν χρησιμοποιείτε ήδη την υπηρεσία τηλεματικής της DKV. Εάν όχι, το TAGRA δέχεται επίσης<code>.DDD</code>, <code>.C1B</code>και<code>.V1B</code>αρχεία από οποιοδήποτε άλλο εργαλείο λήψης δεδομένων ταχογράφου. Επικοινωνήστε μαζί μας αν θα θέλατε μια σύσταση.</div>
+</details>
+<details>
+<summary>Είναι η TAGRA επίσημα συνεργαζόμενη με την DKV;</summary>
+<div class="faq-a">Η TAGRA εισάγει δεδομένα από την υπηρεσία SFTP του DKV LIVE® χρησιμοποιώντας τα δικά σας διαπιστευτήρια DKV. Πρόκειται για ένα τεχνικό χαρακτηριστικό διαλειτουργικότητας, όχι για επίσημη συνεργασία ή έγκριση.<em>Το DKV LIVE® είναι εμπορικό σήμα της DKV Mobility.</em></div>
+</details>
+<details>
+<summary>Περιλαμβάνεται η εισαγωγή δεδομένων του DKV LIVE® στην άδεια χρήσης TAGRA;</summary>
+<div class="faq-a">Ναι. Η λειτουργία Εισαγωγής Δεδομένων (συμπεριλαμβανομένης της συνδεσιμότητας DKV LIVE®) αποτελεί μέρος κάθε τρέχουσας άδειας χρήσης TAGRA χωρίς επιπλέον κόστος. Πληρώνετε μόνο το κανονικό σας τέλος άδειας χρήσης TAGRA και τη συνήθη συνδρομή σας στο DKV LIVE® — τίποτα παραπάνω.</div>
+</details>
+</div>
+</div>
+</section>
+</main>
+<footer class="site-footer" role="contentinfo">
+<div class="footer-inner">
+<div>
+<div class="footer-logo"><img alt="TAGRA" height="32" src="/assets/img/logo-dark.svg?v=20260513zh" width="140"/></div>
+<p class="footer-desc">Επαγγελματικό λογισμικό ανάλυσης ταχογράφου. Λήψη δεδομένων κάρτας οδηγού, ανάλυση ψηφιακού ταχογράφου, ώρες οδήγησης ΕΕ και Οδηγία για τον Χρόνο Εργασίας των οδηγών βαρέων οχημάτων. Αναπτύχθηκε από την Truck Data Technology, s.r.o.</p>
+</div>
+<div class="footer-col">
+<h4>Προϊόν</h4>
+<ul>
+<li><a href="/el/stolos/">Για μεταφορικές εταιρείες</a></li>
+<li><a href="/el/odigoi/">Για επαγγελματίες οδηγούς</a></li>
+<li><a href="/el/eleghos/">Για ελεγκτικές αρχές</a></li>
+<li><a href="/el/pos-leitourgei/">Πώς λειτουργεί</a></li>
+<li><a href="/el/gia-poion/">Για ποιους</a></li>
+<li><a href="/el/faq/">FAQ</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h4>Πόροι</h4>
+<ul>
+<li><a href="/el/arthra/">Άρθρα</a></li><li><a href="/el/egcheiridia/">Εγχειρίδια</a></li>
+<li><a href="/el/arthra/symvola-tachografou/">Εικονίोग्रामματα ταχογράφου</a></li>
+<li><a href="/el/ensomatoseis/dkv-live/">DKV LIVE®</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h4>Εταιρεία</h4>
+<ul>
+<li><a href="/el/epikoinonia/">Επικοινωνία</a></li>
+<li><a href="https://www.tdt.cz" rel="noopener" target="_blank">Truck Data Technology</a></li>
+<li><a href="/de/">Γερμανικά</a></li>
+<li><a href="/pl/">Πολωνικά</a></li>
+</ul>
+</div>
+</div>
+<div class="footer-bottom">
+<span>© 2026 Truck Data Technology, s.r.o. Όλα τα δικαιώματα διατηρούνται.</span>
+<span><a href="/el/epikoinonia/">Επικοινωνία</a> · <a href="https://www.tdt.cz" rel="noopener" target="_blank">tdt.cz</a></span>
+</div>
+</footer>
+<!-- ═══ JAVASCRIPT ════════════════════════════════════════════════ -->
+<script>
+(function() {
+  /* 1. SCROLL PROGRESS */
+  var bar = document.getElementById('scroll-progress');
+  if (bar) {
+    window.addEventListener('scroll', function() {
+      var top = document.documentElement.scrollTop || document.body.scrollTop;
+      var h   = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      bar.style.width = (top / h * 100) + '%';
+    }, { passive: true });
+  }
+
+  /* 2. MOBILE NAV TOGGLE */
+  var toggle = document.getElementById('nav-toggle');
+  var links  = document.getElementById('nav-links');
+  if (toggle && links) {
+    toggle.addEventListener('click', function() {
+      var open = links.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open);
+    });
+  }
+
+  /* 3. INTERSECTION OBSERVER – ANIMATIONS */
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) {
+        if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.anim-up, .fly-left, .fly-right').forEach(function(el) { io.observe(el); });
+  } else {
+    document.querySelectorAll('.anim-up, .fly-left, .fly-right').forEach(function(el) { el.classList.add('on'); });
+  }
+
+  /* 4. REVIEWS SLIDER LOOP */
+  var rail = document.getElementById('rev-rail');
+  if (rail) {
+    rail.innerHTML += rail.innerHTML + rail.innerHTML;
+    var speed = 0.9, busy = false, pos = 0, isDown = false, startX, startScroll, resumeTimer;
+    function tick() {
+      if (!busy) {
+        pos += speed;
+        if (pos >= 1) { rail.scrollLeft += Math.floor(pos); pos -= Math.floor(pos); }
+        if (rail.scrollLeft >= rail.scrollWidth / 3) rail.scrollLeft = 0;
+      }
+      requestAnimationFrame(tick);
+    }
+    function pause()  { busy = true; clearTimeout(resumeTimer); }
+    function resume() { resumeTimer = setTimeout(function() { busy = false; }, 2000); }
+    rail.addEventListener('mousedown',  function(e) { isDown = true; pause(); startX = e.pageX - rail.offsetLeft; startScroll = rail.scrollLeft; });
+    rail.addEventListener('mouseleave', function()   { isDown = false; resume(); });
+    rail.addEventListener('mouseup',    function()   { isDown = false; resume(); });
+    rail.addEventListener('mousemove',  function(e)  { if (!isDown) return; e.preventDefault(); rail.scrollLeft = startScroll - (e.pageX - rail.offsetLeft - startX) * 1.5; });
+    rail.addEventListener('touchstart', pause,  { passive: true });
+    rail.addEventListener('touchend',   resume, { passive: true });
+    tick();
+  }
+
+  /* 5. MAC STAGE ZOOM ON SCROLL */
+  var macImg = document.getElementById('mac-img');
+  if (macImg) {
+    var ticking = false;
+    function zoom() {
+      var r = macImg.getBoundingClientRect();
+      var dist = Math.abs(window.innerHeight / 2 - (r.top + r.height / 2));
+      var prog = Math.max(0, 1 - dist / (window.innerHeight * 0.65));
+      var eased = Math.sin(prog * Math.PI / 2);
+      var s = 1 + eased * (window.innerWidth < 768 ? 0.2 : 0.38);
+      macImg.style.transform = 'scale(' + s.toFixed(3) + ')';
+      ticking = false;
+    }
+    function onScroll() { if (!ticking) { requestAnimationFrame(zoom); ticking = true; } }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll, { passive: true });
+    setTimeout(zoom, 150);
+  }
+  /* 6. HERO VIDEO AUTOPLAY */
+  var heroVid = document.getElementById('hero-vid');
+  if (heroVid && 'IntersectionObserver' in window) {
+    var hvObs = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) {
+        if (e.isIntersecting) { heroVid.play().catch(function(){}); }
+        else { heroVid.pause(); }
+      });
+    }, { threshold: 0.1 });
+    hvObs.observe(heroVid);
+    document.addEventListener('touchstart', function() {
+      if (heroVid.paused) heroVid.play().catch(function(){});
+    }, { once: true, passive: true });
+  }
+
+
+
+})();
+</script>
+<!-- SCHEMA.ORG -->
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "TAGRA – Λογισμικό Διαχείρισης Δεδομένων Ταχογράφου Στόλου",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Windows",
+  "description": "Λογισμικό για διαχειριστές στόλου για ανάλυση και αρχειοθέτηση δεδομένων ταχογράφου για 1 έως απεριόριστα οχήματα. Συμβατό με τον κανονισμό ΕΕ 561/2006, τη συμφωνία AETR και την Οδηγία για τον Χρόνο Εργασίας. Δωρεάν δοκιμή 30 ημερών. Έτοιμο για βαν από τον Ιούλιο 2026.",
+  "url": "https://tagra.app/fleet/",
+  "inLanguage": "en",
+  "author": {
+    "@type": "Organization",
+    "name": "Truck Data Technology, s.r.o.",
+    "url": "https://www.tdt.cz"
+  },
+  "offers": {
+    "@type": "Offer",
+    "priceCurrency": "EUR",
+    "price": "82",
+    "description": "Ετήσιο τέλος άδειας από το 2ο έτος. TAGRA Trucker: €19/year, TAGRA 1–2: €79/year, TAGRA 4–6: €99/year, TAGRA MAX: €139/year. Ο πρώτος χρόνος περιλαμβάνεται στην τιμή αγοράς.",
+    "availability": "https://schema.org/InStock"
+  }
+}</script>
+</body>
+</html>

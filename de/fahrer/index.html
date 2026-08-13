@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<!-- TMX-ANALYTICS START -->
+<meta content="7F7894081BE7FBB245FF03AF8810B22F" name="msvalidate.01"/>
+<!-- Consent Mode v2 defaults (deny) + gtag stub — runs BEFORE gtag.js -->
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent','default',{
+      ad_storage:'denied', ad_user_data:'denied', ad_personalization:'denied',
+      analytics_storage:'denied', functionality_storage:'denied',
+      personalization_storage:'denied', security_storage:'granted',
+      wait_for_update:500
+    });
+    gtag('set','ads_data_redaction',true);
+    gtag('set','url_passthrough',false);
+  </script>
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-92253QFBNX"></script>
+<script>
+    gtag('js', new Date());
+    gtag('config','G-92253QFBNX');
+  </script>
+<!-- Cookie consent banner (self-hosted) + Microsoft Clarity gating -->
+<style>
+    .tmx-cc{position:fixed;left:0;right:0;bottom:0;z-index:2147483000;background:linear-gradient(120deg,var(--blue-dark,#0b2c4a),var(--blue-mid,#134a8e) 62%,var(--blue-light,#1f5fa6));color:#fff;
+      font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+      padding:16px 20px;box-shadow:0 -4px 24px rgba(0,0,0,.18);display:flex;flex-wrap:wrap;
+      align-items:center;gap:14px;justify-content:center}
+    .tmx-cc__txt{flex:1 1 360px;max-width:760px}
+    .tmx-cc__txt a{color:#9ed0f5;text-decoration:underline}
+    .tmx-cc__btns{display:flex;gap:10px;flex:0 0 auto}
+    .tmx-cc__b{appearance:none;border:0;cursor:pointer;font:inherit;font-weight:600;
+      padding:10px 22px;border-radius:99px;transition:filter .15s;color:#fff}
+    .tmx-cc__b:hover{filter:brightness(1.08)}
+    .tmx-cc__b--no{background:rgba(255,255,255,.16)}
+    .tmx-cc__b--yes{background:var(--green-cta,#5C820F)}
+    @media(max-width:640px){.tmx-cc{padding:14px}.tmx-cc__btns{width:100%}.tmx-cc__b{flex:1}}
+  </style>
+<script>
+  (function(){
+    var KEY='tmx-consent-v1', CL='wt18054m0r';
+    function lc(){var l=(document.documentElement.getAttribute('lang')||'en').toLowerCase().split('-')[0];
+      var m={cz:'cs',cs:'cs',sk:'sk',de:'de',pl:'pl',gr:'el',el:'el',en:'en'};return m[l]||'en';}
+    var T={
+      en:{t:'We use analytics cookies (Google Analytics, Microsoft Clarity) to understand site usage. They load only with your consent.',a:'Accept',r:'Reject',p:'Privacy &amp; cookies'},
+      cs:{t:'Pou\u017e\u00edv\u00e1me analytick\u00e9 cookies (Google Analytics, Microsoft Clarity) k pochopen\u00ed pou\u017e\u00edv\u00e1n\u00ed webu. Na\u010dtou se jen s va\u0161\u00edm souhlasem.',a:'P\u0159ijmout',r:'Odm\u00edtnout',p:'Soukrom\u00ed a cookies'},
+      sk:{t:'Pou\u017e\u00edvame analytick\u00e9 cookies (Google Analytics, Microsoft Clarity) na pochopenie pou\u017e\u00edvania webu. Na\u010d\u00edtaj\u00fa sa len s va\u0161\u00edm s\u00fahlasom.',a:'Prija\u0165',r:'Odmietnu\u0165',p:'S\u00fakromie a cookies'},
+      de:{t:'Wir verwenden Analyse-Cookies (Google Analytics, Microsoft Clarity), um die Nutzung der Website zu verstehen. Sie werden nur mit Ihrer Einwilligung geladen.',a:'Akzeptieren',r:'Ablehnen',p:'Datenschutz &amp; Cookies'},
+      pl:{t:'U\u017cywamy plik\u00f3w cookie do analityki (Google Analytics, Microsoft Clarity), aby zrozumie\u0107 korzystanie z witryny. \u0141aduj\u0105 si\u0119 tylko za Twoj\u0105 zgod\u0105.',a:'Akceptuj',r:'Odrzu\u0107',p:'Prywatno\u015b\u0107 i cookies'},
+      el:{t:'\u03a7\u03c1\u03b7\u03c3\u03b9\u03bc\u03bf\u03c0\u03bf\u03b9\u03bf\u03cd\u03bc\u03b5 cookies \u03b1\u03bd\u03ac\u03bb\u03c5\u03c3\u03b7\u03c2 (Google Analytics, Microsoft Clarity) \u03b3\u03b9\u03b1 \u03bd\u03b1 \u03ba\u03b1\u03c4\u03b1\u03bd\u03bf\u03ae\u03c3\u03bf\u03c5\u03bc\u03b5 \u03c4\u03b7 \u03c7\u03c1\u03ae\u03c3\u03b7. \u03a6\u03bf\u03c1\u03c4\u03ce\u03bd\u03bf\u03bd\u03c4\u03b1\u03b9 \u03bc\u03cc\u03bd\u03bf \u03bc\u03b5 \u03c4\u03b7 \u03c3\u03c5\u03b3\u03ba\u03b1\u03c4\u03ac\u03b8\u03b5\u03c3\u03ae \u03c3\u03b1\u03c2.',a:'\u0391\u03c0\u03bf\u03b4\u03bf\u03c7\u03ae',r:'\u0391\u03c0\u03cc\u03c1\u03c1\u03b9\u03c8\u03b7',p:'\u0391\u03c0\u03cc\u03c1\u03c1\u03b7\u03c4\u03bf &amp; cookies'}
+    };
+    function loadClarity(){if(!CL||window.__tmxCl)return;window.__tmxCl=1;
+      (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+       t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+       y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script",CL);}
+    function grant(){try{localStorage.setItem(KEY,'granted')}catch(e){}
+      gtag('consent','update',{analytics_storage:'granted'});loadClarity();}
+    function deny(){try{localStorage.setItem(KEY,'denied')}catch(e){}}
+    var saved=null;try{saved=localStorage.getItem(KEY)}catch(e){}
+    if(saved==='granted'){grant();return;} if(saved==='denied'){return;}
+    function show(){var tx=T[lc()]||T.en;
+      var b=document.createElement('div');b.className='tmx-cc';b.setAttribute('role','dialog');b.setAttribute('aria-live','polite');
+      b.innerHTML='<div class="tmx-cc__txt">'+tx.t+' <a href="/privacy/">'+tx.p+'</a></div>'+
+        '<div class="tmx-cc__btns"><button type="button" class="tmx-cc__b tmx-cc__b--no">'+tx.r+'</button>'+
+        '<button type="button" class="tmx-cc__b tmx-cc__b--yes">'+tx.a+'</button></div>';
+      document.body.appendChild(b);
+      b.querySelector('.tmx-cc__b--yes').addEventListener('click',function(){grant();b.remove();});
+      b.querySelector('.tmx-cc__b--no').addEventListener('click',function(){deny();b.remove();});}
+    if(document.body)show();else document.addEventListener('DOMContentLoaded',show);
+  })();
+  </script>
+<!-- TMX-ANALYTICS END -->
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>TAGRA Trucker – Tachografensoftware für Berufskraftfahrer</title>
+<meta content="TAGRA Trucker hilft Berufskraftfahrern, die EU-Tachografen-Vorschriften einzuhalten. Werten Sie Ihre Fahrerkarte-Daten aus, überprüfen Sie Lenk- und Ruhezeiten. Funktioniert mit einem Standard-USB-Kartenleser. Kostenlose 30-Tage-Testversion." name="description"/>
+<meta content="#0b2c4a" name="theme-color"/>
+<link href="/manifest.json" rel="manifest"/>
+<link href="https://tagra.app/de/fahrer/" rel="canonical"/>
+<meta content="website" property="og:type"/>
+<meta content="de_DE" property="og:locale"/>
+<meta content="TAGRA" property="og:site_name"/>
+<meta content="TAGRA Trucker – Für Berufskraftfahrer" property="og:title"/>
+<meta content="TAGRA Trucker hilft Berufskraftfahrern, die EU-Tachografen-Vorschriften einzuhalten. Funktioniert mit einem Standard-USB-Kartenleser. Kostenlose 30-Tage-Testversion." property="og:description"/>
+<meta content="https://cdn.truckmall.cz/data/user-content/TDT_TAGRA_TRUCKER_wh.jpg" property="og:image"/>
+<meta content="TAGRA Trucker – Tachografensoftware für Berufskraftfahrer mit einem USB-Kartenleser" property="og:image:alt"/>
+<meta content="https://cdn.truckmall.cz/data/user-content/TDT_TAGRA_TRUCKER_wh.jpg" name="twitter:image"/>
+<meta content="TAGRA Trucker – Tachografensoftware für Berufskraftfahrer mit einem USB-Kartenleser" name="twitter:image:alt"/>
+<meta content="https://tagra.app/de/fahrer/" property="og:url"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<style>
+    /* ─── TOKENS ────────────────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    a { color: var(--green-brand); text-decoration: none; }
+    a:hover { color: var(--green-cta); text-decoration: underline; text-underline-offset: .18em; }
+    img { max-width: 100%; height: auto; display: block; }
+    ul { list-style: none; }
+    p + p { margin-top: 12px; }
+    p:empty { display: none; }
+
+    /* ─── SCROLL PROGRESS ───────────────────────────────────────────── */
+    #scroll-progress { position: fixed; top: 0; left: 0; height: 3px; background: linear-gradient(90deg, var(--green-brand), var(--blue-light)); width: 0%; z-index: 9999; pointer-events: none; transition: width .1s ease-out; }
+
+    /* ─── NAV ───────────────────────────────────────────────────────── */
+.nav-inner { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; height: 100%; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .nav-logo { display: flex; align-items: center; gap: 8px; text-decoration: none; flex-shrink: 0; }
+    .nav-links { display: flex; align-items: center; gap: 4px; list-style: none; }
+    .nav-links li a { font-size: 15px; font-weight: 500; color: var(--text); padding: 8px 12px; border-radius: 8px; transition: background .15s, color .15s; text-decoration: none; }
+    .nav-links li a:hover { background: var(--bg-apple-solid); color: var(--blue-mid); }
+    .nav-links .nav-cta a { background: var(--green-cta); color: #fff !important; border-radius: 99px; padding: 8px 18px; font-weight: 600; }
+    .nav-links .nav-cta a:hover { background: var(--green-brand); text-decoration: none; }
+    .nav-lang { display: flex; align-items: center; gap: 4px; font-size: 14px; font-weight: 600; }
+    .nav-lang a { padding: 5px 8px; border-radius: 6px; color: var(--text2); text-decoration: none; transition: background .15s; }
+    .nav-lang a:hover, .nav-lang a.active { background: var(--bg-apple-solid); color: var(--blue-mid); }
+    .nav-lang span { color: var(--border); }
+    .nav-mobile-toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
+    .nav-mobile-toggle span { display: block; width: 22px; height: 2px; background: var(--text); margin: 5px 0; border-radius: 2px; transition: .3s; }
+    @media (max-width: 900px) {
+      .nav-links { display: none; }
+      .nav-mobile-toggle { display: block; }
+      .nav-links.open { display: flex; flex-direction: column; align-items: flex-start; gap: 2px; position: absolute; top: var(--nav-h); left: 0; right: 0; background: rgba(255,255,255,0.97); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 12px 24px 20px; }
+    }
+
+    /* ─── LAYOUT ────────────────────────────────────────────────────── */
+    
+    
+    
+    
+    .band--green { background: var(--green-bg); }
+    @media (max-width: 768px) { .band { padding: 50px 0; } }
+    /* ─── TYPOGRAPHY ────────────────────────────────────────────────── */
+    h2 {
+      font-size: 36px; font-weight: 800;
+      line-height: 1.1; letter-spacing: 0;
+      text-transform: uppercase;
+      color: var(--blue-mid, #134a8e);
+      background: linear-gradient(90deg, var(--blue-dark, #0b2c4a) 0%, var(--blue-mid, #134a8e) 55%, var(--blue-light, #1f5fa6) 100%);
+      -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block; max-width: 100%; margin-bottom: 14px;
+      padding: 0.12em 0.15em 0.08em 0;
+    }
+    @media (max-width: 768px) { h2 {
+      font-size: 36px; font-weight: 800;
+      line-height: 1.1; letter-spacing: 0;
+      text-transform: uppercase;
+      color: var(--blue-mid, #134a8e);
+      background: linear-gradient(90deg, var(--blue-dark, #0b2c4a) 0%, var(--blue-mid, #134a8e) 55%, var(--blue-light, #1f5fa6) 100%);
+      -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block; max-width: 100%; margin-bottom: 14px;
+      padding: 0.12em 0.15em 0.08em 0;
+    } }
+    h2
+    @media (max-width: 768px) { h2 }
+    .eyebrow { font-size: 15px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--green-brand); margin-bottom: 12px; }
+
+    /* ─── BUTTONS ───────────────────────────────────────────────────── */
+    
+    .btn-cta:hover { background: var(--green-brand); transform: scale(1.02); color: #fff !important; }
+    
+
+    /* ─── BENTO ─────────────────────────────────────────────────────── */
+    
+    .bc { background: #fff; border-radius: var(--radius); padding: 32px; border: 1px solid var(--border); position: relative; overflow: hidden; }
+    
+    
+    
+    
+    
+    
+    @media (max-width: 900px) { .bento { grid-template-columns: 1fr 1fr; } .bc.s7, .bc.s5 { grid-column: span 2; } .bc.s4, .bc.s6 { grid-column: span 1; } }
+    @media (max-width: 600px) { .bento { grid-template-columns: 1fr; } .bc { grid-column: span 1 !important; } }
+    
+    
+    .bignum { font-size: 110px; font-weight: 800; line-height: 1; letter-spacing: -.04em; color: rgba(19,74,142,.06); position: absolute; bottom: -16px; right: 16px; pointer-events: none; }
+
+    /* ─── 2-COL ─────────────────────────────────────────────────────── */
+    
+    
+    @media (max-width: 900px) { .g2 { grid-template-columns: 1fr; gap: 40px; } }
+
+    /* ─── FEATURES ──────────────────────────────────────────────────── */
+    
+    
+    
+
+    /* ─── REVIEWS ───────────────────────────────────────────────────── */
+    .rev-rail-wrap { overflow: hidden; margin-top: 24px; mask-image: linear-gradient(to right, transparent 0%,black 6%,black 94%,transparent 100%); }
+    
+    .rev-rail::-webkit-scrollbar { display: none; }
+    .rev-rail:active { cursor: grabbing; }
+    
+    
+    
+    
+
+    /* ─── MEDIA ─────────────────────────────────────────────────────── */
+    .media-frame { width: 100%; border-radius: var(--radius); overflow: hidden; -webkit-mask-image: -webkit-radial-gradient(#fff,#000); }
+    .media-frame img, .media-frame video { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+    /* ─── MAC STAGE ─────────────────────────────────────────────────── */
+    .mac-stage { position: relative; width: 100%; line-height: 0; }
+    .mac-stage img { width: 100%; display: block; object-fit: contain; transform-origin: center center; filter: drop-shadow(0 30px 70px rgba(0,0,0,.16)); will-change: transform; }
+    .mac-stage::after { content: ""; position: absolute; left: 50%; bottom: 5%; transform: translateX(-50%); width: 80%; height: 60px; background: radial-gradient(50% 50%,rgba(0,0,0,.16) 0%,transparent 70%); filter: blur(15px); opacity: .6; pointer-events: none; z-index: -1; }
+
+    /* ─── NOTE BOX ──────────────────────────────────────────────────── */
+    .note-box { position: relative; background: linear-gradient(180deg,var(--green-bg) 0%,#fff 100%); border: 2px solid var(--green-brand); border-radius: var(--radius); padding: 36px 28px 28px; margin-top: 40px; box-shadow: 0 10px 26px rgba(110,155,18,.08); }
+    .note-badge { position: absolute; top: -16px; left: 24px; background: var(--green-brand); color: #fff; font-size: 14px; font-weight: 800; text-transform: uppercase; padding: 5px 14px; border-radius: 999px; box-shadow: 0 6px 14px rgba(110,155,18,.22); }
+    .note-title { font-size: 24px; font-weight: 800; line-height: 1.2; margin: 10px 0 12px; color: var(--text-strong); }
+    .note-box p { font-size: 17px; line-height: 1.6; color: var(--text2); margin-bottom: 12px; }
+
+    /* ─── 3-STEP ────────────────────────────────────────────────────── */
+    
+    @media (max-width: 860px) { .three-col { grid-template-columns: 1fr; } }
+    @media (min-width: 600px) and (max-width: 860px) { .three-col { grid-template-columns: 1fr 1fr; } }
+
+    /* ─── FAQ ───────────────────────────────────────────────────────── */
+    
+    
+    .faq summary { list-style: none; cursor: pointer; padding: 18px 40px 18px 0; font-weight: 800; font-size: 18px; line-height: 1.4; position: relative; color: var(--text-strong); }
+    
+    .faq summary::after { content: "+"; position: absolute; right: 4px; top: 50%; transform: translateY(-50%); font-size: 26px; font-weight: 300; color: var(--green-brand); }
+    
+    
+
+    /* ─── FOOTER ────────────────────────────────────────────────────── */
+
+    /* ─── ANIMATIONS ────────────────────────────────────────────────── */
+    .anim-up { opacity: 0; transform: translateY(28px); transition: opacity .8s cubic-bezier(.16,1,.3,1), transform .8s cubic-bezier(.16,1,.3,1); }
+    .fly-left { opacity: 0; transform: translateX(-80px); transition: opacity 2.8s cubic-bezier(.16,1,.3,1), transform 2.8s cubic-bezier(.16,1,.3,1); }
+    .fly-right { opacity: 0; transform: translateX(80px); transition: opacity 2.8s cubic-bezier(.16,1,.3,1), transform 2.8s cubic-bezier(.16,1,.3,1); }
+    .anim-up.on, .fly-left.on, .fly-right.on { opacity: 1; transform: none; }
+    @media (prefers-reduced-motion: reduce) { .anim-up, .fly-left, .fly-right { transition: none !important; opacity: 1 !important; transform: none !important; } }
+  </style>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Startseite",
+      "item": "https://tagra.app/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Für Berufskraftfahrer",
+      "item": "https://tagra.app/driver/"
+    }
+  ]
+}</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "url": "https://tagra.app/driver/",
+  "name": "Für Berufskraftfahrer",
+  "isPartOf": {
+    "@id": "https://tagra.app/#website"
+  },
+  "about": {
+    "@id": "https://tagra.app/#organization"
+  },
+  "inLanguage": "en"
+}</script>
+<link href="/assets/css/tokens.css?v=20260514j" rel="stylesheet"/>
+<link href="/assets/css/base.css?v=20260514j" rel="stylesheet"/>
+<link href="/assets/css/components.css?v=20260514j" rel="stylesheet"/>
+<link href="/assets/css/nav.css?v=20260514j" rel="stylesheet"/>
+<script defer="" src="/assets/js/nav.js?v=20260513q"></script>
+<link href="/assets/css/footer.css?v=20260513d" rel="stylesheet"/>
+<link href="https://tagra.app/driver/" hreflang="en" rel="alternate"/><link href="https://tagra.app/de/fahrer/" hreflang="de" rel="alternate"/><link href="https://tagra.app/el/odigoi/" hreflang="el" rel="alternate"/><link href="https://tagra.app/driver/" hreflang="x-default" rel="alternate"/></head>
+<body>
+<div aria-hidden="true" id="scroll-progress"></div>
+<!-- ═══ NAVIGATION ════════════════════════════════════════════════════ -->
+<nav aria-label="Hauptnavigation" class="site-nav" role="navigation">
+<div class="nav-inner">
+<a aria-label="TAGRA Trucker – Startseite" class="nav-logo" href="/de/"><img alt="TAGRA" height="32" src="/assets/img/logo-light.svg?v=20260513zh" style="display:block;height:32px;width:auto;" width="140"/><span class="nav-logo-variant">Trucker</span></a>
+<ul class="nav-links">
+<li><a href="/de/fuhrpark/">Für Unternehmen</a></li>
+<li><a aria-current="page" href="/de/fahrer/">Für Fahrer</a></li>
+<li><a href="/de/kontrollbehoerden/">Kontrollbehörden</a></li>
+<li><a href="/de/ratgeber/">Artikel</a></li><li><a href="/de/anleitungen/">Anleitungen</a></li>
+<li><a href="/de/faq/">FAQ</a></li>
+<li><a href="/de/kontakt/">Kontakt</a></li>
+<li class="nav-cta-li"><a class="nav-cta" href="/de/testen/?audience=driver">30 Tage kostenlos testen</a></li>
+</ul>
+<details class="nav-lang">
+<summary aria-label="Language: DE">DE</summary>
+<div class="nav-lang-menu" role="menu">
+<a href="/" hreflang="en">English</a><a aria-current="page" class="active" href="/de/" hreflang="de">Deutsch</a><a href="/pl/" hreflang="pl">Polski</a><a href="/el/" hreflang="el">Ελληνικά</a><a href="/hu/" hreflang="hu">Magyar</a><a href="https://www.tdt.cz/" hreflang="cs" rel="noopener" target="_blank">Čeština</a><a href="https://www.tdt.sk/" hreflang="sk" rel="noopener" target="_blank">Slovenčina</a></div>
+</details>
+<a class="nav-cta-mobile" href="/de/testen/?audience=driver">Kostenlos testen</a>
+<button aria-expanded="false" aria-label="Menü umschalten" class="nav-mobile-toggle" id="nav-toggle">
+<span></span><span></span><span></span>
+</button>
+</div>
+</nav>
+<!-- ═══ HERO ═════════════════════════════════════════════════════════ -->
+<section aria-label="TAGRA Trucker Überblick" class="band band--hero band--hero--green">
+<div class="container">
+<div class="eyebrow anim-up">TAGRA · Tachografensoftware für Berufskraftfahrer</div>
+<h1 class="anim-up" style="transition-delay:.05s">Tachografenauswertung vor<br/>Ihrer nächsten Straßenkontrolle</h1>
+<p class="lead anim-up" style="transition-delay:.1s">
+<strong>Ihre Zeiten. Ihre Daten.</strong>Wissen Sie genau, was sich auf Ihrer<strong>Fahrerkarte</strong>— Lenkzeiten, Pausen, Ruhezeiten und EU-Lenk- und Ruhezeiten — vor jeder Straßenkontrolle befindet. Fahrerkarte-Herunterladen mit einem Standard-USB-Kartenleser.</p>
+<div class="anim-up" style="margin-bottom:16px;transition-delay:.15s">
+<a class="btn-cta" href="/de/testen/?audience=driver" rel="noopener" target="_blank">30 Tage kostenlos testen</a>
+</div>
+<p class="anim-up" style="font-size:15px;color:var(--text2);transition-delay:.2s">Windows · Kostenlose 30-Tage-Testversion · Bereit für Transporterfahrer ab Juli 2026</p>
+<!-- Hero video -->
+<div class="media-frame anim-up" style="margin:44px auto 0;border:1px solid var(--border);box-shadow:0 20px 40px rgba(0,0,0,.08);transition-delay:.25s;border-radius:20px;overflow:hidden">
+<video id="hero-vid" loop="" muted="" playsinline="" poster="https://cdn.truckmall.cz/data/user-content/TDT_TAGRA_TRUCKER_wh.jpg" preload="metadata" style="width:100%;display:block">
+<source src="https://cdn.truckmall.cz/data/user-content/tagra-trucker.webm" type="video/webm">
+</source></video>
+</div>
+</div>
+</section>
+<!-- ═══ KEY PARAMETERS (BENTO) ════════════════════════════════════════ -->
+<section aria-label="Hauptfunktionen" class="band">
+<div class="container">
+<div class="eyebrow anim-up">Hauptfunktionen</div>
+<h2 class="anim-up">Tachografen-Auswertung für Fahrerkarten —<br/>Verstöße frühzeitig erkennen</h2>
+<div class="bento">
+<div class="bc s7 fly-left">
+<div class="eyebrow" style="color:var(--green-brand)">Für</div>
+<div class="bc-title">1 Fahrer · Fahrerkarte</div>
+<div class="bc-text"><strong>Fahrerkarte Herunterladen</strong>, Auswertung und Archivierung Ihrer eigenen Kartendaten. Kennen Sie Ihre<strong>Lenk- und Ruhezeiten</strong>bevor es ein Kontrolleur tut.</div>
+<div class="bignum">1</div>
+</div>
+<div class="bc s5 greenfill fly-right" style="transition-delay:.1s">
+<div class="eyebrow" style="color:var(--green-brand)">Kartenleser</div>
+<div class="bc-title">Standard-USB-<br/>Kartenleser</div>
+<div class="bc-text">Einstecken, Karte einlegen, fertig. Noch keinen Leser? Wir empfehlen Ihnen ein Modell.</div>
+</div>
+<div class="bc s4 fly-left" style="transition-delay:.15s">
+<div class="eyebrow">Testzeitraum</div>
+<div class="bc-title">30 Tage kostenlos</div>
+<div class="bc-text">Herunterladen, installieren, testen. Keine Kreditkarte, keine Verpflichtung.</div>
+</div>
+<div class="bc s4 anim-up" style="transition-delay:.25s">
+<div class="eyebrow">Ab Jahr 2</div>
+<div class="bc-title" style="color:var(--green-brand)">19 € / Jahr</div>
+<div class="bc-text">Jahreslizenzgebühr zzgl. MwSt. — inklusive Updates und Support.</div>
+</div>
+<div class="bc s4 greenfill fly-right" style="transition-delay:.35s">
+<div class="eyebrow" style="color:var(--green-brand)">Funktioniert</div>
+<div class="bc-title" style="color:var(--green-brand)">Offline</div>
+<div class="bc-text">Für den täglichen Gebrauch kein Internet erforderlich. Nur Ihr PC und Ihre Karte.</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ═══ REVIEWS ════════════════════════════════════════════════════════ -->
+<section aria-label="Kundenbewertungen" class="band band--gray">
+<div class="container">
+<div class="eyebrow anim-up">Was Fahrer sagen</div>
+<h2 class="anim-up">Vertraut von Berufskraftfahrern</h2>
+</div>
+<div class="rev-rail-wrap anim-up" style="transition-delay:.05s">
+<div class="rev-rail" id="rev-rail">
+<div class="rev-card"><div aria-label="5 von 5" class="rev-stars">★★★★★</div><p class="rev-txt">„Große Zufriedenheit und keine Probleme bei Kontrollen.“</p><p class="rev-meta">Verifizierter Kunde</p></div>
+<div class="rev-card"><div aria-label="5 von 5" class="rev-stars">★★★★★</div><p class="rev-txt">„Der Leser funktioniert, wie er soll.“</p><p class="rev-meta">Verifizierter Kunde</p></div>
+<div class="rev-card"><div aria-label="5 von 5" class="rev-stars">★★★★★</div><p class="rev-txt">„Alles funktioniert, wie es soll, die Software ist übersichtlich und für meine Bedürfnisse ausreichend. Der Support war hilfreich und reaktionsschnell. Kann ich nur weiterempfehlen.“</p><p class="rev-meta">Verifizierter Kunde</p></div>
+<div class="rev-card"><div aria-label="5 von 5" class="rev-stars">★★★★★</div><p class="rev-txt">„Anfangs etwas gewöhnungsbedürftig, aber dann merkt man, die Software ist einfach, übersichtlich und auch zur Fahrtplanung nützlich. Sollte jeder Fahrer haben.“</p><p class="rev-meta">Verifizierter Kunde</p></div>
+<div class="rev-card"><div aria-label="5 von 5" class="rev-stars">★★★★★</div><p class="rev-txt">„Einfach und übersichtlich. Das Herunterladen, die Auswertung und Archivierung der Daten dauert nur wenige Minuten.“</p><p class="rev-meta">Verifizierter TRUCKMALL Kunde</p></div>
+</div>
+</div>
+</section>
+<!-- ═══ WHAT TAGRA TRUCKER DOES ════════════════════════════════════════ -->
+<section aria-label="Software-Funktionen" class="band">
+<div class="container">
+<div class="g2 top">
+<div class="anim-up">
+<div class="eyebrow">Was TAGRA Trucker leistet</div>
+<h2>Ihre Karte.<br/>Ihre Daten. Ihr Sicherheit.</h2>
+<p style="margin-bottom:24px">Schlanke<strong>Tachografen-Auswertungssoftware</strong>für einen Fahrer. Wissen Sie jederzeit genau, was auf Ihrer Fahrerkarte gespeichert ist – und seien Sie bereit für jede Straßenkontrolle.</p>
+<div class="feats">
+<div class="fi"><div class="fck"><svg fill="none" height="8" viewbox="0 0 10 8" width="10"><path d="M1 4l2.5 2.5L9 1" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></div><span><strong>Standard-USB-Kartenleser</strong>— anschließen, Karte auslesen, fertig</span></div>
+<div class="fi"><div class="fck"><svg fill="none" height="8" viewbox="0 0 10 8" width="10"><path d="M1 4l2.5 2.5L9 1" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></div><span><strong>EU-Lenk- und Ruhezeiten</strong>Auswertung gemäß Verordnung 561/2006 und AETR — Lenkzeiten, Pausen und Ruhezeiten</span></div>
+<div class="fi"><div class="fck"><svg fill="none" height="8" viewbox="0 0 10 8" width="10"><path d="M1 4l2.5 2.5L9 1" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></div><span>Sofortiger Überblick über die auf Ihrer Fahrerkarte gespeicherten Daten</span></div>
+<div class="fi"><div class="fck"><svg fill="none" height="8" viewbox="0 0 10 8" width="10"><path d="M1 4l2.5 2.5L9 1" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></div><span>Archivierung der Fahrerkarte-Daten — rechtlich konform</span></div>
+<div class="fi"><div class="fck"><svg fill="none" height="8" viewbox="0 0 10 8" width="10"><path d="M1 4l2.5 2.5L9 1" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></div><span>Funktioniert offline auf jedem Windows-PC oder Laptop im Führerhaus</span></div>
+<div class="fi"><div class="fck"><svg fill="none" height="8" viewbox="0 0 10 8" width="10"><path d="M1 4l2.5 2.5L9 1" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></div><span><strong>Bereit für Transporter-Fahrer ab Juli 2026</strong></span></div>
+</div>
+<div style="margin-top:28px">
+<a class="btn-cta btn-cta--sm" href="/de/testen/?audience=driver" rel="noopener" target="_blank">Testen Sie Trucker kostenlos — 30 Tage</a>
+</div>
+</div>
+<div class="anim-up" style="transition-delay:.1s">
+<div class="media-frame" style="background:var(--bg-gray);border-radius:var(--radius);overflow:hidden">
+<img alt="TAGRA Trucker – Tachograf-Software mit USB-Lesegerät für den Fahrerkarte-Download" height="600" loading="lazy" src="https://cdn.truckmall.cz/data/user-content/TDT_TAGRA_TRUCKER_wh.jpg" style="object-fit:contain;width:100%;height:auto;" width="600"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ═══ MAC STAGE ═════════════════════════════════════════════════════ -->
+<section aria-label="Software-Vorschau" class="band" style="background:linear-gradient(180deg,var(--bg-apple-solid) 0%,#fff 74%);padding:60px 0">
+<div class="container">
+<div class="mac-stage">
+<img alt="TAGRA Trucker auf Laptop — Fahrerkarte-Download und Überblick über EU-Lenk- und Ruhezeiten" height="2076" id="mac-img" loading="lazy" src="https://cdn.truckmall.cz/data/user-content/Trucker_3_ntb.webp" width="3116"/>
+</div>
+</div>
+</section>
+<!-- ═══ HOW IT WORKS ══════════════════════════════════════════════════ -->
+<section aria-label="Wie Sie Daten in TAGRA Trucker importieren" class="band band--gray">
+<div class="container">
+<div class="anim-up" style="text-align:center;margin-bottom:40px">
+<div class="eyebrow">Einfacher Prozess</div>
+<h2>Drei Schritte.<br/>Das ist alles.</h2>
+</div>
+<div class="three-col anim-up" style="transition-delay:.05s">
+<div style="text-align:center;padding:28px 20px">
+<div style="font-size:52px;font-weight:900;line-height:1;color:rgba(19,74,142,.12);margin-bottom:8px">1</div>
+<div style="font-size:18px;font-weight:800;color:var(--text-strong);margin-bottom:8px">USB-Lesegerät anschließen</div>
+<p style="font-size:16px;color:var(--text2)">Stecken Sie Ihren USB-Kartenleser in Ihren PC oder Laptop. Keine zusätzliche Software erforderlich.</p>
+</div>
+<div style="text-align:center;padding:28px 20px;border-left:1px solid var(--border);border-right:1px solid var(--border)">
+<div style="font-size:52px;font-weight:900;line-height:1;color:rgba(19,74,142,.12);margin-bottom:8px">2</div>
+<div style="font-size:18px;font-weight:800;color:var(--text-strong);margin-bottom:8px">Ihre Fahrerkarte einlegen</div>
+<p style="font-size:16px;color:var(--text2)">TAGRA führt den<strong>Fahrerkarten-Download</strong>automatisch durch. Alle Daten werden in Sekundenschnelle geladen.</p>
+</div>
+<div style="text-align:center;padding:28px 20px">
+<div style="font-size:52px;font-weight:900;line-height:1;color:rgba(19,74,142,.12);margin-bottom:8px">3</div>
+<div style="font-size:18px;font-weight:800;color:var(--text-strong);margin-bottom:8px">Ihre Daten einsehen</div>
+<p style="font-size:16px;color:var(--text2)">Lenkzeiten, Pausen, Ruhezeiten — klarer Überblick. Bereit für jede Kontrolle.</p>
+</div>
+</div>
+<div class="note-box anim-up" role="note">
+<span class="note-badge">Gut zu wissen</span>
+<div class="note-title">Die Pflicht zum Herunterladen liegt beim Transportunternehmen – nicht beim Fahrer</div>
+<p>Nach EU-Recht liegt die Pflicht zum Herunterladen von Tachografen-Daten beim<strong>Transportunternehmen</strong>— dem Frachtführer oder Unternehmen, das das Fahrzeug betreibt (Verordnung (EU) Nr. 165/2014, Artikel 33). Die maximalen Intervalle sind<strong>mindestens alle 28 Tage für die Fahrerkarte</strong>und<strong>mindestens alle 90 Tage für das Fahrzeuggerät</strong>(Kommissionsverordnung (EU) Nr. 581/2010).</p>
+<p><strong>Wenn Sie für einen Arbeitgeber fahren</strong>, liegt die Verpflichtung bei diesem — aber Sie profitieren trotzdem davon, Ihre eigenen Kopien aufzubewahren.<strong>TAGRA Trucker</strong>lädt Ihre Fahrerkarte-Daten herunter und archiviert sie, damit Sie Ihre eigenen Lenk- und Ruhezeiten überprüfen und Ihre Aufzeichnungen bereit haben können, falls Sie jemals den Arbeitgeber wechseln.</p>
+<p><strong>Wenn Sie selbstständiger Fahrer oder Inhaber-Betreiber sind</strong>, sind Sie auch das Transportunternehmen — daher sind Sie gesetzlich verpflichtet, Fahrerkarte-Daten<em>und</em>und Fahrzeuggerät-Daten herunterzuladen. Dafür benötigen Sie mindestens<a href="/de/fuhrpark/" style="color:var(--blue-mid);font-weight:600">TAGRA 1</a>, das sowohl Fahrerkarte- als auch Fahrzeuggerät-Downloads für ein Fahrzeug handhabt. TAGRA Trucker allein ist in diesem Fall nicht ausreichend.</p>
+<p style="margin-bottom:0;font-size:15px"><strong>Neu hier?</strong>Lesen Sie unseren Leitfaden zu<a href="/de/ratgeber/tachographen-symbole/">Tachografen-Piktogrammen und ihrer Bedeutung</a>— die vier Aktivitäts-Piktogramme, die jeder Fahrer kennen muss.</p>
+</div>
+</div>
+</section>
+<!-- ═══ TRY IT ════════════════════════════════════════════════════════ -->
+<section aria-label="Kostenlose Testversion herunterladen" class="band" id="try">
+<div class="container">
+<div class="anim-up" style="text-align:center;max-width:600px;margin:0 auto">
+<h2>TAGRA TRUCKER 30 TAGE KOSTENLOS TESTEN</h2>
+<p style="margin-top:8px;color:var(--text2)">Laden Sie die vollständige Software herunter, installieren und nutzen Sie sie. Keine Kreditkarte, keine Registrierung erforderlich.</p>
+<div style="margin-top:28px">
+<a class="btn-cta" href="/de/testen/?audience=driver" rel="noopener" target="_blank">Testversion herunterladen</a>
+</div>
+<p style="margin-top:14px;font-size:15px;color:var(--text2)">Windows · Kostenlos · Funktioniert mit einem Standard-USB-Kartenleser</p>
+</div>
+</div>
+</section>
+<!-- ═══ PRICING ════════════════════════════════════════════════════════ -->
+<section aria-label="Preise" class="band band--gray">
+<div class="container">
+<div class="anim-up" style="max-width:560px">
+<div class="eyebrow">Preise &amp; Konditionen</div>
+<h2 style="text-transform:none">Transparente Preisgestaltung.<br/>Keine versteckten Gebühren.</h2>
+<p style="margin:16px 0 24px">Beginnen Sie mit der kostenlosen Testversion. Wenn Sie bereit sind, wählen Sie Ihre Lizenz direkt in der Software und bezahlen Sie online.</p>
+<div style="background:#fff;border-radius:var(--radius);border:1px solid var(--border);overflow:hidden;margin-bottom:24px">
+<div style="display:flex;justify-content:space-between;padding:14px 20px;border-bottom:1px solid var(--border)"><span style="color:var(--text2)">Testzeitraum</span><span style="font-weight:600;color:var(--green-brand)">30 Tage kostenlos</span></div>
+<div style="display:flex;justify-content:space-between;padding:14px 20px;border-bottom:1px solid var(--border)"><span style="color:var(--text2)">TAGRA Trucker</span><span style="font-weight:600">€49 zzgl. MwSt.</span></div>
+<div style="display:flex;justify-content:space-between;padding:14px 20px;border-bottom:1px solid var(--border)"><span style="color:var(--text2)">Jahreslizenz (ab dem 2. Jahr)</span><span style="font-weight:600">19 € / Jahr</span></div>
+<div style="display:flex;justify-content:space-between;padding:14px 20px;border-bottom:1px solid var(--border)"><span style="color:var(--text2)">Beinhaltet</span><span style="font-weight:600">Updates + Support</span></div>
+<div style="display:flex;justify-content:space-between;padding:14px 20px"><span style="color:var(--text2)">Zahlung</span><span style="font-weight:600">Online · QR-Code</span></div>
+</div>
+<p style="font-size:15px;color:var(--text2)">Fragen?<a href="tel:+420739005345">+420 739 005 345</a> · <a href="mailto:sales@tagra.app">sales@tagra.app</a></p>
+<div style="margin-top:24px">
+<a class="btn-cta btn-cta--sm" href="/de/testen/?audience=driver" rel="noopener" target="_blank">Testversion herunterladen</a>
+</div>
+</div>
+</div>
+</section>
+<!-- ═══ FAQ ════════════════════════════════════════════════════════════ -->
+<section aria-label="Häufig gestellte Fragen" class="band band--blue">
+<div class="container">
+<div class="eyebrow anim-up">Häufig gestellte Fragen</div>
+<h2 class="anim-up">FAQ</h2>
+<div class="faq anim-up" style="transition-delay:.05s">
+<details>
+<summary>Für wen ist TAGRA Trucker konzipiert?</summary>
+<div class="faq-a">TAGRA Trucker ist<strong>Tachografen-Software</strong>für Berufskraftfahrer – LKW- und Transporterfahrer –, die ihre eigenen Fahrerkarte-Daten im Blick behalten und die Einhaltung der EU-Lenk- und Ruhezeiten überwachen möchten.</div>
+</details>
+<details>
+<summary>Benötige ich einen USB-Kartenleser?</summary>
+<div class="faq-a">Ja. TAGRA Trucker liest Ihre Fahrerkarte über einen handelsüblichen USB-Kartenleser aus. Sollten Sie keinen besitzen, kontaktieren Sie uns, und wir empfehlen Ihnen ein kompatibles Modell.</div>
+</details>
+<details>
+<summary>Wie bekomme ich Daten in die Software?</summary>
+<div class="faq-a">Schließen Sie Ihren USB-Leser an, stecken Sie Ihre Karte ein, und TAGRA führt das<strong>Fahrerkarten-Download</strong>automatisch durch. Sie können auch<strong>.DDD</strong>oder<strong>.C1B</strong>Dateien, die Sie bereits an anderer Stelle heruntergeladen haben, importieren.</div>
+</details>
+<details>
+<summary>Wie oft sollte ich meine Karte auslesen?</summary>
+<div class="faq-a"><p>Nach EU-Recht obliegt die gesetzliche Pflicht zum Auslesen der Tachograf-Daten dem<strong>Transportunternehmen</strong>(Verordnung (EU) Nr. 165/2014, Artikel 33), nicht dem Fahrer. Die maximalen Intervalle betragen mindestens alle<strong>28 Tage für die Fahrerkarte</strong>und mindestens alle<strong>90 Tage für das Fahrzeuggerät</strong>(Kommissionsverordnung (EU) Nr. 581/2010).</p><p style="margin-top:10px"><strong>Als angestellter Fahrer</strong>, liegt die Verpflichtung bei Ihrem Arbeitgeber — aber das Auslesen Ihrer eigenen Karte mit TAGRA Trucker hilft Ihnen dennoch, den Überblick über Ihre Lenk- und Ruhezeiten zu behalten und persönliche Aufzeichnungen zu führen.</p><p style="margin-top:10px"><strong>Als selbstständiger Fahrer oder Einzelunternehmer</strong>, sind Sie das Transportunternehmen, sodass die Verpflichtung in dieser Rolle auf Sie fällt — und Sie benötigen eine Lösung, die sowohl Fahrerkarte als auch Fahrzeuggerätauslesungen verwaltet. In diesem Fall,<a href="/de/fuhrpark/">TAGRA 1</a>ist die Mindeststufe; TAGRA Trucker allein deckt nur die Fahrerkarte ab.</p></div>
+</details>
+<details>
+<summary>Funktioniert TAGRA Trucker offline?</summary>
+<div class="faq-a">Ja. TAGRA Trucker funktioniert vollständig offline. Eine Internetverbindung ist nur für den Download des Installationsprogramms und für Updates erforderlich.</div>
+</details>
+<details>
+<summary>Ist TAGRA Trucker bereit für die Transporter-Verpflichtung ab Juli 2026?</summary>
+<div class="faq-a">Ja. TAGRA Trucker ist vollständig vorbereitet für Transporter-Fahrer (Fahrzeuge von 2,5–3,5 t im internationalen Transport), die von der neuen Tachograf-Verpflichtung ab Juli 2026 betroffen sind.</div>
+</details>
+<details>
+<summary>Wie kaufe ich TAGRA Trucker nach der Testversion?</summary>
+<div class="faq-a">Am Ende der Testversion — oder wann immer Sie bereit sind — öffnen Sie das Lizenzmenü in der Software, wählen Sie TAGRA Trucker und zahlen Sie online per QR-Code oder Banküberweisung. Ihre Lizenz wird sofort aktiviert.</div>
+</details>
+</div>
+</div>
+</section>
+<!-- ═══ ALSO FOR COMPANIES ════════════════════════════════════════════ -->
+<section aria-label="TAGRA für Fuhrparkbetreiber" class="band">
+<div class="container">
+<div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:24px;padding:16px 0">
+<div>
+<div class="eyebrow">Auch erhältlich</div>
+<p style="font-size:19px;font-weight:700;color:var(--text-strong);margin-top:4px">TAGRA für Fuhrparkbetreiber</p>
+<p style="color:var(--text2);margin-top:6px;max-width:480px">Sie verwalten Fahrzeuge für ein Unternehmen? TAGRA 1/2/4/6/MAX deckt Tachograf-Einheiten und Fahrerkarten für 1 bis unbegrenzt viele Fahrzeuge ab.</p>
+</div>
+<a class="btn-cta btn-cta--sm" href="/de/fuhrpark/" style="flex-shrink:0;background:var(--blue-mid)">Fuhrparklösung →</a>
+</div>
+</div>
+</section>
+<!-- ═══ MANUFACTURER ══════════════════════════════════════════════════ -->
+<section aria-label="Herstellerinformationen" class="band band--gray">
+<div class="container">
+<div class="eyebrow anim-up">Entwickler &amp; Hersteller</div>
+<h2 class="anim-up">Truck Data Technology, s.r.o.</h2>
+<address class="anim-up" style="font-style:normal;margin-top:10px;line-height:1.8;transition-delay:.05s">
+<strong>Hauptsitz &amp; Support:</strong>Tschechische Republik<br/>
+<strong>Telefon:</strong> <a href="tel:+420739005345">+420 739 005 345</a><br/>
+<strong>E-Mail:</strong> <a href="mailto:sales@tagra.app">sales@tagra.app</a><br/>
+<strong>Web:</strong> <a href="https://www.tdt.cz" rel="noopener" target="_blank">www.tdt.cz</a>
+</address>
+</div>
+</section>
+<!-- ═══ FOOTER ════════════════════════════════════════════════════════ -->
+<footer class="site-footer" role="contentinfo">
+<div class="footer-inner">
+<div>
+<div class="footer-logo"><img alt="TAGRA" height="32" src="/assets/img/logo-dark.svg?v=20260513zh" width="140"/></div>
+<p class="footer-desc">Professionelle Software zur Tachographen-Auswertung. Fahrerkarten-Download, Analyse digitaler Tachographen, EU-Lenk- und Ruhezeiten sowie Arbeitszeitrichtlinie. Entwickelt von Truck Data Technology, s.r.o.</p>
+</div>
+<div class="footer-col">
+<h4>Produkt</h4>
+<ul>
+<li><a href="/de/fuhrpark/">Für Fuhrparkbetreiber</a></li>
+<li><a href="/de/fahrer/">Für Berufskraftfahrer</a></li>
+<li><a href="/de/kontrollbehoerden/">Für Kontrollbehörden</a></li>
+<li><a href="/de/so-funktioniert-es/">So funktioniert es</a></li>
+<li><a href="/de/fuer-wen/">Für wen</a></li>
+<li><a href="/de/faq/">FAQ</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h4>Ressourcen</h4>
+<ul>
+<li><a href="/de/ratgeber/">Artikel</a></li><li><a href="/de/anleitungen/">Anleitungen</a></li>
+<li><a href="/de/ratgeber/tachographen-symbole/">Tachographen-Symbole</a></li>
+<li><a href="/de/schnittstellen/dkv-live/">DKV LIVE®</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h4>Unternehmen</h4>
+<ul>
+<li><a href="/de/kontakt/">Kontakt</a></li>
+<li><a href="https://www.tdt.cz" rel="noopener" target="_blank">Truck Data Technology</a></li>
+<li><a href="/de/">Deutsch</a></li>
+<li><a href="/pl/">Polski</a></li>
+</ul>
+</div>
+</div>
+<div class="footer-bottom">
+<span>© 2026 Truck Data Technology, s.r.o. Alle Rechte vorbehalten.</span>
+<span><a href="/de/kontakt/">Kontakt</a> · <a href="https://www.tdt.cz" rel="noopener" target="_blank">tdt.cz</a></span>
+</div>
+</footer>
+<!-- ═══ JAVASCRIPT ════════════════════════════════════════════════════ -->
+<script>
+(function() {
+  /* SCROLL PROGRESS */
+  var bar = document.getElementById('scroll-progress');
+  if (bar) {
+    window.addEventListener('scroll', function() {
+      var top = document.documentElement.scrollTop || document.body.scrollTop;
+      var h = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      bar.style.width = (top / h * 100) + '%';
+    }, { passive: true });
+  }
+  /* MOBILE NAV */
+  var toggle = document.getElementById('nav-toggle');
+  var links = document.getElementById('nav-links');
+  if (toggle && links) {
+    toggle.addEventListener('click', function() {
+      var open = links.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open);
+    });
+  }
+  /* ANIMATIONS */
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) { if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); } });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.anim-up, .fly-left, .fly-right').forEach(function(el) { io.observe(el); });
+  } else {
+    document.querySelectorAll('.anim-up, .fly-left, .fly-right').forEach(function(el) { el.classList.add('on'); });
+  }
+  /* REVIEWS SLIDER */
+  var rail = document.getElementById('rev-rail');
+  if (rail) {
+    rail.innerHTML += rail.innerHTML + rail.innerHTML;
+    var speed = 0.9, busy = false, pos = 0, isDown = false, startX, startScroll, resumeTimer;
+    function tick() { if (!busy) { pos += speed; if (pos >= 1) { rail.scrollLeft += Math.floor(pos); pos -= Math.floor(pos); } if (rail.scrollLeft >= rail.scrollWidth / 3) rail.scrollLeft = 0; } requestAnimationFrame(tick); }
+    function pause() { busy = true; clearTimeout(resumeTimer); }
+    function resume() { resumeTimer = setTimeout(function() { busy = false; }, 2000); }
+    rail.addEventListener('mousedown', function(e) { isDown = true; pause(); startX = e.pageX - rail.offsetLeft; startScroll = rail.scrollLeft; });
+    rail.addEventListener('mouseleave', function() { isDown = false; resume(); });
+    rail.addEventListener('mouseup', function() { isDown = false; resume(); });
+    rail.addEventListener('mousemove', function(e) { if (!isDown) return; e.preventDefault(); rail.scrollLeft = startScroll - (e.pageX - rail.offsetLeft - startX) * 1.5; });
+    rail.addEventListener('touchstart', pause, { passive: true });
+    rail.addEventListener('touchend', resume, { passive: true });
+    tick();
+  }
+  /* MAC STAGE ZOOM */
+  var macImg = document.getElementById('mac-img');
+  if (macImg) {
+    var ticking = false;
+    function zoom() { var r = macImg.getBoundingClientRect(); var dist = Math.abs(window.innerHeight / 2 - (r.top + r.height / 2)); var prog = Math.max(0, 1 - dist / (window.innerHeight * 0.65)); var eased = Math.sin(prog * Math.PI / 2); var s = 1 + eased * (window.innerWidth < 768 ? 0.2 : 0.38); macImg.style.transform = 'scale(' + s.toFixed(3) + ')'; ticking = false; }
+    function onScroll() { if (!ticking) { requestAnimationFrame(zoom); ticking = true; } }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll, { passive: true });
+    setTimeout(zoom, 150);
+  }
+  /* HERO VIDEO */
+  var heroVid = document.getElementById('hero-vid');
+  if (heroVid && 'IntersectionObserver' in window) {
+    var hvObs = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) { if (e.isIntersecting) { heroVid.play().catch(function(){}); } else { heroVid.pause(); } });
+    }, { threshold: 0.1 });
+    hvObs.observe(heroVid);
+    document.addEventListener('touchstart', function() { if (heroVid.paused) heroVid.play().catch(function(){}); }, { once: true, passive: true });
+  }
+})();
+</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "TAGRA Trucker – Tachografensoftware für Berufskraftfahrer",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Windows",
+  "description": "Tachograf-Software für Berufskraftfahrer. Fahrerkarte-Download mit einem Standard-USB-Kartenleser. Auswertung und Archivierung von Fahrerkarte-Daten, EU-Lenk- und Ruhezeiten (Verordnung 561/2006), Pausen und Ruhezeiten. Kostenlose 30-Tage-Testversion. Bereit für Transporter-Fahrer ab Juli 2026.",
+  "url": "https://tagra.app/driver/",
+  "inLanguage": "en",
+  "author": {
+    "@type": "Organization",
+    "name": "Truck Data Technology, s.r.o.",
+    "url": "https://www.tdt.cz"
+  },
+  "offers": {
+    "@type": "Offer",
+    "priceCurrency": "EUR",
+    "price": "19",
+    "description": "Jahreslizenzgebühr ab dem 2. Jahr. Erstes Jahr im Kaufpreis enthalten.",
+    "availability": "https://schema.org/InStock"
+  }
+}</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "inLanguage": "en",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Für wen ist TAGRA Trucker konzipiert?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "TAGRA Trucker ist eine Tachograf-Software für Berufskraftfahrer — LKW- und Transporter-Fahrer —, die ihre eigenen Fahrerkarte-Daten im Blick behalten und die Einhaltung der EU-Lenk- und Ruhezeiten überwachen möchten."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Benötige ich einen USB-Kartenleser?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja. TAGRA Trucker liest Ihre Fahrerkarte über einen handelsüblichen USB-Kartenleser aus. Sollten Sie keinen besitzen, kontaktieren Sie uns, und wir empfehlen Ihnen ein kompatibles Modell."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Wie bekomme ich Daten in die Software?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Verbinden Sie Ihr USB-Lesegerät, legen Sie Ihre Karte ein und TAGRA führt den Fahrerkarte-Download automatisch durch. Sie können auch bereits an anderer Stelle heruntergeladene .DDD- oder .C1B-Dateien importieren."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Wie oft sollte ich meine Karte auslesen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nach EU-Recht liegt die gesetzliche Pflicht zum Herunterladen der Tachograf-Daten beim Transportunternehmen (Verordnung (EU) Nr. 165/2014, Artikel 33), nicht beim Fahrer. Die maximalen Intervalle betragen mindestens alle 28 Tage für die Fahrerkarte und mindestens alle 90 Tage für die Fahrzeugeinheit (Kommissionsverordnung (EU) Nr. 581/2010). Als angestellter Fahrer obliegt die Verpflichtung Ihrem Arbeitgeber — aber das Herunterladen Ihrer eigenen Karte mit TAGRA Trucker hilft Ihnen dennoch, den Überblick über Ihre Lenk- und Ruhezeiten zu behalten und persönliche Aufzeichnungen zu führen. Als selbstständiger Fahrer oder Einzelunternehmer sind Sie das Transportunternehmen, sodass die Verpflichtung in dieser Rolle auf Sie fällt — und Sie benötigen eine Lösung, die sowohl Fahrerkarte- als auch Fahrzeugeinheit-Downloads abdeckt. In diesem Fall ist TAGRA 1 die Mindeststufe; TAGRA Trucker allein deckt nur die Fahrerkarte ab."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Funktioniert TAGRA Trucker offline?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja. TAGRA Trucker funktioniert vollständig offline. Eine Internetverbindung ist nur für den Download des Installationsprogramms und für Updates erforderlich."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Ist TAGRA Trucker bereit für die Transporter-Verpflichtung ab Juli 2026?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja. TAGRA Trucker ist vollständig vorbereitet für Transporter-Fahrer (Fahrzeuge von 2,5–3,5 t im internationalen Transport), die von der neuen Tachograf-Verpflichtung ab Juli 2026 betroffen sind."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Wie kaufe ich TAGRA Trucker nach der Testversion?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Am Ende der Testversion — oder wann immer Sie bereit sind — öffnen Sie das Lizenzmenü in der Software, wählen Sie TAGRA Trucker und zahlen Sie online per QR-Code oder Banküberweisung. Ihre Lizenz wird sofort aktiviert."
+      }
+    }
+  ]
+}</script>
+</body>
+</html>

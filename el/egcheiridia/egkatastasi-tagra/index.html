@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+<!-- TMX-ANALYTICS START -->
+<meta content="7F7894081BE7FBB245FF03AF8810B22F" name="msvalidate.01"/>
+<!-- Consent Mode v2 defaults (deny) + gtag stub — runs BEFORE gtag.js -->
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent','default',{
+      ad_storage:'denied', ad_user_data:'denied', ad_personalization:'denied',
+      analytics_storage:'denied', functionality_storage:'denied',
+      personalization_storage:'denied', security_storage:'granted',
+      wait_for_update:500
+    });
+    gtag('set','ads_data_redaction',true);
+    gtag('set','url_passthrough',false);
+  </script>
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-92253QFBNX"></script>
+<script>
+    gtag('js', new Date());
+    gtag('config','G-92253QFBNX');
+  </script>
+<!-- Cookie consent banner (self-hosted) + Microsoft Clarity gating -->
+<style>
+    .tmx-cc{position:fixed;left:0;right:0;bottom:0;z-index:2147483000;background:linear-gradient(120deg,var(--blue-dark,#0b2c4a),var(--blue-mid,#134a8e) 62%,var(--blue-light,#1f5fa6));color:#fff;
+      font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+      padding:16px 20px;box-shadow:0 -4px 24px rgba(0,0,0,.18);display:flex;flex-wrap:wrap;
+      align-items:center;gap:14px;justify-content:center}
+    .tmx-cc__txt{flex:1 1 360px;max-width:760px}
+    .tmx-cc__txt a{color:#9ed0f5;text-decoration:underline}
+    .tmx-cc__btns{display:flex;gap:10px;flex:0 0 auto}
+    .tmx-cc__b{appearance:none;border:0;cursor:pointer;font:inherit;font-weight:600;
+      padding:10px 22px;border-radius:99px;transition:filter .15s;color:#fff}
+    .tmx-cc__b:hover{filter:brightness(1.08)}
+    .tmx-cc__b--no{background:rgba(255,255,255,.16)}
+    .tmx-cc__b--yes{background:var(--green-cta,#5C820F)}
+    @media(max-width:640px){.tmx-cc{padding:14px}.tmx-cc__btns{width:100%}.tmx-cc__b{flex:1}}
+  </style>
+<script>
+  (function(){
+    var KEY='tmx-consent-v1', CL='wt18054m0r';
+    function lc(){var l=(document.documentElement.getAttribute('lang')||'en').toLowerCase().split('-')[0];
+      var m={cz:'cs',cs:'cs',sk:'sk',de:'de',pl:'pl',gr:'el',el:'el',en:'en'};return m[l]||'en';}
+    var T={
+      en:{t:'We use analytics cookies (Google Analytics, Microsoft Clarity) to understand site usage. They load only with your consent.',a:'Accept',r:'Reject',p:'Privacy &amp; cookies'},
+      cs:{t:'Pou\u017e\u00edv\u00e1me analytick\u00e9 cookies (Google Analytics, Microsoft Clarity) k pochopen\u00ed pou\u017e\u00edv\u00e1n\u00ed webu. Na\u010dtou se jen s va\u0161\u00edm souhlasem.',a:'P\u0159ijmout',r:'Odm\u00edtnout',p:'Soukrom\u00ed a cookies'},
+      sk:{t:'Pou\u017e\u00edvame analytick\u00e9 cookies (Google Analytics, Microsoft Clarity) na pochopenie pou\u017e\u00edvania webu. Na\u010d\u00edtaj\u00fa sa len s va\u0161\u00edm s\u00fahlasom.',a:'Prija\u0165',r:'Odmietnu\u0165',p:'S\u00fakromie a cookies'},
+      de:{t:'Wir verwenden Analyse-Cookies (Google Analytics, Microsoft Clarity), um die Nutzung der Website zu verstehen. Sie werden nur mit Ihrer Einwilligung geladen.',a:'Akzeptieren',r:'Ablehnen',p:'Datenschutz &amp; Cookies'},
+      pl:{t:'U\u017cywamy plik\u00f3w cookie do analityki (Google Analytics, Microsoft Clarity), aby zrozumie\u0107 korzystanie z witryny. \u0141aduj\u0105 si\u0119 tylko za Twoj\u0105 zgod\u0105.',a:'Akceptuj',r:'Odrzu\u0107',p:'Prywatno\u015b\u0107 i cookies'},
+      el:{t:'\u03a7\u03c1\u03b7\u03c3\u03b9\u03bc\u03bf\u03c0\u03bf\u03b9\u03bf\u03cd\u03bc\u03b5 cookies \u03b1\u03bd\u03ac\u03bb\u03c5\u03c3\u03b7\u03c2 (Google Analytics, Microsoft Clarity) \u03b3\u03b9\u03b1 \u03bd\u03b1 \u03ba\u03b1\u03c4\u03b1\u03bd\u03bf\u03ae\u03c3\u03bf\u03c5\u03bc\u03b5 \u03c4\u03b7 \u03c7\u03c1\u03ae\u03c3\u03b7. \u03a6\u03bf\u03c1\u03c4\u03ce\u03bd\u03bf\u03bd\u03c4\u03b1\u03b9 \u03bc\u03cc\u03bd\u03bf \u03bc\u03b5 \u03c4\u03b7 \u03c3\u03c5\u03b3\u03ba\u03b1\u03c4\u03ac\u03b8\u03b5\u03c3\u03ae \u03c3\u03b1\u03c2.',a:'\u0391\u03c0\u03bf\u03b4\u03bf\u03c7\u03ae',r:'\u0391\u03c0\u03cc\u03c1\u03c1\u03b9\u03c8\u03b7',p:'\u0391\u03c0\u03cc\u03c1\u03c1\u03b7\u03c4\u03bf &amp; cookies'}
+    };
+    function loadClarity(){if(!CL||window.__tmxCl)return;window.__tmxCl=1;
+      (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+       t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+       y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script",CL);}
+    function grant(){try{localStorage.setItem(KEY,'granted')}catch(e){}
+      gtag('consent','update',{analytics_storage:'granted'});loadClarity();}
+    function deny(){try{localStorage.setItem(KEY,'denied')}catch(e){}}
+    var saved=null;try{saved=localStorage.getItem(KEY)}catch(e){}
+    if(saved==='granted'){grant();return;} if(saved==='denied'){return;}
+    function show(){var tx=T[lc()]||T.en;
+      var b=document.createElement('div');b.className='tmx-cc';b.setAttribute('role','dialog');b.setAttribute('aria-live','polite');
+      b.innerHTML='<div class="tmx-cc__txt">'+tx.t+' <a href="/privacy/">'+tx.p+'</a></div>'+
+        '<div class="tmx-cc__btns"><button type="button" class="tmx-cc__b tmx-cc__b--no">'+tx.r+'</button>'+
+        '<button type="button" class="tmx-cc__b tmx-cc__b--yes">'+tx.a+'</button></div>';
+      document.body.appendChild(b);
+      b.querySelector('.tmx-cc__b--yes').addEventListener('click',function(){grant();b.remove();});
+      b.querySelector('.tmx-cc__b--no').addEventListener('click',function(){deny();b.remove();});}
+    if(document.body)show();else document.addEventListener('DOMContentLoaded',show);
+  })();
+  </script>
+<!-- TMX-ANALYTICS END -->
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="index,follow" name="robots"/>
+<title>Εγκατάσταση TAGRA — εγχειρίδιο βήμα προς βήμα | TAGRA</title>
+<meta content="Πλήρες εγχειρίδιο εγκατάστασης για το λογισμικό ταχογράφου TAGRA: ρύθμιση Firebird και Desktop Runtime, εγκατάσταση του ίδιου του TAGRA, ενεργοποίηση δοκιμαστικής έκδοσης ή πλήρης αδειοδότηση, και αρχική ρύθμιση βάσης δεδομένων. 24 βήματα με στιγμιότυπα οθόνης." name="description"/>
+<meta content="#0b2c4a" name="theme-color"/>
+<link href="/manifest.json" rel="manifest"/>
+<link href="https://tagra.app/el/egcheiridia/egkatastasi-tagra/" rel="canonical"/>
+<meta content="article" property="og:type"/>
+<meta content="el_GR" property="og:locale"/>
+<meta content="TAGRA" property="og:site_name"/>
+<meta content="Εγκατάσταση TAGRA — εγχειρίδιο βήμα προς βήμα" property="og:title"/>
+<meta content="Πλήρες εγχειρίδιο εγκατάστασης για το TAGRA: Firebird, Desktop Runtime, ενεργοποίηση/αδειοδότηση και αρχική ρύθμιση βάσης δεδομένων. 24 βήματα με στιγμιότυπα οθόνης." property="og:description"/>
+<meta content="https://cdn.truckmall.cz/data/user-content/TDT_TAGRA_MAX_wh.jpg" property="og:image"/>
+<meta content="https://tagra.app/el/egcheiridia/egkatastasi-tagra/" property="og:url"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    a{color:var(--blue-mid);text-decoration:none;}
+    a:hover{color:var(--blue-dark);text-decoration:underline;text-underline-offset:.18em;}
+    img{max-width:100%;height:auto;display:block;}
+    #scroll-progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--green-brand),var(--blue-light));width:0%;z-index:9999;pointer-events:none;}
+    .nav-inner{max-width:var(--maxw);margin:0 auto;padding:0 24px;height:100%;display:flex;align-items:center;justify-content:space-between;gap:24px;}
+    .nav-logo{display:flex;align-items:center;gap:8px;text-decoration:none;flex-shrink:0}
+    .nav-links{display:flex;align-items:center;gap:4px;list-style:none;}
+    .nav-links a{font-size:15px;font-weight:500;color:var(--text);padding:8px 12px;border-radius:8px;text-decoration:none;transition:background .15s;}
+    .nav-links a:hover{background:var(--bg-apple);color:var(--blue-mid);}
+    .nav-links .nav-cta a{background:var(--green-cta);color:#fff!important;border-radius:99px;padding:8px 18px;font-weight:600;}
+    .nav-links .nav-cta a:hover{background:var(--green-brand);text-decoration:none;}
+    .nav-lang{display:flex;align-items:center;gap:4px;font-size:14px;font-weight:600;}
+    .nav-lang a{padding:5px 8px;border-radius:6px;color:var(--text2);text-decoration:none;transition:background .15s;}
+    .nav-lang a:hover,.nav-lang a.active{background:var(--bg-apple);color:var(--blue-mid);}
+    .nav-lang span{color:var(--border);}
+    .nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:8px;}
+    .nav-toggle span{display:block;width:22px;height:2px;background:var(--text);margin:5px 0;border-radius:2px;}
+    @media(max-width:900px){.nav-links{display:none;}.nav-toggle{display:block;}.nav-links.open{display:flex;flex-direction:column;align-items:flex-start;gap:2px;position:absolute;top:var(--nav-h);left:0;right:0;background:rgba(255,255,255,.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:12px 24px 20px;}}
+    .breadcrumb{font-size:14px;color:var(--text2);max-width:1180px;margin:18px auto 0;padding:0 16px;}
+    .breadcrumb a{color:var(--text2);text-decoration:none;}
+    .breadcrumb a:hover{color:var(--blue-mid);}
+    .breadcrumb span{margin:0 5px;color:var(--border);}
+  #tmx-navod-tagra .tmx-faq{margin:48px auto 0;max-width:800px;text-align:left;}#tmx-navod-tagra .tmx-faq-item{border-top:1px solid var(--nv-line);padding:16px 0;}#tmx-navod-tagra .tmx-faq-item:last-child{border-bottom:1px solid var(--nv-line);}#tmx-navod-tagra .tmx-faq-item summary{list-style:none;cursor:pointer;font-weight:700;font-size:17px;line-height:1.4;padding-right:30px;position:relative;color:#1a3553;}#tmx-navod-tagra .tmx-faq-item summary::-webkit-details-marker{display:none;}#tmx-navod-tagra .tmx-faq-item summary::after{content:"+";position:absolute;right:0;top:50%;transform:translateY(-50%);font-size:22px;font-weight:300;color:var(--nv-green);}#tmx-navod-tagra .tmx-faq-item[open] summary::after{content:"\2212";}#tmx-navod-tagra .tmx-faq-a{font-size:16px;line-height:1.6;color:#33475b;margin-top:10px;}
+  #tmx-navod-tagra .tmx-byline{font-size:14px;color:#5b6b7c;margin:-10px 0 26px;}#tmx-navod-tagra .tmx-tldr{background:#fff;border:1px solid var(--nv-line);border-left:4px solid var(--nv-green);border-radius:14px;padding:22px 26px;margin:0 0 30px;text-align:left;}#tmx-navod-tagra .tmx-tldr-label{font-weight:800;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--nv-green);margin:0 0 8px;}#tmx-navod-tagra .tmx-tldr p:last-child{margin:0;font-size:16.5px;line-height:1.6;color:#243447;}#tmx-navod-tagra .tmx-next{margin:48px auto 0;max-width:800px;text-align:left;}#tmx-navod-tagra .tmx-next p{font-size:17px;color:#33475b;margin:8px 0 18px;}#tmx-navod-tagra .tmx-next-links{display:flex;flex-wrap:wrap;gap:14px 28px;}#tmx-navod-tagra .tmx-next-links a{font-weight:700;color:var(--nv-blue-m);}
+  </style>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://tagra.app/#organization",
+  "name": "Truck Data Technology, s.r.o.",
+  "alternateName": "TDT",
+  "url": "https://www.tdt.cz",
+  "logo": "https://tagra.app/assets/img/logo-light.svg?v=20260513zh",
+  "sameAs": [
+    "https://www.tdt.cz"
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+420-739-005-345",
+    "email": "sales@tagra.app",
+    "contactType": "sales",
+    "availableLanguage": [
+      "English",
+      "Czech",
+      "Slovak"
+    ]
+  }
+}</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "TAGRA",
+  "softwareVersion": "3.6.1",
+  "operatingSystem": "Windows 10, Windows 11",
+  "applicationCategory": "BusinessApplication",
+  "applicationSubCategory": "Tachograph data evaluation and compliance software",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "EUR",
+    "description": "Δωρεάν δοκιμή 30 ημερών, δεν απαιτείται εγγραφή"
+  },
+  "publisher": {
+    "@id": "https://tagra.app/#organization"
+  },
+  "downloadUrl": "https://tagra.app/try/?audience=fleet",
+  "softwareRequirements": "Firebird database engine; Microsoft Windows Desktop Runtime",
+  "url": "https://tagra.app/manuals/how-to-install-tagra/",
+  "softwareHelp": "https://tagra.app/manuals/how-to-install-tagra/"
+}</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "TAGRA",
+      "item": "https://tagra.app/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Εγχειρίδια",
+      "item": "https://tagra.app/manuals/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Εγκατάσταση TAGRA",
+      "item": "https://tagra.app/manuals/how-to-install-tagra/"
+    }
+  ]
+}</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Χρειάζεται να εγκαταστήσω Firebird αν το έχω ήδη;",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Όχι. Αν το Firebird ή το Microsoft Windows Desktop Runtime είναι ήδη εγκατεστημένο στον υπολογιστή σας (για παράδειγμα από προηγούμενη εγκατάσταση TAGRA ή ενημέρωση Windows), αποεπιλέξτε το αντίστοιχο πλαίσιο στο πρόγραμμα εγκατάστασης και θα παραλειφθεί."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Μπορώ να εγκαταστήσω TAGRA χωρίς σύνδεση στο διαδίκτυο;",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ναι. Επιλέξτε την επιλογή «Offline» κατά την πρώτη εκκίνηση αντί για «Δοκιμή» ή «Ενεργοποίηση». Δημιουργεί ένα αρχείο άδειας χρήσης offline συνδεδεμένο με αυτόν τον συγκεκριμένο υπολογιστή, το οποίο μπορείτε στη συνέχεια να ενεργοποιήσετε χωρίς ενεργή σύνδεση στο διαδίκτυο."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Τι συμβαίνει όταν λήξει η 28ήμερη δωρεάν δοκιμή;",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Το TAGRA σταματά να ανοίγει μέχρι να αγοράσετε μια άδεια χρήσης (μέσω του κουμπιού «Ανανέωση») ή να ενεργοποιήσετε έναν αγορασμένο αριθμό άδειας χρήσης και κωδικό ενεργοποίησης. Δεν χάνονται δεδομένα που έχετε ήδη κατεβάσει ή αναλύσει."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Πού αποθηκεύεται η βάση δεδομένων TAGRA και μπορώ να τη μετακινήσω;",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Επιλέγετε εσείς την τοποθεσία της βάσης δεδομένων κατά την πρώτη σύνδεση — συνιστούμε τον φάκελο «Έγγραφα» σας. Η βάση δεδομένων είναι ένα ενιαίο αρχείο .fdb (για παράδειγμα tagradb.fdb), οπότε μπορεί να δημιουργηθεί αντίγραφο ασφαλείας ή να μετακινηθεί όπως οποιοδήποτε άλλο αρχείο· απλά συνδέστε ξανά το TAGRA με τη νέα διαδρομή στη συνέχεια."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Ποιον να επικοινωνήσω αν η εγκατάσταση ή η ενεργοποίηση κολλήσει;",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Στείλτε email στο helpdesk@tagra.app και η ομάδα τεχνικής υποστήριξής μας θα σας βοηθήσει να ξεμπλοκάρετε — δείτε το πλαίσιο «Χρειάζεστε βοήθεια;» στο τέλος αυτού του οδηγού."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Τι είναι το TAGRA και τι κάνει;",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Το TAGRA είναι εξειδικευμένο λογισμικό για την ανάλυση και αρχειοθέτηση δεδομένων από ψηφιακούς ταχογράφους και κάρτες οδηγού. Βοηθά τις μεταφορικές εταιρείες να ανταποκριθούν στις νομικές τους υποχρεώσεις βάσει του Κανονισμού ΕΕ 561/2006, της συμφωνίας AETR και της νομοθεσίας για τους χρόνους εργασίας — ελέγχοντας τους χρόνους οδήγησης, τα διαλείμματα και τους χρόνους ανάπαυσης, δημιουργώντας αναφορές και αρχειοθετώντας δεδομένα σε μορφή .DDD."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Ποια έκδοση TAGRA πρέπει να επιλέξω;",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Εξαρτάται από τον στόλο σας: TAGRA TRUCKER για έναν μεμονωμένο οδηγό που αναλύει μόνο τη δική του κάρτα οδηγού, TAGRA 1 για ένα όχημα, TAGRA 2/4/6 για μικρού έως μεσαίου μεγέθους στόλους, και TAGRA MAX για απεριόριστα οχήματα. TAGRA TRUCKER EDU είναι κατάλληλο για σχολές οδήγησης με απεριόριστες κάρτες οδηγού. Καθώς ο στόλος σας μεγαλώνει, η άδειά σας μπορεί να αναβαθμιστεί χωρίς να χρειαστεί να αγοράσετε ξανά το λογισμικό — δείτε την πλήρη σύγκριση στη σελίδα μας για τους διαχειριστές στόλου."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Πόσο κοστίζει η ετήσια ανανέωση της άδειας;",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ο πρώτος χρόνος ενημερώσεων περιλαμβάνεται στην τιμή αγοράς. Από τον δεύτερο χρόνο, εφαρμόζεται ετήσια χρέωση άδειας χρήσης ανάλογα με την έκδοση: από 19 €/έτος (TAGRA Trucker) έως 139 €/έτος (TAGRA MAX), καλύπτοντας τόσο τις νομοθετικές ενημερώσεις όσο και την τεχνική υποστήριξη."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Πόσο συχνά χρειάζεται να κάνω λήψη δεδομένων από τον ταχογράφο και την κάρτα οδηγού;",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Τα δεδομένα της κάρτας οδηγού πρέπει να γίνεται λήψη τους τουλάχιστον κάθε 28 ημέρες, και τα δεδομένα του ταχογράφου οχήματος τουλάχιστον κάθε 90 ημέρες, σύμφωνα με τον Κανονισμό (ΕΕ) 581/2010 της Επιτροπής. Τα δεδομένα που έχουν γίνει λήψη πρέπει στη συνέχεια να αρχειοθετούνται για τουλάχιστον ένα έτος — εμείς συνιστούμε 3–5 έτη."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Είναι αρκετή η λήψη των δεδομένων, ή πρέπει επίσης να τα αναλύσω;",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Μόνο η λήψη δεδομένων ικανοποιεί την απαίτηση αρχειοθέτησης. Το άρθρο 10(2) του Κανονισμού (ΕΕ) 561/2006 απαιτεί επίσης από τις μεταφορικές εταιρείες να ελέγχουν τακτικά τα δεδομένα και να αντιμετωπίζουν παραβάσεις οδηγών — κάτι που ακριβώς κάνει το TAGRA, επισημαίνοντας σαφώς τις παραβάσεις και προετοιμάζοντας αναφορές για ελέγχους."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Είναι το TAGRA συμβατό με τους έξυπνους ταχογράφους II (G2V2) και τους ταχογράφους VDO/Stoneridge;",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ναι. Το TAGRA είναι πλήρως συμβατό με τους έξυπνους ταχογράφους δεύτερης γενιάς (G2V2) και υποστηρίζει τόσο μονάδες VDO όσο και Stoneridge, λειτουργώντας με μορφές .DDD (κάρτα/όχημα), C1B και V1B."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Ποια είναι η διαφορά μεταξύ TAGRA TRUCKER και TAGRA 1;",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Το TAGRA TRUCKER αναλύει μόνο δεδομένα κάρτας οδηγού — ένας οδηγός, μία κάρτα. Το TAGRA 1 αναλύει επιπλέον δεδομένα ταχογράφου οχήματος, καθιστώντας το τη σωστή επιλογή για αυτοκινητιστές με ένα όχημα που χρειάζονται πλήρη συμμόρφωση σε επίπεδο επιχείρησης, όχι μόνο το δικό τους αρχείο οδήγησης."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Λειτουργεί το TAGRA σε Mac;",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Το TAGRA είναι μια εγγενής εφαρμογή Windows. Σε Mac, μπορείτε να το εκτελέσετε μέσω Parallels Desktop, VMware Fusion, ή Remote Desktop σε διακομιστή Windows — αλλά για την καλύτερη σταθερότητα και απόδοση, συνιστούμε έναν υπολογιστή με Windows 10 ή 11."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Μπορώ να χρησιμοποιήσω το TAGRA σε πολλούς υπολογιστές ή μέσω δικτύου;",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Η τυπική άδεια χρήσης είναι για έναν χρήστη (ένας υπολογιστής, ένας χρήστης). Μια δικτυωμένη, πολλαπλών χρηστών έκδοση είναι διαθέσιμη για ομάδες που χρειάζονται κοινή πρόσβαση — επικοινωνήστε με το sales@tagra.app για να συζητήσετε τις τιμές και τη ρύθμιση."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Τι γίνεται αν έχω ήδη μια συσκευή λήψης από ανταγωνιστή;",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Το TAGRA διαβάζει τις τυπικές μορφές .DDD, C1B και V1B που χρησιμοποιούνται σε όλους τους ταχογράφους και τις συσκευές λήψης δεδομένων, οπότε δεδομένα από κλειδί λήψης άλλης μάρκας φορτώνονται και αναλύονται χωρίς κανένα πρόβλημα. Δεν χρειάζεται να αλλάξετε υλικό — απλώς ξεκινήστε την ανάλυση στο TAGRA."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Ισχύει η υποχρέωση ανάλυσης και για τα βαν;",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ναι. Από την 1η Ιουλίου 2026, η υποχρέωση ταχογράφου και ανάλυσης δεδομένων επεκτείνεται σε βαν και συνδυασμούς 2,5–3,5 t που χρησιμοποιούνται σε διεθνείς μεταφορές για μίσθωση ή αμοιβή, ή για καμποτάζ. Το TAGRA είναι πλήρως έτοιμο για αυτήν την αλλαγή. Διαβάστε περισσότερα στον οδηγό μας σχετικά με τη νέα υποχρέωση."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Παρέχετε εκπαίδευση και τεχνική υποστήριξη για το TAGRA;",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ναι — προσφέρουμε πρακτική εκπαίδευση σχετικά με τη χρήση του TAGRA για την ομάδα σας, και η τεχνική υποστήριξη (τηλέφωνο, email και απομακρυσμένη βοήθεια) περιλαμβάνεται για όλη τη διάρκεια της άδειάς σας."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Τι γίνεται αν δεν θέλω να κάνω την ανάλυση μόνος μου;",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Μπορείτε αντ' αυτού να χρησιμοποιήσετε την υπηρεσία ανάλυσης δεδομένων μας — στείλτε μας τα δεδομένα σας και οι ειδικοί μας θα χειριστούν τους ελέγχους παραβάσεων, τις αναφορές και τις περιλήψεις για εσάς. Είναι ιδανική λύση για εταιρείες μεταφορών που προτιμούν να μην διαχειρίζονται την ανάλυση εσωτερικά. Επικοινωνήστε με το sales@tagra.app για να συζητήσετε."
+      }
+    }
+  ]
+}</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Πώς να εγκαταστήσετε TAGRA (έκδοση 3.6.1)",
+  "description": "Πλήρες εγχειρίδιο εγκατάστασης βήμα προς βήμα για το λογισμικό ταχογράφου TAGRA: ρύθμιση Firebird και Desktop Runtime, εγκατάσταση του ίδιου του TAGRA, ενεργοποίηση δοκιμαστικής έκδοσης ή πλήρης αδειοδότηση, και αρχική ρύθμιση βάσης δεδομένων.",
+  "image": "https://cdn.truckmall.cz/data/user-content/TDT_TAGRA_MAX_wh.jpg",
+  "url": "https://tagra.app/manuals/how-to-install-tagra/",
+  "inLanguage": "en",
+  "totalTime": "PT15M",
+  "tool": [
+    {
+      "@type": "HowToTool",
+      "name": "Ένας υπολογιστής με Windows"
+    }
+  ],
+  "step": [
+    {
+      "@type": "HowToStep",
+      "position": 1,
+      "name": "Κάντε διπλό κλικ στο TAGRA-setup.exe για να ξεκινήσετε την εγκατάσταση",
+      "text": "Κάντε διπλό κλικ στο TAGRA-setup.exe για να ξεκινήσετε την εγκατάσταση.",
+      "url": "https://tagra.app/manuals/how-to-install-tagra/#step-1",
+      "image": "/assets/img/manuals/install-en/1.webp"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 2,
+      "name": "Ξεκινήστε την εγκατάσταση με το κουμπί «NEXT»",
+      "text": "Ξεκινήστε την εγκατάσταση με το κουμπί «NEXT».",
+      "url": "https://tagra.app/manuals/how-to-install-tagra/#step-2",
+      "image": "/assets/img/manuals/install-en/2.webp"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 3,
+      "name": "TAGRA χρειάζεται τη μηχανή βάσης δεδομένων Firebird και το Microsoft",
+      "text": "Το TAGRA χρειάζεται τη μηχανή βάσης δεδομένων Firebird και το στοιχείο Microsoft Windows Desktop Runtime για να λειτουργήσει. Εάν τα έχετε ήδη εγκατεστημένα (από ενημέρωση Windows ή προηγούμενη χρήση), μπορείτε να τα παραλείψετε αποεπιλέγοντας τα πλαίσια. Διαφορετικά, αφήστε τα επιλεγμένα και συνεχίστε με «Next».",
+      "url": "https://tagra.app/manuals/how-to-install-tagra/#step-3",
+      "image": "/assets/img/manuals/install-en/3.webp"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 4,
+      "name": "Επιτρέψτε την εγκατάσταση του Firebird επιλέγοντας «Yes»",
+      "text": "Επιτρέψτε την εγκατάσταση του Firebird επιλέγοντας «Yes» (Ναι).",
+      "url": "https://tagra.app/manuals/how-to-install-tagra/#step-4",
+      "image": "/assets/img/manuals/install-en/4.webp"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 5,
+      "name": "Επιλέξτε τη γλώσσα εγκατάστασης και επιβεβαιώστε με «OK»",
+      "text": "Επιλέξτε τη γλώσσα εγκατάστασης και επιβεβαιώστε με «OK».",
+      "url": "https://tagra.app/manuals/how-to-install-tagra/#step-5",
+      "image": "/assets/img/manuals/install-en/5.webp"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 6,
+      "name": "Επιβεβαιώστε κάθε οθόνη με «Next» – δεν υπάρχει κάτι για",
+      "text": "Επιβεβαιώστε κάθε οθόνη με «Next» – δεν χρειάζεται να αλλάξετε τίποτα – μέχρι να φτάσετε στο «Finish». Οι παρακάτω οθόνες δείχνουν τη διαδικασία.",
+      "url": "https://tagra.app/manuals/how-to-install-tagra/#step-6",
+      "image": "/assets/img/manuals/install-en/6.1.webp"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 7,
+      "name": "Ξεκινήστε την εγκατάσταση με «Install». Εάν έχετε ήδη",
+      "text": "Ξεκινήστε την εγκατάσταση με «Install». Αν έχετε ήδη αυτό το στοιχείο των Windows, κάντε κλικ στο «Close» αντ' αυτού.",
+      "url": "https://tagra.app/manuals/how-to-install-tagra/#step-7",
+      "image": "/assets/img/manuals/install-en/7.webp"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 8,
+      "name": "Αποδεχτείτε τους όρους άδειας χρήσης και κάντε κλικ στο «Install» για να ξεκινήσει η",
+      "text": "Αποδεχτείτε τους όρους άδειας χρήσης και κάντε κλικ στο «Install» για να ξεκινήσετε την εγκατάσταση.",
+      "url": "https://tagra.app/manuals/how-to-install-tagra/#step-8",
+      "image": "/assets/img/manuals/install-en/8.webp"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 9,
+      "name": "Επιτρέψτε στην εφαρμογή να κάνει αλλαγές στον υπολογιστή σας κάνοντας κλικ στο «Yes»",
+      "text": "Επιτρέψτε στην εφαρμογή να κάνει αλλαγές στον υπολογιστή σας κάνοντας κλικ στο «Yes».",
+      "url": "https://tagra.app/manuals/how-to-install-tagra/#step-9",
+      "image": "/assets/img/manuals/install-en/9.webp"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 10,
+      "name": "Το πρόγραμμα εγκαθίσταται για λίγο – μπορείτε να παρακολουθήσετε την",
+      "text": "Το πρόγραμμα εγκαθίσταται για λίγο – μπορείτε να παρακολουθήσετε την πρόοδο στην οθόνη.",
+      "url": "https://tagra.app/manuals/how-to-install-tagra/#step-10",
+      "image": "/assets/img/manuals/install-en/10.webp"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 11,
+      "name": "Ολοκληρώστε την εγκατάσταση με «Finish». Ένα πράσινο TAGRA",
+      "text": "Ολοκληρώστε την εγκατάσταση με «Finish». Ένα πράσινο εικονίδιο συντόμευσης TAGRA εμφανίζεται στην επιφάνεια εργασίας σας.",
+      "url": "https://tagra.app/manuals/how-to-install-tagra/#step-11",
+      "image": "/assets/img/manuals/install-en/11.webp"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 12,
+      "name": "Κάντε διπλό κλικ στο εικονόγραμμα για να εκκινήσετε το πρόγραμμα",
+      "text": "Κάντε διπλό κλικ στο εικονίδιο για να εκκινήσετε το πρόγραμμα.",
+      "url": "https://tagra.app/manuals/how-to-install-tagra/#step-12",
+      "image": "/assets/img/manuals/install-en/12.webp"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 13,
+      "name": "Εμφανίζεται μια οθόνη άδειας χρήσης. Επιλέξτε μία από τις τρεις επιλογές: Δοκιμή",
+      "text": "Εμφανίζεται μια οθόνη άδειας χρήσης. Επιλέξτε μία από τις τρεις επιλογές: Δοκιμή (νέος πελάτης, απλά εισαγάγετε το email σας), Ενεργοποίηση (έχετε ήδη αριθμό άδειας χρήσης και κλειδί ενεργοποίησης) ή Offline (ο υπολογιστής δεν έχει σύνδεση στο διαδίκτυο).",
+      "url": "https://tagra.app/manuals/how-to-install-tagra/#step-13",
+      "image": "/assets/img/manuals/install-en/13.webp"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 14,
+      "name": "Εισαγάγετε τη διεύθυνση email σας και επιβεβαιώστε την ενεργοποίηση 28 ημερών",
+      "text": "Εισαγάγετε τη διεύθυνση email σας και επιβεβαιώστε την ενεργοποίηση των 28 ημερών στα εισερχόμενά σας. Στο πεδίο «Application variant», επιλέξτε αμέσως πόσα οχήματα θέλετε να χρησιμοποιήσετε το πρόγραμμα (1, 2, 4, 6 ή απεριόριστα – MAX).",
+      "url": "https://tagra.app/manuals/how-to-install-tagra/#step-14",
+      "image": "/assets/img/manuals/install-en/14.1.webp"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 15,
+      "name": "Αφού εισαγάγετε το email σας, θα λάβετε ένα email ενεργοποίησης",
+      "text": "Μετά την εισαγωγή του email σας, θα λάβετε ένα μήνυμα ενεργοποίησης – δείτε το παρακάτω παράδειγμα.",
+      "url": "https://tagra.app/manuals/how-to-install-tagra/#step-15",
+      "image": "/assets/img/manuals/install-en/15.webp"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 16,
+      "name": "Αφού κάνετε κλικ στο «Ενεργοποίηση άδειας» στο email, το πρόγραμμα",
+      "text": "Αφού κάνετε κλικ στην «Ενεργοποίηση άδειας χρήσης» στο email, το πρόγραμμα ξεκινά αυτόματα και μπορείτε να το χρησιμοποιήσετε για 28 ημέρες. Μετά από αυτό, αποφασίζετε αν θα το αγοράσετε.",
+      "url": "https://tagra.app/manuals/how-to-install-tagra/#step-16",
+      "image": "/assets/img/manuals/install-en/16.webp"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 17,
+      "name": "Κάντε κλικ στο «Ενεργοποίηση» και εισαγάγετε τον αριθμό άδειας και",
+      "text": "Κάντε κλικ στο \"Activate\" και εισαγάγετε τον αριθμό άδειας χρήσης και τον κωδικό ενεργοποίησης – θα τα βρείτε και τα δύο στο email σας.",
+      "url": "https://tagra.app/manuals/how-to-install-tagra/#step-17",
+      "image": "/assets/img/manuals/install-en/17.webp"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 18,
+      "name": "Χρησιμοποιήστε το κουμπί «Offline» μόνο εάν αυτός ο υπολογιστής δεν διαθέτει μακροπρόθεσμη",
+      "text": "Χρησιμοποιήστε το κουμπί \"Offline\" μόνο εάν αυτός ο υπολογιστής δεν έχει μακροπρόθεσμη πρόσβαση στο διαδίκτυο. Σας επιτρέπει να λάβετε ένα αρχείο άδειας χρήσης εκτός σύνδεσης για αυτόν τον συγκεκριμένο υπολογιστή.",
+      "url": "https://tagra.app/manuals/how-to-install-tagra/#step-18",
+      "image": "/assets/img/manuals/install-en/18.1.webp"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 19,
+      "name": "Επιλέξτε ένα πλάνο με βάση τον αριθμό των οχημάτων, εισαγάγετε τα",
+      "text": "Επιλέξτε ένα πρόγραμμα με βάση τον αριθμό των οχημάτων, εισαγάγετε τα στοιχεία χρέωσής σας και πληρώστε την προτιμολόγηση που δημιουργήθηκε.",
+      "url": "https://tagra.app/manuals/how-to-install-tagra/#step-19",
+      "image": "/assets/img/manuals/install-en/19.1.webp"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 20,
+      "name": "Συνεχίστε με το κουμπί «Συνέχεια»",
+      "text": "Συνεχίστε με το κουμπί \"Continue\".",
+      "url": "https://tagra.app/manuals/how-to-install-tagra/#step-20",
+      "image": "/assets/img/manuals/install-en/20.webp"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 21,
+      "name": "Για την πρώτη σας σύνδεση, ξεκινήστε δημιουργώντας μια βάση δεδομένων – κάντε κλικ",
+      "text": "Για την πρώτη σας σύνδεση, ξεκινήστε δημιουργώντας μια βάση δεδομένων – κάντε κλικ στο λευκό κουμπί δίπλα στο κενό πεδίο «Διαδρομή αρχείου βάσης δεδομένων» και επιλέξτε Δημιουργία νέας βάσης δεδομένων.",
+      "url": "https://tagra.app/manuals/how-to-install-tagra/#step-21",
+      "image": "/assets/img/manuals/install-en/21.webp"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 22,
+      "name": "Επιλέξτε πού θα αποθηκεύσετε τη βάση δεδομένων (ιδανικά στον φάκελό σας",
+      "text": "Επιλέξτε πού θα αποθηκεύσετε τη βάση δεδομένων (ιδανικά στον φάκελο «Έγγραφα»/«Documents» του υπολογιστή σας) και δώστε της ένα όνομα (π.χ. tagradb.fdb). Επιβεβαιώστε με «Αποθήκευση».",
+      "url": "https://tagra.app/manuals/how-to-install-tagra/#step-22",
+      "image": "/assets/img/manuals/install-en/22.webp"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 23,
+      "name": "Εισαγάγετε το όνομα χρήστη admin και τον κωδικό πρόσβασης admin, και στη συνέχεια συνεχίστε",
+      "text": "Εισαγάγετε το όνομα χρήστη admin και τον κωδικό πρόσβασης admin, και στη συνέχεια συνεχίστε με «Σύνδεση».",
+      "url": "https://tagra.app/manuals/how-to-install-tagra/#step-23",
+      "image": "/assets/img/manuals/install-en/23.webp"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 24,
+      "name": "Το πρόγραμμα θα σας ζητήσει να δημιουργήσετε τη βάση δεδομένων για το",
+      "text": "Το πρόγραμμα θα σας ζητήσει να δημιουργήσετε τη βάση δεδομένων για πρώτη φορά – κάντε κλικ στο «Εκτέλεση». Μόλις δημιουργηθεί η βάση δεδομένων, θα φτάσετε στην αρχική οθόνη του προγράμματος και μπορείτε να ξεκινήσετε την εργασία.",
+      "url": "https://tagra.app/manuals/how-to-install-tagra/#step-24",
+      "image": "/assets/img/manuals/install-en/24.1.webp"
+    }
+  ]
+}</script>
+<link href="/assets/css/tokens.css?v=20260514j" rel="stylesheet"/>
+<link href="/assets/css/base.css?v=20260514j" rel="stylesheet"/>
+<link href="/assets/css/components.css?v=20260514j" rel="stylesheet"/>
+<link href="/assets/css/nav.css?v=20260514j" rel="stylesheet"/>
+<script defer="" src="/assets/js/nav.js?v=20260513q"></script>
+<link href="/assets/css/footer.css?v=20260513d" rel="stylesheet"/>
+<link href="https://tagra.app/manuals/how-to-install-tagra/" hreflang="en" rel="alternate"/><link href="https://tagra.app/de/anleitungen/tagra-installieren/" hreflang="de" rel="alternate"/><link href="https://tagra.app/pl/instrukcje/instalacja-tagra/" hreflang="pl" rel="alternate"/><link href="https://tagra.app/el/egcheiridia/egkatastasi-tagra/" hreflang="el" rel="alternate"/><link href="https://tagra.app/manuals/how-to-install-tagra/" hreflang="x-default" rel="alternate"/></head>
+<body>
+<div aria-hidden="true" id="scroll-progress"></div>
+<nav aria-label="Κύρια πλοήγηση" class="site-nav" role="navigation">
+<div class="nav-inner">
+<a aria-label="TAGRA – Αρχική" class="nav-logo" href="/el/"><img alt="TAGRA" height="32" src="/assets/img/logo-light.svg?v=20260513zh" style="display:block;height:32px;width:auto;" width="140"/></a>
+<ul class="nav-links">
+<li><a href="/el/stolos/">Για εταιρείες</a></li>
+<li><a href="/el/odigoi/">Για οδηγούς</a></li>
+<li><a href="/el/eleghos/">Επιβολή</a></li>
+<li><a href="/el/arthra/">Άρθρα</a></li>
+<li><a aria-current="page" href="/el/egcheiridia/">Εγχειρίδια</a></li>
+<li><a href="/el/faq/">Συχνές ερωτήσεις</a></li>
+<li><a href="/el/epikoinonia/">Επικοινωνία</a></li>
+<li class="nav-cta-li"><a class="nav-cta" href="/el/dokimi/?audience=fleet">Δοκιμάστε 30 ημέρες δωρεάν</a></li>
+</ul>
+<details class="nav-lang">
+<summary aria-label="Language: EL">EL</summary>
+<div class="nav-lang-menu" role="menu">
+<a href="/" hreflang="en">English</a><a href="/de/" hreflang="de">Deutsch</a><a href="/pl/" hreflang="pl">Polski</a><a aria-current="page" class="active" href="/el/" hreflang="el">Ελληνικά</a><a href="/hu/" hreflang="hu">Magyar</a><a href="https://www.tdt.cz/" hreflang="cs" rel="noopener" target="_blank">Čeština</a><a href="https://www.tdt.sk/" hreflang="sk" rel="noopener" target="_blank">Slovenčina</a></div>
+</details>
+<a class="nav-cta-mobile" href="/el/dokimi/?audience=fleet">Δοκιμάστε δωρεάν</a>
+<button aria-expanded="false" aria-label="Εναλλαγή μενού" class="nav-mobile-toggle" id="nav-toggle">
+<span></span><span></span><span></span>
+</button>
+</div>
+</nav>
+<nav class="breadcrumb"><a href="/el/">TAGRA</a><span>›</span><a href="/el/egcheiridia/">Εγχειρίδια</a><span>›</span><span>Εγκατάσταση TAGRA</span></nav>
+<main>
+<style>
+#tmx-navod-tagra{--nv-blue-m:#134a8e;--nv-grad:linear-gradient(90deg,#0b2c4a 0%,#134a8e 50%,#1f5fa6 100%);--nv-green:#5C820F;--nv-green2:#6E9B12;--nv-ink:#111111;--nv-line:#d9e2ec;--nv-bg:#EFF6FF;--nv-radius:14px;
+  max-width:1180px;margin:0 auto;padding:0 16px 56px;color:var(--nv-ink);
+  font:400 17px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;-webkit-font-smoothing:antialiased;}
+#tmx-navod-tagra *{box-sizing:border-box;}
+#tmx-navod-tagra .tmx-nv-hero{background:linear-gradient(180deg,#eef4fa 0%,#f4f8fc 52%,#ffffff 100%);
+  border:1px solid var(--nv-line);border-radius:20px;padding:38px 30px 30px;margin:18px 0 26px;text-align:center;}
+#tmx-navod-tagra .tmx-nv-badge{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+  color:#fff;background:var(--nv-grad);padding:6px 14px;border-radius:999px;margin-top:4px;margin-bottom:18px;}
+#tmx-navod-tagra h1.tmx-nv-h1{font-size:36px;line-height:1.15;font-weight:800;margin:0 0 12px;
+  background:var(--nv-grad);-webkit-background-clip:text;background-clip:text;color:transparent;display:block;}
+#tmx-navod-tagra .tmx-nv-sub{font-size:18px;color:#33475b;max-width:640px;margin:0 auto 22px;}
+#tmx-navod-tagra .tmx-btn{display:inline-block;font-weight:700;font-size:16px;color:#fff !important;text-decoration:none;
+  background:linear-gradient(90deg,#5C820F 0%,#6E9B12 100%);padding:13px 28px;border-radius:999px;
+  box-shadow:0 6px 18px rgba(92,130,15,.28);transition:transform .15s ease,box-shadow .15s ease;}
+#tmx-navod-tagra .tmx-btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(92,130,15,.34);}
+#tmx-navod-tagra .tmx-btn--ghost{background:#fff;color:var(--nv-blue-m) !important;border:1.5px solid var(--nv-line);box-shadow:none;}
+#tmx-navod-tagra .tmx-toc{background:#fff;border:1px solid var(--nv-line);border-radius:16px;padding:18px 20px;margin:0 0 30px;}
+#tmx-navod-tagra .tmx-toc-t{font-weight:700;font-size:14px;letter-spacing:.04em;text-transform:uppercase;color:#5b6b7c;margin:0 0 12px;}
+#tmx-navod-tagra .tmx-toc ol{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:8px 22px;counter-reset:toc;}
+#tmx-navod-tagra .tmx-toc li{counter-increment:toc;}
+#tmx-navod-tagra .tmx-toc a{display:flex;gap:10px;align-items:baseline;text-decoration:none;color:var(--nv-ink);font-size:15.5px;padding:5px 0;border-bottom:1px solid #f0f4f8;}
+#tmx-navod-tagra .tmx-toc a:hover{color:var(--nv-blue-m);}
+#tmx-navod-tagra .tmx-toc a::before{content:none;}
+#tmx-navod-tagra h2.tmx-nv-h2{font-size:30px;line-height:1.2;font-weight:800;color:var(--nv-blue-m);
+  margin:48px auto 6px;max-width:800px;padding-top:14px;scroll-margin-top:80px;}
+#tmx-navod-tagra h2.tmx-nv-h2::after{content:"";display:block;width:64px;height:4px;border-radius:3px;background:var(--nv-grad);margin-top:12px;}
+#tmx-navod-tagra h3.tmx-nv-h3{font-size:21px;font-weight:700;color:#1a3553;margin:34px auto 4px;max-width:800px;scroll-margin-top:80px;}
+#tmx-navod-tagra .tmx-nv-lead{font-size:17.5px;color:#33475b;margin:10px 0 8px;}
+#tmx-navod-tagra .tmx-nv-lead a,#tmx-navod-tagra .tmx-step-body a{color:var(--nv-blue-m);font-weight:600;}
+#tmx-navod-tagra .tmx-step{display:flex;gap:18px;align-items:flex-start;padding:20px 0;border-top:1px solid #eef2f6;max-width:800px;margin-left:auto;margin-right:auto;}
+#tmx-navod-tagra .tmx-step:first-of-type{border-top:none;}
+#tmx-navod-tagra .tmx-step-num{flex:0 0 42px;height:42px;border-radius:12px;background:var(--nv-grad);color:#fff;
+  font-weight:800;font-size:19px;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(19,74,142,.25);}
+#tmx-navod-tagra .tmx-step-body{flex:1 1 auto;min-width:0;}
+#tmx-navod-tagra .tmx-step-body>p{margin:7px 0 14px;}
+#tmx-navod-tagra .tmx-shot{margin:0;}
+#tmx-navod-tagra .tmx-shot img{display:block;max-width:100%;max-height:62vh;width:auto;height:auto;margin:0 auto;border:1px solid var(--nv-line);border-radius:var(--nv-radius);box-shadow:0 8px 24px rgba(11,44,74,.08);background:#fff;}
+#tmx-navod-tagra .tmx-shot-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+#tmx-navod-tagra .tmx-keys{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;
+  background:linear-gradient(180deg,#f4faec 0%,#eef6e0 100%);border:1px solid #d8e8bf;border-radius:18px;padding:22px 26px;margin:26px 0;}
+#tmx-navod-tagra .tmx-keys p{margin:0;font-size:17.5px;color:#2c3a16;flex:1 1 260px;}
+#tmx-navod-tagra .tmx-rada-card{background:#fff;border:1px solid var(--nv-line);border-radius:18px;padding:30px 30px 26px;margin:40px auto 0;max-width:800px;text-align:left;}#tmx-navod-tagra .tmx-rada-headline{font-size:26px;font-weight:800;text-transform:uppercase;letter-spacing:-0.01em;line-height:1.2;margin:0 0 8px;padding:0;color:#0b2c4a;display:inline-block;max-width:100%;}@supports ((-webkit-background-clip:text) or (background-clip:text)){#tmx-navod-tagra .tmx-rada-headline{background:linear-gradient(90deg,#0b2c4a 0%,#134a8e 55%,#1f5fa6 100%);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;}}#tmx-navod-tagra .tmx-rada-prompt{font-size:16px;font-weight:500;color:#33475b;margin:0 0 18px;line-height:1.45;max-width:640px;}
+@media(max-width:767px){
+  #tmx-navod-tagra{padding:0 12px 40px;font-size:16px;}
+  #tmx-navod-tagra .tmx-nv-hero{padding:28px 18px 24px;}
+  #tmx-navod-tagra h1.tmx-nv-h1{font-size:27px;}
+  #tmx-navod-tagra h2.tmx-nv-h2{font-size:24px;margin-top:38px;}
+  #tmx-navod-tagra .tmx-toc ol{grid-template-columns:1fr;}
+  #tmx-navod-tagra .tmx-shot-grid{grid-template-columns:1fr;}
+  #tmx-navod-tagra .tmx-step{gap:12px;}
+  #tmx-navod-tagra .tmx-step-num{flex-basis:34px;height:34px;font-size:16px;border-radius:10px;}
+}
+#tmx-navod-tagra .tmx-rada-row{display:flex;flex-wrap:wrap;gap:20px 40px;}#tmx-navod-tagra .tmx-rada-block{display:inline-flex;flex-direction:row;align-items:center;gap:18px;}#tmx-navod-tagra .tmx-rada-photo{display:block;width:120px;height:120px;flex-shrink:0;border-radius:50%;overflow:hidden;background:var(--nv-bg);line-height:0;box-shadow:0 2px 8px rgba(19,74,142,.08);transition:transform .2s ease,box-shadow .2s ease;}#tmx-navod-tagra .tmx-rada-photo:hover{transform:scale(1.04);box-shadow:0 8px 22px rgba(19,74,142,.22);}#tmx-navod-tagra .tmx-rada-photo img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 20%;}#tmx-navod-tagra .tmx-rada-info{display:inline-flex;flex-direction:column;gap:4px;min-width:0;}#tmx-navod-tagra .tmx-rada-link{display:inline-flex;align-items:center;gap:8px;font-size:19px;font-weight:700;color:var(--nv-blue-m);line-height:1.3;text-decoration:none;transition:color .2s ease;}#tmx-navod-tagra .tmx-rada-link:hover{color:#1f5fa6;text-decoration:underline;}#tmx-navod-tagra .tmx-rada-link::before{content:"📞";font-size:19px;}#tmx-navod-tagra .tmx-rada-status{display:inline-flex;align-items:center;gap:6px;font-size:14px;font-weight:500;line-height:1.3;color:#515154;padding-left:28px;margin-top:2px;}#tmx-navod-tagra .tmx-rada-status::before{content:"";flex-shrink:0;width:7px;height:7px;border-radius:50%;background:currentColor;}#tmx-navod-tagra .tmx-rada-status[data-state="open"]{color:#4a6b08;}#tmx-navod-tagra .tmx-rada-status[data-state="open"]::before{background:#6E9B12;box-shadow:0 0 0 3px rgba(110,155,18,0.18);animation:tmx-nv-pg 2s ease-in-out infinite;}#tmx-navod-tagra .tmx-rada-status[data-state="closing"]{color:#9a5b08;}#tmx-navod-tagra .tmx-rada-status[data-state="closing"]::before{background:#d97706;box-shadow:0 0 0 3px rgba(217,119,6,0.18);animation:tmx-nv-po 2s ease-in-out infinite;}#tmx-navod-tagra .tmx-rada-status[data-state="break"]{color:#9a5b08;}#tmx-navod-tagra .tmx-rada-status[data-state="break"]::before{background:#d97706;box-shadow:0 0 0 3px rgba(217,119,6,0.18);animation:tmx-nv-po 2s ease-in-out infinite;}#tmx-navod-tagra .tmx-rada-status[data-state="closed"]{color:#8a2a2a;}#tmx-navod-tagra .tmx-rada-status[data-state="closed"]::before{background:#c83838;box-shadow:0 0 0 3px rgba(200,56,56,0.18);animation:tmx-nv-pr 2.5s ease-in-out infinite;}#tmx-navod-tagra .tmx-rada-email{font-size:14px;color:#515154;margin:16px 0 0;line-height:1.4;}#tmx-navod-tagra .tmx-rada-email a{color:var(--nv-blue-m);font-weight:600;text-decoration:none;}#tmx-navod-tagra .tmx-rada-email a:hover{color:#1f5fa6;text-decoration:underline;}@keyframes tmx-nv-pg{0%,100%{box-shadow:0 0 0 3px rgba(110,155,18,0.18);}50%{box-shadow:0 0 0 7px rgba(110,155,18,0.0);}}@keyframes tmx-nv-po{0%,100%{box-shadow:0 0 0 3px rgba(217,119,6,0.18);}50%{box-shadow:0 0 0 7px rgba(217,119,6,0.0);}}@keyframes tmx-nv-pr{0%,100%{box-shadow:0 0 0 3px rgba(200,56,56,0.18);}50%{box-shadow:0 0 0 7px rgba(200,56,56,0.0);}}@media(max-width:767px){#tmx-navod-tagra .tmx-rada-headline{font-size:22px;}#tmx-navod-tagra .tmx-rada-prompt{font-size:15px;}#tmx-navod-tagra .tmx-rada-photo{width:72px;height:72px;}#tmx-navod-tagra .tmx-rada-block{gap:14px;}#tmx-navod-tagra .tmx-rada-link{font-size:17px;}#tmx-navod-tagra .tmx-rada-link::before{font-size:17px;}#tmx-navod-tagra .tmx-rada-status{font-size:13px;padding-left:26px;}}@media(max-width:480px){#tmx-navod-tagra .tmx-rada-headline{font-size:20px;}#tmx-navod-tagra .tmx-rada-photo{width:60px;height:60px;}#tmx-navod-tagra .tmx-rada-block{gap:12px;}#tmx-navod-tagra .tmx-rada-link{font-size:16px;}#tmx-navod-tagra .tmx-rada-status{font-size:12px;padding-left:24px;}#tmx-navod-tagra .tmx-rada-email{font-size:13px;}}@media(prefers-reduced-motion:reduce){#tmx-navod-tagra .tmx-rada-status::before{animation:none !important;}}#tmx-navod-tagra .tmx-shot{margin:0 auto;max-width:560px;}#tmx-navod-tagra .tmx-shot img{display:block;max-width:100%;max-height:62vh;width:auto;height:auto;margin:0 auto;border:1px solid var(--nv-line);border-radius:var(--nv-radius);box-shadow:0 8px 24px rgba(11,44,74,.08);background:#fff;}#tmx-navod-tagra .tmx-substeps{display:flex;flex-direction:column;gap:20px;margin-top:8px;}#tmx-navod-tagra .tmx-substep{display:flex;gap:12px;align-items:flex-start;}#tmx-navod-tagra .tmx-substep-num{flex:0 0 auto;min-width:46px;height:26px;padding:0 10px;display:inline-flex;align-items:center;justify-content:center;background:var(--nv-blue-m);color:#fff;font-weight:800;font-size:13px;border-radius:999px;}#tmx-navod-tagra .tmx-substep .tmx-shot{flex:0 1 560px;max-width:560px;}#tmx-navod-tagra .tmx-toc-list{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:1fr;gap:2px;}#tmx-navod-tagra .tmx-toc a{align-items:center;}#tmx-navod-tagra .tmx-toc-num{flex:0 0 auto;min-width:48px;height:24px;padding:0 9px;border-radius:7px;background:var(--nv-bg);color:var(--nv-blue-m);font-weight:700;font-size:12.5px;display:inline-flex;align-items:center;justify-content:center;white-space:nowrap;}#tmx-navod-tagra .tmx-toc-lbl{flex:1 1 auto;}@media(max-width:560px){#tmx-navod-tagra .tmx-substep-num{min-width:42px;}}</style>
+<div id="tmx-navod-tagra">
+<div class="tmx-nv-hero"><h1 class="tmx-nv-h1">Εγκατάσταση TAGRA</h1><span class="tmx-nv-badge">Οδηγός · έκδοση 3.6.1 · 2026</span><p class="tmx-nv-sub">Μια αναλυτική καθοδήγηση βήμα προς βήμα για την εγκατάσταση, ενεργοποίηση και τη σύνδεση στο TAGRA — λογισμικό για την ανάλυση δεδομένων ταχογράφου.</p><a class="tmx-btn" href="/el/dokimi/?audience=fleet" rel="noopener" target="_blank">Λήψη TAGRA</a></div>
+<p class="tmx-byline">Από Tomáš Knížek, Τεχνική Υποστήριξη · Τελευταία ενημέρωση: 30 Ιουνίου 2026</p><div class="tmx-tldr"><p class="tmx-tldr-label">Σύντομη περίληψη</p><p>Η εγκατάσταση του TAGRA διαρκεί περίπου 15 λεπτά. Κατεβάστε το αρχείο εγκατάστασης από<a href="/el/dokimi/?audience=fleet">tagra.app/try</a>, εκτελέστε<b>TAGRA-setup.exe</b>και αφήστε το να εγκαταστήσει το Firebird και το Microsoft Windows Desktop Runtime, στη συνέχεια εκκινήστε το TAGRA και επιλέξτε<b>Δοκιμή</b>(δωρεάν, μόνο με ένα email),<b>Ενεργοποίηση</b>(με μια αγορασμένη άδεια) ή<b>Εκτός σύνδεσης</b>. Κατά την πρώτη σύνδεση, δημιουργήστε μια νέα βάση δεδομένων και είστε έτοιμοι να αναλύσετε δεδομένα ταχογράφου.</p></div>
+<nav class="tmx-toc"><p class="tmx-toc-t">Περιεχόμενα οδηγού</p><ul class="tmx-toc-list"><li><a href="#instalace"><span class="tmx-toc-num">1–3</span><span class="tmx-toc-lbl">Λήψη και αποσυμπίεση</span></a></li><li><a href="#firebird"><span class="tmx-toc-num">4–6</span><span class="tmx-toc-lbl">Εγκατάσταση Firebird</span></a></li><li><a href="#runtime"><span class="tmx-toc-num">7</span><span class="tmx-toc-lbl">Desktop Runtime</span></a></li><li><a href="#program-tagra"><span class="tmx-toc-num">8–11</span><span class="tmx-toc-lbl">Εγκατάσταση TAGRA</span></a></li><li><a href="#prvni-spusteni"><span class="tmx-toc-num">12–18</span><span class="tmx-toc-lbl">Πρώτη εκκίνηση και ενεργοποίηση</span></a></li><li><a href="#licence"><span class="tmx-toc-num">19–20</span><span class="tmx-toc-lbl">Ανανέωση / αγορά άδειας</span></a></li><li><a href="#prihlaseni"><span class="tmx-toc-num">21–24</span><span class="tmx-toc-lbl">Πρώτη σύνδεση και ρύθμιση βάσης δεδομένων</span></a></li></ul></nav>
+<h2 class="tmx-nv-h2" id="instalace">Κατεβάστε και αποσυμπιέστε το πακέτο</h2>
+<p class="tmx-nv-lead">Μπορείτε να κάνετε λήψη της τελευταίας έκδοσης του TAGRA από<a href="/el/dokimi/?audience=fleet" rel="noopener" target="_blank">tagra.app/try</a>. Μετά τη λήψη, κάντε δεξί κλικ στο αρχείο και επιλέξτε<b>Εξαγωγή όλων</b>. Το πακέτο περιέχει τα αρχεία εγκατάστασης καθώς και οδηγούς για εγκατάσταση, ενεργοποίηση και καθημερινή χρήση.</p>
+<div class="tmx-step" id="step-1"><div class="tmx-step-num">1</div><div class="tmx-step-body"><p>Κάντε διπλό κλικ<b>TAGRA-setup.exe</b>για να ξεκινήσει η εγκατάσταση.</p><figure class="tmx-shot"><img alt="Εγκατάσταση TAGRA βήμα 1" decoding="async" loading="eager" src="/assets/img/manuals/install-en/1.webp"/></figure></div></div>
+<div class="tmx-step" id="step-2"><div class="tmx-step-num">2</div><div class="tmx-step-body"><p>Ξεκινήστε την εγκατάσταση με το κουμπί «NEXT».</p><figure class="tmx-shot"><img alt="Εγκατάσταση TAGRA βήμα 2" decoding="async" loading="lazy" src="/assets/img/manuals/install-en/2.webp"/></figure></div></div>
+<div class="tmx-step" id="step-3"><div class="tmx-step-num">3</div><div class="tmx-step-body"><p>Το TAGRA χρειάζεται το<b>Firebird</b>μηχανισμό βάσης δεδομένων και το<b>Microsoft Windows Desktop Runtime</b>στοιχείο για να λειτουργήσει. Εάν τα έχετε ήδη εγκαταστήσει (από μια ενημέρωση των Windows ή προηγούμενη χρήση), μπορείτε να τα παραλείψετε αποεπιλέγοντας τα πλαίσια. Διαφορετικά αφήστε τα επιλεγμένα και συνεχίστε με το «Next» (Επόμενο).</p><figure class="tmx-shot"><img alt="Εγκατάσταση TAGRA βήμα 3" decoding="async" loading="lazy" src="/assets/img/manuals/install-en/3.webp"/></figure></div></div>
+<h3 class="tmx-nv-h3" id="firebird">Εγκατάσταση Firebird</h3>
+<div class="tmx-step" id="step-4"><div class="tmx-step-num">4</div><div class="tmx-step-body"><p>Επιτρέψτε την εγκατάσταση του Firebird επιλέγοντας «Yes» (Ναι).</p><figure class="tmx-shot"><img alt="Εγκατάσταση TAGRA βήμα 4" decoding="async" loading="lazy" src="/assets/img/manuals/install-en/4.webp"/></figure></div></div>
+<div class="tmx-step" id="step-5"><div class="tmx-step-num">5</div><div class="tmx-step-body"><p>Επιλέξτε τη γλώσσα εγκατάστασης και επιβεβαιώστε με «OK».</p><figure class="tmx-shot"><img alt="Εγκατάσταση TAGRA βήμα 5" decoding="async" loading="lazy" src="/assets/img/manuals/install-en/5.webp"/></figure></div></div>
+<div class="tmx-step" id="step-6"><div class="tmx-step-num">6</div><div class="tmx-step-body"><p>Επιβεβαιώστε κάθε οθόνη με «Next» – δεν χρειάζεται να αλλάξετε τίποτα – μέχρι να φτάσετε στο «Finish». Οι παρακάτω οθόνες δείχνουν τη διαδικασία.</p><div class="tmx-substeps"><div class="tmx-substep"><div class="tmx-substep-num">6.1</div><figure class="tmx-shot"><img alt="Εγκατάσταση TAGRA βήμα 6.1" decoding="async" loading="lazy" src="/assets/img/manuals/install-en/6.1.webp"/></figure></div><div class="tmx-substep"><div class="tmx-substep-num">6.2</div><figure class="tmx-shot"><img alt="Εγκατάσταση TAGRA βήμα 6.2" decoding="async" loading="lazy" src="/assets/img/manuals/install-en/6.2.webp"/></figure></div><div class="tmx-substep"><div class="tmx-substep-num">6.3</div><figure class="tmx-shot"><img alt="Εγκατάσταση TAGRA βήμα 6.3" decoding="async" loading="lazy" src="/assets/img/manuals/install-en/6.3.webp"/></figure></div><div class="tmx-substep"><div class="tmx-substep-num">6.4</div><figure class="tmx-shot"><img alt="TAGRA βήμα εγκατάστασης 6.4" decoding="async" loading="lazy" src="/assets/img/manuals/install-en/6.4.webp"/></figure></div><div class="tmx-substep"><div class="tmx-substep-num">6.5</div><figure class="tmx-shot"><img alt="TAGRA βήμα εγκατάστασης 6.5" decoding="async" loading="lazy" src="/assets/img/manuals/install-en/6.5.webp"/></figure></div><div class="tmx-substep"><div class="tmx-substep-num">6.6</div><figure class="tmx-shot"><img alt="TAGRA βήμα εγκατάστασης 6.6" decoding="async" loading="lazy" src="/assets/img/manuals/install-en/6.6.webp"/></figure></div><div class="tmx-substep"><div class="tmx-substep-num">6.7</div><figure class="tmx-shot"><img alt="TAGRA βήμα εγκατάστασης 6.7" decoding="async" loading="lazy" src="/assets/img/manuals/install-en/6.7.webp"/></figure></div><div class="tmx-substep"><div class="tmx-substep-num">6.8</div><figure class="tmx-shot"><img alt="TAGRA βήμα εγκατάστασης 6.8" decoding="async" loading="lazy" src="/assets/img/manuals/install-en/6.8.webp"/></figure></div><div class="tmx-substep"><div class="tmx-substep-num">6.9</div><figure class="tmx-shot"><img alt="TAGRA βήμα εγκατάστασης 6.9" decoding="async" loading="lazy" src="/assets/img/manuals/install-en/6.9.webp"/></figure></div><div class="tmx-substep"><div class="tmx-substep-num">6.10</div><figure class="tmx-shot"><img alt="TAGRA βήμα εγκατάστασης 6.10" decoding="async" loading="lazy" src="/assets/img/manuals/install-en/6.10.webp"/></figure></div></div></div></div>
+<h3 class="tmx-nv-h3" id="runtime">Εγκατάσταση Microsoft Windows Desktop Runtime</h3>
+<div class="tmx-step" id="step-7"><div class="tmx-step-num">7</div><div class="tmx-step-body"><p>Ξεκινήστε την εγκατάσταση με «Install». Αν έχετε ήδη αυτό το στοιχείο των Windows, κάντε κλικ στο «Close» αντ' αυτού.</p><figure class="tmx-shot"><img alt="TAGRA βήμα εγκατάστασης 7" decoding="async" loading="lazy" src="/assets/img/manuals/install-en/7.webp"/></figure></div></div>
+<h3 class="tmx-nv-h3" id="program-tagra">Εγκατάσταση TAGRA</h3>
+<div class="tmx-step" id="step-8"><div class="tmx-step-num">8</div><div class="tmx-step-body"><p>Αποδεχτείτε τους όρους άδειας χρήσης και κάντε κλικ στο «Install» για να ξεκινήσετε την εγκατάσταση.</p><figure class="tmx-shot"><img alt="TAGRA βήμα εγκατάστασης 8" decoding="async" loading="lazy" src="/assets/img/manuals/install-en/8.webp"/></figure></div></div>
+<div class="tmx-step" id="step-9"><div class="tmx-step-num">9</div><div class="tmx-step-body"><p>Επιτρέψτε στην εφαρμογή να κάνει αλλαγές στον υπολογιστή σας κάνοντας κλικ στο «Yes».</p><figure class="tmx-shot"><img alt="TAGRA βήμα εγκατάστασης 9" decoding="async" loading="lazy" src="/assets/img/manuals/install-en/9.webp"/></figure></div></div>
+<div class="tmx-step" id="step-10"><div class="tmx-step-num">10</div><div class="tmx-step-body"><p>Το πρόγραμμα εγκαθίσταται για λίγο – μπορείτε να παρακολουθήσετε την πρόοδο στην οθόνη.</p><figure class="tmx-shot"><img alt="TAGRA βήμα εγκατάστασης 10" decoding="async" loading="lazy" src="/assets/img/manuals/install-en/10.webp"/></figure></div></div>
+<div class="tmx-step" id="step-11"><div class="tmx-step-num">11</div><div class="tmx-step-body"><p>Ολοκληρώστε την εγκατάσταση με «Finish». Ένα πράσινο εικονίδιο συντόμευσης TAGRA εμφανίζεται στην επιφάνεια εργασίας σας.</p><figure class="tmx-shot"><img alt="TAGRA βήμα εγκατάστασης 11" decoding="async" loading="lazy" src="/assets/img/manuals/install-en/11.webp"/></figure></div></div>
+<h2 class="tmx-nv-h2" id="prvni-spusteni">Πρώτη εκκίνηση του TAGRA</h2>
+<div class="tmx-step" id="step-12"><div class="tmx-step-num">12</div><div class="tmx-step-body"><p>Κάντε διπλό κλικ στο εικονίδιο για να εκκινήσετε το πρόγραμμα.</p><figure class="tmx-shot"><img alt="TAGRA βήμα εγκατάστασης 12" decoding="async" loading="lazy" src="/assets/img/manuals/install-en/12.webp"/></figure></div></div>
+<div class="tmx-step" id="step-13"><div class="tmx-step-num">13</div><div class="tmx-step-body"><p>Εμφανίζεται μια οθόνη άδειας χρήσης. Επιλέξτε μία από τις τρεις επιλογές:<b>Δοκιμή</b>(νέος πελάτης, απλά εισαγάγετε το email σας),<b>Ενεργοποίηση</b>(έχετε ήδη αριθμό άδειας χρήσης και κλειδί ενεργοποίησης), ή<b>Εκτός σύνδεσης</b>(ο υπολογιστής δεν έχει σύνδεση στο διαδίκτυο).</p><figure class="tmx-shot"><img alt="TAGRA βήμα εγκατάστασης 13" decoding="async" loading="lazy" src="/assets/img/manuals/install-en/13.webp"/></figure></div></div>
+<h3 class="tmx-nv-h3" id="vyzkouset">1. Δοκιμή</h3>
+<div class="tmx-step" id="step-14"><div class="tmx-step-num">14</div><div class="tmx-step-body"><p>Εισαγάγετε τη διεύθυνση email σας και επιβεβαιώστε την ενεργοποίηση των 28 ημερών στα εισερχόμενά σας. Στο πεδίο «Application variant», επιλέξτε αμέσως πόσα οχήματα θέλετε να χρησιμοποιήσετε το πρόγραμμα (1, 2, 4, 6 ή απεριόριστα – MAX).</p><div class="tmx-substeps"><div class="tmx-substep"><div class="tmx-substep-num">14.1</div><figure class="tmx-shot"><img alt="TAGRA βήμα εγκατάστασης 14.1" decoding="async" loading="lazy" src="/assets/img/manuals/install-en/14.1.webp"/></figure></div><div class="tmx-substep"><div class="tmx-substep-num">14.2</div><figure class="tmx-shot"><img alt="TAGRA βήμα εγκατάστασης 14.2" decoding="async" loading="lazy" src="/assets/img/manuals/install-en/14.2.webp"/></figure></div><div class="tmx-substep"><div class="tmx-substep-num">14.3</div><figure class="tmx-shot"><img alt="TAGRA βήμα εγκατάστασης 14.3" decoding="async" loading="lazy" src="/assets/img/manuals/install-en/14.3.webp"/></figure></div></div></div></div>
+<h3 class="tmx-nv-h3" id="aktivacni-email">Email ενεργοποίησης</h3>
+<div class="tmx-step" id="step-15"><div class="tmx-step-num">15</div><div class="tmx-step-body"><p>Μετά την εισαγωγή του email σας, θα λάβετε ένα μήνυμα ενεργοποίησης – δείτε το παρακάτω παράδειγμα.</p><figure class="tmx-shot"><img alt="TAGRA βήμα εγκατάστασης 15" decoding="async" loading="lazy" src="/assets/img/manuals/install-en/15.webp"/></figure></div></div>
+<h3 class="tmx-nv-h3" id="overeni-licence">Επαλήθευση άδειας χρήσης</h3>
+<div class="tmx-step" id="step-16"><div class="tmx-step-num">16</div><div class="tmx-step-body"><p>Αφού κάνετε κλικ στην «Ενεργοποίηση άδειας χρήσης» στο email, το πρόγραμμα ξεκινά αυτόματα και μπορείτε να το χρησιμοποιήσετε για 28 ημέρες. Μετά από αυτό, αποφασίζετε αν θα το αγοράσετε.</p><figure class="tmx-shot"><img alt="TAGRA βήμα εγκατάστασης 16" decoding="async" loading="lazy" src="/assets/img/manuals/install-en/16.webp"/></figure></div></div>
+<h3 class="tmx-nv-h3" id="aktivovat">2. Ενεργοποίηση</h3>
+<div class="tmx-step" id="step-17"><div class="tmx-step-num">17</div><div class="tmx-step-body"><p>Κάντε κλικ στο "Activate" και εισαγάγετε τον αριθμό άδειας χρήσης και τον κωδικό ενεργοποίησης – θα τα βρείτε και τα δύο στο email σας.</p><figure class="tmx-shot"><img alt="TAGRA βήμα εγκατάστασης 17" decoding="async" loading="lazy" src="/assets/img/manuals/install-en/17.webp"/></figure></div></div>
+<h3 class="tmx-nv-h3" id="offline">3. Εκτός σύνδεσης</h3>
+<div class="tmx-step" id="step-18"><div class="tmx-step-num">18</div><div class="tmx-step-body"><p>Χρησιμοποιήστε το κουμπί "Offline" μόνο εάν αυτός ο υπολογιστής δεν έχει μακροπρόθεσμη πρόσβαση στο διαδίκτυο. Σας επιτρέπει να λάβετε ένα αρχείο άδειας χρήσης εκτός σύνδεσης για αυτόν τον συγκεκριμένο υπολογιστή.</p><div class="tmx-substeps"><div class="tmx-substep"><div class="tmx-substep-num">18.1</div><figure class="tmx-shot"><img alt="TAGRA βήμα εγκατάστασης 18.1" decoding="async" loading="lazy" src="/assets/img/manuals/install-en/18.1.webp"/></figure></div><div class="tmx-substep"><div class="tmx-substep-num">18.2</div><figure class="tmx-shot"><img alt="TAGRA βήμα εγκατάστασης 18.2" decoding="async" loading="lazy" src="/assets/img/manuals/install-en/18.2.webp"/></figure></div></div></div></div>
+<h2 class="tmx-nv-h2" id="licence">Ανανέωση και αγορά άδειας χρήσης</h2>
+<p class="tmx-nv-lead">Μόλις λήξει η δοκιμαστική περίοδος, μπορείτε να αγοράσετε το πρόγραμμα με το κουμπί "Renew". Επιλέξτε ένα πρόγραμμα με βάση τον αριθμό των οχημάτων και εισαγάγετε τα στοιχεία χρέωσής σας. Μια προτιμολόγηση δημιουργείται αυτόματα – μόλις πληρωθεί, η άδεια χρήσης ισχύει για ένα έτος. Μετά από αυτό, το πρόγραμμα συνεχίζει να λειτουργεί μόλις πληρωθεί το ετήσιο τέλος άδειας χρήσης, και περιλαμβάνει πάντα τις τελευταίες ενημερώσεις κανονισμών.</p>
+<div class="tmx-keys"><p>Δεν έχετε κλειδί λήψης<b>ταχογράφου</b>ακόμα; Μπορείτε να προμηθευτείτε ένα απευθείας από το e-shop μας (αγορά Τσεχίας/Σλοβακίας).</p><a class="tmx-btn" href="https://www.truckmall.cz" rel="noopener" target="_blank">Κλειδιά λήψης στο TRUCKMALL.cz</a></div>
+<h3 class="tmx-nv-h3" id="kroky-nakupu">Βήματα για την αγορά ή την ανανέωση άδειας χρήσης</h3>
+<div class="tmx-step" id="step-19"><div class="tmx-step-num">19</div><div class="tmx-step-body"><p>Επιλέξτε ένα πρόγραμμα με βάση τον αριθμό των οχημάτων, εισαγάγετε τα στοιχεία χρέωσής σας και πληρώστε την προτιμολόγηση που δημιουργήθηκε.</p><div class="tmx-substeps"><div class="tmx-substep"><div class="tmx-substep-num">19.1</div><figure class="tmx-shot"><img alt="TAGRA βήμα εγκατάστασης 19.1" decoding="async" loading="lazy" src="/assets/img/manuals/install-en/19.1.webp"/></figure></div><div class="tmx-substep"><div class="tmx-substep-num">19.2</div><figure class="tmx-shot"><img alt="TAGRA βήμα εγκατάστασης 19.2" decoding="async" loading="lazy" src="/assets/img/manuals/install-en/19.2.webp"/></figure></div><div class="tmx-substep"><div class="tmx-substep-num">19.3</div><figure class="tmx-shot"><img alt="TAGRA βήμα εγκατάστασης 19.3" decoding="async" loading="lazy" src="/assets/img/manuals/install-en/19.3.webp"/></figure></div><div class="tmx-substep"><div class="tmx-substep-num">19.4</div><figure class="tmx-shot"><img alt="TAGRA βήμα εγκατάστασης 19.4" decoding="async" loading="lazy" src="/assets/img/manuals/install-en/19.4.webp"/></figure></div></div></div></div>
+<div class="tmx-step" id="step-20"><div class="tmx-step-num">20</div><div class="tmx-step-body"><p>Συνεχίστε με το κουμπί "Continue".</p><figure class="tmx-shot"><img alt="TAGRA βήμα εγκατάστασης 20" decoding="async" loading="lazy" src="/assets/img/manuals/install-en/20.webp"/></figure></div></div>
+<h2 class="tmx-nv-h2" id="prihlaseni">Πρώτη σύνδεση στο πρόγραμμα</h2>
+<div class="tmx-step" id="step-21"><div class="tmx-step-num">21</div><div class="tmx-step-body"><p>Για την πρώτη σας σύνδεση, ξεκινήστε δημιουργώντας μια βάση δεδομένων – κάντε κλικ στο λευκό κουμπί δίπλα στο κενό πεδίο "Διαδρομή αρχείου βάσης δεδομένων" και επιλέξτε<b>Δημιουργία νέας βάσης δεδομένων</b>.</p><figure class="tmx-shot"><img alt="TAGRA βήμα εγκατάστασης 21" decoding="async" loading="lazy" src="/assets/img/manuals/install-en/21.webp"/></figure></div></div>
+<div class="tmx-step" id="step-22"><div class="tmx-step-num">22</div><div class="tmx-step-body"><p>Επιλέξτε πού θα αποθηκεύσετε τη βάση δεδομένων (ιδανικά στον φάκελο Έγγραφα) και δώστε της ένα όνομα (π.χ.<b>tagradb.fdb</b>). Επιβεβαιώστε με "Αποθήκευση".</p><figure class="tmx-shot"><img alt="TAGRA βήμα εγκατάστασης 22" decoding="async" loading="lazy" src="/assets/img/manuals/install-en/22.webp"/></figure></div></div>
+<div class="tmx-step" id="step-23"><div class="tmx-step-num">23</div><div class="tmx-step-body"><p>Εισαγάγετε το όνομα χρήστη<b>admin</b>και κωδικό πρόσβασης<b>admin</b>, στη συνέχεια συνεχίστε με «Σύνδεση».</p><figure class="tmx-shot"><img alt="TAGRA βήμα εγκατάστασης 23" decoding="async" loading="lazy" src="/assets/img/manuals/install-en/23.webp"/></figure></div></div>
+<h3 class="tmx-nv-h3" id="inicializace-db">Αρχικοποίηση βάσης δεδομένων</h3>
+<div class="tmx-step" id="step-24"><div class="tmx-step-num">24</div><div class="tmx-step-body"><p>Το πρόγραμμα θα σας ζητήσει να δημιουργήσετε τη βάση δεδομένων για πρώτη φορά – κάντε κλικ στο «Εκτέλεση». Μόλις δημιουργηθεί η βάση δεδομένων, θα φτάσετε στην αρχική οθόνη του προγράμματος και μπορείτε να ξεκινήσετε την εργασία.</p><div class="tmx-substeps"><div class="tmx-substep"><div class="tmx-substep-num">24.1</div><figure class="tmx-shot"><img alt="TAGRA βήμα εγκατάστασης 24.1" decoding="async" loading="lazy" src="/assets/img/manuals/install-en/24.1.webp"/></figure></div><div class="tmx-substep"><div class="tmx-substep-num">24.2</div><figure class="tmx-shot"><img alt="TAGRA βήμα εγκατάστασης 24.2" decoding="async" loading="lazy" src="/assets/img/manuals/install-en/24.2.webp"/></figure></div></div></div></div>
+<div class="tmx-faq" id="faq"><h2 class="tmx-nv-h2">Συχνές ερωτήσεις</h2><details class="tmx-faq-item"><summary>Χρειάζεται να εγκαταστήσω Firebird αν το έχω ήδη;</summary><p class="tmx-faq-a">Όχι. Αν το Firebird ή το Microsoft Windows Desktop Runtime είναι ήδη εγκατεστημένο στον υπολογιστή σας (για παράδειγμα από προηγούμενη εγκατάσταση TAGRA ή ενημέρωση Windows), αποεπιλέξτε το αντίστοιχο πλαίσιο στο πρόγραμμα εγκατάστασης και θα παραλειφθεί.</p></details><details class="tmx-faq-item"><summary>Μπορώ να εγκαταστήσω TAGRA χωρίς σύνδεση στο διαδίκτυο;</summary><p class="tmx-faq-a">Ναι. Επιλέξτε την επιλογή «Offline» κατά την πρώτη εκκίνηση αντί για «Δοκιμή» ή «Ενεργοποίηση». Δημιουργεί ένα αρχείο άδειας χρήσης offline συνδεδεμένο με αυτόν τον συγκεκριμένο υπολογιστή, το οποίο μπορείτε στη συνέχεια να ενεργοποιήσετε χωρίς ενεργή σύνδεση στο διαδίκτυο.</p></details><details class="tmx-faq-item"><summary>Τι συμβαίνει όταν λήξει η 28ήμερη δωρεάν δοκιμή;</summary><p class="tmx-faq-a">Το TAGRA σταματά να ανοίγει μέχρι να αγοράσετε μια άδεια χρήσης (μέσω του κουμπιού «Ανανέωση») ή να ενεργοποιήσετε έναν αγορασμένο αριθμό άδειας χρήσης και κωδικό ενεργοποίησης. Δεν χάνονται δεδομένα που έχετε ήδη κατεβάσει ή αναλύσει.</p></details><details class="tmx-faq-item"><summary>Πού αποθηκεύεται η βάση δεδομένων TAGRA και μπορώ να τη μετακινήσω;</summary><p class="tmx-faq-a">Επιλέγετε εσείς την τοποθεσία της βάσης δεδομένων κατά την πρώτη σύνδεση — συνιστούμε τον φάκελο «Έγγραφα» σας. Η βάση δεδομένων είναι ένα ενιαίο αρχείο .fdb (για παράδειγμα tagradb.fdb), οπότε μπορεί να δημιουργηθεί αντίγραφο ασφαλείας ή να μετακινηθεί όπως οποιοδήποτε άλλο αρχείο· απλά συνδέστε ξανά το TAGRA με τη νέα διαδρομή στη συνέχεια.</p></details><details class="tmx-faq-item"><summary>Ποιον να επικοινωνήσω αν η εγκατάσταση ή η ενεργοποίηση κολλήσει;</summary><p class="tmx-faq-a">Στείλτε email στο helpdesk@tagra.app και η ομάδα τεχνικής υποστήριξής μας θα σας βοηθήσει να ξεμπλοκάρετε — δείτε το πλαίσιο «Χρειάζεστε βοήθεια;» στο τέλος αυτού του οδηγού.</p></details><details class="tmx-faq-item"><summary>Τι είναι το TAGRA και τι κάνει;</summary><p class="tmx-faq-a">Το TAGRA είναι εξειδικευμένο λογισμικό για την ανάλυση και αρχειοθέτηση δεδομένων από ψηφιακούς ταχογράφους και κάρτες οδηγού. Βοηθά τις μεταφορικές εταιρείες να ανταποκριθούν στις νομικές τους υποχρεώσεις βάσει του Κανονισμού ΕΕ 561/2006, της συμφωνίας AETR και της νομοθεσίας για τους χρόνους εργασίας — ελέγχοντας τους χρόνους οδήγησης, τα διαλείμματα και τους χρόνους ανάπαυσης, δημιουργώντας αναφορές και αρχειοθετώντας δεδομένα σε μορφή .DDD.</p></details><details class="tmx-faq-item"><summary>Ποια έκδοση TAGRA πρέπει να επιλέξω;</summary><p class="tmx-faq-a">Εξαρτάται από τον στόλο σας: TAGRA TRUCKER για έναν οδηγό που αναλύει μόνο τη δική του κάρτα, TAGRA 1 για ένα όχημα, TAGRA 2/4/6 για μικρούς έως μεσαίους στόλους και TAGRA MAX για απεριόριστα οχήματα. Το TAGRA TRUCKER EDU ταιριάζει σε σχολές οδήγησης με απεριόριστες κάρτες οδηγού. Καθώς ο στόλος σας μεγαλώνει, η άδεια χρήσης σας μπορεί να αναβαθμιστεί χωρίς να χρειάζεται να αγοράσετε ξανά το λογισμικό — δείτε την πλήρη σύγκριση στη σελίδα μας<a href="/el/stolos/">στόλου</a>.</p></details><details class="tmx-faq-item"><summary>Πόσο κοστίζει η ετήσια ανανέωση της άδειας;</summary><p class="tmx-faq-a">Το πρώτο έτος ενημερώσεων περιλαμβάνεται στην τιμή αγοράς. Από το δεύτερο έτος, ισχύει ετήσιο τέλος άδειας χρήσης ανάλογα με την έκδοση: από €19/έτος (TAGRA Trucker) έως €139/έτος (TAGRA MAX), που καλύπτει τόσο τις νομοθετικές ενημερώσεις όσο και την τεχνική υποστήριξη — δείτε τον πλήρη<a href="/el/stolos/#tagra-pricing">πίνακα τιμολόγησης</a>.</p></details><details class="tmx-faq-item"><summary>Πόσο συχνά χρειάζεται να κάνω λήψη δεδομένων από τον ταχογράφο και την κάρτα οδηγού;</summary><p class="tmx-faq-a">Τα δεδομένα της κάρτας οδηγού πρέπει να γίνεται λήψη τους τουλάχιστον κάθε 28 ημέρες, και τα δεδομένα του ταχογράφου οχήματος τουλάχιστον κάθε 90 ημέρες, σύμφωνα με τον Κανονισμό (ΕΕ) 581/2010 της Επιτροπής. Τα δεδομένα που έχουν γίνει λήψη πρέπει στη συνέχεια να αρχειοθετούνται για τουλάχιστον ένα έτος — εμείς συνιστούμε 3–5 έτη.</p></details><details class="tmx-faq-item"><summary>Είναι αρκετή η λήψη των δεδομένων, ή πρέπει επίσης να τα αναλύσω;</summary><p class="tmx-faq-a">Μόνο η λήψη δεδομένων ικανοποιεί την απαίτηση αρχειοθέτησης. Το άρθρο 10(2) του Κανονισμού (ΕΕ) 561/2006 απαιτεί επίσης από τις μεταφορικές εταιρείες να ελέγχουν τακτικά τα δεδομένα και να αντιμετωπίζουν παραβάσεις οδηγών — κάτι που ακριβώς κάνει το TAGRA, επισημαίνοντας σαφώς τις παραβάσεις και προετοιμάζοντας αναφορές για ελέγχους.</p></details><details class="tmx-faq-item"><summary>Είναι το TAGRA συμβατό με τους έξυπνους ταχογράφους II (G2V2) και τους ταχογράφους VDO/Stoneridge;</summary><p class="tmx-faq-a">Ναι. Το TAGRA είναι πλήρως συμβατό με τους έξυπνους ταχογράφους δεύτερης γενιάς (G2V2) και υποστηρίζει τόσο μονάδες VDO όσο και Stoneridge, λειτουργώντας με μορφές .DDD (κάρτα/όχημα), C1B και V1B.</p></details><details class="tmx-faq-item"><summary>Ποια είναι η διαφορά μεταξύ TAGRA TRUCKER και TAGRA 1;</summary><p class="tmx-faq-a">Το TAGRA TRUCKER αναλύει μόνο δεδομένα κάρτας οδηγού — ένας οδηγός, μία κάρτα. Το TAGRA 1 αναλύει επιπλέον δεδομένα ταχογράφου οχήματος, καθιστώντας το τη σωστή επιλογή για αυτοκινητιστές με ένα όχημα που χρειάζονται πλήρη συμμόρφωση σε επίπεδο επιχείρησης, όχι μόνο το δικό τους αρχείο οδήγησης.</p></details><details class="tmx-faq-item"><summary>Λειτουργεί το TAGRA σε Mac;</summary><p class="tmx-faq-a">Το TAGRA είναι μια εγγενής εφαρμογή Windows. Σε Mac, μπορείτε να το εκτελέσετε μέσω Parallels Desktop, VMware Fusion, ή Remote Desktop σε διακομιστή Windows — αλλά για την καλύτερη σταθερότητα και απόδοση, συνιστούμε έναν υπολογιστή με Windows 10 ή 11.</p></details><details class="tmx-faq-item"><summary>Μπορώ να χρησιμοποιήσω το TAGRA σε πολλούς υπολογιστές ή μέσω δικτύου;</summary><p class="tmx-faq-a">Η τυπική άδεια είναι για έναν χρήστη (ένας υπολογιστής, ένας χρήστης). Μια δικτυωμένη, πολυ-χρηστική έκδοση είναι διαθέσιμη για ομάδες που χρειάζονται κοινή πρόσβαση — επικοινωνήστε με το<a href="mailto:sales@tagra.app">sales@tagra.app</a>για να συζητήσουμε την τιμολόγηση και τη ρύθμιση.</p></details><details class="tmx-faq-item"><summary>Τι γίνεται αν έχω ήδη μια συσκευή λήψης από ανταγωνιστή;</summary><p class="tmx-faq-a">Το TAGRA διαβάζει τις τυπικές μορφές .DDD, C1B και V1B που χρησιμοποιούνται σε όλους τους ταχογράφους και τις συσκευές λήψης δεδομένων, οπότε δεδομένα από κλειδί λήψης άλλης μάρκας φορτώνονται και αναλύονται χωρίς κανένα πρόβλημα. Δεν χρειάζεται να αλλάξετε υλικό — απλώς ξεκινήστε την ανάλυση στο TAGRA.</p></details><details class="tmx-faq-item"><summary>Ισχύει η υποχρέωση ανάλυσης και για τα βαν;</summary><p class="tmx-faq-a">Ναι. Από 1 July 2026, η υποχρέωση για ταχογράφο και ανάλυση δεδομένων επεκτείνεται σε βαν και συνδυασμούς 2.5–3.5 t που χρησιμοποιούνται σε διεθνείς μεταφορές επί πληρωμή ή για μίσθωση, ή για ενδομεταφορές. Το TAGRA είναι πλήρως έτοιμο για αυτήν την αλλαγή. Διαβάστε περισσότερα στον<a href="/el/arthra/tachografos-van-ypochreosi-ioulios-2026/">οδηγό μας σχετικά με τη νέα υποχρέωση</a>.</p></details><details class="tmx-faq-item"><summary>Παρέχετε εκπαίδευση και τεχνική υποστήριξη για το TAGRA;</summary><p class="tmx-faq-a">Ναι — προσφέρουμε πρακτική εκπαίδευση σχετικά με τη χρήση του TAGRA για την ομάδα σας, και η τεχνική υποστήριξη (τηλέφωνο, email και απομακρυσμένη βοήθεια) περιλαμβάνεται για όλη τη διάρκεια της άδειάς σας.</p></details><details class="tmx-faq-item"><summary>Τι γίνεται αν δεν θέλω να κάνω την ανάλυση μόνος μου;</summary><p class="tmx-faq-a">Μπορείτε να χρησιμοποιήσετε την υπηρεσία ανάλυσής μας αντ' αυτού — στείλτε μας τα δεδομένα σας και οι ειδικοί μας θα αναλάβουν τους ελέγχους παραβάσεων, τις αναφορές και τις περιλήψεις για εσάς. Είναι ιδανικό για επιχειρήσεις που προτιμούν να μην διαχειρίζονται την ανάλυση εσωτερικά. Επικοινωνήστε<a href="mailto:sales@tagra.app">sales@tagra.app</a>για να συζητήσουμε.</p></details></div>
+<div class="tmx-next"><h2 class="tmx-nv-h2">Τι ακολουθεί;</h2><p>Τώρα που το TAGRA έχει εγκατασταθεί, το επόμενο βήμα είναι να επιλέξετε το κατάλληλο πρόγραμμα για τον στόλο σας και να κάνετε την πρώτη σας λήψη δεδομένων ταχογράφου.</p><div class="tmx-next-links"><a href="/el/stolos/">Συγκρίνετε εκδόσεις TAGRA →</a><a href="/el/arthra/lipsi-analysi-dedomenon-tachografou/">Πώς να κάνετε λήψη, ανάλυση και αρχειοθέτηση δεδομένων →</a></div></div>
+<div class="tmx-rada-card" style="text-align:left"><h4 class="tmx-rada-headline">Χρειάζεστε βοήθεια;</h4><p class="tmx-rada-prompt">Έχετε κολλήσει στην εγκατάσταση ή την ενεργοποίηση; Η ομάδα τεχνικής υποστήριξης είναι πρόθυμη να σας βοηθήσει.</p><a class="tmx-btn" href="mailto:helpdesk@tagra.app">Επικοινωνήστε με την τεχνική υποστήριξη</a></div>
+</div>
+</main>
+<footer class="site-footer" role="contentinfo">
+<div class="footer-inner">
+<div>
+<div class="footer-logo"><img alt="TAGRA" height="32" src="/assets/img/logo-dark.svg?v=20260513zh" width="140"/></div>
+<p class="footer-desc">Επαγγελματικό λογισμικό ανάλυσης ταχογράφων. Λήψη δεδομένων κάρτας οδηγού, ανάλυση ψηφιακού ταχογράφου, χρόνοι οδήγησης οδηγών ΕΕ και Οδηγία για τον Χρόνο Εργασίας των βαρέων οχημάτων. Αναπτύχθηκε από την Truck Data Technology, s.r.o.</p>
+</div>
+<div class="footer-col">
+<h4>Προϊόν</h4>
+<ul>
+<li><a href="/el/stolos/">Για διαχειριστές στόλου</a></li>
+<li><a href="/el/odigoi/">Για επαγγελματίες οδηγούς</a></li>
+<li><a href="/el/eleghos/">Για ελεγκτικές αρχές</a></li>
+<li><a href="/el/pos-leitourgei/">Πώς λειτουργεί</a></li>
+<li><a href="/el/gia-poion/">Για ποιους</a></li>
+<li><a href="/el/faq/">Συχνές ερωτήσεις</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h4>Πηγές</h4>
+<ul>
+<li><a href="/el/arthra/">Άρθρα</a></li>
+<li><a href="/el/egcheiridia/">Εγχειρίδια</a></li>
+<li><a href="/el/arthra/symvola-tachografou/">Σύμβολα ταχογράφου</a></li>
+<li><a href="/el/ensomatoseis/dkv-live/">DKV LIVE®</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h4>Εταιρεία</h4>
+<ul>
+<li><a href="/el/epikoinonia/">Επικοινωνία</a></li>
+<li><a href="https://www.tdt.cz" rel="noopener" target="_blank">Truck Data Technology</a></li>
+<li><a href="/de/">Deutsch</a></li>
+<li><a href="/pl/">Polski</a></li>
+</ul>
+</div>
+</div>
+<div class="footer-bottom">
+<span>© 2026 Truck Data Technology, s.r.o. Με την επιφύλαξη παντός δικαιώματος.</span>
+<span><a href="/el/epikoinonia/">Επικοινωνία</a> · <a href="https://www.tdt.cz" rel="noopener" target="_blank">tdt.cz</a></span>
+</div>
+</footer>
+<script>(function(){var bar=document.getElementById('scroll-progress');if(bar)window.addEventListener('scroll',function(){var t=document.documentElement.scrollTop||document.body.scrollTop;var h=document.documentElement.scrollHeight-document.documentElement.clientHeight;bar.style.width=(t/h*100)+'%';},{passive:true});var toggle=document.getElementById('nav-toggle'),links=document.getElementById('nav-links');if(toggle&&links)toggle.addEventListener('click',function(){var o=links.classList.toggle('open');toggle.setAttribute('aria-expanded',o);});})();</script>
+</body>
+</html>

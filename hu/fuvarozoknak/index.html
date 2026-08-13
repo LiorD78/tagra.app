@@ -1,0 +1,1243 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<!-- TMX-ANALYTICS START -->
+<meta content="7F7894081BE7FBB245FF03AF8810B22F" name="msvalidate.01"/>
+<!-- Consent Mode v2 defaults (deny) + gtag stub — runs BEFORE gtag.js -->
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent','default',{
+      ad_storage:'denied', ad_user_data:'denied', ad_personalization:'denied',
+      analytics_storage:'denied', functionality_storage:'denied',
+      personalization_storage:'denied', security_storage:'granted',
+      wait_for_update:500
+    });
+    gtag('set','ads_data_redaction',true);
+    gtag('set','url_passthrough',false);
+  </script>
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-92253QFBNX"></script>
+<script>
+    gtag('js', new Date());
+    gtag('config','G-92253QFBNX');
+  </script>
+<!-- Cookie consent banner (self-hosted) + Microsoft Clarity gating -->
+<style>
+    .tmx-cc{position:fixed;left:0;right:0;bottom:0;z-index:2147483000;background:linear-gradient(120deg,var(--blue-dark,#0b2c4a),var(--blue-mid,#134a8e) 62%,var(--blue-light,#1f5fa6));color:#fff;
+      font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+      padding:16px 20px;box-shadow:0 -4px 24px rgba(0,0,0,.18);display:flex;flex-wrap:wrap;
+      align-items:center;gap:14px;justify-content:center}
+    .tmx-cc__txt{flex:1 1 360px;max-width:760px}
+    .tmx-cc__txt a{color:#9ed0f5;text-decoration:underline}
+    .tmx-cc__btns{display:flex;gap:10px;flex:0 0 auto}
+    .tmx-cc__b{appearance:none;border:0;cursor:pointer;font:inherit;font-weight:600;
+      padding:10px 22px;border-radius:99px;transition:filter .15s;color:#fff}
+    .tmx-cc__b:hover{filter:brightness(1.08)}
+    .tmx-cc__b--no{background:rgba(255,255,255,.16)}
+    .tmx-cc__b--yes{background:var(--green-cta,#5C820F)}
+    @media(max-width:640px){.tmx-cc{padding:14px}.tmx-cc__btns{width:100%}.tmx-cc__b{flex:1}}
+  </style>
+<script>
+  (function(){
+    var KEY='tmx-consent-v1', CL='wt18054m0r';
+    function lc(){var l=(document.documentElement.getAttribute('lang')||'en').toLowerCase().split('-')[0];
+      var m={cz:'cs',cs:'cs',sk:'sk',de:'de',pl:'pl',gr:'el',el:'el',en:'en'};return m[l]||'en';}
+    var T={
+      en:{t:'We use analytics cookies (Google Analytics, Microsoft Clarity) to understand site usage. They load only with your consent.',a:'Accept',r:'Reject',p:'Privacy &amp; cookies'},
+      cs:{t:'Pou\u017e\u00edv\u00e1me analytick\u00e9 cookies (Google Analytics, Microsoft Clarity) k pochopen\u00ed pou\u017e\u00edv\u00e1n\u00ed webu. Na\u010dtou se jen s va\u0161\u00edm souhlasem.',a:'P\u0159ijmout',r:'Odm\u00edtnout',p:'Soukrom\u00ed a cookies'},
+      sk:{t:'Pou\u017e\u00edvame analytick\u00e9 cookies (Google Analytics, Microsoft Clarity) na pochopenie pou\u017e\u00edvania webu. Na\u010d\u00edtaj\u00fa sa len s va\u0161\u00edm s\u00fahlasom.',a:'Prija\u0165',r:'Odmietnu\u0165',p:'S\u00fakromie a cookies'},
+      de:{t:'Wir verwenden Analyse-Cookies (Google Analytics, Microsoft Clarity), um die Nutzung der Website zu verstehen. Sie werden nur mit Ihrer Einwilligung geladen.',a:'Akzeptieren',r:'Ablehnen',p:'Datenschutz &amp; Cookies'},
+      pl:{t:'U\u017cywamy plik\u00f3w cookie do analityki (Google Analytics, Microsoft Clarity), aby zrozumie\u0107 korzystanie z witryny. \u0141aduj\u0105 si\u0119 tylko za Twoj\u0105 zgod\u0105.',a:'Akceptuj',r:'Odrzu\u0107',p:'Prywatno\u015b\u0107 i cookies'},
+      el:{t:'\u03a7\u03c1\u03b7\u03c3\u03b9\u03bc\u03bf\u03c0\u03bf\u03b9\u03bf\u03cd\u03bc\u03b5 cookies \u03b1\u03bd\u03ac\u03bb\u03c5\u03c3\u03b7\u03c2 (Google Analytics, Microsoft Clarity) \u03b3\u03b9\u03b1 \u03bd\u03b1 \u03ba\u03b1\u03c4\u03b1\u03bd\u03bf\u03ae\u03c3\u03bf\u03c5\u03bc\u03b5 \u03c4\u03b7 \u03c7\u03c1\u03ae\u03c3\u03b7. \u03a6\u03bf\u03c1\u03c4\u03ce\u03bd\u03bf\u03bd\u03c4\u03b1\u03b9 \u03bc\u03cc\u03bd\u03bf \u03bc\u03b5 \u03c4\u03b7 \u03c3\u03c5\u03b3\u03ba\u03b1\u03c4\u03ac\u03b8\u03b5\u03c3\u03ae \u03c3\u03b1\u03c2.',a:'\u0391\u03c0\u03bf\u03b4\u03bf\u03c7\u03ae',r:'\u0391\u03c0\u03cc\u03c1\u03c1\u03b9\u03c8\u03b7',p:'\u0391\u03c0\u03cc\u03c1\u03c1\u03b7\u03c4\u03bf &amp; cookies'}
+    };
+    function loadClarity(){if(!CL||window.__tmxCl)return;window.__tmxCl=1;
+      (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+       t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+       y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script",CL);}
+    function grant(){try{localStorage.setItem(KEY,'granted')}catch(e){}
+      gtag('consent','update',{analytics_storage:'granted'});loadClarity();}
+    function deny(){try{localStorage.setItem(KEY,'denied')}catch(e){}}
+    var saved=null;try{saved=localStorage.getItem(KEY)}catch(e){}
+    if(saved==='granted'){grant();return;} if(saved==='denied'){return;}
+    function show(){var tx=T[lc()]||T.en;
+      var b=document.createElement('div');b.className='tmx-cc';b.setAttribute('role','dialog');b.setAttribute('aria-live','polite');
+      b.innerHTML='<div class="tmx-cc__txt">'+tx.t+' <a href="/privacy/">'+tx.p+'</a></div>'+
+        '<div class="tmx-cc__btns"><button type="button" class="tmx-cc__b tmx-cc__b--no">'+tx.r+'</button>'+
+        '<button type="button" class="tmx-cc__b tmx-cc__b--yes">'+tx.a+'</button></div>';
+      document.body.appendChild(b);
+      b.querySelector('.tmx-cc__b--yes').addEventListener('click',function(){grant();b.remove();});
+      b.querySelector('.tmx-cc__b--no').addEventListener('click',function(){deny();b.remove();});}
+    if(document.body)show();else document.addEventListener('DOMContentLoaded',show);
+  })();
+  </script>
+<!-- TMX-ANALYTICS END -->
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Flotta tachográf szoftver: sofőrkártya letöltés és kiértékelés | TAGRA</title>
+<meta content="Flotta tachográf szoftver: tömeges sofőrkártya letöltés, automatikus szabálysértés kiértékelés, (EU) vezetési és pihenőidő és munkaidő-irányelv ellenőrzések. Ingyenes 30 napos próbaverzió." name="description"/>
+<meta content="#0b2c4a" name="theme-color"/>
+<link href="/manifest.json" rel="manifest"/>
+<link href="https://tagra.app/hu/fuvarozoknak/" rel="canonical"/>
+<meta content="website" property="og:type"/>
+<meta content="hu_HU" property="og:locale"/>
+<meta content="TAGRA" property="og:site_name"/>
+<meta content="Flotta tachográf szoftver: sofőrkártya letöltés és kiértékelés | TAGRA" property="og:title"/>
+<meta content="Flotta tachográf szoftver: sofőrkártya letöltés, automatikus szabálysértés kiértékelés, (EU) vezetési és pihenőidő és nehézgépjármű munkaidő-irányelv. Ingyenes 30 napos próbaverzió." property="og:description"/>
+<meta content="https://cdn.truckmall.cz/data/user-content/TDT_TAGRA_MAX_wh.jpg" property="og:image"/>
+<meta content="TAGRA – tachográfadatok kiértékelése szoftver flottakezelőknek, 1-től korlátlan számú járműig" property="og:image:alt"/>
+<meta content="https://cdn.truckmall.cz/data/user-content/TDT_TAGRA_MAX_wh.jpg" name="twitter:image"/>
+<meta content="TAGRA – tachográfadatok kiértékelése szoftver flottakezelőknek, 1-től korlátlan számú járműig" name="twitter:image:alt"/>
+<meta content="https://tagra.app/hu/fuvarozoknak/" property="og:url"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<style>
+    /* ─── DESIGN TOKENS ────────────────────────────────────────── */
+    /* ─── RESET & BASE ─────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    a { color: var(--green-brand); text-decoration: none; }
+    a:hover { color: var(--green-cta); text-decoration: underline; text-underline-offset: .18em; }
+    img { max-width: 100%; height: auto; display: block; }
+    ul { list-style: none; }
+    p + p { margin-top: 12px; }
+    p:empty { display: none; }
+
+    /* ─── SCROLL PROGRESS ──────────────────────────────────────── */
+    #scroll-progress {
+      position: fixed; top: 0; left: 0; height: 3px;
+      background: linear-gradient(90deg, var(--green-brand), var(--blue-light));
+      width: 0%; z-index: 9999; pointer-events: none;
+      transition: width .1s ease-out;
+    }
+
+    /* ─── NAVIGATION ───────────────────────────────────────────── */
+.nav-inner {
+      max-width: var(--maxw);
+      margin: 0 auto; padding: 0 24px;
+      height: 100%;
+      display: flex; align-items: center; justify-content: space-between; gap: 24px;
+    }
+    .nav-logo { display: flex; align-items: center; gap: 8px; text-decoration: none; flex-shrink: 0; }
+    .nav-links {
+      display: flex; align-items: center; gap: 4px;
+      list-style: none;
+    }
+    .nav-links li a {
+      font-size: 15px; font-weight: 500; color: var(--text);
+      padding: 8px 12px; border-radius: 8px;
+      transition: background .15s, color .15s;
+      text-decoration: none;
+    }
+    .nav-links li a:hover { background: var(--bg-apple-solid); color: var(--blue-mid); }
+    .nav-links .nav-cta a {
+      background: var(--green-cta); color: #fff !important;
+      border-radius: 99px; padding: 8px 18px; font-weight: 600;
+    }
+    .nav-links .nav-cta a:hover { background: var(--green-brand); }
+    .nav-lang {
+      display: flex; align-items: center; gap: 4px;
+      font-size: 14px; font-weight: 600;
+    }
+    .nav-lang a {
+      padding: 5px 8px; border-radius: 6px; color: var(--text2);
+      text-decoration: none; transition: background .15s;
+    }
+    .nav-lang a:hover, .nav-lang a.active { background: var(--bg-apple-solid); color: var(--blue-mid); }
+    .nav-lang span { color: var(--border); }
+    .nav-mobile-toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
+    .nav-mobile-toggle span { display: block; width: 22px; height: 2px; background: var(--text); margin: 5px 0; border-radius: 2px; transition: .3s; }
+
+    @media (max-width: 900px) {
+      .nav-links { display: none; }
+      .nav-mobile-toggle { display: block; }
+      .nav-links.open {
+        display: flex; flex-direction: column; align-items: flex-start; gap: 2px;
+        position: absolute; top: var(--nav-h); left: 0; right: 0;
+        background: rgba(255,255,255,0.97); backdrop-filter: blur(12px);
+        border-bottom: 1px solid var(--border); padding: 12px 24px 20px;
+      }
+    }
+
+    /* ─── LAYOUT ───────────────────────────────────────────────── */
+    
+    
+    
+    
+    .band--machero { background: linear-gradient(180deg, var(--bg-apple-solid) 0%, #fff 74%); padding: 60px 0; }
+    @media (max-width: 768px) { .band { padding: 50px 0; } }
+    /* ─── TYPOGRAPHY ───────────────────────────────────────────── */
+    h1, h2, h3 { font-weight: 800; }
+    h2 {
+      font-size: 36px; font-weight: 800;
+      line-height: 1.1; letter-spacing: 0;
+      text-transform: uppercase;
+      color: var(--blue-mid, #134a8e);
+      background: linear-gradient(90deg, var(--blue-dark, #0b2c4a) 0%, var(--blue-mid, #134a8e) 55%, var(--blue-light, #1f5fa6) 100%);
+      -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block; max-width: 100%; margin-bottom: 14px;
+      padding: 0.12em 0.15em 0.08em 0;
+    }
+    @media (max-width: 768px) { h2 {
+      font-size: 36px; font-weight: 800;
+      line-height: 1.1; letter-spacing: 0;
+      text-transform: uppercase;
+      color: var(--blue-mid, #134a8e);
+      background: linear-gradient(90deg, var(--blue-dark, #0b2c4a) 0%, var(--blue-mid, #134a8e) 55%, var(--blue-light, #1f5fa6) 100%);
+      -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block; max-width: 100%; margin-bottom: 14px;
+      padding: 0.12em 0.15em 0.08em 0;
+    } }
+    h2
+    @media (max-width: 768px) { h2 }
+
+    .eyebrow {
+      font-size: 15px; font-weight: 700; letter-spacing: .1em;
+      text-transform: uppercase; color: var(--green-brand); margin-bottom: 12px;
+    }
+
+    /* ─── BUTTONS ──────────────────────────────────────────────── */
+    
+    .btn-cta:hover { background: var(--green-brand); transform: scale(1.02); color: #fff !important; }
+    
+
+    /* ─── BENTO GRID ───────────────────────────────────────────── */
+    
+    .bc {
+      background: var(--bg-white); border-radius: var(--radius);
+      padding: 32px; border: 1px solid var(--border); position: relative; overflow: hidden;
+    }
+    
+    
+    
+    
+    
+    
+    
+    @media (max-width: 900px) {
+      .bento { grid-template-columns: 1fr 1fr; }
+      .bc.s7, .bc.s5, .bc.s8 { grid-column: span 2; }
+      .bc.s4, .bc.s6 { grid-column: span 1; }
+    }
+    @media (max-width: 600px) {
+      .bento { grid-template-columns: 1fr; }
+      .bc { grid-column: span 1 !important; }
+    }
+    
+    
+    .bignum   { font-size: 110px; font-weight: 800; line-height: 1; letter-spacing: -.04em; color: rgba(19,74,142,.06); position: absolute; bottom: -16px; right: 16px; pointer-events: none; }
+
+    /* ─── 2-COL & 3-COL ────────────────────────────────────────── */
+    
+    
+    @media (max-width: 900px) { .g2 { grid-template-columns: 1fr; gap: 40px; } }
+
+    
+    @media (max-width: 860px) { .three-col { grid-template-columns: 1fr; } }
+    @media (min-width: 600px) and (max-width: 860px) { .three-col { grid-template-columns: 1fr 1fr; } }
+
+    .two-col { display: grid; grid-template-columns: 1fr; gap: 24px; align-items: start; }
+    @media (min-width: 992px) { .two-col { grid-template-columns: 1fr 1fr; gap: 38px; } }
+    @media (min-width: 992px) { .two-col.stretch { gap: 64px; align-items: stretch; } }
+
+    /* ─── CALLOUT CARDS ────────────────────────────────────────── */
+    .callout {
+      border-radius: var(--radius); background: var(--bg-white);
+      padding: 32px; box-shadow: 0 12px 32px rgba(0,0,0,.04);
+      border: 1px solid var(--border); position: relative;
+    }
+    
+    @media (min-width: 992px) { .stretch > .callout--plain { padding-top: 40px; } }
+
+    /* GREEN CALLOUT */
+    .callout--green {
+      background: linear-gradient(90deg,#74A81A,var(--green-brand) 55%,#638719);
+      border-radius: var(--radius); padding: 40px; position: relative; overflow: hidden;
+      box-shadow: 0 12px 32px rgba(0,0,0,.06);
+    }
+    .callout--green h2 {
+      background: linear-gradient(90deg,#052037,var(--blue-dark) 55%,#0e3a73);
+      -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent; color: transparent;
+      text-transform: none; margin-bottom: 8px;
+    padding-bottom:0.08em;}
+    .callout--green p, .callout--green li { color: #0b0b0c !important; }
+    .callout--green a { color: #052037 !important; }
+    .callout--green .cg-bg {
+      font-size: 200px; font-weight: 900; position: absolute;
+      right: -20px; bottom: -40px; color: rgba(255,255,255,.12);
+      line-height: 1; pointer-events: none;
+    }
+    ul li { padding: 3px 0; }
+
+    /* ─── FEATURE LIST ─────────────────────────────────────────── */
+    
+    
+    
+    .fck svg { flex-shrink: 0; }
+
+    /* ─── WARNING / NOTE BOXES ─────────────────────────────────── */
+    .note-box {
+      position: relative; background: linear-gradient(180deg,var(--green-bg) 0%,#fff 100%);
+      border: 2px solid var(--green-brand); border-radius: var(--radius);
+      padding: 40px 32px 32px; margin-top: 40px;
+      box-shadow: 0 10px 26px rgba(110,155,18,.08);
+    }
+    .note-badge {
+      position: absolute; top: -16px; left: 24px;
+      background: var(--green-brand); color: #fff;
+      font-size: 14px; font-weight: 800; text-transform: uppercase;
+      padding: 5px 14px; border-radius: 999px;
+      box-shadow: 0 6px 14px rgba(110,155,18,.22);
+    }
+    .note-title { font-size: 24px; font-weight: 800; line-height: 1.2; margin: 10px 0 16px; color: var(--text-strong); }
+    .note-box p  { font-size: 17px; line-height: 1.65; color: var(--text2); margin-bottom: 14px; }
+
+    /* ─── REVIEWS SLIDER ───────────────────────────────────────── */
+    .rev-rail-wrap {
+      overflow: hidden; margin-top: 24px;
+      mask-image: linear-gradient(to right, transparent 0%,black 6%,black 94%,transparent 100%);
+    }
+    
+    .rev-rail::-webkit-scrollbar { display: none; }
+    .rev-rail:active { cursor: grabbing; }
+    
+    
+    
+    
+
+    /* ─── METHOD CARDS ─────────────────────────────────────────── */
+    .method-card { display: flex; flex-direction: column; height: 100%; }
+    .method-frame {
+      background: var(--bg-white); aspect-ratio: 4/3; padding: 20px;
+      border: 1px solid var(--border); border-radius: var(--radius);
+      margin-bottom: 20px; overflow: hidden;
+    }
+    .method-frame img { width: 100%; height: 100%; object-fit: contain; }
+    .snum { font-size: 44px; font-weight: 800; color: rgba(19,74,142,.15); line-height: 1; margin-bottom: 8px; }
+    .stit { font-size: 20px; font-weight: 800; margin-bottom: 8px; color: var(--text-strong); }
+
+    /* ─── SPECS TABLE ──────────────────────────────────────────── */
+    .specs { margin-top: 24px; }
+    .spec { display: flex; justify-content: space-between; padding: 14px 0; border-bottom: 1px solid var(--border); }
+    .spec:last-child { border-bottom: none; }
+    .sk { color: var(--text2); }
+    .sv { font-weight: 600; text-align: right; }
+
+    /* ─── COMPARISON TABLE ─────────────────────────────────────── */
+    .compare-wrap { width: 100%; overflow-x: auto; margin-top: 14px; padding-top: 32px; -webkit-overflow-scrolling: touch; }
+    .compare-table { width: 100%; border-collapse: separate; border-spacing: 0; min-width: 680px; }
+    .compare-table th, .compare-table td { padding: 14px; border-bottom: 1px solid var(--border); vertical-align: middle; text-align: left; }
+    .compare-table th { font-weight: 700; font-size: 15px; color: var(--text2); border-bottom: 2px solid var(--border); vertical-align: top; }
+    .compare-table .col-blue { background: var(--bg-apple-solid); position: relative; }
+    .compare-table th.col-blue { padding-top: 48px !important; color: var(--blue-mid); border-top: 2px solid var(--blue-mid); border-left: 2px solid var(--blue-mid); border-right: 2px solid var(--blue-mid); border-top-left-radius: 16px; border-top-right-radius: 16px; border-bottom: 2px solid var(--border); }
+    .compare-table td.col-blue { border-left: 2px solid var(--blue-mid); border-right: 2px solid var(--blue-mid); border-bottom: 1px solid rgba(19,74,142,.1); }
+    .compare-table tr:last-child td.col-blue { border-bottom: 2px solid var(--blue-mid); border-bottom-left-radius: 16px; border-bottom-right-radius: 16px; }
+    .compare-table .col-green { background: #f4f9ea; position: relative; }
+    .compare-table th.col-green { padding-top: 48px !important; color: var(--green-brand); border-top: 2px solid var(--green-brand); border-left: 2px solid var(--green-brand); border-right: 2px solid var(--green-brand); border-top-left-radius: 16px; border-top-right-radius: 16px; border-bottom: 2px solid var(--border); }
+    .compare-table td.col-green { border-left: 2px solid var(--green-brand); border-right: 2px solid var(--green-brand); border-bottom: 1px solid rgba(110,155,18,.1); }
+    .compare-table tr:last-child td.col-green { border-bottom: 2px solid var(--green-brand); border-bottom-left-radius: 16px; border-bottom-right-radius: 16px; }
+    .winner-badge, .winner-badge-green {
+      position: absolute; top: -18px; left: 16px;
+      display: inline-flex; align-items: center; color: #fff;
+      font-size: 13px; font-weight: 800; text-transform: uppercase;
+      padding: 5px 12px; border-radius: 20px; letter-spacing: .05em;
+      box-shadow: 0 6px 14px rgba(0,0,0,.15); z-index: 2; white-space: nowrap;
+    }
+    .winner-badge       { background: var(--blue-mid); }
+    .winner-badge-green { background: var(--green-brand); }
+    .tc-val { display: flex; align-items: center; gap: 10px; font-size: 15px; font-weight: 500; color: var(--text2); }
+    td.col-blue .tc-val, td.col-green .tc-val { font-weight: 700; color: var(--text-strong); }
+    .tc-val.no-icon { padding-left: 0; }
+    .tb-icon { display: inline-flex; align-items: center; justify-content: center; width: 22px; height: 22px; border-radius: 50%; flex-shrink: 0; }
+    .tb-icon--blue  { background: linear-gradient(135deg,var(--blue-dark),var(--blue-mid)); }
+    .tb-icon--green { background: linear-gradient(135deg,#74A81A,var(--green-brand)); }
+    .tb-icon--gray  { background: #f2f2f7; }
+    .tb-icon--cross { background: #fff0f0; }
+    .tb-icon svg    { width: 12px; height: 12px; }
+
+    /* ─── FAQ ──────────────────────────────────────────────────── */
+    
+    
+    .faq summary {
+      list-style: none; cursor: pointer; padding: 18px 40px 18px 0;
+      font-weight: 800; font-size: 18px; line-height: 1.4;
+      position: relative; color: var(--text-strong);
+    }
+    
+    .faq summary::after { content: "+"; position: absolute; right: 4px; top: 50%; transform: translateY(-50%); font-size: 26px; font-weight: 300; color: var(--green-brand); }
+    
+    
+
+    /* ─── MAC STAGE ────────────────────────────────────────────── */
+    .mac-stage { position: relative; width: 100%; line-height: 0; }
+    .mac-stage img { width: 100%; display: block; object-fit: contain; transform-origin: center center; filter: drop-shadow(0 30px 70px rgba(0,0,0,.16)); }
+    .mac-stage::after { content: ""; position: absolute; left: 50%; bottom: 5%; transform: translateX(-50%); width: 80%; height: 60px; background: radial-gradient(50% 50%,rgba(0,0,0,.16) 0%,transparent 70%); filter: blur(15px); opacity: .6; pointer-events: none; z-index: -1; }
+
+    /* ─── MEDIA FRAME ──────────────────────────────────────────── */
+    .media-frame { width: 100%; border-radius: var(--radius); overflow: hidden; -webkit-mask-image: -webkit-radial-gradient(#fff,#000); }
+    .media-frame img, .media-frame video { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+    /* ─── RELATED / ARTICLE GRID ───────────────────────────────── */
+    .related-featured {
+      display: flex; flex-direction: column; position: relative;
+      margin-top: 34px; padding: 36px 28px 28px;
+      background: linear-gradient(180deg,var(--bg-apple-solid) 0%,#fff 100%);
+      border: 2px solid var(--blue-mid); border-radius: var(--radius);
+      text-decoration: none !important; color: inherit !important;
+      box-shadow: 0 10px 26px rgba(19,74,142,.08);
+      transition: transform .18s, box-shadow .18s;
+    }
+    .related-featured:hover { transform: translateY(-3px); box-shadow: 0 14px 28px rgba(19,74,142,.15); }
+    .related-badge, .article-eyebrow-badge {
+      position: absolute; top: -16px; left: 24px;
+      background: var(--blue-mid); color: #fff; font-size: 13px; font-weight: 800;
+      text-transform: uppercase; padding: 5px 12px; border-radius: 999px;
+      box-shadow: 0 6px 14px rgba(19,74,142,.22);
+    }
+    .related-title { font-size: 24px; font-weight: 800; line-height: 1.25; color: var(--text-strong) !important; margin: 8px 0; }
+    .related-text  { font-size: 17px; line-height: 1.6; color: var(--text2) !important; margin-bottom: 16px; }
+    
+    .article-card  {
+      position: relative; display: flex; flex-direction: column; height: 100%;
+      padding: 22px; background: var(--bg-white); border: 1.5px solid var(--border);
+      border-radius: var(--radius); text-decoration: none !important; color: inherit !important;
+      box-shadow: 0 8px 24px rgba(0,0,0,.04); transition: transform .18s, box-shadow .18s, border-color .18s;
+    }
+    .article-card:hover { transform: translateY(-3px); box-shadow: 0 14px 28px rgba(0,0,0,.08); border-color: rgba(110,155,18,.45); }
+    .article-eyebrow { font-size: 14px; font-weight: 800; text-transform: uppercase; color: var(--blue-mid) !important; margin-bottom: 8px; display: block; }
+    
+    
+    
+    .article-card:hover .article-chip, .related-featured:hover .article-chip { background: var(--green-brand); color: #fff !important; }
+
+    /* ─── ANIMATIONS ───────────────────────────────────────────── */
+    .anim-up   { opacity: 0; transform: translateY(28px); transition: opacity .8s cubic-bezier(.16,1,.3,1), transform .8s cubic-bezier(.16,1,.3,1); }
+    .fly-left  { opacity: 0; transform: translateX(-80px); transition: opacity 2.8s cubic-bezier(.16,1,.3,1), transform 2.8s cubic-bezier(.16,1,.3,1); }
+    .fly-right { opacity: 0; transform: translateX(80px);  transition: opacity 2.8s cubic-bezier(.16,1,.3,1), transform 2.8s cubic-bezier(.16,1,.3,1); }
+    .anim-up.on, .fly-left.on, .fly-right.on { opacity: 1; transform: none; }
+    @media (prefers-reduced-motion: reduce) { .anim-up, .fly-left, .fly-right { transition: none !important; opacity: 1 !important; transform: none !important; } }
+
+    /* ─── FOOTER ───────────────────────────────────────────────── */
+  
+    /* ─── STICKY CTA BAR ───────────────────────────────────────── */
+    .sticky-cta{position:fixed;left:0;right:0;bottom:0;z-index:850;transform:translateY(110%);transition:transform .35s ease;background:linear-gradient(120deg,var(--blue-dark),var(--blue-mid) 70%);box-shadow:0 -4px 24px rgba(0,0,0,.14);}
+    .sticky-cta.is-visible{transform:translateY(0);}
+    .sticky-cta-inner{max-width:var(--maxw);margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:center;gap:20px;flex-wrap:wrap;}
+    .sticky-cta-text{color:#fff;font-weight:600;font-size:15px;}
+    .sticky-cta-btn{background:var(--green-cta);color:#fff!important;padding:10px 24px;border-radius:99px;font-weight:700;text-decoration:none!important;white-space:nowrap;transition:background .15s,transform .15s;}
+    .sticky-cta-btn:hover{background:var(--green-brand);transform:scale(1.03);text-decoration:none!important;}
+    .sticky-cta-close{background:none;border:none;color:rgba(255,255,255,.65);font-size:22px;line-height:1;cursor:pointer;padding:4px 8px;}
+    .sticky-cta-close:hover{color:#fff;}
+    @media(max-width:640px){.sticky-cta-text{display:none;}.sticky-cta-inner{padding:12px 16px;gap:14px;}}
+</style>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Kezdőlap",
+      "item": "https://tagra.app/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Fuvarozók részére",
+      "item": "https://tagra.app/fleet/"
+    }
+  ]
+}</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "url": "https://tagra.app/fleet/",
+  "name": "Tachográfadatok kiértékelő szoftver flottakezelőknek",
+  "description": "A TAGRA egy tachográfadatok kiértékelő szoftver flották számára – sofőrkártya letöltés, digitális tachográf kiértékelés, (EU) vezetési és pihenőidő és a tehergépjárművek munkaidejéről szóló irányelv kiértékelése.",
+  "isPartOf": {
+    "@id": "https://tagra.app/#website"
+  },
+  "about": {
+    "@id": "https://tagra.app/#organization"
+  },
+  "inLanguage": "en"
+}</script>
+<link href="/assets/css/tokens.css?v=20260514j" rel="stylesheet"/>
+<link href="/assets/css/base.css?v=20260514j" rel="stylesheet"/>
+<link href="/assets/css/components.css?v=20260514j" rel="stylesheet"/>
+<link href="/assets/css/nav.css?v=20260514j" rel="stylesheet"/>
+<script defer="" src="/assets/js/nav.js?v=20260513q"></script>
+<link href="/assets/css/footer.css?v=20260513d" rel="stylesheet"/>
+<link href="https://tagra.app/fleet/" hreflang="en" rel="alternate"/><link href="https://tagra.app/de/fuhrpark/" hreflang="de" rel="alternate"/><link href="https://tagra.app/pl/dla-przewoznikow/" hreflang="pl" rel="alternate"/><link href="https://tagra.app/el/stolos/" hreflang="el" rel="alternate"/><link href="https://tagra.app/hu/fuvarozoknak/" hreflang="hu" rel="alternate"/><link href="https://tagra.app/fleet/" hreflang="x-default" rel="alternate"/></head>
+<body>
+<div aria-hidden="true" id="scroll-progress"></div>
+<!-- ═══ NAVIGATION ═══════════════════════════════════════════════ -->
+<nav aria-label="Fő navigáció" class="site-nav" role="navigation">
+<div class="nav-inner">
+<a aria-label="TAGRA Company – Kezdőlap" class="nav-logo" href="/hu/"><img alt="TAGRA" height="32" src="/assets/img/logo-light.svg?v=20260513zh" style="display:block;height:32px;width:auto;" width="140"/><span class="nav-logo-variant">Cég</span></a>
+<ul class="nav-links">
+<li><a aria-current="page" href="/hu/fuvarozoknak/">Cégeknek</a></li>
+<li><a href="/hu/soforoknek/">Sofőröknek</a></li>
+<li><a href="/hu/hatosagoknak/">Ellenőrzés</a></li>
+<li><a href="/articles/">Cikkek</a></li><li><a href="/manuals/">Kézikönyvek</a></li>
+<li><a href="/hu/gyakori-kerdesek/">GYIK</a></li>
+<li><a href="/hu/kapcsolat/">Kapcsolat</a></li>
+<li class="nav-cta-li"><a class="nav-cta" href="/hu/ingyenes-probaverzio/?audience=fleet">Próbálja ki 30 napig ingyen</a></li>
+</ul>
+<details class="nav-lang">
+<summary aria-label="Language: HU">HU</summary>
+<div class="nav-lang-menu" role="menu">
+<a href="/" hreflang="en">English</a><a href="/de/" hreflang="de">Deutsch</a><a href="/pl/" hreflang="pl">Polski</a><a href="/el/" hreflang="el">Ελληνικά</a><a aria-current="page" class="active" href="/hu/" hreflang="hu">Magyar</a><a href="https://www.tdt.cz/" hreflang="cs" rel="noopener" target="_blank">Čeština</a><a href="https://www.tdt.sk/" hreflang="sk" rel="noopener" target="_blank">Slovenčina</a></div>
+</details>
+<a class="nav-cta-mobile" href="/hu/ingyenes-probaverzio/?audience=fleet">Próbálja ki ingyen</a>
+<button aria-expanded="false" aria-label="Menü váltása" class="nav-mobile-toggle" id="nav-toggle">
+<span></span><span></span><span></span>
+</button>
+</div>
+</nav>
+<!-- ═══ HERO ══════════════════════════════════════════════════════ -->
+<section aria-label="TAGRA áttekintés" class="band band--hero band--hero--blue">
+<div class="container">
+<div class="eyebrow anim-up">TAGRA · Flottakezelőknek</div>
+<h1 class="anim-up" style="transition-delay:.05s">Tachográfadatok kiértékelése szoftver<br/>amely először találja meg a szabálysértéseket</h1>
+<p class="lead anim-up" style="transition-delay:.1s">
+<strong>Flotta megfelelés. Főfájás nélkül.</strong>A letöltés nem elég — a törvény megköveteli<strong>kiértékelés és archiválás</strong>. A TAGRA teljes körű<strong>tachográfadatok kiértékelése szoftver</strong>flották számára — 1-től korlátlan számú járműig skálázható.</p>
+<div class="anim-up" style="margin-bottom:16px;transition-delay:.15s">
+<a class="btn-cta" href="/hu/ingyenes-probaverzio/?audience=fleet" rel="noopener" target="_blank">Próbálja ki ingyen 30 napig</a>
+</div>
+<p class="anim-up" style="font-size:15px;color:var(--text2);transition-delay:.2s">Windows · Ingyenes 30 napos próbaverzió · Kisteherautókra is kész 2026 júliusától</p>
+<!-- Hero video -->
+<div class="media-frame anim-up" style="margin:44px auto 0;border:1px solid var(--border);box-shadow:0 20px 40px rgba(0,0,0,.08);transition-delay:.25s;border-radius:20px;overflow:hidden">
+<video id="hero-vid" loop="" muted="" playsinline="" poster="https://cdn.truckmall.cz/data/user-content/TAGRA-monitory-2.webp" preload="metadata" style="width:100%;display:block">
+<source src="https://cdn.truckmall.cz/data/user-content/Comp_2.webm" type="video/webm">
+</source></video>
+</div>
+</div>
+</section>
+<!-- ═══ KEY PARAMETERS (BENTO) ════════════════════════════════════ -->
+<section aria-label="Főbb funkciók" class="band">
+<div class="container">
+<div class="eyebrow anim-up">Főbb funkciók</div>
+<h2 class="anim-up">Tachográf szoftver flottáknak —<br/>letöltés, kiértékelés, archiválás</h2>
+<div class="bento">
+<div class="bc s7 fly-left">
+<div class="eyebrow" style="color:var(--blue-mid)">Járművek</div>
+<div class="bc-title">1-től korlátlan számú járműig</div>
+<div class="bc-text">Digitális tachográfok és sofőrkártyák kiértékelése és archiválása. Válassza ki az Ön flottájához illő verziót — az egyéni vállalkozóktól a nagy üzemeltetőkig.</div>
+<div class="bignum">∞</div>
+</div>
+<div class="bc s5 bluefill fly-right" style="transition-delay:.1s">
+<div class="eyebrow" style="color:var(--blue-mid)">Próbaidőszak</div>
+<div class="bc-title">30 nap ingyen</div>
+<div class="bc-text">Töltse le, telepítse, próbálja ki. Nincs hitelkártya, nincs kötelezettség.</div>
+</div>
+<div class="bc s4 greenfill fly-left" style="transition-delay:.15s">
+<div class="eyebrow">2. évtől</div>
+<div class="bc-title" style="color:var(--green-brand)">19 EUR / évtől</div>
+<div class="bc-text">Éves licencdíj ÁFA nélkül — tartalmazza az összes szoftverfrissítést és dedikált technikai támogatást. 19 EUR (TAGRA Trucker), 79 EUR (TAGRA 1–2), 99 EUR (TAGRA 4–6), 139 EUR (TAGRA MAX).</div>
+</div>
+<div class="bc s4 anim-up" style="transition-delay:.25s">
+<div class="eyebrow">Készüljön fel a</div>
+<div class="bc-title">kisteherautókra 2026</div>
+<div class="bc-text">Teljesen kompatibilis a könnyű haszongépjárművekre vonatkozó új tachográf kötelezettséggel 2026 júliusától.</div>
+</div>
+<div class="bc s4 bluefill fly-right" style="transition-delay:.35s">
+<div class="eyebrow" style="color:var(--blue-mid)">Jogszabályok</div>
+<div class="bc-title" style="color:var(--blue-mid)">EU vezetési idők<br/>és munkaidő</div>
+<div class="bc-text">Azon kevés megoldások egyike, amely mindkettőt kiértékeli:<strong>EU vezetési idők</strong>(561/2006 rendelet) és a teljes<strong>HGV munkaidő-irányelv</strong>munkajogi szabályozást.</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ═══ ALSO FOR DRIVERS ═══════════════════════════════════════════ -->
+<section aria-label="TAGRA Trucker egyéni sofőröknek" class="band band--gray">
+<div class="container">
+<div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:24px;padding:16px 0">
+<div>
+<div class="eyebrow">Szintén elérhető</div>
+<p style="font-size:19px;font-weight:700;color:var(--text-strong);margin-top:4px">TAGRA Trucker — professzionális sofőröknek</p>
+<p style="color:var(--text2);margin-top:6px;max-width:480px">Ön alkalmazott, professzionális sofőr, aki saját kártya nyilvántartást szeretne vezetni? A TAGRA Trucker az egyéni sofőrkártya letöltés és archiválás céljára készült — szabványos USB kártyaolvasóval.</p>
+<p style="color:var(--text2);margin-top:6px;max-width:480px;font-size:14.5px"><strong>Egyéni vállalkozó vagy cégtulajdonos?</strong>Ön a fuvarozó is — olyan csomagra van szüksége, amely letölti<strong>mind a(z)</strong>sofőrkártya, mind a járműegység adatait.<a href="#tagra-pricing" style="color:var(--blue-mid);font-weight:600">TAGRA 1</a>ez a minimum.</p>
+</div>
+<a class="btn-cta btn-cta--sm" href="/hu/soforoknek/" style="flex-shrink:0">Ismerje meg a TAGRA TRUCKER →</a>
+</div>
+</div>
+</section>
+<!-- ═══ REVIEWS ═══════════════════════════════════════════════════ -->
+<section aria-label="Vásárlói vélemények" class="band band--gray">
+<div class="container">
+<div class="eyebrow anim-up">Amit az ügyfelek mondanak</div>
+<h2 class="anim-up">Több ezer üzemeltető használja az EU-ban</h2>
+</div>
+<div class="rev-rail-wrap anim-up" style="transition-delay:.05s">
+<div class="rev-rail" id="rev-rail">
+<div class="rev-card"><div aria-label="5-ből 5" class="rev-stars">★★★★★</div><p class="rev-txt">"A TAGRA hatalmas mennyiségű adatot kezel, és jelentősen egyszerűsítette a szabálysértések ellenőrzését és archiválását."</p><p class="rev-meta">David C. · Ellenőrzött ügyfél</p></div>
+<div class="rev-card"><div aria-label="5-ből 5" class="rev-stars">★★★★★</div><p class="rev-txt">"Már néhány hónapja használjuk a TAGRA-t – egyszerű letöltés és kiértékelés, világos kimutatások. Végre nyugalom."</p><p class="rev-meta">Patrik S. · Ellenőrzött ügyfél</p></div>
+<div class="rev-card"><div aria-label="5-ből 5" class="rev-stars">★★★★★</div><p class="rev-txt">"A szoftver intuitív és könnyen használható. Amikor segítségre volt szükségem, ott voltak."</p><p class="rev-meta">Milan K. · Ellenőrzött ügyfél</p></div>
+<div class="rev-card"><div aria-label="5-ből 5" class="rev-stars">★★★★★</div><p class="rev-txt">"Egyszerű és világos. Az adatok letöltése, kiértékelése és archiválása csak néhány percet vesz igénybe."</p><p class="rev-meta">Josef Z. · Ellenőrzött ügyfél</p></div>
+<div class="rev-card"><div aria-label="5-ből 5" class="rev-stars">★★★★★</div><p class="rev-txt">"A TAGRA segít naprakészen tartani minket a szabálysértések és az archiválás terén. Nagyon könnyű vele dolgozni."</p><p class="rev-meta">Ellenőrzött TRUCKMALL ügyfél</p></div>
+</div>
+</div>
+</section>
+<!-- ═══ WHAT TAGRA DOES ════════════════════════════════════════════ -->
+<section aria-label="Szoftver funkciók" class="band">
+<div class="container">
+<div class="g2 top">
+<div class="anim-up">
+<div class="eyebrow">Mit tud a TAGRA</div>
+<h2>Több, mint csupán<br/>adatok letöltése</h2>
+<p style="margin-bottom:24px">Egyszerűen<strong>sofőrkártya-letöltést</strong>nem elég — a törvény előírja a rendszeres<strong>digitális tachográfadatok kiértékelését</strong>és archiválását. A TAGRA egy végpontok közötti tachográfadatok kiértékelése szoftver minimális adminisztratív terheléssel, 1-től korlátlan számú járműhöz.</p>
+<div class="feats">
+<div class="fi"><div class="fck"><svg fill="none" height="8" viewbox="0 0 10 8" width="10"><path d="M1 4l2.5 2.5L9 1" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></div><span>vezetési és pihenőidő<strong>EU vezetési idők</strong>, szünetek és pihenőidők kiértékelése (561/2006/EK rendelet és AETR)</span></div>
+<div class="fi"><div class="fck"><svg fill="none" height="8" viewbox="0 0 10 8" width="10"><path d="M1 4l2.5 2.5L9 1" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></div><span>Munkaidő kiértékelése a(z)<strong>HGV munkaidő-irányelv</strong></span></div>
+<div class="fi"><div class="fck"><svg fill="none" height="8" viewbox="0 0 10 8" width="10"><path d="M1 4l2.5 2.5L9 1" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></div><span>sofőrkártya letöltés és tachográf távoli letöltés a DKV LIVE® vagy a Download Box segítségével</span></div>
+<div class="fi"><div class="fck"><svg fill="none" height="8" viewbox="0 0 10 8" width="10"><path d="M1 4l2.5 2.5L9 1" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></div><span>sofőrkártya és digitális tachográfadatok archiválása</span></div>
+<div class="fi"><div class="fck"><svg fill="none" height="8" viewbox="0 0 10 8" width="10"><path d="M1 4l2.5 2.5L9 1" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></div><span><strong>Teljesen készen áll a kisteherautókra 2026 júliusától</strong></span></div>
+<div class="fi"><div class="fck"><svg fill="none" height="8" viewbox="0 0 10 8" width="10"><path d="M1 4l2.5 2.5L9 1" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></div><span>Világos kimutatások hatóságok és belső használatra</span></div>
+</div>
+</div>
+<div class="anim-up" style="transition-delay:.1s">
+<div class="media-frame" style="background:var(--bg-gray);border-radius:var(--radius);overflow:hidden">
+<img alt="TAGRA MAX – tachográfadatok kiértékelő szoftver flottakezelőknek" height="800" loading="lazy" src="https://cdn.truckmall.cz/data/user-content/TDT_TAGRA_MAX_wh.jpg" style="object-fit:contain;width:100%;height:auto;" width="800"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ═══ WHY (OBLIGATION) ══════════════════════════════════════════ -->
+<section aria-label="Jogi kötelezettségek" class="band band--blue">
+<div class="container">
+<div class="eyebrow">Miért fontos</div>
+<h2 class="anim-up">Önmagában a letöltés<br/>nem elég</h2>
+<p class="anim-up" style="max-width:580px;margin-bottom:32px;transition-delay:.05s">A törvény előírja az üzemeltetők számára a tachográfadatok rendszeres kiértékelését és archiválását. Megfelelő archiválás<strong>digitális tachográfadatok kiértékelését</strong>nélkül bírságokat kockáztat — még akkor is, ha az adatok már le vannak töltve.</p>
+<div class="bento anim-up" style="margin-top:0;transition-delay:.1s">
+<div class="bc s6">
+<div class="eyebrow">Sofőrkártyák</div>
+<p>A kártyákat legalább minden<strong>28 naponta le kell tölteni.</strong>A TAGRA figyelmezteti Önt a határidők előtt.</p>
+</div>
+<div class="bc s6">
+<div class="eyebrow">Tachográf egység</div>
+<p>Az egységeket legalább minden<strong>90 nap.</strong>Archiválás minimum 1 évig kötelező.</p>
+</div>
+<div class="bc s6">
+<div class="eyebrow">Mit ellenőriznek az ellenőrök?</div>
+<p>Nem csak az adatokat magukat, hanem az<strong>egész kiértékelési folyamatot.</strong>A TAGRA olyan kimutatásokat generál, amelyeket az ellenőrző hatóságok teljes mértékben elfogadnak.</p>
+</div>
+<div class="bc s6">
+<div class="eyebrow">Kisteherautók</div>
+<p>Már<strong>2026 júliusától</strong>Ez a 2,5–3,5 t járművekre érvényes a nemzetközi fuvarozásban. Készen állunk.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- ═══ TRUSTED BY AUTHORITIES ════════════════════════════════════ -->
+<section class="band">
+<div class="container">
+<div class="anim-up" style="text-align:center;max-width:780px;margin:0 auto">
+<h2>Megbízható az Önt ellenőrző hatóságok számára</h2>
+<p>A TAGRA-t aktívan használják az adatkiértékelésre<strong>országos rendőrségek, vámhatóságok, munkaügyi felügyelőségek, közlekedési minisztériumok és regionális hatóságok</strong>Európa-szerte. Ön pontosan ugyanazt a kiértékelési logikát és kimutatás formátumot kapja, mint az ellenőrök.</p>
+</div>
+</div>
+</section>
+<!-- ═══ MAC STAGE ══════════════════════════════════════════════════ -->
+<section aria-label="Szoftver előnézet" class="band band--machero">
+<div class="container">
+<div class="mac-stage">
+<img alt="TAGRA tachográfadatok kiértékelő szoftver felület – (EU) vezetési és pihenőidő áttekintés" height="2076" id="mac-img" loading="lazy" src="https://cdn.truckmall.cz/data/user-content/tagra/Tagra_screen_2xb.webp" width="3116"/>
+</div>
+</div>
+</section>
+<!-- ═══ COMPARISON TABLE ══════════════════════════════════════════ -->
+<section aria-label="Megoldások összehasonlítása" class="band">
+<div class="container anim-up">
+<div class="eyebrow">Összehasonlítás</div>
+<h2>Hogyan viszonyul a TAGRA?</h2>
+<div class="compare-wrap">
+<table class="compare-table">
+<thead>
+<tr>
+<th style="width:34%"></th>
+<th style="width:33%">Standard tachográf szoftver</th>
+<th class="col-blue" style="width:33%">
+<span class="winner-badge">Legjobb ár-érték arány</span>
+<span style="font-size:20px;font-weight:900;display:block;margin-top:4px">TAGRA</span>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="font-weight:700;color:var(--text-strong)">Éves költség</td>
+<td><div class="tc-val no-icon">Változó (gyakran modulok vagy extra díjak)</div></td>
+<td class="col-blue"><div class="tc-val no-icon">79 €/év-től (2. évtől) · TAGRA MAX: 139 €/év</div></td>
+</tr>
+<tr>
+<td style="font-weight:700;color:var(--text-strong)">EU vezetési és pihenőidők ((EU) rendelet 561/2006)</td>
+<td><div class="tc-val"><span class="tb-icon tb-icon--gray"><svg fill="none" stroke="#8e8e93" stroke-width="3" viewbox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></span>Igen</div></td>
+<td class="col-blue"><div class="tc-val"><span class="tb-icon tb-icon--blue"><svg fill="none" stroke="white" stroke-width="3" viewbox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></span>Igen</div></td>
+</tr>
+<tr>
+<td style="font-weight:700;color:var(--text-strong)">HGV munkaidő-irányelv</td>
+<td><div class="tc-val no-icon">Megoldásfüggő</div></td>
+<td class="col-blue"><div class="tc-val"><span class="tb-icon tb-icon--blue"><svg fill="none" stroke="white" stroke-width="3" viewbox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></span>Igen – beleértve a műszakokat, túlórákat, éjszakai munkát</div></td>
+</tr>
+<tr>
+<td style="font-weight:700;color:var(--text-strong)">Szabálysértés észlelése</td>
+<td><div class="tc-val"><span class="tb-icon tb-icon--gray"><svg fill="none" stroke="#8e8e93" stroke-width="3" viewbox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></span>Igen</div></td>
+<td class="col-blue"><div class="tc-val"><span class="tb-icon tb-icon--blue"><svg fill="none" stroke="white" stroke-width="3" viewbox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></span>Igen, áttekinthető kimutatásokkal</div></td>
+</tr>
+<tr>
+<td style="font-weight:700;color:var(--text-strong)">Kézi erőfeszítés szükséges</td>
+<td><div class="tc-val no-icon">Gyakran sok kézi lépés</div></td>
+<td class="col-blue"><div class="tc-val"><span class="tb-icon tb-icon--blue"><svg fill="none" stroke="white" stroke-width="3" viewbox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></span>Jelentősen csökkentett</div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p style="font-size:13px;color:var(--text2);margin-top:12px;line-height:1.5">* Az összehasonlítás a tipikus piaci megoldások hatókörén alapul. Az egyes funkciók verziónként és konfigurációnként eltérőek lehetnek.</p>
+<div aria-label="Jogi kötelezettség értesítés" class="note-box anim-up" role="note">
+<span class="note-badge">Jogi kötelezettség</span>
+<div class="note-title">A tachográfadatok kiértékelése és archiválása kötelező</div>
+<p>Az 561/2006/EK (EU) rendelet III. fejezetének 10b. cikk (2) bekezdése értelmében a tachográfadatok kiértékelése és archiválása szigorú jogi kötelezettség a fuvarozók számára.</p>
+<p style="margin-bottom:0"><strong>Speciális megoldás nélkül akár 14 000 eurós bírságot is kockáztat</strong>a közlekedési hatóságtól – és akár<strong>€80,000</strong>a sofőrök vezetési és pihenőidőre vonatkozó szabálysértéseiért.</p>
+</div>
+</div>
+</section>
+<!-- ═══ TRY IT ════════════════════════════════════════════════════ -->
+<section class="band band--gray">
+<div class="container">
+<div class="anim-up" style="text-align:center;max-width:680px;margin:0 auto 48px">
+<h2>PRÓBÁLJA KI A TAGRA-T INGYEN 30 NAPIG</h2>
+<p style="font-size:19px;color:var(--text2);margin-top:8px">Töltse le, telepítse és használja a teljes szoftvert – hitelkártya és kötelezettségvállalás nélkül.</p>
+</div>
+<!-- How it works: 3-step flow -->
+<div class="three-col anim-up" style="transition-delay:.05s;max-width:900px;margin:0 auto 40px">
+<div style="text-align:center;padding:28px 20px">
+<div style="font-size:52px;font-weight:900;line-height:1;color:rgba(19,74,142,.12);margin-bottom:8px">1</div>
+<div style="font-size:18px;font-weight:800;color:var(--text-strong);margin-bottom:8px">Letöltés és telepítés</div>
+<p style="font-size:16px;color:var(--text2)">Töltse le a telepítőt, és futtassa a TAGRA-t Windows alatt. A próbaverzió teljes szoftvert biztosít Önnek – korlátozások nélkül.</p>
+</div>
+<div style="text-align:center;padding:28px 20px;border-left:1px solid var(--border);border-right:1px solid var(--border)">
+<div style="font-size:52px;font-weight:900;line-height:1;color:rgba(19,74,142,.12);margin-bottom:8px">2</div>
+<div style="font-size:18px;font-weight:800;color:var(--text-strong);margin-bottom:8px">Próbálja ki akár 30 napig</div>
+<p style="font-size:16px;color:var(--text2)">Használja a TAGRA-t valós adataival. Válassza ki, hány járműre van szüksége – 1, 2, 4, 6 vagy korlátlan. A szoftver végigvezeti Önt.</p>
+</div>
+<div style="text-align:center;padding:28px 20px">
+<div style="font-size:52px;font-weight:900;line-height:1;color:rgba(19,74,142,.12);margin-bottom:8px">3</div>
+<div style="font-size:18px;font-weight:800;color:var(--text-strong);margin-bottom:8px">A licenc aktiválása</div>
+<p style="font-size:16px;color:var(--text2)">Ha készen áll, válassza ki verzióját a szoftverben, és fizessen online. Licencét azonnal kiállítjuk – Ön ugyanabban a környezetben folytathatja.</p>
+</div>
+</div>
+<div class="anim-up" style="text-align:center;transition-delay:.1s">
+<a class="btn-cta" href="/hu/ingyenes-probaverzio/?audience=fleet" rel="noopener" target="_blank">Próbaverzió letöltése</a>
+<p style="margin-top:14px;font-size:15px;color:var(--text2)">Windows · Ingyenes · Regisztráció nélkül</p>
+</div>
+</div>
+</section>
+<!-- ═══ HOW TO GET DATA ═══════════════════════════════════════════ -->
+<!--  DKV LIVE INTEGRATION CALLOUT (added 2026-05-11)  -->
+<section aria-label="DKV LIVE telematikai integráció" class="band band--gray" style="padding-bottom:80px">
+<div class="container">
+<div class="g2 top">
+<div class="anim-up">
+<div class="eyebrow">Már használ telematikát?</div>
+<h2>DKV LIVE®<br/>automatikusan importál</h2>
+<p style="margin-bottom:16px">Ha már használja a<strong>DKV LIVE®</strong>a<strong>tachográf távoli letöltéshez</strong>akkor a TAGRA közvetlenül a DKV biztonságos SFTP szerveréről húzza be az adatokat – kézi fájlátvitel és járművek körüli járkálás nélkül.</p>
+<p style="margin-bottom:24px">Egyszer állítsa be az ütemezést (naponta, óránként, ahogy Önnek megfelelő), és minden sofőrkártya- és járműadatfájl a TAGRA-ba kerül, készen a kiértékelésre és archiválásra.</p>
+<a class="btn-cta btn-cta--sm" href="/integrations/dkv-live/">Lásd a DKV LIVE beállítási útmutatót</a>
+</div>
+<div class="anim-up" style="transition-delay:.1s">
+<div class="note-box">
+<span class="note-badge">Hogyan működik</span>
+<span class="note-title">SFTP-alapú, a háttérben fut</span>
+<p>A TAGRA<strong>Adatimport</strong>funkció csatlakozik az<code>sftp.styletronic.eu</code>címhez a DKV LIVE® hitelesítő adataival, és letölti a legújabb<code>.DDD</code> / <code>.C1B</code> / <code>.V1B</code>fájlok az Ön által beállított ütemezés szerint. A 345-ös verziótól kezdődően minden TAGRA licenc tartalmazza.</p>
+<p style="font-size:14px;color:var(--text-muted);margin-top:12px;font-style:italic">A DKV LIVE® a DKV Mobility védjegye. A TAGRA integrációja egy technikai interoperabilitási funkció.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section aria-label="Adatletöltési módszerek" class="band band--gray" style="padding-top:0">
+<div class="container">
+<div class="anim-up" style="text-align:center;margin-bottom:48px">
+<div class="eyebrow" style="color:var(--blue-mid);letter-spacing:.12em">Vagy töltse le kézzel</div>
+</div>
+<div class="g2 top anim-up" style="gap:60px;align-items:center">
+<!-- Left: image -->
+<div>
+<div style="border-radius:var(--radius);overflow:hidden">
+<img alt="Download Box II S – kézi eszköz sofőrkártya letöltéshez és tachográf olvasáshoz" loading="lazy" src="https://cdn.truckmall.cz/data/user-content/Download%20Box%20IIS_produkt2.webp" style="object-fit:contain;width:100%;height:auto;display:block"/>
+</div>
+</div>
+<!-- Right: text -->
+<div>
+<div class="eyebrow">Kézi olvasó</div>
+<h2>DOWNLOAD BOX II S</h2>
+<p style="margin:12px 0 24px">Egyszerű és megbízható kézi eszköz a tachográf egységből és a sofőrkártyákról történő manuális adatletöltéshez.</p>
+<div class="feats">
+<div class="fi"><div class="fck"><svg fill="none" height="8" viewbox="0 0 10 8" width="10"><path d="M1 4l2.5 2.5L9 1" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></div><span>Mind a tachográf egységet, mind a sofőrkártyákat olvassa</span></div>
+<div class="fi"><div class="fck"><svg fill="none" height="8" viewbox="0 0 10 8" width="10"><path d="M1 4l2.5 2.5L9 1" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></div><span>USB-n keresztül továbbítja az adatokat a TAGRA-ba</span></div>
+<div class="fi"><div class="fck"><svg fill="none" height="8" viewbox="0 0 10 8" width="10"><path d="M1 4l2.5 2.5L9 1" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></div><span>Kompakt, hordozható — működik a járműben vagy az irodában</span></div>
+<div class="fi"><div class="fck"><svg fill="none" height="8" viewbox="0 0 10 8" width="10"><path d="M1 4l2.5 2.5L9 1" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></div><span>Kompatibilis minden digitális tachográffal, beleértve a G2V2-t is</span></div>
+</div>
+<a href="https://www.truckmall.sk/download-box-ii-s-p230206/" rel="noopener" style="display:inline-block;margin-top:24px" target="_blank">DOWNLOAD BOX II S megtekintése →</a>
+</div>
+</div>
+<div aria-label="Üzembentartói kártya értesítés" class="note-box anim-up" role="note" style="margin-top:72px">
+<span class="note-badge">Fontos figyelmeztetés</span>
+<div class="note-title">A járműadatok letöltéséhez üzembentartói kártya szükséges</div>
+<p>Behelyezett<strong>üzembentartói kártya</strong>nélkül a tachográf nem teszi lehetővé az adatok letöltését a járműből. Ez az Ön elektronikus kulcsaként működik, amely engedélyezi a cége adataihoz való hozzáférést.</p>
+<p>A kártyát az illetékes nemzeti közlekedési hatóság állítja ki, és 5 évig érvényes. Gondoskodjon róla, hogy időben beszerezze.</p>
+</div>
+</div>
+</section>
+<!-- ═══ PRICING ════════════════════════════════════════════════════ -->
+<section aria-label="Árak és szolgáltatások" class="band" id="tagra-pricing">
+<div class="container">
+<div class="anim-up">
+<!-- Pricing -->
+<div class="callout callout--plain">
+<div class="eyebrow">Ár és feltételek</div>
+<h2 style="text-transform:none">Átlátható árazás.<br/>Nincs rejtett díj.</h2>
+<p style="margin:16px 0 24px">Kezdje az ingyenes próbaverzióval. Ha készen áll, válassza ki a verzióját közvetlenül a szoftveren belül, és fizessen online — a licencét azonnal kiállítjuk.</p>
+<!-- Version price table -->
+<div style="width:100%;overflow-x:auto;margin-bottom:24px">
+<table style="width:100%;border-collapse:collapse;min-width:420px;font-size:16px">
+<thead>
+<tr style="border-bottom:2px solid var(--border)">
+<th style="text-align:left;padding:10px 12px;color:var(--text2);font-weight:600;font-size:14px">Verzió</th>
+<th style="text-align:left;padding:10px 12px;color:var(--text2);font-weight:600;font-size:14px">Járművek</th>
+<th style="text-align:right;padding:10px 12px;color:var(--text2);font-weight:600;font-size:14px">Vételár</th>
+<th style="text-align:right;padding:10px 12px;color:var(--text2);font-weight:600;font-size:14px">2. évtől</th>
+</tr>
+</thead>
+<tbody>
+<tr style="border-bottom:1px solid var(--border)">
+<td style="padding:12px;font-weight:700;color:var(--text-strong)">A TAGRA Trucker</td>
+<td style="padding:12px;color:var(--text2)">1 sofőr</td>
+<td style="padding:12px;text-align:right;font-weight:600">€49 <span style="font-size:13px;color:var(--text2)">ÁFA nélkül</span></td>
+<td style="padding:12px;text-align:right;color:var(--green-brand);font-weight:700">19 € / év</td>
+</tr>
+<tr style="border-bottom:1px solid var(--border)">
+<td style="padding:12px;font-weight:700;color:var(--text-strong)">TAGRA 1</td>
+<td style="padding:12px;color:var(--text2)">1</td>
+<td style="padding:12px;text-align:right;font-weight:600">€149 <span style="font-size:13px;color:var(--text2)">ÁFA nélkül</span></td>
+<td style="padding:12px;text-align:right;color:var(--green-brand);font-weight:700">79 € / év</td>
+</tr>
+<tr style="border-bottom:1px solid var(--border)">
+<td style="padding:12px;font-weight:700;color:var(--text-strong)">TAGRA 2</td>
+<td style="padding:12px;color:var(--text2)">2</td>
+<td style="padding:12px;text-align:right;font-weight:600">€279 <span style="font-size:13px;color:var(--text2)">ÁFA nélkül</span></td>
+<td style="padding:12px;text-align:right;color:var(--green-brand);font-weight:700">79 € / év</td>
+</tr>
+<tr style="border-bottom:1px solid var(--border)">
+<td style="padding:12px;font-weight:700;color:var(--text-strong)">TAGRA 4</td>
+<td style="padding:12px;color:var(--text2)">4</td>
+<td style="padding:12px;text-align:right;font-weight:600">€399 <span style="font-size:13px;color:var(--text2)">ÁFA nélkül</span></td>
+<td style="padding:12px;text-align:right;color:var(--green-brand);font-weight:700">99 € / év</td>
+</tr>
+<tr style="border-bottom:1px solid var(--border)">
+<td style="padding:12px;font-weight:700;color:var(--text-strong)">TAGRA 6</td>
+<td style="padding:12px;color:var(--text2)">6</td>
+<td style="padding:12px;text-align:right;font-weight:600">€549 <span style="font-size:13px;color:var(--text2)">ÁFA nélkül</span></td>
+<td style="padding:12px;text-align:right;color:var(--green-brand);font-weight:700">99 € / év</td>
+</tr>
+<tr>
+<td style="padding:12px;font-weight:700;color:var(--text-strong)">TAGRA MAX</td>
+<td style="padding:12px;color:var(--text2)">Korlátlan</td>
+<td style="padding:12px;text-align:right;font-weight:600">€699 <span style="font-size:13px;color:var(--text2)">ÁFA nélkül</span></td>
+<td style="padding:12px;text-align:right;color:var(--green-brand);font-weight:700">139 € / év</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="specs" style="margin:0 0 24px">
+<div class="spec"><span class="sk">Próbaidőszak</span><span class="sv" style="color:var(--green-brand)">30 nap ingyen</span></div>
+<div class="spec"><span class="sk">1. évi licencdíj</span><span class="sv" style="color:var(--green-brand)">Benne van a vételárban</span></div>
+<div class="spec"><span class="sk">Tartalmazza</span><span class="sv">Frissítések + támogatás</span></div>
+<div class="spec"><span class="sk">Fizetés</span><span class="sv">Online · QR kód</span></div>
+</div>
+<p style="margin-top:12px">Kérdése van?<a href="tel:+420739005345">+420 739 005 345</a> · <a href="mailto:sales@tagra.app">sales@tagra.app</a></p>
+<div style="margin-top:24px">
+<a class="btn-cta btn-cta--sm" href="/hu/ingyenes-probaverzio/?audience=fleet" rel="noopener" target="_blank">Próbaverzió letöltése</a>
+</div>
+</div>
+</div>
+<!-- Wide image: TAGRA on monitors at dispatch -->
+<div class="anim-up" style="margin-top:60px">
+<div class="media-frame" style="border-radius:var(--radius);overflow:hidden">
+<img alt="TAGRA tachográfadatok kiértékelő szoftver egy fuvarozási diszpécser irodában" height="840" loading="lazy" src="https://cdn.truckmall.cz/data/user-content/TAGRA-monitory-2.webp" style="width:100%;height:auto;display:block;object-fit:cover;max-height:480px" width="1920"/>
+</div>
+</div>
+</div>
+</section>
+<!-- ═══ FAQ ════════════════════════════════════════════════════════ -->
+<section aria-label="Gyakran ismételt kérdések" class="band band--blue">
+<div class="container">
+<div class="eyebrow anim-up">Gyakran ismételt kérdések</div>
+<h2 class="anim-up">GYIK</h2>
+<div class="faq anim-up" style="transition-delay:.05s">
+<details>
+<summary>Hogyan vásárolhatom meg a TAGRA-t a próba után?</summary>
+<div class="faq-a">Minden közvetlenül a szoftveren belül történik. A próba végén — vagy amikor készen áll — nyissa meg a licenc menüt, válassza ki a járművei számának megfelelő verziót (TAGRA 1, 2, 4, 6 vagy MAX), és fizessen online. A fizetés QR-kóddal vagy online átutalással történik. A licencét azonnal kiállítjuk és aktiváljuk — továbbra is ugyanabban a környezetben dolgozhat, minden adata sértetlen marad.</div>
+</details>
+<details>
+<summary>Kinek készült a TAGRA?</summary>
+<div class="faq-a">A TAGRA egy<strong>tachográfadatok kiértékelése szoftver</strong>olyan fuvarozók számára készült, akiknek el kell végezniük a<strong>sofőrkártya-letöltést</strong>, kiértékelést és archiválást — az egyjárműves egyéni vállalkozóktól a több száz járművel rendelkező nagy flottákig. Válassza ki a járművei számának megfelelő verziót: TAGRA 1, 2, 4, 6 vagy MAX (korlátlan).</div>
+</details>
+<details>
+<summary>Hogyan juttathatom be az adatokat a szoftverbe?</summary>
+<div class="faq-a">Az adatok betöltése a<strong>sofőrkártyáján</strong>(kártyaolvasón vagy letöltőkulcson keresztül) és a<strong>tachográf egységből</strong>történik. A TAGRA támogatja a manuális betöltést a DOWNLOAD BOX II S-en keresztül és a<strong>tachográf távoli letöltéshez</strong>távoli letöltést a DOWNLOAD BOX REMOTE vagy a DKV LIVE® integráció segítségével.</div>
+</details>
+<details>
+<summary>Milyen gyakran kell letölteni az adatokat?</summary>
+<div class="faq-a">Sofőrkártyák legalább minden<strong>28 nap</strong>és a tachográf egység legalább minden<strong>90 nap.</strong>A letöltött adatokat legalább 1 évig meg kell őrizni.</div>
+</details>
+<details>
+<summary>Milyen fájlformátumokat támogat a TAGRA?</summary>
+<div class="faq-a">A tachográfadatok leggyakrabban<strong>.DDD</strong>DDD fájlokként vannak tárolva. Néhány országban a<strong>.C1B</strong>TGD (sofőrkártya) és<strong>.V1B</strong>vagy<strong>ESM</strong>(jármű) fájlokat is használják. Ezeket a fájlokat<strong>nem lehet szabványos megjelenítővel megnyitni</strong>— speciális<strong>tachográfadatok kiértékelése szoftver</strong>szoftverre van szüksége, mint például a TAGRA, a digitális tachográfadatok megfelelő kiértékeléséhez.</div>
+</details>
+<details>
+<summary>Mit tartalmaz az éves licencdíj?</summary>
+<div class="faq-a">Az éves díj magában foglalja a folyamatos licencelést, a szoftverfrissítéseket és a technikai támogatást. Az első év benne van a vételárban; a 2. évtől a díj<strong>19 €/év</strong>(TAGRA Trucker),<strong>€79/év</strong>(TAGRA 1–2),<strong>€99/év</strong>(TAGRA 4–6), vagy<strong>€139/év</strong>(TAGRA MAX), mind ÁFA nélkül.</div>
+</details>
+<details>
+<summary>Felkészült a TAGRA a 2026. júliusi kisteherautó-kötelezettségre?</summary>
+<div class="faq-a">Igen. A TAGRA minden verziója teljes mértékben felkészült a kisteherautókra (2,5–3,5 t járművek a nemzetközi fuvarozásban), amelyekre 2026 júliusától az új digitális tachográf beszerelési és rendszeres adatletöltési kötelezettség vonatkozik az (EU) rendeletek értelmében.</div>
+</details>
+<details>
+<summary>Támogatja a TAGRA a második generációs okostachográfot (G2V2)?</summary>
+<div class="faq-a">Igen. A TAGRA teljes mértékben támogatja a második generációs okostachográfokat (G2V2), amelyek 2023 óta kötelezőek az új járműveknél. A szoftver helyesen dolgozza fel az adatokat ezekből az eszközökből, beleértve a kiterjesztett pozíciórekordokat is.</div>
+</details>
+<details>
+<summary>Telepíthető a TAGRA több számítógépre?</summary>
+<div class="faq-a">Minden licenc egy adott számítógéphez kötött. Ha a szoftvert másik gépre szeretné áthelyezni, vegye fel a kapcsolatot a Truck Data Technology gyártóval a licenc átruházásának megszervezéséhez. A hálózati verziók (TAGRA 4, 6, MAX) több munkaállomást is támogatnak, amelyek egy központi adatbázist osztanak meg – vegye fel velünk a kapcsolatot a részletekért.</div>
+</details>
+</div>
+</div>
+</section>
+<!-- ═══ FURTHER READING ═══════════════════════════════════════════ -->
+<section aria-label="Kapcsolódó útmutatók és cikkek" class="band band--gray">
+<div class="container anim-up">
+<div class="eyebrow">Tudjon meg többet</div>
+<h2>További olvasnivalók</h2>
+<a class="related-featured" href="/articles/how-to-download-evaluate-archive-tachograph-data/" rel="noopener" target="_blank">
+<span class="related-badge">Teljes útmutató</span>
+<span class="related-title">Digitális tachográf: hogyan kell helyesen letölteni, kiértékelni és archiválni az adatokat</span>
+<span class="related-text">Olvassa el a teljes üzembentartói megfelelési útmutatót. Tudja meg pontosan, mit kell tennie ahhoz, hogy bármilyen hatósági ellenőrzés bírság vagy stressz nélkül teljen.</span>
+<span class="article-chip">Olvassa el az útmutatót →</span>
+</a>
+<div class="article-grid">
+<a class="article-card" href="/articles/tachographs-for-vans-new-obligation-july-2026/" rel="noopener" target="_blank">
+<span class="article-eyebrow">Új jogszabályok</span>
+<span class="article-title">Tachográfok kisteherautókhoz: új kötelezettség 2026 júliusától</span>
+<span class="article-meta">Pontosan kire vonatkozik, és Önnek, mint üzembentartónak mit kell időben előkészítenie.</span>
+<span class="article-chip">Olvasson a kisteherautó-tachográfokról 2026 →</span>
+</a>
+<a class="article-card" href="/articles/who-must-evaluate-tachograph-data-2026/" rel="noopener" target="_blank">
+<span class="article-eyebrow">Áttekintés</span>
+<span class="article-title">Kinek kell tachográfadatokat kiértékelnie 2026-tól</span>
+<span class="article-meta">Világos áttekintés a letöltési és kiértékelési kötelezettség alá eső összes szállítási típusról.</span>
+<span class="article-chip">Olvassa el, kinek kell adatokat kiértékelnie →</span>
+</a>
+<a class="article-card" href="https://www.truckmall.cz/dalkove-stahovani-dat-tagra-download-box-remote-a143/" rel="noopener" target="_blank">
+<span class="article-eyebrow">Megoldás áttekintése</span>
+<span class="article-title">Távoli adatletöltés: TAGRA + Download Box Remote</span>
+<span class="article-meta">Tudja meg, hogyan működik a gyakorlatban a teljesen automatikus adatletöltés a járművek felkeresése nélkül.</span>
+<span class="article-chip">Olvasson a távoli tachográf letöltésről →</span>
+</a>
+<a class="article-card" href="/articles/digital-tachograph-symbols/">
+<span class="article-eyebrow">Sofőr tudásbázis</span>
+<span class="article-title">Tachográf szimbólumok: digitális ikonok jelentése magyarázattal</span>
+<span class="article-meta">Egy referencia útmutató, amelyet sofőrjei használhatnak – a négy tevékenység szimbólum, kártya ikonok, figyelmeztető szimbólumok és gyakori hibák.</span>
+<span class="article-chip">Olvassa el a szimbólumok útmutatóját →</span>
+</a>
+</div>
+</div>
+</section>
+<!-- ═══ MANUFACTURER ══════════════════════════════════════════════ -->
+<section aria-label="Gyártói információk" class="band">
+<div class="container">
+<div class="eyebrow anim-up">Fejlesztő és gyártó</div>
+<h2 class="anim-up">Truck Data Technology, s.r.o.</h2>
+<address class="anim-up" style="font-style:normal;margin-top:10px;line-height:1.8;transition-delay:.05s">
+<strong>Székhely és támogatás:</strong>Csehország<br/>
+<strong>Telefon:</strong> <a href="tel:+420739005345">+420 739 005 345</a><br/>
+<strong>E-mail:</strong> <a href="mailto:sales@tagra.app">sales@tagra.app</a><br/>
+<strong>Web:</strong> <a href="https://www.tdt.cz" rel="noopener" target="_blank">www.tdt.cz</a>
+</address>
+</div>
+</section>
+<!-- ═══ FOOTER ════════════════════════════════════════════════════ -->
+<footer class="site-footer" role="contentinfo">
+<div class="footer-inner">
+<div>
+<div class="footer-logo"><img alt="TAGRA" height="32" src="/assets/img/logo-dark.svg?v=20260513zh" width="140"/></div>
+<p class="footer-desc">Professzionális tachográfadatok kiértékelésére szolgáló szoftver. Sofőrkártya letöltés, digitális tachográfadatok kiértékelése, (EU) vezetési és pihenőidő és nehézgépjármű munkaidő-irányelv. Fejlesztette a Truck Data Technology, s.r.o.</p>
+</div>
+<div class="footer-col">
+<h4>Termék</h4>
+<ul>
+<li><a href="/hu/fuvarozoknak/">Fuvarozók részére</a></li>
+<li><a href="/hu/soforoknek/">Professzionális sofőrök részére</a></li>
+<li><a href="/hu/hatosagoknak/">Ellenőrző hatóságok részére</a></li>
+<li><a href="/hu/hogyan-mukodik/">Hogyan működik</a></li>
+<li><a href="/hu/kinek-szol/">Kinek szól</a></li>
+<li><a href="/hu/gyakori-kerdesek/">GYIK</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h4>Források</h4>
+<ul>
+<li><a href="/articles/">Cikkek</a></li><li><a href="/manuals/">Kézikönyvek</a></li>
+<li><a href="/articles/digital-tachograph-symbols/">Tachográf szimbólumok</a></li>
+<li><a href="/integrations/dkv-live/">DKV LIVE®</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h4>Cég</h4>
+<ul>
+<li><a href="/hu/kapcsolat/">Kapcsolat</a></li>
+<li><a href="https://www.tdt.cz" rel="noopener" target="_blank">Truck Data Technology</a></li>
+<li><a href="/de/">Német</a></li>
+<li><a href="/pl/">Lengyel</a></li>
+</ul>
+</div>
+</div>
+<div class="footer-bottom">
+<span>© 2026 Truck Data Technology, s.r.o. Minden jog fenntartva.</span>
+<span><a href="/hu/kapcsolat/">Kapcsolat</a> · <a href="https://www.tdt.cz" rel="noopener" target="_blank">tdt.cz</a></span>
+</div>
+</footer>
+<div aria-label="Gyors próbaverzió regisztráció" class="sticky-cta" id="stickyCta" role="complementary">
+<div class="sticky-cta-inner">
+<span class="sticky-cta-text">Készen áll a kezdésre? Próbálja ki a TAGRA-t ingyen 30 napig.</span>
+<a class="sticky-cta-btn" href="/hu/ingyenes-probaverzio/?audience=fleet">Próbálja ki ingyen →</a>
+<button aria-label="Elvetés" class="sticky-cta-close" id="stickyCtaClose">×</button>
+</div>
+</div>
+<!-- ═══ JAVASCRIPT ════════════════════════════════════════════════ -->
+<script>
+(function() {
+  /* 1. SCROLL PROGRESS */
+  var bar = document.getElementById('scroll-progress');
+  if (bar) {
+    window.addEventListener('scroll', function() {
+      var top = document.documentElement.scrollTop || document.body.scrollTop;
+      var h   = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      bar.style.width = (top / h * 100) + '%';
+    }, { passive: true });
+  }
+
+  /* 2. MOBILE NAV TOGGLE */
+  var toggle = document.getElementById('nav-toggle');
+  var links  = document.getElementById('nav-links');
+  if (toggle && links) {
+    toggle.addEventListener('click', function() {
+      var open = links.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open);
+    });
+  }
+
+  /* 3. INTERSECTION OBSERVER – ANIMATIONS */
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) {
+        if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.anim-up, .fly-left, .fly-right').forEach(function(el) { io.observe(el); });
+  } else {
+    document.querySelectorAll('.anim-up, .fly-left, .fly-right').forEach(function(el) { el.classList.add('on'); });
+  }
+
+  /* 4. REVIEWS SLIDER LOOP */
+  var rail = document.getElementById('rev-rail');
+  if (rail) {
+    rail.innerHTML += rail.innerHTML + rail.innerHTML;
+    var speed = 0.9, busy = false, pos = 0, isDown = false, startX, startScroll, resumeTimer;
+    function tick() {
+      if (!busy) {
+        pos += speed;
+        if (pos >= 1) { rail.scrollLeft += Math.floor(pos); pos -= Math.floor(pos); }
+        if (rail.scrollLeft >= rail.scrollWidth / 3) rail.scrollLeft = 0;
+      }
+      requestAnimationFrame(tick);
+    }
+    function pause()  { busy = true; clearTimeout(resumeTimer); }
+    function resume() { resumeTimer = setTimeout(function() { busy = false; }, 2000); }
+    rail.addEventListener('mousedown',  function(e) { isDown = true; pause(); startX = e.pageX - rail.offsetLeft; startScroll = rail.scrollLeft; });
+    rail.addEventListener('mouseleave', function()   { isDown = false; resume(); });
+    rail.addEventListener('mouseup',    function()   { isDown = false; resume(); });
+    rail.addEventListener('mousemove',  function(e)  { if (!isDown) return; e.preventDefault(); rail.scrollLeft = startScroll - (e.pageX - rail.offsetLeft - startX) * 1.5; });
+    rail.addEventListener('touchstart', pause,  { passive: true });
+    rail.addEventListener('touchend',   resume, { passive: true });
+    tick();
+  }
+
+  /* 5. MAC STAGE ZOOM ON SCROLL */
+  var macImg = document.getElementById('mac-img');
+  if (macImg) {
+    var ticking = false;
+    function zoom() {
+      var r = macImg.getBoundingClientRect();
+      var dist = Math.abs(window.innerHeight / 2 - (r.top + r.height / 2));
+      var prog = Math.max(0, 1 - dist / (window.innerHeight * 0.65));
+      var eased = Math.sin(prog * Math.PI / 2);
+      var s = 1 + eased * (window.innerWidth < 768 ? 0.2 : 0.38);
+      macImg.style.transform = 'scale(' + s.toFixed(3) + ')';
+      ticking = false;
+    }
+    function onScroll() { if (!ticking) { requestAnimationFrame(zoom); ticking = true; } }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll, { passive: true });
+    setTimeout(zoom, 150);
+  }
+  /* 6. HERO VIDEO AUTOPLAY */
+  var heroVid = document.getElementById('hero-vid');
+  if (heroVid && 'IntersectionObserver' in window) {
+    var hvObs = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) {
+        if (e.isIntersecting) { heroVid.play().catch(function(){}); }
+        else { heroVid.pause(); }
+      });
+    }, { threshold: 0.1 });
+    hvObs.observe(heroVid);
+    document.addEventListener('touchstart', function() {
+      if (heroVid.paused) heroVid.play().catch(function(){});
+    }, { once: true, passive: true });
+  }
+
+
+
+
+  /* STICKY CTA BAR */
+  (function(){
+    var bar = document.getElementById('stickyCta');
+    if(!bar) return;
+    var KEY = 'tmx-sticky-cta-dismissed';
+    var dismissed = false;
+    try { dismissed = localStorage.getItem(KEY) === '1'; } catch(e) {}
+    if (dismissed) return;
+    function check(){
+      var top = document.documentElement.scrollTop || document.body.scrollTop;
+      var nearBottom = (window.innerHeight + top) >= (document.documentElement.scrollHeight - 80);
+      if (top > 700 && !nearBottom) bar.classList.add('is-visible');
+      else bar.classList.remove('is-visible');
+    }
+    window.addEventListener('scroll', check, { passive: true });
+    check();
+    var closeBtn = document.getElementById('stickyCtaClose');
+    if (closeBtn) closeBtn.addEventListener('click', function(){
+      bar.classList.remove('is-visible');
+      try { localStorage.setItem(KEY, '1'); } catch(e) {}
+    });
+  })();
+
+})();
+</script>
+<!-- SCHEMA.ORG -->
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "TAGRA – Tachográfadatok kiértékelő szoftver flottakezelőknek",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Windows",
+  "description": "Tachográfadatok kiértékelő szoftver flottakezelőknek. Sofőrkártya letöltés, digitális tachográf kiértékelés, archiválás és tachográf távoli letöltés 1-től korlátlan számú járműhöz. Kiértékeli az (EU) vezetési és pihenőidőt (561/2006 (EU) rendelet), az AETR-t és a tehergépjárművek munkaidejéről szóló irányelvet. Ingyenes 30 napos próbaverzió. Felkészült a kisteherautókra 2026 júliusától.",
+  "url": "https://tagra.app/fleet/",
+  "inLanguage": "en",
+  "author": {
+    "@type": "Organization",
+    "name": "Truck Data Technology, s.r.o.",
+    "url": "https://www.tdt.cz"
+  },
+  "offers": {
+    "@type": "Offer",
+    "priceCurrency": "EUR",
+    "price": "82",
+    "description": "Éves licencdíj a 2. évtől. TAGRA Trucker: €19/év, TAGRA 1–2: €79/év, TAGRA 4–6: €99/év, TAGRA MAX: €139/év. Az első év benne van a vételárban.",
+    "availability": "https://schema.org/InStock"
+  }
+}</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "inLanguage": "en",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Hogyan vásárolhatom meg a TAGRA-t a próba után?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Minden közvetlenül a szoftveren belül történik. A próba végén — vagy amikor készen áll — nyissa meg a licenc menüt, válassza ki a járművei számának megfelelő verziót (TAGRA 1, 2, 4, 6 vagy MAX), és fizessen online. A fizetés QR-kóddal vagy online átutalással történik. A licencét azonnal kiállítjuk és aktiváljuk — továbbra is ugyanabban a környezetben dolgozhat, minden adata sértetlen marad."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Kinek készült a TAGRA?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A TAGRA egy tachográfadatok kiértékelő szoftver, amelyet minden olyan fuvarozó számára terveztek, akinek sofőrkártya letöltést, kiértékelést és archiválást kell végeznie – az egyéni vállalkozóktól egyetlen járművel a nagy flottákig, több száz járművel. Válassza ki a járművei számának megfelelő verziót: TAGRA 1, 2, 4, 6 vagy MAX (korlátlan)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Hogyan juttathatom be az adatokat a szoftverbe?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Az adatok a sofőrkártyáról (kártyaolvasón vagy letöltőkulcson keresztül) és a tachográf egységből töltődnek be. A TAGRA támogatja a manuális betöltést a DOWNLOAD BOX II S segítségével és a tachográf távoli letöltést a DOWNLOAD BOX REMOTE vagy DKV LIVE® integráció segítségével."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Milyen gyakran kell letölteni az adatokat?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sofőrkártyák legalább 28 naponta, a tachográf egység legalább 90 naponta. A letöltött adatokat legalább 1 évig meg kell őrizni."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Milyen fájlformátumokat támogat a TAGRA?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A tachográfadatok leggyakrabban .DDD fájlként tárolódnak. Egyes országokban .C1B (sofőrkártya) és .V1B vagy ESM (jármű) fájlokat is használnak. Ezek a fájlok nem nyithatók meg szabványos nézőkével – dedikált tachográfadat kiértékelő szoftverre, például a TAGRA-ra van szüksége a megfelelő digitális tachográfadatok kiértékeléséhez."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Mit tartalmaz az éves licencdíj?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Az éves díj magában foglalja a folyamatos licencelést, a szoftverfrissítéseket és a technikai támogatást. Az első év benne van a vételárban; a 2. évtől a díj évi 19 € (TAGRA Trucker), évi 79 € (TAGRA 1–2), évi 99 € (TAGRA 4–6), vagy évi 139 € (TAGRA MAX), mind ÁFA nélkül."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Felkészült a TAGRA a 2026. júliusi kisteherautó-kötelezettségre?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Igen. A TAGRA minden verziója teljes mértékben felkészült a kisteherautókra (2,5–3,5 t járművek a nemzetközi fuvarozásban), amelyekre 2026 júliusától az új digitális tachográf beszerelési és rendszeres adatletöltési kötelezettség vonatkozik az (EU) rendeletek értelmében."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Támogatja a TAGRA a második generációs okostachográfot (G2V2)?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Igen. A TAGRA teljes mértékben támogatja a második generációs okostachográfokat (G2V2), amelyek 2023 óta kötelezőek az új járműveknél. A szoftver helyesen dolgozza fel az adatokat ezekből az eszközökből, beleértve a kiterjesztett pozíciórekordokat is."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Telepíthető a TAGRA több számítógépre?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Minden licenc egy adott számítógéphez kötött. Ha a szoftvert másik gépre szeretné áthelyezni, vegye fel a kapcsolatot a Truck Data Technology gyártóval a licenc átruházásának megszervezéséhez. A hálózati verziók (TAGRA 4, 6, MAX) több munkaállomást is támogatnak, amelyek egy központi adatbázist osztanak meg – vegye fel velünk a kapcsolatot a részletekért."
+      }
+    }
+  ]
+}</script>
+</body>
+</html>
