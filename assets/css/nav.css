@@ -48,10 +48,9 @@ html, body { overflow-x: hidden; max-width: 100vw; }
   display: flex; align-items: center; justify-content: space-between; gap: 24px;
 }
 .nav-logo {
+  /* Logo je <img> (SVG) — žádný gradient text-clip. Původní background-clip:text
+     způsoboval v Chrome duplicitní gradientový otisk textu varianty nad logem. */
   font-size: 22px; font-weight: 900; letter-spacing: -.02em;
-  background: linear-gradient(90deg, var(--blue-dark, #0b2c4a), var(--blue-mid, #134a8e));
-  -webkit-background-clip: text; background-clip: text;
-  -webkit-text-fill-color: transparent; color: transparent;
   text-decoration: none; flex-shrink: 0;
   /* explicit dimensions tak aby výška nav byla identická na všech stránkách
      bez ohledu na to jestli je uvnitř Control variant nebo ne */
