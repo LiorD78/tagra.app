@@ -1,3 +1,37 @@
+# ──────────────────────────────────────────────────────────────────
+# Slug architecture migration (tagra.app#12): DE/PL/GR pages moved from
+# /page/{lang}/ to /{lang}/{localized-slug}/, gr directory renamed to el.
+# Direct 301s, no chaining — must stay at the very top of the file so
+# they win over the legacy "not yet translated" fallback rules below.
+# ──────────────────────────────────────────────────────────────────
+/gr/                  /el/                           301!
+/driver/gr/           /el/odigoi/                    301!
+/fleet/de/            /de/fuhrpark/                  301!
+/fleet/pl/            /pl/dla-przewoznikow/          301!
+/fleet/gr/            /el/stolos/                    301!
+/enforcement/de/      /de/kontrollbehoerden/         301!
+/enforcement/pl/      /pl/organy-kontrolne/          301!
+/enforcement/gr/      /el/eleghos/                   301!
+/how-it-works/de/     /de/so-funktioniert-es/        301!
+/how-it-works/pl/     /pl/jak-to-dziala/             301!
+/how-it-works/gr/     /el/pos-leitourgei/            301!
+/for-whom/de/         /de/fuer-wen/                  301!
+/for-whom/pl/         /pl/dla-kogo/                  301!
+/for-whom/gr/         /el/gia-poion/                 301!
+/faq/gr/              /el/faq/                       301!
+/contact/de/          /de/kontakt/                   301!
+/contact/pl/          /pl/kontakt/                   301!
+/contact/gr/          /el/epikoinonia/               301!
+/try/de/              /de/testen/                    301!
+/try/pl/              /pl/wyprobuj/                  301!
+/try/gr/              /el/dokimi/                    301!
+/try/thanks/de/       /de/danke/                     301!
+/try/thanks/pl/       /pl/dziekujemy/                301!
+/try/thanks/gr/       /el/efharisto/                 301!
+/privacy/de/          /de/datenschutz/               301!
+/privacy/pl/          /pl/polityka-prywatnosci/      301!
+/privacy/gr/          /el/aporrito/                  301!
+
 # Netlify redirects — TAGRA.EU
 
 # ──────────────────────────────────────────────────────────────────

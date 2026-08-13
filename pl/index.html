@@ -62,7 +62,7 @@
     if(saved==='granted'){grant();return;} if(saved==='denied'){return;}
     function show(){var tx=T[lc()]||T.en;
       var b=document.createElement('div');b.className='tmx-cc';b.setAttribute('role','dialog');b.setAttribute('aria-live','polite');
-      b.innerHTML='<div class="tmx-cc__txt">'+tx.t+' <a href="/privacy/pl/">'+tx.p+'</a></div>'+
+      b.innerHTML='<div class="tmx-cc__txt">'+tx.t+' <a href="/pl/polityka-prywatnosci/">'+tx.p+'</a></div>'+
         '<div class="tmx-cc__btns"><button type="button" class="tmx-cc__b tmx-cc__b--no">'+tx.r+'</button>'+
         '<button type="button" class="tmx-cc__b tmx-cc__b--yes">'+tx.a+'</button></div>';
       document.body.appendChild(b);
@@ -82,6 +82,7 @@
   <link rel="alternate" hreflang="en" href="https://tagra.app/">
   <link rel="alternate" hreflang="de" href="https://tagra.app/de/">
   <link rel="alternate" hreflang="pl" href="https://tagra.app/pl/">
+  <link rel="alternate" hreflang="el" href="https://tagra.app/el/">
   <link rel="alternate" hreflang="x-default" href="https://tagra.app/">
   <meta property="og:title" content="Program do odczytu karty kierowcy i tachografu | TAGRA">
   <meta property="og:description" content="Rozliczanie i ewidencja czasu pracy kierowców (Pakiet Mobilności). Pobieraj pliki DDD, analizuj naruszenia i unikaj kar ITD. Wypróbuj TAGRA 30 dni za darmo.">
@@ -756,11 +757,11 @@
     <ul class="nav-links">
             <li><a href="/fleet/">Dla firm</a></li>
             <li><a href="/driver/">Dla kierowców</a></li>
-            <li><a href="/enforcement/pl/">Organy kontrolne</a></li>
+            <li><a href="/pl/organy-kontrolne/">Organy kontrolne</a></li>
             <li><a href="/articles/">Artykuły</a></li><li><a href="/manuals/">Instrukcje</a></li>
             <li><a href="/faq/">FAQ</a></li>
             <li><a href="/contact/">Kontakt</a></li>
-            <li class="nav-cta-li"><a class="nav-cta" href="/try/pl/">Wypróbuj 30 dni za darmo</a></li>
+            <li class="nav-cta-li"><a class="nav-cta" href="/pl/wyprobuj/">Wypróbuj 30 dni za darmo</a></li>
           </ul>
     <details class="nav-lang">
       <summary aria-label="Language: PL">PL</summary>
@@ -768,12 +769,12 @@
         <a href="/" hreflang="en">English</a>
         <a href="/de/" hreflang="de">Deutsch</a>
          <a href="/pl/" class="active" aria-current="page">Polski</a>
-        <a href="/gr/" hreflang="el">Ελληνικά</a>
+        <a href="/el/" hreflang="el">Ελληνικά</a>
         <a href="https://www.tdt.cz/" hreflang="cs" target="_blank" rel="noopener">Čeština</a>
         <a href="https://www.tdt.sk/" hreflang="sk" target="_blank" rel="noopener">Slovenčina</a>
       </div>
     </details>
-    <a class="nav-cta-mobile" href="/try/pl/">Wypróbuj za darmo</a>
+    <a class="nav-cta-mobile" href="/pl/wyprobuj/">Wypróbuj za darmo</a>
     <button class="nav-mobile-toggle" aria-label="Toggle menu" aria-expanded="false" id="nav-toggle">
       <span></span><span></span><span></span>
     </button>
@@ -848,7 +849,7 @@
       </a>
 
       <!-- Enforcement -->
-      <a class="split-card split-card--enforce" href="/enforcement/pl/" aria-label="TAGRA Control for enforcement authorities">
+      <a class="split-card split-card--enforce" href="/pl/organy-kontrolne/" aria-label="TAGRA Control for enforcement authorities">
         <div class="card-label">Organ kontrolny</div>
         <h3 class="card-title">TAGRA<br>Control</h3>
         <p class="card-desc">Kontrolujesz kierowców i przewoźników. <strong>Kontrole drogowe i w przedsiębiorstwach</strong> zgodnie z (WE) nr 561/2006, (UE) 2020/1054 i AETR.</p>
@@ -1043,7 +1044,7 @@
       </div>
       <div class="pricing-teaser-cta">
         <a href="/fleet/" class="btn-outline">Zobacz wszystkie warianty i ceny →</a>
-        <a href="/try/pl/" class="btn-cta">Wypróbuj 30 dni za darmo</a>
+        <a href="/pl/wyprobuj/" class="btn-cta">Wypróbuj 30 dni za darmo</a>
         <span class="pricing-teaser-cta-note">Bez karty kredytowej. Instalator Windows.</span>
       </div>
     </div>
@@ -1094,7 +1095,7 @@
       <ul>
         <li><a href="/fleet/">Dla przewoźników</a></li>
         <li><a href="/driver/">Dla kierowców zawodowych</a></li>
-        <li><a href="/enforcement/pl/">Dla organów kontrolnych</a></li>
+        <li><a href="/pl/organy-kontrolne/">Dla organów kontrolnych</a></li>
         <li><a href="/how-it-works/">Jak to działa</a></li>
         <li><a href="/for-whom/">Dla kogo</a></li>
         <li><a href="/faq/">FAQ</a></li>
@@ -1126,7 +1127,7 @@
 <div class="sticky-cta" id="stickyCta" role="complementary" aria-label="Quick trial signup">
   <div class="sticky-cta-inner">
     <span class="sticky-cta-text">Gotowy, by zacząć? Wypróbuj TAGRA bezpłatnie przez 30 dni.</span>
-    <a class="sticky-cta-btn" href="/try/pl/">Wypróbuj za darmo &rarr;</a>
+    <a class="sticky-cta-btn" href="/pl/wyprobuj/">Wypróbuj za darmo &rarr;</a>
     <button class="sticky-cta-close" id="stickyCtaClose" aria-label="Dismiss">&times;</button>
   </div>
 </div>

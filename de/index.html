@@ -62,7 +62,7 @@
     if(saved==='granted'){grant();return;} if(saved==='denied'){return;}
     function show(){var tx=T[lc()]||T.en;
       var b=document.createElement('div');b.className='tmx-cc';b.setAttribute('role','dialog');b.setAttribute('aria-live','polite');
-      b.innerHTML='<div class="tmx-cc__txt">'+tx.t+' <a href="/privacy/de/">'+tx.p+'</a></div>'+
+      b.innerHTML='<div class="tmx-cc__txt">'+tx.t+' <a href="/de/datenschutz/">'+tx.p+'</a></div>'+
         '<div class="tmx-cc__btns"><button type="button" class="tmx-cc__b tmx-cc__b--no">'+tx.r+'</button>'+
         '<button type="button" class="tmx-cc__b tmx-cc__b--yes">'+tx.a+'</button></div>';
       document.body.appendChild(b);
@@ -82,6 +82,7 @@
   <link rel="alternate" hreflang="en" href="https://tagra.app/">
   <link rel="alternate" hreflang="de" href="https://tagra.app/de/">
   <link rel="alternate" hreflang="pl" href="https://tagra.app/pl/">
+  <link rel="alternate" hreflang="el" href="https://tagra.app/el/">
   <link rel="alternate" hreflang="x-default" href="https://tagra.app/">
   <meta property="og:title" content="Fahrerkarte auslesen & Tachographen-Software | TAGRA">
   <meta property="og:description" content="Gesetzeskonforme Software: Fahrerkarte auslesen, archivieren & auswerten. Vermeiden Sie BALM-Strafen. Lenk- und Ruhezeiten im Blick. 30 Tage gratis!">
@@ -756,11 +757,11 @@
     <ul class="nav-links">
             <li><a href="/fleet/">Für Unternehmen</a></li>
             <li><a href="/driver/">Für Fahrer</a></li>
-            <li><a href="/enforcement/de/">Kontrollbehörden</a></li>
+            <li><a href="/de/kontrollbehoerden/">Kontrollbehörden</a></li>
             <li><a href="/articles/">Artikel</a></li><li><a href="/manuals/">Anleitungen</a></li>
             <li><a href="/faq/">FAQ</a></li>
             <li><a href="/contact/">Kontakt</a></li>
-            <li class="nav-cta-li"><a class="nav-cta" href="/try/de/">30 Tage kostenlos testen</a></li>
+            <li class="nav-cta-li"><a class="nav-cta" href="/de/testen/">30 Tage kostenlos testen</a></li>
           </ul>
     <details class="nav-lang">
       <summary aria-label="Language: DE">DE</summary>
@@ -768,12 +769,12 @@
         <a href="/" hreflang="en">English</a>
         <a href="/de/" class="active" aria-current="page">Deutsch</a>
         <a href="/pl/" hreflang="pl">Polski</a>
-        <a href="/gr/" hreflang="el">Ελληνικά</a>
+        <a href="/el/" hreflang="el">Ελληνικά</a>
         <a href="https://www.tdt.cz/" hreflang="cs" target="_blank" rel="noopener">Čeština</a>
         <a href="https://www.tdt.sk/" hreflang="sk" target="_blank" rel="noopener">Slovenčina</a>
       </div>
     </details>
-    <a class="nav-cta-mobile" href="/try/de/">Kostenlos testen</a>
+    <a class="nav-cta-mobile" href="/de/testen/">Kostenlos testen</a>
     <button class="nav-mobile-toggle" aria-label="Toggle menu" aria-expanded="false" id="nav-toggle">
       <span></span><span></span><span></span>
     </button>
@@ -848,7 +849,7 @@
       </a>
 
       <!-- Enforcement -->
-      <a class="split-card split-card--enforce" href="/enforcement/de/" aria-label="TAGRA Control for enforcement authorities">
+      <a class="split-card split-card--enforce" href="/de/kontrollbehoerden/" aria-label="TAGRA Control for enforcement authorities">
         <div class="card-label">Kontrollbehörde</div>
         <h3 class="card-title">TAGRA<br>Control</h3>
         <p class="card-desc">Sie kontrollieren Fahrer und Unternehmen. <strong>Straßen- und Betriebskontrollen</strong> nach VO (EG) Nr. 561/2006, (EU) 2020/1054 und AETR.</p>
@@ -1043,7 +1044,7 @@
       </div>
       <div class="pricing-teaser-cta">
         <a href="/fleet/" class="btn-outline">Alle Varianten und Preise ansehen →</a>
-        <a href="/try/de/" class="btn-cta">30 Tage kostenlos testen</a>
+        <a href="/de/testen/" class="btn-cta">30 Tage kostenlos testen</a>
         <span class="pricing-teaser-cta-note">Ohne Kreditkarte. Windows-Installer.</span>
       </div>
     </div>
@@ -1094,7 +1095,7 @@
       <ul>
         <li><a href="/fleet/">Für Fuhrparkbetreiber</a></li>
         <li><a href="/driver/">Für Berufskraftfahrer</a></li>
-        <li><a href="/enforcement/de/">Für Kontrollbehörden</a></li>
+        <li><a href="/de/kontrollbehoerden/">Für Kontrollbehörden</a></li>
         <li><a href="/how-it-works/">So funktioniert es</a></li>
         <li><a href="/for-whom/">Für wen</a></li>
         <li><a href="/faq/">FAQ</a></li>
@@ -1127,7 +1128,7 @@
 <div class="sticky-cta" id="stickyCta" role="complementary" aria-label="Quick trial signup">
   <div class="sticky-cta-inner">
     <span class="sticky-cta-text">Bereit loszulegen? Testen Sie TAGRA 30 Tage kostenlos.</span>
-    <a class="sticky-cta-btn" href="/try/de/">Kostenlos testen &rarr;</a>
+    <a class="sticky-cta-btn" href="/de/testen/">Kostenlos testen &rarr;</a>
     <button class="sticky-cta-close" id="stickyCtaClose" aria-label="Dismiss">&times;</button>
   </div>
 </div>
