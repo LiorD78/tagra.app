@@ -1,0 +1,1568 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<!-- TMX-ANALYTICS START -->
+<meta content="7F7894081BE7FBB245FF03AF8810B22F" name="msvalidate.01"/>
+<!-- Consent Mode v2 defaults (deny) + gtag stub — runs BEFORE gtag.js -->
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent','default',{
+      ad_storage:'denied', ad_user_data:'denied', ad_personalization:'denied',
+      analytics_storage:'denied', functionality_storage:'denied',
+      personalization_storage:'denied', security_storage:'granted',
+      wait_for_update:500
+    });
+    gtag('set','ads_data_redaction',true);
+    gtag('set','url_passthrough',false);
+  </script>
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-92253QFBNX"></script>
+<script>
+    gtag('js', new Date());
+    gtag('config','G-92253QFBNX');
+  </script>
+<!-- Cookie consent banner (self-hosted) + Microsoft Clarity gating -->
+<style>
+    .tmx-cc{position:fixed;left:0;right:0;bottom:0;z-index:2147483000;background:linear-gradient(120deg,var(--blue-dark,#0b2c4a),var(--blue-mid,#134a8e) 62%,var(--blue-light,#1f5fa6));color:#fff;
+      font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+      padding:16px 20px;box-shadow:0 -4px 24px rgba(0,0,0,.18);display:flex;flex-wrap:wrap;
+      align-items:center;gap:14px;justify-content:center}
+    .tmx-cc__txt{flex:1 1 360px;max-width:760px}
+    .tmx-cc__txt a{color:#9ed0f5;text-decoration:underline}
+    .tmx-cc__btns{display:flex;gap:10px;flex:0 0 auto}
+    .tmx-cc__b{appearance:none;border:0;cursor:pointer;font:inherit;font-weight:600;
+      padding:10px 22px;border-radius:99px;transition:filter .15s;color:#fff}
+    .tmx-cc__b:hover{filter:brightness(1.08)}
+    .tmx-cc__b--no{background:rgba(255,255,255,.16)}
+    .tmx-cc__b--yes{background:var(--green-cta,#5C820F)}
+    @media(max-width:640px){.tmx-cc{padding:14px}.tmx-cc__btns{width:100%}.tmx-cc__b{flex:1}}
+  </style>
+<script>
+  (function(){
+    var KEY='tmx-consent-v1', CL='wt18054m0r';
+    function lc(){var l=(document.documentElement.getAttribute('lang')||'en').toLowerCase().split('-')[0];
+      var m={cz:'cs',cs:'cs',sk:'sk',de:'de',pl:'pl',gr:'el',el:'el',en:'en'};return m[l]||'en';}
+    var T={
+      en:{t:'We use analytics cookies (Google Analytics, Microsoft Clarity) to understand site usage. They load only with your consent.',a:'Accept',r:'Reject',p:'Privacy &amp; cookies'},
+      cs:{t:'Pou\u017e\u00edv\u00e1me analytick\u00e9 cookies (Google Analytics, Microsoft Clarity) k pochopen\u00ed pou\u017e\u00edv\u00e1n\u00ed webu. Na\u010dtou se jen s va\u0161\u00edm souhlasem.',a:'P\u0159ijmout',r:'Odm\u00edtnout',p:'Soukrom\u00ed a cookies'},
+      sk:{t:'Pou\u017e\u00edvame analytick\u00e9 cookies (Google Analytics, Microsoft Clarity) na pochopenie pou\u017e\u00edvania webu. Na\u010d\u00edtaj\u00fa sa len s va\u0161\u00edm s\u00fahlasom.',a:'Prija\u0165',r:'Odmietnu\u0165',p:'S\u00fakromie a cookies'},
+      de:{t:'Wir verwenden Analyse-Cookies (Google Analytics, Microsoft Clarity), um die Nutzung der Website zu verstehen. Sie werden nur mit Ihrer Einwilligung geladen.',a:'Akzeptieren',r:'Ablehnen',p:'Datenschutz &amp; Cookies'},
+      pl:{t:'U\u017cywamy plik\u00f3w cookie do analityki (Google Analytics, Microsoft Clarity), aby zrozumie\u0107 korzystanie z witryny. \u0141aduj\u0105 si\u0119 tylko za Twoj\u0105 zgod\u0105.',a:'Akceptuj',r:'Odrzu\u0107',p:'Prywatno\u015b\u0107 i cookies'},
+      el:{t:'\u03a7\u03c1\u03b7\u03c3\u03b9\u03bc\u03bf\u03c0\u03bf\u03b9\u03bf\u03cd\u03bc\u03b5 cookies \u03b1\u03bd\u03ac\u03bb\u03c5\u03c3\u03b7\u03c2 (Google Analytics, Microsoft Clarity) \u03b3\u03b9\u03b1 \u03bd\u03b1 \u03ba\u03b1\u03c4\u03b1\u03bd\u03bf\u03ae\u03c3\u03bf\u03c5\u03bc\u03b5 \u03c4\u03b7 \u03c7\u03c1\u03ae\u03c3\u03b7. \u03a6\u03bf\u03c1\u03c4\u03ce\u03bd\u03bf\u03bd\u03c4\u03b1\u03b9 \u03bc\u03cc\u03bd\u03bf \u03bc\u03b5 \u03c4\u03b7 \u03c3\u03c5\u03b3\u03ba\u03b1\u03c4\u03ac\u03b8\u03b5\u03c3\u03ae \u03c3\u03b1\u03c2.',a:'\u0391\u03c0\u03bf\u03b4\u03bf\u03c7\u03ae',r:'\u0391\u03c0\u03cc\u03c1\u03c1\u03b9\u03c8\u03b7',p:'\u0391\u03c0\u03cc\u03c1\u03c1\u03b7\u03c4\u03bf &amp; cookies'}
+    };
+    function loadClarity(){if(!CL||window.__tmxCl)return;window.__tmxCl=1;
+      (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+       t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+       y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script",CL);}
+    function grant(){try{localStorage.setItem(KEY,'granted')}catch(e){}
+      gtag('consent','update',{analytics_storage:'granted'});loadClarity();}
+    function deny(){try{localStorage.setItem(KEY,'denied')}catch(e){}}
+    var saved=null;try{saved=localStorage.getItem(KEY)}catch(e){}
+    if(saved==='granted'){grant();return;} if(saved==='denied'){return;}
+    function show(){var tx=T[lc()]||T.en;
+      var b=document.createElement('div');b.className='tmx-cc';b.setAttribute('role','dialog');b.setAttribute('aria-live','polite');
+      b.innerHTML='<div class="tmx-cc__txt">'+tx.t+' <a href="/privacy/">'+tx.p+'</a></div>'+
+        '<div class="tmx-cc__btns"><button type="button" class="tmx-cc__b tmx-cc__b--no">'+tx.r+'</button>'+
+        '<button type="button" class="tmx-cc__b tmx-cc__b--yes">'+tx.a+'</button></div>';
+      document.body.appendChild(b);
+      b.querySelector('.tmx-cc__b--yes').addEventListener('click',function(){grant();b.remove();});
+      b.querySelector('.tmx-cc__b--no').addEventListener('click',function(){deny();b.remove();});}
+    if(document.body)show();else document.addEventListener('DOMContentLoaded',show);
+  })();
+  </script>
+<!-- TMX-ANALYTICS END -->
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tachograf-Fehlercodes &amp; Piktogramme: Bedeutung &amp; Lösungen | TAGRA</title>
+<meta content="Jedes Warnpiktogramm und jeder Fehlercode des digitalen Tachografen entschlüsselt — VDO, Stoneridge, Actia und EFAS. Was jeder Code bedeutet und was genau zu tun ist. Kostenlose Abfrage." name="description"/>
+<link href="https://tagra.app/de/ratgeber/tachographen-symbole/" rel="canonical"/>
+<meta content="Tachograf-Fehlercodes &amp; Piktogramme: Bedeutung &amp; Lösungen | TAGRA" property="og:title"/>
+<meta content="Jedes Warnpiktogramm und jeder Fehlercode des digitalen Tachografen entschlüsselt — VDO, Stoneridge, Actia und EFAS. Erfahren Sie, was jeder Code bedeutet und was als Nächstes zu tun ist." property="og:description"/>
+<meta content="article" property="og:type"/>
+<meta content="https://tagra.app/assets/img/hero-poster.jpg" property="og:image"/>
+<meta content="Tachograf-Fehlercodes &amp; Piktogramme: Bedeutung &amp; Lösungen | TAGRA" name="twitter:title"/>
+<meta content="Jedes Warnpiktogramm und jeder Fehlercode des digitalen Tachografen entschlüsselt — VDO, Stoneridge, Actia und EFAS. Was jeder Code bedeutet und was als Nächstes zu tun ist." name="twitter:description"/>
+<meta content="https://tagra.app/assets/img/hero-poster.jpg" name="twitter:image"/>
+<meta content="https://tagra.app/de/ratgeber/tachographen-symbole/" property="og:url"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    a{color:var(--blue-mid);text-decoration:none;}
+    a:hover{color:var(--blue-dark);text-decoration:underline;text-underline-offset:.18em;}
+    img{max-width:100%;height:auto;display:block;}
+    p+p{margin-top:14px;}
+    ul,ol{padding-left:22px;}
+    li{margin:6px 0;line-height:1.65;}
+    li::marker{color:var(--blue-mid);}
+    strong{font-weight:700;color:var(--text);}
+    #scroll-progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--green-brand),var(--blue-light));width:0%;z-index:9999;pointer-events:none;}
+.nav-inner{max-width:1180px;margin:0 auto;padding:0 24px;height:100%;display:flex;align-items:center;justify-content:space-between;gap:24px;}
+    .nav-logo{font-size:22px;font-weight:900;background:linear-gradient(90deg,var(--blue-dark),var(--blue-mid));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;text-decoration:none;}
+    .nav-links{display:flex;align-items:center;gap:4px;list-style:none;}
+    .nav-links a{font-size:15px;font-weight:500;color:var(--text);padding:8px 12px;border-radius:8px;text-decoration:none;transition:background .15s;}
+    .nav-links a:hover{background:var(--bg-apple);color:var(--blue-mid);}
+    .nav-links .nav-cta a{background:var(--green-cta);color:#fff!important;border-radius:99px;padding:8px 18px;font-weight:600;}
+    .nav-links .nav-cta a:hover{background:var(--green-brand);text-decoration:none;}
+    .nav-lang{display:flex;align-items:center;gap:4px;font-size:14px;font-weight:600;}
+    .nav-lang a{padding:5px 8px;border-radius:6px;color:var(--text2);text-decoration:none;transition:background .15s;}
+    .nav-lang a:hover,.nav-lang a.active{background:var(--bg-apple);color:var(--blue-mid);}
+    .nav-lang span{color:var(--border);}
+    .nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:8px;}
+    .nav-toggle span{display:block;width:22px;height:2px;background:var(--text);margin:5px 0;border-radius:2px;}
+    @media(max-width:900px){.nav-links{display:none;}.nav-toggle{display:block;}.nav-links.open{display:flex;flex-direction:column;align-items:flex-start;gap:2px;position:absolute;top:var(--nav-h);left:0;right:0;background:rgba(255,255,255,.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:12px 24px 20px;}}
+    .art-hero{background:linear-gradient(180deg,var(--bg-apple) 0%,#fff 100%);padding:56px 0 44px;}
+    .art-wrap{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 24px;}
+    .breadcrumb{font-size:14px;color:var(--text2);margin-bottom:18px;}
+    .breadcrumb a{color:var(--text2);text-decoration:none;}
+    .breadcrumb a:hover{color:var(--blue-mid);}
+    .breadcrumb span{margin:0 5px;color:var(--border);}
+    .eyebrow{font-size:14px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--green-brand);margin-bottom:10px;}
+    .art-title{font-size:38px;line-height:1.15;font-weight:800;margin-bottom:16px;letter-spacing:-.02em;padding-bottom:0.08em;color:var(--blue-dark);}
+    .art-title .grad{background:linear-gradient(90deg,var(--blue-dark) 0%,var(--blue-light) 50%,var(--blue-bright) 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;}
+    @media(max-width:700px){.art-title{font-size:26px;}}
+    .art-meta{font-size:15px;color:var(--text2);padding-bottom:24px;border-bottom:1px solid var(--border);display:flex;gap:20px;flex-wrap:wrap;}
+    .art-body{padding:44px 0 60px;}
+    /* H2 gradient mechanics: width:max-content shrinks the element to the text's
+       intrinsic width so the 3-stop gradient is rendered across the visible glyphs
+       (not the 949px wrapping width), giving the same visible 3-stop effect as H1.
+       Multi-line H2s wrap via max-width:100% (each wrapped line gets its own slice). */
+    .art-body h2 {
+      font-size: 36px; font-weight: 800;
+      line-height: 1.1; letter-spacing: 0;
+      text-transform: uppercase;
+      color: var(--blue-mid, #134a8e);
+      background: linear-gradient(90deg, var(--blue-dark, #0b2c4a) 0%, var(--blue-light, #1f5fa6) 50%, var(--blue-bright, #3a6ff0) 100%);
+      -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block; width: max-content; max-width: 100%;
+      margin-bottom: 14px;
+      padding: 0.12em 0.15em 0.08em 0;
+    }
+    .art-body h3{font-size:20px;font-weight:700;color:var(--text);margin:28px 0 10px;}
+    .art-body p{margin-bottom:18px;}
+    .art-body ul,.art-body ol{margin-bottom:20px;}
+    .deadline-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:24px 0;}
+    @media(max-width:580px){.deadline-grid{grid-template-columns:1fr;}}
+    .deadline-box{background:var(--bg-apple);border-radius:var(--radius);padding:28px;text-align:center;}
+    .deadline-num{font-size:54px;font-weight:900;line-height:1;background:linear-gradient(90deg,var(--blue-dark),var(--blue-mid));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:6px;}
+    .deadline-lbl{font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--text2);}
+    .deadline-desc{font-size:15px;color:var(--text2);margin-top:10px;line-height:1.5;}
+    .steps-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin:20px 0;}
+    @media(max-width:720px){.steps-grid{grid-template-columns:1fr;}}
+    .step-card{background:var(--bg-gray);border-radius:var(--radius);padding:22px;box-shadow:0 8px 24px rgba(0,0,0,.04);}
+    .step-num{font-size:13px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--green-cta);margin-bottom:8px;}
+    .step-title{font-size:17px;font-weight:800;color:var(--text);margin-bottom:6px;line-height:1.35;}
+    .step-desc{font-size:15px;color:var(--text2);line-height:1.5;}
+    
+    .callout--blue{background:var(--bg-apple);border-left:4px solid var(--blue-mid);}
+    
+    .callout-title{font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:.07em;color:var(--blue-mid);margin-bottom:8px;}
+    .callout--green .callout-title{color:var(--green-brand);}
+    .faq-item{border-top:1px solid var(--border);padding:14px 0;}
+    .faq-item:last-child{border-bottom:1px solid var(--border);}
+    .faq-item summary{list-style:none;cursor:pointer;font-weight:700;font-size:18px;line-height:1.4;padding-right:32px;position:relative;color:var(--text);}
+    .faq-item summary::-webkit-details-marker{display:none;}
+    .faq-item summary::after{content:"+";position:absolute;right:0;top:50%;transform:translateY(-50%);font-size:26px;font-weight:300;color:var(--green-cta);}
+    .faq-item[open] summary::after{content:"−";}
+    
+    .cta-box{background:linear-gradient(135deg,var(--blue-dark),var(--blue-mid));border-radius:var(--radius);padding:40px 36px;margin:44px 0;text-align:center;}
+    .cta-box h3{font-size:24px;font-weight:800;color:#fff;margin-bottom:12px;}
+    .cta-box p{color:rgba(255,255,255,.8);font-size:17px;margin-bottom:24px;}
+    
+    .btn:hover{background:var(--green-brand);transform:scale(1.02);}
+    .related{border-top:1px solid var(--border);padding-top:36px;margin-top:36px;}
+    .related-title{font-size:20px;font-weight:800;color:var(--text);margin-bottom:18px;}
+    .related-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+    @media(max-width:580px){.related-grid{grid-template-columns:1fr;}}
+    .related-card{display:block;padding:20px;border:1px solid var(--border);border-radius:var(--radius);text-decoration:none!important;transition:border-color .15s,transform .15s;}
+    .related-card:hover{border-color:var(--blue-mid);transform:translateY(-2px);}
+    .related-card-eye{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--blue-mid);margin-bottom:6px;}
+    .related-card-title{font-size:16px;font-weight:700;color:var(--text);line-height:1.4;}
+
+    .art-body table{width:100%;border-collapse:collapse;margin:20px 0;font-size:16px;background:#fff;box-shadow:0 8px 24px rgba(0,0,0,.04);border-radius:var(--radius);overflow:hidden;}
+    .sym-cell{display:flex;align-items:center;gap:14px;}
+    .sym-icon{flex-shrink:0;width:48px;height:48px;background:#fff;border:1px solid var(--border);border-radius:8px;padding:8px;color:var(--blue-dark);}
+    .sym-icon svg{display:block;width:100%;height:100%;}
+    .sym-icon img{display:block;width:100%;height:100%;}
+    @media(max-width:680px){.sym-icon{width:40px;height:40px;padding:7px;}}
+    .art-body thead{background:linear-gradient(135deg,var(--blue-dark),var(--blue-mid));color:#fff;}
+    .art-body th{padding:14px 16px;text-align:left;font-weight:700;font-size:14px;letter-spacing:.02em;}
+    .art-body td{padding:14px 16px;border-top:1px solid var(--border);vertical-align:top;line-height:1.55;font-size:15px;}
+    .art-body tbody tr:nth-child(even){background:var(--bg-gray);}
+    .art-body th:first-child,.art-body td:first-child{width:22%;}
+    @media(max-width:680px){.art-body table,.art-body thead,.art-body tbody,.art-body th,.art-body td,.art-body tr{display:block;}.art-body thead{display:none;}.art-body td{border-top:none;border-bottom:1px solid var(--border);}.art-body td:first-child{font-weight:700;background:var(--bg-apple);}}
+    .lead{font-size:20px;color:var(--text2);line-height:1.55;}
+
+    .dec-search{background:var(--bg-apple);border:1px solid var(--border);border-radius:var(--radius);padding:18px 18px 14px;margin:8px 0 26px;}
+    .dec-search-label{display:block;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--blue-mid);margin-bottom:10px;}
+    .dec-search-row{display:flex;gap:10px;align-items:center;}
+    #dec-search-input{flex:1;font-size:16px;padding:12px 14px;border:1px solid var(--border);border-radius:10px;background:#fff;color:var(--text);outline:none;}
+    #dec-search-input:focus{border-color:var(--blue-mid);box-shadow:0 0 0 3px rgba(19,74,142,.12);}
+    #dec-search-clear{flex-shrink:0;width:42px;height:42px;border:1px solid var(--border);background:#fff;border-radius:10px;font-size:22px;line-height:1;color:var(--text2);cursor:pointer;}
+    #dec-search-clear:hover{color:var(--text);border-color:var(--blue-mid);}
+    .dec-chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;}
+    .dec-chip{font-size:14px;font-weight:600;padding:7px 14px;border-radius:99px;border:1px solid var(--border);background:#fff;color:var(--text2);cursor:pointer;transition:all .15s;}
+    .dec-chip:hover{border-color:var(--blue-mid);color:var(--blue-mid);}
+    .dec-chip.is-active{background:var(--blue-mid);border-color:var(--blue-mid);color:#fff;}
+    .dec-count{font-size:14px;color:var(--text2);margin:12px 0 0;min-height:1.2em;}
+    .vendor.dec-hidden{display:none;}
+    tr.dec-hidden{display:none;}
+    .dec-nohit{font-size:14px;color:var(--text2);padding:10px 2px;}
+  
+</style>
+<link href="../../assets/css/tokens.css?v=20260514j" rel="stylesheet"/>
+<link href="../../assets/css/base.css?v=20260514j" rel="stylesheet"/>
+<link href="../../assets/css/components.css?v=20260514j" rel="stylesheet"/>
+<link href="/assets/css/nav.css?v=20260514j" rel="stylesheet"/>
+<script defer="" src="/assets/js/nav.js?v=20260513q"></script>
+<link href="/assets/css/footer.css?v=20260513d" rel="stylesheet"/>
+<link href="https://tagra.app/articles/digital-tachograph-symbols/" hreflang="en" rel="alternate"/><link href="https://tagra.app/de/ratgeber/tachographen-symbole/" hreflang="de" rel="alternate"/><link href="https://tagra.app/articles/digital-tachograph-symbols/" hreflang="x-default" rel="alternate"/></head>
+<body>
+<div aria-hidden="true" id="scroll-progress"></div>
+<nav aria-label="Hauptnavigation" class="site-nav" role="navigation">
+<div class="nav-inner">
+<a aria-label="TAGRA – Startseite" class="nav-logo" href="/de/"><img alt="TAGRA" height="32" src="/assets/img/logo-light.svg?v=20260513zh" style="display:block;height:32px;width:auto;" width="140"/></a>
+<ul class="nav-links">
+<li><a href="/de/fuhrpark/">Für Unternehmen</a></li>
+<li><a href="/de/fahrer/">Für Fahrer</a></li>
+<li><a href="/de/kontrollbehoerden/">Kontrollbehörden</a></li>
+<li><a aria-current="page" href="/de/ratgeber/">Artikel</a></li><li><a href="/de/anleitungen/">Anleitungen</a></li>
+<li><a href="/de/faq/">FAQ</a></li>
+<li><a href="/de/kontakt/">Kontakt</a></li>
+<li class="nav-cta-li"><a class="nav-cta" href="/de/testen/?audience=fleet">30 Tage kostenlos testen</a></li>
+</ul>
+<details class="nav-lang">
+<summary aria-label="Language: DE">DE</summary>
+<div class="nav-lang-menu" role="menu">
+<a href="/" hreflang="en">English</a><a aria-current="page" class="active" href="/de/" hreflang="de">Deutsch</a><a href="/pl/" hreflang="pl">Polski</a><a href="/el/" hreflang="el">Ελληνικά</a><a href="/hu/" hreflang="hu">Magyar</a><a href="https://www.tdt.cz/" hreflang="cs" rel="noopener" target="_blank">Čeština</a><a href="https://www.tdt.sk/" hreflang="sk" rel="noopener" target="_blank">Slovenčina</a></div>
+</details>
+<a class="nav-cta-mobile" href="/de/testen/?audience=fleet">Kostenlos testen</a>
+<button aria-expanded="false" aria-label="Menü umschalten" class="nav-mobile-toggle" id="nav-toggle">
+<span></span><span></span><span></span>
+</button>
+</div>
+</nav>
+<header class="art-hero">
+<div class="art-wrap">
+<nav class="breadcrumb"><a href="/de/">TAGRA</a><span>›</span><a href="/de/ratgeber/">Artikel</a><span>›</span><span>Tachograf-Piktogramme &amp; Fehlercodes</span></nav>
+<div class="eyebrow">Wissensdatenbank für Fahrer</div>
+<h1 class="art-title"><span class="grad">Tachograf-Piktogramme &amp; Fehlercodes: ein Leitfaden für Fahrer</span></h1>
+<div class="art-meta"><span>Truck Data Technology</span><span>Zuletzt aktualisiert: Juni 2026</span><span>22 Min. Lesezeit</span></div>
+<div aria-label="Fahrer, die einen digitalen Tachografen bedienen" class="art-hero-video">
+<video aria-label="Fahrer, die einen digitalen Tachografen bedienen" autoplay="" loop="" muted="" playsinline="" poster="symboly-chybove-kody-hero-poster.webp" preload="metadata" webkit-playsinline="">
+<source src="symboly-chybove-kody-hero.webm" type="video/webm">
+<source src="symboly-chybove-kody-hero.mp4" type="video/mp4">
+</source></source></video>
+</div>
+</div>
+</header>
+<main>
+<div class="art-wrap art-body">
+<article>
+<p class="lead">Jeder digitale Tachograf in der EU spricht dieselbe visuelle Sprache. Egal, ob Sie einen 7,5-Tonnen-LKW durch Bayern oder einen 40-Tonnen-Sattelzug von Rotterdam nach Athen fahren, die Piktogramme auf Ihrem Tachografen-Display folgen einem einzigen, rechtsverbindlichen Standard, der durch die<strong>Verordnung (EU) 2016/799, Anhang I C</strong>— die technische Spezifikation für intelligente Tachografen — festgelegt ist.</p>
+<p>Doch die Piktogramme zu verstehen ist nur die halbe Miete. Der gleiche Bildschirm, der Ihre Aktivität anzeigt, zeigt auch<strong>Warnungen, Ereignisse, Störungen und herstellerspezifische Pop-up-Meldungen</strong>— und Fehler dabei können einen Fahrer ein Bußgeld kosten, ein Fahrzeug stilllegen oder einen obligatorischen Werkstattbesuch innerhalb von sieben Tagen auslösen. Dieser Leitfaden führt Sie durch jede Kategorie mit verifizierten Meldungen aus den offiziellen Handbüchern der vier in Europa am weitesten verbreiteten Geräte:<strong>VDO DTCO 4.1, Stoneridge SE5000, Actia SmarTach</strong>und<strong>EFAS-4</strong>.</p>
+<div aria-label="Artikelinhalt" class="toc">
+<strong>Inhalt dieses Leitfadens</strong>
+<ol>
+<li><a href="#activity-symbols">Vier Aktivitäts-Piktogramme, die jeder Fahrer kennen muss</a></li>
+<li><a href="#universal-warnings">Universelle Warnkategorien (Ereignisse, Störungen, Zeit, Hinweise)</a></li>
+<li><a href="#vendor-codes">200+ verifizierte Codes &amp; Piktogramme (durchsuchbar)</a></li>
+<li><a href="#common-mistakes">Top 10 der häufigsten Tachografmeldungen in der Praxis</a></li>
+<li><a href="#crisis-workflow">Workflow bei kritischen Fehlern: Was am Straßenrand zu tun ist</a></li>
+<li><a href="#sources">Offizielle Quellen &amp; Herstellerhandbücher</a></li>
+<li><a href="#faq">FAQ — Piktogramme und Fehlercodes</a></li>
+</ol>
+</div>
+<!-- ===================================================================== -->
+<!-- SECTION 1: FOUR MAIN ACTIVITY SYMBOLS                                  -->
+<!-- ===================================================================== -->
+<h2 id="activity-symbols">Vier Aktivitäts-Piktogramme, die jeder Fahrer kennen muss</h2>
+<p>Jeder digitale Tachograf erfasst die Lenkzeiten des Fahrers in einer von vier Kategorien, die jeweils durch ein einziges ISO-2575 Piktogramm auf dem Display angezeigt werden. Dies sind nicht nur visuelle Kennzeichnungen – sie sind<strong>rechtlich eigenständige Kategorien</strong>gemäß der Verordnung (EG) Nr. 561/2006 (Lenk- und Ruhezeiten) und der Richtlinie 2002/15/EG (Arbeitszeit von mobilen Arbeitnehmern), und sie bestimmen, wie Ihr Tag auf Lenkzeitbegrenzungen, Pausen und Ruhezeiten angerechnet wird.</p>
+<div class="activity-grid">
+<div class="activity-card">
+<div aria-hidden="true" class="ico ico--drive"><img alt="" height="28" src="icons/driving.svg?v=20260514c" width="28"/></div>
+<h3>LENKEN (Lenkrad)</h3>
+<p>Wird eingestellt<strong>automatisch</strong>in dem Moment, in dem sich das Fahrzeug bewegt. Kann nicht manuell geändert werden. Zählt zu Ihrem 4½-stündigen ununterbrochenen Limit, den täglichen 9/10-Stunden- und den wöchentlichen/zweiwöchentlichen 56/90-Stunden-Lenkzeitbegrenzungen.</p>
+</div>
+<div class="activity-card">
+<div aria-hidden="true" class="ico ico--work"><img alt="" height="28" src="icons/other-work.svg?v=20260514c" width="28"/></div>
+<h3>ARBEIT (gekreuzte Hämmer)</h3>
+<p>Alle bezahlten Arbeiten, die<strong>kein LENKEN sind</strong>: Be- und Entladen, Tanken, Büroarbeiten, Fahrzeugkontrollen, Hilfe für Passagiere. Zählt als Arbeitszeit gemäß der Arbeitszeitrichtlinie. Zählt<em>nicht</em>als Unterbrechung.</p>
+</div>
+<div class="activity-card">
+<div aria-hidden="true" class="ico ico--avail"><img alt="" height="28" src="icons/availability.svg?v=20260514c" width="28"/></div>
+<h3>BEREITSCHAFT (Raute)</h3>
+<p>Wartezeit, deren Dauer im Voraus bekannt ist: Fähre/Zug, Warteschlange bei einem Kunden, Begleitung eines abgeschleppten Fahrzeugs. Bereitschaftszeit zählt nicht als Unterbrechung im Rahmen der Lenk- und Ruhezeiten, zählt aber als Arbeitszeit nach der WTD.</p>
+</div>
+<div class="activity-card">
+<div aria-hidden="true" class="ico ico--rest"><img alt="" height="28" src="icons/rest.svg?v=20260514c" width="28"/></div>
+<h3>UNTERBRECHUNG/RUHE (Bett)</h3>
+<p>Echte Unterbrechung oder tägliche/wöchentliche Ruhezeit. Der Fahrer darf keine Arbeit verrichten und muss frei über seine Zeit verfügen können. Die einzige Kategorie, die die 4½-Stunden-Lenkzeitunterbrechung zurücksetzt und auf die vorgeschriebene 11-stündige tägliche Ruhezeit angerechnet wird.</p>
+</div>
+</div>
+<p>Die Auswahltasten am Gerät (Fahrer 1 / Fahrer 2) ermöglichen das Umschalten zwischen ARBEIT, BEREITSCHAFT und UNTERBRECHUNG/RUHE. LENKEN wird immer automatisch vom Bewegungssensor eingestellt — wenn Sie LENKEN sehen, während das Fahrzeug steht, zeichnet der Tachograf einen Fehler auf, keine Aktivität (mehr dazu unten). Häufige Fahrerfehler mit diesen vier Piktogrammen — und warum „BEREITSCHAFT“ niemals rechtlich eine Unterbrechung ersetzen kann — werden in Abschnitt 4 behandelt.</p>
+<!-- ===================================================================== -->
+<!-- SECTION 2: UNIVERSAL WARNING CATEGORIES                                -->
+<!-- ===================================================================== -->
+<h2 id="universal-warnings">Universelle Warnkategorien, die jeder Tachograf verwendet</h2>
+<p>Sobald Sie die vier Aktivitäts-Piktogramme hinter sich lassen, fallen alle vom digitalen Tachografen angezeigten Warnmeldungen in eine von vier Familien. Das<strong>VDO DTCO 4.1 Handbuch</strong>nennt diese explizit (Seite 109), und dieselbe Logik wird von Stoneridge SE5000, Actia SmarTach und EFAS-4 befolgt — weil<strong>Anhang I C die Kategorien auf Verordnungsebene definiert</strong>. Wenn Sie wissen, zu welcher Familie eine Meldung gehört, wissen Sie sofort, wie ernst sie ist und ob Sie Ihre Schicht fortsetzen können.</p>
+<div class="warn-grid">
+<div class="warn-card warn-card--warn">
+<h3>! Ereignis</h3>
+<p>Ein<strong>Betriebsereignis</strong>, das vom Tachografen aufgezeichnet wird und nicht unbedingt ein Hardwarefehler ist — zum Beispiel Lenken ohne geeignete Karte, Überschreitung der Geschwindigkeitsbegrenzung oder das Einstecken der Karte während des Lenkens. Die meisten Ereignisse müssen mit der OK-Taste bestätigt werden. Die Fahrzeugeinheit (VU) schreibt einen Datensatz in den Massenspeicher<em>und</em>auf die Fahrerkarte.</p>
+</div>
+<div class="warn-card warn-card--crit">
+<h3>x Störung</h3>
+<p>Eine echte<strong>Hardware- oder Softwarefehlfunktion</strong>: Sensorstörung, Druckerstörung, interner Zeitfehler, Störung beim Herunterladen, GNSS-Anomalie. Störungen lösen die gesetzliche Sieben-Tage-Werkstattregel aus — das Gerät muss innerhalb<strong>einer Woche</strong>. Lenken mit einer bekannten Störung ist nur mit dokumentierten manuellen Aufzeichnungen erlaubt.</p>
+</div>
+<div class="warn-card warn-card--info">
+<h3>↻ Lenkzeitwarnung</h3>
+<p>A<strong>Einhaltungsvorwarnung</strong>: durchgängiges Lenken nähert sich 4½ Stunden, tägliche/wöchentliche Lenkzeit nähert sich ihrem Limit, oder die nächste erforderliche Ruhezeit fällig ist. Das blinkende Hintergrundlicht ist das visuelle Signal. Diese Meldungen unterstützen Sie bei der Einhaltung der Verordnung 561/2006 – sie sind keine Störungen.</p>
+</div>
+<div class="warn-card warn-card--ok">
+<h3>i Betriebshinweis</h3>
+<p>Ein<strong>Informationshinweis</strong>: „Bitte eingeben“, „kein Papier“, „Kartenfehler“, „Kalibrierung in 28 Tagen fällig“. Betriebshinweise erscheinen ohne Blinken und verschwinden automatisch nach einigen Sekunden. Es werden keine Daten in den Massenspeicher geschrieben; die Meldung ist rein ein UI-Hinweis.</p>
+</div>
+</div>
+<p>Jede Fehlermeldung, die Sie sehen werden – ob von einem VDO DTCO 4.0, einem Stoneridge SE5000 Exakt Duo², einem Actia SmarTach oder jeder anderen nach Anhang I C typgeprüften Fahrzeugeinheit – gehört zu genau einer dieser vier Familien. Ab diesem Punkt im Leitfaden werden wir jede Familie detailliert betrachten, mit verifiziertem Meldungstext aus den Herstellerhandbüchern.</p>
+<!-- ===================================================================== -->
+<!-- SECTION 3: 120+ VERIFIED ERROR CODES BY MANUFACTURER                  -->
+<!-- ===================================================================== -->
+<h2 id="vendor-codes">Über 200 verifizierte Fehlercodes aus vier Herstellerhandbüchern</h2>
+<p>Die vier meistinstallierten digitalen Tachografen-Modelle in Europa sind<strong>VDO DTCO 4.1</strong>(Continental – die dominante Fahrzeugeinheit in Mitteleuropa und dem tschechischen/slowakischen Markt),<strong>Stoneridge SE5000 Exakt Duo²</strong>(der Standard im Vereinigten Königreich und Skandinavien),<strong>Actia SmarTach</strong>(beliebt in Frankreich und Südeuropa) und<strong>EFAS-4</strong>(Intellic / Schneider, verbreitet in Deutschland und Polen). Jeder Anbieter verwendet eine leicht unterschiedliche Formulierung auf dem Bildschirm, aber alle entsprechen Anhang I C – die zugrunde liegende Bedeutung einer „internen Störung der Fahrzeugeinheit“, einer „Sensorstörung“ oder einer „Letzter Vorgang nicht korrekt abgeschlossen“ ist also identisch, unabhängig von der Fahrzeugeinheit in Ihrem Armaturenbrett.</p>
+<p>Die untenstehenden Codes stammen direkt aus den offiziellen, öffentlich herunterladbaren Benutzerhandbüchern – die Dateireferenzen sind im<a href="#sources">Quellenabschnitt</a>. Wenn das Handbuch eine englische Formulierung angibt, verwenden wir diese wörtlich; wir haben lediglich eine verständliche Spalte „was ist zu tun“ hinzugefügt, wo das Handbuch dies dem Urteilsvermögen des Fahrers überlässt.</p>
+<div class="dec-search" id="dec-search">
+<label class="dec-search-label" for="dec-search-input">Schnellsuche — geben Sie einen Code, eine Meldung oder ein Piktogramm ein</label>
+<div class="dec-search-row">
+<input autocomplete="off" id="dec-search-input" placeholder="z.B. Sensorstörung, 042, 002E80, GNSS…" spellcheck="false" type="search"/>
+<button aria-label="Suche löschen" id="dec-search-clear" type="button">×</button>
+</div>
+<div aria-label="Nach Hersteller filtern" class="dec-chips" role="group">
+<button class="dec-chip is-active" data-vendor="all" type="button">Alle</button>
+<button class="dec-chip" data-vendor="vdo" type="button">VDO DTCO</button>
+<button class="dec-chip" data-vendor="stoneridge" type="button">Stoneridge</button>
+<button class="dec-chip" data-vendor="actia" type="button">Actia</button>
+<button class="dec-chip" data-vendor="efas" type="button">EFAS</button>
+<button class="dec-chip" data-vendor="symbols" type="button">Piktogramme ↑</button>
+</div>
+<p aria-live="polite" class="dec-count" id="dec-count"></p>
+</div>
+<div class="vendor-stack">
+<!-- ===== VDO DTCO 4.1 ===== -->
+<details class="vendor" id="vdo" open="">
+<summary>
+<span class="vendor-meta">Continental VDO · am weitesten verbreitet in Mitteleuropa</span>VDO DTCO 4.1 / 4.1a / 4.1b</summary>
+<div class="vendor-body">
+<p>Die VDO DTCO 4.1 Familie ist der intelligente Tachograf (Smart Tacho 2) der zweiten Generation und die am häufigsten verwendete Einheit in tschechischen, slowakischen, deutschen und österreichischen Fuhrparks. Die folgenden Meldungen stammen aus<strong>VDO DTCO 4.1 Bedienungsanleitung, Edition 3 / 2024-08, BA00.1381.41 100 102</strong>(Continental Automotive Technologies GmbH). Die offizielle Struktur der Meldungen ist:<strong>Ereignisse</strong>(wie zum Beispiel Lenken ohne geeignete Karte),<strong>Störungen</strong>(Hardware-Störungen der Einheit),<strong>Lenkzeitwarnungen</strong>und<strong>Betriebliche Hinweise</strong>.</p>
+<h3>Ereignisse — betriebliche Vorkommnisse (höchste Priorität)</h3>
+<div class="code-table-wrap">
+<table class="code-table">
+<thead>
+<tr>
+<th style="width: 22%;">Meldung</th>
+<th style="width: 30%;">Ursache (aus Handbuch)</th>
+<th style="width: 32%;">Maßnahme</th>
+<th style="width: 12%;">Schweregrad</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>! Sicherheitsverletzung xx</td>
+<td>Fehler im Datenspeicher; die Datensicherheit im DTCO 4.1x ist nicht mehr gewährleistet. Die Sensordaten sind nicht mehr zuverlässig. Das DTCO-Gehäuse wurde unbefugt geöffnet.</td>
+<td>Meldung bestätigen. Die Karte wird automatisch ausgeworfen – auch während der Fahrt. Stecken Sie sie erneut ein oder lassen Sie sie in einer autorisierten Werkstatt überprüfen.</td>
+<td><span class="sev sev-crit">Kritisch</span></td>
+</tr>
+<tr>
+<td>!1 Sicherheitsverletzung xx</td>
+<td>Die Kartensperre ist gestört oder fehlerhaft. Das DTCO erkennt keine Tachografenkarte mehr, die zuvor korrekt eingesteckt war. Kartenidentität, Authentizität oder gespeicherte Daten sind unzuverlässig.</td>
+<td>Meldung bestätigen. Tachografenkarte erneut einstecken oder überprüfen lassen.</td>
+<td><span class="sev sev-crit">Kritisch</span></td>
+</tr>
+<tr>
+<td>! Spannungsunterbrechung xx</td>
+<td>Die Stromversorgung wurde unterbrochen oder die Versorgung des DTCO-Sensors war zu niedrig oder zu hoch. Kann auch beim Motorstart angezeigt werden.</td>
+<td>Meldung bestätigen. Sollte sie erneut auftreten, die Stromversorgung des Fahrzeugs überprüfen.</td>
+<td><span class="sev sev-med">Mittel</span></td>
+</tr>
+<tr>
+<td>x Sensorstörung</td>
+<td>Die Kommunikation mit dem Bewegungssensor ist unterbrochen. Die Meldung erscheint auch nach einer Spannungsunterbrechung.</td>
+<td>Meldung bestätigen. Bei wiederholtem Auftreten eine autorisierte Fachwerkstatt aufsuchen.</td>
+<td><span class="sev sev-crit">Kritisch</span></td>
+</tr>
+<tr>
+<td>! Bewegungskonflikt xx</td>
+<td>Widerspruch bei der Auswertung der Fahrzeugbewegung zwischen Sensor und einer unabhängigen Signalquelle. Die FÄHRÜBERFAHRT/ZUGFAHRT-Funktion wurde möglicherweise während des Versandvorgangs nicht eingestellt.</td>
+<td>Meldung bestätigen. Autorisierte Fachwerkstatt konsultieren — mögliche Manipulation oder Beschädigung.</td>
+<td><span class="sev sev-crit">Kritisch</span></td>
+</tr>
+<tr>
+<td>! GNSS fehlt xx</td>
+<td>Keine Positionsdaten über drei Stunden kumulierter Lenkzeit.</td>
+<td>Meldung bestätigen. Prüfen Sie, ob die GNSS-Antenne nicht verdeckt oder blockiert ist.</td>
+<td><span class="sev sev-med">Mittel</span></td>
+</tr>
+<tr>
+<td>!? GNSS Anomalie</td>
+<td>Manipulation erkannt oder externer Angriff auf das GNSS-Signal (Anti-Spoofing OSNMA).</td>
+<td>Ursachen für Manipulation prüfen. GNSS-Funktion überprüfen. Defekte Komponenten gegebenenfalls ersetzen.</td>
+<td><span class="sev sev-high">Hoch</span></td>
+</tr>
+<tr>
+<td>! Zeitkonflikt xx</td>
+<td>Eine Abweichung von mehr als einer Minute zwischen der internen Uhr des DTCO und der vom GNSS-Signal empfangenen Zeit.</td>
+<td>Bestätigen. Lassen Sie das Kontrollgerät von einer autorisierten Werkstatt prüfen und korrigieren, falls das Problem weiterhin besteht.</td>
+<td><span class="sev sev-med">Mittel</span></td>
+</tr>
+<tr>
+<td>! DSRC Komm. Störung xx</td>
+<td>Ein Kommunikationsfehler ist zwischen dem DTCO 4.1x und dem externen DSRC-CAN-Modul (für Fernkontrollen am Straßenrand verwendet) aufgetreten.</td>
+<td>Meldung bestätigen. Falls diese erneut auftritt, eine autorisierte Fachwerkstatt konsultieren.</td>
+<td><span class="sev sev-med">Mittel</span></td>
+</tr>
+<tr>
+<td>! Fahrt ohne gültige Karte xx</td>
+<td>Die Lenktätigkeit wurde ohne Fahrerkarte — oder ohne gültige Fahrerkarte — in Kartenschacht 1 begonnen. Wird auch ausgelöst, wenn eine unbefugte Kartenkombination vor oder nach der Fahrt eingelegt wird.</td>
+<td>Fahrzeug anhalten. Eine gültige Fahrerkarte einlegen. Gegebenenfalls zuerst eine Unternehmens- / Kontrollkarte aus dem DTCO entnehmen.</td>
+<td><span class="sev sev-high">Hoch</span></td>
+</tr>
+<tr>
+<td>!1 Einlegen bei Fahrt xx</td>
+<td>Die Fahrerkarte wurde eingelegt, nachdem das Fahrzeug bereits in Bewegung gesetzt worden war.</td>
+<td>Meldung bestätigen. Zukünftig das Einlegen der Karte vor dem Losfahren planen.</td>
+<td><span class="sev sev-med">Mittel</span></td>
+</tr>
+<tr>
+<td>!1 Zeitüberlappung xx</td>
+<td>Die UTC-Zeit dieses Tachografen liegt hinter der UTC-Zeit des vorherigen Tachografen, was zu einer negativen Zeitdifferenz führt (typisch beim Fahrzeugwechsel).</td>
+<td>Identifizieren Sie den Tachografen mit der inkorrekten UTC-Zeit und lassen Sie ihn von einer autorisierten Werkstatt prüfen und korrigieren.</td>
+<td><span class="sev sev-med">Mittel</span></td>
+</tr>
+<tr>
+<td>!1 Karte ungültig xx</td>
+<td>Die Tachografenkarte ist abgelaufen, noch nicht gültig oder ihre Authentifizierung ist fehlgeschlagen. Eine Karte, die nach Mitternacht ungültig wird, wird automatisch beschrieben und ausgeworfen, sobald das Fahrzeug anhält.</td>
+<td>Meldung bestätigen. Prüfen Sie die Tachografenkarte und stecken Sie sie erneut ein; verlängern Sie sie, falls sie abgelaufen ist.</td>
+<td><span class="sev sev-med">Mittel</span></td>
+</tr>
+<tr>
+<td>! Kartenkonflikt xx</td>
+<td>Die beiden Tachografenkarten dürfen nicht zusammen eingesteckt werden – zum Beispiel eine Unternehmenskarte zusammen mit einer Kontrollkarte.</td>
+<td>Meldung bestätigen. Entfernen Sie die in Konflikt stehende Karte aus dem entsprechenden Kartenschacht.</td>
+<td><span class="sev sev-med">Mittel</span></td>
+</tr>
+<tr>
+<td>!1 Karte nicht geschlossen xx</td>
+<td>Die Fahrerkarte wurde nicht ordnungsgemäß aus dem vorherigen Tachografen entfernt. Einige fahrerbezogene Daten wurden möglicherweise nicht gespeichert.</td>
+<td>Bestätigen. Warten Sie von nun an immer, bis die Karte freigegeben wird, bevor Sie sie herausziehen.</td>
+<td><span class="sev sev-med">Mittel</span></td>
+</tr>
+<tr>
+<td>⊃ Geschwindigkeitsüberschreitung xx</td>
+<td>Die konfigurierte Höchstgeschwindigkeit wurde länger als<strong>60 seconds</strong>.</td>
+<td>Meldung bestätigen. Geschwindigkeit reduzieren. Wiederholte Geschwindigkeitsüberschreitungen sind für Kontrollbehörden beim Auslesen sichtbar.</td>
+<td><span class="sev sev-high">Hoch</span></td>
+</tr>
+<tr>
+<td>§ Kalibrierung in ... Tagen ??</td>
+<td>Die turnusmäßige zweijährliche Prüfung des Tachografen steht bevor (Warnung erscheint 28 Tage im Voraus).</td>
+<td>Bestätigen. Vereinbaren Sie einen Termin mit einer autorisierten Werkstatt vor Ablauf der Frist.</td>
+<td><span class="sev sev-low">Low</span></td>
+</tr>
+<tr>
+<td>1 Download in ?? Tagen</td>
+<td>Das nächste Auslesen der Fahrerkarte ist fällig (Warnung erscheint 14 Tage im Voraus).</td>
+<td>Führen Sie ein Auslesen der Fahrerkarte durch, bevor die Frist abläuft.</td>
+<td><span class="sev sev-low">Low</span></td>
+</tr>
+<tr>
+<td>1 Ungültig in ?? Tagen</td>
+<td>Die Fahrerkarte läuft bald ab (üblicherweise 28 Tage im Voraus gewarnt).</td>
+<td>Meldung bestätigen. Beantragen Sie die Erneuerung der Karte bei Ihrer nationalen Behörde.</td>
+<td><span class="sev sev-info">Info</span></td>
+</tr>
+<tr>
+<td>! Ende normaler Betrieb in ??</td>
+<td>Die Typgenehmigung des DTCO 4.1x läuft ab. Die Meldung erscheint 92 Tage im Voraus, wenn die Karte entfernt wird.</td>
+<td>Vereinbaren Sie einen Termin mit Ihrer Werkstatt zum Austausch des DTCO vor Ablauf der Frist.</td>
+<td><span class="sev sev-med">Mittel</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>Störungen — Hardware-Fehlfunktionen (Werkstatt innerhalb von 7 Tagen)</h3>
+<div class="code-table-wrap">
+<table class="code-table">
+<thead>
+<tr>
+<th style="width: 22%;">Meldung</th>
+<th style="width: 30%;">Ursache (aus Handbuch)</th>
+<th style="width: 32%;">Maßnahme</th>
+<th style="width: 12%;">Schweregrad</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>x Gerätestörung</td>
+<td>Schwerwiegende Störung in der Fahrzeugeinheit (DTCO 4.1x). Mögliche Ursachen: unerwarteter Programm-/Prozesszeitfehler, blockierte Tasten, Kommunikationsfehlfunktion mit externen Geräten oder Instrumentenanzeige, Fehlfunktion am Impulsausgang.</td>
+<td>Bestätigen. Tasten prüfen. Anschlusskabel / angeschlossenes Kontrollgerät von einer autorisierten Werkstatt prüfen lassen.</td>
+<td><span class="sev sev-crit">Kritisch</span></td>
+</tr>
+<tr>
+<td>x1 Interne Störung der Fahrzeugeinheit</td>
+<td>Fehlfunktion in der Kartenmechanik (Schacht 1), z. B. verriegelt die Kartenverriegelung nicht.</td>
+<td>Tachografenkarte entnehmen und wieder einführen. Bei anhaltendem Problem eine Werkstatt konsultieren.</td>
+<td><span class="sev sev-high">Hoch</span></td>
+</tr>
+<tr>
+<td>x Uhrzeitstörung</td>
+<td>Die UTC-Zeit des DTCO ist nicht plausibel oder die Echtzeituhr ist fehlerhaft. Neu eingeführte Fahrer-/Unternehmenskarten werden abgelehnt, um inkonsistente Daten zu vermeiden.</td>
+<td>Bestätigen. Der DTCO muss so schnell wie möglich von einer autorisierten Werkstatt ersetzt oder zurückgesetzt werden.</td>
+<td><span class="sev sev-crit">Kritisch</span></td>
+</tr>
+<tr>
+<td>x Druckerstörung</td>
+<td>Die Stromversorgung des Druckers ist ausgefallen oder der Temperatursensor für den Druckkopf ist defekt.</td>
+<td>Bestätigen. Den Druck wiederholen, ggf. nach Aus- und Einschalten der Zündung. Bleibt das Problem bestehen, Werkstattbesuch.</td>
+<td><span class="sev sev-med">Mittel</span></td>
+</tr>
+<tr>
+<td>x Störung beim Herunterladen xx</td>
+<td>Störung beim Auslesen von Daten auf ein externes Gerät (Ausleseschlüssel oder Download Box Remote).</td>
+<td>Bestätigen. Das Auslesen wiederholen. Verbindungskabel (Wackelkontakt?) oder das externe Gerät prüfen lassen.</td>
+<td><span class="sev sev-med">Mittel</span></td>
+</tr>
+<tr>
+<td>x Geberstörung xx</td>
+<td>Der Bewegungssensor meldet nach seinem Selbsttest eine interne Störung.</td>
+<td>Quittieren. Werkstattprüfung – ein Sensoraustausch kann erforderlich sein.</td>
+<td><span class="sev sev-crit">Kritisch</span></td>
+</tr>
+<tr>
+<td>x1 Kartenstörung xx</td>
+<td>Beim Lesen oder Schreiben der Fahrerkarte ist eine Kommunikationsstörung aufgetreten – typischerweise durch verschmutzte Kontakte verursacht. Einige Fahrerdaten wurden möglicherweise nicht geschrieben.</td>
+<td>Bestätigen. Kontakte der Karte reinigen (trockenes Tuch) und neu einstecken. Bei wiederkehrenden Problemen die Karte ersetzen.</td>
+<td><span class="sev sev-med">Mittel</span></td>
+</tr>
+<tr>
+<td>x Interne GNSS Störung xx</td>
+<td>Fehler am GNSS-Gerät: interner Fehler, Kurzschluss der externen GNSS-Antenne (Option) oder keine Verbindung zur externen Antenne.</td>
+<td>Quittieren. Eine autorisierte Werkstatt konsultieren.</td>
+<td><span class="sev sev-high">Hoch</span></td>
+</tr>
+<tr>
+<td>x Interne DSRC Störung xx</td>
+<td>Interner Fehler am DSRC-Modul (Funkmodul für Fernkontrolle am Straßenrand) oder die Antenne ist defekt / nicht angeschlossen.</td>
+<td>Bestätigen. Die Werkstatt muss das DSRC-Modul, die Kabel und die externe Antenne überprüfen.</td>
+<td><span class="sev sev-med">Mittel</span></td>
+</tr>
+<tr>
+<td>x Interne Geberstörung xx</td>
+<td>Der Selbsttest des internen Beschleunigungssensors ist mehr als 10 Mal fehlgeschlagen und der Rücksetzversuch war fehlerhaft.</td>
+<td>Bestätigen. Wenden Sie sich unverzüglich an eine autorisierte Fachwerkstatt.</td>
+<td><span class="sev sev-crit">Kritisch</span></td>
+</tr>
+<tr>
+<td>x ITS Störung xx</td>
+<td>Ein Fehler an der internen Bluetooth-Komponente (ITS-Datenschnittstelle).</td>
+<td>Bestätigen. Wenden Sie sich an eine autorisierte Fachwerkstatt.</td>
+<td><span class="sev sev-low">Low</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>Lenkzeitwarnungen (Vorwarnungen zur Einhaltung, keine Störungen)</h3>
+<div class="code-table-wrap">
+<table class="code-table">
+<thead>
+<tr>
+<th style="width: 26%;">Meldung</th>
+<th style="width: 44%;">Bedeutung</th>
+<th style="width: 30%;">Maßnahme</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1 Pause! 04h15 00h15</td>
+<td>Machen Sie eine Unterbrechung — die ununterbrochene Lenkzeit hat 4 Stunden 15 Minuten erreicht (Vorwarnung).</td>
+<td>Bestätigen. Planen Sie eine 45-minütige Unterbrechung in den nächsten 15 Minuten ein.</td>
+</tr>
+<tr>
+<td>1 Pause! 04h30 00h15</td>
+<td>Lenkzeit überschritten — das Limit von 4 Stunden und 30 Minuten ununterbrochener Lenkzeit wurde erreicht.</td>
+<td>Halten Sie an und legen Sie eine Unterbrechung ein (45 Min. oder 15 + 30 geteilt).</td>
+</tr>
+<tr>
+<td>1 Lenkzeit 24h / | / ||</td>
+<td>Das Ende der täglichen (24h), wöchentlichen (|) oder zweiwöchentlichen (||) Lenkzeit naht. Die Vorwarnzeit ist konfigurierbar.</td>
+<td>Bestätigen. Beenden Sie die Fahrt und legen Sie die erforderliche Ruhezeit gemäß Verordnung 561/2006 ein.</td>
+</tr>
+<tr>
+<td>1 Ruhezeit in 01h45</td>
+<td>Die nächste tägliche oder wöchentliche Ruhezeit steht bald an (konfigurierbare Vorwarnung).</td>
+<td>Planen Sie Ihre nächste Ruhepause rechtzeitig ein.</td>
+</tr>
+<tr>
+<td>1 Arbeitszeit 24h 09h30</td>
+<td>Das Ende der täglichen (24h) oder wöchentlichen (|) Arbeitszeit gemäß WTD naht.</td>
+<td>Bestätigen Sie. Beenden Sie den Arbeitstag und legen Sie die erforderliche Ruhezeit ein.</td>
+</tr>
+<tr>
+<td>1 Arbeitszeit 04h15</td>
+<td>Das Ende der maximalen ununterbrochenen Arbeitszeit (6 Stunden gemäß WTD) naht.</td>
+<td>Planen Sie eine Pause in den nächsten 15 Minuten.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>Betriebshinweise (informatorisch, automatische Ausblendung nach 3 Sek.)</h3>
+<div class="code-table-wrap">
+<table class="code-table">
+<thead>
+<tr>
+<th style="width: 30%;">Hinweis</th>
+<th style="width: 70%;">Bedeutung &amp; Lösung</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>? bitte eingeben</td><td>Die Fahrzeugeinheit wartet auf eine Eingabe während einer manuellen Eingabesequenz. Drücken Sie OK und fahren Sie fort.</td></tr>
+<tr><td>o kein Papier xx</td><td>Der Drucker hat kein Papier oder die Druckerschublade ist nicht richtig eingesetzt. Legen Sie eine neue Rolle ein; starten Sie einen unterbrochenen Druckvorgang über das Menü neu.</td></tr>
+<tr><td>Druck nicht möglich xx</td><td>Der Druck ist nicht möglich, da die Zündung ausgeschaltet ist (ADR-Variante), der Druckkopf überhitzt ist, der Drucker besetzt ist oder die Versorgungsspannung falsch ist. Warten Sie, bis die Ursache behoben ist.</td></tr>
+<tr><td>Druck verzögert</td><td>Druck unterbrochen, da der Thermokopf zu heiß ist. Warten Sie – der Druck wird nach dem Abkühlen automatisch fortgesetzt.</td></tr>
+<tr><td>Auswurf nicht möglich xx</td><td>Der Kartenauswurf wurde verweigert: Daten werden gelesen oder übertragen, Tageswechsel im Gange, Fahrzeug in Bewegung oder (ADR) Zündung ausgeschaltet.</td></tr>
+<tr><td>?1 Aufzeichnung inkonsistent xx</td><td>Inkonsistente Reihenfolge der Daten in den Fahrerkarte-Aufzeichnungen. Wird behoben, sobald neue Daten die fehlerhaften Einträge überschreiben.</td></tr>
+<tr><td>1 Bitte Karte auswerfen xx</td><td>Fehler beim Schreiben von Daten auf die Fahrerkarte. Die Karte wird ausgeworfen und erneut gelesen; schlägt dies erneut fehl, wird ein Ausdruck der letzten Aktivitäten gestartet.</td></tr>
+<tr><td>1 Kartenstörung xx</td><td>Beim Verarbeiten der eingelegten Tachografkarte ist ein Fehler aufgetreten. Die Karte wird abgewiesen und ausgeworfen. Kontakte reinigen und erneut einstecken.</td></tr>
+<tr><td>1 falscher Kartentyp xx</td><td>Die eingelegte Karte ist keine Tachografkarte. Legen Sie eine gültige Tachografkarte ein.</td></tr>
+<tr><td>1 Bitte Karte reinigen!</td><td>Der DTCO hatte Probleme beim Lesen oder Schreiben der Karte. Reinigen Sie sowohl die Karte als auch die Kartenschächte.</td></tr>
+</tbody>
+</table>
+</div>
+<h3>VDO numerische Fehlerspeichercodes (001–066)</h3>
+<p style="font-size:14px;color:var(--text2);margin-bottom:12px;">Diese numerischen Codes werden mit einem VDO Werkstatt-Diagnosetool (<strong>SDS</strong> / <strong>CTCII</strong>) aus dem Fehlerspeicher der Fahrzeugeinheit ausgelesen – sie werden dem Fahrer im normalen Betrieb nicht angezeigt. Die Nummerierung ist über DTCO-Generationen (1381 und 4.1) hinweg konsistent, und jede Nummer entspricht einem der in den obigen Meldungstabellen beschriebenen Ereignisse/Störungen gemäß Anhang I C. Geben Sie eine Nummer wie<em>005</em>in das Suchfeld oben in diesem Abschnitt ein.</p>
+<div class="code-table-wrap">
+<table class="code-table">
+<thead><tr><th style="width:24%;">Code</th><th style="width:58%;">Bedeutung</th><th style="width:18%;">Schweregrad</th></tr></thead>
+<tbody>
+<tr><td>001–2, 004–5</td><td>Interne Störung der Fahrzeugeinheit</td><td><span class="sev sev-crit">Kritisch</span></td></tr>
+<tr><td>006</td><td>Zeitkonflikt</td><td><span class="sev sev-crit">Kritisch</span></td></tr>
+<tr><td>007</td><td>Anzeigestörung</td><td><span class="sev sev-high">Hoch</span></td></tr>
+<tr><td>009</td><td>Betriebsart Kalibrierung Fehler</td><td><span class="sev sev-high">Hoch</span></td></tr>
+<tr><td>010</td><td>Geschwindigkeitssignal-Ausgang (B7) Störung</td><td><span class="sev sev-med">Mittel</span></td></tr>
+<tr><td>012</td><td>Störung beim Herunterladen</td><td><span class="sev sev-med">Mittel</span></td></tr>
+<tr><td>013–14</td><td>CAN-Bus-Störung</td><td><span class="sev sev-med">Mittel</span></td></tr>
+<tr><td>015</td><td>Anzeigestörung</td><td><span class="sev sev-med">Mittel</span></td></tr>
+<tr><td>016</td><td>Sensorstörung (Selbsttest)</td><td><span class="sev sev-crit">Kritisch</span></td></tr>
+<tr><td>017–18</td><td>Fehler der Sensor-Datenintegrität</td><td><span class="sev sev-crit">Kritisch</span></td></tr>
+<tr><td>019</td><td>Unterbrechung der Sensor-Stromversorgung</td><td><span class="sev sev-med">Mittel</span></td></tr>
+<tr><td>020–22</td><td>Sensor-Kommunikationsfehler</td><td><span class="sev sev-high">Hoch</span></td></tr>
+<tr><td>023</td><td>Sensor-Authentifizierungs-/Kopplungsfehler</td><td><span class="sev sev-high">Hoch</span></td></tr>
+<tr><td>024</td><td>Unbekannte Sensor-Seriennummer</td><td><span class="sev sev-high">Hoch</span></td></tr>
+<tr><td>025</td><td>Datenspeicherfehler</td><td><span class="sev sev-crit">Kritisch</span></td></tr>
+<tr><td>026</td><td>Gehäuse geöffnet (Sicherheitsverletzung)</td><td><span class="sev sev-crit">Kritisch</span></td></tr>
+<tr><td>028</td><td>Lenken ohne geeignete Karte</td><td><span class="sev sev-crit">Kritisch</span></td></tr>
+<tr><td>029</td><td>Kartenkonflikt</td><td><span class="sev sev-med">Mittel</span></td></tr>
+<tr><td>030</td><td>Geschwindigkeitsüberschreitung</td><td><span class="sev sev-high">Hoch</span></td></tr>
+<tr><td>031</td><td>Unterbrechung der Stromversorgung</td><td><span class="sev sev-med">Mittel</span></td></tr>
+<tr><td>034</td><td>Kartenauswurf nicht möglich</td><td><span class="sev sev-med">Mittel</span></td></tr>
+<tr><td>036</td><td>Drucken/Anzeige nicht möglich</td><td><span class="sev sev-med">Mittel</span></td></tr>
+<tr><td>037</td><td>Druck verzögert</td><td><span class="sev sev-info">Info</span></td></tr>
+<tr><td>038</td><td>Druckerschublade offen</td><td><span class="sev sev-med">Mittel</span></td></tr>
+<tr><td>039</td><td>Kein Papier</td><td><span class="sev sev-med">Mittel</span></td></tr>
+<tr><td>040</td><td>Störung des Kartenmechanismus, Schacht 1</td><td><span class="sev sev-high">Hoch</span></td></tr>
+<tr><td>041</td><td>Kartenkommunikationsfehler, Schacht 1</td><td><span class="sev sev-high">Hoch</span></td></tr>
+<tr><td>042</td><td>Authentizität der Kartendaten, Schacht 1</td><td><span class="sev sev-high">Hoch</span></td></tr>
+<tr><td>043</td><td>Karte fehlt, Schacht 1</td><td><span class="sev sev-high">Hoch</span></td></tr>
+<tr><td>044</td><td>Letzter Vorgang nicht korrekt abgeschlossen, Schacht 1</td><td><span class="sev sev-low">Low</span></td></tr>
+<tr><td>045</td><td>Zeitüberlappung, Schacht 1</td><td><span class="sev sev-med">Mittel</span></td></tr>
+<tr><td>046</td><td>Einstecken der Karte während des Lenkens, Schacht 1</td><td><span class="sev sev-low">Low</span></td></tr>
+<tr><td>047</td><td>Kartenauthentifizierung, Schacht 1</td><td><span class="sev sev-high">Hoch</span></td></tr>
+<tr><td>048</td><td>Ungültige Karte, Schacht 1</td><td><span class="sev sev-high">Hoch</span></td></tr>
+<tr><td>049</td><td>Aufzeichnungsinkonsistenz, Schacht 1</td><td><span class="sev sev-med">Mittel</span></td></tr>
+<tr><td>050</td><td>Karte nicht lesbar, Schacht 1</td><td><span class="sev sev-high">Hoch</span></td></tr>
+<tr><td>051</td><td>Falscher Kartentyp, Schacht 1</td><td><span class="sev sev-med">Mittel</span></td></tr>
+<tr><td>052</td><td>Karte gesperrt, Schacht 1</td><td><span class="sev sev-high">Hoch</span></td></tr>
+<tr><td>053–66</td><td>Kartenfehlfunktionen, Schacht 2 (Beifahrer)</td><td><span class="sev sev-high">Hoch</span></td></tr>
+</tbody>
+</table>
+</div>
+<h3>DTCO 4.0 / 4.1 – was eine Zahl auf dem Display bedeutet (intelligenter Tachograf)</h3>
+<p style="font-size:14px;color:var(--text2);margin-bottom:12px;">Neuere VDO DTCO 4.0 und 4.1 Geräte zeigen eine zweistellige Zahl neben dem Piktogramm an. Niedrige Zahlen (001–066) stehen in der obigen Tabelle; die hohen Zahlen<strong>80–98</strong>gehören zu intelligenten Tachografenfunktionen (GNSS, DSRC, ITS). Sie können jede davon direkt in das Suchfeld oben eingeben.</p>
+<div class="code-table-wrap">
+<table class="code-table">
+<thead><tr><th style="width:24%;">Anzeigenummer</th><th style="width:58%;">Bedeutung</th><th style="width:18%;">Schweregrad</th></tr></thead>
+<tbody>
+<tr><td>34</td><td>Kartenauswurf nicht möglich</td><td><span class="sev sev-med">Mittel</span></td></tr>
+<tr><td>80</td><td>Datenkonflikt Fahrzeugbewegung</td><td><span class="sev sev-crit">Kritisch</span></td></tr>
+<tr><td>82</td><td>x Interne GNSS Störung</td><td><span class="sev sev-med">Mittel</span></td></tr>
+<tr><td>83</td><td>Fehlende Positionsdaten des GNSS-Empfängers</td><td><span class="sev sev-med">Mittel</span></td></tr>
+<tr><td>84</td><td>x Interne DSRC Störung</td><td><span class="sev sev-low">Low</span></td></tr>
+<tr><td>85</td><td>Kommunikationsfehler mit der Fernkommunikationsausrüstung</td><td><span class="sev sev-low">Low</span></td></tr>
+<tr><td>86</td><td>Zeitkonflikt</td><td><span class="sev sev-med">Mittel</span></td></tr>
+<tr><td>87</td><td>Sensorstörung</td><td><span class="sev sev-high">Hoch</span></td></tr>
+<tr><td>96</td><td>GNSS-Anomalie (GNSS-Unregelmäßigkeiten · Anti-Spoofing OSNMA)</td><td><span class="sev sev-high">Hoch</span></td></tr>
+<tr><td>97</td><td>Interne Sensorstörung</td><td><span class="sev sev-high">Hoch</span></td></tr>
+<tr><td>98</td><td>ITS / Bluetooth-Störung</td><td><span class="sev sev-low">Low</span></td></tr>
+<tr><td>67, 99</td><td>Inkonsistenter Eintrag</td><td><span class="sev sev-med">Mittel</span></td></tr>
+<tr><td>68–72</td><td>Karten-/interne Störung, Schacht 2 (Beifahrer)</td><td>Variiert</td></tr>
+<tr><td>88–95</td><td>Lenk- und Ruhezeiten Hinweis – kein Verstoß</td><td><span class="sev sev-info">Info</span></td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</details>
+<!-- ===== STONERIDGE SE5000 ===== -->
+<details class="vendor" id="stoneridge">
+<summary>
+<span class="vendor-meta">Stoneridge · Standardausrüstung im Vereinigten Königreich und Skandinavien</span>Stoneridge SE5000 Exakt Duo² (Rev 7.6)</summary>
+<div class="vendor-body">
+<p>Der Stoneridge SE5000 ist der am häufigsten in im Vereinigten Königreich zugelassenen LKW und in Fuhrparks in den nordischen Ländern verbaute intelligente Tachograf. Die unten aufgeführten Meldungen sind wörtlich aus dem offiziellen<strong>Stoneridge SE5000 Exakt Duo² Driver &amp; Company Manual, Rev 7.6</strong>(Stoneridge Electronics AB, Örebro) übernommen. Das Handbuch von Stoneridge ordnet die Meldungen in vier Familien ein, die genau der Klassifizierung nach Anhang I C entsprechen:<em>Meldungen</em>(informatorisch),<em>Vorwarnungen</em>, <em>Warnungen</em>und<em>Störungen</em>.</p>
+<p style="font-size:14px;color:var(--text2);margin-bottom:18px;"><strong>Handbuchzitat:</strong>"Störungen sind kritischer als Warnungen und werden angezeigt, wenn eine Störung im Tachografen, im Sensor oder in der Fahrerkarte erkannt wird. Darüber hinaus werden Störungen angezeigt, wenn Manipulationen am Kontrollgerät erkannt werden. Störungen werden gespeichert und können ausgedruckt werden."</p>
+<h3>Kartenbezogene Meldungen</h3>
+<div class="code-table-wrap">
+<table class="code-table">
+<thead>
+<tr>
+<th style="width: 26%;">Anzeige</th>
+<th style="width: 14%;">Typ</th>
+<th style="width: 32%;">Beschreibung (wortwörtlich aus dem Handbuch)</th>
+<th style="width: 28%;">Empfohlene Maßnahme</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>Kartenfehlfunktion 1</td><td><span class="sev sev-crit">Störung</span></td><td>Die Karte in Schacht 1 ist defekt. Ähnliche Meldung für Schacht 2. Bezieht sich auf die Karte.</td><td>Auswerfen und visuell prüfen. Mit einem feuchten Tuch reinigen. Bei fortbestehender Störung: Werkstattbesuch.</td></tr>
+<tr><td>Kartenprüfung 1 fehlgeschlagen</td><td><span class="sev sev-crit">Störung</span></td><td>Die Sicherheitsprüfung des Tachografen für die Karte in Schacht 1 ist fehlgeschlagen. Bezieht sich auf den Tachografen.</td><td>Auswerfen und reinigen. Falls die Störung weiterhin besteht: Werkstatt muss prüfen.</td></tr>
+<tr><td>Zeitüberlappung Karte 1</td><td><span class="sev sev-med">Warnung</span></td><td>Die letzte Entnahmezeit der eingelegten Fahrerkarte ist später als Datum/Uhrzeit des Tachografen. Bezieht sich auf den Tachografen.</td><td>Datum/Uhrzeit am Tachografen prüfen. Warten, bis die Überlappung abgelaufen ist.</td></tr>
+<tr><td>Integritätsfehler Karte</td><td><span class="sev sev-crit">Störung</span></td><td>Beschädigte Daten beim Auslesen von der Karte erkannt. Bezug zur Karte.</td><td>Reinigen und erneut versuchen. Falls weiterhin auftretend: Karte ersetzen und Werkstatt aufsuchen.</td></tr>
+<tr><td>Kartenkonflikt</td><td><span class="sev sev-med">Warnung</span></td><td>Eine ungültige Kartenkombination wurde erkannt. Bezug zur Karte.</td><td>Entnehmen Sie die betreffende Karte.</td></tr>
+<tr><td>Einstecken der Karte während des Lenkens</td><td><span class="sev sev-med">Warnung</span></td><td>Eine Fahrerkarte wurde eingesteckt, während sich das Fahrzeug bewegte. Bezug zum Bediener.</td><td>Setzen Sie die Fahrt fort, wenn die Fahrerkarte gültig ist; Ereignis wird aufgezeichnet.</td></tr>
+<tr><td>Kartenentnahme ohne Speicherung</td><td><span class="sev sev-med">Meldung</span></td><td>Daten konnten aufgrund eines Fehlers nicht auf der aus Schacht 1 entnommenen Karte gespeichert werden.</td><td>Karte entnehmen, reinigen, erneut versuchen. Bei weiterhin auftretenden Problemen Selbsttest durchführen.</td></tr>
+<tr><td>Karte ungültig</td><td><span class="sev sev-info">Meldung</span></td><td>Die Karte in Schacht 1 ist abgelaufen. Bezug zum Bediener.</td><td>Entfernen Sie die Karte und ersetzen Sie diese durch eine gültige.</td></tr>
+<tr><td>1 Ungültig in xx Tagen</td><td><span class="sev sev-info">Meldung</span></td><td>Die in Schacht 1 eingesteckte Karte läuft in xx Tagen (0–30) ab. Bezug zum Bediener.</td><td>Wenden Sie sich an die zuständige Behörde, um eine neue Karte zu erhalten.</td></tr>
+<tr><td>Einstecken einer ungültigen Karte</td><td><span class="sev sev-med">Warnung</span></td><td>Es wurde eine ungültige Karte in einen Schacht eingesteckt. Bezug zum Bediener.</td><td>Entnehmen Sie die ungültige Karte.</td></tr>
+<tr><td>Letzter Vorgang nicht korrekt abgeschlossen</td><td><span class="sev sev-med">Warnung</span></td><td>Die Fahrerkarte in Schublade 1 wurde während der letzten Sitzung nicht korrekt ausgeworfen. Die vorherige Kartenentnahme in Schublade 1 wurde vom Tachografen nicht korrekt abgeschlossen.</td><td>Auswerfen und reinigen. Selbsttest, falls das Problem weiterhin besteht.</td></tr>
+<tr><td>PIN falsch! Karte gesperrt</td><td><span class="sev sev-high">Meldung</span></td><td>PIN wurde zu oft falsch eingegeben (Werkstattkarte). Bezogen auf die Karte.</td><td>Auswerfen und durch eine gültige Karte ersetzen.</td></tr>
+</tbody>
+</table>
+</div>
+<h3>Sensor- und Fahrzeugbewegungs-Störungen</h3>
+<div class="code-table-wrap">
+<table class="code-table">
+<thead>
+<tr>
+<th style="width: 26%;">Anzeige</th>
+<th style="width: 14%;">Typ</th>
+<th style="width: 32%;">Beschreibung (wörtlich)</th>
+<th style="width: 28%;">Maßnahme</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>Authentifizierungsfehler des Sensors</td><td><span class="sev sev-crit">Störung</span></td><td>Der Tachograf erkennt den Sensor nicht bzw. erkennt den angeschlossenen Sensor nicht als den installierten. Bezogen auf den Bewegungssensor.</td><td>Digitale Tachografen-Werkstatt aufsuchen.</td></tr>
+<tr><td>Sensorkabelfehler</td><td><span class="sev sev-high">Warnung</span></td><td>Datenfehler Bewegungssensor / Datenfehler Bewegungssensor. Bezogen auf den Bewegungssensor.</td><td>Werkstatt muss Verkabelung und Sensor prüfen.</td></tr>
+<tr><td>Sensor-Kommunikationsfehler</td><td><span class="sev sev-crit">Störung</span></td><td>Kommunikationsfehler des Bewegungssensors. Bezogen auf den Bewegungssensor.</td><td>Werkstattaustausch.</td></tr>
+<tr><td>Sensor-Datenfehler</td><td><span class="sev sev-high">Warnung</span></td><td>Signalausfall zwischen Bewegungssensor und Tachograf. Bezogen auf den Bewegungssensor.</td><td>Werkstatt muss prüfen.</td></tr>
+<tr><td>Fehler der Sensor-Datenintegrität</td><td><span class="sev sev-crit">Störung</span></td><td>Datenfehler Bewegungssensor, Integritätsfehler der gespeicherten Daten. Bezieht sich auf den Bewegungssensor.</td><td>Sensorwechsel wahrscheinlich.</td></tr>
+<tr><td>Fehler bei der Sensor-Datenübertragung</td><td><span class="sev sev-crit">Störung</span></td><td>Der Bewegungssensor und der Tachograf kommunizieren nicht. Bezieht sich auf den Bewegungssensor.</td><td>Werkstattbesuch.</td></tr>
+<tr><td>Sensorstörung keine Bestätigung</td><td><span class="sev sev-crit">Störung</span></td><td>Kommunikationsfehler des Bewegungssensors.</td><td>Werkstattbesuch.</td></tr>
+<tr><td>Sensorspannung hoch / niedrig</td><td><span class="sev sev-crit">Störung</span></td><td>Die Spannung des Bewegungssensors ist zu hoch oder zu niedrig. Bezieht sich auf den Bewegungssensor.</td><td>Die Werkstatt muss die Versorgung prüfen.</td></tr>
+<tr><td>Sensor kein Spannungssignal</td><td><span class="sev sev-crit">Störung</span></td><td>Der Bewegungssensor hat keine Stromversorgung. Bezieht sich auf den Bewegungssensor.</td><td>Die Werkstatt muss die Versorgung prüfen.</td></tr>
+<tr><td>Sensor unbef. Gehäuse offen</td><td><span class="sev sev-crit">Störung</span></td><td>Unautorisiertes Öffnen erkannt. Bezieht sich auf den Bewegungssensor.</td><td>Die Werkstatt muss eine mögliche Manipulation prüfen.</td></tr>
+<tr><td>Sekundäre Sensorstörung</td><td><span class="sev sev-crit">Störung</span></td><td>Keine oder fehlerhafte Daten vom Bewegungssensor der zweiten Quelle. Bezieht sich auf den Bewegungssensor.</td><td>Werkstatt muss prüfen.</td></tr>
+<tr><td>Unbef. Sensorwechsel</td><td><span class="sev sev-crit">Störung</span></td><td>Der Sensor wurde seit der letzten Kopplung gewechselt. Bezieht sich auf den Bewegungssensor.</td><td>Die Werkstatt muss neu koppeln.</td></tr>
+<tr><td>Datenkonflikt Fahrzeugbewegung</td><td><span class="sev sev-crit">Störung</span></td><td>Die Daten der zweiten Quelle des Bewegungssensors und des primären Bewegungssensors widersprechen sich. Bezogen auf den Bewegungssensor.</td><td>Werkstatt muss prüfen.</td></tr>
+<tr><td>Sicherheitsverletzung</td><td><span class="sev sev-crit">Störung</span></td><td>Karte wurde gewaltsam entfernt oder eine Manipulation der Hardware wurde festgestellt.</td><td>Werkstattbesuch — Untersuchung erforderlich.</td></tr>
+</tbody>
+</table>
+</div>
+<h3>Interne Störungen der Fahrzeugeinheit (Tachograf) und Stromversorgung</h3>
+<div class="code-table-wrap">
+<table class="code-table">
+<thead>
+<tr>
+<th style="width: 26%;">Anzeige</th>
+<th style="width: 14%;">Typ</th>
+<th style="width: 32%;">Beschreibung (wörtlich)</th>
+<th style="width: 28%;">Maßnahme</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>Interne Störung der Fahrzeugeinheit</td><td><span class="sev sev-crit">Störung</span></td><td>Der Tachograf hat eine interne Störung festgestellt. Bezogen auf den Tachografen.</td><td>Besuchen Sie eine Werkstatt.</td></tr>
+<tr><td>Fehler bei der Datenintegrität</td><td><span class="sev sev-crit">Störung</span></td><td>Die im Tachografen gespeicherten Benutzerdaten weisen Fehler auf. Bezogen auf den Tachografen.</td><td>Werkstattbesuch umgehend.</td></tr>
+<tr><td>Unbefugtes Öffnen der Fahrzeugeinheit</td><td><span class="sev sev-crit">Störung</span></td><td>Das Gehäuse der Tachograf-Einheit wurde geöffnet. Bezogen auf den Tachografen.</td><td>Die Werkstatt muss eine Manipulation untersuchen.</td></tr>
+<tr><td>Unterbrechung der Stromversorgung</td><td><span class="sev sev-med">Warnung</span></td><td>Die Versorgungsspannung des Tachografen liegt unter oder über dem Grenzwert für den korrekten Betrieb oder wurde unterbrochen. Die Stromversorgung wurde für mehr als 200 Millisekunden unterbrochen. Die Anlasserspannung sollte dieses Ereignis nicht verursachen.</td><td>Die Werkstatt muss bei Wiederholung die elektrische Versorgung des Fahrzeugs prüfen.</td></tr>
+<tr><td>Lenken ohne geeignete Karte</td><td><span class="sev sev-high">Warnung</span></td><td>Lenken ohne geeignete Karte oder mit einer ungeeigneten Kartenkombination. Bezogen auf den Betreiber.</td><td>Anhalten und ungeeignete Karte entfernen. Eine gültige Fahrerkarte einstecken.</td></tr>
+<tr><td>Geschwindigkeitsüberschreitung</td><td><span class="sev sev-high">Warnung</span></td><td>Die Fahrzeuggeschwindigkeit hat die eingestellte Geschwindigkeitsbegrenzung für 1 Minute überschritten und wird gespeichert. Bezieht sich auf den Betreiber.</td><td>Die angegebene Geschwindigkeitsbegrenzung einhalten.</td></tr>
+<tr><td>Vorwarnung Geschwindigkeitsüberschreitung</td><td><span class="sev sev-med">Meldung</span></td><td>Das Fahrzeug überschreitet die eingestellte Geschwindigkeitsbegrenzung. Nach 1 Minute kontinuierlicher Geschwindigkeitsüberschreitung wird die Warnung gespeichert.</td><td>Vor Erreichen der 1-Minuten-Schwelle langsamer werden.</td></tr>
+<tr><td>Störung beim Herunterladen</td><td><span class="sev sev-med">Warnung</span></td><td>Ein Fehler beim Versuch, Daten vom Tachografen herunterzuladen. Bezieht sich auf den Tachografen/die Karte.</td><td>Stecker und Ausrüstung prüfen, erneut versuchen. Bei Fortbestehen: Werkstatt.</td></tr>
+<tr><td>UTC-Anpassung nicht erlaubt</td><td><span class="sev sev-info">Meldung</span></td><td>Eine UTC-Zeitanpassung von mehr als ±1 Minute einmal pro Woche ist nicht erlaubt.</td><td>Wenn die UTC um mehr als 20 Min. abgewichen ist, muss die Werkstatt kalibrieren.</td></tr>
+</tbody>
+</table>
+</div>
+<h3>Meldungen des Druckers</h3>
+<div class="code-table-wrap">
+<table class="code-table">
+<thead>
+<tr>
+<th style="width: 26%;">Anzeige</th>
+<th style="width: 14%;">Typ</th>
+<th style="width: 32%;">Beschreibung (wörtlich)</th>
+<th style="width: 28%;">Maßnahme</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>Drucker überhitzt</td><td><span class="sev sev-low">Meldung</span></td><td>Der Druck konnte nicht gestartet werden, oder der laufende Druck wurde unterbrochen, weil die Temperatur des Druckers zu hoch ist.</td><td>Warten, bis der Drucker abgekühlt ist, dann erneut versuchen.</td></tr>
+<tr><td>Drucker unterkühlt</td><td><span class="sev sev-low">Meldung</span></td><td>Der Druck konnte nicht gestartet werden, weil die Temperatur des Druckers zu niedrig ist.</td><td>Warten, bis der Drucker aufgewärmt ist; Werkstatt aufsuchen, wenn dies weiterhin besteht.</td></tr>
+<tr><td>Drucker-Unterspannung</td><td><span class="sev sev-low">Meldung</span></td><td>Der laufende Druckvorgang wurde unterbrochen, da die Eingangsspannung des Tachografen zu niedrig ist.</td><td>Zündung einschalten prüfen; Batteriespannung und Anschlüsse überprüfen.</td></tr>
+<tr><td>Drucker: Kein Papier</td><td><span class="sev sev-info">Meldung</span></td><td>Der laufende Druckvorgang wurde unterbrochen, da im Drucker kein Papier mehr ist.</td><td>Papier nachfüllen.</td></tr>
+</tbody>
+</table>
+</div>
+<h3>Lenkzeitwarnungen (Stoneridge Vorwarnungen und Warnungen)</h3>
+<div class="code-table-wrap">
+<table class="code-table">
+<thead>
+<tr>
+<th style="width: 30%;">Anzeige</th>
+<th style="width: 14%;">Typ</th>
+<th style="width: 56%;">Bedeutung (Wortlaut)</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>Erinnerung: Verbleibende Viertelstunde</td><td><span class="sev sev-info">Meldung</span></td><td>Dem Fahrer bleiben noch 15 Minuten, bis die gesetzlich zulässige maximale ununterbrochene Lenkzeit von 4½ Stunden überschritten wird.</td></tr>
+<tr><td>Zeit für Pause</td><td><span class="sev sev-med">Warnung</span></td><td>Die gesetzlich zulässige maximale ununterbrochene Lenkzeit von 4½ Stunden ist abgelaufen (gemäß Verordnung 561/2006). Machen Sie eine mindestens 45-minütige Unterbrechung oder eine 15+30-geteilte Pause.</td></tr>
+<tr><td>Erinnerung an Unterbrechung</td><td><span class="sev sev-info">Vorwarnung</span></td><td>Eine Erinnerung an eine Unterbrechung gemäß der 6 h Arbeitszeitrichtlinie (Richtlinie 2002/15/EG).</td></tr>
+<tr><td>tägliche Lenkzeit</td><td><span class="sev sev-med">Warnung</span></td><td>Vorwarnung und Warnung für 9 Stunden tägliche Lenkzeit.</td></tr>
+<tr><td>Ende der täglichen Lenkzeit</td><td><span class="sev sev-med">Warnung</span></td><td>Maximale tägliche Lenkzeit erreicht.</td></tr>
+<tr><td>wöchentliche Lenkzeit</td><td><span class="sev sev-med">Vorwarnung</span></td><td>Maximale wöchentliche Lenkzeit (56 h) wird bald erreicht.</td></tr>
+<tr><td>Ende der wöchentlichen Lenkzeit</td><td><span class="sev sev-med">Warnung</span></td><td>Maximale wöchentliche Lenkzeit erreicht.</td></tr>
+<tr><td>Zwei-Wochen-Lenkzeit</td><td><span class="sev sev-med">Vorwarnung</span></td><td>Maximale Zwei-Wochen-Lenkzeit (90 h) wird bald erreicht.</td></tr>
+<tr><td>Ende der Zwei-Wochen-Lenkzeit</td><td><span class="sev sev-med">Warnung</span></td><td>Maximale Zwei-Wochen-Lenkzeit erreicht.</td></tr>
+<tr><td>wöchentliche Arbeitszeit</td><td><span class="sev sev-med">Vorwarnung</span></td><td>Erreichen der wöchentlichen Arbeitszeit gemäß der 60-Stunden-WTD-Regel.</td></tr>
+<tr><td>Ende der wöchentlichen Arbeitszeit</td><td><span class="sev sev-med">Warnung</span></td><td>Die wöchentliche Arbeitszeit ist gemäß der 60-Stunden-WTD-Regel erreicht.</td></tr>
+<tr><td>Erinnerung an die tägliche Ruhezeit</td><td><span class="sev sev-info">Vorwarnung</span></td><td>Eine Erinnerung an die tägliche Ruhezeit.</td></tr>
+<tr><td>Erinnerung an die wöchentliche Ruhezeit</td><td><span class="sev sev-info">Vorwarnung</span></td><td>Eine Erinnerung an die wöchentliche Ruhezeit.</td></tr>
+<tr><td>Zeit für die tägliche Ruhezeit</td><td><span class="sev sev-med">Warnung</span></td><td>Eine Warnung vor Beginn der täglichen Ruhezeit.</td></tr>
+<tr><td>Zeit für die wöchentliche Ruhezeit</td><td><span class="sev sev-med">Warnung</span></td><td>Eine Warnung vor Beginn der wöchentlichen Ruhezeit.</td></tr>
+<tr><td>Service-Vorwarnung / Zeit für Service</td><td><span class="sev sev-low">Meldung</span></td><td>Nächste Kalibrierungsvorwarnung / die Kalibrierung des Tachografen ist abgelaufen.</td></tr>
+</tbody>
+</table>
+</div>
+<h3>SE5000-8.1 Smart 2 — herstellerspezifische Hex-DTCs (ISO 16844-7)</h3>
+<p style="font-size:14px;color:var(--text2);margin-bottom:12px;">Der aktuelle SE5000-8.1 (Intelligenter Tachograf 2) meldet einen 5-Byte hexadezimalen DTC gemäß ISO 16844-7 zusätzlich zur Meldung auf dem Bildschirm. Die folgenden Codes sind dem<strong>Stoneridge SE5000-8.1 Bedienungsanleitung, Dokument 9000-103766P_0109</strong>(Stoneridge Electronics AB).</p>
+<div class="code-table-wrap">
+<table class="code-table">
+<thead><tr><th style="width:13%;">DTC</th><th style="width:24%;">Meldung</th><th style="width:30%;">Ursache</th><th style="width:21%;">Maßnahme</th><th style="width:12%;">Schweregrad</th></tr></thead>
+<tbody>
+<tr><td>0001C0</td><td>Drucken angehalten, kein Papier</td><td>Der Drucker hat kein Papier.</td><td>Neue Papierrolle einlegen.</td><td><span class="sev sev-low">Low</span></td></tr>
+<tr><td>000900</td><td>Keine Zündung, aber Geschwindigkeitssignale vorhanden</td><td>Die Zündung ist aus, doch der Sensor erkennt Geschwindigkeitssignale.</td><td>Auf Vibrationen / Störungen prüfen; bei Wiederholung muss die Werkstatt den Sensor und Pin B7 prüfen.</td><td><span class="sev sev-high">Hoch</span></td></tr>
+<tr><td>000D40</td><td>Vorwarnung Geschwindigkeitsüberschreitung</td><td>Geschwindigkeitsbegrenzung überschritten, aber für weniger als 60 Sekunden.</td><td>Langsam fahren. Fahrerbezogen — keine Werkstatt erforderlich.</td><td><span class="sev sev-med">Mittel</span></td></tr>
+<tr><td>000B78</td><td>Betriebsart Kalibrierung Fehler</td><td>Zwei Jahre sind seit der letzten Kalibrierung vergangen.</td><td>Neukalibrierung in einer autorisierten Werkstatt.</td><td><span class="sev sev-high">Hoch</span></td></tr>
+<tr><td>000C31</td><td>x Interne GNSS Störung</td><td>Der interne GNSS-Empfänger liefert keine Positionsdaten mehr.</td><td>Führen Sie einen Neustart des Tachografen durch und machen Sie eine Probefahrt; falls wiederkehrend, ersetzen Sie ihn.</td><td><span class="sev sev-med">Mittel</span></td></tr>
+<tr><td>002B80</td><td>Zeitkonflikt (GNSS vs VU)</td><td>Die interne Uhr und die GNSS-Uhr weichen nach 12 Stunden um mehr als 1 Minute voneinander ab.</td><td>Überprüfen Sie die interne Uhr und die GNSS-Zeit. Werkstatt.</td><td><span class="sev sev-med">Mittel</span></td></tr>
+<tr><td>002C80</td><td>Fehlende Positionsdaten des GNSS-Empfängers</td><td>Kein gültiges GNSS-Signal während 3 Stunden kumulativem Lenken.</td><td>Überprüfen Sie den GNSS-Empfang und mögliche Hindernisse um die Antenne herum.</td><td><span class="sev sev-med">Mittel</span></td></tr>
+<tr><td>002D80</td><td>Kommunikationsfehler mit der Fernkommunikationsausrüstung</td><td>Die Fahrzeugeinheit kann nicht korrekt mit dem DSRC-VU-Modul kommunizieren.</td><td>Überprüfen Sie die DSRC-VU-Einheit, die Verkabelung und die CAN-Parameter.</td><td><span class="sev sev-med">Mittel</span></td></tr>
+<tr><td>002E80</td><td>GNSS-Anomalie</td><td>GNSS hat einen Angriff erkannt oder die Nachrichtenauthentifizierung ist fehlgeschlagen (OSNMA).</td><td>Überprüfen Sie, ob Manipulationen vorliegen. Starten Sie neu und überprüfen Sie; ersetzen Sie bei Wiederholung.</td><td><span class="sev sev-crit">Kritisch</span></td></tr>
+<tr><td>00FD0B</td><td>CAN-Bus aus, Tachograf</td><td>Der A-Stecker (TCO-CAN) befindet sich im Zustand „Bus Off“.</td><td>Überprüfen Sie den A-Stecker und die Verkabelung, die CAN-Einstellungen und die Terminierung (60 Ω).</td><td><span class="sev sev-high">Hoch</span></td></tr>
+</tbody>
+</table>
+</div>
+<h3>Allgemeine Ereignisse &amp; Sicherheitsverletzung (SE5000-8.1)</h3>
+<div class="code-table-wrap">
+<table class="code-table">
+<thead><tr><th style="width:24%;">Meldung</th><th style="width:34%;">Ursache</th><th style="width:30%;">Maßnahme</th><th style="width:12%;">Schweregrad</th></tr></thead>
+<tbody>
+<tr><td>Kartenkonflikt</td><td>Eine ungültige Kartenkombination wird erkannt (z. B. Unternehmenskarte + Kontrollkarte).</td><td>Entnehmen Sie die betreffende Karte.</td><td><span class="sev sev-med">Mittel</span></td></tr>
+<tr><td>Lenken ohne geeignete Karte</td><td>Lenken ohne gültige Karte, oder mit einer ungültigen Kartenkombination.</td><td>Halten Sie an, legen Sie eine gültige Karte ein und entfernen Sie die ungeeignete.</td><td><span class="sev sev-crit">Kritisch</span></td></tr>
+<tr><td>Geschwindigkeitsüberschreitung</td><td>Das Tempolimit wurde für mindestens 60 Sekunden überschritten.</td><td>Beachten Sie die zulässige Geschwindigkeitsbegrenzung für das Fahrzeug.</td><td><span class="sev sev-high">Hoch</span></td></tr>
+<tr><td>Unterbrechung der Stromversorgung (Fahrzeugeinheit / Bewegungssensor)</td><td>Die Stromversorgung des Tachografen oder Sensors wurde für mehr als 200 ms unterbrochen.</td><td>Überprüfen Sie die Stromversorgung und Verkabelung des Fahrzeugs.</td><td><span class="sev sev-med">Mittel</span></td></tr>
+<tr><td>Datenfehler Bewegungssensor (CNTR / No CNTR / Ereignis)</td><td>Der Sensor meldet Geschwindigkeit ohne Impulse, der Zähler stimmt nicht überein, oder eine Signaturabweichung tritt auf.</td><td>Überprüfen Sie den Sensor, die Verkabelung und Manipulationen; kalibrieren Sie bei Bedarf neu.</td><td><span class="sev sev-crit">Kritisch</span></td></tr>
+<tr><td>Authentifizierungsfehler Bewegungssensor</td><td>Ein Authentifizierungsversuch des Bewegungssensors ist fehlgeschlagen.</td><td>Überprüfen Sie den Sensor und die Verkabelung; koppeln Sie neu und kalibrieren Sie neu.</td><td><span class="sev sev-crit">Kritisch</span></td></tr>
+<tr><td>Sicherheitsverletzung</td><td>Der Sensor wurde seit der letzten Kopplung geändert.</td><td>Überprüfung auf Manipulation; Reparatur und Neukalibrierung.</td><td><span class="sev sev-crit">Kritisch</span></td></tr>
+<tr><td>Fehler bei der Datenintegrität der gespeicherten Daten</td><td>Daten im 365-Tages-Speicher sind beschädigt.</td><td>Das Kontrollgerät außer Betrieb nehmen und ersetzen.</td><td><span class="sev sev-crit">Kritisch</span></td></tr>
+<tr><td>Sicherheitsverletzung</td><td>Die Karte wurde gewaltsam entfernt.</td><td>Kartenleser überprüfen. Außer Betrieb nehmen und ersetzen.</td><td><span class="sev sev-crit">Kritisch</span></td></tr>
+<tr><td>Sicherheitsverletzung</td><td>Hardware-Manipulation wurde erkannt.</td><td>Das Kontrollgerät außer Betrieb nehmen und ersetzen.</td><td><span class="sev sev-crit">Kritisch</span></td></tr>
+</tbody>
+</table>
+</div>
+<p style="font-size:14px;color:var(--text2);margin-bottom:18px;"><strong>Quelle:</strong>Stoneridge Electronics AB, SE5000-8.1 Smart 2 Kontrollgerät Handbuch, Dokument 9000-103766P_0109, S. 32–37.</p>
+<p style="font-size:14px;color:var(--text2);margin-top:18px;"><strong>Quelle:</strong>Alle oben genannten Stoneridge-Meldungen sind aus dem Handbuch für Fahrer und Unternehmen des SE5000 Exakt Duo² (Rev 7.6) von Stoneridge Electronics AB entnommen. Die vollständige Tabelle umfasst alle Meldungen, die ein Fahrer sehen kann; Meldungen, die spezifisch für den Werkstatt- (Kalibrierungs-) Modus sind, werden hier nicht angezeigt. Die SE5000-8.1 Smart Tachograph 2 Einheit verwendet dieselbe Meldungsfamilienstruktur gemäß Anhang I C mit geringfügigen Textaktualisierungen.</p>
+</div>
+</details>
+<!-- ===== ACTIA SmarTach ===== -->
+<details class="vendor" id="actia">
+<summary>
+<span class="vendor-meta">Actia · Standard für Frankreich und Südeuropa</span>Actia SmarTach (Gen1 &amp; Gen2)</summary>
+<div class="vendor-body">
+<p>Actia SmarTach ist der gebräuchlichste digitaler Tachograf in Frankreich zugelassenen LKW und eine häufige Ausstattung in Spanien, Italien und Portugal. Die folgenden Meldungen stammen aus dem<strong>Actia SmarTach Fahrerhandbuch (2021, Ref. c1c)</strong>. Actia verwendet Piktogramme auf dem Bildschirm + Kurztext; die Formulierung stimmt mit der Terminologie des Anhangs I C überein.</p>
+<div class="code-table-wrap">
+<table class="code-table">
+<thead>
+<tr>
+<th style="width: 26%;">Meldung</th>
+<th style="width: 36%;">Bedeutung</th>
+<th style="width: 26%;">Maßnahme</th>
+<th style="width: 12%;">Schweregrad</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Lenken ohne geeignete Karte</td>
+<td>LENKEN ohne geeignete Karte in Steckplatz 1 – Ereignis gemäß Anhang I C aufgezeichnet.</td>
+<td>Gültige Fahrerkarte einstecken. Zeitraum ausdrucken und kommentieren.</td>
+<td><span class="sev sev-high">Hoch</span></td>
+</tr>
+<tr>
+<td>Einstecken der Karte während des Lenkens</td>
+<td>Die Karte wurde eingesteckt, nachdem die Fahrt bereits begonnen hatte.</td>
+<td>Bestätigen — Ereignis auf Karte aufgezeichnet.</td>
+<td><span class="sev sev-med">Mittel</span></td>
+</tr>
+<tr>
+<td>Letzter Vorgang nicht korrekt abgeschlossen</td>
+<td>Der vorherige Vorgang wurde nicht ordnungsgemäß beendet.</td>
+<td>Bestätigen; Vermerk für Fuhrparkaufzeichnungen.</td>
+<td><span class="sev sev-med">Mittel</span></td>
+</tr>
+<tr>
+<td>Ungültige Karte / abgelaufen</td>
+<td>Die Fahrerkarte ist abgelaufen, wurde noch nicht aktiviert oder die Authentifizierung ist fehlgeschlagen.</td>
+<td>Erneuern Sie die Karte bei der Behörde Ihres Mitgliedstaates.</td>
+<td><span class="sev sev-med">Mittel</span></td>
+</tr>
+<tr>
+<td>Geschwindigkeitsüberschreitung</td>
+<td>Die eingestellte Geschwindigkeitsbegrenzung wurde länger als 60 Sekunden überschritten.</td>
+<td>Geschwindigkeit reduzieren; Ereignis im Download sichtbar.</td>
+<td><span class="sev sev-high">Hoch</span></td>
+</tr>
+<tr>
+<td>Datenkonflikt Fahrzeugbewegung</td>
+<td>Diskrepanz zwischen Bewegungssensor- und GNSS-/Wegstreckenzählersignal.</td>
+<td>Werkstatt — mögliche Manipulation oder Kabelschaden.</td>
+<td><span class="sev sev-crit">Kritisch</span></td>
+</tr>
+<tr>
+<td>Unterbrechung der Stromversorgung</td>
+<td>Die Versorgungsspannung ist abgefallen oder wurde unterbrochen.</td>
+<td>Bestätigen. Bei Wiederholung Versorgung prüfen.</td>
+<td><span class="sev sev-med">Mittel</span></td>
+</tr>
+<tr>
+<td>Sicherheitsverletzung</td>
+<td>Gehäuse der Fahrzeugeinheit geöffnet oder Datenintegrität verletzt.</td>
+<td>Obligatorischer Werkstattbesuch.</td>
+<td><span class="sev sev-crit">Kritisch</span></td>
+</tr>
+<tr>
+<td>Sensorstörung</td>
+<td>Bewegungssensor hat den Selbsttest nicht bestanden.</td>
+<td>Werkstattaustausch.</td>
+<td><span class="sev sev-crit">Kritisch</span></td>
+</tr>
+<tr>
+<td>Druckerstörung</td>
+<td>Der Drucker kann einen Druckauftrag nicht abschließen.</td>
+<td>Papier prüfen / abkühlen lassen / Mechanismus ersetzen, falls es weiterhin besteht.</td>
+<td><span class="sev sev-med">Mittel</span></td>
+</tr>
+<tr>
+<td>Fehlende Positionsdaten des GNSS-Empfängers</td>
+<td>Keine Positionsdaten für 3 Stunden kumuliertes Lenken.</td>
+<td>Bestätigen. Antenne prüfen; auf metallische Hindernisse achten.</td>
+<td><span class="sev sev-med">Mittel</span></td>
+</tr>
+<tr>
+<td>UTC-Zeitabweichung</td>
+<td>Die Differenz zwischen interner Uhr und GNSS-Zeit überschreitet 1 Minute.</td>
+<td>Die Werkstatt wird die Synchronisierung erneut durchführen.</td>
+<td><span class="sev sev-med">Mittel</span></td>
+</tr>
+<tr>
+<td>Interne Störung der Fahrzeugeinheit</td>
+<td>Generische VU-Fehlfunktion – Speicher, RTC, Software-Watchdog.</td>
+<td>Werkstatt innerhalb von 7 Tagen aufsuchen.</td>
+<td><span class="sev sev-crit">Kritisch</span></td>
+</tr>
+<tr>
+<td>Kartenkonflikt</td>
+<td>Inkompatible Kartenkombination in Steckplatz 1 + 2.</td>
+<td>Die im Konflikt stehende Karte entfernen.</td>
+<td><span class="sev sev-med">Mittel</span></td>
+</tr>
+<tr>
+<td>Lenkzeit &gt; 4 h 30</td>
+<td>Die ununterbrochene Lenkzeit hat 4 h 30 min ohne Unterbrechung überschritten (KITAS Bewegungssensor).</td>
+<td>Sofort anhalten und die obligatorische 45-minütige Unterbrechung einlegen.</td>
+<td><span class="sev sev-high">Hoch</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p style="font-size:14px;color:var(--text2);margin-top:14px;"><em>Die benutzerseitigen Nachrichten von Actia sind bewusst prägnant gehalten; detaillierte numerische DTCs sind nur über das CITO / SmarTach Tester eines Workshops zugänglich.</em></p>
+</div>
+</details>
+<!-- ===== EFAS-4 ===== -->
+<details class="vendor" id="efas">
+<summary>
+<span class="vendor-meta">Intellic / Schneider · häufig in deutschen und polnischen Fuhrparks</span>EFAS-4 / EFAS-4.10</summary>
+<div class="vendor-body">
+<p>Das EFAS-4 (ursprünglich Intellic, jetzt Schneider Electric) ist in vielen in Deutschland gebauten Sattelzugmaschinen (MAN, DAF einige Konfigurationen) und in einem erheblichen Anteil polnischer Lkw verbaut. Die unten stehenden Nachrichten stammen aus dem<strong>EFAS-4 Fahrerhandbuch, Edition 06.2022</strong>. EFAS verwendet zweibuchstabige Bildschirmsymbole plus ein Piktogramm.</p>
+<div class="code-table-wrap">
+<table class="code-table">
+<thead>
+<tr>
+<th style="width: 14%;">Code</th>
+<th style="width: 24%;">Meldung</th>
+<th style="width: 36%;">Bedeutung</th>
+<th style="width: 14%;">Maßnahme</th>
+<th style="width: 12%;">Schweregrad</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>E01</td><td>Lenken ohne geeignete Karte</td><td>Fahrzeug ohne gültige Fahrerkarte bewegt.</td><td>Karte einstecken; ausdrucken &amp; kommentieren.</td><td><span class="sev sev-high">Hoch</span></td></tr>
+<tr><td>E02</td><td>Einstecken der Karte während des Lenkens</td><td>Karte nach Fahrtbeginn eingesteckt.</td><td>Bestätigen.</td><td><span class="sev sev-med">Mittel</span></td></tr>
+<tr><td>E03</td><td>Letzter Vorgang nicht korrekt abgeschlossen</td><td>Vorheriger Kartenvorgang nicht korrekt abgeschlossen.</td><td>Bestätigen; für Fuhrpark notieren.</td><td><span class="sev sev-med">Mittel</span></td></tr>
+<tr><td>E04</td><td>Geschwindigkeitsüberschreitung</td><td>Geschwindigkeitsüberschreitung &gt; 1 Min.</td><td>Geschwindigkeit reduzieren.</td><td><span class="sev sev-high">Hoch</span></td></tr>
+<tr><td>E05</td><td>Unterbrechung der Stromversorgung</td><td>Versorgungsspannung zu niedrig oder unterbrochen.</td><td>Versorgung bei wiederholtem Auftreten prüfen.</td><td><span class="sev sev-med">Mittel</span></td></tr>
+<tr><td>E06</td><td>Bewegungsdaten</td><td>Inkonsistente Bewegungssensor-Impulse.</td><td>Werkstatt.</td><td><span class="sev sev-crit">Kritisch</span></td></tr>
+<tr><td>E07</td><td>Datenkonflikt Fahrzeugbewegung</td><td>Sensor stimmt nicht mit GNSS / Wegstreckenzähler überein.</td><td>Werkstatt — Manipulationsprüfung.</td><td><span class="sev sev-crit">Kritisch</span></td></tr>
+<tr><td>E08</td><td>Kartenkonflikt</td><td>Kartenkonflikt.</td><td>Konfligierende Karte entfernen.</td><td><span class="sev sev-med">Mittel</span></td></tr>
+<tr><td>E09</td><td>Zeitüberlappung</td><td>Negativer UTC-Offset von letzter Fahrzeugeinheit.</td><td>Werkstatt muss korrigieren.</td><td><span class="sev sev-med">Mittel</span></td></tr>
+<tr><td>E10</td><td>Sicherheitsverletzung</td><td>Gehäusemanipulation oder Datenintegritätsfehler.</td><td>Werkstatt erforderlich.</td><td><span class="sev sev-crit">Kritisch</span></td></tr>
+<tr><td>F01</td><td>Interne Störung der Fahrzeugeinheit</td><td>Generische Hardware-/Software-Störung der Fahrzeugeinheit.</td><td>Werkstatt innerhalb von 7 Tagen aufsuchen.</td><td><span class="sev sev-crit">Kritisch</span></td></tr>
+<tr><td>F02</td><td>Kartenmechanismus</td><td>Fehler des Kartenverriegelungsmechanismus.</td><td>Werkstatt.</td><td><span class="sev sev-high">Hoch</span></td></tr>
+<tr><td>F03</td><td>Uhrzeitstörung</td><td>Echtzeituhr unplausibel.</td><td>Werkstatt — neue Karten werden abgelehnt.</td><td><span class="sev sev-crit">Kritisch</span></td></tr>
+<tr><td>F04</td><td>Drucker</td><td>Störung des Druckermechanismus.</td><td>Papier ersetzen oder Werkstatt.</td><td><span class="sev sev-med">Mittel</span></td></tr>
+<tr><td>F05</td><td>Herunterladen</td><td>Fehler beim Daten-Download.</td><td>Wiederholen; Kabel prüfen.</td><td><span class="sev sev-med">Mittel</span></td></tr>
+<tr><td>F06</td><td>Sensorstörung</td><td>Bewegungssensor hat den Selbsttest nicht bestanden.</td><td>Sensorersatz in der Werkstatt.</td><td><span class="sev sev-crit">Kritisch</span></td></tr>
+<tr><td>F07</td><td>GNSS</td><td>Interne GNSS-Empfänger- oder Antennenstörung.</td><td>Werkstattüberprüfung.</td><td><span class="sev sev-high">Hoch</span></td></tr>
+<tr><td>F08</td><td>DSRC</td><td>Störung des DSRC-Fernprüfmoduls.</td><td>Die Werkstatt prüft Antenne und CAN.</td><td><span class="sev sev-med">Mittel</span></td></tr>
+</tbody>
+</table>
+</div>
+<h3>EFAS-4.10 / 4.11 — Hex-DTCs (ISO 16844-7), die 12 wichtigsten</h3>
+<p style="font-size:14px;color:var(--text2);margin-bottom:12px;">EFAS-Geräte stellen drei Arten von Codes bereit:<strong>EFT</strong>(Ereignis-/Störungstyp gemäß ISO),<strong>DTC</strong>(5-Byte-Hex gemäß ISO 16844-7) und eine herstellerspezifische<strong>Service ID</strong>. Die wichtigsten DTCs unten sind wiedergegeben aus dem<strong>Bosch Intellic EFAS-4.10 Werkstatthandbuch, Tabelle 18</strong>(DTCs und entsprechenden Service IDs).</p>
+<div class="code-table-wrap">
+<table class="code-table">
+<thead><tr><th style="width:18%;">DTC</th><th style="width:42%;">Bedeutung</th><th style="width:28%;">Maßnahme</th><th style="width:12%;">Schweregrad</th></tr></thead>
+<tbody>
+<tr><td>80 00 002007</td><td>Versorgungsspannung des Bewegungssensors über Maximum</td><td>Überprüfen Sie die Sensor-Stromversorgung und Verkabelung.</td><td><span class="sev sev-high">Hoch</span></td></tr>
+<tr><td>80 00 002003</td><td>Versorgungsspannung des Bewegungssensors unter Minimum</td><td>Überprüfen Sie die Sensor-Stromversorgung und Verkabelung.</td><td><span class="sev sev-high">Hoch</span></td></tr>
+<tr><td>80 00 002180</td><td>Kein Echtzeitsignal vom Bewegungssensor (Pin B3 unterbrochen)</td><td>Prüfen Sie Pin B3 und die Sensorstromversorgung.</td><td><span class="sev sev-crit">Kritisch</span></td></tr>
+<tr><td>80 00 002280</td><td>Fehlerhaftes Echtzeitsensorsignal (Pin B3 oder IMS-Fehler)</td><td>Prüfen Sie Pin B3 und die Sensorprüfsumme.</td><td><span class="sev sev-crit">Kritisch</span></td></tr>
+<tr><td>80 00 002452</td><td>Wegstreckensensor-Datenintegritätsfehler</td><td>Autorisierte Werkstatt muss den Sensor prüfen.</td><td><span class="sev sev-high">Hoch</span></td></tr>
+<tr><td>80 00 002508</td><td>Bewegungssensorstörung</td><td>Autorisierte Werkstatt — Sensoraustausch.</td><td><span class="sev sev-crit">Kritisch</span></td></tr>
+<tr><td>40 00 000200</td><td>Kartenfehlfunktion, Steckplatz 1</td><td>Kontakte reinigen und erneut einstecken; falls wiederkehrend, neue Karte.</td><td><span class="sev sev-high">Hoch</span></td></tr>
+<tr><td>40 00 000300</td><td>Kartenfehlfunktion, Steckplatz 2</td><td>Kontakte reinigen und erneut einstecken.</td><td><span class="sev sev-high">Hoch</span></td></tr>
+<tr><td>80 00 000660</td><td>Drucker: Kein Papier</td><td>Neue Papierrolle einlegen.</td><td><span class="sev sev-low">Low</span></td></tr>
+<tr><td>40 00 000900</td><td>Impulse des Bewegungssensors bei ausgeschalteter Zündung</td><td>Prüfen Sie auf Vibrationen, den Sensor und die Verkabelung.</td><td><span class="sev sev-high">Hoch</span></td></tr>
+<tr><td>40 00 000C31</td><td>Interner Speicherfehler</td><td>Autorisierte Werkstatt; ersetzen, wenn nicht reparierbar.</td><td><span class="sev sev-crit">Kritisch</span></td></tr>
+<tr><td>80 00 000D40</td><td>Kalibrierungsdaten inkorrekt oder unvollständig</td><td>Neukalibrierung in einer autorisierten Werkstatt.</td><td><span class="sev sev-crit">Kritisch</span></td></tr>
+</tbody>
+</table>
+</div>
+<p style="font-size:14px;color:var(--text2);margin-top:14px;"><em>EFAS-4 Zahlencodes (E01–E10, F01–F08) sind die internen Merkhilfen der Einheit — das zugrunde liegende Ereignis/die zugrunde liegende Störung gemäß Anhang I C ist der rechtlich relevante Bezeichner und wird auf die gleiche Weise wie bei jeder anderen Einheit aufgezeichnet.</em></p>
+</div>
+</details>
+</div><!-- /.vendor-stack -->
+<!-- ===== TAGRA CTA Box ===== -->
+<div class="cta-box">
+<h3>TAGRA entschlüsselt jede dieser Nachrichten automatisch.</h3>
+<p>Wenn Sie eine Fahrerkarte oder Fahrzeugeinheit in TAGRA auslesen, wird jedes Ereignis und jede Störung seiner Definition gemäß Anhang I C mit einer einfach verständlichen Erklärung zugeordnet. Testen Sie die Vollversion der Software 30 Tage lang kostenlos — keine Karte erforderlich.</p>
+<a class="cta-btn" href="/de/testen/?audience=fleet">TAGRA 30 Tage lang kostenlos testen →</a>
+</div>
+<!-- ===================================================================== -->
+<!-- SECTION 4: TOP 10 COMMON MISTAKES IN PRACTICE                          -->
+<!-- ===================================================================== -->
+<h2 id="common-mistakes">Top 10 der häufigsten Tachografmeldungen in der Praxis</h2>
+<p>Von den über 200 oben genannten Meldungen machen zehn die überwiegende Mehrheit dessen aus, was echte Fahrer täglich sehen — und fast alle davon sind<strong>betriebsbedingt</strong>statt katastrophal. Wenn Sie wissen, wie Sie auf diese zehn reagieren müssen, werden die meisten Schichten reibungslos ablaufen und die meisten Kontrollbehörden zufrieden sein.</p>
+<div class="code-table-wrap">
+<table class="code-table">
+<thead>
+<tr>
+<th style="width: 6%;">#</th>
+<th style="width: 26%;">Meldung</th>
+<th style="width: 42%;">Warum es auftritt</th>
+<th style="width: 26%;">Erste Reaktion</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>Kartenfehlfunktion</strong></td>
+<td>Verschmutzte Kontakte auf der Fahrerkarte oder im Karteneinschub. Karte leicht schräg eingesteckt. Häufig im Winter, wenn Karten in kalten Taschen aufbewahrt werden und sich Kondenswasser auf den Chipkontakten bildet.</td>
+<td>Auswerfen. Chip mit einem trockenen Tuch abwischen (keine Flüssigkeit). Neu einstecken. Wenn das Problem weiterhin besteht, den Ersatzsteckplatz versuchen.</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>Kein Papier / Druckerlade offen</strong></td>
+<td>Die Papierrolle ist leer, oder die Druckerlade wurde während eines Druckauftrags geöffnet. Falscher Papiertyp (nur Thermopapier, das für digitale Tachografen gekennzeichnet ist, wird akzeptiert).</td>
+<td>Eine neue Rolle einlegen, die Lade muss einrasten. Immer eine Ersatzrolle mitführen.</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>1 Pause! 04h15</strong></td>
+<td>Der Timer für die ununterbrochene Lenkzeit nähert sich 4 h 30 min. Die Vorwarnung ist konfigurierbar (üblicherweise 15 Minuten vorher).</td>
+<td>Planen Sie eine 45-minütige Unterbrechung in den nächsten 15 Minuten ein (oder teilen Sie diese in 15 + 30 auf).</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>Einstecken der Karte während des Lenkens</strong></td>
+<td>Der Fahrer hat vergessen, die Karte vor Fahrtantritt einzustecken, hat es dann bemerkt und sie während der Fahrt eingesteckt.</td>
+<td>Kurz anhalten. Korrekt neu einstecken. Das Ereignis wird auf der Karte aufgezeichnet, ist aber keine Störung.</td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>Letzter Vorgang nicht korrekt abgeschlossen</strong></td>
+<td>Der Fahrer hat die Karte zu schnell aus dem vorherigen Fahrzeug gezogen, oder die vorherige Fahrzeugeinheit wurde heruntergefahren, bevor sie den Abschlussdatensatz geschrieben hat.</td>
+<td>Bestätigen. Informieren Sie den Fuhrparkmanager — die vorherige Fahrzeugeinheit benötigt möglicherweise einen Werkstattbesuch.</td>
+</tr>
+<tr>
+<td>6</td>
+<td><strong>Unterbrechung der Stromversorgung</strong></td>
+<td>Batterie wurde überbrückt, Verdrahtungsfehler oder das Fahrzeug stand über Nacht mit leerer Batterie.</td>
+<td>Bestätigen. Bei Wiederholung lassen Sie den Versorgungsstromkreis prüfen — wiederholter Stromausfall ist verdächtig für Kontrollbehörden.</td>
+</tr>
+<tr>
+<td>7</td>
+<td><strong>Fehlende Positionsdaten des GNSS-Empfängers / keine Positionsdaten</strong></td>
+<td>Kumulierte 3 Stunden Lenken ohne brauchbare GNSS-Position — typisch in Tunneln, Tiefgaragen oder bei blockierter Antenne.</td>
+<td>Bestätigen. Überprüfen Sie die Antennenverlegung und stellen Sie sicher, dass sich nichts Metallisches auf dem Armaturenbrett darüber befindet.</td>
+</tr>
+<tr>
+<td>8</td>
+<td><strong>Ländereingabe erforderlich</strong></td>
+<td>Der intelligente Tachograf 2 fordert Sie auf, das Land (und beim intelligenten Tachograf 2, den Grenzübertritt) jedes Mal zu bestätigen, wenn Sie eine neue Schicht beginnen.</td>
+<td>Verwenden Sie das Menü:<em>Beginn Land</em>→ Code auswählen. Beim intelligenten Tachograf 2 fordert das Gerät auch eine Bestätigung an, wenn GNSS eine Grenze erkennt.</td>
+</tr>
+<tr>
+<td>9</td>
+<td><strong>Kalibrierung in ... Tagen</strong></td>
+<td>Die zweijährliche periodische Überprüfung steht bevor (Warnung typischerweise 28 Tage im Voraus).</td>
+<td>Buchen Sie den Werkstatttermin sofort — das Lenken mit einem nicht kalibrierten Tachograf ist ein schwerwiegender Verstoß.</td>
+</tr>
+<tr>
+<td>10</td>
+<td><strong>1 Download in ?? Tagen</strong></td>
+<td>Das nächste obligatorische Auslesen der Fahrerkarte steht an (Warnung typischerweise 14 Tage im Voraus). EU-Vorschriften verlangen ein Auslesen mindestens alle 28 Tage.</td>
+<td>Geben Sie die Karte an den Fuhrpark weiter oder lesen Sie sie selbst aus. Wenn Sie die Frist versäumen, bleiben die Daten erhalten, aber das Büro kann Sie sanktionieren.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- ===================================================================== -->
+<!-- SECTION 5: CRISIS WORKFLOW                                             -->
+<!-- ===================================================================== -->
+<h2 id="crisis-workflow">Arbeitsablauf bei kritischen Fehlern: Was tun, wenn unterwegs eine Störung auftritt</h2>
+<p>Eine echte<strong>x Störung</strong>Meldung — Geberstörung, Bewegungskonflikt, Interne Störung der Fahrzeugeinheit, Sicherheitsverletzung, Zeitkonflikt — unterscheidet sich von einem Betriebshinweis: Der Tachograf kann Ihre Aktivität nicht mehr zuverlässig aufzeichnen, und Sie sind gesetzlich verpflichtet, manuelle Aufzeichnungen zu führen und die Fahrzeugeinheit von einem<strong>autorisierte Werkstatt innerhalb von sieben Tagen</strong>(Artikel 37 der Verordnung 165/2014). Der folgende Fünf-Schritte-Workflow ist das offizielle Verfahren, das in jedem Handbuch des Herstellers beschrieben ist.</p>
+<ol class="crisis-steps">
+<li>
+<span class="num">1</span>
+<span>
+<strong>Bestätigen Sie die Meldung und fahren Sie sicher fort.</strong>
+<span class="lbl">Drücken Sie die<em>OK</em>Taste, um die blinkende Anzeige stummzuschalten. Die Störung ist nun im Massenspeicher und auf Ihrer Karte aufgezeichnet — eine Bestätigung löscht das Ereignis nicht. Bleiben Sie ruhig und suchen Sie einen sicheren Halt.</span>
+</span>
+</li>
+<li>
+<span class="num">2</span>
+<span>
+<strong>Drucken Sie einen Fahreraktivitäten-Ausdruck von der Fahrzeugeinheit ab.</strong>
+<span class="lbl">Menü:<em>Drucken → Fahrer 1 → Aktivitäten → 24-Stunden-Tag</em>. Der Ausdruck enthält den Störungseintrag und einen Zeitstempel. Erstellen Sie an jedem folgenden Tag einen neuen Ausdruck, bis der Tachograf repariert ist.</span>
+</span>
+</li>
+<li>
+<span class="num">3</span>
+<span>
+<strong>Beginnen Sie manuelle Aufzeichnungen auf der Rückseite des Ausdrucks.</strong>
+<span class="lbl">Für jeden Zeitraum, in dem der Tachograf keine korrekten Aufzeichnungen mehr erstellen kann, schreiben Sie handschriftlich:<em>Startzeit, Endzeit, Tätigkeit (Lenken / sonstige Arbeit / BEREITSCHAFT / UNTERBRECHUNG/RUHE), Ort, Fahrzeugkennzeichen</em>. Dieses Blatt ist Ihr rechtlicher Nachweis für jede Straßenkontrolle, bis das Gerät repariert ist.</span>
+</span>
+</li>
+<li>
+<span class="num">4</span>
+<span>
+<strong>Informieren Sie umgehend Ihren Fuhrparkmanager.</strong>
+<span class="lbl">Telefon, Nachricht oder E-Mail — was auch immer Ihr Betrieb verwendet. Der Fuhrpark muss die Störung protokollieren, den Werkstatttermin planen und bestätigen, dass die Fahrt unter manueller Aufzeichnung fortgesetzt werden kann. Fahren über 7 Tage mit einer bekannten, nicht behobenen Störung setzt den Betreiber erheblichen Bußgeldern aus.</span>
+</span>
+</li>
+<li>
+<span class="num">5</span>
+<span>
+<strong>Buchen Sie den Termin bei der autorisierten Werkstatt innerhalb von 7 Tagen.</strong>
+<span class="lbl">Nur eine<strong>autorisierte Tachografenwerkstatt</strong>(im Besitz einer Werkstattkarte und der entsprechenden Diagnosewerkzeuge) darf die Fahrzeugeinheit reparieren, neu kalibrieren oder ersetzen. Nach der Reparatur führt die Werkstatt eine Kalibrierung durch und stellt eine Anbringungsplatte/Kalibrierungsaufzeichnung aus, die im Fahrzeug aufzubewahren ist.</span>
+</span>
+</li>
+</ol>
+<p style="margin-top:24px;"><strong>Eine entscheidende Ausnahme:</strong>wenn die Störung<em>Sicherheitsverletzung</em>oder<em>Sensorstörung mit Datenkonflikt Fahrzeugbewegung</em>, kann das Kontrollgerät die Karte automatisch auswerfen und sich weigern, weitere Aktivitäten überhaupt nicht aufzuzeichnen. In diesem Fall muss die gesamte Schicht handschriftlich erfasst werden, und der Werkstattbesuch wird dringend anstatt der üblichen 7-Tage-Regel. Die Weiterfahrt ohne manuelle Aufzeichnungen in diesem Szenario ist in jedem EU- und EWR-Mitgliedstaat ein schwerwiegender Verstoß.</p>
+<!-- ===================================================================== -->
+<!-- SECTION 6: OFFICIAL SOURCES                                            -->
+<!-- ===================================================================== -->
+<h2 id="sources">Offizielle Quellen &amp; Herstellerhandbücher</h2>
+<p>Jede oben genannte Meldung, jeder Schwellenwert und jedes Verfahren wurde einem der folgenden öffentlich zugänglichen, offiziellen Dokumente entnommen. Wo die englische Formulierung des Herstellers vom gängigen Fahrervokabular abweicht, haben wir den genauen Text des Herstellers beibehalten und eine allgemein verständliche Erklärung hinzugefügt.</p>
+<ul class="sources-list">
+<li>
+<strong>EU-Verordnung – Lenk- und Ruhezeiten und AETR</strong>Verordnung (EG) Nr. 561/2006 – Lenkzeiten, Fahrtunterbrechungen und Ruhezeiten. Richtlinie 2002/15/EG – Arbeitszeitrichtlinie für mobile Straßenarbeiter. AETR – Europäisches Übereinkommen über die Arbeit des im internationalen Straßenverkehr beschäftigten Fahrpersonals.<a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32006R0561" rel="noopener" target="_blank">EUR-Lex: Regulation 561/2006 (EN)</a>
+</li>
+<li>
+<strong>EU-Verordnung – Technische Spezifikation des Tachografen</strong>Verordnung (EU) Nr. 165/2014 – Rechtsgrundlage. Durchführungsverordnung (EU) 2016/799 der Kommission, Anhang I C – vollständige technische Spezifikation des intelligenten Tachografen (Ereignisse, Störungen, Datenstrukturen).<a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016R0799" rel="noopener" target="_blank">EUR-Lex: 2016/799 / Annex I C (EN)</a>
+    ·
+    <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014R0165" rel="noopener" target="_blank">EUR-Lex: 165/2014 (EN)</a>
+</li>
+<li>
+<strong>VDO DTCO 4.1 – Continental Automotive Technologies</strong>Fahrerhandbuch, Ausgabe 3 / 2024-08, BA00.1381.41 100 102. Umfasst DTCO 4.1, 4.1a und 4.1b.<a href="https://www.fleet.vdo.com/media/sqrd5xnt/ba_dtco_41a_en_web_2024-08-27.pdf" rel="noopener" target="_blank">PDF download (English) – fleet.vdo.com</a>
+</li>
+<li>
+<strong>VDO DTCO 4.0 – Continental Automotive Technologies</strong>Früheres Smart Tacho 1 Gerät, noch weit verbreitet. Fahrerhandbuch, Ausgabe 2 / 2022.<a href="https://www.fleet.vdo.com/media/lvnkmvhq/ba_dtco_40e_web_gb.pdf" rel="noopener" target="_blank">PDF download (English) – fleet.vdo.com</a>
+</li>
+<li>
+<strong>Stoneridge SE5000 Exakt Duo² – Stoneridge Electronics</strong>Fahrer- &amp; Unternehmenshandbuch, Rev 8.x. Referenzeinheit für den britischen und nordischen Markt.<a href="https://www.stoneridgeelectronics.com/tachographs/" rel="noopener" target="_blank">Handbücher — stoneridgeelectronics.com</a>
+</li>
+<li>
+<strong>Actia SmarTach — Actia Group</strong>SmarTach Gen1 und Gen2 Fahrerhandbücher; weit verbreitet in französischen und südeuropäischen Fuhrparks.<a href="https://www.actia.com/en/solutions/tachograph/" rel="noopener" target="_blank">Produktseite — actia.com</a>
+</li>
+<li>
+<strong>Europäische Kommission — DG MOVE</strong>Maßgebliche Hintergrundinformationen zum Rollout des intelligenten Tachografen, Änderungen und Leitlinien zur Durchsetzung.<a href="https://transport.ec.europa.eu/transport-modes/road/social-provisions/smart-tachograph_en" rel="noopener" target="_blank">transport.ec.europa.eu — Intelligenter Tachograf</a>
+</li>
+</ul>
+<!-- ===================================================================== -->
+<!-- RELATED ARTICLES                                                       -->
+<!-- ===================================================================== -->
+<h2 id="related">Zugehörige Fahrerhandbücher</h2>
+<div class="related-grid">
+<a class="related-card" href="/de/ratgeber/tachographendaten-auslesen-auswerten/">
+<span class="r-eyebrow">Konformität · 12 Min. Lesezeit</span>
+<span class="r-title">Wie man Tachografendaten ausliest, auswertet und archiviert</span>
+<span class="r-text">Vollständiger Leitfaden zum 28-Tages-Fahrerkarten- und 90-Tages-Auslesezyklus der Fahrzeugeinheit, Archivierungsregeln und was Ihr Fuhrpark archivieren muss.</span>
+<span class="r-chip">Den Leitfaden zum Auslesen lesen →</span>
+</a>
+<a class="related-card" href="/de/ratgeber/tachographen-auswertung-pflicht-2026/">
+<span class="r-eyebrow">Verordnung · 8 Min. Lesezeit</span>
+<span class="r-title">Wer Tachografendaten im Jahr 2026 auswerten muss</span>
+<span class="r-text">Verpflichtungen des Betreibers gemäß Verordnung 561/2006 und der Arbeitszeitrichtlinie — welche Transportkategorien erfasst sind und was einem Prüfer vorzulegen ist.</span>
+<span class="r-chip">Den Leitfaden zu den Verpflichtungen lesen →</span>
+</a>
+<a class="related-card" href="/de/ratgeber/tachograph-transporter-pflicht-juli-2026/">
+<span class="r-eyebrow">Neue Regeln · 6 Min. Lesezeit</span>
+<span class="r-title">Tachografen für Transporter: die neue Verpflichtung ab Juli 2026</span>
+<span class="r-text">Ab dem 1. Juli 2026 müssen Transporter zwischen 2,5 und 3,5 Tonnen im grenzüberschreitenden Verkehr einen intelligenten Tachografen mitführen. Checkliste für Transportunternehmen.</span>
+<span class="r-chip">Lesen Sie den Transporter-Leitfaden →</span>
+</a>
+</div>
+<!-- ===== second TAGRA CTA Box ===== -->
+<div class="cta-box" style="margin-top:36px;">
+<h3>Dekodieren Sie nicht Hunderte von Meldungen manuell.</h3>
+<p>TAGRA liest Fahrerkarten und Fahrzeugeinheiten aus jedem intelligenten Tachografen auf dem Markt aus, gleicht jedes Ereignis und jede Störung mit seiner Definition gemäß Anhang IC ab und erstellt prüfbereite Auswertungen gemäß EG 561/2006, WTD und AETR. 30-tägige kostenlose Testversion, keine Karte erforderlich, läuft auf jedem Windows PC.</p>
+<a class="cta-btn" href="/de/testen/?audience=fleet">Starten Sie Ihre kostenlose 30-tägige Testversion →</a>
+</div>
+<!-- ===================================================================== -->
+<!-- FAQ                                                                    -->
+<!-- ===================================================================== -->
+<h2 id="faq">FAQ – Tachograf-Fehlercodes und Warnsymbole</h2>
+<div class="faq-block">
+<details>
+<summary>Was ist der Unterschied zwischen einem „Ereignis“ und einer „Störung“ bei einem digitalen Tachografen?</summary>
+<div class="faq-a">Ein<strong>Ereignis</strong>ist ein betrieblicher Vorgang – Lenken ohne geeignete Karte, Geschwindigkeitsüberschreitung, Einstecken der Karte während des Lenkens, Zeitüberlappung. Das Kontrollgerät funktioniert korrekt; es zeichnet etwas auf, das der Fahrer getan hat. Eine<strong>Störung</strong>ist eine Hardware- oder Software-Fehlfunktion des Tachografen selbst – Sensorstörung, Interne Störung der Fahrzeugeinheit, Zeitkonflikt, Druckerstörung. Störungen lösen die gesetzliche 7-Tage-Werkstattregel aus. Beide Kategorien sind durch Anhang IC der Verordnung (EU) 2016/799 definiert.</div>
+</details>
+<details>
+<summary>Ich sehe „Geberstörung“ auf meinem VDO Display – kann ich weiterfahren?</summary>
+<div class="faq-a">Kurz gesagt, ja – um einen sicheren Anhalteplatz zu erreichen. Dann müssen Sie (1) zur Bestätigung OK drücken, (2) die Aktivitäten des Tages ausdrucken, (3) auf der Rückseite dieses Ausdrucks manuelle Aufzeichnungen jeder weiteren Aktivität anfertigen, (4) Ihren Fuhrparkleiter informieren und (5) innerhalb von 7 Tagen eine autorisierte Werkstatt aufsuchen. Das Weiterfahren ohne manuelle Aufzeichnungen, nachdem Sie von einer Sensorstörung wissen, ist in jedem EU-Mitgliedstaat eine schwerwiegende Straftat.</div>
+</details>
+<details>
+<summary>Was bedeutet „GNSS-Anomalie“ bei einem intelligenten Tachografen der Generation 2?</summary>
+<div class="faq-a">Intelligente Tachografen der Generation 2 (verpflichtend für Fahrzeuge, die nach dem 21. August 2023 zugelassen wurden, mit Nachrüstungen, die bis zum 18. August 2025 erforderlich sind) überprüfen das GNSS-Signal auf Spoofing unter Verwendung des Galileo OSNMA-Dienstes. Ein<em>GNSS-Anomalie</em>Ereignis bedeutet, dass das Kontrollgerät entweder einen Manipulationsversuch des GPS/Galileo-Signals erkannt hat oder dass das Signal die Authentifizierung nicht bestanden hat. Das Kontrollgerät protokolliert das Ereignis für die Kontrolle. Wenn es bei einem bestimmten Fahrzeug wieder auftritt, sollten die Antenne und die direkte Verkabelung auf Manipulationen überprüft werden – und Werkstattdiagnosen können erforderlich sein.</div>
+</details>
+<details>
+<summary>Was ist der Unterschied zwischen „Andere Arbeit“ und „Bereitschaftszeit“?</summary>
+<div class="faq-a"><strong>Andere Arbeit</strong>ist bezahlte Arbeit, die kein Lenken ist: Be- und Entladen, Tanken, Büroarbeiten, Fahrgästen helfen, Fahrzeugkontrollen. Sie zählt als Arbeitszeit gemäß der WTD und eine<em>nicht</em>als Unterbrechung.<strong>Bereitschaft</strong>ist Wartezeit, deren Dauer der Fahrer im Voraus kennt – Fähre/Zug, Warten bei einem bekannten Termin, Begleitung eines Fahrzeugs auf einem Transporter. BEREITSCHAFT ist keine ARBEIT, aber es ist auch<em>nicht</em>eine Unterbrechung nach den Lenk- und Ruhezeiten und zählt zur Arbeitszeit nach der Arbeitszeitrichtlinie.</div>
+</details>
+<details>
+<summary>Kann „BEREITSCHAFT“ als UNTERBRECHUNG/RUHE gemäß EG 561/2006 zählen?</summary>
+<div class="faq-a">Nein. Anhang 1 der Verordnung 561/2006 listet nur eine Kategorie auf, die die Uhr für ununterbrochenes LENKEN von 4½ Stunden zurücksetzt und auf die 45-minütige vorgeschriebene UNTERBRECHUNG/RUHE angerechnet wird: die<em>UNTERBRECHUNG/RUHE</em>Aktivität (Bett-Piktogramm). Fahrer, die „BEREITSCHAFT“ einstellen, während sie glauben, eine UNTERBRECHUNG/RUHE zu machen, erhalten beim Auslesen keine Gutschrift für die UNTERBRECHUNG/RUHE – und Kontrollbehörden verhängen dafür regelmäßig Bußgelder.</div>
+</details>
+<details>
+<summary>Was soll ich tun, wenn ich vergessen habe, während einer UNTERBRECHUNG/RUHE auf „RUHE“ zu wechseln?</summary>
+<div class="faq-a">Wenn Sie Ihre Fahrerkarte das nächste Mal in ein Fahrzeug einlegen, bietet der Tachograf eine<strong>manuelle Eingabe</strong>Prozedur für den Zeitraum seit der letzten Kartenentnahme. Verwenden Sie das Menü, um die korrekte Aktivität (RUHE) für dieses Intervall einzustellen. Manuelle Eingaben werden auf der Karte mit einem Zeitstempel versehen und sind für Kontrollbehörden sichtbar, werden aber als legitime Korrektur akzeptiert – im Gegensatz zu einer fehlenden oder inkorrekten Aktivität, die nie deklariert wurde.</div>
+</details>
+<details>
+<summary>Wie oft muss ich meine Fahrerkarte und die Fahrzeugeinheit auslesen?</summary>
+<div class="faq-a">Mindestens alle<strong>28 Tage</strong>für die Fahrerkarte und alle<strong>90 Tage</strong>für die Fahrzeugeinheit (Artikel 33 der Verordnung 165/2014, in Verbindung mit der Verordnung (EU) 581/2010 der Kommission). Die ausgelesenen Daten müssen mindestens ein Jahr lang aufbewahrt werden – und in vielen Mitgliedstaaten für die gesamte berufliche Laufbahn des Fahrers als Teil der Unfall-/Versicherungsunterlagen.</div>
+</details>
+<details>
+<summary>Beeinflusst ein „Kommunikationsfehler der Karte“ meine Lenkzeitaufzeichnungen?</summary>
+<div class="faq-a">Nicht unbedingt. Die meisten Kommunikationsfehler sind einfach nur verschmutzte Chipkontakte – die vor dem Fehler ausgeführte Aktivität ist bereits im Speicher der Karte. Wenn der Fehler kurz ist und nach Reinigung und erneutem Einstecken behoben ist, geht kein Zeitraum verloren. Wenn die Karte überhaupt nicht gelesen werden kann, druckt das Gerät automatisch die letzte Aktivität aus, und Sie müssen ab diesem Zeitpunkt alles handschriftlich aufzeichnen, und die Karte sollte ersetzt werden.</div>
+</details>
+<details>
+<summary>Das Display zeigt „Ländereingabe erforderlich“ an – was muss ich tun?</summary>
+<div class="faq-a">Intelligente Tachografen erfordern, dass Sie das Land angeben, in dem die Schicht beginnt und endet. Bei Smart Tachograph 2 fordert das Gerät Sie auch auf, jede Grenzüberquerung zu bestätigen (das GNSS erkennt die Überquerung, der Fahrer drückt OK zur Bestätigung). Verwenden Sie das Menü:<em>Eingabe → Fahrer 1 → Beginnland</em>(und<em>Endland</em>am Ende der Schicht). Fehlende Ländereingaben werden als Ereignisse erfasst und sind für Straßenkontrolleure sichtbar.</div>
+</details>
+<details>
+<summary>Unterstützt TAGRA alle vier Hersteller-Fehlercodes, die in dieser Anleitung aufgeführt sind?</summary>
+<div class="faq-a">Ja. TAGRA liest die Ereignisse und Störungen gemäß Anhang I C direkt aus jeder heruntergeladenen .DDD-Datei — das Datenformat ist identisch, unabhängig von der Einheit, die sie geschrieben hat. Herstellerspezifische Pop-up-Meldungen werden ihrem zugrunde liegenden Ereignis gemäß Anhang I C zugeordnet, damit Fuhrparkmanager konsistente, klar verständliche Erklärungen sehen, unabhängig davon, ob ihre Fahrer VDO, Stoneridge, Actia, EFAS oder einen anderen typgeprüften intelligenten Tachografen verwenden.</div>
+</details>
+<details>
+<summary>Was genau besagt die offizielle 7-Tage-Werkstattregel?</summary>
+<div class="faq-a">Artikel 37 der Verordnung 165/2014 verlangt, dass, wenn der Tachograf aufgrund einer Störung keine Aktivitäten korrekt aufzeichnen kann, der Betreiber ihn von einem zugelassenen Monteur oder einer Werkstatt „sobald die Umstände es zulassen“ reparieren lassen muss — in der Praxis ausgelegt als innerhalb von<strong>sieben Kalendertagen</strong>wenn das Fahrzeug zur Basis zurückkehren kann, oder sofort bei der Rückkehr, wenn es sich auf einer längeren internationalen Fahrt befindet. Der Fahrer muss während dieses Zeitraums manuelle Aufzeichnungen führen.</div>
+</details>
+<details>
+<summary>Kann ich mit dem erfassten Ereignis „Geschwindigkeitsüberschreitung“ weiterfahren?</summary>
+<div class="faq-a">Ja — Geschwindigkeitsüberschreitung ist ein Ereignis, keine Störung. Das Fahrzeug zeichnet weiterhin korrekt auf; lediglich die Geschwindigkeitsbegrenzung wurde überschritten. Das Ereignis ist beim Auslesen sichtbar, und wiederholte Geschwindigkeitsüberschreitungen auf derselben Fahrt oder über mehrere Fahrten hinweg sind ein häufiger Auslöser für Betreiberprüfungen und Straßenkontrollen.</div>
+</details>
+<details>
+<summary>Mein VDO-Display zeigt eine Zahl wie 80, 82 oder 98 — was bedeutet das?</summary>
+<div class="faq-a">Auf dem DTCO 4.0 / 4.1 identifiziert eine zweistellige Zahl neben dem Piktogramm das Ereignis oder die Störung. Niedrige Zahlen (001–066) sind Werkstatt-Fehlerspeichercodes; hohe Zahlen gehören zu den Smart-Tachografen-Funktionen. Die häufigsten sind<strong>80 — Datenkonflikt Fahrzeugbewegung</strong>(der Bewegungssensor stimmt nicht mit dem GNSS-Signal überein; eine ernste Meldung — besuchen Sie eine autorisierte Werkstatt),<strong>82 — interne GNSS-Störung</strong>(der Empfänger kann vorübergehend keine Position bestimmen; bestätigen Sie und suchen Sie eine Werkstatt auf, wenn dies weiterhin besteht) und<strong>98 — ITS / Bluetooth-Störung</strong>(die Fern-Datenschnittstelle; keine Auswirkung auf die Aufzeichnung, bei der nächsten Wartung beheben). Die vollständige Liste 34–98 finden Sie im VDO-Abschnitt oben.</div>
+</details>
+<details>
+<summary>Was bedeutet „Datenkonflikt Fahrzeugbewegung“ (Code 80) und kann ich weiterfahren?</summary>
+<div class="faq-a">Code 80 ist ein<em>Datenkonflikt Fahrzeugbewegung</em>: der Tachograf hat einen Widerspruch zwischen dem Bewegungssensor und einer unabhängigen Quelle (GNSS) festgestellt. Eine häufige harmlose Ursache ist das Vergessen, den Fähr-/Zugmodus während des Transports einzustellen. Tritt er im normalen Fahrbetrieb auf, kann dies auf Manipulation oder einen Verdrahtungsfehler hinweisen – bestätigen Sie die Meldung, führen Sie manuelle Aufzeichnungen und lassen Sie das Gerät von einer autorisierten Werkstatt überprüfen.</div>
+</details>
+<details>
+<summary>Wie suche ich einen numerischen oder hexadezimalen Fehlercode aus einem Auslesen durch die Werkstatt nach?</summary>
+<div class="faq-a">Nutzen Sie das Suchfeld oben im Hersteller-Codes-Bereich: Geben Sie die Nummer ein (z. B.<em>042</em>), eine VDO Anzeigenummer (z. B.<em>82</em>), einen Stoneridge oder EFAS Hex-DTC (z. B.<em>002E80</em>) oder beliebige Wörter aus der Meldung (z. B.<em>Sensorstörung</em>). Das entsprechende Herstellerfeld öffnet sich automatisch und zeigt nur die passenden Zeilen an.</div>
+</details>
+</div><!-- /.faq-block -->
+</article>
+</div>
+</main>
+<footer class="site-footer" role="contentinfo">
+<div class="footer-inner">
+<div>
+<div class="footer-logo"><img alt="TAGRA" height="32" src="/assets/img/logo-dark.svg?v=20260513zh" width="140"/></div>
+<p class="footer-desc">Professionelle Software zur Tachographen-Auswertung. Fahrerkarten-Download, Analyse digitaler Tachographen, EU-Lenk- und Ruhezeiten sowie Arbeitszeitrichtlinie. Entwickelt von Truck Data Technology, s.r.o.</p>
+</div>
+<div class="footer-col">
+<h4>Produkt</h4>
+<ul>
+<li><a href="/de/fuhrpark/">Für Fuhrparkbetreiber</a></li>
+<li><a href="/de/fahrer/">Für Berufskraftfahrer</a></li>
+<li><a href="/de/kontrollbehoerden/">Für Kontrollbehörden</a></li>
+<li><a href="/de/so-funktioniert-es/">So funktioniert es</a></li>
+<li><a href="/de/fuer-wen/">Für wen</a></li>
+<li><a href="/de/faq/">FAQ</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h4>Ressourcen</h4>
+<ul>
+<li><a href="/de/ratgeber/">Artikel</a></li><li><a href="/de/anleitungen/">Anleitungen</a></li>
+<li><a href="/de/ratgeber/tachographen-symbole/">Tachographen-Symbole</a></li>
+<li><a href="/de/schnittstellen/dkv-live/">DKV LIVE®</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h4>Unternehmen</h4>
+<ul>
+<li><a href="/de/kontakt/">Kontakt</a></li>
+<li><a href="https://www.tdt.cz" rel="noopener" target="_blank">Truck Data Technology</a></li>
+<li><a href="/de/">Deutsch</a></li>
+<li><a href="/pl/">Polski</a></li>
+</ul>
+</div>
+</div>
+<div class="footer-bottom">
+<span>© 2026 Truck Data Technology, s.r.o. Alle Rechte vorbehalten.</span>
+<span><a href="/de/kontakt/">Kontakt</a> · <a href="https://www.tdt.cz" rel="noopener" target="_blank">tdt.cz</a></span>
+</div>
+</footer>
+<script>(function(){var bar=document.getElementById('scroll-progress');if(bar)window.addEventListener('scroll',function(){var t=document.documentElement.scrollTop||document.body.scrollTop;var h=document.documentElement.scrollHeight-document.documentElement.clientHeight;bar.style.width=(t/h*100)+'%';},{passive:true});var toggle=document.getElementById('nav-toggle'),links=document.getElementById('nav-links');if(toggle&&links)toggle.addEventListener('click',function(){var o=links.classList.toggle('open');toggle.setAttribute('aria-expanded',o);});})();</script>
+<script>
+(function(){
+  var input=document.getElementById('dec-search-input');
+  var clearBtn=document.getElementById('dec-search-clear');
+  var count=document.getElementById('dec-count');
+  var chips=Array.prototype.slice.call(document.querySelectorAll('.dec-chip'));
+  var vendors=Array.prototype.slice.call(document.querySelectorAll('details.vendor'));
+  if(!input||!vendors.length)return;
+  vendors.forEach(function(v){v._defaultOpen=v.hasAttribute('open');});
+  var activeVendor='all';
+  function apply(){
+    var q=(input.value||'').trim().toLowerCase();
+    var total=0;
+    vendors.forEach(function(v){
+      var scoped=(activeVendor==='all'||activeVendor===v.id);
+      if(!scoped){v.classList.add('dec-hidden');return;}
+      v.classList.remove('dec-hidden');
+      var rows=v.querySelectorAll('.code-table tbody tr');
+      var hits=0;
+      Array.prototype.forEach.call(rows,function(r){
+        var m=(q===''||r.textContent.toLowerCase().indexOf(q)!==-1);
+        if(m){r.classList.remove('dec-hidden');hits++;}else{r.classList.add('dec-hidden');}
+      });
+      total+=hits;
+      var body=v.querySelector('.vendor-body');
+      var note=v.querySelector('.dec-nohit');
+      if(q!==''&&hits===0){
+        if(!note&&body){note=document.createElement('p');note.className='dec-nohit';note.textContent='No matching rows in this manufacturer.';body.appendChild(note);}
+        if(note)note.style.display='';
+      } else if(note){note.style.display='none';}
+      if(q!==''||activeVendor!=='all'){v.open=hits>0;}else{v.open=v._defaultOpen;}
+    });
+    if(q===''&&activeVendor==='all'){count.textContent='';}
+    else{count.textContent=total+(total===1?' match':' matches')+(activeVendor!=='all'?' \u00b7 '+activeVendor.toUpperCase():'');}
+  }
+  input.addEventListener('input',apply);
+  clearBtn.addEventListener('click',function(){input.value='';apply();input.focus();});
+  chips.forEach(function(c){c.addEventListener('click',function(){
+    var v=c.getAttribute('data-vendor');
+    if(v==='symbols'){var s=document.getElementById('activity-symbols');if(s)s.scrollIntoView({behavior:'smooth'});return;}
+    chips.forEach(function(x){x.classList.toggle('is-active',x===c&&v!=='symbols');});
+    activeVendor=v;apply();
+    var firstVisible=vendors.filter(function(x){return !x.classList.contains('dec-hidden');})[0];
+    if(firstVisible&&v!=='all')firstVisible.scrollIntoView({behavior:'smooth',block:'start'});
+  });});
+})();
+</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Tachograf-Fehlercodes und -Piktogramme: Was sie bedeuten und wie man sie behebt",
+  "description": "Vollständiger Leitfaden für Fahrer zu Fehlercodes und Warnpiktogrammen digitaler Tachografen. Aktivitäts-Piktogramme, Warnmeldungen, VDO DTCO 4.1 / Stoneridge SE5000 / Actia / EFAS-4 Fehlercodes, deren Bedeutung und die genaue Vorgehensweise.",
+  "image": "https://tagra.app/assets/img/og/digital-tachograph-symbols.jpg",
+  "author": {
+    "@type": "Organization",
+    "name": "Truck Data Technology, s.r.o.",
+    "url": "https://www.tdt.cz"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Truck Data Technology, s.r.o.",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://tagra.app/assets/img/logo.svg"
+    }
+  },
+  "datePublished": "2025-09-01",
+  "dateModified": "2026-08-12",
+  "inLanguage": "en",
+  "mainEntityOfPage": "https://tagra.app/articles/digital-tachograph-symbols/",
+  "articleSection": "Wissensdatenbank für Fahrer",
+  "wordCount": 9600,
+  "keywords": "tachograph fault codes, tachograph warning symbols, digital tachograph error codes, VDO DTCO error codes, Stoneridge SE5000 errors, Actia SmarTach faults, EFAS-4 faults, Annex 1C events, smart tachograph GNSS fault, drivers hours, Regulation 165/2014"
+}</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Was ist der Unterschied zwischen einem Ereignis und einer Störung bei einem digitalen Tachografen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ein Ereignis ist ein Betriebsereignis – Lenken ohne Karte, Überschreiten der Geschwindigkeitsbegrenzung, Einstecken der Karte während des Lenkens, Zeitüberlappung. Das Gerät funktioniert korrekt; es zeichnet etwas auf, das der Fahrer getan hat. Eine Störung ist eine Hardware- oder Softwarefehlfunktion des Tachografen selbst – Sensorstörung, Interne Störung der Fahrzeugeinheit, Zeitkonflikt, Druckerstörung. Störungen lösen die gesetzliche 7-Tage-Werkstattregel aus. Beide Kategorien sind in Anhang I C der Verordnung (EU) 2016/799 definiert."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Ich sehe Geberstörung auf meinem VDO Display — kann ich weiterfahren?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Kurz gesagt, ja — um einen sicheren Halteplatz zu erreichen. Dann müssen Sie die Meldung bestätigen, die Tagesaktivitäten ausdrucken, auf der Rückseite dieses Ausdrucks manuelle Aufzeichnungen jeder folgenden Aktivität anfertigen, Ihren Fuhrparkleiter informieren und innerhalb von 7 Tagen eine autorisierte Werkstatt aufsuchen. Das Weiterfahren ohne manuelle Aufzeichnungen, sobald Sie von einer Sensorstörung wissen, ist in jedem EU-Mitgliedstaat eine schwerwiegende Straftat."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Was bedeutet GNSS-Anomalie auf einem Smart Tachograph 2?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Smart Tachograph 2 Einheiten überprüfen das GNSS-Signal auf Spoofing mithilfe des Galileo OSNMA Dienstes. Ein GNSS-Anomalie Ereignis bedeutet, dass die Einheit entweder eine versuchte Manipulation des GPS-/Galileo-Signals oder das Scheitern der Signalauthentifizierung erkannt hat. Die Einheit protokolliert das Ereignis für die Kontrolle. Wenn es bei einem bestimmten Fahrzeug erneut auftritt, sollten die Antenne und die direkte Verkabelung auf Manipulation überprüft werden."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Was ist der Unterschied zwischen ARBEIT und BEREITSCHAFT?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ARBEIT ist bezahlte Arbeit, die nicht Lenken ist: Laden, Entladen, Tanken, Büroarbeit, Hilfe für Fahrgäste, Fahrzeugkontrollen. BEREITSCHAFT ist Wartezeit, deren Dauer der Fahrer im Voraus kennt — FÄHRÜBERFAHRT/ZUGFAHRT, Warten bei einem bekannten Termin. BEREITSCHAFT ist keine Arbeit, aber sie ist auch keine UNTERBRECHUNG/RUHE im Sinne der Lenk- und Ruhezeiten."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Kann BEREITSCHAFT als UNTERBRECHUNG/RUHE gemäß EC 561/2006 zählen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nein. Anhang 1 der Verordnung 561/2006 listet nur eine Kategorie auf, die die 4,5-stündige kontinuierliche Lenkzeit zurücksetzt und auf die 45-minütige vorgeschriebene UNTERBRECHUNG/RUHE angerechnet wird: die UNTERBRECHUNG/RUHE Aktivität. Fahrer, die BEREITSCHAFT einstellen, während sie eine UNTERBRECHUNG/RUHE machen, erhalten beim Auslesen keine UNTERBRECHUNG/RUHE-Gutschrift."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Was soll ich tun, wenn ich vergessen habe, während einer UNTERBRECHUNG/RUHE auf UNTERBRECHUNG/RUHE umzuschalten?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Wenn Sie Ihre Karte das nächste Mal in ein beliebiges Fahrzeug einstecken, bietet der Tachograf ein manuelles Eingabeverfahren für den Zeitraum seit der letzten Kartenentnahme an. Verwenden Sie das Menü, um die korrekte Aktivität für dieses Intervall einzustellen. Manuelle Eingaben werden auf der Karte mit einem Zeitstempel versehen und als legitime Korrektur akzeptiert."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Wie oft muss ich meine Fahrerkarte und die Fahrzeugeinheit auslesen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Mindestens alle 28 Tage für die Fahrerkarte und alle 90 Tage für die Fahrzeugeinheit (Artikel 33 der Verordnung 165/2014, in Verbindung mit der Verordnung (EG) Nr. 581/2010 der Kommission). Die ausgelesenen Daten müssen mindestens ein Jahr lang aufbewahrt werden."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Beeinflusst ein Kommunikationsfehler der Karte meine Lenkzeitaufzeichnungen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nicht unbedingt. Die meisten Kommunikationsfehler sind einfach verschmutzte Chipkontakte — die vor dem Fehler ausgeführte Aktivität befindet sich bereits im Speichers der Karte. Ist der Fehler nur kurz und verschwindet nach Reinigung und erneutem Einstecken, geht kein Zeitraum verloren. Weigert sich die Karte überhaupt gelesen zu werden, druckt die Einheit die letzte Aktivität automatisch aus."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Das Display zeigt „Landeseingabe erforderlich“ — was muss ich tun?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Intelligente Tachografen verlangen, dass Sie das Land angeben, in dem die Schicht beginnt und endet. Bei Smart Tachograph 2 fordert die Einheit Sie auch auf, jede Grenzüberquerung zu bestätigen. Verwenden Sie das Menü: Eintrag → Fahrer 1 → Anfangsland am Start und Endland am Ende der Schicht."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Unterstützt TAGRA alle vier Hersteller-Fehlercodes, die in dieser Anleitung aufgeführt sind?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja. TAGRA liest die Anhang I C Ereignisse und Störungen direkt aus jeder ausgelesenen .DDD-Datei — das Datenformat ist identisch, unabhängig von der Einheit, die sie geschrieben hat. Herstellerspezifische Pop-up-Meldungen werden ihren zugrunde liegenden Anhang I C Ereignissen zugeordnet."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Was genau besagt die offizielle 7-Tage-Werkstattregel?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Artikel 37 der Verordnung 165/2014 schreibt vor, dass, wenn das Kontrollgerät aufgrund einer Störung keine Aktivitäten korrekt aufzeichnen kann, der Unternehmer es so bald wie die Umstände es zulassen – in der Praxis innerhalb von sieben Kalendertagen, wenn das Fahrzeug zur Basis zurückkehren kann – von einer zugelassenen Werkstatt reparieren lassen muss."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Kann ich mit dem aufgezeichneten Geschwindigkeitsüberschreitung Ereignis weiterfahren?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja — Geschwindigkeitsüberschreitung ist ein Ereignis, keine Störung. Das Fahrzeug zeichnet weiterhin korrekt auf; lediglich die Geschwindigkeitsbegrenzung wurde überschritten. Das Ereignis ist beim Auslesen sichtbar, und wiederholte Geschwindigkeitsüberschreitungsaufzeichnungen sind ein häufiger Auslöser für Audits und Straßenkontrollen von Transportunternehmen."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Mein VDO-Display zeigt eine Zahl wie 80, 82 oder 98 — was bedeutet das?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Bei DTCO 4.0/4.1 identifiziert eine zweistellige Zahl neben dem Piktogramm das Ereignis oder die Störung. Niedrige Nummern (001–066) sind Werkstatt-Fehlerspeichercodes; hohe Nummern gehören zu Smart-Tachograph-Funktionen. Die häufigsten sind 80 — Datenkonflikt Fahrzeugbewegung (der Bewegungssensor stimmt nicht mit dem GNSS-Signal überein; besuchen Sie eine autorisierte Werkstatt), 82 — Interne GNSS-Störung (der Empfänger kann vorübergehend keine Position bestimmen) und 98 — ITS/Bluetooth-Störung (die Remote-Datenschnittstelle; keine Auswirkung auf die Aufzeichnung)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Was bedeutet Datenkonflikt Fahrzeugbewegung (Code 80) und kann ich weiterfahren?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Code 80 ist ein Datenkonflikt Fahrzeugbewegung: der Tachograf hat einen Widerspruch zwischen dem Bewegungssensor und einer unabhängigen Quelle (GNSS) festgestellt. Eine häufige harmlose Ursache ist das Vergessen, den FÄHRÜBERFAHRT/ZUGFAHRT-Modus während des Transports einzustellen. Wenn er im normalen Fahrbetrieb auftritt, kann er auf Manipulation oder einen Verdrahtungsfehler hinweisen – quittieren Sie die Meldung, führen Sie manuelle Aufzeichnungen und lassen Sie die Fahrzeugeinheit von einer autorisierten Werkstatt überprüfen."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Wie suche ich einen numerischen oder hexadezimalen Fehlercode aus einem Auslesen durch die Werkstatt nach?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Verwenden Sie das Suchfeld oben im Bereich Hersteller-Codes: geben Sie die Nummer ein (z. B. 042), eine VDO Anzeigennummer (z. B. 82), einen Stoneridge oder EFAS Hex-DTC (z. B. 002E80) oder beliebige Wörter aus der Meldung (z. B. Sensorstörung). Das relevante Herstellerfeld öffnet sich automatisch und zeigt nur die passenden Zeilen an."
+      }
+    }
+  ]
+}</script>
+</body>
+</html>

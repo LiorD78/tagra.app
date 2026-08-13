@@ -114,13 +114,7 @@
       height: 100%;
       display: flex; align-items: center; justify-content: space-between; gap: 24px;
     }
-    .nav-logo {
-      font-size: 22px; font-weight: 900; letter-spacing: -.02em;
-      background: linear-gradient(90deg, var(--blue-dark), var(--blue-mid));
-      -webkit-background-clip: text; background-clip: text;
-      -webkit-text-fill-color: transparent; color: transparent;
-      text-decoration: none; flex-shrink: 0;
-    }
+    .nav-logo { display: flex; align-items: center; gap: 8px; text-decoration: none; flex-shrink: 0; }
     .nav-links {
       display: flex; align-items: center; gap: 4px;
       list-style: none;
@@ -512,24 +506,18 @@
 <div class="nav-inner">
 <a aria-label="TAGRA – Strona główna" class="nav-logo" href="/pl/"><img alt="TAGRA" height="32" src="/assets/img/logo-light.svg?v=20260513zh" style="display:block;height:32px;width:auto;" width="140"/></a>
 <ul class="nav-links">
-<li><a href="/fleet/">Dla firm</a></li>
-<li><a href="/driver/">Dla kierowców</a></li>
+<li><a href="/pl/dla-przewoznikow/">Dla firm</a></li>
+<li><a href="/pl/dla-kierowcow/">Dla kierowców</a></li>
 <li><a href="/pl/organy-kontrolne/">Organy kontrolne</a></li>
-<li><a href="/articles/">Artykuły</a></li><li><a href="/manuals/">Instrukcje</a></li>
-<li><a href="/faq/">FAQ</a></li>
+<li><a href="/pl/poradnik/">Artykuły</a></li><li><a href="/pl/instrukcje/">Instrukcje</a></li>
+<li><a href="/pl/faq/">FAQ</a></li>
 <li><a href="/pl/kontakt/">Kontakt</a></li>
 <li class="nav-cta-li"><a class="nav-cta" href="/pl/wyprobuj/?audience=fleet">Wypróbuj 30 dni za darmo</a></li>
 </ul>
 <details class="nav-lang">
 <summary aria-label="Language: PL">PL</summary>
 <div class="nav-lang-menu" role="menu">
-<a href="/pl/jak-to-dziala/">English</a>
-<a href="/de/">Deutsch</a>
-<a href="/pl/">Polski</a>
-<a href="/el/pos-leitourgei/" hreflang="el">Ελληνικά</a>
-<a href="https://www.tdt.cz/" hreflang="cs" rel="noopener" target="_blank">Čeština</a>
-<a href="https://www.tdt.sk/" hreflang="sk" rel="noopener" target="_blank">Slovenčina</a>
-</div>
+<a href="/" hreflang="en">English</a><a href="/de/" hreflang="de">Deutsch</a><a aria-current="page" class="active" href="/pl/" hreflang="pl">Polski</a><a href="/el/" hreflang="el">Ελληνικά</a><a href="/hu/" hreflang="hu">Magyar</a><a href="https://www.tdt.cz/" hreflang="cs" rel="noopener" target="_blank">Čeština</a><a href="https://www.tdt.sk/" hreflang="sk" rel="noopener" target="_blank">Slovenčina</a></div>
 </details>
 <a class="nav-cta-mobile" href="/pl/wyprobuj/?audience=fleet">Wypróbuj za darmo</a>
 <button aria-expanded="false" aria-label="Przełącz menu" class="nav-mobile-toggle" id="nav-toggle">
@@ -627,7 +615,7 @@
 </div>
 </div>
 <div class="anim-up" style="text-align:center;margin-top:48px">
-<a class="btn-cta" href="/try/?audience=fleet" rel="noopener" target="_blank">Pobierz wersję próbną — za darmo</a>
+<a class="btn-cta" href="/pl/wyprobuj/?audience=fleet" rel="noopener" target="_blank">Pobierz wersję próbną — za darmo</a>
 <p style="font-size:15px;color:var(--text2);margin-top:12px">Windows · Bez karty kredytowej · Bez rejestracji</p>
 </div>
 </div>
@@ -641,7 +629,7 @@
 <p style="font-size:19px;font-weight:700;color:var(--text-strong);margin-top:4px">TAGRA Trucker działa tak samo — dla Twojej karty kierowcy</p>
 <p style="color:var(--text2);margin-top:6px;max-width:480px">Wystarczy podłączyć swój czytnik USB, włożyć kartę, a TAGRA odczyta wszystko automatycznie.</p>
 </div>
-<a class="btn-cta btn-cta--sm" href="/driver/" style="flex-shrink:0;background:var(--green-cta)">TAGRA Trucker →</a>
+<a class="btn-cta btn-cta--sm" href="/pl/dla-kierowcow/" style="flex-shrink:0;background:var(--green-cta)">TAGRA Trucker →</a>
 </div>
 </div>
 </section>
@@ -655,20 +643,20 @@
 <div class="footer-col">
 <h4>Produkt</h4>
 <ul>
-<li><a href="/fleet/">Dla przewoźników</a></li>
-<li><a href="/driver/">Dla kierowców zawodowych</a></li>
+<li><a href="/pl/dla-przewoznikow/">Dla przewoźników</a></li>
+<li><a href="/pl/dla-kierowcow/">Dla kierowców zawodowych</a></li>
 <li><a href="/pl/organy-kontrolne/">Dla organów kontrolnych</a></li>
 <li><a href="/pl/jak-to-dziala/">Jak to działa</a></li>
-<li><a href="/for-whom/">Dla kogo</a></li>
-<li><a href="/faq/">FAQ</a></li>
+<li><a href="/pl/dla-kogo/">Dla kogo</a></li>
+<li><a href="/pl/faq/">FAQ</a></li>
 </ul>
 </div>
 <div class="footer-col">
 <h4>Zasoby</h4>
 <ul>
-<li><a href="/articles/">Artykuły</a></li><li><a href="/manuals/">Instrukcje</a></li>
-<li><a href="/articles/digital-tachograph-symbols/">Symbole tachografu</a></li>
-<li><a href="/integrations/dkv-live/">DKV LIVE®</a></li>
+<li><a href="/pl/poradnik/">Artykuły</a></li><li><a href="/pl/instrukcje/">Instrukcje</a></li>
+<li><a href="/pl/poradnik/symbole-tachografu/">Symbole tachografu</a></li>
+<li><a href="/pl/integracje/dkv-live/">DKV LIVE®</a></li>
 </ul>
 </div>
 <div class="footer-col">

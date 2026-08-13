@@ -1,0 +1,1568 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+<!-- TMX-ANALYTICS START -->
+<meta content="7F7894081BE7FBB245FF03AF8810B22F" name="msvalidate.01"/>
+<!-- Consent Mode v2 defaults (deny) + gtag stub — runs BEFORE gtag.js -->
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent','default',{
+      ad_storage:'denied', ad_user_data:'denied', ad_personalization:'denied',
+      analytics_storage:'denied', functionality_storage:'denied',
+      personalization_storage:'denied', security_storage:'granted',
+      wait_for_update:500
+    });
+    gtag('set','ads_data_redaction',true);
+    gtag('set','url_passthrough',false);
+  </script>
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-92253QFBNX"></script>
+<script>
+    gtag('js', new Date());
+    gtag('config','G-92253QFBNX');
+  </script>
+<!-- Cookie consent banner (self-hosted) + Microsoft Clarity gating -->
+<style>
+    .tmx-cc{position:fixed;left:0;right:0;bottom:0;z-index:2147483000;background:linear-gradient(120deg,var(--blue-dark,#0b2c4a),var(--blue-mid,#134a8e) 62%,var(--blue-light,#1f5fa6));color:#fff;
+      font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+      padding:16px 20px;box-shadow:0 -4px 24px rgba(0,0,0,.18);display:flex;flex-wrap:wrap;
+      align-items:center;gap:14px;justify-content:center}
+    .tmx-cc__txt{flex:1 1 360px;max-width:760px}
+    .tmx-cc__txt a{color:#9ed0f5;text-decoration:underline}
+    .tmx-cc__btns{display:flex;gap:10px;flex:0 0 auto}
+    .tmx-cc__b{appearance:none;border:0;cursor:pointer;font:inherit;font-weight:600;
+      padding:10px 22px;border-radius:99px;transition:filter .15s;color:#fff}
+    .tmx-cc__b:hover{filter:brightness(1.08)}
+    .tmx-cc__b--no{background:rgba(255,255,255,.16)}
+    .tmx-cc__b--yes{background:var(--green-cta,#5C820F)}
+    @media(max-width:640px){.tmx-cc{padding:14px}.tmx-cc__btns{width:100%}.tmx-cc__b{flex:1}}
+  </style>
+<script>
+  (function(){
+    var KEY='tmx-consent-v1', CL='wt18054m0r';
+    function lc(){var l=(document.documentElement.getAttribute('lang')||'en').toLowerCase().split('-')[0];
+      var m={cz:'cs',cs:'cs',sk:'sk',de:'de',pl:'pl',gr:'el',el:'el',en:'en'};return m[l]||'en';}
+    var T={
+      en:{t:'We use analytics cookies (Google Analytics, Microsoft Clarity) to understand site usage. They load only with your consent.',a:'Accept',r:'Reject',p:'Privacy &amp; cookies'},
+      cs:{t:'Pou\u017e\u00edv\u00e1me analytick\u00e9 cookies (Google Analytics, Microsoft Clarity) k pochopen\u00ed pou\u017e\u00edv\u00e1n\u00ed webu. Na\u010dtou se jen s va\u0161\u00edm souhlasem.',a:'P\u0159ijmout',r:'Odm\u00edtnout',p:'Soukrom\u00ed a cookies'},
+      sk:{t:'Pou\u017e\u00edvame analytick\u00e9 cookies (Google Analytics, Microsoft Clarity) na pochopenie pou\u017e\u00edvania webu. Na\u010d\u00edtaj\u00fa sa len s va\u0161\u00edm s\u00fahlasom.',a:'Prija\u0165',r:'Odmietnu\u0165',p:'S\u00fakromie a cookies'},
+      de:{t:'Wir verwenden Analyse-Cookies (Google Analytics, Microsoft Clarity), um die Nutzung der Website zu verstehen. Sie werden nur mit Ihrer Einwilligung geladen.',a:'Akzeptieren',r:'Ablehnen',p:'Datenschutz &amp; Cookies'},
+      pl:{t:'U\u017cywamy plik\u00f3w cookie do analityki (Google Analytics, Microsoft Clarity), aby zrozumie\u0107 korzystanie z witryny. \u0141aduj\u0105 si\u0119 tylko za Twoj\u0105 zgod\u0105.',a:'Akceptuj',r:'Odrzu\u0107',p:'Prywatno\u015b\u0107 i cookies'},
+      el:{t:'\u03a7\u03c1\u03b7\u03c3\u03b9\u03bc\u03bf\u03c0\u03bf\u03b9\u03bf\u03cd\u03bc\u03b5 cookies \u03b1\u03bd\u03ac\u03bb\u03c5\u03c3\u03b7\u03c2 (Google Analytics, Microsoft Clarity) \u03b3\u03b9\u03b1 \u03bd\u03b1 \u03ba\u03b1\u03c4\u03b1\u03bd\u03bf\u03ae\u03c3\u03bf\u03c5\u03bc\u03b5 \u03c4\u03b7 \u03c7\u03c1\u03ae\u03c3\u03b7. \u03a6\u03bf\u03c1\u03c4\u03ce\u03bd\u03bf\u03bd\u03c4\u03b1\u03b9 \u03bc\u03cc\u03bd\u03bf \u03bc\u03b5 \u03c4\u03b7 \u03c3\u03c5\u03b3\u03ba\u03b1\u03c4\u03ac\u03b8\u03b5\u03c3\u03ae \u03c3\u03b1\u03c2.',a:'\u0391\u03c0\u03bf\u03b4\u03bf\u03c7\u03ae',r:'\u0391\u03c0\u03cc\u03c1\u03c1\u03b9\u03c8\u03b7',p:'\u0391\u03c0\u03cc\u03c1\u03c1\u03b7\u03c4\u03bf &amp; cookies'}
+    };
+    function loadClarity(){if(!CL||window.__tmxCl)return;window.__tmxCl=1;
+      (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+       t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+       y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script",CL);}
+    function grant(){try{localStorage.setItem(KEY,'granted')}catch(e){}
+      gtag('consent','update',{analytics_storage:'granted'});loadClarity();}
+    function deny(){try{localStorage.setItem(KEY,'denied')}catch(e){}}
+    var saved=null;try{saved=localStorage.getItem(KEY)}catch(e){}
+    if(saved==='granted'){grant();return;} if(saved==='denied'){return;}
+    function show(){var tx=T[lc()]||T.en;
+      var b=document.createElement('div');b.className='tmx-cc';b.setAttribute('role','dialog');b.setAttribute('aria-live','polite');
+      b.innerHTML='<div class="tmx-cc__txt">'+tx.t+' <a href="/privacy/">'+tx.p+'</a></div>'+
+        '<div class="tmx-cc__btns"><button type="button" class="tmx-cc__b tmx-cc__b--no">'+tx.r+'</button>'+
+        '<button type="button" class="tmx-cc__b tmx-cc__b--yes">'+tx.a+'</button></div>';
+      document.body.appendChild(b);
+      b.querySelector('.tmx-cc__b--yes').addEventListener('click',function(){grant();b.remove();});
+      b.querySelector('.tmx-cc__b--no').addEventListener('click',function(){deny();b.remove();});}
+    if(document.body)show();else document.addEventListener('DOMContentLoaded',show);
+  })();
+  </script>
+<!-- TMX-ANALYTICS END -->
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Κωδικοί αστοχιών ταχογράφου &amp; εικονόγραμμα: τι σημαίνουν &amp; λύσεις | TAGRA</title>
+<meta content="Κάθε προειδοποιητικό εικονόγραμμα ψηφιακού ταχογράφου και κωδικός αστοχίας αποκωδικοποιημένος — VDO, Stoneridge, Actia και EFAS. Τι σημαίνει κάθε κωδικός και τι ακριβώς να κάνετε. Δωρεάν αναζήτηση." name="description"/>
+<link href="https://tagra.app/el/arthra/symvola-tachografou/" rel="canonical"/>
+<meta content="Κωδικοί αστοχιών ταχογράφου &amp; εικονόγραμμα: τι σημαίνουν &amp; λύσεις | TAGRA" property="og:title"/>
+<meta content="Κάθε προειδοποιητικό εικονόγραμμα ψηφιακού ταχογράφου και κωδικός αστοχίας αποκωδικοποιημένος — VDO, Stoneridge, Actia και EFAS. Δείτε τι σημαίνει κάθε κωδικός και τι ακριβώς να κάνετε στη συνέχεια." property="og:description"/>
+<meta content="article" property="og:type"/>
+<meta content="https://tagra.app/assets/img/hero-poster.jpg" property="og:image"/>
+<meta content="Κωδικοί αστοχιών ταχογράφου &amp; εικονόγραμμα: τι σημαίνουν &amp; λύσεις | TAGRA" name="twitter:title"/>
+<meta content="Κάθε προειδοποιητικό εικονόγραμμα ψηφιακού ταχογράφου και κωδικός αστοχίας αποκωδικοποιημένος — VDO, Stoneridge, Actia και EFAS. Τι σημαίνει κάθε κωδικός και τι να κάνετε στη συνέχεια." name="twitter:description"/>
+<meta content="https://tagra.app/assets/img/hero-poster.jpg" name="twitter:image"/>
+<meta content="https://tagra.app/el/arthra/symvola-tachografou/" property="og:url"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    a{color:var(--blue-mid);text-decoration:none;}
+    a:hover{color:var(--blue-dark);text-decoration:underline;text-underline-offset:.18em;}
+    img{max-width:100%;height:auto;display:block;}
+    p+p{margin-top:14px;}
+    ul,ol{padding-left:22px;}
+    li{margin:6px 0;line-height:1.65;}
+    li::marker{color:var(--blue-mid);}
+    strong{font-weight:700;color:var(--text);}
+    #scroll-progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--green-brand),var(--blue-light));width:0%;z-index:9999;pointer-events:none;}
+.nav-inner{max-width:1180px;margin:0 auto;padding:0 24px;height:100%;display:flex;align-items:center;justify-content:space-between;gap:24px;}
+    .nav-logo{font-size:22px;font-weight:900;background:linear-gradient(90deg,var(--blue-dark),var(--blue-mid));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;text-decoration:none;}
+    .nav-links{display:flex;align-items:center;gap:4px;list-style:none;}
+    .nav-links a{font-size:15px;font-weight:500;color:var(--text);padding:8px 12px;border-radius:8px;text-decoration:none;transition:background .15s;}
+    .nav-links a:hover{background:var(--bg-apple);color:var(--blue-mid);}
+    .nav-links .nav-cta a{background:var(--green-cta);color:#fff!important;border-radius:99px;padding:8px 18px;font-weight:600;}
+    .nav-links .nav-cta a:hover{background:var(--green-brand);text-decoration:none;}
+    .nav-lang{display:flex;align-items:center;gap:4px;font-size:14px;font-weight:600;}
+    .nav-lang a{padding:5px 8px;border-radius:6px;color:var(--text2);text-decoration:none;transition:background .15s;}
+    .nav-lang a:hover,.nav-lang a.active{background:var(--bg-apple);color:var(--blue-mid);}
+    .nav-lang span{color:var(--border);}
+    .nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:8px;}
+    .nav-toggle span{display:block;width:22px;height:2px;background:var(--text);margin:5px 0;border-radius:2px;}
+    @media(max-width:900px){.nav-links{display:none;}.nav-toggle{display:block;}.nav-links.open{display:flex;flex-direction:column;align-items:flex-start;gap:2px;position:absolute;top:var(--nav-h);left:0;right:0;background:rgba(255,255,255,.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:12px 24px 20px;}}
+    .art-hero{background:linear-gradient(180deg,var(--bg-apple) 0%,#fff 100%);padding:56px 0 44px;}
+    .art-wrap{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 24px;}
+    .breadcrumb{font-size:14px;color:var(--text2);margin-bottom:18px;}
+    .breadcrumb a{color:var(--text2);text-decoration:none;}
+    .breadcrumb a:hover{color:var(--blue-mid);}
+    .breadcrumb span{margin:0 5px;color:var(--border);}
+    .eyebrow{font-size:14px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--green-brand);margin-bottom:10px;}
+    .art-title{font-size:38px;line-height:1.15;font-weight:800;margin-bottom:16px;letter-spacing:-.02em;padding-bottom:0.08em;color:var(--blue-dark);}
+    .art-title .grad{background:linear-gradient(90deg,var(--blue-dark) 0%,var(--blue-light) 50%,var(--blue-bright) 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;}
+    @media(max-width:700px){.art-title{font-size:26px;}}
+    .art-meta{font-size:15px;color:var(--text2);padding-bottom:24px;border-bottom:1px solid var(--border);display:flex;gap:20px;flex-wrap:wrap;}
+    .art-body{padding:44px 0 60px;}
+    /* H2 gradient mechanics: width:max-content shrinks the element to the text's
+       intrinsic width so the 3-stop gradient is rendered across the visible glyphs
+       (not the 949px wrapping width), giving the same visible 3-stop effect as H1.
+       Multi-line H2s wrap via max-width:100% (each wrapped line gets its own slice). */
+    .art-body h2 {
+      font-size: 36px; font-weight: 800;
+      line-height: 1.1; letter-spacing: 0;
+      text-transform: uppercase;
+      color: var(--blue-mid, #134a8e);
+      background: linear-gradient(90deg, var(--blue-dark, #0b2c4a) 0%, var(--blue-light, #1f5fa6) 50%, var(--blue-bright, #3a6ff0) 100%);
+      -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block; width: max-content; max-width: 100%;
+      margin-bottom: 14px;
+      padding: 0.12em 0.15em 0.08em 0;
+    }
+    .art-body h3{font-size:20px;font-weight:700;color:var(--text);margin:28px 0 10px;}
+    .art-body p{margin-bottom:18px;}
+    .art-body ul,.art-body ol{margin-bottom:20px;}
+    .deadline-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:24px 0;}
+    @media(max-width:580px){.deadline-grid{grid-template-columns:1fr;}}
+    .deadline-box{background:var(--bg-apple);border-radius:var(--radius);padding:28px;text-align:center;}
+    .deadline-num{font-size:54px;font-weight:900;line-height:1;background:linear-gradient(90deg,var(--blue-dark),var(--blue-mid));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:6px;}
+    .deadline-lbl{font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--text2);}
+    .deadline-desc{font-size:15px;color:var(--text2);margin-top:10px;line-height:1.5;}
+    .steps-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin:20px 0;}
+    @media(max-width:720px){.steps-grid{grid-template-columns:1fr;}}
+    .step-card{background:var(--bg-gray);border-radius:var(--radius);padding:22px;box-shadow:0 8px 24px rgba(0,0,0,.04);}
+    .step-num{font-size:13px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--green-cta);margin-bottom:8px;}
+    .step-title{font-size:17px;font-weight:800;color:var(--text);margin-bottom:6px;line-height:1.35;}
+    .step-desc{font-size:15px;color:var(--text2);line-height:1.5;}
+    
+    .callout--blue{background:var(--bg-apple);border-left:4px solid var(--blue-mid);}
+    
+    .callout-title{font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:.07em;color:var(--blue-mid);margin-bottom:8px;}
+    .callout--green .callout-title{color:var(--green-brand);}
+    .faq-item{border-top:1px solid var(--border);padding:14px 0;}
+    .faq-item:last-child{border-bottom:1px solid var(--border);}
+    .faq-item summary{list-style:none;cursor:pointer;font-weight:700;font-size:18px;line-height:1.4;padding-right:32px;position:relative;color:var(--text);}
+    .faq-item summary::-webkit-details-marker{display:none;}
+    .faq-item summary::after{content:"+";position:absolute;right:0;top:50%;transform:translateY(-50%);font-size:26px;font-weight:300;color:var(--green-cta);}
+    .faq-item[open] summary::after{content:"−";}
+    
+    .cta-box{background:linear-gradient(135deg,var(--blue-dark),var(--blue-mid));border-radius:var(--radius);padding:40px 36px;margin:44px 0;text-align:center;}
+    .cta-box h3{font-size:24px;font-weight:800;color:#fff;margin-bottom:12px;}
+    .cta-box p{color:rgba(255,255,255,.8);font-size:17px;margin-bottom:24px;}
+    
+    .btn:hover{background:var(--green-brand);transform:scale(1.02);}
+    .related{border-top:1px solid var(--border);padding-top:36px;margin-top:36px;}
+    .related-title{font-size:20px;font-weight:800;color:var(--text);margin-bottom:18px;}
+    .related-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+    @media(max-width:580px){.related-grid{grid-template-columns:1fr;}}
+    .related-card{display:block;padding:20px;border:1px solid var(--border);border-radius:var(--radius);text-decoration:none!important;transition:border-color .15s,transform .15s;}
+    .related-card:hover{border-color:var(--blue-mid);transform:translateY(-2px);}
+    .related-card-eye{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--blue-mid);margin-bottom:6px;}
+    .related-card-title{font-size:16px;font-weight:700;color:var(--text);line-height:1.4;}
+
+    .art-body table{width:100%;border-collapse:collapse;margin:20px 0;font-size:16px;background:#fff;box-shadow:0 8px 24px rgba(0,0,0,.04);border-radius:var(--radius);overflow:hidden;}
+    .sym-cell{display:flex;align-items:center;gap:14px;}
+    .sym-icon{flex-shrink:0;width:48px;height:48px;background:#fff;border:1px solid var(--border);border-radius:8px;padding:8px;color:var(--blue-dark);}
+    .sym-icon svg{display:block;width:100%;height:100%;}
+    .sym-icon img{display:block;width:100%;height:100%;}
+    @media(max-width:680px){.sym-icon{width:40px;height:40px;padding:7px;}}
+    .art-body thead{background:linear-gradient(135deg,var(--blue-dark),var(--blue-mid));color:#fff;}
+    .art-body th{padding:14px 16px;text-align:left;font-weight:700;font-size:14px;letter-spacing:.02em;}
+    .art-body td{padding:14px 16px;border-top:1px solid var(--border);vertical-align:top;line-height:1.55;font-size:15px;}
+    .art-body tbody tr:nth-child(even){background:var(--bg-gray);}
+    .art-body th:first-child,.art-body td:first-child{width:22%;}
+    @media(max-width:680px){.art-body table,.art-body thead,.art-body tbody,.art-body th,.art-body td,.art-body tr{display:block;}.art-body thead{display:none;}.art-body td{border-top:none;border-bottom:1px solid var(--border);}.art-body td:first-child{font-weight:700;background:var(--bg-apple);}}
+    .lead{font-size:20px;color:var(--text2);line-height:1.55;}
+
+    .dec-search{background:var(--bg-apple);border:1px solid var(--border);border-radius:var(--radius);padding:18px 18px 14px;margin:8px 0 26px;}
+    .dec-search-label{display:block;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--blue-mid);margin-bottom:10px;}
+    .dec-search-row{display:flex;gap:10px;align-items:center;}
+    #dec-search-input{flex:1;font-size:16px;padding:12px 14px;border:1px solid var(--border);border-radius:10px;background:#fff;color:var(--text);outline:none;}
+    #dec-search-input:focus{border-color:var(--blue-mid);box-shadow:0 0 0 3px rgba(19,74,142,.12);}
+    #dec-search-clear{flex-shrink:0;width:42px;height:42px;border:1px solid var(--border);background:#fff;border-radius:10px;font-size:22px;line-height:1;color:var(--text2);cursor:pointer;}
+    #dec-search-clear:hover{color:var(--text);border-color:var(--blue-mid);}
+    .dec-chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;}
+    .dec-chip{font-size:14px;font-weight:600;padding:7px 14px;border-radius:99px;border:1px solid var(--border);background:#fff;color:var(--text2);cursor:pointer;transition:all .15s;}
+    .dec-chip:hover{border-color:var(--blue-mid);color:var(--blue-mid);}
+    .dec-chip.is-active{background:var(--blue-mid);border-color:var(--blue-mid);color:#fff;}
+    .dec-count{font-size:14px;color:var(--text2);margin:12px 0 0;min-height:1.2em;}
+    .vendor.dec-hidden{display:none;}
+    tr.dec-hidden{display:none;}
+    .dec-nohit{font-size:14px;color:var(--text2);padding:10px 2px;}
+  
+</style>
+<link href="../../assets/css/tokens.css?v=20260514j" rel="stylesheet"/>
+<link href="../../assets/css/base.css?v=20260514j" rel="stylesheet"/>
+<link href="../../assets/css/components.css?v=20260514j" rel="stylesheet"/>
+<link href="/assets/css/nav.css?v=20260514j" rel="stylesheet"/>
+<script defer="" src="/assets/js/nav.js?v=20260513q"></script>
+<link href="/assets/css/footer.css?v=20260513d" rel="stylesheet"/>
+<link href="https://tagra.app/articles/digital-tachograph-symbols/" hreflang="en" rel="alternate"/><link href="https://tagra.app/de/ratgeber/tachographen-symbole/" hreflang="de" rel="alternate"/><link href="https://tagra.app/pl/poradnik/symbole-tachografu/" hreflang="pl" rel="alternate"/><link href="https://tagra.app/el/arthra/symvola-tachografou/" hreflang="el" rel="alternate"/><link href="https://tagra.app/articles/digital-tachograph-symbols/" hreflang="x-default" rel="alternate"/></head>
+<body>
+<div aria-hidden="true" id="scroll-progress"></div>
+<nav aria-label="Κύρια πλοήγηση" class="site-nav" role="navigation">
+<div class="nav-inner">
+<a aria-label="TAGRA – Αρχική" class="nav-logo" href="/el/"><img alt="TAGRA" height="32" src="/assets/img/logo-light.svg?v=20260513zh" style="display:block;height:32px;width:auto;" width="140"/></a>
+<ul class="nav-links">
+<li><a href="/el/stolos/">Για εταιρείες</a></li>
+<li><a href="/el/odigoi/">Για οδηγούς</a></li>
+<li><a href="/el/eleghos/">Ελεγκτικές αρχές</a></li>
+<li><a aria-current="page" href="/el/arthra/">Άρθρα</a></li><li><a href="/el/egcheiridia/">Εγχειρίδια</a></li>
+<li><a href="/el/faq/">Συχνές ερωτήσεις</a></li>
+<li><a href="/el/epikoinonia/">Επικοινωνία</a></li>
+<li class="nav-cta-li"><a class="nav-cta" href="/el/dokimi/?audience=fleet">Δοκιμάστε δωρεάν για 30 ημέρες</a></li>
+</ul>
+<details class="nav-lang">
+<summary aria-label="Language: EL">EL</summary>
+<div class="nav-lang-menu" role="menu">
+<a href="/" hreflang="en">English</a><a href="/de/" hreflang="de">Deutsch</a><a href="/pl/" hreflang="pl">Polski</a><a aria-current="page" class="active" href="/el/" hreflang="el">Ελληνικά</a><a href="/hu/" hreflang="hu">Magyar</a><a href="https://www.tdt.cz/" hreflang="cs" rel="noopener" target="_blank">Čeština</a><a href="https://www.tdt.sk/" hreflang="sk" rel="noopener" target="_blank">Slovenčina</a></div>
+</details>
+<a class="nav-cta-mobile" href="/el/dokimi/?audience=fleet">Δοκιμάστε δωρεάν</a>
+<button aria-expanded="false" aria-label="Εναλλαγή μενού" class="nav-mobile-toggle" id="nav-toggle">
+<span></span><span></span><span></span>
+</button>
+</div>
+</nav>
+<header class="art-hero">
+<div class="art-wrap">
+<nav class="breadcrumb"><a href="/el/">TAGRA</a><span>›</span><a href="/el/arthra/">Άρθρα</a><span>›</span><span>Εικονογράμματα ταχογράφου &amp; κωδικοί σφαλμάτων</span></nav>
+<div class="eyebrow">Βάση γνώσεων οδηγού</div>
+<h1 class="art-title"><span class="grad">Εικονογράμματα ταχογράφου &amp; κωδικοί σφαλμάτων: οδηγός για οδηγούς</span></h1>
+<div class="art-meta"><span>Truck Data Technology</span><span>Ενημερώθηκε Ιούνιο 2026</span><span>22 λεπτά ανάγνωσης</span></div>
+<div aria-label="Οδηγός που χειρίζεται έναν ψηφιακό ταχογράφο" class="art-hero-video">
+<video aria-label="Οδηγός που χειρίζεται έναν ψηφιακό ταχογράφο" autoplay="" loop="" muted="" playsinline="" poster="symboly-chybove-kody-hero-poster.webp" preload="metadata" webkit-playsinline="">
+<source src="symboly-chybove-kody-hero.webm" type="video/webm">
+<source src="symboly-chybove-kody-hero.mp4" type="video/mp4">
+</source></source></video>
+</div>
+</div>
+</header>
+<main>
+<div class="art-wrap art-body">
+<article>
+<p class="lead">Κάθε ψηφιακός ταχογράφος στην ΕΕ μιλάει την ίδια οπτική γλώσσα. Είτε οδηγείτε ένα φορτηγό 7,5 τόνων σε όλη τη Βαυαρία είτε ένα αρθρωτό φορτηγό 40 τόνων από το Ρότερνταμ στην Αθήνα, τα εικονογράμματα στην οθόνη του ταχογράφου σας ακολουθούν ένα ενιαίο, νομικά δεσμευτικό πρότυπο που ορίζεται από<strong>Κανονισμός (ΕΕ) 2016/799, Παράρτημα Ι Γ</strong>— η τεχνική προδιαγραφή για έξυπνους ταχογράφους.</p>
+<p>Ωστόσο, η κατανόηση των εικονογραμμάτων είναι μόνο η μισή δουλειά. Η ίδια οθόνη που δείχνει τη δραστηριότητά σας εμφανίζει επίσης<strong>προειδοποιήσεις, συμβάντα, αστοχίες και αναδυόμενα μηνύματα ειδικά για τον κατασκευαστή</strong>— και η λανθασμένη κατανόηση αυτών μπορεί να κοστίσει στον οδηγό ένα πρόστιμο, να αναγκάσει ένα όχημα να μείνει εκτός δρόμου ή να προκαλέσει μια υποχρεωτική επίσκεψη σε συνεργείο εντός επτά ημερών. Αυτός ο οδηγός αναλύει κάθε κατηγορία, με επαληθευμένα μηνύματα που προέρχονται από τα επίσημα εγχειρίδια των τεσσάρων πιο διαδεδομένων μονάδων στην Ευρώπη:<strong>VDO DTCO 4.1, Stoneridge SE5000, Actia SmarTach</strong>και<strong>EFAS-4</strong>.</p>
+<div aria-label="Περιεχόμενα άρθρου" class="toc">
+<strong>Τι περιλαμβάνει αυτός ο οδηγός</strong>
+<ol>
+<li><a href="#activity-symbols">Τέσσερα εικονογράμματα δραστηριότητας που κάθε οδηγός πρέπει να γνωρίζει</a></li>
+<li><a href="#universal-warnings">Καθολικές κατηγορίες προειδοποιήσεων (συμβάντα, αστοχίες, ώρα, σημειώσεις)</a></li>
+<li><a href="#vendor-codes">200+ επαληθευμένοι κωδικοί &amp; εικονογράμματα (με δυνατότητα αναζήτησης)</a></li>
+<li><a href="#common-mistakes">Τα 10 πιο κοινά μηνύματα ταχογράφου στην πράξη</a></li>
+<li><a href="#crisis-workflow">Ροή εργασιών κρίσιμου σφάλματος: τι να κάνετε στην άκρη του δρόμου</a></li>
+<li><a href="#sources">Επίσημες πηγές &amp; εγχειρίδια κατασκευαστή</a></li>
+<li><a href="#faq">Συχνές ερωτήσεις — εικονόγραμμα και κωδικοί σφάλματος</a></li>
+</ol>
+</div>
+<!-- ===================================================================== -->
+<!-- SECTION 1: FOUR MAIN ACTIVITY SYMBOLS                                  -->
+<!-- ===================================================================== -->
+<h2 id="activity-symbols">Τέσσερα εικονογράμματα δραστηριότητας που κάθε οδηγός πρέπει να γνωρίζει</h2>
+<p>Κάθε ψηφιακός ταχογράφος καταγράφει τους χρόνους οδηγού σε μία από τις τέσσερις κατηγορίες, κάθε μία από τις οποίες εμφανίζεται με ένα μόνο εικονόγραμμα ISO-2575 στην οθόνη. Αυτές δεν είναι απλώς οπτικές ετικέτες — είναι<strong>νομικά διακριτές κατηγορίες</strong>βάσει του Κανονισμού ΕΚ 561/2006 (ώρες οδήγησης) και της Οδηγίας 2002/15/ΕΚ (χρόνος εργασίας για τους κινητούς εργαζόμενους), και καθορίζουν πώς η ημέρα σας προσμετράται στα όρια οδήγησης, τα διαλείμματα και τις περιόδους ανάπαυσης.</p>
+<div class="activity-grid">
+<div class="activity-card">
+<div aria-hidden="true" class="ico ico--drive"><img alt="" height="28" src="icons/driving.svg?v=20260514c" width="28"/></div>
+<h3>ΟΔΗΓΗΣΗ (τιμόνι)</h3>
+<p>Ρυθμίζεται<strong>αυτόματα</strong>τη στιγμή που κινείται το όχημα. Δεν μπορεί να αλλάξει χειροκίνητα. Προσμετράται στο συνεχές όριο των 4½ ωρών, στο ημερήσιο όριο των 9/10 ωρών και στα εβδομαδιαία/δεκαπενθήμερα όρια οδήγησης των 56/90 ωρών.</p>
+</div>
+<div class="activity-card">
+<div aria-hidden="true" class="ico ico--work"><img alt="" height="28" src="icons/other-work.svg?v=20260514c" width="28"/></div>
+<h3>ΕΡΓΑΣΙΑ (διασταυρωμένα σφυριά)</h3>
+<p>Όλες οι αμειβόμενες εργασίες που<strong>δεν είναι οδήγηση</strong>: φόρτωση και εκφόρτωση, ανεφοδιασμός καυσίμων, γραφική εργασία, έλεγχοι οχήματος, βοήθεια επιβατών. Προσμετράται ως χρόνος εργασίας βάσει της Οδηγίας για τον Χρόνο Εργασίας (WTD).<em>δεν</em>προσμετράται ως διάλειμμα.</p>
+</div>
+<div class="activity-card">
+<div aria-hidden="true" class="ico ico--avail"><img alt="" height="28" src="icons/availability.svg?v=20260514c" width="28"/></div>
+<h3>ΕΤΟΙΜΟΤΗΤΑ (τετράγωνο διαμάντι)</h3>
+<p>Χρόνος αναμονής του οποίου η διάρκεια είναι γνωστή εκ των προτέρων: διάπλους με οχηματαγωγό/διάβαση με τρένο, αναμονή στην ουρά σε πελάτη, συνοδεία οχήματος που ρυμουλκείται. Η περίοδος ετοιμότητας δεν προσμετράται ως διάλειμμα βάσει των ωρών οδήγησης, αλλά προσμετράται στον χρόνο εργασίας βάσει της Οδηγίας για τον Χρόνο Εργασίας (WTD).</p>
+</div>
+<div class="activity-card">
+<div aria-hidden="true" class="ico ico--rest"><img alt="" height="28" src="icons/rest.svg?v=20260514c" width="28"/></div>
+<h3>ΔΙΑΛΕΙΜΜΑ/ΑΝΑΠΑΥΣΗ (κρεβάτι)</h3>
+<p>Γνήσιο διάλειμμα ή καθημερινή/εβδομαδιαία ανάπαυση. Ο οδηγός δεν πρέπει να εργάζεται και να είναι ελεύθερος να διαθέτει το χρόνο του. Η μόνη κατηγορία που μηδενίζει το ρολόι συνεχούς οδήγησης 4½ ωρών και μετράει προς την υποχρεωτική ημερήσια ανάπαυση 11 ωρών.</p>
+</div>
+</div>
+<p>Τα κουμπιά επιλογής στη μονάδα (Οδηγός 1 / Οδηγός 2) σας επιτρέπουν να εναλλάσσεστε μεταξύ Άλλη εργασία, ΕΤΟΙΜΟΤΗΤΑ και ΔΙΑΛΕΙΜΜΑ/ΑΝΑΠΑΥΣΗ. Η ΟΔΗΓΗΣΗ ορίζεται πάντα αυτόματα από τον αισθητήρα κίνησης — αν δείτε ΟΔΗΓΗΣΗ ενώ το όχημα είναι σταματημένο, ο ταχογράφος καταγράφει μια αστοχία, όχι μια δραστηριότητα (περισσότερα γι' αυτό παρακάτω). Τα κοινά λάθη οδηγού με αυτά τα τέσσερα εικονόγραμμα — και γιατί η «ΕΤΟΙΜΟΤΗΤΑ» δεν μπορεί ποτέ νομικά να αντικαταστήσει ένα διάλειμμα — καλύπτονται στην ενότητα 4.</p>
+<!-- ===================================================================== -->
+<!-- SECTION 2: UNIVERSAL WARNING CATEGORIES                                -->
+<!-- ===================================================================== -->
+<h2 id="universal-warnings">Καθολικές κατηγορίες προειδοποιήσεων που χρησιμοποιεί κάθε ταχογράφος</h2>
+<p>Μόλις περάσετε τα τέσσερα εικονόγραμμα δραστηριότητας, όλα τα προειδοποιητικά μηνύματα που εμφανίζονται από τους ψηφιακούς ταχογράφους ανήκουν σε μία από τέσσερις οικογένειες. Το<strong>εγχειρίδιο VDO DTCO 4.1</strong>τις αναφέρει ρητά (σελίδα 109), και την ίδια λογική ακολουθούν οι Stoneridge SE5000, Actia SmarTach και EFAS-4 — επειδή<strong>το Παράρτημα I C ορίζει τις κατηγορίες σε επίπεδο κανονισμού</strong>. Γνωρίζοντας σε ποια οικογένεια ανήκει ένα μήνυμα, γνωρίζετε αμέσως πόσο σοβαρό είναι και αν μπορείτε να συνεχίσετε τη βάρδιά σας.</p>
+<div class="warn-grid">
+<div class="warn-card warn-card--warn">
+<h3>! Συμβάν</h3>
+<p>Ένα<strong>λειτουργικό συμβάν</strong>που καταγράφεται από τον ταχογράφο και δεν είναι απαραίτητα βλάβη υλικού — για παράδειγμα, οδήγηση χωρίς έγκυρη κάρτα, υπέρβαση ορίου ταχύτητας ή εισαγωγή κάρτας εν κινήσει. Τα περισσότερα συμβάντα πρέπει να επιβεβαιώνονται με το κουμπί OK. Η μονάδα επί οχήματος (VU) γράφει μια εγγραφή στην κύρια μνήμη<em>και</em>στην κάρτα οδηγού.</p>
+</div>
+<div class="warn-card warn-card--crit">
+<h3>x Αστοχία</h3>
+<p>Μια γνήσια<strong>δυσλειτουργία υλικού ή λογισμικού</strong>: αστοχία αισθητήρα, βλάβη εκτυπωτή, εσωτερικό σφάλμα ώρας, αστοχία τηλεφόρτωσης, αστοχία GNSS. Οι αστοχίες ενεργοποιούν τον κανόνα της επταήμερης επίσκεψης στο συνεργείο — η μονάδα πρέπει να επιθεωρηθεί από εξουσιοδοτημένο συνεργείο εντός<strong>μίας εβδομάδας</strong>. Η οδήγηση με γνωστή αστοχία επιτρέπεται μόνο με τεκμηριωμένες χειρόγραφες καταγραφές.</p>
+</div>
+<div class="warn-card warn-card--info">
+<h3>↻ Προειδοποίηση χρόνου οδήγησης</h3>
+<p>A<strong>προειδοποίηση συμμόρφωσης</strong>: συνεχής οδήγηση που πλησιάζει τις 4½ ώρες, ο ημερήσιος/εβδομαδιαίος χρόνος οδήγησης πλησιάζει το όριό του, ή η επόμενη απαιτούμενη ανάπαυση οφείλεται. Ο αναβοσβήνων οπίσθιος φωτισμός είναι η οπτική ένδειξη. Αυτά τα μηνύματα σας βοηθούν να συμμορφωθείτε με τον Κανονισμό 561/2006 — δεν είναι αστοχίες.</p>
+</div>
+<div class="warn-card warn-card--ok">
+<h3>i Σημείωση λειτουργίας</h3>
+<p>Ένα<strong>ενημερωτική προτροπή</strong>: «παρακαλώ εισάγετε», «δεν υπάρχει χαρτί», «Βλάβη κάρτας», «Καλιμπράρισμα σε 28 ημέρες». Οι σημειώσεις λειτουργίας εμφανίζονται χωρίς αναβοσβήσιμο και εξαφανίζονται αυτόματα μετά από λίγα δευτερόλεπτα. Δεν καταγράφονται δεδομένα στην μαζική μνήμη· το μήνυμα είναι απλώς μια υπόδειξη διεπαφής χρήστη (UI hint).</p>
+</div>
+</div>
+<p>Κάθε μήνυμα σφάλματος που θα δείτε — είτε από ένα VDO DTCO 4.0, ένα Stoneridge SE5000 Exakt Duo², ένα Actia SmarTach ή οποιαδήποτε άλλη μονάδα εγκεκριμένου τύπου σύμφωνα με το Παράρτημα I Γ — ανήκει σε μία ακριβώς από αυτές τις τέσσερις οικογένειες. Από αυτό το σημείο του οδηγού θα εξετάσουμε κάθε οικογένεια λεπτομερώς, με επαληθευμένο κείμενο μηνυμάτων από τα εγχειρίδια του κατασκευαστή.</p>
+<!-- ===================================================================== -->
+<!-- SECTION 3: 120+ VERIFIED ERROR CODES BY MANUFACTURER                  -->
+<!-- ===================================================================== -->
+<h2 id="vendor-codes">200+ επαληθευμένοι κωδικοί σφάλματος από τέσσερα εγχειρίδια κατασκευαστών</h2>
+<p>Τα τέσσερα πιο διαδεδομένα εγκατεστημένα μοντέλα ψηφιακού ταχογράφου στην Ευρώπη είναι<strong>VDO DTCO 4.1</strong>(Continental — η κυρίαρχη μονάδα στην Κεντρική Ευρώπη και στην αγορά της Τσεχίας / Σλοβακίας),<strong>Stoneridge SE5000 Exakt Duo²</strong>(η προεπιλεγμένη μονάδα στο Ηνωμένο Βασίλειο και στη Σκανδιναβία),<strong>Actia SmarTach</strong>(δημοφιλές στη Γαλλία και τη Νότια Ευρώπη) και<strong>EFAS-4</strong>(Intellic / Schneider, κοινή στη Γερμανία και την Πολωνία). Κάθε προμηθευτής χρησιμοποιεί ελαφρώς διαφορετική διατύπωση στην οθόνη, αλλά όλες συμμορφώνονται με το Παράρτημα I Γ — έτσι η υποκείμενη σημασία μιας «Εσωτερική αστοχία VU», μιας «Αστοχία αισθητήρα» ή μιας «Η κάρτα δεν είναι κλειστή» είναι πανομοιότυπη ανεξάρτητα από τη μονάδα στο ταμπλό σας.</p>
+<p>Οι παρακάτω κωδικοί λαμβάνονται απευθείας από τα επίσημα, δημόσια διαθέσιμα εγχειρίδια χρήστη — οι αναφορές αρχείων παρατίθενται στην<a href="#sources">ενότητα πηγών</a>. Όπου το εγχειρίδιο παρέχει αγγλική διατύπωση, τη χρησιμοποιούμε κατά λέξη· έχουμε προσθέσει μόνο μια στήλη απλών αγγλικών «τι να κάνετε» όπου το εγχειρίδιο το αφήνει στην κρίση του οδηγού.</p>
+<div class="dec-search" id="dec-search">
+<label class="dec-search-label" for="dec-search-input">Γρήγορη αναζήτηση — πληκτρολογήστε έναν κωδικό, μήνυμα ή εικονόγραμμα</label>
+<div class="dec-search-row">
+<input autocomplete="off" id="dec-search-input" placeholder="π.χ. Αστοχία αισθητήρα, 042, 002E80, GNSS…" spellcheck="false" type="search"/>
+<button aria-label="Εκκαθάριση αναζήτησης" id="dec-search-clear" type="button">×</button>
+</div>
+<div aria-label="Φιλτράρισμα κατά κατασκευαστή" class="dec-chips" role="group">
+<button class="dec-chip is-active" data-vendor="all" type="button">Όλα</button>
+<button class="dec-chip" data-vendor="vdo" type="button">VDO DTCO</button>
+<button class="dec-chip" data-vendor="stoneridge" type="button">Stoneridge</button>
+<button class="dec-chip" data-vendor="actia" type="button">Actia</button>
+<button class="dec-chip" data-vendor="efas" type="button">EFAS</button>
+<button class="dec-chip" data-vendor="symbols" type="button">Εικονογράμματα ↑</button>
+</div>
+<p aria-live="polite" class="dec-count" id="dec-count"></p>
+</div>
+<div class="vendor-stack">
+<!-- ===== VDO DTCO 4.1 ===== -->
+<details class="vendor" id="vdo" open="">
+<summary>
+<span class="vendor-meta">Continental VDO · πιο διαδεδομένο στην Κεντρική Ευρώπη</span>VDO DTCO 4.1 / 4.1a / 4.1b</summary>
+<div class="vendor-body">
+<p>Η οικογένεια VDO DTCO 4.1 είναι ο έξυπνος ταχογράφος δεύτερης γενιάς (Smart Tacho 2) και η πιο κοινή μονάδα στους τσεχικούς, σλοβακικούς, γερμανικούς και αυστριακούς στόλους. Τα παρακάτω μηνύματα προέρχονται από<strong>VDO DTCO 4.1 Instruction Manual, Edition 3 / 2024-08, BA00.1381.41 100 102</strong>(Continental Automotive Technologies GmbH). Η επίσημη δομή των μηνυμάτων είναι:<strong>Συμβάντα</strong>(όπως Οδήγηση χωρίς κατάλληλη κάρτα),<strong>Αστοχίες</strong>(δυσλειτουργίες υλικού της μονάδας),<strong>Προειδοποιήσεις χρόνου οδήγησης</strong>και<strong>Λειτουργικές σημειώσεις</strong>.</p>
+<h3>Συμβάντα — λειτουργικά περιστατικά (ύψιστη προτεραιότητα)</h3>
+<div class="code-table-wrap">
+<table class="code-table">
+<thead>
+<tr>
+<th style="width: 22%;">Μήνυμα</th>
+<th style="width: 30%;">Αιτία (από το εγχειρίδιο)</th>
+<th style="width: 32%;">Τι να κάνετε</th>
+<th style="width: 12%;">Σοβαρότητα</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>! Παραβίαση ασφάλειας xx</td>
+<td>Σφάλμα στη μνήμη δεδομένων· η ασφάλεια των δεδομένων στο DTCO 4.1x δεν είναι πλέον διασφαλισμένη. Τα δεδομένα του αισθητήρα δεν είναι πλέον αξιόπιστα. Το περίβλημα του DTCO άνοιξε χωρίς εξουσιοδότηση.</td>
+<td>Επιβεβαιώστε το μήνυμα. Η κάρτα εξέρχεται αυτόματα — ακόμα και κατά την οδήγηση. Εισαγάγετέ την ξανά ή ελέγξτε την σε εξουσιοδοτημένο συνεργείο.</td>
+<td><span class="sev sev-crit">Κρίσιμο</span></td>
+</tr>
+<tr>
+<td>!1 Παραβίαση ασφάλειας xx</td>
+<td>Η κλειδαριά κάρτας έχει διακοπεί ή είναι ελαττωματική. Το DTCO δεν ανιχνεύει πλέον κάρτα ταχογράφου που είχε εισαχθεί σωστά προηγουμένως. Η ταυτότητα, η αυθεντικότητα ή τα αποθηκευμένα δεδομένα της κάρτας δεν είναι αξιόπιστα.</td>
+<td>Επιβεβαιώστε το μήνυμα. Εισαγάγετε ξανά την κάρτα ταχογράφου ή ελέγξτε την.</td>
+<td><span class="sev sev-crit">Κρίσιμο</span></td>
+</tr>
+<tr>
+<td>! Διακοπή τάσης xx</td>
+<td>Η τροφοδοσία διακόπηκε ή η παροχή στον αισθητήρα του DTCO ήταν πολύ χαμηλή ή πολύ υψηλή. Μπορεί επίσης να εμφανιστεί κατά την εκκίνηση του κινητήρα.</td>
+<td>Επιβεβαιώστε το μήνυμα. Εάν εμφανιστεί ξανά, ελέγξτε την παροχή ρεύματος του οχήματος.</td>
+<td><span class="sev sev-med">Μέτρια</span></td>
+</tr>
+<tr>
+<td>x Βλάβη δότη</td>
+<td>Η επικοινωνία με τον αισθητήρα κίνησης διακόπτεται. Το μήνυμα εμφανίζεται επίσης μετά από διακοπή τάσης.</td>
+<td>Επιβεβαιώστε το μήνυμα. Εάν επαναλαμβάνεται, συμβουλευτείτε εξουσιοδοτημένο εξειδικευμένο συνεργείο.</td>
+<td><span class="sev sev-crit">Κρίσιμο</span></td>
+</tr>
+<tr>
+<td>! Διένεξη κίνησης xx</td>
+<td>Αντίφαση στην αξιολόγηση της κίνησης του οχήματος μεταξύ του αισθητήρα και μιας ανεξάρτητης πηγής σήματος. Η λειτουργία οχηματαγωγού/τρένου ενδέχεται να μην έχει ρυθμιστεί κατά τη διαδικασία αποστολής.</td>
+<td>Επιβεβαιώστε το μήνυμα. Συμβουλευτείτε εξουσιοδοτημένο εξειδικευμένο συνεργείο — πιθανή παραποίηση ή ζημιά.</td>
+<td><span class="sev sev-crit">Κρίσιμο</span></td>
+</tr>
+<tr>
+<td>! GNSS λείπει xx</td>
+<td>Δεν υπάρχουν δεδομένα θέσης για πάνω από τρεις ώρες συνολικού χρόνου οδήγησης.</td>
+<td>Επιβεβαιώστε το μήνυμα. Βεβαιωθείτε ότι η κεραία GNSS δεν είναι καλυμμένη ή φραγμένη.</td>
+<td><span class="sev sev-med">Μέτρια</span></td>
+</tr>
+<tr>
+<td>!? GNSS ανωμαλία</td>
+<td>Εντοπίστηκε παραποίηση ή εξωτερική επίθεση στο σήμα GNSS (anti-spoofing OSNMA).</td>
+<td>Ελέγξτε για λόγους παραποίησης. Επαληθεύστε τη λειτουργία GNSS. Αντικαταστήστε τα ελαττωματικά εξαρτήματα εάν χρειάζεται.</td>
+<td><span class="sev sev-high">Υψηλή</span></td>
+</tr>
+<tr>
+<td>! Αντικρουόμενος χρόνος xx</td>
+<td>Διαφορά μεγαλύτερη του ενός λεπτού μεταξύ του εσωτερικού ρολογιού του DTCO και του χρόνου που λαμβάνεται από το σήμα GNSS.</td>
+<td>Επιβεβαιώστε. Ζητήστε από εξουσιοδοτημένο συνεργείο να επιθεωρήσει και να διορθώσει τον ταχογράφο εάν το πρόβλημα επιμένει.</td>
+<td><span class="sev sev-med">Μέτρια</span></td>
+</tr>
+<tr>
+<td>! Βλάβη επικ. DSRC xx</td>
+<td>Παρουσιάστηκε σφάλμα επικοινωνίας μεταξύ του DTCO 4.1x και της εξωτερικής μονάδας DSRC-CAN (που χρησιμοποιείται για απομακρυσμένους ελέγχους στην άκρη του δρόμου).</td>
+<td>Επιβεβαιώστε το μήνυμα. Εάν επανεμφανιστεί, συμβουλευτείτε εξουσιοδοτημένο εξειδικευμένο συνεργείο.</td>
+<td><span class="sev sev-med">Μέτρια</span></td>
+</tr>
+<tr>
+<td>! Οδήγηση χωρίς έγκυρη κάρτα xx</td>
+<td>Η οδήγηση ξεκίνησε χωρίς κάρτα οδηγού — ή χωρίς έγκυρη κάρτα οδηγού — στην υποδοχή κάρτας 1. Επίσης ενεργοποιείται εάν εισαχθεί μη εξουσιοδοτημένη κάρτα ή συνδυασμός καρτών πριν ή μετά το ταξίδι.</td>
+<td>Ακινητοποιήστε το όχημα. Εισάγετε μια έγκυρη κάρτα οδηγού. Αφαιρέστε τυχόν κάρτα επιχείρησης / κάρτα ελέγχου από το DTCO πρώτα εάν χρειάζεται.</td>
+<td><span class="sev sev-high">Υψηλή</span></td>
+</tr>
+<tr>
+<td>!1 Τοποθέτηση κατά την οδήγηση xx</td>
+<td>Η κάρτα οδηγού εισήχθη αφού το όχημα είχε ήδη ξεκινήσει να κινείται.</td>
+<td>Επιβεβαιώστε το μήνυμα. Σχεδιάστε την εισαγωγή της κάρτας πριν την εκκίνηση στο μέλλον.</td>
+<td><span class="sev sev-med">Μέτρια</span></td>
+</tr>
+<tr>
+<td>!1 Χρονική υπέρθεση xx</td>
+<td>Η ώρα UTC αυτού του ταχογράφου είναι μεταγενέστερη από την ώρα UTC του προηγούμενου ταχογράφου, δημιουργώντας μια αρνητική χρονική διαφορά (τυπικό κατά την αλλαγή οχήματος).</td>
+<td>Εντοπίστε τον ταχογράφο με λανθασμένη ώρα UTC και αναθέστε σε εξουσιοδοτημένο συνεργείο να τον ελέγξει και να τον διορθώσει.</td>
+<td><span class="sev sev-med">Μέτρια</span></td>
+</tr>
+<tr>
+<td>!1 Η κάρτα δεν είναι έγκυρη xx</td>
+<td>Η κάρτα ταχογράφου έχει λήξει, δεν είναι ακόμη έγκυρη ή η πιστοποίησή της απέτυχε. Μια κάρτα που καθίσταται άκυρη μετά τα μεσάνυχτα, γράφεται αυτόματα και εξάγεται μόλις το όχημα σταματήσει.</td>
+<td>Επιβεβαιώστε το μήνυμα. Ελέγξτε την κάρτα ταχογράφου και τοποθετήστε την ξανά· ανανεώστε την εάν έχει λήξει.</td>
+<td><span class="sev sev-med">Μέτρια</span></td>
+</tr>
+<tr>
+<td>! Διένεξη καρτών xx</td>
+<td>Οι δύο κάρτες ταχογράφου δεν πρέπει να τοποθετούνται μαζί — για παράδειγμα, κάρτα επιχείρησης μαζί με κάρτα ελέγχου.</td>
+<td>Επιβεβαιώστε το μήνυμα. Αφαιρέστε την αντικρουόμενη κάρτα από το σχετικό συρτάρι.</td>
+<td><span class="sev sev-med">Μέτρια</span></td>
+</tr>
+<tr>
+<td>!1 Η κάρτα δεν είναι κλειστή xx</td>
+<td>Η κάρτα οδηγού δεν αφαιρέθηκε σωστά από τον προηγούμενο ταχογράφο. Ενδέχεται να μην έχουν αποθηκευτεί ορισμένα δεδομένα που βασίζονται στον οδηγό.</td>
+<td>Αναγνωρίστε. Από εδώ και στο εξής, να περιμένετε πάντα να απελευθερωθεί η κάρτα πριν την τραβήξετε.</td>
+<td><span class="sev sev-med">Μέτρια</span></td>
+</tr>
+<tr>
+<td>⊃ Υπέρβαση ταχύτητας xx</td>
+<td>Η διαμορφωμένη μέγιστη ταχύτητα ξεπεράστηκε για περισσότερο από<strong>60 δευτερόλεπτα</strong>.</td>
+<td>Επιβεβαιώστε το μήνυμα. Μειώστε την ταχύτητα. Τα επανειλημμένα συμβάντα υπέρβασης ταχύτητας είναι ορατά στις ελεγκτικές αρχές κατά τη λήψη δεδομένων.</td>
+<td><span class="sev sev-high">Υψηλή</span></td>
+</tr>
+<tr>
+<td>§ Καλιμπράρισμα σε ... ημέρες ??</td>
+<td>Πλησιάζει ο περιοδικός διετής έλεγχος του ταχογράφου (η προειδοποίηση εμφανίζεται 28 ημέρες νωρίτερα).</td>
+<td>Επιβεβαιώστε. Κλείστε ραντεβού με εξουσιοδοτημένο συνεργείο πριν από την προθεσμία.</td>
+<td><span class="sev sev-low">Χαμηλό</span></td>
+</tr>
+<tr>
+<td>1 Λήψη σε ... ημέρες ??</td>
+<td>Πρέπει να γίνει η επόμενη λήψη δεδομένων από την κάρτα οδηγού (η προειδοποίηση εμφανίζεται 14 ημέρες νωρίτερα).</td>
+<td>Πραγματοποιήστε λήψη δεδομένων της κάρτας οδηγού πριν λήξει η προθεσμία.</td>
+<td><span class="sev sev-low">Χαμηλό</span></td>
+</tr>
+<tr>
+<td>1 Άκυρο σε ?? ημέρες</td>
+<td>Η κάρτα οδηγού λήγει σύντομα (συνήθως ειδοποίηση 28 ημέρες νωρίτερα).</td>
+<td>Επιβεβαιώστε το μήνυμα. Υποβάλετε αίτηση για ανανέωση της κάρτας στην αρμόδια αρχή του κράτους μέλους σας.</td>
+<td><span class="sev sev-info">Πληροφορίες</span></td>
+</tr>
+<tr>
+<td>! Λήξη κανονικής λειτουργίας σε ??</td>
+<td>Το πιστοποιητικό έγκρισης τύπου του DTCO 4.1x λήγει. Το μήνυμα εμφανίζεται 92 ημέρες νωρίτερα όταν αφαιρείται η κάρτα.</td>
+<td>Κλείστε ραντεβού με το συνεργείο σας για να αντικαταστήσετε το DTCO πριν από την προθεσμία.</td>
+<td><span class="sev sev-med">Μέτρια</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>Αστοχίες — βλάβες υλικού (συνεργείο εντός 7 ημερών)</h3>
+<div class="code-table-wrap">
+<table class="code-table">
+<thead>
+<tr>
+<th style="width: 22%;">Μήνυμα</th>
+<th style="width: 30%;">Αιτία (από το εγχειρίδιο)</th>
+<th style="width: 32%;">Τι να κάνετε</th>
+<th style="width: 12%;">Σοβαρότητα</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>x Βλάβη συσκευής xx</td>
+<td>Σοβαρή δυσλειτουργία στο DTCO 4.1x. Πιθανές αιτίες: μη αναμενόμενο σφάλμα χρονισμού προγράμματος/διεργασίας, μπλοκαρισμένα κουμπιά, δυσλειτουργία επικοινωνίας με εξωτερικές συσκευές ή οθόνη οργάνων, δυσλειτουργία στην έξοδο παλμών.</td>
+<td>Επιβεβαιώστε. Ελέγξτε τα κουμπιά. Ζητήστε από ένα εξουσιοδοτημένο συνεργείο να επιθεωρήσει τα καλώδια σύνδεσης / τη συνδεδεμένη συσκευή ελέγχου.</td>
+<td><span class="sev sev-crit">Κρίσιμο</span></td>
+</tr>
+<tr>
+<td>x1 Βλάβη κάρτας xx</td>
+<td>Δυσλειτουργία στον μηχανισμό της κάρτας (υποδοχή 1), π.χ. η κλειδαριά της κάρτας δεν κλείνει.</td>
+<td>Αφαιρέστε την κάρτα ταχογράφου και τοποθετήστε την ξανά. Εάν το πρόβλημα επιμένει, συμβουλευτείτε ένα συνεργείο.</td>
+<td><span class="sev sev-high">Υψηλή</span></td>
+</tr>
+<tr>
+<td>x Βλάβη ώρας xx</td>
+<td>Η ώρα UTC του DTCO δεν είναι εύλογη ή το ρολόι πραγματικού χρόνου είναι ελαττωματικό. Οι νεοεισαχθείσες κάρτες οδηγού/επιχείρησης απορρίπτονται για την αποφυγή μη συνεπούς δεδομένων.</td>
+<td>Επιβεβαιώστε. Το DTCO πρέπει να αντικατασταθεί ή να επαναφερθεί από εξουσιοδοτημένο συνεργείο το συντομότερο δυνατό.</td>
+<td><span class="sev sev-crit">Κρίσιμο</span></td>
+</tr>
+<tr>
+<td>x Βλάβη εκτυπωτή</td>
+<td>Η τάση τροφοδοσίας του εκτυπωτή έχει διακοπεί ή ο αισθητήρας θερμοκρασίας για την κεφαλή εκτύπωσης είναι ελαττωματικός.</td>
+<td>Επιβεβαίωση. Επαναλάβετε την εκτύπωση, ενδεχομένως μετά από κύκλο ανάφλεξης. Εάν δεν επιλυθεί, επίσκεψη στο συνεργείο.</td>
+<td><span class="sev sev-med">Μέτρια</span></td>
+</tr>
+<tr>
+<td>x Βλάβη κατά τη λήψη δεδομένων xx</td>
+<td>Δυσλειτουργία κατά τη λήψη δεδομένων σε εξωτερική συσκευή (κλειδί λήψης ή Download Box Remote).</td>
+<td>Επιβεβαίωση. Επαναλάβετε τη λήψη δεδομένων. Ελέγξτε τα καλώδια σύνδεσης (χαλαρή επαφή;) ή την εξωτερική συσκευή.</td>
+<td><span class="sev sev-med">Μέτρια</span></td>
+</tr>
+<tr>
+<td>x Βλάβη δότη xx</td>
+<td>Ο αισθητήρας κίνησης υποδεικνύει μια εσωτερική δυσλειτουργία μετά τον αυτοέλεγχο.</td>
+<td>Επιβεβαίωση. Έλεγχος συνεργείου — ενδέχεται να απαιτείται αντικατάσταση αισθητήρα.</td>
+<td><span class="sev sev-crit">Κρίσιμο</span></td>
+</tr>
+<tr>
+<td>x1 Βλάβη κάρτας xx</td>
+<td>Κατά την ανάγνωση ή εγγραφή της κάρτας ταχογράφου, παρουσιάστηκε δυσλειτουργία επικοινωνίας — συνήθως λόγω βρώμικων επαφών. Ορισμένα δεδομένα οδηγού ενδέχεται να μην έχουν καταγραφεί.</td>
+<td>Επιβεβαίωση. Καθαρίστε τις επαφές της κάρτας (στεγνό πανί) και εισάγετε ξανά. Εάν επαναληφθεί, αντικαταστήστε την κάρτα.</td>
+<td><span class="sev sev-med">Μέτρια</span></td>
+</tr>
+<tr>
+<td>x Εσωτερική βλάβη GNSS xx</td>
+<td>Σφάλμα στη συσκευή GNSS: εσωτερική αστοχία, βραχυκύκλωμα της εξωτερικής κεραίας GNSS (προαιρετικά), ή μη σύνδεση με την εξωτερική κεραία.</td>
+<td>Επιβεβαίωση. Συμβουλευτείτε εξουσιοδοτημένο συνεργείο.</td>
+<td><span class="sev sev-high">Υψηλή</span></td>
+</tr>
+<tr>
+<td>x Βλάβη επικ. DSRC xx</td>
+<td>Εσωτερικό σφάλμα στην μονάδα DSRC (ραδιόφωνο απομακρυσμένου οδικού ελέγχου), ή η κεραία είναι ελαττωματική / μη συνδεδεμένη.</td>
+<td>Επιβεβαίωση. Το συνεργείο πρέπει να ελέγξει την μονάδα DSRC, τα καλώδια και την εξωτερική κεραία.</td>
+<td><span class="sev sev-med">Μέτρια</span></td>
+</tr>
+<tr>
+<td>x Εσωτερική βλάβη δότη xx</td>
+<td>Ο αυτοέλεγχος του εσωτερικού αισθητήρα επιτάχυνσης απέτυχε περισσότερες από 10 φορές και η προσπάθεια επαναφοράς ήταν ελαττωματική.</td>
+<td>Επιβεβαίωση. Συμβουλευτείτε άμεσα εξουσιοδοτημένο εξειδικευμένο συνεργείο.</td>
+<td><span class="sev sev-crit">Κρίσιμο</span></td>
+</tr>
+<tr>
+<td>x Βλάβη ITS xx</td>
+<td>Ένα σφάλμα στο εσωτερικό εξάρτημα Bluetooth (διεπαφή δεδομένων ITS).</td>
+<td>Επιβεβαιώστε. Συμβουλευτείτε ένα εξουσιοδοτημένο εξειδικευμένο συνεργείο.</td>
+<td><span class="sev sev-low">Χαμηλό</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>Προειδοποιήσεις χρόνου οδήγησης (προ-προειδοποιήσεις συμμόρφωσης, όχι αστοχίες)</h3>
+<div class="code-table-wrap">
+<table class="code-table">
+<thead>
+<tr>
+<th style="width: 26%;">Μήνυμα</th>
+<th style="width: 44%;">Σημασία</th>
+<th style="width: 30%;">Ενέργεια</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1 Διάλειμμα! 04ώ15 00ώ15</td>
+<td>Κάντε ένα διάλειμμα — η συνεχής οδήγηση έχει φτάσει τις 4 ώρες 15 λεπτά (προ-προειδοποίηση).</td>
+<td>Επιβεβαιώστε. Προγραμματίστε ένα διάλειμμα 45 λεπτών μέσα στα επόμενα 15 λεπτά.</td>
+</tr>
+<tr>
+<td>1 Διάλειμμα! 04ώ30 00ώ15</td>
+<td>Υπέρβαση χρόνου οδήγησης — έχει συμπληρωθεί το όριο συνεχούς οδήγησης των 4 ωρών 30 λεπτών.</td>
+<td>Σταματήστε και κάντε ένα διάλειμμα (45 λεπτά, ή 15 + 30 διαιρεμένο).</td>
+</tr>
+<tr>
+<td>1 χρόνος οδήγησης 24ώ / | / ||</td>
+<td>Το τέλος του ημερήσιου (24ώ), εβδομαδιαίου (|) ή δεκαπενθήμερου (||) χρόνου οδήγησης πλησιάζει. Ο χρόνος προ-προειδοποίησης είναι διαμορφώσιμος.</td>
+<td>Επιβεβαιώστε. Τερματίστε την οδήγηση και λάβετε την απαιτούμενη ανάπαυση σύμφωνα με τον Κανονισμό 561/2006.</td>
+</tr>
+<tr>
+<td>1 ανάπαυση σε 01ώ45</td>
+<td>Η επόμενη ημερήσια ή εβδομαδιαία ανάπαυση οφείλεται σύντομα (διαμορφώσιμη προ-προειδοποίηση).</td>
+<td>Προγραμματίστε την επόμενη στάση ανάπαυσης εγκαίρως.</td>
+</tr>
+<tr>
+<td>1 χρόνος εργασίας 24ώ 09ώ30</td>
+<td>Το τέλος του ημερήσιου (24ώ) ή εβδομαδιαίου (|) χρόνου εργασίας σύμφωνα με την Οδηγία για τον Χρόνο Εργασίας πλησιάζει.</td>
+<td>Επιβεβαιώστε. Τερματίστε την εργάσιμη ημέρα και λάβετε την απαιτούμενη ανάπαυση.</td>
+</tr>
+<tr>
+<td>1 χρόνος εργασίας 04ώ15</td>
+<td>Το τέλος του μέγιστου αδιάλειπτου χρόνου εργασίας (6 ώρες βάσει της Οδηγίας για τον χρόνο εργασίας) πλησιάζει.</td>
+<td>Προγραμματίστε ένα διάλειμμα τα επόμενα 15 λεπτά.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>Λειτουργικές σημειώσεις (πληροφοριακές, αυτόματη απόρριψη μετά από 3 δευτ.)</h3>
+<div class="code-table-wrap">
+<table class="code-table">
+<thead>
+<tr>
+<th style="width: 30%;">Σημείωση</th>
+<th style="width: 70%;">Σημασία &amp; επίλυση</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>? παρακαλώ εισαγάγετε</td><td>Η μονάδα αναμένει μια καταχώριση κατά τη διάρκεια μιας ακολουθίας χειροκίνητης καταχώρισης. Πατήστε ΟΚ και συνεχίστε.</td></tr>
+<tr><td>o χωρίς χαρτί xx</td><td>Ο εκτυπωτής δεν έχει χαρτί ή ο συρταρωτός δίσκος του εκτυπωτή δεν έχει τοποθετηθεί σωστά. Εισαγάγετε ένα νέο ρολό· επανεκκινήστε τυχόν διακοπείσα εκτύπωση μέσω του μενού.</td></tr>
+<tr><td>εκτύπωση αδύνατη xx</td><td>Η εκτύπωση είναι αδύνατη επειδή η ανάφλεξη είναι απενεργοποιημένη (παραλλαγή ADR), η κεφαλή εκτύπωσης έχει υπερθερμανθεί, ο εκτυπωτής είναι απασχολημένος ή η τάση τροφοδοσίας είναι λανθασμένη. Περιμένετε να αρθεί η αιτία.</td></tr>
+<tr><td>εκτύπωση καθυστερημένη</td><td>Η εκτύπωση διακόπηκε επειδή η θερμική κεφαλή είναι πολύ ζεστή. Περιμένετε — η εκτύπωση συνεχίζεται αυτόματα μόλις κρυώσει.</td></tr>
+<tr><td>απόρριψη αδύνατη xx</td><td>Η απόρριψη κάρτας απορρίφθηκε: δεδομένα διαβάζονται ή μεταφέρονται, αλλαγή ημέρας σε εξέλιξη, όχημα εν κινήσει ή (ADR) ανάφλεξη απενεργοποιημένη.</td></tr>
+<tr><td>?1 ασυνεπής καταγραφή xx</td><td>Ασυνεπής σειρά ημερομηνιών στα αρχεία της κάρτας οδηγού. Θα διορθωθεί μόλις τα νέα δεδομένα αντικαταστήσουν τις λανθασμένες καταχωρίσεις.</td></tr>
+<tr><td>1 παρακαλώ απορρίψτε την κάρτα xx</td><td>Σφάλμα κατά την εγγραφή δεδομένων στην κάρτα οδηγού. Η κάρτα απορρίπτεται και ξαναδιαβάζεται. Αν αποτύχει ξανά, ξεκινά μια εκτύπωση των τελευταίων δραστηριοτήτων.</td></tr>
+<tr><td>1 αστοχία κάρτας xx</td><td>Παρουσιάστηκε σφάλμα κατά την επεξεργασία της εισαγόμενης κάρτας ταχογράφου. Η κάρτα απορρίπτεται και εξέρχεται. Καθαρίστε τις επαφές και επανεισάγετε.</td></tr>
+<tr><td>1 λανθασμένος τύπος κάρτας xx</td><td>Η εισαγόμενη κάρτα δεν είναι κάρτα ταχογράφου. Εισάγετε μια έγκυρη κάρτα ταχογράφου.</td></tr>
+<tr><td>1 Παρακαλώ καθαρίστε την κάρτα!</td><td>Το DTCO αντιμετώπισε προβλήματα κατά την ανάγνωση ή την εγγραφή της κάρτας. Καθαρίστε τόσο την κάρτα όσο και τις υποδοχές της κάρτας.</td></tr>
+</tbody>
+</table>
+</div>
+<h3>Αριθμητικοί κωδικοί μνήμης αστοχιών VDO (001–066)</h3>
+<p style="font-size:14px;color:var(--text2);margin-bottom:12px;">Αυτοί οι αριθμητικοί κωδικοί διαβάζονται από τη μνήμη αστοχιών της μονάδας με ένα διαγνωστικό εργαλείο συνεργείου VDO (<strong>SDS</strong> / <strong>CTCII</strong>) — δεν εμφανίζονται στον οδηγό κατά την κανονική χρήση. Η αρίθμηση είναι συνεπής σε όλες τις γενιές DTCO (1381 και 4.1) και κάθε αριθμός αντιστοιχεί σε ένα από τα συμβάντα/αστοχίες του Παραρτήματος I C που περιγράφονται στους παραπάνω πίνακες μηνυμάτων. Πληκτρολογήστε έναν αριθμό όπως<em>005</em>στο πλαίσιο αναζήτησης στην κορυφή αυτής της ενότητας.</p>
+<div class="code-table-wrap">
+<table class="code-table">
+<thead><tr><th style="width:24%;">Κωδικός</th><th style="width:58%;">Σημασία</th><th style="width:18%;">Σοβαρότητα</th></tr></thead>
+<tbody>
+<tr><td>001–2, 004–5</td><td>Εσωτερική αστοχία συσκευής</td><td><span class="sev sev-crit">Κρίσιμο</span></td></tr>
+<tr><td>006</td><td>Χρονική απόκλιση</td><td><span class="sev sev-crit">Κρίσιμο</span></td></tr>
+<tr><td>007</td><td>Αστοχία απεικόνισης</td><td><span class="sev sev-high">Υψηλή</span></td></tr>
+<tr><td>009</td><td>Σφάλμα βαθμονόμησης</td><td><span class="sev sev-high">Υψηλή</span></td></tr>
+<tr><td>010</td><td>Αστοχία εξόδου σήματος ταχύτητας (B7)</td><td><span class="sev sev-med">Μέτρια</span></td></tr>
+<tr><td>012</td><td>Αστοχία τηλεφόρτωσης</td><td><span class="sev sev-med">Μέτρια</span></td></tr>
+<tr><td>013–14</td><td>Αστοχία διαύλου CAN</td><td><span class="sev sev-med">Μέτρια</span></td></tr>
+<tr><td>015</td><td>Απώλεια επικοινωνίας απεικόνισης</td><td><span class="sev sev-med">Μέτρια</span></td></tr>
+<tr><td>016</td><td>Αστοχία αισθητήρα (αυτοέλεγχος)</td><td><span class="sev sev-crit">Κρίσιμο</span></td></tr>
+<tr><td>017–18</td><td>Σφάλμα ακεραιότητας δεδομένων αισθητήρα</td><td><span class="sev sev-crit">Κρίσιμο</span></td></tr>
+<tr><td>019</td><td>Διακοπή τροφοδοσίας αισθητήρα</td><td><span class="sev sev-med">Μέτρια</span></td></tr>
+<tr><td>020–22</td><td>Σφάλμα επικοινωνίας αισθητήρα</td><td><span class="sev sev-high">Υψηλή</span></td></tr>
+<tr><td>023</td><td>Σφάλμα πιστοποίησης / σύζευξης αισθητήρα</td><td><span class="sev sev-high">Υψηλή</span></td></tr>
+<tr><td>024</td><td>Άγνωστος σειριακός αριθμός αισθητήρα</td><td><span class="sev sev-high">Υψηλή</span></td></tr>
+<tr><td>025</td><td>Σφάλμα μνήμης δεδομένων</td><td><span class="sev sev-crit">Κρίσιμο</span></td></tr>
+<tr><td>026</td><td>Άνοιγμα περιβλήματος (Παραβίαση της ασφάλειας)</td><td><span class="sev sev-crit">Κρίσιμο</span></td></tr>
+<tr><td>028</td><td>Οδήγηση χωρίς κατάλληλη κάρτα</td><td><span class="sev sev-crit">Κρίσιμο</span></td></tr>
+<tr><td>029</td><td>Αντικρουόμενες κάρτες</td><td><span class="sev sev-med">Μέτρια</span></td></tr>
+<tr><td>030</td><td>Υπέρβαση ταχύτητας</td><td><span class="sev sev-high">Υψηλή</span></td></tr>
+<tr><td>031</td><td>Διακοπή τροφοδοσίας</td><td><span class="sev sev-med">Μέτρια</span></td></tr>
+<tr><td>034</td><td>Η εκβολή κάρτας δεν είναι δυνατή</td><td><span class="sev sev-med">Μέτρια</span></td></tr>
+<tr><td>036</td><td>Δεν είναι δυνατή η εκτύπωση / απεικόνιση</td><td><span class="sev sev-med">Μέτρια</span></td></tr>
+<tr><td>037</td><td>Καθυστέρηση στην εκτύπωση</td><td><span class="sev sev-info">Πληροφορίες</span></td></tr>
+<tr><td>038</td><td>Ανοιχτή θήκη εκτυπωτή</td><td><span class="sev sev-med">Μέτρια</span></td></tr>
+<tr><td>039</td><td>Χωρίς χαρτί</td><td><span class="sev sev-med">Μέτρια</span></td></tr>
+<tr><td>040</td><td>Αστοχία μηχανισμού κάρτας, υποδοχή 1</td><td><span class="sev sev-high">Υψηλή</span></td></tr>
+<tr><td>041</td><td>Σφάλμα επικοινωνίας κάρτας, υποδοχή 1</td><td><span class="sev sev-high">Υψηλή</span></td></tr>
+<tr><td>042</td><td>Αυθεντικότητα δεδομένων κάρτας, θέση 1</td><td><span class="sev sev-high">Υψηλή</span></td></tr>
+<tr><td>043</td><td>Έλλειψη κάρτας, θέση 1</td><td><span class="sev sev-high">Υψηλή</span></td></tr>
+<tr><td>044</td><td>Τελευταίος κύκλος ενημέρωσης κάρτας που δεν ολοκληρώθηκε ορθά, θέση 1</td><td><span class="sev sev-low">Χαμηλό</span></td></tr>
+<tr><td>045</td><td>Χρονική επικάλυψη, θέση 1</td><td><span class="sev sev-med">Μέτρια</span></td></tr>
+<tr><td>046</td><td>Εισαγωγή κάρτας κατά τη διάρκεια της οδήγησης, θέση 1</td><td><span class="sev sev-low">Χαμηλό</span></td></tr>
+<tr><td>047</td><td>Πιστοποίηση κάρτας, θέση 1</td><td><span class="sev sev-high">Υψηλή</span></td></tr>
+<tr><td>048</td><td>Άκυρη κάρτα, θέση 1</td><td><span class="sev sev-high">Υψηλή</span></td></tr>
+<tr><td>049</td><td>Ασυμφωνία εγγραφών, θέση 1</td><td><span class="sev sev-med">Μέτρια</span></td></tr>
+<tr><td>050</td><td>Αδυναμία ανάγνωσης κάρτας, θέση 1</td><td><span class="sev sev-high">Υψηλή</span></td></tr>
+<tr><td>051</td><td>Λάθος τύπος κάρτας, θέση 1</td><td><span class="sev sev-med">Μέτρια</span></td></tr>
+<tr><td>052</td><td>Αποκλεισμένη κάρτα, θέση 1</td><td><span class="sev sev-high">Υψηλή</span></td></tr>
+<tr><td>053–66</td><td>Αστοχίες κάρτας, θέση 2 (συνοδηγός)</td><td><span class="sev sev-high">Υψηλή</span></td></tr>
+</tbody>
+</table>
+</div>
+<h3>DTCO 4.0 / 4.1 — τι σημαίνει ένας αριθμός στην οθόνη (έξυπνος ταχογράφος)</h3>
+<p style="font-size:14px;color:var(--text2);margin-bottom:12px;">Οι νεότερες μονάδες VDO DTCO 4.0 και 4.1 εμφανίζουν έναν διψήφιο αριθμό δίπλα στο εικονόγραμμα. Οι χαμηλοί αριθμοί (001–066) βρίσκονται στον παραπάνω πίνακα· οι υψηλοί αριθμοί<strong>80–98</strong>ανήκουν σε λειτουργίες έξυπνων ταχογράφων (GNSS, DSRC, ITS). Μπορείτε να πληκτρολογήσετε οποιονδήποτε από αυτούς απευθείας στο πλαίσιο αναζήτησης παραπάνω.</p>
+<div class="code-table-wrap">
+<table class="code-table">
+<thead><tr><th style="width:24%;">Αριθμός οθόνης</th><th style="width:58%;">Σημασία</th><th style="width:18%;">Σοβαρότητα</th></tr></thead>
+<tbody>
+<tr><td>34</td><td>Η εκβολή κάρτας δεν είναι δυνατή</td><td><span class="sev sev-med">Μέτρια</span></td></tr>
+<tr><td>80</td><td>Αντικρουόμενη κίνηση οχήματος</td><td><span class="sev sev-crit">Κρίσιμο</span></td></tr>
+<tr><td>82</td><td>x Εσωτερική βλάβη GNSS</td><td><span class="sev sev-med">Μέτρια</span></td></tr>
+<tr><td>83</td><td>! GNSS λείπει</td><td><span class="sev sev-med">Μέτρια</span></td></tr>
+<tr><td>84</td><td>x Εσωτερική βλάβη DSRC</td><td><span class="sev sev-low">Χαμηλό</span></td></tr>
+<tr><td>85</td><td>Σφάλμα επικοινωνίας με τον μηχανισμό επικοινωνίας εξ αποστάσεως</td><td><span class="sev sev-low">Χαμηλό</span></td></tr>
+<tr><td>86</td><td>Χρονική απόκλιση</td><td><span class="sev sev-med">Μέτρια</span></td></tr>
+<tr><td>87</td><td>Αστοχία αισθητήρα</td><td><span class="sev sev-high">Υψηλή</span></td></tr>
+<tr><td>96</td><td>Ανωμαλία GNSS (Ανωμαλίες GNSS · OSNMA αντι-παραποίησης)</td><td><span class="sev sev-high">Υψηλή</span></td></tr>
+<tr><td>97</td><td>Εσωτερική αστοχία αισθητήρα</td><td><span class="sev sev-high">Υψηλή</span></td></tr>
+<tr><td>98</td><td>ITS / αστοχία Bluetooth</td><td><span class="sev sev-low">Χαμηλό</span></td></tr>
+<tr><td>67, 99</td><td>Αντικρουόμενη καταγραφή</td><td><span class="sev sev-med">Μέτρια</span></td></tr>
+<tr><td>68–72</td><td>Αστοχία κάρτας / εσωτερική αστοχία, υποδοχή 2 (συνοδηγός)</td><td>Ποικίλλει</td></tr>
+<tr><td>88–95</td><td>Λειτουργική σημείωση χρόνων οδήγησης / ανάπαυσης — όχι αστοχία</td><td><span class="sev sev-info">Πληροφορίες</span></td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</details>
+<!-- ===== STONERIDGE SE5000 ===== -->
+<details class="vendor" id="stoneridge">
+<summary>
+<span class="vendor-meta">Stoneridge · βασική τοποθέτηση στο Ηνωμένο Βασίλειο και τη Σκανδιναβία</span>Stoneridge SE5000 Exakt Duo² (Rev 7.6)</summary>
+<div class="vendor-body">
+<p>Ο Stoneridge SE5000 είναι ο πιο κοινός έξυπνος ταχογράφος που είναι τοποθετημένος σε βαρέα οχήματα (HGVs) εγγεγραμμένα στο Ηνωμένο Βασίλειο και σε στόλους στις Βόρειες χώρες. Τα παρακάτω μηνύματα αναπαράγονται κατά λέξη από το επίσημο<strong>Stoneridge SE5000 Exakt Duo² Εγχειρίδιο Οδηγού &amp; Επιχείρησης, Αναθ. 7.6</strong>(Stoneridge Electronics AB, Örebro). Το εγχειρίδιο της Stoneridge οργανώνει τα μηνύματα σε τέσσερις κατηγορίες, αντικατοπτρίζοντας ακριβώς την ταξινόμηση του Παραρτήματος I Γ:<em>Μηνύματα</em>(ενημερωτικά),<em>Προ-προειδοποιήσεις</em>, <em>Προειδοποιήσεις</em>και<em>Αστοχίες</em>.</p>
+<p style="font-size:14px;color:var(--text2);margin-bottom:18px;"><strong>Απόσπασμα εγχειριδίου:</strong>«Οι αστοχίες είναι πιο κρίσιμες από τις προειδοποιήσεις και εμφανίζονται εάν εντοπιστεί αστοχία στον ταχογράφο, στον αισθητήρα ή στην κάρτα οδηγού. Επιπλέον, οι αστοχίες εμφανίζονται εάν ανιχνευθεί παραποίηση του εξοπλισμού. Οι αστοχίες αποθηκεύονται και μπορούν να εκτυπωθούν.»</p>
+<h3>Μηνύματα σχετικά με την κάρτα</h3>
+<div class="code-table-wrap">
+<table class="code-table">
+<thead>
+<tr>
+<th style="width: 26%;">Ένδειξη</th>
+<th style="width: 14%;">Τύπος</th>
+<th style="width: 32%;">Περιγραφή (ακριβώς όπως στο εγχειρίδιο)</th>
+<th style="width: 28%;">Συνιστώμενη ενέργεια</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>x1 Βλάβη κάρτας</td><td><span class="sev sev-crit">αστοχία</span></td><td>Η κάρτα στην υποδοχή 1 είναι ελαττωματική. Παρόμοιο μήνυμα για την υποδοχή 2. Σχετίζεται με την κάρτα.</td><td>Εξάγετε και επιθεωρήστε οπτικά. Καθαρίστε με ένα νωπό πανί. Εάν εξακολουθεί να είναι ελαττωματική: επίσκεψη στο συνεργείο.</td></tr>
+<tr><td>x1 Η κάρτα δεν είναι έγκυρη</td><td><span class="sev sev-crit">αστοχία</span></td><td>Ο έλεγχος ασφαλείας του ταχογράφου για την κάρτα στην υποδοχή 1 απέτυχε. Σχετίζεται με τον ταχογράφο.</td><td>Εξάγετε και καθαρίστε. Εάν επιμένει: πρέπει να γίνει επιθεώρηση στο συνεργείο.</td></tr>
+<tr><td>!1 Χρονική υπέρθεση</td><td><span class="sev sev-med">Προειδοποίηση</span></td><td>Η τελευταία ώρα ανάληψης της εισαχθείσας κάρτας οδηγού είναι μεταγενέστερη από την ημερομηνία/ώρα του ταχογράφου. Σχετίζεται με τον ταχογράφο.</td><td>Ελέγξτε την ημερομηνία/ώρα στον ταχογράφο. Περιμένετε να παρέλθει η επικάλυψη.</td></tr>
+<tr><td>Σφάλμα ακεραιότητας κάρτας</td><td><span class="sev sev-crit">αστοχία</span></td><td>Εντοπίστηκαν κατεστραμμένα δεδομένα κατά την ανάγνωση δεδομένων από την κάρτα. Σχετίζεται με την κάρτα.</td><td>Καθαρίστε και δοκιμάστε ξανά. Εάν επιμένει: αντικαταστήστε την κάρτα και επισκεφθείτε το συνεργείο.</td></tr>
+<tr><td>Αντικρουόμενες κάρτες</td><td><span class="sev sev-med">Προειδοποίηση</span></td><td>Ανιχνεύτηκε ένας μη έγκυρος συνδυασμός καρτών. Σχετίζεται με την κάρτα.</td><td>Αφαιρέστε την αντικρουόμενη κάρτα.</td></tr>
+<tr><td>Εισαγωγή κάρτας κατά τη διάρκεια της οδήγησης</td><td><span class="sev sev-med">Προειδοποίηση</span></td><td>Μια κάρτα οδηγού εισήχθη ενώ το όχημα βρισκόταν εν κινήσει. Σχετίζεται με τον χειριστή.</td><td>Συνεχίστε το ταξίδι εάν η κάρτα οδηγού είναι έγκυρη· το συμβάν καταγράφεται.</td></tr>
+<tr><td>Αφαίρεση κάρτας χωρίς αποθήκευση</td><td><span class="sev sev-med">Μήνυμα</span></td><td>Δεδομένα δεν μπόρεσαν να αποθηκευτούν στην κάρτα που αφαιρέθηκε από την υποδοχή 1 λόγω σφάλματος.</td><td>Αφαιρέστε, καθαρίστε, δοκιμάστε ξανά. Αυτοέλεγχος εάν επιμένει.</td></tr>
+<tr><td>Άκυρη κάρτα</td><td><span class="sev sev-info">Μήνυμα</span></td><td>Η κάρτα στην υποδοχή 1 έχει λήξει. Σχετίζεται με τον χειριστή.</td><td>Αφαιρέστε την κάρτα και αντικαταστήστε την με μια έγκυρη.</td></tr>
+<tr><td>1 Άκυρο σε ... ημέρες</td><td><span class="sev sev-info">Μήνυμα</span></td><td>Η κάρτα που έχει εισαχθεί στην υποδοχή 1 λήγει σε xx ημέρες (0–30). Σχετίζεται με τον χειριστή.</td><td>Επικοινωνήστε με την αρμόδια αρχή για να αποκτήσετε μια νέα κάρτα.</td></tr>
+<tr><td>Εισαγωγή άκυρης κάρτας</td><td><span class="sev sev-med">Προειδοποίηση</span></td><td>Μια άκυρη κάρτα έχει εισαχθεί σε μια υποδοχή. Σχετίζεται με τον χειριστή.</td><td>Αφαιρέστε την άκυρη κάρτα.</td></tr>
+<tr><td>Τελευταίος κύκλος ενημέρωσης κάρτας που δεν ολοκληρώθηκε ορθά</td><td><span class="sev sev-med">Προειδοποίηση</span></td><td>Η κάρτα οδηγού στην υποδοχή 1 αφαιρέθηκε λανθασμένα κατά την τελευταία συνεδρία. Η προηγούμενη αφαίρεση κάρτας στην υποδοχή 1 δεν ολοκληρώθηκε σωστά από τον ταχογράφο.</td><td>Εκβολή και καθαρισμός. Αυτοέλεγχος εάν επιμένει.</td></tr>
+<tr><td>Λάθος PIN! Κάρτα κλειδωμένη</td><td><span class="sev sev-high">Μήνυμα</span></td><td>Εισήχθη λάθος PIN πάρα πολλές φορές (κάρτα συνεργείου). Σχετίζεται με την κάρτα.</td><td>Εκβολή και αντικατάσταση με έγκυρη κάρτα.</td></tr>
+</tbody>
+</table>
+</div>
+<h3>Αστοχίες αισθητήρα και κίνησης οχήματος</h3>
+<div class="code-table-wrap">
+<table class="code-table">
+<thead>
+<tr>
+<th style="width: 26%;">Ένδειξη</th>
+<th style="width: 14%;">Τύπος</th>
+<th style="width: 32%;">Περιγραφή (αυτούσια)</th>
+<th style="width: 28%;">Ενέργεια</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>Αστοχία ταυτοποίησης αισθητήρα</td><td><span class="sev sev-crit">αστοχία</span></td><td>Ο ταχογράφος δεν ανιχνεύει τον αισθητήρα / δεν αναγνωρίζει τον συνδεδεμένο αισθητήρα ως τον εγκατεστημένο. Σχετίζεται με τον αισθητήρα κίνησης.</td><td>Επισκεφθείτε ένα συνεργείο ψηφιακού ταχογράφου.</td></tr>
+<tr><td>Αστοχία καλωδίου αισθητήρα</td><td><span class="sev sev-high">Προειδοποίηση</span></td><td>Σφάλμα δεδομένων αισθητήρα / σφάλμα δεδομένων αισθητήρα κίνησης. Σχετίζεται με τον αισθητήρα κίνησης.</td><td>Το συνεργείο πρέπει να ελέγξει την καλωδίωση και τον αισθητήρα.</td></tr>
+<tr><td>Σφάλμα επικοινωνίας αισθητήρα</td><td><span class="sev sev-crit">αστοχία</span></td><td>Σφάλμα επικοινωνίας αισθητήρα κίνησης. Σχετίζεται με τον αισθητήρα κίνησης.</td><td>Αντικατάσταση από συνεργείο.</td></tr>
+<tr><td>Σφάλμα δεδομένων αισθητήρα</td><td><span class="sev sev-high">Προειδοποίηση</span></td><td>Αστοχία σήματος μεταξύ αισθητήρα κίνησης και ταχογράφου. Σχετίζεται με τον αισθητήρα κίνησης.</td><td>Το συνεργείο πρέπει να ελέγξει.</td></tr>
+<tr><td>Σφάλμα ακεραιότητας δεδομένων αισθητήρα</td><td><span class="sev sev-crit">αστοχία</span></td><td>Εσωτερική αστοχία αισθητήρα κίνησης, αστοχία ακεραιότητας αποθηκευμένων δεδομένων. Σχετίζεται με τον αισθητήρα κίνησης.</td><td>Πιθανή αντικατάσταση αισθητήρα.</td></tr>
+<tr><td>Σφάλμα μεταφοράς δεδομένων αισθητήρα</td><td><span class="sev sev-crit">αστοχία</span></td><td>Ο αισθητήρας κίνησης και ο ταχογράφος δεν επικοινωνούν. Σχετίζεται με τον αισθητήρα κίνησης.</td><td>Επίσκεψη στο συνεργείο.</td></tr>
+<tr><td>Αστοχία αισθητήρα χωρίς επιβεβαίωση</td><td><span class="sev sev-crit">αστοχία</span></td><td>Σφάλμα επικοινωνίας αισθητήρα κίνησης.</td><td>Επίσκεψη στο συνεργείο.</td></tr>
+<tr><td>Υψηλή / χαμηλή τάση αισθητήρα</td><td><span class="sev sev-crit">αστοχία</span></td><td>Πολύ υψηλή ή πολύ χαμηλή τάση αισθητήρα κίνησης. Σχετίζεται με τον αισθητήρα κίνησης.</td><td>Το συνεργείο πρέπει να ελέγξει την παροχή.</td></tr>
+<tr><td>Αισθητήρας χωρίς σήμα τροφοδοσίας</td><td><span class="sev sev-crit">αστοχία</span></td><td>Ο αισθητήρας κίνησης δεν έχει τροφοδοσία. Σχετίζεται με τον αισθητήρα κίνησης.</td><td>Το συνεργείο πρέπει να ελέγξει την παροχή.</td></tr>
+<tr><td>Αισθητήρας μη εξουσιοδοτημένου ανοίγματος</td><td><span class="sev sev-crit">αστοχία</span></td><td>Ανιχνεύθηκε μη εξουσιοδοτημένο άνοιγμα. Σχετίζεται με τον αισθητήρα κίνησης.</td><td>Το συνεργείο πρέπει να επιθεωρήσει — πιθανή παραβίαση.</td></tr>
+<tr><td>Δευτερεύουσα αστοχία αισθητήρα</td><td><span class="sev sev-crit">αστοχία</span></td><td>Δεν υπάρχουν ή υπάρχουν εσφαλμένα δεδομένα από τον δευτερεύοντα αισθητήρα κίνησης. Σχετίζεται με τον αισθητήρα κίνησης.</td><td>Το συνεργείο πρέπει να ελέγξει.</td></tr>
+<tr><td>Μη εξουσιοδοτημένη αλλαγή αισθητήρα</td><td><span class="sev sev-crit">αστοχία</span></td><td>Ο αισθητήρας έχει αλλάξει από την τελευταία σύζευξη. Σχετίζεται με τον αισθητήρα κίνησης.</td><td>Το συνεργείο πρέπει να επανασυνδέσει.</td></tr>
+<tr><td>Αντικρουόμενη κίνηση οχήματος</td><td><span class="sev sev-crit">αστοχία</span></td><td>Τα δεδομένα του δευτερεύοντος αισθητήρα κίνησης και του κύριου αισθητήρα κίνησης έρχονται σε αντίθεση. Σχετίζεται με τον αισθητήρα κίνησης.</td><td>Το συνεργείο πρέπει να ελέγξει.</td></tr>
+<tr><td>Παραβίαση της ασφάλειας υλικού</td><td><span class="sev sev-crit">αστοχία</span></td><td>Η κάρτα αφαιρέθηκε βίαια ή εντοπίστηκε παραβίαση του υλικού.</td><td>Επίσκεψη σε συνεργείο — απαιτείται διερεύνηση.</td></tr>
+</tbody>
+</table>
+</div>
+<h3>Εσωτερικές αστοχίες ταχογράφου (μονάδας επί οχήματος (VU)) και τροφοδοσία</h3>
+<div class="code-table-wrap">
+<table class="code-table">
+<thead>
+<tr>
+<th style="width: 26%;">Ένδειξη</th>
+<th style="width: 14%;">Τύπος</th>
+<th style="width: 32%;">Περιγραφή (αυτούσια)</th>
+<th style="width: 28%;">Ενέργεια</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>Εσωτερική αστοχία VU</td><td><span class="sev sev-crit">αστοχία</span></td><td>Ο ταχογράφος εντόπισε μια εσωτερική αστοχία. Σχετίζεται με τον ταχογράφο.</td><td>Επισκεφθείτε ένα συνεργείο.</td></tr>
+<tr><td>Σφάλμα ακεραιότητας δεδομένων</td><td><span class="sev sev-crit">αστοχία</span></td><td>Τα δεδομένα χρήστη που αποθηκεύονται στον ταχογράφο περιέχουν σφάλματα. Σχετίζεται με τον ταχογράφο.</td><td>Επίσκεψη σε συνεργείο αμέσως.</td></tr>
+<tr><td>Μη εξουσιοδοτημένο άνοιγμα VU</td><td><span class="sev sev-crit">αστοχία</span></td><td>Η θήκη της μονάδας ταχογράφου έχει ανοιχθεί. Σχετίζεται με τον ταχογράφο.</td><td>Το συνεργείο πρέπει να διερευνήσει την παραβίαση.</td></tr>
+<tr><td>Διακοπή τροφοδοσίας</td><td><span class="sev sev-med">Προειδοποίηση</span></td><td>Η τάση τροφοδοσίας του ταχογράφου είναι κάτω ή πάνω από το όριο για σωστή λειτουργία ή έχει αποσυνδεθεί. Η τροφοδοσία έχει διακοπεί για περισσότερο από 200 χιλιοστά του δευτερολέπτου. Η τάση εκκίνησης δεν πρέπει να προκαλεί αυτό το συμβάν.</td><td>Το συνεργείο πρέπει να ελέγξει την ηλεκτρική τροφοδοσία του οχήματος εάν επαναλαμβάνεται.</td></tr>
+<tr><td>Οδήγηση χωρίς κατάλληλη κάρτα</td><td><span class="sev sev-high">Προειδοποίηση</span></td><td>Οδήγηση χωρίς κατάλληλη κάρτα ή με ακατάλληλο συνδυασμό καρτών. Σχετίζεται με τον χειριστή.</td><td>Σταματήστε και αφαιρέστε την ακατάλληλη κάρτα. Εισαγάγετε μια έγκυρη κάρτα οδηγού.</td></tr>
+<tr><td>Υπέρβαση ταχύτητας</td><td><span class="sev sev-high">Προειδοποίηση</span></td><td>Η ταχύτητα του οχήματος έχει υπερβεί το καθορισμένο όριο ταχύτητας για 1 λεπτό και θα αποθηκευτεί. Σχετικά με τον χειριστή.</td><td>Τηρήστε το καθορισμένο όριο ταχύτητας.</td></tr>
+<tr><td>Προειδοποίηση υπέρβασης ταχύτητας</td><td><span class="sev sev-med">Μήνυμα</span></td><td>Το όχημα υπερβαίνει το καθορισμένο όριο υπέρβασης ταχύτητας. Μετά από 1 λεπτό συνεχούς υπέρβασης ταχύτητας, η προειδοποίηση θα αποθηκευτεί.</td><td>Επιβραδύνετε πριν από το όριο του 1 λεπτού.</td></tr>
+<tr><td>Αστοχία τηλεφόρτωσης</td><td><span class="sev sev-med">Προειδοποίηση</span></td><td>Μια αστοχία κατά την προσπάθεια λήψης δεδομένων από τον ταχογράφο. Σχετικά με τον ταχογράφο/την κάρτα.</td><td>Ελέγξτε τη σύνδεση και τον εξοπλισμό, δοκιμάστε ξανά. Εάν επιμένει: συνεργείο.</td></tr>
+<tr><td>Η ρύθμιση ώρας UTC δεν επιτρέπεται</td><td><span class="sev sev-info">Μήνυμα</span></td><td>Η ρύθμιση ώρας UTC περισσότερο από ±1 λεπτό μία φορά την εβδομάδα δεν επιτρέπεται.</td><td>Εάν η ώρα UTC έχει αποκλίνει περισσότερο από 20 λεπτά, το συνεργείο πρέπει να κάνει βαθμονόμηση.</td></tr>
+</tbody>
+</table>
+</div>
+<h3>Μηνύματα εκτυπωτή</h3>
+<div class="code-table-wrap">
+<table class="code-table">
+<thead>
+<tr>
+<th style="width: 26%;">Ένδειξη</th>
+<th style="width: 14%;">Τύπος</th>
+<th style="width: 32%;">Περιγραφή (αυτούσια)</th>
+<th style="width: 28%;">Ενέργεια</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>Υψηλή θερμοκρασία εκτυπωτή</td><td><span class="sev sev-low">Μήνυμα</span></td><td>Η εκτύπωση δεν μπόρεσε να ξεκινήσει, ή η εν εξελίξει εκτύπωση διακόπηκε, επειδή η θερμοκρασία του εκτυπωτή είναι πολύ υψηλή.</td><td>Περιμένετε να κρυώσει ο εκτυπωτής, και μετά δοκιμάστε ξανά.</td></tr>
+<tr><td>Χαμηλή θερμοκρασία εκτυπωτή</td><td><span class="sev sev-low">Μήνυμα</span></td><td>Η εκτύπωση δεν μπόρεσε να ξεκινήσει επειδή η θερμοκρασία του εκτυπωτή είναι πολύ χαμηλή.</td><td>Περιμένετε να ζεσταθεί ο εκτυπωτής. Συνεργείο εάν επιμένει.</td></tr>
+<tr><td>Χαμηλή ισχύς εκτυπωτή</td><td><span class="sev sev-low">Μήνυμα</span></td><td>Η εν εξελίξει εκτύπωση διακόπηκε επειδή η τάση εισόδου του ταχογράφου είναι πολύ χαμηλή.</td><td>Ελέγξτε αν η ανάφλεξη είναι ενεργοποιημένη· ελέγξτε την τάση της μπαταρίας και τις συνδέσεις.</td></tr>
+<tr><td>Ο εκτυπωτής δεν έχει χαρτί</td><td><span class="sev sev-info">Μήνυμα</span></td><td>Η εν εξελίξει εκτύπωση έχει διακοπεί επειδή ο εκτυπωτής δεν έχει χαρτί.</td><td>Αντικαταστήστε το χαρτί.</td></tr>
+</tbody>
+</table>
+</div>
+<h3>Προειδοποιήσεις χρόνου οδήγησης (προ-προειδοποιήσεις &amp; προειδοποιήσεις Stoneridge)</h3>
+<div class="code-table-wrap">
+<table class="code-table">
+<thead>
+<tr>
+<th style="width: 30%;">Ένδειξη</th>
+<th style="width: 14%;">Τύπος</th>
+<th style="width: 56%;">Σημασία (κατά λέξη)</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>Υπενθύμιση για τα τελευταία 15 λεπτά</td><td><span class="sev sev-info">Μήνυμα</span></td><td>Ο οδηγός έχει 15 λεπτά μέχρι να υπερβεί τον νόμιμο μέγιστο συνεχή χρόνο οδήγησης των 4½ ωρών.</td></tr>
+<tr><td>Ώρα για διάλειμμα</td><td><span class="sev sev-med">Προειδοποίηση</span></td><td>Έχει παρέλθει ο νόμιμος μέγιστος συνεχής χρόνος οδήγησης των 4½ ωρών (σύμφωνα με τον Κανονισμό 561/2006). Κάντε ένα διάλειμμα τουλάχιστον 45 λεπτών ή διαχωρισμένο 15+30.</td></tr>
+<tr><td>υπενθύμιση διαλείμματος</td><td><span class="sev sev-info">Προ-προειδοποίηση</span></td><td>Μια υπενθύμιση για διάλειμμα σύμφωνα με τον κανόνα της Οδηγίας 2002/15/ΕΚ για 6 ώρες εργασίας.</td></tr>
+<tr><td>ημερήσιος χρόνος οδήγησης</td><td><span class="sev sev-med">Προειδοποίηση</span></td><td>Προ-προειδοποίηση και προειδοποίηση για 9 ώρες ημερήσιο χρόνο οδήγησης.</td></tr>
+<tr><td>τέλος ημερήσιας οδήγησης</td><td><span class="sev sev-med">Προειδοποίηση</span></td><td>Έφτασε ο μέγιστος ημερήσιος χρόνος οδήγησης.</td></tr>
+<tr><td>εβδομαδιαίος χρόνος οδήγησης</td><td><span class="sev sev-med">Προ-προειδοποίηση</span></td><td>Ο μέγιστος εβδομαδιαίος χρόνος οδήγησης (56 ώρες) πλησιάζει.</td></tr>
+<tr><td>τέλος εβδομαδιαίας οδήγησης</td><td><span class="sev sev-med">Προειδοποίηση</span></td><td>Ο μέγιστος εβδομαδιαίος χρόνος οδήγησης έχει επιτευχθεί.</td></tr>
+<tr><td>Χρόνος οδήγησης 2 εβδομάδων</td><td><span class="sev sev-med">Προ-προειδοποίηση</span></td><td>Ο μέγιστος χρόνος οδήγησης 2 εβδομάδων (90 ώρες) πλησιάζει.</td></tr>
+<tr><td>Τέλος οδήγησης 2 εβδομάδων</td><td><span class="sev sev-med">Προειδοποίηση</span></td><td>Ο μέγιστος χρόνος οδήγησης 2 εβδομάδων έχει επιτευχθεί.</td></tr>
+<tr><td>Εβδομαδιαίος χρόνος εργασίας</td><td><span class="sev sev-med">Προ-προειδοποίηση</span></td><td>Επίτευξη του εβδομαδιαίου χρόνου εργασίας σύμφωνα με τον κανόνα της Οδηγίας για τον Χρόνο Εργασίας (WTD) των 60 ωρών.</td></tr>
+<tr><td>Τέλος εβδομαδιαίας εργασίας</td><td><span class="sev sev-med">Προειδοποίηση</span></td><td>Ο εβδομαδιαίος χρόνος εργασίας έχει επιτευχθεί σύμφωνα με τον κανόνα της Οδηγίας για τον Χρόνο Εργασίας (WTD) των 60 ωρών.</td></tr>
+<tr><td>Υπενθύμιση καθημερινής ανάπαυσης</td><td><span class="sev sev-info">Προ-προειδοποίηση</span></td><td>Μια υπενθύμιση για την περίοδο καθημερινής ανάπαυσης.</td></tr>
+<tr><td>Υπενθύμιση εβδομαδιαίας ανάπαυσης</td><td><span class="sev sev-info">Προ-προειδοποίηση</span></td><td>Μια υπενθύμιση για την περίοδο εβδομαδιαίας ανάπαυσης.</td></tr>
+<tr><td>Ώρα για καθημερινή ανάπαυση</td><td><span class="sev sev-med">Προειδοποίηση</span></td><td>Μια προειδοποίηση για την έναρξη της καθημερινής ανάπαυσης.</td></tr>
+<tr><td>Ώρα για εβδομαδιαία ανάπαυση</td><td><span class="sev sev-med">Προειδοποίηση</span></td><td>Μια προειδοποίηση για την έναρξη της εβδομαδιαίας ανάπαυσης.</td></tr>
+<tr><td>Προειδοποίηση προγραμματισμένης συντήρησης / Ώρα για συντήρηση</td><td><span class="sev sev-low">Μήνυμα</span></td><td>Προειδοποίηση για την επόμενη βαθμονόμηση / ο ταχογράφος είναι εκτός βαθμονόμησης.</td></tr>
+</tbody>
+</table>
+</div>
+<h3>SE5000-8.1 Smart 2 — κατασκευαστής-συγκεκριμένοι δεκαεξαδικοί κωδικοί βλάβης (DTCs) (ISO 16844-7)</h3>
+<p style="font-size:14px;color:var(--text2);margin-bottom:12px;">Το τρέχον SE5000-8.1 (Έξυπνος Ταχογράφος 2) αναφέρει έναν δεκαεξαδικό DTC 5 byte σύμφωνα με το ISO 16844-7 εκτός από το μήνυμα στην οθόνη. Οι παρακάτω κωδικοί αναπαράγονται από το<strong>Stoneridge SE5000-8.1 Εγχειρίδιο Ελέγχου, έγγραφο 9000-103766P_0109</strong>(Stoneridge Electronics AB).</p>
+<div class="code-table-wrap">
+<table class="code-table">
+<thead><tr><th style="width:13%;">DTC</th><th style="width:24%;">Μήνυμα</th><th style="width:30%;">Αιτία</th><th style="width:21%;">Τι να κάνετε</th><th style="width:12%;">Σοβαρότητα</th></tr></thead>
+<tbody>
+<tr><td>0001C0</td><td>Η εκτύπωση σταμάτησε, έλλειψη χαρτιού</td><td>Ο εκτυπωτής δεν έχει χαρτί.</td><td>Εισαγάγετε ένα νέο ρολό χαρτιού.</td><td><span class="sev sev-low">Χαμηλό</span></td></tr>
+<tr><td>000900</td><td>Δεν υπάρχει ανάφλεξη αλλά υπάρχουν παλμοί ταχύτητας</td><td>Η ανάφλεξη είναι απενεργοποιημένη, ωστόσο ο αισθητήρας ανιχνεύει παλμούς ταχύτητας.</td><td>Ελέγξτε για κραδασμούς / παρεμβολές· εάν επαναλαμβάνεται, το συνεργείο πρέπει να ελέγξει τον αισθητήρα και τον ακροδέκτη B7.</td><td><span class="sev sev-high">Υψηλή</span></td></tr>
+<tr><td>000D40</td><td>Προειδοποίηση υπέρβασης ταχύτητας</td><td>Υπέρβαση ορίου ταχύτητας, αλλά για λιγότερο από 60 δευτερόλεπτα.</td><td>Επιβραδύνετε. Σχετίζεται με τον οδηγό — δεν απαιτείται συνεργείο.</td><td><span class="sev sev-med">Μέτρια</span></td></tr>
+<tr><td>000B78</td><td>Σφάλμα βαθμονόμησης</td><td>Δύο χρόνια έχουν παρέλθει από την τελευταία βαθμονόμηση.</td><td>Επαναβαθμονόμηση σε εξουσιοδοτημένο συνεργείο.</td><td><span class="sev sev-high">Υψηλή</span></td></tr>
+<tr><td>000C31</td><td>x Εσωτερική βλάβη GNSS</td><td>Ο εσωτερικός δέκτης GNSS έχει σταματήσει να παρέχει δεδομένα θέσης.</td><td>Επανεκκινήστε τον ταχογράφο και πραγματοποιήστε δοκιμαστική οδήγηση· εάν επανέλθει, αντικαταστήστε.</td><td><span class="sev sev-med">Μέτρια</span></td></tr>
+<tr><td>002B80</td><td>Χρονική απόκλιση (GNSS έναντι VU)</td><td>Τα εσωτερικά ρολόγια και τα ρολόγια GNSS διαφέρουν περισσότερο από 1 λεπτό μετά από 12 ώρες.</td><td>Ελέγξτε το εσωτερικό ρολόι και την ώρα GNSS. Συνεργείο.</td><td><span class="sev sev-med">Μέτρια</span></td></tr>
+<tr><td>002C80</td><td>Έλλειψη πληροφοριών σχετικά με τη θέση του οχήματος από τον δέκτη GNSS</td><td>Δεν υπάρχει έγκυρο σήμα GNSS κατά τη διάρκεια 3 ωρών αθροιστικής οδήγησης.</td><td>Ελέγξτε τη λήψη GNSS και τυχόν εμπόδια γύρω από την κεραία.</td><td><span class="sev sev-med">Μέτρια</span></td></tr>
+<tr><td>002D80</td><td>Σφάλμα επικοινωνίας με τον μηχανισμό επικοινωνίας εξ αποστάσεως</td><td>Η μονάδα επί οχήματος (VU) δεν μπορεί να επικοινωνήσει σωστά με τη μονάδα DSRC-VU.</td><td>Ελέγξτε τη μονάδα DSRC-VU, την καλωδίωση και τις παραμέτρους CAN.</td><td><span class="sev sev-med">Μέτρια</span></td></tr>
+<tr><td>002E80</td><td>Ανωμαλία GNSS</td><td>Το GNSS ανίχνευσε επίθεση ή απέτυχε ο έλεγχος ταυτότητας μηνύματος (OSNMA).</td><td>Ελέγξτε για παραβιάσεις. Επανεκκινήστε και επαληθεύστε· αντικαταστήστε εάν επανέλθει.</td><td><span class="sev sev-crit">Κρίσιμο</span></td></tr>
+<tr><td>00FD0B</td><td>CAN bus off, TCO</td><td>Η υποδοχή A (TCO-CAN) βρίσκεται σε κατάσταση «Bus Off».</td><td>Ελέγξτε τον σύνδεσμο Α και την καλωδίωση, τις ρυθμίσεις CAN και την τερματική αντίσταση (60 Ω).</td><td><span class="sev sev-high">Υψηλή</span></td></tr>
+</tbody>
+</table>
+</div>
+<h3>Γενικά συμβάντα &amp; Παραβίαση της ασφάλειας (SE5000-8.1)</h3>
+<div class="code-table-wrap">
+<table class="code-table">
+<thead><tr><th style="width:24%;">Μήνυμα</th><th style="width:34%;">Αιτία</th><th style="width:30%;">Τι να κάνετε</th><th style="width:12%;">Σοβαρότητα</th></tr></thead>
+<tbody>
+<tr><td>Αντικρουόμενες κάρτες</td><td>Ανιχνεύθηκε ένας συνδυασμός άκυρων καρτών (π.χ. κάρτα επιχείρησης + κάρτα ελέγχου).</td><td>Αφαιρέστε την αντικρουόμενη κάρτα.</td><td><span class="sev sev-med">Μέτρια</span></td></tr>
+<tr><td>Οδήγηση χωρίς κατάλληλη κάρτα</td><td>Οδήγηση χωρίς έγκυρη κάρτα, ή με συνδυασμό άκυρων καρτών.</td><td>Σταματήστε, εισαγάγετε μια έγκυρη κάρτα και αφαιρέστε την ακατάλληλη.</td><td><span class="sev sev-crit">Κρίσιμο</span></td></tr>
+<tr><td>Υπέρβαση ταχύτητας</td><td>Το όριο ταχύτητας ξεπεράστηκε για τουλάχιστον 60 δευτερόλεπτα.</td><td>Τηρείτε το επιτρεπόμενο όριο ταχύτητας για το όχημα.</td><td><span class="sev sev-high">Υψηλή</span></td></tr>
+<tr><td>Διακοπή τροφοδοσίας (VU / MS)</td><td>Η τροφοδοσία του ταχογράφου ή του αισθητήρα διακόπηκε για περισσότερα από 200 ms.</td><td>Ελέγξτε την τροφοδοσία του οχήματος και την καλωδίωση.</td><td><span class="sev sev-med">Μέτρια</span></td></tr>
+<tr><td>Σφάλμα ροής δεδομένων (CNTR / No CNTR / Συμβάν)</td><td>Ο αισθητήρας αναφέρει ταχύτητα χωρίς παλμούς, ο μετρητής διαφωνεί ή υπάρχει ασυμφωνία υπογραφής.</td><td>Ελέγξτε τον αισθητήρα, την καλωδίωση και την παραβίαση. Επαναβαθμονομήστε εάν χρειάζεται.</td><td><span class="sev sev-crit">Κρίσιμο</span></td></tr>
+<tr><td>Αποτυχία πιστοποίησης αισθητήρα κίνησης</td><td>Μια απόπειρα πιστοποίησης αισθητήρα κίνησης απέτυχε.</td><td>Ελέγξτε τον αισθητήρα και την καλωδίωση. Επανασυνδέστε και επαναβαθμονομήστε.</td><td><span class="sev sev-crit">Κρίσιμο</span></td></tr>
+<tr><td>Μη εξουσιοδοτημένη αλλαγή αισθητήρα κίνησης</td><td>Ο αισθητήρας έχει αλλάξει από την τελευταία σύζευξη.</td><td>Ελέγξτε για παραβίαση· επισκευάστε και βαθμονομήστε εκ νέου.</td><td><span class="sev sev-crit">Κρίσιμο</span></td></tr>
+<tr><td>Σφάλμα ακεραιότητας αποθηκευμένων δεδομένων</td><td>Τα δεδομένα στην μνήμη 365 ημερών είναι κατεστραμμένα.</td><td>Καταργήστε τη χρήση και αντικαταστήστε τον ταχογράφο.</td><td><span class="sev sev-crit">Κρίσιμο</span></td></tr>
+<tr><td>Παραβίαση της ασφάλειας υλικού</td><td>Η κάρτα αφαιρέθηκε βίαια.</td><td>Ελέγξτε την συσκευή ανάγνωσης κάρτας. Καταργήστε τη χρήση και αντικαταστήστε.</td><td><span class="sev sev-crit">Κρίσιμο</span></td></tr>
+<tr><td>Παραβίαση της ασφάλειας</td><td>Έχει εντοπιστεί παραβίαση υλικού.</td><td>Καταργήστε τη χρήση και αντικαταστήστε τον ταχογράφο.</td><td><span class="sev sev-crit">Κρίσιμο</span></td></tr>
+</tbody>
+</table>
+</div>
+<p style="font-size:14px;color:var(--text2);margin-bottom:18px;"><strong>Πηγή:</strong>Stoneridge Electronics AB, Εγχειρίδιο Ελέγχου SE5000-8.1 Smart 2, έγγραφο 9000-103766P_0109, σελ. 32–37.</p>
+<p style="font-size:14px;color:var(--text2);margin-top:18px;"><strong>Πηγή:</strong>Όλα τα παραπάνω μηνύματα της Stoneridge αναπαράγονται από το Εγχειρίδιο Οδηγού &amp; Επιχείρησης SE5000 Exakt Duo² (Αναθ. 7.6) που εκδόθηκε από την Stoneridge Electronics AB. Ο πλήρης πίνακας καλύπτει όλα τα μηνύματα που μπορεί να δει ένας οδηγός· μηνύματα ειδικά για τη θέση συνεργείου (βαθμονόμησης) δεν εμφανίζονται εδώ. Η μονάδα Έξυπνος Ταχογράφος 2 SE5000-8.1 χρησιμοποιεί την ίδια δομή οικογένειας μηνυμάτων του Παραρτήματος I Γ με μικρές ενημερώσεις διατύπωσης.</p>
+</div>
+</details>
+<!-- ===== ACTIA SmarTach ===== -->
+<details class="vendor" id="actia">
+<summary>
+<span class="vendor-meta">Actia · Προεπιλογή Γαλλίας και νότιας Ευρώπης</span>Actia SmarTach (Gen1 &amp; Gen2)</summary>
+<div class="vendor-body">
+<p>Το SmarTach της Actia είναι ο πιο κοινός ψηφιακός ταχογράφος στα γαλλικά βαρέα οχήματα και μια συχνή τοποθέτηση σε Ισπανία, Ιταλία και Πορτογαλία. Τα παρακάτω μηνύματα αναπαράγονται από το<strong>Εγχειρίδιο Οδηγού Actia SmarTach (2021, αναφ. c1c)</strong>. Η Actia χρησιμοποιεί εικονόγραμμα στην οθόνη + σύντομο κείμενο· η διατύπωση είναι συνεπής με την ορολογία του Παραρτήματος I Γ.</p>
+<div class="code-table-wrap">
+<table class="code-table">
+<thead>
+<tr>
+<th style="width: 26%;">Μήνυμα</th>
+<th style="width: 36%;">Σημασία</th>
+<th style="width: 26%;">Τι να κάνετε</th>
+<th style="width: 12%;">Σοβαρότητα</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Οδήγηση χωρίς κατάλληλη κάρτα</td>
+<td>Οχήματα σε κίνηση χωρίς έγκυρη κάρτα στην υποδοχή 1 — Συμβάν Παραρτήματος I Γ καταγεγραμμένο.</td>
+<td>Εισαγάγετε μια έγκυρη κάρτα οδηγού. Εκτυπώστε και σχολιάστε την περίοδο.</td>
+<td><span class="sev sev-high">Υψηλή</span></td>
+</tr>
+<tr>
+<td>Εισαγωγή κάρτας κατά τη διάρκεια της οδήγησης</td>
+<td>Η κάρτα εισήχθη αφού είχε ήδη ξεκινήσει το ταξίδι.</td>
+<td>Επιβεβαίωση — Το συμβάν καταγράφηκε στην κάρτα.</td>
+<td><span class="sev sev-med">Μέτρια</span></td>
+</tr>
+<tr>
+<td>Τελευταίος κύκλος ενημέρωσης κάρτας που δεν ολοκληρώθηκε ορθά</td>
+<td>Ο προηγούμενος κύκλος δεν ολοκληρώθηκε ορθά.</td>
+<td>Επιβεβαίωση· σημείωση για τα αρχεία του στόλου.</td>
+<td><span class="sev sev-med">Μέτρια</span></td>
+</tr>
+<tr>
+<td>Άκυρη κάρτα / Έχει λήξει</td>
+<td>Η κάρτα οδηγού έχει λήξει, δεν έχει ενεργοποιηθεί ακόμα, ή απέτυχε ο έλεγχος ταυτότητας.</td>
+<td>Ανανεώστε την κάρτα στην αρχή του κράτους μέλους σας.</td>
+<td><span class="sev sev-med">Μέτρια</span></td>
+</tr>
+<tr>
+<td>Υπέρβαση ταχύτητας</td>
+<td>Υπέρβαση του καθορισμένου ορίου ταχύτητας για περισσότερο από 60 δευτερόλεπτα.</td>
+<td>Μειώστε ταχύτητα· το συμβάν είναι ορατό στη λήψη δεδομένων.</td>
+<td><span class="sev sev-high">Υψηλή</span></td>
+</tr>
+<tr>
+<td>Αντικρουόμενη κίνηση οχήματος</td>
+<td>Απόκλιση μεταξύ του αισθητήρα κίνησης και του σήματος GNSS / οδόμετρου.</td>
+<td>Συνεργείο — πιθανή παραποίηση ή ζημιά στην καλωδίωση.</td>
+<td><span class="sev sev-crit">Κρίσιμο</span></td>
+</tr>
+<tr>
+<td>Διακοπή τροφοδοσίας</td>
+<td>Η τάση τροφοδοσίας μειώθηκε ή αποσυνδέθηκε.</td>
+<td>Επιβεβαίωση. Ελέγξτε την τροφοδοσία εάν επανέλθει.</td>
+<td><span class="sev sev-med">Μέτρια</span></td>
+</tr>
+<tr>
+<td>Παραβίαση της ασφάλειας</td>
+<td>Το περίβλημα της μονάδας επί οχήματος (VU) άνοιξε ή η ακεραιότητα των δεδομένων παραβιάστηκε.</td>
+<td>Υποχρεωτική επίσκεψη στο συνεργείο.</td>
+<td><span class="sev sev-crit">Κρίσιμο</span></td>
+</tr>
+<tr>
+<td>Αστοχία αισθητήρα</td>
+<td>Αστοχία αισθητήρα κίνησης κατά τον αυτόματο έλεγχο.</td>
+<td>Αντικατάσταση από συνεργείο.</td>
+<td><span class="sev sev-crit">Κρίσιμο</span></td>
+</tr>
+<tr>
+<td>Αστοχία εκτυπωτή</td>
+<td>Ο εκτυπωτής δεν μπορεί να ολοκληρώσει μια εργασία εκτύπωσης.</td>
+<td>Ελέγξτε το χαρτί / αφήστε τον να κρυώσει / αντικαταστήστε τον μηχανισμό αν το πρόβλημα επιμένει.</td>
+<td><span class="sev sev-med">Μέτρια</span></td>
+</tr>
+<tr>
+<td>Έλλειψη πληροφοριών σχετικά με τη θέση του οχήματος από τον δέκτη GNSS</td>
+<td>Δεν υπάρχουν δεδομένα θέσης για 3 ώρες συνολικής οδήγησης.</td>
+<td>Επιβεβαιώστε. Ελέγξτε την κεραία· βεβαιωθείτε ότι δεν υπάρχει μεταλλικό εμπόδιο.</td>
+<td><span class="sev sev-med">Μέτρια</span></td>
+</tr>
+<tr>
+<td>Χρονική απόκλιση</td>
+<td>Η διαφορά μεταξύ του εσωτερικού ρολογιού και της ώρας GNSS υπερβαίνει το 1 λεπτό.</td>
+<td>Το συνεργείο θα συγχρονίσει ξανά.</td>
+<td><span class="sev sev-med">Μέτρια</span></td>
+</tr>
+<tr>
+<td>Εσωτερική αστοχία VU</td>
+<td>Γενική δυσλειτουργία VU — μνήμη, RTC, λογισμικό παρακολούθησης.</td>
+<td>Συνεργείο εντός 7 ημερών.</td>
+<td><span class="sev sev-crit">Κρίσιμο</span></td>
+</tr>
+<tr>
+<td>Αντικρουόμενες κάρτες</td>
+<td>Μη συμβατός συνδυασμός καρτών στις υποδοχές 1 + 2.</td>
+<td>Αφαιρέστε την αντικρουόμενη κάρτα.</td>
+<td><span class="sev sev-med">Μέτρια</span></td>
+</tr>
+<tr>
+<td>Οδήγηση &gt; 4 ώρες 30 λεπτά</td>
+<td>Η συνεχής οδήγηση έχει υπερβεί τις 4 ώρες 30 λεπτά χωρίς διάλειμμα (αισθητήρας κίνησης KITAS).</td>
+<td>Σταματήστε αμέσως και κάντε το υποχρεωτικό διάλειμμα 45 λεπτών.</td>
+<td><span class="sev sev-high">Υψηλή</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p style="font-size:14px;color:var(--text2);margin-top:14px;"><em>Τα μηνύματα της Actia που απευθύνονται στον χρήστη είναι σκόπιμα συνοπτικά· οι λεπτομερείς αριθμητικοί κωδικοί βλάβης (DTCs) είναι προσβάσιμοι μόνο μέσω του CITO / SmarTach Tester ενός συνεργείου.</em></p>
+</div>
+</details>
+<!-- ===== EFAS-4 ===== -->
+<details class="vendor" id="efas">
+<summary>
+<span class="vendor-meta">Intellic / Schneider · συνήθης σε γερμανικούς και πολωνικούς στόλους</span>EFAS-4 / EFAS-4.10</summary>
+<div class="vendor-body">
+<p>Το EFAS-4 (αρχικά Intellic, τώρα Schneider Electric) είναι τοποθετημένο σε πολλούς γερμανικής κατασκευής ελκυστήρες (MAN, DAF ορισμένες διαμορφώσεις) και σε σημαντικό μερίδιο βαρέων οχημάτων πολωνικής νηολόγησης. Τα παρακάτω μηνύματα προέρχονται από το<strong>Εγχειρίδιο Οδηγού EFAS-4, Έκδοση 06.2022</strong>. Το EFAS χρησιμοποιεί διψήφιους κωδικούς στην οθόνη συν ένα εικονόγραμμα.</p>
+<div class="code-table-wrap">
+<table class="code-table">
+<thead>
+<tr>
+<th style="width: 14%;">Κωδικός</th>
+<th style="width: 24%;">Μήνυμα</th>
+<th style="width: 36%;">Σημασία</th>
+<th style="width: 14%;">Ενέργεια</th>
+<th style="width: 12%;">Σοβαρότητα</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>E01</td><td>Οδήγηση χωρίς κατάλληλη κάρτα</td><td>Το όχημα κινήθηκε χωρίς έγκυρη κάρτα οδηγού.</td><td>Εισαγωγή κάρτας· εκτύπωση &amp;amp; σχολιασμός.</td><td><span class="sev sev-high">Υψηλή</span></td></tr>
+<tr><td>E02</td><td>Εισαγωγή κάρτας κατά τη διάρκεια της οδήγησης</td><td>Κάρτα τοποθετήθηκε μετά την έναρξη της κίνησης.</td><td>Επιβεβαίωση.</td><td><span class="sev sev-med">Μέτρια</span></td></tr>
+<tr><td>E03</td><td>Τελευταίος κύκλος ενημέρωσης κάρτας που δεν ολοκληρώθηκε ορθά</td><td>Προηγούμενος κύκλος ενημέρωσης κάρτας που δεν ολοκληρώθηκε.</td><td>Επιβεβαίωση· σημείωση για τον στόλο.</td><td><span class="sev sev-med">Μέτρια</span></td></tr>
+<tr><td>E04</td><td>Υπέρβαση ταχύτητας</td><td>Υπέρβαση ταχύτητας &gt; 1 λεπτό.</td><td>Μείωση ταχύτητας.</td><td><span class="sev sev-high">Υψηλή</span></td></tr>
+<tr><td>E05</td><td>Διακοπή τροφοδοσίας</td><td>Τάση τροφοδοσίας πολύ χαμηλή ή διακοπείσα.</td><td>Ελέγξτε την τροφοδοσία αν επανεμφανίζεται.</td><td><span class="sev sev-med">Μέτρια</span></td></tr>
+<tr><td>E06</td><td>Δεδομένα κίνησης</td><td>Ασυνεπείς παλμοί αισθητήρα κίνησης.</td><td>Συνεργείο.</td><td><span class="sev sev-crit">Κρίσιμο</span></td></tr>
+<tr><td>E07</td><td>Αντικρουόμενη κίνηση οχήματος</td><td>Διαφωνία αισθητήρα με GNSS / χιλιομετρητή.</td><td>Συνεργείο — έλεγχος παραβίασης.</td><td><span class="sev sev-crit">Κρίσιμο</span></td></tr>
+<tr><td>E08</td><td>Αντικρουόμενες κάρτες</td><td>Αντικρουόμενες κάρτες.</td><td>Αφαιρέστε την αντικρουόμενη κάρτα.</td><td><span class="sev sev-med">Μέτρια</span></td></tr>
+<tr><td>E09</td><td>Χρονική επικάλυψη</td><td>Αρνητική μετατόπιση UTC από την τελευταία VU.</td><td>Το συνεργείο πρέπει να το διορθώσει.</td><td><span class="sev sev-med">Μέτρια</span></td></tr>
+<tr><td>E10</td><td>Παραβίαση της ασφάλειας</td><td>Παραβίαση περιβλήματος ή σφάλμα ακεραιότητας δεδομένων.</td><td>Υποχρεωτικό συνεργείο.</td><td><span class="sev sev-crit">Κρίσιμο</span></td></tr>
+<tr><td>F01</td><td>Εσωτερική αστοχία VU</td><td>Γενική δυσλειτουργία υλικού/λογισμικού της μονάδας επί οχήματος (VU).</td><td>Συνεργείο εντός 7 ημερών.</td><td><span class="sev sev-crit">Κρίσιμο</span></td></tr>
+<tr><td>F02</td><td>Μηχανισμός κάρτας</td><td>Αστοχία μηχανισμού κλειδώματος κάρτας.</td><td>Συνεργείο.</td><td><span class="sev sev-high">Υψηλή</span></td></tr>
+<tr><td>F03</td><td>Βλάβη ώρας</td><td>Το ρολόι πραγματικού χρόνου είναι αναξιόπιστο.</td><td>Συνεργείο — οι νέες κάρτες θα απορριφθούν.</td><td><span class="sev sev-crit">Κρίσιμο</span></td></tr>
+<tr><td>F04</td><td>Εκτυπωτής</td><td>Αστοχία μηχανισμού εκτυπωτή.</td><td>Αντικατάσταση χαρτιού ή συνεργείο.</td><td><span class="sev sev-med">Μέτρια</span></td></tr>
+<tr><td>F05</td><td>Τηλεφόρτωση</td><td>Σφάλμα κατά τη λήψη δεδομένων.</td><td>Επανάληψη δοκιμής· ελέγξτε το καλώδιο.</td><td><span class="sev sev-med">Μέτρια</span></td></tr>
+<tr><td>F06</td><td>Αστοχία αισθητήρα</td><td>Αστοχία αισθητήρα κίνησης κατά τον αυτόματο έλεγχο.</td><td>Αντικατάσταση αισθητήρα στο συνεργείο.</td><td><span class="sev sev-crit">Κρίσιμο</span></td></tr>
+<tr><td>F07</td><td>GNSS</td><td>Εσωτερική αστοχία δέκτη GNSS ή κεραίας.</td><td>Έλεγχος συνεργείου.</td><td><span class="sev sev-high">Υψηλή</span></td></tr>
+<tr><td>F08</td><td>DSRC</td><td>Αστοχία μονάδας DSRC απομακρυσμένου ελέγχου.</td><td>Το συνεργείο θα ελέγξει την κεραία και το CAN.</td><td><span class="sev sev-med">Μέτρια</span></td></tr>
+</tbody>
+</table>
+</div>
+<h3>EFAS-4.10 / 4.11 — hex DTCs (ISO 16844-7), top 12</h3>
+<p style="font-size:14px;color:var(--text2);margin-bottom:12px;">Οι μονάδες EFAS παρουσιάζουν τρεις τύπους κωδικών:<strong>EFT</strong>(τύπος συμβάντος/αστοχίας σύμφωνα με το ISO),<strong>DTC</strong>(5-byte hex σύμφωνα με το ISO 16844-7) και ένας ειδικός του κατασκευαστή<strong>Service ID</strong>. Οι σημαντικότεροι DTCs παρακάτω αναπαράγονται από το<strong>Bosch Intellic EFAS-4.10 Workshop Manual, Πίνακας 18</strong>(DTCs και αντίστοιχα Service IDs).</p>
+<div class="code-table-wrap">
+<table class="code-table">
+<thead><tr><th style="width:18%;">DTC</th><th style="width:42%;">Σημασία</th><th style="width:28%;">Τι να κάνετε</th><th style="width:12%;">Σοβαρότητα</th></tr></thead>
+<tbody>
+<tr><td>80 00 002007</td><td>Τάση τροφοδοσίας αισθητήρα κίνησης πάνω από το μέγιστο</td><td>Ελέγξτε την τροφοδοσία ρεύματος του αισθητήρα και την καλωδίωση.</td><td><span class="sev sev-high">Υψηλή</span></td></tr>
+<tr><td>80 00 002003</td><td>Τάση τροφοδοσίας αισθητήρα κίνησης κάτω από το ελάχιστο</td><td>Ελέγξτε την τροφοδοσία ρεύματος του αισθητήρα και την καλωδίωση.</td><td><span class="sev sev-high">Υψηλή</span></td></tr>
+<tr><td>80 00 002180</td><td>Δεν υπάρχει σήμα πραγματικού χρόνου από τον αισθητήρα κίνησης (διακοπή ακίδας Β3)</td><td>Ελέγξτε την ακίδα Β3 και την τροφοδοσία ρεύματος του αισθητήρα.</td><td><span class="sev sev-crit">Κρίσιμο</span></td></tr>
+<tr><td>80 00 002280</td><td>Εσφαλμένο σήμα αισθητήρα πραγματικού χρόνου (pin B3 ή σφάλμα IMS)</td><td>Ελέγξτε το pin B3 και το άθροισμα ελέγχου αισθητήρα.</td><td><span class="sev sev-crit">Κρίσιμο</span></td></tr>
+<tr><td>80 00 002452</td><td>Σφάλμα ακεραιότητας δεδομένων αισθητήρα απόστασης</td><td>Εξουσιοδοτημένο συνεργείο πρέπει να ελέγξει τον αισθητήρα.</td><td><span class="sev sev-high">Υψηλή</span></td></tr>
+<tr><td>80 00 002508</td><td>Αστοχία αισθητήρα κίνησης</td><td>Εξουσιοδοτημένο συνεργείο — αντικατάσταση αισθητήρα.</td><td><span class="sev sev-crit">Κρίσιμο</span></td></tr>
+<tr><td>40 00 000200</td><td>Αστοχία κάρτας, υποδοχή 1</td><td>Καθαρίστε τις επαφές και τοποθετήστε ξανά· εάν επαναλαμβάνεται, νέα κάρτα.</td><td><span class="sev sev-high">Υψηλή</span></td></tr>
+<tr><td>40 00 000300</td><td>Αστοχία κάρτας, υποδοχή 2</td><td>Καθαρίστε τις επαφές και τοποθετήστε ξανά.</td><td><span class="sev sev-high">Υψηλή</span></td></tr>
+<tr><td>80 00 000660</td><td>Ο εκτυπωτής δεν έχει χαρτί</td><td>Εισαγάγετε ένα νέο ρολό χαρτιού.</td><td><span class="sev sev-low">Χαμηλό</span></td></tr>
+<tr><td>40 00 000900</td><td>Παλμοί αισθητήρα κίνησης με απενεργοποιημένη ανάφλεξη</td><td>Ελέγξτε για κραδασμούς, τον αισθητήρα και την καλωδίωση.</td><td><span class="sev sev-high">Υψηλή</span></td></tr>
+<tr><td>40 00 000C31</td><td>Εσωτερική αστοχία μνήμης</td><td>Εξουσιοδοτημένο συνεργείο· αντικαταστήστε το αν δεν μπορεί να επισκευαστεί.</td><td><span class="sev sev-crit">Κρίσιμο</span></td></tr>
+<tr><td>80 00 000D40</td><td>Δεδομένα βαθμονόμησης εσφαλμένα ή ελλιπή</td><td>Επαναβαθμονόμηση σε εξουσιοδοτημένο συνεργείο.</td><td><span class="sev sev-crit">Κρίσιμο</span></td></tr>
+</tbody>
+</table>
+</div>
+<p style="font-size:14px;color:var(--text2);margin-top:14px;"><em>Οι αριθμητικοί κωδικοί EFAS-4 (E01–E10, F01–F08) είναι τα εσωτερικά μνημονικά της μονάδας — το υποκείμενο συμβάν/αστοχία του Παραρτήματος I Γ είναι το νομικά σχετικό αναγνωριστικό και καταγράφεται με τον ίδιο τρόπο όπως σε οποιαδήποτε άλλη μονάδα.</em></p>
+</div>
+</details>
+</div><!-- /.vendor-stack -->
+<!-- ===== TAGRA CTA Box ===== -->
+<div class="cta-box">
+<h3>Το TAGRA αποκωδικοποιεί αυτόματα κάθε ένα από αυτά τα μηνύματα.</h3>
+<p>Όταν πραγματοποιείτε λήψη δεδομένων κάρτας οδηγού ή μονάδας οχήματος στο TAGRA, κάθε συμβάν και αστοχία αντιστοιχίζεται στον ορισμό του Παραρτήματος I Γ με μια απλή επεξήγηση στα Αγγλικά. Δοκιμάστε το πλήρες λογισμικό δωρεάν για 30 ημέρες — δεν απαιτείται κάρτα.</p>
+<a class="cta-btn" href="/el/dokimi/?audience=fleet">Δοκιμάστε το TAGRA δωρεάν για 30 ημέρες →</a>
+</div>
+<!-- ===================================================================== -->
+<!-- SECTION 4: TOP 10 COMMON MISTAKES IN PRACTICE                          -->
+<!-- ===================================================================== -->
+<h2 id="common-mistakes">Τα 10 πιο κοινά μηνύματα ταχογράφου στην πράξη</h2>
+<p>Από τα 200+ μηνύματα παραπάνω, τα δέκα αντιπροσωπεύουν τη συντριπτική πλειονότητα αυτών που βλέπουν οι πραγματικοί οδηγοί καθημερινά — και σχεδόν όλα αυτά είναι<strong>λειτουργικά</strong>παρά καταστροφικά. Γνωρίζοντας πώς να αντιδράσετε σε αυτά τα δέκα θα διατηρήσει τις περισσότερες βάρδιες να λειτουργούν ομαλά και τους περισσότερους υπαλλήλους των ελεγκτικών αρχών ικανοποιημένους.</p>
+<div class="code-table-wrap">
+<table class="code-table">
+<thead>
+<tr>
+<th style="width: 6%;">#</th>
+<th style="width: 26%;">Μήνυμα</th>
+<th style="width: 42%;">Γιατί συμβαίνει</th>
+<th style="width: 26%;">Πρώτη αντίδραση</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>Σφάλμα επικοινωνίας κάρτας 1</strong></td>
+<td>Βρώμικοι επαφές στην κάρτα οδηγού ή στη θήκη της κάρτας. Κάρτα εισαχθείσα ελαφρώς εκτός άξονα. Συνηθισμένο τον χειμώνα όταν οι κάρτες βρίσκονται σε κρύες τσέπες και σχηματίζεται συμπύκνωση στις επαφές του τσιπ.</td>
+<td>Εξαγωγή. Σκουπίστε το τσιπ με ένα στεγνό πανί (χωρίς υγρό). Επανεισαγωγή. Εάν συνεχίζει να αποτυγχάνει, δοκιμάστε την εφεδρική υποδοχή.</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>Χωρίς χαρτί / ανοιχτή θήκη εκτυπωτή</strong></td>
+<td>Το ρολό χαρτιού τελείωσε ή η θήκη του εκτυπωτή άνοιξε κατά τη διάρκεια μιας εργασίας εκτύπωσης. Λάθος τύπος χαρτιού (γίνονται δεκτά μόνο θερμικά χαρτιά που φέρουν σήμανση για ψηφιακούς ταχογράφους).</td>
+<td>Εισαγάγετε ένα νέο ρολό, η θήκη πρέπει να κλείσει με κλικ. Να έχετε πάντα ένα εφεδρικό ρολό.</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>1 Διάλειμμα! 04ώ15 00ώ15</strong></td>
+<td>Ο χρονομετρητής συνεχούς οδήγησης πλησιάζει τα 4 ώρες 30 λεπτά. Η προειδοποίηση είναι ρυθμιζόμενη (συνήθως 15 λεπτά πριν).</td>
+<td>Προγραμματίστε ένα διάλειμμα 45 λεπτών μέσα στα επόμενα 15 λεπτά (ή διαιρέστε το σε 15 + 30).</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>Εισαγωγή κάρτας κατά τη διάρκεια της οδήγησης</strong></td>
+<td>Ο οδηγός ξέχασε να εισάγει την κάρτα πριν ξεκινήσει, το συνειδητοποίησε και την εισήγαγε εν κινήσει.</td>
+<td>Σταματήστε για λίγο. Επανεισάγετε σωστά. Το συμβάν καταγράφεται στην κάρτα αλλά δεν αποτελεί αστοχία.</td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>Τελευταίος κύκλος ενημέρωσης κάρτας που δεν ολοκληρώθηκε ορθά</strong></td>
+<td>Ο οδηγός αφαίρεσε την κάρτα πολύ γρήγορα από το προηγούμενο όχημα ή η προηγούμενη VU έκλεισε πριν καταγραφεί η εγγραφή λήξης.</td>
+<td>Αναγνωρίστε. Αναφέρετε στον διαχειριστή του στόλου — η προηγούμενη μονάδα επί οχήματος (VU) ίσως χρειάζεται επίσκεψη στο συνεργείο.</td>
+</tr>
+<tr>
+<td>6</td>
+<td><strong>Διακοπή τροφοδοσίας</strong></td>
+<td>Εκκίνηση με καλώδια (μπαταρίας), βλάβη καλωδίωσης ή όχημα που έμεινε όλη νύχτα με άδεια μπαταρία.</td>
+<td>Αναγνωρίστε. Εάν επαναλαμβάνεται, ζητήστε έλεγχο του κυκλώματος τροφοδοσίας — η επανειλημμένη διακοπή τροφοδοσίας είναι ύποπτη για τις ελεγκτικές αρχές.</td>
+</tr>
+<tr>
+<td>7</td>
+<td><strong>Έλλειψη πληροφοριών σχετικά με τη θέση του οχήματος από τον δέκτη GNSS / χωρίς δεδομένα θέσης</strong></td>
+<td>Συνολικά 3 ώρες οδήγησης χωρίς αξιοποιήσιμη διόρθωση GNSS — συνηθισμένο σε σήραγγες, υπόγειες αποθήκες ή με μπλοκαρισμένη κεραία.</td>
+<td>Επιβεβαιώστε. Ελέγξτε τη δρομολόγηση της κεραίας και ότι τίποτα μεταλλικό δεν έχει τοποθετηθεί στο ταμπλό από πάνω της.</td>
+</tr>
+<tr>
+<td>8</td>
+<td><strong>Απαιτείται καταχώριση χώρας</strong></td>
+<td>Ο Έξυπνος Ταχογράφος 2 σας ζητά να επιβεβαιώσετε τη χώρα (και στον Έξυπνο Ταχογράφο 2, τη διέλευση των συνόρων) κάθε φορά που ξεκινάτε μια νέα βάρδια.</td>
+<td>Χρησιμοποιήστε το μενού:<em>έναρξη χώρας</em>→ επιλέξτε κωδικό. Στον Έξυπνο Ταχογράφο 2 η μονάδα ζητά επίσης επιβεβαίωση όταν το GNSS ανιχνεύσει σύνορα.</td>
+</tr>
+<tr>
+<td>9</td>
+<td><strong>Καλιμπράρισμα σε ... ημέρες</strong></td>
+<td>Η διετής περιοδική επιθεώρηση πλησιάζει (προειδοποίηση συνήθως 28 ημέρες πριν).</td>
+<td>Κλείστε αμέσως το ραντεβού στο συνεργείο — η οδήγηση με μη βαθμονομημένο ταχογράφο αποτελεί σοβαρή παράβαση.</td>
+</tr>
+<tr>
+<td>10</td>
+<td><strong>1 Λήψη σε ... ημέρες ??</strong></td>
+<td>Η επόμενη υποχρεωτική λήψη δεδομένων κάρτας οδηγού είναι προγραμματισμένη (προειδοποίηση συνήθως 14 ημέρες πριν). Οι κανόνες της ΕΕ απαιτούν λήψη δεδομένων τουλάχιστον κάθε 28 ημέρες.</td>
+<td>Παραδώστε την κάρτα στον στόλο ή κάντε τη λήψη δεδομένων μόνοι σας. Εάν χάσετε την προθεσμία, τα δεδομένα διατηρούνται, αλλά το γραφείο μπορεί να σας επιβάλει κυρώσεις.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- ===================================================================== -->
+<!-- SECTION 5: CRISIS WORKFLOW                                             -->
+<!-- ===================================================================== -->
+<h2 id="crisis-workflow">Ροή εργασιών κρίσιμου σφάλματος: τι να κάνετε όταν εμφανιστεί μια αστοχία στο δρόμο</h2>
+<p>Μια γνήσια<strong>x Αστοχία</strong>μήνυμα — Βλάβη αισθητήρα, Αντικρουόμενη κίνηση οχήματος, Εσωτερική αστοχία VU, Παραβίαση της ασφάλειας, Χρονική απόκλιση — διαφέρει από μια λειτουργική σημείωση: ο ταχογράφος δεν μπορεί πλέον να καταγράψει την δραστηριότητά σας αξιόπιστα και είστε νομικά υποχρεωμένοι να τηρείτε χειρόγραφες καταγραφές και να ελέγξετε τη μονάδα από<strong>εξουσιοδοτημένο συνεργείο εντός επτά ημερών</strong>(Άρθρο 37 του Κανονισμού 165/2014). Η ακόλουθη ροή εργασιών πέντε βημάτων είναι η επίσημη διαδικασία που περιγράφεται σε κάθε εγχειρίδιο κατασκευαστή.</p>
+<ol class="crisis-steps">
+<li>
+<span class="num">1</span>
+<span>
+<strong>Επιβεβαιώστε το μήνυμα και συνεχίστε με ασφάλεια.</strong>
+<span class="lbl">Πατήστε το<em>OK</em>κουμπί για να σιγήσετε την αναβοσβήνουσα οθόνη. Η αστοχία έχει καταγραφεί τώρα στην ομαδική μνήμη και στην κάρτα σας — η επιβεβαίωσή της δεν διαγράφει το συμβάν. Παραμείνετε ψύχραιμοι και βρείτε ένα ασφαλές μέρος για να σταματήσετε.</span>
+</span>
+</li>
+<li>
+<span class="num">2</span>
+<span>
+<strong>Εκτυπώστε μια εκτύπωση δραστηριοτήτων οδηγού από τη VU.</strong>
+<span class="lbl">Μενού:<em>εκτύπωση → οδηγός 1 → δραστηριότητες → 24ωρη ημέρα</em>. Η εκτύπωση θα περιλαμβάνει την καταχώρηση της αστοχίας και μια χρονική σήμανση. Λαμβάνετε μια νέα εκτύπωση κάθε επόμενη ημέρα μέχρι να επισκευαστεί ο ταχογράφος.</span>
+</span>
+</li>
+<li>
+<span class="num">3</span>
+<span>
+<strong>Ξεκινήστε χειρόγραφες καταχωρήσεις στην πίσω όψη της εκτύπωσης.</strong>
+<span class="lbl">Για κάθε περίοδο που ο ταχογράφος δεν μπορεί πλέον να καταγράφει σωστά, γράψτε με το χέρι:<em>ώρα έναρξης, ώρα λήξης, δραστηριότητα (οδήγηση / άλλη εργασία / ετοιμότητα / ανάπαυση), τοποθεσία, πινακίδα κυκλοφορίας οχήματος</em>. Αυτό το φύλλο αποτελεί τη νομική σας απόδειξη για τυχόν έλεγχο στην άκρη του δρόμου μέχρι να επισκευαστεί η μονάδα.</span>
+</span>
+</li>
+<li>
+<span class="num">4</span>
+<span>
+<strong>Ενημερώστε αμέσως τον διαχειριστή του στόλου σας.</strong>
+<span class="lbl">Τηλέφωνο, μήνυμα ή email — ό,τι χρησιμοποιεί η επιχείρησή σας. Ο στόλος πρέπει να καταγράψει την αστοχία, να προγραμματίσει το ραντεβού του συνεργείου και να επιβεβαιώσει ότι το ταξίδι μπορεί να συνεχιστεί με χειρόγραφη καταγραφή. Η οδήγηση πέραν των 7 ημερών με γνωστή μη επισκευασμένη αστοχία εκθέτει τη μεταφορική εταιρεία σε σημαντικά πρόστιμα.</span>
+</span>
+</li>
+<li>
+<span class="num">5</span>
+<span>
+<strong>Κλείστε ραντεβού με το εξουσιοδοτημένο συνεργείο εντός 7 ημερών.</strong>
+<span class="lbl">Μόνο ένα<strong>εξουσιοδοτημένο συνεργείο ταχογράφων</strong>(που διαθέτει κάρτα συνεργείου και τα κατάλληλα διαγνωστικά εργαλεία) μπορεί να επισκευάσει, να επαναβαθμονομήσει ή να αντικαταστήσει τη VU. Μετά την επισκευή, το συνεργείο θα πραγματοποιήσει βαθμονόμηση και θα παράσχει μια πλακέτα τοποθέτησης / αρχείο βαθμονόμησης που πρέπει να φυλάσσεται στο όχημα.</span>
+</span>
+</li>
+</ol>
+<p style="margin-top:24px;"><strong>Μία κρίσιμη εξαίρεση:</strong>εάν η αστοχία είναι<em>Παραβίαση της ασφάλειας</em>ή<em>Αστοχία αισθητήρα με αντικρουόμενη κίνηση οχήματος</em>, η μονάδα μπορεί να εξάγει αυτόματα την κάρτα και να αρνηθεί να καταγράψει περαιτέρω δραστηριότητες. Σε αυτή την περίπτωση, ολόκληρη η βάρδια πρέπει να καταγραφεί χειρόγραφα, και η επίσκεψη στο συνεργείο καθίσταται επείγουσα αντί για τον τυπικό κανόνα των 7 ημερών. Η συνέχιση της οδήγησης χωρίς χειρόγραφες καταγραφές σε αυτό το σενάριο αποτελεί σοβαρό παράπτωμα σε κάθε κράτος μέλος της ΕΕ και του ΕΟΧ.</p>
+<!-- ===================================================================== -->
+<!-- SECTION 6: OFFICIAL SOURCES                                            -->
+<!-- ===================================================================== -->
+<h2 id="sources">Επίσημες πηγές &amp; εγχειρίδια κατασκευαστή</h2>
+<p>Κάθε μήνυμα, όριο και διαδικασία παραπάνω αναπαράγεται από ένα από τα ακόλουθα δημόσια διαθέσιμα, επίσημα έγγραφα. Όπου η αγγλική διατύπωση του κατασκευαστή διαφέρει από το κοινό λεξιλόγιο του οδηγού, διατηρήσαμε το ακριβές κείμενο του κατασκευαστή και προσθέσαμε μια επεξήγηση σε απλά αγγλικά δίπλα.</p>
+<ul class="sources-list">
+<li>
+<strong>Κανονισμός ΕΕ — ώρες οδήγησης και AETR</strong>Κανονισμός (ΕΚ) αριθ. 561/2006 — χρόνοι οδήγησης, διαλείμματα και περίοδοι ανάπαυσης. Οδηγία 2002/15/ΕΚ — Οδηγία για τον χρόνο εργασίας για τους κινητούς εργαζόμενους οδικών μεταφορών. AETR — Ευρωπαϊκή Συμφωνία για την εργασία των πληρωμάτων που ασχολούνται με διεθνείς οδικές μεταφορές.<a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32006R0561" rel="noopener" target="_blank">EUR-Lex: Regulation 561/2006 (EN)</a>
+</li>
+<li>
+<strong>Κανονισμός ΕΕ — τεχνική προδιαγραφή ταχογράφου</strong>Κανονισμός (ΕΕ) αριθ. 165/2014 — νομική βάση. Εκτελεστικός Κανονισμός (ΕΕ) 2016/799 της Επιτροπής, Παράρτημα I Γ — πλήρης τεχνική προδιαγραφή του έξυπνου ταχογράφου (Συμβάντα, Αστοχίες, δομές δεδομένων).<a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016R0799" rel="noopener" target="_blank">EUR-Lex: 2016/799 / Annex I C (EN)</a>
+    ·
+    <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014R0165" rel="noopener" target="_blank">EUR-Lex: 165/2014 (EN)</a>
+</li>
+<li>
+<strong>VDO DTCO 4.1 — Continental Automotive Technologies</strong>Εγχειρίδιο οδηγιών χρήσης για τον οδηγό, Έκδοση 3 / 2024-08, BA00.1381.41 100 102. Καλύπτει τα DTCO 4.1, 4.1a και 4.1b.<a href="https://www.fleet.vdo.com/media/sqrd5xnt/ba_dtco_41a_en_web_2024-08-27.pdf" rel="noopener" target="_blank">Λήψη PDF (Αγγλικά) — fleet.vdo.com</a>
+</li>
+<li>
+<strong>VDO DTCO 4.0 — Continental Automotive Technologies</strong>Προηγούμενη μονάδα Έξυπνου Ταχογράφου 1, ακόμη σε ευρεία χρήση. Εγχειρίδιο οδηγού, Έκδοση 2 / 2022.<a href="https://www.fleet.vdo.com/media/lvnkmvhq/ba_dtco_40e_web_gb.pdf" rel="noopener" target="_blank">Λήψη PDF (Αγγλικά) — fleet.vdo.com</a>
+</li>
+<li>
+<strong>Stoneridge SE5000 Exakt Duo² — Stoneridge Electronics</strong>Εγχειρίδιο οδηγού &amp; επιχείρησης, Αναθ. 8.x. Μονάδα αναφοράς για τις αγορές του Ηνωμένου Βασιλείου και των Βόρειων χωρών.<a href="https://www.stoneridgeelectronics.com/tachographs/" rel="noopener" target="_blank">Εγχειρίδια — stoneridgeelectronics.com</a>
+</li>
+<li>
+<strong>Actia SmarTach — Actia Group</strong>SmarTach Gen1 και Gen2 εγχειρίδια οδηγών· διαδεδομένα σε γαλλικούς και νοτιοευρωπαϊκούς στόλους.<a href="https://www.actia.com/en/solutions/tachograph/" rel="noopener" target="_blank">Σελίδα προϊόντος — actia.com</a>
+</li>
+<li>
+<strong>Ευρωπαϊκή Επιτροπή — DG MOVE</strong>Επίσημες πληροφορίες σχετικά με την εφαρμογή του έξυπνου ταχογράφου, τις τροποποιήσεις και τις οδηγίες επιβολής.<a href="https://transport.ec.europa.eu/transport-modes/road/social-provisions/smart-tachograph_en" rel="noopener" target="_blank">transport.ec.europa.eu — Έξυπνος ταχογράφος</a>
+</li>
+</ul>
+<!-- ===================================================================== -->
+<!-- RELATED ARTICLES                                                       -->
+<!-- ===================================================================== -->
+<h2 id="related">Σχετικά εγχειρίδια οδηγών</h2>
+<div class="related-grid">
+<a class="related-card" href="/el/arthra/lipsi-analysi-dedomenon-tachografou/">
+<span class="r-eyebrow">Συμμόρφωση · 12 λεπτά ανάγνωσης</span>
+<span class="r-title">Πώς να κάνετε λήψη δεδομένων, ανάλυση και αρχειοθέτηση δεδομένων ταχογράφου</span>
+<span class="r-text">Πλήρης οδηγός για τον κύκλο λήψης δεδομένων κάρτας οδηγού 28 ημερών και της μονάδας οχήματος (VU) 90 ημερών, τους κανόνες αρχειοθέτησης και τι πρέπει να διατηρεί ο στόλος σας στα αρχεία του.</span>
+<span class="r-chip">Διαβάστε τον οδηγό λήψης δεδομένων →</span>
+</a>
+<a class="related-card" href="/el/arthra/ypochreosi-analysis-tachografou-2026/">
+<span class="r-eyebrow">Κανονισμός · 8 λεπτά ανάγνωσης</span>
+<span class="r-title">Ποιος πρέπει να αναλύει δεδομένα ταχογράφου το 2026</span>
+<span class="r-text">Υποχρεώσεις φορέων εκμετάλλευσης βάσει του Κανονισμού 561/2006 και της Οδηγίας για τον Χρόνο Εργασίας — ποιες κατηγορίες μεταφορών εμπίπτουν στο πεδίο εφαρμογής και τι πρέπει να παραδίδεται σε έναν επιθεωρητή.</span>
+<span class="r-chip">Διαβάστε τον οδηγό υποχρεώσεων →</span>
+</a>
+<a class="related-card" href="/el/arthra/tachografos-van-ypochreosi-ioulios-2026/">
+<span class="r-eyebrow">Νέοι κανόνες · 6 λεπτά ανάγνωσης</span>
+<span class="r-title">Ταχογράφοι για ημιφορτηγά: η νέα υποχρέωση από τον Ιούλιο του 2026</span>
+<span class="r-text">Από την 1η Ιουλίου 2026, τα ημιφορτηγά μεταξύ 2,5 και 3,5 τόνων στις διεθνείς μεταφορές πρέπει να φέρουν έξυπνο ταχογράφο. Λίστα ελέγχου φορέα εκμετάλλευσης.</span>
+<span class="r-chip">Διαβάστε τον οδηγό για τα ημιφορτηγά →</span>
+</a>
+</div>
+<!-- ===== second TAGRA CTA Box ===== -->
+<div class="cta-box" style="margin-top:36px;">
+<h3>Μην αποκωδικοποιείτε εκατοντάδες μηνύματα με το χέρι.</h3>
+<p>Η TAGRA διαβάζει κάρτες οδηγού και μονάδες επί οχήματος (VU) από κάθε έξυπνο ταχογράφο της αγοράς, αντιστοιχίζει κάθε συμβάν και αστοχία στον ορισμό του Παραρτήματος I C και παράγει αναφορές έτοιμες για έλεγχο βάσει του EC 561/2006, της WTD και της AETR. 30ήμερη δωρεάν δοκιμή, χωρίς απαίτηση κάρτας, τρέχει σε οποιοδήποτε Windows PC.</p>
+<a class="cta-btn" href="/el/dokimi/?audience=fleet">Ξεκινήστε τη δωρεάν 30ήμερη δοκιμή σας →</a>
+</div>
+<!-- ===================================================================== -->
+<!-- FAQ                                                                    -->
+<!-- ===================================================================== -->
+<h2 id="faq">Συχνές Ερωτήσεις — κωδικοί αστοχιών ταχογράφου και σύμβολα προειδοποίησης</h2>
+<div class="faq-block">
+<details>
+<summary>Ποια είναι η διαφορά μεταξύ ενός "συμβάντος" και μιας "αστοχίας" σε έναν ψηφιακό ταχογράφο;</summary>
+<div class="faq-a">Ένα<strong>συμβάν</strong>είναι ένα λειτουργικό γεγονός — οδήγηση χωρίς κατάλληλη κάρτα, υπέρβαση ταχύτητας, εισαγωγή κάρτας κατά τη διάρκεια της οδήγησης, χρονική επικάλυψη. Η μονάδα λειτουργεί σωστά· καταγράφει κάτι που έκανε ο οδηγός. Μια<strong>αστοχία</strong>είναι δυσλειτουργία υλικού ή λογισμικού του ίδιου του ταχογράφου — αστοχία αισθητήρα, εσωτερική αστοχία VU, χρονική απόκλιση, αστοχία εκτυπωτή. Οι αστοχίες ενεργοποιούν τον νομικό κανόνα των 7 ημερών για συνεργείο. Και οι δύο κατηγορίες ορίζονται από το Παράρτημα I C του Κανονισμού (ΕΕ) 2016/799.</div>
+</details>
+<details>
+<summary>Βλέπω "x Βλάβη δότη" στην οθόνη του VDO μου — μπορώ να συνεχίσω να οδηγώ;</summary>
+<div class="faq-a">Εν συντομία, ναι — για να φτάσετε σε ένα ασφαλές σημείο στάσης. Στη συνέχεια, πρέπει (1) να πατήσετε ΟΚ για επιβεβαίωση, (2) να εκτυπώσετε τις δραστηριότητες της ημέρας, (3) να γράψετε χειρόγραφες καταγραφές κάθε επόμενης δραστηριότητας στο πίσω μέρος της εκτύπωσης αυτής, (4) να ενημερώσετε τον διαχειριστή του στόλου σας και (5) να φτάσετε σε εξουσιοδοτημένο συνεργείο εντός 7 ημερών. Η συνέχιση της οδήγησης χωρίς χειρόγραφες καταγραφές αφού γνωρίζετε για μια αστοχία αισθητήρα αποτελεί σοβαρό παράπτωμα σε κάθε κράτος μέλος της ΕΕ.</div>
+</details>
+<details>
+<summary>Τι σημαίνει "!? GNSS ανωμαλία" σε έναν Έξυπνο Ταχογράφο 2;</summary>
+<div class="faq-a">Οι μονάδες Έξυπνου Ταχογράφου 2 (υποχρεωτικές για οχήματα που ταξινομήθηκαν μετά τις 21 Αυγούστου 2023, με απαιτούμενες αναβαθμίσεις έως τις 18 Αυγούστου 2025) ελέγχουν το σήμα GNSS για παραποίηση χρησιμοποιώντας την υπηρεσία Galileo OSNMA. Ένα<em>Ανωμαλία GNSS</em>συμβάν σημαίνει ότι η μονάδα ανίχνευσε είτε μια απόπειρα χειραγώγησης του σήματος GPS/Galileo είτε ότι το σήμα απέτυχε την πιστοποίηση. Η μονάδα καταγράφει το συμβάν για τον έλεγχο. Εάν επανέλθει σε ένα συγκεκριμένο όχημα, η κεραία και η άμεση καλωδίωση θα πρέπει να ελεγχθούν για παραποίηση — και ενδέχεται να χρειαστούν διαγνωστικά συνεργείου.</div>
+</details>
+<details>
+<summary>Ποια είναι η διαφορά μεταξύ "Εργασία" και "ΕΤΟΙΜΟΤΗΤΑ";</summary>
+<div class="faq-a"><strong>ΕΡΓΑΣΙΑ</strong>είναι αμειβόμενη εργασία που δεν είναι οδήγηση: φόρτωση, εκφόρτωση, ανεφοδιασμός, χαρτοδουλειές, βοήθεια επιβατών, έλεγχοι οχήματος. Μετράει ως χρόνος εργασίας βάσει της WTD και<em>δεν</em>προσμετράται ως διάλειμμα.<strong>ΕΤΟΙΜΟΤΗΤΑ</strong>είναι χρόνος αναμονής του οποίου τη διάρκεια γνωρίζει εκ των προτέρων ο οδηγός — Διάπλους με οχηματαγωγό/διάβαση με τρένο, αναμονή σε γνωστό ραντεβού, συνοδεία οχήματος σε μεταφορέα. Η ΕΤΟΙΜΟΤΗΤΑ δεν είναι εργασία, αλλά επίσης<em>δεν</em>δεν είναι διάλειμμα βάσει των ωρών οδήγησης και μετράει ως χρόνος εργασίας βάσει της WTD.</div>
+</details>
+<details>
+<summary>Μπορεί η «Περίοδος ετοιμότητας» να λογιστεί ως διάλειμμα βάσει του ΕΚ 561/2006;</summary>
+<div class="faq-a">Όχι. Το Παράρτημα 1 του Κανονισμού 561/2006 αναφέρει μόνο μία κατηγορία που μηδενίζει το ρολόι συνεχούς οδήγησης 4½ ωρών και προσμετράται στο υποχρεωτικό διάλειμμα 45 λεπτών: την<em>ΔΙΑΛΕΙΜΜΑ/ΑΝΑΠΑΥΣΗ</em>δραστηριότητα (εικονόγραμμα κρεβατιού). Οι οδηγοί που επιλέγουν «ΕΤΟΙΜΟΤΗΤΑ» ενώ κάνουν αυτό που θεωρούν διάλειμμα δεν λαμβάνουν πίστωση διαλείμματος κατά τη λήψη δεδομένων — και οι επιθεωρητές οδικών ελέγχων εκδίδουν τακτικά πρόστιμα για αυτό.</div>
+</details>
+<details>
+<summary>Τι πρέπει να κάνω αν ξέχασα να αλλάξω σε «Ανάπαυση» κατά τη διάρκεια ενός διαλείμματος;</summary>
+<div class="faq-a">Όταν εισάγετε ξανά την κάρτα σας σε οποιοδήποτε όχημα, ο ταχογράφος προσφέρει μια<strong>μη αυτόματη καταχώριση</strong>διαδικασία για την περίοδο από την τελευταία αφαίρεση της κάρτας σας. Χρησιμοποιήστε το μενού για να ορίσετε τη σωστή δραστηριότητα (Ανάπαυση) για αυτό το διάστημα. Οι μη αυτόματες καταχωρίσεις φέρουν χρονοσφραγίδα στην κάρτα και είναι ορατές στις ελεγκτικές αρχές, αλλά γίνονται δεκτές ως νόμιμη διόρθωση — σε αντίθεση με μια λείπουσα ή λανθασμένη δραστηριότητα που δεν δηλώθηκε ποτέ.</div>
+</details>
+<details>
+<summary>Πόσο συχνά πρέπει να κάνω download την κάρτα οδηγού μου και τη μονάδα οχήματος;</summary>
+<div class="faq-a">Τουλάχιστον κάθε<strong>28 ημέρες</strong>για την κάρτα οδηγού και κάθε<strong>90 ημέρες</strong>για τη μονάδα οχήματος (Άρθρο 33 του Κανονισμού 165/2014, σε συνδυασμό με τον Κανονισμό (ΕΚ) 581/2010 της Επιτροπής). Τα δεδομένα που έχουν γίνει download πρέπει να διατηρούνται για τουλάχιστον ένα έτος — και σε πολλά κράτη μέλη για ολόκληρη την εργασιακή σταδιοδρομία του οδηγού ως μέρος των αρχείων ατυχημάτων/ασφαλίσεων.</div>
+</details>
+<details>
+<summary>Επηρεάζει ένα «σφάλμα επικοινωνίας κάρτας» τα αρχεία μου για τους χρόνους οδήγησης;</summary>
+<div class="faq-a">Όχι απαραίτητα. Τα περισσότερα σφάλματα επικοινωνίας είναι απλώς βρώμικες επαφές τσιπ — η δραστηριότητα που πραγματοποιήθηκε πριν από το σφάλμα βρίσκεται ήδη στη μνήμη της κάρτας. Εάν το σφάλμα είναι σύντομο και διορθωθεί μετά από καθαρισμό και επανεισαγωγή, δεν χάνεται καμία περίοδος. Εάν η κάρτα αρνηθεί να διαβαστεί καθόλου, η μονάδα θα εκτυπώσει την τελευταία δραστηριότητα αυτόματα και πρέπει να καταγράψετε χειροκίνητα τα πάντα από εκείνο το σημείο και μετά, και η κάρτα πρέπει να αντικατασταθεί.</div>
+</details>
+<details>
+<summary>Η οθόνη εμφανίζει «απαιτείται καταχώριση χώρας» — τι πρέπει να κάνω;</summary>
+<div class="faq-a">Οι έξυπνοι ταχογράφοι απαιτούν να δηλώσετε τη χώρα στην οποία ξεκινά και τελειώνει η βάρδια. Με τον Έξυπνο Ταχογράφο 2, η μονάδα σας ζητά επίσης να επιβεβαιώσετε κάθε διέλευση συνόρων (το GNSS εντοπίζει τη διέλευση, ο οδηγός πατά OK για επιβεβαίωση). Χρησιμοποιήστε το μενού:<em>καταχώριση → οδηγός 1 → χώρα έναρξης</em>(και<em>χώρα λήξης</em>στο τέλος της βάρδιας). Οι χαμένες καταχωρίσεις χώρας καταγράφονται ως συμβάντα και είναι ορατές στις ελεγκτικές αρχές στον δρόμο.</div>
+</details>
+<details>
+<summary>Υποστηρίζει το TAGRA όλους τους τέσσερις κωδικούς αστοχιών κατασκευαστή που εμφανίζονται σε αυτόν τον οδηγό;</summary>
+<div class="faq-a">Ναι. Το TAGRA διαβάζει τα συμβάντα και τις αστοχίες του Παραρτήματος I Γ απευθείας από οποιοδήποτε τηλεφορτωμένο αρχείο .DDD — η μορφή δεδομένων είναι πανομοιότυπη ανεξάρτητα από τη μονάδα που την έγραψε. Τα αναδυόμενα μηνύματα συγκεκριμένων κατασκευαστών αντιστοιχίζονται στο υποκείμενο συμβάν του Παραρτήματος I Γ ώστε οι διαχειριστές στόλου να βλέπουν συνεπείς, απλές εξηγήσεις στα αγγλικά είτε οι οδηγοί τους χρησιμοποιούν VDO, Stoneridge, Actia, EFAS ή οποιονδήποτε άλλο εγκεκριμένο έξυπνο ταχογράφο.</div>
+</details>
+<details>
+<summary>Τι απαιτεί στην πραγματικότητα ο επίσημος κανόνας των 7 ημερών για τα συνεργεία;</summary>
+<div class="faq-a">Το Άρθρο 37 του Κανονισμού 165/2014 απαιτεί ότι, όταν ο ταχογράφος δεν μπορεί να καταγράψει σωστά τις δραστηριότητες λόγω αστοχίας, ο μεταφορέας πρέπει να τον επισκευάσει από εγκεκριμένο τεχνικό ή συνεργείο «μόλις το επιτρέψουν οι περιστάσεις» — ερμηνεύεται στην πράξη ως εντός<strong>επτά ημερολογιακών ημερών</strong>εάν το όχημα μπορεί να επιστρέψει στη βάση του, ή αμέσως μετά την επιστροφή εάν βρίσκεται σε ένα μακρύτερο διεθνές ταξίδι. Ο οδηγός πρέπει να τηρεί χειρόγραφες καταγραφές καθ' όλη τη διάρκεια αυτής της περιόδου.</div>
+</details>
+<details>
+<summary>Μπορώ να συνεχίσω την οδήγηση με καταγεγραμμένο το συμβάν «Υπέρβαση ταχύτητας»;</summary>
+<div class="faq-a">Ναι — η υπέρβαση ταχύτητας είναι ένα συμβάν, όχι μια αστοχία. Το όχημα συνεχίζει να καταγράφει σωστά· μόνο το όριο ταχύτητας έχει ξεπεραστεί. Το συμβάν είναι ορατό κατά τη λήψη δεδομένων, και οι επανειλημμένες καταγραφές υπέρβασης ταχύτητας στο ίδιο ταξίδι ή σε πολλαπλά ταξίδια αποτελούν συχνό έναυσμα για ελέγχους των μεταφορικών εταιρειών και έρευνες στην άκρη του δρόμου.</div>
+</details>
+<details>
+<summary>Η οθόνη VDO μου δείχνει έναν αριθμό όπως 80, 82 ή 98 — τι σημαίνει;</summary>
+<div class="faq-a">Στο DTCO 4.0 / 4.1 ένας διψήφιος αριθμός δίπλα στο εικονόγραμμα προσδιορίζει το συμβάν ή την αστοχία. Οι χαμηλοί αριθμοί (001–066) είναι κωδικοί μνήμης αστοχιών συνεργείου· οι υψηλοί αριθμοί ανήκουν στις λειτουργίες του έξυπνου ταχογράφου. Οι πιο συνηθισμένοι είναι<strong>80 — Αντικρουόμενη κίνηση οχήματος</strong>(ο αισθητήρας κίνησης διαφωνεί με το σήμα GNSS· ένα σοβαρό μήνυμα — επισκεφθείτε ένα εξουσιοδοτημένο συνεργείο),<strong>82 — Εσωτερική βλάβη GNSS</strong>(ο δέκτης προσωρινά δεν μπορεί να καθορίσει θέση· αναγνωρίστε και επισκεφθείτε ένα συνεργείο αν επιμείνει) και<strong>98 — αστοχία ITS / Bluetooth</strong>(η διεπαφή απομακρυσμένων δεδομένων· δεν επηρεάζει την καταγραφή, επιδιορθώστε στην επόμενη συντήρηση). Η πλήρης λίστα 34–98 βρίσκεται στην ενότητα VDO παραπάνω.</div>
+</details>
+<details>
+<summary>Τι σημαίνει «Αντικρουόμενη κίνηση οχήματος» (κωδικός 80) και μπορώ να συνεχίσω την οδήγηση;</summary>
+<div class="faq-a">Ο κωδικός 80 είναι μια<em>Αντικρουόμενη κίνηση οχήματος</em>: ο ταχογράφος εντόπισε αντίφαση μεταξύ του αισθητήρα κίνησης και μιας ανεξάρτητης πηγής (GNSS). Μια συχνή αβλαβής αιτία είναι η παράλειψη ρύθμισης της λειτουργίας διάπλου με οχηματαγωγό/διάβασης με τρένο κατά τη μεταφορά. Εάν εμφανιστεί σε κανονική οδήγηση, μπορεί να υποδηλώνει παραποίηση ή βλάβη καλωδίωσης — αναγνωρίστε το μήνυμα, κρατήστε χειροκίνητα αρχεία και ζητήστε από ένα εξουσιοδοτημένο συνεργείο να επιθεωρήσει τη μονάδα.</div>
+</details>
+<details>
+<summary>Πώς αναζητώ έναν αριθμητικό ή δεκαεξαδικό κωδικό αστοχίας από μια ανάγνωση συνεργείου;</summary>
+<div class="faq-a">Χρησιμοποιήστε το πλαίσιο αναζήτησης στο πάνω μέρος της ενότητας κωδικών κατασκευαστή: πληκτρολογήστε τον αριθμό (π.χ.,<em>042</em>)<em>82</em>, έναν αριθμό οθόνης VDO (π.χ.,<em>002E80</em>) ή οποιεσδήποτε λέξεις από το μήνυμα (π.χ.,<em>Αστοχία αισθητήρα</em>). Ο σχετικός πίνακας κατασκευαστή ανοίγει αυτόματα και εμφανίζει μόνο τις αντίστοιχες γραμμές.</div>
+</details>
+</div><!-- /.faq-block -->
+</article>
+</div>
+</main>
+<footer class="site-footer" role="contentinfo">
+<div class="footer-inner">
+<div>
+<div class="footer-logo"><img alt="TAGRA" height="32" src="/assets/img/logo-dark.svg?v=20260513zh" width="140"/></div>
+<p class="footer-desc">Επαγγελματικό λογισμικό ανάλυσης ταχογράφου. Λήψη δεδομένων κάρτας οδηγού, ανάλυση ψηφιακού ταχογράφου, ώρες οδήγησης στην ΕΕ και Οδηγία για τον Χρόνο Εργασίας των οδηγών βαρέων οχημάτων. Αναπτύχθηκε από την Truck Data Technology, s.r.o.</p>
+</div>
+<div class="footer-col">
+<h4>Προϊόν</h4>
+<ul>
+<li><a href="/el/stolos/">Για διαχειριστές στόλου</a></li>
+<li><a href="/el/odigoi/">Για επαγγελματίες οδηγούς</a></li>
+<li><a href="/el/eleghos/">Για ελεγκτικές αρχές</a></li>
+<li><a href="/el/pos-leitourgei/">Πώς λειτουργεί</a></li>
+<li><a href="/el/gia-poion/">Για ποιον</a></li>
+<li><a href="/el/faq/">Συχνές ερωτήσεις</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h4>Πόροι</h4>
+<ul>
+<li><a href="/el/arthra/">Άρθρα</a></li><li><a href="/el/egcheiridia/">Εγχειρίδια</a></li>
+<li><a href="/el/arthra/symvola-tachografou/">Εικονόγραμμα ταχογράφου</a></li>
+<li><a href="/el/ensomatoseis/dkv-live/">DKV LIVE®</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h4>Εταιρεία</h4>
+<ul>
+<li><a href="/el/epikoinonia/">Επικοινωνία</a></li>
+<li><a href="https://www.tdt.cz" rel="noopener" target="_blank">Truck Data Technology</a></li>
+<li><a href="/de/">Deutsch</a></li>
+<li><a href="/pl/">Polski</a></li>
+</ul>
+</div>
+</div>
+<div class="footer-bottom">
+<span>© 2026 Truck Data Technology, s.r.o. Με την επιφύλαξη παντός δικαιώματος.</span>
+<span><a href="/el/epikoinonia/">Επικοινωνία</a> · <a href="https://www.tdt.cz" rel="noopener" target="_blank">tdt.cz</a></span>
+</div>
+</footer>
+<script>(function(){var bar=document.getElementById('scroll-progress');if(bar)window.addEventListener('scroll',function(){var t=document.documentElement.scrollTop||document.body.scrollTop;var h=document.documentElement.scrollHeight-document.documentElement.clientHeight;bar.style.width=(t/h*100)+'%';},{passive:true});var toggle=document.getElementById('nav-toggle'),links=document.getElementById('nav-links');if(toggle&&links)toggle.addEventListener('click',function(){var o=links.classList.toggle('open');toggle.setAttribute('aria-expanded',o);});})();</script>
+<script>
+(function(){
+  var input=document.getElementById('dec-search-input');
+  var clearBtn=document.getElementById('dec-search-clear');
+  var count=document.getElementById('dec-count');
+  var chips=Array.prototype.slice.call(document.querySelectorAll('.dec-chip'));
+  var vendors=Array.prototype.slice.call(document.querySelectorAll('details.vendor'));
+  if(!input||!vendors.length)return;
+  vendors.forEach(function(v){v._defaultOpen=v.hasAttribute('open');});
+  var activeVendor='all';
+  function apply(){
+    var q=(input.value||'').trim().toLowerCase();
+    var total=0;
+    vendors.forEach(function(v){
+      var scoped=(activeVendor==='all'||activeVendor===v.id);
+      if(!scoped){v.classList.add('dec-hidden');return;}
+      v.classList.remove('dec-hidden');
+      var rows=v.querySelectorAll('.code-table tbody tr');
+      var hits=0;
+      Array.prototype.forEach.call(rows,function(r){
+        var m=(q===''||r.textContent.toLowerCase().indexOf(q)!==-1);
+        if(m){r.classList.remove('dec-hidden');hits++;}else{r.classList.add('dec-hidden');}
+      });
+      total+=hits;
+      var body=v.querySelector('.vendor-body');
+      var note=v.querySelector('.dec-nohit');
+      if(q!==''&&hits===0){
+        if(!note&&body){note=document.createElement('p');note.className='dec-nohit';note.textContent='No matching rows in this manufacturer.';body.appendChild(note);}
+        if(note)note.style.display='';
+      } else if(note){note.style.display='none';}
+      if(q!==''||activeVendor!=='all'){v.open=hits>0;}else{v.open=v._defaultOpen;}
+    });
+    if(q===''&&activeVendor==='all'){count.textContent='';}
+    else{count.textContent=total+(total===1?' match':' matches')+(activeVendor!=='all'?' \u00b7 '+activeVendor.toUpperCase():'');}
+  }
+  input.addEventListener('input',apply);
+  clearBtn.addEventListener('click',function(){input.value='';apply();input.focus();});
+  chips.forEach(function(c){c.addEventListener('click',function(){
+    var v=c.getAttribute('data-vendor');
+    if(v==='symbols'){var s=document.getElementById('activity-symbols');if(s)s.scrollIntoView({behavior:'smooth'});return;}
+    chips.forEach(function(x){x.classList.toggle('is-active',x===c&&v!=='symbols');});
+    activeVendor=v;apply();
+    var firstVisible=vendors.filter(function(x){return !x.classList.contains('dec-hidden');})[0];
+    if(firstVisible&&v!=='all')firstVisible.scrollIntoView({behavior:'smooth',block:'start'});
+  });});
+})();
+</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Κωδικοί αστοχιών και εικονογράμματα ταχογράφου: τι σημαίνουν και πώς να τα επιδιορθώσετε",
+  "description": "Πλήρης οδηγός οδηγού για τους κωδικούς αστοχιών και τα προειδοποιητικά εικονόγραμμα ψηφιακού ταχογράφου. Εικονίδια δραστηριοτήτων, προειδοποιητικά αναδυόμενα παράθυρα, VDO DTCO 4.1 / Stoneridge SE5000 / Actia / EFAS-4 κωδικοί αστοχιών, τι σημαίνει κάθε αστοχία και τι ακριβώς πρέπει να κάνετε.",
+  "image": "https://tagra.app/assets/img/og/digital-tachograph-symbols.jpg",
+  "author": {
+    "@type": "Organization",
+    "name": "Truck Data Technology, s.r.o.",
+    "url": "https://www.tdt.cz"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Truck Data Technology, s.r.o.",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://tagra.app/assets/img/logo.svg"
+    }
+  },
+  "datePublished": "2025-09-01",
+  "dateModified": "2026-08-12",
+  "inLanguage": "en",
+  "mainEntityOfPage": "https://tagra.app/articles/digital-tachograph-symbols/",
+  "articleSection": "Βάση γνώσεων οδηγού",
+  "wordCount": 9600,
+  "keywords": "tachograph fault codes, tachograph warning symbols, digital tachograph error codes, VDO DTCO error codes, Stoneridge SE5000 errors, Actia SmarTach faults, EFAS-4 faults, Annex 1C events, smart tachograph GNSS fault, drivers hours, Regulation 165/2014"
+}</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Ποια είναι η διαφορά μεταξύ συμβάντος και αστοχίας σε έναν ψηφιακό ταχογράφο;",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ένα συμβάν είναι ένα λειτουργικό γεγονός — Οδήγηση χωρίς κατάλληλη κάρτα, Υπέρβαση ταχύτητας, Εισαγωγή κάρτας κατά τη διάρκεια της οδήγησης, Χρονική επικάλυψη. Η μονάδα λειτουργεί σωστά. Καταγράφει κάτι που έκανε ο οδηγός. Μια αστοχία είναι μια δυσλειτουργία υλικού ή λογισμικού του ίδιου του ταχογράφου — Αστοχία αισθητήρα, Εσωτερική αστοχία VU, Χρονική απόκλιση, Αστοχία εκτυπωτή. Οι αστοχίες ενεργοποιούν τον νόμιμο κανόνα των 7 ημερών για συνεργείο. Και οι δύο κατηγορίες ορίζονται από το Παράρτημα I Γ του Κανονισμού (ΕΕ) 2016/799."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Βλέπω βλάβη δότη στην οθόνη του VDO μου — μπορώ να συνεχίσω την οδήγηση;",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Εν ολίγοις, ναι — για να φτάσετε σε ένα ασφαλές μέρος στάσης. Στη συνέχεια πρέπει να αναγνωρίσετε το μήνυμα, να εκτυπώσετε τις δραστηριότητες της ημέρας, να καταγράψετε χειροκίνητα κάθε περαιτέρω δραστηριότητα στο πίσω μέρος αυτής της εκτύπωσης, να ενημερώσετε τον διαχειριστή του στόλου σας και να φτάσετε σε ένα εξουσιοδοτημένο συνεργείο εντός 7 ημερών. Η συνέχιση της οδήγησης χωρίς χειροκίνητες καταγραφές, μόλις γνωρίζετε για Αστοχία αισθητήρα, είναι σοβαρό αδίκημα σε κάθε κράτος μέλος της ΕΕ."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Τι σημαίνει GNSS ανωμαλία σε έναν Έξυπνο Ταχογράφο 2;",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Οι μονάδες Έξυπνου Ταχογράφου 2 ελέγχουν το σήμα GNSS για απόπειρα παραβίασης χρησιμοποιώντας την υπηρεσία Galileo OSNMA. Ένα συμβάν Ανωμαλία GNSS σημαίνει ότι η μονάδα ανίχνευσε είτε απόπειρα χειραγώγησης του σήματος GPS/Galileo είτε ότι το σήμα απέτυχε την πιστοποίηση. Η μονάδα καταγράφει το συμβάν για τον έλεγχο. Εάν επανεμφανιστεί σε ένα συγκεκριμένο όχημα, η κεραία και η άμεση καλωδίωση θα πρέπει να ελεγχθούν για απόπειρα παραβίασης."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Ποια είναι η διαφορά μεταξύ Άλλης εργασίας και Περιόδου ετοιμότητας;",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Άλλη εργασία είναι αμειβόμενη εργασία που δεν είναι οδήγηση: φόρτωση, εκφόρτωση, ανεφοδιασμός καυσίμων, εργασίες γραφείου, βοήθεια επιβατών, έλεγχοι οχήματος. Η Περίοδος ετοιμότητας είναι χρόνος αναμονής του οποίου τη διάρκεια ο οδηγός γνωρίζει εκ των προτέρων — Διάπλους με οχηματαγωγό/διάβαση με τρένο, αναμονή σε προκαθορισμένο ραντεβού. Η Περίοδος ετοιμότητας δεν είναι εργασία, αλλά ούτε διάλειμμα σύμφωνα με τους χρόνους οδήγησης και ανάπαυσης."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Μπορεί η Περίοδος ετοιμότητας να υπολογιστεί ως διάλειμμα σύμφωνα με τον Κανονισμό ΕΚ 561/2006;",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Όχι. Το Παράρτημα 1 του Κανονισμού 561/2006 αναφέρει μόνο μία κατηγορία που μηδενίζει το ρολόι συνεχούς οδήγησης 4,5 ωρών και υπολογίζεται στο υποχρεωτικό διάλειμμα των 45 λεπτών: την δραστηριότητα BREAK/REST. Οι οδηγοί που επιλέγουν ΕΤΟΙΜΟΤΗΤΑ ενώ κάνουν διάλειμμα δεν λαμβάνουν πίστωση διαλείμματος κατά τη λήψη δεδομένων."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Τι πρέπει να κάνω αν ξέχασα να αλλάξω σε Ανάπαυση κατά τη διάρκεια ενός διαλείμματος;",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Όταν εισαγάγετε την κάρτα σας ξανά σε οποιοδήποτε όχημα, ο ταχογράφος προσφέρει μια διαδικασία μη αυτόματης καταχώρισης για την περίοδο από την τελευταία αφαίρεση της κάρτας σας. Χρησιμοποιήστε το μενού για να ορίσετε τη σωστή δραστηριότητα για αυτό το διάστημα. Οι μη αυτόματες καταχωρίσεις φέρουν χρονική σήμανση στην κάρτα και γίνονται δεκτές ως νόμιμη διόρθωση."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Πόσο συχνά πρέπει να κάνω download την κάρτα οδηγού μου και τη μονάδα οχήματος;",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Τουλάχιστον κάθε 28 ημέρες για την κάρτα οδηγού και κάθε 90 ημέρες για τη μονάδα οχήματος (άρθρο 33 του Κανονισμού 165/2014, σε συνδυασμό με τον Κανονισμό (ΕΚ) αριθ. 581/2010 της Επιτροπής). Τα δεδομένα που έχουν ληφθεί πρέπει να διατηρούνται για τουλάχιστον ένα έτος."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Επηρεάζει ένα σφάλμα επικοινωνίας κάρτας τα αρχεία των χρόνων οδήγησής μου;",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Όχι απαραίτητα. Τα περισσότερα σφάλματα επικοινωνίας είναι απλώς βρώμικες επαφές του τσιπ — η δραστηριότητα που πραγματοποιήθηκε πριν από το σφάλμα βρίσκεται ήδη στη μνήμη της κάρτας. Εάν το σφάλμα είναι σύντομο και διορθωθεί μετά από καθαρισμό και επανεισαγωγή, δεν χάνεται καμία περίοδος. Εάν η κάρτα αρνείται να διαβαστεί καθόλου, η μονάδα θα εκτυπώσει αυτόματα την τελευταία δραστηριότητα."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Η οθόνη λέει ότι απαιτείται καταχώριση χώρας — τι πρέπει να κάνω;",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Οι έξυπνοι ταχογράφοι απαιτούν να δηλώσετε τη χώρα στην οποία ξεκινά και τελειώνει η βάρδια. Με τον Έξυπνο Ταχογράφο 2, η μονάδα σας ζητά επίσης να επιβεβαιώνετε κάθε διέλευση συνόρων. Χρησιμοποιήστε το μενού: καταχώριση → οδηγός 1 → αρχική χώρα στην έναρξη και τελική χώρα στο τέλος της βάρδιας."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Υποστηρίζει το TAGRA όλους τους τέσσερις κωδικούς αστοχιών κατασκευαστή που εμφανίζονται σε αυτόν τον οδηγό;",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ναι. Το TAGRA διαβάζει τα συμβάντα και τις αστοχίες του Παραρτήματος I Γ απευθείας από οποιοδήποτε αρχείο .DDD που έχει γίνει λήψη δεδομένων — η μορφή δεδομένων είναι ίδια ανεξάρτητα από τη μονάδα που το έγραψε. Τα αναδυόμενα μηνύματα ειδικά για τον κατασκευαστή αντιστοιχίζονται στο υποκείμενο συμβάν του Παραρτήματος I Γ."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Τι απαιτεί στην πραγματικότητα ο επίσημος κανόνας των 7 ημερών για τα συνεργεία;",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Το άρθρο 37 του Κανονισμού 165/2014 απαιτεί, όταν ο ταχογράφος δεν μπορεί να καταγράψει σωστά τις δραστηριότητες λόγω αστοχίας, ο επιχειρηματίας να τον επισκευάσει από εγκεκριμένο συνεργείο μόλις το επιτρέψουν οι περιστάσεις — στην πράξη ερμηνεύεται εντός επτά ημερολογιακών ημερών εάν το όχημα μπορεί να επιστρέψει στη βάση."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Μπορώ να συνεχίσω να οδηγώ με καταγεγραμμένο το συμβάν υπέρβασης ταχύτητας;",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ναι — η υπέρβαση ταχύτητας είναι συμβάν, όχι αστοχία. Το όχημα συνεχίζει να καταγράφει σωστά· μόνο το όριο ταχύτητας έχει ξεπεραστεί. Το συμβάν είναι ορατό στη λήψη δεδομένων και οι επαναλαμβανόμενες καταγραφές υπέρβασης ταχύτητας αποτελούν συνήθη αιτία για ελέγχους των μεταφορικών εταιρειών και επιτόπιες έρευνες."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Η οθόνη VDO μου δείχνει έναν αριθμό όπως 80, 82 ή 98 — τι σημαίνει;",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Στους DTCO 4.0/4.1 ένας διψήφιος αριθμός δίπλα στο εικονόγραμμα προσδιορίζει το συμβάν ή την αστοχία. Οι χαμηλοί αριθμοί (001–066) είναι κωδικοί αστοχίας μνήμης συνεργείου. οι υψηλοί αριθμοί ανήκουν σε λειτουργίες έξυπνου ταχογράφου. Οι πιο συνηθισμένοι είναι 80 — Αντικρουόμενη κίνηση οχήματος (ο αισθητήρας κίνησης διαφωνεί με το σήμα GNSS· επισκεφθείτε ένα εξουσιοδοτημένο συνεργείο), 82 — Εσωτερική αστοχία GNSS (ο δέκτης δεν μπορεί προσωρινά να προσδιορίσει θέση) και 98 — αστοχία ITS/Bluetooth (η διεπαφή απομακρυσμένων δεδομένων· χωρίς επίδραση στην καταγραφή)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Τι σημαίνει Αντικρουόμενη κίνηση οχήματος (κωδικός 80) και μπορώ να συνεχίσω να οδηγώ;",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ο κωδικός 80 είναι Αντικρουόμενη κίνηση οχήματος: ο ταχογράφος ανίχνευσε αντίφαση μεταξύ του αισθητήρα κίνησης και μιας ανεξάρτητης πηγής (GNSS). Μια συχνή αβλαβής αιτία είναι η παράλειψη ρύθμισης της λειτουργίας Διάπλους με οχηματαγωγό/διάβαση με τρένο κατά τη μεταφορά. Εάν εμφανίζεται κατά την κανονική οδήγηση, μπορεί να υποδηλώνει χειρισμό ή αστοχία καλωδίωσης — αναγνωρίστε το μήνυμα, κρατήστε μη αυτόματα αρχεία και ζητήστε από ένα εξουσιοδοτημένο συνεργείο να επιθεωρήσει τη μονάδα."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Πώς αναζητώ έναν αριθμητικό ή δεκαεξαδικό κωδικό αστοχίας από μια ανάγνωση συνεργείου;",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Χρησιμοποιήστε το πλαίσιο αναζήτησης στην κορυφή της ενότητας κωδικών κατασκευαστή: πληκτρολογήστε τον αριθμό (π.χ. 042), έναν αριθμό οθόνης VDO (π.χ. 82), έναν δεκαεξαδικό DTC Stoneridge ή EFAS (π.χ. 002E80) ή οποιεσδήποτε λέξεις από το μήνυμα (π.χ. αστοχία αισθητήρα). Ο σχετικός πίνακας κατασκευαστή ανοίγει αυτόματα και εμφανίζει μόνο τις αντίστοιχες γραμμές."
+      }
+    }
+  ]
+}</script>
+</body>
+</html>

@@ -106,7 +106,7 @@
 
     /* ─── NAV ───────────────────────────────────────────────────────── */
 .nav-inner { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; height: 100%; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
-    .nav-logo { font-size: 22px; font-weight: 900; letter-spacing: -.02em; background: linear-gradient(90deg, var(--blue-dark), var(--blue-mid)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent; text-decoration: none; flex-shrink: 0; }
+    .nav-logo { display: flex; align-items: center; gap: 8px; text-decoration: none; flex-shrink: 0; }
     .nav-links { display: flex; align-items: center; gap: 4px; list-style: none; }
     .nav-links li a { font-size: 15px; font-weight: 500; color: var(--text); padding: 8px 12px; border-radius: 8px; transition: background .15s, color .15s; text-decoration: none; }
     .nav-links li a:hover { background: var(--bg-apple-solid); color: var(--blue-mid); }
@@ -281,10 +281,10 @@
 <div class="nav-inner">
 <a aria-label="TAGRA Trucker – Αρχική" class="nav-logo" href="/el/"><img alt="TAGRA" height="32" src="/assets/img/logo-light.svg?v=20260513zh" style="display:block;height:32px;width:auto;" width="140"/><span class="nav-logo-variant">Trucker</span></a>
 <ul class="nav-links">
-<li><a href="/fleet/">Για εταιρείες</a></li>
-<li><a aria-current="page" href="/driver/">Για οδηγούς</a></li>
+<li><a href="/el/stolos/">Για εταιρείες</a></li>
+<li><a aria-current="page" href="/el/odigoi/">Για οδηγούς</a></li>
 <li><a href="/el/eleghos/">Ελεγκτικές αρχές</a></li>
-<li><a href="/articles/">Άρθρα</a></li><li><a href="/manuals/">Εγχειρίδια</a></li>
+<li><a href="/el/arthra/">Άρθρα</a></li><li><a href="/el/egcheiridia/">Εγχειρίδια</a></li>
 <li><a href="/el/faq/">Συχνές ερωτήσεις</a></li>
 <li><a href="/el/epikoinonia/">Επικοινωνία</a></li>
 <li class="nav-cta-li"><a class="nav-cta" href="/el/dokimi/?audience=driver">Δοκιμάστε δωρεάν για 30 ημέρες</a></li>
@@ -292,13 +292,7 @@
 <details class="nav-lang">
 <summary aria-label="Language: EL">EL</summary>
 <div class="nav-lang-menu" role="menu">
-<a href="/driver/">English</a>
-<a href="/de/">Deutsch</a>
-<a href="/pl/">Polski</a>
-<a href="/el/odigoi/" class="active" aria-current="page" hreflang="el">Ελληνικά</a>
-<a href="https://www.tdt.cz/" hreflang="cs" rel="noopener" target="_blank">Čeština</a>
-<a href="https://www.tdt.sk/" hreflang="sk" rel="noopener" target="_blank">Slovenčina</a>
-</div>
+<a href="/" hreflang="en">English</a><a href="/de/" hreflang="de">Deutsch</a><a href="/pl/" hreflang="pl">Polski</a><a aria-current="page" class="active" href="/el/" hreflang="el">Ελληνικά</a><a href="/hu/" hreflang="hu">Magyar</a><a href="https://www.tdt.cz/" hreflang="cs" rel="noopener" target="_blank">Čeština</a><a href="https://www.tdt.sk/" hreflang="sk" rel="noopener" target="_blank">Slovenčina</a></div>
 </details>
 <a class="nav-cta-mobile" href="/el/dokimi/?audience=driver">Δοκιμάστε δωρεάν</a>
 <button aria-expanded="false" aria-label="Εναλλαγή μενού" class="nav-mobile-toggle" id="nav-toggle">
@@ -441,8 +435,8 @@
 <div class="note-title">Η υποχρέωση λήψης βαρύνει την επιχείρηση μεταφορών — όχι τον οδηγό</div>
 <p>Σύμφωνα με τη νομοθεσία της ΕΕ, η υποχρέωση λήψης δεδομένων ταχογράφου βαρύνει την<strong>επιχείρηση μεταφορών</strong>— τον μεταφορέα ή την εταιρεία που εκμεταλλεύεται το όχημα (Κανονισμός (ΕΕ) αριθ. 165/2014, Άρθρο 33). Τα μέγιστα διαστήματα είναι<strong>τουλάχιστον κάθε 28 ημέρες για την κάρτα οδηγού</strong>και<strong>τουλάχιστον κάθε 90 ημέρες για τη μονάδα οχήματος</strong>(Κανονισμός (ΕΕ) αριθ. 581/2010 της Επιτροπής).</p>
 <p><strong>Εάν οδηγείτε για εργοδότη</strong>, η υποχρέωση βαρύνει αυτούς — αλλά εξακολουθείτε να επωφελείστε από τη διατήρηση των δικών σας αντιγράφων.<strong>TAGRA Trucker</strong>κατεβάζει και αρχειοθετεί τα δεδομένα της κάρτας οδηγού σας, ώστε να μπορείτε να ελέγχετε το δικό σας ωράριο οδηγών και να έχετε τα αρχεία σας έτοιμα αν αλλάξετε ποτέ εργοδότη.</p>
-<p><strong>Εάν είστε αυτοαπασχολούμενος οδηγός ή ιδιοκτήτης-οδηγός</strong>, είστε επίσης η επιχείρηση μεταφορών — οπότε είστε νομικά υποχρεωμένος να κάνετε λήψη δεδομένων κάρτας οδηγού<em>και</em>δεδομένων μονάδας οχήματος. Για αυτό χρειάζεστε τουλάχιστον<a href="/fleet/" style="color:var(--blue-mid);font-weight:600">TAGRA 1</a>, το οποίο χειρίζεται τόσο λήψεις από κάρτα οδηγού όσο και από μονάδα οχήματος για ένα όχημα. Το TAGRA Trucker από μόνο του δεν επαρκεί σε αυτή την περίπτωση.</p>
-<p style="margin-bottom:0;font-size:15px"><strong>Νέος εδώ;</strong>Διαβάστε τον οδηγό αναφοράς μας σχετικά με<a href="/articles/digital-tachograph-symbols/">σύμβολα ταχογράφου και την σημασία τους</a>— τα τέσσερα εικονίδια δραστηριότητας που πρέπει να γνωρίζει κάθε οδηγός.</p>
+<p><strong>Εάν είστε αυτοαπασχολούμενος οδηγός ή ιδιοκτήτης-οδηγός</strong>, είστε επίσης η επιχείρηση μεταφορών — οπότε είστε νομικά υποχρεωμένος να κάνετε λήψη δεδομένων κάρτας οδηγού<em>και</em>δεδομένων μονάδας οχήματος. Για αυτό χρειάζεστε τουλάχιστον<a href="/el/stolos/" style="color:var(--blue-mid);font-weight:600">TAGRA 1</a>, το οποίο χειρίζεται τόσο λήψεις από κάρτα οδηγού όσο και από μονάδα οχήματος για ένα όχημα. Το TAGRA Trucker από μόνο του δεν επαρκεί σε αυτή την περίπτωση.</p>
+<p style="margin-bottom:0;font-size:15px"><strong>Νέος εδώ;</strong>Διαβάστε τον οδηγό αναφοράς μας σχετικά με<a href="/el/arthra/symvola-tachografou/">σύμβολα ταχογράφου και την σημασία τους</a>— τα τέσσερα εικονίδια δραστηριότητας που πρέπει να γνωρίζει κάθε οδηγός.</p>
 </div>
 </div>
 </section>
@@ -500,7 +494,7 @@
 </details>
 <details>
 <summary>Πόσο συχνά πρέπει να κατεβάζω την κάρτα μου;</summary>
-<div class="faq-a"><p>Σύμφωνα με τη νομοθεσία της ΕΕ, η νομική υποχρέωση λήψης δεδομένων ταχογράφου βαρύνει την<strong>επιχείρηση μεταφορών</strong>(Κανονισμός (ΕΕ) αριθ. 165/2014, Άρθρο 33), όχι τον οδηγό. Τα μέγιστα διαστήματα είναι τουλάχιστον κάθε<strong>28 ημέρες για την κάρτα οδηγού</strong>και τουλάχιστον κάθε<strong>90 ημέρες για τη μονάδα οχήματος</strong>(Κανονισμός (ΕΕ) αριθ. 581/2010 της Επιτροπής).</p><p style="margin-top:10px"><strong>Ως μισθωτός οδηγός</strong>, η υποχρέωση βαρύνει τον εργοδότη σας — αλλά η λήψη της δικής σας κάρτας με το TAGRA Trucker εξακολουθεί να σας βοηθά να παραμένετε ενήμεροι για το ωράριο οδήγησής σας και να τηρείτε προσωπικά αρχεία.</p><p style="margin-top:10px"><strong>Ως αυτοαπασχολούμενος οδηγός ή ιδιοκτήτης-οδηγός</strong>, είστε η επιχείρηση μεταφορών, άρα η υποχρέωση βαρύνει εσάς σε αυτόν τον ρόλο — και χρειάζεστε μια λύση που να χειρίζεται τη λήψη τόσο της κάρτας οδηγού όσο και της μονάδας οχήματος. Σε αυτή την περίπτωση,<a href="/fleet/">TAGRA 1</a>είναι η ελάχιστη βαθμίδα· το TAGRA Trucker από μόνο του καλύπτει μόνο την κάρτα οδηγού.</p></div>
+<div class="faq-a"><p>Σύμφωνα με τη νομοθεσία της ΕΕ, η νομική υποχρέωση λήψης δεδομένων ταχογράφου βαρύνει την<strong>επιχείρηση μεταφορών</strong>(Κανονισμός (ΕΕ) αριθ. 165/2014, Άρθρο 33), όχι τον οδηγό. Τα μέγιστα διαστήματα είναι τουλάχιστον κάθε<strong>28 ημέρες για την κάρτα οδηγού</strong>και τουλάχιστον κάθε<strong>90 ημέρες για τη μονάδα οχήματος</strong>(Κανονισμός (ΕΕ) αριθ. 581/2010 της Επιτροπής).</p><p style="margin-top:10px"><strong>Ως μισθωτός οδηγός</strong>, η υποχρέωση βαρύνει τον εργοδότη σας — αλλά η λήψη της δικής σας κάρτας με το TAGRA Trucker εξακολουθεί να σας βοηθά να παραμένετε ενήμεροι για το ωράριο οδήγησής σας και να τηρείτε προσωπικά αρχεία.</p><p style="margin-top:10px"><strong>Ως αυτοαπασχολούμενος οδηγός ή ιδιοκτήτης-οδηγός</strong>, είστε η επιχείρηση μεταφορών, άρα η υποχρέωση βαρύνει εσάς σε αυτόν τον ρόλο — και χρειάζεστε μια λύση που να χειρίζεται τη λήψη τόσο της κάρτας οδηγού όσο και της μονάδας οχήματος. Σε αυτή την περίπτωση,<a href="/el/stolos/">TAGRA 1</a>είναι η ελάχιστη βαθμίδα· το TAGRA Trucker από μόνο του καλύπτει μόνο την κάρτα οδηγού.</p></div>
 </details>
 <details>
 <summary>Λειτουργεί το TAGRA Trucker εκτός σύνδεσης;</summary>
@@ -526,7 +520,7 @@
 <p style="font-size:19px;font-weight:700;color:var(--text-strong);margin-top:4px">TAGRA για διαχειριστές στόλου</p>
 <p style="color:var(--text2);margin-top:6px;max-width:480px">Διαχειρίζεστε οχήματα για μια εταιρεία; Το TAGRA 1/2/4/6/MAX καλύπτει μονάδες ταχογράφου και κάρτες οδηγού για 1 έως απεριόριστα οχήματα.</p>
 </div>
-<a class="btn-cta btn-cta--sm" href="/fleet/" style="flex-shrink:0;background:var(--blue-mid)">Λύση στόλου →</a>
+<a class="btn-cta btn-cta--sm" href="/el/stolos/" style="flex-shrink:0;background:var(--blue-mid)">Λύση στόλου →</a>
 </div>
 </div>
 </section>
@@ -553,8 +547,8 @@
 <div class="footer-col">
 <h4>Προϊόν</h4>
 <ul>
-<li><a href="/fleet/">Για διαχειριστές στόλου</a></li>
-<li><a href="/driver/">Για επαγγελματίες οδηγούς</a></li>
+<li><a href="/el/stolos/">Για διαχειριστές στόλου</a></li>
+<li><a href="/el/odigoi/">Για επαγγελματίες οδηγούς</a></li>
 <li><a href="/el/eleghos/">Για ελεγκτικές αρχές</a></li>
 <li><a href="/el/pos-leitourgei/">Πώς λειτουργεί</a></li>
 <li><a href="/el/gia-poion/">Σε ποιους απευθύνεται</a></li>
@@ -564,9 +558,9 @@
 <div class="footer-col">
 <h4>Υλικό</h4>
 <ul>
-<li><a href="/articles/">Άρθρα</a></li><li><a href="/manuals/">Εγχειρίδια</a></li>
-<li><a href="/articles/digital-tachograph-symbols/">Σύμβολα ταχογράφου</a></li>
-<li><a href="/integrations/dkv-live/">DKV LIVE®</a></li>
+<li><a href="/el/arthra/">Άρθρα</a></li><li><a href="/el/egcheiridia/">Εγχειρίδια</a></li>
+<li><a href="/el/arthra/symvola-tachografou/">Σύμβολα ταχογράφου</a></li>
+<li><a href="/el/ensomatoseis/dkv-live/">DKV LIVE®</a></li>
 </ul>
 </div>
 <div class="footer-col">

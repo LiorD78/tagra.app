@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<!-- TMX-ANALYTICS START -->
+<meta content="7F7894081BE7FBB245FF03AF8810B22F" name="msvalidate.01"/>
+<!-- Consent Mode v2 defaults (deny) + gtag stub — runs BEFORE gtag.js -->
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent','default',{
+      ad_storage:'denied', ad_user_data:'denied', ad_personalization:'denied',
+      analytics_storage:'denied', functionality_storage:'denied',
+      personalization_storage:'denied', security_storage:'granted',
+      wait_for_update:500
+    });
+    gtag('set','ads_data_redaction',true);
+    gtag('set','url_passthrough',false);
+  </script>
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-92253QFBNX"></script>
+<script>
+    gtag('js', new Date());
+    gtag('config','G-92253QFBNX');
+  </script>
+<!-- Cookie consent banner (self-hosted) + Microsoft Clarity gating -->
+<style>
+    .tmx-cc{position:fixed;left:0;right:0;bottom:0;z-index:2147483000;background:linear-gradient(120deg,var(--blue-dark,#0b2c4a),var(--blue-mid,#134a8e) 62%,var(--blue-light,#1f5fa6));color:#fff;
+      font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+      padding:16px 20px;box-shadow:0 -4px 24px rgba(0,0,0,.18);display:flex;flex-wrap:wrap;
+      align-items:center;gap:14px;justify-content:center}
+    .tmx-cc__txt{flex:1 1 360px;max-width:760px}
+    .tmx-cc__txt a{color:#9ed0f5;text-decoration:underline}
+    .tmx-cc__btns{display:flex;gap:10px;flex:0 0 auto}
+    .tmx-cc__b{appearance:none;border:0;cursor:pointer;font:inherit;font-weight:600;
+      padding:10px 22px;border-radius:99px;transition:filter .15s;color:#fff}
+    .tmx-cc__b:hover{filter:brightness(1.08)}
+    .tmx-cc__b--no{background:rgba(255,255,255,.16)}
+    .tmx-cc__b--yes{background:var(--green-cta,#5C820F)}
+    @media(max-width:640px){.tmx-cc{padding:14px}.tmx-cc__btns{width:100%}.tmx-cc__b{flex:1}}
+  </style>
+<script>
+  (function(){
+    var KEY='tmx-consent-v1', CL='wt18054m0r';
+    function lc(){var l=(document.documentElement.getAttribute('lang')||'en').toLowerCase().split('-')[0];
+      var m={cz:'cs',cs:'cs',sk:'sk',de:'de',pl:'pl',gr:'el',el:'el',en:'en'};return m[l]||'en';}
+    var T={
+      en:{t:'We use analytics cookies (Google Analytics, Microsoft Clarity) to understand site usage. They load only with your consent.',a:'Accept',r:'Reject',p:'Privacy &amp; cookies'},
+      cs:{t:'Pou\u017e\u00edv\u00e1me analytick\u00e9 cookies (Google Analytics, Microsoft Clarity) k pochopen\u00ed pou\u017e\u00edv\u00e1n\u00ed webu. Na\u010dtou se jen s va\u0161\u00edm souhlasem.',a:'P\u0159ijmout',r:'Odm\u00edtnout',p:'Soukrom\u00ed a cookies'},
+      sk:{t:'Pou\u017e\u00edvame analytick\u00e9 cookies (Google Analytics, Microsoft Clarity) na pochopenie pou\u017e\u00edvania webu. Na\u010d\u00edtaj\u00fa sa len s va\u0161\u00edm s\u00fahlasom.',a:'Prija\u0165',r:'Odmietnu\u0165',p:'S\u00fakromie a cookies'},
+      de:{t:'Wir verwenden Analyse-Cookies (Google Analytics, Microsoft Clarity), um die Nutzung der Website zu verstehen. Sie werden nur mit Ihrer Einwilligung geladen.',a:'Akzeptieren',r:'Ablehnen',p:'Datenschutz &amp; Cookies'},
+      pl:{t:'U\u017cywamy plik\u00f3w cookie do analityki (Google Analytics, Microsoft Clarity), aby zrozumie\u0107 korzystanie z witryny. \u0141aduj\u0105 si\u0119 tylko za Twoj\u0105 zgod\u0105.',a:'Akceptuj',r:'Odrzu\u0107',p:'Prywatno\u015b\u0107 i cookies'},
+      el:{t:'\u03a7\u03c1\u03b7\u03c3\u03b9\u03bc\u03bf\u03c0\u03bf\u03b9\u03bf\u03cd\u03bc\u03b5 cookies \u03b1\u03bd\u03ac\u03bb\u03c5\u03c3\u03b7\u03c2 (Google Analytics, Microsoft Clarity) \u03b3\u03b9\u03b1 \u03bd\u03b1 \u03ba\u03b1\u03c4\u03b1\u03bd\u03bf\u03ae\u03c3\u03bf\u03c5\u03bc\u03b5 \u03c4\u03b7 \u03c7\u03c1\u03ae\u03c3\u03b7. \u03a6\u03bf\u03c1\u03c4\u03ce\u03bd\u03bf\u03bd\u03c4\u03b1\u03b9 \u03bc\u03cc\u03bd\u03bf \u03bc\u03b5 \u03c4\u03b7 \u03c3\u03c5\u03b3\u03ba\u03b1\u03c4\u03ac\u03b8\u03b5\u03c3\u03ae \u03c3\u03b1\u03c2.',a:'\u0391\u03c0\u03bf\u03b4\u03bf\u03c7\u03ae',r:'\u0391\u03c0\u03cc\u03c1\u03c1\u03b9\u03c8\u03b7',p:'\u0391\u03c0\u03cc\u03c1\u03c1\u03b7\u03c4\u03bf &amp; cookies'}
+    };
+    function loadClarity(){if(!CL||window.__tmxCl)return;window.__tmxCl=1;
+      (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+       t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+       y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script",CL);}
+    function grant(){try{localStorage.setItem(KEY,'granted')}catch(e){}
+      gtag('consent','update',{analytics_storage:'granted'});loadClarity();}
+    function deny(){try{localStorage.setItem(KEY,'denied')}catch(e){}}
+    var saved=null;try{saved=localStorage.getItem(KEY)}catch(e){}
+    if(saved==='granted'){grant();return;} if(saved==='denied'){return;}
+    function show(){var tx=T[lc()]||T.en;
+      var b=document.createElement('div');b.className='tmx-cc';b.setAttribute('role','dialog');b.setAttribute('aria-live','polite');
+      b.innerHTML='<div class="tmx-cc__txt">'+tx.t+' <a href="/privacy/">'+tx.p+'</a></div>'+
+        '<div class="tmx-cc__btns"><button type="button" class="tmx-cc__b tmx-cc__b--no">'+tx.r+'</button>'+
+        '<button type="button" class="tmx-cc__b tmx-cc__b--yes">'+tx.a+'</button></div>';
+      document.body.appendChild(b);
+      b.querySelector('.tmx-cc__b--yes').addEventListener('click',function(){grant();b.remove();});
+      b.querySelector('.tmx-cc__b--no').addEventListener('click',function(){deny();b.remove();});}
+    if(document.body)show();else document.addEventListener('DOMContentLoaded',show);
+  })();
+  </script>
+<!-- TMX-ANALYTICS END -->
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Kto musi analizować dane z tachografu od 2026 – kompletny przegląd | TAGRA</title>
+<meta content="Jasny przegląd wszystkich rodzajów transportu podlegających analizie i archiwizacji danych z tachografu od 2026 — ciężarówki, autobusy, pojazdy dostawcze, kierowcy samozatrudnieni. Szybki test, kary i rozwiązania." name="description"/>
+<link href="https://tagra.app/pl/poradnik/obowiazek-analizy-tachografu-2026/" rel="canonical"/>
+<meta content="Kto musi analizować dane z tachografu od 2026 – kompletny przegląd" property="og:title"/>
+<meta content="https://tagra.app/assets/img/hero-poster.jpg" property="og:image"/>
+<meta content="https://tagra.app/pl/poradnik/obowiazek-analizy-tachografu-2026/" property="og:url"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    a{color:var(--blue-mid);text-decoration:none;}
+    a:hover{color:var(--blue-dark);text-decoration:underline;text-underline-offset:.18em;}
+    p+p{margin-top:14px;}
+    ul,ol{padding-left:22px;}
+    li{margin:6px 0;line-height:1.65;}
+    li::marker{color:var(--blue-mid);}
+    strong{font-weight:700;color:var(--text-strong);}
+    #scroll-progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--green-brand),var(--blue-light));width:0%;z-index:9999;pointer-events:none;}
+.nav-inner{max-width:1180px;margin:0 auto;padding:0 24px;height:100%;display:flex;align-items:center;justify-content:space-between;gap:24px;}
+    .nav-logo{font-size:22px;font-weight:900;background:linear-gradient(90deg,var(--blue-dark),var(--blue-mid));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;text-decoration:none;}
+    .nav-links{display:flex;align-items:center;gap:4px;list-style:none;}
+    .nav-links a{font-size:15px;font-weight:500;color:var(--text);padding:8px 12px;border-radius:8px;text-decoration:none;transition:background .15s;}
+    .nav-links a:hover{background:var(--bg-apple);color:var(--blue-mid);}
+    .nav-links .nav-cta a{background:var(--green-cta);color:#fff!important;border-radius:99px;padding:8px 18px;font-weight:600;}
+    .nav-links .nav-cta a:hover{background:var(--green-brand);text-decoration:none;}
+    .nav-lang{display:flex;align-items:center;gap:4px;font-size:14px;font-weight:600;}
+    .nav-lang a{padding:5px 8px;border-radius:6px;color:var(--text2);text-decoration:none;transition:background .15s;}
+    .nav-lang a:hover,.nav-lang a.active{background:var(--bg-apple);color:var(--blue-mid);}
+    .nav-lang span{color:var(--border);}
+    .nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:8px;}
+    .nav-toggle span{display:block;width:22px;height:2px;background:var(--text);margin:5px 0;border-radius:2px;}
+    @media(max-width:900px){.nav-links{display:none;}.nav-toggle{display:block;}.nav-links.open{display:flex;flex-direction:column;align-items:flex-start;gap:2px;position:absolute;top:var(--nav-h);left:0;right:0;background:rgba(255,255,255,.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:12px 24px 20px;}}
+    .art-hero{background:linear-gradient(180deg,var(--bg-apple) 0%,#fff 100%);padding:56px 0 44px;}
+    .art-wrap{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 24px;}
+    .breadcrumb{font-size:14px;color:var(--text2);margin-bottom:18px;}
+    .breadcrumb a{color:var(--text2);text-decoration:none;}
+    .breadcrumb a:hover{color:var(--blue-mid);}
+    .breadcrumb span{margin:0 5px;color:var(--border);}
+    .eyebrow{font-size:14px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--green-brand);margin-bottom:10px;}
+    .art-title{font-size:38px;line-height:1.15;font-weight:800;margin-bottom:16px;letter-spacing:-.02em;padding-bottom:0.08em;color:var(--blue-dark);}
+    .art-title .grad{background:linear-gradient(90deg,var(--blue-dark) 0%,var(--blue-light) 50%,var(--blue-bright) 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;}
+    @media(max-width:700px){.art-title{font-size:26px;}}
+    .art-meta{font-size:15px;color:var(--text2);padding-bottom:24px;border-bottom:1px solid var(--border);display:flex;gap:20px;flex-wrap:wrap;}
+    .art-body{padding:44px 0 60px;}
+    .art-body h2 {
+      font-size: 36px; font-weight: 800;
+      line-height: 1.1; letter-spacing: 0;
+      text-transform: uppercase;
+      color: var(--blue-mid, #134a8e);
+      background: linear-gradient(90deg, var(--blue-dark, #0b2c4a) 0%, var(--blue-light, #1f5fa6) 50%, var(--blue-bright, #3a6ff0) 100%);
+      -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block; max-width: 100%; margin-bottom: 14px;
+      padding: 0.12em 0.15em 0.08em 0;
+    }
+    .art-body h3{font-size:20px;font-weight:700;color:var(--text-strong);margin:28px 0 10px;}
+    .art-body p{margin-bottom:18px;}
+    .art-body ul,.art-body ol{margin-bottom:20px;}
+    /* QUICK TEST CARDS */
+    .test-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:20px 0;}
+    @media(max-width:640px){.test-grid{grid-template-columns:1fr;}}
+    .test-card{background:#fff;border-radius:var(--radius);padding:22px;box-shadow:0 8px 28px rgba(0,0,0,.06);}
+    .test-tag{font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--green-cta);margin-bottom:8px;}
+    .test-title{font-size:17px;font-weight:800;color:var(--text-strong);margin-bottom:6px;line-height:1.35;}
+    .test-desc{font-size:15px;color:var(--text2);line-height:1.5;}
+    /* CALLOUT */
+    
+    .callout--blue{background:var(--bg-apple);border-left:4px solid var(--blue-mid);}
+    
+    .callout-title{font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.07em;color:var(--blue-mid);margin-bottom:8px;}
+    .callout--green .callout-title{color:var(--green-brand);}
+    /* FAQ */
+    .faq-item{border-top:1px solid var(--border);padding:14px 0;}
+    .faq-item:last-child{border-bottom:1px solid var(--border);}
+    .faq-item summary{list-style:none;cursor:pointer;font-weight:700;font-size:18px;line-height:1.4;padding-right:32px;position:relative;color:var(--text-strong);}
+    .faq-item summary::-webkit-details-marker{display:none;}
+    .faq-item summary::after{content:"+";position:absolute;right:0;top:50%;transform:translateY(-50%);font-size:26px;font-weight:300;color:var(--green-cta);}
+    .faq-item[open] summary::after{content:"−";}
+    
+    .faq-answer p+p{margin-top:10px;}
+    /* CTA */
+    .cta-box{background:linear-gradient(135deg,var(--blue-dark),var(--blue-mid));border-radius:var(--radius);padding:40px 36px;margin:44px 0;text-align:center;}
+    .cta-box h3{font-size:24px;font-weight:800;color:#fff;margin-bottom:12px;}
+    .cta-box p{color:rgba(255,255,255,.8);font-size:17px;margin-bottom:24px;}
+    
+    .btn:hover{background:var(--green-brand);transform:scale(1.02);}
+    /* RELATED */
+    .related{border-top:1px solid var(--border);padding-top:36px;margin-top:36px;}
+    .related-title{font-size:20px;font-weight:800;color:var(--text-strong);margin-bottom:18px;}
+    .related-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+    @media(max-width:580px){.related-grid{grid-template-columns:1fr;}}
+    .related-card{display:block;padding:20px;border:1px solid var(--border);border-radius:var(--radius);text-decoration:none!important;transition:border-color .15s,transform .15s;}
+    .related-card:hover{border-color:var(--blue-mid);transform:translateY(-2px);}
+    .related-card-eye{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--blue-mid);margin-bottom:6px;}
+    .related-card-title{font-size:16px;font-weight:700;color:var(--text-strong);line-height:1.4;}
+    /* FOOTER */
+  </style>
+<link href="../../assets/css/tokens.css?v=20260514j" rel="stylesheet"/>
+<link href="../../assets/css/base.css?v=20260514j" rel="stylesheet"/>
+<link href="../../assets/css/components.css?v=20260514j" rel="stylesheet"/>
+<link href="/assets/css/nav.css?v=20260514j" rel="stylesheet"/>
+<script defer="" src="/assets/js/nav.js?v=20260513q"></script>
+<link href="/assets/css/footer.css?v=20260513d" rel="stylesheet"/>
+<link href="https://tagra.app/articles/who-must-evaluate-tachograph-data-2026/" hreflang="en" rel="alternate"/><link href="https://tagra.app/de/ratgeber/tachographen-auswertung-pflicht-2026/" hreflang="de" rel="alternate"/><link href="https://tagra.app/pl/poradnik/obowiazek-analizy-tachografu-2026/" hreflang="pl" rel="alternate"/><link href="https://tagra.app/articles/who-must-evaluate-tachograph-data-2026/" hreflang="x-default" rel="alternate"/></head>
+<body>
+<div aria-hidden="true" id="scroll-progress"></div>
+<nav aria-label="Nawigacja główna" class="site-nav" role="navigation">
+<div class="nav-inner">
+<a aria-label="TAGRA – Strona główna" class="nav-logo" href="/pl/"><img alt="TAGRA" height="32" src="/assets/img/logo-light.svg?v=20260513zh" style="display:block;height:32px;width:auto;" width="140"/></a>
+<ul class="nav-links">
+<li><a href="/pl/dla-przewoznikow/">Dla firm</a></li>
+<li><a href="/pl/dla-kierowcow/">Dla kierowców</a></li>
+<li><a href="/pl/organy-kontrolne/">Organy kontrolne</a></li>
+<li><a aria-current="page" href="/pl/poradnik/">Artykuły</a></li><li><a href="/pl/instrukcje/">Instrukcje</a></li>
+<li><a href="/pl/faq/">FAQ</a></li>
+<li><a href="/pl/kontakt/">Kontakt</a></li>
+<li class="nav-cta-li"><a class="nav-cta" href="/pl/wyprobuj/?audience=fleet">Wypróbuj 30 dni za darmo</a></li>
+</ul>
+<details class="nav-lang">
+<summary aria-label="Language: PL">PL</summary>
+<div class="nav-lang-menu" role="menu">
+<a href="/" hreflang="en">English</a><a href="/de/" hreflang="de">Deutsch</a><a aria-current="page" class="active" href="/pl/" hreflang="pl">Polski</a><a href="/el/" hreflang="el">Ελληνικά</a><a href="/hu/" hreflang="hu">Magyar</a><a href="https://www.tdt.cz/" hreflang="cs" rel="noopener" target="_blank">Čeština</a><a href="https://www.tdt.sk/" hreflang="sk" rel="noopener" target="_blank">Slovenčina</a></div>
+</details>
+<a class="nav-cta-mobile" href="/pl/wyprobuj/?audience=fleet">Wypróbuj za darmo</a>
+<button aria-expanded="false" aria-label="Przełącz menu" class="nav-mobile-toggle" id="nav-toggle">
+<span></span><span></span><span></span>
+</button>
+</div>
+</nav>
+<header class="art-hero">
+<div class="art-wrap">
+<nav class="breadcrumb"><a href="/pl/">TAGRA</a><span>›</span><a href="/pl/poradnik/">Artykuły</a><span>›</span><span>Przegląd</span></nav>
+<div class="eyebrow">Przegląd · Zaktualizowano na 2026</div>
+<h1 class="art-title"><span class="grad">Kto musi analizować dane z tachografu od 2026 — kompletny przegląd</span></h1>
+<div class="art-meta"><span>Truck Data Technology</span><span>Zaktualizowano kwiecień 2026</span><span>9 min czytania</span></div>
+</div>
+</header>
+<main>
+<div class="art-wrap art-body">
+<p>Czy prowadzisz ciężarówkę lub pojazd dostawczy? Czy prowadzisz firmę, która przewozi towary za granicę? Od lipca 2026 zasady się zmieniają — i teraz dotyczą pojazdów dostawczych od 2,5 tony. Oto jasny przegląd tego, kogo to dotyczy i co musisz zrobić, niezależnie od tego, czy siedzisz za kierownicą, czy w biurze.</p>
+<h2>Szybki test — czy to dotyczy Ciebie?</h2>
+<div class="test-grid">
+<div class="test-card">
+<div class="test-tag">Kierowca</div>
+<div class="test-title">Czy prowadzisz pojazd powyżej 3.5 t?</div>
+<div class="test-desc">Obowiązek dotyczy Ciebie już dziś. Dane z tachografu i karty kierowcy muszą być regularnie pobierane, analizowane i archiwizowane.</div>
+</div>
+<div class="test-card">
+<div class="test-tag">Kierowca</div>
+<div class="test-title">Czy prowadzisz pojazd dostawczy o masie 2,5–3,5 t przewożący towary za granicę za opłatą?</div>
+<div class="test-desc">Od 1 lipca 2026 mogą obowiązywać te same zasady, co dla ciężarówek. Ważne jest, czy jest to transport na wynajem lub za wynagrodzeniem, czy kabotaż — a nie tylko przekraczanie granicy.</div>
+</div>
+<div class="test-card">
+<div class="test-tag">Firma</div>
+<div class="test-title">Czy posiadasz pojazdy powyżej 3.5 t w swojej flocie?</div>
+<div class="test-desc">Analizowanie danych jest Twoim prawnym obowiązkiem już teraz. Jeśli tylko pobierasz i nie postępujesz zgodnie z danymi, ryzykujesz karę.</div>
+</div>
+<div class="test-card">
+<div class="test-tag">Firma</div>
+<div class="test-title">Czy wysyłasz pojazdy dostawcze o masie 2,5–3,5 t w transporcie międzynarodowym na wynajem lub za wynagrodzeniem, lub w kabotażu?</div>
+<div class="test-desc">Od lipca 2026 musisz obsługiwać tachografy, karty, pobieranie i analizę. Samo przekraczanie granicy (np. w celu odbioru własnych materiałów) nie wywołuje samo w sobie obowiązku.</div>
+</div>
+</div>
+<p><strong>Czy podróżujesz tylko w kraju i nie przekraczasz granic?</strong>Nowy obowiązek jeszcze Cię nie dotyczy. Uwaga: samo przekroczenie granicy pojazdem dostawczym nie uruchamia automatycznie obowiązku. Liczy się, czy jest to transport zarobkowy lub kabotaż — szczegóły poniżej.</p>
+<h2>Co właściwie oznacza "analiza danych"?</h2>
+<p>Wielu ludzi zakłada, że posiadanie tachografu i sporadyczne pobieranie z niego danych wystarczy. Tak nie jest. Prawo jest jasne:</p>
+<ul>
+<li><strong>Pobieranie danych z karty kierowcy</strong>— co najmniej co 28 dni.</li>
+<li><strong>Pobieranie danych z tachografu (z pojazdu)</strong>— co najmniej co 90 dni.</li>
+<li><strong>Analiza danych</strong>— sprawdź, czy kierowcy przestrzegają czasu pracy kierowcy (tj. czasów jazdy, przerw i okresów odpoczynku).</li>
+<li><strong>Archiwizacja danych</strong>— co najmniej przez 1 rok; zaleca się 3–5 lat.</li>
+</ul>
+<p>W praktyce działa to prosto: pobierasz dane (za pomocą klucza do pobierania lub zdalnie), importujesz je do oprogramowania, a oprogramowanie informuje Cię, czy wszystko jest w porządku — lub gdzie jest problem.</p>
+<h2>Kogo dotyczy obowiązek już dzisiaj</h2>
+<p>Jeśli posiadasz<strong>pojazd powyżej 3,5 tony</strong>z tachografem, analiza danych nie jest niczym nowym. Dotyczy to transportu ciężarowego (krajowego i międzynarodowego), transportu autobusowego oraz każdego, kto posiada tachograf cyfrowy w swoim pojeździe.</p>
+<p>Ile firm i kierowców faktycznie regularnie analizuje dane — a ile tylko je pobiera i odkłada do szuflady? Organy kontrolne to sprawdzą.</p>
+<h2>Co zmienia się od lipca 2026</h2>
+<p>Od 1 lipca 2026 r.<strong>pojazdy dostawcze o DMC 2,5–3,5 t</strong>używany do<strong>międzynarodowego przewozu towarów zarobkowego</strong>lub do<strong>kabotażu</strong>(gdy jako przewoźnik transportujesz towary wewnątrz innego kraju UE — na przykład z Hamburga do Berlina) będzie również potrzebny tachograf. Samo przekroczenie granicy pojazdem dostawczym nie wywołuje samo w sobie tego obowiązku.</p>
+<p>W praktyce dotknie to wielu przedsiębiorstw i kierowców, którzy wcześniej nie mieli do czynienia z tachografami:</p>
+<ul>
+<li><strong>Firmy kurierskie i paczkowe</strong>— dostarczające paczki między krajami.</li>
+<li><strong>Firmy budowlane</strong>— transportujące materiały, sprzęt lub rusztowania na zagraniczne projekty.</li>
+<li><strong>Firmy przeprowadzkowe</strong>— przeprowadzki międzynarodowe.</li>
+<li><strong>Firmy usługowe i instalacyjne</strong>— technicy podróżujący w celu naprawy lub instalacji sprzętu za granicą.</li>
+<li><strong>Usługi pomocy drogowej i holowania</strong>— transportujące pojazdy między krajami UE.</li>
+<li><strong>Transport chłodniczy</strong>— transgraniczna dostawa żywności z agregatem chłodniczym za wynagrodzeniem.</li>
+<li><strong>Dystrybucja towarów i części zamiennych</strong>— komercyjna dystrybucja między krajami.</li>
+<li><strong>Rolnictwo i leśnictwo</strong>— komercyjny transgraniczny transport produktów rolnych lub drewna.</li>
+<li><strong>Operatorzy przewożący towary za wynagrodzeniem</strong>— np. przewoźnik dostarczający przesyłki klienta za granicę pojazdem dostawczym.</li>
+</ul>
+<div class="callout callout--blue">
+<div class="callout-title">Wyjątek — transport na własny rachunek</div>
+<p style="margin:0">Transport na własny rachunek (np. przekraczasz granicę, aby odebrać materiały dla własnej firmy, a prowadzenie pojazdu nie jest głównym zawodem kierowcy) zazwyczaj nie podlega nowemu obowiązkowi. Jeśli nie masz pewności,<a href="/pl/kontakt/">skontaktuj się z nami</a>— pomożemy Ci ocenić Twoją sytuację.</p>
+</div>
+<h2>Czego będziesz potrzebować</h2>
+<p>Niezależnie od tego, czy jesteś kierowcą, czy właścicielem firmy — oto lista:</p>
+<ul>
+<li><strong>Tachograf inteligentny drugiej generacji (G2v2)</strong>— starsze typy są niewystarczające. Montaż musi zostać wykonany w autoryzowanym warsztacie; zarezerwuj termin z dużym wyprzedzeniem.</li>
+<li><strong>Karta kierowcy</strong>— każdy kierowca musi posiadać własną. Złóż wniosek w lokalnym urzędzie transportowym lub na portalu internetowym.</li>
+<li><strong>Karta przedsiębiorstwa</strong>— potrzebna firmie do pobierania danych z tachografu pojazdu. Złóż wniosek na stronie<a href="https://portal.gov.cz/sluzby-vs/vydani-karty-podniku-S6634" rel="noopener" target="_blank">gov.cz</a>.</li>
+<li><strong>Urządzenie do pobierania danych</strong>—<strong>Download Box II S</strong>do ręcznego pobierania z pojazdu i kart kierowcy.</li>
+<li><strong>Oprogramowanie do analizy</strong>— pliki danych z tachografu nie mogą być odczytane przez standardowe przeglądarki. Potrzebujesz dedykowanego oprogramowania, takiego jak<strong>TAGRA</strong>, które je odczytuje, analizuje naruszenia i generuje raporty.</li>
+</ul>
+<h2>Rozwiązania dla firm</h2>
+<p>Wybierz wersję na podstawie liczby posiadanych pojazdów. Wszystkie wersje robią to samo — analizują naruszenia, przygotowują raporty z kontroli i archiwizują dane. Jedyną różnicą jest liczba pojazdów objętych licencją. A jeśli Twoja firma się rozwinie, w każdej chwili możesz wykupić rozszerzenie.</p>
+<ul>
+<li><a href="/pl/dla-przewoznikow/">TAGRA 1</a>— dla 1 pojazdu</li>
+<li><a href="/pl/dla-przewoznikow/">TAGRA 2</a>— dla 2 pojazdów</li>
+<li><a href="/pl/dla-przewoznikow/">TAGRA 4</a>— do 4 pojazdów</li>
+<li><a href="/pl/dla-przewoznikow/">TAGRA 6</a>— do 6 pojazdów</li>
+<li><a href="/pl/dla-przewoznikow/">TAGRA MAX</a>— nieograniczona liczba pojazdów</li>
+</ul>
+<h2>Rozwiązanie dla kierowców</h2>
+<p>Czy jeździsz jako samozatrudniony kierowca, czy chcesz monitorować własne dane niezależnie od pracodawcy?<a href="/pl/dla-kierowcow/">TAGRA Trucker</a>jest zaprojektowany dokładnie dla Ciebie. Możesz analizować dane ze swojej karty kierowcy, sprawdzać, gdzie masz naruszenia, i mieć kontrolę nad swoją zgodnością.</p>
+<p>Mogą Państwo<a href="/pl/wyprobuj/?audience=driver" rel="noopener" target="_blank">wypróbować bezpłatnie przez 30 dni</a>— bez zobowiązań.</p>
+<h2>Co się stanie, jeśli nie będą Państwo przestrzegać przepisów?</h2>
+<p>Kontrole odbywają się na drogach w całej Europie. Inspektorzy sprawdzają, czy dane zostały pobrane i poddane analizie, czy kierowcy przestrzegają zasad dotyczących czasu pracy kierowcy, oraz czy tachograf działa prawidłowo i jest skalibrowany.</p>
+<p>A kary nie są małe:</p>
+<ul>
+<li><strong>Przedsiębiorstwa</strong>mogą otrzymać kary w wysokości<strong>do 14 000 €</strong>.</li>
+<li><strong>Kierowcy</strong>mogą być zobowiązani do zapłaty kaucji zabezpieczającej na drodze w wysokości<strong>do 8 000 €</strong>za najpoważniejsze naruszenia — takie jak manipulacja tachografem.</li>
+</ul>
+<h2>Nie chcą Państwo zajmować się tym samodzielnie?</h2>
+<p><strong>Zlecą Państwo analizę specjalistom:</strong>Prześlą nam Państwo dane, a my zajmiemy się wszystkim — ocenimy naruszenia, przygotujemy raporty i będziemy monitorować terminy. Zapewniamy Państwu spokój.<a href="/pl/kontakt/">Dowiedz się więcej o naszej usłudze analizy.</a></p>
+<p><strong>Naucz się to robić samodzielnie:</strong>Zarezerwuj<a href="/pl/kontakt/">szkolenie</a>a nasi specjaliści nauczą Cię obsługi TAGRA, poprawnego odczytywania wyników i wdrożenia całego procesu w Twojej firmie. Oferujemy również szkolenia indywidualne.</p>
+<div class="cta-box">
+<h3>Nie wiesz, czego dokładnie potrzebujesz?</h3>
+<p>Pomożemy Ci wybrać odpowiednie rozwiązanie — niezależnie od tego, czy posiadasz jeden pojazd, czy pięćdziesiąt.</p>
+<a class="btn" href="/pl/kontakt/">Skontaktuj się z nami →</a>
+</div>
+<h2>Często zadawane pytania</h2>
+<details class="faq-item"><summary>Czy muszę tylko pobierać dane z tachografu, czy muszę je również analizować?</summary>
+<div class="faq-answer"><p>Samo pobieranie danych nie wystarczy. Prawo wymaga regularnej analizy — sprawdzania zgodności z czasem pracy kierowcy, przerwami i okresami odpoczynku. Bez analizy nie masz wglądu w naruszenia i ryzykujesz karę.</p></div>
+</details>
+<details class="faq-item"><summary>Jak często należy pobierać dane?</summary>
+<div class="faq-answer"><p>Karta kierowcy co najmniej co<strong>28 dni</strong>, dane z pojazdu co najmniej co<strong>90 dni</strong>. Zalecamy pobieranie częściej — na przykład co 10 i 30 dni — aby zachować margines bezpieczeństwa.</p></div>
+</details>
+<details class="faq-item"><summary>Jestem kierowcą — czy muszę samodzielnie zajmować się analizą?</summary>
+<div class="faq-answer"><p>Jeśli jesteś pracownikiem, obowiązek analizy spoczywa na Twoim pracodawcy. Jednak inspektorzy zapytają Ciebie — a kierowca również może zostać ukarany. Jeśli prowadzisz działalność na własny rachunek, jest to Twoja odpowiedzialność.<a href="/pl/dla-kierowcow/">TAGRA Trucker</a>jest zaprojektowany dokładnie do tego celu.</p></div>
+</details>
+<details class="faq-item"><summary>Czy nowy obowiązek dotyczy pojazdów dostawczych, które poruszają się tylko na terenie kraju?</summary>
+<div class="faq-answer"><p>Nie. Nowy obowiązek od lipca 2026 r. dotyczy pojazdów dostawczych o masie 2,5–3,5 t wyłącznie w transporcie międzynarodowym zarobkowym lub podczas kabotażu w UE. Jeśli podróżujesz tylko na terenie kraju, obecnie Cię to nie dotyczy.</p></div>
+</details>
+<details class="faq-item"><summary>Co to jest kabotaż?</summary>
+<div class="faq-answer"><p>Kabotaż oznacza, że jako przewoźnik transportujesz towary wewnątrz innego kraju UE. Przykład: rozładowujesz towar w Hamburgu, a następnie przewozisz przesyłkę z Hamburga do Berlina. Mimo że nie przekraczasz granicy, podlega to reżimowi kabotażowemu i wymagany będzie tachograf.</p></div>
+</details>
+<details class="faq-item"><summary>Przekraczam granicę moim pojazdem dostawczym — czy automatycznie potrzebuję tachografu?</summary>
+<div class="faq-answer"><p>Niekoniecznie. Obowiązek dotyczy międzynarodowego przewozu towarów<strong>za wynagrodzeniem</strong>i do kabotażu. Transport na potrzeby własne (np. przekraczanie granicy w celu odebrania materiałów dla własnej firmy, gdzie prowadzenie pojazdu nie jest głównym zawodem kierowcy) zazwyczaj nie podlega nowemu obowiązkowi. Jeśli nie są Państwo pewni, prosimy o kontakt pod numerem<a href="tel:+420739005345">+420 739 005 345</a>.</p></div>
+</details>
+<details class="faq-item"><summary>Jakie kary grożą?</summary>
+<div class="faq-answer"><p>Firmy mogą otrzymać kary w wysokości<strong>do 14 000 €</strong>. Kierowcom grozi kaucja drogowa w wysokości<strong>do 8 000 €</strong>za najpoważniejsze naruszenia — takie jak manipulacja tachografem.</p></div>
+</details>
+<details class="faq-item"><summary>Nie chcę się tym zajmować. Czy mogą Państwo dokonać analizy danych dla mnie?</summary>
+<div class="faq-answer"><p>Tak. Oferujemy usługę analizy — proszę przesłać nam dane, my je analizujemy, sprawdzamy naruszenia i przesyłamy Państwu przejrzysty raport. Monitorujemy również terminy pobierania i archiwizację.<a href="/pl/kontakt/">Prosimy o kontakt w celu uzyskania szczegółów.</a></p></div>
+</details>
+<div class="related">
+<div class="related-title">Powiązane artykuły</div>
+<div class="related-grid">
+<a class="related-card" href="/pl/poradnik/tachograf-w-busach-obowiazek-lipiec-2026/">
+<div class="related-card-eye">Nowe przepisy</div>
+<h3 class="card-title">Tachografy dla pojazdów dostawczych: nowy obowiązek od lipca 2026</h3>
+</a>
+<a class="related-card" href="/pl/poradnik/pobieranie-analiza-danych-tachografu/">
+<div class="related-card-eye">Kompletny przewodnik</div>
+<h3 class="card-title">Jak prawidłowo pobierać, analizować i archiwizować dane z tachografu</h3>
+</a>
+</div>
+</div>
+</div>
+</main>
+<footer class="site-footer" role="contentinfo">
+<div class="footer-inner">
+<div>
+<div class="footer-logo"><img alt="TAGRA" height="32" src="/assets/img/logo-dark.svg?v=20260513zh" width="140"/></div>
+<p class="footer-desc">Profesjonalne oprogramowanie do analizy tachografów. Pobieranie karty kierowcy, analiza tachografów cyfrowych, unijne czasy prowadzenia pojazdu i dyrektywa o czasie pracy. Opracowane przez Truck Data Technology, s.r.o.</p>
+</div>
+<div class="footer-col">
+<h4>Produkt</h4>
+<ul>
+<li><a href="/pl/dla-przewoznikow/">Dla przewoźników</a></li>
+<li><a href="/pl/dla-kierowcow/">Dla kierowców zawodowych</a></li>
+<li><a href="/pl/organy-kontrolne/">Dla organów kontrolnych</a></li>
+<li><a href="/pl/jak-to-dziala/">Jak to działa</a></li>
+<li><a href="/pl/dla-kogo/">Dla kogo</a></li>
+<li><a href="/pl/faq/">FAQ</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h4>Zasoby</h4>
+<ul>
+<li><a href="/pl/poradnik/">Artykuły</a></li><li><a href="/pl/instrukcje/">Instrukcje</a></li>
+<li><a href="/pl/poradnik/symbole-tachografu/">Symbole tachografu</a></li>
+<li><a href="/pl/integracje/dkv-live/">DKV LIVE®</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h4>Firma</h4>
+<ul>
+<li><a href="/pl/kontakt/">Kontakt</a></li>
+<li><a href="https://www.tdt.cz" rel="noopener" target="_blank">Truck Data Technology</a></li>
+<li><a href="/de/">Deutsch</a></li>
+<li><a href="/pl/">Polski</a></li>
+</ul>
+</div>
+</div>
+<div class="footer-bottom">
+<span>© 2026 Truck Data Technology, s.r.o. Wszelkie prawa zastrzeżone.</span>
+<span><a href="/pl/kontakt/">Kontakt</a> · <a href="https://www.tdt.cz" rel="noopener" target="_blank">tdt.cz</a></span>
+</div>
+</footer>
+<script>(function(){var bar=document.getElementById('scroll-progress');if(bar)window.addEventListener('scroll',function(){var t=document.documentElement.scrollTop||document.body.scrollTop;var h=document.documentElement.scrollHeight-document.documentElement.clientHeight;bar.style.width=(t/h*100)+'%';},{passive:true});var toggle=document.getElementById('nav-toggle'),links=document.getElementById('nav-links');if(toggle&&links)toggle.addEventListener('click',function(){var o=links.classList.toggle('open');toggle.setAttribute('aria-expanded',o);});})();</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Czy muszę tylko pobierać dane z tachografu, czy muszę je również analizować?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Samo pobieranie danych nie wystarczy. Prawo wymaga regularnej analizy — sprawdzania czasu jazdy, przerw i okresów odpoczynku. Bez analizy ryzykujesz karę."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Jak często należy pobierać dane?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Karta kierowcy co najmniej co 28 dni, jednostka pojazdowa co najmniej co 90 dni."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Czy nowy obowiązek dotyczy pojazdów dostawczych, które poruszają się tylko na terenie kraju?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nie. Obowiązek od lipca 2026 dotyczy wyłącznie pojazdów dostawczych o masie 2,5–3,5 t w transporcie międzynarodowym za wynagrodzeniem lub kabotażu."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Co to jest kabotaż?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Kabotaż to sytuacja, w której Państwo, jako przewoźnik, transportują towary w innym kraju UE. Przykład: rozładowują Państwo towar w Hamburgu, a następnie przewożą przesyłkę z Hamburga do Berlina."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Jakie kary grożą?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Firmy mogą otrzymać kary w wysokości do 14 000 €. Kierowcom grozi kaucja drogowa w wysokości do 8 000 € za najpoważniejsze naruszenia."
+      }
+    }
+  ]
+}</script>
+</body>
+</html>

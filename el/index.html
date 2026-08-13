@@ -79,10 +79,6 @@
 <meta content="#0b2c4a" name="theme-color"/>
 <link href="/manifest.json" rel="manifest"/>
 <link href="https://tagra.app/el/" rel="canonical"/>
-
-
-
-
 <meta content="TAGRA – Πρόγραμμα Διαχείρισης Δεδομένων Ταχογράφου" property="og:title"/>
 <meta content="Το TAGRA βοηθά τις εταιρείες μεταφορών και τους επαγγελματίες οδηγούς να παραμένουν σε συμμόρφωση με τους κανονισμούς ταχογράφου της ΕΕ. Δωρεάν δοκιμή 30 ημερών." property="og:description"/>
 <meta content="https://cdn.truckmall.cz/images/0/ff1952bcc480ca3d/1/tagra-1-vyhodnoceni-dat-z-tachografu.webp" property="og:image"/>
@@ -112,7 +108,7 @@
 
     /* ─── NAV ──────────────────────────────────────────────────────── */
 .nav-inner { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; height: 100%; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
-    .nav-logo { font-size: 22px; font-weight: 900; letter-spacing: -.02em; background: linear-gradient(90deg, var(--blue-dark), var(--blue-mid)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent; text-decoration: none; flex-shrink: 0; }
+    .nav-logo { display: flex; align-items: center; gap: 8px; text-decoration: none; flex-shrink: 0; }
     .nav-links { display: flex; align-items: center; gap: 4px; list-style: none; }
     .nav-links li a { font-size: 15px; font-weight: 500; color: var(--text); padding: 8px 12px; border-radius: 8px; transition: background .15s, color .15s; text-decoration: none; }
     .nav-links li a:hover { background: var(--bg-apple-solid); color: var(--blue-mid); }
@@ -777,24 +773,18 @@
 <div class="nav-inner">
 <a aria-label="TAGRA – Αρχική" class="nav-logo" href="/el/"><img alt="TAGRA" height="32" src="/assets/img/logo-light.svg?v=20260513zh" style="display:block;height:32px;width:auto;" width="140"/></a>
 <ul class="nav-links">
-<li><a href="/fleet/">Για εταιρείες</a></li>
-<li><a href="/driver/">Για οδηγούς</a></li>
+<li><a href="/el/stolos/">Για εταιρείες</a></li>
+<li><a href="/el/odigoi/">Για οδηγούς</a></li>
 <li><a href="/el/eleghos/">Ελεγκτικές αρχές</a></li>
-<li><a href="/articles/">Άρθρα</a></li><li><a href="/manuals/">Εγχειρίδια</a></li>
-<li><a href="/faq/">Συχνές ερωτήσεις</a></li>
-<li><a href="/contact/">Επικοινωνία</a></li>
+<li><a href="/el/arthra/">Άρθρα</a></li><li><a href="/el/egcheiridia/">Εγχειρίδια</a></li>
+<li><a href="/el/faq/">Συχνές ερωτήσεις</a></li>
+<li><a href="/el/epikoinonia/">Επικοινωνία</a></li>
 <li class="nav-cta-li"><a class="nav-cta" href="/el/dokimi/?audience=fleet">Δοκιμάστε δωρεάν για 30 ημέρες</a></li>
 </ul>
 <details class="nav-lang">
 <summary aria-label="Language: EL">EL</summary>
 <div class="nav-lang-menu" role="menu">
-<a href="/">English</a>
-<a href="/de/">Deutsch</a>
-<a href="/pl/">Polski</a>
-<a href="/el/" class="active" aria-current="page" hreflang="el">Ελληνικά</a>
-<a href="https://www.tdt.cz/" hreflang="cs" rel="noopener" target="_blank">Čeština</a>
-<a href="https://www.tdt.sk/" hreflang="sk" rel="noopener" target="_blank">Slovenčina</a>
-</div>
+<a href="/" hreflang="en">English</a><a href="/de/" hreflang="de">Deutsch</a><a href="/pl/" hreflang="pl">Polski</a><a aria-current="page" class="active" href="/el/" hreflang="el">Ελληνικά</a><a href="/hu/" hreflang="hu">Magyar</a><a href="https://www.tdt.cz/" hreflang="cs" rel="noopener" target="_blank">Čeština</a><a href="https://www.tdt.sk/" hreflang="sk" rel="noopener" target="_blank">Slovenčina</a></div>
 </details>
 <a class="nav-cta-mobile" href="/el/dokimi/?audience=fleet">Δοκιμάστε δωρεάν</a>
 <button aria-expanded="false" aria-label="Εναλλαγή μενού" class="nav-mobile-toggle" id="nav-toggle">
@@ -833,7 +823,7 @@
 </div>
 <div class="split anim-up" id="picker-rail">
 <!-- Fleet -->
-<a aria-label="TAGRA για διαχειριστές στόλων" class="split-card split-card--fleet" href="/fleet/">
+<a aria-label="TAGRA για διαχειριστές στόλων" class="split-card split-card--fleet" href="/el/stolos/">
 <div class="card-label">Διαχειριστής στόλου</div>
 <h3 class="card-title">TAGRA<br/>Company</h3>
 <p class="card-desc">Διαχειρίζεστε οχήματα για μια εταιρεία. Πρέπει να κάνετε λήψη και αξιολόγηση δεδομένων από<strong>μονάδες ταχογράφου και κάρτες οδηγού</strong>— και να αρχειοθετήσετε τα πάντα για ελέγχους.</p>
@@ -847,7 +837,7 @@
 <span class="card-note">Δωρεάν δοκιμή 30 ημερών · χωρίς πιστωτική κάρτα</span>
 </a>
 <!-- Driver -->
-<a aria-label="TAGRA Trucker για επαγγελματίες οδηγούς" class="split-card split-card--driver" href="/driver/">
+<a aria-label="TAGRA Trucker για επαγγελματίες οδηγούς" class="split-card split-card--driver" href="/el/odigoi/">
 <div class="card-label">Επαγγελματίας οδηγός</div>
 <h3 class="card-title">TAGRA<br/>Trucker</h3>
 <p class="card-desc">Οδηγείτε επαγγελματικά. Θέλετε να παρακολουθείτε τους δικούς σας χρόνους οδήγησης και ανάπαυσης χρησιμοποιώντας<strong>την κάρτα οδηγού σας</strong>— με έναν τυπικό αναγνώστη καρτών USB.</p>
@@ -861,7 +851,7 @@
 <span class="card-note">Δωρεάν δοκιμή 30 ημερών · χωρίς πιστωτική κάρτα</span>
 </a>
 <!-- Enforcement -->
-<a aria-label="TAGRA Control για ελεγκτικές αρχές" class="split-card split-card--enforce" href="/enforcement/">
+<a aria-label="TAGRA Control για ελεγκτικές αρχές" class="split-card split-card--enforce" href="/el/eleghos/">
 <div class="card-label">Ελεγκτική αρχή</div>
 <h3 class="card-title">TAGRA<br/>Control</h3>
 <p class="card-desc">Ελέγχετε οδηγούς και διαχειριστές στόλου.<strong>Οδικοί έλεγχοι και έλεγχοι επιχειρήσεων</strong>σύμφωνα με τους Κανονισμούς (ΕΚ) 561/2006, (ΕΕ) 2020/1054 και τη Συμφωνία AETR.</p>
@@ -1043,7 +1033,7 @@
 </ul>
 </div>
 <div class="pricing-teaser-cta">
-<a class="btn-outline" href="/fleet/">Δείτε όλα τα επίπεδα και τις τιμές →</a>
+<a class="btn-outline" href="/el/stolos/">Δείτε όλα τα επίπεδα και τις τιμές →</a>
 <a class="btn-cta" href="/el/dokimi/">Δοκιμάστε δωρεάν για 30 ημέρες</a>
 <span class="pricing-teaser-cta-note">Χωρίς πιστωτική κάρτα. Πρόγραμμα εγκατάστασης Windows.</span>
 </div>
@@ -1076,7 +1066,7 @@
 <div class="faq-answer">Κατεβάστε και εγκαταστήστε το πακέτο Windows — αποκτάτε<strong>30 ημέρες πλήρους, απεριόριστης πρόσβασης</strong>σε όλες τις λειτουργίες. Χωρίς πιστωτική κάρτα, χωρίς πληροφορίες πληρωμής. Εάν το TAGRA ταιριάζει στην επιχείρησή σας, αγοράζετε μια άδεια αόριστης χρήσης για να συνεχίσετε.</div>
 </details>
 <div class="faq-cta">
-<a href="/faq/">Δείτε όλες τις Συχνές Ερωτήσεις →</a>
+<a href="/el/faq/">Δείτε όλες τις Συχνές Ερωτήσεις →</a>
 </div>
 </div>
 </div>
@@ -1091,26 +1081,26 @@
 <div class="footer-col">
 <h4>Προϊόν</h4>
 <ul>
-<li><a href="/fleet/">Για διαχειριστές στόλου</a></li>
-<li><a href="/driver/">Για επαγγελματίες οδηγούς</a></li>
+<li><a href="/el/stolos/">Για διαχειριστές στόλου</a></li>
+<li><a href="/el/odigoi/">Για επαγγελματίες οδηγούς</a></li>
 <li><a href="/el/eleghos/">Για ελεγκτικές αρχές</a></li>
-<li><a href="/how-it-works/">Πώς λειτουργεί</a></li>
-<li><a href="/for-whom/">Σε ποιους απευθύνεται</a></li>
-<li><a href="/faq/">Συχνές ερωτήσεις</a></li>
+<li><a href="/el/pos-leitourgei/">Πώς λειτουργεί</a></li>
+<li><a href="/el/gia-poion/">Σε ποιους απευθύνεται</a></li>
+<li><a href="/el/faq/">Συχνές ερωτήσεις</a></li>
 </ul>
 </div>
 <div class="footer-col">
 <h4>Υλικό</h4>
 <ul>
-<li><a href="/articles/">Άρθρα</a></li><li><a href="/manuals/">Εγχειρίδια</a></li>
-<li><a href="/articles/digital-tachograph-symbols/">Σύμβολα ταχογράφου</a></li>
-<li><a href="/integrations/dkv-live/">DKV LIVE®</a></li>
+<li><a href="/el/arthra/">Άρθρα</a></li><li><a href="/el/egcheiridia/">Εγχειρίδια</a></li>
+<li><a href="/el/arthra/symvola-tachografou/">Σύμβολα ταχογράφου</a></li>
+<li><a href="/el/ensomatoseis/dkv-live/">DKV LIVE®</a></li>
 </ul>
 </div>
 <div class="footer-col">
 <h4>Εταιρεία</h4>
 <ul>
-<li><a href="/contact/">Επικοινωνία</a></li>
+<li><a href="/el/epikoinonia/">Επικοινωνία</a></li>
 <li><a href="https://www.tdt.cz" rel="noopener" target="_blank">Truck Data Technology</a></li>
 <li><a href="/de/">Deutsch</a></li>
 <li><a href="/pl/">Polski</a></li>
@@ -1119,7 +1109,7 @@
 </div>
 <div class="footer-bottom">
 <span>© 2026 Truck Data Technology, s.r.o. Με την επιφύλαξη παντός δικαιώματος.</span>
-<span><a href="/contact/">Επικοινωνία</a> · <a href="https://www.tdt.cz" rel="noopener" target="_blank">tdt.cz</a></span>
+<span><a href="/el/epikoinonia/">Επικοινωνία</a> · <a href="https://www.tdt.cz" rel="noopener" target="_blank">tdt.cz</a></span>
 </div>
 </footer>
 <div aria-label="Γρήγορη εγγραφή δοκιμής" class="sticky-cta" id="stickyCta" role="complementary">

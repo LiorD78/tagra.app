@@ -114,13 +114,7 @@
       height: 100%;
       display: flex; align-items: center; justify-content: space-between; gap: 24px;
     }
-    .nav-logo {
-      font-size: 22px; font-weight: 900; letter-spacing: -.02em;
-      background: linear-gradient(90deg, var(--blue-dark), var(--blue-mid));
-      -webkit-background-clip: text; background-clip: text;
-      -webkit-text-fill-color: transparent; color: transparent;
-      text-decoration: none; flex-shrink: 0;
-    }
+    .nav-logo { display: flex; align-items: center; gap: 8px; text-decoration: none; flex-shrink: 0; }
     .nav-links {
       display: flex; align-items: center; gap: 4px;
       list-style: none;
@@ -512,24 +506,18 @@
 <div class="nav-inner">
 <a aria-label="TAGRA – Αρχική" class="nav-logo" href="/el/"><img alt="TAGRA" height="32" src="/assets/img/logo-light.svg?v=20260513zh" style="display:block;height:32px;width:auto;" width="140"/></a>
 <ul class="nav-links">
-<li><a href="/fleet/">Για εταιρείες</a></li>
-<li><a href="/driver/">Για οδηγούς</a></li>
+<li><a href="/el/stolos/">Για εταιρείες</a></li>
+<li><a href="/el/odigoi/">Για οδηγούς</a></li>
 <li><a href="/el/eleghos/">Ελεγκτικές αρχές</a></li>
-<li><a href="/articles/">Άρθρα</a></li><li><a href="/manuals/">Εγχειρίδια</a></li>
-<li><a href="/faq/">Συχνές ερωτήσεις</a></li>
+<li><a href="/el/arthra/">Άρθρα</a></li><li><a href="/el/egcheiridia/">Εγχειρίδια</a></li>
+<li><a href="/el/faq/">Συχνές ερωτήσεις</a></li>
 <li><a href="/el/epikoinonia/">Επικοινωνία</a></li>
 <li class="nav-cta-li"><a class="nav-cta" href="/el/dokimi/?audience=fleet">Δοκιμάστε δωρεάν για 30 ημέρες</a></li>
 </ul>
 <details class="nav-lang">
 <summary aria-label="Language: EL">EL</summary>
 <div class="nav-lang-menu" role="menu">
-<a href="/how-it-works/">English</a>
-<a href="/de/">Deutsch</a>
-<a href="/pl/">Polski</a>
-<a href="/el/pos-leitourgei/" class="active" aria-current="page" hreflang="el">Ελληνικά</a>
-<a href="https://www.tdt.cz/" hreflang="cs" rel="noopener" target="_blank">Čeština</a>
-<a href="https://www.tdt.sk/" hreflang="sk" rel="noopener" target="_blank">Slovenčina</a>
-</div>
+<a href="/" hreflang="en">English</a><a href="/de/" hreflang="de">Deutsch</a><a href="/pl/" hreflang="pl">Polski</a><a aria-current="page" class="active" href="/el/" hreflang="el">Ελληνικά</a><a href="/hu/" hreflang="hu">Magyar</a><a href="https://www.tdt.cz/" hreflang="cs" rel="noopener" target="_blank">Čeština</a><a href="https://www.tdt.sk/" hreflang="sk" rel="noopener" target="_blank">Slovenčina</a></div>
 </details>
 <a class="nav-cta-mobile" href="/el/dokimi/?audience=fleet">Δοκιμάστε δωρεάν</a>
 <button aria-expanded="false" aria-label="Εναλλαγή μενού" class="nav-mobile-toggle" id="nav-toggle">
@@ -641,7 +629,7 @@
 <p style="font-size:19px;font-weight:700;color:var(--text-strong);margin-top:4px">Το TAGRA Trucker λειτουργεί με τον ίδιο τρόπο — για την κάρτα οδηγού σας</p>
 <p style="color:var(--text2);margin-top:6px;max-width:480px">Απλώς συνδέστε τον αναγνώστη USB σας, εισάγετε την κάρτα σας και το TAGRA διαβάζει τα πάντα αυτόματα.</p>
 </div>
-<a class="btn-cta btn-cta--sm" href="/driver/" style="flex-shrink:0;background:var(--green-cta)">TAGRA Trucker →</a>
+<a class="btn-cta btn-cta--sm" href="/el/odigoi/" style="flex-shrink:0;background:var(--green-cta)">TAGRA Trucker →</a>
 </div>
 </div>
 </section>
@@ -655,20 +643,20 @@
 <div class="footer-col">
 <h4>Προϊόν</h4>
 <ul>
-<li><a href="/fleet/">Για διαχειριστές στόλου</a></li>
-<li><a href="/driver/">Για επαγγελματίες οδηγούς</a></li>
+<li><a href="/el/stolos/">Για διαχειριστές στόλου</a></li>
+<li><a href="/el/odigoi/">Για επαγγελματίες οδηγούς</a></li>
 <li><a href="/el/eleghos/">Για ελεγκτικές αρχές</a></li>
-<li><a href="/how-it-works/">Πώς λειτουργεί</a></li>
+<li><a href="/el/pos-leitourgei/">Πώς λειτουργεί</a></li>
 <li><a href="/el/gia-poion/">Σε ποιους απευθύνεται</a></li>
-<li><a href="/faq/">Συχνές ερωτήσεις</a></li>
+<li><a href="/el/faq/">Συχνές ερωτήσεις</a></li>
 </ul>
 </div>
 <div class="footer-col">
 <h4>Υλικό</h4>
 <ul>
-<li><a href="/articles/">Άρθρα</a></li><li><a href="/manuals/">Εγχειρίδια</a></li>
-<li><a href="/articles/digital-tachograph-symbols/">Σύμβολα ταχογράφου</a></li>
-<li><a href="/integrations/dkv-live/">DKV LIVE®</a></li>
+<li><a href="/el/arthra/">Άρθρα</a></li><li><a href="/el/egcheiridia/">Εγχειρίδια</a></li>
+<li><a href="/el/arthra/symvola-tachografou/">Σύμβολα ταχογράφου</a></li>
+<li><a href="/el/ensomatoseis/dkv-live/">DKV LIVE®</a></li>
 </ul>
 </div>
 <div class="footer-col">
