@@ -235,6 +235,24 @@ def hu_extras(doc, page_id=None):
     return doc
 
 
+
+
+def fix_ld(txt, lang):
+    """Localize inLanguage + tagra.app URLs inside LD-JSON string (rebuild-proof)."""
+    code = LANGS[lang]['code']
+    txt = txt.replace('"inLanguage": "en"', f'"inLanguage": "{code}"')
+    um = {}
+    for pid, d in SLUGMAP.items():
+        if 'en' not in d or lang not in d: continue
+        en = d['en'].strip('/'); lg = d[lang].strip('/')
+        src = f"https://tagra.app/{en}/" if en else "https://tagra.app/"
+        um[src] = f"https://tagra.app/{lg}/"
+    for k in sorted([k for k in um if k != "https://tagra.app/"], key=len, reverse=True):
+        txt = txt.replace(k, um[k])
+    if "https://tagra.app/" in um:
+        txt = txt.replace('"https://tagra.app/"', f'"{um["https://tagra.app/"]}"')
+    return txt
+
 def cmd_apply(page_id, lang):
     tf = os.path.join(I18N, f'{page_id}.{lang}.json')
     if not os.path.exists(tf):
@@ -255,7 +273,10 @@ def cmd_apply(page_id, lang):
         elif kind in ('meta', 'attr'):
             tag[attr] = new
         elif kind == 'text':
-            tag.replace_with(NavigableString(new))
+            raw = str(tag)
+            lead = raw[:len(raw) - len(raw.lstrip())]
+            trail = raw[len(raw.rstrip()):]
+            tag.replace_with(NavigableString(lead + new + trail))
 
     lds = tr.get('ld', [])
     for n, sc in enumerate(doc.find_all('script', type='application/ld+json')):
@@ -266,7 +287,7 @@ def cmd_apply(page_id, lang):
         except Exception:
             continue
         ld_apply(data, lds[n], [0])
-        sc.string = json.dumps(data, ensure_ascii=False, indent=2)
+        sc.string = fix_ld(json.dumps(data, ensure_ascii=False, indent=2), lang)
 
     doc.html['lang'] = LANGS[lang]['code']
     url = url_of(page_id, lang)
