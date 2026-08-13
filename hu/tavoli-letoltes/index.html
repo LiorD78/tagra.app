@@ -753,26 +753,7 @@
                 </p>
                 <p class="eyebrow rev-anim" style="color: var(--tmx-blue-m); margin: 24px auto 48px;">Csehországban és Szlovákiában naponta több ezer jármű számára segítünk a fuvarozóknak leegyszerűsíteni a tachográf adatok letöltését és kezelését.</p>
                 
-                <div class="tmx-media-frame rev-anim" style="width: 100%; margin: 50px auto 70px; border-radius: var(--tmx-radius); border: 1px solid var(--tmx-border); overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.08);">
-                    <div class="video-landscape">
-                        <div id="tmxYtHeroWrap" class="tmx-video-frame tmx-video-frame--landscape tmx-ytbox" style="margin: 0;">
-                            <iframe id="tmxYtHeroFrame" src="about:blank" title="Adatok távoli letöltése tachográfokról – videó" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen"></iframe>
-                            <a class="tmx-yt-cover" href="#" aria-label="Videó lejátszása">
-                                <img src="https://i.ytimg.com/vi/paGdhiN4_hE/maxresdefault.jpg" onerror="this.src='https://i.ytimg.com/vi/paGdhiN4_hE/hqdefault.jpg'" alt="Videó előnézete: Adatok távoli letöltése tachográfokról" loading="lazy" decoding="async" width="1280" height="720">
-                            </a>
-                            <div class="tmx-playbtn" aria-hidden="true">&nbsp;</div>
-                        </div>
-                    </div>
-                    <div class="video-shorts">
-                        <div id="tmxYtHeroWrapShorts" class="tmx-video-frame tmx-video-frame--shorts tmx-ytbox" style="margin: 0 auto; width: 100%; height: 100%;">
-                            <iframe id="tmxYtHeroFrameShorts" src="about:blank" title="Adatok távoli letöltése tachográfokról – rövid videó" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen"></iframe>
-                            <a class="tmx-yt-cover" href="#" aria-label="Videó lejátszása">
-                                <img src="https://i.ytimg.com/vi/uLNcSyTdMUA/maxresdefault.jpg" onerror="this.src='https://i.ytimg.com/vi/uLNcSyTdMUA/hqdefault.jpg'" alt="Videó előnézete: Adatok távoli letöltése tachográfokról (mobil)" loading="lazy" decoding="async" width="480" height="853">
-                            </a>
-                            <div class="tmx-playbtn" aria-hidden="true">&nbsp;</div>
-                        </div>
-                    </div>
-                </div>
+                
 
                 <div class="bento">
                     <div class="bc s7 fly-left">
@@ -1388,23 +1369,7 @@
         for (var i = 0; i < anims.length; i++) ro.observe(anims[i]);
     }
 
-    /* YouTube lazy-load (hero landscape + shorts) */
-    function ytLazy(frameId, wrapId, videoId) {
-        var fr = document.getElementById(frameId);
-        var wr = document.getElementById(wrapId);
-        if (!fr || !wr) return;
-        var cover = wr.querySelector('.tmx-yt-cover');
-        var started = false;
-        var url = 'https://www.youtube-nocookie.com/embed/' + videoId + '?modestbranding=1&rel=0&playsinline=1&autoplay=1';
-        fr.addEventListener('load', function() { if (started) wr.classList.add('is-playing'); }, false);
-        if (cover) cover.addEventListener('click', function(e) {
-            e.preventDefault(); if (started) return;
-            started = true; fr.setAttribute('src', url);
-        }, false);
-    }
-    ytLazy('tmxYtHeroFrame', 'tmxYtHeroWrap', 'paGdhiN4_hE');
-    ytLazy('tmxYtHeroFrameShorts', 'tmxYtHeroWrapShorts', 'uLNcSyTdMUA');
-
+    
     /* Video autoplay při scrollu do view */
     function safePlay(v) {
         try { v.muted = true; v.setAttribute('muted','muted'); v.setAttribute('playsinline','playsinline'); } catch(e) {}
@@ -1461,7 +1426,7 @@
 <!-- SCHÉMÁK A DOWNLOAD BOX REMOTE-HOZ (FELOSZTVA, JAVÍTOTT URL-EL ÉS KONFLIKTUSOK NÉLKÜL) -->
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Product", "@id": "/hu/kapcsolat/", "name": "DOWNLOAD BOX REMOTE – Távoli letöltőkulcs tachográfokhoz", "image": "https://tagra.app/assets/img/products/dbr-og.webp", "description": "A DOWNLOAD BOX REMOTE távoli letöltőkulcs biztosítja az adatok automatikus átvitelét a tachográfból és a sofőrkártyákról. Az adatok titkosítva, közvetlen M2M alagúton keresztül, harmadik fél felhője nélkül, közvetlenül a TAGRA programba töltődnek le. Teljes G2v2 támogatás, szakszerű telepítés az árban. Alkalmas kisteherautókhoz is 2026 júliusától.", "sku": "tdt00054", "featureList": "Automatikus tachográf-adatletöltés távolról, G2V2 Smart Tacho kompatibilitás, szakszerű telepítés az árban, GSM-kapcsolat Wi-Fi nélkül, adatátvitel közvetlenül a TAGRA programba, 24/7 monitoring, kisteherautók támogatása 2026 júliusától", "brand": {"@type": "Brand", "name": "Truck Data Technology Kft.", "url": "https://tagra.app"}, "offers": {"@type": "Offer", "priceCurrency": "EUR", "price": "159", "priceSpecification": {"@type": "UnitPriceSpecification", "price": "159", "priceCurrency": "EUR", "valueAddedTaxIncluded": false}, "availability": "https://schema.org/InStock", "itemCondition": "https://schema.org/NewCondition", "priceValidUntil": "2027-12-31", "url": "https://tagra.app/hu/tavoli-letoltes/", "shippingDetails": {"@type": "OfferShippingDetails", "shippingRate": {"@type": "MonetaryAmount", "value": "0", "currency": "EUR"}, "shippingDestination": {"@type": "DefinedRegion", "addressCountry": "HU"}}, "hasMerchantReturnPolicy": {"@type": "MerchantReturnPolicy", "applicableCountry": "CZ", "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow", "merchantReturnDays": 14, "returnMethod": "https://schema.org/ReturnByMail", "returnFees": "https://schema.org/FreeReturn"}}, "aggregateRating": {"@type": "AggregateRating", "ratingValue": "5", "bestRating": "5", "ratingCount": "4", "reviewCount": "4"}, "review": [{"@type": "Review", "author": {"@type": "Person", "name": "Petr N."}, "datePublished": "2025-02-15", "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"}, "reviewBody": "Megszűnt a folyamatos határidőfigyelés és sofőrök hajszolása. Minden megbízhatóan fut a háttérben."}, {"@type": "Review", "author": {"@type": "Person", "name": "Martin K."}, "datePublished": "2025-04-22", "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"}, "reviewBody": "A technikus általi telepítés problémamentesen zajlott közvetlenül cégünknél. Az első letöltés automatikusan megtörtént a következő napon. Nagyon ajánlom."}, {"@type": "Review", "author": {"@type": "Person", "name": "Jana D."}, "datePublished": "2025-08-30", "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"}, "reviewBody": "Az 5,90 € havi ár rejtett költségek nélkül ideális számunkra. Korábban egy felhőalapú megoldásunk volt 14 €-ért."}, {"@type": "Review", "author": {"@type": "Person", "name": "Tomáš R."}, "datePublished": "2026-01-12", "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"}, "reviewBody": "Egy év működés után semmilyen fennakadás, a támogatás gyors. Az adatok közvetlenül a TAGRA programunkba kerülnek, nincs harmadik fél felhője."}], "url": "https://tagra.app/hu/tavoli-letoltes/"}</script>
 
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "VideoObject", "name": "Távoli adatletöltés tachográfokból – példa a gyakorlatból", "description": "Nézze meg, hogyan működik az adatok automatikus letöltése digitális tachográfokból és sofőrkártyákról a DOWNLOAD BOX REMOTE segítségével, közvetlenül a TAGRA programba.", "thumbnailUrl": "https://i.ytimg.com/vi/paGdhiN4_hE/maxresdefault.jpg", "uploadDate": "2024-05-15T08:00:00+01:00", "duration": "PT41S", "contentUrl": "https://www.youtube.com/watch?v=paGdhiN4_hE", "embedUrl": "https://www.youtube-nocookie.com/embed/paGdhiN4_hE"}</script>
+
 
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "HowTo", "name": "Hogyan kezdjen hozzá a tachográfok távoli letöltéséhez", "description": "Három egyszerű lépés a tachográfokból származó adatok távoli letöltésének beüzemeléséhez a TAGRA programba.", "step": [{"@type": "HowToStep", "name": "TAGRA program", "text": "Elindítja a TAGRA programot számítógépén."}, {"@type": "HowToStep", "name": "Üzembentartói kártya", "text": "Csatlakoztatja az intelligens kártyaolvasót és behelyezi az üzembentartói kártyát."}, {"@type": "HowToStep", "name": "Távoli letöltés", "text": "A TAGRA programban megnyitja a Távoli letöltés menüpontot, és hozzáadja a DOWNLOAD BOX REMOTE egységet. Az adatátvitel titkosított és maximálisan biztonságos, a rendszer ezután teljesen Ön helyett dolgozik."}]}</script>
 
