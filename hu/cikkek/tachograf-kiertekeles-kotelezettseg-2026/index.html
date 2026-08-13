@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<!-- TMX-ANALYTICS START -->
+<meta content="7F7894081BE7FBB245FF03AF8810B22F" name="msvalidate.01"/>
+<!-- Consent Mode v2 defaults (deny) + gtag stub — runs BEFORE gtag.js -->
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent','default',{
+      ad_storage:'denied', ad_user_data:'denied', ad_personalization:'denied',
+      analytics_storage:'denied', functionality_storage:'denied',
+      personalization_storage:'denied', security_storage:'granted',
+      wait_for_update:500
+    });
+    gtag('set','ads_data_redaction',true);
+    gtag('set','url_passthrough',false);
+  </script>
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-92253QFBNX"></script>
+<script>
+    gtag('js', new Date());
+    gtag('config','G-92253QFBNX');
+  </script>
+<!-- Cookie consent banner (self-hosted) + Microsoft Clarity gating -->
+<style>
+    .tmx-cc{position:fixed;left:0;right:0;bottom:0;z-index:2147483000;background:linear-gradient(120deg,var(--blue-dark,#0b2c4a),var(--blue-mid,#134a8e) 62%,var(--blue-light,#1f5fa6));color:#fff;
+      font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+      padding:16px 20px;box-shadow:0 -4px 24px rgba(0,0,0,.18);display:flex;flex-wrap:wrap;
+      align-items:center;gap:14px;justify-content:center}
+    .tmx-cc__txt{flex:1 1 360px;max-width:760px}
+    .tmx-cc__txt a{color:#9ed0f5;text-decoration:underline}
+    .tmx-cc__btns{display:flex;gap:10px;flex:0 0 auto}
+    .tmx-cc__b{appearance:none;border:0;cursor:pointer;font:inherit;font-weight:600;
+      padding:10px 22px;border-radius:99px;transition:filter .15s;color:#fff}
+    .tmx-cc__b:hover{filter:brightness(1.08)}
+    .tmx-cc__b--no{background:rgba(255,255,255,.16)}
+    .tmx-cc__b--yes{background:var(--green-cta,#5C820F)}
+    @media(max-width:640px){.tmx-cc{padding:14px}.tmx-cc__btns{width:100%}.tmx-cc__b{flex:1}}
+  </style>
+<script>
+  (function(){
+    var KEY='tmx-consent-v1', CL='wt18054m0r';
+    function lc(){var l=(document.documentElement.getAttribute('lang')||'en').toLowerCase().split('-')[0];
+      var m={cz:'cs',cs:'cs',sk:'sk',de:'de',pl:'pl',gr:'el',el:'el',en:'en'};return m[l]||'en';}
+    var T={
+      en:{t:'We use analytics cookies (Google Analytics, Microsoft Clarity) to understand site usage. They load only with your consent.',a:'Accept',r:'Reject',p:'Privacy &amp; cookies'},
+      cs:{t:'Pou\u017e\u00edv\u00e1me analytick\u00e9 cookies (Google Analytics, Microsoft Clarity) k pochopen\u00ed pou\u017e\u00edv\u00e1n\u00ed webu. Na\u010dtou se jen s va\u0161\u00edm souhlasem.',a:'P\u0159ijmout',r:'Odm\u00edtnout',p:'Soukrom\u00ed a cookies'},
+      sk:{t:'Pou\u017e\u00edvame analytick\u00e9 cookies (Google Analytics, Microsoft Clarity) na pochopenie pou\u017e\u00edvania webu. Na\u010d\u00edtaj\u00fa sa len s va\u0161\u00edm s\u00fahlasom.',a:'Prija\u0165',r:'Odmietnu\u0165',p:'S\u00fakromie a cookies'},
+      de:{t:'Wir verwenden Analyse-Cookies (Google Analytics, Microsoft Clarity), um die Nutzung der Website zu verstehen. Sie werden nur mit Ihrer Einwilligung geladen.',a:'Akzeptieren',r:'Ablehnen',p:'Datenschutz &amp; Cookies'},
+      pl:{t:'U\u017cywamy plik\u00f3w cookie do analityki (Google Analytics, Microsoft Clarity), aby zrozumie\u0107 korzystanie z witryny. \u0141aduj\u0105 si\u0119 tylko za Twoj\u0105 zgod\u0105.',a:'Akceptuj',r:'Odrzu\u0107',p:'Prywatno\u015b\u0107 i cookies'},
+      el:{t:'\u03a7\u03c1\u03b7\u03c3\u03b9\u03bc\u03bf\u03c0\u03bf\u03b9\u03bf\u03cd\u03bc\u03b5 cookies \u03b1\u03bd\u03ac\u03bb\u03c5\u03c3\u03b7\u03c2 (Google Analytics, Microsoft Clarity) \u03b3\u03b9\u03b1 \u03bd\u03b1 \u03ba\u03b1\u03c4\u03b1\u03bd\u03bf\u03ae\u03c3\u03bf\u03c5\u03bc\u03b5 \u03c4\u03b7 \u03c7\u03c1\u03ae\u03c3\u03b7. \u03a6\u03bf\u03c1\u03c4\u03ce\u03bd\u03bf\u03bd\u03c4\u03b1\u03b9 \u03bc\u03cc\u03bd\u03bf \u03bc\u03b5 \u03c4\u03b7 \u03c3\u03c5\u03b3\u03ba\u03b1\u03c4\u03ac\u03b8\u03b5\u03c3\u03ae \u03c3\u03b1\u03c2.',a:'\u0391\u03c0\u03bf\u03b4\u03bf\u03c7\u03ae',r:'\u0391\u03c0\u03cc\u03c1\u03c1\u03b9\u03c8\u03b7',p:'\u0391\u03c0\u03cc\u03c1\u03c1\u03b7\u03c4\u03bf &amp; cookies'}
+    };
+    function loadClarity(){if(!CL||window.__tmxCl)return;window.__tmxCl=1;
+      (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+       t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+       y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script",CL);}
+    function grant(){try{localStorage.setItem(KEY,'granted')}catch(e){}
+      gtag('consent','update',{analytics_storage:'granted'});loadClarity();}
+    function deny(){try{localStorage.setItem(KEY,'denied')}catch(e){}}
+    var saved=null;try{saved=localStorage.getItem(KEY)}catch(e){}
+    if(saved==='granted'){grant();return;} if(saved==='denied'){return;}
+    function show(){var tx=T[lc()]||T.en;
+      var b=document.createElement('div');b.className='tmx-cc';b.setAttribute('role','dialog');b.setAttribute('aria-live','polite');
+      b.innerHTML='<div class="tmx-cc__txt">'+tx.t+' <a href="/privacy/">'+tx.p+'</a></div>'+
+        '<div class="tmx-cc__btns"><button type="button" class="tmx-cc__b tmx-cc__b--no">'+tx.r+'</button>'+
+        '<button type="button" class="tmx-cc__b tmx-cc__b--yes">'+tx.a+'</button></div>';
+      document.body.appendChild(b);
+      b.querySelector('.tmx-cc__b--yes').addEventListener('click',function(){grant();b.remove();});
+      b.querySelector('.tmx-cc__b--no').addEventListener('click',function(){deny();b.remove();});}
+    if(document.body)show();else document.addEventListener('DOMContentLoaded',show);
+  })();
+  </script>
+<!-- TMX-ANALYTICS END -->
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Kinek kell kiértékelnie a tachográf adatokat 2026-tól – teljes áttekintés | TAGRA</title>
+<meta content="Világos áttekintés a tachográf adatok kiértékelésére és archiválására kötelezett összes szállítási típusról 2026-tól – teherautók, buszok, furgonok, egyéni vállalkozó járművezetők. Gyors teszt, bírságok és megoldások." name="description"/>
+<link href="https://tagra.app/hu/cikkek/tachograf-kiertekeles-kotelezettseg-2026/" rel="canonical"/>
+<meta content="Kinek kell kiértékelnie a tachográf adatokat 2026-tól – teljes áttekintés" property="og:title"/>
+<meta content="https://tagra.app/assets/img/hero-poster.jpg" property="og:image"/>
+<meta content="https://tagra.app/hu/cikkek/tachograf-kiertekeles-kotelezettseg-2026/" property="og:url"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    a{color:var(--blue-mid);text-decoration:none;}
+    a:hover{color:var(--blue-dark);text-decoration:underline;text-underline-offset:.18em;}
+    p+p{margin-top:14px;}
+    ul,ol{padding-left:22px;}
+    li{margin:6px 0;line-height:1.65;}
+    li::marker{color:var(--blue-mid);}
+    strong{font-weight:700;color:var(--text-strong);}
+    #scroll-progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--green-brand),var(--blue-light));width:0%;z-index:9999;pointer-events:none;}
+.nav-inner{max-width:1180px;margin:0 auto;padding:0 24px;height:100%;display:flex;align-items:center;justify-content:space-between;gap:24px;}
+    .nav-logo{display:flex;align-items:center;gap:8px;text-decoration:none;flex-shrink:0}
+    .nav-links{display:flex;align-items:center;gap:4px;list-style:none;}
+    .nav-links a{font-size:15px;font-weight:500;color:var(--text);padding:8px 12px;border-radius:8px;text-decoration:none;transition:background .15s;}
+    .nav-links a:hover{background:var(--bg-apple);color:var(--blue-mid);}
+    .nav-links .nav-cta a{background:var(--green-cta);color:#fff!important;border-radius:99px;padding:8px 18px;font-weight:600;}
+    .nav-links .nav-cta a:hover{background:var(--green-brand);text-decoration:none;}
+    .nav-lang{display:flex;align-items:center;gap:4px;font-size:14px;font-weight:600;}
+    .nav-lang a{padding:5px 8px;border-radius:6px;color:var(--text2);text-decoration:none;transition:background .15s;}
+    .nav-lang a:hover,.nav-lang a.active{background:var(--bg-apple);color:var(--blue-mid);}
+    .nav-lang span{color:var(--border);}
+    .nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:8px;}
+    .nav-toggle span{display:block;width:22px;height:2px;background:var(--text);margin:5px 0;border-radius:2px;}
+    @media(max-width:900px){.nav-links{display:none;}.nav-toggle{display:block;}.nav-links.open{display:flex;flex-direction:column;align-items:flex-start;gap:2px;position:absolute;top:var(--nav-h);left:0;right:0;background:rgba(255,255,255,.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:12px 24px 20px;}}
+    .art-hero{background:linear-gradient(180deg,var(--bg-apple) 0%,#fff 100%);padding:56px 0 44px;}
+    .art-wrap{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 24px;}
+    .breadcrumb{font-size:14px;color:var(--text2);margin-bottom:18px;}
+    .breadcrumb a{color:var(--text2);text-decoration:none;}
+    .breadcrumb a:hover{color:var(--blue-mid);}
+    .breadcrumb span{margin:0 5px;color:var(--border);}
+    .eyebrow{font-size:14px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--green-brand);margin-bottom:10px;}
+    .art-title{font-size:38px;line-height:1.15;font-weight:800;margin-bottom:16px;letter-spacing:-.02em;padding-bottom:0.08em;color:var(--blue-dark);}
+    .art-title .grad{background:linear-gradient(90deg,var(--blue-dark) 0%,var(--blue-light) 50%,var(--blue-bright) 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;}
+    @media(max-width:700px){.art-title{font-size:26px;}}
+    .art-meta{font-size:15px;color:var(--text2);padding-bottom:24px;border-bottom:1px solid var(--border);display:flex;gap:20px;flex-wrap:wrap;}
+    .art-body{padding:44px 0 60px;}
+    .art-body h2 {
+      font-size: 36px; font-weight: 800;
+      line-height: 1.1; letter-spacing: 0;
+      text-transform: uppercase;
+      color: var(--blue-mid, #134a8e);
+      background: linear-gradient(90deg, var(--blue-dark, #0b2c4a) 0%, var(--blue-light, #1f5fa6) 50%, var(--blue-bright, #3a6ff0) 100%);
+      -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block; max-width: 100%; margin-bottom: 14px;
+      padding: 0.12em 0.15em 0.08em 0;
+    }
+    .art-body h3{font-size:20px;font-weight:700;color:var(--text-strong);margin:28px 0 10px;}
+    .art-body p{margin-bottom:18px;}
+    .art-body ul,.art-body ol{margin-bottom:20px;}
+    /* QUICK TEST CARDS */
+    .test-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:20px 0;}
+    @media(max-width:640px){.test-grid{grid-template-columns:1fr;}}
+    .test-card{background:#fff;border-radius:var(--radius);padding:22px;box-shadow:0 8px 28px rgba(0,0,0,.06);}
+    .test-tag{font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--green-cta);margin-bottom:8px;}
+    .test-title{font-size:17px;font-weight:800;color:var(--text-strong);margin-bottom:6px;line-height:1.35;}
+    .test-desc{font-size:15px;color:var(--text2);line-height:1.5;}
+    /* CALLOUT */
+    
+    .callout--blue{background:var(--bg-apple);border-left:4px solid var(--blue-mid);}
+    
+    .callout-title{font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.07em;color:var(--blue-mid);margin-bottom:8px;}
+    .callout--green .callout-title{color:var(--green-brand);}
+    /* FAQ */
+    .faq-item{border-top:1px solid var(--border);padding:14px 0;}
+    .faq-item:last-child{border-bottom:1px solid var(--border);}
+    .faq-item summary{list-style:none;cursor:pointer;font-weight:700;font-size:18px;line-height:1.4;padding-right:32px;position:relative;color:var(--text-strong);}
+    .faq-item summary::-webkit-details-marker{display:none;}
+    .faq-item summary::after{content:"+";position:absolute;right:0;top:50%;transform:translateY(-50%);font-size:26px;font-weight:300;color:var(--green-cta);}
+    .faq-item[open] summary::after{content:"−";}
+    
+    .faq-answer p+p{margin-top:10px;}
+    /* CTA */
+    .cta-box{background:linear-gradient(135deg,var(--blue-dark),var(--blue-mid));border-radius:var(--radius);padding:40px 36px;margin:44px 0;text-align:center;}
+    .cta-box h3{font-size:24px;font-weight:800;color:#fff;margin-bottom:12px;}
+    .cta-box p{color:rgba(255,255,255,.8);font-size:17px;margin-bottom:24px;}
+    
+    .btn:hover{background:var(--green-brand);transform:scale(1.02);}
+    /* RELATED */
+    .related{border-top:1px solid var(--border);padding-top:36px;margin-top:36px;}
+    .related-title{font-size:20px;font-weight:800;color:var(--text-strong);margin-bottom:18px;}
+    .related-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+    @media(max-width:580px){.related-grid{grid-template-columns:1fr;}}
+    .related-card{display:block;padding:20px;border:1px solid var(--border);border-radius:var(--radius);text-decoration:none!important;transition:border-color .15s,transform .15s;}
+    .related-card:hover{border-color:var(--blue-mid);transform:translateY(-2px);}
+    .related-card-eye{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--blue-mid);margin-bottom:6px;}
+    .related-card-title{font-size:16px;font-weight:700;color:var(--text-strong);line-height:1.4;}
+    /* FOOTER */
+  </style>
+<link href="/assets/css/tokens.css?v=20260514j" rel="stylesheet"/>
+<link href="/assets/css/base.css?v=20260514j" rel="stylesheet"/>
+<link href="/assets/css/components.css?v=20260514j" rel="stylesheet"/>
+<link href="/assets/css/nav.css?v=20260514j" rel="stylesheet"/>
+<script defer="" src="/assets/js/nav.js?v=20260513q"></script>
+<link href="/assets/css/footer.css?v=20260513d" rel="stylesheet"/>
+<link href="https://tagra.app/articles/who-must-evaluate-tachograph-data-2026/" hreflang="en" rel="alternate"/><link href="https://tagra.app/de/ratgeber/tachographen-auswertung-pflicht-2026/" hreflang="de" rel="alternate"/><link href="https://tagra.app/pl/poradnik/obowiazek-analizy-tachografu-2026/" hreflang="pl" rel="alternate"/><link href="https://tagra.app/el/arthra/ypochreosi-analysis-tachografou-2026/" hreflang="el" rel="alternate"/><link href="https://tagra.app/hu/cikkek/tachograf-kiertekeles-kotelezettseg-2026/" hreflang="hu" rel="alternate"/><link href="https://tagra.app/articles/who-must-evaluate-tachograph-data-2026/" hreflang="x-default" rel="alternate"/></head>
+<body>
+<div aria-hidden="true" id="scroll-progress"></div>
+<nav aria-label="Fő navigáció" class="site-nav" role="navigation">
+<div class="nav-inner">
+<a aria-label="TAGRA – Kezdőlap" class="nav-logo" href="/hu/"><img alt="TAGRA" height="32" src="/assets/img/logo-light.svg?v=20260513zh" style="display:block;height:32px;width:auto;" width="140"/></a>
+<ul class="nav-links">
+<li><a href="/hu/fuvarozoknak/">Cégeknek</a></li>
+<li><a href="/hu/soforoknek/">Sofőröknek</a></li>
+<li><a href="/hu/hatosagoknak/">Ellenőrzés</a></li>
+<li><a aria-current="page" href="/hu/cikkek/">Cikkek</a></li><li><a href="/manuals/">Kézikönyvek</a></li>
+<li><a href="/hu/letolto-eszkozok/">Eszközök</a></li><li><a href="/hu/gyakori-kerdesek/">GYIK</a></li>
+<li><a href="/hu/kapcsolat/">Kapcsolat</a></li>
+<li class="nav-cta-li"><a class="nav-cta" href="/hu/ingyenes-probaverzio/?audience=fleet">Próbálja ki 30 napig ingyen</a></li>
+</ul>
+<details class="nav-lang">
+<summary aria-label="Language: HU">HU</summary>
+<div class="nav-lang-menu" role="menu">
+<a href="/" hreflang="en">English</a><a href="/de/" hreflang="de">Deutsch</a><a href="/pl/" hreflang="pl">Polski</a><a href="/el/" hreflang="el">Ελληνικά</a><a aria-current="page" class="active" href="/hu/" hreflang="hu">Magyar</a><a href="https://www.tdt.cz/" hreflang="cs" rel="noopener" target="_blank">Čeština</a><a href="https://www.tdt.sk/" hreflang="sk" rel="noopener" target="_blank">Slovenčina</a></div>
+</details>
+<a class="nav-cta-mobile" href="/hu/ingyenes-probaverzio/?audience=fleet">Próbálja ki ingyen</a>
+<button aria-expanded="false" aria-label="Menü váltása" class="nav-mobile-toggle" id="nav-toggle">
+<span></span><span></span><span></span>
+</button>
+</div>
+</nav>
+<header class="art-hero">
+<div class="art-wrap">
+<nav class="breadcrumb"><a href="/hu/">TAGRA</a><span>›</span><a href="/hu/cikkek/">Cikkek</a><span>›</span><span>Áttekintés</span></nav>
+<div class="eyebrow">Áttekintés · Frissítve 2026-ra</div>
+<h1 class="art-title"><span class="grad">Kinek kell kiértékelnie a tachográf adatokat 2026-tól – teljes áttekintés</span></h1>
+<div class="art-meta"><span>Truck Data Technology</span><span>Frissítve 2026. április</span><span>9 perces olvasmány</span></div>
+</div>
+</header>
+<main>
+<div class="art-wrap art-body">
+<p>Teherautót vagy furgont vezetsz? Egy olyan céget vezetsz, amely árukat szállít országhatárokon át? 2026 júliusától változtak a szabályok – és most már a 2,5 tonna feletti furgonokra is vonatkoznak. Itt egy világos áttekintés arról, hogy kiket érintenek a változások, és mit kell tenned, akár a volán mögött, akár az irodában ülsz.</p>
+<h2>Gyors teszt – rád is vonatkozik?</h2>
+<div class="test-grid">
+<div class="test-card">
+<div class="test-tag">Sofőr</div>
+<div class="test-title">3,5 tonna feletti járművet vezetsz?</div>
+<div class="test-desc">A kötelezettség ma is vonatkozik rád. A tachográf és a járművezetői kártya adatait rendszeresen le kell tölteni, ki kell értékelni és archiválni kell.</div>
+</div>
+<div class="test-card">
+<div class="test-tag">Sofőr</div>
+<div class="test-title">2,5–3,5 tonna közötti furgont vezetsz, amiért fizetést kapsz áruk országhatáron át történő szállításáért?</div>
+<div class="test-desc">2026. július 1-jétől ugyanazok a szabályok vonatkozhatnak rád, mint a teherautókra. Az számít, hogy fizetett szállításról vagy kabotázsról van szó – nem pusztán a határátlépésről.</div>
+</div>
+<div class="test-card">
+<div class="test-tag">Cég</div>
+<div class="test-title">Flottádban vannak 3,5 tonna feletti járművek?</div>
+<div class="test-desc">Az adatok kiértékelése jogi kötelezettséged. Ha csak letöltesz és nem cselekszel az adatok alapján, bírság kockázatával jár.</div>
+</div>
+<div class="test-card">
+<div class="test-tag">Cég</div>
+<div class="test-title">2,5–3,5 tonna közötti furgonokat küldesz nemzetközi fuvarozásra, bértárgyalásra vagy kabotázsra?</div>
+<div class="test-desc">2026 júliusától foglalkoznod kell a tachográfokkal, kártyákkal, letöltéssel és kiértékeléssel. A pusztán határátlépés (pl. saját anyagok gyűjtése céljából) önmagában nem váltja ki a kötelezettséget.</div>
+</div>
+</div>
+<p><strong>Csak belföldön utazik és nem lépi át a határokat?</strong>Az új kötelezettség még nem érinti Önt. Megjegyzés: önmagában a furgonnal történő határátlépés nem vonja maga után automatikusan a kötelezettséget. Az a lényeg, hogy díj ellenében végzett áruszállításról vagy kabotázsról van-e szó – lásd a részleteket alább.</p>
+<h2>Mit is jelent valójában az „adatok kiértékelése”?</h2>
+<p>Sokan feltételezik, hogy elegendő egy menetíró készülék, és az adatok alkalmankénti letöltése róla. Ez nem így van. A törvény egyértelmű:</p>
+<ul>
+<li><strong>Adatok letöltése a járművezetői kártyáról</strong>— legalább 28 naponta.</li>
+<li><strong>Adatok letöltése a menetíró készülékből (a járműből)</strong>— legalább 90 naponta.</li>
+<li><strong>Az adatok kiértékelése</strong>— ellenőrizze, hogy a járművezetők betartják-e a vezetési időket, a szüneteket és a pihenőidőket.</li>
+<li><strong>Az adatok archiválása</strong>— legalább 1 évig; 3–5 év javasolt.</li>
+</ul>
+<p>A gyakorlatban egyszerűen működik: letölti az adatokat (letöltőkulccsal vagy távolról), importálja a szoftverbe, és a szoftver megmondja, hogy minden rendben van-e – vagy hol van probléma.</p>
+<h2>Kire vonatkozik már ma is a kötelezettség</h2>
+<p>Ha rendelkezik<strong>3,5 tonna feletti járművel</strong>menetíró készülékkel, az adatok kiértékelése nem újkeletű. Ez vonatkozik a tehergépjármű-szállításra (belföldi és nemzetközi), az autóbusz-szállításra, és mindenkire, akinek digitális menetíró készülék van a járművében.</p>
+<p>Hány vállalkozás és járművezető értékeli ki rendszeresen az adatokat valójában – és hányan csak letöltik és elteszik őket egy fiókba? Az ellenőrök majd kiderítik.</p>
+<h2>Mi változik 2026. júliusától</h2>
+<p>2026. július 1-jétől<strong>a 2,5–3,5 t össztömegű furgonok</strong>amelyeket<strong>díj ellenében végzett nemzetközi áruszállításra</strong>vagy<strong>kabotázsra</strong>használnak (amikor fuvarozóként árut szállít egy másik EU-országon belül – például Hamburgból Berlinbe), szintén menetíró készülékkel kell, hogy rendelkezzenek. Önmagában a furgonnal történő határátlépés nem vonja maga után a kötelezettséget.</p>
+<p>A gyakorlatban ez sok olyan vállalkozást és járművezetőt érint, akiknek eddig nem kellett foglalkozniuk a menetíró készülékekkel:</p>
+<ul>
+<li><strong>Futár- és csomagküldő szolgálatok</strong>— országok közötti csomagszállítás.</li>
+<li><strong>Építőipari vállalkozások</strong>— anyagok, berendezések vagy állványzat szállítása külföldi projektekre.</li>
+<li><strong>Költöztető cégek</strong>— nemzetközi költöztetések.</li>
+<li><strong>Szerviz- és telepítő cégek</strong>— külföldre utazó technikusok berendezések javítására vagy telepítésére.</li>
+<li><strong>Műszaki mentő- és segélyszolgálatok</strong>— járművek szállítása EU-országok között.</li>
+<li><strong>Hűtött szállítás</strong>— élelmiszerek határokon átnyúló szállítása hűtőegységgel, bérfuvarozás keretében.</li>
+<li><strong>Áruk és pótalkatrészek forgalmazása</strong>— országok közötti kereskedelmi forgalmazás.</li>
+<li><strong>Mezőgazdaság és erdőgazdálkodás</strong>— termények vagy faanyag kereskedelmi célú, határokon átnyúló szállítása.</li>
+<li><strong>Díj ellenében árut fuvarozó üzemeltetők</strong>— pl. egy futár, aki furgonnal külföldre szállít ügyfélküldeményeket.</li>
+</ul>
+<div class="callout callout--blue">
+<div class="callout-title">Kivétel – saját számlás szállítás</div>
+<p style="margin:0">A saját számlás szállítás (pl. Ön átlépi a határt, hogy anyagokat gyűjtsön saját cégének, és a vezetés nem a sofőr fő szakmája) jellemzően nem tartozik az új kötelezettség hatálya alá. Ha nem biztos benne,<a href="/hu/kapcsolat/">keressen minket</a>— segítünk a helyzet felmérésében.</p>
+</div>
+<h2>Amire szüksége lesz</h2>
+<p>Legyen Ön járművezető vagy cégtulajdonos – íme a lista:</p>
+<ul>
+<li><strong>Smart tachograph 2. generáció (G2v2)</strong>— a régebbi típusok nem elegendőek. A telepítést hivatalos műhelyben kell elvégezni; foglaljon időpontot jó előre.</li>
+<li><strong>Sofőrkártya</strong>— minden járművezetőnek rendelkeznie kell saját kártyával. Igénylését a helyi közlekedési hatóságnál vagy online portálon teheti meg.</li>
+<li><strong>Vállalkozáskártya</strong>— szükséges a vállalkozásnak az adatok letöltéséhez a jármű tachográfjából. Igényelhető:<a href="https://portal.gov.cz/sluzby-vs/vydani-karty-podniku-S6634" rel="noopener" target="_blank">gov.cz</a>.</li>
+<li><strong>Letöltőeszköz</strong>— a<strong>Download Box II S</strong>a járműről és a járművezetői kártyákról történő manuális letöltéshez.</li>
+<li><strong>Értékelő szoftver</strong>— a tachográfadatfájlokat nem lehet szabványos megjelenítővel olvasni. Dedikált szoftverre van szüksége, mint például a<strong>TAGRA</strong>, amely beolvassa azokat, értékeli a szabálysértéseket és jelentéseket generál.</li>
+</ul>
+<h2>Megoldások vállalkozások számára</h2>
+<p>Válassza ki a verziót a járművei száma alapján. Minden verzió ugyanazt csinálja — értékeli a szabálysértéseket, ellenőrzési jelentéseket készít és archiválja az adatokat. Az egyetlen különbség a licenc által lefedett járművek száma. És ha vállalkozása növekszik, bármikor frissíthet.</p>
+<ul>
+<li><a href="/hu/fuvarozoknak/">TAGRA 1</a>— 1 járműhöz</li>
+<li><a href="/hu/fuvarozoknak/">TAGRA 2</a>— 2 járműhöz</li>
+<li><a href="/hu/fuvarozoknak/">TAGRA 4</a>— akár 4 járműhöz</li>
+<li><a href="/hu/fuvarozoknak/">TAGRA 6</a>— akár 6 járműhöz</li>
+<li><a href="/hu/fuvarozoknak/">TAGRA MAX</a>— korlátlan számú járműhöz</li>
+</ul>
+<h2>Megoldás járművezetők számára</h2>
+<p>Önálló vállalkozóként vezet, vagy saját adatait szeretné nyomon követni a munkaadójától függetlenül?<a href="/hu/soforoknek/">A TAGRA Trucker</a>pontosan Önnek készült. Kiértékelheti sofőrkártyájának adatait, láthatja, hol vannak szabálysértései, és kézben tarthatja megfelelőségét.</p>
+<p>Kipróbálhatja<a href="/hu/ingyenes-probaverzio/?audience=driver" rel="noopener" target="_blank">ingyen 30 napig</a>— kötelezettségek nélkül.</p>
+<h2>Mi történik, ha nem tartja be a szabályokat?</h2>
+<p>Ellenőrzések zajlanak az utak mentén egész Európában. Az ellenőrök ellenőrzik, hogy az adatok letöltésre és kiértékelésre kerültek-e, a járművezetők betartják-e a vezetési és pihenőidő szabályait, valamint hogy a tachográf működik-e és kalibrálva van-e.</p>
+<p>És a bírságok nem csekélyek:</p>
+<ul>
+<li><strong>Vállalkozások</strong>bírságot kaphat<strong>akár 14 000 euróig</strong>.</li>
+<li><strong>Járművezetők</strong>útszéli biztosíték fizetésére kötelezhetők<strong>akár 8 000 euróig</strong>a legsúlyosabb jogsértésekért – mint például a tachográf manipulálása.</li>
+</ul>
+<h2>Nem szeretne ezzel maga foglalkozni?</h2>
+<p><strong>Bízza szakemberekre az értékelést:</strong>Küldje el nekünk az adatokat, és mi mindent elintézünk – kiértékeljük a jogsértéseket, elkészítjük a jelentéseket és figyelemmel kísérjük a határidőket. Ön nyugodt lehet.<a href="/hu/kapcsolat/">Tudjon meg többet értékelési szolgáltatásunkról.</a></p>
+<p><strong>Tanulja meg Ön is:</strong>Foglaljon egy<a href="/hu/kapcsolat/">képzést</a>és szakembereink megtanítják Önnek a TAGRA használatát, helyesen értelmezni az eredményeket és beállítani a teljes folyamatot cégében. Egyéni képzést is kínálunk.</p>
+<div class="cta-box">
+<h3>Nem biztos benne, hogy pontosan mire van szüksége?</h3>
+<p>Segítünk kiválasztani a megfelelő megoldást – akár egy, akár ötven járműve van.</p>
+<a class="btn" href="/hu/kapcsolat/">Lépjen kapcsolatba velünk →</a>
+</div>
+<h2>Gyakran ismételt kérdések</h2>
+<details class="faq-item"><summary>Csak le kell töltenem a tachográf adatokat, vagy értékelnem is kell őket?</summary>
+<div class="faq-answer"><p>Az önmagában történő letöltés nem elegendő. A törvény előírja a rendszeres értékelést – a vezetési idők, a szünetek és a pihenőidők betartásának ellenőrzését. Értékelés nélkül Ön nem látja a jogsértéseket, és bírságot kockáztat.</p></div>
+</details>
+<details class="faq-item"><summary>Milyen gyakran kell letölteni az adatokat?</summary>
+<div class="faq-answer"><p>Járművezetői kártya legalább minden<strong>28 nap</strong>, járműegység legalább minden<strong>90 nap</strong>. Javasoljuk a gyakoribb letöltést – például 10 és 30 naponta –, hogy biztonsági tartalékot tartson fenn.</p></div>
+</details>
+<details class="faq-item"><summary>Járművezető vagyok – magamnak kell elvégeznem az értékelést?</summary>
+<div class="faq-answer"><p>Ha Ön alkalmazott, az értékelési kötelezettség a munkáltatóját terheli. Az ellenőrök azonban Önt fogják kérdezni – és a járművezető is kaphat bírságot. Ha Ön önálló vállalkozó, ez az Ön felelőssége.<a href="/hu/soforoknek/">A TAGRA Trucker</a>pontosan erre a célra készült.</p></div>
+</details>
+<details class="faq-item"><summary>Az új kötelezettség vonatkozik a csak belföldön közlekedő furgonokra?</summary>
+<div class="faq-answer"><p>Nem. A 2026. júliusától érvényes új kötelezettség a 2,5–3,5 tonna össztömegű furgonokra csak a nemzetközi, díj ellenében végzett fuvarozás, vagy az EU-n belüli kabotázs során vonatkozik. Ha Ön csak belföldön közlekedik, az jelenleg nem érinti Önt.</p></div>
+</details>
+<details class="faq-item"><summary>Mi az a kabotázs?</summary>
+<div class="faq-answer"><p>A kabotázs azt jelenti, hogy fuvarozóként árut szállít egy másik EU-országon belül. Például: Hamburgban rakod le, majd onnan szállítmányt visz Berlinbe. Annak ellenére, hogy nem lépi át a határt, ez kabotázsfuvarozásnak minősül, és tachográf szükséges.</p></div>
+</details>
+<details class="faq-item"><summary>Átlépek egy határt a furgonommal — automatikusan szükségem van tachográfra?</summary>
+<div class="faq-answer"><p>Nem feltétlenül. A kötelezettség a nemzetközi árufuvarozásra vonatkozik<strong>díj ellenében vagy jutalomból</strong>és a kabotázsfuvarozásra. Saját számlás fuvarozás (pl. határátlépés saját cég anyagbeszerzése céljából, ahol a vezetés nem a járművezető fő foglalkozása) jellemzően nem esik az új kötelezettség alá. Ha nem biztos benne, hívjon minket a következő számon:<a href="tel:+420739005345">+420 739 005 345</a>.</p></div>
+</details>
+<details class="faq-item"><summary>Milyen bírságok várhatók?</summary>
+<div class="faq-answer"><p>A cégek büntetést kaphatnak akár<strong>akár 14 000 euróig</strong>. A járművezetőkkel szemben helyszíni biztosíték előírására kerülhet sor, akár<strong>akár 8 000 euróig</strong>a legsúlyosabb jogsértésekért – mint például a tachográf manipulálása.</p></div>
+</details>
+<details class="faq-item"><summary>Nem akarok ezzel foglalkozni. Ki tudja értékelni helyettem az adatokat?</summary>
+<div class="faq-answer"><p>Igen. Értékelési szolgáltatást kínálunk — küldje el nekünk az adatokat, mi kiértékeljük, ellenőrizzük a jogsértéseket és küldünk Önnek egy egyértelmű jelentést. Ezenkívül figyelemmel kísérjük a letöltési határidőket és az archiválást is.<a href="/hu/kapcsolat/">Vegye fel velünk a kapcsolatot a részletekért.</a></p></div>
+</details>
+<div class="related">
+<div class="related-title">Kapcsolódó cikkek</div>
+<div class="related-grid">
+<a class="related-card" href="/articles/tachographs-for-vans-new-obligation-july-2026/">
+<div class="related-card-eye">Új jogszabályok</div>
+<h3 class="card-title">Tachográfok kisteherautókhoz: új kötelezettség 2026 júliusától</h3>
+</a>
+<a class="related-card" href="/hu/cikkek/tachograf-adatok-letoltese-kiertekelese/">
+<div class="related-card-eye">Teljes útmutató</div>
+<h3 class="card-title">Hogyan kell helyesen letölteni, kiértékelni és archiválni a tachográf adatokat</h3>
+</a>
+</div>
+</div>
+</div>
+</main>
+<footer class="site-footer" role="contentinfo">
+<div class="footer-inner">
+<div>
+<div class="footer-logo"><img alt="TAGRA" height="32" src="/assets/img/logo-dark.svg?v=20260513zh" width="140"/></div>
+<p class="footer-desc">Professzionális szoftver tachográfadatok kiértékelésére. Sofőrkártya-letöltés, digitális tachográfadatok kiértékelése, uniós vezetési és pihenőidő, valamint nehézgépjárművekre vonatkozó munkaidő-irányelv. Fejlesztő: Truck Data Technology, s.r.o.</p>
+</div>
+<div class="footer-col">
+<h4>Termék</h4>
+<ul>
+<li><a href="/hu/fuvarozoknak/">Fuvarozók részére</a></li>
+<li><a href="/hu/soforoknek/">Professzionális sofőrök részére</a></li>
+<li><a href="/hu/hatosagoknak/">Ellenőrző hatóságok részére</a></li>
+<li><a href="/hu/hogyan-mukodik/">Hogyan működik</a></li>
+<li><a href="/hu/kinek-szol/">Kinek szól</a></li>
+<li><a href="/hu/gyakori-kerdesek/">GYIK</a></li>
+<li><a href="/hu/letolto-eszkozok/">Letöltő eszközök</a></li><li><a href="/hu/gps-nyomkovetes/">GPS nyomkövetés</a></li></ul>
+</div>
+<div class="footer-col">
+<h4>Források</h4>
+<ul>
+<li><a href="/hu/cikkek/">Cikkek</a></li><li><a href="/manuals/">Kézikönyvek</a></li>
+<li><a href="/hu/cikkek/tachograf-szimbolumok/">Tachográf szimbólumok</a></li>
+<li><a href="/integrations/dkv-live/">DKV LIVE®</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h4>Cég</h4>
+<ul>
+<li><a href="/hu/kapcsolat/">Kapcsolat</a></li>
+<li><a href="https://www.tdt.cz" rel="noopener" target="_blank">Truck Data Technology</a></li>
+<li><a href="/de/">Német</a></li>
+<li><a href="/pl/">Lengyel</a></li>
+</ul>
+</div>
+</div>
+<div class="footer-bottom">
+<span>© 2026 Truck Data Technology, s.r.o. Minden jog fenntartva.</span>
+<span><a href="/hu/kapcsolat/">Kapcsolat</a> · <a href="https://www.tdt.cz" rel="noopener" target="_blank">tdt.cz</a></span>
+</div>
+</footer>
+<script>(function(){var bar=document.getElementById('scroll-progress');if(bar)window.addEventListener('scroll',function(){var t=document.documentElement.scrollTop||document.body.scrollTop;var h=document.documentElement.scrollHeight-document.documentElement.clientHeight;bar.style.width=(t/h*100)+'%';},{passive:true});var toggle=document.getElementById('nav-toggle'),links=document.getElementById('nav-links');if(toggle&&links)toggle.addEventListener('click',function(){var o=links.classList.toggle('open');toggle.setAttribute('aria-expanded',o);});})();</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Csak le kell töltenem a tachográf adatokat, vagy értékelnem is kell őket?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Önmagában a letöltés nem elegendő. A jogszabályok előírják a rendszeres kiértékelést – a vezetési idők, a szünetek és a pihenőidők ellenőrzését. Kiértékelés nélkül bírságot kockáztat."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Milyen gyakran kell letölteni az adatokat?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Járművezetői kártya legalább 28 naponta, járműegység legalább 90 naponta."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Az új kötelezettség vonatkozik a csak belföldön közlekedő furgonokra?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nem. A 2026. július 1-jétől hatályos kötelezettség csak a 2,5–3,5 tonna össztömegű furgonokra vonatkozik nemzetközi, díj ellenében vagy jutalomból végzett árufuvarozás vagy kabotázs esetén."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Mi az a kabotázs?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Kabotázsfuvarozás az, amikor Ön fuvarozóként árut szállít egy másik EU-országon belül. Például: Hamburgban rakod le, majd onnan szállítmányt visz Berlinbe."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Milyen bírságok várhatók?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A cégek akár 14 000 euró pénzbírságot is kaphatnak. A járművezetőkkel szemben a legsúlyosabb jogsértésekért akár 8 000 euró helyszíni biztosíték is előírható."
+      }
+    }
+  ]
+}</script>
+</body>
+</html>

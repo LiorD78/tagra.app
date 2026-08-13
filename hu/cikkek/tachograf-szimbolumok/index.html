@@ -1,0 +1,1568 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<!-- TMX-ANALYTICS START -->
+<meta content="7F7894081BE7FBB245FF03AF8810B22F" name="msvalidate.01"/>
+<!-- Consent Mode v2 defaults (deny) + gtag stub — runs BEFORE gtag.js -->
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent','default',{
+      ad_storage:'denied', ad_user_data:'denied', ad_personalization:'denied',
+      analytics_storage:'denied', functionality_storage:'denied',
+      personalization_storage:'denied', security_storage:'granted',
+      wait_for_update:500
+    });
+    gtag('set','ads_data_redaction',true);
+    gtag('set','url_passthrough',false);
+  </script>
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-92253QFBNX"></script>
+<script>
+    gtag('js', new Date());
+    gtag('config','G-92253QFBNX');
+  </script>
+<!-- Cookie consent banner (self-hosted) + Microsoft Clarity gating -->
+<style>
+    .tmx-cc{position:fixed;left:0;right:0;bottom:0;z-index:2147483000;background:linear-gradient(120deg,var(--blue-dark,#0b2c4a),var(--blue-mid,#134a8e) 62%,var(--blue-light,#1f5fa6));color:#fff;
+      font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+      padding:16px 20px;box-shadow:0 -4px 24px rgba(0,0,0,.18);display:flex;flex-wrap:wrap;
+      align-items:center;gap:14px;justify-content:center}
+    .tmx-cc__txt{flex:1 1 360px;max-width:760px}
+    .tmx-cc__txt a{color:#9ed0f5;text-decoration:underline}
+    .tmx-cc__btns{display:flex;gap:10px;flex:0 0 auto}
+    .tmx-cc__b{appearance:none;border:0;cursor:pointer;font:inherit;font-weight:600;
+      padding:10px 22px;border-radius:99px;transition:filter .15s;color:#fff}
+    .tmx-cc__b:hover{filter:brightness(1.08)}
+    .tmx-cc__b--no{background:rgba(255,255,255,.16)}
+    .tmx-cc__b--yes{background:var(--green-cta,#5C820F)}
+    @media(max-width:640px){.tmx-cc{padding:14px}.tmx-cc__btns{width:100%}.tmx-cc__b{flex:1}}
+  </style>
+<script>
+  (function(){
+    var KEY='tmx-consent-v1', CL='wt18054m0r';
+    function lc(){var l=(document.documentElement.getAttribute('lang')||'en').toLowerCase().split('-')[0];
+      var m={cz:'cs',cs:'cs',sk:'sk',de:'de',pl:'pl',gr:'el',el:'el',en:'en'};return m[l]||'en';}
+    var T={
+      en:{t:'We use analytics cookies (Google Analytics, Microsoft Clarity) to understand site usage. They load only with your consent.',a:'Accept',r:'Reject',p:'Privacy &amp; cookies'},
+      cs:{t:'Pou\u017e\u00edv\u00e1me analytick\u00e9 cookies (Google Analytics, Microsoft Clarity) k pochopen\u00ed pou\u017e\u00edv\u00e1n\u00ed webu. Na\u010dtou se jen s va\u0161\u00edm souhlasem.',a:'P\u0159ijmout',r:'Odm\u00edtnout',p:'Soukrom\u00ed a cookies'},
+      sk:{t:'Pou\u017e\u00edvame analytick\u00e9 cookies (Google Analytics, Microsoft Clarity) na pochopenie pou\u017e\u00edvania webu. Na\u010d\u00edtaj\u00fa sa len s va\u0161\u00edm s\u00fahlasom.',a:'Prija\u0165',r:'Odmietnu\u0165',p:'S\u00fakromie a cookies'},
+      de:{t:'Wir verwenden Analyse-Cookies (Google Analytics, Microsoft Clarity), um die Nutzung der Website zu verstehen. Sie werden nur mit Ihrer Einwilligung geladen.',a:'Akzeptieren',r:'Ablehnen',p:'Datenschutz &amp; Cookies'},
+      pl:{t:'U\u017cywamy plik\u00f3w cookie do analityki (Google Analytics, Microsoft Clarity), aby zrozumie\u0107 korzystanie z witryny. \u0141aduj\u0105 si\u0119 tylko za Twoj\u0105 zgod\u0105.',a:'Akceptuj',r:'Odrzu\u0107',p:'Prywatno\u015b\u0107 i cookies'},
+      el:{t:'\u03a7\u03c1\u03b7\u03c3\u03b9\u03bc\u03bf\u03c0\u03bf\u03b9\u03bf\u03cd\u03bc\u03b5 cookies \u03b1\u03bd\u03ac\u03bb\u03c5\u03c3\u03b7\u03c2 (Google Analytics, Microsoft Clarity) \u03b3\u03b9\u03b1 \u03bd\u03b1 \u03ba\u03b1\u03c4\u03b1\u03bd\u03bf\u03ae\u03c3\u03bf\u03c5\u03bc\u03b5 \u03c4\u03b7 \u03c7\u03c1\u03ae\u03c3\u03b7. \u03a6\u03bf\u03c1\u03c4\u03ce\u03bd\u03bf\u03bd\u03c4\u03b1\u03b9 \u03bc\u03cc\u03bd\u03bf \u03bc\u03b5 \u03c4\u03b7 \u03c3\u03c5\u03b3\u03ba\u03b1\u03c4\u03ac\u03b8\u03b5\u03c3\u03ae \u03c3\u03b1\u03c2.',a:'\u0391\u03c0\u03bf\u03b4\u03bf\u03c7\u03ae',r:'\u0391\u03c0\u03cc\u03c1\u03c1\u03b9\u03c8\u03b7',p:'\u0391\u03c0\u03cc\u03c1\u03c1\u03b7\u03c4\u03bf &amp; cookies'}
+    };
+    function loadClarity(){if(!CL||window.__tmxCl)return;window.__tmxCl=1;
+      (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+       t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+       y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script",CL);}
+    function grant(){try{localStorage.setItem(KEY,'granted')}catch(e){}
+      gtag('consent','update',{analytics_storage:'granted'});loadClarity();}
+    function deny(){try{localStorage.setItem(KEY,'denied')}catch(e){}}
+    var saved=null;try{saved=localStorage.getItem(KEY)}catch(e){}
+    if(saved==='granted'){grant();return;} if(saved==='denied'){return;}
+    function show(){var tx=T[lc()]||T.en;
+      var b=document.createElement('div');b.className='tmx-cc';b.setAttribute('role','dialog');b.setAttribute('aria-live','polite');
+      b.innerHTML='<div class="tmx-cc__txt">'+tx.t+' <a href="/privacy/">'+tx.p+'</a></div>'+
+        '<div class="tmx-cc__btns"><button type="button" class="tmx-cc__b tmx-cc__b--no">'+tx.r+'</button>'+
+        '<button type="button" class="tmx-cc__b tmx-cc__b--yes">'+tx.a+'</button></div>';
+      document.body.appendChild(b);
+      b.querySelector('.tmx-cc__b--yes').addEventListener('click',function(){grant();b.remove();});
+      b.querySelector('.tmx-cc__b--no').addEventListener('click',function(){deny();b.remove();});}
+    if(document.body)show();else document.addEventListener('DOMContentLoaded',show);
+  })();
+  </script>
+<!-- TMX-ANALYTICS END -->
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tachográf hibakódok és szimbólumok: jelentésük és a megoldások | TAGRA</title>
+<meta content="Minden digitális tachográf figyelmeztető szimbóluma és hibakódja megfejtve — VDO, Stoneridge, Actia és EFAS. Mit jelent az egyes kód, és pontosan mit kell tenni. Ingyenes keresés." name="description"/>
+<link href="https://tagra.app/hu/cikkek/tachograf-szimbolumok/" rel="canonical"/>
+<meta content="Tachográf hibakódok és szimbólumok: jelentésük és a megoldások | TAGRA" property="og:title"/>
+<meta content="Minden digitális tachográf figyelmeztető szimbóluma és hibakódja megfejtve — VDO, Stoneridge, Actia és EFAS. Nézze meg, mit jelent az egyes kód, és pontosan mit kell tenni ezután." property="og:description"/>
+<meta content="article" property="og:type"/>
+<meta content="https://tagra.app/assets/img/hero-poster.jpg" property="og:image"/>
+<meta content="Tachográf hibakódok és szimbólumok: jelentésük és a megoldások | TAGRA" name="twitter:title"/>
+<meta content="Minden digitális tachográf figyelmeztető szimbóluma és hibakódja megfejtve — VDO, Stoneridge, Actia és EFAS. Mit jelent az egyes kód, és mit kell tenni ezután." name="twitter:description"/>
+<meta content="https://tagra.app/assets/img/hero-poster.jpg" name="twitter:image"/>
+<meta content="https://tagra.app/hu/cikkek/tachograf-szimbolumok/" property="og:url"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    a{color:var(--blue-mid);text-decoration:none;}
+    a:hover{color:var(--blue-dark);text-decoration:underline;text-underline-offset:.18em;}
+    img{max-width:100%;height:auto;display:block;}
+    p+p{margin-top:14px;}
+    ul,ol{padding-left:22px;}
+    li{margin:6px 0;line-height:1.65;}
+    li::marker{color:var(--blue-mid);}
+    strong{font-weight:700;color:var(--text);}
+    #scroll-progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--green-brand),var(--blue-light));width:0%;z-index:9999;pointer-events:none;}
+.nav-inner{max-width:1180px;margin:0 auto;padding:0 24px;height:100%;display:flex;align-items:center;justify-content:space-between;gap:24px;}
+    .nav-logo{display:flex;align-items:center;gap:8px;text-decoration:none;flex-shrink:0}
+    .nav-links{display:flex;align-items:center;gap:4px;list-style:none;}
+    .nav-links a{font-size:15px;font-weight:500;color:var(--text);padding:8px 12px;border-radius:8px;text-decoration:none;transition:background .15s;}
+    .nav-links a:hover{background:var(--bg-apple);color:var(--blue-mid);}
+    .nav-links .nav-cta a{background:var(--green-cta);color:#fff!important;border-radius:99px;padding:8px 18px;font-weight:600;}
+    .nav-links .nav-cta a:hover{background:var(--green-brand);text-decoration:none;}
+    .nav-lang{display:flex;align-items:center;gap:4px;font-size:14px;font-weight:600;}
+    .nav-lang a{padding:5px 8px;border-radius:6px;color:var(--text2);text-decoration:none;transition:background .15s;}
+    .nav-lang a:hover,.nav-lang a.active{background:var(--bg-apple);color:var(--blue-mid);}
+    .nav-lang span{color:var(--border);}
+    .nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:8px;}
+    .nav-toggle span{display:block;width:22px;height:2px;background:var(--text);margin:5px 0;border-radius:2px;}
+    @media(max-width:900px){.nav-links{display:none;}.nav-toggle{display:block;}.nav-links.open{display:flex;flex-direction:column;align-items:flex-start;gap:2px;position:absolute;top:var(--nav-h);left:0;right:0;background:rgba(255,255,255,.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:12px 24px 20px;}}
+    .art-hero{background:linear-gradient(180deg,var(--bg-apple) 0%,#fff 100%);padding:56px 0 44px;}
+    .art-wrap{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 24px;}
+    .breadcrumb{font-size:14px;color:var(--text2);margin-bottom:18px;}
+    .breadcrumb a{color:var(--text2);text-decoration:none;}
+    .breadcrumb a:hover{color:var(--blue-mid);}
+    .breadcrumb span{margin:0 5px;color:var(--border);}
+    .eyebrow{font-size:14px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--green-brand);margin-bottom:10px;}
+    .art-title{font-size:38px;line-height:1.15;font-weight:800;margin-bottom:16px;letter-spacing:-.02em;padding-bottom:0.08em;color:var(--blue-dark);}
+    .art-title .grad{background:linear-gradient(90deg,var(--blue-dark) 0%,var(--blue-light) 50%,var(--blue-bright) 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;}
+    @media(max-width:700px){.art-title{font-size:26px;}}
+    .art-meta{font-size:15px;color:var(--text2);padding-bottom:24px;border-bottom:1px solid var(--border);display:flex;gap:20px;flex-wrap:wrap;}
+    .art-body{padding:44px 0 60px;}
+    /* H2 gradient mechanics: width:max-content shrinks the element to the text's
+       intrinsic width so the 3-stop gradient is rendered across the visible glyphs
+       (not the 949px wrapping width), giving the same visible 3-stop effect as H1.
+       Multi-line H2s wrap via max-width:100% (each wrapped line gets its own slice). */
+    .art-body h2 {
+      font-size: 36px; font-weight: 800;
+      line-height: 1.1; letter-spacing: 0;
+      text-transform: uppercase;
+      color: var(--blue-mid, #134a8e);
+      background: linear-gradient(90deg, var(--blue-dark, #0b2c4a) 0%, var(--blue-light, #1f5fa6) 50%, var(--blue-bright, #3a6ff0) 100%);
+      -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block; width: max-content; max-width: 100%;
+      margin-bottom: 14px;
+      padding: 0.12em 0.15em 0.08em 0;
+    }
+    .art-body h3{font-size:20px;font-weight:700;color:var(--text);margin:28px 0 10px;}
+    .art-body p{margin-bottom:18px;}
+    .art-body ul,.art-body ol{margin-bottom:20px;}
+    .deadline-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:24px 0;}
+    @media(max-width:580px){.deadline-grid{grid-template-columns:1fr;}}
+    .deadline-box{background:var(--bg-apple);border-radius:var(--radius);padding:28px;text-align:center;}
+    .deadline-num{font-size:54px;font-weight:900;line-height:1;background:linear-gradient(90deg,var(--blue-dark),var(--blue-mid));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:6px;}
+    .deadline-lbl{font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--text2);}
+    .deadline-desc{font-size:15px;color:var(--text2);margin-top:10px;line-height:1.5;}
+    .steps-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin:20px 0;}
+    @media(max-width:720px){.steps-grid{grid-template-columns:1fr;}}
+    .step-card{background:var(--bg-gray);border-radius:var(--radius);padding:22px;box-shadow:0 8px 24px rgba(0,0,0,.04);}
+    .step-num{font-size:13px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--green-cta);margin-bottom:8px;}
+    .step-title{font-size:17px;font-weight:800;color:var(--text);margin-bottom:6px;line-height:1.35;}
+    .step-desc{font-size:15px;color:var(--text2);line-height:1.5;}
+    
+    .callout--blue{background:var(--bg-apple);border-left:4px solid var(--blue-mid);}
+    
+    .callout-title{font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:.07em;color:var(--blue-mid);margin-bottom:8px;}
+    .callout--green .callout-title{color:var(--green-brand);}
+    .faq-item{border-top:1px solid var(--border);padding:14px 0;}
+    .faq-item:last-child{border-bottom:1px solid var(--border);}
+    .faq-item summary{list-style:none;cursor:pointer;font-weight:700;font-size:18px;line-height:1.4;padding-right:32px;position:relative;color:var(--text);}
+    .faq-item summary::-webkit-details-marker{display:none;}
+    .faq-item summary::after{content:"+";position:absolute;right:0;top:50%;transform:translateY(-50%);font-size:26px;font-weight:300;color:var(--green-cta);}
+    .faq-item[open] summary::after{content:"−";}
+    
+    .cta-box{background:linear-gradient(135deg,var(--blue-dark),var(--blue-mid));border-radius:var(--radius);padding:40px 36px;margin:44px 0;text-align:center;}
+    .cta-box h3{font-size:24px;font-weight:800;color:#fff;margin-bottom:12px;}
+    .cta-box p{color:rgba(255,255,255,.8);font-size:17px;margin-bottom:24px;}
+    
+    .btn:hover{background:var(--green-brand);transform:scale(1.02);}
+    .related{border-top:1px solid var(--border);padding-top:36px;margin-top:36px;}
+    .related-title{font-size:20px;font-weight:800;color:var(--text);margin-bottom:18px;}
+    .related-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+    @media(max-width:580px){.related-grid{grid-template-columns:1fr;}}
+    .related-card{display:block;padding:20px;border:1px solid var(--border);border-radius:var(--radius);text-decoration:none!important;transition:border-color .15s,transform .15s;}
+    .related-card:hover{border-color:var(--blue-mid);transform:translateY(-2px);}
+    .related-card-eye{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--blue-mid);margin-bottom:6px;}
+    .related-card-title{font-size:16px;font-weight:700;color:var(--text);line-height:1.4;}
+
+    .art-body table{width:100%;border-collapse:collapse;margin:20px 0;font-size:16px;background:#fff;box-shadow:0 8px 24px rgba(0,0,0,.04);border-radius:var(--radius);overflow:hidden;}
+    .sym-cell{display:flex;align-items:center;gap:14px;}
+    .sym-icon{flex-shrink:0;width:48px;height:48px;background:#fff;border:1px solid var(--border);border-radius:8px;padding:8px;color:var(--blue-dark);}
+    .sym-icon svg{display:block;width:100%;height:100%;}
+    .sym-icon img{display:block;width:100%;height:100%;}
+    @media(max-width:680px){.sym-icon{width:40px;height:40px;padding:7px;}}
+    .art-body thead{background:linear-gradient(135deg,var(--blue-dark),var(--blue-mid));color:#fff;}
+    .art-body th{padding:14px 16px;text-align:left;font-weight:700;font-size:14px;letter-spacing:.02em;}
+    .art-body td{padding:14px 16px;border-top:1px solid var(--border);vertical-align:top;line-height:1.55;font-size:15px;}
+    .art-body tbody tr:nth-child(even){background:var(--bg-gray);}
+    .art-body th:first-child,.art-body td:first-child{width:22%;}
+    @media(max-width:680px){.art-body table,.art-body thead,.art-body tbody,.art-body th,.art-body td,.art-body tr{display:block;}.art-body thead{display:none;}.art-body td{border-top:none;border-bottom:1px solid var(--border);}.art-body td:first-child{font-weight:700;background:var(--bg-apple);}}
+    .lead{font-size:20px;color:var(--text2);line-height:1.55;}
+
+    .dec-search{background:var(--bg-apple);border:1px solid var(--border);border-radius:var(--radius);padding:18px 18px 14px;margin:8px 0 26px;}
+    .dec-search-label{display:block;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--blue-mid);margin-bottom:10px;}
+    .dec-search-row{display:flex;gap:10px;align-items:center;}
+    #dec-search-input{flex:1;font-size:16px;padding:12px 14px;border:1px solid var(--border);border-radius:10px;background:#fff;color:var(--text);outline:none;}
+    #dec-search-input:focus{border-color:var(--blue-mid);box-shadow:0 0 0 3px rgba(19,74,142,.12);}
+    #dec-search-clear{flex-shrink:0;width:42px;height:42px;border:1px solid var(--border);background:#fff;border-radius:10px;font-size:22px;line-height:1;color:var(--text2);cursor:pointer;}
+    #dec-search-clear:hover{color:var(--text);border-color:var(--blue-mid);}
+    .dec-chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;}
+    .dec-chip{font-size:14px;font-weight:600;padding:7px 14px;border-radius:99px;border:1px solid var(--border);background:#fff;color:var(--text2);cursor:pointer;transition:all .15s;}
+    .dec-chip:hover{border-color:var(--blue-mid);color:var(--blue-mid);}
+    .dec-chip.is-active{background:var(--blue-mid);border-color:var(--blue-mid);color:#fff;}
+    .dec-count{font-size:14px;color:var(--text2);margin:12px 0 0;min-height:1.2em;}
+    .vendor.dec-hidden{display:none;}
+    tr.dec-hidden{display:none;}
+    .dec-nohit{font-size:14px;color:var(--text2);padding:10px 2px;}
+  
+</style>
+<link href="/assets/css/tokens.css?v=20260514j" rel="stylesheet"/>
+<link href="/assets/css/base.css?v=20260514j" rel="stylesheet"/>
+<link href="/assets/css/components.css?v=20260514j" rel="stylesheet"/>
+<link href="/assets/css/nav.css?v=20260514j" rel="stylesheet"/>
+<script defer="" src="/assets/js/nav.js?v=20260513q"></script>
+<link href="/assets/css/footer.css?v=20260513d" rel="stylesheet"/>
+<link href="https://tagra.app/articles/digital-tachograph-symbols/" hreflang="en" rel="alternate"/><link href="https://tagra.app/de/ratgeber/tachographen-symbole/" hreflang="de" rel="alternate"/><link href="https://tagra.app/pl/poradnik/symbole-tachografu/" hreflang="pl" rel="alternate"/><link href="https://tagra.app/el/arthra/symvola-tachografou/" hreflang="el" rel="alternate"/><link href="https://tagra.app/hu/cikkek/tachograf-szimbolumok/" hreflang="hu" rel="alternate"/><link href="https://tagra.app/articles/digital-tachograph-symbols/" hreflang="x-default" rel="alternate"/></head>
+<body>
+<div aria-hidden="true" id="scroll-progress"></div>
+<nav aria-label="Fő navigáció" class="site-nav" role="navigation">
+<div class="nav-inner">
+<a aria-label="TAGRA – Kezdőlap" class="nav-logo" href="/hu/"><img alt="TAGRA" height="32" src="/assets/img/logo-light.svg?v=20260513zh" style="display:block;height:32px;width:auto;" width="140"/></a>
+<ul class="nav-links">
+<li><a href="/hu/fuvarozoknak/">Cégeknek</a></li>
+<li><a href="/hu/soforoknek/">Sofőröknek</a></li>
+<li><a href="/hu/hatosagoknak/">Ellenőrzés</a></li>
+<li><a aria-current="page" href="/hu/cikkek/">Cikkek</a></li><li><a href="/manuals/">Kézikönyvek</a></li>
+<li><a href="/hu/letolto-eszkozok/">Eszközök</a></li><li><a href="/hu/gyakori-kerdesek/">GYIK</a></li>
+<li><a href="/hu/kapcsolat/">Kapcsolat</a></li>
+<li class="nav-cta-li"><a class="nav-cta" href="/hu/ingyenes-probaverzio/?audience=fleet">Próbálja ki 30 napig ingyen</a></li>
+</ul>
+<details class="nav-lang">
+<summary aria-label="Language: HU">HU</summary>
+<div class="nav-lang-menu" role="menu">
+<a href="/" hreflang="en">English</a><a href="/de/" hreflang="de">Deutsch</a><a href="/pl/" hreflang="pl">Polski</a><a href="/el/" hreflang="el">Ελληνικά</a><a aria-current="page" class="active" href="/hu/" hreflang="hu">Magyar</a><a href="https://www.tdt.cz/" hreflang="cs" rel="noopener" target="_blank">Čeština</a><a href="https://www.tdt.sk/" hreflang="sk" rel="noopener" target="_blank">Slovenčina</a></div>
+</details>
+<a class="nav-cta-mobile" href="/hu/ingyenes-probaverzio/?audience=fleet">Próbálja ki ingyen</a>
+<button aria-expanded="false" aria-label="Menü váltása" class="nav-mobile-toggle" id="nav-toggle">
+<span></span><span></span><span></span>
+</button>
+</div>
+</nav>
+<header class="art-hero">
+<div class="art-wrap">
+<nav class="breadcrumb"><a href="/hu/">TAGRA</a><span>›</span><a href="/hu/cikkek/">Cikkek</a><span>›</span><span>Tachográf szimbólumok és hibakódok</span></nav>
+<div class="eyebrow">Sofőr tudásbázis</div>
+<h1 class="art-title"><span class="grad">Tachográf szimbólumok és hibakódok: járművezetői útmutató</span></h1>
+<div class="art-meta"><span>Truck Data Technology</span><span>Frissítve: 2026. június</span><span>22 perc olvasási idő</span></div>
+<div aria-label="Digitális tachográfot üzemeltető járművezető" class="art-hero-video">
+<video aria-label="Digitális tachográfot üzemeltető járművezető" autoplay="" loop="" muted="" playsinline="" poster="symboly-chybove-kody-hero-poster.webp" preload="metadata" webkit-playsinline="">
+<source src="symboly-chybove-kody-hero.webm" type="video/webm">
+<source src="symboly-chybove-kody-hero.mp4" type="video/mp4">
+</source></source></video>
+</div>
+</div>
+</header>
+<main>
+<div class="art-wrap art-body">
+<article>
+<p class="lead">Minden digitális tachográf az EU-ban ugyanazt a vizuális nyelvet beszéli. Akár egy 7,5 tonnás teherautót vezet Bajorországon keresztül, akár egy 40 tonnás nyerges vontatót Rotterdamból Athénba, a tachográf kijelzőjén lévő szimbólumok egyetlen, jogilag kötelező érvényű szabványt követnek, amelyet a<strong>2016/799/EU rendelet, I C. melléklet</strong>— az intelligens tachográfok műszaki specifikációja.</p>
+<p>De az ikonok megértése csak a munka fele. Ugyanez a képernyő, amely a tevékenységét mutatja, megjeleníti a következőket is:<strong>figyelmeztetéseket, eseményeket, hibákat és gyártóspecifikus felugró üzeneteket</strong>— és ha rosszul értelmezi őket, az a járművezetőnek bírságot, a jármű útról való letiltását vagy kötelező műhelylátogatást vonhat maga után hét napon belül. Ez az útmutató végigvezeti az összes kategórián, hitelesített üzenetekkel, amelyek Európa négy legszélesebb körben használt egységének hivatalos kézikönyveiből származnak:<strong>VDO DTCO 4.1, Stoneridge SE5000, Actia SmarTach</strong>és<strong>EFAS-4</strong>.</p>
+<div aria-label="A cikk tartalma" class="toc">
+<strong>Mi található ebben az útmutatóban</strong>
+<ol>
+<li><a href="#activity-symbols">Négy tevékenységi szimbólum, amit minden járművezetőnek ismernie kell</a></li>
+<li><a href="#universal-warnings">Univerzális figyelmeztetési kategóriák (események, hibák, idő, jegyzetek)</a></li>
+<li><a href="#vendor-codes">Több mint 200 ellenőrzött kód és szimbólum (kereshető)</a></li>
+<li><a href="#common-mistakes">A 10 leggyakoribb tachográf üzenet a gyakorlatban</a></li>
+<li><a href="#crisis-workflow">Kritikus hiba munkafolyamat: mit kell tenni az út mentén</a></li>
+<li><a href="#sources">Hivatalos források és gyártói kézikönyvek</a></li>
+<li><a href="#faq">GYIK — szimbólumok és hibakódok</a></li>
+</ol>
+</div>
+<!-- ===================================================================== -->
+<!-- SECTION 1: FOUR MAIN ACTIVITY SYMBOLS                                  -->
+<!-- ===================================================================== -->
+<h2 id="activity-symbols">Négy tevékenységi szimbólum, amit minden járművezetőnek ismernie kell</h2>
+<p>Minden digitális tachográf négy kategória valamelyike alá rögzíti a járművezető idejét, mindegyiket egyetlen ISO-2575 piktogram mutatja a kijelzőn. Ezek nem csupán vizuális címkék —<strong>jogilag különálló kategóriák</strong>az 561/2006/EK rendelet (vezetési idők) és a 2002/15/EK irányelv (mobil munkavállalók munkaideje) értelmében, és meghatározzák, hogyan számít a napja a vezetési korlátokba, a szünetekbe és a pihenőidőkbe.</p>
+<div class="activity-grid">
+<div class="activity-card">
+<div aria-hidden="true" class="ico ico--drive"><img alt="" height="28" src="icons/driving.svg?v=20260514c" width="28"/></div>
+<h3>JÁRMŰVEZETÉS (kormánykerék)</h3>
+<p>Beállítva<strong>automatikusan</strong>abban a pillanatban, amikor a jármű mozog. Kézzel nem módosítható. Beleszámít a 4 és fél órás folyamatos, a 9/10 órás napi, és az 56/90 órás heti/kéthetente vezetési korlátokba.</p>
+</div>
+<div class="activity-card">
+<div aria-hidden="true" class="ico ico--work"><img alt="" height="28" src="icons/other-work.svg?v=20260514c" width="28"/></div>
+<h3>Egyéb munka (áthúzott kalapácsok)</h3>
+<p>Minden olyan fizetett munka, amely<strong>nem járművezetés</strong>: be- és kirakodás, tankolás, adminisztráció, járműellenőrzések, utasok segítése. Munkaidőnek számít a munkaidő-irányelv (WTD) értelmében. Ez<em>nem</em>számít szünetnek.</p>
+</div>
+<div class="activity-card">
+<div aria-hidden="true" class="ico ico--avail"><img alt="" height="28" src="icons/availability.svg?v=20260514c" width="28"/></div>
+<h3>KÉSZENLÉT (négyzet alakú rombusz)</h3>
+<p>Olyan várakozási idő, amelynek időtartama előre ismert: kompon/vonaton való utazás, sorban állás az ügyfélnél, vontatott jármű kísérete. A készenléti idő a vezetési idők szabályai szerint nem számít szünetnek, és – ha időtartama előre ismert – a munkaidő-irányelv (WTD) értelmében szintén kizárt a munkaidőből.</p>
+</div>
+<div class="activity-card">
+<div aria-hidden="true" class="ico ico--rest"><img alt="" height="28" src="icons/rest.svg?v=20260514c" width="28"/></div>
+<h3>SZÜNET/PIHENÉS (ágy)</h3>
+<p>Valódi szünet vagy napi/heti pihenőidő. A járművezető nem végezhet munkát, és szabadon rendelkezhet az idejével. Ez az egyetlen kategória, amely újraindítja a 4 és fél órás folyamatos vezetési idő számlálóját, és beleszámít a kötelező 11 órás napi pihenőidőbe.</p>
+</div>
+</div>
+<p>A készüléken lévő választó gombok (Járművezető 1 / Járművezető 2) lehetővé teszik a váltást az Egyéb munka, Készenlét és SZÜNET/PIHENÉS között. A JÁRMŰVEZETÉS-t mindig automatikusan állítja be a mozgásérzékelő – ha a JÁRMŰVEZETÉS feliratot látja, miközben a jármű áll, a tachográf hibát rögzít, nem tevékenységet (erről bővebben alább). Az e négy szimbólummal kapcsolatos gyakori járművezetői hibákat – és azt, hogy a „Készenlét” miért nem helyettesítheti jogszerűen a szünetet – a 4. szakasz tárgyalja.</p>
+<!-- ===================================================================== -->
+<!-- SECTION 2: UNIVERSAL WARNING CATEGORIES                                -->
+<!-- ===================================================================== -->
+<h2 id="universal-warnings">Univerzális figyelmeztetési kategóriák, amelyeket minden tachográf használ</h2>
+<p>Miután túljutott a négy tevékenység szimbólumon, a digitális tachográfok által megjelenített összes figyelmeztető üzenet négy család egyikébe tartozik. A<strong>VDO DTCO 4.1 kézikönyv</strong>ezeket kifejezetten említi (109. oldal), és ugyanezt a logikát követi a Stoneridge SE5000, az Actia SmarTach és az EFAS-4 is – mivel az<strong>I. C melléklet határozza meg a kategóriákat a rendeleti szinten</strong>. Annak ismerete, hogy egy üzenet melyik családhoz tartozik, azonnal megmondja, mennyire súlyos, és folytathatja-e a műszakját.</p>
+<div class="warn-grid">
+<div class="warn-card warn-card--warn">
+<h3>! Esemény</h3>
+<p>Egy<strong>működési esemény</strong>a menetíró készülék által rögzített, de nem feltétlenül hardverhiba – például járművezetés megfelelő kártya nélkül, gyorshajtás vagy kártya behelyezése járművezetés közben. A legtöbb eseményt az OK gombbal nyugtázni kell. A járműegység (VU) bejegyzést ír a tömegmemóriába<em>és</em>a járművezetői kártyára.</p>
+</div>
+<div class="warn-card warn-card--crit">
+<h3>x Hiba</h3>
+<p>Valódi<strong>hardveres vagy szoftveres meghibásodás</strong>: érzékelőhiba, nyomtatóhiba, belső időhiba, letöltési hiba, GNSS-anomália. A hibák kiváltják a jogi hétnapos műhelyszabályt – a készüléket egy engedélyezett műhelynek kell megvizsgálnia<strong>egy héten</strong>. Ismert hibával vezetni csak dokumentált manuális bejegyzésekkel engedélyezett.</p>
+</div>
+<div class="warn-card warn-card--info">
+<h3>↻ Vezetésiidő-figyelmeztetés</h3>
+<p>Egy<strong>megfelelőségi előzetes figyelmeztetés</strong>: a folyamatos vezetés a 4½ órát közelíti, a napi/heti vezetési idő a határához közeledik, vagy a következő kötelező pihenőidő esedékes. A villogó háttérvilágítás a vizuális jelzés. Ezek az üzenetek segítenek megfelelni az 561/2006 rendeletnek – nem hibákról van szó.</p>
+</div>
+<div class="warn-card warn-card--ok">
+<h3>i Üzemi megjegyzés</h3>
+<p>Egy<strong>információs értesítés</strong>: „kérjük, helyezze be”, „nincs papír”, „kártyahiba”, „illesztés 28 nap múlva esedékes”. Az üzemi megjegyzések villogás nélkül jelennek meg, és néhány másodperc múlva automatikusan eltűnnek. Nincs adat a tömegmemóriába írva; az üzenet pusztán felhasználói felületi tipp.</p>
+</div>
+</div>
+<p>Minden hibaüzenet, amit látni fog – legyen az VDO DTCO 4.0, Stoneridge SE5000 Exakt Duo², Actia SmarTach vagy bármely más, az I. melléklet C. része szerint típusjóváhagyott készülék –, pontosan e négy család egyikéhez tartozik. A útmutató ezen pontjától kezdve részletesen megvizsgáljuk az egyes családokat, a gyártói kézikönyvekből származó hitelesített üzenetszöveggel.</p>
+<!-- ===================================================================== -->
+<!-- SECTION 3: 120+ VERIFIED ERROR CODES BY MANUFACTURER                  -->
+<!-- ===================================================================== -->
+<h2 id="vendor-codes">200+ hitelesített hibakód négy gyártói kézikönyvből</h2>
+<p>Európa négy legelterjedtebb digitális tachográf modellje a<strong>VDO DTCO 4.1</strong>(Continental – a domináns készülék Közép-Európában, valamint a cseh/szlovák piacon),<strong>Stoneridge SE5000 Exakt Duo²</strong>(az Egyesült Királyságban és Skandináviában az alapértelmezett),<strong>Actia SmarTach</strong>(népszerű Franciaországban és Dél-Európában) és a<strong>EFAS-4</strong>(Intellic / Schneider, gyakori Németországban és Lengyelországban). Minden gyártó kissé eltérő képernyőn megjelenő megfogalmazást használ, de mindegyik megfelel az I. melléklet C. részének – így az „internal fault”, a „sensor fault” vagy a „card not closed” mögöttes jelentése azonos, függetlenül attól, hogy milyen készülék van a műszerfalán.</p>
+<p>Az alábbi kódok közvetlenül a hivatalos, nyilvánosan letölthető felhasználói kézikönyvekből származnak — a fájlhivatkozások szerepelnek a<a href="#sources">források részben</a>Ahol a kézikönyv angol megfogalmazást ad meg, azt szó szerint használjuk; csak egy egyszerű angol „mit kell tenni” oszlopot adtunk hozzá, ahol a kézikönyv ezt a járművezető döntésére bízza.</p>
+<div class="dec-search" id="dec-search">
+<label class="dec-search-label" for="dec-search-input">Gyors keresés — írjon be egy kódot, üzenetet vagy szimbólumot</label>
+<div class="dec-search-row">
+<input autocomplete="off" id="dec-search-input" placeholder="pl. érzékelőhiba, 042, 002E80, GNSS…" spellcheck="false" type="search"/>
+<button aria-label="Keresés törlése" id="dec-search-clear" type="button">×</button>
+</div>
+<div aria-label="Szűrés gyártó szerint" class="dec-chips" role="group">
+<button class="dec-chip is-active" data-vendor="all" type="button">Összes</button>
+<button class="dec-chip" data-vendor="vdo" type="button">VDO DTCO</button>
+<button class="dec-chip" data-vendor="stoneridge" type="button">Stoneridge</button>
+<button class="dec-chip" data-vendor="actia" type="button">Actia</button>
+<button class="dec-chip" data-vendor="efas" type="button">EFAS</button>
+<button class="dec-chip" data-vendor="symbols" type="button">Szimbólumok ↑</button>
+</div>
+<p aria-live="polite" class="dec-count" id="dec-count"></p>
+</div>
+<div class="vendor-stack">
+<!-- ===== VDO DTCO 4.1 ===== -->
+<details class="vendor" id="vdo" open="">
+<summary>
+<span class="vendor-meta">Continental VDO · legelterjedtebb Közép-Európában</span>VDO DTCO 4.1 / 4.1a / 4.1b</summary>
+<div class="vendor-body">
+<p>A VDO DTCO 4.1 család a második generációs intelligens tachográf (Smart Tacho 2) és a leggyakoribb egység cseh, szlovák, német és osztrák flottákban. Az alábbi üzenetek a következő forrásból származnak<strong>VDO DTCO 4.1 Instruction Manual, Edition 3 / 2024-08, BA00.1381.41 100 102</strong>(Continental Automotive Technologies GmbH). Az üzenetek hivatalos szerkezete a következő:<strong>Események</strong>(mint például járművezetés megfelelő kártya nélkül),<strong>Hibák</strong>(a készülék hardveres meghibásodásai),<strong>Vezetési idő figyelmeztetések</strong>és<strong>Működési megjegyzések</strong>.</p>
+<h3>Események — működési események (legmagasabb prioritás)</h3>
+<div class="code-table-wrap">
+<table class="code-table">
+<thead>
+<tr>
+<th style="width: 22%;">Üzenet</th>
+<th style="width: 30%;">Ok (kézikönyv alapján)</th>
+<th style="width: 32%;">Mit kell tenni</th>
+<th style="width: 12%;">Súlyosság</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>! biztonság feltörés xx</td>
+<td>Hiba az adathordozóban; a DTCO 4.1x adatbiztonsága már nem biztosított. Az érzékelő adatok már nem megbízhatóak. A DTCO házat jogosulatlanul felnyitották.</td>
+<td>Üzenet nyugtázása. A kártya automatikusan kiadódik – még vezetés közben is. Helyezze vissza, vagy ellenőriztesse egy hivatalos műhelyben.</td>
+<td><span class="sev sev-crit">Kritikus</span></td>
+</tr>
+<tr>
+<td>! biztonság feltörés xx</td>
+<td>A kártyazár zavart vagy hibás. A DTCO már nem érzékel egy korábban helyesen behelyezett tachográfkártyát. A kártya azonossága, hitelessége vagy a tárolt adatok nem megbízhatóak.</td>
+<td>Üzenet megerősítése. Helyezze vissza a tachográfkártyát, vagy ellenőriztesse.</td>
+<td><span class="sev sev-crit">Kritikus</span></td>
+</tr>
+<tr>
+<td>! feszültség megszakitás xx</td>
+<td>Az áramellátás megszakadt, vagy a DTCO érzékelőjének tápfeszültsége túl alacsony vagy túl magas volt. A motor indításakor is megjelenhet.</td>
+<td>Üzenet nyugtázása. Ismétlődés esetén ellenőrizze a jármű áramellátását.</td>
+<td><span class="sev sev-med">Közepes</span></td>
+</tr>
+<tr>
+<td>x érzékelő hiba xx</td>
+<td>A mozgásérzékelővel való kommunikáció megszakadt. Az üzenet feszültség-megszakadás után is megjelenik.</td>
+<td>Üzenet nyugtázása. Ismétlődés esetén forduljon hivatalos szakműhelyhez.</td>
+<td><span class="sev sev-crit">Kritikus</span></td>
+</tr>
+<tr>
+<td>! mozgási adat konfliktus xx</td>
+<td>Ellentmondás a jármű mozgásának értékelésében az érzékelő és egy független jelforrás között. A kompjárat/vonat funkciót esetleg nem állították be a szállítási folyamat során.</td>
+<td>Üzenet megerősítése. Forduljon hivatalos szakműhelyhez – esetleges manipuláció vagy sérülés.</td>
+<td><span class="sev sev-crit">Kritikus</span></td>
+</tr>
+<tr>
+<td>! GNSS is hiányzik xx</td>
+<td>Nincs helyzetmeghatározási adat három órányi kumulált vezetési idő után.</td>
+<td>Üzenet nyugtázása. Ellenőrizze, hogy a GNSS antenna nincs-e letakarva vagy elzárva.</td>
+<td><span class="sev sev-med">Közepes</span></td>
+</tr>
+<tr>
+<td>!? GNSS anomália</td>
+<td>Manipulációt észleltek vagy külső támadás történt a GNSS jel ellen (anti-spoofing OSNMA).</td>
+<td>Ellenőrizze a manipuláció okait. Ellenőrizze a GNSS funkciót. Szükség esetén cserélje ki a hibás alkatrészeket.</td>
+<td><span class="sev sev-high">Magas</span></td>
+</tr>
+<tr>
+<td>! Időütközés xx</td>
+<td>Több mint egy perces eltérés a DTCO belső órája és a GNSS jelből érkező idő között.</td>
+<td>Nyugtázza. Ha a probléma továbbra is fennáll, ellenőriztesse és javíttassa ki a tachográfot egy felhatalmazott műhelyben.</td>
+<td><span class="sev sev-med">Közepes</span></td>
+</tr>
+<tr>
+<td>! DSRC komm. hiba xx</td>
+<td>Kommunikációs hiba történt a DTCO 4.1x és a külső DSRC-CAN modul (távoli közúti ellenőrzésekhez használatos) között.</td>
+<td>Nyugtázza az üzenetet. Ha újra előfordul, forduljon egy felhatalmazott szakműhelyhez.</td>
+<td><span class="sev sev-med">Közepes</span></td>
+</tr>
+<tr>
+<td>! vezetés kártya nélkül xx</td>
+<td>Járművezetés kezdődött járművezetői kártya – vagy érvényes járművezetői kártya – nélkül az 1-es kártyafiókban. Akkor is kiváltódik, ha érvénytelen kártyakombinációt helyeznek be az út előtt vagy után.</td>
+<td>Állítsa meg a járművet. Helyezzen be érvényes járművezetői kártyát. Szükség esetén először távolítsa el az esetleges vállalkozáskártyát / ellenőrzőkártyát a DTCO-ból.</td>
+<td><span class="sev sev-high">Magas</span></td>
+</tr>
+<tr>
+<td>!1 behelyezés menet közben xx</td>
+<td>A járművezetői kártyát azután helyezték be, miután a jármű már mozgásba lendült.</td>
+<td>Nyugtázza az üzenetet. A jövőben tervezze meg a kártya behelyezését indulás előtt.</td>
+<td><span class="sev sev-med">Közepes</span></td>
+</tr>
+<tr>
+<td>!1 időtúllépés xx</td>
+<td>Ennek a tachográfnak az UTC ideje elmarad az előző tachográf UTC idejétől, ami negatív időeltérést eredményez (jellemző járműcsere esetén).</td>
+<td>Azonosítsa a hibás UTC idővel rendelkező tachográfot, és ellenőriztesse, illetve javíttassa ki egy felhatalmazott műhelyben.</td>
+<td><span class="sev sev-med">Közepes</span></td>
+</tr>
+<tr>
+<td>!1 érvénytelen kártya xx</td>
+<td>A tachográfkártya lejárt, még nem érvényes, vagy az azonosítása sikertelen volt. Az éjfél után érvénytelenné váló kártyát a jármű megállásakor automatikusan rögzíti és kiadja.</td>
+<td>Nyugtázza az üzenetet. Ellenőrizze a tachográfkártyát és helyezze be újra; ha lejárt, újítsa meg.</td>
+<td><span class="sev sev-med">Közepes</span></td>
+</tr>
+<tr>
+<td>! kártya konfliktus xx</td>
+<td>A két tachográfkártyát nem szabad egyszerre behelyezni – például vállalkozáskártyát ellenőrzőkártyával.</td>
+<td>Nyugtázza az üzenetet. Távolítsa el az ütköző kártyát az érintett fiókból.</td>
+<td><span class="sev sev-med">Közepes</span></td>
+</tr>
+<tr>
+<td>!1 kártya nincs lezárva xx</td>
+<td>A járművezetői kártyát nem megfelelően távolították el az előző tachográfból. Előfordulhat, hogy egyes járművezetői adatok nem lettek elmentve.</td>
+<td>Nyugtázza. Mostantól mindig várja meg, amíg a kártya feloldódik, mielőtt kihúzza.</td>
+<td><span class="sev sev-med">Közepes</span></td>
+</tr>
+<tr>
+<td> gyorshajtás xx</td>
+<td>A beállított maximális sebességet hosszabb ideig túllépték, mint<strong>60 másodperc</strong>.</td>
+<td>Üzenet megerősítése. Csökkentse a sebességet. Az ismételt gyorshajtási események letöltéskor láthatóak az ellenőrző hatóság számára.</td>
+<td><span class="sev sev-high">Magas</span></td>
+</tr>
+<tr>
+<td>§ illesztés nap múlva ??</td>
+<td>A tachográf kétévenkénti időszakos illesztése közeledik (a figyelmeztetés 28 nappal előre megjelenik).</td>
+<td>Megerősítés. Foglaljon időpontot egy hivatalos műhelynél a határidő lejárta előtt.</td>
+<td><span class="sev sev-low">Alacsony</span></td>
+</tr>
+<tr>
+<td>1 letöltés napokban ??</td>
+<td>A következő járművezetői kártya letöltése esedékes (a figyelmeztetés 14 nappal előre megjelenik).</td>
+<td>Végezze el a járművezetői kártya letöltését, mielőtt a határidő lejár.</td>
+<td><span class="sev sev-low">Alacsony</span></td>
+</tr>
+<tr>
+<td>1 lejár nap múlva ??</td>
+<td>A járművezetői kártya hamarosan lejár (általában 28 nappal előre figyelmeztet).</td>
+<td>Üzenet megerősítése. Kérje a kártya megújítását a tagállami hatóságtól.</td>
+<td><span class="sev sev-info">Információ</span></td>
+</tr>
+<tr>
+<td>! Dtco licensz lejár ??</td>
+<td>A DTCO 4.1x típusjóváhagyási tanúsítványa lejár. Az üzenet 92 nappal előre megjelenik a kártya kivételekor.</td>
+<td>Foglaljon időpontot a műhelyben a DTCO cseréjére a határidő lejárta előtt.</td>
+<td><span class="sev sev-med">Közepes</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>Hibák – hardveres meghibásodások (műhely 7 napon belül)</h3>
+<div class="code-table-wrap">
+<table class="code-table">
+<thead>
+<tr>
+<th style="width: 22%;">Üzenet</th>
+<th style="width: 30%;">Ok (kézikönyv alapján)</th>
+<th style="width: 32%;">Mit kell tenni</th>
+<th style="width: 12%;">Súlyosság</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>x járműegység belső hiba xx</td>
+<td>Súlyos meghibásodás a DTCO 4.1x-ben. Lehetséges okok: váratlan program-/folyamatidőzítési hiba, beragadt gombok, kommunikációs meghibásodás külső eszközökkel vagy műszerkijelzővel, a impulzuskimenet meghibásodása.</td>
+<td>Megerősítés. Ellenőrizze a gombokat. Ellenőriztesse a csatlakozókábeleket / a csatlakoztatott adatrögzítő készüléket egy hivatalos műhelyben.</td>
+<td><span class="sev sev-crit">Kritikus</span></td>
+</tr>
+<tr>
+<td>x1 kártyahiba xx</td>
+<td>Meghibásodás a kártyamechanikában (1. foglalat), pl. a kártyazár nem záródik.</td>
+<td>Vegye ki a tachográfkártyát és helyezze vissza. Ha a probléma továbbra is fennáll, forduljon egy műhelyhez.</td>
+<td><span class="sev sev-high">Magas</span></td>
+</tr>
+<tr>
+<td>x óra hiba xx</td>
+<td>A DTCO UTC ideje nem hiteles, vagy a valós idejű óra hibás. Az újonnan behelyezett járművezetői és üzembentartói kártyák elutasításra kerülnek az inkonzisztens adatok elkerülése érdekében.</td>
+<td>Tudomásul vétel. A DTCO-t a lehető leghamarabb cserélni vagy alaphelyzetbe állítani szükséges egy hivatalos műhely által.</td>
+<td><span class="sev sev-crit">Kritikus</span></td>
+</tr>
+<tr>
+<td>x Nyomtatózavar</td>
+<td>A nyomtató tápfeszültsége megszűnt, vagy a nyomtatófej hőmérséklet-érzékelője hibás.</td>
+<td>Megerősítés. Ismételje meg a nyomtatást, esetleg a gyújtás kikapcsolása és visszakapcsolása után. Ha nem oldódik meg, keresse fel a műhelyt.</td>
+<td><span class="sev sev-med">Közepes</span></td>
+</tr>
+<tr>
+<td>x letöltési hiba xx</td>
+<td>Meghibásodás történt adatok külső eszközre (letöltő kulcs vagy távoli letöltő doboz) történő letöltése közben.</td>
+<td>Megerősítés. Ismételje meg a letöltést. Ellenőriztesse a csatlakozókábeleket (lazulás?) vagy a külső eszközt.</td>
+<td><span class="sev sev-med">Közepes</span></td>
+</tr>
+<tr>
+<td>x érzékelő hiba xx</td>
+<td>A mozgásérzékelő belső meghibásodást jelez az öntesztje után.</td>
+<td>Tudomásul vétel. Műhelyi ellenőrzés szükséges – az érzékelő cseréjére is sor kerülhet.</td>
+<td><span class="sev sev-crit">Kritikus</span></td>
+</tr>
+<tr>
+<td>x1 kártyahiba xx</td>
+<td>A tachográfkártya olvasása vagy írása során kommunikációs meghibásodás történt – jellemzően piszkos érintkezők miatt. Előfordulhat, hogy egyes járművezetői adatok nem kerültek rögzítésre.</td>
+<td>Megerősítés. Tisztítsa meg a kártya érintkezőit (száraz ruhával), majd helyezze vissza. Ha ismétlődik, cserélje ki a kártyát.</td>
+<td><span class="sev sev-med">Közepes</span></td>
+</tr>
+<tr>
+<td>x Belső GNSS zavar xx</td>
+<td>Hiba a GNSS-eszközön: belső meghibásodás, a külső GNSS-antenna rövidzárlata (opció), vagy nincs kapcsolat a külső antennával.</td>
+<td>Tudomásul vétel. Forduljon hivatalos műhelyhez.</td>
+<td><span class="sev sev-high">Magas</span></td>
+</tr>
+<tr>
+<td>x Belső DSRC zavar xx</td>
+<td>Belső hiba a DSRC modulon (távoli országúti ellenőrző rádió), vagy az antenna hibás/nincs csatlakoztatva.</td>
+<td>Megerősítés. A műhelynek ellenőriznie kell a DSRC modult, a kábeleket és a külső antennát.</td>
+<td><span class="sev sev-med">Közepes</span></td>
+</tr>
+<tr>
+<td>x belső érzékelő hiba xx</td>
+<td>A belső gyorsulásérzékelő öntesztje több mint 10 alkalommal sikertelen volt, és a visszaállítási kísérlet hibás volt.</td>
+<td>Megerősítés. Haladéktalanul forduljon egy felhatalmazott szakműhelyhez.</td>
+<td><span class="sev sev-crit">Kritikus</span></td>
+</tr>
+<tr>
+<td>x ITS hiba xx</td>
+<td>Hiba a belső Bluetooth-komponensen (ITS adatintegrált interfész).</td>
+<td>Megerősítés. Forduljon hivatalos szakműhelyhez.</td>
+<td><span class="sev sev-low">Alacsony</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>Vezetésiidő-figyelmeztetések (megfelelőségi előzetes figyelmeztetések, nem hibák)</h3>
+<div class="code-table-wrap">
+<table class="code-table">
+<thead>
+<tr>
+<th style="width: 26%;">Üzenet</th>
+<th style="width: 44%;">Jelentése</th>
+<th style="width: 30%;">Teendő</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1 szünet! 1 04h15 00h15</td>
+<td>Tartson szünetet — a folyamatos vezetési idő elérte a 4 óra 15 percet (előzetes figyelmeztetés).</td>
+<td>Megerősítés. Tervezzen be egy 45 perces szünetet a következő 15 percben.</td>
+</tr>
+<tr>
+<td>1 szünet! 1 04h30 00h15</td>
+<td>Túllépte a vezetési időt — elérte a 4 óra 30 perces folyamatos vezetési idő korlátját.</td>
+<td>Álljon meg és tartson szünetet (45 perc, vagy 15 + 30 percre osztva).</td>
+</tr>
+<tr>
+<td>1 vezetési idő 24h / | / ||</td>
+<td>Közeleg a napi (24 óra), heti (|) vagy két heti (||) vezetési idő vége. Az előzetes figyelmeztetés ideje konfigurálható.</td>
+<td>Megerősítés. Fejezze be a vezetést, és tartsa be a 561/2006/EK rendelet szerinti előírt pihenőidőt.</td>
+</tr>
+<tr>
+<td>1 pihenő 01h45</td>
+<td>Közeleg a következő napi vagy heti pihenőidő (konfigurálható előzetes figyelmeztetés).</td>
+<td>Tervezze meg időben a következő pihenőjét.</td>
+</tr>
+<tr>
+<td>1 munkaidö 24h 09h30</td>
+<td>Közeleg a napi (24 óra) vagy heti (|) munkaidő vége a munkaidő-irányelv szerint.</td>
+<td>Megerősítés. Fejezze be a munkanapot, és tartsa be az előírt pihenőidőt.</td>
+</tr>
+<tr>
+<td>1 munkaidő 04h15</td>
+<td>Közeleg a maximális megszakítás nélküli munkaidő (6 óra a munkaidő-irányelv szerint) vége.</td>
+<td>Tervezzen be egy szünetet a következő 15 percben.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>Üzemeltetési megjegyzések (tájékoztató jellegűek, 3 másodperc után automatikusan eltűnnek)</h3>
+<div class="code-table-wrap">
+<table class="code-table">
+<thead>
+<tr>
+<th style="width: 30%;">Megjegyzés</th>
+<th style="width: 70%;">Jelentése és megoldása</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>? kérjük adja meg</td><td>A készülék bevitelt vár a kézi adatbevitel során. Nyomja meg az OK gombot, és folytassa.</td></tr>
+<tr><td>o nincs papír xx</td><td>A nyomtatóban nincs papír, vagy a nyomtatófiók nincs megfelelően behelyezve. Helyezzen be új tekercset; a megszakított nyomtatást a menüből indítsa újra.</td></tr>
+<tr><td>nyomtatás nem lehetséges xx</td><td>A nyomtatás nem lehetséges, mert a gyújtás kikapcsolt állapotban van (ADR-változat), a nyomtatófej túlmelegedett, a nyomtató foglalt, vagy a tápfeszültség nem megfelelő. Várja meg, amíg az ok megszűnik.</td></tr>
+<tr><td>nyomtatás késik</td><td>A nyomtatás megszakadt, mert a hőfej túlmelegedett. Várjon – a nyomtatás automatikusan folytatódik, miután lehűlt.</td></tr>
+<tr><td>kidobás nem lehetséges xx</td><td>A kártya kiadása elutasításra került: adatok olvasása vagy átvitele zajlik, napváltás van folyamatban, a jármű mozog, vagy (ADR) a gyújtás kikapcsolt állapotban van.</td></tr>
+<tr><td>?1 rögzítés inkonzisztens xx</td><td>Inkonzisztens dátumsorrend a járművezetői kártya adataiban. Az új adatok felülírják a hibás bejegyzéseket, így megszűnik.</td></tr>
+<tr><td>1 vegye ki a kártyáját xx</td><td>Hiba történt az adatok járművezetői kártyára írásakor. A kártya kiadásra és újraolvasásra kerül; ha ismét hiba történik, az utolsó tevékenységekről nyomtatás indul.</td></tr>
+<tr><td>1 kártyahiba xx</td><td>Hiba történt a behelyezett tachográf kártya feldolgozása során. A kártya elutasításra és kiadásra kerül. Tisztítsa meg az érintkezőket, és helyezze be újra.</td></tr>
+<tr><td>1 rossz kártya típus xx</td><td>A behelyezett kártya nem tachográf kártya. Helyezzen be érvényes tachográf kártyát.</td></tr>
+<tr><td>1 Tisztítsa meg a kártyát!</td><td>A DTCO-nak problémái voltak a kártya olvasásával vagy írásával. Tisztítsa meg mind a kártyát, mind a kártyafiókokat.</td></tr>
+</tbody>
+</table>
+</div>
+<h3>VDO numerikus hibamemória kódok (001–066)</h3>
+<p style="font-size:14px;color:var(--text2);margin-bottom:12px;">Ezek a numerikus kódok a járműegység hibamemóriájából olvashatók ki egy VDO műhely diagnosztikai eszközzel (<strong>SDS</strong> / <strong>CTCII</strong>) – normál használat során nem jelennek meg a járművezető számára. A számozás következetes a DTCO generációk (1381 és 4.1) között, és minden szám a fenti üzenettáblákban leírt I C mellékletbeli események/hibák egyikéhez kapcsolódik. Írjon be egy számot, például<em>005</em>a szakasz tetején található keresőmezőbe.</p>
+<div class="code-table-wrap">
+<table class="code-table">
+<thead><tr><th style="width:24%;">Kód</th><th style="width:58%;">Jelentése</th><th style="width:18%;">Súlyosság</th></tr></thead>
+<tbody>
+<tr><td>001–2, 004–5</td><td>Belső készülékhiba</td><td><span class="sev sev-crit">Kritikus</span></td></tr>
+<tr><td>006</td><td>Időhiba</td><td><span class="sev sev-crit">Kritikus</span></td></tr>
+<tr><td>007</td><td>Kijelzőhiba</td><td><span class="sev sev-high">Magas</span></td></tr>
+<tr><td>009</td><td>Illesztési hiba</td><td><span class="sev sev-high">Magas</span></td></tr>
+<tr><td>010</td><td>Sebességjel-kimenet (B7) hiba</td><td><span class="sev sev-med">Közepes</span></td></tr>
+<tr><td>012</td><td>Letöltési hiba</td><td><span class="sev sev-med">Közepes</span></td></tr>
+<tr><td>013–14</td><td>CAN-busz hiba</td><td><span class="sev sev-med">Közepes</span></td></tr>
+<tr><td>015</td><td>Kijelzőkommunikáció megszakadása</td><td><span class="sev sev-med">Közepes</span></td></tr>
+<tr><td>016</td><td>Érzékelőhiba (önteszt)</td><td><span class="sev sev-crit">Kritikus</span></td></tr>
+<tr><td>017–18</td><td>Érzékelő adatintegritási hiba</td><td><span class="sev sev-crit">Kritikus</span></td></tr>
+<tr><td>019</td><td>Érzékelő áramellátás megszakadása</td><td><span class="sev sev-med">Közepes</span></td></tr>
+<tr><td>020–22</td><td>Érzékelő kommunikációs hiba</td><td><span class="sev sev-high">Magas</span></td></tr>
+<tr><td>023</td><td>Érzékelő hitelesítési/párosítási hiba</td><td><span class="sev sev-high">Magas</span></td></tr>
+<tr><td>024</td><td>Ismeretlen érzékelő sorozatszám</td><td><span class="sev sev-high">Magas</span></td></tr>
+<tr><td>025</td><td>Adattárolási hiba</td><td><span class="sev sev-crit">Kritikus</span></td></tr>
+<tr><td>026</td><td>Burkolat felnyitása (a biztonsági rendszer megsértésére irányuló kísérlet)</td><td><span class="sev sev-crit">Kritikus</span></td></tr>
+<tr><td>028</td><td>! vezetés kártya nélkül xx</td><td><span class="sev sev-crit">Kritikus</span></td></tr>
+<tr><td>029</td><td>! kártya konfliktus xx</td><td><span class="sev sev-med">Közepes</span></td></tr>
+<tr><td>030</td><td> gyorshajtás xx</td><td><span class="sev sev-high">Magas</span></td></tr>
+<tr><td>031</td><td>! feszültség megszakitás xx</td><td><span class="sev sev-med">Közepes</span></td></tr>
+<tr><td>034</td><td>Kártyakivétel nem lehetséges</td><td><span class="sev sev-med">Közepes</span></td></tr>
+<tr><td>036</td><td>Nyomtatás/kijelzés nem lehetséges</td><td><span class="sev sev-med">Közepes</span></td></tr>
+<tr><td>037</td><td>Nyomtatás késik</td><td><span class="sev sev-info">Információ</span></td></tr>
+<tr><td>038</td><td>Nyomtatófiók nyitva</td><td><span class="sev sev-med">Közepes</span></td></tr>
+<tr><td>039</td><td>Nincs papír</td><td><span class="sev sev-med">Közepes</span></td></tr>
+<tr><td>040</td><td>Kártyamechanikai hiba, 1. foglalat</td><td><span class="sev sev-high">Magas</span></td></tr>
+<tr><td>041</td><td>Kártyakommunikációs hiba, 1. foglalat</td><td><span class="sev sev-high">Magas</span></td></tr>
+<tr><td>042</td><td>Kártyaadatok hitelessége, 1. foglalat</td><td><span class="sev sev-high">Magas</span></td></tr>
+<tr><td>043</td><td>Kártya hiányzik, 1. foglalat</td><td><span class="sev sev-high">Magas</span></td></tr>
+<tr><td>044</td><td>Kártya nincs lezárva, 1. foglalat</td><td><span class="sev sev-low">Alacsony</span></td></tr>
+<tr><td>045</td><td>Időátfedés, 1. foglalat</td><td><span class="sev sev-med">Közepes</span></td></tr>
+<tr><td>046</td><td>Kártya behelyezése járművezetés közben, 1. foglalat</td><td><span class="sev sev-low">Alacsony</span></td></tr>
+<tr><td>047</td><td>Kártya hitelesítése, 1. foglalat</td><td><span class="sev sev-high">Magas</span></td></tr>
+<tr><td>048</td><td>Érvénytelen kártya, 1. foglalat</td><td><span class="sev sev-high">Magas</span></td></tr>
+<tr><td>049</td><td>Adatrögzítési ellentmondás, 1. foglalat</td><td><span class="sev sev-med">Közepes</span></td></tr>
+<tr><td>050</td><td>Kártya nem olvasható, 1. foglalat</td><td><span class="sev sev-high">Magas</span></td></tr>
+<tr><td>051</td><td>1 rossz kártya típus xx, 1. foglalat</td><td><span class="sev sev-med">Közepes</span></td></tr>
+<tr><td>052</td><td>Kártya blokkolva, 1. foglalat</td><td><span class="sev sev-high">Magas</span></td></tr>
+<tr><td>053–66</td><td>Kártyahibák, 2. foglalat (másodpilóta)</td><td><span class="sev sev-high">Magas</span></td></tr>
+</tbody>
+</table>
+</div>
+<h3>DTCO 4.0 / 4.1 — mit jelent egy szám a kijelzőn (intelligens menetíró)</h3>
+<p style="font-size:14px;color:var(--text2);margin-bottom:12px;">Az újabb VDO DTCO 4.0 és 4.1 készülékek kétjegyű számot mutatnak a piktogram mellett. Az alacsony számok (001–066) a fenti táblázatban találhatók; a magas számok<strong>80–98</strong>intelligens menetíró funkciókhoz (GNSS, DSRC, ITS) tartoznak. Bármelyiket közvetlenül beírhatja a fenti keresőmezőbe.</p>
+<div class="code-table-wrap">
+<table class="code-table">
+<thead><tr><th style="width:24%;">Kijelzőszám</th><th style="width:58%;">Jelentése</th><th style="width:18%;">Súlyosság</th></tr></thead>
+<tbody>
+<tr><td>34</td><td>Kártyakivétel nem lehetséges</td><td><span class="sev sev-med">Közepes</span></td></tr>
+<tr><td>80</td><td>! mozgási adat konfliktus xx</td><td><span class="sev sev-crit">Kritikus</span></td></tr>
+<tr><td>82</td><td>x Belső GNSS zavar xx</td><td><span class="sev sev-med">Közepes</span></td></tr>
+<tr><td>83</td><td>! GNSS is hiányzik xx</td><td><span class="sev sev-med">Közepes</span></td></tr>
+<tr><td>84</td><td>x Belső DSRC zavar xx</td><td><span class="sev sev-low">Alacsony</span></td></tr>
+<tr><td>85</td><td>! DSRC komm. hiba xx</td><td><span class="sev sev-low">Alacsony</span></td></tr>
+<tr><td>86</td><td>Időütközés</td><td><span class="sev sev-med">Közepes</span></td></tr>
+<tr><td>87</td><td>Érzékelőhiba</td><td><span class="sev sev-high">Magas</span></td></tr>
+<tr><td>96</td><td>GNSS-anomália (GNSS-szabálytalanságok · hamisítás elleni védelem OSNMA)</td><td><span class="sev sev-high">Magas</span></td></tr>
+<tr><td>97</td><td>Belső érzékelőhiba</td><td><span class="sev sev-high">Magas</span></td></tr>
+<tr><td>98</td><td>ITS / Bluetooth hiba</td><td><span class="sev sev-low">Alacsony</span></td></tr>
+<tr><td>67, 99</td><td>Ellentmondásos adat</td><td><span class="sev sev-med">Közepes</span></td></tr>
+<tr><td>68–72</td><td>Kártya- / belső hiba, 2-es foglalat (másodpilóta)</td><td>Változó</td></tr>
+<tr><td>88–95</td><td>Vezetési idő / pihenő működési megjegyzés — nem hiba</td><td><span class="sev sev-info">Információ</span></td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</details>
+<!-- ===== STONERIDGE SE5000 ===== -->
+<details class="vendor" id="stoneridge">
+<summary>
+<span class="vendor-meta">Stoneridge · egyesült királyságbeli és skandináv alapfelszereltség</span>Stoneridge SE5000 Exakt Duo² (7.6. verzió)</summary>
+<div class="vendor-body">
+<p>A Stoneridge SE5000 a leggyakoribb intelligens tachográf, amelyet az Egyesült Királyságban bejegyzett nehézgépjárművekbe és a skandináv országokban működő flottákba szerelnek. Az alábbi üzenetek szó szerint a hivatalos dokumentumból származnak:<strong>Stoneridge SE5000 Exakt Duo² Járművezetői és Vállalkozási Kézikönyv, 7.6. verzió</strong>(Stoneridge Electronics AB, Örebro). A Stoneridge kézikönyve az üzeneteket négy családba rendezi, pontosan tükrözve az I. melléklet C osztályozását:<em>Üzenetek</em>(információs jellegű)<em>Előzetes figyelmeztetések</em>, <em>Figyelmeztetések</em>és<em>Hibák</em>.</p>
+<p style="font-size:14px;color:var(--text2);margin-bottom:18px;"><strong>Kézikönyvi idézet:</strong>„A hibák kritikusabbak, mint a figyelmeztetések, és akkor jelennek meg, ha hibát észlelnek a tachográfban, az érzékelőben vagy a járművezetői kártyában. Emellett hibák jelennek meg, ha a berendezés manipulációját észlelik. A hibák tárolódnak és kinyomtathatók.”</p>
+<h3>Kártyával kapcsolatos üzenetek</h3>
+<div class="code-table-wrap">
+<table class="code-table">
+<thead>
+<tr>
+<th style="width: 26%;">Kijelző</th>
+<th style="width: 14%;">Típus</th>
+<th style="width: 32%;">Leírás (szó szerint a kézikönyvből)</th>
+<th style="width: 28%;">Javasolt művelet</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>1-es kártyahiba</td><td><span class="sev sev-crit">Hiba</span></td><td>Az 1-es foglalatban lévő kártya hibás. Hasonló üzenet a 2-es foglalat esetén. A kártyához kapcsolódó.</td><td>Vegye ki és szemrevételezze. Tisztítsa meg nedves ruhával. Ha továbbra is hibás: műhelylátogatás.</td></tr>
+<tr><td>1-es kártya hitelesítési hiba</td><td><span class="sev sev-crit">Hiba</span></td><td>Az 1-es foglalatban lévő kártya adatrögzítő készülék biztonsági ellenőrzése sikertelen volt. Az adatrögzítő készülékhez kapcsolódó.</td><td>Vegye ki és tisztítsa meg. Ha a hiba továbbra is fennáll: a műhelynek ellenőriznie kell.</td></tr>
+<tr><td>1-es kártya időátfedés</td><td><span class="sev sev-med">Figyelmeztetés</span></td><td>A behelyezett járművezetői kártya utolsó kivételi ideje későbbi, mint az adatrögzítő készülék dátuma/ideje. Az adatrögzítő készülékhez kapcsolódó.</td><td>Ellenőrizze az adatrögzítő készülék dátumát/idejét. Várja meg, amíg az átfedés lejár.</td></tr>
+<tr><td>Kártya integritási hiba</td><td><span class="sev sev-crit">Hiba</span></td><td>Sérült adatot észleltek a kártyáról történő adatolvasás során. A kártyához kapcsolódó.</td><td>Tisztítsa meg és próbálja újra. Ha a hiba továbbra is fennáll: cserélje ki a kártyát és látogasson el műhelybe.</td></tr>
+<tr><td>Kártyaütközés</td><td><span class="sev sev-med">Figyelmeztetés</span></td><td>Érvénytelen kártyakombinációt észleltek. A kártyához kapcsolódó.</td><td>Vegye ki a problémás kártyát.</td></tr>
+<tr><td>Kártya behelyezése járművezetés közben</td><td><span class="sev sev-med">Figyelmeztetés</span></td><td>Járművezetői kártyát helyeztek be, miközben a jármű mozgásban volt. Az üzemeltetőhöz kapcsolódó.</td><td>Folytassa az utat, ha a járművezetői kártya érvényes; az esemény rögzítésre került.</td></tr>
+<tr><td>Kártya kivétele mentés nélkül</td><td><span class="sev sev-med">Üzenet</span></td><td>Az adatok nem tárolhatók az 1-es foglalatból kivett kártyán hiba miatt.</td><td>Vegye ki, tisztítsa meg, próbálja újra. Önteszt, ha a hiba továbbra is fennáll.</td></tr>
+<tr><td>Lejárt kártya</td><td><span class="sev sev-info">Üzenet</span></td><td>Az 1-es foglalatban lévő kártya lejárt. Az üzemeltetőhöz kapcsolódó.</td><td>Vegye ki a kártyát, és helyezzen be egy érvényeset.</td></tr>
+<tr><td>A kártya xx nap múlva lejár.</td><td><span class="sev sev-info">Üzenet</span></td><td>Az 1-es tálcába helyezett kártya xx nap múlva jár le (0–30). Az üzembentartóra vonatkozó.</td><td>Forduljon az illetékes hatósághoz, hogy új kártyát igényeljen.</td></tr>
+<tr><td>Érvénytelen kártya behelyezése</td><td><span class="sev sev-med">Figyelmeztetés</span></td><td>Érvénytelen kártya került behelyezésre egy foglalatba. Az üzembentartóra vonatkozó.</td><td>Vegye ki az érvénytelen kártyát.</td></tr>
+<tr><td>Utolsó munkamenet nincs rendben lezárva.</td><td><span class="sev sev-med">Figyelmeztetés</span></td><td>Az 1-es tálcában lévő járművezetői kártyát helytelenül vették ki az utolsó munkamenet során. Az 1-es tálcából történő előző kártyakivételt a menetíró készülék nem fejezte be megfelelően.</td><td>Vegye ki és tisztítsa meg. Ha a hiba továbbra is fennáll, végezzen öntesztet.</td></tr>
+<tr><td>Téves PIN! Kártya zárolva</td><td><span class="sev sev-high">Üzenet</span></td><td>Túl sokszor adtak meg téves PIN-kódot (műhelykártya). A kártyára vonatkozó.</td><td>Vegye ki és cserélje érvényes kártyára.</td></tr>
+</tbody>
+</table>
+</div>
+<h3>Érzékelő- és járműmozgás-hibák</h3>
+<div class="code-table-wrap">
+<table class="code-table">
+<thead>
+<tr>
+<th style="width: 26%;">Kijelző</th>
+<th style="width: 14%;">Típus</th>
+<th style="width: 32%;">Leírás (szó szerint)</th>
+<th style="width: 28%;">Teendő</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>Érzékelőhitelesítés sikertelen</td><td><span class="sev sev-crit">Hiba</span></td><td>A menetíró készülék nem érzékeli az érzékelőt / nem ismeri fel a csatlakoztatott érzékelőt a telepített érzékelőként. A mozgásérzékelőre vonatkozó.</td><td>Látogasson el egy digitális tachográf műhelybe.</td></tr>
+<tr><td>Érzékelőkábel hiba</td><td><span class="sev sev-high">Figyelmeztetés</span></td><td>Érzékelőadat-hiba / mozgásérzékelő adatainak hibája. A mozgásérzékelőre vonatkozó.</td><td>A műhelynek ellenőriznie kell a kábelezést és az érzékelőt.</td></tr>
+<tr><td>Érzékelő kommunikációs hiba</td><td><span class="sev sev-crit">Hiba</span></td><td>Mozgásérzékelő kommunikációs hiba. A mozgásérzékelőre vonatkozó.</td><td>Műhelyi csere.</td></tr>
+<tr><td>Érzékelő adatainak hibája</td><td><span class="sev sev-high">Figyelmeztetés</span></td><td>Jelhiba a mozgásérzékelő és az adatrögzítő készülék között. A mozgásérzékelőhöz kapcsolódik.</td><td>A műhelynek ellenőriznie kell.</td></tr>
+<tr><td>Érzékelő adatintegritási hiba</td><td><span class="sev sev-crit">Hiba</span></td><td>Belső mozgásérzékelő hiba, tárolt adatok integritási hibája. A mozgásérzékelőhöz kapcsolódik.</td><td>Érzékelőcsere valószínű.</td></tr>
+<tr><td>Érzékelő adatátviteli hiba</td><td><span class="sev sev-crit">Hiba</span></td><td>A mozgásérzékelő és az adatrögzítő készülék nem kommunikálnak. A mozgásérzékelőhöz kapcsolódik.</td><td>Műhelylátogatás.</td></tr>
+<tr><td>Nem nyugtázott érzékelőhiba</td><td><span class="sev sev-crit">Hiba</span></td><td>Mozgásérzékelő kommunikációs hiba.</td><td>Műhelylátogatás.</td></tr>
+<tr><td>Érzékelő tápellátás magas / alacsony</td><td><span class="sev sev-crit">Hiba</span></td><td>A mozgásérzékelő tápellátása túl magas vagy túl alacsony. A mozgásérzékelőhöz kapcsolódik.</td><td>A műhelynek ellenőriznie kell az áramellátást.</td></tr>
+<tr><td>Érzékelő nem kap áramot</td><td><span class="sev sev-crit">Hiba</span></td><td>A mozgásérzékelő nem kap áramot. A mozgásérzékelőhöz kapcsolódik.</td><td>A műhelynek ellenőriznie kell az áramellátást.</td></tr>
+<tr><td>Érzékelő illetéktelen felnyitása</td><td><span class="sev sev-crit">Hiba</span></td><td>Illetéktelen felnyitás észlelve. A mozgásérzékelőhöz kapcsolódik.</td><td>A műhelynek ellenőriznie kell – lehetséges manipuláció.</td></tr>
+<tr><td>Másodlagos érzékelőhiba</td><td><span class="sev sev-crit">Hiba</span></td><td>Hiányzó vagy hibás adatok a második forrású mozgásérzékelőből. A mozgásérzékelőhöz kapcsolódik.</td><td>A műhelynek ellenőriznie kell.</td></tr>
+<tr><td>Érzékelő illetéktelen cseréje</td><td><span class="sev sev-crit">Hiba</span></td><td>Az érzékelő a legutóbbi párosítás óta cserélve lett. A mozgásérzékelőhöz kapcsolódik.</td><td>A műhelynek újra kell párosítania.</td></tr>
+<tr><td>! mozgási adat konfliktus xx</td><td><span class="sev sev-crit">Hiba</span></td><td>A második forrású mozgásérzékelő és az elsődleges mozgásérzékelő adatai ellentmondásosak. A mozgásérzékelőhöz kapcsolódik.</td><td>A műhelynek ellenőriznie kell.</td></tr>
+<tr><td>Hardver szabotázs</td><td><span class="sev sev-crit">Hiba</span></td><td>A kártyát erőszakkal eltávolították, vagy hardverrel való illetéktelen beavatkozást észleltek.</td><td>Műhelylátogatás — vizsgálat szükséges.</td></tr>
+</tbody>
+</table>
+</div>
+<h3>Adatrögzítő készülék (járműegység) belső hibái és áramellátás</h3>
+<div class="code-table-wrap">
+<table class="code-table">
+<thead>
+<tr>
+<th style="width: 26%;">Kijelző</th>
+<th style="width: 14%;">Típus</th>
+<th style="width: 32%;">Leírás (szó szerint)</th>
+<th style="width: 28%;">Teendő</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>A járműegység belső hibája</td><td><span class="sev sev-crit">Hiba</span></td><td>Az adatrögzítő készülék belső hibát észlelt. Az adatrögzítő készülékkel kapcsolatos.</td><td>Keresse fel a műhelyt.</td></tr>
+<tr><td>Adatintegritási hiba</td><td><span class="sev sev-crit">Hiba</span></td><td>Az adatrögzítő készülékben tárolt felhasználói adatok hibásak. Az adatrögzítő készülékkel kapcsolatos.</td><td>Azonnal keresse fel a műhelyt.</td></tr>
+<tr><td>Illetéktelen járműegység-nyitás</td><td><span class="sev sev-crit">Hiba</span></td><td>Az adatrögzítő készülék burkolatát felnyitották. Az adatrögzítő készülékkel kapcsolatos.</td><td>A műhelynek ki kell vizsgálnia a manipulációt.</td></tr>
+<tr><td>Áramellátás megszakadása</td><td><span class="sev sev-med">Figyelmeztetés</span></td><td>Az adatrögzítő készülék tápfeszültsége a helyes működéshez szükséges határérték alatt vagy felett van, vagy meg lett szakítva. Az áramellátás több mint 200 milliszekundumra megszakadt. Az indítófeszültség nem okozhatja ezt az eseményt.</td><td>Műhelynek ellenőriznie kell a jármű elektromos ellátását, ha ismétlődik.</td></tr>
+<tr><td>! vezetés kártya nélkül xx</td><td><span class="sev sev-high">Figyelmeztetés</span></td><td>Járművezetés megfelelő kártya nélkül, vagy nem megfelelő kártyakombinációval. Az üzemeltetővel kapcsolatos.</td><td>Álljon meg, és távolítsa el a nem megfelelő kártyát. Helyezzen be érvényes járművezetői kártyát.</td></tr>
+<tr><td> gyorshajtás xx</td><td><span class="sev sev-high">Figyelmeztetés</span></td><td>A jármű sebessége egy percre túllépte a beállított sebességhatárt, és rögzítésre kerül. Az üzemeltetővel kapcsolatos.</td><td>Tartsa be az előírt sebességhatárt.</td></tr>
+<tr><td>Gyorshajtás előzetes figyelmeztetés</td><td><span class="sev sev-med">Üzenet</span></td><td>A jármű túllépi a beállított gyorshajtási sebességhatárt. Az egy perces folyamatos gyorshajtás után a figyelmeztetés rögzítésre kerül.</td><td>Lassítson az 1 perces küszöb elérése előtt.</td></tr>
+<tr><td>Letöltés sikertelen</td><td><span class="sev sev-med">Figyelmeztetés</span></td><td>Letöltési hiba az adatrögzítő készülékből történő adatletöltési kísérlet során. Az adatrögzítő készülékhez/kártyához kapcsolódik.</td><td>Ellenőrizze a csatlakozót és a berendezést, próbálja újra. Ha továbbra is fennáll: műhely.</td></tr>
+<tr><td>UTC-állítás nem engedélyezett</td><td><span class="sev sev-info">Üzenet</span></td><td>A UTC idő ±1 percnél nagyobb mértékű heti egyszeri módosítása nem engedélyezett.</td><td>Ha a UTC több mint 20 perccel eltért, a műhelynek kalibrálnia kell.</td></tr>
+</tbody>
+</table>
+</div>
+<h3>Nyomtatóüzenetek</h3>
+<div class="code-table-wrap">
+<table class="code-table">
+<thead>
+<tr>
+<th style="width: 26%;">Kijelző</th>
+<th style="width: 14%;">Típus</th>
+<th style="width: 32%;">Leírás (szó szerint)</th>
+<th style="width: 28%;">Teendő</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>Nyomtató magas hőmérséklet</td><td><span class="sev sev-low">Üzenet</span></td><td>A nyomtatás nem indulhatott el, vagy a folyamatban lévő nyomtatás megszakadt, mert a nyomtató hőmérséklete túl magas.</td><td>Várjon, amíg a nyomtató lehűl, majd próbálja újra.</td></tr>
+<tr><td>Nyomtató alacsony hőmérséklet</td><td><span class="sev sev-low">Üzenet</span></td><td>A nyomtatás nem indulhatott el, mert a nyomtató hőmérséklete túl alacsony.</td><td>Várjon, amíg a nyomtató felmelegszik; ha továbbra is fennáll, keressen fel egy műhelyt.</td></tr>
+<tr><td>Nyomtató alacsony tápfeszültség</td><td><span class="sev sev-low">Üzenet</span></td><td>A folyamatban lévő nyomtatás megszakadt, mert az adatrögzítő készülék bemeneti feszültsége túl alacsony.</td><td>Ellenőrizze, hogy a gyújtás be van-e kapcsolva; ellenőrizze az akkumulátor feszültségét és a csatlakozásokat.</td></tr>
+<tr><td>Nyomtatóban nincs papír</td><td><span class="sev sev-info">Üzenet</span></td><td>A folyamatban lévő nyomtatás megszakadt, mert a nyomtatóban nincs papír.</td><td>Cseréljen papírt.</td></tr>
+</tbody>
+</table>
+</div>
+<h3>Vezetési idő figyelmeztetések (Stoneridge előjelzések és figyelmeztetések)</h3>
+<div class="code-table-wrap">
+<table class="code-table">
+<thead>
+<tr>
+<th style="width: 30%;">Kijelző</th>
+<th style="width: 14%;">Típus</th>
+<th style="width: 56%;">Jelentés (szó szerint)</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>Negyedóra hátra van emlékeztető</td><td><span class="sev sev-info">Üzenet</span></td><td>A járművezetőnek 15 perce maradt, amíg túllépi a folyamatos vezetés jogi maximumát, a 4½ órát.</td></tr>
+<tr><td>Ideje szünetet tartani</td><td><span class="sev sev-med">Figyelmeztetés</span></td><td>A folyamatos vezetés jogi maximuma, a 4½ óra letelt (az 561/2006/EK rendelet szerint). Tartson legalább 45 perces szünetet, vagy 15+30 perces felosztásban.</td></tr>
+<tr><td>emlékeztető szünet</td><td><span class="sev sev-info">Előzetes figyelmeztetés</span></td><td>Emlékeztető szünetre a 6 órás munkaidő-irányelv (2002/15/EK irányelv) szabálya szerint.</td></tr>
+<tr><td>napi vezetési idő</td><td><span class="sev sev-med">Figyelmeztetés</span></td><td>Előzetes figyelmeztetés és figyelmeztetés 9 órás napi vezetési időre.</td></tr>
+<tr><td>napi vezetés vége</td><td><span class="sev sev-med">Figyelmeztetés</span></td><td>Maximális napi vezetési idő elérve.</td></tr>
+<tr><td>heti vezetési idő</td><td><span class="sev sev-med">Előzetes figyelmeztetés</span></td><td>Maximális heti vezetési idő (56 óra) közeledik.</td></tr>
+<tr><td>heti vezetés vége</td><td><span class="sev sev-med">Figyelmeztetés</span></td><td>Maximális heti vezetési idő elérve.</td></tr>
+<tr><td>kétheti vezetési idő</td><td><span class="sev sev-med">Előzetes figyelmeztetés</span></td><td>Maximális kétheti vezetési idő (90 óra) közeledik.</td></tr>
+<tr><td>kétheti vezetés vége</td><td><span class="sev sev-med">Figyelmeztetés</span></td><td>Maximális kétheti vezetési idő elérve.</td></tr>
+<tr><td>heti munkaidő</td><td><span class="sev sev-med">Előzetes figyelmeztetés</span></td><td>A heti munkaidő elérése a 60 órás munkaidő-irányelv szabálya szerint.</td></tr>
+<tr><td>heti munka vége</td><td><span class="sev sev-med">Figyelmeztetés</span></td><td>A heti munkaidő elérve a 60 órás munkaidő-irányelv szabálya szerint.</td></tr>
+<tr><td>emlékeztető napi pihenőre</td><td><span class="sev sev-info">Előzetes figyelmeztetés</span></td><td>Emlékeztető a napi pihenőidőre.</td></tr>
+<tr><td>emlékeztető heti pihenőre</td><td><span class="sev sev-info">Előzetes figyelmeztetés</span></td><td>Emlékeztető a heti pihenőidőre.</td></tr>
+<tr><td>idő a napi pihenőre</td><td><span class="sev sev-med">Figyelmeztetés</span></td><td>Figyelmeztetés a napi pihenő kezdetére.</td></tr>
+<tr><td>idő a heti pihenőre</td><td><span class="sev sev-med">Figyelmeztetés</span></td><td>Figyelmeztetés a heti pihenőidő kezdetére.</td></tr>
+<tr><td>Szerviz előzetes figyelmeztetés / Szerviz esedékes</td><td><span class="sev sev-low">Üzenet</span></td><td>Következő illesztés előzetes figyelmeztetés / A tachográf illesztése lejárt.</td></tr>
+</tbody>
+</table>
+</div>
+<h3>SE5000-8.1 Smart 2 — gyártóspecifikus hexadecimális hibakódok (ISO 16844-7)</h3>
+<p style="font-size:14px;color:var(--text2);margin-bottom:12px;">A jelenlegi SE5000-8.1 (Smart Tachograph 2) az ISO 16844-7 szerint egy 5 bájtos hexadecimális hibakódot is jelent a képernyőn megjelenő üzeneten túl. Az alábbi kódok a következő dokumentumból származnak:<strong>Stoneridge SE5000-8.1 Kezelési kézikönyv, 9000-103766P_0109 dokumentum</strong>(Stoneridge Electronics AB).</p>
+<div class="code-table-wrap">
+<table class="code-table">
+<thead><tr><th style="width:13%;">DTC</th><th style="width:24%;">Üzenet</th><th style="width:30%;">Ok</th><th style="width:21%;">Mit kell tenni</th><th style="width:12%;">Súlyosság</th></tr></thead>
+<tbody>
+<tr><td>0001C0</td><td>Nyomtatás leállt, kifogyott a papír</td><td>A nyomtatóban nincs papír.</td><td>Helyezzen be új papírtekercset.</td><td><span class="sev sev-low">Alacsony</span></td></tr>
+<tr><td>000900</td><td>Nincs gyújtás, de sebességimpulzusok vannak</td><td>A gyújtás ki van kapcsolva, de az érzékelő sebességimpulzusokat érzékel.</td><td>Ellenőrizze a rezgést / interferenciát; ismétlődés esetén a műhelynek ellenőriznie kell az érzékelőt és a B7-es csatlakozót.</td><td><span class="sev sev-high">Magas</span></td></tr>
+<tr><td>000D40</td><td>Gyorshajtás előzetes figyelmeztetés</td><td>Sebességkorlát túllépve, de kevesebb mint 60 másodpercig.</td><td>Lassítson. Járművezetőhöz kapcsolódó – nincs szükség műhelyre.</td><td><span class="sev sev-med">Közepes</span></td></tr>
+<tr><td>000B78</td><td>Illesztési hiba</td><td>Két év telt el az utolsó illesztés óta.</td><td>Illesztesse újra egy hivatalos műhelyben.</td><td><span class="sev sev-high">Magas</span></td></tr>
+<tr><td>000C31</td><td>x Belső GNSS zavar xx</td><td>A belső GNSS-vevő leállt a helyzetmeghatározási adatok szolgáltatásával.</td><td>Kapcsolja ki, majd be a tachográfot, és végezzen próbavezetést; ismétlődés esetén cserélje ki.</td><td><span class="sev sev-med">Közepes</span></td></tr>
+<tr><td>002B80</td><td>Időütközés (GNSS vs járműegység)</td><td>A belső és a GNSS óra több mint 1 perccel eltér 12 óra elteltével.</td><td>Ellenőrizze a belső órát és a GNSS időt. Műhely.</td><td><span class="sev sev-med">Közepes</span></td></tr>
+<tr><td>002C80</td><td>GNSS-helyzet hiánya</td><td>Nincs érvényes GNSS jel 3 óra kumulált vezetés alatt.</td><td>Ellenőrizze a GNSS vételt és az antenna körüli esetleges akadályokat.</td><td><span class="sev sev-med">Közepes</span></td></tr>
+<tr><td>002D80</td><td>! DSRC komm. hiba xx</td><td>A járműegység nem tud megfelelően kommunikálni a DSRC-VU modullal.</td><td>Ellenőrizze a DSRC-VU egységet, a kábelezést és a CAN paramétereket.</td><td><span class="sev sev-med">Közepes</span></td></tr>
+<tr><td>002E80</td><td>!? GNSS anomália</td><td>A GNSS támadást észlelt, vagy az üzenet hitelesítése sikertelen volt (OSNMA).</td><td>Ellenőrizze a manipulációt. Indítsa újra és ellenőrizze; ismétlődés esetén cserélje ki.</td><td><span class="sev sev-crit">Kritikus</span></td></tr>
+<tr><td>00FD0B</td><td>CAN busz kikapcsolva, TCO</td><td>Az A-csatlakozó (TCO-CAN) "Bus Off" állapotban van.</td><td>Ellenőrizze az A-csatlakozót és a kábelezést, a CAN beállításokat és a lezárást (60 Ω).</td><td><span class="sev sev-high">Magas</span></td></tr>
+</tbody>
+</table>
+</div>
+<h3>Általános események és a biztonsági rendszer megsértésére irányuló kísérlet (SE5000-8.1)</h3>
+<div class="code-table-wrap">
+<table class="code-table">
+<thead><tr><th style="width:24%;">Üzenet</th><th style="width:34%;">Ok</th><th style="width:30%;">Mit kell tenni</th><th style="width:12%;">Súlyosság</th></tr></thead>
+<tbody>
+<tr><td>Kártyaütközés</td><td>Érvénytelen kártyakombinációt észleltek (pl. vállalkozáskártya + ellenőrzőkártya).</td><td>Vegye ki a problémás kártyát.</td><td><span class="sev sev-med">Közepes</span></td></tr>
+<tr><td>Járművezetés megfelelő kártya nélkül</td><td>Vezetés érvénytelen kártya nélkül, vagy érvénytelen kártyakombinációval.</td><td>Állítsa le, helyezzen be egy érvényes kártyát, és távolítsa el a nem megfelelőt.</td><td><span class="sev sev-crit">Kritikus</span></td></tr>
+<tr><td>Gyorshajtás</td><td>A sebességhatárt legalább 60 másodpercig túllépték.</td><td>Tartsa be a jármű megengedett sebességhatárát.</td><td><span class="sev sev-high">Magas</span></td></tr>
+<tr><td>Áramellátás megszakadása (járműegység / mozgásérzékelő)</td><td>Az adatrögzítő készülék vagy az érzékelő áramellátása több mint 200 ms-re megszakadt.</td><td>Ellenőrizze a jármű áramellátását és kábelezését.</td><td><span class="sev sev-med">Közepes</span></td></tr>
+<tr><td>Mozgásadatok hibája (CNTR / No CNTR / esemény)</td><td>Az érzékelő impulzusok nélküli sebességet jelent, a számláló eltérést mutat, vagy aláírási eltérés lép fel.</td><td>Ellenőrizze az érzékelőt, a kábelezést és a manipulációt; szükség esetén kalibrálja újra.</td><td><span class="sev sev-crit">Kritikus</span></td></tr>
+<tr><td>Mozgásérzékelő hitelesítési hiba</td><td>Egy mozgásérzékelő hitelesítési kísérlet sikertelen volt.</td><td>Ellenőrizze az érzékelőt és a kábelezést; párosítsa újra és kalibrálja újra.</td><td><span class="sev sev-crit">Kritikus</span></td></tr>
+<tr><td>Jogosulatlan változtatás a mozgásérzékelőn</td><td>Az érzékelőt az utolsó párosítás óta megváltoztatták.</td><td>Vizsgálja meg manipuláció szempontjából; javítsa meg és kalibrálja újra.</td><td><span class="sev sev-crit">Kritikus</span></td></tr>
+<tr><td>Tárolt adatok integritási hibája</td><td>A 365 napos memóriában lévő adatok sérültek.</td><td>Vegyje ki a forgalomból és cserélje ki a tachográfot.</td><td><span class="sev sev-crit">Kritikus</span></td></tr>
+<tr><td>Hardver szabotázs</td><td>A kártyát erőszakkal távolították el.</td><td>Vizsgálja meg a kártyaolvasót. Vegyje ki a forgalomból és cserélje ki.</td><td><span class="sev sev-crit">Kritikus</span></td></tr>
+<tr><td>Biztonsági jogsértés</td><td>Hardveres manipulációt észleltek.</td><td>Vegyje ki a forgalomból és cserélje ki a tachográfot.</td><td><span class="sev sev-crit">Kritikus</span></td></tr>
+</tbody>
+</table>
+</div>
+<p style="font-size:14px;color:var(--text2);margin-bottom:18px;"><strong>Forrás:</strong>Stoneridge Electronics AB, SE5000-8.1 Smart 2 Control Manual, dokumentum: 9000-103766P_0109, pp. 32–37.</p>
+<p style="font-size:14px;color:var(--text2);margin-top:18px;"><strong>Forrás:</strong>A fenti Stoneridge üzenetek mindegyike a Stoneridge Electronics AB által kiadott SE5000 Exakt Duo² (Rev 7.6) Driver &amp; Company Manual kézikönyvből származik. A teljes táblázat tartalmazza az összes olyan üzenetet, amelyet a járművezető láthat; a műhely (kalibrálási) üzemmódra vonatkozó üzenetek itt nem szerepelnek. Az SE5000-8.1 Smart Tachograph 2 egység ugyanazt az I. melléklet C üzenetcsalád-struktúrát használja, kisebb szövegezési frissítésekkel.</p>
+</div>
+</details>
+<!-- ===== ACTIA SmarTach ===== -->
+<details class="vendor" id="actia">
+<summary>
+<span class="vendor-meta">Actia · Francia és dél-európai alapértelmezett</span>Actia SmarTach (Gen1 &amp; Gen2)</summary>
+<div class="vendor-body">
+<p>Az Actia SmarTach a leggyakoribb digitális tachográf a Franciaországban nyilvántartott nehézgépjárművekben, és gyakori beépítés Spanyolországban, Olaszországban és Portugáliában. Az alábbi üzenetek a következő forrásból származnak:<strong>Actia SmarTach Járművezetői kézikönyv (2021, ref. c1c)</strong>. Az Actia képernyőn megjelenő piktogramot és rövid szöveget használ; a megfogalmazás összhangban van az I C melléklet terminológiájával.</p>
+<div class="code-table-wrap">
+<table class="code-table">
+<thead>
+<tr>
+<th style="width: 26%;">Üzenet</th>
+<th style="width: 36%;">Jelentése</th>
+<th style="width: 26%;">Mit kell tenni</th>
+<th style="width: 12%;">Súlyosság</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>! vezetés kártya nélkül xx</td>
+<td>Jármű mozgásban, érvényes kártya nélkül az 1-es nyílásban — I C melléklet szerinti esemény rögzítve.</td>
+<td>Helyezzen be érvényes járművezetői kártyát. Nyomtassa ki és jegyzetelje fel az időszakot.</td>
+<td><span class="sev sev-high">Magas</span></td>
+</tr>
+<tr>
+<td>Kártya behelyezése járművezetés közben</td>
+<td>A kártyát már a járművezetés megkezdése után helyezték be.</td>
+<td>Tudomásul vétel — Az esemény rögzítve a kártyán.</td>
+<td><span class="sev sev-med">Közepes</span></td>
+</tr>
+<tr>
+<td>Utolsó kártyakapcsolat nem megfelelő lezárása</td>
+<td>Az előző kapcsolat nem volt megfelelően lezárva.</td>
+<td>Tudomásul vétel; jegyzék a flottanyilvántartások számára.</td>
+<td><span class="sev sev-med">Közepes</span></td>
+</tr>
+<tr>
+<td>Érvénytelen kártya / lejárt kártya</td>
+<td>A járművezetői kártya lejárt, még nem aktiválódott, vagy az azonosítás sikertelen volt.</td>
+<td>Újítsa meg a kártyát a tagállami hatóságnál.</td>
+<td><span class="sev sev-med">Közepes</span></td>
+</tr>
+<tr>
+<td>Gyorshajtás</td>
+<td>A beállított sebességhatár túllépése több mint 60 másodpercig.</td>
+<td>Csökkentse a sebességet; az esemény látható a letöltéskor.</td>
+<td><span class="sev sev-high">Magas</span></td>
+</tr>
+<tr>
+<td>A jármű mozgásával kapcsolatos ellentmondás</td>
+<td>Eltérés a mozgásérzékelő és a GNSS / kilométeróra jel között.</td>
+<td>Műhely — lehetséges manipuláció vagy vezeték sérülés.</td>
+<td><span class="sev sev-crit">Kritikus</span></td>
+</tr>
+<tr>
+<td>Áramellátás megszakadása</td>
+<td>A tápfeszültség leesett vagy megszakadt.</td>
+<td>Tudomásul vétel. Ismétlődés esetén ellenőrizze a tápellátást.</td>
+<td><span class="sev sev-med">Közepes</span></td>
+</tr>
+<tr>
+<td>! biztonság feltörés xx</td>
+<td>A járműegység burkolatát felnyitották vagy az adatintegritást megsértették.</td>
+<td>Kötelező műhelylátogatás.</td>
+<td><span class="sev sev-crit">Kritikus</span></td>
+</tr>
+<tr>
+<td>Érzékelőhiba</td>
+<td>A mozgásérzékelő öntesztje sikertelen volt.</td>
+<td>Műhelyi csere.</td>
+<td><span class="sev sev-crit">Kritikus</span></td>
+</tr>
+<tr>
+<td>Nyomtatóhiba</td>
+<td>A nyomtató nem tudja befejezni a nyomtatási feladatot.</td>
+<td>Ellenőrizze a papírt / hagyja lehűlni / cserélje ki a mechanizmust, ha a hiba továbbra is fennáll.</td>
+<td><span class="sev sev-med">Közepes</span></td>
+</tr>
+<tr>
+<td>! GNSS is hiányzik xx</td>
+<td>Nincs helyzetmeghatározási adat 3 óra összesített járművezetés alatt.</td>
+<td>Erősítse meg. Ellenőrizze az antennát; győződjön meg róla, hogy nincs fém akadály.</td>
+<td><span class="sev sev-med">Közepes</span></td>
+</tr>
+<tr>
+<td>Időütközés (UTC)</td>
+<td>A belső óra és a GNSS idő közötti különbség meghaladja az 1 percet.</td>
+<td>A műhely újra szinkronizálja.</td>
+<td><span class="sev sev-med">Közepes</span></td>
+</tr>
+<tr>
+<td>A járműegység belső hibája</td>
+<td>Általános járműegység-meghibásodás – memória, RTC, szoftveres figyelőprogram.</td>
+<td>Műhelylátogatás 7 napon belül.</td>
+<td><span class="sev sev-crit">Kritikus</span></td>
+</tr>
+<tr>
+<td>! kártya konfliktus xx</td>
+<td>Nem megfelelő kártyakombináció az 1. és 2. foglalatban.</td>
+<td>Távolítsa el az ütköző kártyát.</td>
+<td><span class="sev sev-med">Közepes</span></td>
+</tr>
+<tr>
+<td>Járművezetés &gt; 4 óra 30 perc</td>
+<td>A folyamatos járművezetés meghaladta a 4 óra 30 percet szünet nélkül (KITAS mozgásérzékelő).</td>
+<td>Azonnal álljon meg, és tartson kötelező 45 perces szünetet.</td>
+<td><span class="sev sev-high">Magas</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p style="font-size:14px;color:var(--text2);margin-top:14px;"><em>Az Actia felhasználói üzenetei szándékosan tömörek; a részletes numerikus DTC-k csak műhelyi CITO / SmarTach Teszter segítségével érhetők el.</em></p>
+</div>
+</details>
+<!-- ===== EFAS-4 ===== -->
+<details class="vendor" id="efas">
+<summary>
+<span class="vendor-meta">Intellic / Schneider · gyakori a német és lengyel flottákban</span>EFAS-4 / EFAS-4.10</summary>
+<div class="vendor-body">
+<p>Az EFAS-4 (eredetileg Intellic, most Schneider Electric) számos német gyártmányú nyerges vontatóba (MAN, DAF egyes konfigurációi) és a lengyel rendszámú nehézgépjárművek jelentős részébe van beszerelve. Az alábbi üzenetek a<strong>EFAS-4 Járművezetői kézikönyv, 2022.06. kiadás</strong>. Az EFAS kétbetűs képernyőkódokat, valamint piktogramot használ.</p>
+<div class="code-table-wrap">
+<table class="code-table">
+<thead>
+<tr>
+<th style="width: 14%;">Kód</th>
+<th style="width: 24%;">Üzenet</th>
+<th style="width: 36%;">Jelentése</th>
+<th style="width: 14%;">Teendő</th>
+<th style="width: 12%;">Súlyosság</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>E01</td><td>Nincs kártya</td><td>A jármű érvényes járművezetői kártya nélkül mozgott.</td><td>Helyezze be a kártyát; nyomtasson és jegyzeteljen.</td><td><span class="sev sev-high">Magas</span></td></tr>
+<tr><td>E02</td><td>Kártya behelyezése</td><td>A kártya a mozgás megkezdése után lett behelyezve.</td><td>Nyugtázza.</td><td><span class="sev sev-med">Közepes</span></td></tr>
+<tr><td>E03</td><td>Utolsó kapcsolat</td><td>Az utolsó kártyakapcsolat nem lett lezárva.</td><td>Nyugtázza; jelölje a flotta számára.</td><td><span class="sev sev-med">Közepes</span></td></tr>
+<tr><td>E04</td><td> gyorshajtás xx</td><td>Sebességkorlátozás túllépése &gt; 1 perc.</td><td>Csökkentse a sebességet.</td><td><span class="sev sev-high">Magas</span></td></tr>
+<tr><td>E05</td><td>Áramellátás megszakadása</td><td>Tápfeszültség túl alacsony vagy megszakadt.</td><td>Ismétlődés esetén ellenőrizze a tápellátást.</td><td><span class="sev sev-med">Közepes</span></td></tr>
+<tr><td>E06</td><td>Mozgásadatok</td><td>Ellentmondó mozgásérzékelő impulzusok.</td><td>Műhely.</td><td><span class="sev sev-crit">Kritikus</span></td></tr>
+<tr><td>E07</td><td>A jármű mozgásával kapcsolatos ellentmondás</td><td>Az érzékelő és a GNSS / kilométer-számláló adatai közötti eltérés.</td><td>Műhely – manipuláció ellenőrzése.</td><td><span class="sev sev-crit">Kritikus</span></td></tr>
+<tr><td>E08</td><td>Kártyaütközés</td><td>Érvénytelen kártyakombináció.</td><td>Vegye ki az ütköző kártyát.</td><td><span class="sev sev-med">Közepes</span></td></tr>
+<tr><td>E09</td><td>Időátfedés</td><td>Negatív UTC-eltolás az utolsó járműegységhez képest.</td><td>A műhelynek javítania kell.</td><td><span class="sev sev-med">Közepes</span></td></tr>
+<tr><td>E10</td><td>! biztonság feltörés xx</td><td>Burkolati manipuláció vagy adatintegritási hiba.</td><td>Kötelező műhelyellenőrzés.</td><td><span class="sev sev-crit">Kritikus</span></td></tr>
+<tr><td>F01</td><td>A járműegység belső hibája</td><td>Általános járműegység hardver/szoftver meghibásodás.</td><td>Műhelylátogatás 7 napon belül.</td><td><span class="sev sev-crit">Kritikus</span></td></tr>
+<tr><td>F02</td><td>Kártyamechanizmus</td><td>Kártyazár mechanizmus hibája.</td><td>Műhely.</td><td><span class="sev sev-high">Magas</span></td></tr>
+<tr><td>F03</td><td>Időhiba</td><td>Valós idejű óra nem valószínű.</td><td>Műhely – az új kártyák elutasításra kerülnek.</td><td><span class="sev sev-crit">Kritikus</span></td></tr>
+<tr><td>F04</td><td>Nyomtató</td><td>Nyomtatómechanizmus meghibásodása.</td><td>Papírcsere vagy műhely.</td><td><span class="sev sev-med">Közepes</span></td></tr>
+<tr><td>F05</td><td>Letöltés</td><td>Hiba az adatletöltés során.</td><td>Próbálja újra; ellenőrizze a kábelt.</td><td><span class="sev sev-med">Közepes</span></td></tr>
+<tr><td>F06</td><td>Érzékelőhiba</td><td>A mozgásérzékelő öntesztje sikertelen volt.</td><td>Érzékelőcsere műhelyben.</td><td><span class="sev sev-crit">Kritikus</span></td></tr>
+<tr><td>F07</td><td>GNSS</td><td>Belső GNSS-vevő vagy antennahiba.</td><td>Műhelyi ellenőrzés.</td><td><span class="sev sev-high">Magas</span></td></tr>
+<tr><td>F08</td><td>DSRC</td><td>Távoli ellenőrzés DSRC-modul hibája.</td><td>A műhely ellenőrzi az antennát és a CAN-t.</td><td><span class="sev sev-med">Közepes</span></td></tr>
+</tbody>
+</table>
+</div>
+<h3>EFAS-4.10 / 4.11 — hex DTC-k (ISO 16844-7), top 12</h3>
+<p style="font-size:14px;color:var(--text2);margin-bottom:12px;">Az EFAS egységek három kódtípust mutatnak:<strong>EFT</strong>(esemény/hiba típus ISO szerint),<strong>DTC</strong>(5 bájtos hex ISO 16844-7 szerint) és egy gyártóspecifikus<strong>Szervizazonosító</strong>. Az alábbi legfontosabb DTC-k a<strong>Bosch Intellic EFAS-4.10 Műhelyi Kézikönyv 18. táblázatából</strong>(DTC-k és a hozzájuk tartozó szervizazonosítók) származnak.</p>
+<div class="code-table-wrap">
+<table class="code-table">
+<thead><tr><th style="width:18%;">DTC</th><th style="width:42%;">Jelentése</th><th style="width:28%;">Mit kell tenni</th><th style="width:12%;">Súlyosság</th></tr></thead>
+<tbody>
+<tr><td>80 00 002007</td><td>Mozgásérzékelő tápfeszültsége a maximális érték felett</td><td>Ellenőrizze az érzékelő tápellátását és a kábelezést.</td><td><span class="sev sev-high">Magas</span></td></tr>
+<tr><td>80 00 002003</td><td>A mozgásérzékelő tápfeszültsége a minimum alatt van.</td><td>Ellenőrizze az érzékelő tápellátását és a kábelezést.</td><td><span class="sev sev-high">Magas</span></td></tr>
+<tr><td>80 00 002180</td><td>Nincs valós idejű jel a mozgásérzékelőtől (B3 láb megszakadt).</td><td>Ellenőrizze a B3 lábat és az érzékelő tápellátását.</td><td><span class="sev sev-crit">Kritikus</span></td></tr>
+<tr><td>80 00 002280</td><td>Hibás valós idejű érzékelőjel (B3 láb vagy IMS hiba).</td><td>Ellenőrizze a B3 lábat és az érzékelő ellenőrzőösszegét.</td><td><span class="sev sev-crit">Kritikus</span></td></tr>
+<tr><td>80 00 002452</td><td>Távolságérzékelő adatainak integritási hibája.</td><td>Engedélyezett műhelynek ellenőriznie kell az érzékelőt.</td><td><span class="sev sev-high">Magas</span></td></tr>
+<tr><td>80 00 002508</td><td>Mozgásérzékelő hiba.</td><td>Engedélyezett műhely – érzékelőcsere.</td><td><span class="sev sev-crit">Kritikus</span></td></tr>
+<tr><td>40 00 000200</td><td>Kártyahiba, 1. slot.</td><td>Tisztítsa meg az érintkezőket és helyezze vissza; ismétlődés esetén új kártya.</td><td><span class="sev sev-high">Magas</span></td></tr>
+<tr><td>40 00 000300</td><td>Kártyahiba, 2. slot.</td><td>Tisztítsa meg az érintkezőket és helyezze vissza.</td><td><span class="sev sev-high">Magas</span></td></tr>
+<tr><td>80 00 000660</td><td>Nyomtatóban nincs papír</td><td>Helyezzen be új papírtekercset.</td><td><span class="sev sev-low">Alacsony</span></td></tr>
+<tr><td>40 00 000900</td><td>Mozgásérzékelő impulzusok kikapcsolt gyújtásnál.</td><td>Ellenőrizze a rezgéseket, az érzékelőt és a kábelezést.</td><td><span class="sev sev-high">Magas</span></td></tr>
+<tr><td>40 00 000C31</td><td>Belső memória hiba.</td><td>Engedélyezett műhely; cserélje ki, ha nem javítható.</td><td><span class="sev sev-crit">Kritikus</span></td></tr>
+<tr><td>80 00 000D40</td><td>A kalibrációs adatok helytelenek vagy hiányosak.</td><td>Illesztesse újra egy hivatalos műhelyben.</td><td><span class="sev sev-crit">Kritikus</span></td></tr>
+</tbody>
+</table>
+</div>
+<p style="font-size:14px;color:var(--text2);margin-top:14px;"><em>Az EFAS-4 numerikus kódjai (E01–E10, F01–F08) az egység belső mnemonikai jelölései – a mögöttes I. melléklet C szerinti esemény/hiba a jogilag releváns azonosító, és ugyanúgy kerül rögzítésre, mint bármely más egységen.</em></p>
+</div>
+</details>
+</div><!-- /.vendor-stack -->
+<!-- ===== TAGRA CTA Box ===== -->
+<div class="cta-box">
+<h3>A TAGRA automatikusan dekódolja ezeket az üzeneteket.</h3>
+<p>Amikor egy járművezetői kártyát vagy járműegységet letölt a TAGRA-ba, minden esemény és hiba párosítva van az I. melléklet C szerinti definíciójával, egy közérthető angol magyarázattal. Próbálja ki a teljes szoftvert ingyenesen 30 napig – kártya nem szükséges.</p>
+<a class="cta-btn" href="/hu/ingyenes-probaverzio/?audience=fleet">Próbálja ki a TAGRA-t ingyenesen 30 napig →</a>
+</div>
+<!-- ===================================================================== -->
+<!-- SECTION 4: TOP 10 COMMON MISTAKES IN PRACTICE                          -->
+<!-- ===================================================================== -->
+<h2 id="common-mistakes">A 10 leggyakoribb tachográf üzenet a gyakorlatban</h2>
+<p>A fenti több mint 200 üzenetből tíz teszi ki annak a nagyrészét, amit a járművezetők nap mint nap látnak — és szinte mindegyik<strong>működési</strong>nem pedig katasztrofális. Ha tudja, hogyan reagáljon erre a tízre, a legtöbb műszak zökkenőmentesen zajlik, és a legtöbb ellenőrző tisztviselő elégedett lesz.</p>
+<div class="code-table-wrap">
+<table class="code-table">
+<thead>
+<tr>
+<th style="width: 6%;">#</th>
+<th style="width: 26%;">Üzenet</th>
+<th style="width: 42%;">Miért történik</th>
+<th style="width: 26%;">Első lépés</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>1. kártya kommunikációs hiba</strong></td>
+<td>Szennyezett érintkezők a járművezetői kártyán vagy a kártyafiókban. A kártya kissé ferdén lett behelyezve. Télen gyakori, amikor a kártyák hideg zsebekben vannak, és páralecsapódás keletkezik a chip érintkezőin.</td>
+<td>Vegye ki. Tisztítsa meg a chipet száraz ruhával (folyadék nélkül). Helyezze vissza. Ha továbbra sem működik, próbálja meg a tartalék slotot.</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>Nincs papír / nyomtatófiók nyitva</strong></td>
+<td>A papírtekercs kifogyott, vagy a nyomtatófiók kinyílt nyomtatás közben. Rossz papírtípus (csak digitális tachográfokhoz jelölt hőpapír fogadható el).</td>
+<td>Helyezzen be egy új tekercset, a fióknak be kell kattannia. Mindig tartson magánál egy tartalék tekercset.</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>1 szünet! 1 04h15 00h15</strong></td>
+<td>A folyamatos vezetési időzítő megközelíti a 4 óra 30 percet. Az előzetes figyelmeztetés konfigurálható (általában 15 perccel előbb).</td>
+<td>Tervezzen egy 45 perces szünetet a következő 15 percen belül (vagy ossza fel 15 + 30 percre).</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>Kártya behelyezése járművezetés közben</strong></td>
+<td>A járművezető elfelejtette behelyezni a kártyát elindulás előtt, majd menet közben észrevette és behelyezte.</td>
+<td>Álljon meg rövid időre. Helyezze vissza megfelelően. Az esemény rögzítésre kerül a kártyán, de nem minősül hibának.</td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>Utolsó kártyakapcsolat nem megfelelő lezárása</strong></td>
+<td>A járművezető túl gyorsan húzta ki a kártyát az előző járműből, vagy az előző járműegység leállt, mielőtt a záró rekordot rögzítette volna.</td>
+<td>Hagyja jóvá. Említse meg a flottakezelőnek — az előző járműegységnek szüksége lehet egy műhelylátogatásra.</td>
+</tr>
+<tr>
+<td>6</td>
+<td><strong>Áramellátás megszakadása</strong></td>
+<td>Akkumulátor bikázva, vezetékhiba, vagy a jármű lemerült akkumulátorral állt egész éjjel.</td>
+<td>Hagyja jóvá. Ha ismétlődik, ellenőriztesse az áramellátó áramkört — az ismételt áramkimaradás gyanús az ellenőrző hatóságok számára.</td>
+</tr>
+<tr>
+<td>7</td>
+<td><strong>A GNSS-vevőből származó helyzetmeghatározási információk hiánya / nincs helyzetadat</strong></td>
+<td>Összesen 3 óra járművezetés használható GNSS-jel nélkül — jellemző alagutakban, föld alatti depókban vagy eltakart antennával.</td>
+<td>Erősítse meg. Ellenőrizze az antenna útvonalát és azt, hogy semmilyen fémtárgyat ne helyeztek el a műszerfalon fölötte.</td>
+</tr>
+<tr>
+<td>8</td>
+<td><strong>Országbejegyzés szükséges</strong></td>
+<td>A Smart Tachográf 2 minden új műszak megkezdésekor kéri az ország (és a Smart Tachográf 2-n a határátlépés) megerősítését.</td>
+<td>Használja a menüt:<em>ország indítása</em>→ kód kiválasztása. A Smart Tachográf 2-n a készülék szintén megerősítést kér, amikor a GNSS határt észlel.</td>
+</tr>
+<tr>
+<td>9</td>
+<td><strong>§ illesztés nap múlva ??</strong></td>
+<td>Közeleg a kétévenkénti időszakos illesztés (figyelmeztetés jellemzően 28 nappal előre).</td>
+<td>Foglalja le azonnal a műhelyidőpontot — az illesztés nélküli menetíró készülékkel történő járművezetés súlyos szabálysértésnek minősül.</td>
+</tr>
+<tr>
+<td>10</td>
+<td><strong>1 letöltés napokban ??</strong></td>
+<td>Esedékes a következő kötelező járművezetői kártya letöltés (figyelmeztetés jellemzően 14 nappal előre). Az EU szabályok legalább 28 naponta megkövetelik a letöltést.</td>
+<td>Adja át a kártyát a flottakezelőnek, vagy töltse le saját maga. Ha elmulasztja a határidőt, az adatok továbbra is megmaradnak, de a hivatal szankcionálhatja.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- ===================================================================== -->
+<!-- SECTION 5: CRISIS WORKFLOW                                             -->
+<!-- ===================================================================== -->
+<h2 id="crisis-workflow">Kritikus hiba esetén teendő: mit tegyen, ha hiba jelentkezik útközben?</h2>
+<p>Valódi<strong>x Hiba</strong>üzenet — érzékelőhiba, mozgásadatok hibája, a járműegység belső hibája, a biztonsági rendszer megsértésére irányuló kísérlet, időütközés — különbözik az üzemeltetési értesítéstől: a menetíró készülék már nem képes megbízhatóan rögzíteni tevékenységét, és jogilag köteles manuális feljegyzéseket vezetni, valamint a készüléket egy<strong>hivatalos műhelyben hét napon belül ellenőriztetni</strong>(az 165/2014 rendelet 37. cikke). Az alábbi ötlépéses munkafolyamat az összes gyártói kézikönyvben leírt hivatalos eljárás.</p>
+<ol class="crisis-steps">
+<li>
+<span class="num">1</span>
+<span>
+<strong>Ismerje el az üzenetet és folytassa biztonságosan.</strong>
+<span class="lbl">Nyomja meg az<em>OK</em>gombot a villogó kijelző elnémításához. A hiba mostantól rögzítve van a tömegtárolóban és a kártyáján — a megerősítés nem törli az eseményt. Maradjon nyugodt és találjon egy biztonságos helyet a megálláshoz.</span>
+</span>
+</li>
+<li>
+<span class="num">2</span>
+<span>
+<strong>Nyomtasson egy járművezetői tevékenységi kivonatot a járműegységből.</strong>
+<span class="lbl">Menü:<em>nyomtatás → járművezető 1 → tevékenységek → 24 órás nap</em>. A kivonat tartalmazni fogja a hibabejegyzést és egy időbélyegzőt. Készítsen minden következő nap egy friss kivonatot, amíg a menetíró készüléket meg nem javítják.</span>
+</span>
+</li>
+<li>
+<span class="num">3</span>
+<span>
+<strong>Kezdje meg a manuális feljegyzéseket a kivonat hátoldalán.</strong>
+<span class="lbl">Minden olyan időszakra, amelyre a menetíró készülék már nem tudja helyesen rögzíteni az adatokat, írja be kézzel:<em>kezdési idő, befejezési idő, tevékenység (járművezetés / egyéb munka / készenlét / pihenés), helyszín, jármű rendszám</em>. Ez a lap az Ön jogi bizonyítéka bármely közúti ellenőrzés során, amíg az adatrögzítő készülék meg nem javul.</span>
+</span>
+</li>
+<li>
+<span class="num">4</span>
+<span>
+<strong>Haladéktalanul értesítse flottakezelőjét.</strong>
+<span class="lbl">Telefonon, üzenetben vagy e-mailben — bármilyen módon, amit az Ön vállalkozása használ. A flotta köteles rögzíteni a hibát, megtervezni a műhelylátogatást, és megerősíteni, hogy az út folytatódhat kézi rögzítéssel. Ha 7 napon túl is vezetnek ismert, nem javított hibával, az üzemeltető jelentős bírságoknak teszi ki magát.</span>
+</span>
+</li>
+<li>
+<span class="num">5</span>
+<span>
+<strong>Foglaljon időpontot az engedélyezett műhelybe 7 napon belül.</strong>
+<span class="lbl">Csak egy<strong>engedélyezett tachográf műhely</strong>(amely műhelykártyával és megfelelő diagnosztikai eszközökkel rendelkezik) javíthatja, újrakalibrálhatja vagy kicserélheti a járműegységet. A javítás után a műhely kalibrálást végez, és egy illesztési lapot / kalibrálási jegyzőkönyvet biztosít, amelyet a járműben kell tartani.</span>
+</span>
+</li>
+</ol>
+<p style="margin-top:24px;"><strong>Egy kritikus kivétel:</strong>ha a hiba<em>A biztonsági rendszer megsértésére irányuló kísérlet</em>vagy<em>érzékelőhiba és a jármű mozgásával kapcsolatos ellentmondás</em>, az adatrögzítő készülék automatikusan kiadhatja a kártyát, és egyáltalán megtagadhatja a további tevékenységek rögzítését. Ebben az esetben a teljes műszakot kézzel kell rögzíteni, és a műhelylátogatás sürgőssé válik a standard 7 napos szabály helyett. A kézi rögzítés nélküli továbbvezetés ebben a forgatókönyvben súlyos szabálysértés az összes EU és EGT tagállamban.</p>
+<!-- ===================================================================== -->
+<!-- SECTION 6: OFFICIAL SOURCES                                            -->
+<!-- ===================================================================== -->
+<h2 id="sources">Hivatalos források és gyártói kézikönyvek</h2>
+<p>Minden fenti üzenet, küszöbérték és eljárás az alábbi, nyilvánosan hozzáférhető hivatalos dokumentumokból került átvételre. Ahol a gyártó angol megfogalmazása eltér a köznyelvi járművezetői szókincstől, ott megtartottuk a gyártó pontos szövegét, és mellé egy egyszerű angol nyelvű magyarázatot adtunk.</p>
+<ul class="sources-list">
+<li>
+<strong>EU rendelet — járművezetői órák és AETR</strong>561/2006/EK rendelet — vezetési idők, szünetek és pihenőidők. 2002/15/EK irányelv — A mobil közúti dolgozók munkaidő-irányelve. AETR — Az Európai Megállapodás a nemzetközi közúti fuvarozást végző járműszemélyzet munkájáról.<a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32006R0561" rel="noopener" target="_blank">EUR-Lex: 561/2006 rendelet (EN)</a>
+</li>
+<li>
+<strong>EU rendelet — tachográf műszaki specifikáció</strong>165/2014/EU rendelet — jogalap. A Bizottság (EU) 2016/799 végrehajtási rendelete, I C. melléklet — az intelligens tachográf teljes műszaki specifikációja (események, hibák, adatstruktúrák).<a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016R0799" rel="noopener" target="_blank">EUR-Lex: 2016/799 / I C. melléklet (EN)</a>
+    ·
+    <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014R0165" rel="noopener" target="_blank">EUR-Lex: 165/2014 (EN)</a>
+</li>
+<li>
+<strong>VDO DTCO 4.1 — Continental Automotive Technologies</strong>Járművezetői kezelési útmutató, 3. kiadás / 2024-08, BA00.1381.41 100 102. Tartalmazza a DTCO 4.1, 4.1a és 4.1b verziókat.<a href="https://www.fleet.vdo.com/media/sqrd5xnt/ba_dtco_41a_en_web_2024-08-27.pdf" rel="noopener" target="_blank">PDF letöltés (angol) — fleet.vdo.com</a>
+</li>
+<li>
+<strong>VDO DTCO 4.0 — Continental Automotive Technologies</strong>Korábbi Smart Tacho 1 készülék, még széles körben használatban. Járművezetői kézikönyv, 2. kiadás / 2022.<a href="https://www.fleet.vdo.com/media/lvnkmvhq/ba_dtco_40e_web_gb.pdf" rel="noopener" target="_blank">PDF letöltés (angol) — fleet.vdo.com</a>
+</li>
+<li>
+<strong>Stoneridge SE5000 Exakt Duo² — Stoneridge Electronics</strong>Járművezetői és Vállalkozási kézikönyv, 8.x. verzió. Referencia egység az Egyesült Királyság és az északi piacok számára.<a href="https://www.stoneridgeelectronics.com/tachographs/" rel="noopener" target="_blank">Kézikönyvek — stoneridgeelectronics.com</a>
+</li>
+<li>
+<strong>Actia SmarTach — Actia Group</strong>SmarTach Gen1 és Gen2 sofőrkártya útmutatók; elterjedt a francia és dél-európai flották körében.<a href="https://www.actia.com/en/solutions/tachograph/" rel="noopener" target="_blank">Termékoldal — actia.com</a>
+</li>
+<li>
+<strong>Európai Bizottság — DG MOVE</strong>Hiteles háttérinformációk az intelligens tachográf bevezetéséről, a módosításokról és a végrehajtási útmutatókról.<a href="https://transport.ec.europa.eu/transport-modes/road/social-provisions/smart-tachograph_en" rel="noopener" target="_blank">transport.ec.europa.eu — Intelligens tachográf</a>
+</li>
+</ul>
+<!-- ===================================================================== -->
+<!-- RELATED ARTICLES                                                       -->
+<!-- ===================================================================== -->
+<h2 id="related">Kapcsolódó sofőrkártya útmutatók</h2>
+<div class="related-grid">
+<a class="related-card" href="/articles/how-to-download-evaluate-archive-tachograph-data/">
+<span class="r-eyebrow">Megfelelőség · 12 perces olvasmány</span>
+<span class="r-title">Hogyan töltsük le, értékeljük és archiváljuk a tachográf adatokat</span>
+<span class="r-text">Teljes útmutató a 28 napos sofőrkártya és a 90 napos járműegység letöltési ciklushoz, az archiválási szabályokhoz, és arról, hogy flottájának mit kell nyilvántartania.</span>
+<span class="r-chip">Olvasd el a letöltési útmutatót →</span>
+</a>
+<a class="related-card" href="/articles/who-must-evaluate-tachograph-data-2026/">
+<span class="r-eyebrow">Szabályozás · 8 perces olvasmány</span>
+<span class="r-title">Kinek kell tachográf adatokat értékelnie 2026-ban</span>
+<span class="r-text">Az üzemeltetői kötelezettségek az 561/2006/EK rendelet és a munkaidő-irányelv értelmében — mely szállítási kategóriák tartoznak ide, és mit kell bemutatni az ellenőrnek.</span>
+<span class="r-chip">Olvasd el a kötelezettségekről szóló útmutatót →</span>
+</a>
+<a class="related-card" href="/articles/tachographs-for-vans-new-obligation-july-2026/">
+<span class="r-eyebrow">Új szabályok · 6 perces olvasmány</span>
+<span class="r-title">Tachográfok furgonokba: az új kötelezettség 2026. júliusától</span>
+<span class="r-text">2026. július 1-jétől a nemzetközi forgalomban lévő, 2,5 és 3,5 tonna közötti furgonokba intelligens tachográf beépítése volt kötelező. Üzemeltetői ellenőrzőlista.</span>
+<span class="r-chip">Olvasd el a furgonokról szóló útmutatót →</span>
+</a>
+</div>
+<!-- ===== second TAGRA CTA Box ===== -->
+<div class="cta-box" style="margin-top:36px;">
+<h3>Ne dekódolja a több száz üzenetet kézzel.</h3>
+<p>A TAGRA beolvassa a sofőrkártyákat és járműegységeket minden piaci intelligens tachográfból, minden eseményt és hibát hozzárendel az I C mellékletben szereplő definíciójához, és ellenőrzésre kész jelentéseket készít az 561/2006/EK rendelet, a WTD és az AETR alapján. 30 napos ingyenes próba, kártya nem szükséges, bármely Windows PC-n fut.</p>
+<a class="cta-btn" href="/hu/ingyenes-probaverzio/?audience=fleet">Indítsa el ingyenes 30 napos próbaverzióját →</a>
+</div>
+<!-- ===================================================================== -->
+<!-- FAQ                                                                    -->
+<!-- ===================================================================== -->
+<h2 id="faq">GYIK — tachográf hibakódok és figyelmeztető szimbólumok</h2>
+<div class="faq-block">
+<details>
+<summary>Mi a különbség egy digitális tachográfon az „esemény” és a „hiba” között?</summary>
+<div class="faq-a">Egy<strong>esemény</strong>egy működési esemény — járművezetés megfelelő kártya nélkül, gyorshajtás, kártya behelyezése járművezetés közben, időátfedés. Az egység megfelelően működik; rögzíti a járművezető által végzett tevékenységet. A<strong>hiba</strong>az adatrögzítő készülék hardveres vagy szoftveres meghibásodása — érzékelőhiba, járműegység belső hibája, időhiba, nyomtatóhiba. A hibák elindítják a jogszabályban előírt 7 napos műhelyszabályt. Mindkét kategóriát az (EU) 2016/799 rendelet I C. melléklete határozza meg.</div>
+</details>
+<details>
+<summary>„x érzékelő hiba xx” jelenik meg a VDO kijelzőmön — tovább vezethettek?</summary>
+<div class="faq-a">Röviden: igen — egy biztonságos megállási pont eléréséig. Ezután (1) nyomja meg az OK gombot a nyugtázáshoz, (2) nyomtassa ki az aznapi tevékenységeket, (3) írja fel manuálisan az összes további tevékenységet a kinyomtatott lap hátoldalára, (4) értesítse a flottamenedzserét, és (5) 7 napon belül keressen fel egy hivatalos műhelyt. A járművezetés folytatása manuális feljegyzések nélkül, amint tudomása van az érzékelőhibáról, súlyos szabálysértés az összes uniós tagállamban.</div>
+</details>
+<details>
+<summary>Mit jelent a „!? GNSS anomália” a Smart Tachograph 2-n?</summary>
+<div class="faq-a">A Smart Tachograph 2 egységek (kötelező a 2023. augusztus 21. után forgalomba helyezett járművekben, utólagos beszerelés 2025. augusztus 18-ig kötelező) a Galileo OSNMA szolgáltatás segítségével ellenőrzik a GNSS jelet a hamisítás szempontjából. A<em>GNSS-anomália</em>esemény azt jelenti, hogy az egység a GPS/Galileo jel manipulálására tett kísérletet, vagy a jelhitelesítés sikertelenségét észlelte. Az egység naplózza az eseményt a hatósági ellenőrzés céljából. Ha ez egy adott járművön megismétlődik, az antennát és a közvetlen vezetékezést ellenőrizni kell manipuláció szempontjából — és szükség lehet műhelydiagnosztikára.</div>
+</details>
+<details>
+<summary>Mi a különbség a „MUNKA” és a „KÉSZENLÉT” között?</summary>
+<div class="faq-a"><strong>MUNKA</strong>az a fizetett munka, ami nem járművezetés: rakodás, kirakodás, tankolás, papírmunka, utasok segítése, járműellenőrzések. Munkaidőnek számít a munkaidő-irányelv (WTD) szerint, és<em>nem</em>számít szünetnek.<strong>KÉSZENLÉT</strong>az a várakozási idő, amelynek időtartamát a sofőr előre ismeri — kompozás/vonatozás, sorban állás egy ismert időpontra, jármű kísérése szállítójárművön. A készenlét nem munka, de<em>nem</em>nem számít szünetnek a vezetési időre vonatkozó szabályok szerint; a munkaidő-irányelv (WTD) szerint ki van zárva a munkaidőből, ha időtartama előre ismert.</div>
+</details>
+<details>
+<summary>Számítható-e a „KÉSZENLÉT” szünetnek az 561/2006/EK rendelet szerint?</summary>
+<div class="faq-a">Nem. Az 561/2006 rendelet 1. melléklete csak egy kategóriát sorol fel, amely nullázza a 4 és fél órás folyamatos vezetési időt és beleszámít a kötelező 45 perces szünetbe: a<em>SZÜNET/PIHENÉS</em>tevékenység (ágy piktogram). Azok a járművezetők, akik „Készenlét” üzemmódot állítanak be, miközben azt hiszik, hogy szünetet tartanak, nem kapnak szünetidő-jóváírást letöltéskor — és a közúti ellenőrök rendszeresen bírságot szabnak ki emiatt.</div>
+</details>
+<details>
+<summary>Mit tegyek, ha elfelejtettem „SZÜNET/PIHENÉS” állásba kapcsolni egy pihenő alatt?</summary>
+<div class="faq-a">Amikor legközelebb behelyezi sofőrkártyáját bármely járműbe, a tachográf felajánl egy<strong>manuális bejegyzés</strong>eljárást az utolsó kártyakivétel óta eltelt időszakra. Használja a menüt az adott időszakra vonatkozó helyes tevékenység (Pihenés) beállításához. A manuális bejegyzések időbélyeggel kerülnek rögzítésre a kártyán és láthatók a hatósági ellenőrzés során, de jogos korrekcióként elfogadják őket — ellentétben a hiányzó vagy hibás, soha nem deklarált tevékenységgel.</div>
+</details>
+<details>
+<summary>Milyen gyakran kell letöltenem a sofőrkártyámat és a járműegységet?</summary>
+<div class="faq-a">Legalább minden<strong>28 nap</strong>a járművezetői kártya esetében, és minden<strong>90 nap</strong>a járműegység esetében (az 165/2014 rendelet 33. cikke, az 581/2010 bizottsági rendelettel összefüggésben). A letöltött adatokat legalább egy évig – számos tagállamban pedig a járművezető teljes munkavégzési időtartama alatt – meg kell őrizni a baleseti/biztosítási nyilvántartások részeként.</div>
+</details>
+<details>
+<summary>Befolyásolja a „kártya kommunikációs hiba” a vezetési idő nyilvántartásaimat?</summary>
+<div class="faq-a">Nem feltétlenül. A legtöbb kommunikációs hiba egyszerűen a chip érintkezőinek szennyeződése – a hiba előtt végrehajtott tevékenység már a kártya memóriájában van. Ha a hiba rövid ideig tart, és tisztítás, majd újbóli behelyezés után megszűnik, nem veszik el időtartam. Ha a kártya egyáltalán nem olvasható, a készülék automatikusan kinyomtatja az utolsó tevékenységet, Önnek pedig ettől a ponttól kezdve mindent kézzel kell rögzítenie, és a kártyát ki kell cserélni.</div>
+</details>
+<details>
+<summary>A kijelzőn az áll, hogy „országbejegyzés szükséges” – mit kell tennem?</summary>
+<div class="faq-a">Az intelligens tachográfok megkövetelik, hogy adja meg azt az országot, ahol a műszak kezdődik és végződik. A Smart Tachograph 2 esetében a készülék minden határátlépés megerősítését is kéri (a GNSS észleli az átlépést, a járművezető az OK gomb megnyomásával nyugtázza). Használja a menüpontot:<em>bejegyzés → járművezető 1 → kezdő ország</em>(és a<em>befejező ország</em>a műszak végén). Az elmulasztott országbejegyzések eseményként kerülnek rögzítésre, és láthatók az útszéli ellenőrök számára.</div>
+</details>
+<details>
+<summary>A TAGRA támogatja mind a négy, ebben az útmutatóban bemutatott gyártói hibakódot?</summary>
+<div class="faq-a">Igen. A TAGRA az I. melléklet C. részében szereplő eseményeket és hibákat közvetlenül bármely letöltött .DDD fájlból kiolvassa – az adatformátum az azt író egységtől függetlenül azonos. A gyártóspecifikus felugró üzenetek az I. melléklet C. részében szereplő alapul szolgáló eseményhez vannak hozzárendelve, így a flottakezelők egységes, érthető magyarázatokat látnak, függetlenül attól, hogy járművezetőik VDO, Stoneridge, Actia, EFAS vagy bármely más típusjóváhagyott intelligens tachográfot használnak.</div>
+</details>
+<details>
+<summary>Mit követel meg valójában a hivatalos 7 napos műhelyszabály?</summary>
+<div class="faq-a">Az 165/2014 rendelet 37. cikke előírja, hogy ha a tachográf hiba miatt nem tudja megfelelően rögzíteni a tevékenységeket, az üzemeltetőnek „amint a körülmények megengedik” meg kell javíttatnia azt egy jóváhagyott szerelővel vagy műhellyel – a gyakorlatban ezt a következőként értelmezik:<strong>hét naptári napon belül</strong>ha a jármű vissza tud térni a bázisra, vagy azonnal a visszatéréskor, ha hosszabb nemzetközi úton van. A járművezetőnek ebben az időszakban végig kézi feljegyzéseket kell vezetnie.</div>
+</details>
+<details>
+<summary>Tovább vezethetek a „Gyorshajtás” esemény rögzítése mellett?</summary>
+<div class="faq-a">Igen – a gyorshajtás esemény, nem pedig hiba. A jármű továbbra is megfelelően rögzít; csak a sebességhatárt lépték túl. Az esemény a letöltéskor látható, és az ugyanazon út során vagy több úton ismétlődő gyorshajtási feljegyzések gyakori kiváltó okai az üzemeltetői ellenőrzéseknek és az útszéli vizsgálatoknak.</div>
+</details>
+<details>
+<summary>A VDO kijelzőm 80, 82 vagy 98-as számot mutat – mit jelent?</summary>
+<div class="faq-a">A DTCO 4.0 / 4.1 készüléken a piktogram melletti kétjegyű szám az eseményt vagy hibát azonosítja. Az alacsony számok (001–066) műhelyi hibamemória kódok; a magas számok az intelligens tachográf funkcióihoz tartoznak. A leggyakoribbak a következők:<strong>80 – A jármű mozgásával kapcsolatos ellentmondás</strong>(a mozgásérzékelő nem egyezik a GNSS-jellel; komoly üzenet – keressen fel egy hivatalos műhelyt),<strong>82 – Kommunikációs hiba a külső GNSS-eszközzel</strong>(a vevő átmenetileg nem tudja rögzíteni a pozíciót; nyugtázza és keressen fel egy műhelyt, ha a hiba továbbra is fennáll) és<strong>98 — ITS / Bluetooth hiba</strong>(a távoli adatinterfész; nincs hatása a rögzítésre, javítás a következő szerviz alkalmával). A teljes 34–98-as lista a fentebbi VDO szakaszban található.</div>
+</details>
+<details>
+<summary>Mit jelent a „mozgási ellentmondás” (80-as kód), és folytathatom a vezetést?</summary>
+<div class="faq-a">A 80-as kód egy<em>A jármű mozgásával kapcsolatos ellentmondás</em>: az adatrögzítő készülék ellentmondást észlelt a mozgásérzékelő és egy független forrás (GNSS) között. Gyakori, ártalmatlan oka, ha szállítás közben elfelejtik beállítani a komp/vonat üzemmódot. Ha normál vezetés közben jelentkezik, az manipulációra vagy kábelezési hibára utalhat — nyugtázza az üzenetet, vezessen manuális nyilvántartást, és ellenőriztesse a járműegységet egy engedélyezett műhelyben.</div>
+</details>
+<details>
+<summary>Hogyan kereshetek ki egy numerikus vagy hexadecimális hibakódot műhelyi kiolvasásból?</summary>
+<div class="faq-a">Használja a keresőmezőt a gyártói kódok rész tetején: írja be a számot (pl.<em>042</em>), egy VDO kijelzőszámot (pl.<em>82</em>), egy Stoneridge vagy EFAS hexadecimális DTC-t (pl.<em>002E80</em>) vagy bármilyen szót az üzenetből (pl.<em>érzékelőhiba</em>). A megfelelő gyártói panel automatikusan megnyílik, és csak a találati sorokat jeleníti meg.</div>
+</details>
+</div><!-- /.faq-block -->
+</article>
+</div>
+</main>
+<footer class="site-footer" role="contentinfo">
+<div class="footer-inner">
+<div>
+<div class="footer-logo"><img alt="TAGRA" height="32" src="/assets/img/logo-dark.svg?v=20260513zh" width="140"/></div>
+<p class="footer-desc">Professzionális szoftver tachográfadatok kiértékelésére. Sofőrkártya-letöltés, digitális tachográfadatok kiértékelése, uniós vezetési és pihenőidő, valamint nehézgépjárművekre vonatkozó munkaidő-irányelv. Fejlesztő: Truck Data Technology, s.r.o.</p>
+</div>
+<div class="footer-col">
+<h4>Termék</h4>
+<ul>
+<li><a href="/hu/fuvarozoknak/">Fuvarozók részére</a></li>
+<li><a href="/hu/soforoknek/">Professzionális sofőrök részére</a></li>
+<li><a href="/hu/hatosagoknak/">Ellenőrző hatóságok részére</a></li>
+<li><a href="/hu/hogyan-mukodik/">Hogyan működik</a></li>
+<li><a href="/hu/kinek-szol/">Kinek szól</a></li>
+<li><a href="/hu/gyakori-kerdesek/">GYIK</a></li>
+<li><a href="/hu/letolto-eszkozok/">Letöltő eszközök</a></li><li><a href="/hu/gps-nyomkovetes/">GPS nyomkövetés</a></li></ul>
+</div>
+<div class="footer-col">
+<h4>Források</h4>
+<ul>
+<li><a href="/hu/cikkek/">Cikkek</a></li><li><a href="/manuals/">Kézikönyvek</a></li>
+<li><a href="/articles/digital-tachograph-symbols/">Tachográf szimbólumok</a></li>
+<li><a href="/integrations/dkv-live/">DKV LIVE®</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h4>Cég</h4>
+<ul>
+<li><a href="/hu/kapcsolat/">Kapcsolat</a></li>
+<li><a href="https://www.tdt.cz" rel="noopener" target="_blank">Truck Data Technology</a></li>
+<li><a href="/de/">Német</a></li>
+<li><a href="/pl/">Lengyel</a></li>
+</ul>
+</div>
+</div>
+<div class="footer-bottom">
+<span>© 2026 Truck Data Technology, s.r.o. Minden jog fenntartva.</span>
+<span><a href="/hu/kapcsolat/">Kapcsolat</a> · <a href="https://www.tdt.cz" rel="noopener" target="_blank">tdt.cz</a></span>
+</div>
+</footer>
+<script>(function(){var bar=document.getElementById('scroll-progress');if(bar)window.addEventListener('scroll',function(){var t=document.documentElement.scrollTop||document.body.scrollTop;var h=document.documentElement.scrollHeight-document.documentElement.clientHeight;bar.style.width=(t/h*100)+'%';},{passive:true});var toggle=document.getElementById('nav-toggle'),links=document.getElementById('nav-links');if(toggle&&links)toggle.addEventListener('click',function(){var o=links.classList.toggle('open');toggle.setAttribute('aria-expanded',o);});})();</script>
+<script>
+(function(){
+  var input=document.getElementById('dec-search-input');
+  var clearBtn=document.getElementById('dec-search-clear');
+  var count=document.getElementById('dec-count');
+  var chips=Array.prototype.slice.call(document.querySelectorAll('.dec-chip'));
+  var vendors=Array.prototype.slice.call(document.querySelectorAll('details.vendor'));
+  if(!input||!vendors.length)return;
+  vendors.forEach(function(v){v._defaultOpen=v.hasAttribute('open');});
+  var activeVendor='all';
+  function apply(){
+    var q=(input.value||'').trim().toLowerCase();
+    var total=0;
+    vendors.forEach(function(v){
+      var scoped=(activeVendor==='all'||activeVendor===v.id);
+      if(!scoped){v.classList.add('dec-hidden');return;}
+      v.classList.remove('dec-hidden');
+      var rows=v.querySelectorAll('.code-table tbody tr');
+      var hits=0;
+      Array.prototype.forEach.call(rows,function(r){
+        var m=(q===''||r.textContent.toLowerCase().indexOf(q)!==-1);
+        if(m){r.classList.remove('dec-hidden');hits++;}else{r.classList.add('dec-hidden');}
+      });
+      total+=hits;
+      var body=v.querySelector('.vendor-body');
+      var note=v.querySelector('.dec-nohit');
+      if(q!==''&&hits===0){
+        if(!note&&body){note=document.createElement('p');note.className='dec-nohit';note.textContent='No matching rows in this manufacturer.';body.appendChild(note);}
+        if(note)note.style.display='';
+      } else if(note){note.style.display='none';}
+      if(q!==''||activeVendor!=='all'){v.open=hits>0;}else{v.open=v._defaultOpen;}
+    });
+    if(q===''&&activeVendor==='all'){count.textContent='';}
+    else{count.textContent=total+(total===1?' match':' matches')+(activeVendor!=='all'?' \u00b7 '+activeVendor.toUpperCase():'');}
+  }
+  input.addEventListener('input',apply);
+  clearBtn.addEventListener('click',function(){input.value='';apply();input.focus();});
+  chips.forEach(function(c){c.addEventListener('click',function(){
+    var v=c.getAttribute('data-vendor');
+    if(v==='symbols'){var s=document.getElementById('activity-symbols');if(s)s.scrollIntoView({behavior:'smooth'});return;}
+    chips.forEach(function(x){x.classList.toggle('is-active',x===c&&v!=='symbols');});
+    activeVendor=v;apply();
+    var firstVisible=vendors.filter(function(x){return !x.classList.contains('dec-hidden');})[0];
+    if(firstVisible&&v!=='all')firstVisible.scrollIntoView({behavior:'smooth',block:'start'});
+  });});
+})();
+</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Tachográf hibakódok és szimbólumok: mit jelentenek és hogyan javíthatók",
+  "description": "Teljes járművezetői útmutató a digitális tachográf hibakódjaihoz és figyelmeztető szimbólumaihoz. Tevékenységikonok, figyelmeztető felugró ablakok, VDO DTCO 4.1 / Stoneridge SE5000 / Actia / EFAS-4 hibakódok, mit jelent az egyes hibák és pontosan mit kell tenni.",
+  "image": "https://tagra.app/assets/img/og/digital-tachograph-symbols.jpg",
+  "author": {
+    "@type": "Organization",
+    "name": "Truck Data Technology, s.r.o.",
+    "url": "https://www.tdt.cz"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Truck Data Technology, s.r.o.",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://tagra.app/assets/img/logo.svg"
+    }
+  },
+  "datePublished": "2025-09-01",
+  "dateModified": "2026-08-12",
+  "inLanguage": "en",
+  "mainEntityOfPage": "https://tagra.app/articles/digital-tachograph-symbols/",
+  "articleSection": "Sofőr tudásbázis",
+  "wordCount": 9600,
+  "keywords": "tachograph fault codes, tachograph warning symbols, digital tachograph error codes, VDO DTCO error codes, Stoneridge SE5000 errors, Actia SmarTach faults, EFAS-4 faults, Annex 1C events, smart tachograph GNSS fault, drivers hours, Regulation 165/2014"
+}</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Mi a különbség egy esemény és egy hiba között egy digitális tachográfon?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Az esemény egy működési jellegű történés — járművezetés megfelelő kártya nélkül, gyorshajtás, kártya behelyezése járművezetés közben, időátfedés. Az adatrögzítő készülék helyesen működik; valami olyasmit rögzít, amit a járművezető tett. A hiba maga az adatrögzítő készülék hardver- vagy szoftveres meghibásodása — érzékelőhiba, a járműegység belső hibája, időütközés, nyomtatóhiba. A hibák kiváltják a jogszabályban előírt 7 napos műhelyszabályt. Mindkét kategóriát a 2016/799 (EU) rendelet I C. melléklete határozza meg."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Érzékelőhiba üzenetet látok a VDO kijelzőmön – folytathatom a vezetést?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Röviden: igen – amíg el nem ér egy biztonságos megállóhelyet. Ezután nyugtáznia kell az üzenetet, ki kell nyomtatnia az aznapi tevékenységeket, manuális nyilvántartást kell vezetnie minden további tevékenységről a nyomtatvány hátoldalán, tájékoztatnia kell flottakezelőjét, és 7 napon belül fel kell keresnie egy engedélyezett műhelyt. Az érzékelőhiba ismerete után manuális nyilvántartás nélkül történő járművezetés súlyos szabálysértés minden EU-tagállamban."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Mit jelent a GNSS-anomália a Smart Tachograph 2 készüléken?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Az Intelligens Tachográf 2 készülékek ellenőrzik a GNSS-jelet a hamisítás ellen a Galileo OSNMA szolgáltatás segítségével. Egy GNSS-anomália esemény azt jelenti, hogy a készülék vagy a GPS/Galileo jel manipulálására tett kísérletet, vagy a jel hitelesítésének sikertelenségét észlelte. A készülék naplózza az eseményt a végrehajtáshoz. Ha egy adott járművön ismétlődik, ellenőrizni kell az antennát és a közvetlen vezetékezést, hogy történt-e manipuláció."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Mi a különbség az Egyéb munka és a Készenlét között?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Az Egyéb munka olyan fizetett munka, amely nem vezetés: rakodás, kirakodás, tankolás, adminisztráció, utasok segítése, járműellenőrzések. A Készenlét olyan várakozási idő, amelynek időtartamát a járművezető előre ismeri – komp/vonat, sorban állás ismert időpontban. A Készenlét nem minősül munkának, de nem is szünetnek a járművezetői munkaidő szabályai szerint."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Beszámítható a Készenlét szünetként az 561/2006/EK rendelet szerint?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nem. Az 561/2006 rendelet I. melléklete csak egy kategóriát sorol fel, amely nullázza a 4,5 órás folyamatos vezetési időt és beleszámít a 45 perces kötelező szünetbe: a szünet/pihenő tevékenység. Azok a sofőrök, akik szünet tartása közben Készenlétet állítanak be, letöltéskor nem kapnak szünetidő jóváírást."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Mit tegyek, ha elfelejtettem Pihenőre váltani egy szünet alatt?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Amikor legközelebb behelyezi kártyáját bármelyik járműbe, a tachográf manuális beviteli eljárást ajánl fel az utolsó kártyakivétel óta eltelt időszakra. Használja a menüt a megfelelő tevékenység beállításához erre az időtartamra. A manuális bejegyzések időbélyegzővel kerülnek a kártyára, és jogos javításnak minősülnek."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Milyen gyakran kell letöltenem a sofőrkártyámat és a járműegységet?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A sofőrkártya esetében legalább 28 naponta, a járműegység esetében pedig legalább 90 naponta (az 165/2014 rendelet 33. cikke, az 581/2010 bizottsági rendelettel összefüggésben). A letöltött adatokat legalább egy évig meg kell őrizni."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Befolyásolja a kártya kommunikációs hiba a vezetési időim rögzítését?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nem feltétlenül. A legtöbb kommunikációs hiba egyszerűen a chip érintkezőinek szennyeződése – a hiba előtt végzett tevékenység már a kártya memóriájában van. Ha a hiba rövid, és tisztítás, majd újbóli behelyezés után megszűnik, nem vész el időszak. Ha a kártya egyáltalán nem olvasható, a készülék automatikusan kinyomtatja az utolsó tevékenységet."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "A kijelzőn az látható, hogy országbejegyzés szükséges – mit kell tennem?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Az intelligens tachográfok megkövetelik, hogy nyilatkozzon arról az országról, ahol a műszak kezdődik és végződik. Az Intelligens Tachográf 2-vel a készülék minden határátlépés megerősítését is kéri. Használja a menüt: bejegyzés → járművezető 1 → kezdő ország a műszak elején, és záró ország a műszak végén."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "A TAGRA támogatja mind a négy, ebben az útmutatóban bemutatott gyártói hibakódot?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Igen. A TAGRA közvetlenül bármely letöltött .DDD fájlból kiolvassa az I C. melléklet szerinti eseményeket és hibákat – az adatformátum az azt író egységtől függetlenül azonos. A gyártóspecifikus felugró üzenetek a mögöttes I C. melléklet szerinti eseményhez vannak hozzárendelve."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Mit követel meg valójában a hivatalos 7 napos műhelyszabály?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Az 165/2014 rendelet 37. cikke előírja, hogy amennyiben a tachográf hiba miatt nem tudja megfelelően rögzíteni a tevékenységeket, az üzemeltetőnek a körülmények lehetővé tétele esetén azonnal – a gyakorlatban hét naptári napon belül, ha a jármű vissza tud térni a bázisra – meg kell javíttatnia azt egy jóváhagyott műhelyben."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Folytathatom a vezetést a gyorshajtás esemény rögzítése mellett?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Igen – a gyorshajtás esemény, nem hiba. A jármű továbbra is helyesen rögzít; csak a sebességkorlátot lépte túl. Az esemény letöltéskor látható, és az ismétlődő gyorshajtás rögzítések gyakori kiváltó okai az üzemeltetői ellenőrzéseknek és a közúti vizsgálatoknak."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "A VDO kijelzőm 80, 82 vagy 98-as számot mutat – mit jelent?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A DTCO 4.0/4.1 készülékeken a piktogram melletti kétjegyű szám azonosítja az eseményt vagy a hibát. Az alacsony számok (001–066) műhelyi hibakódok; a magas számok az intelligens tachográf funkcióihoz tartoznak. A leggyakoribbak a 80 – a jármű mozgásával kapcsolatos ellentmondás (a mozgásérzékelő nem egyezik a GNSS jellel; keressen fel egy hivatalos műhelyt), a 82 – a járműegység belső GNSS hibája (a vevő ideiglenesen nem tudja rögzíteni a pozíciót) és a 98 – ITS/Bluetooth hiba (a távoli adatinterfész; nincs hatása a rögzítésre)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Mit jelent a mozgással kapcsolatos ellentmondás (kód 80) és folytathatom-e a vezetést?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A 80-as kód a jármű mozgásával kapcsolatos ellentmondás: a tachográf ellentmondást észlelt a mozgásérzékelő és egy független forrás (GNSS) között. Gyakori, ártalmatlan ok, ha szállítás közben elfelejtik beállítani a komp/vonat üzemmódot. Ha normál vezetés közben jelenik meg, manipulációra vagy vezetékhibára utalhat – nyugtázza az üzenetet, vezessen manuális nyilvántartást, és ellenőriztesse a készüléket egy hivatalos műhelyben."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Hogyan kereshetek ki egy numerikus vagy hexadecimális hibakódot műhelyi kiolvasásból?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Használja a gyártói kódok rész tetején található keresőmezőt: írja be a számot (pl. 042), egy VDO kijelzőszámot (pl. 82), egy Stoneridge vagy EFAS hexadecimális DTC-t (pl. 002E80) vagy bármely szót az üzenetből (pl. érzékelőhiba). A releváns gyártói panel automatikusan megnyílik, és csak a megfelelő sorokat mutatja."
+      }
+    }
+  ]
+}</script>
+</body>
+</html>
