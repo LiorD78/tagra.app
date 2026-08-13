@@ -64,7 +64,7 @@ def url_of(page_id, lang=None):
 
 
 # EN cesta -> page_id (pro přepis interních odkazů)
-EN2ID = {en_path(pid): pid for pid in SLUGMAP}
+EN2ID = {en_path(pid): pid for pid in SLUGMAP if 'en' in SLUGMAP[pid]}
 
 
 def walk(doc):
@@ -206,6 +206,26 @@ def set_hreflang(doc, page_id, self_lang=None):
     return doc
 
 
+
+
+def hu_extras(doc):
+    """HU-only: portfolio links (product pages exist only in /hu/). Runs after build_nav."""
+    from bs4 import BeautifulSoup as _BS
+    # 1) nav item "Eszközök" -> hub, before GYIK/FAQ item
+    nav = doc.find('ul', class_='nav-links')
+    if nav and not nav.find('a', href='/hu/letolto-eszkozok/'):
+        li = _BS('<li><a href="/hu/letolto-eszkozok/">Eszközök</a></li>', 'html.parser').li
+        anchor = nav.find('a', href='/hu/gyakori-kerdesek/')
+        (anchor.parent.insert_before(li) if anchor else nav.append(li))
+    # 2) footer "Termék" column += hub + GPS
+    for col in doc.find_all('div', class_='footer-col'):
+        ul = col.find('ul')
+        if ul and ul.find('a', href='/hu/fuvarozoknak/') and not ul.find('a', href='/hu/letolto-eszkozok/'):
+            for href, txt in [('/hu/letolto-eszkozok/', 'Letöltő eszközök'), ('/hu/gps-nyomkovetes/', 'GPS nyomkövetés')]:
+                li = _BS(f'<li><a href="{href}">{txt}</a></li>', 'html.parser').li
+                ul.append(li)
+    return doc
+
 def cmd_apply(page_id, lang):
     tf = os.path.join(I18N, f'{page_id}.{lang}.json')
     if not os.path.exists(tf):
@@ -251,6 +271,8 @@ def cmd_apply(page_id, lang):
 
     doc = set_hreflang(doc, page_id, self_lang=lang)
     doc = build_nav(doc, page_id, lang)
+    if lang == 'hu':
+        doc = hu_extras(doc)
 
     dst = dst_file(page_id, lang)
     os.makedirs(os.path.dirname(dst), exist_ok=True)
