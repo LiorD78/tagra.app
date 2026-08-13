@@ -109,8 +109,8 @@ https://tagra.eu/*        https://tagra.app/:splat   301!
 # No real equivalent on the new site — sent to the closest sensible page
 /about-company                       /contact/                    301
 /legislation                         /articles/                   301
-/references                          /                            301
-/czech-program-tagra                 /                            301
+/references                          /for-whom/                   301
+/czech-program-tagra                 /fleet/                      301
 /download-0                          /try/                        301
 
 # Drupal language switcher: CZ/SK stránky bez EN překladu generují /page-not-found
@@ -126,3 +126,54 @@ https://tagra.eu/*        https://tagra.app/:splat   301!
 # Starý odkaz z tagra.eu, který Google stále obchází (GSC: Nenalezeno 404).
 /license   /faq/   301
 /license/  /faq/   301
+
+# ──────────────────────────────────────────────────────────────────
+# Jazykový přepínač Drupalu na tdt.cz / tdt.sk
+# Drupal skládá EN odkaz jako doména (tagra.app) + alias české stránky.
+# Ověřeno 13. 8. 2026: 43 ze 47 cest ze sitemapy tdt.cz končilo na 404,
+# takže každý anglický přepínač posílal návštěvníka i robota do prázdna.
+# Mapováno na nejbližší odpovídající stránku; blogové články na články
+# se shodným tématem, ostatní na příslušný rozcestník.
+# ──────────────────────────────────────────────────────────────────
+/cesky-program-tagra                                                         /fleet/                                              301
+/klice-pro-stahovani-dat-z-tachografu                                        /fleet/                                              301
+/dalkove-stahovani-dat-dbr                                                   /fleet/                                              301
+/gps-monitoring-vozidel-eutracker-online-sledovani-elektronicka-kniha-jizd   /fleet/                                              301
+/vyzkousejte-tagra-na-30-dni-zdarma                                          /try/?audience=fleet                                 301
+/vyzkousejte-tagra-trucker-na-30-dni-zdarma                                  /try/?audience=driver                                301
+/tagra-update                                                                /try/                                                301
+/ke-stazeni                                                                  /try/                                                301
+/sluzby/vyhodnoceni-dat-z-tachografu                                         /how-it-works/                                       301
+/sluzby/skoleni                                                              /contact/?topic=training                             301
+/service/poradenska-cinnost-tachografy-silnicni-doprava                      /contact/                                            301
+/doplnkove-sluzby                                                            /how-it-works/                                       301
+/technicka-podpora-247                                                       /contact/                                            301
+/casto-kladene-dotazy                                                        /faq/                                                301
+/navody                                                                      /manuals/                                            301
+/legislativa                                                                 /articles/                                           301
+/kontakty                                                                    /contact/                                            301
+/o-spolecnosti                                                               /for-whom/                                           301
+/truck-data-technology                                                       /for-whom/                                           301
+/reference                                                                   /for-whom/                                           301
+/jednicka-na-trhu                                                            /for-whom/                                           301
+/vyhodne-ceny-slevy-pro-registrovane-zakazniky                               /try/                                                301
+/jezdete-v-klidu-o-zbytek-se-postarame-my                                    /fleet/                                              301
+/reklama-tagra                                                               /                                                    301
+/blog/dodavky-25-35-t-tachografy-co-prinese-cervenec-2026                    /articles/tachographs-for-vans-new-obligation-july-2026/ 301
+/blog/velky-pruvodce-povinne-tachografy-pro-dodavky-nad-25-tuny-prehledne    /articles/tachographs-for-vans-new-obligation-july-2026/ 301
+/blog/digitalni-tachograf-povinnosti-dopravcu-podle-zakona-novinky-20252026  /articles/who-must-evaluate-tachograph-data-2026/    301
+/blog/pro-koho-je-dulezite-vyhodnocovat-data-z-tachografu                    /articles/who-must-evaluate-tachograph-data-2026/    301
+/blog/kdy-tachograf-mit-nemusite-jak-prokazat                                /articles/who-must-evaluate-tachograph-data-2026/    301
+/blog/stahovani-dat-z-tachografu-jak-proc-zacit                              /articles/how-to-download-evaluate-archive-tachograph-data/ 301
+/blog/pripravte-se-na-stahovani-dat-z-novych-tachografu-g2-v2                /articles/how-to-download-evaluate-archive-tachograph-data/ 301
+/blog/narizeni-561-aetr-zaklady-pro-ridice-i-dispecery                       /articles/                                           301
+/blog/povinnosti-ridicu-podle-narizeni-vlady-c-5892006-sb                    /articles/                                           301
+/blog/pomocnik-profesionalniho-ridice-na-cestach                             /driver/                                             301
+/blog/kontrolni-organy-pouzivaji-program-tagra                               /enforcement/                                        301
+/blog/mezinarodni-doprava-vymena-tachografu-je-urgentni-zalezitost           /articles/                                           301
+/blog/novinky-v-programu-tagra                                               /articles/                                           301
+/blog/ukonceno-aktualizace-tagraeu-s-bonusem-500-kc                          /try/                                                301
+/novinka/stahovani-dat-ze-smart-tachografu-a-karet-ridicu-2g                 /articles/how-to-download-evaluate-archive-tachograph-data/ 301
+/novinka/inteligentni-smart-tachograf-s-gps-funkci                           /articles/                                           301
+/novinka/balicky-tagra-se-stahovacim-klicem-dbiis                            /fleet/                                              301
+/novinka/truckmall                                                           /fleet/                                              301
