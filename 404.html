@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Page not found | TAGRA</title>
+<meta content="noindex, follow" name="robots"/>
+<link href="/assets/css/tokens.css?v=20260514j" rel="stylesheet"/>
+<link href="/assets/css/base.css?v=20260813f" rel="stylesheet"/>
+<link href="/assets/css/nav.css?v=20260813e" rel="stylesheet"/>
+<link href="/assets/css/footer.css?v=20260813g" rel="stylesheet"/>
+<style>
+  .nf-wrap { max-width: 720px; margin: 0 auto; padding: 96px 24px 80px; text-align: center; }
+  .nf-code { font-size: 88px; font-weight: 800; line-height: 1; letter-spacing: -.03em;
+    background: linear-gradient(90deg, var(--blue-dark,#0b2c4a) 0%, var(--blue-light,#1f5fa6) 50%, var(--blue-bright,#3a6ff0) 100%);
+    -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+  .nf-wrap h1 { font-size: 32px; margin: 12px 0 14px; }
+  .nf-wrap p { color: var(--text2,#515154); font-size: 18px; line-height: 1.6; margin-bottom: 32px; }
+  .nf-links { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+  .nf-links a { padding: 11px 22px; border-radius: 99px; text-decoration: none; font-weight: 600; font-size: 15px;
+    border: 1px solid var(--border,rgba(0,0,0,.12)); color: var(--text,#1d1d1f); }
+  .nf-links a.primary { background: var(--green-cta,#5C820F); color: #fff; border-color: transparent; }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+<nav aria-label="Main navigation" class="site-nav" role="navigation">
+<div class="nav-inner">
+<a aria-label="TAGRA" class="nav-logo" href="/" id="nfLogo"><img alt="TAGRA" height="32" src="/assets/img/logo-light.svg?v=20260513zh" style="display:block;height:32px;width:auto;" width="140"/></a>
+</div>
+</nav>
+<main id="main-content">
+<div class="nf-wrap">
+<div class="nf-code">404</div>
+<h1 id="nfTitle">Page not found</h1>
+<p id="nfBody">The page you are looking for does not exist or has moved. Try the homepage or one of the sections below.</p>
+<div class="nf-links">
+<a class="primary" href="/" id="nfHome">Homepage</a>
+<a href="/articles/" id="nfArticles">Articles</a>
+<a href="/faq/" id="nfFaq">FAQ</a>
+<a href="/contact/" id="nfContact">Contact</a>
+</div>
+</div>
+</main>
+<script>
+/* Lokalizace podle jazykového prefixu v URL. Statický web nemá server-side
+   routing, takže se 404 obsluhuje jedním souborem a text se přepne zde. */
+(function () {
+  var T = {
+    en: { lang:'en', title:'Page not found',
+          body:'The page you are looking for does not exist or has moved. Try the homepage or one of the sections below.',
+          home:'/', homeLabel:'Homepage', articles:'/articles/', articlesLabel:'Articles',
+          faq:'/faq/', faqLabel:'FAQ', contact:'/contact/', contactLabel:'Contact' },
+    de: { lang:'de', title:'Seite nicht gefunden',
+          body:'Die gesuchte Seite existiert nicht oder wurde verschoben. Versuchen Sie die Startseite oder einen der folgenden Bereiche.',
+          home:'/de/', homeLabel:'Startseite', articles:'/de/ratgeber/', articlesLabel:'Artikel',
+          faq:'/de/faq/', faqLabel:'FAQ', contact:'/de/kontakt/', contactLabel:'Kontakt' },
+    pl: { lang:'pl', title:'Nie znaleziono strony',
+          body:'Szukana strona nie istnieje lub została przeniesiona. Przejdź na stronę główną lub do jednej z sekcji poniżej.',
+          home:'/pl/', homeLabel:'Strona główna', articles:'/pl/poradnik/', articlesLabel:'Artykuły',
+          faq:'/pl/faq/', faqLabel:'FAQ', contact:'/pl/kontakt/', contactLabel:'Kontakt' },
+    el: { lang:'el', title:'Η σελίδα δεν βρέθηκε',
+          body:'Η σελίδα που αναζητάτε δεν υπάρχει ή έχει μετακινηθεί. Δοκιμάστε την αρχική σελίδα ή μία από τις παρακάτω ενότητες.',
+          home:'/el/', homeLabel:'Αρχική', articles:'/el/arthra/', articlesLabel:'Άρθρα',
+          faq:'/el/faq/', faqLabel:'Συχνές ερωτήσεις', contact:'/el/epikoinonia/', contactLabel:'Επικοινωνία' },
+    hu: { lang:'hu', title:'A oldal nem található',
+          body:'A keresett oldal nem létezik vagy áthelyezték. Próbálja meg a főoldalt vagy az alábbi szakaszok egyikét.',
+          home:'/hu/', homeLabel:'Főoldal', articles:'/hu/cikkek/', articlesLabel:'Cikkek',
+          faq:'/hu/gyakori-kerdesek/', faqLabel:'GYIK', contact:'/hu/kapcsolat/', contactLabel:'Kapcsolat' }
+  };
+  var seg = location.pathname.split('/')[1];
+  var t = T[seg] || T.en;
+  document.documentElement.lang = t.lang;
+  document.title = t.title + ' | TAGRA';
+  document.getElementById('nfTitle').textContent = t.title;
+  document.getElementById('nfBody').textContent = t.body;
+  var map = [['nfHome','home','homeLabel'],['nfArticles','articles','articlesLabel'],
+             ['nfFaq','faq','faqLabel'],['nfContact','contact','contactLabel']];
+  map.forEach(function (m) {
+    var el = document.getElementById(m[0]);
+    el.setAttribute('href', t[m[1]]);
+    el.textContent = t[m[2]];
+  });
+  document.getElementById('nfLogo').setAttribute('href', t.home);
+})();
+</script>
+</body>
+</html>

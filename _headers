@@ -8,6 +8,14 @@
   Permissions-Policy: geolocation=(), camera=(), microphone=(), payment=(), usb=(), interest-cohort=()
   X-XSS-Protection: 1; mode=block
   Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+  # Content-Security-Policy — omezuje, odkud se smí načítat kód a obsah.
+  # 'unsafe-inline' u skriptů je nutné: web má 731 inline <script> bloků
+  # (souhlas s cookies, navigace, přepínače) a 237 <style> bloků. Politika
+  # tedy neblokuje inline kód, ale blokuje načtení čehokoli z neznámé domény
+  # — což je hlavní ochrana proti kompromitované třetí straně.
+  # Povolené domény: Google Tag Manager a Analytics, Microsoft Clarity,
+  # obrázkové CDN TRUCKMALL, vlajky (flagcdn), formuláře Netlify.
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://www.clarity.ms https://*.clarity.ms; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://cdn.truckmall.cz https://flagcdn.com https://www.google-analytics.com https://www.googletagmanager.com https://*.clarity.ms; font-src 'self' data:; media-src 'self' https://cdn.truckmall.cz; connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://www.googletagmanager.com https://www.clarity.ms https://*.clarity.ms; form-action 'self'; frame-ancestors 'self'; base-uri 'self'; object-src 'none'; upgrade-insecure-requests
 
 # ────────────────────────────────────────────────
 # HTML — short cache, must revalidate, stale-while-revalidate for speed
