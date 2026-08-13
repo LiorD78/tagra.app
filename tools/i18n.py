@@ -232,6 +232,50 @@ def hu_extras(doc, page_id=None):
             ft = doc.find('footer')
             if ft:
                 ft.insert_before(frag)
+    # 4) nav: HU article/manual paths
+    for a in doc.find_all('a', href='/articles/'): a['href']='/hu/cikkek/'
+    for a in doc.find_all('a', href='/manuals/'): a['href']='/hu/kezikonyvek/'
+    # 5) contact: replace first two contact cards with HU partner cards (Rukon + Tachocontroll)
+    if page_id == 'contact':
+        fp = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'i18n', 'hu_contact_cards.html')
+        grid = doc.find('div', class_='contact-grid')
+        if grid and os.path.exists(fp) and not grid.find('a', href='mailto:rukon@rukon.hu'):
+            for card in grid.find_all('div', class_='contact-card', recursive=False):
+                card.decompose()
+            frag = BeautifulSoup(open(fp, encoding='utf-8').read(), 'html.parser')
+            grid.append(frag)
+    # 6) faq: Digi/Mini/Combi mapping item after "Melyik verzióra" + schema
+    if page_id == 'faq' and 'Digi' not in str(doc):
+        import json as _json
+        q = "Korábban TAGRA Digi, Mini vagy Combi változatot vásároltam. Melyik mai változatnak felelnek meg?"
+        a_html = 'A korábbi elnevezések (Digi, Mini, Combi) a mai TAGRA 1 / 2 / 4 / 6 / MAX változatoknak felelnek meg, a licencben szereplő járművek száma szerint. Meglévő licence továbbra is érvényes; megújításkor vagy bővítéskor magyarországi forgalmazónk, a <strong>Rukon Kft.</strong> pontosan megmondja, melyik mai változat tartozik hozzá — hívja a <a href="tel:+36304742540">+36 30 474 2540</a> számot.'
+        for summ in doc.find_all('summary'):
+            if 'Melyik verzióra' in summ.get_text():
+                det = BeautifulSoup(f'<details><summary>{q}</summary><div class="faq-a">{a_html}</div></details>', 'html.parser').details
+                summ.parent.insert_after(det)
+                break
+        for sc in doc.find_all('script', type='application/ld+json'):
+            try:
+                d = _json.loads(sc.string or '')
+            except Exception:
+                continue
+            if d.get('@type') == 'FAQPage':
+                d['mainEntity'].append({"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": "A korábbi elnevezések (Digi, Mini, Combi) a mai TAGRA 1 / 2 / 4 / 6 / MAX változatoknak felelnek meg, a licencben szereplő járművek száma szerint. Meglévő licence továbbra is érvényes; megújításkor vagy bővítéskor magyarországi forgalmazónk, a Rukon Kft. pontosan megmondja, melyik mai változat tartozik hozzá (+36 30 474 2540)."}})
+                sc.string = _json.dumps(d, ensure_ascii=False)
+    # 7) products hub: Download Station variant + warranty note
+    if page_id == 'products-hub' and 'Download Station' not in str(doc):
+        for li in doc.find_all('li'):
+            if 'Wi-Fi változat' in li.get_text():
+                nl = BeautifulSoup('<li>Telephelyi változat: Download Station – zárható fali doboz, alap és Wi-Fi-változat</li>', 'html.parser').li
+                li.insert_after(nl)
+                break
+        for h3 in doc.find_all('h3'):
+            if 'EUTracker' in h3.get_text():
+                grid = h3.find_parent('div', class_='px-grid')
+                if grid:
+                    note = BeautifulSoup('<p class="px-note" style="margin-top:14px;">Minden letöltő eszközhöz <b>garanciakiterjesztés</b> igényelhető – a kiterjesztett időszak alatti meghibásodás esetén a hibás készüléket azonnal újra cseréljük.</p>', 'html.parser').p
+                    grid.insert_after(note)
+                break
     return doc
 
 
