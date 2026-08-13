@@ -98,8 +98,11 @@ h1, h2.hero-h2, .hero-h2 {
 @media (max-width: 768px) {
   h1, h2.hero-h2, .hero-h2 { font-size: 42px; }
 }
-/* Safety: never apply hero styling to h1/h2 sitting inside the nav. */
-nav h1, nav h2 {
+/* Safety: never apply section-heading styling to h1/h2 in the nav or footer.
+   Bez tohoto dědí patičkové nadpisy modrý přechodový text určený pro obsahové
+   H2, který je na tmavém pozadí patičky neviditelný. */
+nav h1, nav h2,
+footer h1, footer h2, .site-footer h2 {
   font-size: inherit;
   font-weight: inherit;
   text-transform: none;
