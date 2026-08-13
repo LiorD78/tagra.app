@@ -204,7 +204,7 @@
 }</script>
 
 <link href="/assets/css/tokens.css?v=20260514j" rel="stylesheet"/>
-<link href="/assets/css/base.css?v=20260813h" rel="stylesheet"/>
+<link href="/assets/css/base.css?v=20260814a" rel="stylesheet"/>
 <link href="/assets/css/components.css?v=20260514j" rel="stylesheet"/>
 <link href="/assets/css/nav.css?v=20260813e" rel="stylesheet"/>
 <script defer="" src="/assets/js/nav.js?v=20260513q"></script>
@@ -753,6 +753,13 @@
                     <strong>a kisteherautókra is 2026 júliusától.</strong>
                 </p>
                 <p class="eyebrow rev-anim" style="color: var(--tmx-blue-m); margin: 24px auto 48px;">Csehországban és Szlovákiában naponta több ezer jármű számára segítünk a fuvarozóknak leegyszerűsíteni a tachográf adatok letöltését és kezelését.</p>
+<div class="rev-anim"><div class="tmx-media-frame" style="margin: 40px auto 0; max-width: 920px; width: 100%; margin: 0 auto; border-radius: var(--tmx-radius); overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.08);">
+                        <video id="tmxHeroVideo" style="width: 100%; display: block;" poster="/assets/img/products/dbr-final-poster.webp" preload="metadata" muted="" autoplay="" loop="" playsinline="" webkit-playsinline="" aria-label="DBR adatletöltés bemutatója">
+                            <source src="https://cdn.truckmall.cz/data/user-content/DBR_Final_720p.mp4" type="video/mp4">
+                            <source src="https://cdn.truckmall.cz/data/user-content/DBR_Final_720p.webm" type="video/webm">
+                        </video>
+                    </div></div>
+
                 
                 
 
@@ -855,7 +862,7 @@
         </section><section class="tmx-band tmx-band--gray" aria-label="Műszaki jellemzők">
             <div class="container">
                 <div class="tmx-two-col tmx-two-col--swap rev-anim">
-                    <div class="tmx-media-frame tmx-col-img" style="border: 1px solid var(--tmx-border);">
+                    <div class="tmx-media-frame tmx-col-img" style="">
                         <img src="/assets/img/products/dbr-technik.webp" alt="Szerelő telepíti a DOWNLOAD BOX REMOTE eszközt a járműbe" loading="lazy" width="800" height="800">
                     </div>
                     <div class="tmx-callout tmx-callout--plain tmx-col-txt">
@@ -1199,20 +1206,7 @@
 
         
 
-        <section class="tmx-band" aria-label="Hogyan működik">
-            <div class="container">
-                <div class="rev-anim">
-                    <h2 style="text-align: center; display: block;">HOGYAN MŰKÖDIK</h2>
-                    <p class="tmx-muted" style="text-align: center; margin-bottom: 24px;">Nézzen meg egy rövid videót a járműből történő adatletöltési megoldásról.</p>
-                    <div class="tmx-media-frame" style="width: 100%; margin: 0 auto; border-radius: var(--tmx-radius); border: 1px solid var(--tmx-border); overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.08);">
-                        <video id="tmxBottomVideo" style="width: 100%; display: block;" poster="/assets/img/products/dbr-final-poster.webp" preload="metadata" muted="" autoplay="" loop="" playsinline="" webkit-playsinline="" aria-label="DBR adatletöltés bemutatója">
-                            <source src="https://cdn.truckmall.cz/data/user-content/DBR_Final_720p.mp4" type="video/mp4">
-                            <source src="https://cdn.truckmall.cz/data/user-content/DBR_Final_720p.webm" type="video/webm">
-                        </video>
-                    </div>
-                </div>
-            </div>
-        </section><section class="tmx-band tmx-band--blue" aria-label="Gyakran ismételt kérdések a programmal kapcsolatban">
+        <section class="tmx-band tmx-band--blue" aria-label="Gyakran ismételt kérdések a programmal kapcsolatban">
             <div class="container">
                 <div class="eyebrow rev-anim">Gyakran ismételt kérdések</div>
                 <h2 class="rev-anim">GYIK</h2>
@@ -1329,7 +1323,7 @@
                 <div class="rev-anim">
                     <div class="eyebrow" style="color: var(--tmx-blue-m);">A megoldás szakmai garanciája</div>
                     <div style="display: flex; align-items: center; gap: 30px; margin-bottom: 24px; flex-wrap: wrap;">
-                        <img src="/assets/img/products/od-technik.webp" alt="Ondřej Dospěl" loading="lazy" style="width: 150px; display: block; flex-shrink: 0;" width="856" height="928">
+                        <img src="/assets/img/products/od-technik.webp" alt="Ondřej Dospěl" loading="lazy" style="height: auto; width: 150px; display: block; flex-shrink: 0;" width="856" height="928">
                         <div>
                             <h3 style="font-size: 24px; font-weight: 800; color: var(--tmx-strong); margin: 0 0 4px;">Ondřej Dospěl</h3>
                             <p style="font-size: 16px !important; color: var(--tmx-blue-m); font-weight: 600; margin: 0;">Főmérnök és specialista a Truck Data Technologynál</p>
@@ -1377,7 +1371,7 @@
         try { var p = v.play && v.play(); if (p && p.catch) p.catch(function(){}); } catch(e) {}
     }
     function safePause(v) { try { v.pause && v.pause(); } catch(e) {} }
-    var vBot = document.getElementById('tmxBottomVideo');
+    var vBot = document.getElementById('tmxHeroVideo');
     if (vBot) {
         var botOut = true;
         if ('IntersectionObserver' in window) {

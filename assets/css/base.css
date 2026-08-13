@@ -325,3 +325,10 @@ p.lead {
   padding: 0; margin: -1px; overflow: hidden;
   clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
 }
+
+
+/* === Poměr stran obrázků ===
+   Atributy width/height na <img> rezervují místo (brání poskakování layoutu),
+   ale jakmile šířku přebije CSS, musí se výška dopočítat — jinak se obrázek
+   roztáhne. Platí pro obrázky, které nemají výšku určenou vlastním pravidlem. */
+img[width][height]:not([style*="height"]) { height: auto; }
