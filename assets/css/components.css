@@ -787,3 +787,14 @@
 @media (max-width: 700px) {
   .art-hero-video { aspect-ratio: 4 / 3; border-radius: 14px; margin-top: 20px; }
 }
+
+/* === Odsazení mezi obsahovými bloky ===
+   .doc-bento, .twocol a .steps mají horní odsazení, ale ne spodní. Když po nich
+   následuje .callout nebo .warning-box, oba bloky se dotýkají. Sourozenecký
+   selektor to řeší jen tam, kde k tomu dochází — samostatně stojící callout
+   si vlastní odsazení řešit nemá. */
+.doc-bento + .callout, .twocol + .callout, .steps + .callout,
+.doc-bento + .warning-box, .twocol + .warning-box, .steps + .warning-box,
+.callout + .callout, .warning-box + .callout, .callout + .warning-box {
+  margin-top: 24px;
+}
