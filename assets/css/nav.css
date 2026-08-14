@@ -236,3 +236,44 @@ html, body { overflow-x: hidden; max-width: 100vw; }
 .nav-logo:active {
   text-decoration: none;
 }
+
+/* === Mobilní lišta u delších jazyků ===
+   .nav-inner je flex a jediné, co mělo flex-shrink:0, bylo logo. Mobilní CTA
+   má white-space:nowrap, takže se nikdy nezmenšilo — u delších překladů
+   ("Próbálja ki ingyen", "Wypróbuj za darmo", "Kostenlos testen") suma šířek
+   přerostla viewport a hamburger vytlačila za pravý okraj, kde ho
+   html{overflow-x:hidden} uřízlo. Na mobilu je hamburger jediná cesta do
+   navigace, takže má přednost před šířkou CTA: nesmršťuje se on, ale pill. */
+@media (max-width: 900px) {
+  .nav-inner { min-width: 0; }
+  .nav-logo,
+  .nav-lang,
+  .nav-mobile-toggle { flex-shrink: 0; }
+  .nav-cta-mobile {
+    flex: 0 1 auto; min-width: 0;
+    overflow: hidden; text-overflow: ellipsis;
+  }
+}
+
+/* Pod 560 px se CTA zkracuje na jedno slovo — pill je akce, ne věta.
+   Původní text zůstává v DOM kvůli čtečkám a odkaz cílí beze změny;
+   vizuálně ho nahrazuje ::after, takže nedochází k probliknutí jako
+   při výměně textu skriptem. */
+@media (max-width: 560px) {
+  .nav-cta-mobile { font-size: 0; padding: 8px 13px; }
+  .nav-cta-mobile::after {
+    content: "Try free";
+    font-size: 13px; font-weight: 600; line-height: 1;
+  }
+  html[lang="de"] .nav-cta-mobile::after { content: "Testen"; }
+  html[lang="pl"] .nav-cta-mobile::after { content: "Wypróbuj"; }
+  html[lang="el"] .nav-cta-mobile::after { content: "Δοκιμή"; }
+  html[lang="hu"] .nav-cta-mobile::after { content: "Kipróbálom"; }
+}
+
+/* Nejužší telefony (≤400 px) — utáhnout mezery a logo, ať zbyde místo na
+   hamburger. Výška loga je v HTML inline stylem, proto !important. */
+@media (max-width: 400px) {
+  .nav-inner { gap: 8px; padding: 0 12px 0 14px; }
+  .nav-logo img { height: 26px !important; }
+}
