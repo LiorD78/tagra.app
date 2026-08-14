@@ -94,6 +94,40 @@ Zkratka: `{L}` = kód jazyka (de, pl, el, hu…), `{X}` = existující jazyk pro
 
 ---
 
+## 11. Vazby mezi HTML a JavaScriptem
+
+Nejzrádnější kategorie chyb. HTML je validní, JavaScript bez chyby, odkazy fungují —
+a přesto něco nejde. Chyba leží **mezi** dvěma vrstvami, ne uvnitř jedné, takže ji
+běžná validace nenajde.
+
+- [ ] **Spustit `python3 tools/check-js-refs.py`** — ověří, že každý identifikátor
+      a třída, na kterou se skript odkazuje, v HTML skutečně existuje
+- [ ] Výsledek **ROZBITÉ** = funkce nefunguje, opravit před nasazením
+- [ ] Výsledek **mrtvý kód** = odkaz je chráněný podmínkou, nic se nerozbije,
+      ale kód se zbytečně stahuje — uklidit při nejbližší příležitosti
+- [ ] Nové stránky vždy porovnat s **funkčním vzorem téhož typu**, ne s cizojazyčnou
+      předlohou — kostra (navigace, patička, obslužné skripty) se musí brát ze stránky
+      v cílovém jazyce
+
+### Proč tato sekce vznikla
+
+**14. 8. 2026: na celém webu nešlo otevřít mobilní menu.** Obslužný skript hledal
+seznam odkazů přes `getElementById('nav-links')`, ale element měl jen
+`class="nav-links"` bez `id`. Podmínka `if (toggle && links)` neprošla, posluchač
+kliknutí se nenavěsil a hamburger nedělal nic. Postihovalo to **96 ze 110 stránek**
+ve všech jazycích a nikdo si toho nevšiml, protože:
+
+- HTML validní ✓
+- JavaScript bez syntaktické chyby ✓
+- odkazy, hreflang, strukturovaná data, kontrast, mezery — vše čisté ✓
+- na desktopu se hamburger vůbec nezobrazuje, takže při běžné kontrole není vidět
+
+Odhalil to až uživatel na mobilu. **Defenzivní `if (element)` je dobrý zvyk, ale
+způsobuje tiché selhání** — funkce prostě přestane existovat, aniž by cokoli
+zahlásilo chybu. Proto je potřeba kontrolovat vazby staticky.
+
+---
+
 ## Poučení z 13. 8. 2026
 
 **Hromadné úpravy HTML regulárními výrazy jsou nejrizikovější operace na webu.**
