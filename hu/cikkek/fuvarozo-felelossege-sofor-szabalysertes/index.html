@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<!-- TMX-ANALYTICS START -->
+<meta content="7F7894081BE7FBB245FF03AF8810B22F" name="msvalidate.01"/>
+<!-- Consent Mode v2 defaults (deny) + gtag stub — runs BEFORE gtag.js -->
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent','default',{
+      ad_storage:'denied', ad_user_data:'denied', ad_personalization:'denied',
+      analytics_storage:'denied', functionality_storage:'denied',
+      personalization_storage:'denied', security_storage:'granted',
+      wait_for_update:500
+    });
+    gtag('set','ads_data_redaction',true);
+    gtag('set','url_passthrough',false);
+  </script>
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-92253QFBNX"></script>
+<script>
+    gtag('js', new Date());
+    gtag('config','G-92253QFBNX');
+  </script>
+<!-- Cookie consent banner (self-hosted) + Microsoft Clarity gating -->
+<style>
+    .tmx-cc{position:fixed;left:0;right:0;bottom:0;z-index:2147483000;background:linear-gradient(120deg,var(--blue-dark,#0b2c4a),var(--blue-mid,#134a8e) 62%,var(--blue-light,#1f5fa6));color:#fff;
+      font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+      padding:16px 20px;box-shadow:0 -4px 24px rgba(0,0,0,.18);display:flex;flex-wrap:wrap;
+      align-items:center;gap:14px;justify-content:center}
+    .tmx-cc__txt{flex:1 1 360px;max-width:760px}
+    .tmx-cc__txt a{color:#9ed0f5;text-decoration:underline}
+    .tmx-cc__btns{display:flex;gap:10px;flex:0 0 auto}
+    .tmx-cc__b{appearance:none;border:0;cursor:pointer;font:inherit;font-weight:600;
+      padding:10px 22px;border-radius:99px;transition:filter .15s;color:#fff}
+    .tmx-cc__b:hover{filter:brightness(1.08)}
+    .tmx-cc__b--no{background:rgba(255,255,255,.16)}
+    .tmx-cc__b--yes{background:var(--green-cta,#5C820F)}
+    @media(max-width:640px){.tmx-cc{padding:14px}.tmx-cc__btns{width:100%}.tmx-cc__b{flex:1}}
+  </style>
+<script>
+  (function(){
+    var KEY='tmx-consent-v1', CL='wt18054m0r';
+    function lc(){var l=(document.documentElement.getAttribute('lang')||'en').toLowerCase().split('-')[0];
+      var m={cz:'cs',cs:'cs',sk:'sk',de:'de',pl:'pl',gr:'el',el:'el',en:'en'};return m[l]||'en';}
+    var T={
+      en:{t:'We use analytics cookies (Google Analytics, Microsoft Clarity) to understand site usage. They load only with your consent.',a:'Accept',r:'Reject',p:'Privacy &amp; cookies'},
+      cs:{t:'Pou\u017e\u00edv\u00e1me analytick\u00e9 cookies (Google Analytics, Microsoft Clarity) k pochopen\u00ed pou\u017e\u00edv\u00e1n\u00ed webu. Na\u010dtou se jen s va\u0161\u00edm souhlasem.',a:'P\u0159ijmout',r:'Odm\u00edtnout',p:'Soukrom\u00ed a cookies'},
+      sk:{t:'Pou\u017e\u00edvame analytick\u00e9 cookies (Google Analytics, Microsoft Clarity) na pochopenie pou\u017e\u00edvania webu. Na\u010d\u00edtaj\u00fa sa len s va\u0161\u00edm s\u00fahlasom.',a:'Prija\u0165',r:'Odmietnu\u0165',p:'S\u00fakromie a cookies'},
+      de:{t:'Wir verwenden Analyse-Cookies (Google Analytics, Microsoft Clarity), um die Nutzung der Website zu verstehen. Sie werden nur mit Ihrer Einwilligung geladen.',a:'Akzeptieren',r:'Ablehnen',p:'Datenschutz &amp; Cookies'},
+      pl:{t:'U\u017cywamy plik\u00f3w cookie do analityki (Google Analytics, Microsoft Clarity), aby zrozumie\u0107 korzystanie z witryny. \u0141aduj\u0105 si\u0119 tylko za Twoj\u0105 zgod\u0105.',a:'Akceptuj',r:'Odrzu\u0107',p:'Prywatno\u015b\u0107 i cookies'},
+      el:{t:'\u03a7\u03c1\u03b7\u03c3\u03b9\u03bc\u03bf\u03c0\u03bf\u03b9\u03bf\u03cd\u03bc\u03b5 cookies \u03b1\u03bd\u03ac\u03bb\u03c5\u03c3\u03b7\u03c2 (Google Analytics, Microsoft Clarity) \u03b3\u03b9\u03b1 \u03bd\u03b1 \u03ba\u03b1\u03c4\u03b1\u03bd\u03bf\u03ae\u03c3\u03bf\u03c5\u03bc\u03b5 \u03c4\u03b7 \u03c7\u03c1\u03ae\u03c3\u03b7. \u03a6\u03bf\u03c1\u03c4\u03ce\u03bd\u03bf\u03bd\u03c4\u03b1\u03b9 \u03bc\u03cc\u03bd\u03bf \u03bc\u03b5 \u03c4\u03b7 \u03c3\u03c5\u03b3\u03ba\u03b1\u03c4\u03ac\u03b8\u03b5\u03c3\u03ae \u03c3\u03b1\u03c2.',a:'\u0391\u03c0\u03bf\u03b4\u03bf\u03c7\u03ae',r:'\u0391\u03c0\u03cc\u03c1\u03c1\u03b9\u03c8\u03b7',p:'\u0391\u03c0\u03cc\u03c1\u03c1\u03b7\u03c4\u03bf &amp; cookies'}
+    };
+    function loadClarity(){if(!CL||window.__tmxCl)return;window.__tmxCl=1;
+      (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+       t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+       y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script",CL);}
+    function grant(){try{localStorage.setItem(KEY,'granted')}catch(e){}
+      gtag('consent','update',{analytics_storage:'granted'});loadClarity();}
+    function deny(){try{localStorage.setItem(KEY,'denied')}catch(e){}}
+    var saved=null;try{saved=localStorage.getItem(KEY)}catch(e){}
+    if(saved==='granted'){grant();return;} if(saved==='denied'){return;}
+    function show(){var tx=T[lc()]||T.en;
+      var b=document.createElement('div');b.className='tmx-cc';b.setAttribute('role','dialog');b.setAttribute('aria-live','polite');
+      b.innerHTML='<div class="tmx-cc__txt">'+tx.t+' <a href="/privacy/">'+tx.p+'</a></div>'+
+        '<div class="tmx-cc__btns"><button type="button" class="tmx-cc__b tmx-cc__b--no">'+tx.r+'</button>'+
+        '<button type="button" class="tmx-cc__b tmx-cc__b--yes">'+tx.a+'</button></div>';
+      document.body.appendChild(b);
+      b.querySelector('.tmx-cc__b--yes').addEventListener('click',function(){grant();b.remove();});
+      b.querySelector('.tmx-cc__b--no').addEventListener('click',function(){deny();b.remove();});}
+    if(document.body)show();else document.addEventListener('DOMContentLoaded',show);
+  })();
+  </script>
+<!-- TMX-ANALYTICS END -->
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Ki fizet, ha a járművezető megszegi a szabályokat?</title>
+<meta content="Az uniós szabályok szerint a fuvarozó felel a járművezetői szabálysértéseiért — de bizonyíthatja is, hogy ésszerűen nem vonható felelősségre." name="description"/>
+<link href="https://tagra.app/hu/cikkek/fuvarozo-felelossege-sofor-szabalysertes/" rel="canonical"/>
+<meta content="Ki fizet, ha a járművezető megszegi a szabályokat?" property="og:title"/><meta content="Az uniós szabályok szerint a fuvarozó felel a járművezetői szabálysértéseiért — de bizonyíthatja is, hogy ésszerűen nem vonható felelősségre." property="og:description"/>
+<meta content="https://tagra.app/assets/img/hero-poster.jpg" property="og:image"/>
+<meta content="https://tagra.app/hu/cikkek/fuvarozo-felelossege-sofor-szabalysertes/" property="og:url"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    a{color:var(--blue-mid);text-decoration:none;}
+    a:hover{color:var(--blue-dark);text-decoration:underline;text-underline-offset:.18em;}
+    p+p{margin-top:14px;}
+    ul,ol{padding-left:22px;}
+    li{margin:6px 0;line-height:1.65;}
+    li::marker{color:var(--blue-mid);}
+    strong{font-weight:700;color:var(--text-strong);}
+    #scroll-progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--green-brand),var(--blue-light));width:0%;z-index:9999;pointer-events:none;}
+.nav-inner{max-width:1180px;margin:0 auto;padding:0 24px;height:100%;display:flex;align-items:center;justify-content:space-between;gap:24px;}
+    .nav-links{display:flex;align-items:center;gap:4px;list-style:none;}
+    .nav-links a{font-size:15px;font-weight:500;color:var(--text);padding:8px 12px;border-radius:8px;text-decoration:none;transition:background .15s;}
+    .nav-links a:hover{background:var(--bg-apple);color:var(--blue-mid);}
+    .nav-links .nav-cta a{background:var(--green-cta);color:#fff!important;border-radius:99px;padding:8px 18px;font-weight:600;}
+    .nav-links .nav-cta a:hover{background:var(--green-brand);text-decoration:none;}
+    .nav-lang{display:flex;align-items:center;gap:4px;font-size:14px;font-weight:600;}
+    .nav-lang a{padding:5px 8px;border-radius:6px;color:var(--text2);text-decoration:none;transition:background .15s;}
+    .nav-lang a:hover,.nav-lang a.active{background:var(--bg-apple);color:var(--blue-mid);}
+    .nav-lang span{color:var(--border);}
+    .nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:8px;}
+    .nav-toggle span{display:block;width:22px;height:2px;background:var(--text);margin:5px 0;border-radius:2px;}
+    @media(max-width:900px){.nav-links{display:none;}.nav-toggle{display:block;}.nav-links.open{display:flex;flex-direction:column;align-items:flex-start;gap:2px;position:absolute;top:var(--nav-h);left:0;right:0;background:rgba(255,255,255,.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:12px 24px 20px;}}
+    .art-hero{background:linear-gradient(180deg,var(--bg-apple) 0%,#fff 100%);padding:56px 0 44px;}
+    .art-wrap{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 24px;}
+    .breadcrumb{font-size:14px;color:var(--text2);margin-bottom:18px;}
+    .breadcrumb a{color:var(--text2);text-decoration:none;}
+    .breadcrumb a:hover{color:var(--blue-mid);}
+    .breadcrumb span{margin:0 5px;color:var(--border);}
+    .eyebrow{font-size:14px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--green-brand);margin-bottom:10px;}
+    .art-title{font-size:38px;line-height:1.15;font-weight:800;margin-bottom:16px;letter-spacing:-.02em;padding-bottom:0.08em;color:var(--blue-dark);}
+    .art-title .grad{background:linear-gradient(90deg,var(--blue-dark) 0%,var(--blue-light) 50%,var(--blue-bright) 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;}
+    @media(max-width:700px){.art-title{font-size:26px;}}
+    .art-meta{font-size:15px;color:var(--text2);padding-bottom:24px;border-bottom:1px solid var(--border);display:flex;gap:20px;flex-wrap:wrap;}
+    .art-body{padding:44px 0 60px;}
+    .art-body h2 {
+      font-size: 36px; font-weight: 800;
+      line-height: 1.1; letter-spacing: 0;
+      text-transform: uppercase;
+      color: var(--blue-mid, #134a8e);
+      background: linear-gradient(90deg, var(--blue-dark, #0b2c4a) 0%, var(--blue-light, #1f5fa6) 50%, var(--blue-bright, #3a6ff0) 100%);
+      -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block; max-width: 100%; margin-bottom: 14px;
+      padding: 0.12em 0.15em 0.08em 0;
+    }
+    .art-body h3{font-size:20px;font-weight:700;color:var(--text-strong);margin:28px 0 10px;}
+    .art-body p{margin-bottom:18px;}
+    .art-body ul,.art-body ol{margin-bottom:20px;}
+    /* QUICK TEST CARDS */
+    .test-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:20px 0;}
+    @media(max-width:640px){.test-grid{grid-template-columns:1fr;}}
+    .test-card{background:#fff;border-radius:var(--radius);padding:22px;box-shadow:0 8px 28px rgba(0,0,0,.06);}
+    .test-tag{font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--green-cta);margin-bottom:8px;}
+    .test-title{font-size:17px;font-weight:800;color:var(--text-strong);margin-bottom:6px;line-height:1.35;}
+    .test-desc{font-size:15px;color:var(--text2);line-height:1.5;}
+    /* CALLOUT */
+    
+    .callout--blue{background:var(--bg-apple);border-left:4px solid var(--blue-mid);}
+    
+    .callout-title{font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.07em;color:var(--blue-mid);margin-bottom:8px;}
+    .callout--green .callout-title{color:var(--green-brand);}
+    /* FAQ */
+    .faq-item{border-top:1px solid var(--border);padding:14px 0;}
+    .faq-item:last-child{border-bottom:1px solid var(--border);}
+    .faq-item summary{list-style:none;cursor:pointer;font-weight:700;font-size:18px;line-height:1.4;padding-right:32px;position:relative;color:var(--text-strong);}
+    .faq-item summary::-webkit-details-marker{display:none;}
+    .faq-item summary::after{content:"+";position:absolute;right:0;top:50%;transform:translateY(-50%);font-size:26px;font-weight:300;color:var(--green-cta);}
+    .faq-item[open] summary::after{content:"−";}
+    
+    .faq-answer p+p{margin-top:10px;}
+    /* CTA */
+    .cta-box{background:linear-gradient(135deg,var(--blue-dark),var(--blue-mid));border-radius:var(--radius);padding:40px 36px;margin:44px 0;text-align:center;}
+    .cta-box h3{font-size:24px;font-weight:800;color:#fff;margin-bottom:12px;}
+    .cta-box p{color:rgba(255,255,255,.8);font-size:17px;margin-bottom:24px;}
+    
+    .btn:hover{background:var(--green-brand);transform:scale(1.02);}
+    /* RELATED */
+    .related{border-top:1px solid var(--border);padding-top:36px;margin-top:36px;}
+    .related-title{font-size:20px;font-weight:800;color:var(--text-strong);margin-bottom:18px;}
+    .related-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+    @media(max-width:580px){.related-grid{grid-template-columns:1fr;}}
+    .related-card{display:block;padding:20px;border:1px solid var(--border);border-radius:var(--radius);text-decoration:none!important;transition:border-color .15s,transform .15s;}
+    .related-card:hover{border-color:var(--blue-mid);transform:translateY(-2px);}
+    .related-card-eye{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--blue-mid);margin-bottom:6px;}
+    .related-card-title{font-size:16px;font-weight:700;color:var(--text-strong);line-height:1.4;}
+    /* FOOTER */
+  </style>
+<link href="/assets/css/tokens.css?v=20260514j" rel="stylesheet"/>
+<link href="/assets/css/base.css?v=20260814a" rel="stylesheet"/>
+<link href="/assets/css/components.css?v=20260514j" rel="stylesheet"/>
+<link href="/assets/css/nav.css?v=20260813e" rel="stylesheet"/>
+<script defer="" src="/assets/js/nav.js?v=20260513q"></script>
+<link href="/assets/css/footer.css?v=20260813h" rel="stylesheet"/>
+<link href="https://tagra.app/articles/operator-liability-for-driver-infringements/" hreflang="en" rel="alternate"/><link href="https://tagra.app/de/ratgeber/haftung-unternehmen-fahrer-verstoesse/" hreflang="de" rel="alternate"/><link href="https://tagra.app/pl/poradnik/odpowiedzialnosc-przewoznika-naruszenia-kierowcow/" hreflang="pl" rel="alternate"/><link href="https://tagra.app/el/arthra/efthyni-metaforea-paravaseis-odigon/" hreflang="el" rel="alternate"/><link href="https://tagra.app/hu/cikkek/fuvarozo-felelossege-sofor-szabalysertes/" hreflang="hu" rel="alternate"/><link href="https://tagra.app/articles/operator-liability-for-driver-infringements/" hreflang="x-default" rel="alternate"/><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Ki fizet, ha a járművezető megszegi a szabályokat?", "description": "Az uniós szabályok szerint a fuvarozó felel a járművezetői szabálysértéseiért — de bizonyíthatja is, hogy ésszerűen nem vonható felelősségre.", "image": "https://tagra.app/assets/img/hero-poster.jpg", "author": {"@type": "Organization", "name": "Truck Data Technology, s.r.o.", "url": "https://www.tdt.cz"}, "publisher": {"@type": "Organization", "name": "Truck Data Technology, s.r.o.", "logo": {"@type": "ImageObject", "url": "https://tagra.app/assets/img/logo.svg"}}, "datePublished": "2026-08-14T09:00:00+02:00", "dateModified": "2026-08-14T09:00:00+02:00", "inLanguage": "hu", "mainEntityOfPage": "https://tagra.app/hu/cikkek/fuvarozo-felelossege-sofor-szabalysertes/", "articleSection": "Transport operator knowledge base"}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "TAGRA", "item": "https://tagra.app/"}, {"@type": "ListItem", "position": 2, "name": "Articles", "item": "https://tagra.app/hu/cikkek/"}, {"@type": "ListItem", "position": 3, "name": "A fuvarozó felelőssége", "item": "https://tagra.app/hu/cikkek/fuvarozo-felelossege-sofor-szabalysertes/"}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Felel a vállalkozás a járművezetője által elkövetett szabálysértésért?", "acceptedAnswer": {"@type": "Answer", "text": "Igen. Az 561/2006/EK rendelet 10. cikkének (3) bekezdése szerint a fuvarozó felel a járművezetői által elkövetett szabálysértésekért, beleértve azokat is, amelyeket másik tagállamban vagy harmadik országban követtek el. Ugyanez a cikk lehetővé teszi a tagállamoknak, hogy figyelembe vegyék azt a bizonyítékot, amely szerint a fuvarozó ésszerűen nem vonható felelősségre."}}, {"@type": "Question", "name": "Elég az adatokat letölteni, vagy ki is kell értékelni azokat?", "acceptedAnswer": {"@type": "Answer", "text": ". A kártyákat legalább 28 naponta, a járműegységeket 90 naponta le kell tölteni, a kötelezettség viszont az, hogy tudja, mit tartalmaznak az adatok."}}, {"@type": "Question", "name": "Milyen bizonyíték segít igazolni, hogy a fuvarozó nem felelős?", "acceptedAnswer": {"@type": "Answer", "text": "Tájékoztatási és képzési nyilvántartások, a tachográf használatára vonatkozó belső szabályok, a törvényes határidőkön belüli letöltések, a szabálysértések észlelését igazoló értékelési eredmények, a járművezető által aláírt írásos szabálysértési jelentések, korrekciós intézkedések és olyan menetrendek, amelyek lehetővé tették a szabályok betartását. Az értékelés a nemzeti jogtól és az eset körülményeitől függ."}}]}</script><style id="TAGRA-COMPONENTS">.hero-lede{ font-size: 18px;line-height: 1.6;color: var(--text);max-width: 920px;margin-top: 16px;} .band{ padding: 60px 0;} .band--gray{ background: var(--bg-gray);} .band--blue{ background: var(--bg-apple-solid);} .container{ max-width: var(--maxw);margin: 0 auto;padding: 0 24px;} .h2-grad{ background: var(--heading-gradient);-webkit-background-clip: text;background-clip: text;color: transparent;-webkit-text-fill-color: transparent;display: inline-block;font-weight: 800;text-transform: uppercase;font-size: 36px;line-height: 1.06;padding: 0.12em 0.15em 0.08em 0;margin: 0 0 12px;} @media(max-width:700px){.h2-grad{font-size:28px;}} .bento--hero{ display: grid;grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));gap: 16px;max-width: 1080px;margin: 32px 0;} @media (max-width: 900px){ .bento--hero{ grid-template-columns: 1fr;} } .hero-card{ background: #fff;border: 1px solid var(--border);border-radius: var(--radius-lg, 20px);padding: 24px;} .hero-card--blue{ background: rgba(31,95,166,0.06);} .hero-card .eyebrow{ color: var(--blue-mid);margin-bottom: 8px;} .hero-card .big{ font-size: 44px;font-weight: 800;color: var(--blue-dark);margin-bottom: 8px;letter-spacing: -0.02em;line-height: 1;} .hero-card p{ margin: 0;color: var(--text2);font-size: 15px;line-height: 1.5;} .twocol{ display: grid;grid-template-columns: 1fr 1fr;gap: 20px;margin-top: 32px;} @media (max-width: 900px){ .twocol{ grid-template-columns: 1fr;} } .card{ background: #fff;border: 1px solid var(--border);border-radius: var(--radius-lg, 20px);padding: 28px;} .card--blue{ background: rgba(31,95,166,0.06);} .card--green{ background: rgba(110,155,18,0.07);} .card h3{ margin: 6px 0 12px;font-size: 22px;color: var(--blue-dark);font-weight: 800;} .card ul{ margin: 8px 0 0 18px;color: var(--text);line-height: 1.65;} .card ul li{ margin: 6px 0;} .info-card{ margin-top: 24px;border-left: 4px solid var(--blue-bright);background: #fff;border-radius: var(--radius-lg, 20px);padding: 24px;box-shadow: 0 1px 0 var(--border);} .info-card .badge{ display: inline-block;font-size: 11px;font-weight: 800;text-transform: uppercase;letter-spacing: .08em;color: var(--blue-mid);background: rgba(31,95,166,0.09);padding: 5px 10px;border-radius: 999px;margin-bottom: 10px;} .info-card h3{ margin: 4px 0 8px;font-size: 22px;color: var(--blue-dark);} .info-card p{ color: var(--text);line-height: 1.6;} .doc-bento{ display: grid;grid-template-columns: repeat(3, 1fr);gap: 16px;margin-top: 24px;} @media (max-width: 900px){ .doc-bento{ grid-template-columns: 1fr;} } .doc-card{ background: #fff;border: 1px solid var(--border);border-radius: var(--radius-lg, 20px);padding: 24px;} .doc-card h3{ font-size: 20px;margin: 4px 0 10px;color: var(--blue-dark);font-weight: 800;} .doc-card .num{ font-weight: 800;color: var(--blue-mid);font-size: 12px;letter-spacing: .1em;text-transform: uppercase;} .doc-card p{ color: var(--text2);line-height: 1.6;} .steps{ display: grid;grid-template-columns: 1fr;gap: 14px;margin-top: 24px;} .step{ background: #fff;border: 1px solid var(--border);border-radius: var(--radius-lg, 20px);padding: 24px;} .step .snum{ font-weight: 800;color: var(--blue-mid);font-size: 12px;letter-spacing: .1em;text-transform: uppercase;} .step h3{ margin: 6px 0 8px;font-size: 22px;color: var(--blue-dark);font-weight: 800;} .step p{ color: var(--text2);line-height: 1.6;} .step--urgent{ border-color: var(--blue-mid);} .snum--urgent{ color: var(--warn);}  .warning-box{ margin-top: 24px;border: 1px solid rgba(220,120,0,0.25);background: linear-gradient(180deg, rgba(255,190,120,0.14), rgba(255,190,120,0.06));border-left: 4px solid var(--warn);border-radius: var(--radius-lg, 20px);padding: 24px;} .warning-box--urgent{ margin-top: 0;} .warning-box .badge{ display: inline-block;font-weight: 800;color: var(--warn);font-size: 12px;letter-spacing: .08em;text-transform: uppercase;background: rgba(255,160,80,0.2);padding: 5px 10px;border-radius: 999px;margin-bottom: 8px;} .warning-box__title{ margin: 4px 0 8px;font-size: 22px;color: var(--blue-dark);font-weight: 800;line-height: 1.3;} .warning-box p{ color: var(--text);line-height: 1.6;} .cta-row{ display: flex;gap: 12px;flex-wrap: wrap;margin-top: 16px;} .btn{ display: inline-flex;align-items: center;justify-content: center;gap: 8px;height: 44px;padding: 0 18px;border-radius: 999px;text-decoration: none;font-weight: 700;font-size: 15px;} .btn--primary{ background: var(--green-cta);color: #fff;border: 1.5px solid var(--green-cta);} .btn--primary:hover{ background: var(--green-brand);border-color: var(--green-brand);} .btn--outline{ background: transparent;color: var(--blue-mid);border: 1.5px solid rgba(19,74,142,0.4);} .btn--outline:hover{ background: var(--bg-apple-solid);} .callout--green{ border: 1px solid rgba(110,155,18,0.3);background: linear-gradient(180deg, rgba(110,155,18,0.08), rgba(110,155,18,0.03));border-radius: var(--radius-lg, 20px);padding: 28px;} .callout--green h3{ font-size: 24px;color: var(--green-cta);margin: 4px 0 12px;font-weight: 800;} .callout--green ul{ margin: 12px 0 12px 18px;color: var(--text);line-height: 1.7;} .related-grid{ display: grid;grid-template-columns: repeat(3, 1fr);gap: 16px;margin-top: 16px;} @media (max-width: 900px){ .related-grid{ grid-template-columns: 1fr;} } .rel-card{ background: #fff;border: 1px solid var(--border);border-radius: var(--radius-lg, 20px);padding: 24px;transition: border-color .15s, box-shadow .15s;} .rel-card:hover{ border-color: var(--blue-mid);box-shadow: 0 8px 22px rgba(0,0,0,0.06);} .rel-card .rel-eyebrow{ font-size: 11px;font-weight: 800;letter-spacing: .1em;text-transform: uppercase;color: var(--blue-mid);margin-bottom: 8px;} .rel-card a{ color: var(--blue-dark);text-decoration: none;font-weight: 700;font-size: 17px;line-height: 1.35;display: block;} .rel-card a:hover{ color: var(--blue-mid);} .rel-card p{ margin-top: 8px;color: var(--text2);font-size: 14px;line-height: 1.5;} .rel-featured{ background: linear-gradient(135deg, var(--blue-dark), var(--blue-mid));color: #fff;border-radius: var(--radius-lg, 20px);padding: 32px;margin-bottom: 16px;} .rel-featured .rel-eyebrow{ color: rgba(255,255,255,0.7);font-size: 12px;font-weight: 800;letter-spacing: .12em;text-transform: uppercase;margin-bottom: 12px;} .rel-featured h3{ margin: 0 0 16px;font-size: 24px;color: #fff;font-weight: 800;line-height: 1.25;} .rel-featured a{ color: #fff;text-decoration: none;border-bottom: 1px solid rgba(255,255,255,0.4);padding-bottom: 2px;font-weight: 600;} .rel-featured a:hover{ border-bottom-color: #fff;} .faq{ max-width: 980px;margin: 32px auto 0;} .faq details{ border-bottom: 1px solid var(--border);padding: 16px 0;} .faq summary{ list-style: none;cursor: pointer;position: relative;padding-right: 32px;font-weight: 700;color: var(--blue-dark);font-size: 17px;line-height: 1.4;} .faq summary::-webkit-details-marker{ display: none;} .faq summary::after{ content: '+';position: absolute;right: 0;top: 0;color: var(--blue-mid);font-weight: 400;font-size: 22px;line-height: 1;} .faq details[open] summary::after{ content: '–';} .faq-a{ padding: 12px 0 4px;color: var(--text);line-height: 1.65;} .author-block{ background: #fff;border: 1px solid var(--border);border-radius: var(--radius-lg, 20px);padding: 28px;margin-top: 16px;} .author-block p{ margin: 6px 0;color: var(--text);line-height: 1.7;}</style></head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+<div aria-hidden="true" id="scroll-progress"></div>
+<nav aria-label="Main navigation" class="site-nav" role="navigation">
+<div class="nav-inner">
+<a aria-label="TAGRA – Home" class="nav-logo" href="/"><img alt="TAGRA" height="32" src="/assets/img/logo-light.svg?v=20260513zh" style="display:block;height:32px;width:auto;" width="140"/></a>
+<ul class="nav-links">
+<li><a href="/fleet/">For companies</a></li>
+<li><a href="/driver/">For drivers</a></li>
+<li><a href="/enforcement/">Enforcement</a></li>
+<li><a aria-current="page" href="/articles/">Articles</a></li><li><a href="/manuals/">Manuals</a></li>
+<li><a href="/faq/">FAQ</a></li>
+<li><a href="/contact/">Contact</a></li>
+<li class="nav-cta-li"><a class="nav-cta" href="/try/?audience=fleet">Try 30 days free</a></li>
+</ul>
+<details class="nav-lang">
+<summary aria-label="Language: EN">EN</summary>
+<div class="nav-lang-menu" role="menu">
+<a aria-current="page" class="active" href="/" hreflang="en">English</a><a href="/de/" hreflang="de">Deutsch</a><a href="/pl/" hreflang="pl">Polski</a><a href="/el/" hreflang="el">Ελληνικά</a><a href="/hu/" hreflang="hu">Magyar</a><a href="https://www.tdt.cz/" hreflang="cs" rel="noopener" target="_blank">Čeština</a><a href="https://www.tdt.sk/" hreflang="sk" rel="noopener" target="_blank">Slovenčina</a></div>
+</details>
+<a class="nav-cta-mobile" href="/try/?audience=fleet">Try free</a>
+<button aria-expanded="false" aria-label="Toggle menu" class="nav-mobile-toggle" id="nav-toggle">
+<span></span><span></span><span></span>
+</button>
+</div>
+</nav>
+<header class="art-hero">
+<div class="art-wrap">
+<nav aria-label="Breadcrumb" class="breadcrumb"><a href="/">TAGRA</a><span>›</span><a href="/articles/">Cikkek</a><span>›</span><span>A fuvarozó felelőssége</span></nav>
+<div class="eyebrow">Megfelelőség · Frissítve: 2026</div>
+<h1 class="art-title"><span class="grad">Ki fizet, ha a járművezető megszegi a szabályokat?</span></h1>
+<div class="art-meta"><span>Truck Data Technology</span><span>Frissítve: 2026. augusztus</span><span>9 perces olvasmány</span></div><p class="hero-lede">Egy járművezető túllépi a vezetési idejét Franciaországban. Hetekkel később megérkezik az értesítés – a cégnek címezve. Az uniós szabályok szerint a fuvarozó felel a járművezetőiért, bárhol történt is a szabálysértés. Ugyanezek a szabályok viszont lehetővé teszik, hogy bebizonyítsa: ésszerűen nem vonható felelősségre. Így néz ki ez a bizonyíték.</p><div class="bento--hero"><div class="hero-card"><div class="eyebrow">Felelősség</div><div class="big">Az Öné</div><p>A 10. cikk (3) bekezdése szerint a fuvarozó felel a járművezetői szabálysértésekért – beleértve a külföldön elkövetetteket is.</p></div><div class="hero-card hero-card--blue"><div class="eyebrow">De</div><div class="big">A bizonyíték számít</div><p>A tagállamok figyelembe vehetik azt a bizonyítékot, amely szerint a fuvarozó ésszerűen nem vonható felelősségre.</p></div><div class="hero-card"><div class="eyebrow">Letöltés ennyi naponta</div><div class="big">28 / 90</div><p>Járművezetői kártyák legalább 28 naponta, járműegységek 90 naponta. A letöltés nem azonos az ellenőrzéssel.</p></div><div class="hero-card hero-card--blue"><div class="eyebrow">A tét</div><div class="big">Jó hírnév</div><p>A súlyos vagy ismételt szabálysértések bekerülnek a nemzeti nyilvántartásba, és akár magába az engedélybe is kerülhetnek.</p></div></div>
+</div>
+</header>
+<main><section class="band"><div class="container art-body"><div class="eyebrow">A helyzet</div><h2 class="h2-grad">A probléma nem ér véget a járművezetőnél</h2>
+<p>A legtöbb fuvarozó ezt a nehezebb úton tanulja meg. A járművezető túllépi a napi vezetési idejét, kihagy egy szünetet, vagy kihúzza a kártyáját és tovább vezet. Bírságot kap az út szélén – és úgy tűnik, ezzel az ügy le is zárult. Aztán a hatóság a céget veszi szemügyre.</p>
+<p>Az ellenőr nem azt kérdezi, hogy <em>&#8220;megszegte-e a járművezetője a szabályokat&#8221;</em>. It is <strong>&#8220;tájékoztatta-e, ellenőrizte-e, észrevette-e, és mit tett ellene&#8221;</strong>. Ez a négy kérdés dönti el, hogy a szabálysértés a járművezetőnél marad, vagy a cég problémájává válik.</p>
+</div></section>
+
+<section class="band band--blue"><div class="container art-body"><div class="eyebrow">Amit a szabályok előírnak</div><h2 class="h2-grad">A 10. cikk (2) bekezdése a gyakorlat nyelvén</h2>
+<p>Az 561/2006/EK rendelet négy kötelezettséget ír elő a fuvarozó számára. A szövegben rövidek, a gyakorlatban terjedelmesek:</p>
+<div class="doc-bento">
+<div class="doc-card"><div class="num">01</div><h3>Tájékoztassa a járművezetőt</h3><p>Megfelelően és úgy, hogy később bizonyítani tudja, megtörtént. A szóbeli tájékoztatás keveset ér, ha semmi sincs rögzítve.</p></div>
+<div class="doc-card"><div class="num">02</div><h3>Szervezze meg a munkát</h3><p>A menetrendeknek lehetővé kell tenniük a szabályok betartását. Az az útvonal, amely jogszerűen nem teljesíthető, szervezési hiba, nem a járművezető hibája.</p></div>
+<div class="doc-card"><div class="num">03</div><h3>Végezzen rendszeres ellenőrzéseket</h3><p>Ne tárolja az adatokat — <strong>ellenőrizze</strong> őket. Ezt a kötelezettséget tévesztik össze leggyakrabban az archiválással.</p></div>
+<div class="doc-card"><div class="num">04</div><h3>Tegyen lépéseket a feltártak alapján</h3><p>Az Ön által észlelt, de figyelmen kívül hagyott szabálysértés rosszabb bizonyíték, mint az, amelyet sosem látott, mert azt mutatja: a rendszer működik, Ön azonban úgy döntött, hogy nem használja.</p></div>
+</div>
+<div class="callout callout--blue"><p>A letöltési határidők az 581/2010/EU rendeletből következnek: <strong>a járművezetői kártyákat legalább 28 naponta, a járműegységeket legalább 90 naponta</strong>, továbbá egy letöltés a jármű eladása vagy átruházása előtt. E határidők betartása teljesíti a megőrzési kötelezettséget. Önmagában azonban nem teljesíti az ellenőrzési kötelezettséget.</p></div>
+</div></section>
+
+<section class="band"><div class="container art-body"><div class="eyebrow">Határokon átnyúlóan</div><h2 class="h2-grad">Igen, a más országban elkövetett szabálysértésekre is</h2>
+<p>A 10. cikk (3) bekezdése egyértelmű: a fuvarozó felel a járművezetői által elkövetett szabálysértésekért <strong>akkor is, ha azok másik tagállamban vagy harmadik országban történtek</strong>. Az Olaszországban vagy Franciaországban kiszabott bírság nem marad Olaszországban vagy Franciaországban.</p>
+<p>Ugyanez a cikk ezután hozzáteszi azt a mondatot, amiről itt szó van. A tagállamok e felelősséget ahhoz köthetik, hogy a fuvarozó megsértette-e az (1) és (2) bekezdés szerinti saját kötelezettségeit – és <strong>figyelembe vehetnek minden olyan bizonyítékot, amely szerint a fuvarozó ésszerűen nem tehető felelőssé</strong> a bekövetkezett szabálysértésért.</p>
+<div class="warning-box"><p class="warning-box__title">Olvassa ezt gyakorlati utasításként</p><p>A rendelet azt üzeni, hogy a védekezése dokumentumokon alapul. Nem a járművezetővel ápolt jó viszonyon, nem a meghallgatáson elmondott érvelésen – hanem olyan nyilvántartáson, amely igazolja, hogy tájékoztatott, ellenőrzött, feltárt és intézkedett. Ha nincs írásban, akkor nem történt meg.</p></div>
+</div></section>
+
+<section class="band band--gray"><div class="container art-body"><div class="eyebrow">A bizonyíték</div><h2 class="h2-grad">Mi igazolhatja, hogy Ön ésszerűen nem volt felelős</h2>
+<p>A nemzeti hatóságok ezt egyedileg értékelik, így egyetlen felsorolás sem jelent garanciát. Az alábbi elemeket azonban egy megfelelési rendszertől elvárják, és a hiányukat róják fel a fuvarozónak:</p>
+<div class="twocol">
+<div class="info-card"><h3>A szabálysértés előtt</h3><p>A járművezetői tájékoztatások és képzések feljegyzései dátummal és aláírással. Belső szabályok a tachográf és a kártya használatára. Bizonyíték arra, hogy a menetrendek és a szállítási időablakok lehetővé tették a szabályok betartását. Olyan szerződések, amelyek nem kényszerítenek ki teljesíthetetlen időzítést.</p></div>
+<div class="info-card"><h3>A szabálysértés után</h3><p>A 28 és 90 napos határidőn belül elvégzett letöltések. Értékelési eredmény, amely igazolja, hogy a szabálysértést <strong>észlelték</strong>. A járművezető által aláírt írásos szabálysértési jelentés. A megtett korrekciós intézkedés és annak igazolása, hogy végre is hajtották.</p></div>
+</div>
+<p>Figyelje meg a mintázatot: a bizonyítékok felének már azelőtt léteznie kell, <em>mielőtt</em> bármi baj történik. Ezért segít ritkán az a megfelelés, amelyet csak az értesítés megérkezése után építenek ki.</p>
+</div></section>
+
+<section class="band"><div class="container art-body"><div class="eyebrow">Egy valós eset, 2026 júliusa</div><h2 class="h2-grad">Amit a hatóságok valójában büntetnek</h2>
+<p>2026 júliusában egy brit fuvarozó engedélyét <strong>12 járműről 8-ra</strong> csökkentették, miután egy járművezető ismételten kihúzta a kártyáját és tovább vezetett – közel 200 km-t egy rögzítetlen szakaszon, amelyet később pihenőidőként naplózott.</p>
+<p>A járművezető elvesztette a jogosultságát. A tanulságos az, amit a hatóság a <em>vállalkozásnak</em> rótt fel: hiányos tachográf-letöltések, dokumentált fegyelmi eljárások hiánya, szóban tartott és sehol nem rögzített járművezetői képzések, valamint ismétlődő szabálysértések, amelyekkel senki nem foglalkozott. Az eljárásban kiderült, hogy a problémák azután maradtak észrevétlenek, hogy az irodavezető távozott, és <strong>senki más nem tudta kezelni a felügyeleti rendszereket</strong>.</p>
+<p>A mechanizmus brit — a Traffic Commissioner által felülvizsgált Operator Licence-nek nincs pontos megfelelője az EU tagállamaiban. <strong>A mulasztásoknak viszont van.</strong> Mindegyik ugyanígy hangzana egy 2006/22/EK irányelv szerinti telephelyi ellenőrzésen. <a href="/articles/tachograph-rules-uk-dvsa-operator-licence/">Részletek a brit rendszerről &#8594;</a></p>
+</div></section>
+
+<section class="band band--blue"><div class="container art-body"><div class="eyebrow">A bírságon túl</div><h2 class="h2-grad">Jó hírnév és a nemzeti nyilvántartás</h2>
+<p>A bírság költség. A vállalkozásokat ellehetetlenítő következmény más: az 1071/2009/EK rendelet szerint a súlyos szabálysértéseket rögzítik a nemzeti elektronikus nyilvántartásban, és azok <strong>a jó hírnév elvesztéséhez</strong> vezethetnek — a vállalkozás, a szállításvezető vagy mindkettő esetében.</p>
+<div class="twocol">
+<div class="info-card"><h3>Hogyan fokozódik</h3><p>A 2016/403/EU rendelet osztályozza, mely szabálysértések elég súlyosak az eljárás megindításához. A tachográf manipulálása és a hiányzó nyilvántartások előkelő helyen szerepelnek ezen a listán. Az 561/2006/EK rendelet 19. cikke emellett lehetővé teszi a tagállamnak, hogy visszavonja, felfüggessze vagy korlátozza a fuvarozó engedélyét.</p></div>
+<div class="info-card"><h3>Meddig tart</h3><p>Az elvesztett jó hírnév nem áll helyre gyorsan — a visszaszerzéséig eltelő legrövidebb idő <strong>egy év</strong>, az alkalmatlannak nyilvánított szállításvezető szakmai alkalmassági bizonyítványa pedig valamennyi tagállamban érvényét veszti a rehabilitációig.</p></div>
+</div>
+</div></section>
+
+<section class="band"><div class="container art-body"><div class="eyebrow">Nem csak a fuvarozó</div><h2 class="h2-grad">A menetrend is valakinek a felelőssége</h2>
+<p>A 10. cikk (4) bekezdése a fuvarozón túlra is kiterjeszti a kötelezettséget. <strong>A feladók, szállítmányozók, utazásszervezők, fővállalkozók, alvállalkozók és járművezetői munkaerő-közvetítők</strong> kötelesek gondoskodni arról, hogy a szerződésben rögzített szállítási menetrendek megfeleljenek a rendeletnek.</p>
+<p>Ez két irányban is fontos. Ha az ügyfél olyan szállítási időablakot ír elő, amely jogszerűen nem teljesíthető, a kötelezettség nem kizárólag az Öné. És ha a szabálysértések egy útvonal, egy ügyfél vagy egy megbízástípus körül sűrűsödnek, akkor valószínűleg nem a járművezető a probléma — hanem a tervezés. Ezt a mintázatot csak az adatok rendszeres kiértékelése tárja fel.</p>
+</div></section>
+
+<section class="band band--gray"><div class="container art-body"><div class="eyebrow">Telephelyi ellenőrzés</div><h2 class="h2-grad">Mit keres az ellenőrzés az Ön telephelyén</h2>
+<p>A 2006/22/EK irányelv határozza meg a fuvarozók telephelyén végzett ellenőrzések minimális feltételeit. A gyakorlatban az ellenőr a következőket kéri:</p>
+<div class="steps">
+<div class="step"><h3>Letöltött adatok</h3><p>A járművezetői kártyákról és a járműegységekről, hiánytalanul és az előírt határidőkön belül.</p></div>
+<div class="step"><h3>Az értékelés bizonyítéka</h3><p>Kimutatás, amely igazolja, hogy az adatokat a vezetési időre, a szünetekre és a pihenőidőre vonatkozó szabályok szerint értékelték — nem csupán tárolták.</p></div>
+<div class="step"><h3>Szabálysértési nyilvántartás</h3><p>Mit tártak fel, mikor, ki vizsgálta át, mit közöltek a járművezetővel.</p></div>
+<div class="step"><h3>Helyesbítő intézkedés</h3><p>Dokumentált nyomon követés és bizonyíték arra, hogy az ismétlődő eseteket eszkalálták, nem pedig hagyták megismétlődni.</p></div>
+<div class="step"><h3>Képzési nyilvántartások</h3><p>Dátummal, aláírással, és azokra a szabályokra vonatkozóan, amelyeket a szabálysértések érintenek.</p></div>
+<div class="step"><h3>Munkaidő</h3><p>A 2002/15/EK irányelv a vezetési és pihenőidőn felül alkalmazandó, és azzal együtt ellenőrzik.</p></div>
+</div>
+</div></section>
+
+<section class="band"><div class="container art-body"><div class="eyebrow">Gyakorlati felállás</div><h2 class="h2-grad">Folyamat, amely csökkenti a kockázatot</h2>
+<div class="doc-bento">
+<div class="doc-card"><div class="num">01</div><h3>Töltsön le időben</h3><p>Kártyák 28 naponta, járműegységek 90 naponta. Állítson be belső emlékeztetőt a 21. és a 75. napra, hogy egyetlen hiányzás se vigye túl a határidőn.</p></div>
+<div class="doc-card"><div class="num">02</div><h3>Előbb értékeljen, utána iktasson</h3><p>Vesse össze az adatokat a vezetési és pihenőidőre, valamint a munkaidőre vonatkozó szabályokkal. Az értékelés nélküli tárolás az a hiányosság, amelyet a hatóságok megtalálnak.</p></div>
+<div class="doc-card"><div class="num">03</div><h3>Írásbeli kiértékelés</h3><p>Minden szabálysértéshez jelentés és a járművezető aláírása tartozik. Ez az a dokumentum, amely választ ad az ellenőrnek.</p></div>
+<div class="doc-card"><div class="num">04</div><h3>Ne egyetlen emberre építsen</h3><p>Egynél több embernek kell tudnia kezelni a rendszert. Az egyetlen munkatárstól függő megfelelés abban a pillanatban összeomlik, amikor az illető távozik.</p></div>
+</div>
+<div class="callout callout--blue"><p><strong>TAGRA</strong> bármely digitális vagy intelligens tachográfból beolvassa az adatokat, országtól függetlenül, kiértékeli azokat a vezetési és pihenőidőre, valamint a munkaidőre vonatkozó szabályok szerint, elkészíti azokat a szabálysértési jelentéseket, amelyeket átad a járművezetőnek és megőriz, valamint vezeti azt az archívumot, amelyet kérésre be kell mutatnia. Windows, felhőfüggőség nélkül, az adatai Önnél maradnak. <a href="/try/?audience=fleet">Próbálja ki ingyen 30 napig</a> — kártyaadatok megadása nélkül.</p></div>
+</div></section>
+
+<section class="band band--gray"><div class="container art-body"><div class="eyebrow">Kérdések és válaszok</div><h2 class="h2-grad">Gyakran ismételt kérdések</h2>
+<h3>Felel a vállalkozás a járművezetője által elkövetett szabálysértésért?</h3>
+<p>Igen. Az 561/2006/EK rendelet 10. cikkének (3) bekezdése szerint a fuvarozó felel a járművezetői által elkövetett szabálysértésekért, beleértve azokat is, amelyeket másik tagállamban vagy harmadik országban követtek el. Ugyanez a cikk lehetővé teszi a tagállamoknak, hogy figyelembe vegyék azt a bizonyítékot, amely szerint a fuvarozó ésszerűen nem vonható felelősségre.</p>
+<h3>Elég az adatokat letölteni, vagy ki is kell értékelni azokat?</h3>
+<p>A puszta letöltés nem bizonyítja, hogy ellenőrzés történt. A 10. cikk (2) bekezdése megköveteli a járművezetők megfelelő tájékoztatását és a <strong>rendszeres ellenőrzést</strong>. A kártyákat legalább 28 naponta, a járműegységeket 90 naponta le kell tölteni, a kötelezettség viszont az, hogy tudja, mit tartalmaznak az adatok.</p>
+<h3>Milyen bizonyíték segít igazolni, hogy a fuvarozó nem felelős?</h3>
+<p>Tájékoztatási és képzési nyilvántartások, a tachográf használatára vonatkozó belső szabályok, a törvényes határidőkön belüli letöltések, a szabálysértések észlelését igazoló értékelési eredmények, a járművezető által aláírt írásos szabálysértési jelentések, korrekciós intézkedések és olyan menetrendek, amelyek lehetővé tették a szabályok betartását. Az értékelés a nemzeti jogtól és az eset körülményeitől függ.</p>
+<h3>Elveszítheti a vállalkozás az engedélyét a járművezetői szabálysértések miatt?</h3>
+<p>A súlyos vagy ismételt szabálysértéseket az 1071/2009/EK rendelet szerint rögzítik a nemzeti elektronikus nyilvántartásban, és a jó hírnév elvesztéséhez vezethetnek; az 561/2006/EK rendelet 19. cikke emellett lehetővé teszi a tagállamnak az engedély visszavonását, felfüggesztését vagy korlátozását. A jó hírnév legkorábban egy év elteltével szerezhető vissza.</p>
+<p style="font-size:14px;color:var(--text2);margin-top:28px">Ez a cikk tájékoztató jellegű, és az EU vezetési időre, pihenőidőre és tachográfadatokra vonatkozó szabályaiból eredő általános követelményeket ismerteti. Nem minősül jogi tanácsadásnak. A felelősséget, a szankciókat és azt, hogy mi számít elegendő bizonyítéknak, a nemzeti jog és az egyes esetek körülményei határozzák meg.</p>
+</div></section>
+</main>
+<footer class="site-footer" role="contentinfo">
+<div class="footer-inner">
+<div>
+<div class="footer-logo"><img alt="TAGRA" height="32" src="/assets/img/logo-dark.svg?v=20260513zh" width="140" loading="lazy"/></div>
+<p class="footer-desc">Professional tachograph analysis software. Driver card download, digital tachograph analysis, EU drivers' hours and HGV Working Time Directive. Developed by Truck Data Technology, s.r.o.</p>
+</div>
+<div class="footer-col">
+<h2 class="footer-col-title">Product</h2>
+<ul>
+<li><a href="/fleet/">For fleet operators</a></li>
+<li><a href="/driver/">For professional drivers</a></li>
+<li><a href="/enforcement/">For enforcement</a></li>
+<li><a href="/how-it-works/">How it works</a></li>
+<li><a href="/for-whom/">For whom</a></li>
+<li><a href="/faq/">FAQ</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h2 class="footer-col-title">Resources</h2>
+<ul>
+<li><a href="/articles/">Articles</a></li><li><a href="/manuals/">Manuals</a></li>
+<li><a href="/articles/digital-tachograph-symbols/">Tachograph symbols</a></li>
+<li><a href="/integrations/dkv-live/">DKV LIVE®</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h2 class="footer-col-title">Company</h2>
+<ul>
+<li><a href="/contact/">Contact</a></li>
+<li><a href="https://www.tdt.cz" rel="noopener" target="_blank">Truck Data Technology</a></li>
+<li><a href="/">English</a></li><li><a href="/de/">Deutsch</a></li><li><a href="/pl/">Polski</a></li><li><a href="/el/">Ελληνικά</a></li><li><a href="/hu/">Magyar</a></li><li><a href="https://www.tdt.cz/" rel="noopener" target="_blank">Čeština</a></li><li><a href="https://www.tdt.sk/" rel="noopener" target="_blank">Slovenčina</a></li></ul>
+</div>
+</div>
+<div class="footer-bottom">
+<span>© 2026 Truck Data Technology, s.r.o. All rights reserved.</span>
+<span><a href="/contact/">Contact</a> · <a href="https://www.tdt.cz" rel="noopener" target="_blank">tdt.cz</a> · <a href="/privacy/">Privacy &amp; cookies</a></span>
+</div>
+</footer>
+<script>(function(){var bar=document.getElementById('scroll-progress');if(bar)window.addEventListener('scroll',function(){var t=document.documentElement.scrollTop||document.body.scrollTop;var h=document.documentElement.scrollHeight-document.documentElement.clientHeight;bar.style.width=(t/h*100)+'%';},{passive:true});var toggle=document.getElementById('nav-toggle'),links=document.getElementById('nav-links');if(toggle&&links)toggle.addEventListener('click',function(){var o=links.classList.toggle('open');toggle.setAttribute('aria-expanded',o);});})();</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Felel a vállalkozás a járművezetője által elkövetett szabálysértésért?", "acceptedAnswer": {"@type": "Answer", "text": "Igen. Az 561/2006/EK rendelet 10. cikkének (3) bekezdése szerint a fuvarozó felel a járművezetői által elkövetett szabálysértésekért, beleértve azokat is, amelyeket másik tagállamban vagy harmadik országban követtek el. Ugyanez a cikk lehetővé teszi a tagállamoknak, hogy figyelembe vegyék azt a bizonyítékot, amely szerint a fuvarozó ésszerűen nem vonható felelősségre."}}, {"@type": "Question", "name": "Elég az adatokat letölteni, vagy ki is kell értékelni azokat?", "acceptedAnswer": {"@type": "Answer", "text": ". A kártyákat legalább 28 naponta, a járműegységeket 90 naponta le kell tölteni, a kötelezettség viszont az, hogy tudja, mit tartalmaznak az adatok."}}, {"@type": "Question", "name": "Milyen bizonyíték segít igazolni, hogy a fuvarozó nem felelős?", "acceptedAnswer": {"@type": "Answer", "text": "Tájékoztatási és képzési nyilvántartások, a tachográf használatára vonatkozó belső szabályok, a törvényes határidőkön belüli letöltések, a szabálysértések észlelését igazoló értékelési eredmények, a járművezető által aláírt írásos szabálysértési jelentések, korrekciós intézkedések és olyan menetrendek, amelyek lehetővé tették a szabályok betartását. Az értékelés a nemzeti jogtól és az eset körülményeitől függ."}}, {"@type": "Question", "name": "What is cabotage?", "acceptedAnswer": {"@type": "Answer", "text": "Cabotage is when you, as a carrier, transport goods inside another EU country. Example: you unload in Hamburg and then carry a shipment from Hamburg to Berlin."}}, {"@type": "Question", "name": "What fines are at stake?", "acceptedAnswer": {"@type": "Answer", "text": "Companies can receive fines of up to €14,000. Drivers can face a roadside security deposit of up to €8,000 for the most serious violations."}}]}</script>
+</body>
+</html>
