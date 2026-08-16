@@ -48,3 +48,24 @@
     syncLangLinks();
   }
 })();
+
+/* Smartsupp live chat + Mira AI
+   Ucet TDT (agent Tom). Nacita se site-wide odtud, aby nebylo nutne
+   sahat na 100+ HTML souboru. Widget si jazyk navstevnika detekuje sam.
+   Souhlas: chat je sluzba, kterou navstevnik sam vyvola, proto se nacita
+   bez gatingu; v cookie liste je uvedeny mezi zpracovateli. */
+(function () {
+  'use strict';
+  if (window.smartsupp) return;
+  window._smartsupp = window._smartsupp || {};
+  window._smartsupp.key = 'e33efc5751087329b81e3e5a14c01afecafaebf9';
+  window.smartsupp = function () { window.smartsupp._.push(arguments); };
+  window.smartsupp._ = [];
+  var s = document.getElementsByTagName('script')[0];
+  var c = document.createElement('script');
+  c.type = 'text/javascript';
+  c.charset = 'utf-8';
+  c.async = true;
+  c.src = 'https://www.smartsuppchat.com/loader.js?';
+  s.parentNode.insertBefore(c, s);
+})();
