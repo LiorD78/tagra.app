@@ -61,6 +61,19 @@
   window._smartsupp.key = 'e33efc5751087329b81e3e5a14c01afecafaebf9';
   window.smartsupp = function () { window.smartsupp._.push(arguments); };
   window.smartsupp._ = [];
+
+  /* Jazyk widgetu podle jazyka stranky.
+     Ucet TDT ma lang:"cs" a vlastni preklad button.greeting = "Podpora".
+     Bez tohoto prikazu se "Podpora" ukazovala i na anglicke, nemecke,
+     polske, recke a madarske verzi. Prikaz 'language' prepne widget na
+     vestavene preklady daneho jazyka (EN/DE/PL/HU "Chat", EL "Συνομιλία").
+     Cestinu zamerne NEposilame - tam ma zustat firemni "Podpora" (a na
+     tagra.app ceska verze stejne neni, CZ vede na tdt.cz).
+     Overeno v prohlizeci pro vsech pet jazyku 16. 8. 2026. */
+  var PODPOROVANE = { en: 1, de: 1, pl: 1, el: 1, hu: 1, sk: 1 };
+  var lg = (document.documentElement.getAttribute('lang') || '').slice(0, 2).toLowerCase();
+  if (PODPOROVANE[lg]) window.smartsupp('language', lg);
+
   var s = document.getElementsByTagName('script')[0];
   var c = document.createElement('script');
   c.type = 'text/javascript';
