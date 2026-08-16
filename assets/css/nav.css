@@ -8,6 +8,33 @@
      --blue-dark, --blue-mid, --blue-light, --green-cta, --green-brand
    ────────────────────────────────────────────────────────────────────────── */
 
+/* ─── SKIP LINK ────────────────────────────────────────────
+   První prvek v <body> (WCAG 2.4.1) — umožní klávesnici a čtečkám
+   přeskočit navigaci rovnou na #main-content.
+
+   Pravidlo dosud v žádném CSS nebylo, takže se odkaz vykresloval jako
+   běžný modrý text nad navigací na všech stránkách. Schováváme ho
+   odsunutím mimo viewport, NE přes display:none — ten by ho vyřadil
+   z tab pořadí a odkaz by ztratil smysl. Zviditelní se až při fokusu.
+   z-index nad .site-nav (900) i #scroll-progress (9999). */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 10000;
+  padding: 10px 16px;
+  background: var(--blue-dark, #0b2c4a);
+  color: #fff;
+  font-size: 14px; font-weight: 600; line-height: 1.4;
+  text-decoration: none;
+  border-radius: 0 0 6px 0;
+}
+.skip-link:focus {
+  left: 0;
+  outline: 3px solid var(--blue-light, #1f5fa6);
+  outline-offset: 2px;
+}
+
 /* ─── SCROLL PROGRESS ──────────────────────────────────────── */
 #scroll-progress {
   position: fixed; top: 0; left: 0; height: 3px;
