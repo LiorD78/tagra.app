@@ -15,10 +15,16 @@
   # — což je hlavní ochrana proti kompromitované třetí straně.
   # Povolené domény: Google Tag Manager a Analytics, Microsoft Clarity,
   # obrázkové CDN TRUCKMALL, vlajky (flagcdn), formuláře Netlify, Smartsupp.
-  # Pozor u Smartsuppu: widget se načítá ze smartsuppchat.com / smartsuppcdn.com,
-  # ale WebSocket jde na wss://websocket-visitors.smartsupp.com — tedy TŘETÍ
-  # doména. Bez ní se widget spustí, ale nevykreslí tlačítko a mlčky selže.
-  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://www.clarity.ms https://*.clarity.ms https://www.smartsuppchat.com https://*.smartsuppcdn.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://cdn.truckmall.cz https://flagcdn.com https://www.google-analytics.com https://www.googletagmanager.com https://*.clarity.ms https://*.smartsuppcdn.com https://*.smartsuppchat.com https://*.smartsupp.com; font-src 'self' data: https://*.smartsuppcdn.com; media-src 'self' https://cdn.truckmall.cz https://*.smartsuppcdn.com; connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://www.googletagmanager.com https://www.clarity.ms https://*.clarity.ms https://*.smartsuppchat.com https://*.smartsuppcdn.com https://*.smartsupp.com wss://*.smartsuppchat.com wss://*.smartsupp.com; frame-src 'self' https://*.smartsuppchat.com https://*.smartsuppcdn.com https://*.smartsupp.com; form-action 'self'; frame-ancestors 'self'; base-uri 'self'; object-src 'none'; upgrade-insecure-requests
+  #
+  # POZOR U SMARTSUPPU — widget sahá na tři různé domény a každá selže jinak:
+  #   smartsuppchat.com   loader, bootstrap, API
+  #   smartsuppcdn.com    kód widgetu, stylesheet, překlady
+  #   smartsupp.com       WebSocket (wss://websocket-visitors.smartsupp.com)
+  # Bez smartsupp.com se widget spustí, ale nevykreslí tlačítko a mlčky selže.
+  # Bez smartsuppcdn.com ve style-src se tlačítko vykreslí BEZ STYLŮ — černý
+  # průhledný obdélník místo modré bubliny. Stylesheet se tahá jako <link>,
+  # takže 'unsafe-inline' na něj nestačí.
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://www.clarity.ms https://*.clarity.ms https://www.smartsuppchat.com https://*.smartsuppcdn.com; style-src 'self' 'unsafe-inline' https://*.smartsuppcdn.com https://*.smartsuppchat.com; img-src 'self' data: blob: https://cdn.truckmall.cz https://flagcdn.com https://www.google-analytics.com https://www.googletagmanager.com https://*.clarity.ms https://*.smartsuppcdn.com https://*.smartsuppchat.com https://*.smartsupp.com; font-src 'self' data: https://*.smartsuppcdn.com; media-src 'self' https://cdn.truckmall.cz https://*.smartsuppcdn.com; connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://www.googletagmanager.com https://www.clarity.ms https://*.clarity.ms https://*.smartsuppchat.com https://*.smartsuppcdn.com https://*.smartsupp.com wss://*.smartsuppchat.com wss://*.smartsupp.com; frame-src 'self' https://*.smartsuppchat.com https://*.smartsuppcdn.com https://*.smartsupp.com; form-action 'self'; frame-ancestors 'self'; base-uri 'self'; object-src 'none'; upgrade-insecure-requests
 
 # ────────────────────────────────────────────────
 # HTML — short cache, must revalidate, stale-while-revalidate for speed
