@@ -91,8 +91,12 @@
   Cache-Control: public, max-age=86400, must-revalidate
   Content-Type: text/css; charset=UTF-8
 
+# nav.js se meni casteji, nez se stiha bumpovat ?v= na 111 strankach.
+# 24h cache znamenala, ze oprava chatu nedorazila k vracejicim se
+# navstevnikum cely den. 5 minut + revalidace je rozumny kompromis:
+# soubor ma 4 kB, revalidace je 304 bez tela.
 /assets/js/*
-  Cache-Control: public, max-age=86400, must-revalidate
+  Cache-Control: public, max-age=300, must-revalidate
 
 # ────────────────────────────────────────────────
 # XML / TXT / JSON metadata
