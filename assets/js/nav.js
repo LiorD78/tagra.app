@@ -69,3 +69,50 @@
   c.src = 'https://www.smartsuppchat.com/loader.js?';
   s.parentNode.insertBefore(c, s);
 })();
+
+/* Odsazeni chatove bubliny nad sticky CTA listu.
+   Smartsupp si bublinu kotvi na fixed wrapper s bottom:24px. Na strankach,
+   kde je dole lista #stickyCta (10 stranek), se pres ni bublina prekryva
+   a splyva s ni. Zvedneme ji o vysku listy, jakmile lista najede, a vratime
+   dolu, kdyz ji navstevnik zavre. Vysku merime az za behu, protoze na mobilu
+   je lista nizsi nez na desktopu. Na strankach bez listy nedela nic. */
+(function () {
+  'use strict';
+  var GAP = 12;    // mezera mezi listou a bublinou
+  var BASE = 24;   // vychozi odsazeni Smartsuppu
+
+  function bar()  { return document.getElementById('stickyCta'); }
+  function wrap() {
+    var f = document.getElementById('widgetButtonFrame');
+    return f && f.parentElement;
+  }
+
+  var last = null;
+  function apply() {
+    var w = wrap();
+    if (!w) return;
+    var b = bar();
+    var extra = (b && b.classList.contains('is-visible'))
+      ? Math.round(b.getBoundingClientRect().height) + GAP
+      : 0;
+    var val = (BASE + extra) + 'px';
+    if (val === last && w.style.bottom === val) return;  // zabrani smycce s observerem
+    last = val;
+    w.style.setProperty('bottom', val, 'important');
+  }
+
+  function init() {
+    var b = bar();
+    if (!b) return;                       // stranka bez listy - nic neresime
+    new MutationObserver(apply).observe(b, { attributes: true, attributeFilter: ['class'] });
+    new MutationObserver(apply).observe(document.body, { childList: true });
+    window.addEventListener('resize', apply);
+    apply();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();
