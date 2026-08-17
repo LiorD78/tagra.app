@@ -134,6 +134,11 @@ html, body { overflow-x: hidden; max-width: 100vw; }
   padding: 8px 10px; border-radius: 8px;
   transition: background .15s, color .15s;
   text-decoration: none;
+  /* Položka navigace se nikdy nezalamuje. Lišta má pevnou výšku 64 px, takže
+     druhý řádek z ní vyteče ven — u delších jazyků (EL, HU, DE) se to dělo
+     už kolem 1100–1300 px. Přetečení řeší kompresní tier + breakpoint níže,
+     ne zalomení. */
+  white-space: nowrap;
 }
 .nav-links li a:hover { background: var(--bg-apple-solid, #eaf3f8); color: var(--blue-mid, #134a8e); }
 .nav-links a.nav-cta,
@@ -144,10 +149,54 @@ html, body { overflow-x: hidden; max-width: 100vw; }
   padding: 8px 18px !important;
   font-weight: 600;
   text-decoration: none;
+  /* Pill je jedna akce — rozlomený na dva řádky ztrácí tvar i čitelnost. */
+  white-space: nowrap;
 }
 .nav-links a.nav-cta:hover,
 .nav-links .nav-cta-li a:hover {
   background: var(--green-brand, #6E9B12) !important;
+}
+
+/* === Řecký CTA v desktopové navigaci ===
+   Řecký překlad "Δοκιμάστε δωρεάν για 30 ημέρες" je 276 px široký — o 100 px
+   víc než kterýkoli jiný jazyk. Sám o sobě posunul minimální šířku řecké nav
+   na 1459 px, takže se nevešla ani do 1400px stropu .nav-inner a lámala se
+   mimo lištu. Vizuálně ho proto zkracujeme na "Δοκιμάστε δωρεάν" (131 px).
+
+   Stejná technika jako u mobilního pillu pod 560 px: text zůstává v DOM kvůli
+   čtečkám a hlasovému ovládání, vizuálně ho nahrazuje ::after — nedochází
+   k probliknutí jako při výměně textu skriptem. Zkrácený text je souvislým
+   začátkem plného textu, takže platí WCAG 2.5.3 (Label in Name) a shoduje se
+   s textem mobilního pillu .nav-cta-mobile. */
+html[lang="el"] .nav-links a.nav-cta,
+html[lang="el"] .nav-links .nav-cta-li a { font-size: 0; }
+html[lang="el"] .nav-links a.nav-cta::after,
+html[lang="el"] .nav-links .nav-cta-li a::after {
+  content: "\0394\03BF\03BA\03B9\03BC\03AC\03C3\03C4\03B5 \03B4\03C9\03C1\03B5\03AC\03BD";
+  font-size: 15px; font-weight: 600; line-height: 1;
+}
+@media (max-width: 1439px) {
+  html[lang="el"] .nav-links a.nav-cta::after,
+  html[lang="el"] .nav-links .nav-cta-li a::after { font-size: 14px; }
+}
+
+/* === Kompresní tier pro užší desktop (≤1439 px) ===
+   Naměřená minimální šířka viewportu, aby se nav vešla na jeden řádek
+   (bez variantu, výchozí velikosti):
+     EN 1077 · PL 1173 · DE 1203 · HU 1240 · EL 1362
+   Na 1366px noteboocích tedy DE/HU/EL nevycházely a lámaly se do druhého
+   řádku mimo 64px lištu. Po kompresi (gap 1, padding 8/7, font 14, CTA 8/14)
+   a po zkrácení řeckého CTA:
+     EN 943 · PL 1034 · DE 1062 · HU 1089 · EL 1088
+   — vše bezpečně pod hamburger breakpointem 1200 px.
+   Ověřeno v iframe na 1920/1500/1440/1439/1366/1280/1201/1200/1024 px pro
+   všech pět jazyků: CTA na jednom řádku, nic nepřetéká, výška lišty 64 px. */
+@media (max-width: 1439px) {
+  .nav-inner { gap: 14px; padding: 0 18px; }
+  .nav-links { gap: 1px; }
+  .nav-links li a { font-size: 14px; padding: 8px 7px; }
+  .nav-links a.nav-cta,
+  .nav-links .nav-cta-li a { padding: 8px 14px !important; font-size: 14px; }
 }
 .nav-lang {
   /* Apple-style language dropdown: compact trigger, native names in menu. */
@@ -231,7 +280,11 @@ html, body { overflow-x: hidden; max-width: 100vw; }
   border-radius: 2px; transition: .3s;
 }
 
-@media (max-width: 900px) {
+/* Hamburger breakpoint je 1200 px (dřív 900): nejdelší jazyk (EL) potřebuje
+   po kompresi a zkrácení CTA 1088 px, HU 1089, DE 1062 — pod 1200 px už
+   desktopová nav nedává smysl pro žádný z jazyků. Jednotné číslo pro všechny
+   jazyky, ať lišta vypadá napříč weby stejně a nezávisí na délce překladu. */
+@media (max-width: 1200px) {
   .nav-inner { padding: 0 16px 0 20px; gap: 12px; }
   .nav-links { display: none; }
   .nav-cta-mobile { display: inline-flex; align-items: center; }
@@ -271,7 +324,7 @@ html, body { overflow-x: hidden; max-width: 100vw; }
    přerostla viewport a hamburger vytlačila za pravý okraj, kde ho
    html{overflow-x:hidden} uřízlo. Na mobilu je hamburger jediná cesta do
    navigace, takže má přednost před šířkou CTA: nesmršťuje se on, ale pill. */
-@media (max-width: 900px) {
+@media (max-width: 1200px) {
   .nav-inner { min-width: 0; }
   .nav-logo,
   .nav-lang,
