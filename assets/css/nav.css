@@ -157,32 +157,15 @@ html, body { overflow-x: hidden; max-width: 100vw; }
   background: var(--green-brand, #6E9B12) !important;
 }
 
-/* === Řecký CTA v desktopové navigaci ===
-   Řecký překlad "Δοκιμάστε δωρεάν για 30 ημέρες" je 276 px široký — o 100 px
-   víc než kterýkoli jiný jazyk. Sám o sobě posunul minimální šířku řecké nav
-   na 1459 px, takže se nevešla ani do 1400px stropu .nav-inner a lámala se
-   mimo lištu. Vizuálně ho proto zkracujeme na "Δοκιμάστε δωρεάν" (131 px).
-
-   Stejná technika jako u mobilního pillu pod 560 px: text zůstává v DOM kvůli
-   čtečkám a hlasovému ovládání, vizuálně ho nahrazuje ::after — nedochází
-   k probliknutí jako při výměně textu skriptem. Zkrácený text je souvislým
-   začátkem plného textu, takže platí WCAG 2.5.3 (Label in Name) a shoduje se
-   s textem mobilního pillu .nav-cta-mobile. */
-html[lang="el"] .nav-links a.nav-cta,
-html[lang="el"] .nav-links .nav-cta-li a { font-size: 0; }
-html[lang="el"] .nav-links a.nav-cta::after,
-html[lang="el"] .nav-links .nav-cta-li a::after {
-  content: "\0394\03BF\03BA\03B9\03BC\03AC\03C3\03C4\03B5 \03B4\03C9\03C1\03B5\03AC\03BD";
-  font-size: 14px; font-weight: 600; line-height: 1;
-}
-
 /* === Kompaktní rozměry navigace (platí na všech desktop šířkách) ===
    .nav-inner je zastropovaný na 1400 px, takže víc místa než 1400 px nav
    nikdy nedostane — tier omezený na užší okna proto nechytil stránky, které
    přetékaly i na 1920 px. Nejnáročnější sady menu (potřeba bez komprese):
      /privacy/sk/ 1445 · /privacy/cz/ 1408 · /el/stolos/ 1368 · /hu/ 1353
    Po kompresi zbývá i u nejtěsnější stránky (/privacy/sk/) 98 px rezervy,
-   u zbytku 130–280 px — dost i na širší renderování fontů na Windows. */
+   u zbytku 130–280 px — dost i na širší renderování fontů na Windows.
+   Řecké CTA v liště používá kratší text "30 ημέρες δωρεάν" přímo v HTML
+   (plná věta "Δοκιμάστε δωρεάν για 30 ημέρες" zůstává v hero CTA). */
 .nav-inner { gap: 14px; padding: 0 18px; }
 .nav-links { gap: 1px; }
 .nav-links li a { font-size: 14px; padding: 8px 7px; }
