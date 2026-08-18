@@ -576,121 +576,121 @@
 
   const NODES = {
     'start': {
-      step: 1, label: 'Vehicle weight',
-      question: 'What is the gross weight of your vehicle or combination?',
-      hint: 'Check the permissible maximum mass on your registration document — include any trailer.',
+      step: 1, label: 'Jármű tömege',
+      question: 'Mekkora a járműve vagy járműszerelvénye megengedett össztömege?',
+      hint: 'Ellenőrizze a megengedett legnagyobb össztömeget a forgalmi engedélyben — beleértve az esetleges pótkocsit is.',
       options: [
-        { id: 'r-light', label: 'Up to 2,5 t' },
-        { id: 'q-trans-25', label: '2.5 – 3,5 t' },
-        { id: 'r-over-35', label: 'Above 3,5 t' }
+        { id: 'r-light', label: 'Legfeljebb 2,5 t' },
+        { id: 'q-trans-25', label: '2,5–3,5 t' },
+        { id: 'r-over-35', label: '3,5 t felett' }
       ],
       threeCol: true
     },
     'q-trans-25': {
-      step: 2, label: 'Type of transport',
-      question: 'Do you operate international goods transport with the vehicle?',
-      hint: 'This covers cross-border carriage between EU/EEA/UK and cabotage (domestic operations performed in another country).',
+      step: 2, label: 'Fuvarozás típusa',
+      question: 'Végez a járművel nemzetközi árufuvarozást?',
+      hint: 'Ide tartozik az EU/EGT/Egyesült Királyság közötti határon átnyúló fuvarozás, valamint a kabotázs (más országban végzett belföldi fuvarozás).',
       options: [
-        { id: 'r-domestic-25', label: 'No, domestic only' },
-        { id: 'q-purpose-25', label: 'Yes, cross-border or cabotage' }
+        { id: 'r-domestic-25', label: 'Nem, csak belföldi' },
+        { id: 'q-purpose-25', label: 'Igen, határon átnyúló vagy kabotázs' }
       ]
     },
     'q-purpose-25': {
-      step: 3, label: 'Purpose of transport',
-      question: 'What is the purpose of the cross-border transport?',
-      hint: 'Hire or reward = carrying goods for a customer for payment. Own account = transporting your own goods for your own business.',
+      step: 3, label: 'Fuvarozás célja',
+      question: 'Mi a határon átnyúló fuvarozás célja?',
+      hint: 'Díj ellenében = áru fuvarozása ügyfél számára fizetség ellenében. Saját számlás = saját áru fuvarozása saját vállalkozás számára.',
       options: [
-        { id: 'r-yes-25', label: "Hire or reward (carrying others' goods)" },
-        { id: 'q-driver-main-25', label: 'Own account (own goods, own company)' }
+        { id: 'r-yes-25', label: 'Díj ellenében (mások áruját fuvarozza)' },
+        { id: 'q-driver-main-25', label: 'Saját számlás (saját áru, saját vállalkozás)' }
       ]
     },
     'q-driver-main-25': {
-      step: 4, label: "Driver's profession",
-      question: "Is driving the driver's main profession?",
-      hint: 'If the driver works primarily as a professional driver, the own-account exemption does NOT apply. If driving is secondary (e.g. tradesperson, technician, business owner), the exemption may apply.',
+      step: 4, label: 'Járművezető foglalkozása',
+      question: 'A vezetés a járművezető fő tevékenysége?',
+      hint: 'Ha a járművezető elsősorban hivatásos gépjárművezetőként dolgozik, a saját számlás mentesség NEM alkalmazható. Ha a vezetés csak másodlagos tevékenység (pl. iparos, technikus, vállalkozás tulajdonosa), a mentesség alkalmazható lehet.',
       options: [
-        { id: 'r-yes-25', label: 'Yes, professional driver' },
-        { id: 'r-own-account-25', label: 'No, driving is secondary' }
+        { id: 'r-yes-25', label: 'Igen, hivatásos gépjárművezető' },
+        { id: 'r-own-account-25', label: 'Nem, a vezetés másodlagos tevékenység' }
       ]
     },
     'r-light': {
       kind: 'no',
-      title: 'Tachograph generally not required',
-      desc: 'Vehicles and combinations <strong>up to 2,5 t</strong> permissible mass generally fall outside the scope of Regulation (EC) No 561/2006 — even after July 2026.',
+      title: 'Tachográf általában nem szükséges',
+      desc: 'A <strong>legfeljebb 2,5 t</strong> megengedett tömegű járművek és járműszerelvények általában nem tartoznak az 561/2006/EK rendelet hatálya alá — 2026 júliusa után sem.',
       bullets: [
-        'Watch the <strong>combination mass</strong> — if you attach a trailer and exceed 2,5 t, you enter the 2.5–3,5 t bracket.',
-        'For absolute certainty, verify your specific situation in official sources or with a specialist.'
+        'Figyeljen a <strong>szerelvény össztömegére</strong> — ha pótkocsit kapcsol, és túllépi a 2,5 t-t, a 2,5–3,5 t-s sávba kerül.',
+        'A teljes bizonyosság érdekében ellenőrizze konkrét helyzetét hivatalos forrásokból vagy szakértővel.'
       ],
       ctas: [
-        { href: 'https://www.ela.europa.eu/assets/lcv2026/index.html', label: 'Read ELA guidance', ext: true, outline: true }
+        { href: 'https://www.ela.europa.eu/assets/lcv2026/index.html', label: 'Olvassa el az ELA útmutatóját', ext: true, outline: true }
       ]
     },
     'r-domestic-25': {
       kind: 'no',
-      title: 'Tachograph generally not required',
-      desc: 'If you operate a 2.5–3,5 t van <strong>strictly domestically</strong> (no cross-border leg and no cabotage), the new July 2026 obligation does not apply. The change targets international commercial transport and cabotage within the EU.',
+      title: 'Tachográf általában nem szükséges',
+      desc: 'Ha a 2,5–3,5 t megengedett össztömegű furgont <strong>kizárólag belföldön</strong> üzemelteti (határon átnyúló szakasz és kabotázs nélkül), a 2026 júliusától érvényes új kötelezettség nem vonatkozik Önre. A változás a nemzetközi kereskedelmi fuvarozást és az EU-n belüli kabotázst érinti.',
       bullets: [
-        'If you start cross-border operations, the obligation kicks in automatically.',
-        'Other operator duties (working time, goods documentation) still apply under national rules.'
+        'Amint határon átnyúló tevékenységet kezd, a kötelezettség automatikusan életbe lép.',
+        'Más üzemeltetői kötelezettségek (munkaidő, áruokmányok) a nemzeti szabályok szerint továbbra is érvényesek.'
       ],
       ctas: [
-        { href: 'https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=legissum%3A4382208', label: 'Read EUR-Lex summary', ext: true, outline: true }
+        { href: 'https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=legissum%3A4382208', label: 'Olvassa el az EUR-Lex összefoglalót', ext: true, outline: true }
       ]
     },
     'q-purpose-25': null, // safety; will be redefined above
     'r-own-account-25': {
       kind: 'maybe',
-      title: 'Own-account exemption likely applies',
-      desc: 'If the transport is <strong>not for hire or reward</strong> and <strong>driving is not the main profession</strong> of the driver, the exemption in <strong>Article 3(h) of Regulation 561/2006</strong> usually applies and a tachograph is generally not required. <strong>However:</strong> the specific situation and documentation matter.',
+      title: 'Valószínűleg alkalmazható a saját számlás mentesség',
+      desc: 'Ha a fuvarozás <strong>nem díj ellenében</strong> történik, és a vezetés <strong>nem a járművezető fő tevékenysége</strong>, akkor általában alkalmazható az <strong>561/2006/EK rendelet 3. cikkének h) pontjában</strong> foglalt mentesség, és tachográf általában nem szükséges. <strong>Ugyanakkor:</strong> a konkrét helyzet és a dokumentáció számít.',
       bullets: [
-        'Carry in the vehicle: <strong>document for the goods</strong> (invoice, delivery note), a <strong>brief journey-purpose note</strong>, and proof of the <strong>driver–company–vehicle</strong> link.',
-        'Be prepared for the control authority to ask you to demonstrate that it is not transport for hire or reward.',
-        'In doubt, assess individually with a specialist.'
+        'Vigye magával a járműben: <strong>az áruval kapcsolatos dokumentumot</strong> (számla, szállítólevél), egy <strong>rövid feljegyzést az út céljáról</strong>, valamint a <strong>járművezető–vállalkozás–jármű</strong> közötti kapcsolat igazolását.',
+        'Legyen felkészülve arra, hogy az ellenőrző hatóság kérheti annak igazolását, hogy nem díj ellenében végzett fuvarozásról van szó.',
+        'Kétség esetén értékelje a helyzetet egyedileg, szakértő bevonásával.'
       ],
       ctas: [
-        { href: '/contact/', label: 'Talk to a TAGRA expert', primary: true },
-        { href: 'https://www.ela.europa.eu/assets/lcv2026/index.html', label: 'Read ELA guidance', ext: true, outline: true }
+        { href: '/hu/kapcsolat/', label: 'Beszéljen egy TAGRA szakértővel', primary: true },
+        { href: 'https://www.ela.europa.eu/assets/lcv2026/index.html', label: 'Olvassa el az ELA útmutatóját', ext: true, outline: true }
       ]
     },
     'r-yes-25': {
       kind: 'yes',
-      title: 'Tachograph is required (since 1 July 2026)',
-      desc: 'You operate a 2.5–3,5 t van for <strong>international goods transport for hire or reward</strong> or <strong>cabotage</strong> within the EU. From <strong>1 July 2026</strong> you must have a smart tachograph version 2 (G2v2).',
+      title: 'A tachográf kötelező (2026. július 1. óta)',
+      desc: 'Ön 2,5–3,5 t megengedett össztömegű furgonnal <strong>nemzetközi árufuvarozást végez díj ellenében</strong> vagy <strong>kabotázst</strong> az EU-n belül. <strong>2026. július 1-től</strong> G2v2-es intelligens tachográfra van szüksége.',
       bullets: [
-        '<strong>Installation:</strong> G2v2 tachograph at an approved tachograph workshop.',
-        '<strong>Cards:</strong> driver card for every driver + company card for the operator.',
-        '<strong>Data downloads:</strong> driver cards at least every 28 days, vehicle units at least every 90 days.',
-        '<strong>Evaluation and archiving:</strong> by software (e.g. TAGRA) or service. Archive at least 1 year.'
+        '<strong>Beszerelés:</strong> G2v2-es tachográf engedélyezett tachográfműhelyben.',
+        '<strong>Kártyák:</strong> járművezetői kártya minden járművezető számára + üzembentartói kártya az üzemeltető számára.',
+        '<strong>Adatletöltés:</strong> járművezetői kártya legalább 28 naponta, járműegység legalább 90 naponta.',
+        '<strong>Kiértékelés és archiválás:</strong> szoftverrel (pl. TAGRA) vagy szolgáltatással. Legalább 1 évig archiválja.'
       ],
       ctas: [
-        { href: '/try/', label: 'Try TAGRA free for 30 days', primary: true },
-        { href: '/integrations/dkv-live/', label: 'See DKV LIVE integration', outline: true }
+        { href: '/hu/ingyenes-probaverzio/', label: 'Próbálja ki a TAGRA-t ingyen 30 napig', primary: true },
+        { href: '/hu/integraciok/dkv-live/', label: 'Tekintse meg a DKV LIVE integrációt', outline: true }
       ]
     },
     'r-over-35': {
       kind: 'yes',
-      title: 'Tachograph already required today',
-      desc: 'For vehicles <strong>above 3,5 t</strong> in goods transport, the tachograph obligation under Regulation (EC) No 561/2006 applies <strong>today</strong> — not just from July 2026. New vehicles must be fitted with the smart tachograph version 2 (G2v2).',
+      title: 'A tachográf már ma is kötelező',
+      desc: 'A <strong>3,5 t feletti</strong> járművekre az áruszállításban az 561/2006/EK rendelet szerinti tachográf-kötelezettség <strong>már ma is</strong> érvényes — nem csak 2026 júliusától. Az új járműveket G2v2-es intelligens tachográffal kell felszerelni.',
       bullets: [
-        '<strong>Cards:</strong> driver card for every driver + company card for the operator.',
-        '<strong>Data downloads:</strong> driver cards every 28 days, vehicle units every 90 days.',
-        '<strong>Evaluation and archiving:</strong> by software (e.g. TAGRA) or service. Archive at least 1 year.',
-        'There are <strong>taxative exemptions</strong> under Articles 3 and 13 of Reg 561/2006 (agricultural, forestry, fire/rescue vehicles, tractors up to 40 km/h, etc.) — verify any applicable exemption with national authorities.'
+        '<strong>Kártyák:</strong> járművezetői kártya minden járművezető számára + üzembentartói kártya az üzemeltető számára.',
+        '<strong>Adatletöltés:</strong> járművezetői kártya 28 naponta, járműegység 90 naponta.',
+        '<strong>Kiértékelés és archiválás:</strong> szoftverrel (pl. TAGRA) vagy szolgáltatással. Legalább 1 évig archiválja.',
+        'Az 561/2006 rendelet 3. és 13. cikke alapján <strong>taxatíve felsorolt mentességek</strong> léteznek (mezőgazdasági, erdészeti, tűzoltó-/mentőjárművek, legfeljebb 40 km/h sebességű vontatók stb.) — az alkalmazható mentességet ellenőrizze a nemzeti hatóságoknál.'
       ],
       ctas: [
-        { href: '/try/', label: 'Try TAGRA free for 30 days', primary: true },
-        { href: 'https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A02006R0561-20240522', label: 'List of exemptions (EUR-Lex)', ext: true, outline: true }
+        { href: '/hu/ingyenes-probaverzio/', label: 'Próbálja ki a TAGRA-t ingyen 30 napig', primary: true },
+        { href: 'https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A02006R0561-20240522', label: 'Mentességek listája (EUR-Lex)', ext: true, outline: true }
       ]
     }
   };
   // Re-add q-purpose-25 properly
   NODES['q-purpose-25'] = {
-    step: 3, label: 'Purpose of transport',
-    question: 'What is the purpose of the cross-border transport?',
-    hint: 'Hire or reward = carrying goods for a customer for payment. Own account = transporting your own goods for your own business.',
+    step: 3, label: 'Fuvarozás célja',
+    question: 'Mi a határon átnyúló fuvarozás célja?',
+    hint: 'Díj ellenében = áru fuvarozása ügyfél számára fizetség ellenében. Saját számlás = saját áru fuvarozása saját vállalkozás számára.',
     options: [
-      { id: 'r-yes-25', label: "Hire or reward (carrying others' goods)" },
-      { id: 'q-driver-main-25', label: 'Own account (own goods, own company)' }
+      { id: 'r-yes-25', label: 'Díj ellenében (mások áruját fuvarozza)' },
+      { id: 'q-driver-main-25', label: 'Saját számlás (saját áru, saját vállalkozás)' }
     ]
   };
 
