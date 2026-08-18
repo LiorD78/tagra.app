@@ -711,6 +711,25 @@
     box-shadow: 0 10px 26px rgba(110,155,18,0.45), 0 0 0 4px rgba(110,155,18,0.12), 0 1px 0 rgba(255,255,255,0.3) inset;
 }
 
+/* Two-path chooser (driver: already have data / need the reader) */
+.path-split {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
+}
+.path-card {
+  background: #fff; border: 1.5px solid var(--border); border-radius: var(--radius);
+  padding: 28px 26px; display: flex; flex-direction: column; gap: 12px;
+}
+.path-card h3 { font-size: 19px; font-weight: 800; color: var(--strong); margin: 0; }
+.path-card p { font-size: 15px; line-height: 1.6; color: var(--text2); margin: 0; }
+.path-card p code { background: var(--bg-gray); padding: 2px 6px; border-radius: 5px; font-size: .9em; }
+.path-card .btn-cta { margin-top: 4px; align-self: flex-start; }
+.path-card--buy {
+  background: linear-gradient(180deg, #f4f8e9 0%, #fff 100%);
+  border: 2px solid var(--green-brand);
+  box-shadow: 0 10px 26px rgba(110,155,18,.10);
+}
+@media (max-width: 768px) { .path-split { grid-template-columns: 1fr; gap: 18px; } }
+
 /* Sources list */
 .sources-list {
   list-style: none; padding: 0; margin: 14px 0 0;
