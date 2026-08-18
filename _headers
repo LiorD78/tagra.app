@@ -14,7 +14,8 @@
   # tedy neblokuje inline kód, ale blokuje načtení čehokoli z neznámé domény
   # — což je hlavní ochrana proti kompromitované třetí straně.
   # Povolené domény: Google Tag Manager a Analytics, Microsoft Clarity,
-  # obrázkové CDN TRUCKMALL, vlajky (flagcdn), formuláře Netlify, Smartsupp.
+  # obrázkové CDN TRUCKMALL, vlajky (flagcdn), formuláře Netlify, Smartsupp,
+  # JARABOT.
   #
   # POZOR U SMARTSUPPU — widget sahá na tři různé domény a každá selže jinak:
   #   smartsuppchat.com   loader, bootstrap, API
@@ -24,7 +25,20 @@
   # Bez smartsuppcdn.com ve style-src se tlačítko vykreslí BEZ STYLŮ — černý
   # průhledný obdélník místo modré bubliny. Stylesheet se tahá jako <link>,
   # takže 'unsafe-inline' na něj nestačí.
-  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://www.clarity.ms https://*.clarity.ms https://www.smartsuppchat.com https://*.smartsuppcdn.com; style-src 'self' 'unsafe-inline' https://*.smartsuppcdn.com https://*.smartsuppchat.com; img-src 'self' data: blob: https://cdn.truckmall.cz https://flagcdn.com https://www.google-analytics.com https://www.googletagmanager.com https://*.clarity.ms https://*.smartsuppcdn.com https://*.smartsuppchat.com https://*.smartsupp.com; font-src 'self' data: https://*.smartsuppcdn.com; media-src 'self' https://cdn.truckmall.cz https://*.smartsuppcdn.com; connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://www.googletagmanager.com https://www.clarity.ms https://*.clarity.ms https://*.smartsuppchat.com https://*.smartsuppcdn.com https://*.smartsupp.com wss://*.smartsuppchat.com wss://*.smartsupp.com; frame-src 'self' https://*.smartsuppchat.com https://*.smartsuppcdn.com https://*.smartsupp.com; form-action 'self'; frame-ancestors 'self'; base-uri 'self'; object-src 'none'; upgrade-insecure-requests
+  #
+  # JARABOT (chat.jarabot.com) — přidáno 18. 8. 2026 podle specifikace dodavatele.
+  # Smartsupp zatím ponechán, protože migrace neproběhla; po přepnutí smazat
+  # všechny tři smartsupp* domény ze všech direktiv.
+  #   script-src / frame-src / img-src   chat.jarabot.com
+  #   connect-src                        chat.jarabot.com + wss://chat.jarabot.com
+  #   connect-src                        m1.openfpcdn.io (fingerprinting návštěvníka)
+  #   style-src                          'unsafe-inline' už máme, widget vkládá <style>
+  # Nad rámec specifikace přidán chat.jarabot.com do style-src, font-src a media-src
+  # — dodavatel je neuvádí, ale u Smartsuppu nás přesně tohle stálo půl dne.
+  # POKUD SE WIDGET NAČTE A MLČKY NEVYKRESLÍ: první podezřelý je m1.openfpcdn.io,
+  # který má podle specifikace stačit v connect-src. Pokud se agent fingerprintu
+  # tahá jako <script>, patří i do script-src — ověřit v konzoli, ne přidávat naslepo.
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://www.clarity.ms https://*.clarity.ms https://www.smartsuppchat.com https://*.smartsuppcdn.com https://chat.jarabot.com; style-src 'self' 'unsafe-inline' https://*.smartsuppcdn.com https://*.smartsuppchat.com https://chat.jarabot.com; img-src 'self' data: blob: https://cdn.truckmall.cz https://flagcdn.com https://www.google-analytics.com https://www.googletagmanager.com https://*.clarity.ms https://*.smartsuppcdn.com https://*.smartsuppchat.com https://*.smartsupp.com https://chat.jarabot.com; font-src 'self' data: https://*.smartsuppcdn.com https://chat.jarabot.com; media-src 'self' https://cdn.truckmall.cz https://*.smartsuppcdn.com https://chat.jarabot.com; connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://www.googletagmanager.com https://www.clarity.ms https://*.clarity.ms https://*.smartsuppchat.com https://*.smartsuppcdn.com https://*.smartsupp.com wss://*.smartsuppchat.com wss://*.smartsupp.com https://chat.jarabot.com wss://chat.jarabot.com https://m1.openfpcdn.io; frame-src 'self' https://*.smartsuppchat.com https://*.smartsuppcdn.com https://*.smartsupp.com https://chat.jarabot.com; form-action 'self'; frame-ancestors 'self'; base-uri 'self'; object-src 'none'; upgrade-insecure-requests
 
 # ────────────────────────────────────────────────
 # HTML — short cache, must revalidate, stale-while-revalidate for speed
