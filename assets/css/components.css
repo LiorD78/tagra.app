@@ -711,6 +711,45 @@
     box-shadow: 0 10px 26px rgba(110,155,18,0.45), 0 0 0 4px rgba(110,155,18,0.12), 0 1px 0 rgba(255,255,255,0.3) inset;
 }
 
+/* Path split — "already have data" vs "no card reader" two-way choice */
+.path-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin: 40px 0;
+}
+.path-card {
+  background: #fff;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.path-card h3 { font-size: 20px; font-weight: 800; color: var(--strong); }
+.path-card p { font-size: 15px; line-height: 1.6; color: var(--text2); }
+.path-card code {
+  background: var(--bg-gray);
+  border-radius: 4px;
+  padding: 2px 6px;
+  font-size: 14px;
+}
+.path-card .btn-cta { align-self: flex-start; margin-top: 4px; }
+.path-note { font-size: 13px; color: var(--text2); margin: 0; }
+.path-card--buy {
+  background: linear-gradient(135deg, #052037 0%, var(--blue-dark) 55%, var(--blue-mid) 100%);
+  border-color: transparent;
+  box-shadow: 0 10px 30px rgba(19,74,142,.22);
+}
+.path-card--buy h3 { color: #fff; }
+.path-card--buy p { color: rgba(255,255,255,.88); }
+.path-card--buy code { background: rgba(255,255,255,.15); color: #fff; }
+.path-card--buy .path-note { color: rgba(255,255,255,.7); }
+@media (max-width: 768px) {
+  .path-split { grid-template-columns: 1fr; }
+}
+
 /* Sources list */
 .sources-list {
   list-style: none; padding: 0; margin: 14px 0 0;
