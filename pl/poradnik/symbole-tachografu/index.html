@@ -170,7 +170,8 @@
     .cta-box{background:linear-gradient(135deg,var(--blue-dark),var(--blue-mid));border-radius:var(--radius);padding:40px 36px;margin:44px 0;text-align:center;}
     .cta-box h3{font-size:24px;font-weight:800;color:#fff;margin-bottom:12px;}
     .cta-box p{color:rgba(255,255,255,.8);font-size:17px;margin-bottom:24px;}
-    
+    .cta-box p.cta-note{font-size:14px;margin-bottom:0;color:rgba(255,255,255,.65);}
+
     .btn:hover{background:var(--green-brand);transform:scale(1.02);}
     .related{border-top:1px solid var(--border);padding-top:36px;margin-top:36px;}
     .related-title{font-size:20px;font-weight:800;color:var(--text);margin-bottom:18px;}
@@ -328,6 +329,13 @@
 <button class="dec-chip" data-vendor="symbols" type="button">Piktogramy ↑</button>
 </div>
 <p aria-live="polite" class="dec-count" id="dec-count"></p>
+</div>
+<!-- ===== TAGRA CTA Box — znalazłeś kod ===== -->
+<div class="cta-box">
+<h3>Znalazłeś swój kod? Sprawdź, co zapisało się na karcie.</h3>
+<p>Ostrzeżenie na wyświetlaczu często zostawia ślad w danych karty kierowcy. TAGRA Trucker odczytuje kartę po pobraniu danych i pokazuje naruszenia, czasy jazdy i odpoczynku — żebyś przed kontrolą wiedział, jak stoisz.</p>
+<p><a class="cta-btn" href="/pl/dla-kierowcow/">TAGRA Trucker — 49 €, czytnik w zestawie →</a></p>
+<p class="cta-note">Zarządzasz kilkoma kierowcami? <a href="/pl/dla-przewoznikow/">Zobacz TAGRA dla flot</a>.</p>
 </div>
 <div class="vendor-stack">
 <!-- ===== VDO DTCO 4.1 ===== -->
@@ -1099,7 +1107,7 @@
 <div class="cta-box">
 <h3>TAGRA dekoduje każdą z tych wiadomości automatycznie.</h3>
 <p>Kiedy pobierasz kartę kierowcy lub przyrząd rejestrujący do TAGRA, każde zdarzenie i usterka jest dopasowane do swojej definicji z załącznika I C z wyjaśnieniem w prostym języku angielskim. Wypróbuj pełne oprogramowanie bezpłatnie przez 30 dni — nie wymaga karty.</p>
-<a class="cta-btn" href="/pl/wyprobuj/?audience=fleet">Wypróbuj TAGRA bezpłatnie przez 30 dni →</a>
+<a class="cta-btn" href="/pl/dla-kierowcow/">Wypróbuj TAGRA Trucker bezpłatnie przez 30 dni →</a>
 </div>
 <!-- ===================================================================== -->
 <!-- SECTION 4: TOP 10 COMMON MISTAKES IN PRACTICE                          -->
@@ -1273,12 +1281,12 @@
 <span class="r-chip">Przeczytaj przewodnik po pojazdach dostawczych →</span>
 </a>
 </div>
+<p style="margin-bottom:16px;">Jeździsz na własnej karcie kierowcy i nie zarządzasz flotą? <a href="/pl/dla-kierowcow/">TAGRA Trucker</a> to wersja dla jednego kierowcy — analizuje dane z Twojej karty i wskazuje naruszenia, zanim znajdzie je kontrola. Czytnik kart USB w zestawie, 49 €.</p>
 <!-- ===== second TAGRA CTA Box ===== -->
 <div class="cta-box" style="margin-top:36px;">
 <h3>Nie dekoduj setek wiadomości ręcznie.</h3>
 <p>TAGRA odczytuje karty kierowcy i przyrządy rejestrujące z każdego tachografu inteligentnego dostępnego na rynku, dopasowuje każde zdarzenie i usterkę do ich definicji z załącznika I C oraz generuje raporty gotowe do kontroli zgodnie z rozporządzeniem WE 561/2006, WTD i AETR. 30-dniowa bezpłatna wersja próbna, karta nie jest wymagana, działa na każdym komputerze z systemem Windows.</p>
 <a class="cta-btn" href="/pl/wyprobuj/?audience=fleet">Rozpocznij swoją bezpłatną 30-dniową wersję próbną →</a>
-<p style="margin-top:18px;margin-bottom:0;font-size:15px;">Jeździsz na własnej karcie kierowcy? <a href="/pl/dla-kierowcow/">TAGRA Trucker</a> to wersja dla jednego kierowcy — analizuje dane z Twojej karty i wskazuje naruszenia, zanim znajdzie je kontrola. Czytnik kart USB w zestawie.</p>
 </div>
 <!-- ===================================================================== -->
 <!-- FAQ                                                                    -->
@@ -1343,6 +1351,10 @@
 <details>
 <summary>Jak sprawdzić numeryczny lub szesnastkowy kod usterki z odczytu warsztatowego?</summary>
 <div class="faq-a">Użyj pola wyszukiwania u góry sekcji kodów producenta: wpisz numer (np. <em>042</em>), numer wyświetlacza VDO (np. <em>82</em>), szesnastkowy kod usterki Stoneridge lub EFAS (np. <em>002E80</em>) lub dowolne słowa z wiadomości (np. <em>Usterka czujnika</em>). Odpowiedni panel producenta otwiera się automatycznie i pokazuje tylko pasujące wiersze.</div>
+</details>
+<details>
+<summary>Czy TAGRA może ostrzec mnie o usterce tachografu, zanim wystąpi?</summary>
+<div class="faq-a">Nie. TAGRA analizuje dane po ich pobraniu z karty kierowcy lub przyrządu rejestrującego — nie łączy się z tachografem w czasie rzeczywistym i nie przewiduje usterek. Pokazuje natomiast, czy usterka pozostawiła ślad w zarejestrowanych danych i czy spowodowała naruszenie.</div>
 </details>
 </div><!-- /.faq-block -->
 </article></div></section></main>
@@ -1555,6 +1567,14 @@
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Użyj pola wyszukiwania na górze sekcji kodów producenta: wpisz numer (np. 042), numer wyświetlacza VDO (np. 82), szesnastkowy kod DTC Stoneridge lub EFAS (np. 002E80) lub dowolne słowa z wiadomości (np. usterka czujnika). Odpowiedni panel producenta otworzy się automatycznie i pokaże tylko pasujące wiersze."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Czy TAGRA może ostrzec mnie o usterce tachografu, zanim wystąpi?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nie. TAGRA analizuje dane po ich pobraniu z karty kierowcy lub przyrządu rejestrującego – nie łączy się z tachografem w czasie rzeczywistym i nie przewiduje usterek. Pokazuje natomiast, czy usterka pozostawiła ślad w zarejestrowanych danych i czy spowodowała naruszenie."
       }
     }
   ]

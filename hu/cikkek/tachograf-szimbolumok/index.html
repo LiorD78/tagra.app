@@ -170,7 +170,8 @@
     .cta-box{background:linear-gradient(135deg,var(--blue-dark),var(--blue-mid));border-radius:var(--radius);padding:40px 36px;margin:44px 0;text-align:center;}
     .cta-box h3{font-size:24px;font-weight:800;color:#fff;margin-bottom:12px;}
     .cta-box p{color:rgba(255,255,255,.8);font-size:17px;margin-bottom:24px;}
-    
+    .cta-box p.cta-note{font-size:14px;margin-bottom:0;color:rgba(255,255,255,.65);}
+
     .btn:hover{background:var(--green-brand);transform:scale(1.02);}
     .related{border-top:1px solid var(--border);padding-top:36px;margin-top:36px;}
     .related-title{font-size:20px;font-weight:800;color:var(--text);margin-bottom:18px;}
@@ -328,6 +329,13 @@
 <button class="dec-chip" data-vendor="symbols" type="button">Szimbólumok ↑</button>
 </div>
 <p aria-live="polite" class="dec-count" id="dec-count"></p>
+</div>
+<!-- ===== TAGRA CTA Box — megvan a kód ===== -->
+<div class="cta-box">
+<h3>Megvan a kód? Nézze meg, mi került a kártyájára.</h3>
+<p>A kijelzőn megjelenő figyelmeztetés gyakran nyomot hagy a sofőrkártya adataiban. A TAGRA Trucker letöltés után beolvassa a kártyát, és megmutatja a szabálysértéseket, vezetési és pihenőidőket — hogy egy ellenőrzés előtt tudja, hol áll.</p>
+<p><a class="cta-btn" href="/hu/soforoknek/">TAGRA Trucker — 49 €, kártyaolvasóval →</a></p>
+<p class="cta-note">Több sofőrt vagy járművet kezel? <a href="/hu/fuvarozoknak/">Nézze meg a TAGRA flottamegoldást</a>.</p>
 </div>
 <div class="vendor-stack">
 <!-- ===== VDO DTCO 4.1 ===== -->
@@ -1099,7 +1107,7 @@
 <div class="cta-box">
 <h3>A TAGRA automatikusan dekódolja ezeket az üzeneteket.</h3>
 <p>Amikor egy járművezetői kártyát vagy járműegységet letölt a TAGRA-ba, minden esemény és hiba párosítva van az I. melléklet C szerinti definíciójával, egy közérthető angol magyarázattal. Próbálja ki a teljes szoftvert ingyenesen 30 napig – kártya nem szükséges.</p>
-<a class="cta-btn" href="/hu/ingyenes-probaverzio/?audience=fleet">Próbálja ki a TAGRA-t ingyenesen 30 napig →</a>
+<a class="cta-btn" href="/hu/soforoknek/">Próbálja ki a TAGRA Truckert ingyenesen 30 napig →</a>
 </div>
 <!-- ===================================================================== -->
 <!-- SECTION 4: TOP 10 COMMON MISTAKES IN PRACTICE                          -->
@@ -1273,12 +1281,12 @@
 <span class="r-chip">Olvasd el a furgonokról szóló útmutatót →</span>
 </a>
 </div>
+<p style="margin-bottom:16px;">Saját kártyával vezet, és nem flottát irányít? A <a href="/hu/soforoknek/">TAGRA Trucker</a> az egy sofőrre szabott változat — kiértékeli a saját kártyája adatait, és még az ellenőrzés előtt jelzi a szabálysértéseket. USB kártyaolvasó a csomagban, 49 €.</p>
 <!-- ===== second TAGRA CTA Box ===== -->
 <div class="cta-box" style="margin-top:36px;">
 <h3>Ne dekódolja a több száz üzenetet kézzel.</h3>
 <p>A TAGRA beolvassa a sofőrkártyákat és járműegységeket minden piaci intelligens tachográfból, minden eseményt és hibát hozzárendel az I C mellékletben szereplő definíciójához, és ellenőrzésre kész jelentéseket készít az 561/2006/EK rendelet, a WTD és az AETR alapján. 30 napos ingyenes próba, kártya nem szükséges, bármely Windows PC-n fut.</p>
 <a class="cta-btn" href="/hu/ingyenes-probaverzio/?audience=fleet">Indítsa el ingyenes 30 napos próbaverzióját →</a>
-<p style="margin-top:18px;margin-bottom:0;font-size:15px;">Saját kártyával vezet? A <a href="/hu/soforoknek/">TAGRA Trucker</a> az egy sofőrre szabott változat — kiértékeli a saját kártyája adatait, és még az ellenőrzés előtt jelzi a szabálysértéseket. USB kártyaolvasó a csomagban.</p>
 </div>
 <!-- ===================================================================== -->
 <!-- FAQ                                                                    -->
@@ -1343,6 +1351,10 @@
 <details>
 <summary>Hogyan kereshetek ki egy numerikus vagy hexadecimális hibakódot műhelyi kiolvasásból?</summary>
 <div class="faq-a">Használja a keresőmezőt a gyártói kódok rész tetején: írja be a számot (pl. <em>042</em>), egy VDO kijelzőszámot (pl. <em>82</em>), egy Stoneridge vagy EFAS hexadecimális DTC-t (pl. <em>002E80</em>) vagy bármilyen szót az üzenetből (pl. <em>érzékelőhiba</em>). A megfelelő gyártói panel automatikusan megnyílik, és csak a találati sorokat jeleníti meg.</div>
+</details>
+<details>
+<summary>Figyelmeztethet a TAGRA egy tachográfhibára, mielőtt az bekövetkezik?</summary>
+<div class="faq-a">Nem. A TAGRA az adatokat azután elemzi, hogy letöltötte azokat a sofőrkártyáról vagy a járműegységről — nem csatlakozik valós időben a tachográfhoz, és nem képes hibákat előre jelezni. Azt mutatja meg, hogy egy hiba hagyott-e nyomot a rögzített adatokban, és okozott-e szabálysértést.</div>
 </details>
 </div><!-- /.faq-block -->
 </article></div></section></main>
@@ -1555,6 +1567,14 @@
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Használja a gyártói kódok rész tetején található keresőmezőt: írja be a számot (pl. 042), egy VDO kijelzőszámot (pl. 82), egy Stoneridge vagy EFAS hexadecimális DTC-t (pl. 002E80) vagy bármely szót az üzenetből (pl. érzékelőhiba). A releváns gyártói panel automatikusan megnyílik, és csak a megfelelő sorokat mutatja."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Figyelmeztethet a TAGRA egy tachográfhibára, mielőtt az bekövetkezik?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nem. A TAGRA az adatokat azután elemzi, hogy letöltötte azokat a sofőrkártyáról vagy a járműegységről – nem csatlakozik valós időben a tachográfhoz, és nem képes hibákat előre jelezni. Azt mutatja meg, hogy egy hiba hagyott-e nyomot a rögzített adatokban, és okozott-e szabálysértést."
       }
     }
   ]

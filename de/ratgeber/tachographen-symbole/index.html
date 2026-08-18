@@ -170,7 +170,8 @@
     .cta-box{background:linear-gradient(135deg,var(--blue-dark),var(--blue-mid));border-radius:var(--radius);padding:40px 36px;margin:44px 0;text-align:center;}
     .cta-box h3{font-size:24px;font-weight:800;color:#fff;margin-bottom:12px;}
     .cta-box p{color:rgba(255,255,255,.8);font-size:17px;margin-bottom:24px;}
-    
+    .cta-box p.cta-note{font-size:14px;margin-bottom:0;color:rgba(255,255,255,.65);}
+
     .btn:hover{background:var(--green-brand);transform:scale(1.02);}
     .related{border-top:1px solid var(--border);padding-top:36px;margin-top:36px;}
     .related-title{font-size:20px;font-weight:800;color:var(--text);margin-bottom:18px;}
@@ -328,6 +329,13 @@
 <button class="dec-chip" data-vendor="symbols" type="button">Piktogramme ↑</button>
 </div>
 <p aria-live="polite" class="dec-count" id="dec-count"></p>
+</div>
+<!-- ===== TAGRA CTA Box — Code gefunden ===== -->
+<div class="cta-box">
+<h3>Code gefunden? Prüfen Sie, was auf Ihrer Karte aufgezeichnet wurde.</h3>
+<p>Eine Warnung im Display hinterlässt oft Spuren in den Daten der Fahrerkarte. TAGRA Trucker liest Ihre Karte nach dem Herunterladen aus und zeigt Verstöße, Lenk- und Ruhezeiten — damit Sie vor einer Kontrolle wissen, woran Sie sind.</p>
+<p><a class="cta-btn" href="/de/fahrer/">TAGRA Trucker — 49 €, Kartenleser inklusive →</a></p>
+<p class="cta-note">Mehrere Fahrer oder Fahrzeuge? <a href="/de/fuhrpark/">TAGRA für Flotten ansehen</a>.</p>
 </div>
 <div class="vendor-stack">
 <!-- ===== VDO DTCO 4.1 ===== -->
@@ -1099,7 +1107,7 @@
 <div class="cta-box">
 <h3>TAGRA entschlüsselt jede dieser Nachrichten automatisch.</h3>
 <p>Wenn Sie eine Fahrerkarte oder Fahrzeugeinheit in TAGRA auslesen, wird jedes Ereignis und jede Störung seiner Definition gemäß Anhang I C mit einer einfach verständlichen Erklärung zugeordnet. Testen Sie die Vollversion der Software 30 Tage lang kostenlos — keine Karte erforderlich.</p>
-<a class="cta-btn" href="/de/testen/?audience=fleet">TAGRA 30 Tage lang kostenlos testen →</a>
+<a class="cta-btn" href="/de/fahrer/">TAGRA Trucker 30 Tage kostenlos testen →</a>
 </div>
 <!-- ===================================================================== -->
 <!-- SECTION 4: TOP 10 COMMON MISTAKES IN PRACTICE                          -->
@@ -1273,12 +1281,12 @@
 <span class="r-chip">Lesen Sie den Transporter-Leitfaden →</span>
 </a>
 </div>
+<p style="margin-bottom:16px;">Sie fahren mit Ihrer eigenen Fahrerkarte und leiten keinen Fuhrpark? <a href="/de/fahrer/">TAGRA Trucker</a> ist die Version für einen einzelnen Fahrer — sie wertet die Daten Ihrer eigenen Karte aus und weist auf Verstöße hin, bevor es die Kontrolle tut. USB-Kartenleser inklusive, 49 €.</p>
 <!-- ===== second TAGRA CTA Box ===== -->
 <div class="cta-box" style="margin-top:36px;">
 <h3>Dekodieren Sie nicht Hunderte von Meldungen manuell.</h3>
 <p>TAGRA liest Fahrerkarten und Fahrzeugeinheiten aus jedem intelligenten Tachographen auf dem Markt aus, gleicht jedes Ereignis und jede Störung mit seiner Definition gemäß Anhang IC ab und erstellt prüfbereite Auswertungen gemäß EG 561/2006, WTD und AETR. 30-tägige kostenlose Testversion, keine Karte erforderlich, läuft auf jedem Windows PC.</p>
 <a class="cta-btn" href="/de/testen/?audience=fleet">Starten Sie Ihre kostenlose 30-tägige Testversion →</a>
-<p style="margin-top:18px;margin-bottom:0;font-size:15px;">Sie fahren mit Ihrer eigenen Fahrerkarte? <a href="/de/fahrer/">TAGRA Trucker</a> ist die Version für einen einzelnen Fahrer — sie wertet die Daten Ihrer eigenen Karte aus und weist auf Verstöße hin, bevor es die Kontrolle tut. USB-Kartenleser inklusive.</p>
 </div>
 <!-- ===================================================================== -->
 <!-- FAQ                                                                    -->
@@ -1343,6 +1351,10 @@
 <details>
 <summary>Wie suche ich einen numerischen oder hexadezimalen Fehlercode aus einem Auslesen durch die Werkstatt nach?</summary>
 <div class="faq-a">Nutzen Sie das Suchfeld oben im Hersteller-Codes-Bereich: Geben Sie die Nummer ein (z. B. <em>042</em>), eine VDO Anzeigenummer (z. B. <em>82</em>), einen Stoneridge oder EFAS Hex-DTC (z. B. <em>002E80</em>) oder beliebige Wörter aus der Meldung (z. B. <em>Sensorstörung</em>). Das entsprechende Herstellerfeld öffnet sich automatisch und zeigt nur die passenden Zeilen an.</div>
+</details>
+<details>
+<summary>Kann TAGRA mich vor einer Tachographenstörung warnen, bevor sie auftritt?</summary>
+<div class="faq-a">Nein. TAGRA analysiert Daten, nachdem Sie diese von der Fahrerkarte oder Fahrzeugeinheit heruntergeladen haben — die Software verbindet sich nicht in Echtzeit mit dem Tachographen und kann keine Störungen vorhersagen. Sie zeigt, ob eine Störung eine Spur in Ihren aufgezeichneten Daten hinterlassen hat und ob dadurch ein Verstoß entstanden ist.</div>
 </details>
 </div><!-- /.faq-block -->
 </article></div></section></main>
@@ -1555,6 +1567,14 @@
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Verwenden Sie das Suchfeld oben im Bereich Hersteller-Codes: geben Sie die Nummer ein (z. B. 042), eine VDO Anzeigennummer (z. B. 82), einen Stoneridge oder EFAS Hex-DTC (z. B. 002E80) oder beliebige Wörter aus der Meldung (z. B. Sensorstörung). Das relevante Herstellerfeld öffnet sich automatisch und zeigt nur die passenden Zeilen an."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Kann TAGRA mich vor einer Tachographenstörung warnen, bevor sie auftritt?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nein. TAGRA analysiert Daten, nachdem Sie diese von der Fahrerkarte oder Fahrzeugeinheit heruntergeladen haben – die Software verbindet sich nicht in Echtzeit mit dem Tachographen und kann keine Störungen vorhersagen. Sie zeigt, ob eine Störung eine Spur in Ihren aufgezeichneten Daten hinterlassen hat und ob dadurch ein Verstoß entstanden ist."
       }
     }
   ]
