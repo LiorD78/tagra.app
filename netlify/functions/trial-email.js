@@ -49,7 +49,7 @@ const FOLLOWUP_SCHEDULE = [
 const SEQUENCE_AUDIENCES = ["fleet", "driver"];
 
 const VALID_AUDIENCES = ["fleet", "driver", "enforcement"];
-const VALID_LANGS     = ["en", "de", "pl", "cz", "sk", "gr"];
+const VALID_LANGS     = ["en", "de", "pl", "cz", "sk", "gr", "hu"];
 
 // Předměty uvítacího mailu (#1). U #2/#3 se čtou z <title> šablony.
 const SUBJECTS = {
@@ -82,6 +82,11 @@ const SUBJECTS = {
     fleet:       "Η δοκιμαστική έκδοση TAGRA είναι έτοιμη — σύνδεσμος λήψης εντός",
     driver:      "Η δοκιμαστική έκδοση TAGRA TRUCKER είναι έτοιμη — σύνδεσμος εντός",
     enforcement: "Σας ευχαριστούμε για το ενδιαφέρον σας για το TAGRA Control",
+  },
+  hu: {
+    fleet:       "A TAGRA próbaverziója készen áll — a letöltési linket alább találja",
+    driver:      "A TAGRA TRUCKER próbaverziója készen áll — a letöltési linket alább találja",
+    enforcement: "Köszönjük érdeklődését a TAGRA Control iránt",
   },
 };
 
