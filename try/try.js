@@ -72,6 +72,7 @@
 
   form.addEventListener('submit', function (e) {
     if (!form.checkValidity()) {
+      e.preventDefault();
       const firstInvalid = form.querySelector(':invalid');
       if (firstInvalid) {
         firstInvalid.closest('.form-field, .audience-picker, .gdpr-check')?.classList.add('has-error');
