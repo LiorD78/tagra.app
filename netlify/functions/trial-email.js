@@ -90,6 +90,26 @@ const SUBJECTS = {
   },
 };
 
+/**
+ * Netlify uloží dvě stejně pojmenovaná pole jako JSON řetězec,
+ * např. '["driver", "driver"]'. Vzniklo to tím, že formulář postoval na
+ * action s ?audience= v query stringu (kolize s polem formuláře) — opraveno
+ * v try.js přejmenováním na ?a=. Tohle je pojistka pro stará odeslání
+ * a pro klienty se zakešovaným try.js: bez ní spadne audience na "fleet"
+ * a řidič dostane fleetový mail i fleetovou sekvenci.
+ */
+function normalizeAudience(raw) {
+  if (Array.isArray(raw)) raw = raw[0];
+  let v = String(raw || "").trim().toLowerCase();
+  if (v.startsWith("[")) {
+    try {
+      const parsed = JSON.parse(v);
+      if (Array.isArray(parsed) && parsed.length) v = String(parsed[0]).trim().toLowerCase();
+    } catch { /* necháme jak je, spadne na fallback */ }
+  }
+  return VALID_AUDIENCES.includes(v) ? v : "fleet";
+}
+
 const logInfo  = (msg, extra) => console.log(`[trial-email] ${msg}`, extra || "");
 const logError = (msg, extra) => console.error(`[trial-email] ERROR: ${msg}`, extra || "");
 
@@ -170,7 +190,7 @@ exports.handler = async (event) => {
 
   const email    = (data.email || "").trim();
   const name     = (data.name || "").trim();
-  const audience = (data.audience || "fleet").toLowerCase();
+  const audience = normalizeAudience(data.audience);
   const language = (data.language || "en").toLowerCase();
 
   if (!email) {
