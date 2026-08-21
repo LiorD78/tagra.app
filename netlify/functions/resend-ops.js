@@ -6,6 +6,15 @@
  * mailů se v trial-email.js jen logují, nikam se neukládají, takže je
  * potřeba je v Resendu dohledat a zrušit.
  *
+ * ── POZOR: POTŘEBUJE VLASTNÍ KLÍČ ────────────────────────────────────
+ * RESEND_API_KEY je v Resendu založený jako "sending access" — čtení
+ * i rušení na něm vrací 401 restricted_api_key. Ověřeno 21. 8. 2026.
+ *
+ * Aby tahle funkce fungovala, je potřeba v Resendu založit klíč
+ * s plným přístupem a uložit ho v Netlify jako RESEND_OPS_KEY.
+ * Funkce ho preferuje a na RESEND_API_KEY spadne jen jako fallback.
+ * Sending klíč zůstává beze změny — trial-email.js se nedotýkáme.
+ *
  * Klíč se čte z process.env a NIKDY se nevrací v odpovědi.
  *
  * Omezení (schválně úzké):
@@ -49,14 +58,23 @@ exports.handler = async (event) => {
   const q = event.queryStringParameters || {};
   if (q.token !== TOKEN) return { statusCode: 403, body: "forbidden" };
 
-  const apiKey = process.env.RESEND_API_KEY;
-  if (!apiKey) return json(500, { error: "RESEND_API_KEY not configured" });
+  const apiKey = process.env.RESEND_OPS_KEY || process.env.RESEND_API_KEY;
+  if (!apiKey) return json(500, { error: "no Resend key configured" });
 
-  // ── Výpis mailů. Resend list endpoint nemusí být na tomhle plánu
-  //    dostupný — proto vracíme i syrový status, ať je vidět proč.
+  const usingOpsKey = Boolean(process.env.RESEND_OPS_KEY);
+
+  // ── Výpis mailů. Se sending klíčem vrátí Resend 401 restricted_api_key.
   if (q.action === "list") {
     const res = await rq(apiKey, "/emails?limit=100");
-    if (!res.ok) return json(200, { listSupported: false, status: res.status, body: res.body });
+    if (!res.ok) {
+      return json(200, {
+        listSupported: false,
+        usingOpsKey,
+        hint: usingOpsKey ? undefined : "nastav RESEND_OPS_KEY (klíč s plným přístupem)",
+        status: res.status,
+        body: res.body,
+      });
+    }
 
     const rows = (res.body && (res.body.data || res.body)) || [];
     const slim = (Array.isArray(rows) ? rows : []).map((e) => ({
@@ -67,7 +85,7 @@ exports.handler = async (event) => {
       scheduled_at: e.scheduled_at,
       last_event: e.last_event,
     }));
-    return json(200, { listSupported: true, count: slim.length, emails: slim });
+    return json(200, { listSupported: true, usingOpsKey, count: slim.length, emails: slim });
   }
 
   // ── Detail jednoho mailu (pro ověření, co se ruší)
@@ -77,6 +95,7 @@ exports.handler = async (event) => {
     const e = res.body || {};
     return json(200, {
       status: res.status,
+      usingOpsKey,
       id: e.id,
       to: e.to,
       subject: e.subject,
@@ -126,7 +145,7 @@ exports.handler = async (event) => {
         body: res.ok ? undefined : res.body,
       });
     }
-    return json(200, { results });
+    return json(200, { usingOpsKey, results });
   }
 
   return json(400, { error: "action must be list|get|cancel" });
