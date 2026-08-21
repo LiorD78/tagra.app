@@ -89,6 +89,18 @@
       sessionStorage.setItem('tagra_language', language);
     } catch (e) { /* private mode — thanks page falls back to defaults */ }
 
+    // 6. Ochrana proti kolizi query stringu s polem formuláře.
+    // Inline skript na stránce přepisuje action na "?audience=...", což je
+    // stejný název jako pole formuláře — Netlify pak obě hodnoty slije do
+    // pole a uloží audience jako '["fleet", "fleet"]'. Přejmenujeme na "a=";
+    // stránka poděkování si audience vezme ze sessionStorage (viz krok 5).
+    // TODO: až se budou upravovat stránky /try/*, přesunout přepis action
+    // z inline skriptu sem a v poděkování číst i ?a= — teď je to na dvou místech.
+    const action = form.getAttribute('action') || '';
+    if (action.indexOf('audience=') !== -1) {
+      form.setAttribute('action', action.replace(/([?&])audience=/, '$1a='));
+    }
+
     // Loading state
     const btn = form.querySelector('.btn-submit');
     const btnText = btn?.querySelector('.btn-text');
