@@ -70,6 +70,11 @@
   const form = document.getElementById('trialForm');
   if (!form) return;
 
+  // Nativní validace je v HTML záměrně zapnutá — když se tenhle skript
+  // nenačte, prohlížeč nepustí odeslání s prázdným e-mailem. Až tady ji
+  // vypínáme, protože dál si chyby zvýrazňujeme sami (.has-error).
+  form.setAttribute('novalidate', '');
+
   form.addEventListener('submit', function (e) {
     if (!form.checkValidity()) {
       e.preventDefault();
