@@ -49,6 +49,23 @@
     if (radio) radio.checked = true;
   }
 
+  // ─── 1b. Company field — hidden for drivers (they don't have one) ───
+  function updateCompanyVisibility() {
+    const wrap = document.getElementById('field-company');
+    if (!wrap) return;
+    const checked = document.querySelector('input[name="audience"]:checked');
+    const isDriver = !!checked && checked.value === 'driver';
+    wrap.hidden = isDriver;
+    if (isDriver) {
+      const input = wrap.querySelector('input[name="company"]');
+      if (input) input.value = '';
+    }
+  }
+  updateCompanyVisibility();
+  document.querySelectorAll('input[name="audience"]').forEach((radio) => {
+    radio.addEventListener('change', updateCompanyVisibility);
+  });
+
   // ─── 2. Source URL tracking (for admin notification email) ───
   const sourceUrl = document.getElementById('source_url');
   if (sourceUrl) {
