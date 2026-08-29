@@ -643,6 +643,70 @@
 .code-table td:first-child { font-weight: 700; color: var(--text); }
 .code-table tr:hover td { background: rgba(19,74,142,.03); }
 
+/* Code table — mobilní kartové zobrazení.
+   Pod 768 px se vodorovný scroll ruší; kazdy radek je karta a popisky
+   sloupcu se doplnuji z ::before podle jazyka dokumentu. */
+@media (max-width: 768px) {
+  .code-table-wrap { overflow-x: visible; }
+  .code-table {
+    min-width: 0;
+    table-layout: auto;
+    font-size: 14px;
+  }
+  .code-table thead { display: none; }
+  .code-table tbody, .code-table tr, .code-table td { display: block; width: 100%; }
+  .code-table tr {
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 12px 14px;
+    margin-bottom: 12px;
+    background: #fff;
+  }
+  .code-table tr:hover td { background: transparent; }
+  .code-table tr.dec-hidden { display: none; }
+  .code-table td {
+    padding: 7px 0 !important;
+    border-bottom: none !important;
+  }
+  .code-table td::before {
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--text2);
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    margin-bottom: 3px;
+  }
+  .code-table td:first-child {
+    font-size: 16px;
+    padding-bottom: 10px !important;
+    margin-bottom: 4px;
+    border-bottom: 1px solid var(--border) !important;
+  }
+  .code-table td:first-child::before { display: none; }
+
+  /* Popisky sloupcu podle jazyka dokumentu */
+  html[lang="en"] .code-table td:nth-child(2)::before { content: "Cause (from manual)"; }
+  html[lang="en"] .code-table td:nth-child(3)::before { content: "What to do"; }
+  html[lang="en"] .code-table td:nth-child(4)::before { content: "Severity"; }
+
+  html[lang="de"] .code-table td:nth-child(2)::before { content: "Ursache (aus Handbuch)"; }
+  html[lang="de"] .code-table td:nth-child(3)::before { content: "Maßnahme"; }
+  html[lang="de"] .code-table td:nth-child(4)::before { content: "Schweregrad"; }
+
+  html[lang="pl"] .code-table td:nth-child(2)::before { content: "Przyczyna (z instrukcji)"; }
+  html[lang="pl"] .code-table td:nth-child(3)::before { content: "Co zrobić"; }
+  html[lang="pl"] .code-table td:nth-child(4)::before { content: "Ważność"; }
+
+  html[lang="hu"] .code-table td:nth-child(2)::before { content: "Ok (kézikönyv alapján)"; }
+  html[lang="hu"] .code-table td:nth-child(3)::before { content: "Mit kell tenni"; }
+  html[lang="hu"] .code-table td:nth-child(4)::before { content: "Súlyosság"; }
+
+  html[lang="el"] .code-table td:nth-child(2)::before { content: "Αιτία (από το εγχειρίδιο)"; }
+  html[lang="el"] .code-table td:nth-child(3)::before { content: "Τι να κάνετε"; }
+  html[lang="el"] .code-table td:nth-child(4)::before { content: "Σοβαρότητα"; }
+}
+
 /* Severity badges */
 .sev {
   display: inline-block; padding: 3px 10px; border-radius: 99px;
