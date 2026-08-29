@@ -67,9 +67,9 @@ html { scroll-padding-top: var(--nav-h, 64px); }
 /* Prevent horizontal page scroll caused by inner overflow (review rail, etc). */
 html, body { overflow-x: hidden; max-width: 100vw; }
 .nav-inner {
-  /* nav-inner širší než content (1180px) — logo se odsadí ~110px doleva od krajů
-     contentu, lépe vyniká a Control variant má víc dýchání od nav-links */
-  max-width: var(--nav-maxw, 1400px);
+  /* nav-inner zarovnaný s šířkou contentu (1180px) — sjednoceno 29. 8. 2026.
+     Proměnná --nav-maxw není nikde definovaná, takže platí fallback. */
+  max-width: var(--nav-maxw, 1180px);
   margin: 0 auto; padding: 0 24px;
   height: 100%;
   display: flex; align-items: center; justify-content: space-between; gap: 24px;
