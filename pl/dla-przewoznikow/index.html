@@ -431,6 +431,44 @@
     .sticky-cta-close{background:none;border:none;color:rgba(255,255,255,.65);font-size:22px;line-height:1;cursor:pointer;padding:4px 8px;}
     .sticky-cta-close:hover{color:#fff;}
     @media(max-width:640px){.sticky-cta-text{display:none;}.sticky-cta-inner{padding:12px 16px;gap:14px;}}
+
+    /* ─── PRICE TABLE (MOBILE CARDS) ───────────────────────────── */
+    @media (max-width: 640px) {
+      .price-table-wrap { overflow-x: visible; }
+      .price-table { min-width: 0 !important; font-size: 15px; }
+      .price-table thead { display: none; }
+      .price-table tbody, .price-table tr, .price-table td { display: block; width: 100%; }
+      .price-table tr {
+        border: 1px solid var(--border) !important;
+        border-radius: 12px;
+        padding: 12px 14px;
+        margin-bottom: 12px;
+      }
+      .price-table td {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        gap: 12px;
+        text-align: right !important;
+        padding: 6px 0 !important;
+      }
+      .price-table td::before {
+        content: attr(data-label);
+        text-align: left;
+        color: var(--text2);
+        font-weight: 600;
+        font-size: 13px;
+        flex: 0 0 auto;
+      }
+      .price-table td:first-child {
+        font-size: 18px;
+        padding-bottom: 10px !important;
+        margin-bottom: 6px;
+        border-bottom: 1px solid var(--border);
+        justify-content: flex-start;
+      }
+      .price-table td:first-child::before { content: none; }
+    }
 </style>
 <script type="application/ld+json">
 {
@@ -811,8 +849,8 @@
 <h2 style="text-transform:none">Przejrzyste ceny.<br/>Bez ukrytych opłat.</h2>
 <p style="margin:16px 0 24px">Zacznij od bezpłatnej wersji próbnej. Gdy będziesz gotowy, wybierz swoją wersję bezpośrednio w oprogramowaniu i zapłać online — licencja zostaje wydana natychmiast.</p>
 <!-- Version price table -->
-<div style="width:100%;overflow-x:auto;margin-bottom:24px">
-<table style="width:100%;border-collapse:collapse;min-width:420px;font-size:16px">
+<div class="price-table-wrap" style="width:100%;overflow-x:auto;margin-bottom:24px">
+<table class="price-table" style="width:100%;border-collapse:collapse;font-size:16px">
 <thead>
 <tr style="border-bottom:2px solid var(--border)">
 <th style="text-align:left;padding:10px 12px;color:var(--text2);font-weight:600;font-size:14px">Wersja</th>
@@ -824,39 +862,39 @@
 <tbody>
 <tr style="border-bottom:1px solid var(--border)">
 <td style="padding:12px;font-weight:700;color:var(--text-strong)">TAGRA Trucker</td>
-<td style="padding:12px;color:var(--text2)">1 kierowca</td>
-<td style="padding:12px;text-align:right;font-weight:600">49 € <span style="font-size:13px;color:var(--text2)">netto</span></td>
-<td style="padding:12px;text-align:right;color:var(--green-brand);font-weight:700">19 € / rok</td>
+<td style="padding:12px;color:var(--text2)" data-label="Pojazdy">1 kierowca</td>
+<td style="padding:12px;text-align:right;font-weight:600" data-label="Cena zakupu">49 € <span style="font-size:13px;color:var(--text2)">netto</span></td>
+<td style="padding:12px;text-align:right;color:var(--green-brand);font-weight:700" data-label="Od 2. roku">19 € / rok</td>
 </tr>
 <tr style="border-bottom:1px solid var(--border)">
 <td style="padding:12px;font-weight:700;color:var(--text-strong)">TAGRA 1</td>
-<td style="padding:12px;color:var(--text2)">1</td>
-<td style="padding:12px;text-align:right;font-weight:600">149 € <span style="font-size:13px;color:var(--text2)">netto</span></td>
-<td style="padding:12px;text-align:right;color:var(--green-brand);font-weight:700">79 € / rok</td>
+<td style="padding:12px;color:var(--text2)" data-label="Pojazdy">1</td>
+<td style="padding:12px;text-align:right;font-weight:600" data-label="Cena zakupu">149 € <span style="font-size:13px;color:var(--text2)">netto</span></td>
+<td style="padding:12px;text-align:right;color:var(--green-brand);font-weight:700" data-label="Od 2. roku">79 € / rok</td>
 </tr>
 <tr style="border-bottom:1px solid var(--border)">
 <td style="padding:12px;font-weight:700;color:var(--text-strong)">TAGRA 2</td>
-<td style="padding:12px;color:var(--text2)">2</td>
-<td style="padding:12px;text-align:right;font-weight:600">299 € <span style="font-size:13px;color:var(--text2)">netto</span></td>
-<td style="padding:12px;text-align:right;color:var(--green-brand);font-weight:700">79 € / rok</td>
+<td style="padding:12px;color:var(--text2)" data-label="Pojazdy">2</td>
+<td style="padding:12px;text-align:right;font-weight:600" data-label="Cena zakupu">299 € <span style="font-size:13px;color:var(--text2)">netto</span></td>
+<td style="padding:12px;text-align:right;color:var(--green-brand);font-weight:700" data-label="Od 2. roku">79 € / rok</td>
 </tr>
 <tr style="border-bottom:1px solid var(--border)">
 <td style="padding:12px;font-weight:700;color:var(--text-strong)">TAGRA 4</td>
-<td style="padding:12px;color:var(--text2)">4</td>
-<td style="padding:12px;text-align:right;font-weight:600">399 € <span style="font-size:13px;color:var(--text2)">netto</span></td>
-<td style="padding:12px;text-align:right;color:var(--green-brand);font-weight:700">99 € / rok</td>
+<td style="padding:12px;color:var(--text2)" data-label="Pojazdy">4</td>
+<td style="padding:12px;text-align:right;font-weight:600" data-label="Cena zakupu">399 € <span style="font-size:13px;color:var(--text2)">netto</span></td>
+<td style="padding:12px;text-align:right;color:var(--green-brand);font-weight:700" data-label="Od 2. roku">99 € / rok</td>
 </tr>
 <tr style="border-bottom:1px solid var(--border)">
 <td style="padding:12px;font-weight:700;color:var(--text-strong)">TAGRA 6</td>
-<td style="padding:12px;color:var(--text2)">6</td>
-<td style="padding:12px;text-align:right;font-weight:600">549 € <span style="font-size:13px;color:var(--text2)">netto</span></td>
-<td style="padding:12px;text-align:right;color:var(--green-brand);font-weight:700">99 € / rok</td>
+<td style="padding:12px;color:var(--text2)" data-label="Pojazdy">6</td>
+<td style="padding:12px;text-align:right;font-weight:600" data-label="Cena zakupu">549 € <span style="font-size:13px;color:var(--text2)">netto</span></td>
+<td style="padding:12px;text-align:right;color:var(--green-brand);font-weight:700" data-label="Od 2. roku">99 € / rok</td>
 </tr>
 <tr>
 <td style="padding:12px;font-weight:700;color:var(--text-strong)">TAGRA MAX</td>
-<td style="padding:12px;color:var(--text2)">Bez limitu</td>
-<td style="padding:12px;text-align:right;font-weight:600">749 € <span style="font-size:13px;color:var(--text2)">netto</span></td>
-<td style="padding:12px;text-align:right;color:var(--green-brand);font-weight:700">149 € / rok</td>
+<td style="padding:12px;color:var(--text2)" data-label="Pojazdy">Bez limitu</td>
+<td style="padding:12px;text-align:right;font-weight:600" data-label="Cena zakupu">749 € <span style="font-size:13px;color:var(--text2)">netto</span></td>
+<td style="padding:12px;text-align:right;color:var(--green-brand);font-weight:700" data-label="Od 2. roku">149 € / rok</td>
 </tr>
 </tbody>
 </table>
