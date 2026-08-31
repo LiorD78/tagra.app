@@ -1,0 +1,1424 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<!-- TMX-ANALYTICS START -->
+<meta content="7F7894081BE7FBB245FF03AF8810B22F" name="msvalidate.01"/>
+<!-- Consent Mode v2 defaults (deny) + gtag stub — runs BEFORE gtag.js -->
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent','default',{
+      ad_storage:'denied', ad_user_data:'denied', ad_personalization:'denied',
+      analytics_storage:'denied', functionality_storage:'denied',
+      personalization_storage:'denied', security_storage:'granted',
+      wait_for_update:500
+    });
+    gtag('set','ads_data_redaction',true);
+    gtag('set','url_passthrough',false);
+  </script>
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-92253QFBNX"></script>
+<script>
+    gtag('js', new Date());
+    gtag('config','G-92253QFBNX');
+  </script>
+<!-- Cookie consent banner (self-hosted) + Microsoft Clarity gating -->
+<style>
+    .tmx-cc{position:fixed;left:0;right:0;bottom:0;z-index:2147483000;background:linear-gradient(120deg,var(--blue-dark,#0b2c4a),var(--blue-mid,#134a8e) 62%,var(--blue-light,#1f5fa6));color:#fff;
+      font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+      padding:16px 20px;box-shadow:0 -4px 24px rgba(0,0,0,.18);display:flex;flex-wrap:wrap;
+      align-items:center;gap:14px;justify-content:center}
+    .tmx-cc__txt{flex:1 1 360px;max-width:760px}
+    .tmx-cc__txt a{color:#9ed0f5;text-decoration:underline}
+    .tmx-cc__btns{display:flex;gap:10px;flex:0 0 auto}
+    .tmx-cc__b{appearance:none;border:0;cursor:pointer;font:inherit;font-weight:600;
+      padding:10px 22px;border-radius:99px;transition:filter .15s;color:#fff}
+    .tmx-cc__b:hover{filter:brightness(1.08)}
+    .tmx-cc__b--no{background:rgba(255,255,255,.16)}
+    .tmx-cc__b--yes{background:var(--green-cta,#5C820F)}
+    @media(max-width:640px){.tmx-cc{padding:14px}.tmx-cc__btns{width:100%}.tmx-cc__b{flex:1}}
+  </style>
+<script>
+  (function(){
+    var KEY='tmx-consent-v1', CL='wt18054m0r';
+    function lc(){var l=(document.documentElement.getAttribute('lang')||'en').toLowerCase().split('-')[0];
+      var m={cz:'cs',cs:'cs',sk:'sk',de:'de',pl:'pl',gr:'el',el:'el',hu:'hu',en:'en'};return m[l]||'en';}
+    var T={
+      hu:{t:'Analitikai sütiket használunk (Google Analytics, Microsoft Clarity, Smartsupp), hogy megértsük a webhely használatát. Csak az Ön hozzájárulásával töltődnek be.',a:'Elfogadom',r:'Elutasítom',p:'Adatvédelem és sütik'},
+      en:{t:'We use analytics cookies (Google Analytics, Microsoft Clarity, Smartsupp) to understand site usage. They load only with your consent.',a:'Accept',r:'Reject',p:'Privacy &amp; cookies'},
+      cs:{t:'Používáme analytické cookies (Google Analytics, Microsoft Clarity, Smartsupp) k pochopení používání webu. Načtou se jen s vaším souhlasem.',a:'Přijmout',r:'Odmítnout',p:'Soukromí a cookies'},
+      sk:{t:'Používame analytické cookies (Google Analytics, Microsoft Clarity, Smartsupp) na pochopenie používania webu. Načítajú sa len s vaším súhlasom.',a:'Prijať',r:'Odmietnuť',p:'Súkromie a cookies'},
+      de:{t:'Wir verwenden Analyse-Cookies (Google Analytics, Microsoft Clarity, Smartsupp), um die Nutzung der Website zu verstehen. Sie werden nur mit Ihrer Einwilligung geladen.',a:'Akzeptieren',r:'Ablehnen',p:'Datenschutz &amp; Cookies'},
+      pl:{t:'Używamy plików cookie do analityki (Google Analytics, Microsoft Clarity, Smartsupp), aby zrozumieć korzystanie z witryny. Ładują się tylko za Twoją zgodą.',a:'Akceptuj',r:'Odrzuć',p:'Prywatność i cookies'},
+      el:{t:'Χρησιμοποιούμε cookies ανάλυσης (Google Analytics, Microsoft Clarity, Smartsupp) για να κατανοήσουμε τη χρήση. Φορτώνονται μόνο με τη συγκατάθεσή σας.',a:'Αποδοχή',r:'Απόρριψη',p:'Απόρρητο &amp; cookies'}
+    };
+    function loadClarity(){if(!CL||window.__tmxCl)return;window.__tmxCl=1;
+      (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+       t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+       y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script",CL);}
+    function grant(){try{localStorage.setItem(KEY,'granted')}catch(e){}
+      gtag('consent','update',{analytics_storage:'granted'});loadClarity();}
+    function deny(){try{localStorage.setItem(KEY,'denied')}catch(e){}}
+    var saved=null;try{saved=localStorage.getItem(KEY)}catch(e){}
+    if(saved==='granted'){grant();return;} if(saved==='denied'){return;}
+    function show(){var tx=T[lc()]||T.en;
+      var b=document.createElement('div');b.className='tmx-cc';b.setAttribute('role','dialog');b.setAttribute('aria-live','polite');
+      b.innerHTML='<div class="tmx-cc__txt">'+tx.t+' <a href="/privacy/">'+tx.p+'</a></div>'+
+        '<div class="tmx-cc__btns"><button type="button" class="tmx-cc__b tmx-cc__b--no">'+tx.r+'</button>'+
+        '<button type="button" class="tmx-cc__b tmx-cc__b--yes">'+tx.a+'</button></div>';
+      document.body.appendChild(b);
+      b.querySelector('.tmx-cc__b--yes').addEventListener('click',function(){grant();b.remove();});
+      b.querySelector('.tmx-cc__b--no').addEventListener('click',function(){deny();b.remove();});}
+    if(document.body)show();else document.addEventListener('DOMContentLoaded',show);
+  })();
+  </script>
+<!-- TMX-ANALYTICS END -->
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>TAGRA – Software di Analisi del Tachigrafo</title>
+<meta content="TAGRA aiuta le aziende di trasporto e gli autisti professionisti a rispettare la normativa UE sul cronotachigrafo. Valutazione, archiviazione e reportistica. Prova gratuita di 30 giorni." name="description"/>
+<meta content="#0b2c4a" name="theme-color"/>
+<link href="/manifest.json" rel="manifest"/>
+<link href="https://tagra.app/it/" rel="canonical"/>
+<meta content="TAGRA – Software di Gestione dei Dati del Tachigrafo" property="og:title"/>
+<meta content="TAGRA aiuta le aziende di trasporto e gli autisti professionisti a rispettare la normativa UE sul cronotachigrafo. Prova gratuita di 30 giorni." property="og:description"/>
+<meta content="https://cdn.truckmall.cz/images/0/ff1952bcc480ca3d/1/tagra-1-vyhodnoceni-dat-z-tachografu.webp" property="og:image"/>
+<meta content="Software di analisi del tachigrafo TAGRA – report di conformità di autisti e veicoli" property="og:image:alt"/>
+<meta content="website" property="og:type"/>
+<meta content="TAGRA" property="og:site_name"/>
+<meta content="it_IT" property="og:locale"/>
+<meta content="https://cdn.truckmall.cz/images/0/ff1952bcc480ca3d/1/tagra-1-vyhodnoceni-dat-z-tachografu.webp" name="twitter:image"/>
+<meta content="Software di analisi del tachigrafo TAGRA – report di conformità di autisti e veicoli" name="twitter:image:alt"/>
+<meta content="https://tagra.app/it/" property="og:url"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<style>
+    /* ─── TOKENS ───────────────────────────────────────────────────── */
+    /* ─── RESET ────────────────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; scroll-padding-top: var(--nav-h); }
+    a { color: var(--green-brand); text-decoration: none; }
+    a:hover { color: var(--green-cta); text-decoration: underline; text-underline-offset: .18em; }
+    img { max-width: 100%; height: auto; display: block; }
+    p + p { margin-top: 12px; }
+
+    /* ─── SCROLL PROGRESS ──────────────────────────────────────────── */
+    #scroll-progress { position: fixed; top: 0; left: 0; height: 3px; background: linear-gradient(90deg, var(--green-brand), var(--blue-light)); width: 0%; z-index: 9999; pointer-events: none; transition: width .1s ease-out; }
+
+
+    /* Homepage: hero is full-bleed under translucent nav — no top padding */
+    body.home-fullbleed { padding-top: 0; }
+
+    /* ─── NAV ──────────────────────────────────────────────────────── */
+.nav-inner { margin: 0 auto; padding: 0 24px; height: 100%; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .nav-links { display: flex; align-items: center; gap: 4px; list-style: none; }
+    .nav-links li a { font-size: 15px; font-weight: 500; color: var(--text); padding: 8px 12px; border-radius: 8px; transition: background .15s, color .15s; text-decoration: none; }
+    .nav-links li a:hover { background: var(--bg-apple-solid); color: var(--blue-mid); }
+    .nav-links .nav-cta a { background: var(--green-cta); color: #fff !important; border-radius: 99px; padding: 8px 18px; font-weight: 600; }
+    .nav-links .nav-cta a:hover { background: var(--green-brand); text-decoration: none; }
+    .nav-lang { display: flex; align-items: center; gap: 4px; font-size: 14px; font-weight: 600; }
+    .nav-lang a { padding: 5px 8px; border-radius: 6px; color: var(--text2); text-decoration: none; transition: background .15s; }
+    .nav-lang a:hover, .nav-lang a.active { background: var(--bg-apple-solid); color: var(--blue-mid); }
+    .nav-lang span { color: var(--border); }
+    .nav-mobile-toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
+    .nav-mobile-toggle span { display: block; width: 22px; height: 2px; background: var(--text); margin: 5px 0; border-radius: 2px; transition: .3s; }
+    @media (max-width: 900px) {
+      .nav-links { display: none; }
+      .nav-mobile-toggle { display: block; }
+      .nav-links.open { display: flex; flex-direction: column; align-items: flex-start; gap: 2px; position: absolute; top: var(--nav-h); left: 0; right: 0; background: rgba(255,255,255,0.97); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 12px 24px 20px; }
+    }
+
+    /* ─── LAYOUT ───────────────────────────────────────────────────── */
+    /* ─── HERO ─────────────────────────────────────────────────────── */
+    .hero {
+      background: #87b9d8;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      /* Text must clear the fixed transparent nav (64px) plus breathing room. */
+      padding-top:calc(var(--nav-h, 64px) + 40px);
+    }
+    .hero > .container {
+      position: relative;
+      width: 100%;
+    }
+    .hero .eyebrow {
+      color: var(--green-brand);
+      /* No text-shadow — each element now sits on its own Liquid Glass
+         chip, which supplies the contrast. Shadow removed for crisp edges. */
+      margin-bottom: 0;
+      letter-spacing: 0.12em;
+      font-weight: 700;
+    }
+    .hero .hero-sub {
+      max-width: 620px;
+      margin: 0 auto;
+      color: var(--blue-dark);
+    }
+    .hero .hero-sub strong { color: var(--blue-dark); }
+    /* Liquid Glass chips — one snug frosted panel PER line (eyebrow / H1 /
+       sub), each sized to its own content, not one shared block behind
+       all three. display:table (not inline-block) so each chip both
+       shrink-wraps its content AND forces a new line — inline-block let
+       chips sit side-by-side on wide desktop viewports (bug: "TAGRA"
+       chip drifting right of the eyebrow chip). Milkier/higher-opacity
+       fill = stronger contrast per Libor's request 2026-07-01. */
+    .hero-glass {
+      display: table;
+      max-width: 660px;
+      margin: 0 auto 14px;
+      padding: 14px 30px;
+      border-radius: 22px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.46) 0%, rgba(255,255,255,0.24) 100%);
+      backdrop-filter: blur(20px) saturate(140%) brightness(1.05);
+      -webkit-backdrop-filter: blur(20px) saturate(140%) brightness(1.05);
+      border: 1px solid rgba(255,255,255,0.55);
+      box-shadow:
+        inset 0 1px 0 rgba(255,255,255,0.55),
+        inset 0 -1px 0 rgba(255,255,255,0.12),
+        0 8px 28px rgba(11,44,74,0.16),
+        0 2px 8px rgba(11,44,74,0.08);
+    }
+    .hero-glass:last-child { margin-bottom: 0; }
+    .hero-glass .eyebrow, .hero-glass h1, .hero-glass .hero-sub { margin-bottom: 0; }
+    @media (max-width: 768px) {
+      .hero-glass { padding: 11px 20px; border-radius: 16px; max-width: 92%; margin: 0 auto 10px; }
+    }
+    @media (max-width: 1024px) {
+      .hero { aspect-ratio: 9 / 16; max-height: 90vh; padding-top:calc(var(--nav-h, 64px) + 40px); background: #87b9d8; align-items: flex-start; }
+      .hero > .container { position: relative; padding-top: 0; }
+    }
+
+    .hero-video, .hero-video-poster {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      z-index: 0;
+      pointer-events: none;
+      user-select: none;
+    }
+    .hero-video-poster { opacity: 1; transition: opacity .4s ease-out; z-index: 0; }
+    .hero-video { opacity: 0; transition: opacity 1.2s ease-in-out; z-index: 1; }
+    .hero-video.is-active { opacity: 1 !important; }
+    /* Once any video is active, hide the poster */
+    .hero.has-video-ready .hero-video-poster { opacity: 0; }
+
+    .hero > .container { position: relative; z-index: 2; }
+
+    @media (max-width: 1024px) {
+      /* Keep video on mobile, but crop with top-aligned object-position
+         so the sky stays visible behind the hero text. */
+      .hero-video { object-position: center top; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .hero-video { display: none; }
+    }
+    @media (max-width: 768px) { /* .hero mobile handled inline above with aspect-ratio:auto override */ }
+
+    .eyebrow { font-size: 15px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--green-brand); margin-bottom: 12px; }
+    @media (max-width: 768px) {
+    }
+
+    .hero-sub { font-size: 20px; line-height: 1.5; color: var(--text2); max-width: 580px; margin: 0 auto 48px; }
+    @media (max-width: 768px) { .hero-sub { font-size: 17px; } }
+
+    /* ─── SPLIT CARDS ──────────────────────────────────────────────── */
+    .split { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; max-width: 1180px; margin: 0 auto; }
+    @media (max-width: 1024px) { .split { grid-template-columns: 1fr; gap: 16px; max-width: 540px; } }
+
+    .split-card {
+      display: flex; flex-direction: column;
+      border-radius: 24px; padding: 40px 36px;
+      text-decoration: none !important; color: inherit !important;
+      transition: transform .2s, box-shadow .2s;
+      text-align: left;
+    }
+    .split-card:hover { transform: translateY(-4px); box-shadow: 0 20px 48px rgba(0,0,0,.10); text-decoration: none !important; }
+
+    .split-card--fleet {
+      background: var(--bg-apple-solid);
+      border: 2px solid rgba(19,74,142,.15);
+    }
+    .split-card--driver {
+      background: var(--green-bg);
+      border: 2px solid rgba(110,155,18,.2);
+    }
+
+    .split-card--enforce {
+      background: linear-gradient(135deg, #dfe5ee 0%, #eef3f8 60%, #f5f8fb 100%);
+      border: 2px solid rgba(11,44,74,.2);
+    }
+
+    .card-label { font-size: 13px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; margin-bottom: 10px; }
+    .split-card--fleet .card-label { color: var(--blue-mid); }
+    .split-card--driver .card-label { color: var(--green-brand); }
+    .split-card--enforce .card-label { color: var(--blue-dark); }
+
+    /* card-title: flex item v .split-card (flex column) — defaultní align-items:stretch
+       roztáhne element na plnou šířku karty (286px), což rozprostře gradient příliš.
+       align-self:flex-start + width:max-content zmrští element na šířku samotného textu,
+       gradient pak jde přes oba řádky jako jeden blok (TRUCKMALL pattern). */
+    .split-card .card-title { font-size: 26px; font-weight: 800; color: var(--text-strong); line-height: 1.2; margin-bottom: 14px; align-self: flex-start; width: max-content; max-width: 100%; background: var(--heading-gradient); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent; }
+
+    .card-desc { font-size: 16px; line-height: 1.6; color: var(--text2); margin-bottom: 24px; }
+
+    .card-list { display: flex; flex-direction: column; gap: 8px; margin-bottom: 32px; }
+    .card-list li { display: flex; gap: 10px; align-items: flex-start; font-size: 15px; line-height: 1.5; }
+    .split-card--fleet .card-list li::before { content: "✓"; color: var(--blue-mid); font-weight: 900; flex-shrink: 0; }
+    .split-card--driver .card-list li::before { content: "✓"; color: var(--green-brand); font-weight: 900; flex-shrink: 0; }
+    .split-card--enforce .card-list li::before { content: "✓"; color: var(--blue-dark); font-weight: 900; flex-shrink: 0; }
+
+    .card-cta {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 13px 26px; border-radius: 99px;
+      font-size: 16px; font-weight: 600;
+      margin-top: auto; align-self: flex-start;
+      transition: background .2s, transform .15s;
+      text-decoration: none !important;
+    }
+    .split-card--fleet .card-cta { background: var(--blue-mid); color: #fff !important; }
+    .split-card--fleet .card-cta:hover { background: var(--blue-dark); }
+    .split-card--driver .card-cta { background: var(--green-cta); color: #fff !important; }
+    .split-card--driver .card-cta:hover { background: var(--green-brand); }
+    .split-card--enforce .card-cta { background: var(--blue-dark); color: #fff !important; }
+    .split-card--enforce .card-cta:hover { background: var(--blue-mid); }
+
+    .card-note { font-size: 13px; color: var(--text2); margin-top: 10px; }
+
+    /* ─── TRUST BAR ────────────────────────────────────────────────── */
+    .picker { background: var(--bg-apple-solid); padding: 60px 0 70px; }
+    @media (max-width: 1024px) { .picker { padding: 40px 0 50px; } }
+
+    .trust-bar { padding: 40px 0; background: var(--bg-gray); text-align: center; }
+    .trust-bar p { font-size: 15px; color: var(--text2); }
+    .trust-bar strong { color: var(--text-strong); }
+
+    /* ─── FOOTER ───────────────────────────────────────────────────── */
+
+    /* ─── ANIMATIONS ───────────────────────────────────────────────── */
+    .anim-up { opacity: 0; transform: translateY(28px); transition: opacity .8s cubic-bezier(.16,1,.3,1), transform .8s cubic-bezier(.16,1,.3,1); }
+    .anim-up.on { opacity: 1; transform: none; }
+    @media (prefers-reduced-motion: reduce) { .anim-up { transition: none !important; opacity: 1 !important; transform: none !important; } }
+
+    /* ─── HOMEPAGE EXPANSION: SECTIONS ─────────────────────────────── */
+    .section { padding: 80px 0; }
+    .section--gray { background: var(--bg-gray, #f5f5f7); }
+    .section--blue { background: var(--bg-apple-solid, #eaf3f8); }
+    .section--white { background: var(--bg-white, #fff); }
+    .section-inner { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
+    .section-head { text-align: center; max-width: 760px; margin: 0 auto 16px; }
+    .section-label {
+      font-size: 16px; font-weight: 600; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--green-brand, #6E9B12);
+      margin-bottom: 12px; display: block;
+    }
+    .section-h2 {
+      font-size: 36px; font-weight: 800;
+      line-height: 1.1; letter-spacing: 0;
+      text-transform: uppercase;
+      color: var(--blue-mid, #134a8e);
+      background: linear-gradient(90deg, var(--blue-dark, #0b2c4a) 0%, var(--blue-mid, #134a8e) 55%, var(--blue-light, #1f5fa6) 100%);
+      -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block; max-width: 100%; margin-bottom: 14px;
+      padding: 0.12em 0.15em 0.08em 0;
+    }
+    @media (max-width: 768px) {
+      .section-h2 {
+      font-size: 36px; font-weight: 800;
+      line-height: 1.1; letter-spacing: 0;
+      text-transform: uppercase;
+      color: var(--blue-mid, #134a8e);
+      background: linear-gradient(90deg, var(--blue-dark, #0b2c4a) 0%, var(--blue-mid, #134a8e) 55%, var(--blue-light, #1f5fa6) 100%);
+      -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block; max-width: 100%; margin-bottom: 14px;
+      padding: 0.12em 0.15em 0.08em 0;
+    }
+    }
+    .section-intro {
+      font-size: 18px; line-height: 1.6; color: var(--text2);
+      max-width: 680px; margin: 0 auto;
+    }
+
+    /* ─── BENTO GRID (reused from /fleet/) ─────────────────────────── */
+
+    .bc {
+      background: var(--bg-white); border-radius: var(--radius);
+      padding: 32px; border: 1px solid var(--border);
+      position: relative; overflow: hidden;
+    }
+
+
+
+
+
+
+    .bc-eyebrow {
+      font-size: 12px; font-weight: 700; letter-spacing: .08em;
+      text-transform: uppercase; color: var(--blue-mid);
+      margin-bottom: 8px; display: block;
+    }
+
+
+    .bignum {
+      font-size: 110px; font-weight: 800; line-height: 1;
+      letter-spacing: -.04em; color: rgba(19,74,142,.06);
+      position: absolute; bottom: -16px; right: 16px; pointer-events: none;
+    }
+    @media (max-width: 900px) {
+      .bento { grid-template-columns: 1fr 1fr; }
+      .bc.s7, .bc.s5, .bc.s8 { grid-column: span 2; }
+      .bc.s4, .bc.s6 { grid-column: span 1; }
+    }
+    @media (max-width: 600px) {
+      .bento { grid-template-columns: 1fr; }
+      .bc { grid-column: span 1 !important; padding: 26px; }
+      .bc-title { font-size: 21px; }
+      .bignum { font-size: 80px; }
+    }
+
+    /* ─── FLY-IN ANIMATIONS (intersection observer) ────────────────── */
+    .fly-left  { opacity: 0; transform: translateX(-50px);
+      transition: opacity .9s cubic-bezier(.16,1,.3,1), transform .9s cubic-bezier(.16,1,.3,1); }
+    .fly-right { opacity: 0; transform: translateX(50px);
+      transition: opacity .9s cubic-bezier(.16,1,.3,1), transform .9s cubic-bezier(.16,1,.3,1); }
+    .fly-left.on, .fly-right.on { opacity: 1; transform: none; }
+    @media (prefers-reduced-motion: reduce) {
+      .fly-left, .fly-right { transition: none !important;
+        opacity: 1 !important; transform: none !important; }
+    }
+
+    /* ─── SOCIAL PROOF: REFERENCE GRID ─────────────────────────────── */
+    .ref-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 14px; margin-top: 44px;
+    }
+    .ref-card {
+      background: #fff; border-radius: 20px;
+      border: 1.5px solid rgba(0,0,0,.08); padding: 26px 22px;
+      display: flex; flex-direction: column; gap: 6px;
+      position: relative; overflow: hidden;
+      transition: transform .18s, box-shadow .18s, border-color .18s;
+    }
+    .ref-card::before {
+      content: ''; position: absolute; inset: 0;
+      background-size: cover; background-position: center;
+      opacity: .05; pointer-events: none;
+    }
+    .ref-card > * { position: relative; z-index: 1; }
+    .ref-card--cz::before { background-image: url('https://flagcdn.com/w320/cz.png'); }
+    .ref-card--sk::before { background-image: url('https://flagcdn.com/w320/sk.png'); }
+    .ref-card--hu::before { background-image: url('https://flagcdn.com/w320/hu.png'); }
+    .ref-card:hover {
+      transform: translateY(-3px); border-color: rgba(19,74,142,.3);
+      box-shadow: 0 14px 28px rgba(19,74,142,.10);
+    }
+    .ref-flag { font-size: 28px; line-height: 1; margin-bottom: 6px; }
+    .ref-country {
+      font-size: 12px; font-weight: 700; letter-spacing: .08em;
+      text-transform: uppercase; color: var(--blue-mid);
+    }
+    .ref-name { font-size: 18px; font-weight: 800; color: var(--text-strong);
+      line-height: 1.25; }
+    .ref-note { font-size: 14px; color: var(--text2); line-height: 1.5; margin-top: 4px; }
+
+    /* ─── REVIEWS SLIDER (auto-scroll loop, drag to pause) ─────────── */
+    .rev-rail-wrap {
+      overflow: hidden; margin-top: 44px;
+      mask-image: linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%);
+      -webkit-mask-image: linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%);
+    }
+
+    .rev-rail::-webkit-scrollbar { display: none; }
+    .rev-rail:active { cursor: grabbing; }
+
+
+
+
+    /* ─── PRICING TEASER ───────────────────────────────────────────── */
+    .pricing-teaser {
+      background: linear-gradient(135deg, var(--green-bg) 0%, #fff 100%);
+      border-radius: var(--radius); border: 1px solid rgba(110,155,18,.2);
+      padding: 56px 48px; margin-top: 44px;
+      display: grid; grid-template-columns: 1.4fr 1fr; gap: 40px; align-items: center;
+    }
+    .pricing-teaser-headline {
+      font-size: clamp(26px, 3vw, 36px); font-weight: 800;
+      line-height: 1.15; letter-spacing: -.02em;
+      color: var(--text-strong); margin-bottom: 12px;
+    }
+    .pricing-teaser-price {
+      font-size: 17px; line-height: 1.55; color: var(--text2);
+      margin-bottom: 20px;
+    }
+    .pricing-teaser-price strong { color: var(--green-brand); font-size: 22px; font-weight: 800; }
+    .pricing-teaser-features {
+      list-style: none; padding: 0; margin: 0 0 24px;
+      display: flex; flex-direction: column; gap: 8px;
+    }
+    .pricing-teaser-features li {
+      font-size: 15px; color: var(--text); display: flex; gap: 10px; align-items: flex-start;
+    }
+    .pricing-teaser-features li::before {
+      content: '✓'; color: var(--green-brand); font-weight: 800; flex-shrink: 0;
+    }
+    .pricing-teaser-cta { display: flex; flex-direction: column; gap: 10px; align-items: flex-start; }
+    .pricing-teaser-cta-note { font-size: 13px; color: var(--text2); }
+    @media (max-width: 900px) {
+      .pricing-teaser { grid-template-columns: 1fr; padding: 40px 28px; gap: 24px; }
+    }
+
+    /* ─── FAQ TEASER ───────────────────────────────────────────────── */
+    .faq-block { max-width: 760px; margin: 44px auto 0; }
+
+
+    .faq-block summary {
+      list-style: none; cursor: pointer;
+      padding: 18px 44px 18px 0;
+      font-weight: 700; font-size: 18px; line-height: 1.4;
+      position: relative; color: var(--text-strong);
+    }
+
+    .faq-block summary::after {
+      content: '+'; position: absolute; right: 4px; top: 50%;
+      transform: translateY(-50%); font-size: 28px; font-weight: 300;
+      color: var(--green-brand); transition: transform .2s;
+    }
+
+
+    .faq-cta { text-align: center; margin-top: 28px; }
+    .faq-cta a {
+      font-size: 16px; font-weight: 600; color: var(--blue-mid);
+      text-decoration: none; border-bottom: 1.5px solid var(--blue-mid);
+      padding-bottom: 2px;
+    }
+    .faq-cta a:hover { color: var(--blue-dark); border-color: var(--blue-dark); }
+
+    /* ─── BUTTONS (reuse from picker, but in case missing) ─────────── */
+
+    .btn-cta:hover { background: var(--green-brand); transform: scale(1.02); color: #fff !important; }
+
+
+
+    /* ─── PICKER MOBILE CAROUSEL ─────────────────────────────────────
+       Desktop: 3 cards side-by-side (existing layout unchanged).
+       Mobile (≤900px): sticky picker section + horizontal scroll-snap
+       carousel + vertically centered cards with a fixed 380px height. */
+    @media (max-width: 900px) {
+      /* Sticky behavior on the picker section.
+         position: sticky keeps the section anchored just below the nav
+         while the user scrolls past it; once the next sibling section
+         takes over, the picker scrolls away normally. */
+      .picker {
+        position: sticky;
+        top: var(--nav-h, 64px);
+        z-index: 1;
+        background: var(--bg-apple-solid);
+        /* Target a full-viewport-minus-nav height for the Apple feel, but
+           allow the section to grow if the card needs more room. The
+           card itself is ~593px on mobile; with section padding 24+24 we
+           need at least 641px total. On short viewports (iPhone SE 1st
+           gen at 667px) min-height: 0 ensures nothing is clipped. */
+        min-height: max(640px, calc(100vh - var(--nav-h, 64px)));
+        display: flex;
+        flex-direction: column;
+        justify-content: center;  /* vertically center the carousel rail */
+        padding: 24px 0;
+      }
+      /* Make the next section paint over the sticky picker as it scrolls,
+         giving a clean handoff. */
+      .picker + * {
+        position: relative;
+        z-index: 2;
+        background: var(--bg-white);
+      }
+
+      .picker .split {
+        display: flex !important;
+        flex-direction: row !important;
+        grid-template-columns: none !important;
+        gap: 16px;
+        overflow-x: auto;
+        overflow-y: visible;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
+        overscroll-behavior-x: contain;
+        scrollbar-width: none;
+        padding: 0 24px 8px;
+        margin: 0 -24px;
+        scroll-padding-left: 24px;
+        mask-image: linear-gradient(to right, black 0%, black 92%, transparent 100%);
+        -webkit-mask-image: linear-gradient(to right, black 0%, black 92%, transparent 100%);
+        align-items: stretch;  /* equal heights for cards */
+      }
+      .picker .split::-webkit-scrollbar { display: none; }
+      .picker .split > .split-card {
+        flex: 0 0 clamp(280px, 78vw, 340px);
+        max-width: 340px;
+        scroll-snap-align: start;
+        /* No fixed height — let the card size to its content so the full
+           card is visible without inner scrolling. Cards still match each
+           other's height via align-items: stretch on the parent. */
+        padding: 28px 24px;
+      }
+      /* Shorter typography on mobile so the 380px box doesn't feel tight. */
+      .picker .split > .split-card .card-title { font-size: 28px; line-height: 1.1; }
+      .picker .split > .split-card .card-desc { font-size: 14px; line-height: 1.45; }
+      .picker .split > .split-card .card-list { font-size: 14px; }
+    }
+    .picker-dots { display: none; }
+    @media (max-width: 900px) {
+      .picker-dots {
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+        margin-top: 24px;
+      }
+      .picker-dot {
+        width: 8px; height: 8px; padding: 0;
+        background: #d0d0d0;
+        border: none; border-radius: 99px;
+        cursor: pointer;
+        transition: width 0.25s ease, background 0.25s ease;
+      }
+      .picker-dot.is-active {
+        width: 28px;
+        background: var(--blue-dark, #0b2c4a);
+      }
+      .picker-dot:focus-visible {
+        outline: 2px solid var(--blue-mid, #134a8e);
+        outline-offset: 3px;
+      }
+    }
+
+    /* ─── STICKY CTA BAR ───────────────────────────────────────── */
+    .sticky-cta{position:fixed;left:0;right:0;bottom:0;z-index:850;transform:translateY(110%);transition:transform .35s ease;background:linear-gradient(120deg,var(--blue-dark),var(--blue-mid) 70%);box-shadow:0 -4px 24px rgba(0,0,0,.14);}
+    .sticky-cta.is-visible{transform:translateY(0);}
+    .sticky-cta-inner{max-width:var(--maxw);margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:center;gap:20px;flex-wrap:wrap;}
+    .sticky-cta-text{color:#fff;font-weight:600;font-size:15px;}
+    .sticky-cta-btn{background:linear-gradient(135deg,var(--green-brand) 0%,var(--green-cta) 100%);color:#fff!important;padding:10px 24px;border-radius:99px;font-weight:700;text-decoration:none!important;white-space:nowrap;position:relative;overflow:hidden;box-shadow:0 4px 14px rgba(0,0,0,.22),0 1px 0 rgba(255,255,255,.22) inset;transition:background .15s,transform .15s,box-shadow .2s;}
+    .sticky-cta-btn:hover{background:linear-gradient(140deg,#79a517 0%,#527311 100%);transform:scale(1.03);box-shadow:0 8px 20px rgba(0,0,0,.30),0 1px 0 rgba(255,255,255,.28) inset;text-decoration:none!important;}
+    .sticky-cta-close{background:none;border:none;color:rgba(255,255,255,.65);font-size:22px;line-height:1;cursor:pointer;padding:4px 8px;}
+    .sticky-cta-close:hover{color:#fff;}
+    @media(max-width:640px){.sticky-cta-text{display:none;}.sticky-cta-inner{padding:12px 16px;gap:14px;}}
+
+    /* ─── UI SHOWCASE ("see exactly what TAGRA flags") ────────────── */
+    .showcase-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:32px;}
+    @media(max-width:900px){.showcase-grid{grid-template-columns:1fr;max-width:420px;margin-left:auto;margin-right:auto;}}
+    .showcase-card{background:#fff;border-radius:var(--radius-lg,20px);border:1.5px solid var(--border);padding:22px 22px 20px;box-shadow:0 8px 28px rgba(16,42,74,.06);position:relative;overflow:hidden;}
+    .showcase-card::before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;}
+    .showcase-card--critical::before{background:#d23b3b;}
+    .showcase-card--warn::before{background:#d98c12;}
+    .showcase-card--ready::before{background:var(--green-brand);}
+    .showcase-badge{display:inline-flex;align-items:center;gap:6px;font-size:11.5px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;padding:4px 10px;border-radius:99px;margin-bottom:12px;}
+    .showcase-card--critical .showcase-badge{background:#fdeaea;color:#b22b2b;}
+    .showcase-card--warn .showcase-badge{background:#fbf0db;color:#a06a08;}
+    .showcase-card--ready .showcase-badge{background:#eaf3da;color:#4a6b0c;}
+    .showcase-title{font-size:17px;font-weight:800;color:var(--text);margin:0 0 10px;line-height:1.3;}
+    .showcase-row{display:flex;justify-content:space-between;gap:10px;font-size:14px;color:var(--text2);padding:6px 0;border-top:1px solid var(--border);}
+    .showcase-row:first-of-type{border-top:none;padding-top:0;}
+    .showcase-row strong{color:var(--text);font-weight:700;}
+    .showcase-foot{margin-top:14px;font-size:12.5px;color:var(--text2);font-style:italic;}
+
+    /* ─── CUSTOMER NAME MARQUEE ────────────────────────────────────── */
+    .name-marquee-wrap{position:relative;width:100vw;left:50%;right:50%;margin-left:-50vw;margin-right:-50vw;overflow:hidden;mask-image:linear-gradient(to right,transparent 0%,black 6%,black 94%,transparent 100%);margin-top:28px;}
+    .name-marquee-label{text-align:center;font-size:13px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--blue-mid,#134a8e);margin-bottom:14px;}
+    .name-marquee{display:flex;width:max-content;animation:tmx-marquee 38s linear infinite;}
+    .name-marquee:hover{animation-play-state:paused;}
+    .name-marquee span{flex:0 0 auto;padding:0 28px;font-size:16px;font-weight:600;color:var(--blue-dark,#0b2c4a);white-space:nowrap;border-right:1px solid rgba(19,74,142,.22);}
+    @keyframes tmx-marquee{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://tagra.app/#organization",
+  "name": "Truck Data Technology, s.r.o.",
+  "alternateName": "TDT",
+  "url": "https://www.tdt.cz",
+  "logo": "https://tagra.app/assets/img/logo-light.svg?v=20260513zh",
+  "foundingDate": "2000",
+  "sameAs": [
+    "https://www.linkedin.com/company/truckmall/",
+    "https://www.facebook.com/truckmall.cz.truck.data.technology",
+    "https://www.instagram.com/truckmall.cz/",
+    "https://www.youtube.com/@truckmall"
+  ],
+  "areaServed": [
+    { "@type": "Country", "name": "Repubblica Ceca" },
+    { "@type": "Country", "name": "Slovacchia" },
+    { "@type": "Country", "name": "Ungheria" },
+    { "@type": "Country", "name": "Polonia" },
+    { "@type": "Country", "name": "Germania" }
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+420-739-005-345",
+    "email": "sales@tagra.app",
+    "contactType": "sales",
+    "availableLanguage": ["English", "Czech", "Slovak"]
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://tagra.app/#website",
+  "url": "https://tagra.app/it/",
+  "name": "TAGRA",
+  "description": "Software professionale per la gestione dei dati del tachigrafo",
+  "publisher": { "@id": "https://tagra.app/#organization" },
+  "inLanguage": "it"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "TAGRA per operatori di flotta",
+  "url": "https://tagra.app/it/per-aziende/",
+  "provider": { "@id": "https://tagra.app/#organization" },
+  "serviceType": "Tachograph data management software",
+  "description": "Valutazione, archiviazione e reportistica per operatori di flotta da 1 a un numero illimitato di veicoli. Conforme al Regolamento (CE) 561/2006 e alla Direttiva sull'orario di lavoro.",
+  "audience": {
+    "@type": "BusinessAudience",
+    "audienceType": "Fleet operators and transport companies"
+  },
+  "areaServed": [
+    { "@type": "Country", "name": "Repubblica Ceca" },
+    { "@type": "Country", "name": "Slovacchia" },
+    { "@type": "Country", "name": "Ungheria" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "TAGRA Trucker per autisti professionisti",
+  "url": "https://tagra.app/it/per-autisti/",
+  "provider": { "@id": "https://tagra.app/#organization" },
+  "serviceType": "Personal tachograph data tool",
+  "description": "Strumento personale per autisti professionisti per scaricare la propria carta conducente e verificare i tempi di guida e i periodi di riposo. Funziona con un comune lettore di carte USB.",
+  "audience": {
+    "@type": "Audience",
+    "audienceType": "Professional truck and bus drivers"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "TAGRA Control per gli enti di controllo",
+  "url": "https://tagra.app/enforcement/",
+  "provider": { "@id": "https://tagra.app/#organization" },
+  "serviceType": "Inspection and enforcement software",
+  "description": "Software di controllo su strada e aziendale per Polizia, Dogane, Ispettorati del Lavoro e Ministeri dei Trasporti. Lo standard de facto in tutta l'Europa centrale.",
+  "audience": {
+    "@type": "GovernmentService",
+    "audienceType": "Enforcement authorities, Police, Customs, Labour Inspectorates"
+  }
+}
+</script>
+<link href="/assets/css/tokens.css" rel="stylesheet"/>
+<link href="/assets/css/base.css" rel="stylesheet"/>
+<link href="/assets/css/components.css" rel="stylesheet"/>
+<link href="/assets/css/nav.css" rel="stylesheet"/>
+<script defer="" src="/assets/js/nav.js?v=20260816b"></script>
+<link href="/assets/css/footer.css" rel="stylesheet"/>
+<link href="https://tagra.app/" hreflang="en" rel="alternate"/><link href="https://tagra.app/de/" hreflang="de" rel="alternate"/><link href="https://tagra.app/pl/" hreflang="pl" rel="alternate"/><link href="https://tagra.app/el/" hreflang="el" rel="alternate"/><link href="https://tagra.app/hu/" hreflang="hu" rel="alternate"/><link href="https://tagra.app/it/" hreflang="it" rel="alternate"/><link href="https://tagra.app/" hreflang="x-default" rel="alternate"/></head>
+<body class="home-fullbleed">
+<a class="skip-link" href="#main-content">Vai al contenuto</a>
+<div aria-hidden="true" id="scroll-progress"></div>
+<!-- ═══ NAVIGATION ═══════════════════════════════════════════════════ -->
+<nav aria-label="Navigazione principale" class="site-nav" role="navigation">
+<div class="nav-inner">
+<a aria-label="TAGRA – Home" class="nav-logo" href="/it/"><img alt="TAGRA" height="32" src="/assets/img/logo-light.svg?v=20260513zh" style="display:block;height:32px;width:auto;" width="140"/></a>
+<ul class="nav-links" id="nav-links">
+<li><a href="/it/per-aziende/">Per le aziende</a></li>
+<li><a href="/it/per-autisti/">Per gli autisti</a></li>
+<li><a href="/enforcement/">Enti di controllo</a></li>
+<li><a href="/articles/">Articoli</a></li><li><a href="/manuals/">Manuali</a></li>
+<li><a href="/faq/">FAQ</a></li>
+<li><a href="/contact/">Contatti</a></li>
+<li class="nav-cta-li"><a class="nav-cta" href="/it/prova-gratuita/?audience=fleet">Prova gratuita 30 giorni</a></li>
+</ul>
+<details class="nav-lang">
+<summary aria-label="Language: IT">IT</summary>
+<div class="nav-lang-menu" role="menu">
+<a href="/" hreflang="en">English</a><a href="/de/" hreflang="de">Deutsch</a><a href="/pl/" hreflang="pl">Polski</a><a href="/el/" hreflang="el">Ελληνικά</a><a href="/hu/" hreflang="hu">Magyar</a><a aria-current="page" class="active" href="/it/" hreflang="it">Italiano</a><a href="https://www.tdt.cz/" hreflang="cs" rel="noopener" target="_blank">Čeština</a><a href="https://www.tdt.sk/" hreflang="sk" rel="noopener" target="_blank">Slovenčina</a></div>
+</details>
+<a class="nav-cta-mobile" href="/it/prova-gratuita/?audience=fleet">Prova gratis</a>
+<button aria-expanded="false" aria-label="Attiva/disattiva menu" class="nav-mobile-toggle" id="nav-toggle">
+<span></span><span></span><span></span>
+</button>
+</div>
+</nav>
+<!-- ═══ HERO ══════════════════════════════════════════════════════════ -->
+<section id="main-content" aria-label="TAGRA – Scegli la tua soluzione" class="hero">
+<img alt="" aria-hidden="true" class="hero-video-poster" fetchpriority="high" loading="eager" src="/assets/img/hero-poster.jpg?v=2026-05-13b" width="1920" height="1080"/>
+<video aria-hidden="true" class="hero-video" id="heroVideoA" muted="" playsinline="" poster="/assets/img/hero-poster.jpg?v=2026-05-13b" preload="auto">
+<source media="(max-width: 1024px)" src="/assets/video/hero-720.mp4?v=2026-05-13c" type="video/mp4">
+<source src="/assets/video/hero-1080.webm?v=2026-05-13c" type="video/webm">
+<source src="/assets/video/hero-1080.mp4?v=2026-05-13c" type="video/mp4">
+</source></source></source></video>
+<video aria-hidden="true" class="hero-video" id="heroVideoB" muted="" playsinline="" poster="/assets/img/hero-poster.jpg?v=2026-05-13b" preload="auto">
+<source media="(max-width: 1024px)" src="/assets/video/hero-720.mp4?v=2026-05-13c" type="video/mp4">
+<source src="/assets/video/hero-1080.webm?v=2026-05-13c" type="video/webm">
+<source src="/assets/video/hero-1080.mp4?v=2026-05-13c" type="video/mp4">
+</source></source></source></video>
+<div class="container">
+<div class="hero-glass anim-up">
+<div class="eyebrow">TAGRA · Software di analisi del tachigrafo</div>
+</div>
+<h1 class="anim-up" style="transition-delay:.05s">Analisi del cronotachigrafo <br/>prima che lo scopra l'ispezione</h1>
+<div class="hero-glass anim-up" style="transition-delay:.1s">
+<p class="hero-sub">
+        Scaricare i dati non basta — la legge richiede <strong>valutazione e archiviazione.</strong><br/>
+        TAGRA copre tutto. Prova gratuita di 30 giorni, nessuna carta di credito.
+      </p>
+</div>
+</div>
+</section>
+<!-- ═══ PICKER (3 audience cards) ═══════════════════════════════════ -->
+<section aria-label="Scegli la tua soluzione TAGRA" class="picker">
+<div class="container">
+<div class="picker-head anim-up">
+<span class="section-label">Scegli il tuo ruolo</span>
+</div>
+<div class="split anim-up" id="picker-rail">
+<!-- Fleet -->
+<a aria-label="TAGRA per operatori di flotta" class="split-card split-card--fleet" href="/it/per-aziende/">
+<div class="card-label">Operatore di flotta</div>
+<h2 class="sr-only">TAGRA · Software di analisi del tachigrafo</h2><h3 class="card-title">TAGRA<br/>Company</h3>
+<p class="card-desc">Gestisci veicoli per un'azienda. Devi scaricare e valutare i dati da <strong>unità del tachigrafo e carte conducente</strong> — e archiviare tutto per le ispezioni.</p>
+<ul class="card-list">
+<li>Da 1 a veicoli illimitati</li>
+<li>Valutazione completa dell'orario di lavoro ((CE) 561/2006 + Direttiva Orario di Lavoro)</li>
+<li>Output accettati dagli enti di controllo</li>
+<li>Pronto per i furgoni da luglio 2026</li>
+</ul>
+<span class="card-cta">Soluzione flotta →</span>
+<span class="card-note">Prova gratuita di 30 giorni · nessuna carta di credito</span>
+</a>
+<!-- Driver -->
+<a aria-label="TAGRA Trucker per autisti professionisti" class="split-card split-card--driver" href="/it/per-autisti/">
+<div class="card-label">Autista professionista</div>
+<h3 class="card-title">TAGRA<br/>Trucker</h3>
+<p class="card-desc">Guidi professionalmente. Vuoi tenere traccia delle tue ore e dei periodi di riposo usando la <strong>tua carta conducente</strong> — con un comune lettore USB.</p>
+<ul class="card-list">
+<li>Per 1 autista · solo carta conducente</li>
+<li>Funziona con un comune lettore di carte USB</li>
+<li>Tempi di guida e periodi di riposo a colpo d'occhio</li>
+<li>Funziona offline su qualsiasi PC Windows</li>
+</ul>
+<span class="card-cta">Soluzione autisti →</span>
+<span class="card-note">Prova gratuita di 30 giorni · nessuna carta di credito</span>
+</a>
+<!-- Enforcement -->
+<a aria-label="TAGRA Control per gli enti di controllo" class="split-card split-card--enforce" href="/enforcement/">
+<div class="card-label">Ente di controllo</div>
+<h3 class="card-title">TAGRA<br/>Control</h3>
+<p class="card-desc">Controlli autisti e operatori. <strong>Controlli su strada e aziendali</strong> ai sensi del (CE) 561/2006, (UE) 2020/1054 e AETR.</p>
+<ul class="card-list">
+<li>Polizia · Dogane · Ispettorati del Lavoro</li>
+<li>Autorità ceche, slovacche e ungheresi</li>
+<li>Output di valutazione validi in sede giudiziaria</li>
+<li>Standard de facto in Europa centrale</li>
+</ul>
+<span class="card-cta">Soluzione ispezioni →</span>
+<span class="card-note">Uso governativo e istituzionale</span>
+</a>
+</div>
+<div aria-label="Picker pagination" class="picker-dots" role="tablist">
+<button aria-label="Go to card 1" class="picker-dot is-active" data-target="0" type="button"></button>
+<button aria-label="Go to card 2" class="picker-dot" data-target="1" type="button"></button>
+<button aria-label="Go to card 3" class="picker-dot" data-target="2" type="button"></button>
+</div>
+</div>
+</section>
+<!-- ═══ TRUST BAR ══════════════════════════════════════════════════════ -->
+<div class="trust-bar anim-up">
+<div class="container">
+<p><strong>La fiducia di migliaia di operatori in tutta Europa.</strong> La stessa logica di valutazione usata da forze di Polizia, Amministrazioni doganali e Ispettorati del Lavoro.</p>
+</div>
+</div>
+<!-- ═══ UI SHOWCASE ════════════════════════════════════════════════════ -->
+<section aria-label="Cosa segnala TAGRA — esempi di output" class="section section--white">
+<div class="section-inner">
+<div class="section-head anim-up">
+<span class="section-label">Guardalo in azione</span>
+<h2 class="section-h2">Guarda esattamente cosa segnala TAGRA</h2>
+<p class="section-intro">Esempi realistici di ciò che TAGRA rileva — scadenze di download, infrazioni sui tempi di guida e report di conformità pronti per l'esportazione.</p>
+</div>
+<div class="showcase-grid anim-up">
+<div class="showcase-card showcase-card--critical">
+<span class="showcase-badge">In ritardo</span>
+<p class="showcase-title">Download della carta conducente in ritardo</p>
+<div class="showcase-row"><span>Autista</span><strong>A. Walsh</strong></div>
+<div class="showcase-row"><span>Stato</span><strong>In ritardo di 3 giorni</strong></div>
+<div class="showcase-row"><span>Ultimo download</span><strong>2 giu 2026</strong></div>
+<p class="showcase-foot">Monitorato automaticamente rispetto alla regola dei 28 giorni.</p>
+</div>
+<div class="showcase-card showcase-card--warn">
+<span class="showcase-badge">Infrazione</span>
+<p class="showcase-title">Tempo di guida giornaliero superato</p>
+<div class="showcase-row"><span>Autista</span><strong>J. Kowalski</strong></div>
+<div class="showcase-row"><span>Guidato</span><strong>9h 42m</strong></div>
+<div class="showcase-row"><span>Limite</span><strong>9h · Reg. 561/2006</strong></div>
+<p class="showcase-foot">Segnalato con dettaglio completo per orario, tipo e durata.</p>
+</div>
+<div class="showcase-card showcase-card--ready">
+<span class="showcase-badge">Report pronto</span>
+<p class="showcase-title">Riepilogo settimanale di conformità</p>
+<div class="showcase-row"><span>Autisti analizzati</span><strong>42</strong></div>
+<div class="showcase-row"><span>Infrazioni</span><strong>3 segnalate</strong></div>
+<div class="showcase-row"><span>Settimana</span><strong>Settimana 26</strong></div>
+<p class="showcase-foot">Output pronto per l'esportazione, di livello audit, in un clic.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- ═══ USP BENTO ═════════════════════════════════════════════════════ -->
+<section aria-label="Perché TAGRA — caratteristiche principali" class="section section--white">
+<div class="section-inner">
+<div class="section-head anim-up">
+<span class="section-label">Perché TAGRA</span>
+<h2 class="section-h2">Download, analisi e archiviazione del tachigrafo</h2>
+<p class="section-intro">Potente software Windows per l'analisi del cronotachigrafo digitale, i tempi di guida UE e la Direttiva sull'orario di lavoro degli autotrasportatori — scala da un veicolo a flotte aziendali.</p>
+</div>
+<div class="bento">
+<div class="bc s7 fly-left">
+<span class="bc-eyebrow">Motore di conformità</span>
+<div class="bc-title">Tempi di guida UE + orario di lavoro</div>
+<p class="bc-text">Valutazione automatica del <strong>Regolamento (CE) n. 561/2006</strong> e della <strong>Direttiva sull'orario di lavoro degli autotrasportatori</strong> (2002/15/CE). Riepiloghi giornalieri e settimanali chiari con ogni infrazione segnalata per orario, tipo e durata.</p>
+<div class="bignum">01</div>
+</div>
+<div class="bc s5 bluefill fly-right">
+<span class="bc-eyebrow">Copertura</span>
+<div class="bc-title">Tutti i tachigrafi supportati</div>
+<p class="bc-text">Dalla prima generazione digitale fino allo <strong>Smart Tachograph G2V2</strong>. Legge file <code>.DDD</code>, <code>.C1B</code>, <code>.V1B</code> ed ESM da carta conducente e unità di bordo.</p>
+</div>
+<div class="bc s6 fly-left" style="transition-delay:.05s">
+<span class="bc-eyebrow">Report</span>
+<div class="bc-title">Output di livello audit</div>
+<p class="bc-text">Report pronti per gli ispettori, che gli agenti di controllo comprendono davvero. Stampa, esporta o condividi output puliti e strutturati per audit, revisioni interne e controlli su strada.</p>
+</div>
+<div class="bc s6 greenfill fly-right" style="transition-delay:.05s">
+<span class="bc-eyebrow">Scala</span>
+<div class="bc-title">Da 1 a veicoli illimitati</div>
+<p class="bc-text">TAGRA Trucker, livelli 1, 2, 4, 6 e MAX. Inizia con un solo camion e cresci fino a una flotta aziendale senza cambiare strumenti o flussi di lavoro.</p>
+<div class="bignum">∞</div>
+</div>
+<div class="bc s8 fly-left" style="transition-delay:.1s">
+<span class="bc-eyebrow">Privacy</span>
+<div class="bc-title">Desktop. Veloce. Tuo.</div>
+<p class="bc-text">Software Windows che funziona offline sul tuo PC. I dati di autisti e veicoli non lasciano mai la tua rete — nessun vincolo al cloud, nessun abbonamento mensile, nessuna preoccupazione GDPR su elaboratori terzi.</p>
+</div>
+<div class="bc s4 bluefill fly-right" style="transition-delay:.1s">
+<span class="bc-eyebrow">A prova di futuro</span>
+<div class="bc-title">Pronto per i furgoni 2026</div>
+<p class="bc-text">Piena conformità al nuovo obbligo del tachigrafo per veicoli commerciali leggeri (2,5–3,5 t) dal <strong>1° luglio 2026</strong>.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- ═══ SOCIAL PROOF ══════════════════════════════════════════════════ -->
+<section aria-label="La fiducia delle autorità e delle flotte in tutta l'Europa centrale" class="section section--blue">
+<div class="section-inner">
+<div class="section-head anim-up">
+<span class="section-label">Verificato nella pratica</span>
+<h2 class="section-h2">La fiducia delle autorità. Scelto dalle flotte.</h2>
+<p class="section-intro">La stessa logica di valutazione usata da Polizia, Dogane e Ispettorati del Lavoro in Repubblica Ceca, Slovacchia e Ungheria.</p>
+</div>
+<div class="ref-grid">
+<div class="ref-card ref-card--cz">
+<div class="ref-country">Repubblica Ceca</div>
+<div class="ref-name">Polizia e Dogane</div>
+<div class="ref-note">Controlli su strada e aziendali in tutto il paese.</div>
+</div>
+<div class="ref-card ref-card--sk">
+<div class="ref-country">Slovacchia</div>
+<div class="ref-name">Ispettorato del Lavoro</div>
+<div class="ref-note">Controllo dei tempi di guida e dell'orario di lavoro.</div>
+</div>
+<div class="ref-card ref-card--hu">
+<div class="ref-country">Ungheria</div>
+<div class="ref-name">Enti di controllo e ministeri</div>
+<div class="ref-note">Conformità nei trasporti transfrontalieri.</div>
+</div>
+<div class="ref-card">
+<div class="ref-country">In tutta l'Europa centrale</div>
+<div class="ref-name">Centinaia di operatori di flotta</div>
+<div class="ref-note">Autotrasporto, bus e pullman, noleggio, flotte comunali, officine.</div>
+</div>
+</div>
+<div class="name-marquee-wrap anim-up">
+<p class="name-marquee-label">Tra le flotte e gli operatori che già usano TAGRA</p>
+<div class="name-marquee"><span>FCC Group</span><span>CS Cargo a.s.</span><span>ČEDOK a.s.</span><span>AGRO SERVIS CZ</span><span>ČSAD Jihotrans</span><span>ČSAD Karviná</span><span>Pivovar Holba</span><span>PORR a.s.</span><span>Klaus Timber a.s.</span><span>Mátra Transport a.s.</span><span>KAFKA Transport a.s.</span><span>DKC s.r.o.</span><span>TQM Holding</span><span>Synergies Logistiques</span><span>ČSAD Autobusy České Budějovice</span><span>ČSAD POLKOST</span><span>Cargospol</span><span>Energie stavební a báňská a.s.</span><span>SAP Mimoň</span><span>FCC Group</span><span>CS Cargo a.s.</span><span>ČEDOK a.s.</span><span>AGRO SERVIS CZ</span><span>ČSAD Jihotrans</span><span>ČSAD Karviná</span><span>Pivovar Holba</span><span>PORR a.s.</span><span>Klaus Timber a.s.</span><span>Mátra Transport a.s.</span><span>KAFKA Transport a.s.</span><span>DKC s.r.o.</span><span>TQM Holding</span><span>Synergies Logistiques</span><span>ČSAD Autobusy České Budějovice</span><span>ČSAD POLKOST</span><span>Cargospol</span><span>Energie stavební a báňská a.s.</span><span>SAP Mimoň</span></div>
+</div>
+</div>
+</section>
+<!-- ═══ REVIEWS (auto-scroll loop, matches /fleet/) ═══════════════════ -->
+<section aria-label="Customer reviews" class="section section--white">
+<div class="section-inner">
+<div class="section-head anim-up">
+<span class="section-label">Cosa dicono i clienti</span>
+<h2 class="section-h2">Scelto da migliaia di operatori in tutta l'UE</h2>
+<p class="section-intro">Recensioni a cinque stelle da clienti verificati in tutta l'Europa centrale.</p>
+</div>
+</div>
+<div class="rev-rail-wrap anim-up" style="transition-delay:.05s">
+<div class="rev-rail" id="rev-rail">
+<div class="rev-card"><div aria-label="5 out of 5" class="rev-stars">★★★★★</div><p class="rev-txt">"TAGRA gestisce un enorme volume di dati e ha semplificato notevolmente i nostri controlli sulle infrazioni e l'archiviazione."</p><p class="rev-meta">David C. · Cliente verificato</p></div>
+<div class="rev-card"><div aria-label="5 out of 5" class="rev-stars">★★★★★</div><p class="rev-txt">"Usiamo TAGRA da alcuni mesi — download e valutazione semplici, output chiari. Finalmente tranquillità."</p><p class="rev-meta">Patrik S. · Cliente verificato</p></div>
+<div class="rev-card"><div aria-label="5 out of 5" class="rev-stars">★★★★★</div><p class="rev-txt">"Il software è intuitivo e facile da usare. Quando ho avuto bisogno di aiuto, c'erano."</p><p class="rev-meta">Milan K. · Cliente verificato</p></div>
+<div class="rev-card"><div aria-label="5 out of 5" class="rev-stars">★★★★★</div><p class="rev-txt">"Semplice e chiaro. Il download, la valutazione e l'archiviazione dei dati richiedono pochi minuti."</p><p class="rev-meta">Josef Z. · Cliente verificato</p></div>
+<div class="rev-card"><div aria-label="5 out of 5" class="rev-stars">★★★★★</div><p class="rev-txt">"TAGRA ci tiene aggiornati su infrazioni e archiviazione. Davvero facile da usare."</p><p class="rev-meta">Cliente verificato TRUCKMALL</p></div>
+</div>
+</div>
+</section>
+<!-- ═══ PRICING TEASER ════════════════════════════════════════════════ -->
+<section aria-label="Pricing overview" class="section section--gray">
+<div class="section-inner">
+<div class="section-head anim-up">
+<span class="section-label">Prezzi</span>
+<h2 class="section-h2">Prezzi equi. Nessuna sorpresa.</h2>
+<p class="section-intro">Primo anno incluso nel prezzo di acquisto. Dal 2° anno, un canone annuale di 19–149 € mantiene il tuo software funzionante, aggiornato e assistito.</p>
+</div>
+<div class="pricing-teaser anim-up">
+<div>
+<div class="pricing-teaser-headline">Inizia gratis. Licenza da 49 €.</div>
+<p class="pricing-teaser-price">Prova gratuita di 30 giorni, nessuna carta di credito richiesta. TAGRA costa da <strong>49 €</strong> (TAGRA Trucker) a 749 € (TAGRA MAX, veicoli illimitati), IVA esclusa — il primo anno di aggiornamenti e assistenza è incluso. Dal 2° anno, un canone annuale da 19 a 149 € lo mantiene attivo.</p>
+<ul class="pricing-teaser-features">
+<li>Analisi completa dei tempi di guida UE e della Direttiva sull'orario di lavoro</li>
+<li>Supporto per tutti i cronotachigrafi digitali, incluso Smart G2V2</li>
+<li>Aggiornamenti software gratuiti per ogni modifica normativa</li>
+<li>Assistenza tecnica dedicata durante tutto l'anno</li>
+</ul>
+</div>
+<div class="pricing-teaser-cta">
+<a class="btn-outline" href="/it/per-aziende/#tagra-pricing">Vedi tutti i livelli e i prezzi →</a>
+<a class="btn-cta" href="/it/prova-gratuita/">Prova gratis per 30 giorni</a>
+<span class="pricing-teaser-cta-note">Nessuna carta di credito. Installer Windows.</span>
+</div>
+</div>
+</div>
+</section>
+<!-- ═══ FAQ TEASER ════════════════════════════════════════════════════ -->
+<section aria-label="Frequently asked questions" class="section section--white">
+<div class="section-inner">
+<div class="section-head anim-up">
+<span class="section-label">Domande</span>
+<h2 class="section-h2">Domande frequenti</h2>
+<p class="section-intro">Risposte brevi alle domande che sentiamo più spesso. La FAQ completa ne ha altre.</p>
+</div>
+<div class="faq-block anim-up">
+<details>
+<summary>TAGRA è basato su cloud o installato localmente?</summary>
+<div class="faq-answer">TAGRA è un <strong>software desktop per Windows</strong> che funziona interamente offline sul tuo computer. I dati di autisti e veicoli non lasciano mai la tua rete — nessun caricamento sul cloud, nessun elaboratore terzo, nessun abbonamento mensile. Molte flotte lo preferiscono per motivi di GDPR e protezione dei dati.</div>
+</details>
+<details>
+<summary>TAGRA copre i tempi di guida UE e la Direttiva sull'orario di lavoro?</summary>
+<div class="faq-answer">Sì. TAGRA valuta il <strong>Regolamento (CE) n. 561/2006</strong> (tempi di guida UE) e la <strong>Direttiva sull'orario di lavoro degli autotrasportatori</strong> 2002/15/CE, oltre alle relative norme AETR. Ogni infrazione è evidenziata in report chiari per autisti e veicoli con orario, tipo e durata esatti.</div>
+</details>
+<details>
+<summary>Quali tachigrafi e lettori di carte supporta?</summary>
+<div class="faq-answer">Tutti i cronotachigrafi digitali UE, dalla prima generazione fino allo Smart Tachograph G2V2. Compatibile con i comuni lettori di smart card (es. DOWNLOAD BOX II S) e legge file <code>.DDD</code>, <code>.C1B</code>, <code>.V1B</code> ed ESM. Pronto per i requisiti di luglio 2026 per i veicoli commerciali leggeri.</div>
+</details>
+<details>
+<summary>Come funziona la prova gratuita di 30 giorni?</summary>
+<div class="faq-answer">Scarica e installa il pacchetto Windows — ottieni <strong>30 giorni di accesso completo e senza restrizioni</strong> a tutte le funzionalità. Nessuna carta di credito, nessun dato di pagamento. Se TAGRA si adatta alla tua attività, acquisti una licenza per continuare.</div>
+</details>
+<div class="faq-cta">
+<a href="/faq/">Vedi tutte le FAQ →</a>
+</div>
+</div>
+</div>
+</section>
+<!-- ═══ FOOTER ════════════════════════════════════════════════════════ -->
+<footer class="site-footer" role="contentinfo">
+<div class="footer-inner">
+<div>
+<div class="footer-logo"><img alt="TAGRA" height="20" src="/assets/img/logo-dark.svg?v=20260513zh" width="88" loading="lazy"/></div>
+<p class="footer-desc">Software professionale per l'analisi dei dati del tachigrafo. Download della carta conducente, analisi del cronotachigrafo digitale, tempi di guida e di riposo nell'UE e Direttiva sull'orario di lavoro degli autotrasportatori. Sviluppato da Truck Data Technology, s.r.o.</p>
+</div>
+<div class="footer-col">
+<h2 class="footer-col-title">Prodotto</h2>
+<ul>
+<li><a href="/it/per-aziende/">Per operatori di flotta</a></li>
+<li><a href="/it/per-autisti/">Per autisti professionisti</a></li>
+<li><a href="/enforcement/">Per gli enti di controllo</a></li>
+<li><a href="/how-it-works/">Come funziona</a></li>
+<li><a href="/for-whom/">A chi si rivolge</a></li>
+<li><a href="/faq/">FAQ</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h2 class="footer-col-title">Risorse</h2>
+<ul>
+<li><a href="/articles/">Articoli</a></li><li><a href="/manuals/">Manuali</a></li>
+<li><a href="/articles/digital-tachograph-symbols/">Simboli del cronotachigrafo</a></li>
+<li><a href="/integrations/dkv-live/">DKV LIVE®</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h2 class="footer-col-title">Azienda</h2>
+<ul>
+<li><a href="/contact/">Contatti</a></li>
+<li><a href="https://www.tdt.cz" rel="noopener" target="_blank">Truck Data Technology</a></li>
+<li><a href="/">English</a></li><li><a href="/de/">Deutsch</a></li><li><a href="/pl/">Polski</a></li><li><a href="/el/">Ελληνικά</a></li><li><a href="/hu/">Magyar</a></li><li><a href="/it/">Italiano</a></li><li><a href="https://www.tdt.cz/" rel="noopener" target="_blank">Čeština</a></li><li><a href="https://www.tdt.sk/" rel="noopener" target="_blank">Slovenčina</a></li></ul>
+</div>
+</div>
+<div class="footer-bottom">
+<span>© 2026 Truck Data Technology, s.r.o. Tutti i diritti riservati.</span>
+<span><a href="/contact/">Contatti</a> · <a href="https://www.tdt.cz" rel="noopener" target="_blank">tdt.cz</a> · <a href="/privacy/">Privacy e cookie</a></span>
+</div>
+</footer>
+<div aria-label="Quick trial signup" class="sticky-cta" id="stickyCta" role="complementary">
+<div class="sticky-cta-inner">
+<span class="sticky-cta-text">Pronto per iniziare? Prova TAGRA gratis per 30 giorni.</span>
+<a class="sticky-cta-btn" href="/it/prova-gratuita/?audience=fleet">Prova gratis →</a>
+<button aria-label="Chiudi" class="sticky-cta-close" id="stickyCtaClose">×</button>
+</div>
+</div>
+<script>
+(function() {
+  /* SCROLL PROGRESS */
+  var bar = document.getElementById('scroll-progress');
+  if (bar) {
+    window.addEventListener('scroll', function() {
+      var top = document.documentElement.scrollTop || document.body.scrollTop;
+      var h = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      bar.style.width = (top / h * 100) + '%';
+    }, { passive: true });
+  }
+  /* MOBILE NAV */
+  var toggle = document.getElementById('nav-toggle');
+  var links = document.getElementById('nav-links');
+  if (toggle && links) {
+    toggle.addEventListener('click', function() {
+      var open = links.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open);
+    });
+  }
+  /* ANIMATIONS */
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) { if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); } });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.anim-up').forEach(function(el) { io.observe(el); });
+  } else {
+    document.querySelectorAll('.anim-up').forEach(function(el) { el.classList.add('on'); });
+  }
+})();
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "TAGRA – Software di Gestione dei Dati del Tachigrafo",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Windows",
+  "description": "Software per la valutazione e l'archiviazione dei dati di cronotachigrafi digitali e carte conducente. Disponibile per operatori di flotta (da 1 a veicoli illimitati) e autisti professionisti. Conforme al Regolamento (CE) 561/2006, all'AETR e alla Direttiva sull'orario di lavoro. Prova gratuita di 30 giorni.",
+  "url": "https://tagra.app/it/",
+  "inLanguage": "it",
+  "author": {
+    "@type": "Organization",
+    "name": "Truck Data Technology, s.r.o.",
+    "url": "https://www.tdt.cz"
+  },
+  "offers": {
+    "@type": "AggregateOffer",
+    "priceCurrency": "EUR",
+    "lowPrice": "49",
+    "highPrice": "749",
+    "offerCount": "6",
+    "url": "https://tagra.app/it/",
+    "availability": "https://schema.org/InStock",
+    "description": "Il prezzo di acquisto include il primo anno di aggiornamenti e assistenza. Dal 2° anno è previsto un canone annuale di 19–149 € per mantenere attivo il programma."
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "inLanguage": "it",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "TAGRA è basato su cloud o installato localmente?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "TAGRA è un software desktop per Windows che funziona interamente offline sul tuo computer. I dati di autisti e veicoli non lasciano mai la tua rete — nessun caricamento sul cloud, nessun elaboratore terzo, nessun abbonamento mensile. Molte flotte lo preferiscono per motivi di GDPR e protezione dei dati."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "TAGRA copre i tempi di guida UE e la Direttiva sull'orario di lavoro?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sì. TAGRA valuta il Regolamento (CE) n. 561/2006 (tempi di guida UE) e la Direttiva sull'orario di lavoro degli autotrasportatori 2002/15/CE, oltre alle relative norme AETR. Ogni infrazione è evidenziata in report chiari per autisti e veicoli con orario, tipo e durata esatti."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quali tachigrafi e lettori di carte supporta?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tutti i cronotachigrafi digitali UE, dalla prima generazione fino allo Smart Tachograph G2V2. Compatibile con i comuni lettori di smart card (es. DOWNLOAD BOX II S) e legge file .DDD, .C1B, .V1B ed ESM. Pronto per i requisiti di luglio 2026 per i veicoli commerciali leggeri."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Come funziona la prova gratuita di 30 giorni?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Scarica e installa il pacchetto Windows — ottieni 30 giorni di accesso completo e senza restrizioni a tutte le funzionalità. Nessuna carta di credito, nessun dato di pagamento. Se TAGRA si adatta alla tua attività, acquisti una licenza per continuare."
+      }
+    }
+  ]
+}
+</script>
+<script>
+(function() {
+  var videoA = document.getElementById('heroVideoA');
+  var videoB = document.getElementById('heroVideoB');
+  var hero = document.querySelector('.hero');
+  if (!videoA || !videoB || !hero) return;
+
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  // Crossfade duration must match the CSS transition (.hero-video opacity 1.2s)
+  var CROSSFADE_MS = 1200;
+  var CROSSFADE_S = CROSSFADE_MS / 1000;
+
+  var current = videoA;   // currently playing & opaque
+  var next = videoB;      // pre-buffered, hidden
+  var swapping = false;
+  var rafId = null;
+  var isPaused = false;
+
+  function tryPlay(v) {
+    try {
+      var p = v.play();
+      if (p && typeof p.catch === 'function') p.catch(function() {});
+    } catch (e) {}
+  }
+
+  function swap() {
+    if (swapping || isPaused) return;
+    swapping = true;
+    // Start the next video from the beginning
+    try { next.currentTime = 0; } catch (e) {}
+    tryPlay(next);
+    // Crossfade: bring next to opacity 1, take current to 0
+    next.classList.add('is-active');
+    current.classList.remove('is-active');
+    // After the fade completes, the now-hidden video becomes "next"
+    setTimeout(function() {
+      try { current.pause(); current.currentTime = 0; } catch (e) {}
+      var tmp = current;
+      current = next;
+      next = tmp;
+      swapping = false;
+    }, CROSSFADE_MS + 50);
+  }
+
+  // rAF loop checks playback time; when current is within CROSSFADE_S of end, swap
+  function tick() {
+    rafId = null;
+    if (!isPaused && current && !current.paused && !isNaN(current.duration) && current.duration > 0) {
+      var timeLeft = current.duration - current.currentTime;
+      if (timeLeft <= CROSSFADE_S && !swapping) {
+        swap();
+      }
+    }
+    rafId = requestAnimationFrame(tick);
+  }
+
+  // Boot: when video A has data, mark it active and start playback + loop
+  function boot() {
+    hero.classList.add('has-video-ready');
+    current.classList.add('is-active');
+    tryPlay(current);
+    if (rafId === null) rafId = requestAnimationFrame(tick);
+  }
+
+  // Both videos load the same file; boot as soon as A is ready
+  if (videoA.readyState >= 2) {
+    boot();
+  } else {
+    videoA.addEventListener('loadeddata', boot, { once: true });
+  }
+
+  // Pause loop while hero is off-screen, resume when it returns
+  if ('IntersectionObserver' in window) {
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          isPaused = false;
+          if (current && current.paused) tryPlay(current);
+        } else {
+          isPaused = true;
+          try { current.pause(); } catch (e) {}
+          try { next.pause(); } catch (e) {}
+        }
+      });
+    }, { threshold: 0.05 });
+    observer.observe(hero);
+  }
+
+  // Pause when tab loses visibility (saves CPU/bandwidth)
+  document.addEventListener('visibilitychange', function() {
+    if (document.hidden) {
+      isPaused = true;
+      try { current.pause(); } catch (e) {}
+      try { next.pause(); } catch (e) {}
+    } else if (!isPaused) {
+      if (current && current.paused) tryPlay(current);
+    }
+  });
+})();
+</script>
+<script>
+(function() {
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    document.querySelectorAll('.fly-left, .fly-right, .anim-up').forEach(function(el) {
+      el.classList.add('on');
+      el.style.opacity = '1'; el.style.transform = 'none';
+    });
+    return;
+  }
+  if (!('IntersectionObserver' in window)) {
+    document.querySelectorAll('.fly-left, .fly-right, .anim-up').forEach(function(el) {
+      el.classList.add('on');
+    });
+    return;
+  }
+  var io = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('on');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -50px 0px' });
+  document.querySelectorAll('.fly-left, .fly-right, .anim-up').forEach(function(el) {
+    io.observe(el);
+  });
+
+  /* Reviews slider — auto-scroll loop, drag/touch to pause. */
+  var rail = document.getElementById('rev-rail');
+  if (rail) {
+    // Triple the content so the loop wraps without a visible jump.
+    rail.innerHTML += rail.innerHTML + rail.innerHTML;
+    var speed = 0.9, busy = false, pos = 0;
+    var isDown = false, startX = 0, startScroll = 0, resumeTimer = null;
+
+    function tick() {
+      if (!busy) {
+        pos += speed;
+        if (pos >= 1) {
+          rail.scrollLeft += Math.floor(pos);
+          pos -= Math.floor(pos);
+        }
+        if (rail.scrollLeft >= rail.scrollWidth / 3) {
+          rail.scrollLeft = 0;
+        }
+      }
+      requestAnimationFrame(tick);
+    }
+    function pause()  { busy = true; clearTimeout(resumeTimer); }
+    function resume() { resumeTimer = setTimeout(function() { busy = false; }, 2000); }
+
+    rail.addEventListener('mousedown',  function(e) {
+      isDown = true; pause();
+      startX = e.pageX - rail.offsetLeft;
+      startScroll = rail.scrollLeft;
+    });
+    rail.addEventListener('mouseleave', function() { isDown = false; resume(); });
+    rail.addEventListener('mouseup',    function() { isDown = false; resume(); });
+    rail.addEventListener('mousemove',  function(e) {
+      if (!isDown) return;
+      e.preventDefault();
+      rail.scrollLeft = startScroll - (e.pageX - rail.offsetLeft - startX) * 1.5;
+    });
+    rail.addEventListener('touchstart', pause,  { passive: true });
+    rail.addEventListener('touchend',   resume, { passive: true });
+    tick();
+  }
+})();
+</script>
+<script>
+(function(){
+
+
+  /* Picker carousel — sync active dot with visible card (mobile only). */
+  (function() {
+    var rail = document.getElementById('picker-rail');
+    var dots = document.querySelectorAll('.picker-dot');
+    if (!rail || dots.length === 0) return;
+    var cards = Array.from(rail.querySelectorAll('.split-card'));
+    if (cards.length === 0) return;
+    dots.forEach(function(dot, i) {
+      dot.addEventListener('click', function() {
+        var t = cards[i];
+        if (t) t.scrollIntoView({ behavior: 'smooth', inline: 'start', block: 'nearest' });
+      });
+    });
+    if (!('IntersectionObserver' in window)) return;
+    var obs = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting && entry.intersectionRatio > 0.6) {
+          var idx = cards.indexOf(entry.target);
+          if (idx >= 0) {
+            dots.forEach(function(d) { d.classList.remove('is-active'); });
+            if (dots[idx]) dots[idx].classList.add('is-active');
+          }
+        }
+      });
+    }, { root: rail, threshold: [0.6, 0.8, 1.0] });
+    cards.forEach(function(c) { obs.observe(c); });
+  })();
+
+
+  /* STICKY CTA BAR */
+  (function(){
+    var bar = document.getElementById('stickyCta');
+    if(!bar) return;
+    var KEY = 'tmx-sticky-cta-dismissed';
+    var dismissed = false;
+    try { dismissed = localStorage.getItem(KEY) === '1'; } catch(e) {}
+    if (dismissed) return;
+    function check(){
+      var top = document.documentElement.scrollTop || document.body.scrollTop;
+      var nearBottom = (window.innerHeight + top) >= (document.documentElement.scrollHeight - 80);
+      if (top > 700 && !nearBottom) bar.classList.add('is-visible');
+      else bar.classList.remove('is-visible');
+    }
+    window.addEventListener('scroll', check, { passive: true });
+    check();
+    var closeBtn = document.getElementById('stickyCtaClose');
+    if (closeBtn) closeBtn.addEventListener('click', function(){
+      bar.classList.remove('is-visible');
+      try { localStorage.setItem(KEY, '1'); } catch(e) {}
+    });
+  })();
+
+})();
+</script>
+</body>
+</html>
