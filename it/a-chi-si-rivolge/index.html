@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="it">
 <head>
 <!-- TMX-ANALYTICS START -->
 <meta content="7F7894081BE7FBB245FF03AF8810B22F" name="msvalidate.01"/>
@@ -44,13 +44,13 @@
     function lc(){var l=(document.documentElement.getAttribute('lang')||'en').toLowerCase().split('-')[0];
       var m={cz:'cs',cs:'cs',sk:'sk',de:'de',pl:'pl',gr:'el',el:'el',hu:'hu',en:'en'};return m[l]||'en';}
     var T={
-      hu:{t:'Analitikai s\u00fctiket haszn\u00e1lunk (Google Analytics, Microsoft Clarity, Smartsupp), hogy meg\u00e9rts\u00fck a webhely haszn\u00e1lat\u00e1t. Csak az \u00d6n hozz\u00e1j\u00e1rul\u00e1s\u00e1val t\u00f6lt\u0151dnek be.',a:'Elfogadom',r:'Elutas\u00edtom',p:'Adatv\u00e9delem \u00e9s s\u00fctik'},
+      hu:{t:'Analitikai sütiket használunk (Google Analytics, Microsoft Clarity, Smartsupp), hogy megértsük a webhely használatát. Csak az Ön hozzájárulásával töltődnek be.',a:'Elfogadom',r:'Elutasítom',p:'Adatvédelem és sütik'},
       en:{t:'We use analytics cookies (Google Analytics, Microsoft Clarity, Smartsupp) to understand site usage. They load only with your consent.',a:'Accept',r:'Reject',p:'Privacy &amp; cookies'},
-      cs:{t:'Pou\u017e\u00edv\u00e1me analytick\u00e9 cookies (Google Analytics, Microsoft Clarity, Smartsupp) k pochopen\u00ed pou\u017e\u00edv\u00e1n\u00ed webu. Na\u010dtou se jen s va\u0161\u00edm souhlasem.',a:'P\u0159ijmout',r:'Odm\u00edtnout',p:'Soukrom\u00ed a cookies'},
-      sk:{t:'Pou\u017e\u00edvame analytick\u00e9 cookies (Google Analytics, Microsoft Clarity, Smartsupp) na pochopenie pou\u017e\u00edvania webu. Na\u010d\u00edtaj\u00fa sa len s va\u0161\u00edm s\u00fahlasom.',a:'Prija\u0165',r:'Odmietnu\u0165',p:'S\u00fakromie a cookies'},
+      cs:{t:'Používáme analytické cookies (Google Analytics, Microsoft Clarity, Smartsupp) k pochopení používání webu. Načtou se jen s vaším souhlasem.',a:'Přijmout',r:'Odmítnout',p:'Soukromí a cookies'},
+      sk:{t:'Používame analytické cookies (Google Analytics, Microsoft Clarity, Smartsupp) na pochopenie používania webu. Načítajú sa len s vaším súhlasom.',a:'Prijať',r:'Odmietnuť',p:'Súkromie a cookies'},
       de:{t:'Wir verwenden Analyse-Cookies (Google Analytics, Microsoft Clarity, Smartsupp), um die Nutzung der Website zu verstehen. Sie werden nur mit Ihrer Einwilligung geladen.',a:'Akzeptieren',r:'Ablehnen',p:'Datenschutz &amp; Cookies'},
-      pl:{t:'U\u017cywamy plik\u00f3w cookie do analityki (Google Analytics, Microsoft Clarity, Smartsupp), aby zrozumie\u0107 korzystanie z witryny. \u0141aduj\u0105 si\u0119 tylko za Twoj\u0105 zgod\u0105.',a:'Akceptuj',r:'Odrzu\u0107',p:'Prywatno\u015b\u0107 i cookies'},
-      el:{t:'\u03a7\u03c1\u03b7\u03c3\u03b9\u03bc\u03bf\u03c0\u03bf\u03b9\u03bf\u03cd\u03bc\u03b5 cookies \u03b1\u03bd\u03ac\u03bb\u03c5\u03c3\u03b7\u03c2 (Google Analytics, Microsoft Clarity, Smartsupp) \u03b3\u03b9\u03b1 \u03bd\u03b1 \u03ba\u03b1\u03c4\u03b1\u03bd\u03bf\u03ae\u03c3\u03bf\u03c5\u03bc\u03b5 \u03c4\u03b7 \u03c7\u03c1\u03ae\u03c3\u03b7. \u03a6\u03bf\u03c1\u03c4\u03ce\u03bd\u03bf\u03bd\u03c4\u03b1\u03b9 \u03bc\u03cc\u03bd\u03bf \u03bc\u03b5 \u03c4\u03b7 \u03c3\u03c5\u03b3\u03ba\u03b1\u03c4\u03ac\u03b8\u03b5\u03c3\u03ae \u03c3\u03b1\u03c2.',a:'\u0391\u03c0\u03bf\u03b4\u03bf\u03c7\u03ae',r:'\u0391\u03c0\u03cc\u03c1\u03c1\u03b9\u03c8\u03b7',p:'\u0391\u03c0\u03cc\u03c1\u03c1\u03b7\u03c4\u03bf &amp; cookies'}
+      pl:{t:'Używamy plików cookie do analityki (Google Analytics, Microsoft Clarity, Smartsupp), aby zrozumieć korzystanie z witryny. Ładują się tylko za Twoją zgodą.',a:'Akceptuj',r:'Odrzuć',p:'Prywatność i cookies'},
+      el:{t:'Χρησιμοποιούμε cookies ανάλυσης (Google Analytics, Microsoft Clarity, Smartsupp) για να κατανοήσουμε τη χρήση. Φορτώνονται μόνο με τη συγκατάθεσή σας.',a:'Αποδοχή',r:'Απόρριψη',p:'Απόρρητο &amp; cookies'}
     };
     function loadClarity(){if(!CL||window.__tmxCl)return;window.__tmxCl=1;
       (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
@@ -63,7 +63,7 @@
     if(saved==='granted'){grant();return;} if(saved==='denied'){return;}
     function show(){var tx=T[lc()]||T.en;
       var b=document.createElement('div');b.className='tmx-cc';b.setAttribute('role','dialog');b.setAttribute('aria-live','polite');
-      b.innerHTML='<div class="tmx-cc__txt">'+tx.t+' <a href="/pl/polityka-prywatnosci/">'+tx.p+'</a></div>'+
+      b.innerHTML='<div class="tmx-cc__txt">'+tx.t+' <a href="/privacy/">'+tx.p+'</a></div>'+
         '<div class="tmx-cc__btns"><button type="button" class="tmx-cc__b tmx-cc__b--no">'+tx.r+'</button>'+
         '<button type="button" class="tmx-cc__b tmx-cc__b--yes">'+tx.a+'</button></div>';
       document.body.appendChild(b);
@@ -75,18 +75,18 @@
 <!-- TMX-ANALYTICS END -->
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Kto potrzebuje TAGRA – przewoźnicy, kierowcy i organy kontrolne</title>
-<meta content="TAGRA jest przeznaczona dla przewoźników i kierowców zawodowych, którzy zgodnie z prawem UE muszą pobierać i analizować dane z tachografu. Sprawdź, czy dotyczy to również Ciebie." name="description"/>
+<title>Chi ha bisogno di TAGRA – Operatori di flotta, autisti ed enti di controllo</title>
+<meta content="TAGRA è pensato per qualsiasi operatore di trasporto o autista professionista tenuto a scaricare e valutare i dati del cronotachigrafo secondo la normativa UE. Scopri se si applica anche a te." name="description"/>
 <meta content="#0b2c4a" name="theme-color"/>
 <link href="/manifest.json" rel="manifest"/>
-<link href="https://tagra.app/pl/dla-kogo/" rel="canonical"/>
+<link href="https://tagra.app/it/a-chi-si-rivolge/" rel="canonical"/>
 <meta content="website" property="og:type"/>
-<meta content="pl_PL" property="og:locale"/>
+<meta content="it_IT" property="og:locale"/>
 <meta content="TAGRA" property="og:site_name"/>
-<meta content="Kto potrzebuje TAGRA – przewoźnicy i kierowcy zawodowi" property="og:title"/>
-<meta content="Sprawdź, czy obowiązek analizy danych z tachografu dotyczy również Ciebie — i jak TAGRA może w tym pomóc." property="og:description"/>
+<meta content="Chi ha bisogno di TAGRA – Operatori di trasporto e autisti professionisti" property="og:title"/>
+<meta content="Scopri se l'obbligo di valutazione dei dati del cronotachigrafo si applica a te — e come TAGRA può aiutarti." property="og:description"/>
 <meta content="https://cdn.truckmall.cz/data/user-content/TDT_TAGRA_MAX_wh.jpg" property="og:image"/>
-<meta content="https://tagra.app/pl/dla-kogo/" property="og:url"/>
+<meta content="https://tagra.app/it/a-chi-si-rivolge/" property="og:url"/>
 <meta content="summary_large_image" name="twitter:card"/>
 <style>
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
@@ -111,10 +111,10 @@
     .nav-mobile-toggle{display:none;background:none;border:none;cursor:pointer;padding:8px;}
     .nav-mobile-toggle span{display:block;width:22px;height:2px;background:var(--text);margin:5px 0;border-radius:2px;transition:.3s;}
     @media(max-width:900px){.nav-links{display:none;}.nav-mobile-toggle{display:block;}.nav-links.open{display:flex;flex-direction:column;align-items:flex-start;gap:2px;position:absolute;top:var(--nav-h);left:0;right:0;background:rgba(255,255,255,0.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:12px 24px 20px;}}
-    
-    
-    
-    
+
+
+
+
     .band--green{background:var(--green-bg);}
     @media(max-width:768px){.band{padding:50px 0;}}
     h2 {
@@ -142,10 +142,10 @@
     h2.hero-h2{font-size:56px;line-height:1.15;letter-spacing:-.02em;display:block;text-transform:none;padding-bottom:0.08em;}
     @media(max-width:768px){h2.hero-h2{font-size:36px;padding-bottom:0.08em;}}
     .eyebrow{font-size:15px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--green-brand);margin-bottom:12px;}
-    
+
     .btn-cta:hover{background:var(--green-brand);transform:scale(1.02);color:#fff!important;}
-    
-    
+
+
     @media(max-width:900px){.g2{grid-template-columns:1fr;gap:32px;}}
     .who-card{border-radius:var(--radius);padding:36px;border:1px solid var(--border);background:#fff;display:flex;flex-direction:column;gap:16px;}
     .who-card--fleet{border-color:rgba(19,74,142,.2);background:var(--bg-apple-solid);}
@@ -161,7 +161,7 @@
     .anim-up{opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.16,1,.3,1),transform .8s cubic-bezier(.16,1,.3,1);}
     .anim-up.on{opacity:1;transform:none;}
     @media(prefers-reduced-motion:reduce){.anim-up{transition:none!important;opacity:1!important;transform:none!important;}}
-  
+
     /* 3-col group grid */
     /* who-card flex layout — CTA vždy dole, nadpis stejná výška */
     /* Zarovnání nadpisů ve stejné výšce */
@@ -179,11 +179,12 @@
       .enf-2col { grid-template-columns: 1fr !important; }
     }
 
-  
+
     .who-card[style*="0b2c4a"] .check-list li { color: rgba(255,255,255,.9); }
     .who-card[style*="0b2c4a"] .check-list li::before { color: rgba(255,255,255,.7); }
   </style>
-<script type="application/ld+json">{
+<script type="application/ld+json">
+{
   "@context": "https://schema.org",
   "@type": "Organization",
   "@id": "https://tagra.app/#organization",
@@ -199,41 +200,27 @@
     "telephone": "+420-739-005-345",
     "email": "sales@tagra.app",
     "contactType": "sales",
-    "availableLanguage": [
-      "English",
-      "Czech",
-      "Slovak"
-    ]
+    "availableLanguage": ["English", "Czech", "Slovak"]
   }
-}</script>
-<script type="application/ld+json">{
+}
+</script>
+<script type="application/ld+json">
+{
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "url": "https://tagra.app/pl/dla-kogo/",
-  "name": "Kto potrzebuje TAGRA – przewoźnicy, kierowcy i organy kontrolne",
-  "description": "TAGRA jest przeznaczona dla przewoźników i kierowców zawodowych, którzy zgodnie z prawem UE muszą pobierać i analizować dane z tachografu.",
-  "inLanguage": "pl",
-  "isPartOf": {
-    "@id": "https://tagra.app/#website"
-  },
-  "about": {
-    "@id": "https://tagra.app/#organization"
-  },
+  "url": "https://tagra.app/it/a-chi-si-rivolge/",
+  "name": "Chi ha bisogno di TAGRA – Operatori di flotta, autisti ed enti di controllo",
+  "description": "TAGRA è pensato per qualsiasi operatore di trasporto o autista professionista tenuto a scaricare e valutare i dati del cronotachigrafo secondo la normativa UE.",
+  "inLanguage": "it",
+  "isPartOf": { "@id": "https://tagra.app/#website" },
+  "about": { "@id": "https://tagra.app/#organization" },
   "audience": [
-    {
-      "@type": "Audience",
-      "audienceType": "Fleet operators"
-    },
-    {
-      "@type": "Audience",
-      "audienceType": "Professional drivers"
-    },
-    {
-      "@type": "Audience",
-      "audienceType": "Enforcement authorities"
-    }
+    { "@type": "Audience", "audienceType": "Operatori di flotta" },
+    { "@type": "Audience", "audienceType": "Autisti professionisti" },
+    { "@type": "Audience", "audienceType": "Enti di controllo" }
   ]
-}</script>
+}
+</script>
 <link href="/assets/css/tokens.css" rel="stylesheet"/>
 <link href="/assets/css/base.css" rel="stylesheet"/>
 <link href="/assets/css/components.css" rel="stylesheet"/>
@@ -242,27 +229,27 @@
 <link href="/assets/css/footer.css" rel="stylesheet"/>
 <link href="https://tagra.app/for-whom/" hreflang="en" rel="alternate"/><link href="https://tagra.app/de/fuer-wen/" hreflang="de" rel="alternate"/><link href="https://tagra.app/pl/dla-kogo/" hreflang="pl" rel="alternate"/><link href="https://tagra.app/el/gia-poion/" hreflang="el" rel="alternate"/><link href="https://tagra.app/hu/kinek-szol/" hreflang="hu" rel="alternate"/><link href="https://tagra.app/it/a-chi-si-rivolge/" hreflang="it" rel="alternate"/><link href="https://tagra.app/for-whom/" hreflang="x-default" rel="alternate"/></head>
 <body>
-<a class="skip-link" href="#main-content">Przejdź do treści</a>
+<a class="skip-link" href="#main-content">Vai al contenuto</a>
 <div aria-hidden="true" id="scroll-progress"></div>
-<nav aria-label="Nawigacja główna" class="site-nav" role="navigation">
+<nav aria-label="Navigazione principale" class="site-nav" role="navigation">
 <div class="nav-inner">
-<a aria-label="TAGRA – Strona główna" class="nav-logo" href="/pl/"><img alt="TAGRA" height="32" src="/assets/img/logo-light.svg?v=20260513zh" style="display:block;height:32px;width:auto;" width="140"/></a>
+<a aria-label="TAGRA – Home" class="nav-logo" href="/it/"><img alt="TAGRA" height="32" src="/assets/img/logo-light.svg?v=20260513zh" style="display:block;height:32px;width:auto;" width="140"/></a>
 <ul class="nav-links" id="nav-links">
-<li><a href="/pl/dla-przewoznikow/">Dla firm</a></li>
-<li><a href="/pl/dla-kierowcow/">Dla kierowców</a></li>
-<li><a href="/pl/organy-kontrolne/">Organy kontrolne</a></li>
-<li><a href="/pl/poradnik/">Artykuły</a></li><li><a href="/pl/instrukcje/">Instrukcje</a></li>
-<li><a href="/pl/faq/">FAQ</a></li>
-<li><a href="/pl/kontakt/">Kontakt</a></li>
-<li class="nav-cta-li"><a class="nav-cta" href="/pl/wyprobuj/?audience=fleet">Wypróbuj 30 dni za darmo</a></li>
+<li><a href="/it/per-aziende/">Per le aziende</a></li>
+<li><a href="/it/per-autisti/">Per gli autisti</a></li>
+<li><a href="/enforcement/">Enti di controllo</a></li>
+<li><a href="/articles/">Articoli</a></li><li><a href="/manuals/">Manuali</a></li>
+<li><a href="/faq/">FAQ</a></li>
+<li><a href="/contact/">Contatti</a></li>
+<li class="nav-cta-li"><a class="nav-cta" href="/it/prova-gratuita/?audience=fleet">Prova gratuita 30 giorni</a></li>
 </ul>
 <details class="nav-lang">
-<summary aria-label="Language: PL">PL</summary>
+<summary aria-label="Language: IT">IT</summary>
 <div class="nav-lang-menu" role="menu">
-<a href="/" hreflang="en">English</a><a href="/de/" hreflang="de">Deutsch</a><a aria-current="page" class="active" href="/pl/" hreflang="pl">Polski</a><a href="/el/" hreflang="el">Ελληνικά</a><a href="/hu/" hreflang="hu">Magyar</a><a href="/it/a-chi-si-rivolge/" hreflang="it">Italiano</a><a href="https://www.tdt.cz/" hreflang="cs" rel="noopener" target="_blank">Čeština</a><a href="https://www.tdt.sk/" hreflang="sk" rel="noopener" target="_blank">Slovenčina</a></div>
+<a href="/" hreflang="en">English</a><a href="/de/" hreflang="de">Deutsch</a><a href="/pl/" hreflang="pl">Polski</a><a href="/el/" hreflang="el">Ελληνικά</a><a href="/hu/" hreflang="hu">Magyar</a><a aria-current="page" class="active" href="/it/" hreflang="it">Italiano</a><a href="https://www.tdt.cz/" hreflang="cs" rel="noopener" target="_blank">Čeština</a><a href="https://www.tdt.sk/" hreflang="sk" rel="noopener" target="_blank">Slovenčina</a></div>
 </details>
-<a class="nav-cta-mobile" href="/pl/wyprobuj/?audience=fleet">Wypróbuj za darmo</a>
-<button aria-expanded="false" aria-label="Przełącz menu" class="nav-mobile-toggle" id="nav-toggle">
+<a class="nav-cta-mobile" href="/it/prova-gratuita/?audience=fleet">Prova gratis</a>
+<button aria-expanded="false" aria-label="Attiva/disattiva menu" class="nav-mobile-toggle" id="nav-toggle">
 <span></span><span></span><span></span>
 </button>
 </div>
@@ -270,9 +257,11 @@
 <!-- HERO -->
 <section id="main-content" class="band band--hero">
 <div class="container">
-<div class="eyebrow anim-up">Kto potrzebuje TAGRA</div>
-<h1 class="hero-h2 anim-up" style="transition-delay:.05s">Czy dotyczy to<br/>również Ciebie?</h1>
-<p class="anim-up" style="font-size:20px;line-height:1.5;max-width:600px;margin:16px auto 0;color:var(--text2);transition-delay:.1s">Prawo UE zobowiązuje przewoźników i część kierowców zawodowych do regularnego pobierania, analizowania i archiwizowania danych z tachografu. Oto kogo to dotyczy.</p>
+<div class="eyebrow anim-up">Chi ha bisogno di TAGRA</div>
+<h1 class="hero-h2 anim-up" style="transition-delay:.05s">Questo si applica<br/>anche a te?</h1>
+<p class="anim-up" style="font-size:20px;line-height:1.5;max-width:600px;margin:16px auto 0;color:var(--text2);transition-delay:.1s">
+      La normativa UE impone agli operatori di trasporto e a determinati autisti professionisti di scaricare, valutare e archiviare regolarmente i dati del cronotachigrafo. Ecco chi è interessato.
+    </p>
 </div>
 </section>
 <!-- TWO GROUPS -->
@@ -282,60 +271,61 @@
 <!-- Fleet -->
 <div class="who-card who-card--fleet fleet anim-up">
 <div>
-<div class="eyebrow" style="color:var(--blue-mid)">Przewoźnicy i firmy</div>
+<div class="eyebrow" style="color:var(--blue-mid)">Operatori di flotta e aziende</div>
 <div style="font-size:24px;font-weight:800;color:var(--text-strong);line-height:1.2;margin-top:4px">TAGRA 1 / 2 / 4 / 6 / MAX</div>
 </div>
-<p style="color:var(--text2)">Dotyczy to Ciebie, jeśli Twoja firma eksploatuje pojazdy podlegające unijnym przepisom o tachografach — samochody ciężarowe, autobusy, a od lipca 2026 również część pojazdów dostawczych.</p>
+<p style="color:var(--text2)">Sei interessato se la tua azienda gestisce veicoli soggetti alla normativa UE sul cronotachigrafo — inclusi camion, autobus e (da luglio 2026) alcuni furgoni.</p>
 <ul class="check-list">
-<li>Przewoźnicy w transporcie międzynarodowym</li>
-<li>Przewoźnicy krajowi z pojazdami powyżej 3,5 t</li>
-<li>Przewoźnicy autobusowi i autokarowi</li>
-<li>Przewoźnicy z pojazdami dostawczymi w transporcie międzynarodowym (od lipca 2026, pojazdy 2,5–3,5 t)</li>
-<li>Zarządzający transportem odpowiedzialni za zgodność pracy kierowców z przepisami</li>
-<li>Firmy logistyczne prowadzące ewidencję czasu pracy kierowców</li>
+<li>Operatori di autotrasporto internazionale</li>
+<li>Vettori nazionali con veicoli oltre 3,5 t</li>
+<li>Operatori di autobus e pullman</li>
+<li>Operatori di furgoni nel trasporto internazionale (da luglio 2026, veicoli 2,5–3,5 t)</li>
+<li>Responsabili trasporti incaricati della conformità degli autisti</li>
+<li>Aziende di logistica che gestiscono i dati degli autisti</li>
 </ul>
 <div style="margin-top:8px">
-<a class="btn-cta btn-cta--sm" href="/pl/dla-przewoznikow/">Rozwiązanie dla firm →</a>
+<a class="btn-cta btn-cta--sm" href="/it/per-aziende/">Soluzione per flotte →</a>
 </div>
 </div>
 <!-- Driver -->
 <div class="who-card who-card--driver driver anim-up" style="transition-delay:.1s">
 <div>
-<div class="eyebrow" style="color:var(--green-brand)">Kierowcy zawodowi</div>
+<div class="eyebrow" style="color:var(--green-brand)">Autisti professionisti</div>
 <div style="font-size:24px;font-weight:800;color:var(--text-strong);line-height:1.2;margin-top:4px">TAGRA Trucker</div>
 </div>
-<p style="color:var(--text2)">Dotyczy to Ciebie, jeśli jeździsz zawodowo i sam odpowiadasz za dane ze swojej karty kierowcy. TAGRA Trucker obsługuje pobieranie i archiwizację danych z karty kierowcy dla jednego kierowcy.</p>
+<p style="color:var(--text2)">Sei interessato se guidi professionalmente e sei responsabile dei dati della tua carta conducente. TAGRA Trucker gestisce il download e l'archiviazione della carta conducente per un singolo autista.</p>
 <ul class="check-list">
-<li>Kierowcy zatrudnieni, którzy sami archiwizują dane ze swojej karty</li>
-<li>Kierowcy, którzy chcą sprawdzić swoje czasy pracy przed kontrolą</li>
-<li>Kierowcy zmieniający pracodawcę, którzy chcą zachować swoją dokumentację</li>
+<li>Autisti dipendenti che gestiscono autonomamente l'archiviazione della propria carta</li>
+<li>Autisti che vogliono verificare le proprie ore prima dei controlli</li>
+<li>Autisti che cambiano datore di lavoro e vogliono conservare i propri dati</li>
 </ul>
 <div style="margin-top:16px;padding:14px 18px;background:#fff7e6;border:1px solid #f0c270;border-radius:10px;font-size:14.5px;line-height:1.55;color:var(--text2)">
-<strong style="color:#a96100">Kierowca samozatrudniony?</strong> Jesteś jednocześnie kierowcą I przedsiębiorcą transportowym, więc musisz pobierać dane z karty kierowcy <em>oraz</em> dane z urządzenia rejestrującego (tachografu). Sama TAGRA Trucker nie wystarczy — zobacz <a href="/pl/dla-przewoznikow/" style="color:var(--blue-mid);font-weight:600">TAGRA 1</a>(jeden pojazd), która obejmuje oba te zakresy.</div>
+<strong style="color:#a96100">Lavoratore autonomo o titolare-conducente?</strong> Sei sia l'autista <em>sia</em> l'impresa di autotrasporto, quindi devi scaricare sia i dati della carta conducente sia quelli dell'unità di bordo (tachigrafo). TAGRA Trucker da solo non basta — vedi <a href="/it/per-aziende/" style="color:var(--blue-mid);font-weight:600">TAGRA 1</a> (un veicolo), che copre entrambi.
+        </div>
 <ul class="check-list">
-<li>Kierowcy pojazdów dostawczych w transporcie międzynarodowym (od lipca 2026) — kierowcy zatrudnieni mogą używać TAGRA Trucker do własnych kopii danych z karty; samozatrudnieni potrzebują TAGRA 1 (karta i pojazd).</li>
+<li>Autisti di furgoni nel trasporto internazionale (da luglio 2026) — gli autisti dipendenti possono usare TAGRA Trucker per le copie personali della carta; gli operatori di furgoni autonomi hanno bisogno di TAGRA 1 (carta e veicolo).</li>
 </ul>
 <div style="margin-top:8px">
-<a class="btn-cta btn-cta--sm" href="/pl/dla-kierowcow/" style="background:var(--green-cta)">Rozwiązanie dla kierowców →</a>
+<a class="btn-cta btn-cta--sm" href="/it/per-autisti/" style="background:var(--green-cta)">Soluzione per autisti →</a>
 </div>
 </div>
 <!-- Enforcement -->
 <div class="who-card anim-up" style="background:linear-gradient(160deg,#0b2c4a 0%,#134a8e 100%);border-color:transparent;transition-delay:.2s">
 <div>
-<div class="eyebrow" style="color:rgba(255,255,255,.6)">Organy kontrolne</div>
+<div class="eyebrow" style="color:rgba(255,255,255,.6)">Enti di controllo</div>
 <div style="font-size:24px;font-weight:800;color:#ffffff;line-height:1.2;margin-top:4px">TAGRA Control</div>
 </div>
-<p style="color:rgba(255,255,255,.82)">Policja, administracja celna, inspekcje pracy i ministerstwa transportu korzystają z TAGRA Control — programu przeznaczonego do kontroli drogowych i kontroli w przedsiębiorstwach.</p>
+<p style="color:rgba(255,255,255,.82)">Forze di Polizia, Amministrazioni doganali, Ispettorati del Lavoro e Ministeri dei Trasporti utilizzano TAGRA Control — un software dedicato ai controlli su strada e in azienda.</p>
 <ul class="check-list">
-<li style="color:rgba(255,255,255,.9)">Natychmiastowa analiza naruszeń z kart kierowców i tachografów</li>
-<li style="color:rgba(255,255,255,.9)">Wszystkie generacje tachografów: G1 i smart G2V2</li>
-<li style="color:rgba(255,255,255,.9)">UE 561/2006, 2020/1054, AETR — zawsze aktualne</li>
-<li style="color:rgba(255,255,255,.9)">Protokoły kontroli gotowe do postępowania</li>
-<li style="color:rgba(255,255,255,.9)">Czeska policja, służby celne, słowackie inspekcje pracy, węgierskie ministerstwo transportu</li>
-<li style="color:rgba(255,255,255,.9)">Szkolenia dostępne w języku angielskim</li>
+<li style="color:rgba(255,255,255,.9)">Analisi immediata delle infrazioni da carte conducente e tachigrafi</li>
+<li style="color:rgba(255,255,255,.9)">Tutte le generazioni di tachigrafo: G1 e smart G2V2</li>
+<li style="color:rgba(255,255,255,.9)">Regolamento (UE) n. 561/2006, 2020/1054, AETR — sempre aggiornato</li>
+<li style="color:rgba(255,255,255,.9)">Moduli per i controlli su strada pronti per i procedimenti</li>
+<li style="color:rgba(255,255,255,.9)">Polizia ceca, Dogana, Ispettorati del Lavoro slovacchi, Ministero dei Trasporti ungherese</li>
+<li style="color:rgba(255,255,255,.9)">Formazione disponibile in inglese</li>
 </ul>
 <div style="margin-top:8px">
-<a class="btn-cta btn-cta--sm" href="/pl/organy-kontrolne/" style="background:rgba(255,255,255,.15);color:#fff;border:1.5px solid rgba(255,255,255,.4)">Rozwiązanie dla organów kontrolnych →</a>
+<a class="btn-cta btn-cta--sm" href="/enforcement/" style="background:rgba(255,255,255,.15);color:#fff;border:1.5px solid rgba(255,255,255,.4)">Soluzione per gli enti di controllo →</a>
 </div>
 </div>
 </div>
@@ -344,22 +334,22 @@
 <!-- VANS 2026 -->
 <section class="band band--blue">
 <div class="container">
-<div class="eyebrow anim-up">Nowość od lipca 2026</div>
-<h2 class="anim-up">Pojazdy dostawcze w transporcie międzynarodowym</h2>
+<div class="eyebrow anim-up">Novità da luglio 2026</div>
+<h2 class="anim-up">Furgoni nel trasporto internazionale</h2>
 <div class="g2" style="margin-top:24px">
 <div class="anim-up">
-<p>Od <strong>1 lipca 2026</strong> obowiązek montażu tachografu cyfrowego oraz regularnego pobierania i analizowania danych obejmie także <strong>lekkie pojazdy użytkowe o masie 2,5–3,5 t</strong> wykorzystywane w transporcie międzynarodowym.</p>
-<p style="margin-top:12px">Dotyczy to wielu firm i kierowców, którzy dotąd byli zwolnieni z tego obowiązku. Jeśli jeździsz pojazdami dostawczymi za granicę — musisz być gotowy już teraz.</p>
-<p style="margin-top:12px">TAGRA jest w pełni przygotowana na ten obowiązek. Zarówno wersja dla firm, jak i dla kierowców spełnia nowe wymogi od pierwszego dnia.</p>
+<p>Dal <strong>1° luglio 2026</strong>, l'obbligo di installare un cronotachigrafo digitale e di scaricare e valutare regolarmente i dati si estende ai <strong>veicoli commerciali leggeri di 2,5–3,5 t</strong> utilizzati nel trasporto internazionale.</p>
+<p style="margin-top:12px">Questo riguarda un gran numero di operatori e autisti finora esenti. Se operi con furgoni oltre confine — devi prepararti fin da ora.</p>
+<p style="margin-top:12px">TAGRA è pienamente pronto per questo obbligo. Sia la versione per flotte sia quella per autisti supportano i nuovi requisiti fin dal primo giorno.</p>
 </div>
 <div class="anim-up" style="transition-delay:.1s">
 <div style="background:#fff;border-radius:var(--radius);padding:28px;border:1px solid var(--border)">
-<div style="font-size:15px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--blue-mid);margin-bottom:16px">Kogo to dotyczy od lipca 2026</div>
+<div style="font-size:15px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--blue-mid);margin-bottom:16px">Chi è interessato da luglio 2026</div>
 <ul style="list-style:none;display:flex;flex-direction:column;gap:10px">
-<li style="display:flex;gap:10px;align-items:flex-start;font-size:16px"><span style="color:var(--blue-mid);font-weight:900;flex-shrink:0">✓</span><span>Pojazdy 2,5–3,5 t w transporcie międzynarodowym</span></li>
-<li style="display:flex;gap:10px;align-items:flex-start;font-size:16px"><span style="color:var(--blue-mid);font-weight:900;flex-shrink:0">✓</span><span>Firmy z siedzibą w państwach członkowskich UE</span></li>
-<li style="display:flex;gap:10px;align-items:flex-start;font-size:16px"><span style="color:var(--blue-mid);font-weight:900;flex-shrink:0">✓</span><span>Samozatrudnieni kierowcy dostawczy przekraczający granice</span></li>
-<li style="display:flex;gap:10px;align-items:flex-start;font-size:16px;color:var(--text2)"><span style="color:var(--border);font-weight:900;flex-shrink:0">✗</span><span>Transport wyłącznie krajowy — nie jest objęty</span></li>
+<li style="display:flex;gap:10px;align-items:flex-start;font-size:16px"><span style="color:var(--blue-mid);font-weight:900;flex-shrink:0">✓</span><span>Veicoli 2,5–3,5 t nel trasporto internazionale</span></li>
+<li style="display:flex;gap:10px;align-items:flex-start;font-size:16px"><span style="color:var(--blue-mid);font-weight:900;flex-shrink:0">✓</span><span>Operatori con sede in uno Stato membro UE</span></li>
+<li style="display:flex;gap:10px;align-items:flex-start;font-size:16px"><span style="color:var(--blue-mid);font-weight:900;flex-shrink:0">✓</span><span>Autisti di furgoni autonomi che attraversano il confine</span></li>
+<li style="display:flex;gap:10px;align-items:flex-start;font-size:16px;color:var(--text2)"><span style="color:var(--border);font-weight:900;flex-shrink:0">✗</span><span>Trasporto puramente nazionale — non interessato</span></li>
 </ul>
 </div>
 </div>
@@ -371,38 +361,38 @@
 <div class="footer-inner">
 <div>
 <div class="footer-logo"><img alt="TAGRA" height="20" src="/assets/img/logo-dark.svg?v=20260513zh" width="88" loading="lazy"/></div>
-<p class="footer-desc">Profesjonalne oprogramowanie do analizy danych z tachografów. Pobieranie danych z kart kierowców, analiza danych z tachografów cyfrowych, unijne przepisy o czasie prowadzenia pojazdu i odpoczynku oraz dyrektywa o czasie pracy w transporcie drogowym. Opracowane przez Truck Data Technology, s.r.o.</p>
+<p class="footer-desc">Software professionale per l'analisi dei dati del tachigrafo. Download della carta conducente, analisi del cronotachigrafo digitale, tempi di guida e di riposo nell'UE e Direttiva sull'orario di lavoro degli autotrasportatori. Sviluppato da Truck Data Technology, s.r.o.</p>
 </div>
 <div class="footer-col">
-<h2 class="footer-col-title">Produkt</h2>
+<h2 class="footer-col-title">Prodotto</h2>
 <ul>
-<li><a href="/pl/dla-przewoznikow/">Dla przewoźników</a></li>
-<li><a href="/pl/dla-kierowcow/">Dla kierowców zawodowych</a></li>
-<li><a href="/pl/organy-kontrolne/">Dla organów kontrolnych</a></li>
-<li><a href="/pl/jak-to-dziala/">Jak to działa</a></li>
-<li><a href="/pl/dla-kogo/">Dla kogo</a></li>
-<li><a href="/pl/faq/">FAQ</a></li>
+<li><a href="/it/per-aziende/">Per operatori di flotta</a></li>
+<li><a href="/it/per-autisti/">Per autisti professionisti</a></li>
+<li><a href="/enforcement/">Per gli enti di controllo</a></li>
+<li><a href="/it/come-funziona/">Come funziona</a></li>
+<li><a aria-current="page" href="/it/a-chi-si-rivolge/">A chi si rivolge</a></li>
+<li><a href="/faq/">FAQ</a></li>
 </ul>
 </div>
 <div class="footer-col">
-<h2 class="footer-col-title">Materiały</h2>
+<h2 class="footer-col-title">Risorse</h2>
 <ul>
-<li><a href="/pl/poradnik/">Artykuły</a></li><li><a href="/pl/instrukcje/">Instrukcje</a></li>
-<li><a href="/pl/poradnik/symbole-tachografu/">Symbole tachografu</a></li>
-<li><a href="/pl/integracje/dkv-live/">DKV LIVE®</a></li>
+<li><a href="/articles/">Articoli</a></li><li><a href="/manuals/">Manuali</a></li>
+<li><a href="/articles/digital-tachograph-symbols/">Simboli del cronotachigrafo</a></li>
+<li><a href="/integrations/dkv-live/">DKV LIVE®</a></li>
 </ul>
 </div>
 <div class="footer-col">
-<h2 class="footer-col-title">Firma</h2>
+<h2 class="footer-col-title">Azienda</h2>
 <ul>
-<li><a href="/pl/kontakt/">Kontakt</a></li>
+<li><a href="/contact/">Contatti</a></li>
 <li><a href="https://www.tdt.cz" rel="noopener" target="_blank">Truck Data Technology</a></li>
 <li><a href="/">English</a></li><li><a href="/de/">Deutsch</a></li><li><a href="/pl/">Polski</a></li><li><a href="/el/">Ελληνικά</a></li><li><a href="/hu/">Magyar</a></li><li><a href="/it/">Italiano</a></li><li><a href="https://www.tdt.cz/" rel="noopener" target="_blank">Čeština</a></li><li><a href="https://www.tdt.sk/" rel="noopener" target="_blank">Slovenčina</a></li></ul>
 </div>
 </div>
 <div class="footer-bottom">
-<span>© 2026 Truck Data Technology, s.r.o. Wszelkie prawa zastrzeżone.</span>
-<span><a href="/pl/kontakt/">Kontakt</a> · <a href="https://www.tdt.cz" rel="noopener" target="_blank">tdt.cz</a> · <a href="/pl/polityka-prywatnosci/">Prywatność i cookies</a></span>
+<span>© 2026 Truck Data Technology, s.r.o. Tutti i diritti riservati.</span>
+<span><a href="/contact/">Contatti</a> · <a href="https://www.tdt.cz" rel="noopener" target="_blank">tdt.cz</a> · <a href="/privacy/">Privacy e cookie</a></span>
 </div>
 </footer>
 <script>
