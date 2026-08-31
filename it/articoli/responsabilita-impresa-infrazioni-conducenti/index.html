@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<!-- TMX-ANALYTICS START -->
+<meta content="7F7894081BE7FBB245FF03AF8810B22F" name="msvalidate.01"/>
+<!-- Consent Mode v2 defaults (deny) + gtag stub — runs BEFORE gtag.js -->
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent','default',{
+      ad_storage:'denied', ad_user_data:'denied', ad_personalization:'denied',
+      analytics_storage:'denied', functionality_storage:'denied',
+      personalization_storage:'denied', security_storage:'granted',
+      wait_for_update:500
+    });
+    gtag('set','ads_data_redaction',true);
+    gtag('set','url_passthrough',false);
+  </script>
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-92253QFBNX"></script>
+<script>
+    gtag('js', new Date());
+    gtag('config','G-92253QFBNX');
+  </script>
+<!-- Cookie consent banner (self-hosted) + Microsoft Clarity gating -->
+<style>
+    .tmx-cc{position:fixed;left:0;right:0;bottom:0;z-index:2147483000;background:linear-gradient(120deg,var(--blue-dark,#0b2c4a),var(--blue-mid,#134a8e) 62%,var(--blue-light,#1f5fa6));color:#fff;
+      font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+      padding:16px 20px;box-shadow:0 -4px 24px rgba(0,0,0,.18);display:flex;flex-wrap:wrap;
+      align-items:center;gap:14px;justify-content:center}
+    .tmx-cc__txt{flex:1 1 360px;max-width:760px}
+    .tmx-cc__txt a{color:#9ed0f5;text-decoration:underline}
+    .tmx-cc__btns{display:flex;gap:10px;flex:0 0 auto}
+    .tmx-cc__b{appearance:none;border:0;cursor:pointer;font:inherit;font-weight:600;
+      padding:10px 22px;border-radius:99px;transition:filter .15s;color:#fff}
+    .tmx-cc__b:hover{filter:brightness(1.08)}
+    .tmx-cc__b--no{background:rgba(255,255,255,.16)}
+    .tmx-cc__b--yes{background:var(--green-cta,#5C820F)}
+    @media(max-width:640px){.tmx-cc{padding:14px}.tmx-cc__btns{width:100%}.tmx-cc__b{flex:1}}
+  </style>
+<script>
+  (function(){
+    var KEY='tmx-consent-v1', CL='wt18054m0r';
+    function lc(){var l=(document.documentElement.getAttribute('lang')||'en').toLowerCase().split('-')[0];
+      var m={cz:'cs',cs:'cs',sk:'sk',de:'de',pl:'pl',gr:'el',el:'el',hu:'hu',en:'en'};return m[l]||'en';}
+    var T={
+      hu:{t:'Analitikai sütiket használunk (Google Analytics, Microsoft Clarity, Smartsupp), hogy megértsük a webhely használatát. Csak az Ön hozzájárulásával töltődnek be.',a:'Elfogadom',r:'Elutasítom',p:'Adatvédelem és sütik'},
+      en:{t:'We use analytics cookies (Google Analytics, Microsoft Clarity, Smartsupp) to understand site usage. They load only with your consent.',a:'Accept',r:'Reject',p:'Privacy &amp; cookies'},
+      cs:{t:'Používáme analytické cookies (Google Analytics, Microsoft Clarity, Smartsupp) k pochopení používání webu. Načtou se jen s vaším souhlasem.',a:'Přijmout',r:'Odmítnout',p:'Soukromí a cookies'},
+      sk:{t:'Používame analytické cookies (Google Analytics, Microsoft Clarity, Smartsupp) na pochopenie používania webu. Načítajú sa len s vaším súhlasom.',a:'Prijať',r:'Odmietnuť',p:'Súkromie a cookies'},
+      de:{t:'Wir verwenden Analyse-Cookies (Google Analytics, Microsoft Clarity, Smartsupp), um die Nutzung der Website zu verstehen. Sie werden nur mit Ihrer Einwilligung geladen.',a:'Akzeptieren',r:'Ablehnen',p:'Datenschutz &amp; Cookies'},
+      pl:{t:'Używamy plików cookie do analityki (Google Analytics, Microsoft Clarity, Smartsupp), aby zrozumieć korzystanie z witryny. Ładują się tylko za Twoją zgodą.',a:'Akceptuj',r:'Odrzuć',p:'Prywatność i cookies'},
+      el:{t:'Χρησιμοποιούμε cookies ανάλυσης (Google Analytics, Microsoft Clarity, Smartsupp) για να κατανοήσουμε τη χρήση. Φορτώνονται μόνο με τη συγκατάθεσή σας.',a:'Αποδοχή',r:'Απόρριψη',p:'Απόρρητο &amp; cookies'}
+    };
+    function loadClarity(){if(!CL||window.__tmxCl)return;window.__tmxCl=1;
+      (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+       t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+       y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script",CL);}
+    function grant(){try{localStorage.setItem(KEY,'granted')}catch(e){}
+      gtag('consent','update',{analytics_storage:'granted'});loadClarity();}
+    function deny(){try{localStorage.setItem(KEY,'denied')}catch(e){}}
+    var saved=null;try{saved=localStorage.getItem(KEY)}catch(e){}
+    if(saved==='granted'){grant();return;} if(saved==='denied'){return;}
+    function show(){var tx=T[lc()]||T.en;
+      var b=document.createElement('div');b.className='tmx-cc';b.setAttribute('role','dialog');b.setAttribute('aria-live','polite');
+      b.innerHTML='<div class="tmx-cc__txt">'+tx.t+' <a href="/privacy/">'+tx.p+'</a></div>'+
+        '<div class="tmx-cc__btns"><button type="button" class="tmx-cc__b tmx-cc__b--no">'+tx.r+'</button>'+
+        '<button type="button" class="tmx-cc__b tmx-cc__b--yes">'+tx.a+'</button></div>';
+      document.body.appendChild(b);
+      b.querySelector('.tmx-cc__b--yes').addEventListener('click',function(){grant();b.remove();});
+      b.querySelector('.tmx-cc__b--no').addEventListener('click',function(){deny();b.remove();});}
+    if(document.body)show();else document.addEventListener('DOMContentLoaded',show);
+  })();
+  </script>
+<!-- TMX-ANALYTICS END -->
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Chi paga quando un autista viola le regole? La responsabilità dell'operatore</title>
+<meta content="Le norme UE rendono l'operatore responsabile delle infrazioni dei propri autisti — ma permettono anche di dimostrare che non potevi essere ragionevolmente ritenuto responsabile. Ecco come si presenta questa prova nella pratica." name="description"/>
+<link href="https://tagra.app/it/articoli/responsabilita-impresa-infrazioni-conducenti/" rel="canonical"/>
+<meta content="Chi paga quando un autista viola le regole? La responsabilità dell'operatore" property="og:title"/><meta content="Le norme UE rendono l'operatore responsabile delle infrazioni dei propri autisti — ma permettono anche di dimostrare che non potevi essere ragionevolmente ritenuto responsabile. Ecco come si presenta questa prova nella pratica." property="og:description"/>
+<meta content="https://tagra.app/assets/img/hero-poster.jpg" property="og:image"/>
+<meta content="https://tagra.app/it/articoli/responsabilita-impresa-infrazioni-conducenti/" property="og:url"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    a{color:var(--blue-mid);text-decoration:none;}
+    a:hover{color:var(--blue-dark);text-decoration:underline;text-underline-offset:.18em;}
+    p+p{margin-top:14px;}
+    ul,ol{padding-left:22px;}
+    li{margin:6px 0;line-height:1.65;}
+    li::marker{color:var(--blue-mid);}
+    strong{font-weight:700;color:var(--text-strong);}
+    #scroll-progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--green-brand),var(--blue-light));width:0%;z-index:9999;pointer-events:none;}
+.nav-inner{margin:0 auto;padding:0 24px;height:100%;display:flex;align-items:center;justify-content:space-between;gap:24px;}
+    .nav-links{display:flex;align-items:center;gap:4px;list-style:none;}
+    .nav-links a{font-size:15px;font-weight:500;color:var(--text);padding:8px 12px;border-radius:8px;text-decoration:none;transition:background .15s;}
+    .nav-links a:hover{background:var(--bg-apple);color:var(--blue-mid);}
+    .nav-links .nav-cta a{background:var(--green-cta);color:#fff!important;border-radius:99px;padding:8px 18px;font-weight:600;}
+    .nav-links .nav-cta a:hover{background:var(--green-brand);text-decoration:none;}
+    .nav-lang{display:flex;align-items:center;gap:4px;font-size:14px;font-weight:600;}
+    .nav-lang a{padding:5px 8px;border-radius:6px;color:var(--text2);text-decoration:none;transition:background .15s;}
+    .nav-lang a:hover,.nav-lang a.active{background:var(--bg-apple);color:var(--blue-mid);}
+    .nav-lang span{color:var(--border);}
+    .nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:8px;}
+    .nav-toggle span{display:block;width:22px;height:2px;background:var(--text);margin:5px 0;border-radius:2px;}
+    @media(max-width:900px){.nav-links{display:none;}.nav-toggle{display:block;}.nav-links.open{display:flex;flex-direction:column;align-items:flex-start;gap:2px;position:absolute;top:var(--nav-h);left:0;right:0;background:rgba(255,255,255,.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:12px 24px 20px;}}
+    .art-hero{background:linear-gradient(180deg,var(--bg-apple) 0%,#fff 100%);padding:calc(var(--nav-h,64px) + 28px) 0 44px;}
+    .art-wrap{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 24px;}
+    .breadcrumb{font-size:14px;color:var(--text2);margin-bottom:18px;}
+    .breadcrumb a{color:var(--text2);text-decoration:none;}
+    .breadcrumb a:hover{color:var(--blue-mid);}
+    .breadcrumb span{margin:0 5px;color:var(--border);}
+    .eyebrow{font-size:14px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--green-brand);margin-bottom:10px;}
+    .art-title{font-size:38px;line-height:1.15;font-weight:800;margin-bottom:16px;letter-spacing:-.02em;padding-bottom:0.08em;color:var(--blue-dark);}
+    .art-title .grad{background:linear-gradient(90deg,var(--blue-dark) 0%,var(--blue-light) 50%,var(--blue-bright) 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;}
+    @media(max-width:700px){.art-title{font-size:26px;}}
+    .art-meta{font-size:15px;color:var(--text2);padding-bottom:24px;border-bottom:1px solid var(--border);display:flex;gap:20px;flex-wrap:wrap;}
+    .art-body{padding:44px 0 60px;}
+    .art-body h2 {
+      font-size: 36px; font-weight: 800;
+      line-height: 1.1; letter-spacing: 0;
+      text-transform: uppercase;
+      color: var(--blue-mid, #134a8e);
+      background: linear-gradient(90deg, var(--blue-dark, #0b2c4a) 0%, var(--blue-light, #1f5fa6) 50%, var(--blue-bright, #3a6ff0) 100%);
+      -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block; max-width: 100%; margin-bottom: 14px;
+      padding: 0.12em 0.15em 0.08em 0;
+    }
+    .art-body h3{font-size:20px;font-weight:700;color:var(--text-strong);margin:28px 0 10px;}
+    .art-body p{margin-bottom:18px;}
+    .art-body ul,.art-body ol{margin-bottom:20px;}
+    /* QUICK TEST CARDS */
+    .test-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:20px 0;}
+    @media(max-width:640px){.test-grid{grid-template-columns:1fr;}}
+    .test-card{background:#fff;border-radius:var(--radius);padding:22px;box-shadow:0 8px 28px rgba(0,0,0,.06);}
+    .test-tag{font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--green-cta);margin-bottom:8px;}
+    .test-title{font-size:17px;font-weight:800;color:var(--text-strong);margin-bottom:6px;line-height:1.35;}
+    .test-desc{font-size:15px;color:var(--text2);line-height:1.5;}
+    /* CALLOUT */
+
+    .callout--blue{background:var(--bg-apple);border-left:4px solid var(--blue-mid);}
+
+    .callout-title{font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.07em;color:var(--blue-mid);margin-bottom:8px;}
+    .callout--green .callout-title{color:var(--green-brand);}
+    /* FAQ */
+    .faq-item{border-top:1px solid var(--border);padding:14px 0;}
+    .faq-item:last-child{border-bottom:1px solid var(--border);}
+    .faq-item summary{list-style:none;cursor:pointer;font-weight:700;font-size:18px;line-height:1.4;padding-right:32px;position:relative;color:var(--text-strong);}
+    .faq-item summary::-webkit-details-marker{display:none;}
+    .faq-item summary::after{content:"+";position:absolute;right:0;top:50%;transform:translateY(-50%);font-size:26px;font-weight:300;color:var(--green-cta);}
+    .faq-item[open] summary::after{content:"−";}
+
+    .faq-answer p+p{margin-top:10px;}
+    /* CTA */
+    .cta-box{background:linear-gradient(135deg,var(--blue-dark),var(--blue-mid));border-radius:var(--radius);padding:40px 36px;margin:44px 0;text-align:center;}
+    .cta-box h3{font-size:24px;font-weight:800;color:#fff;margin-bottom:12px;}
+    .cta-box p{color:rgba(255,255,255,.8);font-size:17px;margin-bottom:24px;}
+
+    .btn:hover{background:var(--green-brand);transform:scale(1.02);}
+    /* RELATED */
+    .related{border-top:1px solid var(--border);padding-top:36px;margin-top:36px;}
+    .related-title{font-size:20px;font-weight:800;color:var(--text-strong);margin-bottom:18px;}
+    .related-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+    @media(max-width:580px){.related-grid{grid-template-columns:1fr;}}
+    .related-card{display:block;padding:20px;border:1px solid var(--border);border-radius:var(--radius);text-decoration:none!important;transition:border-color .15s,transform .15s;}
+    .related-card:hover{border-color:var(--blue-mid);transform:translateY(-2px);}
+    .related-card-eye{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--blue-mid);margin-bottom:6px;}
+    .related-card-title{font-size:16px;font-weight:700;color:var(--text-strong);line-height:1.4;}
+    /* FOOTER */
+  </style>
+<link href="/assets/css/tokens.css" rel="stylesheet"/>
+<link href="/assets/css/base.css" rel="stylesheet"/>
+<link href="/assets/css/components.css" rel="stylesheet"/>
+<link href="/assets/css/nav.css" rel="stylesheet"/>
+<script defer="" src="/assets/js/nav.js?v=20260816b"></script>
+<link href="/assets/css/footer.css" rel="stylesheet"/>
+<link href="https://tagra.app/articles/operator-liability-for-driver-infringements/" hreflang="en" rel="alternate"/><link href="https://tagra.app/de/ratgeber/haftung-unternehmen-fahrer-verstoesse/" hreflang="de" rel="alternate"/><link href="https://tagra.app/pl/poradnik/odpowiedzialnosc-przewoznika-naruszenia-kierowcow/" hreflang="pl" rel="alternate"/><link href="https://tagra.app/el/arthra/efthyni-metaforea-paravaseis-odigon/" hreflang="el" rel="alternate"/><link href="https://tagra.app/hu/cikkek/fuvarozo-felelossege-sofor-szabalysertes/" hreflang="hu" rel="alternate"/><link href="https://tagra.app/it/articoli/responsabilita-impresa-infrazioni-conducenti/" hreflang="it" rel="alternate"/><link href="https://tagra.app/articles/operator-liability-for-driver-infringements/" hreflang="x-default" rel="alternate"/><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Chi paga quando un autista viola le regole? La responsabilità dell'operatore secondo le norme UE", "description": "Le norme UE rendono l'operatore responsabile delle infrazioni dei propri autisti — ma permettono anche di dimostrare che non potevi essere ragionevolmente ritenuto responsabile. Ecco come si presenta questa prova nella pratica.", "image": "https://tagra.app/assets/img/hero-poster.jpg", "author": {"@type": "Organization", "name": "Truck Data Technology, s.r.o.", "url": "https://www.tdt.cz"}, "publisher": {"@type": "Organization", "name": "Truck Data Technology, s.r.o.", "logo": {"@type": "ImageObject", "url": "https://tagra.app/assets/img/logo.svg"}}, "datePublished": "2026-08-14T09:00:00+02:00", "dateModified": "2026-08-14T09:00:00+02:00", "inLanguage": "it", "mainEntityOfPage": "https://tagra.app/it/articoli/responsabilita-impresa-infrazioni-conducenti/", "articleSection": "Base di conoscenza per operatori di trasporto"}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "TAGRA", "item": "https://tagra.app/it/"}, {"@type": "ListItem", "position": 2, "name": "Articoli", "item": "https://tagra.app/articles/"}, {"@type": "ListItem", "position": 3, "name": "Responsabilità dell'operatore", "item": "https://tagra.app/it/articoli/responsabilita-impresa-infrazioni-conducenti/"}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "L'impresa di trasporto è responsabile di un'infrazione commessa dal proprio autista?", "acceptedAnswer": {"@type": "Answer", "text": "Sì. Ai sensi dell'articolo 10, paragrafo 3, del Regolamento (CE) 561/2006, l'operatore è responsabile delle infrazioni commesse dai propri autisti, comprese quelle commesse in un altro Stato membro o in un paese terzo. Lo stesso articolo consente agli Stati membri di considerare prove che l'operatore non può essere ragionevolmente ritenuto responsabile."}}, {"@type": "Question", "name": "Basta scaricare i dati del cronotachigrafo, o è necessario anche valutarli?", "acceptedAnswer": {"@type": "Answer", "text": "Il solo download non dimostra che siano stati effettuati controlli. L'articolo 10, paragrafo 2, richiede che l'operatore istruisca adeguatamente gli autisti ed effettui controlli regolari sulla conformità. Le carte tachigrafiche devono essere scaricate almeno ogni 28 giorni e le unità di bordo almeno ogni 90, ma l'obbligo consiste nel sapere cosa contengono i dati."}}, {"@type": "Question", "name": "Quali prove possono aiutare a dimostrare che l'operatore non è responsabile?", "acceptedAnswer": {"@type": "Answer", "text": "Registrazioni dell'istruzione e della formazione degli autisti, regole interne per l'uso del cronotachigrafo, download effettuati entro gli intervalli previsti dalla legge, output di valutazione che mostrano infrazioni rilevate, rapporti scritti di infrazione controfirmati dall'autista, le azioni correttive intraprese e pianificazioni di trasporto che rendevano possibile la conformità. La valutazione dipende dal diritto nazionale e dalle circostanze."}}]}</script><noscript><style>.anim-up,.fly-left,.fly-right{opacity:1!important;transform:none!important}</style></noscript></head>
+<body class="art-page">
+<a class="skip-link" href="#main-content">Vai al contenuto</a>
+<div aria-hidden="true" id="scroll-progress"></div>
+<nav aria-label="Navigazione principale" class="site-nav" role="navigation">
+<div class="nav-inner">
+<a aria-label="TAGRA – Home" class="nav-logo" href="/it/"><img alt="TAGRA" height="32" src="/assets/img/logo-light.svg?v=20260513zh" style="display:block;height:32px;width:auto;" width="140"/></a>
+<ul class="nav-links" id="nav-links">
+<li><a href="/it/per-aziende/">Per le aziende</a></li>
+<li><a href="/it/per-autisti/">Per gli autisti</a></li>
+<li><a href="/enforcement/">Enti di controllo</a></li>
+<li><a aria-current="page" href="/articles/">Articoli</a></li><li><a href="/manuals/">Manuali</a></li>
+<li><a href="/faq/">FAQ</a></li>
+<li><a href="/contact/">Contatti</a></li>
+<li class="nav-cta-li"><a class="nav-cta" href="/it/prova-gratuita/?audience=fleet">Prova gratuita 30 giorni</a></li>
+</ul>
+<details class="nav-lang">
+<summary aria-label="Language: IT">IT</summary>
+<div class="nav-lang-menu" role="menu">
+<a href="/" hreflang="en">English</a><a href="/de/" hreflang="de">Deutsch</a><a href="/pl/" hreflang="pl">Polski</a><a href="/el/" hreflang="el">Ελληνικά</a><a href="/hu/" hreflang="hu">Magyar</a><a aria-current="page" class="active" href="/it/" hreflang="it">Italiano</a><a href="https://www.tdt.cz/" hreflang="cs" rel="noopener" target="_blank">Čeština</a><a href="https://www.tdt.sk/" hreflang="sk" rel="noopener" target="_blank">Slovenčina</a></div>
+</details>
+<a class="nav-cta-mobile" href="/it/prova-gratuita/?audience=fleet">Prova gratis</a>
+<button aria-expanded="false" aria-label="Attiva/disattiva menu" class="nav-mobile-toggle" id="nav-toggle">
+<span></span><span></span><span></span>
+</button>
+</div>
+</nav>
+<header class="art-hero">
+<div class="art-wrap">
+<nav aria-label="Breadcrumb" class="breadcrumb"><a href="/it/">TAGRA</a><span>›</span><a href="/articles/">Articoli</a><span>›</span><span>Responsabilità dell'operatore</span></nav>
+<div class="eyebrow anim-up">Conformità · Aggiornato nel 2026</div>
+<h1 class="art-title"><span class="grad">Chi paga quando un autista viola le regole?</span></h1>
+<div class="art-meta"><span>Truck Data Technology</span><span>Aggiornato ad agosto 2026</span><span>9 min di lettura</span></div><p class="hero-lede anim-up">Un autista supera il proprio tempo di guida in Francia. Settimane dopo arriva la notifica — indirizzata all'azienda. Secondo le norme UE, l'operatore risponde per i propri autisti, ovunque sia avvenuta l'infrazione. Ma le stesse norme permettono di dimostrare che non potevi essere ragionevolmente ritenuto responsabile. Ecco come si presenta questa prova.</p><div class="bento--hero"><div class="hero-card"><div class="eyebrow">Responsabilità</div><div class="big">Tua</div><p>L'articolo 10, paragrafo 3, rende l'operatore responsabile delle infrazioni degli autisti — comprese quelle commesse all'estero.</p></div><div class="hero-card hero-card--blue"><div class="eyebrow">Ma</div><div class="big">Le prove contano</div><p>Gli Stati membri possono considerare prove che l'operatore non può essere ragionevolmente ritenuto responsabile.</p></div><div class="hero-card"><div class="eyebrow">Download ogni</div><div class="big">28 / 90</div><p>Le carte tachigrafiche almeno ogni 28 giorni, le unità di bordo ogni 90. Scaricare non equivale a controllare.</p></div><div class="hero-card hero-card--blue"><div class="eyebrow">In gioco</div><div class="big">L'onorabilità</div><p>Le infrazioni gravi o ripetute finiscono nel registro nazionale e possono costarti la licenza stessa.</p></div></div>
+</div>
+</header>
+<main><section class="band"><div class="container art-body"><div class="eyebrow anim-up">La situazione</div><h2 class="h2-grad anim-up">Il problema non si ferma all'autista</h2>
+<p>La maggior parte degli operatori lo impara a proprie spese. Un autista supera il proprio tempo di guida giornaliero, salta una pausa, oppure estrae la carta e continua a guidare. Riceve una sanzione al controllo su strada — e sembra finita lì. Poi l'autorità si rivolge all'azienda.</p>
+<p>La domanda che si pone un ispettore non è <em>«il tuo autista ha violato le regole»</em>. È <strong>«lo hai istruito, hai controllato, te ne sei accorto, e cosa hai fatto al riguardo»</strong>. Queste quattro domande decidono se l'infrazione resta a carico dell'autista o diventa un problema dell'azienda.</p>
+</div></section>
+
+<section class="band band--blue"><div class="container art-body"><div class="eyebrow anim-up">Cosa richiedono le norme</div><h2 class="h2-grad anim-up">L'articolo 10, paragrafo 2, in termini operativi concreti</h2>
+<p>Il Regolamento (CE) 561/2006 assegna all'operatore quattro doveri. Sono brevi nel testo e importanti nella pratica:</p>
+<div class="doc-bento">
+<div class="doc-card anim-up"><div class="num">01</div><h3>Istruire l'autista</h3><p>In modo adeguato, e in un modo che tu possa poi dimostrare essere avvenuto. Un briefing verbale conta molto poco se non resta nulla di documentato.</p></div>
+<div class="doc-card anim-up"><div class="num">02</div><h3>Organizzare il lavoro</h3><p>Le pianificazioni devono rendere possibile la conformità. Un percorso che non può essere guidato legalmente è un errore organizzativo, non un errore dell'autista.</p></div>
+<div class="doc-card anim-up"><div class="num">03</div><h3>Effettuare controlli regolari</h3><p>Non limitarsi ad archiviare i dati — <strong>controllarli</strong>. È il dovere più spesso confuso con l'archiviazione.</p></div>
+<div class="doc-card anim-up"><div class="num">04</div><h3>Agire su ciò che trovi</h3><p>Un'infrazione rilevata e ignorata è una prova peggiore di una mai vista, perché dimostra che il sistema funziona e che hai scelto di non usarlo.</p></div>
+</div>
+<div class="callout callout--blue anim-up"><p>Gli intervalli di download derivano dal Regolamento (UE) 581/2010: <strong>le carte tachigrafiche almeno ogni 28 giorni, le unità di bordo almeno ogni 90 giorni</strong>, oltre a un download prima della vendita o del trasferimento di un veicolo. Rispettare queste scadenze soddisfa il dovere di archiviazione. Non soddisfa, da solo, il dovere di controllo.</p></div>
+</div></section>
+
+<section class="band"><div class="container art-body"><div class="eyebrow anim-up">Transfrontaliero</div><h2 class="h2-grad anim-up">Sì, anche le infrazioni commesse in un altro paese</h2>
+<p>L'articolo 10, paragrafo 3, è esplicito: l'operatore è responsabile delle infrazioni commesse dai propri autisti <strong>anche quando si verificano in un altro Stato membro o in un paese terzo</strong>. Una sanzione emessa in Italia o in Francia non resta confinata in Italia o in Francia.</p>
+<p>Lo stesso articolo aggiunge poi la frase su cui ruota l'intero contenuto di questo articolo. Gli Stati membri possono subordinare tale responsabilità al fatto che l'operatore abbia violato i propri doveri ai sensi dei paragrafi 1 e 2 — e <strong>possono considerare qualsiasi prova che l'operatore non possa essere ragionevolmente ritenuto responsabile</strong> dell'infrazione avvenuta.</p>
+<div class="warning-box anim-up"><p class="warning-box__title">Leggila come un'istruzione pratica</p><p>Il regolamento ti sta dicendo che la tua difesa è documentale. Non un buon rapporto con l'autista, non un'argomentazione in udienza — una registrazione che dimostri che hai istruito, controllato, rilevato e agito. Se non è scritto, non è successo.</p></div>
+</div></section>
+
+<section class="band band--gray"><div class="container art-body"><div class="eyebrow anim-up">Le prove</div><h2 class="h2-grad anim-up">Cosa può dimostrare che non eri ragionevolmente responsabile</h2>
+<p>Le autorità nazionali valutano questo aspetto caso per caso, quindi nessun elenco è una garanzia. Ma gli elementi seguenti sono ciò che un sistema di conformità dovrebbe produrre, e la loro assenza è ciò che viene contestato agli operatori:</p>
+<div class="twocol">
+<div class="info-card anim-up"><h3>Prima dell'infrazione</h3><p>Registrazioni dell'istruzione e della formazione degli autisti con date e firme. Regole interne per l'uso del cronotachigrafo e della carta. Prove che le pianificazioni e le finestre di consegna permettevano di rispettare le regole. Contratti che non impongono tempistiche impossibili.</p></div>
+<div class="info-card anim-up"><h3>Dopo l'infrazione</h3><p>Download effettuati entro gli intervalli di 28 e 90 giorni. Output di valutazione che mostra come l'infrazione sia stata <strong>rilevata</strong>. Un rapporto scritto di infrazione controfirmato dall'autista. L'azione correttiva intrapresa, con la prova che sia stata portata a termine.</p></div>
+</div>
+<p>Nota lo schema: metà delle prove deve esistere <em>prima</em> che qualcosa vada storto. Per questo una conformità costruita dopo l'arrivo di una notifica raramente aiuta.</p>
+</div></section>
+
+<section class="band"><div class="container art-body"><div class="eyebrow anim-up">Un caso reale, luglio 2026</div><h2 class="h2-grad anim-up">Cosa puniscono davvero le autorità</h2>
+<p>Nel luglio 2026 a un operatore britannico è stata ridotta la licenza da <strong>12 a 8 veicoli</strong> dopo che un autista aveva ripetutamente estratto la carta continuando a guidare — quasi 200 km in un unico tratto non registrato, poi segnato come pausa.</p>
+<p>L'autista ha perso l'abilitazione. Ciò che l'autorità di regolazione ha contestato all'<em>azienda</em> è la parte istruttiva: download del cronotachigrafo incompleti, nessuna procedura disciplinare documentata, formazione degli autisti impartita verbalmente senza nulla di registrato, e infrazioni ripetute mai affrontate. L'istruttoria ha appurato che i problemi erano passati inosservati dopo che il responsabile d'ufficio se n'era andato e <strong>nessun altro sapeva usare i sistemi di monitoraggio</strong>.</p>
+<p>Il meccanismo è britannico — una Operator Licence riesaminata da un Traffic Commissioner non ha un equivalente esatto negli Stati membri UE. <strong>Le carenze, invece, sì.</strong> Ognuna di esse si leggerebbe allo stesso modo in un audit aziendale ai sensi della Direttiva 2006/22/CE. <a href="/articles/tachograph-rules-uk-dvsa-operator-licence/">Tutti i dettagli sul regime britannico →</a></p>
+</div></section>
+
+<section class="band band--blue"><div class="container art-body"><div class="eyebrow anim-up">Oltre la sanzione</div><h2 class="h2-grad anim-up">L'onorabilità e il registro nazionale</h2>
+<p>Una sanzione è un costo. La conseguenza che fa chiudere le aziende è diversa: ai sensi del Regolamento (CE) 1071/2009, le infrazioni gravi vengono registrate nel registro elettronico nazionale e possono comportare la <strong>perdita dell'onorabilità</strong> — per l'impresa, per il gestore dei trasporti, o per entrambi.</p>
+<div class="twocol">
+<div class="info-card anim-up"><h3>Come si aggrava</h3><p>Il Regolamento (UE) 2016/403 classifica quali infrazioni sono abbastanza gravi da attivare la procedura. La manomissione del cronotachigrafo e la mancanza di registrazioni sono ai primi posti di quell'elenco. L'articolo 19 del Regolamento 561/2006 consente inoltre a uno Stato membro di revocare, sospendere o limitare l'autorizzazione di un operatore.</p></div>
+<div class="info-card anim-up"><h3>Quanto dura</h3><p>L'onorabilità perduta non si recupera rapidamente — il periodo minimo prima che possa essere riottenuta è di <strong>un anno</strong>, e un gestore dei trasporti dichiarato inidoneo perde la validità dell'attestato di capacità professionale in tutti gli Stati membri fino alla riabilitazione.</p></div>
+</div>
+</div></section>
+
+<section class="band"><div class="container art-body"><div class="eyebrow anim-up">Non solo il vettore</div><h2 class="h2-grad anim-up">Anche la pianificazione è responsabilità di qualcuno</h2>
+<p>L'articolo 10, paragrafo 4, estende il dovere oltre l'impresa di trasporto. <strong>Speditori, spedizionieri, operatori turistici, appaltatori principali, subappaltatori e agenzie di collocamento di autisti</strong> devono garantire che le pianificazioni di trasporto concordate contrattualmente rispettino il regolamento.</p>
+<p>Questo conta in due direzioni. Se un cliente impone una finestra di consegna che non può essere rispettata legalmente, l'obbligo non è solo tuo. E se le infrazioni si concentrano su un percorso, un cliente o un tipo di incarico, il problema probabilmente non è l'autista — è la pianificazione. È uno schema che solo una valutazione regolare dei dati può rivelare.</p>
+</div></section>
+
+<section class="band band--gray"><div class="container art-body"><div class="eyebrow anim-up">Audit aziendale</div><h2 class="h2-grad anim-up">Cosa cerca un'ispezione presso la tua sede</h2>
+<p>La Direttiva 2006/22/CE stabilisce le condizioni minime per i controlli presso le sedi degli operatori. In pratica un ispettore vorrà:</p>
+<div class="steps">
+<div class="step anim-up"><h3>Dati scaricati</h3><p>Da carte tachigrafiche e unità di bordo, completi e nei termini richiesti.</p></div>
+<div class="step anim-up"><h3>Prova della valutazione</h3><p>Output che mostra che i dati sono stati verificati rispetto alle regole su tempi di guida, pause e riposo — non semplicemente archiviati.</p></div>
+<div class="step anim-up"><h3>Registrazioni delle infrazioni</h3><p>Cosa è stato rilevato, quando, chi lo ha esaminato, cosa è stato comunicato all'autista.</p></div>
+<div class="step anim-up"><h3>Azione correttiva</h3><p>Seguito documentato, e prova che i casi ripetuti siano stati portati a un livello superiore invece di ripetersi.</p></div>
+<div class="step anim-up"><h3>Registrazioni della formazione</h3><p>Datate, controfirmate, e riguardanti le regole a cui si riferiscono le infrazioni.</p></div>
+<div class="step anim-up"><h3>Orario di lavoro</h3><p>La Direttiva 2002/15/CE si applica in aggiunta ai tempi di guida ed è verificata insieme ad essi.</p></div>
+</div>
+</div></section>
+
+<section class="band"><div class="container art-body"><div class="eyebrow anim-up">Impostazione pratica</div><h2 class="h2-grad anim-up">Un processo che riduce il rischio</h2>
+<div class="doc-bento">
+<div class="doc-card anim-up"><div class="num">01</div><h3>Scarica secondo programma</h3><p>Carte ogni 28 giorni, unità ogni 90. Imposta promemoria interni al 21° e al 75° giorno, così un'assenza non ti fa superare il termine.</p></div>
+<div class="doc-card anim-up"><div class="num">02</div><h3>Valuta, poi archivia</h3><p>Verifica i dati rispetto alle regole sui tempi di guida e sull'orario di lavoro. L'archiviazione senza valutazione è la lacuna che le autorità individuano.</p></div>
+<div class="doc-card anim-up"><div class="num">03</div><h3>Verbalizza per iscritto</h3><p>Ogni infrazione riceve un rapporto e una controfirma dell'autista. È il documento che risponde all'ispettore.</p></div>
+<div class="doc-card anim-up"><div class="num">04</div><h3>Non concentrare tutto in una sola persona</h3><p>Più di una persona deve sapere come gestire il sistema. Una conformità che dipende da un solo dipendente fallisce nel momento in cui quella persona se ne va.</p></div>
+</div>
+<div class="callout callout--blue anim-up"><p><strong>TAGRA</strong> legge i dati da qualsiasi cronotachigrafo digitale o intelligente indipendentemente dal paese, li valuta rispetto alle regole sui tempi di guida e sull'orario di lavoro, produce i report delle infrazioni che consegni all'autista e conservi in archivio, e mantiene l'archivio che devi produrre su richiesta. Windows, nessuna dipendenza dal cloud, i tuoi dati restano con te. <a href="/it/prova-gratuita/?audience=fleet">Provalo gratis per 30 giorni</a> — nessun dato di carta richiesto.</p></div>
+</div></section>
+
+<section class="band band--gray"><div class="container art-body"><div class="eyebrow anim-up">Domande e risposte</div><h2 class="h2-grad anim-up">Domande frequenti</h2>
+<h3>L'azienda è responsabile di un'infrazione commessa dal proprio autista?</h3>
+<p>Sì. L'articolo 10, paragrafo 3, del Regolamento (CE) 561/2006 rende l'operatore responsabile delle infrazioni commesse dai propri autisti, comprese quelle commesse in un altro Stato membro o in un paese terzo. Lo stesso articolo consente agli Stati membri di considerare prove che l'operatore non può essere ragionevolmente ritenuto responsabile.</p>
+<h3>Basta scaricare i dati, o è necessario anche valutarli?</h3>
+<p>Il solo download non dimostra che siano stati effettuati controlli. L'articolo 10, paragrafo 2, richiede un'adeguata istruzione degli autisti e <strong>controlli regolari</strong> sulla conformità. Le carte devono essere scaricate almeno ogni 28 giorni e le unità di bordo ogni 90, ma l'obbligo consiste nel sapere cosa contengono i dati.</p>
+<h3>Quali prove aiutano a dimostrare che l'operatore non è responsabile?</h3>
+<p>Registrazioni dell'istruzione e della formazione, regole interne per l'uso del cronotachigrafo, download entro gli intervalli previsti dalla legge, output di valutazione che mostrano infrazioni rilevate, rapporti scritti di infrazione controfirmati dall'autista, azioni correttive, e pianificazioni che rendevano possibile la conformità. La valutazione dipende dal diritto nazionale e dalle circostanze del caso.</p>
+<h3>Un'azienda può perdere la licenza a causa delle infrazioni degli autisti?</h3>
+<p>Le infrazioni gravi o ripetute vengono registrate nel registro elettronico nazionale ai sensi del Regolamento (CE) 1071/2009 e possono comportare la perdita dell'onorabilità; l'articolo 19 del Regolamento 561/2006 consente inoltre a uno Stato membro di revocare, sospendere o limitare l'autorizzazione. L'onorabilità può essere riottenuta solo dopo un periodo minimo di un anno.</p>
+<p style="font-size:14px;color:var(--text2);margin-top:28px">Questo articolo ha finalità informativa e descrive i requisiti generali derivanti dalle norme UE su tempi di guida, periodi di riposo e dati del cronotachigrafo. Non costituisce consulenza legale. La responsabilità, le sanzioni e ciò che costituisce una difesa adeguata sono determinati dal diritto nazionale e dalle circostanze di ciascun caso.</p>
+</div></section>
+</main>
+<footer class="site-footer" role="contentinfo">
+<div class="footer-inner">
+<div>
+<div class="footer-logo"><img alt="TAGRA" height="20" src="/assets/img/logo-dark.svg?v=20260513zh" width="88" loading="lazy"/></div>
+<p class="footer-desc">Software professionale per l'analisi dei dati del tachigrafo. Download della carta conducente, analisi del cronotachigrafo digitale, tempi di guida e di riposo nell'UE e Direttiva sull'orario di lavoro degli autotrasportatori. Sviluppato da Truck Data Technology, s.r.o.</p>
+</div>
+<div class="footer-col">
+<h2 class="footer-col-title">Prodotto</h2>
+<ul>
+<li><a href="/it/per-aziende/">Per operatori di flotta</a></li>
+<li><a href="/it/per-autisti/">Per autisti professionisti</a></li>
+<li><a href="/enforcement/">Per gli enti di controllo</a></li>
+<li><a href="/it/come-funziona/">Come funziona</a></li>
+<li><a href="/it/a-chi-si-rivolge/">A chi si rivolge</a></li>
+<li><a href="/faq/">FAQ</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h2 class="footer-col-title">Risorse</h2>
+<ul>
+<li><a href="/articles/">Articoli</a></li><li><a href="/manuals/">Manuali</a></li>
+<li><a href="/articles/digital-tachograph-symbols/">Simboli del cronotachigrafo</a></li>
+<li><a href="/integrations/dkv-live/">DKV LIVE®</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h2 class="footer-col-title">Azienda</h2>
+<ul>
+<li><a href="/contact/">Contatti</a></li>
+<li><a href="https://www.tdt.cz" rel="noopener" target="_blank">Truck Data Technology</a></li>
+<li><a href="/">English</a></li><li><a href="/de/">Deutsch</a></li><li><a href="/pl/">Polski</a></li><li><a href="/el/">Ελληνικά</a></li><li><a href="/hu/">Magyar</a></li><li><a href="/it/">Italiano</a></li><li><a href="https://www.tdt.cz/" rel="noopener" target="_blank">Čeština</a></li><li><a href="https://www.tdt.sk/" rel="noopener" target="_blank">Slovenčina</a></li></ul>
+</div>
+</div>
+<div class="footer-bottom">
+<span>© 2026 Truck Data Technology, s.r.o. Tutti i diritti riservati.</span>
+<span><a href="/contact/">Contatti</a> · <a href="https://www.tdt.cz" rel="noopener" target="_blank">tdt.cz</a> · <a href="/privacy/">Privacy e cookie</a></span>
+</div>
+</footer>
+<script>(function(){var bar=document.getElementById('scroll-progress');if(bar)window.addEventListener('scroll',function(){var t=document.documentElement.scrollTop||document.body.scrollTop;var h=document.documentElement.scrollHeight-document.documentElement.clientHeight;bar.style.width=(t/h*100)+'%';},{passive:true});var toggle=document.getElementById('nav-toggle'),links=document.getElementById('nav-links');if(toggle&&links)toggle.addEventListener('click',function(){var o=links.classList.toggle('open');toggle.setAttribute('aria-expanded',o);});})();</script><script>
+/* INTERSECTION OBSERVER – ANIMATIONS */
+if ('IntersectionObserver' in window) {
+  var io = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) {
+      if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.anim-up, .fly-left, .fly-right').forEach(function(el) { io.observe(el); });
+} else {
+  document.querySelectorAll('.anim-up, .fly-left, .fly-right').forEach(function(el) { el.classList.add('on'); });
+}
+</script>
+</body>
+</html>
