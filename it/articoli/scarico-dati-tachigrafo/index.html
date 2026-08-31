@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<!-- TMX-ANALYTICS START -->
+<meta content="7F7894081BE7FBB245FF03AF8810B22F" name="msvalidate.01"/>
+<!-- Consent Mode v2 defaults (deny) + gtag stub — runs BEFORE gtag.js -->
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent','default',{
+      ad_storage:'denied', ad_user_data:'denied', ad_personalization:'denied',
+      analytics_storage:'denied', functionality_storage:'denied',
+      personalization_storage:'denied', security_storage:'granted',
+      wait_for_update:500
+    });
+    gtag('set','ads_data_redaction',true);
+    gtag('set','url_passthrough',false);
+  </script>
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-92253QFBNX"></script>
+<script>
+    gtag('js', new Date());
+    gtag('config','G-92253QFBNX');
+  </script>
+<!-- Cookie consent banner (self-hosted) + Microsoft Clarity gating -->
+<style>
+    .tmx-cc{position:fixed;left:0;right:0;bottom:0;z-index:2147483000;background:linear-gradient(120deg,var(--blue-dark,#0b2c4a),var(--blue-mid,#134a8e) 62%,var(--blue-light,#1f5fa6));color:#fff;
+      font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+      padding:16px 20px;box-shadow:0 -4px 24px rgba(0,0,0,.18);display:flex;flex-wrap:wrap;
+      align-items:center;gap:14px;justify-content:center}
+    .tmx-cc__txt{flex:1 1 360px;max-width:760px}
+    .tmx-cc__txt a{color:#9ed0f5;text-decoration:underline}
+    .tmx-cc__btns{display:flex;gap:10px;flex:0 0 auto}
+    .tmx-cc__b{appearance:none;border:0;cursor:pointer;font:inherit;font-weight:600;
+      padding:10px 22px;border-radius:99px;transition:filter .15s;color:#fff}
+    .tmx-cc__b:hover{filter:brightness(1.08)}
+    .tmx-cc__b--no{background:rgba(255,255,255,.16)}
+    .tmx-cc__b--yes{background:var(--green-cta,#5C820F)}
+    @media(max-width:640px){.tmx-cc{padding:14px}.tmx-cc__btns{width:100%}.tmx-cc__b{flex:1}}
+  </style>
+<script>
+  (function(){
+    var KEY='tmx-consent-v1', CL='wt18054m0r';
+    function lc(){var l=(document.documentElement.getAttribute('lang')||'en').toLowerCase().split('-')[0];
+      var m={cz:'cs',cs:'cs',sk:'sk',de:'de',pl:'pl',gr:'el',el:'el',hu:'hu',en:'en'};return m[l]||'en';}
+    var T={
+      hu:{t:'Analitikai sütiket használunk (Google Analytics, Microsoft Clarity, Smartsupp), hogy megértsük a webhely használatát. Csak az Ön hozzájárulásával töltődnek be.',a:'Elfogadom',r:'Elutasítom',p:'Adatvédelem és sütik'},
+      en:{t:'We use analytics cookies (Google Analytics, Microsoft Clarity, Smartsupp) to understand site usage. They load only with your consent.',a:'Accept',r:'Reject',p:'Privacy &amp; cookies'},
+      cs:{t:'Používáme analytické cookies (Google Analytics, Microsoft Clarity, Smartsupp) k pochopení používání webu. Načtou se jen s vaším souhlasem.',a:'Přijmout',r:'Odmítnout',p:'Soukromí a cookies'},
+      sk:{t:'Používame analytické cookies (Google Analytics, Microsoft Clarity, Smartsupp) na pochopenie používania webu. Načítajú sa len s vaším súhlasom.',a:'Prijať',r:'Odmietnuť',p:'Súkromie a cookies'},
+      de:{t:'Wir verwenden Analyse-Cookies (Google Analytics, Microsoft Clarity, Smartsupp), um die Nutzung der Website zu verstehen. Sie werden nur mit Ihrer Einwilligung geladen.',a:'Akzeptieren',r:'Ablehnen',p:'Datenschutz &amp; Cookies'},
+      pl:{t:'Używamy plików cookie do analityki (Google Analytics, Microsoft Clarity, Smartsupp), aby zrozumieć korzystanie z witryny. Ładują się tylko za Twoją zgodą.',a:'Akceptuj',r:'Odrzuć',p:'Prywatność i cookies'},
+      el:{t:'Χρησιμοποιούμε cookies ανάλυσης (Google Analytics, Microsoft Clarity, Smartsupp) για να κατανοήσουμε τη χρήση. Φορτώνονται μόνο με τη συγκατάθεσή σας.',a:'Αποδοχή',r:'Απόρριψη',p:'Απόρρητο &amp; cookies'}
+    };
+    function loadClarity(){if(!CL||window.__tmxCl)return;window.__tmxCl=1;
+      (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+       t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+       y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script",CL);}
+    function grant(){try{localStorage.setItem(KEY,'granted')}catch(e){}
+      gtag('consent','update',{analytics_storage:'granted'});loadClarity();}
+    function deny(){try{localStorage.setItem(KEY,'denied')}catch(e){}}
+    var saved=null;try{saved=localStorage.getItem(KEY)}catch(e){}
+    if(saved==='granted'){grant();return;} if(saved==='denied'){return;}
+    function show(){var tx=T[lc()]||T.en;
+      var b=document.createElement('div');b.className='tmx-cc';b.setAttribute('role','dialog');b.setAttribute('aria-live','polite');
+      b.innerHTML='<div class="tmx-cc__txt">'+tx.t+' <a href="/privacy/">'+tx.p+'</a></div>'+
+        '<div class="tmx-cc__btns"><button type="button" class="tmx-cc__b tmx-cc__b--no">'+tx.r+'</button>'+
+        '<button type="button" class="tmx-cc__b tmx-cc__b--yes">'+tx.a+'</button></div>';
+      document.body.appendChild(b);
+      b.querySelector('.tmx-cc__b--yes').addEventListener('click',function(){grant();b.remove();});
+      b.querySelector('.tmx-cc__b--no').addEventListener('click',function(){deny();b.remove();});}
+    if(document.body)show();else document.addEventListener('DOMContentLoaded',show);
+  })();
+  </script>
+<!-- TMX-ANALYTICS END -->
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tachigrafo digitale: come scaricare, valutare e archiviare correttamente i dati | TAGRA</title>
+<meta content="Guida completa per operatori di trasporto: come scaricare i dati dal tachigrafo digitale e dalla carta tachigrafica, valutare i tempi di guida e archiviare tutto a norma di legge. Scadenze, strumenti e procedura passo dopo passo." name="description"/>
+<link href="https://tagra.app/it/articoli/scarico-dati-tachigrafo/" rel="canonical"/>
+<meta content="Tachigrafo digitale: come scaricare, valutare e archiviare correttamente i dati" property="og:title"/><meta content="Guida completa per operatori di trasporto: come scaricare i dati dal tachigrafo digitale e dalla carta tachigrafica, valutare i tempi di guida e archiviare tutto a norma di legge. Scadenze, strumenti e procedura passo dopo passo." property="og:description"/>
+<meta content="https://tagra.app/assets/img/hero-poster.jpg" property="og:image"/>
+<meta content="https://tagra.app/it/articoli/scarico-dati-tachigrafo/" property="og:url"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    a{color:var(--blue-mid);text-decoration:none;}
+    a:hover{color:var(--blue-dark);text-decoration:underline;text-underline-offset:.18em;}
+    img{max-width:100%;height:auto;display:block;}
+    p+p{margin-top:14px;}
+    ul,ol{padding-left:22px;}
+    li{margin:6px 0;line-height:1.65;}
+    li::marker{color:var(--blue-mid);}
+    strong{font-weight:700;color:var(--text-strong);}
+    #scroll-progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--green-brand),var(--blue-light));width:0%;z-index:9999;pointer-events:none;}
+.nav-inner{margin:0 auto;padding:0 24px;height:100%;display:flex;align-items:center;justify-content:space-between;gap:24px;}
+    .nav-links{display:flex;align-items:center;gap:4px;list-style:none;}
+    .nav-links a{font-size:15px;font-weight:500;color:var(--text);padding:8px 12px;border-radius:8px;text-decoration:none;transition:background .15s;}
+    .nav-links a:hover{background:var(--bg-apple);color:var(--blue-mid);}
+    .nav-links .nav-cta a{background:var(--green-cta);color:#fff!important;border-radius:99px;padding:8px 18px;font-weight:600;}
+    .nav-links .nav-cta a:hover{background:var(--green-brand);text-decoration:none;}
+    .nav-lang{display:flex;align-items:center;gap:4px;font-size:14px;font-weight:600;}
+    .nav-lang a{padding:5px 8px;border-radius:6px;color:var(--text2);text-decoration:none;transition:background .15s;}
+    .nav-lang a:hover,.nav-lang a.active{background:var(--bg-apple);color:var(--blue-mid);}
+    .nav-lang span{color:var(--border);}
+    .nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:8px;}
+    .nav-toggle span{display:block;width:22px;height:2px;background:var(--text);margin:5px 0;border-radius:2px;}
+    @media(max-width:900px){.nav-links{display:none;}.nav-toggle{display:block;}.nav-links.open{display:flex;flex-direction:column;align-items:flex-start;gap:2px;position:absolute;top:var(--nav-h);left:0;right:0;background:rgba(255,255,255,.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:12px 24px 20px;}}
+    .art-hero{background:linear-gradient(180deg,var(--bg-apple) 0%,#fff 100%);padding:calc(var(--nav-h,64px) + 28px) 0 44px;}
+    .art-wrap{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 24px;}
+    .breadcrumb{font-size:14px;color:var(--text2);margin-bottom:18px;}
+    .breadcrumb a{color:var(--text2);text-decoration:none;}
+    .breadcrumb a:hover{color:var(--blue-mid);}
+    .breadcrumb span{margin:0 5px;color:var(--border);}
+    .eyebrow{font-size:14px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--green-brand);margin-bottom:10px;}
+    .art-title{font-size:38px;line-height:1.15;font-weight:800;margin-bottom:16px;letter-spacing:-.02em;padding-bottom:0.08em;color:var(--blue-dark);}
+    .art-title .grad{background:linear-gradient(90deg,var(--blue-dark) 0%,var(--blue-light) 50%,var(--blue-bright) 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;}
+    @media(max-width:700px){.art-title{font-size:26px;}}
+    .art-meta{font-size:15px;color:var(--text2);padding-bottom:24px;border-bottom:1px solid var(--border);display:flex;gap:20px;flex-wrap:wrap;}
+    .art-body{padding:44px 0 60px;}
+    .art-body h2 {
+      font-size: 36px; font-weight: 800;
+      line-height: 1.1; letter-spacing: 0;
+      text-transform: uppercase;
+      color: var(--blue-mid, #134a8e);
+      background: linear-gradient(90deg, var(--blue-dark, #0b2c4a) 0%, var(--blue-light, #1f5fa6) 50%, var(--blue-bright, #3a6ff0) 100%);
+      -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block; max-width: 100%; margin-bottom: 14px;
+      padding: 0.12em 0.15em 0.08em 0;
+    }
+    .art-body h3{font-size:20px;font-weight:700;color:var(--text-strong);margin:28px 0 10px;}
+    .art-body p{margin-bottom:18px;}
+    .art-body ul,.art-body ol{margin-bottom:20px;}
+    .deadline-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:24px 0;}
+    @media(max-width:580px){.deadline-grid{grid-template-columns:1fr;}}
+    .deadline-box{background:var(--bg-apple);border-radius:var(--radius);padding:28px;text-align:center;}
+    .deadline-num{font-size:54px;font-weight:900;line-height:1;background:linear-gradient(90deg,var(--blue-dark),var(--blue-mid));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:6px;}
+    .deadline-lbl{font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--text2);}
+    .deadline-desc{font-size:15px;color:var(--text2);margin-top:10px;line-height:1.5;}
+    .steps-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin:20px 0;}
+    @media(max-width:720px){.steps-grid{grid-template-columns:1fr;}}
+    .step-card{background:var(--bg-gray);border-radius:var(--radius);padding:22px;box-shadow:0 8px 24px rgba(0,0,0,.04);}
+    .step-num{font-size:13px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--green-cta);margin-bottom:8px;}
+    .step-title{font-size:17px;font-weight:800;color:var(--text-strong);margin-bottom:6px;line-height:1.35;}
+    .step-desc{font-size:15px;color:var(--text2);line-height:1.5;}
+
+    .callout--blue{background:var(--bg-apple);border-left:4px solid var(--blue-mid);}
+
+    .callout-title{font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:.07em;color:var(--blue-mid);margin-bottom:8px;}
+    .callout--green .callout-title{color:var(--green-brand);}
+    .faq-item{border-top:1px solid var(--border);padding:14px 0;}
+    .faq-item:last-child{border-bottom:1px solid var(--border);}
+    .faq-item summary{list-style:none;cursor:pointer;font-weight:700;font-size:18px;line-height:1.4;padding-right:32px;position:relative;color:var(--text-strong);}
+    .faq-item summary::-webkit-details-marker{display:none;}
+    .faq-item summary::after{content:"+";position:absolute;right:0;top:50%;transform:translateY(-50%);font-size:26px;font-weight:300;color:var(--green-cta);}
+    .faq-item[open] summary::after{content:"−";}
+
+    .cta-box{background:linear-gradient(135deg,var(--blue-dark),var(--blue-mid));border-radius:var(--radius);padding:40px 36px;margin:44px 0;text-align:center;}
+    .cta-box h3{font-size:24px;font-weight:800;color:#fff;margin-bottom:12px;}
+    .cta-box p{color:rgba(255,255,255,.8);font-size:17px;margin-bottom:24px;}
+
+    .btn:hover{background:var(--green-brand);transform:scale(1.02);}
+    .related{border-top:1px solid var(--border);padding-top:36px;margin-top:36px;}
+    .related-title{font-size:20px;font-weight:800;color:var(--text-strong);margin-bottom:18px;}
+    .related-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+    @media(max-width:580px){.related-grid{grid-template-columns:1fr;}}
+    .related-card{display:block;padding:20px;border:1px solid var(--border);border-radius:var(--radius);text-decoration:none!important;transition:border-color .15s,transform .15s;}
+    .related-card:hover{border-color:var(--blue-mid);transform:translateY(-2px);}
+    .related-card-eye{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--blue-mid);margin-bottom:6px;}
+    .related-card-title{font-size:16px;font-weight:700;color:var(--text-strong);line-height:1.4;}
+  </style>
+<link href="/assets/css/tokens.css" rel="stylesheet"/>
+<link href="/assets/css/base.css" rel="stylesheet"/>
+<link href="/assets/css/components.css" rel="stylesheet"/>
+<link href="/assets/css/nav.css" rel="stylesheet"/>
+<script defer="" src="/assets/js/nav.js?v=20260816b"></script>
+<link href="/assets/css/footer.css" rel="stylesheet"/>
+<link href="https://tagra.app/articles/how-to-download-evaluate-archive-tachograph-data/" hreflang="en" rel="alternate"/><link href="https://tagra.app/de/ratgeber/tachographendaten-auslesen-auswerten/" hreflang="de" rel="alternate"/><link href="https://tagra.app/pl/poradnik/pobieranie-analiza-danych-tachografu/" hreflang="pl" rel="alternate"/><link href="https://tagra.app/el/arthra/lipsi-analysi-dedomenon-tachografou/" hreflang="el" rel="alternate"/><link href="https://tagra.app/hu/cikkek/tachograf-adatok-letoltese-kiertekelese/" hreflang="hu" rel="alternate"/><link href="https://tagra.app/it/articoli/scarico-dati-tachigrafo/" hreflang="it" rel="alternate"/><link href="https://tagra.app/articles/how-to-download-evaluate-archive-tachograph-data/" hreflang="x-default" rel="alternate"/><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Tachigrafo digitale: come scaricare, valutare e archiviare correttamente i dati", "description": "Guida completa per operatori di trasporto: come scaricare i dati dal tachigrafo digitale e dalla carta tachigrafica, valutare i tempi di guida e archiviare tutto a norma di legge. Scadenze, strumenti e procedura passo dopo passo.", "image": "https://tagra.app/assets/img/hero-poster.jpg", "author": {"@type": "Organization", "name": "Truck Data Technology, s.r.o.", "url": "https://www.tdt.cz"}, "publisher": {"@type": "Organization", "name": "Truck Data Technology, s.r.o.", "logo": {"@type": "ImageObject", "url": "https://tagra.app/assets/img/logo.svg"}}, "datePublished": "2025-11-01T09:00:00+02:00", "dateModified": "2026-04-15T09:00:00+02:00", "inLanguage": "it", "mainEntityOfPage": "https://tagra.app/it/articoli/scarico-dati-tachigrafo/", "articleSection": "Base di conoscenza per operatori di trasporto", "wordCount": 745}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "TAGRA", "item": "https://tagra.app/it/"}, {"@type": "ListItem", "position": 2, "name": "Articoli", "item": "https://tagra.app/articles/"}, {"@type": "ListItem", "position": 3, "name": "Guida completa", "item": "https://tagra.app/it/articoli/scarico-dati-tachigrafo/"}]}</script><style id="BAND-FIX">.band .art-body{padding:0;max-width:var(--maxw)}.band .art-body>.eyebrow{margin-bottom:6px}.band .art-body>h2.h2-grad{margin-bottom:18px}.bento--hero{margin-top:26px}.hero-card p{margin:0}</style><noscript><style>.anim-up,.fly-left,.fly-right{opacity:1!important;transform:none!important}</style></noscript></head>
+<body class="art-page">
+<a class="skip-link" href="#main-content">Vai al contenuto</a>
+<div aria-hidden="true" id="scroll-progress"></div>
+<nav aria-label="Navigazione principale" class="site-nav" role="navigation">
+<div class="nav-inner">
+<a aria-label="TAGRA – Home" class="nav-logo" href="/it/"><img alt="TAGRA" height="32" src="/assets/img/logo-light.svg?v=20260513zh" style="display:block;height:32px;width:auto;" width="140"/></a>
+<ul class="nav-links" id="nav-links">
+<li><a href="/it/per-aziende/">Per le aziende</a></li>
+<li><a href="/it/per-autisti/">Per gli autisti</a></li>
+<li><a href="/enforcement/">Enti di controllo</a></li>
+<li><a aria-current="page" href="/articles/">Articoli</a></li><li><a href="/manuals/">Manuali</a></li>
+<li><a href="/faq/">FAQ</a></li>
+<li><a href="/contact/">Contatti</a></li>
+<li class="nav-cta-li"><a class="nav-cta" href="/it/prova-gratuita/?audience=fleet">Prova gratuita 30 giorni</a></li>
+</ul>
+<details class="nav-lang">
+<summary aria-label="Language: IT">IT</summary>
+<div class="nav-lang-menu" role="menu">
+<a href="/" hreflang="en">English</a><a href="/de/" hreflang="de">Deutsch</a><a href="/pl/" hreflang="pl">Polski</a><a href="/el/" hreflang="el">Ελληνικά</a><a href="/hu/" hreflang="hu">Magyar</a><a aria-current="page" class="active" href="/it/" hreflang="it">Italiano</a><a href="https://www.tdt.cz/" hreflang="cs" rel="noopener" target="_blank">Čeština</a><a href="https://www.tdt.sk/" hreflang="sk" rel="noopener" target="_blank">Slovenčina</a></div>
+</details>
+<a class="nav-cta-mobile" href="/it/prova-gratuita/?audience=fleet">Prova gratis</a>
+<button aria-expanded="false" aria-label="Attiva/disattiva menu" class="nav-mobile-toggle" id="nav-toggle">
+<span></span><span></span><span></span>
+</button>
+</div>
+</nav>
+<header class="art-hero">
+<div class="art-wrap">
+<nav aria-label="Breadcrumb" class="breadcrumb"><a href="/it/">TAGRA</a><span>›</span><a href="/articles/">Articoli</a><span>›</span><span>Guida completa</span></nav>
+<div class="eyebrow anim-up">Guida completa</div>
+<h1 class="art-title"><span class="grad">Tachigrafo digitale: come scaricare, valutare e archiviare correttamente i dati</span></h1>
+<div class="art-meta"><span>Truck Data Technology</span><span>Aggiornato ad aprile 2026</span><span>8 min di lettura</span></div><p class="hero-lede anim-up">Se possiedi un camion, un autobus — o dal luglio 2026 un furgone sopra le 2,5 t nel trasporto internazionale — un tachigrafo digitale è o sarà una parte essenziale della tua vita lavorativa. Che tu guidi personalmente o gestisca una flotta, ci sono diversi obblighi che devi rispettare correttamente.</p><div class="bento--hero"><div class="hero-card"><div class="eyebrow">giorni — carta tachigrafica</div><div class="big">28</div><p>I dati della carta tachigrafica devono essere scaricati almeno ogni 28 giorni. TAGRA ti avvisa prima della scadenza.</p></div><div class="hero-card hero-card--blue"><div class="eyebrow">giorni — unità di bordo</div><div class="big">90</div><p>I dati dell'unità di bordo devono essere scaricati almeno ogni 90 giorni. Tutti i dati devono poi essere archiviati per almeno 1 anno.</p></div><div class="hero-card"><div class="eyebrow">Minimo di legge</div><div class="big">12 mesi</div><p>Periodo minimo di conservazione richiesto dalla legge.</p></div><div class="hero-card hero-card--blue"><div class="eyebrow">Consigliato</div><div class="big">2–5 anni</div><p>conviene avere tutto disponibile per eventuali controlli retrospettivi.</p></div></div>
+</div>
+</header>
+<main id="main-content"><section class="band"><div class="container art-body"><div class="eyebrow anim-up">Obblighi regolari</div><h2 class="h2-grad anim-up">Cosa devi fare regolarmente</h2><p>Scaricare, valutare correttamente e archiviare i dati ti garantisce:</p>
+<ul>
+<li><strong>tranquillità durante le ispezioni,</strong></li>
+<li><strong>protezione per la tua azienda,</strong></li>
+<li>e soprattutto <strong>tempo e nervi risparmiati.</strong></li>
+<li>Nei casi più gravi durante un <strong>controllo su strada</strong> — come la manomissione di un tachigrafo o la falsificazione intenzionale — può essere imposta sul posto una cauzione fino a <strong>8.000 €</strong>.</li>
+</ul><div class="doc-bento"><div class="doc-card anim-up"><div class="num">01</div><h3>Scarica i dati dal tachigrafo</h3><p>Almeno ogni 90 giorni.</p></div><div class="doc-card anim-up"><div class="num">02</div><h3>Scarica i dati dalla carta tachigrafica</h3><p>Almeno ogni 28 giorni.</p></div><div class="doc-card anim-up"><div class="num">03</div><h3>Valuta i dati</h3><p>Verifica che i tempi di guida, le pause e i periodi di riposo rispettino la legge.</p></div><div class="doc-card anim-up"><div class="num">04</div><h3>Archivia i dati</h3><p>Per almeno 1 anno (consigliamo 3–5 anni).</p></div><div class="doc-card anim-up"><div class="num">05</div><h3>Mantieni il tachigrafo tarato</h3><p>La taratura periodica presso un'officina autorizzata è obbligatoria.</p></div></div></div></section><section class="band band--blue"><div class="container art-body"><div class="eyebrow anim-up">Scadenze di legge</div><h2 class="h2-grad anim-up">Le scadenze di legge da rispettare</h2><div class="twocol"><div class="info-card anim-up"><div class="badge">giorni — carta tachigrafica</div><h3>28</h3><p>I dati della carta tachigrafica devono essere scaricati almeno ogni 28 giorni. TAGRA ti avvisa prima della scadenza.</p></div><div class="info-card anim-up"><div class="badge">giorni — unità di bordo</div><h3>90</h3><p>I dati dell'unità di bordo devono essere scaricati almeno ogni 90 giorni. Tutti i dati devono poi essere archiviati per almeno 1 anno.</p></div></div><div class="callout callout--green anim-up">
+<div class="callout-title">Consiglio TRUCKMALL</div>
+<p style="margin:0">Anche se la legge richiede solo 1 anno di archiviazione, consigliamo di conservare i dati per almeno 3 anni — per essere al sicuro nel caso emergano controversie in seguito.</p>
+</div></div></section><section class="band band--gray"><div class="container art-body"><div class="eyebrow anim-up">Errore comune</div><h2 class="h2-grad anim-up">Perché scaricare da solo non basta</h2>
+<p>Molti operatori pensano che sia sufficiente scaricare i dati. Non lo è. La legge richiede anche di <strong>valutare regolarmente</strong> i dati — verificando i tempi di guida, le pause e i periodi di riposo — e di <strong>archiviarli</strong>. Gli ispettori controllano la valutazione, non solo l'esistenza dei file scaricati.</p>
+</div></section><section class="band"><div class="container art-body"><div class="eyebrow anim-up">Flusso di lavoro pratico</div><h2 class="h2-grad anim-up">Come essere in regola in pratica</h2><div class="steps"><div class="step anim-up"><div class="snum">Passaggio 1 — Download</div><h3>Dispositivo per scaricare i dati</h3><p>Usa il <strong>Download Box II S</strong> per il download manuale dal tachigrafo del veicolo e dalle carte tachigrafiche.</p></div><div class="step anim-up"><div class="snum">Passaggio 2 — Valuta</div><h3>Software di valutazione</h3><p><strong>TAGRA</strong> mostra le infrazioni, i tempi di guida e i periodi di riposo in pochi click. Report accettati dagli ispettori.</p></div><div class="step anim-up"><div class="snum">Passaggio 3 — Archivia</div><h3>Archiviazione</h3><p>TAGRA archivia tutto automaticamente — <strong>sicuro e sempre accessibile</strong> per qualsiasi ispezione.</p></div></div><p>Non sei sicuro di quale soluzione fa per te? <a href="/contact/">Contattaci</a> — saremo felici di consigliarti.</p></div></section><section class="band band--gray"><div class="container art-body"><div class="eyebrow anim-up">Archiviazione</div><h2 class="h2-grad anim-up">Archiviazione: legge e prassi</h2>
+<ul>
+<li>Minimo di legge: <strong>12 mesi.</strong></li>
+<li>Consigliato: <strong>2–5 anni</strong> — conviene avere tutto disponibile per eventuali controlli retrospettivi.</li>
+</ul>
+<div class="callout callout--blue anim-up">
+<div class="callout-title">Fonti normative</div>
+<ul style="margin:0">
+<li><a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32006R0561" rel="noopener" target="_blank">Regolamento (CE) n. 561/2006</a></li>
+<li><a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R0581" rel="noopener" target="_blank">Regolamento (UE) n. 581/2010 della Commissione</a></li>
+</ul>
+</div>
+</div></section><section class="band"><div class="container art-body"><div class="eyebrow anim-up">Attrezzatura</div><h2 class="h2-grad anim-up">Tachigrafi intelligenti G2V2</h2>
+<p>Dal 2023, tutti i nuovi veicoli devono essere dotati di tachigrafi intelligenti di seconda generazione (G2V2). <strong>Tutti i dispositivi Download Box attuali e il software TAGRA sono pienamente compatibili con i tachigrafi G2V2.</strong></p>
+</div></section><section class="band band--blue"><div class="container art-body"><div class="eyebrow anim-up">Novità da luglio 2026</div><h2 class="h2-grad anim-up">Da luglio 2026: furgoni nel trasporto internazionale</h2><div class="warning-box warning-box--urgent anim-up"><div class="badge">In vigore ora</div><p class="warning-box__title">Dal 1° luglio 2026 l'obbligo copre anche i furgoni da 2,5–3,5 t</p><p>Un importante cambiamento normativo interesserà gli operatori di veicoli più piccoli. Dal <strong>1° luglio 2026</strong>, l'obbligo di utilizzare un tachigrafo si estende ai <strong>furgoni e alle combinazioni con massa lorda di 2,5–3,5 t</strong> quando utilizzati nel trasporto internazionale per conto terzi o per il cabotaggio. TAGRA è già pronta per questo obbligo. <a href="/it/articoli/tachigrafo-furgoni-obbligo-luglio-2026/">Leggi la guida completa →</a></p></div><div class="cta-box">
+<h3>Prova TAGRA gratis per 30 giorni</h3>
+<p>Scarica e usa il software completo con i tuoi dati reali. Nessuna registrazione, nessuna carta di credito richiesta.</p>
+<a class="btn" href="/it/prova-gratuita/?audience=fleet" rel="noopener" target="_blank">Scarica la versione di prova</a>
+</div></div></section><section class="band band--gray"><div class="container art-body"><div class="eyebrow anim-up">Domande e risposte</div><h2 class="h2-grad anim-up">Domande frequenti</h2>
+<details class="faq-item"><summary>Con quale frequenza devono essere scaricati i dati del tachigrafo e della carta tachigrafica?</summary>
+<div class="faq-answer"><p>I dati della carta tachigrafica almeno ogni <strong>28 giorni</strong>, i dati dell'unità di bordo almeno ogni <strong>90 giorni</strong>. Consigliamo di scaricare più spesso — ad esempio ogni 10 e 30 giorni — per mantenere un margine di sicurezza.</p></div>
+</details>
+<details class="faq-item"><summary>Scaricare i dati è sufficiente, o devo anche valutarli?</summary>
+<div class="faq-answer"><p>Il solo download non basta. La legge richiede una valutazione regolare — verificare i tempi di guida, le pause e i periodi di riposo. Senza valutazione non hai visibilità sulle infrazioni e rischi una sanzione. TAGRA lo fa automaticamente.</p></div>
+</details>
+<details class="faq-item"><summary>Cosa mi serve per scaricare i dati dal tachigrafo?</summary>
+<div class="faq-answer"><p>Un dispositivo di download (come il Download Box II S), una carta azienda inserita nel tachigrafo e il software TAGRA per la valutazione e l'archiviazione.</p></div>
+</details>
+<details class="faq-item"><summary>Per quanto tempo devono essere archiviati i dati del tachigrafo?</summary>
+<div class="faq-answer"><p>Almeno <strong>1 anno</strong> per legge. Consigliamo 3–5 anni. TAGRA archivia i dati automaticamente.</p></div>
+</details>
+<details class="faq-item"><summary>L'attrezzatura supporta i tachigrafi intelligenti G2V2?</summary>
+<div class="faq-answer"><p>Sì. Tutti i dispositivi Download Box attuali e TAGRA sono pienamente compatibili con i tachigrafi intelligenti di seconda generazione (G2V2).</p></div>
+</details>
+<div class="related">
+<div class="related-title">Articoli correlati</div>
+<div class="related-grid">
+<a class="related-card anim-up" href="/it/articoli/tachigrafo-furgoni-obbligo-luglio-2026/">
+<div class="related-card-eye">Nuova normativa</div>
+<h3 class="card-title">Tachigrafo furgoni: nuovo obbligo da luglio 2026</h3>
+</a>
+<a class="related-card anim-up" href="/it/articoli/obbligo-analisi-cronotachigrafo-2026/">
+<div class="related-card-eye">Panoramica</div>
+<h3 class="card-title">Chi deve valutare i dati del tachigrafo dal 2026</h3>
+</a>
+</div>
+</div>
+</div></section></main>
+<footer class="site-footer" role="contentinfo">
+<div class="footer-inner">
+<div>
+<div class="footer-logo"><img alt="TAGRA" height="20" src="/assets/img/logo-dark.svg?v=20260513zh" width="88" loading="lazy"/></div>
+<p class="footer-desc">Software professionale per l'analisi dei dati del tachigrafo. Download della carta conducente, analisi del cronotachigrafo digitale, tempi di guida e di riposo nell'UE e Direttiva sull'orario di lavoro degli autotrasportatori. Sviluppato da Truck Data Technology, s.r.o.</p>
+</div>
+<div class="footer-col">
+<h2 class="footer-col-title">Prodotto</h2>
+<ul>
+<li><a href="/it/per-aziende/">Per operatori di flotta</a></li>
+<li><a href="/it/per-autisti/">Per autisti professionisti</a></li>
+<li><a href="/enforcement/">Per gli enti di controllo</a></li>
+<li><a href="/it/come-funziona/">Come funziona</a></li>
+<li><a href="/it/a-chi-si-rivolge/">A chi si rivolge</a></li>
+<li><a href="/faq/">FAQ</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h2 class="footer-col-title">Risorse</h2>
+<ul>
+<li><a href="/articles/">Articoli</a></li><li><a href="/manuals/">Manuali</a></li>
+<li><a href="/articles/digital-tachograph-symbols/">Simboli del tachigrafo</a></li>
+<li><a href="/integrations/dkv-live/">DKV LIVE®</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h2 class="footer-col-title">Azienda</h2>
+<ul>
+<li><a href="/contact/">Contatti</a></li>
+<li><a href="https://www.tdt.cz" rel="noopener" target="_blank">Truck Data Technology</a></li>
+<li><a href="/">English</a></li><li><a href="/de/">Deutsch</a></li><li><a href="/pl/">Polski</a></li><li><a href="/el/">Ελληνικά</a></li><li><a href="/hu/">Magyar</a></li><li><a href="/it/">Italiano</a></li><li><a href="https://www.tdt.cz/" rel="noopener" target="_blank">Čeština</a></li><li><a href="https://www.tdt.sk/" rel="noopener" target="_blank">Slovenčina</a></li></ul>
+</div>
+</div>
+<div class="footer-bottom">
+<span>© 2026 Truck Data Technology, s.r.o. Tutti i diritti riservati.</span>
+<span><a href="/contact/">Contatti</a> · <a href="https://www.tdt.cz" rel="noopener" target="_blank">tdt.cz</a> · <a href="/privacy/">Privacy e cookie</a></span>
+</div>
+</footer>
+<script>(function(){var bar=document.getElementById('scroll-progress');if(bar)window.addEventListener('scroll',function(){var t=document.documentElement.scrollTop||document.body.scrollTop;var h=document.documentElement.scrollHeight-document.documentElement.clientHeight;bar.style.width=(t/h*100)+'%';},{passive:true});var toggle=document.getElementById('nav-toggle'),links=document.getElementById('nav-links');if(toggle&&links)toggle.addEventListener('click',function(){var o=links.classList.toggle('open');toggle.setAttribute('aria-expanded',o);});})();</script><script>
+/* INTERSECTION OBSERVER – ANIMATIONS */
+if ('IntersectionObserver' in window) {
+  var io = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) {
+      if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.anim-up, .fly-left, .fly-right').forEach(function(el) { io.observe(el); });
+} else {
+  document.querySelectorAll('.anim-up, .fly-left, .fly-right').forEach(function(el) { el.classList.add('on'); });
+}
+</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Con quale frequenza devono essere scaricati i dati del tachigrafo e della carta tachigrafica?","acceptedAnswer":{"@type":"Answer","text":"I dati della carta tachigrafica almeno ogni 28 giorni, i dati dell'unità di bordo almeno ogni 90 giorni."}},{"@type":"Question","name":"Scaricare i dati è sufficiente, o devo anche valutarli?","acceptedAnswer":{"@type":"Answer","text":"Il solo download non basta. La legge richiede una valutazione regolare dei tempi di guida, delle pause e dei periodi di riposo. TAGRA lo fa automaticamente."}},{"@type":"Question","name":"Cosa mi serve per scaricare i dati dal tachigrafo?","acceptedAnswer":{"@type":"Answer","text":"Un dispositivo di download (come il Download Box II S), una carta azienda inserita nel tachigrafo e il software TAGRA per la valutazione e l'archiviazione."}},{"@type":"Question","name":"Per quanto tempo devono essere archiviati i dati del tachigrafo?","acceptedAnswer":{"@type":"Answer","text":"Almeno 1 anno per legge. Consigliamo 3–5 anni. TAGRA archivia i dati automaticamente."}},{"@type":"Question","name":"L'attrezzatura supporta i tachigrafi intelligenti G2V2?","acceptedAnswer":{"@type":"Answer","text":"Sì. Tutti i dispositivi Download Box attuali e TAGRA sono pienamente compatibili con i tachigrafi G2V2."}}]}</script>
+</body>
+</html>
