@@ -95,15 +95,20 @@ jobs:
         run: |
           set -e
           # /fleet/de/, /driver/de/ etc. must return 302 → /fleet/, /driver/
+          # Keep in sync with _redirects. Two groups:
+          #  1) localized slugs (migration #12) -> 301 to /{lang}/{slug}/
+          #  2) not-yet-translated pages        -> 302 fallback to EN
           REDIRECTS=(
-            "/fleet/de/=/fleet/"
-            "/fleet/pl/=/fleet/"
+            # 1) localized slugs
+            "/fleet/de/=/de/fuhrpark/"
+            "/fleet/pl/=/pl/dla-przewoznikow/"
+            "/contact/de/=/de/kontakt/"
+            "/how-it-works/de/=/de/so-funktioniert-es/"
+            # 2) not yet translated -> EN fallback
             "/driver/de/=/driver/"
             "/driver/pl/=/driver/"
             "/articles/de/=/articles/"
             "/faq/de/=/faq/"
-            "/contact/de/=/contact/"
-            "/how-it-works/de/=/how-it-works/"
           )
           
           FAILED=0
