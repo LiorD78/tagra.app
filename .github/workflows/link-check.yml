@@ -94,7 +94,6 @@ jobs:
       - name: Check redirect rules
         run: |
           set -e
-          # /fleet/de/, /driver/de/ etc. must return 302 → /fleet/, /driver/
           # Keep in sync with _redirects. Two groups:
           #  1) localized slugs (migration #12) -> 301 to /{lang}/{slug}/
           #  2) not-yet-translated pages        -> 302 fallback to EN
