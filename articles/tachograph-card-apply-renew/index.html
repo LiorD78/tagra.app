@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- TMX-ANALYTICS START -->
+<meta content="7F7894081BE7FBB245FF03AF8810B22F" name="msvalidate.01"/>
+<!-- Consent Mode v2 defaults (deny) + gtag stub — runs BEFORE gtag.js -->
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent','default',{
+      ad_storage:'denied', ad_user_data:'denied', ad_personalization:'denied',
+      analytics_storage:'denied', functionality_storage:'denied',
+      personalization_storage:'denied', security_storage:'granted',
+      wait_for_update:500
+    });
+    gtag('set','ads_data_redaction',true);
+    gtag('set','url_passthrough',false);
+  </script>
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-92253QFBNX"></script>
+<script>
+    gtag('js', new Date());
+    gtag('config','G-92253QFBNX');
+  </script>
+<!-- Cookie consent banner (self-hosted) + Microsoft Clarity gating -->
+<style>
+    .tmx-cc{position:fixed;left:0;right:0;bottom:0;z-index:2147483000;background:linear-gradient(120deg,var(--blue-dark,#0b2c4a),var(--blue-mid,#134a8e) 62%,var(--blue-light,#1f5fa6));color:#fff;
+      font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+      padding:16px 20px;box-shadow:0 -4px 24px rgba(0,0,0,.18);display:flex;flex-wrap:wrap;
+      align-items:center;gap:14px;justify-content:center}
+    .tmx-cc__txt{flex:1 1 360px;max-width:760px}
+    .tmx-cc__txt a{color:#9ed0f5;text-decoration:underline}
+    .tmx-cc__btns{display:flex;gap:10px;flex:0 0 auto}
+    .tmx-cc__b{appearance:none;border:0;cursor:pointer;font:inherit;font-weight:600;
+      padding:10px 22px;border-radius:99px;transition:filter .15s;color:#fff}
+    .tmx-cc__b:hover{filter:brightness(1.08)}
+    .tmx-cc__b--no{background:rgba(255,255,255,.16)}
+    .tmx-cc__b--yes{background:var(--green-cta,#5C820F)}
+    @media(max-width:640px){.tmx-cc{padding:14px}.tmx-cc__btns{width:100%}.tmx-cc__b{flex:1}}
+  </style>
+<script>
+  (function(){
+    var KEY='tmx-consent-v1', CL='wt18054m0r';
+    function lc(){var l=(document.documentElement.getAttribute('lang')||'en').toLowerCase().split('-')[0];
+      var m={cz:'cs',cs:'cs',sk:'sk',de:'de',pl:'pl',gr:'el',el:'el',hu:'hu',en:'en'};return m[l]||'en';}
+    var T={
+      hu:{t:'Analitikai sütiket használunk (Google Analytics, Microsoft Clarity, Smartsupp), hogy megértsük a webhely használatát. Csak az Ön hozzájárulásával töltődnek be.',a:'Elfogadom',r:'Elutasítom',p:'Adatvédelem és sütik'},
+      en:{t:'We use analytics cookies (Google Analytics, Microsoft Clarity, Smartsupp) to understand site usage. They load only with your consent.',a:'Accept',r:'Reject',p:'Privacy &amp; cookies'},
+      cs:{t:'Používáme analytické cookies (Google Analytics, Microsoft Clarity, Smartsupp) k pochopení používání webu. Načtou se jen s vaším souhlasem.',a:'Přijmout',r:'Odmítnout',p:'Soukromí a cookies'},
+      sk:{t:'Používame analytické cookies (Google Analytics, Microsoft Clarity, Smartsupp) na pochopenie používania webu. Načítajú sa len s vaším súhlasom.',a:'Prijať',r:'Odmietnuť',p:'Súkromie a cookies'},
+      de:{t:'Wir verwenden Analyse-Cookies (Google Analytics, Microsoft Clarity, Smartsupp), um die Nutzung der Website zu verstehen. Sie werden nur mit Ihrer Einwilligung geladen.',a:'Akzeptieren',r:'Ablehnen',p:'Datenschutz &amp; Cookies'},
+      pl:{t:'Używamy plików cookie do analityki (Google Analytics, Microsoft Clarity, Smartsupp), aby zrozumieć korzystanie z witryny. Ładują się tylko za Twoją zgodą.',a:'Akceptuj',r:'Odrzuć',p:'Prywatność i cookies'},
+      el:{t:'Χρησιμοποιούμε cookies ανάλυσης (Google Analytics, Microsoft Clarity, Smartsupp) για να κατανοήσουμε τη χρήση. Φορτώνονται μόνο με τη συγκατάθεσή σας.',a:'Αποδοχή',r:'Απόρριψη',p:'Απόρρητο &amp; cookies'}
+    };
+    function loadClarity(){if(!CL||window.__tmxCl)return;window.__tmxCl=1;
+      (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+       t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+       y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script",CL);}
+    function grant(){try{localStorage.setItem(KEY,'granted')}catch(e){}
+      gtag('consent','update',{analytics_storage:'granted'});loadClarity();}
+    function deny(){try{localStorage.setItem(KEY,'denied')}catch(e){}}
+    var saved=null;try{saved=localStorage.getItem(KEY)}catch(e){}
+    if(saved==='granted'){grant();return;} if(saved==='denied'){return;}
+    function show(){var tx=T[lc()]||T.en;
+      var b=document.createElement('div');b.className='tmx-cc';b.setAttribute('role','dialog');b.setAttribute('aria-live','polite');
+      b.innerHTML='<div class="tmx-cc__txt">'+tx.t+' <a href="/privacy/">'+tx.p+'</a></div>'+
+        '<div class="tmx-cc__btns"><button type="button" class="tmx-cc__b tmx-cc__b--no">'+tx.r+'</button>'+
+        '<button type="button" class="tmx-cc__b tmx-cc__b--yes">'+tx.a+'</button></div>';
+      document.body.appendChild(b);
+      b.querySelector('.tmx-cc__b--yes').addEventListener('click',function(){grant();b.remove();});
+      b.querySelector('.tmx-cc__b--no').addEventListener('click',function(){deny();b.remove();});}
+    if(document.body)show();else document.addEventListener('DOMContentLoaded',show);
+  })();
+  </script>
+<!-- TMX-ANALYTICS END -->
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tachograph card: how to apply, renew and replace | TAGRA</title>
+<meta content="How to apply for a digital tachograph driver card, what it costs, how long it lasts and what to do if it is lost or stolen. UK rules, 2026." name="description"/>
+<link href="https://tagra.app/articles/tachograph-card-apply-renew/" rel="canonical"/>
+<meta content="Tachograph card: how to apply, renew and replace | TAGRA" property="og:title"/><meta content="How to apply for a digital tachograph driver card, what it costs, how long it lasts and what to do if it is lost or stolen. UK rules, 2026." property="og:description"/>
+<meta content="https://tagra.app/assets/img/hero-poster.jpg" property="og:image"/>
+<meta content="https://tagra.app/articles/tachograph-card-apply-renew/" property="og:url"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    a{color:var(--blue-mid);text-decoration:none;}
+    a:hover{color:var(--blue-dark);text-decoration:underline;text-underline-offset:.18em;}
+    p+p{margin-top:14px;}
+    ul,ol{padding-left:22px;}
+    li{margin:6px 0;line-height:1.65;}
+    li::marker{color:var(--blue-mid);}
+    strong{font-weight:700;color:var(--text-strong);}
+    #scroll-progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--green-brand),var(--blue-light));width:0%;z-index:9999;pointer-events:none;}
+.nav-inner{margin:0 auto;padding:0 24px;height:100%;display:flex;align-items:center;justify-content:space-between;gap:24px;}
+    .nav-links{display:flex;align-items:center;gap:4px;list-style:none;}
+    .nav-links a{font-size:15px;font-weight:500;color:var(--text);padding:8px 12px;border-radius:8px;text-decoration:none;transition:background .15s;}
+    .nav-links a:hover{background:var(--bg-apple);color:var(--blue-mid);}
+    .nav-links .nav-cta a{background:var(--green-cta);color:#fff!important;border-radius:99px;padding:8px 18px;font-weight:600;}
+    .nav-links .nav-cta a:hover{background:var(--green-brand);text-decoration:none;}
+    .nav-lang{display:flex;align-items:center;gap:4px;font-size:14px;font-weight:600;}
+    .nav-lang a{padding:5px 8px;border-radius:6px;color:var(--text2);text-decoration:none;transition:background .15s;}
+    .nav-lang a:hover,.nav-lang a.active{background:var(--bg-apple);color:var(--blue-mid);}
+    .nav-lang span{color:var(--border);}
+    .nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:8px;}
+    .nav-toggle span{display:block;width:22px;height:2px;background:var(--text);margin:5px 0;border-radius:2px;}
+    @media(max-width:900px){.nav-links{display:none;}.nav-toggle{display:block;}.nav-links.open{display:flex;flex-direction:column;align-items:flex-start;gap:2px;position:absolute;top:var(--nav-h);left:0;right:0;background:rgba(255,255,255,.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:12px 24px 20px;}}
+    .art-hero{background:linear-gradient(180deg,var(--bg-apple) 0%,#fff 100%);padding:calc(var(--nav-h,64px) + 28px) 0 44px;}
+    .art-wrap{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 24px;}
+    .breadcrumb{font-size:14px;color:var(--text2);margin-bottom:18px;}
+    .breadcrumb a{color:var(--text2);text-decoration:none;}
+    .breadcrumb a:hover{color:var(--blue-mid);}
+    .breadcrumb span{margin:0 5px;color:var(--border);}
+    .eyebrow{font-size:14px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--green-brand);margin-bottom:10px;}
+    .art-title{font-size:38px;line-height:1.15;font-weight:800;margin-bottom:16px;letter-spacing:-.02em;padding-bottom:0.08em;color:var(--blue-dark);}
+    .art-title .grad{background:linear-gradient(90deg,var(--blue-dark) 0%,var(--blue-light) 50%,var(--blue-bright) 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;}
+    @media(max-width:700px){.art-title{font-size:26px;}}
+    .art-meta{font-size:15px;color:var(--text2);padding-bottom:24px;border-bottom:1px solid var(--border);display:flex;gap:20px;flex-wrap:wrap;}
+    .art-body{padding:44px 0 60px;}
+    .art-body h2 {
+      font-size: 36px; font-weight: 800;
+      line-height: 1.1; letter-spacing: 0;
+      text-transform: uppercase;
+      color: var(--blue-mid, #134a8e);
+      background: linear-gradient(90deg, var(--blue-dark, #0b2c4a) 0%, var(--blue-light, #1f5fa6) 50%, var(--blue-bright, #3a6ff0) 100%);
+      -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block; max-width: 100%; margin-bottom: 14px;
+      padding: 0.12em 0.15em 0.08em 0;
+    }
+    .art-body h3{font-size:20px;font-weight:700;color:var(--text-strong);margin:28px 0 10px;}
+    .art-body p{margin-bottom:18px;}
+    .art-body ul,.art-body ol{margin-bottom:20px;}
+    /* CALLOUT */
+    .callout--blue{background:var(--bg-apple);border-left:4px solid var(--blue-mid);}
+    .callout-title{font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.07em;color:var(--blue-mid);margin-bottom:8px;}
+    .callout--green .callout-title{color:var(--green-brand);}
+    /* FAQ */
+    .faq-item{border-top:1px solid var(--border);padding:14px 0;}
+    .faq-item:last-child{border-bottom:1px solid var(--border);}
+    .faq-item summary{list-style:none;cursor:pointer;font-weight:700;font-size:18px;line-height:1.4;padding-right:32px;position:relative;color:var(--text-strong);}
+    .faq-item summary::-webkit-details-marker{display:none;}
+    .faq-item summary::after{content:"+";position:absolute;right:0;top:50%;transform:translateY(-50%);font-size:26px;font-weight:300;color:var(--green-cta);}
+    .faq-item[open] summary::after{content:"−";}
+    .faq-answer p+p{margin-top:10px;}
+    /* CTA */
+    .cta-box{background:linear-gradient(135deg,var(--blue-dark),var(--blue-mid));border-radius:var(--radius);padding:40px 36px;margin:44px 0;text-align:center;}
+    .cta-box h3{font-size:24px;font-weight:800;color:#fff;margin-bottom:12px;}
+    .cta-box p{color:rgba(255,255,255,.8);font-size:17px;margin-bottom:24px;}
+    .btn:hover{background:var(--green-brand);transform:scale(1.02);}
+    /* RELATED */
+    .related{border-top:1px solid var(--border);padding-top:36px;margin-top:36px;}
+    .related-title{font-size:20px;font-weight:800;color:var(--text-strong);margin-bottom:18px;}
+    .related-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+    @media(max-width:580px){.related-grid{grid-template-columns:1fr;}}
+    .related-card{display:block;padding:20px;border:1px solid var(--border);border-radius:var(--radius);text-decoration:none!important;transition:border-color .15s,transform .15s;}
+    .related-card:hover{border-color:var(--blue-mid);transform:translateY(-2px);}
+    .related-card-eye{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--blue-mid);margin-bottom:6px;}
+    .related-card-title{font-size:16px;font-weight:700;color:var(--text-strong);line-height:1.4;}
+    /* FOOTER */
+  </style>
+<link href="/assets/css/tokens.css" rel="stylesheet"/>
+<link href="/assets/css/base.css" rel="stylesheet"/>
+<link href="/assets/css/components.css" rel="stylesheet"/>
+<link href="/assets/css/nav.css" rel="stylesheet"/>
+<script defer="" src="/assets/js/nav.js?v=20260816b"></script>
+<link href="/assets/css/footer.css" rel="stylesheet"/>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Tachograph card: how to apply, renew and replace it", "description": "How to apply for a digital tachograph driver card, what it costs, how long it lasts and what to do if it is lost or stolen. UK rules, 2026.", "image": "https://tagra.app/assets/img/hero-poster.jpg", "author": {"@type": "Organization", "name": "Truck Data Technology, s.r.o.", "url": "https://www.tdt.cz"}, "publisher": {"@type": "Organization", "name": "Truck Data Technology, s.r.o.", "logo": {"@type": "ImageObject", "url": "https://tagra.app/assets/img/logo.svg"}}, "datePublished": "2026-09-03T09:00:00+02:00", "dateModified": "2026-09-03T09:00:00+02:00", "inLanguage": "en", "mainEntityOfPage": "https://tagra.app/articles/tachograph-card-apply-renew/", "articleSection": "Driver knowledge base", "wordCount": 992}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "TAGRA", "item": "https://tagra.app/"}, {"@type": "ListItem", "position": 2, "name": "Articles", "item": "https://tagra.app/articles/"}, {"@type": "ListItem", "position": 3, "name": "Tachograph card", "item": "https://tagra.app/articles/tachograph-card-apply-renew/"}]}</script><noscript><style>.anim-up,.fly-left,.fly-right{opacity:1!important;transform:none!important}</style></noscript></head>
+<body class="art-page">
+<a class="skip-link" href="#main-content">Skip to content</a>
+<div aria-hidden="true" id="scroll-progress"></div>
+<nav aria-label="Main navigation" class="site-nav" role="navigation">
+<div class="nav-inner">
+<a aria-label="TAGRA – Home" class="nav-logo" href="/"><img alt="TAGRA" height="32" src="/assets/img/logo-light.svg?v=20260513zh" style="display:block;height:32px;width:auto;" width="140"/></a>
+<ul class="nav-links" id="nav-links">
+<li><a href="/fleet/">For companies</a></li>
+<li><a href="/driver/">For drivers</a></li>
+<li><a href="/enforcement/">Enforcement</a></li>
+<li><a aria-current="page" href="/articles/">Articles</a></li><li><a href="/manuals/">Manuals</a></li>
+<li><a href="/faq/">FAQ</a></li>
+<li><a href="/contact/">Contact</a></li>
+<li class="nav-cta-li"><a class="nav-cta" href="/try/?audience=fleet">Try 30 days free</a></li>
+</ul>
+<details class="nav-lang">
+<summary aria-label="Language: EN">EN</summary>
+<div class="nav-lang-menu" role="menu">
+<a aria-current="page" class="active" href="/" hreflang="en">English</a><a href="/de/" hreflang="de">Deutsch</a><a href="/pl/" hreflang="pl">Polski</a><a href="/el/" hreflang="el">Ελληνικά</a><a href="/hu/" hreflang="hu">Magyar</a><a href="/it/articoli/" hreflang="it">Italiano</a><a href="https://www.tdt.cz/" hreflang="cs" rel="noopener" target="_blank">Čeština</a><a href="https://www.tdt.sk/" hreflang="sk" rel="noopener" target="_blank">Slovenčina</a></div>
+</details>
+<a class="nav-cta-mobile" href="/try/?audience=fleet">Try free</a>
+<button aria-expanded="false" aria-label="Toggle menu" class="nav-mobile-toggle" id="nav-toggle">
+<span></span><span></span><span></span>
+</button>
+</div>
+</nav>
+<header class="art-hero">
+<div class="art-wrap">
+<nav aria-label="Breadcrumb" class="breadcrumb"><a href="/">TAGRA</a><span>›</span><a href="/articles/">Articles</a><span>›</span><span>Tachograph card</span></nav>
+<div class="eyebrow anim-up">Guide · Updated for 2026</div>
+<h1 class="art-title"><span class="grad">Tachograph card: how to apply, renew and replace it</span></h1>
+<div class="art-meta"><span>Truck Data Technology</span><span>Updated September 2026</span><span>5 min read</span></div>
+<p class="hero-lede anim-up">Every professional driver with a digital tachograph needs a driver tachograph card. Here is where to apply, what it costs, how long it lasts, and what to do if it is lost, stolen or about to expire.</p><div class="bento--hero"><div class="hero-card"><div class="eyebrow">Validity</div><div class="big">5 years</div><p>How long an issued tachograph card stays valid before it must be renewed.</p></div><div class="hero-card hero-card--blue"><div class="eyebrow">First card</div><div class="big">£32</div><p>One-off DVLA fee to apply for a tachograph card for the first time.</p></div><div class="hero-card"><div class="eyebrow">Report loss within</div><div class="big">7 days</div><p>How quickly you must tell DVLA if your card is lost, stolen or damaged.</p></div><div class="hero-card hero-card--blue"><div class="eyebrow">Renew by</div><div class="big">15 days before expiry</div><p>The deadline for applying so you are not left without a valid card.</p></div></div>
+</div>
+</header>
+<main id="main-content"><section class="band"><div class="container art-body"><div class="eyebrow anim-up">Who needs one</div><h2 class="h2-grad anim-up">Who needs a tachograph card</h2>
+<p>Every driver of a vehicle fitted with a digital tachograph needs their own <strong>driver tachograph card</strong>. It records who was driving, for how long, and confirms your identity to the tachograph — you cannot legally drive a vehicle that requires one without it.</p>
+<p>From <strong>1 July 2026</strong>, this also applies to vans of 2.5–3.5 t, but <strong>only in international transport and cabotage</strong> — not for vans used purely for domestic journeys. See <a href="/articles/tachographs-for-vans-new-obligation-july-2026/">Tachographs for vans: new obligation from July 2026</a> for the full detail on who is affected.</p></div></section><section class="band band--blue"><div class="container art-body"><div class="eyebrow anim-up">Application</div><h2 class="h2-grad anim-up">How to apply for a driver tachograph card</h2>
+<p>In Great Britain, the tachograph card is issued by the <strong>DVLA</strong>. In Northern Ireland, it is issued by <strong>DVA Coleraine</strong>.</p>
+<p>The application form depends on where you live:</p>
+<ul>
+<li><strong>Great Britain</strong> — form <strong>D777B/DL</strong></li>
+<li><strong>Northern Ireland</strong> — form <strong>D777(NI)</strong> for a new card, or <strong>D786(NI)</strong> for renewal</li>
+</ul>
+<p>You can apply online through the official service: <a href="https://www.gov.uk/apply-driver-digital-tachograph-card" rel="noopener" target="_blank">gov.uk/apply-driver-digital-tachograph-card</a>.</p></div></section><section class="band band--gray"><div class="container art-body"><div class="eyebrow anim-up">Cost</div><h2 class="h2-grad anim-up">What a tachograph card costs</h2>
+<ul>
+<li><strong>First card:</strong> £32</li>
+<li><strong>Renewal:</strong> £19</li>
+<li><strong>Replacement for a lost or stolen card:</strong> £19</li>
+<li><strong>Exchanging an EU/EEA or Northern Ireland card for a GB card:</strong> £32</li>
+</ul></div></section><section class="band"><div class="container art-body"><div class="eyebrow anim-up">Validity</div><h2 class="h2-grad anim-up">Validity and renewal</h2>
+<p>A tachograph card is valid for <strong>5 years</strong>.</p>
+<p>You can renew it online if it is due to expire <strong>within 90 days</strong>. To avoid being left without a valid card, apply for renewal <strong>at least 15 days before it expires</strong>.</p></div></section><section class="band band--blue"><div class="container art-body"><div class="eyebrow anim-up">Lost or stolen</div><h2 class="h2-grad anim-up">Lost, stolen or faulty cards</h2>
+<p>If your card is lost, stolen or faulty, report it to <strong>DVLA immediately</strong> and apply for a replacement <strong>within 7 days</strong>. A replacement card is usually issued <strong>within 5 working days</strong>.</p>
+<p>While you wait, you can keep driving for a <strong>maximum of 15 days</strong> using manual daily printouts from the vehicle unit instead of your card — but those printouts <strong>must be signed on the back</strong>.</p>
+<div class="callout callout--blue anim-up">
+<div class="callout-title">While you wait for a replacement</div>
+<p style="margin:0">You can already start keeping your own downloaded record of your driving with <a href="/driver/">TAGRA Trucker</a> — <a href="/try/?audience=driver&amp;src=driver-card" rel="noopener" target="_blank">try it free for 30 days</a>, no commitment.</p>
+</div></div></section><section class="band band--gray"><div class="container art-body"><div class="eyebrow anim-up">Card data</div><h2 class="h2-grad anim-up">What happens to the data on your card</h2>
+<p>By law, a tachograph card must be able to store <strong>at least 28 days</strong> of activity — that is a legal minimum capacity, not a fixed limit. In practice, a card keeps recording until its memory is full, which for an average driver can mean several months of history. Once it is full, the oldest records are overwritten first.</p>
+<p>Regardless of how much space is actually left, you must <strong>download the data every 28 days</strong>.</p>
+<p>An expired card must be <strong>kept for 28 days</strong> in case it is needed for a roadside check, and you must <strong>download the data from it before disposing of it</strong>.</p>
+<p>Without your own archive of downloaded data, you have no way to prove your driving times and rest periods after the fact.</p>
+<div class="cta-box">
+<h3>Keep your own record of your driver card data</h3>
+<p>TAGRA Trucker reads your card, checks it for violations and archives the data — before an inspection does it for you.</p>
+<a class="btn" href="/try/?audience=driver&amp;src=driver-card">Try 30 days free →</a>
+</div></div></section><section class="band"><div class="container art-body"><div class="eyebrow anim-up">For drivers</div><h2 class="h2-grad anim-up">Track your own tachograph card data: TAGRA Trucker</h2>
+<p>Are you self-employed, or do you simply want to check your own driving times and rest periods independently of your employer? <a href="/driver/">TAGRA Trucker</a> is built exactly for that — read your driver card with the included USB card reader and see straight away if and where you have violations.</p>
+<p>TAGRA Trucker costs <strong>€49 excl. VAT</strong>, including the card reader, then <strong>€19 a year</strong> from the second year onwards.</p>
+<p>You can <a href="/try/?audience=driver&amp;src=driver-card" rel="noopener" target="_blank">try it free for 30 days</a> — no commitment.</p></div></section><section class="band band--blue"><div class="container art-body"><div class="eyebrow anim-up">For companies</div><h2 class="h2-grad anim-up">Running your own vehicles too? TAGRA for fleets</h2>
+<p>Are you self-employed and also operate as a carrier with vehicles of your own? For evaluating data from more than one vehicle, there is <a href="/fleet/">TAGRA</a> in five versions, depending on how many vehicles you run:</p>
+<div class="price-table-wrap" style="width:100%;overflow-x:auto;margin-bottom:24px">
+<table class="price-table" style="width:100%;border-collapse:collapse;font-size:16px">
+<thead>
+<tr style="border-bottom:2px solid var(--border)">
+<th style="text-align:left;padding:10px 12px;color:var(--text2);font-weight:600;font-size:14px">Version</th>
+<th style="text-align:left;padding:10px 12px;color:var(--text2);font-weight:600;font-size:14px">Vehicles</th>
+</tr>
+</thead>
+<tbody>
+<tr style="border-bottom:1px solid var(--border)"><td style="padding:12px;font-weight:700;color:var(--text-strong)"><a href="/fleet/">TAGRA 1</a></td><td style="padding:12px;color:var(--text2)">1 vehicle</td></tr>
+<tr style="border-bottom:1px solid var(--border)"><td style="padding:12px;font-weight:700;color:var(--text-strong)"><a href="/fleet/">TAGRA 2</a></td><td style="padding:12px;color:var(--text2)">2 vehicles</td></tr>
+<tr style="border-bottom:1px solid var(--border)"><td style="padding:12px;font-weight:700;color:var(--text-strong)"><a href="/fleet/">TAGRA 4</a></td><td style="padding:12px;color:var(--text2)">up to 4 vehicles</td></tr>
+<tr style="border-bottom:1px solid var(--border)"><td style="padding:12px;font-weight:700;color:var(--text-strong)"><a href="/fleet/">TAGRA 6</a></td><td style="padding:12px;color:var(--text2)">up to 6 vehicles</td></tr>
+<tr style="border-bottom:1px solid var(--border)"><td style="padding:12px;font-weight:700;color:var(--text-strong)"><a href="/fleet/">TAGRA MAX</a></td><td style="padding:12px;color:var(--text2)">unlimited number of vehicles</td></tr>
+</tbody>
+</table>
+</div></div></section><section class="band band--gray"><div class="container art-body"><div class="eyebrow anim-up">Questions & answers</div><h2 class="h2-grad anim-up">Frequently asked questions</h2>
+<details class="faq-item"><summary>How do I apply for a tachograph card?</summary>
+<div class="faq-answer"><p>In Great Britain, apply to the DVLA using form D777B/DL. In Northern Ireland, apply to DVA Coleraine using form D777(NI) for a new card or D786(NI) for renewal. You can apply online at <a href="https://www.gov.uk/apply-driver-digital-tachograph-card" rel="noopener" target="_blank">gov.uk/apply-driver-digital-tachograph-card</a>.</p></div>
+</details>
+<details class="faq-item"><summary>How do I renew my tachograph card?</summary>
+<div class="faq-answer"><p>You can renew online if your card is due to expire within 90 days. Apply at least 15 days before expiry so you are not left without a valid card.</p></div>
+</details>
+<details class="faq-item"><summary>What does a tachograph card cost?</summary>
+<div class="faq-answer"><p>A first card costs £32. Renewal costs £19, and a replacement for a lost or stolen card also costs £19. Exchanging an EU/EEA or Northern Ireland card for a GB card costs £32.</p></div>
+</details>
+<details class="faq-item"><summary>What do I do if I lose my tachograph card?</summary>
+<div class="faq-answer"><p>Report the loss to DVLA immediately and apply for a replacement within 7 days. A replacement is usually issued within 5 working days. In the meantime, you can drive for a maximum of 15 days using manual daily printouts from the vehicle unit, signed on the back.</p></div>
+</details>
+<details class="faq-item"><summary>How long does a replacement tachograph card take?</summary>
+<div class="faq-answer"><p>A replacement card is usually issued within 5 working days of DVLA receiving your application, provided you apply within 7 days of the loss, theft or fault.</p></div>
+</details>
+<details class="faq-item"><summary>Is a tachograph card the same as a company card?</summary>
+<div class="faq-answer"><p>No. The driver tachograph card belongs to you personally and identifies you to the tachograph. A separate company card is used by a transport operator to download data from the vehicle unit, and is not a substitute for a driver card. If you run your own vehicles, <a href="/fleet/">TAGRA</a> can help with that side of the evaluation too.</p></div>
+</details>
+<div class="related">
+<div class="related-title">Related articles</div>
+<div class="related-grid">
+<a class="related-card anim-up" href="/articles/tachographs-for-vans-new-obligation-july-2026/">
+<div class="related-card-eye">New legislation</div>
+<h3 class="card-title">Tachographs for vans: new obligation from July 2026</h3>
+</a>
+<a class="related-card anim-up" href="/articles/who-must-evaluate-tachograph-data-2026/">
+<div class="related-card-eye">Overview</div>
+<h3 class="card-title">Who must evaluate tachograph data from 2026</h3>
+</a>
+</div>
+</div></div></section></main>
+<footer class="site-footer" role="contentinfo">
+<div class="footer-inner">
+<div>
+<div class="footer-logo"><img alt="TAGRA" height="20" src="/assets/img/logo-dark.svg?v=20260513zh" width="88" loading="lazy"/></div>
+<p class="footer-desc">Professional tachograph analysis software. Driver card download, digital tachograph analysis, EU drivers' hours and HGV Working Time Directive. Developed by Truck Data Technology, s.r.o.</p>
+</div>
+<div class="footer-col">
+<h2 class="footer-col-title">Product</h2>
+<ul>
+<li><a href="/fleet/">For fleet operators</a></li>
+<li><a href="/driver/">For professional drivers</a></li>
+<li><a href="/enforcement/">For enforcement</a></li>
+<li><a href="/how-it-works/">How it works</a></li>
+<li><a href="/for-whom/">For whom</a></li>
+<li><a href="/faq/">FAQ</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h2 class="footer-col-title">Resources</h2>
+<ul>
+<li><a href="/articles/">Articles</a></li><li><a href="/manuals/">Manuals</a></li>
+<li><a href="/articles/digital-tachograph-symbols/">Tachograph symbols</a></li>
+<li><a href="/integrations/dkv-live/">DKV LIVE®</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h2 class="footer-col-title">Company</h2>
+<ul>
+<li><a href="/contact/">Contact</a></li>
+<li><a href="https://www.tdt.cz" rel="noopener" target="_blank">Truck Data Technology</a></li>
+<li><a href="/">English</a></li><li><a href="/de/">Deutsch</a></li><li><a href="/pl/">Polski</a></li><li><a href="/el/">Ελληνικά</a></li><li><a href="/hu/">Magyar</a></li><li><a href="/it/">Italiano</a></li><li><a href="https://www.tdt.cz/" rel="noopener" target="_blank">Čeština</a></li><li><a href="https://www.tdt.sk/" rel="noopener" target="_blank">Slovenčina</a></li></ul>
+</div>
+</div>
+<div class="footer-bottom">
+<span>© 2026 Truck Data Technology, s.r.o. All rights reserved.</span>
+<span><a href="/contact/">Contact</a> · <a href="https://www.tdt.cz" rel="noopener" target="_blank">tdt.cz</a> · <a href="/privacy/">Privacy &amp; cookies</a></span>
+</div>
+</footer>
+<script>(function(){var bar=document.getElementById('scroll-progress');if(bar)window.addEventListener('scroll',function(){var t=document.documentElement.scrollTop||document.body.scrollTop;var h=document.documentElement.scrollHeight-document.documentElement.clientHeight;bar.style.width=(t/h*100)+'%';},{passive:true});var toggle=document.getElementById('nav-toggle'),links=document.getElementById('nav-links');if(toggle&&links)toggle.addEventListener('click',function(){var o=links.classList.toggle('open');toggle.setAttribute('aria-expanded',o);});})();</script><script>
+/* INTERSECTION OBSERVER – ANIMATIONS */
+if ('IntersectionObserver' in window) {
+  var io = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) {
+      if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.anim-up, .fly-left, .fly-right').forEach(function(el) { io.observe(el); });
+} else {
+  document.querySelectorAll('.anim-up, .fly-left, .fly-right').forEach(function(el) { el.classList.add('on'); });
+}
+</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I apply for a tachograph card?","acceptedAnswer":{"@type":"Answer","text":"In Great Britain, apply to the DVLA using form D777B/DL. In Northern Ireland, apply to DVA Coleraine using form D777(NI) for a new card or D786(NI) for renewal. You can apply online at gov.uk/apply-driver-digital-tachograph-card."}},{"@type":"Question","name":"How do I renew my tachograph card?","acceptedAnswer":{"@type":"Answer","text":"You can renew online if your card is due to expire within 90 days. Apply at least 15 days before expiry so you are not left without a valid card."}},{"@type":"Question","name":"What does a tachograph card cost?","acceptedAnswer":{"@type":"Answer","text":"A first card costs £32. Renewal costs £19, and a replacement for a lost or stolen card also costs £19. Exchanging an EU/EEA or Northern Ireland card for a GB card costs £32."}},{"@type":"Question","name":"What do I do if I lose my tachograph card?","acceptedAnswer":{"@type":"Answer","text":"Report the loss to DVLA immediately and apply for a replacement within 7 days. A replacement is usually issued within 5 working days. In the meantime, you can drive for a maximum of 15 days using manual daily printouts from the vehicle unit, signed on the back."}},{"@type":"Question","name":"How long does a replacement tachograph card take?","acceptedAnswer":{"@type":"Answer","text":"A replacement card is usually issued within 5 working days of DVLA receiving your application, provided you apply within 7 days of the loss, theft or fault."}},{"@type":"Question","name":"Is a tachograph card the same as a company card?","acceptedAnswer":{"@type":"Answer","text":"No. The driver tachograph card belongs to you personally and identifies you to the tachograph. A separate company card is used by a transport operator to download data from the vehicle unit, and is not a substitute for a driver card."}}]}</script>
+</body>
+</html>
