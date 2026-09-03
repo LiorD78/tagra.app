@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<!-- TMX-ANALYTICS START -->
+<meta content="7F7894081BE7FBB245FF03AF8810B22F" name="msvalidate.01"/>
+<!-- Consent Mode v2 defaults (deny) + gtag stub — runs BEFORE gtag.js -->
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent','default',{
+      ad_storage:'denied', ad_user_data:'denied', ad_personalization:'denied',
+      analytics_storage:'denied', functionality_storage:'denied',
+      personalization_storage:'denied', security_storage:'granted',
+      wait_for_update:500
+    });
+    gtag('set','ads_data_redaction',true);
+    gtag('set','url_passthrough',false);
+  </script>
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-92253QFBNX"></script>
+<script>
+    gtag('js', new Date());
+    gtag('config','G-92253QFBNX');
+  </script>
+<!-- Cookie consent banner (self-hosted) + Microsoft Clarity gating -->
+<style>
+    .tmx-cc{position:fixed;left:0;right:0;bottom:0;z-index:2147483000;background:linear-gradient(120deg,var(--blue-dark,#0b2c4a),var(--blue-mid,#134a8e) 62%,var(--blue-light,#1f5fa6));color:#fff;
+      font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+      padding:16px 20px;box-shadow:0 -4px 24px rgba(0,0,0,.18);display:flex;flex-wrap:wrap;
+      align-items:center;gap:14px;justify-content:center}
+    .tmx-cc__txt{flex:1 1 360px;max-width:760px}
+    .tmx-cc__txt a{color:#9ed0f5;text-decoration:underline}
+    .tmx-cc__btns{display:flex;gap:10px;flex:0 0 auto}
+    .tmx-cc__b{appearance:none;border:0;cursor:pointer;font:inherit;font-weight:600;
+      padding:10px 22px;border-radius:99px;transition:filter .15s;color:#fff}
+    .tmx-cc__b:hover{filter:brightness(1.08)}
+    .tmx-cc__b--no{background:rgba(255,255,255,.16)}
+    .tmx-cc__b--yes{background:var(--green-cta,#5C820F)}
+    @media(max-width:640px){.tmx-cc{padding:14px}.tmx-cc__btns{width:100%}.tmx-cc__b{flex:1}}
+  </style>
+<script>
+  (function(){
+    var KEY='tmx-consent-v1', CL='wt18054m0r';
+    function lc(){var l=(document.documentElement.getAttribute('lang')||'en').toLowerCase().split('-')[0];
+      var m={cz:'cs',cs:'cs',sk:'sk',de:'de',pl:'pl',gr:'el',el:'el',hu:'hu',en:'en'};return m[l]||'en';}
+    var T={
+      hu:{t:'Analitikai sütiket használunk (Google Analytics, Microsoft Clarity, Smartsupp), hogy megértsük a webhely használatát. Csak az Ön hozzájárulásával töltődnek be.',a:'Elfogadom',r:'Elutasítom',p:'Adatvédelem és sütik'},
+      en:{t:'We use analytics cookies (Google Analytics, Microsoft Clarity, Smartsupp) to understand site usage. They load only with your consent.',a:'Accept',r:'Reject',p:'Privacy &amp; cookies'},
+      cs:{t:'Používáme analytické cookies (Google Analytics, Microsoft Clarity, Smartsupp) k pochopení používání webu. Načtou se jen s vaším souhlasem.',a:'Přijmout',r:'Odmítnout',p:'Soukromí a cookies'},
+      sk:{t:'Používame analytické cookies (Google Analytics, Microsoft Clarity, Smartsupp) na pochopenie používania webu. Načítajú sa len s vaším súhlasom.',a:'Prijať',r:'Odmietnuť',p:'Súkromie a cookies'},
+      de:{t:'Wir verwenden Analyse-Cookies (Google Analytics, Microsoft Clarity, Smartsupp), um die Nutzung der Website zu verstehen. Sie werden nur mit Ihrer Einwilligung geladen.',a:'Akzeptieren',r:'Ablehnen',p:'Datenschutz &amp; Cookies'},
+      pl:{t:'Używamy plików cookie do analityki (Google Analytics, Microsoft Clarity, Smartsupp), aby zrozumieć korzystanie z witryny. Ładują się tylko za Twoją zgodą.',a:'Akceptuj',r:'Odrzuć',p:'Prywatność i cookies'},
+      el:{t:'Χρησιμοποιούμε cookies ανάλυσης (Google Analytics, Microsoft Clarity, Smartsupp) για να κατανοήσουμε τη χρήση. Φορτώνονται μόνο με τη συγκατάθεσή σας.',a:'Αποδοχή',r:'Απόρριψη',p:'Απόρρητο &amp; cookies'}
+    };
+    function loadClarity(){if(!CL||window.__tmxCl)return;window.__tmxCl=1;
+      (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+       t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+       y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script",CL);}
+    function grant(){try{localStorage.setItem(KEY,'granted')}catch(e){}
+      gtag('consent','update',{analytics_storage:'granted'});loadClarity();}
+    function deny(){try{localStorage.setItem(KEY,'denied')}catch(e){}}
+    var saved=null;try{saved=localStorage.getItem(KEY)}catch(e){}
+    if(saved==='granted'){grant();return;} if(saved==='denied'){return;}
+    function show(){var tx=T[lc()]||T.en;
+      var b=document.createElement('div');b.className='tmx-cc';b.setAttribute('role','dialog');b.setAttribute('aria-live','polite');
+      b.innerHTML='<div class="tmx-cc__txt">'+tx.t+' <a href="/de/datenschutz/">'+tx.p+'</a></div>'+
+        '<div class="tmx-cc__btns"><button type="button" class="tmx-cc__b tmx-cc__b--no">'+tx.r+'</button>'+
+        '<button type="button" class="tmx-cc__b tmx-cc__b--yes">'+tx.a+'</button></div>';
+      document.body.appendChild(b);
+      b.querySelector('.tmx-cc__b--yes').addEventListener('click',function(){grant();b.remove();});
+      b.querySelector('.tmx-cc__b--no').addEventListener('click',function(){deny();b.remove();});}
+    if(document.body)show();else document.addEventListener('DOMContentLoaded',show);
+  })();
+  </script>
+<!-- TMX-ANALYTICS END -->
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Fahrerkarte beantragen: Behörde, Kosten, Fristen | TAGRA</title>
+<meta content="Fahrerkarte beantragen, verlängern oder bei Verlust ersetzen: zuständige Stelle, Kosten, Gültigkeit und Fristen nach FPersV. Stand 2026." name="description"/>
+<link href="https://tagra.app/de/ratgeber/fahrerkarte-beantragen/" rel="canonical"/>
+<meta content="Fahrerkarte beantragen: Behörde, Kosten, Fristen | TAGRA" property="og:title"/><meta content="Fahrerkarte beantragen, verlängern oder bei Verlust ersetzen: zuständige Stelle, Kosten, Gültigkeit und Fristen nach FPersV. Stand 2026." property="og:description"/>
+<meta content="https://tagra.app/assets/img/hero-poster.jpg" property="og:image"/>
+<meta content="https://tagra.app/de/ratgeber/fahrerkarte-beantragen/" property="og:url"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    a{color:var(--blue-mid);text-decoration:none;}
+    a:hover{color:var(--blue-dark);text-decoration:underline;text-underline-offset:.18em;}
+    p+p{margin-top:14px;}
+    ul,ol{padding-left:22px;}
+    li{margin:6px 0;line-height:1.65;}
+    li::marker{color:var(--blue-mid);}
+    strong{font-weight:700;color:var(--text-strong);}
+    #scroll-progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--green-brand),var(--blue-light));width:0%;z-index:9999;pointer-events:none;}
+.nav-inner{margin:0 auto;padding:0 24px;height:100%;display:flex;align-items:center;justify-content:space-between;gap:24px;}
+    .nav-links{display:flex;align-items:center;gap:4px;list-style:none;}
+    .nav-links a{font-size:15px;font-weight:500;color:var(--text);padding:8px 12px;border-radius:8px;text-decoration:none;transition:background .15s;}
+    .nav-links a:hover{background:var(--bg-apple);color:var(--blue-mid);}
+    .nav-links .nav-cta a{background:var(--green-cta);color:#fff!important;border-radius:99px;padding:8px 18px;font-weight:600;}
+    .nav-links .nav-cta a:hover{background:var(--green-brand);text-decoration:none;}
+    .nav-lang{display:flex;align-items:center;gap:4px;font-size:14px;font-weight:600;}
+    .nav-lang a{padding:5px 8px;border-radius:6px;color:var(--text2);text-decoration:none;transition:background .15s;}
+    .nav-lang a:hover,.nav-lang a.active{background:var(--bg-apple);color:var(--blue-mid);}
+    .nav-lang span{color:var(--border);}
+    .nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:8px;}
+    .nav-toggle span{display:block;width:22px;height:2px;background:var(--text);margin:5px 0;border-radius:2px;}
+    @media(max-width:900px){.nav-links{display:none;}.nav-toggle{display:block;}.nav-links.open{display:flex;flex-direction:column;align-items:flex-start;gap:2px;position:absolute;top:var(--nav-h);left:0;right:0;background:rgba(255,255,255,.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:12px 24px 20px;}}
+    .art-hero{background:linear-gradient(180deg,var(--bg-apple) 0%,#fff 100%);padding:calc(var(--nav-h,64px) + 28px) 0 44px;}
+    .art-wrap{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 24px;}
+    .breadcrumb{font-size:14px;color:var(--text2);margin-bottom:18px;}
+    .breadcrumb a{color:var(--text2);text-decoration:none;}
+    .breadcrumb a:hover{color:var(--blue-mid);}
+    .breadcrumb span{margin:0 5px;color:var(--border);}
+    .eyebrow{font-size:14px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--green-brand);margin-bottom:10px;}
+    .art-title{font-size:38px;line-height:1.15;font-weight:800;margin-bottom:16px;letter-spacing:-.02em;padding-bottom:0.08em;color:var(--blue-dark);}
+    .art-title .grad{background:linear-gradient(90deg,var(--blue-dark) 0%,var(--blue-light) 50%,var(--blue-bright) 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;}
+    @media(max-width:700px){.art-title{font-size:26px;}}
+    .art-meta{font-size:15px;color:var(--text2);padding-bottom:24px;border-bottom:1px solid var(--border);display:flex;gap:20px;flex-wrap:wrap;}
+    .art-body{padding:44px 0 60px;}
+    .art-body h2 {
+      font-size: 36px; font-weight: 800;
+      line-height: 1.1; letter-spacing: 0;
+      text-transform: uppercase;
+      color: var(--blue-mid, #134a8e);
+      background: linear-gradient(90deg, var(--blue-dark, #0b2c4a) 0%, var(--blue-light, #1f5fa6) 50%, var(--blue-bright, #3a6ff0) 100%);
+      -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block; max-width: 100%; margin-bottom: 14px;
+      padding: 0.12em 0.15em 0.08em 0;
+    }
+    .art-body h3{font-size:20px;font-weight:700;color:var(--text-strong);margin:28px 0 10px;}
+    .art-body p{margin-bottom:18px;}
+    .art-body ul,.art-body ol{margin-bottom:20px;}
+    /* QUICK TEST CARDS */
+    .test-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:20px 0;}
+    @media(max-width:640px){.test-grid{grid-template-columns:1fr;}}
+    .test-card{background:#fff;border-radius:var(--radius);padding:22px;box-shadow:0 8px 28px rgba(0,0,0,.06);}
+    .test-tag{font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--green-cta);margin-bottom:8px;}
+    .test-title{font-size:17px;font-weight:800;color:var(--text-strong);margin-bottom:6px;line-height:1.35;}
+    .test-desc{font-size:15px;color:var(--text2);line-height:1.5;}
+    /* CALLOUT */
+
+    .callout--blue{background:var(--bg-apple);border-left:4px solid var(--blue-mid);}
+
+    .callout-title{font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.07em;color:var(--blue-mid);margin-bottom:8px;}
+    .callout--green .callout-title{color:var(--green-brand);}
+    /* FAQ */
+    .faq-item{border-top:1px solid var(--border);padding:14px 0;}
+    .faq-item:last-child{border-bottom:1px solid var(--border);}
+    .faq-item summary{list-style:none;cursor:pointer;font-weight:700;font-size:18px;line-height:1.4;padding-right:32px;position:relative;color:var(--text-strong);}
+    .faq-item summary::-webkit-details-marker{display:none;}
+    .faq-item summary::after{content:"+";position:absolute;right:0;top:50%;transform:translateY(-50%);font-size:26px;font-weight:300;color:var(--green-cta);}
+    .faq-item[open] summary::after{content:"−";}
+
+    .faq-answer p+p{margin-top:10px;}
+    /* CTA */
+    .cta-box{background:linear-gradient(135deg,var(--blue-dark),var(--blue-mid));border-radius:var(--radius);padding:40px 36px;margin:44px 0;text-align:center;}
+    .cta-box h3{font-size:24px;font-weight:800;color:#fff;margin-bottom:12px;}
+    .cta-box p{color:rgba(255,255,255,.8);font-size:17px;margin-bottom:24px;}
+
+    .btn:hover{background:var(--green-brand);transform:scale(1.02);}
+    /* RELATED */
+    .related{border-top:1px solid var(--border);padding-top:36px;margin-top:36px;}
+    .related-title{font-size:20px;font-weight:800;color:var(--text-strong);margin-bottom:18px;}
+    .related-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+    @media(max-width:580px){.related-grid{grid-template-columns:1fr;}}
+    .related-card{display:block;padding:20px;border:1px solid var(--border);border-radius:var(--radius);text-decoration:none!important;transition:border-color .15s,transform .15s;}
+    .related-card:hover{border-color:var(--blue-mid);transform:translateY(-2px);}
+    .related-card-eye{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--blue-mid);margin-bottom:6px;}
+    .related-card-title{font-size:16px;font-weight:700;color:var(--text-strong);line-height:1.4;}
+    /* FOOTER */
+  </style>
+<link href="/assets/css/tokens.css" rel="stylesheet"/>
+<link href="/assets/css/base.css" rel="stylesheet"/>
+<link href="/assets/css/components.css" rel="stylesheet"/>
+<link href="/assets/css/nav.css" rel="stylesheet"/>
+<script defer="" src="/assets/js/nav.js?v=20260816b"></script>
+<link href="/assets/css/footer.css" rel="stylesheet"/>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Fahrerkarte beantragen: Behörde, Kosten und Fristen im Überblick", "description": "Fahrerkarte beantragen, verlängern oder bei Verlust ersetzen: zuständige Stelle, Kosten, Gültigkeit und Fristen nach FPersV. Stand 2026.", "image": "https://tagra.app/assets/img/hero-poster.jpg", "author": {"@type": "Organization", "name": "Truck Data Technology, s.r.o.", "url": "https://www.tdt.cz"}, "publisher": {"@type": "Organization", "name": "Truck Data Technology, s.r.o.", "logo": {"@type": "ImageObject", "url": "https://tagra.app/assets/img/logo.svg"}}, "datePublished": "2026-09-03T09:00:00+02:00", "dateModified": "2026-09-03T09:00:00+02:00", "inLanguage": "de", "mainEntityOfPage": "https://tagra.app/de/ratgeber/fahrerkarte-beantragen/", "articleSection": "Wissensdatenbank für Fahrer", "wordCount": 925}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "TAGRA", "item": "https://tagra.app/de/"}, {"@type": "ListItem", "position": 2, "name": "Artikel", "item": "https://tagra.app/de/ratgeber/"}, {"@type": "ListItem", "position": 3, "name": "Fahrerkarte beantragen", "item": "https://tagra.app/de/ratgeber/fahrerkarte-beantragen/"}]}</script><noscript><style>.anim-up,.fly-left,.fly-right{opacity:1!important;transform:none!important}</style></noscript></head>
+<body class="art-page">
+<a class="skip-link" href="#main-content">Zum Inhalt springen</a>
+<div aria-hidden="true" id="scroll-progress"></div>
+<nav aria-label="Hauptnavigation" class="site-nav" role="navigation">
+<div class="nav-inner">
+<a aria-label="TAGRA – Startseite" class="nav-logo" href="/de/"><img alt="TAGRA" height="32" src="/assets/img/logo-light.svg?v=20260513zh" style="display:block;height:32px;width:auto;" width="140"/></a>
+<ul class="nav-links" id="nav-links">
+<li><a href="/de/fuhrpark/">Für Unternehmen</a></li>
+<li><a href="/de/fahrer/">Für Fahrer</a></li>
+<li><a href="/de/kontrollbehoerden/">Kontrollbehörden</a></li>
+<li><a aria-current="page" href="/de/ratgeber/">Artikel</a></li><li><a href="/de/anleitungen/">Anleitungen</a></li>
+<li><a href="/de/faq/">FAQ</a></li>
+<li><a href="/de/kontakt/">Kontakt</a></li>
+<li class="nav-cta-li"><a class="nav-cta" href="/de/testen/?audience=fleet">30 Tage kostenlos testen</a></li>
+</ul>
+<details class="nav-lang">
+<summary aria-label="Language: DE">DE</summary>
+<div class="nav-lang-menu" role="menu">
+<a href="/" hreflang="en">English</a><a aria-current="page" class="active" href="/de/" hreflang="de">Deutsch</a><a href="/pl/" hreflang="pl">Polski</a><a href="/el/" hreflang="el">Ελληνικά</a><a href="/hu/" hreflang="hu">Magyar</a><a href="/it/articoli/" hreflang="it">Italiano</a><a href="https://www.tdt.cz/" hreflang="cs" rel="noopener" target="_blank">Čeština</a><a href="https://www.tdt.sk/" hreflang="sk" rel="noopener" target="_blank">Slovenčina</a></div>
+</details>
+<a class="nav-cta-mobile" href="/de/testen/?audience=fleet">Kostenlos testen</a>
+<button aria-expanded="false" aria-label="Menü umschalten" class="nav-mobile-toggle" id="nav-toggle">
+<span></span><span></span><span></span>
+</button>
+</div>
+</nav>
+<header class="art-hero">
+<div class="art-wrap">
+<nav aria-label="Breadcrumb" class="breadcrumb"><a href="/de/">TAGRA</a><span>›</span><a href="/de/ratgeber/">Artikel</a><span>›</span><span>Fahrerkarte beantragen</span></nav>
+<div class="eyebrow anim-up">Ratgeber · Aktualisiert für 2026</div>
+<h1 class="art-title"><span class="grad">Fahrerkarte beantragen: Behörde, Kosten und Fristen im Überblick</span></h1>
+<div class="art-meta"><span>Truck Data Technology</span><span>Aktualisiert September 2026</span><span>5 Min Lesezeit</span></div>
+<p class="hero-lede anim-up">Sie brauchen eine Fahrerkarte und wissen nicht, wo Sie sie beantragen, was sie kostet oder was bei Verlust zu tun ist? Hier finden Sie die zuständige Stelle, die Kosten, die Gültigkeitsdauer und alle Fristen nach der Fahrpersonalverordnung (FPersV) auf einen Blick.</p><div class="bento--hero"><div class="hero-card"><div class="eyebrow">Gültigkeit</div><div class="big">5 Jahre</div><p>So lange gilt eine ausgestellte Fahrerkarte, bevor sie verlängert werden muss.</p></div><div class="hero-card hero-card--blue"><div class="eyebrow">Verlängerung spätestens</div><div class="big">15 Werktage</div><p>So kurz vor Ablauf müssen Sie die Verlängerung spätestens beantragen.</p></div><div class="hero-card"><div class="eyebrow">Bei Verlust melden</div><div class="big">7 Kalendertage</div><p>So schnell müssen Sie eine verlorene, gestohlene oder defekte Karte melden.</p></div><div class="hero-card hero-card--blue"><div class="eyebrow">Kosten</div><div class="big">ca. 30–45 €</div><p>Je nach Bundesland, typischerweise um die 40 €.</p></div></div>
+</div>
+</header>
+<main id="main-content"><section class="band"><div class="container art-body"><div class="eyebrow anim-up">Voraussetzung</div><h2 class="h2-grad anim-up">Wer eine Fahrerkarte braucht</h2>
+<p>Eine Fahrerkarte braucht jeder Fahrer, der ein Fahrzeug mit digitalem Tachographen lenkt — in erster Linie Lkw- und Busfahrer.</p>
+<p>Ab dem 1. Juli 2026 gilt die Pflicht auch für Fahrzeuge von 2,5–3,5 Tonnen — allerdings <strong>nur im internationalen Güterkraftverkehr und bei Kabotage</strong>, nicht im reinen Inlandsverkehr. Details dazu finden Sie im Artikel <a href="/de/ratgeber/tachograph-transporter-pflicht-juli-2026/">Tachographen für Transporter: neue Pflicht ab Juli 2026</a>.</p></div></section><section class="band band--blue"><div class="container art-body"><div class="eyebrow anim-up">Antrag</div><h2 class="h2-grad anim-up">Fahrerkarte beantragen — Schritt für Schritt</h2>
+<p>Zuständig ist die <strong>Fahrerlaubnisbehörde bzw. Führerscheinstelle</strong> an Ihrem Hauptwohnsitz. In manchen Regionen nimmt stattdessen <strong>TÜV oder DEKRA</strong> den Antrag entgegen.</p>
+<p><strong>Es gibt keine einzige bundesweit zuständige Stelle</strong> — die Zuständigkeit unterscheidet sich je nach Bundesland. Eine Übersicht bietet das <a href="https://verwaltung.bund.de/leistungsverzeichnis/DE/leistung/99108056001000" rel="noopener" target="_blank">Bundesportal</a>.</p>
+<p>Die Antragstellung erfolgt in der Regel <strong>persönlich</strong>. Online lässt sich meist nur ein Termin dafür buchen.</p>
+<p>Voraussetzungen für den Antrag:</p>
+<ul>
+<li>Wohnsitz in Deutschland</li>
+<li>Gültiger Führerschein der Klasse C, CE, D oder DE</li>
+<li>Biometrisches Passfoto im Format 35 × 45 mm</li>
+</ul></div></section><section class="band band--gray"><div class="container art-body"><div class="eyebrow anim-up">Kosten</div><h2 class="h2-grad anim-up">Was die Fahrerkarte kostet</h2>
+<p>Die Kosten liegen bei <strong>etwa 30–45 €</strong>, je nach Bundesland — typischerweise um die <strong>40 €</strong>. Die genaue Gebühr legt jedes Bundesland selbst fest; die exakte Höhe erfahren Sie bei der für Sie zuständigen Stelle.</p>
+<div class="callout callout--blue anim-up">
+<div class="callout-title">Wer zahlt?</div>
+<p style="margin:0">Der Arbeitgeber ist <strong>nicht verpflichtet</strong>, die Kosten der Fahrerkarte zu übernehmen.</p>
+</div></div></section><section class="band"><div class="container art-body"><div class="eyebrow anim-up">Fristen</div><h2 class="h2-grad anim-up">Gültigkeit und Verlängerung</h2>
+<p>Eine Fahrerkarte ist <strong>5 Jahre</strong> gültig.</p>
+<p>Die Verlängerung können Sie <strong>frühestens 6 Monate</strong> und müssen Sie <strong>spätestens 15 Werktage</strong> vor Ablauf der Gültigkeit beantragen (§ 4 Abs. 3, § 5 Abs. 5, § 6 FPersV).</p>
+<p>Wer diese Frist verpasst, riskiert, vorübergehend ohne gültige Fahrerkarte dazustehen.</p></div></section><section class="band band--blue"><div class="container art-body"><div class="eyebrow anim-up">Ersatzkarte</div><h2 class="h2-grad anim-up">Fahrerkarte verloren, gestohlen oder defekt</h2>
+<p>Eine verlorene, gestohlene oder defekte Fahrerkarte müssen Sie <strong>innerhalb von 7 Kalendertagen</strong> melden und eine Ersatzkarte beantragen. Die Behörde stellt die Ersatzkarte <strong>innerhalb von 8 Werktagen</strong> aus.</p>
+<p>In der Zwischenzeit dürfen Sie <strong>maximal 15 Tage</strong> mit manuellen Aufzeichnungen und Ausdrucken aus dem Tachographen weiterfahren.</p>
+<div class="callout callout--blue anim-up">
+<div class="callout-title">Häufiger Irrtum</div>
+<p style="margin:0">Die Ersatzkarte gilt <strong>nur bis zum Ablaufdatum der ursprünglichen Karte</strong>, sofern zum Zeitpunkt des Verlusts noch mehr als 6 Monate Gültigkeit übrig waren — die 5-Jahres-Frist beginnt <strong>nicht</strong> erneut.</p>
+</div></div></section><section class="band band--gray"><div class="container art-body"><div class="eyebrow anim-up">Datenspeicherung</div><h2 class="h2-grad anim-up">Was mit den Daten auf der Karte passiert</h2>
+<p>Nach Vorschrift muss die Fahrerkarte <strong>mindestens 28 Tage</strong> an Aktivität speichern können — das ist die gesetzliche Mindestkapazität, keine feste Speicherdauer. In der Praxis speichert die Karte, bis der Speicher voll ist, bei einem durchschnittlichen Fahrer oft mehrere Monate. Ist der Speicher voll, werden die ältesten Aufzeichnungen überschrieben.</p>
+<p>Unabhängig von der tatsächlichen Kapazität müssen die Daten <strong>alle 28 Tage</strong> heruntergeladen werden.</p>
+<p>Bei einer Ersatz- oder Verlustkarte werden die Daten der alten Karte <strong>nicht übertragen</strong>. Eine wiedergefundene oder ersetzte Karte müssen Sie zurückgeben.</p>
+<p>Ohne ein eigenes Archiv der heruntergeladenen Daten haben Sie im Nachhinein keinen Nachweis über Ihre Lenk- und Ruhezeiten.</p>
+<div class="cta-box">
+<h3>Behalten Sie Ihre Fahrerkarten-Daten selbst im Blick</h3>
+<p>TAGRA liest Ihre Fahrerkarte aus, wertet Verstöße aus und archiviert die Daten — bevor es die Kontrolle tut.</p>
+<a class="btn" href="/de/testen/?audience=driver&amp;src=driver-card">30 Tage kostenlos testen →</a>
+</div></div></section><section class="band"><div class="container art-body"><div class="eyebrow anim-up">Für Fahrer</div><h2 class="h2-grad anim-up">Fahrerkarten-Daten selbst auswerten: TAGRA Trucker</h2>
+<p>Fahren Sie als selbstständiger Fahrer oder möchten Sie Ihre eigenen Fahrerkarten-Daten unabhängig von Ihrem Arbeitgeber im Blick behalten? <a href="/de/fahrer/">TAGRA Trucker</a> ist genau dafür gemacht: Sie lesen Ihre Fahrerkarte über einen im Lieferumfang enthaltenen USB-Kartenleser aus und sehen sofort, ob und wo Verstöße vorliegen.</p>
+<p>TAGRA Trucker kostet <strong>49 € zzgl. MwSt.</strong> inklusive Kartenleser, ab dem zweiten Jahr <strong>19 € jährliche Gebühr</strong>.</p>
+<p>Sie können TAGRA Trucker <a href="/de/testen/?audience=driver&amp;src=driver-card" rel="noopener" target="_blank">30 Tage kostenlos testen</a> — unverbindlich.</p></div></section><section class="band band--blue"><div class="container art-body"><div class="eyebrow anim-up">Für Unternehmen</div><h2 class="h2-grad anim-up">Für Fuhrparkbetreiber: TAGRA</h2>
+<p>Sind Sie selbstständiger Fahrer und gleichzeitig Unternehmer mit eigenem Fuhrpark? Für die Auswertung mehrerer Fahrzeuge gibt es <a href="/de/fuhrpark/">TAGRA</a> in fünf Versionen, je nach Anzahl der Fahrzeuge:</p>
+<div class="price-table-wrap" style="width:100%;overflow-x:auto;margin-bottom:24px">
+<table class="price-table" style="width:100%;border-collapse:collapse;font-size:16px">
+<thead>
+<tr style="border-bottom:2px solid var(--border)">
+<th style="text-align:left;padding:10px 12px;color:var(--text2);font-weight:600;font-size:14px">Version</th>
+<th style="text-align:left;padding:10px 12px;color:var(--text2);font-weight:600;font-size:14px">Fahrzeuge</th>
+</tr>
+</thead>
+<tbody>
+<tr style="border-bottom:1px solid var(--border)"><td style="padding:12px;font-weight:700;color:var(--text-strong)"><a href="/de/fuhrpark/">TAGRA 1</a></td><td style="padding:12px;color:var(--text2)">1 Fahrzeug</td></tr>
+<tr style="border-bottom:1px solid var(--border)"><td style="padding:12px;font-weight:700;color:var(--text-strong)"><a href="/de/fuhrpark/">TAGRA 2</a></td><td style="padding:12px;color:var(--text2)">2 Fahrzeuge</td></tr>
+<tr style="border-bottom:1px solid var(--border)"><td style="padding:12px;font-weight:700;color:var(--text-strong)"><a href="/de/fuhrpark/">TAGRA 4</a></td><td style="padding:12px;color:var(--text2)">bis zu 4 Fahrzeuge</td></tr>
+<tr style="border-bottom:1px solid var(--border)"><td style="padding:12px;font-weight:700;color:var(--text-strong)"><a href="/de/fuhrpark/">TAGRA 6</a></td><td style="padding:12px;color:var(--text2)">bis zu 6 Fahrzeuge</td></tr>
+<tr style="border-bottom:1px solid var(--border)"><td style="padding:12px;font-weight:700;color:var(--text-strong)"><a href="/de/fuhrpark/">TAGRA MAX</a></td><td style="padding:12px;color:var(--text2)">unbegrenzte Anzahl von Fahrzeugen</td></tr>
+</tbody>
+</table>
+</div></div></section><section class="band band--gray"><div class="container art-body"><div class="eyebrow anim-up">Fragen & Antworten</div><h2 class="h2-grad anim-up">Häufig gestellte Fragen</h2>
+<details class="faq-item"><summary>Wie beantrage ich eine Fahrerkarte?</summary>
+<div class="faq-answer"><p>Sie stellen den Antrag bei der Fahrerlaubnisbehörde bzw. Führerscheinstelle an Ihrem Hauptwohnsitz — in manchen Regionen bei TÜV oder DEKRA. Eine bundesweit einheitliche Zuständigkeit gibt es nicht; sie unterscheidet sich je nach Bundesland. Die Antragstellung erfolgt in der Regel persönlich, Sie benötigen einen Wohnsitz in Deutschland, einen gültigen Führerschein der Klasse C, CE, D oder DE sowie ein biometrisches Passfoto im Format 35 × 45 mm.</p></div>
+</details>
+<details class="faq-item"><summary>Wie verlängere ich meine Fahrerkarte?</summary>
+<div class="faq-answer"><p>Sie können die Verlängerung frühestens 6 Monate und müssen sie spätestens 15 Werktage vor Ablauf der Gültigkeit beantragen (§ 4 Abs. 3, § 5 Abs. 5, § 6 FPersV).</p></div>
+</details>
+<details class="faq-item"><summary>Was kostet eine Fahrerkarte?</summary>
+<div class="faq-answer"><p>Etwa 30–45 €, je nach Bundesland, typischerweise um die 40 €. Die genaue Gebühr legt jedes Bundesland selbst fest. Der Arbeitgeber ist nicht verpflichtet, die Kosten zu übernehmen.</p></div>
+</details>
+<details class="faq-item"><summary>Was tue ich, wenn ich meine Fahrerkarte verliere?</summary>
+<div class="faq-answer"><p>Melden Sie den Verlust, Diebstahl oder Defekt innerhalb von 7 Kalendertagen und beantragen Sie eine Ersatzkarte. Die Behörde stellt diese innerhalb von 8 Werktagen aus. Bis dahin dürfen Sie maximal 15 Tage mit manuellen Aufzeichnungen und Tachographen-Ausdrucken weiterfahren. Die Ersatzkarte gilt nur bis zum Ablaufdatum der ursprünglichen Karte, sofern noch mehr als 6 Monate Gültigkeit übrig waren — die 5-Jahres-Frist beginnt nicht erneut.</p></div>
+</details>
+<details class="faq-item"><summary>Wie lange ist eine Fahrerkarte gültig?</summary>
+<div class="faq-answer"><p>5 Jahre ab Ausstellung.</p></div>
+</details>
+<details class="faq-item"><summary>Wie lese ich meine Fahrerkarte aus?</summary>
+<div class="faq-answer"><p>Die Daten müssen mindestens alle 28 Tage heruntergeladen werden — unabhängig von der tatsächlichen Speicherkapazität der Karte. <a href="/de/fahrer/">TAGRA Trucker</a> liest Ihre Fahrerkarte über einen im Lieferumfang enthaltenen USB-Kartenleser aus. Details zum Auslesen und Auswerten von Tachographendaten finden Sie im Artikel <a href="/de/ratgeber/tachographendaten-auslesen-auswerten/">So werden Tachographendaten ausgelesen, ausgewertet und archiviert</a>.</p></div>
+</details>
+<div class="related">
+<div class="related-title">Verwandte Artikel</div>
+<div class="related-grid">
+<a class="related-card anim-up" href="/de/ratgeber/tachograph-transporter-pflicht-juli-2026/">
+<div class="related-card-eye">Neue Gesetzgebung</div>
+<h3 class="card-title">Tachographen für Transporter: neue Pflicht ab Juli 2026</h3>
+</a>
+<a class="related-card anim-up" href="/de/ratgeber/tachographendaten-auslesen-auswerten/">
+<div class="related-card-eye">Vollständiger Leitfaden</div>
+<h3 class="card-title">So lesen Sie Tachographendaten korrekt aus, werten sie aus und archivieren sie</h3>
+</a>
+</div>
+</div></div></section></main>
+<footer class="site-footer" role="contentinfo">
+<div class="footer-inner">
+<div>
+<div class="footer-logo"><img alt="TAGRA" height="20" src="/assets/img/logo-dark.svg?v=20260513zh" width="88" loading="lazy"/></div>
+<p class="footer-desc">Professionelle Software zur Tachographenauswertung. Auslesen von Fahrerkarten, Auswertung digitaler Tachographendaten, EU-Lenk- und Ruhezeiten sowie Arbeitszeitrichtlinie für den Straßentransport. Entwickelt von Truck Data Technology, s.r.o.</p>
+</div>
+<div class="footer-col">
+<h2 class="footer-col-title">Produkt</h2>
+<ul>
+<li><a href="/de/fuhrpark/">Für Fuhrparkbetreiber</a></li>
+<li><a href="/de/fahrer/">Für Berufskraftfahrer</a></li>
+<li><a href="/de/kontrollbehoerden/">Für Kontrollbehörden</a></li>
+<li><a href="/de/so-funktioniert-es/">So funktioniert es</a></li>
+<li><a href="/de/fuer-wen/">Für wen</a></li>
+<li><a href="/de/faq/">FAQ</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h2 class="footer-col-title">Ressourcen</h2>
+<ul>
+<li><a href="/de/ratgeber/">Artikel</a></li><li><a href="/de/anleitungen/">Anleitungen</a></li>
+<li><a href="/de/ratgeber/tachographen-symbole/">Tachographen-Symbole</a></li>
+<li><a href="/de/schnittstellen/dkv-live/">DKV LIVE®</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h2 class="footer-col-title">Unternehmen</h2>
+<ul>
+<li><a href="/de/kontakt/">Kontakt</a></li>
+<li><a href="https://www.tdt.cz" rel="noopener" target="_blank">Truck Data Technology</a></li>
+<li><a href="/">English</a></li><li><a href="/de/">Deutsch</a></li><li><a href="/pl/">Polski</a></li><li><a href="/el/">Ελληνικά</a></li><li><a href="/hu/">Magyar</a></li><li><a href="/it/">Italiano</a></li><li><a href="https://www.tdt.cz/" rel="noopener" target="_blank">Čeština</a></li><li><a href="https://www.tdt.sk/" rel="noopener" target="_blank">Slovenčina</a></li></ul>
+</div>
+</div>
+<div class="footer-bottom">
+<span>© 2026 Truck Data Technology, s.r.o. Alle Rechte vorbehalten.</span>
+<span><a href="/de/kontakt/">Kontakt</a> · <a href="https://www.tdt.cz" rel="noopener" target="_blank">tdt.cz</a> · <a href="/de/datenschutz/">Datenschutz &amp; Cookies</a> · <a href="/de/impressum/">Impressum</a></span>
+</div>
+</footer>
+<script>(function(){var bar=document.getElementById('scroll-progress');if(bar)window.addEventListener('scroll',function(){var t=document.documentElement.scrollTop||document.body.scrollTop;var h=document.documentElement.scrollHeight-document.documentElement.clientHeight;bar.style.width=(t/h*100)+'%';},{passive:true});var toggle=document.getElementById('nav-toggle'),links=document.getElementById('nav-links');if(toggle&&links)toggle.addEventListener('click',function(){var o=links.classList.toggle('open');toggle.setAttribute('aria-expanded',o);});})();</script><script>
+/* INTERSECTION OBSERVER – ANIMATIONS */
+if ('IntersectionObserver' in window) {
+  var io = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) {
+      if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.anim-up, .fly-left, .fly-right').forEach(function(el) { io.observe(el); });
+} else {
+  document.querySelectorAll('.anim-up, .fly-left, .fly-right').forEach(function(el) { el.classList.add('on'); });
+}
+</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Wie beantrage ich eine Fahrerkarte?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sie stellen den Antrag bei der Fahrerlaubnisbehörde bzw. Führerscheinstelle an Ihrem Hauptwohnsitz — in manchen Regionen bei TÜV oder DEKRA. Eine bundesweit einheitliche Zuständigkeit gibt es nicht; sie unterscheidet sich je nach Bundesland. Die Antragstellung erfolgt in der Regel persönlich, Sie benötigen einen Wohnsitz in Deutschland, einen gültigen Führerschein der Klasse C, CE, D oder DE sowie ein biometrisches Passfoto im Format 35 × 45 mm."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Wie verlängere ich meine Fahrerkarte?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sie können die Verlängerung frühestens 6 Monate und müssen sie spätestens 15 Werktage vor Ablauf der Gültigkeit beantragen (§ 4 Abs. 3, § 5 Abs. 5, § 6 FPersV)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Was kostet eine Fahrerkarte?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Etwa 30–45 €, je nach Bundesland, typischerweise um die 40 €. Die genaue Gebühr legt jedes Bundesland selbst fest. Der Arbeitgeber ist nicht verpflichtet, die Kosten zu übernehmen."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Was tue ich, wenn ich meine Fahrerkarte verliere?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Melden Sie den Verlust, Diebstahl oder Defekt innerhalb von 7 Kalendertagen und beantragen Sie eine Ersatzkarte. Die Behörde stellt diese innerhalb von 8 Werktagen aus. Bis dahin dürfen Sie maximal 15 Tage mit manuellen Aufzeichnungen und Tachographen-Ausdrucken weiterfahren. Die Ersatzkarte gilt nur bis zum Ablaufdatum der ursprünglichen Karte, sofern noch mehr als 6 Monate Gültigkeit übrig waren — die 5-Jahres-Frist beginnt nicht erneut."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Wie lange ist eine Fahrerkarte gültig?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "5 Jahre ab Ausstellung."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Wie lese ich meine Fahrerkarte aus?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Die Daten müssen mindestens alle 28 Tage heruntergeladen werden — unabhängig von der tatsächlichen Speicherkapazität der Karte. TAGRA Trucker liest Ihre Fahrerkarte über einen im Lieferumfang enthaltenen USB-Kartenleser aus."
+      }
+    }
+  ]
+}</script>
+</body>
+</html>
