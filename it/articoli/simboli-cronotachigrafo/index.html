@@ -63,7 +63,7 @@
     if(saved==='granted'){grant();return;} if(saved==='denied'){return;}
     function show(){var tx=T[lc()]||T.en;
       var b=document.createElement('div');b.className='tmx-cc';b.setAttribute('role','dialog');b.setAttribute('aria-live','polite');
-      b.innerHTML='<div class="tmx-cc__txt">'+tx.t+' <a href="/privacy/">'+tx.p+'</a></div>'+
+      b.innerHTML='<div class="tmx-cc__txt">'+tx.t+' <a href="/it/privacy/">'+tx.p+'</a></div>'+
         '<div class="tmx-cc__btns"><button type="button" class="tmx-cc__b tmx-cc__b--no">'+tx.r+'</button>'+
         '<button type="button" class="tmx-cc__b tmx-cc__b--yes">'+tx.a+'</button></div>';
       document.body.appendChild(b);
@@ -230,7 +230,7 @@
 <li><a href="/it/per-aziende/">Per le aziende</a></li>
 <li><a href="/it/per-autisti/">Per gli autisti</a></li>
 <li><a href="/it/organi-di-controllo/">Enti di controllo</a></li>
-<li><a aria-current="page" href="/articles/">Articoli</a></li><li><a href="/it/manuali/">Manuali</a></li>
+<li><a aria-current="page" href="/it/articoli/">Articoli</a></li><li><a href="/it/manuali/">Manuali</a></li>
 <li><a href="/it/faq/">FAQ</a></li>
 <li><a href="/it/contatti/">Contatti</a></li>
 <li class="nav-cta-li"><a class="nav-cta" href="/it/prova-gratuita/?audience=driver&amp;src=symbols">Prova gratuita 30 giorni</a></li>
@@ -248,7 +248,7 @@
 </nav>
 <header class="art-hero">
 <div class="art-wrap">
-<nav aria-label="Breadcrumb" class="breadcrumb"><a href="/it/">TAGRA</a><span>›</span><a href="/articles/">Articoli</a><span>›</span><span>Simboli e codici del cronotachigrafo</span></nav>
+<nav aria-label="Breadcrumb" class="breadcrumb"><a href="/it/">TAGRA</a><span>›</span><a href="/it/articoli/">Articoli</a><span>›</span><span>Simboli e codici del cronotachigrafo</span></nav>
 <div class="eyebrow anim-up">Base di conoscenza per autisti</div>
 <h1 class="art-title"><span class="grad">Simboli e codici errore del cronotachigrafo: la guida per autisti</span></h1>
 <div class="art-meta"><span>Truck Data Technology</span><span>Aggiornato a giugno 2026</span><span>22 min di lettura</span></div>
@@ -732,7 +732,7 @@
 <p style="font-size:14px;color:var(--text2);margin-bottom:12px;">Non tutti i messaggi sul display finiscono nei dati scaricati. Solo i messaggi con un <strong>EventFaultType</strong> definito nell'Appendice 1 dell'Allegato IC al Regolamento (UE) 2016/799 vengono memorizzati nella memoria del cronotachigrafo, compaiono sulla stampa e nei report di valutazione. I messaggi operativi e sull'orario di lavoro sono visibili solo a display.</p>
 <div class="code-table-wrap">
 <table class="code-table">
-<thead><tr><th style="width:16%;">EventFaultType</th><th style="width:60%;">Evento / anomalia (dicitura ufficiale Allegato IC)</th><th style="width:24%;">Codice display</th></tr></thead>
+<thead><tr><th style="width:16%;">EventFaultType</th><th style="width:60%;">Evento / anomalia (descrizione secondo l'Allegato IC)</th><th style="width:24%;">Codice display</th></tr></thead>
 <tbody>
 <tr><td>0x01</td><td>Inserimento di una carta non valida</td><td>048, 066</td></tr>
 <tr><td>0x02</td><td>Conflitto di carte</td><td>029</td></tr>
@@ -1270,7 +1270,7 @@
 <p>I codici sopra sono identici su ogni veicolo — provengono dal cronotachigrafo, non dalla legge nazionale. Ciò che cambia da un paese all'altro è <strong>chi controlla il registro, fino a quanto tempo indietro guarda e quanto ti costa una lacuna</strong>.</p>
 <div class="twocol">
 <div class="info-card anim-up"><h3>Unione Europea e SEE</h3><p>I controlli sono affidati agli ispettorati nazionali ai sensi del Regolamento (UE) 165/2014 e del Regolamento (CE) 561/2006. Gli autisti devono esibire la giornata corrente più i <strong>28 giorni</strong> precedenti a un controllo su strada. Le sanzioni sono stabilite a livello nazionale — i casi più gravi, come la manomissione, possono comportare un deposito immediato fino a <strong>8.000 €</strong>. Le carte vengono scaricate ogni 28 giorni, le unità di bordo ogni 90.</p></div>
-<div class="info-card anim-up"><h3>Regno Unito</h3><p>La Gran Bretagna opera con una normativa recepita — le stesse regole fondamentali, applicate dalla <strong>DVSA</strong>, che emette oltre 20.000 sanzioni fisse all'anno. Le sanzioni fisse graduate vanno da circa <strong>50 £ a oltre 300 £</strong>. Sui viaggi internazionali UK-UE gli autisti devono esibire <strong>56 giorni</strong> di dati, non 28. Il rischio maggiore è la <strong>licenza di operatore (Operator Licence)</strong>: lacune ripetute finiscono davanti al Traffic Commissioner. <a href="/articles/tachograph-rules-uk-dvsa-operator-licence/">Guida completa per operatori UK →</a></p></div>
+<div class="info-card anim-up"><h3>Regno Unito</h3><p>La Gran Bretagna opera con una normativa recepita — le stesse regole fondamentali, applicate dalla <strong>DVSA</strong>, che emette oltre 20.000 sanzioni fisse all'anno. Le sanzioni fisse graduate vanno da circa <strong>50 £ a oltre 300 £</strong>. Sui viaggi internazionali UK-UE gli autisti devono esibire <strong>56 giorni</strong> di dati, non 28. Il rischio maggiore è la <strong>licenza di operatore (Operator Licence)</strong>: lacune ripetute finiscono davanti al Traffic Commissioner. <a href="/articles/tachograph-rules-uk-dvsa-operator-licence/">Guida completa per operatori UK (in inglese) →</a></p></div>
 </div>
 <div class="callout callout--blue anim-up"><p><strong>Perché il codice conta più di quanto sembri.</strong> Un'anomalia come <em>conflitto movimento 80</em> o <em>anomalia GNSS interna 82</em> non infastidisce solo l'autista — lascia una lacuna o un'anomalia nel registro che sei legalmente tenuto a consegnare, che si tratti di 28 giorni nell'UE o di 56 su una tratta UK-UE. Il momento più economico per scoprirla è quando i dati vengono scaricati, non quando lo chiede un ispettore.</p>
 <p>TAGRA Trucker legge la tua carta conducente indipendentemente dal paese, segnala lacune e infrazioni, e conserva l'archivio che potresti dover esibire su richiesta. <a href="/it/per-autisti/">Prova TAGRA Trucker gratis per 30 giorni</a> — Windows, nessun dato della carta richiesto.</p></div>
@@ -1436,9 +1436,9 @@
 <div class="footer-col">
 <h2 class="footer-col-title">Risorse</h2>
 <ul>
-<li><a href="/articles/">Articoli</a></li><li><a href="/it/manuali/">Manuali</a></li>
+<li><a href="/it/articoli/">Articoli</a></li><li><a href="/it/manuali/">Manuali</a></li>
 <li><a href="/it/articoli/simboli-cronotachigrafo/">Simboli del cronotachigrafo</a></li>
-<li><a href="/integrations/dkv-live/">DKV LIVE®</a></li>
+<li><a href="/it/integrazioni/dkv-live/">DKV LIVE®</a></li>
 </ul>
 </div>
 <div class="footer-col">
@@ -1451,7 +1451,7 @@
 </div>
 <div class="footer-bottom">
 <span>© 2026 Truck Data Technology, s.r.o. Tutti i diritti riservati.</span>
-<span><a href="/it/contatti/">Contatti</a> · <a href="https://www.tdt.cz" rel="noopener" target="_blank">tdt.cz</a> · <a href="/privacy/">Privacy e cookie</a></span>
+<span><a href="/it/contatti/">Contatti</a> · <a href="https://www.tdt.cz" rel="noopener" target="_blank">tdt.cz</a> · <a href="/it/privacy/">Privacy e cookie</a></span>
 </div>
 </footer>
 <div aria-label="Iscrizione rapida alla prova gratuita" class="sticky-cta" id="stickyCta" role="complementary">
