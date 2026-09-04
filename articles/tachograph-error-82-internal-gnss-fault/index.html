@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- TMX-ANALYTICS START -->
+<meta content="7F7894081BE7FBB245FF03AF8810B22F" name="msvalidate.01"/>
+<!-- Consent Mode v2 defaults (deny) + gtag stub — runs BEFORE gtag.js -->
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent','default',{
+      ad_storage:'denied', ad_user_data:'denied', ad_personalization:'denied',
+      analytics_storage:'denied', functionality_storage:'denied',
+      personalization_storage:'denied', security_storage:'granted',
+      wait_for_update:500
+    });
+    gtag('set','ads_data_redaction',true);
+    gtag('set','url_passthrough',false);
+  </script>
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-92253QFBNX"></script>
+<script>
+    gtag('js', new Date());
+    gtag('config','G-92253QFBNX');
+  </script>
+<!-- Cookie consent banner (self-hosted) + Microsoft Clarity gating -->
+<style>
+    .tmx-cc{position:fixed;left:0;right:0;bottom:0;z-index:2147483000;background:linear-gradient(120deg,var(--blue-dark,#0b2c4a),var(--blue-mid,#134a8e) 62%,var(--blue-light,#1f5fa6));color:#fff;
+      font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+      padding:16px 20px;box-shadow:0 -4px 24px rgba(0,0,0,.18);display:flex;flex-wrap:wrap;
+      align-items:center;gap:14px;justify-content:center}
+    .tmx-cc__txt{flex:1 1 360px;max-width:760px}
+    .tmx-cc__txt a{color:#9ed0f5;text-decoration:underline}
+    .tmx-cc__btns{display:flex;gap:10px;flex:0 0 auto}
+    .tmx-cc__b{appearance:none;border:0;cursor:pointer;font:inherit;font-weight:600;
+      padding:10px 22px;border-radius:99px;transition:filter .15s;color:#fff}
+    .tmx-cc__b:hover{filter:brightness(1.08)}
+    .tmx-cc__b--no{background:rgba(255,255,255,.16)}
+    .tmx-cc__b--yes{background:var(--green-cta,#5C820F)}
+    @media(max-width:640px){.tmx-cc{padding:14px}.tmx-cc__btns{width:100%}.tmx-cc__b{flex:1}}
+  </style>
+<script>
+  (function(){
+    var KEY='tmx-consent-v1', CL='wt18054m0r';
+    function lc(){var l=(document.documentElement.getAttribute('lang')||'en').toLowerCase().split('-')[0];
+      var m={cz:'cs',cs:'cs',sk:'sk',de:'de',pl:'pl',gr:'el',el:'el',hu:'hu',en:'en'};return m[l]||'en';}
+    var T={
+      hu:{t:'Analitikai sütiket használunk (Google Analytics, Microsoft Clarity, Smartsupp), hogy megértsük a webhely használatát. Csak az Ön hozzájárulásával töltődnek be.',a:'Elfogadom',r:'Elutasítom',p:'Adatvédelem és sütik'},
+      en:{t:'We use analytics cookies (Google Analytics, Microsoft Clarity, Smartsupp) to understand site usage. They load only with your consent.',a:'Accept',r:'Reject',p:'Privacy &amp; cookies'},
+      cs:{t:'Používáme analytické cookies (Google Analytics, Microsoft Clarity, Smartsupp) k pochopení používání webu. Načtou se jen s vaším souhlasem.',a:'Přijmout',r:'Odmítnout',p:'Soukromí a cookies'},
+      sk:{t:'Používame analytické cookies (Google Analytics, Microsoft Clarity, Smartsupp) na pochopenie používania webu. Načítajú sa len s vaším súhlasom.',a:'Prijať',r:'Odmietnuť',p:'Súkromie a cookies'},
+      de:{t:'Wir verwenden Analyse-Cookies (Google Analytics, Microsoft Clarity, Smartsupp), um die Nutzung der Website zu verstehen. Sie werden nur mit Ihrer Einwilligung geladen.',a:'Akzeptieren',r:'Ablehnen',p:'Datenschutz &amp; Cookies'},
+      pl:{t:'Używamy plików cookie do analityki (Google Analytics, Microsoft Clarity, Smartsupp), aby zrozumieć korzystanie z witryny. Ładują się tylko za Twoją zgodą.',a:'Akceptuj',r:'Odrzuć',p:'Prywatność i cookies'},
+      el:{t:'Χρησιμοποιούμε cookies ανάλυσης (Google Analytics, Microsoft Clarity, Smartsupp) για να κατανοήσουμε τη χρήση. Φορτώνονται μόνο με τη συγκατάθεσή σας.',a:'Αποδοχή',r:'Απόρριψη',p:'Απόρρητο &amp; cookies'}
+    };
+    function loadClarity(){if(!CL||window.__tmxCl)return;window.__tmxCl=1;
+      (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+       t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+       y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script",CL);}
+    function grant(){try{localStorage.setItem(KEY,'granted')}catch(e){}
+      gtag('consent','update',{analytics_storage:'granted'});loadClarity();}
+    function deny(){try{localStorage.setItem(KEY,'denied')}catch(e){}}
+    var saved=null;try{saved=localStorage.getItem(KEY)}catch(e){}
+    if(saved==='granted'){grant();return;} if(saved==='denied'){return;}
+    function show(){var tx=T[lc()]||T.en;
+      var b=document.createElement('div');b.className='tmx-cc';b.setAttribute('role','dialog');b.setAttribute('aria-live','polite');
+      b.innerHTML='<div class="tmx-cc__txt">'+tx.t+' <a href="/privacy/">'+tx.p+'</a></div>'+
+        '<div class="tmx-cc__btns"><button type="button" class="tmx-cc__b tmx-cc__b--no">'+tx.r+'</button>'+
+        '<button type="button" class="tmx-cc__b tmx-cc__b--yes">'+tx.a+'</button></div>';
+      document.body.appendChild(b);
+      b.querySelector('.tmx-cc__b--yes').addEventListener('click',function(){grant();b.remove();});
+      b.querySelector('.tmx-cc__b--no').addEventListener('click',function(){deny();b.remove();});}
+    if(document.body)show();else document.addEventListener('DOMContentLoaded',show);
+  })();
+  </script>
+<!-- TMX-ANALYTICS END -->
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Internal GNSS fault (code 82): what it means and what to do | TAGRA</title>
+<meta content="Tachograph error code 82, internal GNSS fault: what it means, what VDO DTCO 4.1 and Stoneridge SE5000 manuals say to do, and whether you can keep driving." name="description"/>
+<link href="https://tagra.app/articles/tachograph-error-82-internal-gnss-fault/" rel="canonical"/>
+<meta content="Internal GNSS fault (code 82): what it means and what to do | TAGRA" property="og:title"/><meta content="Tachograph error code 82, internal GNSS fault: what it means, what VDO DTCO 4.1 and Stoneridge SE5000 manuals say to do, and whether you can keep driving." property="og:description"/>
+<meta content="https://tagra.app/assets/img/hero-poster.jpg" property="og:image"/>
+<meta content="https://tagra.app/articles/tachograph-error-82-internal-gnss-fault/" property="og:url"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    a{color:var(--blue-mid);text-decoration:none;}
+    a:hover{color:var(--blue-dark);text-decoration:underline;text-underline-offset:.18em;}
+    p+p{margin-top:14px;}
+    ul,ol{padding-left:22px;}
+    li{margin:6px 0;line-height:1.65;}
+    li::marker{color:var(--blue-mid);}
+    strong{font-weight:700;color:var(--text-strong);}
+    #scroll-progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--green-brand),var(--blue-light));width:0%;z-index:9999;pointer-events:none;}
+.nav-inner{margin:0 auto;padding:0 24px;height:100%;display:flex;align-items:center;justify-content:space-between;gap:24px;}
+    .nav-links{display:flex;align-items:center;gap:4px;list-style:none;}
+    .nav-links a{font-size:15px;font-weight:500;color:var(--text);padding:8px 12px;border-radius:8px;text-decoration:none;transition:background .15s;}
+    .nav-links a:hover{background:var(--bg-apple);color:var(--blue-mid);}
+    .nav-links .nav-cta a{background:var(--green-cta);color:#fff!important;border-radius:99px;padding:8px 18px;font-weight:600;}
+    .nav-links .nav-cta a:hover{background:var(--green-brand);text-decoration:none;}
+    .nav-lang{display:flex;align-items:center;gap:4px;font-size:14px;font-weight:600;}
+    .nav-lang a{padding:5px 8px;border-radius:6px;color:var(--text2);text-decoration:none;transition:background .15s;}
+    .nav-lang a:hover,.nav-lang a.active{background:var(--bg-apple);color:var(--blue-mid);}
+    .nav-lang span{color:var(--border);}
+    .nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:8px;}
+    .nav-toggle span{display:block;width:22px;height:2px;background:var(--text);margin:5px 0;border-radius:2px;}
+    @media(max-width:900px){.nav-links{display:none;}.nav-toggle{display:block;}.nav-links.open{display:flex;flex-direction:column;align-items:flex-start;gap:2px;position:absolute;top:var(--nav-h);left:0;right:0;background:rgba(255,255,255,.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:12px 24px 20px;}}
+    .art-hero{background:linear-gradient(180deg,var(--bg-apple) 0%,#fff 100%);padding:calc(var(--nav-h,64px) + 28px) 0 44px;}
+    .art-wrap{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 24px;}
+    .breadcrumb{font-size:14px;color:var(--text2);margin-bottom:18px;}
+    .breadcrumb a{color:var(--text2);text-decoration:none;}
+    .breadcrumb a:hover{color:var(--blue-mid);}
+    .breadcrumb span{margin:0 5px;color:var(--border);}
+    .eyebrow{font-size:14px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--green-brand);margin-bottom:10px;}
+    .art-title{font-size:38px;line-height:1.15;font-weight:800;margin-bottom:16px;letter-spacing:-.02em;padding-bottom:0.08em;color:var(--blue-dark);}
+    .art-title .grad{background:linear-gradient(90deg,var(--blue-dark) 0%,var(--blue-light) 50%,var(--blue-bright) 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;}
+    @media(max-width:700px){.art-title{font-size:26px;}}
+    .art-meta{font-size:15px;color:var(--text2);padding-bottom:24px;border-bottom:1px solid var(--border);display:flex;gap:20px;flex-wrap:wrap;}
+    .art-body{padding:44px 0 60px;}
+    .art-body h2 {
+      font-size: 36px; font-weight: 800;
+      line-height: 1.1; letter-spacing: 0;
+      text-transform: uppercase;
+      color: var(--blue-mid, #134a8e);
+      background: linear-gradient(90deg, var(--blue-dark, #0b2c4a) 0%, var(--blue-light, #1f5fa6) 50%, var(--blue-bright, #3a6ff0) 100%);
+      -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block; max-width: 100%; margin-bottom: 14px;
+      padding: 0.12em 0.15em 0.08em 0;
+    }
+    .art-body h3{font-size:20px;font-weight:700;color:var(--text-strong);margin:28px 0 10px;}
+    .art-body p{margin-bottom:18px;}
+    .art-body ul,.art-body ol{margin-bottom:20px;}
+    /* CALLOUT */
+    .callout--blue{background:var(--bg-apple);border-left:4px solid var(--blue-mid);}
+    .callout-title{font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.07em;color:var(--blue-mid);margin-bottom:8px;}
+    .callout--green .callout-title{color:var(--green-brand);}
+    /* FAQ */
+    .faq-item{border-top:1px solid var(--border);padding:14px 0;}
+    .faq-item:last-child{border-bottom:1px solid var(--border);}
+    .faq-item summary{list-style:none;cursor:pointer;font-weight:700;font-size:18px;line-height:1.4;padding-right:32px;position:relative;color:var(--text-strong);}
+    .faq-item summary::-webkit-details-marker{display:none;}
+    .faq-item summary::after{content:"+";position:absolute;right:0;top:50%;transform:translateY(-50%);font-size:26px;font-weight:300;color:var(--green-cta);}
+    .faq-item[open] summary::after{content:"−";}
+    .faq-answer p+p{margin-top:10px;}
+    /* RELATED */
+    .related{border-top:1px solid var(--border);padding-top:36px;margin-top:36px;}
+    .related-title{font-size:20px;font-weight:800;color:var(--text-strong);margin-bottom:18px;}
+    .related-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;}
+    @media(max-width:820px){.related-grid{grid-template-columns:1fr;}}
+    .related-card{display:block;padding:20px;border:1px solid var(--border);border-radius:var(--radius);text-decoration:none!important;transition:border-color .15s,transform .15s;}
+    .related-card:hover{border-color:var(--blue-mid);transform:translateY(-2px);}
+    .related-card-eye{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--blue-mid);margin-bottom:6px;}
+    .related-card-title{font-size:16px;font-weight:700;color:var(--text-strong);line-height:1.4;}
+    /* ALSO DISPLAYED AS */
+    .lang-list{list-style:none;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:10px 24px;}
+    @media(max-width:580px){.lang-list{grid-template-columns:1fr;}}
+    .lang-list li{margin:0;padding:10px 14px;background:#fff;border:1px solid var(--border);border-radius:10px;font-size:15px;}
+    .lang-list li span{color:var(--text2);font-size:13px;}
+  </style>
+<link href="/assets/css/tokens.css" rel="stylesheet"/>
+<link href="/assets/css/base.css" rel="stylesheet"/>
+<link href="/assets/css/components.css" rel="stylesheet"/>
+<link href="/assets/css/nav.css" rel="stylesheet"/>
+<script defer="" src="/assets/js/nav.js?v=20260816b"></script>
+<link href="/assets/css/footer.css" rel="stylesheet"/>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Internal GNSS fault — tachograph error code 82", "description": "Tachograph error code 82, internal GNSS fault: what it means, what VDO DTCO 4.1 and Stoneridge SE5000 manuals say to do, and whether you can keep driving.", "image": "https://tagra.app/assets/img/hero-poster.jpg", "author": {"@type": "Organization", "name": "Truck Data Technology, s.r.o.", "url": "https://www.tdt.cz"}, "publisher": {"@type": "Organization", "name": "Truck Data Technology, s.r.o.", "logo": {"@type": "ImageObject", "url": "https://tagra.app/assets/img/logo.svg"}}, "datePublished": "2026-09-03T09:00:00+02:00", "dateModified": "2026-09-03T09:00:00+02:00", "inLanguage": "en", "mainEntityOfPage": "https://tagra.app/articles/tachograph-error-82-internal-gnss-fault/", "articleSection": "Driver knowledge base", "wordCount": 755}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "TAGRA", "item": "https://tagra.app/"}, {"@type": "ListItem", "position": 2, "name": "Articles", "item": "https://tagra.app/articles/"}, {"@type": "ListItem", "position": 3, "name": "Error 82", "item": "https://tagra.app/articles/tachograph-error-82-internal-gnss-fault/"}]}</script><noscript><style>.anim-up,.fly-left,.fly-right{opacity:1!important;transform:none!important}</style></noscript></head>
+<body class="art-page">
+<a class="skip-link" href="#main-content">Skip to content</a>
+<div aria-hidden="true" id="scroll-progress"></div>
+<nav aria-label="Main navigation" class="site-nav" role="navigation">
+<div class="nav-inner">
+<a aria-label="TAGRA – Home" class="nav-logo" href="/"><img alt="TAGRA" height="32" src="/assets/img/logo-light.svg?v=20260513zh" style="display:block;height:32px;width:auto;" width="140"/></a>
+<ul class="nav-links" id="nav-links">
+<li><a href="/fleet/">For companies</a></li>
+<li><a href="/driver/">For drivers</a></li>
+<li><a href="/enforcement/">Enforcement</a></li>
+<li><a aria-current="page" href="/articles/">Articles</a></li><li><a href="/manuals/">Manuals</a></li>
+<li><a href="/faq/">FAQ</a></li>
+<li><a href="/contact/">Contact</a></li>
+<li class="nav-cta-li"><a class="nav-cta" href="/try/?audience=fleet">Try 30 days free</a></li>
+</ul>
+<details class="nav-lang">
+<summary aria-label="Language: EN">EN</summary>
+<div class="nav-lang-menu" role="menu">
+<a aria-current="page" class="active" href="/" hreflang="en">English</a><a href="/de/" hreflang="de">Deutsch</a><a href="/pl/" hreflang="pl">Polski</a><a href="/el/" hreflang="el">Ελληνικά</a><a href="/hu/" hreflang="hu">Magyar</a><a href="/it/articoli/" hreflang="it">Italiano</a><a href="https://www.tdt.cz/" hreflang="cs" rel="noopener" target="_blank">Čeština</a><a href="https://www.tdt.sk/" hreflang="sk" rel="noopener" target="_blank">Slovenčina</a></div>
+</details>
+<a class="nav-cta-mobile" href="/try/?audience=fleet">Try free</a>
+<button aria-expanded="false" aria-label="Toggle menu" class="nav-mobile-toggle" id="nav-toggle">
+<span></span><span></span><span></span>
+</button>
+</div>
+</nav>
+<header class="art-hero">
+<div class="art-wrap">
+<nav aria-label="Breadcrumb" class="breadcrumb"><a href="/">TAGRA</a><span>›</span><a href="/articles/">Articles</a><span>›</span><span>Error 82</span></nav>
+<div class="eyebrow anim-up">Error code · VDO DTCO 4.1 &amp; Stoneridge SE5000</div>
+<h1 class="art-title"><span class="grad">Internal GNSS fault — tachograph error code 82</span></h1>
+<div class="art-meta"><span>Truck Data Technology</span><span>Updated September 2026</span><span>3 min read</span></div>
+<p class="hero-lede anim-up">Code 82 means your tachograph has found an internal fault affecting its GNSS positioning receiver.</p><div class="bento--hero"><div class="hero-card"><div class="eyebrow">Severity</div><div class="big">Medium</div><p>Requires acknowledgement and a workshop consultation.</p></div><div class="hero-card hero-card--blue"><div class="eyebrow">Affected part</div><div class="big">GNSS receiver</div><p>The device that fixes your tachograph's position for the record.</p></div><div class="hero-card"><div class="eyebrow">Stoneridge DTC</div><div class="big">000C31</div><p>Power-cycle, test-drive, then replace if the fault persists.</p></div></div>
+</div>
+</header>
+<main id="main-content"><section class="band"><div class="container art-body"><div class="eyebrow anim-up">What it means</div><h2 class="h2-grad anim-up">What this code means</h2>
+<p>Modern digital tachographs use a built-in <strong>GNSS receiver</strong> to record the vehicle's position at the start and end of a shift, and at set intervals during driving. Code 82, <strong>internal GNSS fault</strong>, means the tachograph has detected an internal problem with this receiver — not simply a lost signal.</p>
+<p>According to the manual, the severity of this fault is <strong>Medium</strong>. On a Stoneridge SE5000, the same fault is logged in the workshop diagnostic tool as <strong>DTC 000C31</strong>.</p>
+<div class="callout callout--blue anim-up">
+<div class="callout-title">Don't confuse this with code 83</div>
+<p style="margin:0">Code 82 means the GNSS receiver or antenna itself is faulty. Code 83, <a href="/articles/tachograph-error-83-gnss-is-missing/">GNSS is missing</a>, means the receiver is working but simply isn't getting a position signal. See the full comparison on that page.</p>
+</div></div></section><section class="band band--blue"><div class="container art-body"><div class="info-card anim-up">
+<span class="badge">What to do now</span>
+<h2 class="h2-grad anim-up" style="font-size:28px;">What to do now</h2>
+<p>The manual gives one instruction for code 82:</p>
+<ol>
+<li><strong>Acknowledge the message</strong> on the tachograph display.</li>
+<li><strong>Consult an authorised workshop.</strong></li>
+</ol>
+<p style="margin-top:14px;"><strong>If your unit is a Stoneridge SE5000:</strong> the workshop procedure for DTC 000C31 is to power-cycle the tachograph and carry out a test drive. If the fault persists, the receiver must be replaced.</p>
+</div>
+<div class="cta-box">
+<h3>Your tachograph logs this fault — TAGRA reads it</h3>
+<p>TAGRA doesn't repair a GNSS fault — only an authorised workshop can replace a faulty receiver or antenna. But once code 82 is written to the tachograph's memory and to your driver card, TAGRA finds it in your downloaded data, evaluates it and documents it — exactly what you need at a roadside check, and when you raise a warranty claim with the workshop.</p>
+<a class="cta-btn" href="/try/?audience=fleet&amp;src=error-82">Try TAGRA free for 30 days →</a>
+<p style="font-size:14px;color:rgba(255,255,255,.7);margin-top:2px;">or see <a href="/fleet/" style="color:#fff;text-decoration:underline;">TAGRA for fleets</a> · <a href="/driver/" style="color:#fff;text-decoration:underline;">TAGRA Trucker for drivers</a></p>
+</div></div></section><section class="band"><div class="container art-body"><div class="eyebrow anim-up">Why it happens</div><h2 class="h2-grad anim-up">Why it happens</h2>
+<p>According to the manual, code 82 has three possible causes:</p>
+<ul>
+<li>an <strong>internal fault</strong> within the tachograph's own GNSS device;</li>
+<li>a <strong>short circuit</strong> on the external GNSS antenna, if one is fitted; or</li>
+<li><strong>no connection</strong> to the external GNSS antenna.</li>
+</ul>
+<p>On a Stoneridge SE5000 (DTC 000C31), the same underlying problem is described as the internal GNSS receiver having stopped providing position data.</p></div></section><section class="band band--gray"><div class="container art-body"><div class="eyebrow anim-up">Severity</div><h2 class="h2-grad anim-up">Can you keep driving?</h2>
+<p>The manual classifies code 82 as <strong>Medium severity</strong>. It requires you to acknowledge the message and consult an authorised workshop — it is not a fault that stops you where you are.</p>
+<p>Because it affects the receiver responsible for the tachograph's position data, don't let it run indefinitely: book the workshop check promptly rather than waiting for a recurring problem to resolve itself. On a Stoneridge unit, a power-cycle and test drive is the first step; if the fault returns, the receiver needs replacing.</p></div></section><section class="band"><div class="container art-body"><div class="eyebrow anim-up">Also displayed as</div><h2 class="h2-grad anim-up">Also displayed as</h2>
+<p>Drivers across Europe see the same fault under different on-screen wording. These are the real search terms used for code 82:</p>
+<ul class="lang-list">
+<li>Defect intern GNSS 82 <span>— Romanian</span></li>
+<li>Błąd wewnętrzny GNSS 82 <span>— Polish</span></li>
+<li>Belső GNSS zavar 82 <span>— Hungarian</span></li>
+<li>Falha GNSS interna 82 <span>— Portuguese</span></li>
+<li>Fallo GNSS 82 <span>— Spanish</span></li>
+<li>Intern GNSS fejl 82 <span>— Danish</span></li>
+<li>Digitaler Tachograph Fehler 82 <span>— German</span></li>
+</ul></div></section><section class="band band--gray"><div class="container art-body"><div class="eyebrow anim-up">Related codes</div><h2 class="h2-grad anim-up">Related codes</h2>
+<div class="related-grid">
+<a class="related-card anim-up" href="/articles/tachograph-error-83-gnss-is-missing/">
+<div class="related-card-eye">Error 83</div>
+<h3 class="related-card-title">GNSS is missing — tachograph error code 83</h3>
+</a>
+<a class="related-card anim-up" href="/articles/tachograph-error-84-internal-dsrc-fault/">
+<div class="related-card-eye">Error 84</div>
+<h3 class="related-card-title">Internal DSRC fault — tachograph error code 84</h3>
+</a>
+<a class="related-card anim-up" href="/articles/digital-tachograph-symbols/">
+<div class="related-card-eye">Full reference</div>
+<h3 class="related-card-title">Tachograph symbols &amp; error codes: a driver's guide</h3>
+</a>
+</div></div></section><section class="band"><div class="container art-body"><div class="eyebrow anim-up">Questions & answers</div><h2 class="h2-grad anim-up">Frequently asked questions</h2>
+<details class="faq-item"><summary>What is the difference between code 82 and code 83?</summary>
+<div class="faq-answer"><p>Code 82 means the GNSS receiver or its antenna is itself faulty — an internal fault, a short circuit on the external antenna, or no connection to it. Code 83 means the receiver is working but has received no position data for three hours of cumulative driving. See <a href="/articles/tachograph-error-83-gnss-is-missing/">GNSS is missing (code 83)</a> for details.</p></div>
+</details>
+<details class="faq-item"><summary>Can I keep driving with an internal GNSS fault (code 82)?</summary>
+<div class="faq-answer"><p>The manual rates it Medium severity: acknowledge the message and consult an authorised workshop. It is not a fault that requires you to stop immediately, but you should book the check promptly rather than let it recur.</p></div>
+</details>
+<details class="faq-item"><summary>What does DTC 000C31 mean on a Stoneridge SE5000?</summary>
+<div class="faq-answer"><p>DTC 000C31 is the Stoneridge SE5000 workshop code for an internal GNSS fault — the internal GNSS receiver has stopped providing position data. The procedure is to power-cycle the tachograph and test-drive; if the fault persists, the receiver must be replaced.</p></div>
+</details>
+<details class="faq-item"><summary>What causes an internal GNSS fault on a digital tachograph?</summary>
+<div class="faq-answer"><p>According to the manual, three things can trigger code 82: an internal fault in the tachograph's own GNSS device, a short circuit on the external GNSS antenna (if fitted), or no connection to the external GNSS antenna.</p></div>
+</details>
+</div></section></main>
+<footer class="site-footer" role="contentinfo">
+<div class="footer-inner">
+<div>
+<div class="footer-logo"><img alt="TAGRA" height="20" src="/assets/img/logo-dark.svg?v=20260513zh" width="88" loading="lazy"/></div>
+<p class="footer-desc">Professional tachograph analysis software. Driver card download, digital tachograph analysis, EU drivers' hours and HGV Working Time Directive. Developed by Truck Data Technology, s.r.o.</p>
+</div>
+<div class="footer-col">
+<h2 class="footer-col-title">Product</h2>
+<ul>
+<li><a href="/fleet/">For fleet operators</a></li>
+<li><a href="/driver/">For professional drivers</a></li>
+<li><a href="/enforcement/">For enforcement</a></li>
+<li><a href="/how-it-works/">How it works</a></li>
+<li><a href="/for-whom/">For whom</a></li>
+<li><a href="/faq/">FAQ</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h2 class="footer-col-title">Resources</h2>
+<ul>
+<li><a href="/articles/">Articles</a></li><li><a href="/manuals/">Manuals</a></li>
+<li><a href="/articles/digital-tachograph-symbols/">Tachograph symbols</a></li>
+<li><a href="/integrations/dkv-live/">DKV LIVE®</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h2 class="footer-col-title">Company</h2>
+<ul>
+<li><a href="/contact/">Contact</a></li>
+<li><a href="https://www.tdt.cz" rel="noopener" target="_blank">Truck Data Technology</a></li>
+<li><a href="/">English</a></li><li><a href="/de/">Deutsch</a></li><li><a href="/pl/">Polski</a></li><li><a href="/el/">Ελληνικά</a></li><li><a href="/hu/">Magyar</a></li><li><a href="/it/">Italiano</a></li><li><a href="https://www.tdt.cz/" rel="noopener" target="_blank">Čeština</a></li><li><a href="https://www.tdt.sk/" rel="noopener" target="_blank">Slovenčina</a></li></ul>
+</div>
+</div>
+<div class="footer-bottom">
+<span>© 2026 Truck Data Technology, s.r.o. All rights reserved.</span>
+<span><a href="/contact/">Contact</a> · <a href="https://www.tdt.cz" rel="noopener" target="_blank">tdt.cz</a> · <a href="/privacy/">Privacy &amp; cookies</a></span>
+</div>
+</footer>
+<script>(function(){var bar=document.getElementById('scroll-progress');if(bar)window.addEventListener('scroll',function(){var t=document.documentElement.scrollTop||document.body.scrollTop;var h=document.documentElement.scrollHeight-document.documentElement.clientHeight;bar.style.width=(t/h*100)+'%';},{passive:true});var toggle=document.getElementById('nav-toggle'),links=document.getElementById('nav-links');if(toggle&&links)toggle.addEventListener('click',function(){var o=links.classList.toggle('open');toggle.setAttribute('aria-expanded',o);});})();</script><script>
+/* INTERSECTION OBSERVER – ANIMATIONS */
+if ('IntersectionObserver' in window) {
+  var io = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) {
+      if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.anim-up, .fly-left, .fly-right').forEach(function(el) { io.observe(el); });
+} else {
+  document.querySelectorAll('.anim-up, .fly-left, .fly-right').forEach(function(el) { el.classList.add('on'); });
+}
+</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the difference between code 82 and code 83?","acceptedAnswer":{"@type":"Answer","text":"Code 82 means the GNSS receiver or its antenna is itself faulty — an internal fault, a short circuit on the external antenna, or no connection to it. Code 83 means the receiver is working but has received no position data for three hours of cumulative driving."}},{"@type":"Question","name":"Can I keep driving with an internal GNSS fault (code 82)?","acceptedAnswer":{"@type":"Answer","text":"The manual rates it Medium severity: acknowledge the message and consult an authorised workshop. It is not a fault that requires you to stop immediately, but you should book the check promptly rather than let it recur."}},{"@type":"Question","name":"What does DTC 000C31 mean on a Stoneridge SE5000?","acceptedAnswer":{"@type":"Answer","text":"DTC 000C31 is the Stoneridge SE5000 workshop code for an internal GNSS fault — the internal GNSS receiver has stopped providing position data. The procedure is to power-cycle the tachograph and test-drive; if the fault persists, the receiver must be replaced."}},{"@type":"Question","name":"What causes an internal GNSS fault on a digital tachograph?","acceptedAnswer":{"@type":"Answer","text":"According to the manual, three things can trigger code 82: an internal fault in the tachograph's own GNSS device, a short circuit on the external GNSS antenna (if fitted), or no connection to the external GNSS antenna."}}]}</script>
+</body>
+</html>
