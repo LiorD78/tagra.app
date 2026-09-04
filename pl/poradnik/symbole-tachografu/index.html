@@ -706,8 +706,8 @@
 <thead><tr><th style="width:24%;">Numer wyświetlacza</th><th style="width:58%;">Znaczenie</th><th style="width:18%;">Ważność</th></tr></thead>
 <tbody>
 <tr><td>34</td><td>Wysuwanie karty niemożliwe</td><td><span class="sev sev-med">Średni</span></td></tr>
-<tr><td>80</td><td>Konflikt ruchu pojazdu</td><td><span class="sev sev-crit">Krytyczny</span></td></tr>
-<tr><td>82</td><td>x błąd wewn. GNSS</td><td><span class="sev sev-med">Średni</span></td></tr>
+<tr><td>80</td><td><a href="/pl/poradnik/tachograf-blad-80-konflikt-ruchu/">Konflikt ruchu pojazdu → co zrobić</a></td><td><span class="sev sev-crit">Krytyczny</span></td></tr>
+<tr><td>82</td><td><a href="/pl/poradnik/tachograf-blad-82-gnss/">x błąd wewn. GNSS → co zrobić</a></td><td><span class="sev sev-med">Średni</span></td></tr>
 <tr><td>83</td><td>Brak informacji o pozycji z odbiornika GNSS</td><td><span class="sev sev-med">Średni</span></td></tr>
 <tr><td>84</td><td>x błąd wewn. DSRC</td><td><span class="sev sev-low">Niski</span></td></tr>
 <tr><td>85</td><td>Błąd połączenia z urządzeniem do łączności na odległość</td><td><span class="sev sev-low">Niski</span></td></tr>
@@ -715,7 +715,7 @@
 <tr><td>87</td><td>Usterka czujnika</td><td><span class="sev sev-high">Wysoki</span></td></tr>
 <tr><td>96</td><td>Anomalia GNSS (nieprawidłowości GNSS · anty-spoofing OSNMA)</td><td><span class="sev sev-high">Wysoki</span></td></tr>
 <tr><td>97</td><td>Wewnętrzna usterka czujnika</td><td><span class="sev sev-high">Wysoki</span></td></tr>
-<tr><td>98</td><td>Usterka ITS / Bluetooth</td><td><span class="sev sev-low">Niski</span></td></tr>
+<tr><td>98</td><td><a href="/pl/poradnik/tachograf-blad-98-its/">Usterka ITS / Bluetooth → co zrobić</a></td><td><span class="sev sev-low">Niski</span></td></tr>
 <tr><td>67, 99</td><td>Niespójny zapis</td><td><span class="sev sev-med">Średni</span></td></tr>
 <tr><td>68–72</td><td>Karta / usterka wewnętrzna, gniazdo 2 (drugi kierowca)</td><td>Różne</td></tr>
 <tr><td>74–75</td><td>Przerwa! gniazdo 2 (drugi kierowca) — 4 h 30 / 4 h 15</td><td><span class="sev sev-high">Wysoki</span></td></tr>
@@ -726,6 +726,7 @@
 </tbody>
 </table><p><strong>Jak kierowcy zwykle szukają tych kodów:</strong> motion conflict 80, internal GNSS fault 82, missing GNSS signal 83, internal DSRC fault 84, DSRC comm error 85, błąd czujnika 87, GNSS anomaly 96, ITS fault 98, kody błędów tachografu cyfrowego VDO. Treść na wyświetlaczu różni się w zależności od producenta — VDO DTCO, Stoneridge SE5000, Actia SmarTach i EFAS opisują to samo zdarzenie inaczej.</p>
 </div>
+<p>Szczegółowe instrukcje dla najczęstszych usterek: <a href="/pl/poradnik/tachograf-blad-98-its/">awaria ITS / Bluetooth (98)</a>, <a href="/pl/poradnik/tachograf-blad-82-gnss/">błąd wewnętrzny GNSS (82)</a> i <a href="/pl/poradnik/tachograf-blad-80-konflikt-ruchu/">konflikt ruchu pojazdu (80)</a>.</p>
 <h3>Co faktycznie trafia do pobranych danych (EventFaultType)</h3>
 <p style="font-size:14px;color:var(--text2);margin-bottom:12px;">Nie każdy komunikat z wyświetlacza trafia do pobranych danych. Tylko komunikaty z <strong>EventFaultType</strong> zdefiniowanym w Dodatku 1 do Załącznika IC rozporządzenia (UE) 2016/799 są zapisywane w pamięci tachografu, pojawiają się na wydruku i w raporcie z analizy. Komunikaty operacyjne i dotyczące czasu pracy widoczne są tylko na wyświetlaczu.</p>
 <div class="code-table-wrap">
