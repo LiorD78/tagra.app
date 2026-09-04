@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="fr">
 <head>
 <!-- TMX-ANALYTICS START -->
 <meta content="7F7894081BE7FBB245FF03AF8810B22F" name="msvalidate.01"/>
@@ -44,13 +44,13 @@
     function lc(){var l=(document.documentElement.getAttribute('lang')||'en').toLowerCase().split('-')[0];
       var m={cz:'cs',cs:'cs',sk:'sk',de:'de',pl:'pl',gr:'el',el:'el',hu:'hu',en:'en'};return m[l]||'en';}
     var T={
-      hu:{t:'Analitikai s\u00fctiket haszn\u00e1lunk (Google Analytics, Microsoft Clarity, Smartsupp), hogy meg\u00e9rts\u00fck a webhely haszn\u00e1lat\u00e1t. Csak az \u00d6n hozz\u00e1j\u00e1rul\u00e1s\u00e1val t\u00f6lt\u0151dnek be.',a:'Elfogadom',r:'Elutas\u00edtom',p:'Adatv\u00e9delem \u00e9s s\u00fctik'},
+      hu:{t:'Analitikai sütiket használunk (Google Analytics, Microsoft Clarity, Smartsupp), hogy megértsük a webhely használatát. Csak az Ön hozzájárulásával töltődnek be.',a:'Elfogadom',r:'Elutasítom',p:'Adatvédelem és sütik'},
       en:{t:'We use analytics cookies (Google Analytics, Microsoft Clarity, Smartsupp) to understand site usage. They load only with your consent.',a:'Accept',r:'Reject',p:'Privacy &amp; cookies'},
-      cs:{t:'Pou\u017e\u00edv\u00e1me analytick\u00e9 cookies (Google Analytics, Microsoft Clarity, Smartsupp) k pochopen\u00ed pou\u017e\u00edv\u00e1n\u00ed webu. Na\u010dtou se jen s va\u0161\u00edm souhlasem.',a:'P\u0159ijmout',r:'Odm\u00edtnout',p:'Soukrom\u00ed a cookies'},
-      sk:{t:'Pou\u017e\u00edvame analytick\u00e9 cookies (Google Analytics, Microsoft Clarity, Smartsupp) na pochopenie pou\u017e\u00edvania webu. Na\u010d\u00edtaj\u00fa sa len s va\u0161\u00edm s\u00fahlasom.',a:'Prija\u0165',r:'Odmietnu\u0165',p:'S\u00fakromie a cookies'},
+      cs:{t:'Používáme analytické cookies (Google Analytics, Microsoft Clarity, Smartsupp) k pochopení používání webu. Načtou se jen s vaším souhlasem.',a:'Přijmout',r:'Odmítnout',p:'Soukromí a cookies'},
+      sk:{t:'Používame analytické cookies (Google Analytics, Microsoft Clarity, Smartsupp) na pochopenie používania webu. Načítajú sa len s vaším súhlasom.',a:'Prijať',r:'Odmietnuť',p:'Súkromie a cookies'},
       de:{t:'Wir verwenden Analyse-Cookies (Google Analytics, Microsoft Clarity, Smartsupp), um die Nutzung der Website zu verstehen. Sie werden nur mit Ihrer Einwilligung geladen.',a:'Akzeptieren',r:'Ablehnen',p:'Datenschutz &amp; Cookies'},
-      pl:{t:'U\u017cywamy plik\u00f3w cookie do analityki (Google Analytics, Microsoft Clarity, Smartsupp), aby zrozumie\u0107 korzystanie z witryny. \u0141aduj\u0105 si\u0119 tylko za Twoj\u0105 zgod\u0105.',a:'Akceptuj',r:'Odrzu\u0107',p:'Prywatno\u015b\u0107 i cookies'},
-      el:{t:'\u03a7\u03c1\u03b7\u03c3\u03b9\u03bc\u03bf\u03c0\u03bf\u03b9\u03bf\u03cd\u03bc\u03b5 cookies \u03b1\u03bd\u03ac\u03bb\u03c5\u03c3\u03b7\u03c2 (Google Analytics, Microsoft Clarity, Smartsupp) \u03b3\u03b9\u03b1 \u03bd\u03b1 \u03ba\u03b1\u03c4\u03b1\u03bd\u03bf\u03ae\u03c3\u03bf\u03c5\u03bc\u03b5 \u03c4\u03b7 \u03c7\u03c1\u03ae\u03c3\u03b7. \u03a6\u03bf\u03c1\u03c4\u03ce\u03bd\u03bf\u03bd\u03c4\u03b1\u03b9 \u03bc\u03cc\u03bd\u03bf \u03bc\u03b5 \u03c4\u03b7 \u03c3\u03c5\u03b3\u03ba\u03b1\u03c4\u03ac\u03b8\u03b5\u03c3\u03ae \u03c3\u03b1\u03c2.',a:'\u0391\u03c0\u03bf\u03b4\u03bf\u03c7\u03ae',r:'\u0391\u03c0\u03cc\u03c1\u03c1\u03b9\u03c8\u03b7',p:'\u0391\u03c0\u03cc\u03c1\u03c1\u03b7\u03c4\u03bf &amp; cookies'}
+      pl:{t:'Używamy plików cookie do analityki (Google Analytics, Microsoft Clarity, Smartsupp), aby zrozumieć korzystanie z witryny. Ładują się tylko za Twoją zgodą.',a:'Akceptuj',r:'Odrzuć',p:'Prywatność i cookies'},
+      el:{t:'Χρησιμοποιούμε cookies ανάλυσης (Google Analytics, Microsoft Clarity, Smartsupp) για να κατανοήσουμε τη χρήση. Φορτώνονται μόνο με τη συγκατάθεσή σας.',a:'Αποδοχή',r:'Απόρριψη',p:'Απόρρητο &amp; cookies'}
     };
     function loadClarity(){if(!CL||window.__tmxCl)return;window.__tmxCl=1;
       (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
@@ -63,7 +63,7 @@
     if(saved==='granted'){grant();return;} if(saved==='denied'){return;}
     function show(){var tx=T[lc()]||T.en;
       var b=document.createElement('div');b.className='tmx-cc';b.setAttribute('role','dialog');b.setAttribute('aria-live','polite');
-      b.innerHTML='<div class="tmx-cc__txt">'+tx.t+' <a href="/de/datenschutz/">'+tx.p+'</a></div>'+
+      b.innerHTML='<div class="tmx-cc__txt">'+tx.t+' <a href="/privacy/">'+tx.p+'</a></div>'+
         '<div class="tmx-cc__btns"><button type="button" class="tmx-cc__b tmx-cc__b--no">'+tx.r+'</button>'+
         '<button type="button" class="tmx-cc__b tmx-cc__b--yes">'+tx.a+'</button></div>';
       document.body.appendChild(b);
@@ -75,25 +75,21 @@
 <!-- TMX-ANALYTICS END -->
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Fahrerkarte auslesen &amp; Tachographen-Software | TAGRA</title>
-<meta content="Gesetzeskonforme Software: Fahrerkarte auslesen, archivieren &amp; auswerten. Vermeiden Sie BALM-Strafen. Lenk- und Ruhezeiten im Blick. 30 Tage gratis!" name="description"/>
+<title>TAGRA – Logiciel d'analyse du chronotachygraphe</title>
+<meta content="TAGRA aide les entreprises de transport et les conducteurs professionnels à respecter la réglementation européenne sur le chronotachygraphe. Évaluation, archivage et reporting. Essai gratuit de 30 jours." name="description"/>
 <meta content="#0b2c4a" name="theme-color"/>
 <link href="/manifest.json" rel="manifest"/>
-<link href="https://tagra.app/de/" rel="canonical"/>
-<link href="https://tagra.app/" hreflang="en" rel="alternate"/>
-<link href="https://tagra.app/de/" hreflang="de" rel="alternate"/>
-<link href="https://tagra.app/pl/" hreflang="pl" rel="alternate"/>
-<link href="https://tagra.app/el/" hreflang="el" rel="alternate"/>
-<link href="https://tagra.app/hu/" hreflang="hu" rel="alternate"/><link href="https://tagra.app/it/" hreflang="it" rel="alternate"/><link href="https://tagra.app/fr/" hreflang="fr" rel="alternate"/><link href="https://tagra.app/" hreflang="x-default" rel="alternate"/>
-<meta content="Fahrerkarte auslesen &amp; Tachographen-Software | TAGRA" property="og:title"/>
-<meta content="Gesetzeskonforme Software: Fahrerkarte auslesen, archivieren &amp; auswerten. Vermeiden Sie BALM-Strafen. Lenk- und Ruhezeiten im Blick. 30 Tage gratis!" property="og:description"/>
+<link href="https://tagra.app/fr/" rel="canonical"/>
+<meta content="TAGRA – Logiciel d'analyse du chronotachygraphe" property="og:title"/>
+<meta content="TAGRA aide les entreprises de transport et les conducteurs professionnels à respecter la réglementation européenne sur le chronotachygraphe. Essai gratuit de 30 jours." property="og:description"/>
 <meta content="https://cdn.truckmall.cz/images/0/ff1952bcc480ca3d/1/tagra-1-vyhodnoceni-dat-z-tachografu.webp" property="og:image"/>
-<meta content="TAGRA Tachographen-Auswertungssoftware – Fahrer- und Fahrzeugbericht" property="og:image:alt"/>
+<meta content="Logiciel d'analyse du chronotachygraphe TAGRA – rapport de conformité des conducteurs et véhicules" property="og:image:alt"/>
 <meta content="website" property="og:type"/>
 <meta content="TAGRA" property="og:site_name"/>
+<meta content="fr_FR" property="og:locale"/>
 <meta content="https://cdn.truckmall.cz/images/0/ff1952bcc480ca3d/1/tagra-1-vyhodnoceni-dat-z-tachografu.webp" name="twitter:image"/>
-<meta content="TAGRA Tachographen-Auswertungssoftware – Fahrer- und Fahrzeugbericht" name="twitter:image:alt"/>
-<meta content="https://tagra.app/de/" property="og:url"/>
+<meta content="Logiciel d'analyse du chronotachygraphe TAGRA – rapport de conformité des conducteurs et véhicules" name="twitter:image:alt"/>
+<meta content="https://tagra.app/fr/" property="og:url"/>
 <meta content="summary_large_image" name="twitter:card"/>
 <style>
     /* ─── TOKENS ───────────────────────────────────────────────────── */
@@ -353,26 +349,26 @@
     }
 
     /* ─── BENTO GRID (reused from /fleet/) ─────────────────────────── */
-    
+
     .bc {
       background: var(--bg-white); border-radius: var(--radius);
       padding: 32px; border: 1px solid var(--border);
       position: relative; overflow: hidden;
     }
-    
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
+
     .bc-eyebrow {
       font-size: 12px; font-weight: 700; letter-spacing: .08em;
       text-transform: uppercase; color: var(--blue-mid);
       margin-bottom: 8px; display: block;
     }
-    
-    
+
+
     .bignum {
       font-size: 110px; font-weight: 800; line-height: 1;
       letter-spacing: -.04em; color: rgba(19,74,142,.06);
@@ -441,13 +437,13 @@
       mask-image: linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%);
       -webkit-mask-image: linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%);
     }
-    
+
     .rev-rail::-webkit-scrollbar { display: none; }
     .rev-rail:active { cursor: grabbing; }
-    
-    
-    
-    
+
+
+
+
 
     /* ─── PRICING TEASER ───────────────────────────────────────────── */
     .pricing-teaser {
@@ -484,22 +480,22 @@
 
     /* ─── FAQ TEASER ───────────────────────────────────────────────── */
     .faq-block { max-width: 760px; margin: 44px auto 0; }
-    
-    
+
+
     .faq-block summary {
       list-style: none; cursor: pointer;
       padding: 18px 44px 18px 0;
       font-weight: 700; font-size: 18px; line-height: 1.4;
       position: relative; color: var(--text-strong);
     }
-    
+
     .faq-block summary::after {
       content: '+'; position: absolute; right: 4px; top: 50%;
       transform: translateY(-50%); font-size: 28px; font-weight: 300;
       color: var(--green-brand); transition: transform .2s;
     }
-    
-    
+
+
     .faq-cta { text-align: center; margin-top: 28px; }
     .faq-cta a {
       font-size: 16px; font-weight: 600; color: var(--blue-mid);
@@ -509,10 +505,10 @@
     .faq-cta a:hover { color: var(--blue-dark); border-color: var(--blue-dark); }
 
     /* ─── BUTTONS (reuse from picker, but in case missing) ─────────── */
-    
+
     .btn-cta:hover { background: var(--green-brand); transform: scale(1.02); color: #fff !important; }
-    
-    
+
+
 
 
     /* ─── PICKER MOBILE CAROUSEL ─────────────────────────────────────
@@ -606,7 +602,7 @@
         outline-offset: 3px;
       }
     }
-    
+
     /* ─── STICKY CTA BAR ───────────────────────────────────────── */
     .sticky-cta{position:fixed;left:0;right:0;bottom:0;z-index:850;transform:translateY(110%);transition:transform .35s ease;background:linear-gradient(120deg,var(--blue-dark),var(--blue-mid) 70%);box-shadow:0 -4px 24px rgba(0,0,0,.14);}
     .sticky-cta.is-visible{transform:translateY(0);}
@@ -661,11 +657,11 @@
     "https://www.youtube.com/@truckmall"
   ],
   "areaServed": [
-    { "@type": "Country", "name": "Czech Republic" },
-    { "@type": "Country", "name": "Slovakia" },
-    { "@type": "Country", "name": "Hungary" },
-    { "@type": "Country", "name": "Poland" },
-    { "@type": "Country", "name": "Germany" }
+    { "@type": "Country", "name": "République tchèque" },
+    { "@type": "Country", "name": "Slovaquie" },
+    { "@type": "Country", "name": "Hongrie" },
+    { "@type": "Country", "name": "Pologne" },
+    { "@type": "Country", "name": "Allemagne" }
   ],
   "contactPoint": {
     "@type": "ContactPoint",
@@ -681,30 +677,30 @@
   "@context": "https://schema.org",
   "@type": "WebSite",
   "@id": "https://tagra.app/#website",
-  "url": "https://tagra.app/de/",
+  "url": "https://tagra.app/fr/",
   "name": "TAGRA",
-  "description": "Professional software for tachograph data management",
+  "description": "Logiciel professionnel de gestion des données du chronotachygraphe",
   "publisher": { "@id": "https://tagra.app/#organization" },
-  "inLanguage": "de"
+  "inLanguage": "fr"
 }
 </script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Service",
-  "name": "TAGRA for fleet operators",
-  "url": "https://tagra.app/de/fuhrpark/",
+  "name": "TAGRA pour les opérateurs de flotte",
+  "url": "https://tagra.app/fr/transporteurs/",
   "provider": { "@id": "https://tagra.app/#organization" },
   "serviceType": "Tachograph data management software",
-  "description": "Evaluation, archiving and reporting for fleet operators from 1 to unlimited vehicles. Compliant with Regulation (EC) 561/2006 and the Working Time Directive.",
+  "description": "Évaluation, archivage et reporting pour les opérateurs de flotte, de 1 à un nombre illimité de véhicules. Conforme au règlement (CE) n° 561/2006 et à la directive sur le temps de travail.",
   "audience": {
     "@type": "BusinessAudience",
     "audienceType": "Fleet operators and transport companies"
   },
   "areaServed": [
-    { "@type": "Country", "name": "Czech Republic" },
-    { "@type": "Country", "name": "Slovakia" },
-    { "@type": "Country", "name": "Hungary" }
+    { "@type": "Country", "name": "République tchèque" },
+    { "@type": "Country", "name": "Slovaquie" },
+    { "@type": "Country", "name": "Hongrie" }
   ]
 }
 </script>
@@ -712,11 +708,11 @@
 {
   "@context": "https://schema.org",
   "@type": "Service",
-  "name": "TAGRA Trucker for professional drivers",
-  "url": "https://tagra.app/de/fahrer/",
+  "name": "TAGRA Trucker pour les conducteurs professionnels",
+  "url": "https://tagra.app/fr/conducteurs/",
   "provider": { "@id": "https://tagra.app/#organization" },
   "serviceType": "Personal tachograph data tool",
-  "description": "Personal tool for professional drivers to download their own driver card, review driving times and rest periods. Works with a standard USB card reader.",
+  "description": "Outil personnel destiné aux conducteurs professionnels pour télécharger les données de leur carte conducteur et vérifier les temps de conduite et les périodes de repos. Fonctionne avec un lecteur de carte USB standard.",
   "audience": {
     "@type": "Audience",
     "audienceType": "Professional truck and bus drivers"
@@ -727,11 +723,11 @@
 {
   "@context": "https://schema.org",
   "@type": "Service",
-  "name": "TAGRA Control for enforcement authorities",
-  "url": "https://tagra.app/de/kontrollbehoerden/",
+  "name": "TAGRA Control pour les autorités de contrôle",
+  "url": "https://tagra.app/enforcement/",
   "provider": { "@id": "https://tagra.app/#organization" },
   "serviceType": "Inspection and enforcement software",
-  "description": "Roadside and company inspection software for Police, Customs, Labour Inspectorates and Ministries of Transport. The de-facto standard across Central Europe.",
+  "description": "Logiciel de contrôle routier et en entreprise pour la police, les douanes, les inspections du travail et les ministères des Transports. La norme de facto en Europe centrale.",
   "audience": {
     "@type": "GovernmentService",
     "audienceType": "Enforcement authorities, Police, Customs, Labour Inspectorates"
@@ -744,36 +740,36 @@
 <link href="/assets/css/nav.css" rel="stylesheet"/>
 <script defer="" src="/assets/js/nav.js?v=20260816b"></script>
 <link href="/assets/css/footer.css" rel="stylesheet"/>
-</head>
+<link href="https://tagra.app/" hreflang="en" rel="alternate"/><link href="https://tagra.app/de/" hreflang="de" rel="alternate"/><link href="https://tagra.app/pl/" hreflang="pl" rel="alternate"/><link href="https://tagra.app/el/" hreflang="el" rel="alternate"/><link href="https://tagra.app/hu/" hreflang="hu" rel="alternate"/><link href="https://tagra.app/it/" hreflang="it" rel="alternate"/><link href="https://tagra.app/fr/" hreflang="fr" rel="alternate"/><link href="https://tagra.app/" hreflang="x-default" rel="alternate"/></head>
 <body class="home-fullbleed">
-<a class="skip-link" href="#main-content">Zum Inhalt springen</a>
+<a class="skip-link" href="#main-content">Passer au contenu</a>
 <div aria-hidden="true" id="scroll-progress"></div>
 <!-- ═══ NAVIGATION ═══════════════════════════════════════════════════ -->
-<nav aria-label="Main navigation" class="site-nav" role="navigation">
+<nav aria-label="Navigation principale" class="site-nav" role="navigation">
 <div class="nav-inner">
-<a aria-label="TAGRA – Home" class="nav-logo" href="/de/"><img alt="TAGRA" height="32" src="/assets/img/logo-light.svg?v=20260513zh" style="display:block;height:32px;width:auto;" width="140"/></a>
+<a aria-label="TAGRA – Home" class="nav-logo" href="/fr/"><img alt="TAGRA" height="32" src="/assets/img/logo-light.svg?v=20260513zh" style="display:block;height:32px;width:auto;" width="140"/></a>
 <ul class="nav-links" id="nav-links">
-<li><a href="/de/fuhrpark/">Für Unternehmen</a></li>
-<li><a href="/de/fahrer/">Für Fahrer</a></li>
-<li><a href="/de/kontrollbehoerden/">Kontrollbehörden</a></li>
-<li><a href="/de/ratgeber/">Artikel</a></li><li><a href="/de/anleitungen/">Anleitungen</a></li>
-<li><a href="/de/faq/">FAQ</a></li>
-<li><a href="/de/kontakt/">Kontakt</a></li>
-<li class="nav-cta-li"><a class="nav-cta" href="/de/testen/?audience=fleet">30 Tage kostenlos testen</a></li>
+<li><a href="/fr/transporteurs/">Pour les entreprises</a></li>
+<li><a href="/fr/conducteurs/">Pour les conducteurs</a></li>
+<li><a href="/enforcement/">Enforcement</a></li>
+<li><a href="/articles/">Articles</a></li><li><a href="/manuals/">Manuals</a></li>
+<li><a href="/faq/">FAQ</a></li>
+<li><a href="/fr/contact/">Contact</a></li>
+<li class="nav-cta-li"><a class="nav-cta" href="/fr/essai-gratuit/?audience=fleet">Essai gratuit de 30 jours</a></li>
 </ul>
 <details class="nav-lang">
-<summary aria-label="Language: DE">DE</summary>
+<summary aria-label="Language: FR">FR</summary>
 <div class="nav-lang-menu" role="menu">
-<a href="/" hreflang="en">English</a><a aria-current="page" class="active" href="/de/" hreflang="de">Deutsch</a><a href="/pl/" hreflang="pl">Polski</a><a href="/el/" hreflang="el">Ελληνικά</a><a href="/hu/" hreflang="hu">Magyar</a><a href="/it/" hreflang="it">Italiano</a><a href="https://tagra.app/fr/" hreflang="fr">Français</a><a href="https://www.tdt.cz/" hreflang="cs" rel="noopener" target="_blank">Čeština</a><a href="https://www.tdt.sk/" hreflang="sk" rel="noopener" target="_blank">Slovenčina</a></div>
+<a href="/" hreflang="en">English</a><a href="/de/" hreflang="de">Deutsch</a><a href="/pl/" hreflang="pl">Polski</a><a href="/el/" hreflang="el">Ελληνικά</a><a href="/hu/" hreflang="hu">Magyar</a><a href="/it/" hreflang="it">Italiano</a><a aria-current="page" class="active" href="/fr/" hreflang="fr">Français</a><a href="https://www.tdt.cz/" hreflang="cs" rel="noopener" target="_blank">Čeština</a><a href="https://www.tdt.sk/" hreflang="sk" rel="noopener" target="_blank">Slovenčina</a></div>
 </details>
-<a class="nav-cta-mobile" href="/de/testen/?audience=fleet">Kostenlos testen</a>
+<a class="nav-cta-mobile" href="/fr/essai-gratuit/?audience=fleet">Essai gratuit</a>
 <button aria-expanded="false" aria-label="Toggle menu" class="nav-mobile-toggle" id="nav-toggle">
 <span></span><span></span><span></span>
 </button>
 </div>
 </nav>
 <!-- ═══ HERO ══════════════════════════════════════════════════════════ -->
-<section id="main-content" aria-label="TAGRA – Wählen Sie Ihre Lösung" class="hero">
+<section id="main-content" aria-label="TAGRA – Choose your solution" class="hero">
 <img alt="" aria-hidden="true" class="hero-video-poster" fetchpriority="high" loading="eager" src="/assets/img/hero-poster.jpg?v=2026-05-13b" width="1920" height="1080"/>
 <video aria-hidden="true" class="hero-video" id="heroVideoA" muted="" playsinline="" poster="/assets/img/hero-poster.jpg?v=2026-05-13b" preload="auto">
 <source media="(max-width: 1024px)" src="/assets/video/hero-720.mp4?v=2026-05-13c" type="video/mp4">
@@ -787,13 +783,13 @@
 </source></source></source></video>
 <div class="container">
 <div class="hero-glass anim-up">
-<div class="eyebrow">TAGRA · Software für die Verwaltung von Tachographendaten</div>
+<div class="eyebrow">TAGRA · Logiciel d'analyse du chronotachygraphe</div>
 </div>
-<h1 class="anim-up" style="transition-delay:.05s">Tachographen-Auswertung, <br/>bevor die Kontrolle Verstöße entdeckt</h1>
+<h1 class="anim-up" style="transition-delay:.05s">Analyse du chronotachygraphe <br/>avant que le contrôle ne la découvre</h1>
 <div class="hero-glass anim-up" style="transition-delay:.1s">
 <p class="hero-sub">
-        Auslesen allein genügt nicht — das Gesetz verlangt <strong>Auswertung und Archivierung.</strong><br/>
-        TAGRA deckt alles ab. 30 Tage kostenlos, ohne Kreditkarte.
+        Télécharger ne suffit pas — la loi exige une <strong>évaluation et un archivage.</strong><br/>
+        TAGRA couvre tout. Essai gratuit de 30 jours, sans carte bancaire.
       </p>
 </div>
 </div>
@@ -802,50 +798,50 @@
 <section aria-label="Choose your TAGRA solution" class="picker">
 <div class="container">
 <div class="picker-head anim-up">
-<span class="section-label">Wählen Sie Ihre Rolle</span>
+<span class="section-label">Choisissez votre profil</span>
 </div>
 <div class="split anim-up" id="picker-rail">
 <!-- Fleet -->
-<a aria-label="TAGRA for fleet operators" class="split-card split-card--fleet" href="/de/fuhrpark/">
-<div class="card-label">Fuhrparkbetreiber</div>
-<h2 class="sr-only">TAGRA · Software für die Verwaltung von Tachographendaten</h2><h3 class="card-title">TAGRA<br/>Company</h3>
-<p class="card-desc">Sie verwalten Fahrzeuge für ein Unternehmen. Sie müssen Daten aus <strong>Fahrtenschreibern und Fahrerkarten</strong> auslesen, auswerten — und alles für Kontrollen archivieren.</p>
+<a aria-label="TAGRA pour les opérateurs de flotte" class="split-card split-card--fleet" href="/fr/transporteurs/">
+<div class="card-label">Opérateur de flotte</div>
+<h2 class="sr-only">TAGRA · Logiciel d'analyse du chronotachygraphe</h2><h3 class="card-title">TAGRA<br/>Company</h3>
+<p class="card-desc">Vous gérez des véhicules pour une entreprise. Vous devez télécharger et évaluer les données des <strong>unités embarquées et cartes conducteur</strong> — et tout archiver pour les contrôles.</p>
 <ul class="card-list">
-<li>1 bis unbegrenzt viele Fahrzeuge</li>
-<li>Vollständige Arbeitszeitauswertung (VO (EG) Nr. 561/2006 + RL 2002/15/EG)</li>
-<li>Von Kontrollbehörden anerkannte Auswertungen</li>
-<li>Bereit für Transporter ab Juli 2026</li>
+<li>De 1 à un nombre illimité de véhicules</li>
+<li>Évaluation complète du temps de travail ((CE) n° 561/2006 + directive temps de travail)</li>
+<li>Résultats acceptés par les autorités de contrôle</li>
+<li>Prêt pour les véhicules utilitaires légers dès juillet 2026</li>
 </ul>
-<span class="card-cta">Lösung für Unternehmen →</span>
-<span class="card-note">30 Tage kostenlos · ohne Kreditkarte</span>
+<span class="card-cta">Solution flotte →</span>
+<span class="card-note">Essai gratuit de 30 jours · sans carte bancaire</span>
 </a>
 <!-- Driver -->
-<a aria-label="TAGRA Trucker for professional drivers" class="split-card split-card--driver" href="/de/fahrer/">
-<div class="card-label">Berufskraftfahrer</div>
+<a aria-label="TAGRA Trucker pour les conducteurs professionnels" class="split-card split-card--driver" href="/fr/conducteurs/">
+<div class="card-label">Conducteur professionnel</div>
 <h3 class="card-title">TAGRA<br/>Trucker</h3>
-<p class="card-desc">Sie fahren berufsmäßig. Sie möchten Ihre Lenk- und Ruhezeiten mit <strong>Ihrer Fahrerkarte</strong> im Blick behalten — mit einem handelsüblichen USB-Kartenleser.</p>
+<p class="card-desc">Vous conduisez à titre professionnel. Vous voulez suivre vos propres temps de conduite et périodes de repos à l'aide de votre <strong>carte conducteur</strong> — avec un lecteur de carte USB standard.</p>
 <ul class="card-list">
-<li>Für 1 Fahrer · nur Fahrerkarte</li>
-<li>Funktioniert mit jedem handelsüblichen USB-Kartenleser</li>
-<li>Lenk- und Ruhezeiten auf einen Blick</li>
-<li>Läuft offline auf jedem Windows-PC</li>
+<li>Pour 1 conducteur · carte conducteur uniquement</li>
+<li>Fonctionne avec un lecteur de carte USB standard</li>
+<li>Temps de conduite et périodes de repos en un coup d'œil</li>
+<li>Fonctionne hors ligne sur n'importe quel PC Windows</li>
 </ul>
-<span class="card-cta">Lösung für Fahrer →</span>
-<span class="card-note">30 Tage kostenlos · ohne Kreditkarte</span>
+<span class="card-cta">Solution conducteur →</span>
+<span class="card-note">Essai gratuit de 30 jours · sans carte bancaire</span>
 </a>
 <!-- Enforcement -->
-<a aria-label="TAGRA Control for enforcement authorities" class="split-card split-card--enforce" href="/de/kontrollbehoerden/">
-<div class="card-label">Kontrollbehörde</div>
+<a aria-label="TAGRA Control pour les autorités de contrôle" class="split-card split-card--enforce" href="/enforcement/">
+<div class="card-label">Autorité de contrôle</div>
 <h3 class="card-title">TAGRA<br/>Control</h3>
-<p class="card-desc">Sie kontrollieren Fahrer und Unternehmen. <strong>Straßen- und Betriebskontrollen</strong> nach VO (EG) Nr. 561/2006, (EU) 2020/1054 und AETR.</p>
+<p class="card-desc">Vous contrôlez les conducteurs et les opérateurs. <strong>Contrôles routiers et en entreprise</strong> au titre du (CE) 561/2006, du (UE) 2020/1054 et de l'AETR.</p>
 <ul class="card-list">
-<li>Polizei · Zoll · Arbeitsinspektionen</li>
-<li>Tschechische, slowakische und ungarische Behörden</li>
-<li>Gerichtsverwertbare Auswertungen</li>
-<li>De-facto-Standard in Mitteleuropa</li>
+<li>Police · Douanes · Inspections du travail</li>
+<li>Autorités tchèques, slovaques et hongroises</li>
+<li>Rapports d'évaluation de qualité judiciaire</li>
+<li>Norme de facto en Europe centrale</li>
 </ul>
-<span class="card-cta">Lösung für Kontrollbehörden →</span>
-<span class="card-note">Behördlicher und institutioneller Einsatz</span>
+<span class="card-cta">Solution contrôle →</span>
+<span class="card-note">Usage gouvernemental et institutionnel</span>
 </a>
 </div>
 <div aria-label="Picker pagination" class="picker-dots" role="tablist">
@@ -858,41 +854,41 @@
 <!-- ═══ TRUST BAR ══════════════════════════════════════════════════════ -->
 <div class="trust-bar anim-up">
 <div class="container">
-<p><strong>Tausende Unternehmen in ganz Europa vertrauen uns.</strong> Dieselbe Auswertungslogik, die Polizei, Zollverwaltungen und Arbeitsinspektionen einsetzen.</p>
+<p><strong>La confiance de milliers d'opérateurs à travers l'Europe.</strong> La même logique d'évaluation utilisée par la police, les administrations douanières et les inspections du travail.</p>
 </div>
 </div>
 <!-- ═══ UI SHOWCASE ════════════════════════════════════════════════════ -->
 <section aria-label="What TAGRA flags — example outputs" class="section section--white">
 <div class="section-inner">
 <div class="section-head anim-up">
-<span class="section-label">In Aktion sehen</span>
-<h2 class="section-h2">Sehen Sie genau, was TAGRA erkennt</h2>
-<p class="section-intro">Realistische Beispiele dessen, was TAGRA aufdeckt — Auslesefristen, Lenkzeitverstöße und exportfertige Verstoßberichte.</p>
+<span class="section-label">Voyez-le en action</span>
+<h2 class="section-h2">Voyez exactement ce que TAGRA détecte</h2>
+<p class="section-intro">Des exemples concrets de ce que TAGRA fait apparaître — échéances de téléchargement, infractions aux temps de conduite et rapports de conformité prêts à l'export.</p>
 </div>
 <div class="showcase-grid anim-up">
 <div class="showcase-card showcase-card--critical">
-<span class="showcase-badge">Überfällig</span>
-<p class="showcase-title">Auslesen der Fahrerkarte überfällig</p>
-<div class="showcase-row"><span>Fahrer</span><strong>A. Walsh</strong></div>
-<div class="showcase-row"><span>Status</span><strong>3 Tage überfällig</strong></div>
-<div class="showcase-row"><span>Letztes Auslesen</span><strong>2. Juni 2026</strong></div>
-<p class="showcase-foot">Automatische Überwachung der 28-Tage-Frist.</p>
+<span class="showcase-badge">En retard</span>
+<p class="showcase-title">Téléchargement de la carte conducteur en retard</p>
+<div class="showcase-row"><span>Conducteur</span><strong>A. Walsh</strong></div>
+<div class="showcase-row"><span>Statut</span><strong>En retard de 3 jours</strong></div>
+<div class="showcase-row"><span>Dernier téléchargement</span><strong>2 juin 2026</strong></div>
+<p class="showcase-foot">Suivi automatique par rapport à la règle des 28 jours.</p>
 </div>
 <div class="showcase-card showcase-card--warn">
-<span class="showcase-badge">Verstoß</span>
-<p class="showcase-title">Tägliche Lenkzeit überschritten</p>
-<div class="showcase-row"><span>Fahrer</span><strong>J. Kowalski</strong></div>
-<div class="showcase-row"><span>Gefahrene Zeit</span><strong>9h 42m</strong></div>
-<div class="showcase-row"><span>Grenzwert</span><strong>9 Std. · VO (EG) Nr. 561/2006</strong></div>
-<p class="showcase-foot">Markiert mit vollständiger Aufschlüsselung nach Zeit, Art und Dauer.</p>
+<span class="showcase-badge">Infraction</span>
+<p class="showcase-title">Temps de conduite journalier dépassé</p>
+<div class="showcase-row"><span>Conducteur</span><strong>J. Kowalski</strong></div>
+<div class="showcase-row"><span>Conduit</span><strong>9 h 42</strong></div>
+<div class="showcase-row"><span>Limite</span><strong>9 h · Règl. 561/2006</strong></div>
+<p class="showcase-foot">Signalé avec le détail complet de l'heure, du type et de la durée.</p>
 </div>
 <div class="showcase-card showcase-card--ready">
-<span class="showcase-badge">Bericht fertig</span>
-<p class="showcase-title">Wöchentliche Konformitätsübersicht</p>
-<div class="showcase-row"><span>Ausgewertete Fahrer</span><strong>42</strong></div>
-<div class="showcase-row"><span>Verstöße</span><strong>3 erkannt</strong></div>
-<div class="showcase-row"><span>Woche</span><strong>KW 26</strong></div>
-<p class="showcase-foot">Exportfertiger, prüfungssicherer Bericht mit einem Klick.</p>
+<span class="showcase-badge">Rapport prêt</span>
+<p class="showcase-title">Synthèse hebdomadaire de conformité</p>
+<div class="showcase-row"><span>Conducteurs analysés</span><strong>42</strong></div>
+<div class="showcase-row"><span>Infractions</span><strong>3 signalées</strong></div>
+<div class="showcase-row"><span>Semaine</span><strong>Semaine 26</strong></div>
+<p class="showcase-foot">Résultat prêt à l'export, de qualité audit, en un clic.</p>
 </div>
 </div>
 </div>
@@ -901,42 +897,42 @@
 <section aria-label="Why TAGRA — key features" class="section section--white">
 <div class="section-inner">
 <div class="section-head anim-up">
-<span class="section-label">Warum TAGRA</span>
-<h2 class="section-h2">Alles für die Einhaltung der Tachographenvorschriften</h2>
-<p class="section-intro">Leistungsstarke Windows-Software zum Auslesen und Auswerten digitaler Tachographen (Fahrtenschreiber (auch Tachograph genannt)): Lenk- und Ruhezeiten, Verstöße und gesetzeskonforme Archivierung — vom Einzelfahrzeug bis zum Großfuhrpark.</p>
+<span class="section-label">Pourquoi TAGRA</span>
+<h2 class="section-h2">Téléchargement, analyse et archivage du chronotachygraphe</h2>
+<p class="section-intro">Un logiciel Windows puissant pour l'analyse du chronotachygraphe numérique, les temps de conduite européens et la directive sur le temps de travail des chauffeurs routiers — évolutif d'un seul véhicule à une flotte d'entreprise.</p>
 </div>
 <div class="bento">
 <div class="bc s7 fly-left">
-<span class="bc-eyebrow">Gesetzeskonformität</span>
-<div class="bc-title">Lenk- und Ruhezeiten + Arbeitszeit</div>
-<p class="bc-text">Automatische Auswertung der <strong>Verordnung (EG) Nr. 561/2006</strong> und die <strong>Arbeitszeitrichtlinie für Kraftfahrer</strong> (2002/15/EG). Übersichtliche Tages- und Wochenauswertungen mit jedem Verstoß nach Zeit, Art und Dauer markiert.</p>
+<span class="bc-eyebrow">Moteur de conformité</span>
+<div class="bc-title">Temps de conduite UE + directive temps de travail</div>
+<p class="bc-text">Évaluation automatique du <strong>règlement (CE) n° 561/2006</strong> et de la <strong>directive sur le temps de travail des chauffeurs routiers</strong> (2002/15/CE). Synthèses journalières et hebdomadaires claires, avec chaque infraction signalée par heure, type et durée.</p>
 <div class="bignum">01</div>
 </div>
 <div class="bc s5 bluefill fly-right">
-<span class="bc-eyebrow">Abdeckung</span>
-<div class="bc-title">Alle Tachographen unterstützt</div>
-<p class="bc-text">Von digitalen Geräten der ersten Generation bis zum <strong>intelligenten Tachographen G2V2</strong>. Liest <code>.DDD</code>, <code>.C1B</code>, <code>.V1B</code> und ESM-Dateien aus Fahrerkarte und Massenspeicher (Fahrzeugeinheit).</p>
+<span class="bc-eyebrow">Couverture</span>
+<div class="bc-title">Tous les chronotachygraphes pris en charge</div>
+<p class="bc-text">De la première génération numérique jusqu'au <strong>Smart Tachograph G2V2</strong>. Lit les fichiers <code>.DDD</code>, <code>.C1B</code>, <code>.V1B</code> et ESM issus des téléchargements de carte conducteur et d'unité embarquée.</p>
 </div>
 <div class="bc s6 fly-left" style="transition-delay:.05s">
-<span class="bc-eyebrow">Berichte</span>
-<div class="bc-title">Prüfungssichere Auswertungen</div>
-<p class="bc-text">Berichte, die Kontrolleure sofort verstehen. Drucken, exportieren oder teilen Sie klar strukturierte Auswertungen für Audits, interne Prüfungen und Straßenkontrollen.</p>
+<span class="bc-eyebrow">Rapports</span>
+<div class="bc-title">Résultats de qualité audit</div>
+<p class="bc-text">Des rapports prêts pour l'inspection, que les agents de contrôle comprennent réellement. Imprimez, exportez ou partagez des résultats propres et structurés pour les audits, les revues internes et les contrôles routiers.</p>
 </div>
 <div class="bc s6 greenfill fly-right" style="transition-delay:.05s">
-<span class="bc-eyebrow">Skalierbar</span>
-<div class="bc-title">1 bis unbegrenzt viele Fahrzeuge</div>
-<p class="bc-text">Varianten TAGRA Trucker, 1, 2, 4, 6 und MAX. Starten Sie mit einem Lkw und wachsen Sie zum Großfuhrpark — ohne Software- oder Prozesswechsel.</p>
+<span class="bc-eyebrow">Évolutif</span>
+<div class="bc-title">De 1 à un nombre illimité de véhicules</div>
+<p class="bc-text">TAGRA Trucker, 1, 2, 4, 6 et MAX. Commencez avec un seul camion et évoluez vers une flotte d'entreprise sans changer d'outils ni de méthode de travail.</p>
 <div class="bignum">∞</div>
 </div>
 <div class="bc s8 fly-left" style="transition-delay:.1s">
-<span class="bc-eyebrow">Datenschutz</span>
-<div class="bc-title">Desktop. Schnell. Ihre Daten.</div>
-<p class="bc-text">Windows-Software, die offline auf Ihrem PC läuft. Fahrer- und Fahrzeugdaten verlassen Ihr Netzwerk nie — keine Cloud-Bindung, kein Abo, keine DSGVO-Sorgen wegen Auftragsverarbeitung.</p>
+<span class="bc-eyebrow">Confidentialité</span>
+<div class="bc-title">Sur votre poste. Rapide. À vous.</div>
+<p class="bc-text">Un logiciel Windows qui fonctionne hors ligne sur votre PC. Les données des conducteurs et des véhicules ne quittent jamais votre réseau — pas de dépendance au cloud, pas d'abonnement mensuel, aucune inquiétude RGPD liée à des sous-traitants tiers.</p>
 </div>
 <div class="bc s4 bluefill fly-right" style="transition-delay:.1s">
-<span class="bc-eyebrow">Zukunftssicher</span>
-<div class="bc-title">Bereit für Transporter 2026</div>
-<p class="bc-text">Vollständig konform mit der neuen Tachographenpflicht für leichte Nutzfahrzeuge (2,5–3,5 t) ab <strong>1. Juli 2026</strong>.</p>
+<span class="bc-eyebrow">Prêt pour l'avenir</span>
+<div class="bc-title">Prêt pour les VUL dès 2026</div>
+<p class="bc-text">Conformité totale avec la nouvelle obligation de chronotachygraphe pour les véhicules utilitaires légers (2,5–3,5 t) à partir du <strong>1er juillet 2026</strong>.</p>
 </div>
 </div>
 </div>
@@ -945,34 +941,34 @@
 <section aria-label="Trusted by authorities and fleets across Central Europe" class="section section--blue">
 <div class="section-inner">
 <div class="section-head anim-up">
-<span class="section-label">In der Praxis bewährt</span>
-<h2 class="section-h2">Von Behörden genutzt. Von Unternehmen gewählt.</h2>
-<p class="section-intro">Dieselbe Auswertungslogik, die Polizei, Zoll und Arbeitsinspektionen in Tschechien, der Slowakei und Ungarn einsetzen.</p>
+<span class="section-label">Vérifié sur le terrain</span>
+<h2 class="section-h2">La confiance des autorités. Choisi par les flottes.</h2>
+<p class="section-intro">La même logique d'évaluation utilisée par la police, les douanes et les inspections du travail en République tchèque, en Slovaquie et en Hongrie.</p>
 </div>
 <div class="ref-grid">
 <div class="ref-card ref-card--cz">
-<div class="ref-country">Tschechien</div>
-<div class="ref-name">Polizei und Zoll</div>
-<div class="ref-note">Straßen- und Betriebskontrollen im ganzen Land.</div>
+<div class="ref-country">République tchèque</div>
+<div class="ref-name">Police et douanes</div>
+<div class="ref-note">Contrôles routiers et en entreprise dans tout le pays.</div>
 </div>
 <div class="ref-card ref-card--sk">
-<div class="ref-country">Slowakei</div>
-<div class="ref-name">Arbeitsinspektion</div>
-<div class="ref-note">Durchsetzung von Lenk- und Arbeitszeiten.</div>
+<div class="ref-country">Slovaquie</div>
+<div class="ref-name">Inspection du travail</div>
+<div class="ref-note">Contrôle des temps de conduite et du temps de travail.</div>
 </div>
 <div class="ref-card ref-card--hu">
-<div class="ref-country">Ungarn</div>
-<div class="ref-name">Kontrollbehörden und Ministerien</div>
-<div class="ref-note">Compliance im grenzüberschreitenden Verkehr.</div>
+<div class="ref-country">Hongrie</div>
+<div class="ref-name">Autorités de contrôle et ministères</div>
+<div class="ref-note">Conformité du transport transfrontalier.</div>
 </div>
 <div class="ref-card">
-<div class="ref-country">In ganz Mitteleuropa</div>
-<div class="ref-name">Hunderte Fuhrparkbetreiber</div>
-<div class="ref-note">Güterverkehr, Bus und Reisebus, Vermietung, kommunale Fuhrparks, Werkstätten.</div>
+<div class="ref-country">Dans toute l'Europe centrale</div>
+<div class="ref-name">Des centaines d'opérateurs de flotte</div>
+<div class="ref-note">Transport routier, autocars, location, flottes municipales, ateliers.</div>
 </div>
 </div>
 <div class="name-marquee-wrap anim-up">
-<p class="name-marquee-label">Unternehmen, die TAGRA bereits einsetzen</p>
+<p class="name-marquee-label">Parmi les flottes et opérateurs qui utilisent déjà TAGRA</p>
 <div class="name-marquee"><span>FCC Group</span><span>CS Cargo a.s.</span><span>ČEDOK a.s.</span><span>AGRO SERVIS CZ</span><span>ČSAD Jihotrans</span><span>ČSAD Karviná</span><span>Pivovar Holba</span><span>PORR a.s.</span><span>Klaus Timber a.s.</span><span>Mátra Transport a.s.</span><span>KAFKA Transport a.s.</span><span>DKC s.r.o.</span><span>TQM Holding</span><span>Synergies Logistiques</span><span>ČSAD Autobusy České Budějovice</span><span>ČSAD POLKOST</span><span>Cargospol</span><span>Energie stavební a báňská a.s.</span><span>SAP Mimoň</span><span>FCC Group</span><span>CS Cargo a.s.</span><span>ČEDOK a.s.</span><span>AGRO SERVIS CZ</span><span>ČSAD Jihotrans</span><span>ČSAD Karviná</span><span>Pivovar Holba</span><span>PORR a.s.</span><span>Klaus Timber a.s.</span><span>Mátra Transport a.s.</span><span>KAFKA Transport a.s.</span><span>DKC s.r.o.</span><span>TQM Holding</span><span>Synergies Logistiques</span><span>ČSAD Autobusy České Budějovice</span><span>ČSAD POLKOST</span><span>Cargospol</span><span>Energie stavební a báňská a.s.</span><span>SAP Mimoň</span></div>
 </div>
 </div>
@@ -981,18 +977,18 @@
 <section aria-label="Customer reviews" class="section section--white">
 <div class="section-inner">
 <div class="section-head anim-up">
-<span class="section-label">Kundenstimmen</span>
-<h2 class="section-h2">Tausende Unternehmen vertrauen uns</h2>
-<p class="section-intro">Fünf-Sterne-Bewertungen verifizierter Kunden aus Mitteleuropa.</p>
+<span class="section-label">Ce que disent nos clients</span>
+<h2 class="section-h2">Utilisé par des milliers d'opérateurs dans toute l'UE</h2>
+<p class="section-intro">Avis cinq étoiles de clients vérifiés dans toute l'Europe centrale.</p>
 </div>
 </div>
 <div class="rev-rail-wrap anim-up" style="transition-delay:.05s">
 <div class="rev-rail" id="rev-rail">
-<div class="rev-card"><div aria-label="5 out of 5" class="rev-stars">★★★★★</div><p class="rev-txt">„TAGRA bewältigt riesige Datenmengen und hat unsere Verstoßprüfung und Archivierung deutlich vereinfacht.“</p><p class="rev-meta">David C. · Verifizierter Kunde</p></div>
-<div class="rev-card"><div aria-label="5 out of 5" class="rev-stars">★★★★★</div><p class="rev-txt">„Wir nutzen TAGRA seit einigen Monaten — einfaches Auslesen und Auswerten, klare Berichte. Endlich Ruhe.“</p><p class="rev-meta">Patrik S. · Verifizierter Kunde</p></div>
-<div class="rev-card"><div aria-label="5 out of 5" class="rev-stars">★★★★★</div><p class="rev-txt">„Die Software ist intuitiv und einfach zu bedienen. Als ich Hilfe brauchte, war sie da.“</p><p class="rev-meta">Milan K. · Verifizierter Kunde</p></div>
-<div class="rev-card"><div aria-label="5 out of 5" class="rev-stars">★★★★★</div><p class="rev-txt">„Einfach und übersichtlich. Auslesen, Auswerten und Archivieren dauert nur wenige Minuten.“</p><p class="rev-meta">Josef Z. · Verifizierter Kunde</p></div>
-<div class="rev-card"><div aria-label="5 out of 5" class="rev-stars">★★★★★</div><p class="rev-txt">„Mit TAGRA haben wir Verstöße und Archivierung im Griff. Die Arbeit damit ist wirklich einfach.“</p><p class="rev-meta">Verifizierter TRUCKMALL-Kunde</p></div>
+<div class="rev-card"><div aria-label="5 out of 5" class="rev-stars">★★★★★</div><p class="rev-txt">"TAGRA gère un énorme volume de données et a considérablement simplifié nos contrôles d'infractions et notre archivage."</p><p class="rev-meta">David C. · Client vérifié</p></div>
+<div class="rev-card"><div aria-label="5 out of 5" class="rev-stars">★★★★★</div><p class="rev-txt">"Nous utilisons TAGRA depuis quelques mois — téléchargement et évaluation faciles, résultats clairs. Enfin la tranquillité d'esprit."</p><p class="rev-meta">Patrik S. · Client vérifié</p></div>
+<div class="rev-card"><div aria-label="5 out of 5" class="rev-stars">★★★★★</div><p class="rev-txt">"Le logiciel est intuitif et facile à utiliser. Quand j'ai eu besoin d'aide, ils étaient là."</p><p class="rev-meta">Milan K. · Client vérifié</p></div>
+<div class="rev-card"><div aria-label="5 out of 5" class="rev-stars">★★★★★</div><p class="rev-txt">"Simple et clair. Le téléchargement, l'évaluation et l'archivage des données ne prennent que quelques minutes."</p><p class="rev-meta">Josef Z. · Client vérifié</p></div>
+<div class="rev-card"><div aria-label="5 out of 5" class="rev-stars">★★★★★</div><p class="rev-txt">"TAGRA nous permet de garder le contrôle sur les infractions et l'archivage. Vraiment facile à utiliser."</p><p class="rev-meta">Client TRUCKMALL vérifié</p></div>
 </div>
 </div>
 </section>
@@ -1000,25 +996,25 @@
 <section aria-label="Pricing overview" class="section section--gray">
 <div class="section-inner">
 <div class="section-head anim-up">
-<span class="section-label">Preise</span>
-<h2 class="section-h2">Faire Preise. Keine Überraschungen.</h2>
-<p class="section-intro">Das erste Jahr ist im Kaufpreis enthalten. Ab dem 2. Jahr hält eine Jahresgebühr von 19–149 € Ihre Software aktiv, aktuell und im Support.</p>
+<span class="section-label">Tarifs</span>
+<h2 class="section-h2">Des tarifs justes. Sans surprise.</h2>
+<p class="section-intro">La première année est incluse dans le prix d'achat. À partir de la 2e année, une redevance annuelle de 19 à 149 € maintient votre logiciel actif, à jour et assisté.</p>
 </div>
 <div class="pricing-teaser anim-up">
 <div>
-<div class="pricing-teaser-headline">Kostenlos starten. Lizenz ab 49 €.</div>
-<p class="pricing-teaser-price">30 Tage kostenlos testen, ohne Kreditkarte. TAGRA kostet von <strong>49 €</strong> (TAGRA Trucker) bis 749 € (TAGRA MAX, unbegrenzte Fahrzeuge), zzgl. MwSt. — das erste Jahr mit Updates und Support ist enthalten. Ab dem 2. Jahr hält eine Jahresgebühr von 19 € bis 149 € die Software aktiv.</p>
+<div class="pricing-teaser-headline">Commencez gratuitement. Licence à partir de 49 €.</div>
+<p class="pricing-teaser-price">Essai gratuit de 30 jours, sans carte bancaire. TAGRA coûte à partir de <strong>49 €</strong> (TAGRA Trucker) jusqu'à 749 € (TAGRA MAX, véhicules illimités), hors TVA — la première année de mises à jour et d'assistance est incluse. À partir de la 2e année, une redevance annuelle de 19 à 149 € maintient la licence active.</p>
 <ul class="pricing-teaser-features">
-<li>Vollständige Auswertung von EU-Lenkzeiten und Arbeitszeitrichtlinie</li>
-<li>Unterstützung aller digitalen Tachographen, inklusive Smart G2V2</li>
-<li>Kostenlose Updates bei jeder Gesetzesänderung</li>
-<li>Persönlicher technischer Support das ganze Jahr</li>
+<li>Analyse complète des temps de conduite UE et de la directive temps de travail</li>
+<li>Prise en charge de tous les chronotachygraphes numériques, y compris Smart G2V2</li>
+<li>Mises à jour logicielles gratuites à chaque évolution réglementaire</li>
+<li>Assistance technique dédiée toute l'année</li>
 </ul>
 </div>
 <div class="pricing-teaser-cta">
-<a class="btn-outline" href="/de/fuhrpark/#tagra-pricing">Alle Varianten und Preise ansehen →</a>
-<a class="btn-cta" href="/de/testen/">30 Tage kostenlos testen</a>
-<span class="pricing-teaser-cta-note">Ohne Kreditkarte. Windows-Installer.</span>
+<a class="btn-outline" href="/fr/transporteurs/#tagra-pricing">Voir tous les niveaux et tarifs →</a>
+<a class="btn-cta" href="/fr/essai-gratuit/">Essai gratuit de 30 jours</a>
+<span class="pricing-teaser-cta-note">Sans carte bancaire. Installeur Windows.</span>
 </div>
 </div>
 </div>
@@ -1027,29 +1023,29 @@
 <section aria-label="Frequently asked questions" class="section section--white">
 <div class="section-inner">
 <div class="section-head anim-up">
-<span class="section-label">Fragen</span>
-<h2 class="section-h2">Häufig gestellte Fragen</h2>
-<p class="section-intro">Kurze Antworten auf die häufigsten Fragen. Das vollständige FAQ bietet mehr.</p>
+<span class="section-label">Questions</span>
+<h2 class="section-h2">Questions fréquentes</h2>
+<p class="section-intro">Réponses courtes aux questions les plus fréquentes. La FAQ complète en propose davantage.</p>
 </div>
 <div class="faq-block anim-up">
 <details>
-<summary>Läuft TAGRA in der Cloud oder wird es lokal installiert?</summary>
-<div class="faq-answer">TAGRA ist <strong>Windows-Desktop-Software</strong> , die vollständig offline auf Ihrem eigenen Rechner läuft. Fahrer- und Fahrzeugdaten verlassen Ihr Netzwerk nie — kein Cloud-Upload, kein Auftragsverarbeitung, kein Monatsabo. Viele Unternehmen bevorzugen dies aus Gründen der DSGVO und des Datenschutzes.</div>
+<summary>TAGRA est-il basé sur le cloud ou installé localement ?</summary>
+<div class="faq-answer">TAGRA est un <strong>logiciel de bureau Windows</strong> qui fonctionne entièrement hors ligne sur votre propre ordinateur. Les données des conducteurs et des véhicules ne quittent jamais votre réseau — aucun envoi vers le cloud, aucun sous-traitant tiers, aucun abonnement mensuel. De nombreuses flottes préfèrent cette approche pour des raisons de RGPD et de protection des données.</div>
 </details>
 <details>
-<summary>Deckt TAGRA EU-Lenkzeiten und die Arbeitszeitrichtlinie ab?</summary>
-<div class="faq-answer">Ja. TAGRA wertet <strong>Verordnung (EG) Nr. 561/2006</strong> (EU-Lenkzeiten) und die <strong>Arbeitszeitrichtlinie für Kraftfahrer</strong> 2002/15/EG sowie die zugehörigen AETR-Regeln aus. Jeder Verstoß wird in übersichtlichen Fahrer- und Fahrzeugberichten mit genauer Zeit, Art und Dauer hervorgehoben.</div>
+<summary>TAGRA couvre-t-il les temps de conduite UE et la directive temps de travail ?</summary>
+<div class="faq-answer">Oui. TAGRA évalue le <strong>règlement (CE) n° 561/2006</strong> (temps de conduite UE) et la <strong>directive sur le temps de travail des chauffeurs routiers</strong> 2002/15/CE, ainsi que les règles AETR associées. Chaque infraction est mise en évidence dans des rapports clairs par conducteur et par véhicule, avec l'heure, le type et la durée exacts.</div>
 </details>
 <details>
-<summary>Welche Tachographen und Kartenleser werden unterstützt?</summary>
-<div class="faq-answer">Alle digitalen Tachographen der EU — von der ersten Generation bis zum intelligenten Tachographen G2V2. Kompatibel mit gängigen Chipkartenlesern (z. B. DOWNLOAD BOX II S), liest <code>.DDD</code>, <code>.C1B</code>, <code>.V1B</code> und ESM-Dateien. Bereit für die Anforderungen an leichte Nutzfahrzeuge ab Juli 2026.</div>
+<summary>Quels chronotachygraphes et lecteurs de carte prend-il en charge ?</summary>
+<div class="faq-answer">Tous les chronotachygraphes numériques UE, de la première génération jusqu'au Smart Tachograph G2V2. Compatible avec les lecteurs de carte à puce standard (par ex. DOWNLOAD BOX II S) et lit les fichiers <code>.DDD</code>, <code>.C1B</code>, <code>.V1B</code> et ESM. Prêt pour les exigences de juillet 2026 applicables aux véhicules utilitaires légers.</div>
 </details>
 <details>
-<summary>Wie funktioniert die 30-tägige Testversion?</summary>
-<div class="faq-answer">Laden Sie das Windows-Paket herunter und installieren Sie es — Sie erhalten <strong>30 Tage vollen, uneingeschränkten Zugriff</strong> auf alle Funktionen. Ohne Kreditkarte, ohne Zahlungsdaten. Wenn TAGRA zu Ihrem Betrieb passt, erwerben Sie eine Lizenz.</div>
+<summary>Comment fonctionne l'essai gratuit de 30 jours ?</summary>
+<div class="faq-answer">Téléchargez et installez le package Windows — vous bénéficiez de <strong>30 jours d'accès complet et illimité</strong> à toutes les fonctionnalités. Aucune carte bancaire, aucune information de paiement. Si TAGRA convient à votre activité, vous achetez une licence pour continuer.</div>
 </details>
 <div class="faq-cta">
-<a href="/de/faq/">Alle Fragen ansehen →</a>
+<a href="/faq/">See all FAQs →</a>
 </div>
 </div>
 </div>
@@ -1059,45 +1055,45 @@
 <div class="footer-inner">
 <div>
 <div class="footer-logo"><img alt="TAGRA" height="20" src="/assets/img/logo-dark.svg?v=20260513zh" width="88" loading="lazy"/></div>
-<p class="footer-desc">Professionelle Software zur Tachographenauswertung. Auslesen von Fahrerkarten, Auswertung digitaler Tachographendaten, EU-Lenk- und Ruhezeiten sowie Arbeitszeitrichtlinie für den Straßentransport. Entwickelt von Truck Data Technology, s.r.o.</p>
+<p class="footer-desc">Logiciel professionnel d'analyse du chronotachygraphe. Téléchargement de la carte conducteur, analyse du chronotachygraphe numérique, temps de conduite UE et directive sur le temps de travail des chauffeurs routiers. Développé par Truck Data Technology, s.r.o.</p>
 </div>
 <div class="footer-col">
-<h2 class="footer-col-title">Produkt</h2>
+<h2 class="footer-col-title">Product</h2>
 <ul>
-<li><a href="/de/fuhrpark/">Für Fuhrparkbetreiber</a></li>
-<li><a href="/de/fahrer/">Für Berufskraftfahrer</a></li>
-<li><a href="/de/kontrollbehoerden/">Für Kontrollbehörden</a></li>
-<li><a href="/de/so-funktioniert-es/">So funktioniert es</a></li>
-<li><a href="/de/fuer-wen/">Für wen</a></li>
-<li><a href="/de/faq/">FAQ</a></li>
+<li><a href="/fr/transporteurs/">Pour les opérateurs de flotte</a></li>
+<li><a href="/fr/conducteurs/">Pour les conducteurs professionnels</a></li>
+<li><a href="/enforcement/">For enforcement</a></li>
+<li><a href="/how-it-works/">How it works</a></li>
+<li><a href="/for-whom/">For whom</a></li>
+<li><a href="/faq/">FAQ</a></li>
 </ul>
 </div>
 <div class="footer-col">
-<h2 class="footer-col-title">Ressourcen</h2>
+<h2 class="footer-col-title">Resources</h2>
 <ul>
-<li><a href="/de/ratgeber/">Artikel</a></li><li><a href="/de/anleitungen/">Anleitungen</a></li>
-<li><a href="/de/ratgeber/tachographen-symbole/">Tachographen-Symbole</a></li>
-<li><a href="/de/schnittstellen/dkv-live/">DKV LIVE®</a></li>
+<li><a href="/articles/">Articles</a></li><li><a href="/manuals/">Manuals</a></li>
+<li><a href="/articles/digital-tachograph-symbols/">Tachograph symbols</a></li>
+<li><a href="/integrations/dkv-live/">DKV LIVE®</a></li>
 </ul>
 </div>
 <div class="footer-col">
-<h2 class="footer-col-title">Unternehmen</h2>
+<h2 class="footer-col-title">Company</h2>
 <ul>
-<li><a href="/de/kontakt/">Kontakt</a></li>
+<li><a href="/fr/contact/">Contact</a></li>
 <li><a href="https://www.tdt.cz" rel="noopener" target="_blank">Truck Data Technology</a></li>
-<li><a href="/">English</a></li><li><a href="/de/">Deutsch</a></li><li><a href="/pl/">Polski</a></li><li><a href="/el/">Ελληνικά</a></li><li><a href="/hu/">Magyar</a></li><li><a href="/it/">Italiano</a></li><li><a href="https://www.tdt.cz/" rel="noopener" target="_blank">Čeština</a></li><li><a href="https://www.tdt.sk/" rel="noopener" target="_blank">Slovenčina</a></li></ul>
+<li><a href="/">English</a></li><li><a href="/de/">Deutsch</a></li><li><a href="/pl/">Polski</a></li><li><a href="/el/">Ελληνικά</a></li><li><a href="/hu/">Magyar</a></li><li><a href="/it/">Italiano</a></li><li><a href="/fr/">Français</a></li><li><a href="https://www.tdt.cz/" rel="noopener" target="_blank">Čeština</a></li><li><a href="https://www.tdt.sk/" rel="noopener" target="_blank">Slovenčina</a></li></ul>
 </div>
 </div>
 <div class="footer-bottom">
-<span>© 2026 Truck Data Technology, s.r.o. Alle Rechte vorbehalten.</span>
-<span><a href="/de/kontakt/">Kontakt</a> · <a href="https://www.tdt.cz" rel="noopener" target="_blank">tdt.cz</a> · <a href="/de/datenschutz/">Datenschutz &amp; Cookies</a> · <a href="/de/impressum/">Impressum</a></span>
+<span>© 2026 Truck Data Technology, s.r.o. Tous droits réservés.</span>
+<span><a href="/fr/contact/">Contact</a> · <a href="https://www.tdt.cz" rel="noopener" target="_blank">tdt.cz</a> · <a href="/privacy/">Privacy &amp; cookies</a></span>
 </div>
 </footer>
 <div aria-label="Quick trial signup" class="sticky-cta" id="stickyCta" role="complementary">
 <div class="sticky-cta-inner">
-<span class="sticky-cta-text">Bereit loszulegen? Testen Sie TAGRA 30 Tage kostenlos.</span>
-<a class="sticky-cta-btn" href="/de/testen/">Kostenlos testen →</a>
-<button aria-label="Dismiss" class="sticky-cta-close" id="stickyCtaClose">×</button>
+<span class="sticky-cta-text">Prêt à commencer ? Essayez TAGRA gratuitement pendant 30 jours.</span>
+<a class="sticky-cta-btn" href="/fr/essai-gratuit/?audience=fleet">Essai gratuit →</a>
+<button aria-label="Fermer" class="sticky-cta-close" id="stickyCtaClose">×</button>
 </div>
 </div>
 <script>
@@ -1135,12 +1131,12 @@
 {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
-  "name": "TAGRA – Tachograph Data Management Software",
+  "name": "TAGRA – Logiciel d'analyse du chronotachygraphe",
   "applicationCategory": "BusinessApplication",
   "operatingSystem": "Windows",
-  "description": "Software for evaluating and archiving data from digital tachographs and driver cards. Available for fleet operators (1 to unlimited vehicles) and professional drivers. Compliant with Regulation (EC) 561/2006, AETR and the Working Time Directive. Free 30-day trial.",
-  "url": "https://tagra.app/de/",
-  "inLanguage": "de",
+  "description": "Logiciel d'évaluation et d'archivage des données issues des chronotachygraphes numériques et des cartes conducteur. Disponible pour les opérateurs de flotte (de 1 à un nombre illimité de véhicules) et les conducteurs professionnels. Conforme au règlement (CE) 561/2006, à l'AETR et à la directive sur le temps de travail. Essai gratuit de 30 jours.",
+  "url": "https://tagra.app/fr/",
+  "inLanguage": "fr",
   "author": {
     "@type": "Organization",
     "name": "Truck Data Technology, s.r.o.",
@@ -1152,9 +1148,9 @@
     "lowPrice": "49",
     "highPrice": "749",
     "offerCount": "6",
-    "url": "https://tagra.app/de/",
+    "url": "https://tagra.app/fr/",
     "availability": "https://schema.org/InStock",
-    "description": "Der Kaufpreis umfasst Updates und Support im ersten Jahr. Ab dem 2. Jahr fällt eine Jahresgebühr von 19–149 € an, um die Software aktiv zu halten."
+    "description": "Le prix d'achat inclut la première année de mises à jour et d'assistance. À partir de la 2e année, une redevance annuelle de 19 à 149 € s'applique pour maintenir le logiciel actif."
   }
 }
 </script>
@@ -1162,38 +1158,38 @@
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  "inLanguage": "de",
+  "inLanguage": "fr",
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "Läuft TAGRA in der Cloud oder wird es lokal installiert?",
+      "name": "TAGRA est-il basé sur le cloud ou installé localement ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "TAGRA ist Windows-Desktop-Software, die vollständig offline auf Ihrem eigenen Rechner läuft. Fahrer- und Fahrzeugdaten verlassen Ihr Netzwerk nie — kein Cloud-Upload, kein Auftragsverarbeitung, kein Monatsabo. Viele Unternehmen bevorzugen dies aus Gründen der DSGVO und des Datenschutzes."
+        "text": "TAGRA est un logiciel de bureau Windows qui fonctionne entièrement hors ligne sur votre propre ordinateur. Les données des conducteurs et des véhicules ne quittent jamais votre réseau — aucun envoi vers le cloud, aucun sous-traitant tiers, aucun abonnement mensuel. De nombreuses flottes préfèrent cette approche pour des raisons de RGPD et de protection des données."
       }
     },
     {
       "@type": "Question",
-      "name": "Deckt TAGRA EU-Lenkzeiten und die Arbeitszeitrichtlinie ab?",
+      "name": "TAGRA couvre-t-il les temps de conduite UE et la directive temps de travail ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Ja. TAGRA wertet Verordnung (EG) Nr. 561/2006 (EU-Lenkzeiten) und die Arbeitszeitrichtlinie für Kraftfahrer 2002/15/EG sowie die zugehörigen AETR-Regeln aus. Jeder Verstoß wird in übersichtlichen Fahrer- und Fahrzeugberichten mit genauer Zeit, Art und Dauer hervorgehoben."
+        "text": "Oui. TAGRA évalue le règlement (CE) n° 561/2006 (temps de conduite UE) et la directive sur le temps de travail des chauffeurs routiers 2002/15/CE, ainsi que les règles AETR associées. Chaque infraction est mise en évidence dans des rapports clairs par conducteur et par véhicule, avec l'heure, le type et la durée exacts."
       }
     },
     {
       "@type": "Question",
-      "name": "Welche Tachographen und Kartenleser werden unterstützt?",
+      "name": "Quels chronotachygraphes et lecteurs de carte prend-il en charge ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Alle digitalen Tachographen der EU — von der ersten Generation bis zum intelligenten Tachographen G2V2. Kompatibel mit gängigen Chipkartenlesern (z. B. DOWNLOAD BOX II S), liest .DDD, .C1B, .V1B und ESM-Dateien. Bereit für die Anforderungen an leichte Nutzfahrzeuge ab Juli 2026."
+        "text": "Tous les chronotachygraphes numériques UE, de la première génération jusqu'au Smart Tachograph G2V2. Compatible avec les lecteurs de carte à puce standard (par ex. DOWNLOAD BOX II S) et lit les fichiers .DDD, .C1B, .V1B et ESM. Prêt pour les exigences de juillet 2026 applicables aux véhicules utilitaires légers."
       }
     },
     {
       "@type": "Question",
-      "name": "Wie funktioniert die 30-tägige Testversion?",
+      "name": "Comment fonctionne l'essai gratuit de 30 jours ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Laden Sie das Windows-Paket herunter und installieren Sie es — Sie erhalten 30 Tage vollen, uneingeschränkten Zugriff auf alle Funktionen. Ohne Kreditkarte, ohne Zahlungsdaten. Wenn TAGRA zu Ihrem Betrieb passt, erwerben Sie eine Lizenz."
+        "text": "Téléchargez et installez le package Windows — vous bénéficiez de 30 jours d'accès complet et illimité à toutes les fonctionnalités. Aucune carte bancaire, aucune information de paiement. Si TAGRA convient à votre activité, vous achetez une licence pour continuer."
       }
     }
   ]
