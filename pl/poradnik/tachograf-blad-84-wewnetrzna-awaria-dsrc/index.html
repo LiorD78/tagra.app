@@ -213,15 +213,15 @@
 <p>Inteligentne tachografy mają wbudowany <strong>moduł DSRC</strong> — moduł radiowy krótkiego zasięgu, dzięki któremu organy kontrolne mogą przy drodze odczytać skrócony przegląd danych z tachografu bez zatrzymywania pojazdu. Kod 84, <strong>wewnętrzna awaria DSRC</strong>, według instrukcji VDO oznacza „wewnętrzną awarię modułu DSRC (modułu radiowego do zdalnych kontroli przy drodze) lub uszkodzoną / niepodłączoną antenę”.</p>
 <div class="callout callout--blue anim-up">
 <div class="callout-title">Nie myl z kodem 85</div>
-<p style="margin:0">Kod 84 dotyczy samego modułu DSRC lub jego anteny — awaria sprzętowa. Kod 85, zakłócenie komunikacji DSRC, dotyczy natomiast połączenia między tachografem a zewnętrznym modułem CAN DSRC — problem komunikacyjny lub okablowania, niekoniecznie awaria samego modułu.</p>
+<p style="margin:0">Kod 84 dotyczy samego modułu DSRC lub jego anteny — awaria sprzętowa. Kod 85, zakłócenie komunikacji DSRC, dotyczy natomiast połączenia między tachografem a zewnętrznym modułem DSRC-CAN — problem komunikacyjny lub okablowania, niekoniecznie awaria samego modułu.</p>
 </div></div></section><section class="band band--blue"><div class="container art-body"><div class="info-card anim-up">
 <span class="badge">Co zrobić teraz</span>
 <h2 class="h2-grad anim-up" style="font-size:28px;">Co zrobić teraz</h2>
 <ol>
 <li><strong>Potwierdź komunikat na wyświetlaczu.</strong></li>
 <li><strong>Jedź dalej normalnie</strong> — nie są potrzebne żadne dodatkowe działania natychmiastowe.</li>
-<li><strong>Przy najbliższej planowej wizycie w warsztacie lub kalibracji</strong> zgłoś, że warsztat ma sprawdzić moduł DSRC, okablowanie i zewnętrzną antenę.</li>
-<li><strong>Jeśli komunikat się powtarza</strong>, umów wizytę w autoryzowanym warsztacie wcześniej.</li>
+<li><strong>Zleć naprawę zatwierdzonemu warsztatowi</strong> (posiadającemu zezwolenie Prezesa GUM), gdy tylko pozwolą na to okoliczności — ma sprawdzić moduł DSRC, okablowanie i zewnętrzną antenę.</li>
+<li><strong>Niski priorytet nie zwalnia z obowiązku naprawy z art. 37</strong> — nie łącz jej z terminem kalibracji ani nie odkładaj bezterminowo.</li>
 </ol>
 </div>
 <div class="cta-box">
@@ -241,7 +241,7 @@
 </div></section><section class="band"><div class="container art-body"><div class="eyebrow anim-up">Czego nie robić</div><h2 class="h2-grad anim-up">Czego nie robić</h2>
 <ul>
 <li><strong>Nie zakładaj</strong>, że to nagła sytuacja wymagająca postoju — moduł DSRC nie ma wpływu na zapis czasu jazdy.</li>
-<li><strong>Nie myl z kodem 85</strong> (zakłócenie komunikacji DSRC) — to dotyczy połączenia z zewnętrznym modułem CAN, nie samego modułu.</li>
+<li><strong>Nie myl z kodem 85</strong> (zakłócenie komunikacji DSRC) — to dotyczy połączenia z zewnętrznym modułem DSRC-CAN, nie samego modułu.</li>
 <li><strong>Nie ignoruj komunikatu bezterminowo</strong> mimo niskiego priorytetu — formalnie nadal jest to awaria z obowiązkiem naprawy z art. 37.</li>
 <li><strong>Nie próbuj sam ingerować</strong> w moduł DSRC ani antenę.</li>
 </ul></div></section><section class="band"><div class="container art-body"><div class="eyebrow anim-up">Dlaczego się pojawia</div><h2 class="h2-grad anim-up">Dlaczego się pojawia</h2>
@@ -251,8 +251,8 @@
 <li><strong>uszkodzona lub niepodłączona antena</strong> modułu.</li>
 </ul>
 <p>Jako <strong>EventFaultType 0x38</strong> („sprzęt do komunikacji zdalnej”) według załącznika I C rozporządzenia (UE) 2016/799 awaria zapisywana jest w pamięci masowej. Urządzenia EFAS-4 grupują wewnętrzną awarię DSRC i zakłócenie komunikacji DSRC pod tym samym zbiorczym kodem F08, bez dalszego rozróżnienia.</p></div></section><section class="band band--gray"><div class="container art-body"><div class="eyebrow anim-up">Czy możesz jechać dalej?</div><h2 class="h2-grad anim-up">Czy możesz jechać dalej?</h2>
-<p><strong>Tak, bez ograniczeń.</strong> Awaria dotyczy wyłącznie modułu DSRC do zdalnych kontroli, a nie zapisu czasu jazdy i odpoczynku. Formalnie obowiązuje art. 37 rozporządzenia 165/2014 (awaria → obowiązek naprawy „jak tylko pozwolą na to okoliczności”), ale niski priorytet pozwala połączyć wizytę z najbliższym planowym przeglądem lub kalibracją zamiast jechać do warsztatu od razu.</p></div></section><section class="band"><div class="container art-body"><div class="eyebrow anim-up">Konsekwencje dla firmy</div><h2 class="h2-grad anim-up">Konsekwencje dla firmy</h2>
-<p>Moduł DSRC umożliwia organom kontrolnym wstępną selekcję pojazdów do kontroli przy drodze bez zatrzymywania pojazdu. Jeśli jest niesprawny, pojazd nie unika przez to kontroli — kontrolerzy sięgają wtedy po zwykłą kontrolę drogową. Sama awaria nie rodzi bezpośredniego ryzyka mandatu, jeśli zostanie usunięta w rozsądnym czasie.</p>
+<p><strong>Tak, bez ograniczeń.</strong> Awaria dotyczy wyłącznie modułu DSRC do zdalnych kontroli, a nie zapisu czasu jazdy i odpoczynku. Formalnie obowiązuje art. 37 rozporządzenia 165/2014: naprawa u zatwierdzonego warsztatu, jak tylko pozwolą na to okoliczności. Niski priorytet według instrukcji VDO tego obowiązku nie zmienia — nie jest podstawą, by odkładać naprawę do najbliższej kalibracji.</p></div></section><section class="band"><div class="container art-body"><div class="eyebrow anim-up">Konsekwencje dla firmy</div><h2 class="h2-grad anim-up">Konsekwencje dla firmy</h2>
+<p>Moduł DSRC umożliwia organom kontrolnym wstępną selekcję pojazdów do kontroli przy drodze bez zatrzymywania pojazdu. Jeśli jest niesprawny, nie oznacza to, że pojazd uniknie kontroli — kontrolerzy mogą wtedy zatrzymać pojazd do zwykłej kontroli drogowej. Sama awaria nie rodzi bezpośredniego ryzyka mandatu, jeśli zostanie usunięta w rozsądnym czasie.</p>
 <p>Jeśli kod 84 pozostaje nienaprawiony przez wiele miesięcy, kontroler może i tak zapytać o dowód naprawy, bo formalnie nadal obowiązuje art. 37. Krótka adnotacja w protokole warsztatowym zwykle wystarcza jako dowód.</p></div></section><section class="band band--gray"><div class="container art-body"><div class="eyebrow anim-up">Wyświetlane także jako</div><h2 class="h2-grad anim-up">Wyświetlane także jako</h2>
 <ul class="lang-list">
 <li>Wewnętrzna awaria DSRC <span>— VDO DTCO 4.1, krótki tekst na wyświetlaczu, kod 084</span></li>
@@ -278,10 +278,10 @@
 <div class="faq-answer"><p>Nie. Awaria dotyczy wyłącznie modułu DSRC używanego do zdalnych kontroli przy drodze. Zapis czasu jazdy, pracy i odpoczynku przebiega normalnie, bez zakłóceń.</p></div>
 </details>
 <details class="faq-item"><summary>Jaka jest różnica między kodem 84 a kodem 85?</summary>
-<div class="faq-answer"><p>Kod 84 oznacza wewnętrzną awarię samego modułu DSRC lub uszkodzoną bądź niepodłączoną antenę. Kod 85 oznacza zakłócenie komunikacji między tachografem a zewnętrznym modułem CAN DSRC — problem połączenia, niekoniecznie awarię samego modułu.</p></div>
+<div class="faq-answer"><p>Kod 84 oznacza wewnętrzną awarię samego modułu DSRC lub uszkodzoną bądź niepodłączoną antenę. Kod 85 oznacza zakłócenie komunikacji między tachografem a zewnętrznym modułem DSRC-CAN — problem połączenia, niekoniecznie awarię samego modułu.</p></div>
 </details>
 <details class="faq-item"><summary>Czy muszę natychmiast jechać do warsztatu z powodu kodu 84?</summary>
-<div class="faq-answer"><p>Nie. Priorytet jest niski, a awaria nie wpływa na zapis danych. Potwierdź komunikat i zgłoś go przy najbliższej planowej wizycie w warsztacie lub kalibracji.</p></div>
+<div class="faq-answer"><p>Nie od razu, ale priorytet niski nie zwalnia z obowiązku naprawy z art. 37. Potwierdź komunikat i zleć naprawę zatwierdzonemu warsztatowi, gdy tylko pozwolą na to okoliczności — nie czekaj do najbliższej kalibracji.</p></div>
 </details>
 <details class="faq-item"><summary>Czym właściwie jest DSRC w tachografie?</summary>
 <div class="faq-answer"><p>DSRC to moduł radiowy krótkiego zasięgu inteligentnego tachografu, dzięki któremu organy kontrolne mogą przy drodze odczytać skrócony przegląd danych bez zatrzymywania pojazdu. Awaria tego modułu nie ma wpływu na zapisany czas jazdy i odpoczynku.</p></div>
@@ -338,6 +338,6 @@ if ('IntersectionObserver' in window) {
   document.querySelectorAll('.anim-up, .fly-left, .fly-right').forEach(function(el) { el.classList.add('on'); });
 }
 </script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Czy wewnętrzna awaria DSRC 84 wpływa na mój czas jazdy i odpoczynku?","acceptedAnswer":{"@type":"Answer","text":"Nie. Awaria dotyczy wyłącznie modułu DSRC używanego do zdalnych kontroli przy drodze. Zapis czasu jazdy, pracy i odpoczynku przebiega normalnie, bez zakłóceń."}},{"@type":"Question","name":"Jaka jest różnica między kodem 84 a kodem 85?","acceptedAnswer":{"@type":"Answer","text":"Kod 84 oznacza wewnętrzną awarię samego modułu DSRC lub uszkodzoną bądź niepodłączoną antenę. Kod 85 oznacza zakłócenie komunikacji między tachografem a zewnętrznym modułem CAN DSRC — problem połączenia, niekoniecznie awarię samego modułu."}},{"@type":"Question","name":"Czy muszę natychmiast jechać do warsztatu z powodu kodu 84?","acceptedAnswer":{"@type":"Answer","text":"Nie. Priorytet jest niski, a awaria nie wpływa na zapis danych. Potwierdź komunikat i zgłoś go przy najbliższej planowej wizycie w warsztacie lub kalibracji."}},{"@type":"Question","name":"Czym właściwie jest DSRC w tachografie?","acceptedAnswer":{"@type":"Answer","text":"DSRC to moduł radiowy krótkiego zasięgu inteligentnego tachografu, dzięki któremu organy kontrolne mogą przy drodze odczytać skrócony przegląd danych bez zatrzymywania pojazdu. Awaria tego modułu nie ma wpływu na zapisany czas jazdy i odpoczynku."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Czy wewnętrzna awaria DSRC 84 wpływa na mój czas jazdy i odpoczynku?","acceptedAnswer":{"@type":"Answer","text":"Nie. Awaria dotyczy wyłącznie modułu DSRC używanego do zdalnych kontroli przy drodze. Zapis czasu jazdy, pracy i odpoczynku przebiega normalnie, bez zakłóceń."}},{"@type":"Question","name":"Jaka jest różnica między kodem 84 a kodem 85?","acceptedAnswer":{"@type":"Answer","text":"Kod 84 oznacza wewnętrzną awarię samego modułu DSRC lub uszkodzoną bądź niepodłączoną antenę. Kod 85 oznacza zakłócenie komunikacji między tachografem a zewnętrznym modułem DSRC-CAN — problem połączenia, niekoniecznie awarię samego modułu."}},{"@type":"Question","name":"Czy muszę natychmiast jechać do warsztatu z powodu kodu 84?","acceptedAnswer":{"@type":"Answer","text":"Nie od razu, ale priorytet niski nie zwalnia z obowiązku naprawy z art. 37. Potwierdź komunikat i zleć naprawę zatwierdzonemu warsztatowi, gdy tylko pozwolą na to okoliczności — nie czekaj do najbliższej kalibracji."}},{"@type":"Question","name":"Czym właściwie jest DSRC w tachografie?","acceptedAnswer":{"@type":"Answer","text":"DSRC to moduł radiowy krótkiego zasięgu inteligentnego tachografu, dzięki któremu organy kontrolne mogą przy drodze odczytać skrócony przegląd danych bez zatrzymywania pojazdu. Awaria tego modułu nie ma wpływu na zapisany czas jazdy i odpoczynku."}}]}</script>
 </body>
 </html>
