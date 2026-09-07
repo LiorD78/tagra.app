@@ -41,8 +41,8 @@ const DAY_MS = 24 * 60 * 60 * 1000;
 
 // Kdy odeslat navazující maily (dny od registrace)
 const FOLLOWUP_SCHEDULE = [
-  { mail: "email2", days: 3,  campaign: "trial-followup-2" },
-  { mail: "email3", days: 25, campaign: "trial-followup-3" },
+  { mail: "email2", days: 3,  campaign: "trial-followup-2", idPrefix: "trial2" },
+  { mail: "email3", days: 25, campaign: "trial-followup-3", idPrefix: "trial3" },
 ];
 
 // Publika, kterým sekvence běží. Enforcement úmyslně chybí — viz hlavička.
@@ -50,6 +50,26 @@ const SEQUENCE_AUDIENCES = ["fleet", "driver"];
 
 const VALID_AUDIENCES = ["fleet", "driver", "enforcement"];
 const VALID_LANGS     = ["en", "de", "pl", "cz", "sk", "gr", "hu"];
+
+// Jednorázové / testovací e-mailové domény — odeslání se tiše ignoruje.
+const DISPOSABLE_DOMAINS = [
+  "example.com",
+  "example.org",
+  "laoia.com",
+  "mailinator.com",
+  "tempmail.com",
+  "guerrillamail.com",
+  "10minutemail.com",
+];
+
+const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[a-z]{2,}$/i;
+
+// Segment v source_url → jazyk šablony. Rozhoduje první výskyt zleva
+// (source_url má tvar "referrer → cílová URL", jazyk stránky odkud
+// návštěvník přišel je spolehlivější než jazyk cílové stránky).
+// /it/ a /fr/ záměrně chybí: italská a francouzská šablona zatím
+// neexistuje, fallback na "en" je pro ně správný.
+const LANG_URL_SEGMENTS = { de: "de", pl: "pl", el: "gr", hu: "hu", cz: "cz", sk: "sk" };
 
 // Předměty uvítacího mailu (#1). U #2/#3 se čtou z <title> šablony.
 const SUBJECTS = {
@@ -146,17 +166,49 @@ async function fetchTemplate(url) {
   return r.text();
 }
 
+/** E-mail → ASCII klíč pro Idempotency-Key (lowercase, non-alfanumerické → "-"). */
+function normalizeEmailForKey(email) {
+  return String(email || "").trim().toLowerCase().replace(/[^a-z0-9]/g, "-");
+}
+
+/**
+ * Rozhoduje první výskyt jazykového segmentu zleva v source_url.
+ * Viz LANG_URL_SEGMENTS výše. Bez shody vrací null (fallback na "en").
+ */
+function deriveLangFromSourceUrl(sourceUrl) {
+  const s = String(sourceUrl || "");
+  let bestIndex = Infinity;
+  let bestLang  = null;
+
+  for (const [segment, lang] of Object.entries(LANG_URL_SEGMENTS)) {
+    const idx = s.indexOf(`/${segment}/`);
+    if (idx !== -1 && idx < bestIndex) {
+      bestIndex = idx;
+      bestLang  = lang;
+    }
+  }
+
+  return bestLang;
+}
+
 /**
  * Odešle e-mail přes Resend. Když je zadáno `scheduledAt`, Resend ho
- * podrží a odešle až v daný čas.
+ * podrží a odešle až v daný čas. `idempotencyKey`, pokud je zadán, jde
+ * do hlavičky Idempotency-Key — Resend ji respektuje 24 h a druhý
+ * požadavek se stejným klíčem vrátí původní e-mail místo nového.
  */
-async function sendViaResend(apiKey, payload) {
+async function sendViaResend(apiKey, payload, idempotencyKey) {
+  const headers = {
+    "Authorization": `Bearer ${apiKey}`,
+    "Content-Type": "application/json",
+  };
+  if (idempotencyKey) {
+    headers["Idempotency-Key"] = idempotencyKey.slice(0, 256);
+  }
+
   const resp = await fetch(RESEND_API, {
     method: "POST",
-    headers: {
-      "Authorization": `Bearer ${apiKey}`,
-      "Content-Type": "application/json",
-    },
+    headers,
     body: JSON.stringify(payload),
   });
 
@@ -188,14 +240,35 @@ exports.handler = async (event) => {
     return { statusCode: 200, body: "Ignored: not tagra-trial" };
   }
 
+  if (String(data.source_url || "").includes("test=1") || data.test === "1") {
+    logInfo("Ignored: test submission");
+    return { statusCode: 200, body: "Ignored: test submission" };
+  }
+
   const email    = (data.email || "").trim();
   const name     = (data.name || "").trim();
   const audience = normalizeAudience(data.audience);
-  const language = (data.language || "en").toLowerCase();
+  let   language = (data.language || "en").toLowerCase();
 
   if (!email) {
     logError("Missing email in submission");
     return { statusCode: 200, body: "Ignored: no email" };
+  }
+
+  if (!EMAIL_RE.test(email)) {
+    logError(`Invalid email in submission: ${email}`);
+    return { statusCode: 200, body: "Ignored: invalid email" };
+  }
+
+  if (name.length < 2) {
+    logError("Empty name in submission");
+    return { statusCode: 200, body: "Ignored: empty name" };
+  }
+
+  const emailDomain = email.split("@")[1]?.toLowerCase() || "";
+  if (DISPOSABLE_DOMAINS.includes(emailDomain)) {
+    logInfo(`Ignored: disposable domain (${emailDomain})`);
+    return { statusCode: 200, body: "Ignored: disposable domain" };
   }
 
   const apiKey = process.env.RESEND_API_KEY;
@@ -204,9 +277,15 @@ exports.handler = async (event) => {
     return { statusCode: 200, body: "Not configured: no API key" };
   }
 
+  if (!language || language === "en") {
+    const derived = deriveLangFromSourceUrl(data.source_url);
+    if (derived) language = derived;
+  }
+
   const aud      = VALID_AUDIENCES.includes(audience) ? audience : "fleet";
   const lang     = VALID_LANGS.includes(language) ? language : "en";
   const greeting = firstName(name);
+  const emailKey = normalizeEmailForKey(email);
 
   const fromAddr = process.env.RESEND_FROM || "TAGRA <sales@tagra.app>";
   const replyTo  = "sales@tagra.app";
@@ -229,7 +308,7 @@ exports.handler = async (event) => {
         { name: "audience", value: aud },
         { name: "language", value: lang },
       ],
-    });
+    }, `trial1-${emailKey}-${lang}-${aud}`);
 
     result.welcome = sent.id;
     logInfo(`#1 sent to ${email} (lang=${lang}, audience=${aud}, id=${sent.id})`);
@@ -271,7 +350,7 @@ exports.handler = async (event) => {
           { name: "audience", value: aud },
           { name: "language", value: lang },
         ],
-      });
+      }, `${step.idPrefix}-${emailKey}-${lang}-${aud}`);
 
       result.scheduled.push({ mail: step.mail, at: scheduledAt, id: sent.id });
       logInfo(`${step.mail} scheduled for ${email} at ${scheduledAt} (id=${sent.id})`);
