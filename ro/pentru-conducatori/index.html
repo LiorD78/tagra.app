@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<!-- TMX-ANALYTICS START -->
+<meta content="7F7894081BE7FBB245FF03AF8810B22F" name="msvalidate.01"/>
+<!-- Consent Mode v2 defaults (deny) + gtag stub — runs BEFORE gtag.js -->
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent','default',{
+      ad_storage:'denied', ad_user_data:'denied', ad_personalization:'denied',
+      analytics_storage:'denied', functionality_storage:'denied',
+      personalization_storage:'denied', security_storage:'granted',
+      wait_for_update:500
+    });
+    gtag('set','ads_data_redaction',true);
+    gtag('set','url_passthrough',false);
+  </script>
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-92253QFBNX"></script>
+<script>
+    gtag('js', new Date());
+    gtag('config','G-92253QFBNX');
+  </script>
+<!-- Cookie consent banner (self-hosted) + Microsoft Clarity gating -->
+<style>
+    .tmx-cc{position:fixed;left:0;right:0;bottom:0;z-index:2147483000;background:linear-gradient(120deg,var(--blue-dark,#0b2c4a),var(--blue-mid,#134a8e) 62%,var(--blue-light,#1f5fa6));color:#fff;
+      font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+      padding:16px 20px;box-shadow:0 -4px 24px rgba(0,0,0,.18);display:flex;flex-wrap:wrap;
+      align-items:center;gap:14px;justify-content:center}
+    .tmx-cc__txt{flex:1 1 360px;max-width:760px}
+    .tmx-cc__txt a{color:#9ed0f5;text-decoration:underline}
+    .tmx-cc__btns{display:flex;gap:10px;flex:0 0 auto}
+    .tmx-cc__b{appearance:none;border:0;cursor:pointer;font:inherit;font-weight:600;
+      padding:10px 22px;border-radius:99px;transition:filter .15s;color:#fff}
+    .tmx-cc__b:hover{filter:brightness(1.08)}
+    .tmx-cc__b--no{background:rgba(255,255,255,.16)}
+    .tmx-cc__b--yes{background:var(--green-cta,#5C820F)}
+    @media(max-width:640px){.tmx-cc{padding:14px}.tmx-cc__btns{width:100%}.tmx-cc__b{flex:1}}
+  </style>
+<script>
+  (function(){
+    var KEY='tmx-consent-v1', CL='wt18054m0r';
+    function lc(){var l=(document.documentElement.getAttribute('lang')||'en').toLowerCase().split('-')[0];
+      var m={cz:'cs',cs:'cs',sk:'sk',de:'de',pl:'pl',gr:'el',el:'el',hu:'hu',en:'en'};return m[l]||'en';}
+    var T={
+      hu:{t:'Analitikai s\u00fctiket haszn\u00e1lunk (Google Analytics, Microsoft Clarity, Smartsupp), hogy meg\u00e9rts\u00fck a webhely haszn\u00e1lat\u00e1t. Csak az \u00d6n hozz\u00e1j\u00e1rul\u00e1s\u00e1val t\u00f6lt\u0151dnek be.',a:'Elfogadom',r:'Elutas\u00edtom',p:'Adatv\u00e9delem \u00e9s s\u00fctik'},
+      ro:{t:'Utilizăm module cookie de analiză (Google Analytics, Microsoft Clarity, Smartsupp) pentru a înțelege modul de utilizare a site-ului. Se încarcă doar cu consimțământul dumneavoastră.',a:'Accept',r:'Refuz',p:'Confidențialitate și cookie-uri'},
+      nl:{t:'We gebruiken analytische cookies (Google Analytics, Microsoft Clarity, Smartsupp) om het gebruik van de site te begrijpen. Ze laden alleen met uw toestemming.',a:'Accepteren',r:'Weigeren',p:'Privacy en cookies'},
+      fr:{t:'Nous utilisons des cookies analytiques (Google Analytics, Microsoft Clarity, Smartsupp) pour comprendre l’utilisation du site. Ils ne se chargent qu’avec votre consentement.',a:'Accepter',r:'Refuser',p:'Confidentialité et cookies'},
+      it:{t:'Utilizziamo cookie analitici (Google Analytics, Microsoft Clarity, Smartsupp) per capire l’utilizzo del sito. Si caricano solo con il Suo consenso.',a:'Accetta',r:'Rifiuta',p:'Privacy e cookie'},
+      en:{t:'Utilizăm module cookie de analiză (Google Analytics, Microsoft Clarity, Smartsupp) pentru a înțelege modul de utilizare a site-ului. Acestea se încarcă numai cu consimțământul dumneavoastră.',a:'Accept',r:'Reject',p:'Privacy &amp; cookies'},
+      cs:{t:'Pou\u017e\u00edv\u00e1me analytick\u00e9 cookies (Google Analytics, Microsoft Clarity, Smartsupp) k pochopen\u00ed pou\u017e\u00edv\u00e1n\u00ed webu. Na\u010dtou se jen s va\u0161\u00edm souhlasem.',a:'P\u0159ijmout',r:'Odm\u00edtnout',p:'Soukrom\u00ed a cookies'},
+      sk:{t:'Pou\u017e\u00edvame analytick\u00e9 cookies (Google Analytics, Microsoft Clarity, Smartsupp) na pochopenie pou\u017e\u00edvania webu. Na\u010d\u00edtaj\u00fa sa len s va\u0161\u00edm s\u00fahlasom.',a:'Prija\u0165',r:'Odmietnu\u0165',p:'S\u00fakromie a cookies'},
+      de:{t:'Wir verwenden Analyse-Cookies (Google Analytics, Microsoft Clarity, Smartsupp), um die Nutzung der Website zu verstehen. Sie werden nur mit Ihrer Einwilligung geladen.',a:'Akzeptieren',r:'Ablehnen',p:'Datenschutz &amp; Cookies'},
+      pl:{t:'U\u017cywamy plik\u00f3w cookie do analityki (Google Analytics, Microsoft Clarity, Smartsupp), aby zrozumie\u0107 korzystanie z witryny. \u0141aduj\u0105 si\u0119 tylko za Twoj\u0105 zgod\u0105.',a:'Akceptuj',r:'Odrzu\u0107',p:'Prywatno\u015b\u0107 i cookies'},
+      el:{t:'\u03a7\u03c1\u03b7\u03c3\u03b9\u03bc\u03bf\u03c0\u03bf\u03b9\u03bf\u03cd\u03bc\u03b5 cookies \u03b1\u03bd\u03ac\u03bb\u03c5\u03c3\u03b7\u03c2 (Google Analytics, Microsoft Clarity, Smartsupp) \u03b3\u03b9\u03b1 \u03bd\u03b1 \u03ba\u03b1\u03c4\u03b1\u03bd\u03bf\u03ae\u03c3\u03bf\u03c5\u03bc\u03b5 \u03c4\u03b7 \u03c7\u03c1\u03ae\u03c3\u03b7. \u03a6\u03bf\u03c1\u03c4\u03ce\u03bd\u03bf\u03bd\u03c4\u03b1\u03b9 \u03bc\u03cc\u03bd\u03bf \u03bc\u03b5 \u03c4\u03b7 \u03c3\u03c5\u03b3\u03ba\u03b1\u03c4\u03ac\u03b8\u03b5\u03c3\u03ae \u03c3\u03b1\u03c2.',a:'\u0391\u03c0\u03bf\u03b4\u03bf\u03c7\u03ae',r:'\u0391\u03c0\u03cc\u03c1\u03c1\u03b9\u03c8\u03b7',p:'\u0391\u03c0\u03cc\u03c1\u03c1\u03b7\u03c4\u03bf &amp; cookies'}
+    };
+    function loadClarity(){if(!CL||window.__tmxCl)return;window.__tmxCl=1;
+      (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+       t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+       y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script",CL);}
+    function grant(){try{localStorage.setItem(KEY,'granted')}catch(e){}
+      gtag('consent','update',{analytics_storage:'granted'});loadClarity();}
+    function deny(){try{localStorage.setItem(KEY,'denied')}catch(e){}}
+    var saved=null;try{saved=localStorage.getItem(KEY)}catch(e){}
+    if(saved==='granted'){grant();return;} if(saved==='denied'){return;}
+    function show(){var tx=T[lc()]||T.en;
+      var b=document.createElement('div');b.className='tmx-cc';b.setAttribute('role','dialog');b.setAttribute('aria-live','polite');
+      b.innerHTML='<div class="tmx-cc__txt">'+tx.t+' <a href="/ro/confidentialitate/">'+tx.p+'</a></div>'+
+        '<div class="tmx-cc__btns"><button type="button" class="tmx-cc__b tmx-cc__b--no">'+tx.r+'</button>'+
+        '<button type="button" class="tmx-cc__b tmx-cc__b--yes">'+tx.a+'</button></div>';
+      document.body.appendChild(b);
+      b.querySelector('.tmx-cc__b--yes').addEventListener('click',function(){grant();b.remove();});
+      b.querySelector('.tmx-cc__b--no').addEventListener('click',function(){deny();b.remove();});}
+    if(document.body)show();else document.addEventListener('DOMContentLoaded',show);
+  })();
+  </script>
+<!-- TMX-ANALYTICS END -->
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>TAGRA Trucker – Software pentru tahografe destinat conducătorilor auto profesioniști</title>
+<meta content="TAGRA TRUCKER îi ajută pe conducătorii auto profesioniști să respecte reglementările UE privind tahografele. Verificați datele cardului de conducător auto, duratele de conducere și perioadele de repaus cu un cititor de carduri USB." name="description"/>
+<meta content="#0b2c4a" name="theme-color"/>
+<link href="/manifest.json" rel="manifest"/>
+<link href="https://tagra.app/ro/pentru-conducatori/" rel="canonical"/>
+<link href="https://tagra.app/de/fahrer/" hreflang="de" rel="alternate"/><link href="https://tagra.app/el/odigoi/" hreflang="el" rel="alternate"/><link href="https://tagra.app/driver/" hreflang="en" rel="alternate"/><link href="https://tagra.app/fr/conducteurs/" hreflang="fr" rel="alternate"/><link href="https://tagra.app/hu/soforoknek/" hreflang="hu" rel="alternate"/><link href="https://tagra.app/it/per-autisti/" hreflang="it" rel="alternate"/><link href="https://tagra.app/nl/voor-chauffeurs/" hreflang="nl" rel="alternate"/><link href="https://tagra.app/pl/dla-kierowcow/" hreflang="pl" rel="alternate"/>
+<link href="https://tagra.app/ro/pentru-conducatori/" hreflang="ro" rel="alternate"/><link href="https://tagra.app/driver/" hreflang="x-default" rel="alternate"/>
+<meta content="website" property="og:type"/>
+<meta content="en_US" property="og:locale"/>
+<meta content="TAGRA" property="og:site_name"/>
+<meta content="TAGRA Trucker – Pentru conducători auto profesioniști" property="og:title"/>
+<meta content="TAGRA Trucker îi ajută pe conducătorii auto profesioniști să respecte reglementările UE privind tahografele. Funcționează cu un cititor de carduri USB standard. Perioadă de probă gratuită de 30 de zile." property="og:description"/>
+<meta content="https://cdn.truckmall.cz/data/user-content/TDT_TAGRA_TRUCKER_wh.jpg" property="og:image"/>
+<meta content="TAGRA Trucker – software pentru tahografe destinat conducătorilor auto profesioniști, cu cititor de carduri USB" property="og:image:alt"/>
+<meta content="https://cdn.truckmall.cz/data/user-content/TDT_TAGRA_TRUCKER_wh.jpg" name="twitter:image"/>
+<meta content="TAGRA Trucker – software pentru tahografe destinat conducătorilor auto profesioniști, cu cititor de carduri USB" name="twitter:image:alt"/>
+<meta content="https://tagra.app/ro/pentru-conducatori/" property="og:url"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<style>
+    /* ─── TOKENS ────────────────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    a { color: var(--green-brand); text-decoration: none; }
+    a:hover { color: var(--green-cta); text-decoration: underline; text-underline-offset: .18em; }
+    img { max-width: 100%; height: auto; display: block; }
+    ul { list-style: none; }
+    p + p { margin-top: 12px; }
+    p:empty { display: none; }
+
+    /* ─── SCROLL PROGRESS ───────────────────────────────────────────── */
+    #scroll-progress { position: fixed; top: 0; left: 0; height: 3px; background: linear-gradient(90deg, var(--green-brand), var(--blue-light)); width: 0%; z-index: 9999; pointer-events: none; transition: width .1s ease-out; }
+
+    /* ─── NAV ───────────────────────────────────────────────────────── */
+.nav-inner { margin: 0 auto; padding: 0 24px; height: 100%; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .nav-links { display: flex; align-items: center; gap: 4px; list-style: none; }
+    .nav-links li a { font-size: 15px; font-weight: 500; color: var(--text); padding: 8px 12px; border-radius: 8px; transition: background .15s, color .15s; text-decoration: none; }
+    .nav-links li a:hover { background: var(--bg-apple-solid); color: var(--blue-mid); }
+    .nav-links .nav-cta a { background: var(--green-cta); color: #fff !important; border-radius: 99px; padding: 8px 18px; font-weight: 600; }
+    .nav-links .nav-cta a:hover { background: var(--green-brand); text-decoration: none; }
+    .nav-lang { display: flex; align-items: center; gap: 4px; font-size: 14px; font-weight: 600; }
+    .nav-lang a { padding: 5px 8px; border-radius: 6px; color: var(--text2); text-decoration: none; transition: background .15s; }
+    .nav-lang a:hover, .nav-lang a.active { background: var(--bg-apple-solid); color: var(--blue-mid); }
+    .nav-lang span { color: var(--border); }
+    .nav-mobile-toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
+    .nav-mobile-toggle span { display: block; width: 22px; height: 2px; background: var(--text); margin: 5px 0; border-radius: 2px; transition: .3s; }
+    @media (max-width: 900px) {
+      .nav-links { display: none; }
+      .nav-mobile-toggle { display: block; }
+      .nav-links.open { display: flex; flex-direction: column; align-items: flex-start; gap: 2px; position: absolute; top: var(--nav-h); left: 0; right: 0; background: rgba(255,255,255,0.97); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 12px 24px 20px; }
+    }
+
+    /* ─── LAYOUT ────────────────────────────────────────────────────── */
+    
+    
+    
+    
+    .band--green { background: var(--green-bg); }
+    @media (max-width: 768px) { .band { padding: 50px 0; } }
+    /* ─── TYPOGRAPHY ────────────────────────────────────────────────── */
+    h2 {
+      font-size: 36px; font-weight: 800;
+      line-height: 1.1; letter-spacing: 0;
+      text-transform: uppercase;
+      color: var(--blue-mid, #134a8e);
+      background: linear-gradient(90deg, var(--blue-dark, #0b2c4a) 0%, var(--blue-mid, #134a8e) 55%, var(--blue-light, #1f5fa6) 100%);
+      -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block; max-width: 100%; margin-bottom: 14px;
+      padding: 0.12em 0.15em 0.08em 0;
+    }
+    @media (max-width: 768px) { h2 {
+      font-size: 36px; font-weight: 800;
+      line-height: 1.1; letter-spacing: 0;
+      text-transform: uppercase;
+      color: var(--blue-mid, #134a8e);
+      background: linear-gradient(90deg, var(--blue-dark, #0b2c4a) 0%, var(--blue-mid, #134a8e) 55%, var(--blue-light, #1f5fa6) 100%);
+      -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block; max-width: 100%; margin-bottom: 14px;
+      padding: 0.12em 0.15em 0.08em 0;
+    } }
+    h2
+    @media (max-width: 768px) { h2 }
+    .eyebrow { font-size: 15px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--green-brand); margin-bottom: 12px; }
+
+    /* ─── BUTTONS ───────────────────────────────────────────────────── */
+    
+    .btn-cta:hover { background: var(--green-brand); transform: scale(1.02); color: #fff !important; }
+    
+
+    /* ─── BENTO ─────────────────────────────────────────────────────── */
+    
+    .bc { background: #fff; border-radius: var(--radius); padding: 32px; border: 1px solid var(--border); position: relative; overflow: hidden; }
+    
+    
+    
+    
+    
+    
+    @media (max-width: 900px) { .bento { grid-template-columns: 1fr 1fr; } .bc.s7, .bc.s5 { grid-column: span 2; } .bc.s4, .bc.s6 { grid-column: span 1; } }
+    @media (max-width: 600px) { .bento { grid-template-columns: 1fr; } .bc { grid-column: span 1 !important; } }
+    
+    
+    .bignum { font-size: 110px; font-weight: 800; line-height: 1; letter-spacing: -.04em; color: rgba(19,74,142,.06); position: absolute; bottom: -16px; right: 16px; pointer-events: none; }
+
+    /* ─── 2-COL ─────────────────────────────────────────────────────── */
+    
+    
+    @media (max-width: 900px) { .g2 { grid-template-columns: 1fr; gap: 40px; } }
+
+    /* ─── FEATURES ──────────────────────────────────────────────────── */
+    
+    
+    
+
+    /* ─── REVIEWS ───────────────────────────────────────────────────── */
+    .rev-rail-wrap { overflow: hidden; margin-top: 24px; mask-image: linear-gradient(to right, transparent 0%,black 6%,black 94%,transparent 100%); }
+    
+    .rev-rail::-webkit-scrollbar { display: none; }
+    .rev-rail:active { cursor: grabbing; }
+    
+    
+    
+    
+
+    /* ─── MEDIA ─────────────────────────────────────────────────────── */
+    .media-frame { width: 100%; border-radius: var(--radius); overflow: hidden; -webkit-mask-image: -webkit-radial-gradient(#fff,#000); }
+    .media-frame img, .media-frame video { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+    /* ─── MAC STAGE ─────────────────────────────────────────────────── */
+    .mac-stage { position: relative; width: 100%; line-height: 0; }
+    .mac-stage img { width: 100%; display: block; object-fit: contain; transform-origin: center center; filter: drop-shadow(0 30px 70px rgba(0,0,0,.16)); will-change: transform; }
+    .mac-stage::after { content: ""; position: absolute; left: 50%; bottom: 5%; transform: translateX(-50%); width: 80%; height: 60px; background: radial-gradient(50% 50%,rgba(0,0,0,.16) 0%,transparent 70%); filter: blur(15px); opacity: .6; pointer-events: none; z-index: -1; }
+
+    /* ─── NOTE BOX ──────────────────────────────────────────────────── */
+    .note-box { position: relative; background: linear-gradient(180deg,var(--green-bg) 0%,#fff 100%); border: 2px solid var(--green-brand); border-radius: var(--radius); padding: 36px 28px 28px; margin-top: 40px; box-shadow: 0 10px 26px rgba(110,155,18,.08); }
+    .note-badge { position: absolute; top: -16px; left: 24px; background: var(--green-brand); color: #fff; font-size: 14px; font-weight: 800; text-transform: uppercase; padding: 5px 14px; border-radius: 999px; box-shadow: 0 6px 14px rgba(110,155,18,.22); }
+    .note-title { font-size: 24px; font-weight: 800; line-height: 1.2; margin: 10px 0 12px; color: var(--text-strong); }
+    .note-box p { font-size: 17px; line-height: 1.6; color: var(--text2); margin-bottom: 12px; }
+
+    /* ─── 3-STEP ────────────────────────────────────────────────────── */
+    
+    @media (max-width: 860px) { .three-col { grid-template-columns: 1fr; } }
+    @media (min-width: 600px) and (max-width: 860px) { .three-col { grid-template-columns: 1fr 1fr; } }
+
+    /* ─── FAQ ───────────────────────────────────────────────────────── */
+    
+    
+    .faq summary { list-style: none; cursor: pointer; padding: 18px 40px 18px 0; font-weight: 800; font-size: 18px; line-height: 1.4; position: relative; color: var(--text-strong); }
+    
+    .faq summary::after { content: "+"; position: absolute; right: 4px; top: 50%; transform: translateY(-50%); font-size: 26px; font-weight: 300; color: var(--green-brand); }
+    
+    
+
+    /* ─── FOOTER ────────────────────────────────────────────────────── */
+
+    /* ─── ANIMATIONS ────────────────────────────────────────────────── */
+    .anim-up { opacity: 0; transform: translateY(28px); transition: opacity .8s cubic-bezier(.16,1,.3,1), transform .8s cubic-bezier(.16,1,.3,1); }
+    .fly-left { opacity: 0; transform: translateX(-80px); transition: opacity 2.8s cubic-bezier(.16,1,.3,1), transform 2.8s cubic-bezier(.16,1,.3,1); }
+    .fly-right { opacity: 0; transform: translateX(80px); transition: opacity 2.8s cubic-bezier(.16,1,.3,1), transform 2.8s cubic-bezier(.16,1,.3,1); }
+    .anim-up.on, .fly-left.on, .fly-right.on { opacity: 1; transform: none; }
+    @media (prefers-reduced-motion: reduce) { .anim-up, .fly-left, .fly-right { transition: none !important; opacity: 1 !important; transform: none !important; } }
+  </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Acasă",
+      "item": "https://tagra.app/ro/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Pentru conducătorii auto profesioniști",
+      "item": "https://tagra.app/ro/pentru-conducatori/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "url": "https://tagra.app/ro/pentru-conducatori/",
+  "name": "Pentru conducătorii auto profesioniști",
+  "isPartOf": {
+    "@id": "https://tagra.app/#website"
+  },
+  "about": {
+    "@id": "https://tagra.app/#organization"
+  },
+  "inLanguage": "ro"
+}
+</script>
+<link href="/assets/css/tokens.css" rel="stylesheet"/>
+<link href="/assets/css/base.css" rel="stylesheet"/>
+<link href="/assets/css/components.css" rel="stylesheet"/>
+<link href="/assets/css/nav.css" rel="stylesheet"/>
+<script defer="" src="/assets/js/nav.js?v=20260816b"></script>
+<link href="/assets/css/footer.css" rel="stylesheet"/></head>
+<body>
+<a class="skip-link" href="#main-content">Salt la conținut</a>
+<div aria-hidden="true" id="scroll-progress"></div>
+<!-- ═══ NAVIGATION ════════════════════════════════════════════════════ -->
+<nav aria-label="Navigare principală" class="site-nav" role="navigation">
+<div class="nav-inner">
+<a aria-label="TAGRA Trucker – Acasă" class="nav-logo" href="/ro/"><img alt="TAGRA" height="32" src="/assets/img/logo-light.svg?v=20260513zh" style="display:block;height:32px;width:auto;" width="140"/><span class="nav-logo-variant">Șofer de camion</span></a>
+<ul class="nav-links" id="nav-links">
+<li><a href="/ro/pentru-firme/">Pentru societăți</a></li>
+<li><a aria-current="page" href="/driver/">Pentru conducători auto</a></li>
+<li><a href="/ro/autoritati-de-control/">Control</a></li>
+<li><a href="/ro/articole/">Articole</a></li><li><a href="/ro/manuale/">Manuale</a></li>
+<li><a href="/ro/intrebari-frecvente/">Întrebări frecvente</a></li>
+<li><a href="/ro/contact/">Contact</a></li>
+<li class="nav-cta-li"><a class="nav-cta" href="/ro/incercare-gratuita/?audience=driver">Încercați gratuit timp de 30 de zile</a></li>
+</ul>
+<details class="nav-lang">
+<summary aria-label="Limbă: RO">RO</summary>
+<div class="nav-lang-menu" role="menu"><a href="/" hreflang="en">Engleză</a><a href="/de/fahrer/" hreflang="de">Deutsch</a><a href="/pl/dla-kierowcow/" hreflang="pl">Polski</a><a href="/nl/voor-chauffeurs/" hreflang="nl">Nederlands</a><a href="/fr/conducteurs/" hreflang="fr">Français</a><a href="/it/per-autisti/" hreflang="it">Italiano</a><a href="/el/odigoi/" hreflang="el">Ελληνικά</a><a href="/hu/soforoknek/" hreflang="hu">Magyar</a><a href="/ro/pentru-conducatori/" hreflang="ro">Română</a><a href="https://www.tdt.cz/" hreflang="cs" rel="noopener" target="_blank">Čeština</a><a href="https://www.tdt.sk/" hreflang="sk" rel="noopener" target="_blank">Slovenčina</a></div>
+</details>
+<a class="nav-cta-mobile" href="/ro/incercare-gratuita/?audience=driver">Încercați gratuit</a>
+<button aria-expanded="false" aria-label="Comutați meniul" class="nav-mobile-toggle" id="nav-toggle">
+<span></span><span></span><span></span>
+</button>
+</div>
+</nav>
+<!-- ═══ HERO ═════════════════════════════════════════════════════════ -->
+<section id="main-content" aria-label="Prezentare generală TAGRA Trucker" class="band band--hero band--hero--green">
+<div class="container">
+<div class="eyebrow anim-up">TAGRA · Software pentru tahografe destinat conducătorilor auto profesioniști</div>
+<h1 class="anim-up" style="transition-delay:.05s">Analiza tahografului înainte de <br/>următorul dumneavoastră control rutier</h1>
+<p class="lead anim-up" style="transition-delay:.1s">
+<strong>Orele dumneavoastră. Datele dumneavoastră.</strong> Știți exact ce conține <strong>card de conducător auto</strong> — durate de conducere, pauze, perioade de repaus și timpi de lucru ai conducătorilor auto din UE — înainte de orice control rutier. Descărcarea datelor de pe cardul de conducător auto cu un cititor de carduri USB standard.
+    </p>
+<div class="anim-up" style="margin-bottom:16px;transition-delay:.15s">
+<a class="btn-cta" href="/ro/incercare-gratuita/?audience=driver" rel="noopener" target="_blank">Încercați gratuit timp de 30 de zile</a>
+</div>
+<p class="anim-up" style="font-size:15px;color:var(--text2);transition-delay:.2s">Windows · Perioadă de probă gratuită de 30 de zile · Pregătit pentru conducătorii auto de autoutilitare din iulie 2026</p>
+<!-- Hero video -->
+<div class="media-frame anim-up" style="margin:44px auto 0;box-shadow:0 20px 40px rgba(0,0,0,.08);transition-delay:.25s;border-radius:20px;overflow:hidden">
+<video id="hero-vid" loop="" muted="" playsinline="" poster="https://cdn.truckmall.cz/data/user-content/TDT_TAGRA_TRUCKER_wh.jpg" preload="metadata" style="width:100%;display:block">
+<source src="https://cdn.truckmall.cz/data/user-content/tagra-trucker.webm" type="video/webm">
+</source></video>
+</div>
+</div>
+</section>
+<!-- ═══ KEY PARAMETERS (BENTO) ════════════════════════════════════════ -->
+<section aria-label="Funcții principale" class="band">
+<div class="container">
+<div class="eyebrow anim-up">Funcții principale</div>
+<h2 class="anim-up">Analiza tahografului pentru cardurile de conducător auto —<br/>identificați din timp contravențiile</h2>
+<div class="bento">
+<div class="bc s7 fly-left">
+<div class="eyebrow" style="color:var(--green-brand)">Pentru</div>
+<div class="bc-title">1 conducător auto · card de conducător auto</div>
+<div class="bc-text"><strong>Descărcarea cardului de conducător auto</strong>, evaluarea și arhivarea propriilor date de pe card. Cunoașteți <strong>timpii de lucru ai conducătorilor auto</strong> înaintea inspectorului.</div>
+<div class="bignum">1</div>
+</div>
+<div class="bc s5 greenfill fly-right" style="transition-delay:.1s">
+<div class="eyebrow" style="color:var(--green-brand)">Cititor de carduri</div>
+<div class="bc-title">USB standard<br/>cititor de carduri</div>
+<div class="bc-text">Conectați-l, introduceți cardul și gata. Nu aveți încă un cititor? Vă vom recomanda un model.</div>
+</div>
+<div class="bc s4 fly-left" style="transition-delay:.15s">
+<div class="eyebrow">Perioada de probă</div>
+<div class="bc-title">30 de zile gratuite</div>
+<div class="bc-text">Descărcați, instalați, încercați. Fără card de credit, fără obligații.</div>
+</div>
+<div class="bc s4 anim-up" style="transition-delay:.25s">
+<div class="eyebrow">Începând din anul 2</div>
+<div class="bc-title" style="color:var(--green-brand)">€19 / an</div>
+<div class="bc-text">Taxă anuală de licență fără TVA — include actualizări și asistență.</div>
+</div>
+<div class="bc s4 greenfill fly-right" style="transition-delay:.35s">
+<div class="eyebrow" style="color:var(--green-brand)">Funcționează</div>
+<div class="bc-title" style="color:var(--green-brand)">Offline</div>
+<div class="bc-text">Nu este necesară conexiunea la internet pentru utilizarea zilnică. Doar PC-ul și cardul dumneavoastră.</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ═══ REVIEWS ════════════════════════════════════════════════════════ -->
+<section aria-label="Recenzii ale clienților" class="band band--gray">
+<div class="container">
+<div class="eyebrow anim-up">Ce spun conducătorii auto</div>
+<h2 class="anim-up">Creat pentru conducători auto profesioniști</h2>
+</div>
+<div class="rev-rail-wrap anim-up" style="transition-delay:.05s">
+<div class="rev-rail" id="rev-rail">
+<div class="rev-card"><div aria-label="5 din 5" class="rev-stars">★★★★★</div><p class="rev-txt">„Foarte mulțumit și fără probleme în timpul controalelor.”</p><p class="rev-meta">Client verificat</p></div>
+<div class="rev-card"><div aria-label="5 din 5" class="rev-stars">★★★★★</div><p class="rev-txt">„Cititorul funcționează așa cum trebuie.”</p><p class="rev-meta">Client verificat</p></div>
+<div class="rev-card"><div aria-label="5 din 5" class="rev-stars">★★★★★</div><p class="rev-txt">„Totul funcționează așa cum trebuie, software-ul este clar și suficient pentru nevoile mele. Asistența a fost utilă și promptă. Nu pot decât să îl recomand.”</p><p class="rev-meta">Client verificat</p></div>
+<div class="rev-card"><div aria-label="5 din 5" class="rev-stars">★★★★★</div><p class="rev-txt">„La început necesită puțin timp de acomodare, dar apoi vă dați seama că software-ul este simplu, clar și util și pentru planificarea curselor. Fiecare conducător auto ar trebui să îl aibă.”</p><p class="rev-meta">Client verificat</p></div>
+<div class="rev-card"><div aria-label="5 din 5" class="rev-stars">★★★★★</div><p class="rev-txt">„Simplu și clar. Descărcarea, evaluarea și arhivarea datelor durează doar câteva minute.”</p><p class="rev-meta">Client TRUCKMALL verificat</p></div>
+</div>
+</div>
+</section>
+<!-- ═══ WHAT TAGRA TRUCKER DOES ════════════════════════════════════════ -->
+<section aria-label="Funcțiile software-ului" class="band">
+<div class="container">
+<div class="g2 top">
+<div class="anim-up">
+<div class="eyebrow">Ce face TAGRA Trucker</div>
+<h2>Cardul dumneavoastră.<br/>Datele dumneavoastră. Liniștea dumneavoastră.</h2>
+<p style="margin-bottom:24px">Ușor <strong>software de analiză a tahografului</strong> pentru un singur conducător auto. Știți întotdeauna exact ce se află pe cardul dumneavoastră de conducător auto — și sunteți pregătit pentru orice control rutier.</p>
+<div class="feats">
+<div class="fi"><div class="fck"><svg fill="none" height="8" viewbox="0 0 10 8" width="10"><path d="M1 4l2.5 2.5L9 1" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></div><span><strong>Cititor USB standard de carduri</strong> — conectați, citiți cardul, gata</span></div>
+<div class="fi"><div class="fck"><svg fill="none" height="8" viewbox="0 0 10 8" width="10"><path d="M1 4l2.5 2.5L9 1" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></div><span><strong>Timpii de conducere UE</strong> evaluare conform Regulamentului 561/2006 și AETR — durate de conducere, pauze și perioade de repaus</span></div>
+<div class="fi"><div class="fck"><svg fill="none" height="8" viewbox="0 0 10 8" width="10"><path d="M1 4l2.5 2.5L9 1" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></div><span>Prezentare generală instantanee a informațiilor stocate pe cardul dumneavoastră de conducător auto</span></div>
+<div class="fi"><div class="fck"><svg fill="none" height="8" viewbox="0 0 10 8" width="10"><path d="M1 4l2.5 2.5L9 1" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></div><span>Arhivarea datelor de pe cardul de conducător auto — conformă din punct de vedere legal</span></div>
+<div class="fi"><div class="fck"><svg fill="none" height="8" viewbox="0 0 10 8" width="10"><path d="M1 4l2.5 2.5L9 1" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></div><span>Funcționează offline pe orice PC sau laptop cu Windows, din cabină</span></div>
+<div class="fi"><div class="fck"><svg fill="none" height="8" viewbox="0 0 10 8" width="10"><path d="M1 4l2.5 2.5L9 1" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></div><span><strong>Pregătit pentru conducătorii de autoutilitare din iulie 2026</strong></span></div>
+</div>
+<div style="margin-top:28px">
+<a class="btn-cta btn-cta--sm" href="/ro/incercare-gratuita/?audience=driver" rel="noopener" target="_blank">Încercați Trucker gratuit — 30 de zile</a>
+</div>
+</div>
+<div class="anim-up" style="transition-delay:.1s">
+<div class="media-frame" style="background:var(--bg-gray);border-radius:var(--radius);overflow:hidden">
+<img alt="TAGRA Trucker – software pentru tahograf cu cititor USB pentru descărcarea datelor de pe cardul de conducător auto" height="600" loading="lazy" src="https://cdn.truckmall.cz/data/user-content/TDT_TAGRA_TRUCKER_wh.jpg" style="object-fit:contain;width:100%;height:auto;" width="600"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ═══ MAC STAGE ═════════════════════════════════════════════════════ -->
+<section aria-label="Previzualizare software" class="band" style="background:linear-gradient(180deg,var(--bg-apple-solid) 0%,#fff 74%);padding:60px 0">
+<div class="container">
+<div class="mac-stage">
+<img alt="TAGRA Trucker pe laptop — descărcarea datelor de pe cardul de conducător auto și prezentarea generală a timpilor de lucru ai conducătorilor auto din UE" height="2076" id="mac-img" loading="lazy" src="https://cdn.truckmall.cz/data/user-content/Trucker_3_ntb.webp" width="3116"/>
+</div>
+</div>
+</section>
+<!-- ═══ HOW IT WORKS ══════════════════════════════════════════════════ -->
+<section aria-label="Cum introduceți datele în TAGRA Trucker" class="band band--gray">
+<div class="container">
+<div class="anim-up" style="text-align:center;margin-bottom:40px">
+<div class="eyebrow">Proces simplu</div>
+<h2>Trei pași.<br/>Atât.</h2>
+</div>
+<div class="three-col anim-up" style="transition-delay:.05s">
+<div style="text-align:center;padding:28px 20px">
+<div style="font-size:52px;font-weight:900;line-height:1;color:rgba(19,74,142,.12);margin-bottom:8px">1</div>
+<div style="font-size:18px;font-weight:800;color:var(--text-strong);margin-bottom:8px">Conectați cititorul USB</div>
+<p style="font-size:16px;color:var(--text2)">Introduceți cititorul de carduri USB în PC-ul sau laptopul dumneavoastră. Nu este necesar niciun software suplimentar.</p>
+</div>
+<div style="text-align:center;padding:28px 20px;border-left:1px solid var(--border);border-right:1px solid var(--border)">
+<div style="font-size:52px;font-weight:900;line-height:1;color:rgba(19,74,142,.12);margin-bottom:8px">2</div>
+<div style="font-size:18px;font-weight:800;color:var(--text-strong);margin-bottom:8px">Introduceți cardul de conducător auto</div>
+<p style="font-size:16px;color:var(--text2)">TAGRA efectuează <strong>descărcarea datelor de pe cardul de conducător auto</strong> automat. Toate datele se încarcă în câteva secunde.</p>
+</div>
+<div style="text-align:center;padding:28px 20px">
+<div style="font-size:52px;font-weight:900;line-height:1;color:rgba(19,74,142,.12);margin-bottom:8px">3</div>
+<div style="font-size:18px;font-weight:800;color:var(--text-strong);margin-bottom:8px">Consultați datele dumneavoastră</div>
+<p style="font-size:16px;color:var(--text2)">Durate de conducere, pauze, perioade de repaus — prezentare generală clară. Pregătit pentru orice control rutier.</p>
+</div>
+</div>
+<div class="note-box anim-up" role="note">
+<span class="note-badge">Bine de știut</span>
+<div class="note-title">Obligația de descărcare revine întreprinderii de transport — nu conducătorului auto</div>
+<p>În conformitate cu legislația UE, obligația de a descărca datele tahografului revine <strong>întreprinderii de transport</strong> — operatorului de transport rutier sau societății care operează vehiculul [Regulamentul (UE) nr. 165/2014, articolul 33]. Intervalele maxime sunt <strong>cel puțin o dată la 28 de zile pentru cardul de conducător auto</strong> și <strong>cel puțin o dată la 90 de zile pentru unitatea montată pe vehicul (UMV)</strong> [Regulamentul (UE) nr. 581/2010 al Comisiei].</p>
+<p><strong>Dacă conduceți pentru un angajator</strong>, obligația îi revine acestuia — însă beneficiați în continuare dacă păstrați propriile copii. <strong>TAGRA Trucker</strong> descarcă și arhivează datele de pe cardul dumneavoastră de conducător auto, astfel încât să vă puteți verifica propriile durate de conducere și să aveți înregistrările pregătite dacă vă schimbați vreodată angajatorul.</p>
+<p><strong>Dacă sunteți conducător auto independent sau proprietar-conducător auto,</strong>, sunteți și operatorul de transport rutier — prin urmare, aveți obligația legală de a descărca datele de pe cardul de conducător auto <em>și</em> datele din unitatea montată pe vehicul. Pentru aceasta aveți nevoie cel puțin de <a href="/ro/pentru-firme/" style="color:var(--blue-mid);font-weight:600">TAGRA 1</a>, care gestionează atât descărcarea datelor de pe cardul de conducător auto, cât și din unitatea montată pe vehicul, pentru un vehicul. TAGRA Trucker singur nu este suficient în acest caz.</p>
+<p style="margin-bottom:0;font-size:15px"><strong>Sunteți nou aici?</strong> Citiți ghidul nostru de referință despre <a href="/ro/articole/simboluri-tahograf-digital/">simbolurile tahografului și semnificația acestora</a> — cele patru pictograme de activitate pe care fiecare conducător auto trebuie să le cunoască.</p>
+</div>
+</div>
+</section>
+<!-- ═══ TRY IT ════════════════════════════════════════════════════════ -->
+<section aria-label="Descărcați versiunea de probă" class="band" id="try">
+<div class="container">
+<div class="anim-up" style="text-align:center;max-width:600px;margin:0 auto">
+<h2>ÎNCERCAȚI TAGRA TRUCKER GRATUIT TIMP DE 30 DE ZILE</h2>
+<p style="margin-top:8px;color:var(--text2)">Descărcați, instalați și utilizați software-ul complet. Nu este necesar un card de credit.</p>
+<div style="margin-top:28px">
+<a class="btn-cta" href="/ro/incercare-gratuita/?audience=driver" rel="noopener" target="_blank">Descărcați versiunea de probă</a>
+</div>
+<p style="margin-top:14px;font-size:15px;color:var(--text2)">Windows · Gratuit · Funcționează cu un cititor USB standard de carduri</p>
+</div>
+</div>
+</section>
+<!-- ═══ WHICH PATH FITS YOU ═══════════════════════════════════════════ -->
+<section aria-label="Alegeți cum să începeți" class="band">
+<div class="container">
+<div class="anim-up" style="text-align:center;max-width:640px;margin:0 auto 32px">
+<div class="eyebrow">Două modalități de a începe</div>
+<h2>Testați cu propriile date —<br/>sau începeți cu cititorul</h2>
+</div>
+<div class="path-split anim-up" style="transition-delay:.05s">
+<div class="path-card">
+<h3>Aveți deja date de tahograf</h3>
+<p>Ați descărcat anterior un fișier <code>.DDD</code> sau <code>.C1B</code> — de la angajatorul dumneavoastră, de la un atelier sau de la un alt cititor? Instalați versiunea de probă și încărcați-l. Funcționalitate completă, 30 de zile, fără plată și fără date de pe card.</p>
+<a class="btn-cta" href="/ro/incercare-gratuita/?audience=driver">Descărcați versiunea de probă gratuită →</a>
+</div>
+<div class="path-card path-card--buy">
+<h3>Nu aveți nicio modalitate de a vă citi cardul</h3>
+<p>Atunci cititorul este elementul care vă lipsește. TAGRA Trucker funcționează cu orice cititor standard USB compatibil cu carduri inteligente — vă puteți aștepta la un preț de aproximativ €25–45. Totuși, un cititor singur nu va evalua nimic: software-ul face treaba.</p>
+<p><strong>Aveți nevoie de un cititor? Vă putem trimite unul.</strong> Scrieți la <a href="mailto:sales@tagra.app">sales@tagra.app</a> și fie vă vom recomanda un model compatibil, fie vă vom expedia unul — prețul și transportul sunt cotate pentru țara dumneavoastră.</p>
+<a class="btn-cta" href="/ro/contact/?product=trucker">Comandați TAGRA Trucker — €49 fără TVA →</a>
+<p class="path-note">Vă confirmăm comanda și vă trimitem licența prin e-mail.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- ═══ PRICING ════════════════════════════════════════════════════════ -->
+<section aria-label="Prețuri" class="band band--gray" id="pricing">
+<div class="container">
+<div class="anim-up" style="max-width:560px">
+<div class="eyebrow">Preț &amp; condiții</div>
+<h2 style="text-transform:none">Prețuri transparente.<br/>Fără taxe ascunse.</h2>
+<p style="margin:16px 0 24px">Începeți cu perioada de probă gratuită. Când sunteți pregătit, selectați licența direct din software și plătiți online.</p>
+<div style="background:#fff;border-radius:var(--radius);border:1px solid var(--border);overflow:hidden;margin-bottom:24px">
+<div style="display:flex;justify-content:space-between;padding:14px 20px;border-bottom:1px solid var(--border)"><span style="color:var(--text2)">Perioada de probă</span><span style="font-weight:600;color:var(--green-brand)">30 de zile gratuite</span></div>
+<div style="display:flex;justify-content:space-between;padding:14px 20px;border-bottom:1px solid var(--border)"><span style="color:var(--text2)">TAGRA Trucker</span><span style="font-weight:600">€49 fără TVA</span></div>
+<div style="display:flex;justify-content:space-between;padding:14px 20px;border-bottom:1px solid var(--border)"><span style="color:var(--text2)">Licență anuală (din anul 2)</span><span style="font-weight:600">€19 / an</span></div>
+<div style="display:flex;justify-content:space-between;padding:14px 20px;border-bottom:1px solid var(--border)"><span style="color:var(--text2)">Include</span><span style="font-weight:600">Actualizări + asistență</span></div>
+<div style="display:flex;justify-content:space-between;padding:14px 20px"><span style="color:var(--text2)">Plată</span><span style="font-weight:600">Online · cod QR</span></div>
+</div>
+<p style="font-size:15px;color:var(--text2)">Întrebări? <a href="tel:+420739005345">+420 739 005 345</a> · <a href="mailto:sales@tagra.app">sales@tagra.app</a></p>
+<div style="margin-top:24px">
+<a class="btn-cta btn-cta--sm" href="/ro/incercare-gratuita/?audience=driver" rel="noopener" target="_blank">Descărcați versiunea de probă</a>
+</div>
+</div>
+</div>
+</section>
+<!-- ═══ FAQ ════════════════════════════════════════════════════════════ -->
+<section aria-label="Întrebări frecvente" class="band band--blue">
+<div class="container">
+<div class="eyebrow anim-up">Întrebări frecvente</div>
+<h2 class="anim-up">Întrebări frecvente</h2>
+<div class="faq anim-up" style="transition-delay:.05s">
+<details>
+<summary>Pentru cine este conceput TAGRA Trucker?</summary>
+<div class="faq-a">TAGRA Trucker este <strong>software pentru tahograf</strong> pentru conducători auto profesioniști — conducători de camion și de autoutilitară — care doresc să își urmărească propriile date de pe cardul de conducător auto și să monitorizeze respectarea normelor UE privind duratele de conducere și perioadele de repaus.</div>
+</details>
+<details>
+<summary>Am nevoie de un cititor de carduri USB?</summary>
+<div class="faq-a">Da. TAGRA Trucker citește cardul de conducător auto printr-un cititor standard de carduri USB. Dacă nu aveți unul, contactați-ne și vă vom recomanda un model compatibil — sau vă putem trimite unul, cu prețul și livrarea calculate pentru țara dumneavoastră.</div>
+</details>
+<details>
+<summary>Cum introduc datele în software?</summary>
+<div class="faq-a">Conectați cititorul USB, introduceți cardul, iar TAGRA efectuează <strong>descărcarea datelor de pe cardul de conducător auto</strong> automat. De asemenea, puteți importa <strong>.DDD</strong> sau <strong>.C1B</strong> fișiere pe care le-ați descărcat deja din altă parte.</div>
+</details>
+<details>
+<summary>Cât de des trebuie să descarc datele de pe card?</summary>
+<div class="faq-a"><p>Conform legislației UE, obligația legală de a descărca datele tahografului revine <strong>întreprinderii de transport</strong> (Regulamentul (UE) nr. 165/2014, articolul 33), nu conducătorului auto. Intervalele maxime sunt de cel puțin o dată la fiecare <strong>28 de zile pentru cardul de conducător auto</strong> și cel puțin o dată la fiecare <strong>90 de zile pentru unitatea montată pe vehicul (UMV)</strong> [Regulamentul (UE) nr. 581/2010 al Comisiei].</p><p style="margin-top:10px"><strong>În calitate de conducător auto angajat</strong>, obligația revine angajatorului dumneavoastră — însă descărcarea propriului card cu TAGRA Trucker vă ajută în continuare să urmăriți duratele de conducere și să păstrați evidențe personale.</p><p style="margin-top:10px"><strong>În calitate de conducător auto independent sau proprietar-conducător auto</strong>, sunteți întreprinderea de transport, astfel încât obligația vă revine în acest rol — și aveți nevoie de o soluție care gestionează descărcarea datelor atât de pe cardul de conducător auto, cât și din unitatea montată pe vehicul (UMV). În acest caz, <a href="/ro/pentru-firme/">TAGRA 1</a> reprezintă nivelul minim; TAGRA Trucker acoperă numai cardul de conducător auto.</p></div>
+</details>
+<details>
+<summary>Funcționează TAGRA Trucker offline?</summary>
+<div class="faq-a">Da. TAGRA Trucker funcționează complet offline. Internetul este necesar numai pentru descărcarea programului de instalare și primirea actualizărilor.</div>
+</details>
+<details>
+<summary>Este TAGRA Trucker pregătit pentru obligația din iulie 2026 privind autoutilitarele?</summary>
+<div class="faq-a">Da. TAGRA Trucker este pe deplin pregătit pentru conducătorii auto de autoutilitare (vehicule de 2,5–3,5 t utilizate în transport internațional) afectați de noua obligație privind tahograful începând din iulie 2026.</div>
+</details>
+<details>
+<summary>Cum cumpăr TAGRA Trucker după perioada de probă?</summary>
+<div class="faq-a">La sfârșitul perioadei de probă — sau oricând sunteți pregătit — deschideți meniul de licențe din software, selectați TAGRA Trucker și plătiți online prin cod QR sau transfer bancar. Licența dumneavoastră este activată imediat.</div>
+</details>
+</div>
+</div>
+</section>
+<!-- ═══ ALSO FOR COMPANIES ════════════════════════════════════════════ -->
+<section aria-label="TAGRA pentru operatorii de transport rutier" class="band">
+<div class="container">
+<div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:24px;padding:16px 0">
+<div>
+<div class="eyebrow">De asemenea disponibil</div>
+<p style="font-size:19px;font-weight:700;color:var(--text-strong);margin-top:4px">TAGRA pentru operatorii de transport rutier</p>
+<p style="color:var(--text2);margin-top:6px;max-width:480px">Gestionați vehicule pentru o societate? TAGRA 1/2/4/6/MAX acoperă unitățile montate pe vehicule (UMV) și cardurile de conducător auto pentru 1 până la un număr nelimitat de vehicule.</p>
+</div>
+<a class="btn-cta btn-cta--sm" href="/ro/pentru-firme/" style="flex-shrink:0;background:var(--blue-mid)">Soluție pentru flote →</a>
+</div>
+</div>
+</section>
+<!-- ═══ MANUFACTURER ══════════════════════════════════════════════════ -->
+<section aria-label="Informații despre producător" class="band band--gray">
+<div class="container">
+<div class="eyebrow anim-up">Dezvoltator &amp; producător</div>
+<h2 class="anim-up">Truck Data Technology, s.r.o.</h2>
+<address class="anim-up" style="font-style:normal;margin-top:10px;line-height:1.8;transition-delay:.05s">
+<strong>Sediu central &amp; asistență:</strong> Republica Cehă<br/>
+<strong>Telefon:</strong> <a href="tel:+420739005345">+420 739 005 345</a><br/>
+<strong>E-mail:</strong> <a href="mailto:sales@tagra.app">sales@tagra.app</a><br/>
+<strong>Web:</strong> <a href="https://www.tdt.cz" rel="noopener" target="_blank">www.tdt.cz</a>
+</address>
+</div>
+</section>
+<!-- ═══ FOOTER ════════════════════════════════════════════════════════ -->
+<footer class="site-footer" role="contentinfo">
+<div class="footer-inner">
+<div>
+<div class="footer-logo"><img alt="TAGRA" height="20" src="/assets/img/logo-dark.svg?v=20260513zh" width="88" loading="lazy"/></div>
+<p class="footer-desc">Software profesional de analiză a tahografelor. Descărcare date de pe cardul de conducător auto, analiză a tahografelor digitale, durată de conducere în UE și Directiva privind timpul de lucru pentru vehicule grele de marfă. Dezvoltat de Truck Data Technology, s.r.o.</p>
+</div>
+<div class="footer-col">
+<h2 class="footer-col-title">Produs</h2>
+<ul>
+<li><a href="/ro/pentru-firme/">Pentru operatorii de transport rutier</a></li>
+<li><a href="/driver/">Pentru conducătorii auto profesioniști</a></li>
+<li><a href="/ro/autoritati-de-control/">Pentru autoritățile de control (ISCTR)</a></li>
+<li><a href="/ro/cum-functioneaza/">Cum funcționează</a></li>
+<li><a href="/ro/pentru-cine/">Pentru cine</a></li>
+<li><a href="/ro/intrebari-frecvente/">Întrebări frecvente</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h2 class="footer-col-title">Resurse</h2>
+<ul>
+<li><a href="/ro/articole/">Articole</a></li><li><a href="/ro/manuale/">Manuale</a></li>
+<li><a href="/ro/articole/simboluri-tahograf-digital/">Simboluri tahograf</a></li>
+<li><a href="/ro/integrari/dkv-live/">DKV LIVE®</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h2 class="footer-col-title">Societate</h2>
+<ul>
+<li><a href="/ro/contact/">Contact</a></li>
+<li><a href="https://www.tdt.cz" rel="noopener" target="_blank">Truck Data Technology</a></li>
+<li><a href="/ro/">Engleză</a></li><li><a href="/de/">Deutsch</a></li><li><a href="/pl/">Polski</a></li><li><a href="/el/">Ελληνικά</a></li><li><a href="/hu/">Magyar</a></li><li><a href="/it/">Italiano</a></li><li><a href="https://www.tdt.cz/" rel="noopener" target="_blank">Čeština</a></li><li><a href="https://www.tdt.sk/" rel="noopener" target="_blank">Slovenčina</a></li></ul>
+</div>
+</div>
+<div class="footer-bottom">
+<span>© 2026 Truck Data Technology, s.r.o. Toate drepturile rezervate.</span>
+<span><a href="/ro/contact/">Contact</a> · <a href="https://www.tdt.cz" rel="noopener" target="_blank">tdt.cz</a> · <a href="/ro/confidentialitate/">Confidențialitate &amp; cookie-uri</a></span>
+</div>
+</footer>
+<!-- ═══ JAVASCRIPT ════════════════════════════════════════════════════ -->
+<script>
+(function() {
+  /* SCROLL PROGRESS */
+  var bar = document.getElementById('scroll-progress');
+  if (bar) {
+    window.addEventListener('scroll', function() {
+      var top = document.documentElement.scrollTop || document.body.scrollTop;
+      var h = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      bar.style.width = (top / h * 100) + '%';
+    }, { passive: true });
+  }
+  /* MOBILE NAV */
+  var toggle = document.getElementById('nav-toggle');
+  var links = document.getElementById('nav-links');
+  if (toggle && links) {
+    toggle.addEventListener('click', function() {
+      var open = links.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open);
+    });
+  }
+  /* ANIMATIONS */
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) { if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); } });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.anim-up, .fly-left, .fly-right').forEach(function(el) { io.observe(el); });
+  } else {
+    document.querySelectorAll('.anim-up, .fly-left, .fly-right').forEach(function(el) { el.classList.add('on'); });
+  }
+  /* REVIEWS SLIDER */
+  var rail = document.getElementById('rev-rail');
+  if (rail) {
+    rail.innerHTML += rail.innerHTML + rail.innerHTML;
+    var speed = 0.9, busy = false, pos = 0, isDown = false, startX, startScroll, resumeTimer;
+    function tick() { if (!busy) { pos += speed; if (pos >= 1) { rail.scrollLeft += Math.floor(pos); pos -= Math.floor(pos); } if (rail.scrollLeft >= rail.scrollWidth / 3) rail.scrollLeft = 0; } requestAnimationFrame(tick); }
+    function pause() { busy = true; clearTimeout(resumeTimer); }
+    function resume() { resumeTimer = setTimeout(function() { busy = false; }, 2000); }
+    rail.addEventListener('mousedown', function(e) { isDown = true; pause(); startX = e.pageX - rail.offsetLeft; startScroll = rail.scrollLeft; });
+    rail.addEventListener('mouseleave', function() { isDown = false; resume(); });
+    rail.addEventListener('mouseup', function() { isDown = false; resume(); });
+    rail.addEventListener('mousemove', function(e) { if (!isDown) return; e.preventDefault(); rail.scrollLeft = startScroll - (e.pageX - rail.offsetLeft - startX) * 1.5; });
+    rail.addEventListener('touchstart', pause, { passive: true });
+    rail.addEventListener('touchend', resume, { passive: true });
+    tick();
+  }
+  /* MAC STAGE ZOOM */
+  var macImg = document.getElementById('mac-img');
+  if (macImg) {
+    var ticking = false;
+    function zoom() { var r = macImg.getBoundingClientRect(); var dist = Math.abs(window.innerHeight / 2 - (r.top + r.height / 2)); var prog = Math.max(0, 1 - dist / (window.innerHeight * 0.65)); var eased = Math.sin(prog * Math.PI / 2); var s = 1 + eased * (window.innerWidth < 768 ? 0.2 : 0.38); macImg.style.transform = 'scale(' + s.toFixed(3) + ')'; ticking = false; }
+    function onScroll() { if (!ticking) { requestAnimationFrame(zoom); ticking = true; } }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll, { passive: true });
+    setTimeout(zoom, 150);
+  }
+  /* HERO VIDEO */
+  var heroVid = document.getElementById('hero-vid');
+  if (heroVid && 'IntersectionObserver' in window) {
+    var hvObs = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) { if (e.isIntersecting) { heroVid.play().catch(function(){}); } else { heroVid.pause(); } });
+    }, { threshold: 0.1 });
+    hvObs.observe(heroVid);
+    document.addEventListener('touchstart', function() { if (heroVid.paused) heroVid.play().catch(function(){}); }, { once: true, passive: true });
+  }
+})();
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "TAGRA Trucker – Software pentru tahografe destinat conducătorilor auto profesioniști",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Windows",
+  "description": "Software pentru tahograf destinat conducătorilor auto profesioniști. Descărcarea datelor de pe cardul de conducător auto cu un cititor de carduri USB standard. Evaluarea și arhivarea datelor de pe cardul de conducător auto, a duratelor de conducere din UE [Regulamentul (CE) nr. 561/2006], a pauzelor și a perioadelor de repaus. Perioadă de probă gratuită de 30 de zile. Pregătit pentru conducătorii auto de autoutilitare din iulie 2026.",
+  "url": "https://tagra.app/ro/pentru-conducatori/",
+  "inLanguage": "ro",
+  "author": { "@type": "Organization", "name": "Truck Data Technology, s.r.o.", "url": "https://www.tdt.cz" },
+  "offers": { "@type": "Offer", "priceCurrency": "EUR", "price": "19", "description": "Taxă anuală de licență începând cu anul 2. Primul an este inclus în prețul de achiziție.", "availability": "https://schema.org/InStock" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "inLanguage": "ro",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Pentru cine este conceput TAGRA Trucker?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "TAGRA Trucker este un software pentru tahograf destinat conducătorilor auto profesioniști — conducători auto de camioane și autoutilitare — care doresc să își urmărească propriile date de pe cardul de conducător auto și să monitorizeze respectarea normelor UE privind duratele de conducere și perioadele de repaus."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Am nevoie de un cititor de carduri USB?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Da. TAGRA Trucker citește cardul de conducător auto printr-un cititor standard de carduri USB. Dacă nu aveți unul, contactați-ne și vă vom recomanda un model compatibil — sau vă putem trimite unul, cu prețul și livrarea calculate pentru țara dumneavoastră."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Cum introduc datele în software?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Conectați cititorul USB, introduceți cardul, iar TAGRA efectuează automat descărcarea datelor de pe cardul de conducător auto. De asemenea, puteți importa fișiere .DDD sau .C1B pe care le-ați descărcat deja din altă parte."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Cât de des trebuie să descarc datele de pe card?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Conform legislației UE, obligația legală de a descărca datele tahografului revine întreprinderii de transport [Regulamentul (UE) nr. 165/2014, articolul 33], nu conducătorului auto. Intervalele maxime sunt de cel puțin o dată la fiecare 28 de zile pentru cardul de conducător auto și de cel puțin o dată la fiecare 90 de zile pentru unitatea montată pe vehicul (UMV) [Regulamentul (UE) nr. 581/2010 al Comisiei]. În calitate de conducător auto angajat, obligația revine angajatorului dumneavoastră — însă descărcarea propriului card cu TAGRA Trucker vă ajută în continuare să urmăriți duratele de conducere și să păstrați evidențe personale. În calitate de conducător auto independent sau proprietar-conducător auto, sunteți întreprinderea de transport, astfel încât obligația vă revine în acest rol — și aveți nevoie de o soluție care gestionează descărcarea datelor atât de pe cardul de conducător auto, cât și din unitatea montată pe vehicul (UMV). În acest caz, TAGRA 1 reprezintă nivelul minim; TAGRA Trucker acoperă numai cardul de conducător auto."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Funcționează TAGRA Trucker offline?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Da. TAGRA Trucker funcționează complet offline. Internetul este necesar numai pentru descărcarea programului de instalare și primirea actualizărilor."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Este TAGRA Trucker pregătit pentru obligația din iulie 2026 privind autoutilitarele?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Da. TAGRA Trucker este pe deplin pregătit pentru conducătorii auto de autoutilitare (vehicule de 2,5–3,5 t utilizate în transport internațional) afectați de noua obligație privind tahograful începând din iulie 2026."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Cum cumpăr TAGRA Trucker după perioada de probă?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La sfârșitul perioadei de probă — sau oricând sunteți pregătit — deschideți meniul de licențe din software, selectați TAGRA Trucker și plătiți online prin cod QR sau transfer bancar. Licența dumneavoastră este activată imediat."
+      }
+    }
+  ]
+}
+</script>
+</body>
+</html>

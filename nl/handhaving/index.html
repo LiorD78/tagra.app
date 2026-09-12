@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<!-- TMX-ANALYTICS START -->
+<meta content="7F7894081BE7FBB245FF03AF8810B22F" name="msvalidate.01"/>
+<!-- Consent Mode v2 defaults (deny) + gtag stub — runs BEFORE gtag.js -->
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent','default',{
+      ad_storage:'denied', ad_user_data:'denied', ad_personalization:'denied',
+      analytics_storage:'denied', functionality_storage:'denied',
+      personalization_storage:'denied', security_storage:'granted',
+      wait_for_update:500
+    });
+    gtag('set','ads_data_redaction',true);
+    gtag('set','url_passthrough',false);
+  </script>
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-92253QFBNX"></script>
+<script>
+    gtag('js', new Date());
+    gtag('config','G-92253QFBNX');
+  </script>
+<!-- Cookie consent banner (self-hosted) + Microsoft Clarity gating -->
+<style>
+    .tmx-cc{position:fixed;left:0;right:0;bottom:0;z-index:2147483000;background:linear-gradient(120deg,var(--blue-dark,#0b2c4a),var(--blue-mid,#134a8e) 62%,var(--blue-light,#1f5fa6));color:#fff;
+      font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+      padding:16px 20px;box-shadow:0 -4px 24px rgba(0,0,0,.18);display:flex;flex-wrap:wrap;
+      align-items:center;gap:14px;justify-content:center}
+    .tmx-cc__txt{flex:1 1 360px;max-width:760px}
+    .tmx-cc__txt a{color:#9ed0f5;text-decoration:underline}
+    .tmx-cc__btns{display:flex;gap:10px;flex:0 0 auto}
+    .tmx-cc__b{appearance:none;border:0;cursor:pointer;font:inherit;font-weight:600;
+      padding:10px 22px;border-radius:99px;transition:filter .15s;color:#fff}
+    .tmx-cc__b:hover{filter:brightness(1.08)}
+    .tmx-cc__b--no{background:rgba(255,255,255,.16)}
+    .tmx-cc__b--yes{background:var(--green-cta,#5C820F)}
+    @media(max-width:640px){.tmx-cc{padding:14px}.tmx-cc__btns{width:100%}.tmx-cc__b{flex:1}}
+  </style>
+<script>
+  (function(){
+    var KEY='tmx-consent-v1', CL='wt18054m0r';
+    function lc(){var l=(document.documentElement.getAttribute('lang')||'en').toLowerCase().split('-')[0];
+      var m={cz:'cs',cs:'cs',sk:'sk',de:'de',pl:'pl',gr:'el',el:'el',hu:'hu',en:'en'};return m[l]||'en';}
+    var T={
+      hu:{t:'Analitikai s\u00fctiket haszn\u00e1lunk (Google Analytics, Microsoft Clarity, Smartsupp), hogy meg\u00e9rts\u00fck a webhely haszn\u00e1lat\u00e1t. Csak az \u00d6n hozz\u00e1j\u00e1rul\u00e1s\u00e1val t\u00f6lt\u0151dnek be.',a:'Elfogadom',r:'Elutas\u00edtom',p:'Adatv\u00e9delem \u00e9s s\u00fctik'},
+      ro:{t:'Utilizăm module cookie de analiză (Google Analytics, Microsoft Clarity, Smartsupp) pentru a înțelege modul de utilizare a site-ului. Se încarcă doar cu consimțământul dumneavoastră.',a:'Accept',r:'Refuz',p:'Confidențialitate și cookie-uri'},
+      nl:{t:'We gebruiken analytische cookies (Google Analytics, Microsoft Clarity, Smartsupp) om het gebruik van de site te begrijpen. Ze laden alleen met uw toestemming.',a:'Accepteren',r:'Weigeren',p:'Privacy en cookies'},
+      fr:{t:'Nous utilisons des cookies analytiques (Google Analytics, Microsoft Clarity, Smartsupp) pour comprendre l’utilisation du site. Ils ne se chargent qu’avec votre consentement.',a:'Accepter',r:'Refuser',p:'Confidentialité et cookies'},
+      it:{t:'Utilizziamo cookie analitici (Google Analytics, Microsoft Clarity, Smartsupp) per capire l’utilizzo del sito. Si caricano solo con il Suo consenso.',a:'Accetta',r:'Rifiuta',p:'Privacy e cookie'},
+      en:{t:'We use analytics cookies (Google Analytics, Microsoft Clarity, Smartsupp) to understand site usage. They load only with your consent.',a:'Accept',r:'Reject',p:'Privacy &amp; cookies'},
+      cs:{t:'Pou\u017e\u00edv\u00e1me analytick\u00e9 cookies (Google Analytics, Microsoft Clarity, Smartsupp) k pochopen\u00ed pou\u017e\u00edv\u00e1n\u00ed webu. Na\u010dtou se jen s va\u0161\u00edm souhlasem.',a:'P\u0159ijmout',r:'Odm\u00edtnout',p:'Soukrom\u00ed a cookies'},
+      sk:{t:'Pou\u017e\u00edvame analytick\u00e9 cookies (Google Analytics, Microsoft Clarity, Smartsupp) na pochopenie pou\u017e\u00edvania webu. Na\u010d\u00edtaj\u00fa sa len s va\u0161\u00edm s\u00fahlasom.',a:'Prija\u0165',r:'Odmietnu\u0165',p:'S\u00fakromie a cookies'},
+      de:{t:'Wir verwenden Analyse-Cookies (Google Analytics, Microsoft Clarity, Smartsupp), um die Nutzung der Website zu verstehen. Sie werden nur mit Ihrer Einwilligung geladen.',a:'Akzeptieren',r:'Ablehnen',p:'Datenschutz &amp; Cookies'},
+      pl:{t:'U\u017cywamy plik\u00f3w cookie do analityki (Google Analytics, Microsoft Clarity, Smartsupp), aby zrozumie\u0107 korzystanie z witryny. \u0141aduj\u0105 si\u0119 tylko za Twoj\u0105 zgod\u0105.',a:'Akceptuj',r:'Odrzu\u0107',p:'Prywatno\u015b\u0107 i cookies'},
+      el:{t:'\u03a7\u03c1\u03b7\u03c3\u03b9\u03bc\u03bf\u03c0\u03bf\u03b9\u03bf\u03cd\u03bc\u03b5 cookies \u03b1\u03bd\u03ac\u03bb\u03c5\u03c3\u03b7\u03c2 (Google Analytics, Microsoft Clarity, Smartsupp) \u03b3\u03b9\u03b1 \u03bd\u03b1 \u03ba\u03b1\u03c4\u03b1\u03bd\u03bf\u03ae\u03c3\u03bf\u03c5\u03bc\u03b5 \u03c4\u03b7 \u03c7\u03c1\u03ae\u03c3\u03b7. \u03a6\u03bf\u03c1\u03c4\u03ce\u03bd\u03bf\u03bd\u03c4\u03b1\u03b9 \u03bc\u03cc\u03bd\u03bf \u03bc\u03b5 \u03c4\u03b7 \u03c3\u03c5\u03b3\u03ba\u03b1\u03c4\u03ac\u03b8\u03b5\u03c3\u03ae \u03c3\u03b1\u03c2.',a:'\u0391\u03c0\u03bf\u03b4\u03bf\u03c7\u03ae',r:'\u0391\u03c0\u03cc\u03c1\u03c1\u03b9\u03c8\u03b7',p:'\u0391\u03c0\u03cc\u03c1\u03c1\u03b7\u03c4\u03bf &amp; cookies'}
+    };
+    function loadClarity(){if(!CL||window.__tmxCl)return;window.__tmxCl=1;
+      (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+       t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+       y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script",CL);}
+    function grant(){try{localStorage.setItem(KEY,'granted')}catch(e){}
+      gtag('consent','update',{analytics_storage:'granted'});loadClarity();}
+    function deny(){try{localStorage.setItem(KEY,'denied')}catch(e){}}
+    var saved=null;try{saved=localStorage.getItem(KEY)}catch(e){}
+    if(saved==='granted'){grant();return;} if(saved==='denied'){return;}
+    function show(){var tx=T[lc()]||T.en;
+      var b=document.createElement('div');b.className='tmx-cc';b.setAttribute('role','dialog');b.setAttribute('aria-live','polite');
+      b.innerHTML='<div class="tmx-cc__txt">'+tx.t+' <a href="/nl/privacy/">'+tx.p+'</a></div>'+
+        '<div class="tmx-cc__btns"><button type="button" class="tmx-cc__b tmx-cc__b--no">'+tx.r+'</button>'+
+        '<button type="button" class="tmx-cc__b tmx-cc__b--yes">'+tx.a+'</button></div>';
+      document.body.appendChild(b);
+      b.querySelector('.tmx-cc__b--yes').addEventListener('click',function(){grant();b.remove();});
+      b.querySelector('.tmx-cc__b--no').addEventListener('click',function(){deny();b.remove();});}
+    if(document.body)show();else document.addEventListener('DOMContentLoaded',show);
+  })();
+  </script>
+<!-- TMX-ANALYTICS END -->
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>TAGRA Control: tachograafanalyse voor handhaving</title>
+<meta content="Professionele software voor analyse van tachograafgegevens bij weg- en bedrijfscontroles door politie, douane, arbeidsinspecties en ministeries van Verkeer." name="description"/>
+<meta content="#0b2c4a" name="theme-color"/>
+<link href="/manifest.json" rel="manifest"/>
+<link href="https://tagra.app/nl/handhaving/" rel="canonical"/>
+<link href="https://tagra.app/de/kontrollbehoerden/" hreflang="de" rel="alternate"/><link href="https://tagra.app/el/eleghos/" hreflang="el" rel="alternate"/><link href="https://tagra.app/enforcement/" hreflang="en" rel="alternate"/><link href="https://tagra.app/fr/autorites-de-controle/" hreflang="fr" rel="alternate"/><link href="https://tagra.app/hu/hatosagoknak/" hreflang="hu" rel="alternate"/><link href="https://tagra.app/it/organi-di-controllo/" hreflang="it" rel="alternate"/><link href="https://tagra.app/nl/handhaving/" hreflang="nl" rel="alternate"/><link href="https://tagra.app/pl/organy-kontrolne/" hreflang="pl" rel="alternate"/>
+<link href="https://tagra.app/ro/autoritati-de-control/" hreflang="ro" rel="alternate"/><link href="https://tagra.app/enforcement/" hreflang="x-default" rel="alternate"/>
+<meta content="website" property="og:type"/>
+<meta content="TAGRA Control – software voor handhavingsinstanties" property="og:title"/>
+<meta content="Professionele software voor de analyse van tachograafgegevens tijdens wegcontroles en bedrijfscontroles. Gebruikt door politie, douane en arbeidsinspecties in Centraal-Europa." property="og:description"/>
+<meta content="https://tagra.app/assets/img/tagra-control-screenshot.webp" property="og:image"/>
+<meta content="TAGRA Control – interface voor de analyse van gegevens van digitale tachografen voor handhavingsinstanties" property="og:image:alt"/>
+<meta content="https://tagra.app/nl/handhaving/" property="og:url"/>
+<meta content="TAGRA" property="og:site_name"/>
+<meta content="en_US" property="og:locale"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="TAGRA Control – software voor handhavingsinstanties" name="twitter:title"/>
+<meta content="Professionele software voor de analyse van tachograafgegevens tijdens wegcontroles en bedrijfscontroles." name="twitter:description"/>
+<meta content="https://tagra.app/assets/img/tagra-control-screenshot.webp" name="twitter:image"/>
+<meta content="TAGRA Control – interface voor de analyse van gegevens van digitale tachografen voor handhavingsinstanties" name="twitter:image:alt"/>
+<link href="/assets/img/favicon.ico" rel="icon"/>
+<style>
+    /* ── Enforcement-specific overrides ── */
+    .enf-hero { background: linear-gradient(180deg,#e8e8ed 0%,#f5f5f7 52%,#ffffff 100%); padding: calc(var(--nav-h, 64px) + 80px) 0 60px; text-align: center; }
+    .enf-hero
+    .enf-hero p.lead { font-size: 20px; color: #515154; max-width: 640px; margin: 0 auto 32px; line-height: 1.55; }
+    .enf-btn-row { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; margin-bottom: 24px; }
+    
+    .btn-cta:hover { background: var(--green-brand); transform: scale(1.02); color: #fff !important; }
+    .btn-cta.btn-blue { background: var(--blue-mid); }
+    .btn-cta.btn-blue:hover { background: var(--blue-dark); }
+
+    /* bento grid */
+    
+    .bc { background:#fff; border-radius: 20px; padding: 32px; border: 1px solid rgba(0,0,0,.08); position: relative; overflow: hidden; }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    .bc.darkfill .bc-title, .bc.darkfill .bc-text, .bc.darkfill p, .bc.darkfill li { color: rgba(255,255,255,.88) !important; }
+    .bc.darkfill .bc-label { color: rgba(255,255,255,.55) !important; }
+    @media (max-width: 900px) { .bento { grid-template-columns: 1fr 1fr; } .bc.s7, .bc.s8, .bc.s12 { grid-column: span 2; } .bc.s4, .bc.s5, .bc.s6 { grid-column: span 1; } }
+    @media (max-width: 600px) { .bento { grid-template-columns: 1fr; } .bc { grid-column: span 1 !important; } }
+    .bc-label { font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--green-brand); margin-bottom: 6px; display: block; }
+    
+    
+    .bignum { font-size: 110px; font-weight: 800; line-height: 1; color: rgba(19,74,142,.06); position: absolute; bottom: -16px; right: 16px; pointer-events: none; letter-spacing: -.04em; }
+
+    /* ref cards (who uses) */
+    .ref-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(210px,1fr)); gap: 14px; margin-top: 32px; }
+    .ref-card { background: #fff; border-radius: 20px; border: 1.5px solid rgba(0,0,0,.08); padding: 26px 20px; display: flex; flex-direction: column; gap: 4px; position: relative; overflow: hidden; transition: transform .18s, box-shadow .18s, border-color .18s; }
+    .ref-card::before { content: ''; position: absolute; inset: 0; background-size: cover; background-position: center; opacity: .05; pointer-events: none; }
+    .ref-card > * { position: relative; z-index: 1; }
+    .ref-card--cz::before { background-image: url('https://flagcdn.com/w320/cz.png'); }
+    .ref-card--sk::before { background-image: url('https://flagcdn.com/w320/sk.png'); }
+    .ref-card--hu::before { background-image: url('https://flagcdn.com/w320/hu.png'); }
+    .ref-card:hover { transform: translateY(-3px); box-shadow: 0 14px 28px rgba(19,74,142,.10); border-color: rgba(19,74,142,.3); }
+    .ref-flag { font-size: 28px; line-height: 1; margin-bottom: 4px; }
+    .ref-country { font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--blue); }
+    .ref-name { font-size: 17px; font-weight: 800; color: #0b0b0c; line-height: 1.3; }
+    .ref-note { font-size: 14px; color: #515154; margin-top: 4px; line-height: 1.4; }
+
+    /* feats list */
+    
+    
+    
+    .fck::after { content: ''; width: 12px; height: 12px; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E") no-repeat center/contain; }
+
+    /* steps */
+    .steps { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; margin-top: 32px; }
+    @media (max-width: 768px) { .steps { grid-template-columns: 1fr; } }
+    .step-card { background: #fff; border-radius: 20px; padding: 28px 24px; border: 1px solid rgba(0,0,0,.08); display: flex; flex-direction: column; }
+    .step-card .step-header { min-height: 100px; }
+    .snum { font-size: 44px; font-weight: 800; color: rgba(19,74,142,.15); line-height: 1; margin-bottom: 8px; display: block; letter-spacing: -.02em; }
+    .stit { font-size: 20px; font-weight: 800; color: #0b0b0c; margin-bottom: 8px; display: block; }
+
+    /* reports grid */
+    .reports-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(260px,1fr)); gap: 14px; margin-top: 28px; }
+    .report-item { background: #fff; border-radius: 16px; border: 1px solid rgba(0,0,0,.08); padding: 20px 22px; display: flex; align-items: flex-start; gap: 14px; }
+    .report-icon { font-size: 32px; font-weight: 800; color: rgba(19,74,142,.18); line-height: 1.1; padding-top: 2px; flex-shrink: 0; width: 36px; text-align: center; }
+    .report-label { font-size: 16px; font-weight: 700; color: #0b0b0c; line-height: 1.3; margin-bottom: 4px; display: block; }
+    .report-desc { font-size: 15px; color: #515154; line-height: 1.4; }
+
+    /* legislation table */
+    .leg-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 20px; }
+    @media (max-width: 600px) { .leg-grid { grid-template-columns: 1fr; } }
+    .leg-item { display: flex; align-items: center; gap: 10px; background: rgba(19,74,142,.04); border-radius: 10px; padding: 12px 16px; font-size: 16px; font-weight: 600; color: #0b2c4a; }
+    .leg-item::before { content: '✓'; font-size: 15px; font-weight: 800; color: var(--green-brand); flex-shrink: 0; }
+
+    /* device card */
+    .device-card { background: linear-gradient(135deg,#eaf3f8 0%,#f5f9fd 100%); border-radius: 20px; border: 1px solid rgba(31,95,166,.12); padding: 36px; display: flex; gap: 36px; align-items: center; margin-top: 32px; }
+    @media (max-width: 768px) { .device-card { flex-direction: column; gap: 24px; } }
+    .device-img { width: 180px; flex-shrink: 0; border-radius: 12px; overflow: hidden; }
+    .device-img img { width: 100%; height: auto; display: block; object-fit: contain; }
+    .device-specs { display: flex; flex-direction: column; gap: 8px; margin-top: 14px; }
+    .dspec { display: flex; gap: 10px; font-size: 16px; }
+    .dspec-k { color: #515154; min-width: 120px; flex-shrink: 0; }
+    .dspec-v { font-weight: 600; color: #0b0b0c; }
+
+    /* training list */
+    .training-list { list-style: none; padding: 0; margin: 16px 0 0; display: flex; flex-direction: column; gap: 10px; }
+    .training-list li { padding-left: 20px; position: relative; font-size: 17px; color: #1d1d1f; line-height: 1.5; }
+    .training-list li::before { content: ''; position: absolute; left: 0; top: 10px; width: 8px; height: 8px; border-radius: 50%; background: linear-gradient(135deg,#0b2c4a 0%,#134a8e 100%); }
+
+    /* callout green */
+    .callout-green { background: linear-gradient(90deg,#74A81A 0%,#6E9B12 55%,#638719 100%); border-radius: 20px; padding: 48px 40px; position: relative; overflow: hidden; box-shadow: 0 12px 32px rgba(0,0,0,.06); margin-top: 40px; }
+    .callout-green h2 { background: linear-gradient(90deg,#052037 0%,#0b2c4a 55%,#0e3a73 100%); -webkit-background-clip: text; background-clip: text; color: transparent; -webkit-text-fill-color: transparent; padding-bottom:0.08em;}
+    .callout-green p, .callout-green li { color: #0b0b0c !important; font-size: 17px; }
+    .callout-green a { color: #052037 !important; font-weight: 600; }
+    .callout-green a:hover { text-decoration: underline; text-decoration-color: rgba(0,0,0,.35); }
+    .cg-bg { font-size: 200px; font-weight: 900; position: absolute; right: -20px; bottom: -40px; color: rgba(255,255,255,.12); line-height: 1; pointer-events: none; }
+    @media (max-width: 600px) { .cg-bg { font-size: 80px; right: -10px; bottom: -20px; } .callout-green { padding: 36px 24px; } }
+
+    /* media frame */
+    .tmx-media-frame { border-radius: 20px; overflow: hidden; -webkit-mask-image: -webkit-radial-gradient(#fff,#000); }
+    .tmx-media-frame img { width: 100%; display: block; object-fit: cover; }
+    /* Hero image is already 16:9 (1080x608) so let it set its own aspect ratio. */
+    .enf-hero .tmx-media-frame img { height: auto; }
+
+    /* faq */
+    
+    
+    .faq-block summary { list-style: none; cursor: pointer; padding: 18px 40px 18px 0; font-weight: 700; font-size: 18px; line-height: 1.4; position: relative; color: #0b0b0c; }
+    
+    .faq-block summary::after { content: '+'; position: absolute; right: 4px; top: 50%; transform: translateY(-50%); font-size: 26px; font-weight: 300; color: var(--green-brand); }
+    
+    
+
+    /* anim */
+    .anim-up { opacity: 0; transform: translateY(28px); transition: opacity .75s cubic-bezier(.16,1,.3,1), transform .75s cubic-bezier(.16,1,.3,1); }
+    .fly-left { opacity: 0; transform: translateX(-50px); transition: opacity .8s cubic-bezier(.16,1,.3,1), transform .8s cubic-bezier(.16,1,.3,1); }
+    .fly-right { opacity: 0; transform: translateX(50px); transition: opacity .8s cubic-bezier(.16,1,.3,1), transform .8s cubic-bezier(.16,1,.3,1); }
+    .anim-up.on, .fly-left.on, .fly-right.on { opacity: 1; transform: none; }
+    @media (prefers-reduced-motion: reduce) { .anim-up, .fly-left, .fly-right { transition: none !important; opacity: 1 !important; transform: none !important; } }
+
+    /* section spacing */
+    .section { padding: 80px 0; }
+    .section--gray { background: #f5f5f7; }
+    .section--blue { background: #eaf3f8; }
+    @media (max-width: 768px) { .section { padding: 52px 0; } }
+    .section-label {
+      font-size: 16px; font-weight: 600; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--green-brand, #6E9B12);
+      margin-bottom: 12px; display: block;
+    }
+    .section-h2 {
+      font-size: 36px; font-weight: 800;
+      line-height: 1.1; letter-spacing: 0;
+      text-transform: uppercase;
+      color: var(--blue-mid, #134a8e);
+      background: linear-gradient(90deg, var(--blue-dark, #0b2c4a) 0%, var(--blue-mid, #134a8e) 55%, var(--blue-light, #1f5fa6) 100%);
+      -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block; max-width: 100%; margin-bottom: 14px;
+      padding: 0.12em 0.15em 0.08em 0;
+    }
+    @media (max-width: 768px) {
+      .section-h2 {
+      font-size: 36px; font-weight: 800;
+      line-height: 1.1; letter-spacing: 0;
+      text-transform: uppercase;
+      color: var(--blue-mid, #134a8e);
+      background: linear-gradient(90deg, var(--blue-dark, #0b2c4a) 0%, var(--blue-mid, #134a8e) 55%, var(--blue-light, #1f5fa6) 100%);
+      -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block; max-width: 100%; margin-bottom: 14px;
+      padding: 0.12em 0.15em 0.08em 0;
+    }
+    }
+    .section-intro { font-size: 18px; color: #515154; max-width: 680px; line-height: 1.6; margin-bottom: 8px; }
+    
+    
+    @media (max-width: 900px) { .g2 { grid-template-columns: 1fr; gap: 36px; } }
+  </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Startpagina",
+      "item": "https://tagra.app/nl/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Voor handhavingsinstanties",
+      "item": "https://tagra.app/nl/handhaving/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "url": "https://tagra.app/nl/handhaving/",
+  "name": "Voor handhavingsinstanties",
+  "isPartOf": {
+    "@id": "https://tagra.app/#website"
+  },
+  "about": {
+    "@id": "https://tagra.app/#organization"
+  },
+  "inLanguage": "nl"
+}
+</script>
+<link href="/assets/css/main.css" rel="stylesheet"/>
+<link href="/assets/css/tokens.css" rel="stylesheet"/>
+<link href="/assets/css/base.css" rel="stylesheet"/>
+<link href="/assets/css/components.css" rel="stylesheet"/>
+<link href="/assets/css/nav.css" rel="stylesheet"/>
+<script defer="" src="/assets/js/nav.js?v=20260816b"></script>
+<link href="/assets/css/footer.css" rel="stylesheet"/></head>
+<body>
+<a class="skip-link" href="#main-content">Naar de inhoud</a>
+<div aria-hidden="true" id="scroll-progress"></div>
+<!-- ═══ NAVIGATION ═══════════════════════════════════════════════ -->
+<nav aria-label="Hoofdnavigatie" class="site-nav" role="navigation">
+<div class="nav-inner">
+<a aria-label="TAGRA Control – home" class="nav-logo" href="/nl/"><img alt="TAGRA" height="32" src="/assets/img/logo-light.svg?v=20260513zh" style="display:block;height:32px;width:auto;" width="140"/><span class="nav-logo-variant">Control</span></a>
+<ul class="nav-links" id="nav-links">
+<li><a href="/nl/voor-transportbedrijven/">Voor transportbedrijven</a></li>
+<li><a href="/nl/voor-chauffeurs/">Voor chauffeurs</a></li>
+<li><a aria-current="page" href="/nl/handhaving/">Handhaving</a></li>
+<li><a href="/nl/artikelen/">Artikelen</a></li><li><a href="/nl/handleidingen/">Handleidingen</a></li>
+<li><a href="/nl/veelgestelde-vragen/">Veelgestelde vragen</a></li>
+<li><a href="/nl/contact/">Contact</a></li>
+<li class="nav-cta-li"><a class="nav-cta" href="/nl/gratis-proefversie/?audience=enforcement">30 dagen gratis proberen</a></li>
+</ul>
+<details class="nav-lang">
+<summary aria-label="Taal: NL">NL</summary>
+<div class="nav-lang-menu" role="menu"><a href="/enforcement/" hreflang="en">English</a><a href="/de/kontrollbehoerden/" hreflang="de">Deutsch</a><a href="/pl/organy-kontrolne/" hreflang="pl">Polski</a><a aria-current="page" class="active" href="/nl/handhaving/" hreflang="nl">Nederlands</a><a href="/fr/autorites-de-controle/" hreflang="fr">Français</a><a href="/it/organi-di-controllo/" hreflang="it">Italiano</a><a href="/el/eleghos/" hreflang="el">Ελληνικά</a><a href="/hu/hatosagoknak/" hreflang="hu">Magyar</a><a href="/ro/autoritati-de-control/" hreflang="ro">Română</a><a href="https://www.tdt.cz/" hreflang="cs" rel="noopener" target="_blank">Čeština</a><a href="https://www.tdt.sk/" hreflang="sk" rel="noopener" target="_blank">Slovenčina</a></div>
+</details>
+<a class="nav-cta-mobile" href="/nl/gratis-proefversie/?audience=enforcement">Gratis proberen</a>
+<button aria-expanded="false" aria-label="Menu in- of uitschakelen" class="nav-mobile-toggle" id="nav-toggle">
+<span></span><span></span><span></span>
+</button>
+</div>
+</nav>
+<!-- HERO -->
+<section id="main-content" class="enf-hero">
+<div class="container">
+<div class="eyebrow anim-up">TAGRA · Voor handhavingsinstanties</div>
+<h1>Tachograafanalyse bij een wegcontrole in minuten, niet in uren</h1>
+<p class="lead">Professioneel <strong>tachograafanalyסesoftware</strong> voor snelle analyse van digitale tachografen tijdens wegcontroles en bedrijfscontroles. De standaard in Centraal-Europa.</p>
+<div class="enf-btn-row anim-up">
+<a class="btn-cta" href="/nl/gratis-proefversie/?audience=enforcement">Demo aanvragen</a>
+<a class="btn-cta btn-blue" href="/nl/contact/?topic=training">Neem contact met ons op voor een training</a>
+</div>
+<p class="anim-up" style="font-size:15px;color:var(--text2);margin-bottom:0;transition-delay:.2s">Windows · Demo op aanvraag · Gebruikt door autoriteiten in Tsjechië, Slowakije en Hongarije</p>
+<div class="tmx-media-frame anim-up" style="margin:44px auto 0;box-shadow:0 20px 40px rgba(0,0,0,.08);">
+<img alt="TAGRA Control – interface voor de analyse van gegevens van digitale tachografen voor handhavingsinstanties" height="608" src="/assets/img/tagra-control-screenshot.webp?v=2026-05-13c" width="1080"/>
+</div>
+</div>
+</section>
+<!-- KEY METRICS BENTO -->
+<section class="section">
+<div class="container">
+<div class="bento">
+<div class="bc bluefill s4 anim-up" style="transition-delay:0s">
+<span class="bc-label">Snelheid</span>
+<div class="bc-title">Resultaten in seconden</div>
+<p class="bc-text" style="margin-top:8px;">Bestuurderskaart of tachograaf → <strong>analyse van de digitale tachograaf</strong> met overtredingsrapport in seconden. Geen verwerking op een server, geen wachttijd.</p>
+<div class="bignum">01</div>
+</div>
+<div class="bc bluefill s4 anim-up" style="transition-delay:0.1s">
+<span class="bc-label">Wetgeving</span>
+<div class="bc-title">Rij- en rusttijden van EU-chauffeurs + arbeidstijdenrichtlijn</div>
+<p class="bc-text" style="margin-top:8px;">Volledig actueel: Verordening 561/2006, 2020/1054, AETR, 478/2000, 462/2007 en de <strong>arbeidstijdenrichtlijn voor vrachtwagenchauffeurs</strong>. Bijgewerkt bij elke wijziging van de wetgeving.</p>
+<div class="bignum">02</div>
+</div>
+<div class="bc bluefill s4 anim-up" style="transition-delay:0.2s">
+<span class="bc-label">Tachografen</span>
+<div class="bc-title">Alle generaties</div>
+<p class="bc-text" style="margin-top:8px;">Digitale G1- en slimme G2V2-tachografen. Alle formaten in één tool: .DDD, .C1B, .V1B, ESM.</p>
+<div class="bignum">03</div>
+</div>
+<div class="bc darkfill s6 fly-left">
+<span class="bc-label" style="color:rgba(255,255,255,.55);">Mede ontwikkeld</span>
+<div class="bc-title">Met handhavingsinstanties</div>
+<p class="bc-text" style="margin-top:8px;color:rgba(255,255,255,.82);">Functies worden ontwikkeld in directe samenwerking met inspecteurs uit de praktijk. De software sluit aan op de daadwerkelijke controlepraktijk.</p>
+</div>
+<div class="bc greenfill s6 fly-right">
+<span class="bc-label">Rapporten</span>
+<div class="bc-title">Formulieren klaar voor controles</div>
+<p class="bc-text" style="margin-top:8px;">Uitvoer voorbereid voor wegcontroles en bedrijfscontroles — identiek aan wat transportbedrijven bij autoriteiten indienen.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- WHO USES -->
+<section class="section section--gray">
+<div class="container anim-up">
+<span class="section-label">In de praktijk geverifieerd</span>
+<h2 class="section-h2">Wie gebruikt TAGRA Control</h2>
+<p class="section-intro">TAGRA Control is de standaard <strong>tachograafanalyסesoftware</strong> voor handhavingsinstanties in Tsjechië, Slowakije en Hongarije. De software wordt voortdurend bijgewerkt op basis van feedback van inspecteurs uit de praktijk.</p>
+<div class="ref-grid">
+<div class="ref-card ref-card--cz">
+<div class="ref-country">Tsjechië</div>
+<div class="ref-name">Tsjechische politie</div>
+<div class="ref-note">Wegcontroles in heel Tsjechië</div>
+</div>
+<div class="ref-card ref-card--cz">
+<div class="ref-country">Tsjechië</div>
+<div class="ref-name">Tsjechische douaneadministratie</div>
+<div class="ref-note">Grens- en veldcontroles</div>
+</div>
+<div class="ref-card ref-card--cz">
+<div class="ref-country">Tsjechië</div>
+<div class="ref-name">Ministerie van Verkeer CZ</div>
+<div class="ref-note">Administratieve en methodologische handhaving</div>
+</div>
+<div class="ref-card ref-card--cz">
+<div class="ref-country">Tsjechië</div>
+<div class="ref-name">Staatsarbeidsinspectie</div>
+<div class="ref-note">Arbeidstijdcontroles bij werkgevers</div>
+</div>
+<div class="ref-card ref-card--cz">
+<div class="ref-country">Tsjechië</div>
+<div class="ref-name">Regionale autoriteiten &amp; ORP</div>
+<div class="ref-note">Gemeenten met uitgebreide bevoegdheden in heel Tsjechië</div>
+</div>
+<div class="ref-card ref-card--sk">
+<div class="ref-country">Slowaakse Republiek</div>
+<div class="ref-name">Arbeidsinspecties van de Slowaakse Republiek</div>
+<div class="ref-note">Wegcontroles en bedrijfscontroles in Slowakije</div>
+</div>
+<div class="ref-card ref-card--hu">
+<div class="ref-country">Hongarije</div>
+<div class="ref-name">Ministerie van Vervoer HU</div>
+<div class="ref-note">Handhavings- en methodologische agenda</div>
+</div>
+<div class="ref-card ref-card--hu">
+<div class="ref-country">Hongarije</div>
+<div class="ref-name">Politie van het comitaat Komárom-Esztergom</div>
+<div class="ref-note">Wegcontroles van tachografen in Hongarije</div>
+</div>
+</div>
+<div class="commitment-callout" style="margin:36px 0 0;padding:32px 36px;background:#fff;border-radius:16px;border-left:4px solid var(--green-brand);font-size:17px;color:#515154;line-height:1.65;">
+<div style="font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--green-brand);margin-bottom:10px;">Onze inzet</div>
+<p style="margin:0;color:#1d1d1f;">TAGRA Control wordt voortdurend aangepast op basis van praktijkervaring van inspecteurs in het veld — voor een zo efficiënt mogelijke inspectieworkflow. Elke wijziging in de wetgeving van de EU en de lidstaten wordt bij elke release in de software verwerkt.</p>
+</div>
+</div>
+</section>
+<!-- WHAT IT DETECTS -->
+<section class="section">
+<div class="container">
+<div class="g2 anim-up">
+<div class="fly-left">
+<span class="section-label">Analyse van overtredingen</span>
+<h2 class="section-h2">Wat TAGRA Control direct signaleert</h2>
+<p style="font-size:17px;color:#515154;line-height:1.6;margin-bottom:20px;">De software voert een analyse uit <strong>analyse van de digitale tachograaf</strong> op elk tijdssegment van de bestuurderskaart of tachograaf en markeert ondubbelzinnig overtredingen van de toepasselijke <strong>rij- en rusttijden</strong> wetgeving.</p>
+<div class="feats">
+<div class="fi"><div class="fck"></div><span>Overschrijding van dagelijkse en wekelijkse rijtijden volgens de EU-regels voor rij- en rusttijden (Verordening 561/2006)</span></div>
+<div class="fi"><div class="fck"></div><span>Verkorte verplichte veiligheidspauze</span></div>
+<div class="fi"><div class="fck"></div><span>Onvoldoende dagelijkse en wekelijkse rusttijd</span></div>
+<div class="fi"><div class="fck"></div><span>Rijden zonder geplaatste bestuurderskaart</span></div>
+<div class="fi"><div class="fck"></div><span>Manipulatie van de tachograaf (ongebruikelijke registraties)</span></div>
+<div class="fi"><div class="fck"></div><span>Controles van cycli van 14 dagen en gecumuleerde overuren</span></div>
+<div class="fi"><div class="fck"></div><span>GPS-positie van slimme tachografen van de tweede generatie</span></div>
+</div>
+</div>
+<div class="fly-right">
+<span class="section-label" style="display:block;margin-bottom:12px;">Toepasselijke wetgeving</span>
+<div class="leg-grid">
+<div class="leg-item">Verordening (EG) 561/2006</div>
+<div class="leg-item">Verordening (EU) 2020/1054</div>
+<div class="leg-item">AETR (internationaal)</div>
+<div class="leg-item">Verordening 478/2000</div>
+<div class="leg-item">Verordening 462/2007 (SK)</div>
+<div class="leg-item">Verordening 3821/1985</div>
+<div class="leg-item">Wet 589/2006 Sb. (CZ)</div>
+<div class="leg-item">Arbeidswetboek 262/2006 (CZ)</div>
+</div>
+<p style="margin-top:16px;font-size:15px;color:#515154;line-height:1.55;">De software wordt voortdurend bijgewerkt bij elke wijziging in de EU- en nationale wetgeving.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- REPORTS -->
+<section class="section section--blue">
+<div class="container anim-up">
+<span class="section-label">Klaar voor de praktijk</span>
+<h2 class="section-h2">Rapporten en formulieren voor controles</h2>
+<p class="section-intro">TAGRA Control bevat alle noodzakelijke uitvoerbestanden en formulieren voor wegcontroles en bedrijfscontroles — klaar voor onmiddellijk gebruik.</p>
+<div class="reports-grid">
+<div class="report-item">
+<div class="report-icon">1</div>
+<div><span class="report-label">Rapport van overtredingen door de chauffeur</span><span class="report-desc">Chronologisch overzicht van alle overtredingen met het exacte tijdstip en type overtreding.</span></div>
+</div>
+<div class="report-item">
+<div class="report-icon">2</div>
+<div><span class="report-label">Rapport rij- en rusttijden</span><span class="report-desc">Dagelijkse, wekelijkse en 14-daagse cycli volgens EU 561/2006.</span></div>
+</div>
+<div class="report-item">
+<div class="report-icon">3</div>
+<div><span class="report-label">Rapport arbeidstijd</span><span class="report-desc">Arbeidstijden inclusief nachtwerk, overuren en wachtdienst.</span></div>
+</div>
+<div class="report-item">
+<div class="report-icon">4</div>
+<div><span class="report-label">Rapport voertuiggebruik</span><span class="report-desc">Overzicht van ritten, stops en activiteiten gekoppeld aan de bestuurderskaart.</span></div>
+</div>
+<div class="report-item">
+<div class="report-icon">5</div>
+<div><span class="report-label">GPS-positie (G2V2)</span><span class="report-desc">Voertuiglocatie uit registraties van de slimme tachograaf van de tweede generatie.</span></div>
+</div>
+<div class="report-item">
+<div class="report-icon">6</div>
+<div><span class="report-label">Samenvatting van de bedrijfscontrole</span><span class="report-desc">Volledig overzicht voor de geselecteerde periode — voor controles op de bedrijfsvestiging van de wagenparkbeheerder.</span></div>
+</div>
+<div class="report-item">
+<div class="report-icon">7</div>
+<div><span class="report-label">Overzicht van rijden zonder kaart</span><span class="report-desc">Identificeert segmenten waarin de bestuurder het voertuig bestuurde zonder geplaatste bestuurderskaart.</span></div>
+</div>
+<div class="report-item">
+<div class="report-icon">8</div>
+<div><span class="report-label">Export voor procedures</span><span class="report-desc">Afdrukken en elektronische export voor administratieve procedures en procedures wegens overtredingen.</span></div>
+</div>
+</div>
+</div>
+</section>
+<!-- ROADSIDE STEPS -->
+<section class="section">
+<div class="container anim-up">
+<span class="section-label">Controleprocedure</span>
+<h2 class="section-h2">Wegcontrole in drie stappen</h2>
+<div class="steps">
+<div class="step-card fly-left">
+<div class="step-header"><span class="snum">01</span>
+<span class="stit">Kaart of tachograaf uitlezen</span></div><div class="tmx-media-frame" style="margin:12px 0;max-height:180px;background:#f5f5f7;">
+<img alt="DOWNLOAD BOX II S – kaartlezer voor handhavingsinstanties" src="https://cdn.truckmall.cz/data/user-content/Download%20Box%20IIS_produkt2.webp" style="width:100%;height:180px;object-fit:contain;object-position:center;" loading="lazy" width="1875" height="1172"/>
+</div>
+<p style="font-size:16px;color:#515154;line-height:1.55;">Plaats de bestuurderskaart in DOWNLOAD BOX II S of sluit het apparaat aan op de gegevenspoort van de tachograaf. Het <strong>de bestuurderskaart uitlezen</strong> duurt slechts enkele seconden.</p>
+</div>
+<div class="step-card anim-up">
+<div class="step-header"><span class="snum">02</span>
+<span class="stit">Onmiddellijke analyse in TAGRA Control</span></div><div class="tmx-media-frame" style="margin:12px 0;">
+<img alt="TAGRA Control-interface – onmiddellijke analyse van de digitale tachograaf en rapport van overtredingen" height="300" src="/assets/img/tagra-control-screenshot.webp" width="400" loading="lazy"/>
+</div>
+<p style="font-size:16px;color:#515154;line-height:1.55;">Het programma evalueert automatisch alle registraties en markeert elke overtreding met het exacte tijdstip, type en duur.</p>
+</div>
+<div class="step-card fly-right">
+<div class="step-header"><span class="snum">03</span>
+<span class="stit">Rapport van de wegcontrole</span></div><div class="tmx-media-frame" style="margin:12px 0;">
+<img alt="Formulier voor wegcontrole – uitvoer uit TAGRA Control, klaar voor handhaving" height="300" src="/assets/img/road-check-form-tagra.webp" width="400" loading="lazy"/>
+</div>
+<p style="font-size:16px;color:#515154;line-height:1.55;">Rapport van overtredingen, klaar om af te drukken of elektronisch te exporteren. Voorbereid voor administratieve procedures en procedures wegens overtredingen.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- DEVICE -->
+<section class="section section--gray">
+<div class="container anim-up">
+<span class="section-label">Aanbevolen hardware</span>
+<h2 class="section-h2">DOWNLOAD BOX II S</h2>
+<div class="device-card">
+<div class="device-img">
+<img alt="DOWNLOAD BOX II S – kaartlezer voor handhavingsinstanties" height="180" src="https://cdn.truckmall.cz/data/user-content/Download%20Box%20IIS_produkt2.webp" width="180" loading="lazy"/>
+</div>
+<div>
+<p style="font-size:17px;color:#515154;line-height:1.6;margin-bottom:16px;">Compacte kaartlezer voor bestuurderskaarten en uitleessleutel voor digitale tachografen. Gefabriceerd in Tsjechië, volledig compatibel met alle digitale tachografen en slimme tachografen van de tweede generatie.</p>
+<div class="device-specs">
+<div class="dspec"><span class="dspec-k">Compatibiliteit</span><span class="dspec-v">Alle digitale tachografen + G2V2</span></div>
+<div class="dspec"><span class="dspec-k">Bestuurderskaart</span><span class="dspec-v">Via geïntegreerde lezer</span></div>
+<div class="dspec"><span class="dspec-k">Verbinding</span><span class="dspec-v">USB naar laptop</span></div>
+<div class="dspec"><span class="dspec-k">Fabrikant</span><span class="dspec-v">Truck Data Technology, CZ</span></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- TRAINING -->
+<section class="section">
+<div class="container">
+<div class="g2 top anim-up">
+<div class="fly-left">
+<span class="section-label">Training</span>
+<h2 class="section-h2">Training voor handhavingsinstanties</h2>
+<p style="font-size:17px;color:#515154;line-height:1.6;margin-bottom:16px;">Truck Data Technology, s.r.o. verzorgt professionele trainingen in het gebruik van TAGRA Control, rechtstreeks voor handhavingsinstanties. De training wordt afgestemd op de behoeften en werkprocedures van elke organisatie.</p>
+<ul class="training-list">
+<li>Bediening van de software — bestuurderskaarten en tachografen uitlezen</li>
+<li>Resultaten interpreteren — zo leest u rapporten van overtredingen</li>
+<li>Wetgevingscontext — EU 561/2006, AETR, nationale voorschriften</li>
+<li>Exports en protocollen — documenten voor procedures voorbereiden</li>
+<li>Training in het Engels — beschikbaar voor internationale handhavingsinstanties</li>
+</ul>
+<p style="margin-top:20px;font-size:16px;color:#515154;">Contact voor training: <strong><a href="tel:+420739005345">+420 739 005 345</a> · <a href="mailto:sales@tagra.app">sales@tagra.app</a></strong></p>
+</div>
+<div class="fly-right">
+<div class="callout-green">
+<div class="cg-bg">TDT</div>
+<h2 style="font-size:clamp(24px,3vw,34px);font-weight:800;margin-bottom:14px;display:inline-block;">Interesse in TAGRA Control?</h2>
+<p style="margin-bottom:8px;"><strong>TAGRA Control: € 749 excl. btw</strong> — het eerste jaar met updates en ondersteuning is inbegrepen; vanaf jaar 2 bedraagt de jaarlijkse licentievergoeding € 149 excl. btw.</p>
+<p style="margin-bottom:8px;">Wij stellen graag een voorstel op en organiseren een training voor uw team.</p>
+<p>Neem op werkdagen van 8:00 tot 16:00 contact met ons op. Wij antwoorden in het Engels.</p>
+<p style="margin-top:20px;"><strong>Web:</strong> <a href="/nl/handhaving/">tagra.app/enforcement</a></p>
+<div style="margin-top:24px;display:flex;gap:12px;flex-wrap:wrap;">
+<a class="btn" href="mailto:sales@tagra.app" style="background:#fff;color:#0b2c4a;padding:12px 24px;border-radius:50px;font-weight:700;font-size:16px;text-decoration:none;">E-mail sturen</a>
+<a class="btn" href="tel:+420739005345" style="background:rgba(255,255,255,.2);color:#fff;padding:12px 24px;border-radius:50px;font-weight:700;font-size:16px;text-decoration:none;border:1.5px solid rgba(255,255,255,.5);">Bel ons</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ -->
+<section class="section section--gray">
+<div class="container anim-up">
+<span class="section-label">Veelgestelde vragen</span>
+<h2 class="section-h2">Veelgestelde vragen voor handhavingsinstanties</h2>
+<div class="faq-block" style="margin-top:28px;max-width:820px;">
+<details>
+<summary>Welke typen tachografen ondersteunt TAGRA Control?</summary>
+<p class="faq-a">TAGRA Control voert een analyse uit <strong>analyse van de digitale tachograaf</strong> op registraties van tachografen van de eerste generatie (G1) en slimme tachografen van de tweede generatie (G2V2). Ondersteunde bestandsindelingen: .DDD, .C1B, .V1B en ESM.</p>
+</details>
+<details>
+<summary>Wat laat de analyse van de bestuurderskaart zien?</summary>
+<p class="faq-a">Na het uitlezen van de bestuurderskaart evalueert <strong>de bestuurderskaart uitlezen</strong>de software rijtijden <strong>rij- en rusttijden</strong>, pauzes, rusttijden, arbeidstijd en rijden zonder kaart. Elke overtreding wordt weergegeven met de exacte datum, tijd en duur. Voor G2V2-kaarten zijn ook GPS-coördinaten uit de tachograafregistratie beschikbaar.</p>
+</details>
+<details>
+<summary>Hoe snel wordt een analyse uitgevoerd tijdens een wegcontrole?</summary>
+<p class="faq-a">Het uitlezen van een bestuurderskaart via DOWNLOAD BOX II S duurt doorgaans 10–60 seconden, afhankelijk van de hoeveelheid gegevens op de kaart. De analyse zelf en de weergave van het rapport van overtredingen vinden onmiddellijk na het uitlezen van de gegevens plaats.</p>
+</details>
+<details>
+<summary>Kan TAGRA Control offline zonder internetverbinding worden gebruikt?</summary>
+<p class="faq-a">Ja. TAGRA Control werkt volledig offline. Een internetverbinding is alleen nodig voor het installeren van software-updates. De controleactiviteiten en gegevensanalyse werken zonder netwerkverbinding.</p>
+</details>
+<details>
+<summary>Op welke apparaten werkt TAGRA Control?</summary>
+<p class="faq-a">De software werkt op Windows 7 SP1 en nieuwer (Windows 8.1, 10, 11 — zowel 32- als 64-bits). Geschikt voor laptops en desktopcomputers. De minimale hardwarevereisten zijn beperkt.</p>
+</details>
+<details>
+<summary>Is training in het Engels beschikbaar voor internationale handhavingsinstanties?</summary>
+<p class="faq-a">Ja. Truck Data Technology verzorgt trainingen in het Engels voor internationale handhavingsinstanties en partnerinstellingen. Neem contact met ons op via sales@tagra.app om de voorwaarden en planning af te spreken.</p>
+</details>
+<details>
+<summary>Hoe wordt gewaarborgd dat de wetgeving actueel is?</summary>
+<p class="faq-a">De software wordt voortdurend bijgewerkt bij elke wijziging in de relevante EU- en nationale wetgeving. Updates zijn beschikbaar voor alle houders van een geldige licentie. Het programma zelf meldt wanneer een update beschikbaar is.</p>
+</details>
+</div>
+</div>
+</section>
+<!-- MANUFACTURER -->
+<section class="section">
+<div class="container anim-up">
+<div style="max-width:600px;">
+<span class="section-label">Ontwikkelaar &amp; fabrikant</span>
+<h2 class="section-h2">Truck Data Technology, s.r.o.</h2>
+<p style="font-size:17px;color:#515154;line-height:1.6;margin-bottom:20px;">Tsjechische fabrikant van software en hardware voor het beheer van tachograafgegevens, met meer dan 20 jaar ervaring. Rechtstreekse fabrikant — geen tussenpersoon.</p>
+<div style="display:flex;flex-direction:column;gap:8px;font-size:16px;">
+<div><span style="color:#515154;min-width:80px;display:inline-block;">Locatie</span> <strong>Tsjechië</strong></div>
+<div><span style="color:#515154;min-width:80px;display:inline-block;">Telefoon</span> <a href="tel:+420739005345" style="color:#134a8e;font-weight:600;">+420 739 005 345</a></div>
+<div><span style="color:#515154;min-width:80px;display:inline-block;">E-mail</span> <a href="mailto:sales@tagra.app" style="color:#134a8e;font-weight:600;">sales@tagra.app</a></div>
+<div><span style="color:#515154;min-width:80px;display:inline-block;">Web</span> <a href="https://www.tdt.cz" rel="noopener" style="color:#134a8e;font-weight:600;" target="_blank">www.tdt.cz</a></div>
+</div>
+</div>
+</div>
+</section>
+<!-- FOOTER -->
+<footer class="site-footer" role="contentinfo">
+<div class="footer-inner">
+<div>
+<div class="footer-logo"><img alt="TAGRA" height="20" src="/assets/img/logo-dark.svg?v=20260513zh" width="88" loading="lazy"/></div>
+<p class="footer-desc">Professionele software voor tachograafanalyse. Uitlezen van bestuurderskaarten, analyse van digitale tachografen, rij- en rusttijden van EU-bestuurders en de arbeidstijdenrichtlijn voor vrachtwagenbestuurders. Ontwikkeld door Truck Data Technology, s.r.o.</p>
+</div>
+<div class="footer-col">
+<h2 class="footer-col-title">Product</h2>
+<ul>
+<li><a href="/nl/voor-transportbedrijven/">Voor wagenparkbeheerders</a></li>
+<li><a href="/nl/voor-chauffeurs/">Voor beroepschauffeurs</a></li>
+<li><a href="/nl/handhaving/">Voor handhaving</a></li>
+<li><a href="/nl/hoe-het-werkt/">Hoe het werkt</a></li>
+<li><a href="/nl/voor-wie/">Voor wie</a></li>
+<li><a href="/nl/veelgestelde-vragen/">Veelgestelde vragen</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h2 class="footer-col-title">Bronnen</h2>
+<ul>
+<li><a href="/nl/artikelen/">Artikelen</a></li><li><a href="/nl/handleidingen/">Handleidingen</a></li>
+<li><a href="/nl/artikelen/tachograaf-symbolen/">Tachograafsymbolen</a></li>
+<li><a href="/nl/integraties/dkv-live/">DKV LIVE®</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h2 class="footer-col-title">Bedrijf</h2>
+<ul>
+<li><a href="/nl/contact/">Contact</a></li>
+<li><a href="https://www.tdt.cz" rel="noopener" target="_blank">Truck Data Technology</a></li>
+<li><a href="/nl/">English</a></li><li><a href="/de/">Deutsch</a></li><li><a href="/pl/">Polski</a></li><li><a href="/el/">Ελληνικά</a></li><li><a href="/hu/">Magyar</a></li><li><a href="/it/">Italiano</a></li><li><a href="https://www.tdt.cz/" rel="noopener" target="_blank">Čeština</a></li><li><a href="https://www.tdt.sk/" rel="noopener" target="_blank">Slovenčina</a></li></ul>
+</div>
+</div>
+<div class="footer-bottom">
+<span>© 2026 Truck Data Technology, s.r.o. Alle rechten voorbehouden.</span>
+<span><a href="/nl/contact/">Contact</a> · <a href="https://www.tdt.cz" rel="noopener" target="_blank">tdt.cz</a> · <a href="/nl/privacy/">Privacy &amp; cookies</a></span>
+</div>
+</footer>
+<script>
+(function() {
+  /* scroll progress */
+  var bar = document.getElementById('scroll-progress');
+  if (bar) {
+    window.addEventListener('scroll', function() {
+      var top = document.documentElement.scrollTop || document.body.scrollTop;
+      var h = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      bar.style.width = (top / h * 100) + '%';
+    }, { passive: true });
+  }
+  /* mobile nav */
+  var toggle = document.getElementById('nav-toggle');
+  var links = document.getElementById('nav-links');
+  if (toggle && links) {
+    toggle.addEventListener('click', function() {
+      var open = links.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open);
+    });
+  }
+  /* intersection observer */
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) {
+        if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.anim-up, .fly-left, .fly-right').forEach(function(el) { io.observe(el); });
+  } else {
+    document.querySelectorAll('.anim-up, .fly-left, .fly-right').forEach(function(el) { el.classList.add('on'); });
+  }
+})();
+</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "TAGRA Control – software voor tachograafanalyse voor handhavingsinstanties", "applicationCategory": "BusinessApplication", "operatingSystem": "Windows", "description": "Professionele tachograafanalysesoftware voor de analyse van digitale tachografen tijdens wegcontroles en bedrijfscontroles. Voert het uitlezen van bestuurderskaarten uit, beoordeelt overtredingen van de rij- en rusttijden van bestuurders volgens Verordening 561/2006, 2020/1054 en de AETR. Wordt gebruikt door de Tsjechische politie, de Tsjechische douaneadministratie, het Tsjechische ministerie van Vervoer, de Slowaakse arbeidsinspecties en het Hongaarse ministerie van Vervoer.", "url": "https://tagra.app/nl/handhaving/", "inLanguage": "nl", "author": {"@type": "Organization", "name": "Truck Data Technology, s.r.o.", "url": "https://www.tdt.cz", "telephone": "+420739005345", "email": "sales@tagra.app"}, "offers": {"@type": "Offer", "@id": "https://tagra.app/nl/handhaving/#offer", "priceCurrency": "EUR", "price": "749", "availability": "https://schema.org/InStock", "url": "https://tagra.app/nl/handhaving/", "description": "Aankoopprijs excl. btw. Het eerste jaar met updates en ondersteuning is inbegrepen; vanaf jaar 2 bedraagt de jaarlijkse licentievergoeding € 149 excl. btw.", "seller": {"@type": "Organization", "name": "Truck Data Technology, s.r.o.", "url": "https://www.tdt.cz"}}}</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "inLanguage": "nl",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Welke typen tachografen ondersteunt TAGRA Control?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "TAGRA Control voert digitale tachograafanalyses uit op registraties van tachografen van de eerste generatie (G1) en slimme tachografen van de tweede generatie (G2V2). Ondersteunde bestandsindelingen: .DDD, .C1B, .V1B en ESM."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Wat laat de analyse van de bestuurderskaart zien?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Na het uitlezen van de bestuurderskaart beoordeelt de software de rijtijden, onderbrekingen, rusttijden, arbeidstijd en het rijden zonder kaart van bestuurders. Elke overtreding wordt weergegeven met de exacte datum, tijd en duur. Voor G2V2-kaarten zijn ook de GNSS-coördinaten uit de tachograafregistratie beschikbaar."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Hoe snel wordt een analyse uitgevoerd tijdens een wegcontrole?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Het uitlezen van een bestuurderskaart via DOWNLOAD BOX II S duurt doorgaans 10–60 seconden, afhankelijk van de hoeveelheid gegevens op de kaart. De analyse zelf en de weergave van het rapport van overtredingen vinden onmiddellijk na het uitlezen van de gegevens plaats."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Kan TAGRA Control offline zonder internetverbinding worden gebruikt?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja. TAGRA Control werkt volledig offline. Een internetverbinding is alleen nodig voor het installeren van software-updates. De controleactiviteiten en gegevensanalyse werken zonder netwerkverbinding."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Op welke apparaten werkt TAGRA Control?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "De software werkt op Windows 7 SP1 en nieuwer (Windows 8.1, 10, 11 — zowel 32- als 64-bits). Geschikt voor laptops en desktopcomputers. De minimale hardwarevereisten zijn beperkt."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is training in het Engels beschikbaar voor internationale handhavingsinstanties?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja. Truck Data Technology verzorgt trainingen in het Engels voor internationale handhavingsinstanties en partnerinstellingen. Neem contact met ons op via sales@tagra.app om de voorwaarden en planning af te spreken."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Hoe wordt gewaarborgd dat de wetgeving actueel is?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "De software wordt voortdurend bijgewerkt bij elke wijziging in de relevante EU- en nationale wetgeving. Updates zijn beschikbaar voor alle houders van een geldige licentie. Het programma zelf meldt wanneer een update beschikbaar is."
+      }
+    }
+  ]
+}
+</script>
+</body>
+</html>

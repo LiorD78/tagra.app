@@ -45,6 +45,10 @@
       var m={cz:'cs',cs:'cs',sk:'sk',de:'de',pl:'pl',gr:'el',el:'el',hu:'hu',en:'en'};return m[l]||'en';}
     var T={
       hu:{t:'Analitikai s\u00fctiket haszn\u00e1lunk (Google Analytics, Microsoft Clarity, Smartsupp), hogy meg\u00e9rts\u00fck a webhely haszn\u00e1lat\u00e1t. Csak az \u00d6n hozz\u00e1j\u00e1rul\u00e1s\u00e1val t\u00f6lt\u0151dnek be.',a:'Elfogadom',r:'Elutas\u00edtom',p:'Adatv\u00e9delem \u00e9s s\u00fctik'},
+      ro:{t:'Utilizăm module cookie de analiză (Google Analytics, Microsoft Clarity, Smartsupp) pentru a înțelege modul de utilizare a site-ului. Se încarcă doar cu consimțământul dumneavoastră.',a:'Accept',r:'Refuz',p:'Confidențialitate și cookie-uri'},
+      nl:{t:'We gebruiken analytische cookies (Google Analytics, Microsoft Clarity, Smartsupp) om het gebruik van de site te begrijpen. Ze laden alleen met uw toestemming.',a:'Accepteren',r:'Weigeren',p:'Privacy en cookies'},
+      fr:{t:'Nous utilisons des cookies analytiques (Google Analytics, Microsoft Clarity, Smartsupp) pour comprendre l’utilisation du site. Ils ne se chargent qu’avec votre consentement.',a:'Accepter',r:'Refuser',p:'Confidentialité et cookies'},
+      it:{t:'Utilizziamo cookie analitici (Google Analytics, Microsoft Clarity, Smartsupp) per capire l’utilizzo del sito. Si caricano solo con il Suo consenso.',a:'Accetta',r:'Rifiuta',p:'Privacy e cookie'},
       en:{t:'We use analytics cookies (Google Analytics, Microsoft Clarity, Smartsupp) to understand site usage. They load only with your consent.',a:'Accept',r:'Reject',p:'Privacy &amp; cookies'},
       cs:{t:'Pou\u017e\u00edv\u00e1me analytick\u00e9 cookies (Google Analytics, Microsoft Clarity, Smartsupp) k pochopen\u00ed pou\u017e\u00edv\u00e1n\u00ed webu. Na\u010dtou se jen s va\u0161\u00edm souhlasem.',a:'P\u0159ijmout',r:'Odm\u00edtnout',p:'Soukrom\u00ed a cookies'},
       sk:{t:'Pou\u017e\u00edvame analytick\u00e9 cookies (Google Analytics, Microsoft Clarity, Smartsupp) na pochopenie pou\u017e\u00edvania webu. Na\u010d\u00edtaj\u00fa sa len s va\u0161\u00edm s\u00fahlasom.',a:'Prija\u0165',r:'Odmietnu\u0165',p:'S\u00fakromie a cookies'},
@@ -76,15 +80,17 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>TAGRA — DKV LIVE — Αυτόματη Εισαγωγή Δεδομένων Ταχογράφου</title>
-<meta content="Χρησιμοποιείτε ήδη το DKV LIVE για απομακρυσμένη λήψη δεδομένων ταχογράφου; Το TAGRA εισάγει τα δεδομένα αυτόματα μέσω SFTP — χωρίς χειροκίνητες μεταφορές αρχείων, χωρίς επιπλέον κλικ." name="description"/>
+<meta content="TAGRA: εισάγετε αυτόματα δεδομένα ταχογράφου από το DKV LIVE μέσω SFTP, χωρίς χειροκίνητες μεταφορές αρχείων ή επιπλέον κλικ." name="description"/>
 <meta content="#0b2c4a" name="theme-color"/>
 <link href="/manifest.json" rel="manifest"/>
 <link href="https://tagra.app/el/ensomatoseis/dkv-live/" rel="canonical"/>
+<link href="https://tagra.app/de/schnittstellen/dkv-live/" hreflang="de" rel="alternate"/><link href="https://tagra.app/el/ensomatoseis/dkv-live/" hreflang="el" rel="alternate"/><link href="https://tagra.app/integrations/dkv-live/" hreflang="en" rel="alternate"/><link href="https://tagra.app/fr/integrations/dkv-live/" hreflang="fr" rel="alternate"/><link href="https://tagra.app/hu/integraciok/dkv-live/" hreflang="hu" rel="alternate"/><link href="https://tagra.app/it/integrazioni/dkv-live/" hreflang="it" rel="alternate"/><link href="https://tagra.app/nl/integraties/dkv-live/" hreflang="nl" rel="alternate"/><link href="https://tagra.app/pl/integracje/dkv-live/" hreflang="pl" rel="alternate"/>
+<link href="https://tagra.app/ro/integrari/dkv-live/" hreflang="ro" rel="alternate"/><link href="https://tagra.app/integrations/dkv-live/" hreflang="x-default" rel="alternate"/>
 <meta content="website" property="og:type"/>
 <meta content="el_GR" property="og:locale"/>
 <meta content="TAGRA" property="og:site_name"/>
 <meta content="TAGRA — DKV LIVE — Αυτόματη Εισαγωγή Δεδομένων Ταχογράφου" property="og:title"/>
-<meta content="Χρησιμοποιείτε ήδη το DKV LIVE για απομακρυσμένη λήψη δεδομένων ταχογράφου; Το TAGRA εισάγει τα δεδομένα αυτόματα μέσω SFTP — χωρίς χειροκίνητες μεταφορές αρχείων, χωρίς επιπλέον κλικ." property="og:description"/>
+<meta content="TAGRA: εισάγετε αυτόματα δεδομένα ταχογράφου από το DKV LIVE μέσω SFTP, χωρίς χειροκίνητες μεταφορές αρχείων ή επιπλέον κλικ." property="og:description"/>
 <meta content="https://cdn.truckmall.cz/data/user-content/TDT_TAGRA_MAX_wh.jpg" property="og:image"/>
 <meta content="https://tagra.app/el/ensomatoseis/dkv-live/" property="og:url"/>
 <meta content="summary_large_image" name="twitter:card"/>
@@ -437,7 +443,7 @@
       "name": "Πού λαμβάνω τα διαπιστευτήριά μου για το DKV LIVE;",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Από τον διαχειριστή λογαριασμού σας DKV Mobility ή τον αντιπρόσωπο πωλήσεων. Το TAGRA χρειάζεται ένα έγκυρο όνομα χρήστη και κωδικό πρόσβασης SFTP για τον διακομιστή DKV LIVE."
+        "text": "Από τον διαχειριστή λογαριασμού σας στη DKV Mobility ή από τον αντιπρόσωπο πωλήσεων. Το TAGRA χρειάζεται έγκυρο όνομα χρήστη και κωδικό πρόσβασης SFTP για τον διακομιστή DKV LIVE."
       }
     },
     {
@@ -445,7 +451,7 @@
       "name": "Πόσο συχνά πρέπει το TAGRA να ανακτά δεδομένα από το DKV LIVE;",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Συνιστούμε τουλάχιστον μία φορά την ημέρα (διάστημα 1d). Αυτό διατηρεί τα δεδομένα σας ενημερωμένα και διασφαλίζει ότι βρίσκεστε εντός των νομικών περιθωρίων λήψης δεδομένων των 28 και 90 ημερών."
+        "text": "Συνιστούμε τουλάχιστον μία φορά την ημέρα (διάστημα 1d). Έτσι, τα δεδομένα σας παραμένουν ενημερωμένα και διασφαλίζεται ότι τηρούνται οι νόμιμες προθεσμίες λήψης δεδομένων των 28 και 90 ημερών."
       }
     },
     {
@@ -479,8 +485,7 @@
 <link href="/assets/css/components.css" rel="stylesheet"/>
 <link href="/assets/css/nav.css" rel="stylesheet"/>
 <script defer="" src="/assets/js/nav.js?v=20260816b"></script>
-<link href="/assets/css/footer.css" rel="stylesheet"/>
-<link href="https://tagra.app/integrations/dkv-live/" hreflang="en" rel="alternate"/><link href="https://tagra.app/de/schnittstellen/dkv-live/" hreflang="de" rel="alternate"/><link href="https://tagra.app/pl/integracje/dkv-live/" hreflang="pl" rel="alternate"/><link href="https://tagra.app/el/ensomatoseis/dkv-live/" hreflang="el" rel="alternate"/><link href="https://tagra.app/hu/integraciok/dkv-live/" hreflang="hu" rel="alternate"/><link href="https://tagra.app/it/integrazioni/dkv-live/" hreflang="it" rel="alternate"/><link href="https://tagra.app/integrations/dkv-live/" hreflang="x-default" rel="alternate"/></head>
+<link href="/assets/css/footer.css" rel="stylesheet"/></head>
 <body>
 <a class="skip-link" href="#content">Μετάβαση στο περιεχόμενο</a>
 <!-- ═══ NAVIGATION ═══════════════════════════════════════════════ -->
@@ -498,8 +503,7 @@
 </ul>
 <details class="nav-lang">
 <summary aria-label="Language: EL">EL</summary>
-<div class="nav-lang-menu" role="menu">
-<a href="/" hreflang="en">English</a><a href="/de/" hreflang="de">Deutsch</a><a href="/pl/" hreflang="pl">Polski</a><a aria-current="page" class="active" href="/el/" hreflang="el">Ελληνικά</a><a href="/hu/" hreflang="hu">Magyar</a><a href="/it/integrazioni/dkv-live/" hreflang="it">Italiano</a><a href="https://www.tdt.cz/" hreflang="cs" rel="noopener" target="_blank">Čeština</a><a href="https://www.tdt.sk/" hreflang="sk" rel="noopener" target="_blank">Slovenčina</a></div>
+<div class="nav-lang-menu" role="menu"><a href="/integrations/dkv-live/" hreflang="en">English</a><a href="/de/schnittstellen/dkv-live/" hreflang="de">Deutsch</a><a href="/pl/integracje/dkv-live/" hreflang="pl">Polski</a><a href="/nl/integraties/dkv-live/" hreflang="nl">Nederlands</a><a href="/fr/integrations/dkv-live/" hreflang="fr">Français</a><a href="/it/integrazioni/dkv-live/" hreflang="it">Italiano</a><a aria-current="page" class="active" href="/el/ensomatoseis/dkv-live/" hreflang="el">Ελληνικά</a><a href="/hu/integraciok/dkv-live/" hreflang="hu">Magyar</a><a href="/ro/integrari/dkv-live/" hreflang="ro">Română</a><a href="https://www.tdt.cz/" hreflang="cs" rel="noopener" target="_blank">Čeština</a><a href="https://www.tdt.sk/" hreflang="sk" rel="noopener" target="_blank">Slovenčina</a></div>
 </details>
 <a class="nav-cta-mobile" href="/el/dokimi/?audience=fleet">Δοκιμάστε δωρεάν</a>
 <button aria-expanded="false" aria-label="Εναλλαγή μενού" class="nav-mobile-toggle" id="nav-toggle">
@@ -560,7 +564,7 @@
 <div class="bc s4 anim-up" style="transition-delay:.1s">
 <div class="eyebrow" style="color:var(--blue-mid)">Διακομιστής SFTP</div>
 <div class="bc-title">sftp.styletronic.eu<br/>θύρα 22</div>
-<div class="bc-text">Το τελικό σημείο SFTP της DKV LIVE® στο οποίο συνδέεται το TAGRA. Ίδια διεύθυνση για όλους τους πελάτες· τα διαπιστευτήριά σας σάς πιστοποιούν στον συγκεκριμένο φάκελο δεδομένων σας.</div>
+<div class="bc-text">Το τελικό σημείο SFTP της DKV LIVE® με το οποίο συνδέεται το TAGRA. Η ίδια διεύθυνση ισχύει για όλους τους πελάτες· τα διαπιστευτήριά σας σάς ταυτοποιούν στον συγκεκριμένο φάκελο δεδομένων σας.</div>
 </div>
 </div>
 </div>
@@ -606,7 +610,7 @@
 <div class="snum">04</div>
 <div>
 <div class="stit">Εκτελέστε την πρώτη εισαγωγή</div>
-<p>Κάντε κλικ στην νέα σας σύνδεση (αυτή επισημαίνεται με μπλε χρώμα) και πατήστε <strong>Εκτέλεση εισαγωγής</strong>. Το TAGRA ανακτά τα πιο πρόσφατα αρχεία ταχογράφου και κάρτας οδηγού από τον διακομιστή DKV άμεσα. Όταν ολοκληρωθεί, επιστρέψτε στην κύρια οθόνη και ξεκινήστε την ανάλυσή σας.</p>
+<p>Κάντε κλικ στη νέα σας σύνδεση (επισημαίνεται με μπλε χρώμα) και πατήστε <strong>Εκτέλεση εισαγωγής</strong>. Το TAGRA ανακτά άμεσα από τον διακομιστή DKV τα πιο πρόσφατα αρχεία ταχογράφου και κάρτας οδηγού. Όταν ολοκληρωθεί η διαδικασία, επιστρέψτε στην κύρια οθόνη και ξεκινήστε την ανάλυσή σας.</p>
 </div>
 </div>
 </div>
@@ -619,21 +623,21 @@
 <div class="anim-up">
 <div class="eyebrow">Αυτόματη ή μη αυτόματη;</div>
 <h2>Ρυθμίστε το μία φορά,<br/>ξεχάστε το</h2>
-<p style="margin-bottom:12px">Το <strong>Διάστημα εκτέλεσης</strong> πεδίο καθορίζει πόσο συχνά το TAGRA ανακτά δεδομένα από το DKV LIVE®:</p>
+<p style="margin-bottom:12px">Το <strong>Διάστημα εκτέλεσης</strong> Το πεδίο καθορίζει πόσο συχνά το TAGRA ανακτά δεδομένα από το DKV LIVE®:</p>
 <ul style="margin-left:20px;color:var(--text-muted);font-size:17px;line-height:1.7;margin-bottom:16px">
 <li><code>1d</code>— μία φορά την ημέρα (προτεινόμενο)</li>
 <li><code>12h</code>— κάθε 12 ώρες</li>
 <li><code>6h</code>, <code>3h</code>, <code>1h</code>— συχνότερα</li>
 <li><code>0s</code>— μόνο μη αυτόματη (κάνετε κλικ <em>Εκτέλεση εισαγωγής</em> εσείς)</li>
 </ul>
-<p>Συνιστούμε τουλάχιστον καθημερινά ώστε τα δεδομένα σας να παραμένουν ενημερωμένα και οι νομικές <strong>Περίοδοι λήψης δεδομένων 28 και 90 ημερών</strong> καλύπτονται πάντα.</p>
+<p>Συνιστούμε τουλάχιστον καθημερινή λήψη, ώστε τα δεδομένα σας να παραμένουν ενημερωμένα και να τηρούνται οι νομικές <strong>Περίοδοι λήψης δεδομένων 28 και 90 ημερών</strong> καλύπτονται πάντα.</p>
 </div>
 <div class="anim-up" style="transition-delay:.1s">
 <div class="note-box">
 <span class="note-badge">Γιατί έχει σημασία</span>
 <span class="note-title">Οι 28 και 90 ημέρες είναι νομικές προθεσμίες</span>
 <p style="margin-bottom:10px">Οι κανονισμοί της ΕΕ απαιτούν να γίνεται λήψη των δεδομένων της κάρτας οδηγού τουλάχιστον κάθε <strong>28 ημέρες</strong> και τα δεδομένα της μονάδας ταχογράφου τουλάχιστον κάθε <strong>90 ημέρες</strong>.</p>
-<p>Με το DKV LIVE® + TAGRA να λειτουργεί σε καθημερινό πρόγραμμα, αυτές οι προθεσμίες τηρούνται αυτόματα. Έχετε επίσης ένα καθαρό, αρχειοθετημένο ιστορικό για οποιονδήποτε έλεγχο.</p>
+<p>Με το DKV LIVE® + TAGRA να λειτουργούν σε καθημερινό πρόγραμμα, αυτές οι προθεσμίες τηρούνται αυτόματα. Διαθέτετε επίσης ένα σαφές, αρχειοθετημένο ιστορικό για κάθε έλεγχο.</p>
 </div>
 </div>
 </div>
@@ -645,7 +649,7 @@
 <div class="anim-up">
 <div class="eyebrow">Χρειάζεστε βοήθεια;</div>
 <h2>Έχετε κολλήσει στην εγκατάσταση;<br/>Θα σας βοηθήσουμε.</h2>
-<p style="max-width:680px;margin:16px 0 24px">Εάν η εισαγωγή δεν ξεκινά, εμφανίζει σφάλμα, ή απλά θέλετε μια δεύτερη γνώμη για τη διαμόρφωσή σας — είμαστε στην ευχάριστη θέση να σας βοηθήσουμε να το θέσετε σε λειτουργία.</p>
+<p style="max-width:680px;margin:16px 0 24px">Εάν η εισαγωγή δεν ξεκινά, εμφανίζεται σφάλμα ή απλώς θέλετε μια δεύτερη γνώμη για τη διαμόρφωσή σας — είμαστε στην ευχάριστη θέση να σας βοηθήσουμε να το θέσετε σε λειτουργία.</p>
 <p><strong>Email:</strong> <a href="mailto:helpdesk@tagra.app">helpdesk@tagra.app</a></p>
 </div>
 </div>
@@ -658,15 +662,15 @@
 <div class="faq" style="margin-top:24px">
 <details>
 <summary>Ποιες εκδόσεις TAGRA υποστηρίζουν το DKV LIVE®;</summary>
-<div class="faq-a">Όλες οι τρέχουσες εκδόσεις TAGRA — TAGRA 1, 2, 4, 6 και MAX — υποστηρίζουν εισαγωγή DKV LIVE® από <strong>την έκδοση 345 και μετά</strong> Ο αριθμός έκδοσης εμφανίζεται στο κάτω μέρος του παραθύρου TAGRA. Εάν διαθέτετε παλαιότερη έκδοση, πραγματοποιήστε ενημέρωση μέσω του ενσωματωμένου ενημερωτή της εφαρμογής — οι ενημερώσεις περιλαμβάνονται στην ετήσια άδειά σας.</div>
+<div class="faq-a">Όλες οι τρέχουσες εκδόσεις του TAGRA — TAGRA 1, 2, 4, 6 και MAX — υποστηρίζουν εισαγωγή από το DKV LIVE® <strong>την έκδοση 345 και μετά</strong> Ο αριθμός έκδοσης εμφανίζεται στο κάτω μέρος του παραθύρου TAGRA. Εάν διαθέτετε παλαιότερη έκδοση, ενημερώστε την μέσω του ενσωματωμένου προγράμματος ενημέρωσης της εφαρμογής — οι ενημερώσεις περιλαμβάνονται στην ετήσια άδειά σας.</div>
 </details>
 <details>
 <summary>Πού μπορώ να βρω τα διαπιστευτήριά μου για το DKV LIVE®;</summary>
-<div class="faq-a">Από τον υπεύθυνο λογαριασμού σας στην DKV Mobility ή τον εκπρόσωπο πωλήσεων. Το TAGRA χρειάζεται ένα έγκυρο όνομα χρήστη και κωδικό πρόσβασης SFTP για τον διακομιστή DKV LIVE® — τα ίδια που θα χρησιμοποιούσατε για να αποκτήσετε απευθείας πρόσβαση στην υπηρεσία. Δεν αναλαμβάνουμε την παροχή λογαριασμών DKV.</div>
+<div class="faq-a">Από τον υπεύθυνο λογαριασμού σας στη DKV Mobility ή τον εκπρόσωπο πωλήσεων. Το TAGRA χρειάζεται έγκυρο όνομα χρήστη και κωδικό πρόσβασης SFTP για τον διακομιστή DKV LIVE® — τα ίδια στοιχεία που θα χρησιμοποιούσατε για να αποκτήσετε απευθείας πρόσβαση στην υπηρεσία. Δεν παρέχουμε λογαριασμούς DKV.</div>
 </details>
 <details>
 <summary>Πόσο συχνά πρέπει το TAGRA να ανακτά δεδομένα από το DKV LIVE®;</summary>
-<div class="faq-a">Συνιστούμε <strong>τουλάχιστον μία φορά την ημέρα</strong>(διάστημα<code>1d</code>). Αυτό διατηρεί τα δεδομένα σας ενημερωμένα και διασφαλίζει ότι βρίσκεστε εντός των νομικών προθεσμιών λήψης δεδομένων των 28 και 90 ημερών. Μπορείτε να το ρυθμίσετε να γίνεται κάθε λίγες ώρες, εάν προτιμάτε ανάλυση σχεδόν σε πραγματικό χρόνο — και οι δύο επιλογές λειτουργούν μια χαρά.</div>
+<div class="faq-a">Συνιστούμε <strong>τουλάχιστον μία φορά την ημέρα</strong>(διάστημα<code>1d</code>). Αυτό διατηρεί τα δεδομένα σας ενημερωμένα και διασφαλίζει ότι τηρείτε τις νόμιμες προθεσμίες λήψης δεδομένων των 28 και 90 ημερών. Μπορείτε να το ρυθμίσετε να γίνεται κάθε λίγες ώρες, εάν προτιμάτε ανάλυση σχεδόν σε πραγματικό χρόνο — και οι δύο επιλογές λειτουργούν άψογα.</div>
 </details>
 <details>
 <summary>Τι συμβαίνει εάν η εισαγωγή αποτύχει ή εμφανίσει σφάλμα;</summary>
@@ -674,14 +678,14 @@
 </details>
 <details>
 <summary>Χρειάζομαι το DKV LIVE® για απομακρυσμένη λήψη δεδομένων ταχογράφου;</summary>
-<div class="faq-a">Όχι. Το DKV LIVE® είναι ένας από τους πολλούς τρόπους για να εισάγετε δεδομένα ταχογράφου στο TAGRA — είναι μια εξαιρετική επιλογή αν χρησιμοποιείτε ήδη την υπηρεσία τηλεματικής της DKV. Εάν όχι, το TAGRA δέχεται επίσης<code>.DDD</code>, <code>.C1B</code>και<code>.V1B</code>αρχεία από οποιοδήποτε άλλο εργαλείο λήψης δεδομένων ταχογράφου. Επικοινωνήστε μαζί μας αν θα θέλατε μια σύσταση.</div>
+<div class="faq-a">Όχι. Το DKV LIVE® είναι ένας από τους πολλούς τρόπους εισαγωγής δεδομένων ταχογράφου στο TAGRA — είναι μια εξαιρετική επιλογή εάν χρησιμοποιείτε ήδη την υπηρεσία τηλεματικής της DKV. Εάν όχι, το TAGRA δέχεται επίσης<code>.DDD</code>, <code>.C1B</code>και<code>.V1B</code>αρχεία από οποιοδήποτε άλλο εργαλείο λήψης δεδομένων ταχογράφου. Επικοινωνήστε μαζί μας αν θα θέλατε μια σύσταση.</div>
 </details>
 <details>
 <summary>Είναι η TAGRA επίσημα συνεργαζόμενη με την DKV;</summary>
-<div class="faq-a">Η TAGRA εισάγει δεδομένα από την υπηρεσία SFTP του DKV LIVE® χρησιμοποιώντας τα δικά σας διαπιστευτήρια DKV. Πρόκειται για ένα τεχνικό χαρακτηριστικό διαλειτουργικότητας, όχι για επίσημη συνεργασία ή έγκριση. <em>Το DKV LIVE® είναι εμπορικό σήμα της DKV Mobility.</em></div>
+<div class="faq-a">Το TAGRA εισάγει δεδομένα από την υπηρεσία SFTP του DKV LIVE® χρησιμοποιώντας τα δικά σας διαπιστευτήρια DKV. Πρόκειται για τεχνικό χαρακτηριστικό διαλειτουργικότητας και όχι για επίσημη συνεργασία ή έγκριση. <em>Το DKV LIVE® είναι εμπορικό σήμα της DKV Mobility.</em></div>
 </details>
 <details>
-<summary>Περιλαμβάνεται η εισαγωγή δεδομένων του DKV LIVE® στην άδεια χρήσης TAGRA;</summary>
+<summary>Περιλαμβάνεται η εισαγωγή δεδομένων από το DKV LIVE® στην άδεια χρήσης TAGRA;</summary>
 <div class="faq-a">Ναι. Η λειτουργία Εισαγωγής Δεδομένων (συμπεριλαμβανομένης της συνδεσιμότητας DKV LIVE®) αποτελεί μέρος κάθε τρέχουσας άδειας χρήσης TAGRA χωρίς επιπλέον κόστος. Πληρώνετε μόνο το κανονικό σας τέλος άδειας χρήσης TAGRA και τη συνήθη συνδρομή σας στο DKV LIVE® — τίποτα παραπάνω.</div>
 </details>
 </div>
@@ -692,7 +696,7 @@
 <div class="footer-inner">
 <div>
 <div class="footer-logo"><img alt="TAGRA" height="20" src="/assets/img/logo-dark.svg?v=20260513zh" width="88" loading="lazy"/></div>
-<p class="footer-desc">Επαγγελματικό λογισμικό ανάλυσης δεδομένων ταχογράφου. Λήψη δεδομένων κάρτας οδηγού, ανάλυση δεδομένων ψηφιακών ταχογράφων, κανόνες της ΕΕ για τους χρόνους οδήγησης και ανάπαυσης, καθώς και Οδηγία για τον χρόνο εργασίας στις οδικές μεταφορές. Αναπτύχθηκε από την Truck Data Technology, s.r.o.</p>
+<p class="footer-desc">Επαγγελματικό λογισμικό ανάλυσης δεδομένων ταχογράφου. Λήψη δεδομένων από κάρτες οδηγού, ανάλυση δεδομένων ψηφιακών ταχογράφων, κανόνων της ΕΕ για τους χρόνους οδήγησης και ανάπαυσης, καθώς και της οδηγίας για τον χρόνο εργασίας στις οδικές μεταφορές. Αναπτύχθηκε από την Truck Data Technology, s.r.o.</p>
 </div>
 <div class="footer-col">
 <h2 class="footer-col-title">Προϊόν</h2>
@@ -829,7 +833,7 @@
   "name": "TAGRA – Λογισμικό Διαχείρισης Δεδομένων Ταχογράφου Στόλου",
   "applicationCategory": "BusinessApplication",
   "operatingSystem": "Windows",
-  "description": "Λογισμικό για διαχειριστές στόλου για ανάλυση και αρχειοθέτηση δεδομένων ταχογράφου για 1 έως απεριόριστα οχήματα. Συμβατό με τον κανονισμό ΕΕ 561/2006, τη συμφωνία AETR και την Οδηγία για τον Χρόνο Εργασίας. Δωρεάν δοκιμή 30 ημερών. Έτοιμο για βαν από τον Ιούλιο 2026.",
+  "description": "Λογισμικό για διαχειριστές στόλου για ανάλυση και αρχειοθέτηση δεδομένων ταχογράφου για 1 έως απεριόριστα οχήματα. Συμβατό με τον κανονισμό (ΕΚ) 561/2006, τη συμφωνία AETR και την οδηγία για τον χρόνο εργασίας. Δωρεάν δοκιμή 30 ημερών. Έτοιμο για βαν από τον Ιούλιο 2026.",
   "url": "https://tagra.app/el/stolos/",
   "inLanguage": "el",
   "author": {

@@ -45,6 +45,10 @@
       var m={cz:'cs',cs:'cs',sk:'sk',de:'de',pl:'pl',gr:'el',el:'el',hu:'hu',en:'en'};return m[l]||'en';}
     var T={
       hu:{t:'Analitikai s\u00fctiket haszn\u00e1lunk (Google Analytics, Microsoft Clarity, Smartsupp), hogy meg\u00e9rts\u00fck a webhely haszn\u00e1lat\u00e1t. Csak az \u00d6n hozz\u00e1j\u00e1rul\u00e1s\u00e1val t\u00f6lt\u0151dnek be.',a:'Elfogadom',r:'Elutas\u00edtom',p:'Adatv\u00e9delem \u00e9s s\u00fctik'},
+      ro:{t:'Utilizăm module cookie de analiză (Google Analytics, Microsoft Clarity, Smartsupp) pentru a înțelege modul de utilizare a site-ului. Se încarcă doar cu consimțământul dumneavoastră.',a:'Accept',r:'Refuz',p:'Confidențialitate și cookie-uri'},
+      nl:{t:'We gebruiken analytische cookies (Google Analytics, Microsoft Clarity, Smartsupp) om het gebruik van de site te begrijpen. Ze laden alleen met uw toestemming.',a:'Accepteren',r:'Weigeren',p:'Privacy en cookies'},
+      fr:{t:'Nous utilisons des cookies analytiques (Google Analytics, Microsoft Clarity, Smartsupp) pour comprendre l’utilisation du site. Ils ne se chargent qu’avec votre consentement.',a:'Accepter',r:'Refuser',p:'Confidentialité et cookies'},
+      it:{t:'Utilizziamo cookie analitici (Google Analytics, Microsoft Clarity, Smartsupp) per capire l’utilizzo del sito. Si caricano solo con il Suo consenso.',a:'Accetta',r:'Rifiuta',p:'Privacy e cookie'},
       en:{t:'We use analytics cookies (Google Analytics, Microsoft Clarity, Smartsupp) to understand site usage. They load only with your consent.',a:'Accept',r:'Reject',p:'Privacy &amp; cookies'},
       cs:{t:'Pou\u017e\u00edv\u00e1me analytick\u00e9 cookies (Google Analytics, Microsoft Clarity, Smartsupp) k pochopen\u00ed pou\u017e\u00edv\u00e1n\u00ed webu. Na\u010dtou se jen s va\u0161\u00edm souhlasem.',a:'P\u0159ijmout',r:'Odm\u00edtnout',p:'Soukrom\u00ed a cookies'},
       sk:{t:'Pou\u017e\u00edvame analytick\u00e9 cookies (Google Analytics, Microsoft Clarity, Smartsupp) na pochopenie pou\u017e\u00edvania webu. Na\u010d\u00edtaj\u00fa sa len s va\u0161\u00edm s\u00fahlasom.',a:'Prija\u0165',r:'Odmietnu\u0165',p:'S\u00fakromie a cookies'},
@@ -76,23 +80,20 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Program do odczytu karty kierowcy i tachografu | TAGRA</title>
-<meta content="Rozliczanie i ewidencja czasu pracy kierowców (Pakiet Mobilności). Pobieraj pliki DDD, analizuj naruszenia i unikaj kar ITD. Wypróbuj TAGRA 30 dni za darmo." name="description"/>
+<meta content="Czas pracy kierowców: pobieranie plików DDD, analiza naruszeń i ograniczanie ryzyka kar ITD. TAGRA dostępna bezpłatnie przez 30 dni." name="description"/>
 <meta content="#0b2c4a" name="theme-color"/>
 <link href="/manifest.json" rel="manifest"/>
 <link href="https://tagra.app/pl/" rel="canonical"/>
-<link href="https://tagra.app/" hreflang="en" rel="alternate"/>
-<link href="https://tagra.app/de/" hreflang="de" rel="alternate"/>
-<link href="https://tagra.app/pl/" hreflang="pl" rel="alternate"/>
-<link href="https://tagra.app/el/" hreflang="el" rel="alternate"/>
-<link href="https://tagra.app/hu/" hreflang="hu" rel="alternate"/><link href="https://tagra.app/it/" hreflang="it" rel="alternate"/><link href="https://tagra.app/fr/" hreflang="fr" rel="alternate"/><link href="https://tagra.app/" hreflang="x-default" rel="alternate"/>
+<link href="https://tagra.app/de/" hreflang="de" rel="alternate"/><link href="https://tagra.app/el/" hreflang="el" rel="alternate"/><link href="https://tagra.app/" hreflang="en" rel="alternate"/><link href="https://tagra.app/fr/" hreflang="fr" rel="alternate"/><link href="https://tagra.app/hu/" hreflang="hu" rel="alternate"/><link href="https://tagra.app/it/" hreflang="it" rel="alternate"/><link href="https://tagra.app/nl/" hreflang="nl" rel="alternate"/><link href="https://tagra.app/pl/" hreflang="pl" rel="alternate"/>
+<link href="https://tagra.app/ro/" hreflang="ro" rel="alternate"/><link href="https://tagra.app/" hreflang="x-default" rel="alternate"/>
 <meta content="Program do odczytu karty kierowcy i tachografu | TAGRA" property="og:title"/>
-<meta content="Rozliczanie i ewidencja czasu pracy kierowców (Pakiet Mobilności). Pobieraj pliki DDD, analizuj naruszenia i unikaj kar ITD. Wypróbuj TAGRA 30 dni za darmo." property="og:description"/>
+<meta content="Czas pracy kierowców: pobieranie plików DDD, analiza naruszeń i ograniczanie ryzyka kar ITD. TAGRA dostępna bezpłatnie przez 30 dni." property="og:description"/>
 <meta content="https://cdn.truckmall.cz/images/0/ff1952bcc480ca3d/1/tagra-1-vyhodnoceni-dat-z-tachografu.webp" property="og:image"/>
-<meta content="TAGRA oprogramowanie do analizy tachografu – raport kierowcy i pojazdu" property="og:image:alt"/>
+<meta content="TAGRA – oprogramowanie do analizy tachografu: raporty kierowcy i pojazdu" property="og:image:alt"/>
 <meta content="website" property="og:type"/>
 <meta content="TAGRA" property="og:site_name"/>
 <meta content="https://cdn.truckmall.cz/images/0/ff1952bcc480ca3d/1/tagra-1-vyhodnoceni-dat-z-tachografu.webp" name="twitter:image"/>
-<meta content="TAGRA oprogramowanie do analizy tachografu – raport kierowcy i pojazdu" name="twitter:image:alt"/>
+<meta content="TAGRA – oprogramowanie do analizy tachografu: raporty kierowcy i pojazdu" name="twitter:image:alt"/>
 <meta content="https://tagra.app/pl/" property="og:url"/>
 <meta content="summary_large_image" name="twitter:card"/>
 <style>
@@ -696,7 +697,7 @@
   "url": "https://tagra.app/pl/dla-przewoznikow/",
   "provider": { "@id": "https://tagra.app/#organization" },
   "serviceType": "Tachograph data management software",
-  "description": "Evaluation, archiving and reporting for fleet operators from 1 to unlimited vehicles. Compliant with Regulation (EC) 561/2006 and the Working Time Directive.",
+  "description": "Analiza, archiwizacja i raportowanie dla przewoźników posiadających od 1 do nieograniczonej liczby pojazdów. Zgodne z rozporządzeniem (WE) nr 561/2006 oraz dyrektywą dotyczącą czasu pracy.",
   "audience": {
     "@type": "BusinessAudience",
     "audienceType": "Fleet operators and transport companies"
@@ -716,7 +717,7 @@
   "url": "https://tagra.app/pl/dla-kierowcow/",
   "provider": { "@id": "https://tagra.app/#organization" },
   "serviceType": "Personal tachograph data tool",
-  "description": "Personal tool for professional drivers to download their own driver card, review driving times and rest periods. Works with a standard USB card reader.",
+  "description": "Osobiste narzędzie dla zawodowych kierowców do pobierania danych z własnej karty kierowcy oraz przeglądania czasów jazdy i okresów odpoczynku. Współpracuje ze standardowym czytnikiem kart USB.",
   "audience": {
     "@type": "Audience",
     "audienceType": "Professional truck and bus drivers"
@@ -731,7 +732,7 @@
   "url": "https://tagra.app/pl/organy-kontrolne/",
   "provider": { "@id": "https://tagra.app/#organization" },
   "serviceType": "Inspection and enforcement software",
-  "description": "Roadside and company inspection software for Police, Customs, Labour Inspectorates and Ministries of Transport. The de-facto standard across Central Europe.",
+  "description": "Oprogramowanie do kontroli drogowych i kontroli w przedsiębiorstwach dla Policji, Służby Celnej, Inspekcji Pracy oraz ministerstw transportu. Faktyczny standard w Europie Środkowej.",
   "audience": {
     "@type": "GovernmentService",
     "audienceType": "Enforcement authorities, Police, Customs, Labour Inspectorates"
@@ -759,21 +760,20 @@
 <li><a href="/pl/poradnik/">Artykuły</a></li><li><a href="/pl/instrukcje/">Instrukcje</a></li>
 <li><a href="/pl/faq/">FAQ</a></li>
 <li><a href="/pl/kontakt/">Kontakt</a></li>
-<li class="nav-cta-li"><a class="nav-cta" href="/pl/wyprobuj/?audience=fleet">Wypróbuj 30 dni za darmo</a></li>
+<li class="nav-cta-li"><a class="nav-cta" href="/pl/wyprobuj/?audience=fleet">Prosimy wypróbować przez 30 dni za darmo</a></li>
 </ul>
 <details class="nav-lang">
 <summary aria-label="Language: PL">PL</summary>
-<div class="nav-lang-menu" role="menu">
-<a href="/" hreflang="en">English</a><a href="/de/" hreflang="de">Deutsch</a><a aria-current="page" class="active" href="/pl/" hreflang="pl">Polski</a><a href="/el/" hreflang="el">Ελληνικά</a><a href="/hu/" hreflang="hu">Magyar</a><a href="/it/" hreflang="it">Italiano</a><a href="https://tagra.app/fr/" hreflang="fr">Français</a><a href="https://www.tdt.cz/" hreflang="cs" rel="noopener" target="_blank">Čeština</a><a href="https://www.tdt.sk/" hreflang="sk" rel="noopener" target="_blank">Slovenčina</a></div>
+<div class="nav-lang-menu" role="menu"><a href="/" hreflang="en">English</a><a href="/de/" hreflang="de">Deutsch</a><a aria-current="page" class="active" href="/pl/" hreflang="pl">Polski</a><a href="/nl/" hreflang="nl">Nederlands</a><a href="/fr/" hreflang="fr">Français</a><a href="/it/" hreflang="it">Italiano</a><a href="/el/" hreflang="el">Ελληνικά</a><a href="/hu/" hreflang="hu">Magyar</a><a href="/ro/" hreflang="ro">Română</a><a href="https://www.tdt.cz/" hreflang="cs" rel="noopener" target="_blank">Čeština</a><a href="https://www.tdt.sk/" hreflang="sk" rel="noopener" target="_blank">Slovenčina</a></div>
 </details>
-<a class="nav-cta-mobile" href="/pl/wyprobuj/?audience=fleet">Wypróbuj za darmo</a>
+<a class="nav-cta-mobile" href="/pl/wyprobuj/?audience=fleet">Prosimy wypróbować za darmo</a>
 <button aria-expanded="false" aria-label="Toggle menu" class="nav-mobile-toggle" id="nav-toggle">
 <span></span><span></span><span></span>
 </button>
 </div>
 </nav>
 <!-- ═══ HERO ══════════════════════════════════════════════════════════ -->
-<section id="main-content" aria-label="TAGRA – wybierz rozwiązanie" class="hero">
+<section id="main-content" aria-label="TAGRA – wybór rozwiązania" class="hero">
 <img alt="" aria-hidden="true" class="hero-video-poster" fetchpriority="high" loading="eager" src="/assets/img/hero-poster.jpg?v=2026-05-13b" width="1920" height="1080"/>
 <video aria-hidden="true" class="hero-video" id="heroVideoA" muted="" playsinline="" poster="/assets/img/hero-poster.jpg?v=2026-05-13b" preload="auto">
 <source media="(max-width: 1024px)" src="/assets/video/hero-720.mp4?v=2026-05-13c" type="video/mp4">
@@ -802,14 +802,14 @@
 <section aria-label="Choose your TAGRA solution" class="picker">
 <div class="container">
 <div class="picker-head anim-up">
-<span class="section-label">Wybierz swoją rolę</span>
+<span class="section-label">Wybierzcie Państwo swoją rolę</span>
 </div>
 <div class="split anim-up" id="picker-rail">
 <!-- Fleet -->
 <a aria-label="TAGRA for fleet operators" class="split-card split-card--fleet" href="/pl/dla-przewoznikow/">
 <div class="card-label">Przewoźnik</div>
 <h2 class="sr-only">TAGRA · Oprogramowanie do zarządzania danymi z tachografów</h2><h3 class="card-title">TAGRA<br/>Company</h3>
-<p class="card-desc">Zarządzasz pojazdami w firmie. Musisz pobierać i analizować dane z <strong>tachografów i kart kierowców</strong> — i archiwizować wszystko na potrzeby kontroli.</p>
+<p class="card-desc">Zarządzają Państwo pojazdami w firmie. Muszą Państwo pobierać i analizować dane z <strong>tachografów i kart kierowców</strong> — i archiwizować wszystko na potrzeby kontroli.</p>
 <ul class="card-list">
 <li>Od 1 do nieograniczonej liczby pojazdów</li>
 <li>Pełna analiza czasu pracy (rozp. (WE) nr 561/2006 + dyrektywa 2002/15/WE)</li>
@@ -823,7 +823,7 @@
 <a aria-label="TAGRA Trucker for professional drivers" class="split-card split-card--driver" href="/pl/dla-kierowcow/">
 <div class="card-label">Kierowca zawodowy</div>
 <h3 class="card-title">TAGRA<br/>Trucker</h3>
-<p class="card-desc">Jeździsz zawodowo. Chcesz kontrolować własny czas jazdy i odpoczynku na podstawie <strong>danych z karty kierowcy</strong> — za pomocą standardowego czytnika kart USB.</p>
+<p class="card-desc">Jeżdżą Państwo zawodowo. Chcą Państwo kontrolować własny czas jazdy i odpoczynku na podstawie <strong>danych z karty kierowcy</strong> — za pomocą standardowego czytnika kart USB.</p>
 <ul class="card-list">
 <li>Dla 1 kierowcy · tylko karta kierowcy</li>
 <li>Działa z każdym standardowym czytnikiem kart USB</li>
@@ -858,15 +858,15 @@
 <!-- ═══ TRUST BAR ══════════════════════════════════════════════════════ -->
 <div class="trust-bar anim-up">
 <div class="container">
-<p><strong>Zaufały nam tysiące przewoźników w całej Europie.</strong> Ta sama logika analizy, z której korzystają Policja, Służba Celna i Inspekcja Pracy.</p>
+<p><strong>Stworzone z myślą o realiach europejskiego transportu drogowego w całej Europie.</strong> Ta sama logika analizy, z której korzystają Policja, Służba Celna i Inspekcja Pracy.</p>
 </div>
 </div>
 <!-- ═══ UI SHOWCASE ════════════════════════════════════════════════════ -->
 <section aria-label="What TAGRA flags — example outputs" class="section section--white">
 <div class="section-inner">
 <div class="section-head anim-up">
-<span class="section-label">Zobacz w działaniu</span>
-<h2 class="section-h2">Zobacz dokładnie, co TAGRA wykrywa</h2>
+<span class="section-label">TAGRA w działaniu</span>
+<h2 class="section-h2">Dokładne informacje o tym, co TAGRA wykrywa</h2>
 <p class="section-intro">Realne przykłady tego, co TAGRA wykrywa — terminy pobrania danych, naruszenia czasu jazdy i gotowe do eksportu raporty zgodności.</p>
 </div>
 <div class="showcase-grid anim-up">
@@ -902,7 +902,7 @@
 <div class="section-inner">
 <div class="section-head anim-up">
 <span class="section-label">Dlaczego TAGRA</span>
-<h2 class="section-h2">Wszystko, czego potrzebujesz do zgodności z przepisami tachografowymi</h2>
+<h2 class="section-h2">Wszystko, czego potrzebują Państwo do zgodności z przepisami tachografowymi</h2>
 <p class="section-intro">Zaawansowane oprogramowanie Windows do odczytu i analizy tachografów cyfrowych: ewidencja czasu pracy kierowców, wykrywanie naruszeń i archiwizacja danych — od jednego pojazdu po duże floty.</p>
 </div>
 <div class="bento">
@@ -925,13 +925,13 @@
 <div class="bc s6 greenfill fly-right" style="transition-delay:.05s">
 <span class="bc-eyebrow">Skalowalność</span>
 <div class="bc-title">Od 1 do nieograniczonej liczby pojazdów</div>
-<p class="bc-text">Warianty TAGRA Trucker, 1, 2, 4, 6 i MAX. Zacznij od jednej ciężarówki i rozwiń się do dużej floty bez zmiany narzędzi i procesów.</p>
+<p class="bc-text">Warianty TAGRA Trucker, 1, 2, 4, 6 i MAX. Mogą Państwo zacząć od jednej ciężarówki i rozwinąć flotę bez zmiany narzędzi i procesów.</p>
 <div class="bignum">∞</div>
 </div>
 <div class="bc s8 fly-left" style="transition-delay:.1s">
 <span class="bc-eyebrow">Prywatność</span>
-<div class="bc-title">Na Twoim komputerze. Szybko. Twoje dane.</div>
-<p class="bc-text">Oprogramowanie Windows działające offline na Twoim komputerze. Dane kierowców i pojazdów nigdy nie opuszczają Twojej sieci — bez uzależnienia od chmury, bez abonamentu, bez obaw o RODO i podmioty przetwarzające.</p>
+<div class="bc-title">Na komputerze Państwa. Szybko. Państwa dane.</div>
+<p class="bc-text">Oprogramowanie Windows działające offline na Państwa komputerze. Dane kierowców i pojazdów nigdy nie opuszczają Państwa sieci — bez uzależnienia od chmury, bez abonamentu, bez obaw o RODO i podmioty przetwarzające.</p>
 </div>
 <div class="bc s4 bluefill fly-right" style="transition-delay:.1s">
 <span class="bc-eyebrow">Gotowe na przyszłość</span>
@@ -946,7 +946,7 @@
 <div class="section-inner">
 <div class="section-head anim-up">
 <span class="section-label">Sprawdzone w praktyce</span>
-<h2 class="section-h2">Zaufanie organów kontrolnych. Wybór przewoźników.</h2>
+<h2 class="section-h2">Wykorzystywane podczas kontroli. Stworzone dla flot.</h2>
 <p class="section-intro">Ta sama logika analizy, z której korzystają Policja, Służba Celna i Inspekcja Pracy w Czechach, na Słowacji i na Węgrzech.</p>
 </div>
 <div class="ref-grid">
@@ -982,7 +982,7 @@
 <div class="section-inner">
 <div class="section-head anim-up">
 <span class="section-label">Opinie klientów</span>
-<h2 class="section-h2">Zaufały nam tysiące przewoźników</h2>
+<h2 class="section-h2">Stworzone z myślą o realiach europejskiego transportu drogowego.</h2>
 <p class="section-intro">Pięciogwiazdkowe opinie zweryfikowanych klientów z Europy Środkowej.</p>
 </div>
 </div>
@@ -1002,22 +1002,22 @@
 <div class="section-head anim-up">
 <span class="section-label">Cennik</span>
 <h2 class="section-h2">Uczciwe ceny. Bez niespodzianek.</h2>
-<p class="section-intro">Pierwszy rok jest wliczony w cenę zakupu. Od 2. roku opłata roczna 19–149 € utrzymuje program aktywny, aktualny i objęty wsparciem.</p>
+<p class="section-intro">Pierwszy rok jest wliczony w cenę zakupu. Od 2. roku opłata roczna w wysokości 19–149 € zapewnia aktywność programu, jego aktualność i wsparcie.</p>
 </div>
 <div class="pricing-teaser anim-up">
 <div>
-<div class="pricing-teaser-headline">Zacznij za darmo. Licencja od 49 €.</div>
+<div class="pricing-teaser-headline">Prosimy zacząć za darmo. Licencja od 49 €.</div>
 <p class="pricing-teaser-price">30 dni za darmo, bez karty kredytowej. TAGRA kosztuje od <strong>49 €</strong> (TAGRA Trucker) do 749 € (TAGRA MAX, nieograniczona liczba pojazdów) netto — pierwszy rok aktualizacji i wsparcia jest w cenie. Od 2. roku opłata roczna w wysokości od 19 € do 149 € utrzymuje program aktywny.</p>
 <ul class="pricing-teaser-features">
-<li>Pełna analiza i ewidencja czasu pracy kierowców ((WE) nr 561/2006 + dyrektywa 2002/15/WE)</li>
+<li>Pełna analiza i ewidencja czasu pracy kierowców (rozporządzenie (WE) nr 561/2006 + dyrektywa 2002/15/WE)</li>
 <li>Obsługa wszystkich tachografów cyfrowych, w tym Smart G2V2</li>
 <li>Bezpłatne aktualizacje przy każdej zmianie przepisów</li>
 <li>Dedykowane wsparcie techniczne przez cały rok</li>
 </ul>
 </div>
 <div class="pricing-teaser-cta">
-<a class="btn-outline" href="/pl/dla-przewoznikow/#tagra-pricing">Zobacz wszystkie warianty i ceny →</a>
-<a class="btn-cta" href="/pl/wyprobuj/">Wypróbuj 30 dni za darmo</a>
+<a class="btn-outline" href="/pl/dla-przewoznikow/#tagra-pricing">Wszystkie warianty i ceny →</a>
+<a class="btn-cta" href="/pl/wyprobuj/">Prosimy wypróbować przez 30 dni za darmo</a>
 <span class="pricing-teaser-cta-note">Bez karty kredytowej. Instalator Windows.</span>
 </div>
 </div>
@@ -1034,7 +1034,7 @@
 <div class="faq-block anim-up">
 <details>
 <summary>Czy TAGRA działa w chmurze, czy instaluje się lokalnie?</summary>
-<div class="faq-answer">TAGRA to <strong>oprogramowanie desktopowe dla Windows</strong> , które działa całkowicie offline na Twoim komputerze. Dane kierowców i pojazdów nigdy nie opuszczają Twojej sieci — bez przesyłania do chmury, bez podmiotów przetwarzających, bez abonamentu. Wiele firm wybiera to rozwiązanie ze względu na RODO i ochronę danych.</div>
+<div class="faq-answer">TAGRA to <strong>oprogramowanie desktopowe dla Windows</strong> , które działa całkowicie offline na Państwa komputerze. Dane kierowców i pojazdów nigdy nie opuszczają Państwa sieci — bez przesyłania do chmury, bez podmiotów przetwarzających, bez abonamentu. Wiele firm wybiera to rozwiązanie ze względu na RODO i ochronę danych.</div>
 </details>
 <details>
 <summary>Czy TAGRA obejmuje czas jazdy w UE i dyrektywę o czasie pracy?</summary>
@@ -1046,10 +1046,10 @@
 </details>
 <details>
 <summary>Jak działa 30-dniowy okres próbny?</summary>
-<div class="faq-answer">Pobierz i zainstaluj pakiet Windows — otrzymujesz <strong>30 dni pełnego, nieograniczonego dostępu</strong> do wszystkich funkcji. Bez karty kredytowej, bez danych płatniczych. Jeśli TAGRA sprawdzi się w Twojej firmie, kupujesz licencję.</div>
+<div class="faq-answer">Pobieranie i instalacja pakietu Windows — otrzymują Państwo <strong>30 dni pełnego, nieograniczonego dostępu</strong> do wszystkich funkcji. Bez karty kredytowej, bez danych płatniczych. Jeśli TAGRA sprawdzi się w Państwa firmie, kupują Państwo licencję.</div>
 </details>
 <div class="faq-cta">
-<a href="/pl/faq/">Zobacz wszystkie pytania →</a>
+<a href="/pl/faq/">Wszystkie pytania →</a>
 </div>
 </div>
 </div>
@@ -1059,7 +1059,7 @@
 <div class="footer-inner">
 <div>
 <div class="footer-logo"><img alt="TAGRA" height="20" src="/assets/img/logo-dark.svg?v=20260513zh" width="88" loading="lazy"/></div>
-<p class="footer-desc">Profesjonalne oprogramowanie do analizy danych z tachografów. Pobieranie danych z kart kierowców, analiza danych z tachografów cyfrowych, unijne przepisy o czasie prowadzenia pojazdu i odpoczynku oraz dyrektywa o czasie pracy w transporcie drogowym. Opracowane przez Truck Data Technology, s.r.o.</p>
+<p class="footer-desc">Profesjonalne oprogramowanie do analizy danych z tachografów. Pobieranie danych z kart kierowców, analiza danych z tachografów cyfrowych, unijne przepisy dotyczące czasu prowadzenia pojazdu i okresów odpoczynku oraz dyrektywa o czasie pracy w transporcie drogowym. Opracowane przez Truck Data Technology, s.r.o.</p>
 </div>
 <div class="footer-col">
 <h2 class="footer-col-title">Produkt</h2>
@@ -1095,8 +1095,8 @@
 </footer>
 <div aria-label="Quick trial signup" class="sticky-cta" id="stickyCta" role="complementary">
 <div class="sticky-cta-inner">
-<span class="sticky-cta-text">Gotowy, by zacząć? Wypróbuj TAGRA bezpłatnie przez 30 dni.</span>
-<a class="sticky-cta-btn" href="/pl/wyprobuj/">Wypróbuj za darmo →</a>
+<span class="sticky-cta-text">Gotowi, by zacząć? Prosimy wypróbować TAGRA bezpłatnie przez 30 dni.</span>
+<a class="sticky-cta-btn" href="/pl/wyprobuj/">Wersja próbna za darmo →</a>
 <button aria-label="Dismiss" class="sticky-cta-close" id="stickyCtaClose">×</button>
 </div>
 </div>
@@ -1138,7 +1138,7 @@
   "name": "TAGRA – Tachograph Data Management Software",
   "applicationCategory": "BusinessApplication",
   "operatingSystem": "Windows",
-  "description": "Software for evaluating and archiving data from digital tachographs and driver cards. Available for fleet operators (1 to unlimited vehicles) and professional drivers. Compliant with Regulation (EC) 561/2006, AETR and the Working Time Directive. Free 30-day trial.",
+  "description": "Oprogramowanie do analizy i archiwizacji danych z tachografów cyfrowych oraz kart kierowców. Dostępne dla przewoźników (od 1 do nieograniczonej liczby pojazdów) i zawodowych kierowców. Zgodne z rozporządzeniem (WE) nr 561/2006, umową AETR oraz dyrektywą dotyczącą czasu pracy. Bezpłatny 30-dniowy okres próbny.",
   "url": "https://tagra.app/pl/",
   "inLanguage": "pl",
   "author": {
@@ -1169,7 +1169,7 @@
       "name": "Czy TAGRA działa w chmurze, czy instaluje się lokalnie?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "TAGRA to oprogramowanie desktopowe dla Windows, które działa całkowicie offline na Twoim komputerze. Dane kierowców i pojazdów nigdy nie opuszczają Twojej sieci — bez przesyłania do chmury, bez podmiotów przetwarzających, bez abonamentu. Wiele firm wybiera to rozwiązanie ze względu na RODO i ochronę danych."
+        "text": "TAGRA to oprogramowanie desktopowe dla Windows, które działa całkowicie offline na Państwa komputerze. Dane kierowców i pojazdów nigdy nie opuszczają Państwa sieci — bez przesyłania do chmury, bez podmiotów przetwarzających, bez abonamentu. Wiele firm wybiera to rozwiązanie ze względu na RODO i ochronę danych."
       }
     },
     {
@@ -1177,7 +1177,7 @@
       "name": "Czy TAGRA obejmuje czas jazdy w UE i dyrektywę o czasie pracy?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Tak. TAGRA analizuje rozporządzenia (WE) nr 561/2006 (czas jazdy w UE) oraz dyrektywy o czasie pracy kierowców 2002/15/WE, a także powiązane przepisy AETR. Każde naruszenie jest wyróżnione w czytelnych raportach kierowcy i pojazdu z dokładnym czasem, typem i długością trwania."
+        "text": "Tak. TAGRA analizuje rozporządzenie (WE) nr 561/2006 (czas prowadzenia w UE), dyrektywę 2002/15/WE w sprawie czasu pracy kierowców oraz powiązane przepisy AETR. Każde naruszenie jest wyróżnione w czytelnych raportach kierowcy i pojazdu z dokładnym czasem, typem i czasem trwania."
       }
     },
     {
@@ -1193,7 +1193,7 @@
       "name": "Jak działa 30-dniowy okres próbny?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Pobierz i zainstaluj pakiet Windows — otrzymujesz 30 dni pełnego, nieograniczonego dostępu do wszystkich funkcji. Bez karty kredytowej, bez danych płatniczych. Jeśli TAGRA sprawdzi się w Twojej firmie, kupujesz licencję."
+        "text": "Pobieranie i instalacja pakietu Windows — otrzymują Państwo 30 dni pełnego, nieograniczonego dostępu do wszystkich funkcji. Bez karty kredytowej, bez danych płatniczych. Jeśli TAGRA sprawdzi się w Państwa firmie, kupują Państwo licencję."
       }
     }
   ]

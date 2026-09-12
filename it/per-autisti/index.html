@@ -45,6 +45,10 @@
       var m={cz:'cs',cs:'cs',sk:'sk',de:'de',pl:'pl',gr:'el',el:'el',hu:'hu',en:'en'};return m[l]||'en';}
     var T={
       hu:{t:'Analitikai sütiket használunk (Google Analytics, Microsoft Clarity, Smartsupp), hogy megértsük a webhely használatát. Csak az Ön hozzájárulásával töltődnek be.',a:'Elfogadom',r:'Elutasítom',p:'Adatvédelem és sütik'},
+      ro:{t:'Utilizăm module cookie de analiză (Google Analytics, Microsoft Clarity, Smartsupp) pentru a înțelege modul de utilizare a site-ului. Se încarcă doar cu consimțământul dumneavoastră.',a:'Accept',r:'Refuz',p:'Confidențialitate și cookie-uri'},
+      nl:{t:'We gebruiken analytische cookies (Google Analytics, Microsoft Clarity, Smartsupp) om het gebruik van de site te begrijpen. Ze laden alleen met uw toestemming.',a:'Accepteren',r:'Weigeren',p:'Privacy en cookies'},
+      fr:{t:'Nous utilisons des cookies analytiques (Google Analytics, Microsoft Clarity, Smartsupp) pour comprendre l’utilisation du site. Ils ne se chargent qu’avec votre consentement.',a:'Accepter',r:'Refuser',p:'Confidentialité et cookies'},
+      it:{t:'Utilizziamo cookie analitici (Google Analytics, Microsoft Clarity, Smartsupp) per capire l’utilizzo del sito. Si caricano solo con il Suo consenso.',a:'Accetta',r:'Rifiuta',p:'Privacy e cookie'},
       en:{t:'We use analytics cookies (Google Analytics, Microsoft Clarity, Smartsupp) to understand site usage. They load only with your consent.',a:'Accept',r:'Reject',p:'Privacy &amp; cookies'},
       cs:{t:'Používáme analytické cookies (Google Analytics, Microsoft Clarity, Smartsupp) k pochopení používání webu. Načtou se jen s vaším souhlasem.',a:'Přijmout',r:'Odmítnout',p:'Soukromí a cookies'},
       sk:{t:'Používame analytické cookies (Google Analytics, Microsoft Clarity, Smartsupp) na pochopenie používania webu. Načítajú sa len s vaším súhlasom.',a:'Prijať',r:'Odmietnuť',p:'Súkromie a cookies'},
@@ -75,16 +79,18 @@
 <!-- TMX-ANALYTICS END -->
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>TAGRA Trucker – Software cronotachigrafo per autisti professionisti</title>
-<meta content="TAGRA Trucker aiuta gli autisti professionisti a rispettare la normativa UE sul cronotachigrafo. Valuta i dati della tua carta conducente, controlla tempi di guida e di riposo. Funziona con un comune lettore di carte USB. Prova gratuita di 30 giorni." name="description"/>
+<title>TAGRA TRUCKER: software cronotachigrafo per autisti</title>
+<meta content="TAGRA Trucker aiuta i conducenti a rispettare le norme UE: analizza la carta conducente e controlla tempi di guida e riposi con un lettore USB. Prova gratis." name="description"/>
 <meta content="#0b2c4a" name="theme-color"/>
 <link href="/manifest.json" rel="manifest"/>
 <link href="https://tagra.app/it/per-autisti/" rel="canonical"/>
+<link href="https://tagra.app/de/fahrer/" hreflang="de" rel="alternate"/><link href="https://tagra.app/el/odigoi/" hreflang="el" rel="alternate"/><link href="https://tagra.app/driver/" hreflang="en" rel="alternate"/><link href="https://tagra.app/fr/conducteurs/" hreflang="fr" rel="alternate"/><link href="https://tagra.app/hu/soforoknek/" hreflang="hu" rel="alternate"/><link href="https://tagra.app/it/per-autisti/" hreflang="it" rel="alternate"/><link href="https://tagra.app/nl/voor-chauffeurs/" hreflang="nl" rel="alternate"/><link href="https://tagra.app/pl/dla-kierowcow/" hreflang="pl" rel="alternate"/>
+<link href="https://tagra.app/ro/pentru-conducatori/" hreflang="ro" rel="alternate"/><link href="https://tagra.app/driver/" hreflang="x-default" rel="alternate"/>
 <meta content="website" property="og:type"/>
 <meta content="it_IT" property="og:locale"/>
 <meta content="TAGRA" property="og:site_name"/>
-<meta content="TAGRA Trucker – Software cronotachigrafo per autisti professionisti" property="og:title"/>
-<meta content="TAGRA Trucker aiuta gli autisti professionisti a rispettare la normativa UE sul cronotachigrafo. Funziona con un comune lettore di carte USB. Prova gratuita di 30 giorni." property="og:description"/>
+<meta content="TAGRA TRUCKER: software cronotachigrafo per autisti" property="og:title"/>
+<meta content="TAGRA Trucker aiuta i conducenti professionisti a rispettare la normativa UE sul tachigrafo. Funziona con un comune lettore di carte USB. Prova gratuita di 30 giorni." property="og:description"/>
 <meta content="https://cdn.truckmall.cz/data/user-content/TDT_TAGRA_TRUCKER_wh.jpg" property="og:image"/>
 <meta content="TAGRA Trucker – software cronotachigrafo per autisti professionisti con lettore di carte USB" property="og:image:alt"/>
 <meta content="https://cdn.truckmall.cz/data/user-content/TDT_TAGRA_TRUCKER_wh.jpg" name="twitter:image"/>
@@ -276,8 +282,7 @@
 <link href="/assets/css/components.css" rel="stylesheet"/>
 <link href="/assets/css/nav.css" rel="stylesheet"/>
 <script defer="" src="/assets/js/nav.js?v=20260816b"></script>
-<link href="/assets/css/footer.css" rel="stylesheet"/>
-<link href="https://tagra.app/driver/" hreflang="en" rel="alternate"/><link href="https://tagra.app/de/fahrer/" hreflang="de" rel="alternate"/><link href="https://tagra.app/pl/dla-kierowcow/" hreflang="pl" rel="alternate"/><link href="https://tagra.app/el/odigoi/" hreflang="el" rel="alternate"/><link href="https://tagra.app/hu/soforoknek/" hreflang="hu" rel="alternate"/><link href="https://tagra.app/it/per-autisti/" hreflang="it" rel="alternate"/><link href="https://tagra.app/fr/conducteurs/" hreflang="fr" rel="alternate"/><link href="https://tagra.app/driver/" hreflang="x-default" rel="alternate"/></head>
+<link href="/assets/css/footer.css" rel="stylesheet"/></head>
 <body>
 <a class="skip-link" href="#main-content">Vai al contenuto</a>
 <div aria-hidden="true" id="scroll-progress"></div>
@@ -296,8 +301,7 @@
 </ul>
 <details class="nav-lang">
 <summary aria-label="Language: IT">IT</summary>
-<div class="nav-lang-menu" role="menu">
-<a href="/" hreflang="en">English</a><a href="/de/" hreflang="de">Deutsch</a><a href="/pl/" hreflang="pl">Polski</a><a href="/el/" hreflang="el">Ελληνικά</a><a href="/hu/" hreflang="hu">Magyar</a><a aria-current="page" class="active" href="/it/" hreflang="it">Italiano</a><a href="https://tagra.app/fr/conducteurs/" hreflang="fr">Français</a><a href="https://www.tdt.cz/" hreflang="cs" rel="noopener" target="_blank">Čeština</a><a href="https://www.tdt.sk/" hreflang="sk" rel="noopener" target="_blank">Slovenčina</a></div>
+<div class="nav-lang-menu" role="menu"><a href="/driver/" hreflang="en">English</a><a href="/de/fahrer/" hreflang="de">Deutsch</a><a href="/pl/dla-kierowcow/" hreflang="pl">Polski</a><a href="/nl/voor-chauffeurs/" hreflang="nl">Nederlands</a><a href="/fr/conducteurs/" hreflang="fr">Français</a><a aria-current="page" class="active" href="/it/per-autisti/" hreflang="it">Italiano</a><a href="/el/odigoi/" hreflang="el">Ελληνικά</a><a href="/hu/soforoknek/" hreflang="hu">Magyar</a><a href="/ro/pentru-conducatori/" hreflang="ro">Română</a><a href="https://www.tdt.cz/" hreflang="cs" rel="noopener" target="_blank">Čeština</a><a href="https://www.tdt.sk/" hreflang="sk" rel="noopener" target="_blank">Slovenčina</a></div>
 </details>
 <a class="nav-cta-mobile" href="/it/prova-gratuita/?audience=driver">Prova gratis</a>
 <button aria-expanded="false" aria-label="Attiva/disattiva menu" class="nav-mobile-toggle" id="nav-toggle">
@@ -311,7 +315,7 @@
 <div class="eyebrow anim-up">TAGRA · Software cronotachigrafo per autisti professionisti</div>
 <h1 class="anim-up" style="transition-delay:.05s">Analisi del cronotachigrafo prima <br/>del prossimo controllo su strada</h1>
 <p class="lead anim-up" style="transition-delay:.1s">
-<strong>Le tue ore. I tuoi dati.</strong> Sappi esattamente cosa c'è sulla tua <strong>carta conducente</strong> — tempi di guida, pause, periodi di riposo e tempi di guida UE — prima di qualsiasi controllo su strada. Download della carta conducente con un comune lettore USB.
+<strong>Le Sue ore. I Suoi dati.</strong> Sappia esattamente cosa c'è sulla Sua <strong>carta conducente</strong> — tempi di guida, pause, periodi di riposo e tempi di guida UE — prima di qualsiasi controllo su strada. Download della carta conducente con un comune lettore USB.
     </p>
 <div class="anim-up" style="margin-bottom:16px;transition-delay:.15s">
 <a class="btn-cta" href="/it/prova-gratuita/?audience=driver" rel="noopener" target="_blank">Prova gratis per 30 giorni</a>
@@ -334,13 +338,13 @@
 <div class="bc s7 fly-left">
 <div class="eyebrow" style="color:var(--green-brand)">Per</div>
 <div class="bc-title">1 autista · carta conducente</div>
-<div class="bc-text"><strong>Download della carta conducente</strong>, valutazione e archiviazione dei dati della tua carta. Conosci i tuoi <strong>tempi di guida</strong> prima di un ispettore.</div>
+<div class="bc-text"><strong>Download della carta conducente</strong>, valutazione e archiviazione dei dati della Sua carta. Conosca i Suoi <strong>tempi di guida</strong> prima di un ispettore.</div>
 <div class="bignum">1</div>
 </div>
 <div class="bc s5 greenfill fly-right" style="transition-delay:.1s">
 <div class="eyebrow" style="color:var(--green-brand)">Lettore di carte</div>
 <div class="bc-title">Comune lettore<br/>di carte USB</div>
-<div class="bc-text">Collega, inserisci la carta, fatto. Non hai ancora un lettore? Te ne consigliamo uno.</div>
+<div class="bc-text">Colleghi, inserisca la carta, fatto. Non ha ancora un lettore? Gliene consigliamo uno.</div>
 </div>
 <div class="bc s4 fly-left" style="transition-delay:.15s">
 <div class="eyebrow">Periodo di prova</div>
@@ -355,7 +359,7 @@
 <div class="bc s4 greenfill fly-right" style="transition-delay:.35s">
 <div class="eyebrow" style="color:var(--green-brand)">Funziona</div>
 <div class="bc-title" style="color:var(--green-brand)">Offline</div>
-<div class="bc-text">Non serve internet per l'uso quotidiano. Solo il tuo PC e la tua carta.</div>
+<div class="bc-text">Non serve internet per l'uso quotidiano. Solo il Suo PC e la Sua carta.</div>
 </div>
 </div>
 </div>
@@ -364,7 +368,7 @@
 <section aria-label="Recensioni clienti" class="band band--gray">
 <div class="container">
 <div class="eyebrow anim-up">Cosa dicono gli autisti</div>
-<h2 class="anim-up">La scelta di migliaia di autisti professionisti</h2>
+<h2 class="anim-up">Pensato per i conducenti professionisti</h2>
 </div>
 <div class="rev-rail-wrap anim-up" style="transition-delay:.05s">
 <div class="rev-rail" id="rev-rail">
@@ -382,12 +386,12 @@
 <div class="g2 top">
 <div class="anim-up">
 <div class="eyebrow">Cosa fa TAGRA Trucker</div>
-<h2>La tua carta.<br/>I tuoi dati. La tua tranquillità.</h2>
-<p style="margin-bottom:24px">Software leggero di <strong>analisi del cronotachigrafo</strong> per un singolo autista. Sappi sempre esattamente cosa c'è sulla tua carta conducente — e sii pronto per qualsiasi controllo su strada.</p>
+<h2>La Sua carta.<br/>I Suoi dati. La Sua tranquillità.</h2>
+<p style="margin-bottom:24px">Software leggero di <strong>analisi del cronotachigrafo</strong> per un singolo autista. Sappia sempre esattamente cosa c'è sulla Sua carta conducente — e sia pronto per qualsiasi controllo su strada.</p>
 <div class="feats">
 <div class="fi"><div class="fck"><svg fill="none" height="8" viewbox="0 0 10 8" width="10"><path d="M1 4l2.5 2.5L9 1" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></div><span><strong>Comune lettore di carte USB</strong> — collega, leggi la carta, fatto</span></div>
 <div class="fi"><div class="fck"><svg fill="none" height="8" viewbox="0 0 10 8" width="10"><path d="M1 4l2.5 2.5L9 1" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></div><span>Valutazione dei <strong>tempi di guida UE</strong> secondo il Regolamento (CE) n. 561/2006 e AETR — tempi di guida, pause e periodi di riposo</span></div>
-<div class="fi"><div class="fck"><svg fill="none" height="8" viewbox="0 0 10 8" width="10"><path d="M1 4l2.5 2.5L9 1" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></div><span>Panoramica immediata di cosa è memorizzato sulla tua carta conducente</span></div>
+<div class="fi"><div class="fck"><svg fill="none" height="8" viewbox="0 0 10 8" width="10"><path d="M1 4l2.5 2.5L9 1" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></div><span>Panoramica immediata di cosa è memorizzato sulla Sua carta conducente</span></div>
 <div class="fi"><div class="fck"><svg fill="none" height="8" viewbox="0 0 10 8" width="10"><path d="M1 4l2.5 2.5L9 1" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></div><span>Archiviazione dei dati della carta conducente — conforme alla normativa</span></div>
 <div class="fi"><div class="fck"><svg fill="none" height="8" viewbox="0 0 10 8" width="10"><path d="M1 4l2.5 2.5L9 1" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></div><span>Funziona offline su qualsiasi PC o laptop Windows in cabina</span></div>
 <div class="fi"><div class="fck"><svg fill="none" height="8" viewbox="0 0 10 8" width="10"><path d="M1 4l2.5 2.5L9 1" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></div><span><strong>Pronto per gli autisti di furgoni da luglio 2026</strong></span></div>
@@ -423,16 +427,16 @@
 <div style="text-align:center;padding:28px 20px">
 <div style="font-size:52px;font-weight:900;line-height:1;color:rgba(19,74,142,.12);margin-bottom:8px">1</div>
 <div style="font-size:18px;font-weight:800;color:var(--text-strong);margin-bottom:8px">Collega il lettore USB</div>
-<p style="font-size:16px;color:var(--text2)">Inserisci il lettore di carte USB nel tuo PC o laptop. Non serve software aggiuntivo.</p>
+<p style="font-size:16px;color:var(--text2)">Inserisca il lettore di carte USB nel Suo PC o laptop. Non serve software aggiuntivo.</p>
 </div>
 <div style="text-align:center;padding:28px 20px;border-left:1px solid var(--border);border-right:1px solid var(--border)">
 <div style="font-size:52px;font-weight:900;line-height:1;color:rgba(19,74,142,.12);margin-bottom:8px">2</div>
-<div style="font-size:18px;font-weight:800;color:var(--text-strong);margin-bottom:8px">Inserisci la tua carta conducente</div>
+<div style="font-size:18px;font-weight:800;color:var(--text-strong);margin-bottom:8px">Inserisca la Sua carta conducente</div>
 <p style="font-size:16px;color:var(--text2)">TAGRA esegue automaticamente il <strong>download della carta conducente</strong>. Tutti i dati si caricano in pochi secondi.</p>
 </div>
 <div style="text-align:center;padding:28px 20px">
 <div style="font-size:52px;font-weight:900;line-height:1;color:rgba(19,74,142,.12);margin-bottom:8px">3</div>
-<div style="font-size:18px;font-weight:800;color:var(--text-strong);margin-bottom:8px">Visualizza i tuoi dati</div>
+<div style="font-size:18px;font-weight:800;color:var(--text-strong);margin-bottom:8px">Visualizzi i Suoi dati</div>
 <p style="font-size:16px;color:var(--text2)">Tempi di guida, pause, periodi di riposo — panoramica chiara. Pronto per qualsiasi controllo.</p>
 </div>
 </div>
@@ -440,9 +444,9 @@
 <span class="note-badge">Da sapere</span>
 <div class="note-title">L'obbligo di download spetta all'impresa di autotrasporto — non all'autista</div>
 <p>Secondo la normativa UE, l'obbligo di scaricare i dati del tachigrafo spetta all'<strong>impresa di autotrasporto</strong> — il vettore o l'azienda che gestisce il veicolo (Regolamento (UE) n. 165/2014, articolo 33). Gli intervalli massimi sono <strong>almeno ogni 28 giorni per la carta conducente</strong> e <strong>almeno ogni 90 giorni per l'unità di bordo</strong> (Regolamento (UE) n. 581/2010 della Commissione).</p>
-<p><strong>Se guidi per un datore di lavoro</strong>, l'obbligo è a suo carico — ma anche tu trai vantaggio dal conservare le tue copie. <strong>TAGRA Trucker</strong> scarica e archivia i dati della tua carta conducente così puoi controllare i tuoi tempi di guida e avere i tuoi dati pronti se mai cambierai datore di lavoro.</p>
-<p><strong>Se sei un autista autonomo o titolare-conducente</strong>, sei anche l'impresa di autotrasporto — quindi sei legalmente tenuto a scaricare i dati sia della carta conducente <em>sia</em> dell'unità di bordo. Per questo ti serve almeno <a href="/it/per-aziende/" style="color:var(--blue-mid);font-weight:600">TAGRA 1</a>, che gestisce sia il download della carta conducente sia quello dell'unità di bordo per un veicolo. TAGRA Trucker da solo non è sufficiente in questo caso.</p>
-<p style="margin-bottom:0;font-size:15px"><strong>Sei nuovo qui?</strong> Leggi la nostra guida sui <a href="/it/articoli/simboli-cronotachigrafo/">simboli del cronotachigrafo e il loro significato</a> — le quattro icone di attività che ogni autista deve conoscere.</p>
+<p><strong>Se guidi per un datore di lavoro</strong>, l'obbligo è a suo carico — ma anche Lei trae vantaggio dal conservare le Sue copie. <strong>TAGRA Trucker</strong> scarichi e archivi i dati della Sua carta conducente così può controllare i Suoi tempi di guida e avere i Suoi dati pronti se mai cambierà datore di lavoro.</p>
+<p><strong>Se è un autista autonomo o titolare-conducente</strong>, è anche l'impresa di autotrasporto — quindi è legalmente tenuto a scaricare i dati sia della carta conducente <em>sia</em> dell'unità di bordo. Per questo Le serve almeno <a href="/it/per-aziende/" style="color:var(--blue-mid);font-weight:600">TAGRA 1</a>, che gestisce sia il download della carta conducente sia quello dell'unità di bordo per un veicolo. TAGRA Trucker da solo non è sufficiente in questo caso.</p>
+<p style="margin-bottom:0;font-size:15px"><strong>È nuovo qui?</strong> Leggi la nostra guida sui <a href="/it/articoli/simboli-cronotachigrafo/">simboli del cronotachigrafo e il loro significato</a> — le quattro icone di attività che ogni autista deve conoscere.</p>
 </div>
 </div>
 </section>
@@ -451,7 +455,7 @@
 <div class="container">
 <div class="anim-up" style="text-align:center;max-width:600px;margin:0 auto">
 <h2>PROVA TAGRA TRUCKER GRATIS PER 30 GIORNI</h2>
-<p style="margin-top:8px;color:var(--text2)">Scarica, installa e usa il software completo. Nessuna carta di credito, nessuna registrazione richiesta.</p>
+<p style="margin-top:8px;color:var(--text2)">Scarichi, installi e usi il software completo. Nessuna carta di credito richiesta.</p>
 <div style="margin-top:28px">
 <a class="btn-cta" href="/it/prova-gratuita/?audience=driver" rel="noopener" target="_blank">Scarica la versione di prova</a>
 </div>
@@ -464,20 +468,20 @@
 <div class="container">
 <div class="anim-up" style="text-align:center;max-width:640px;margin:0 auto 32px">
 <div class="eyebrow">Due modi per iniziare</div>
-<h2>Prova con i tuoi dati —<br/>oppure inizia con il lettore</h2>
+<h2>Prova con i Suoi dati —<br/>oppure inizia con il lettore</h2>
 </div>
 <div class="path-split anim-up" style="transition-delay:.05s">
 <div class="path-card">
-<h3>Hai già dati del cronotachigrafo</h3>
-<p>Hai già scaricato un file <code>.DDD</code> o <code>.C1B</code> — dal tuo datore di lavoro, un'officina o un altro lettore? Installa la prova e caricalo. Piena funzionalità, 30 giorni, nessun pagamento e nessun dato della carta.</p>
+<h3>Ha già dati del cronotachigrafo</h3>
+<p>Ha già scaricato un file <code>.DDD</code> o <code>.C1B</code> — dal Suo datore di lavoro, un'officina o un altro lettore? Installi la prova e la carichi. Piena funzionalità, 30 giorni, nessun pagamento e nessun dato della carta.</p>
 <a class="btn-cta" href="/it/prova-gratuita/?audience=driver">Scarica la prova gratuita →</a>
 </div>
 <div class="path-card path-card--buy">
-<h3>Non hai modo di leggere la tua carta</h3>
+<h3>Non ha modo di leggere la Sua carta</h3>
 <p>Allora il lettore è il pezzo mancante. TAGRA Trucker funziona con qualsiasi lettore di carte a chip USB standard compatibile — considera una spesa di circa 25–45 €. Da solo, però, un lettore non valuta nulla: è il software a fare il lavoro.</p>
-<p><strong>Hai bisogno di un lettore? Possiamo inviartene uno.</strong> Scrivi a <a href="mailto:sales@tagra.app">sales@tagra.app</a>: ti consiglieremo un modello compatibile oppure te ne invieremo uno — prezzo e spedizione indicati in base al tuo paese.</p>
+<p><strong>Ha bisogno di un lettore? Possiamo inviargliene uno.</strong> Scrivi a <a href="mailto:sales@tagra.app">sales@tagra.app</a>: Le consiglieremo un modello compatibile oppure gliene invieremo uno — prezzo e spedizione indicati in base al Suo paese.</p>
 <a class="btn-cta" href="/it/contatti/?product=trucker">Ordina TAGRA Trucker — 49 € IVA esclusa →</a>
-<p class="path-note">Confermeremo il tuo ordine e ti invieremo la licenza via e-mail.</p>
+<p class="path-note">Confermeremo il Suo ordine e Le invieremo la licenza via e-mail.</p>
 </div>
 </div>
 </div>
@@ -488,7 +492,7 @@
 <div class="anim-up" style="max-width:560px">
 <div class="eyebrow">Prezzo e condizioni</div>
 <h2 style="text-transform:none">Prezzi trasparenti.<br/>Nessun costo nascosto.</h2>
-<p style="margin:16px 0 24px">Inizia con la prova gratuita. Quando sei pronto, seleziona la tua licenza direttamente nel software e paga online.</p>
+<p style="margin:16px 0 24px">Inizi con la prova gratuita. Quando è pronto, selezioni la Sua licenza direttamente nel software e paghi online.</p>
 <div style="background:#fff;border-radius:var(--radius);border:1px solid var(--border);overflow:hidden;margin-bottom:24px">
 <div style="display:flex;justify-content:space-between;padding:14px 20px;border-bottom:1px solid var(--border)"><span style="color:var(--text2)">Periodo di prova</span><span style="font-weight:600;color:var(--green-brand)">30 giorni gratis</span></div>
 <div style="display:flex;justify-content:space-between;padding:14px 20px;border-bottom:1px solid var(--border)"><span style="color:var(--text2)">TAGRA Trucker</span><span style="font-weight:600">49 € IVA esclusa</span></div>
@@ -515,15 +519,15 @@
 </details>
 <details>
 <summary>Ho bisogno di un lettore di carte USB?</summary>
-<div class="faq-a">Sì. TAGRA Trucker legge la tua carta conducente tramite un comune lettore di carte USB. Se non ne hai uno, contattaci e ti consiglieremo un modello compatibile — oppure possiamo inviartene uno, con prezzo e spedizione indicati in base al tuo paese.</div>
+<div class="faq-a">Sì. TAGRA Trucker legge la Sua carta conducente tramite un comune lettore di carte USB. Se non ne ha uno, ci contatti e Le consiglieremo un modello compatibile — oppure possiamo inviargliene uno, con prezzo e spedizione indicati in base al Suo paese.</div>
 </details>
 <details>
 <summary>Come inserisco i dati nel software?</summary>
-<div class="faq-a">Collega il tuo lettore USB, inserisci la carta, e TAGRA esegue automaticamente il <strong>download della carta conducente</strong>. Puoi anche importare file <strong>.DDD</strong> o <strong>.C1B</strong> già scaricati altrove.</div>
+<div class="faq-a">Colleghi il Suo lettore USB, inserisca la carta, e TAGRA esegue automaticamente il <strong>download della carta conducente</strong>. Può anche importare file <strong>.DDD</strong> o <strong>.C1B</strong> già scaricati altrove.</div>
 </details>
 <details>
 <summary>Con quale frequenza devo scaricare la mia carta?</summary>
-<div class="faq-a"><p>Secondo la normativa UE, l'obbligo legale di scaricare i dati del tachigrafo spetta all'<strong>impresa di autotrasporto</strong> (Regolamento (UE) n. 165/2014, articolo 33), non all'autista. Gli intervalli massimi sono almeno ogni <strong>28 giorni per la carta conducente</strong> e almeno ogni <strong>90 giorni per l'unità di bordo</strong> (Regolamento (UE) n. 581/2010 della Commissione).</p><p style="margin-top:10px"><strong>Come autista dipendente</strong>, l'obbligo è a carico del tuo datore di lavoro — ma scaricare la tua carta con TAGRA Trucker ti aiuta comunque a monitorare i tuoi tempi di guida e a conservare i tuoi dati personali.</p><p style="margin-top:10px"><strong>Come autista autonomo o titolare-conducente</strong>, sei tu l'impresa di autotrasporto, quindi l'obbligo ricade su di te in questo ruolo — e ti serve una soluzione che gestisca sia il download della carta conducente sia quello dell'unità di bordo. In questo caso, <a href="/it/per-aziende/">TAGRA 1</a> è il livello minimo; TAGRA Trucker da solo copre solo la carta conducente.</p></div>
+<div class="faq-a"><p>Secondo la normativa UE, l'obbligo legale di scaricare i dati del tachigrafo spetta all'<strong>impresa di autotrasporto</strong> (Regolamento (UE) n. 165/2014, articolo 33), non all'autista. Gli intervalli massimi sono almeno ogni <strong>28 giorni per la carta conducente</strong> e almeno ogni <strong>90 giorni per l'unità di bordo</strong> (Regolamento (UE) n. 581/2010 della Commissione).</p><p style="margin-top:10px"><strong>Come autista dipendente</strong>, l'obbligo è a carico del Suo datore di lavoro — ma scaricare la Sua carta con TAGRA Trucker La aiuta comunque a monitorare i Suoi tempi di guida e a conservare i Suoi dati personali.</p><p style="margin-top:10px"><strong>Come autista autonomo o titolare-conducente</strong>, è Lei l'impresa di autotrasporto, quindi l'obbligo ricade su di Lei in questo ruolo — e Le serve una soluzione che gestisca sia il download della carta conducente sia quello dell'unità di bordo. In questo caso, <a href="/it/per-aziende/">TAGRA 1</a> è il livello minimo; TAGRA Trucker da solo copre solo la carta conducente.</p></div>
 </details>
 <details>
 <summary>TAGRA Trucker funziona offline?</summary>
@@ -535,7 +539,7 @@
 </details>
 <details>
 <summary>Come acquisto TAGRA Trucker dopo la prova?</summary>
-<div class="faq-a">Alla fine della prova — o quando sei pronto — apri il menu delle licenze nel software, seleziona TAGRA Trucker e paga online tramite codice QR o bonifico bancario. La tua licenza si attiva immediatamente.</div>
+<div class="faq-a">Alla fine della prova — o quando è pronto — apra il menu delle licenze nel software, selezioni TAGRA Trucker e paghi online tramite codice QR o bonifico bancario. La Sua licenza si attiva immediatamente.</div>
 </details>
 </div>
 </div>
@@ -547,7 +551,7 @@
 <div>
 <div class="eyebrow">Disponibile anche</div>
 <p style="font-size:19px;font-weight:700;color:var(--text-strong);margin-top:4px">TAGRA per operatori di flotta</p>
-<p style="color:var(--text2);margin-top:6px;max-width:480px">Gestisci veicoli per un'azienda? TAGRA 1/2/4/6/MAX copre unità di bordo e carte conducente per 1 fino a un numero illimitato di veicoli.</p>
+<p style="color:var(--text2);margin-top:6px;max-width:480px">Gestisce veicoli per un'azienda? TAGRA 1/2/4/6/MAX copre unità di bordo e carte conducente da 1 fino a un numero illimitato di veicoli.</p>
 </div>
 <a class="btn-cta btn-cta--sm" href="/it/per-aziende/" style="flex-shrink:0;background:var(--blue-mid)">Soluzione flotta →</a>
 </div>
@@ -676,10 +680,10 @@
 {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
-  "name": "TAGRA Trucker – Software cronotachigrafo per autisti professionisti",
+  "name": "TAGRA TRUCKER: software cronotachigrafo per autisti",
   "applicationCategory": "BusinessApplication",
   "operatingSystem": "Windows",
-  "description": "Software cronotachigrafo per autisti professionisti. Download della carta conducente con un comune lettore USB. Valutazione e archiviazione dei dati della carta conducente, tempi di guida UE (Regolamento (CE) n. 561/2006), pause e periodi di riposo. Prova gratuita di 30 giorni. Pronto per autisti di furgoni da luglio 2026.",
+  "description": "Software per tachigrafi per autisti professionisti. Download della carta conducente con un comune lettore USB. Valutazione e archiviazione dei dati della carta conducente, tempi di guida UE (Regolamento (CE) n. 561/2006), pause e periodi di riposo. Prova gratuita di 30 giorni. Pronto per autisti di furgoni da luglio 2026.",
   "url": "https://tagra.app/it/per-autisti/",
   "inLanguage": "it",
   "author": { "@type": "Organization", "name": "Truck Data Technology, s.r.o.", "url": "https://www.tdt.cz" },
@@ -697,7 +701,7 @@
       "name": "A chi è rivolto TAGRA Trucker?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "TAGRA Trucker è un software cronotachigrafo per autisti professionisti — camionisti e conducenti di furgoni — che vogliono tenere traccia dei dati della propria carta conducente e monitorare la conformità ai tempi di guida e di riposo UE."
+        "text": "TAGRA Trucker è un software per tachigrafi destinato ad autisti professionisti — camionisti e conducenti di furgoni — che desiderano tenere traccia dei dati della propria carta conducente e monitorare la conformità ai tempi di guida e di riposo UE."
       }
     },
     {
@@ -705,7 +709,7 @@
       "name": "Ho bisogno di un lettore di carte USB?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Sì. TAGRA Trucker legge la tua carta conducente tramite un comune lettore di carte USB. Se non ne hai uno, contattaci e ti consiglieremo un modello compatibile — oppure possiamo inviartene uno, con prezzo e spedizione indicati in base al tuo paese."
+        "text": "Sì. TAGRA Trucker legge la Sua carta conducente tramite un comune lettore di carte USB. Se non ne ha uno, ci contatti e Le consiglieremo un modello compatibile — oppure possiamo inviargliene uno, con prezzo e spedizione indicati in base al Suo paese."
       }
     },
     {
@@ -713,7 +717,7 @@
       "name": "Come inserisco i dati nel software?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Collega il tuo lettore USB, inserisci la carta, e TAGRA esegue automaticamente il download della carta conducente. Puoi anche importare file .DDD o .C1B già scaricati altrove."
+        "text": "Colleghi il Suo lettore USB, inserisca la carta, e TAGRA esegue automaticamente il download della carta conducente. Può anche importare file .DDD o .C1B già scaricati altrove."
       }
     },
     {
@@ -721,7 +725,7 @@
       "name": "Con quale frequenza devo scaricare la mia carta?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Secondo la normativa UE, l'obbligo legale di scaricare i dati del tachigrafo spetta all'impresa di autotrasporto (Regolamento (UE) n. 165/2014, articolo 33), non all'autista. Gli intervalli massimi sono almeno ogni 28 giorni per la carta conducente e almeno ogni 90 giorni per l'unità di bordo (Regolamento (UE) n. 581/2010 della Commissione). Come autista dipendente, l'obbligo è a carico del tuo datore di lavoro — ma scaricare la tua carta con TAGRA Trucker ti aiuta comunque a monitorare i tuoi tempi di guida e a conservare i tuoi dati personali. Come autista autonomo o titolare-conducente, sei tu l'impresa di autotrasporto, quindi l'obbligo ricade su di te in questo ruolo — e ti serve una soluzione che gestisca sia il download della carta conducente sia quello dell'unità di bordo. In questo caso, TAGRA 1 è il livello minimo; TAGRA Trucker da solo copre solo la carta conducente."
+        "text": "Secondo la normativa UE, l'obbligo legale di scaricare i dati del tachigrafo spetta all'impresa di trasporto (Regolamento (UE) n. 165/2014, articolo 33), non all'autista. Gli intervalli massimi sono di 28 giorni per la carta conducente e di 90 giorni per l'unità di bordo (Regolamento (UE) n. 581/2010 della Commissione). Come autista dipendente, l'obbligo è a carico del Suo datore di lavoro — ma scaricare la Sua carta con TAGRA Trucker La aiuta comunque a monitorare i Suoi tempi di guida e a conservare i Suoi dati personali. Come autista autonomo o titolare-conducente, è Lei l'impresa di trasporto, quindi l'obbligo ricade su di Lei in questo ruolo — e Le serve una soluzione che gestisca sia il download della carta conducente sia quello dell'unità di bordo. In questo caso, TAGRA 1 è il livello minimo; TAGRA Trucker da solo copre solo la carta conducente."
       }
     },
     {
@@ -745,7 +749,7 @@
       "name": "Come acquisto TAGRA Trucker dopo la prova?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Alla fine della prova — o quando sei pronto — apri il menu delle licenze nel software, seleziona TAGRA Trucker e paga online tramite codice QR o bonifico bancario. La tua licenza si attiva immediatamente."
+        "text": "Alla fine della prova — o quando è pronto — apra il menu delle licenze nel software, selezioni TAGRA Trucker e paghi online tramite codice QR o bonifico bancario. La Sua licenza si attiva immediatamente."
       }
     }
   ]

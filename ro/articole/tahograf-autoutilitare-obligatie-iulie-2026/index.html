@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<!-- TMX-ANALYTICS START -->
+<meta content="7F7894081BE7FBB245FF03AF8810B22F" name="msvalidate.01"/>
+<!-- Consent Mode v2 defaults (deny) + gtag stub — runs BEFORE gtag.js -->
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent','default',{
+      ad_storage:'denied', ad_user_data:'denied', ad_personalization:'denied',
+      analytics_storage:'denied', functionality_storage:'denied',
+      personalization_storage:'denied', security_storage:'granted',
+      wait_for_update:500
+    });
+    gtag('set','ads_data_redaction',true);
+    gtag('set','url_passthrough',false);
+  </script>
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-92253QFBNX"></script>
+<script>
+    gtag('js', new Date());
+    gtag('config','G-92253QFBNX');
+  </script>
+<!-- Cookie consent banner (self-hosted) + Microsoft Clarity gating -->
+<style>
+    .tmx-cc{position:fixed;left:0;right:0;bottom:0;z-index:2147483000;background:linear-gradient(120deg,var(--blue-dark,#0b2c4a),var(--blue-mid,#134a8e) 62%,var(--blue-light,#1f5fa6));color:#fff;
+      font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+      padding:16px 20px;box-shadow:0 -4px 24px rgba(0,0,0,.18);display:flex;flex-wrap:wrap;
+      align-items:center;gap:14px;justify-content:center}
+    .tmx-cc__txt{flex:1 1 360px;max-width:760px}
+    .tmx-cc__txt a{color:#9ed0f5;text-decoration:underline}
+    .tmx-cc__btns{display:flex;gap:10px;flex:0 0 auto}
+    .tmx-cc__b{appearance:none;border:0;cursor:pointer;font:inherit;font-weight:600;
+      padding:10px 22px;border-radius:99px;transition:filter .15s;color:#fff}
+    .tmx-cc__b:hover{filter:brightness(1.08)}
+    .tmx-cc__b--no{background:rgba(255,255,255,.16)}
+    .tmx-cc__b--yes{background:var(--green-cta,#5C820F)}
+    @media(max-width:640px){.tmx-cc{padding:14px}.tmx-cc__btns{width:100%}.tmx-cc__b{flex:1}}
+  </style>
+<script>
+  (function(){
+    var KEY='tmx-consent-v1', CL='wt18054m0r';
+    function lc(){var l=(document.documentElement.getAttribute('lang')||'en').toLowerCase().split('-')[0];
+      var m={cz:'cs',cs:'cs',sk:'sk',de:'de',pl:'pl',gr:'el',el:'el',hu:'hu',en:'en'};return m[l]||'en';}
+    var T={
+      hu:{t:'Analitikai s\u00fctiket haszn\u00e1lunk (Google Analytics, Microsoft Clarity, Smartsupp), hogy meg\u00e9rts\u00fck a webhely haszn\u00e1lat\u00e1t. Csak az \u00d6n hozz\u00e1j\u00e1rul\u00e1s\u00e1val t\u00f6lt\u0151dnek be.',a:'Elfogadom',r:'Elutas\u00edtom',p:'Adatv\u00e9delem \u00e9s s\u00fctik'},
+      ro:{t:'Utilizăm module cookie de analiză (Google Analytics, Microsoft Clarity, Smartsupp) pentru a înțelege modul de utilizare a site-ului. Se încarcă doar cu consimțământul dumneavoastră.',a:'Accept',r:'Refuz',p:'Confidențialitate și cookie-uri'},
+      nl:{t:'We gebruiken analytische cookies (Google Analytics, Microsoft Clarity, Smartsupp) om het gebruik van de site te begrijpen. Ze laden alleen met uw toestemming.',a:'Accepteren',r:'Weigeren',p:'Privacy en cookies'},
+      fr:{t:'Nous utilisons des cookies analytiques (Google Analytics, Microsoft Clarity, Smartsupp) pour comprendre l’utilisation du site. Ils ne se chargent qu’avec votre consentement.',a:'Accepter',r:'Refuser',p:'Confidentialité et cookies'},
+      it:{t:'Utilizziamo cookie analitici (Google Analytics, Microsoft Clarity, Smartsupp) per capire l’utilizzo del sito. Si caricano solo con il Suo consenso.',a:'Accetta',r:'Rifiuta',p:'Privacy e cookie'},
+      en:{t:'Utilizăm module cookie de analiză (Google Analytics, Microsoft Clarity, Smartsupp) pentru a înțelege modul de utilizare a site-ului. Acestea se încarcă numai cu consimțământul dumneavoastră.',a:'Accept',r:'Reject',p:'Privacy &amp; cookies'},
+      cs:{t:'Používáme analytické cookies (Google Analytics, Microsoft Clarity, Smartsupp) k pochopení používání webu. Načtou se jen s vaším souhlasem.',a:'Přijmout',r:'Odmítnout',p:'Soukromí a cookies'},
+      sk:{t:'Používame analytické cookies (Google Analytics, Microsoft Clarity, Smartsupp) na pochopenie používania webu. Načítajú sa len s vaším súhlasom.',a:'Prijať',r:'Odmietnuť',p:'Súkromie a cookies'},
+      de:{t:'Wir verwenden Analyse-Cookies (Google Analytics, Microsoft Clarity, Smartsupp), um die Nutzung der Website zu verstehen. Sie werden nur mit Ihrer Einwilligung geladen.',a:'Akzeptieren',r:'Ablehnen',p:'Datenschutz &amp; Cookies'},
+      pl:{t:'Używamy plików cookie do analityki (Google Analytics, Microsoft Clarity, Smartsupp), aby zrozumieć korzystanie z witryny. Ładują się tylko za Twoją zgodą.',a:'Akceptuj',r:'Odrzuć',p:'Prywatność i cookies'},
+      el:{t:'Χρησιμοποιούμε cookies ανάλυσης (Google Analytics, Microsoft Clarity, Smartsupp) για να κατανοήσουμε τη χρήση. Φορτώνονται μόνο με τη συγκατάθεσή σας.',a:'Αποδοχή',r:'Απόρριψη',p:'Απόρρητο &amp; cookies'}
+    };
+    function loadClarity(){if(!CL||window.__tmxCl)return;window.__tmxCl=1;
+      (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+       t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+       y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script",CL);}
+    function grant(){try{localStorage.setItem(KEY,'granted')}catch(e){}
+      gtag('consent','update',{analytics_storage:'granted'});loadClarity();}
+    function deny(){try{localStorage.setItem(KEY,'denied')}catch(e){}}
+    var saved=null;try{saved=localStorage.getItem(KEY)}catch(e){}
+    if(saved==='granted'){grant();return;} if(saved==='denied'){return;}
+    function show(){var tx=T[lc()]||T.en;
+      var b=document.createElement('div');b.className='tmx-cc';b.setAttribute('role','dialog');b.setAttribute('aria-live','polite');
+      b.innerHTML='<div class="tmx-cc__txt">'+tx.t+' <a href="/ro/confidentialitate/">'+tx.p+'</a></div>'+
+        '<div class="tmx-cc__btns"><button type="button" class="tmx-cc__b tmx-cc__b--no">'+tx.r+'</button>'+
+        '<button type="button" class="tmx-cc__b tmx-cc__b--yes">'+tx.a+'</button></div>';
+      document.body.appendChild(b);
+      b.querySelector('.tmx-cc__b--yes').addEventListener('click',function(){grant();b.remove();});
+      b.querySelector('.tmx-cc__b--no').addEventListener('click',function(){deny();b.remove();});}
+    if(document.body)show();else document.addEventListener('DOMContentLoaded',show);
+  })();
+  </script>
+<!-- TMX-ANALYTICS END -->
+<meta charset="utf-8"/>
+<title>Tahografe pentru autoutilitare de 2,5–3,5 t: reguli 2026, excepții &amp; amenzi | TAGRA</title>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="Autoutilitara dumneavoastră de 2,5–3,5 t trebuie să utilizeze un tahograf de la 1 iulie 2026? Aflați cine este exceptat (transport în cont propriu, meșteșugari), regulile, obligațiile de descărcare și amenzile la care vă expuneți." name="description"/>
+<meta content="article" property="og:type"/>
+<meta content="Van tachograph 2.5–3.5 t: 2026 rules, exemptions &amp; fines | TAGRA" property="og:title"/>
+<meta content="Autoutilitara dumneavoastră de 2,5–3,5 t trebuie să utilizeze un tahograf de la 1 iulie 2026? Cine este exceptat (transport în cont propriu, meșteșugari), regulile G2v2, obligațiile de descărcare și amenzile la care vă expuneți." property="og:description"/>
+<meta content="https://tagra.app/assets/img/hero-poster.jpg" property="og:image"/>
+<meta content="ro_RO" property="og:locale"/>
+<meta content="https://tagra.app/ro/articole/tahograf-autoutilitare-obligatie-iulie-2026/" property="og:url"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Van tachograph 2.5–3.5 t: 2026 rules, exemptions &amp; fines | TAGRA" name="twitter:title"/>
+<meta content="De la 1 iulie 2026, autoutilitarele de 2,5–3,5 t utilizate în transport internațional sau cabotaj au nevoie de un tahograf G2v2. Aflați cine este exceptat, regulile și amenzile." name="twitter:description"/>
+<meta content="https://tagra.app/assets/img/hero-poster.jpg" name="twitter:image"/>
+<link href="https://tagra.app/ro/articole/tahograf-autoutilitare-obligatie-iulie-2026/" rel="canonical"/>
+<link href="https://tagra.app/de/ratgeber/tachograph-transporter-pflicht-juli-2026/" hreflang="de" rel="alternate"/><link href="https://tagra.app/el/arthra/tachografos-van-ypochreosi-ioulios-2026/" hreflang="el" rel="alternate"/><link href="https://tagra.app/articles/tachographs-for-vans-new-obligation-july-2026/" hreflang="en" rel="alternate"/><link href="https://tagra.app/fr/articles/tachygraphe-utilitaires-obligation-juillet-2026/" hreflang="fr" rel="alternate"/><link href="https://tagra.app/hu/cikkek/tachograf-furgon-kotelezettseg-2026/" hreflang="hu" rel="alternate"/><link href="https://tagra.app/it/articoli/tachigrafo-furgoni-obbligo-luglio-2026/" hreflang="it" rel="alternate"/><link href="https://tagra.app/nl/artikelen/tachograafplicht-bestelbus-juli-2026/" hreflang="nl" rel="alternate"/><link href="https://tagra.app/pl/poradnik/tachograf-w-busach-obowiazek-lipiec-2026/" hreflang="pl" rel="alternate"/>
+<link href="https://tagra.app/ro/articole/tahograf-autoutilitare-obligatie-iulie-2026/" hreflang="ro" rel="alternate"/><link href="https://tagra.app/articles/tachographs-for-vans-new-obligation-july-2026/" hreflang="x-default" rel="alternate"/>
+<link href="/assets/css/tokens.css" rel="stylesheet"/>
+<link href="/assets/css/base.css" rel="stylesheet"/>
+<link href="/assets/css/components.css" rel="stylesheet"/>
+<link href="/assets/css/nav.css" rel="stylesheet"/>
+<link href="/assets/css/footer.css" rel="stylesheet"/>
+
+<style>
+    .art-hero { background: var(--bg-apple-solid); padding: calc(var(--nav-h, 64px) + 20px) 0 10px; border-bottom: 1px solid var(--border); }
+    .art-wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
+    
+    
+    
+    
+    .art-title{font-size:38px;line-height:1.15;font-weight:800;margin-bottom:16px;letter-spacing:-.02em;padding-bottom:0.08em;color:var(--blue-dark);}
+    .art-title .grad{background:linear-gradient(90deg,var(--blue-dark) 0%,var(--blue-light) 50%,var(--blue-bright) 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;}
+    @media(max-width:700px){.art-title{font-size:26px;}}
+    
+    .hero-lede { font-size: 18px; line-height: 1.6; color: var(--text); max-width: 920px; margin-top: 16px; }
+    .band { padding: 60px 0; }
+    .band--gray { background: var(--bg-gray); }
+    .band--blue { background: var(--bg-apple-solid); }
+    .container { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
+    .h2-grad { background: var(--heading-gradient); -webkit-background-clip: text; background-clip: text; color: transparent; -webkit-text-fill-color: transparent; display: inline-block; font-weight: 800; text-transform: uppercase; font-size: 36px; line-height: 1.06; padding: 0.12em 0.15em 0.08em 0; margin: 0 0 12px; }
+    @media(max-width:700px){.h2-grad{font-size:28px;}}
+    .eyebrow { font-size: 14px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--green-brand); margin-bottom: 8px; display: block; }
+    .bento--hero { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; max-width: 1080px; margin: 32px 0; }
+    @media (max-width: 900px) { .bento--hero { grid-template-columns: 1fr; } }
+    .hero-card { background: #fff; border: 1px solid var(--border); border-radius: var(--radius-lg, 20px); padding: 24px; }
+    .hero-card--blue { background: rgba(31,95,166,0.06); }
+    .hero-card .eyebrow { color: var(--blue-mid); margin-bottom: 8px; }
+    .hero-card .big { font-size: 44px; font-weight: 800; color: var(--blue-dark); margin-bottom: 8px; letter-spacing: -0.02em; line-height: 1; }
+    .hero-card p { margin: 0; color: var(--text2); font-size: 15px; line-height: 1.5; }
+    .twocol { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 32px; }
+    @media (max-width: 900px) { .twocol { grid-template-columns: 1fr; } }
+    .card { background: #fff; border: 1px solid var(--border); border-radius: var(--radius-lg, 20px); padding: 28px; }
+    .card--blue { background: rgba(31,95,166,0.06); }
+    .card--green { background: rgba(110,155,18,0.07); }
+    .card h3 { margin: 6px 0 12px; font-size: 22px; color: var(--blue-dark); font-weight: 800; }
+    .card ul { margin: 8px 0 0 18px; color: var(--text); line-height: 1.65; }
+    .card ul li { margin: 6px 0; }
+    .info-card { margin-top: 24px; border-left: 4px solid var(--blue-bright); background: #fff; border-radius: var(--radius-lg, 20px); padding: 24px; box-shadow: 0 1px 0 var(--border); }
+    .info-card .badge { display: inline-block; font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: .08em; color: var(--blue-mid); background: rgba(31,95,166,0.09); padding: 5px 10px; border-radius: 999px; margin-bottom: 10px; }
+    .info-card h3 { margin: 4px 0 8px; font-size: 22px; color: var(--blue-dark); }
+    .info-card p { color: var(--text); line-height: 1.6; }
+    .doc-bento { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 24px; }
+    @media (max-width: 900px) { .doc-bento { grid-template-columns: 1fr; } }
+    .doc-card { background: #fff; border: 1px solid var(--border); border-radius: var(--radius-lg, 20px); padding: 24px; }
+    .doc-card h3 { font-size: 20px; margin: 4px 0 10px; color: var(--blue-dark); font-weight: 800; }
+    .doc-card .num { font-weight: 800; color: var(--blue-mid); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; }
+    .doc-card p { color: var(--text2); line-height: 1.6; }
+    .prep-bento { display: grid; grid-template-columns: repeat(6, 1fr); gap: 16px; margin-top: 24px; }
+    .prep-bento .s4 { grid-column: span 2; }
+    .prep-bento .s6 { grid-column: span 3; }
+    @media (max-width: 1080px) { .prep-bento { grid-template-columns: 1fr 1fr; } .prep-bento .s4, .prep-bento .s6 { grid-column: span 1; } }
+    @media (max-width: 700px) { .prep-bento { grid-template-columns: 1fr; } }
+    .prep-card { background: #fff; border: 1px solid var(--border); border-radius: var(--radius-lg, 20px); padding: 24px; }
+    .prep-card--blue { background: rgba(31,95,166,0.06); }
+    .prep-card--green { background: rgba(110,155,18,0.08); }
+    .prep-card .k { font-weight: 800; color: var(--blue-mid); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; }
+    .prep-card h3 { margin: 6px 0 10px; font-size: 22px; color: var(--blue-dark); font-weight: 800; }
+    .prep-card p { color: var(--text2); line-height: 1.6; }
+    .steps { display: grid; grid-template-columns: 1fr; gap: 14px; margin-top: 24px; }
+    .step { background: #fff; border: 1px solid var(--border); border-radius: var(--radius-lg, 20px); padding: 24px; }
+    .step .snum { font-weight: 800; color: var(--blue-mid); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; }
+    .step h3 { margin: 6px 0 8px; font-size: 22px; color: var(--blue-dark); font-weight: 800; }
+    .step p { color: var(--text2); line-height: 1.6; }
+    .step--urgent { border-color: var(--blue-mid); }
+    .snum--urgent { color: var(--warn); }
+    .art-wrap, .container { --warn: #c96a00; }
+    .warning-box { margin-top: 24px; border: 1px solid rgba(220,120,0,0.25); background: linear-gradient(180deg, rgba(255,190,120,0.14), rgba(255,190,120,0.06)); border-left: 4px solid var(--warn); border-radius: var(--radius-lg, 20px); padding: 24px; }
+    .warning-box--urgent { margin-top: 0; }
+    .warning-box .badge { display: inline-block; font-weight: 800; color: var(--warn); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; background: rgba(255,160,80,0.2); padding: 5px 10px; border-radius: 999px; margin-bottom: 8px; }
+    .warning-box__title { margin: 4px 0 8px; font-size: 22px; color: var(--blue-dark); font-weight: 800; line-height: 1.3; }
+    .warning-box p { color: var(--text); line-height: 1.6; }
+    .cta-row { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 16px; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 44px; padding: 0 18px; border-radius: 999px; text-decoration: none; font-weight: 700; font-size: 15px; }
+    .btn--primary { background: var(--green-cta); color: #fff; border: 1.5px solid var(--green-cta); }
+    .btn--primary:hover { background: var(--green-brand); border-color: var(--green-brand); }
+    .btn--outline { background: transparent; color: var(--blue-mid); border: 1.5px solid rgba(19,74,142,0.4); }
+    .btn--outline:hover { background: var(--bg-apple-solid); }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 32px; }
+    @media (max-width: 900px) { .contact-grid { grid-template-columns: 1fr; } }
+    .callout--green h3 { font-size: 24px; color: var(--green-cta); margin: 4px 0 12px; font-weight: 800; }
+    .callout--green ul { margin: 12px 0 12px 18px; color: var(--text); line-height: 1.7; }
+    .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 16px; }
+    @media (max-width: 900px) { .related-grid { grid-template-columns: 1fr; } }
+    .rel-card { background: #fff; border: 1px solid var(--border); border-radius: var(--radius-lg, 20px); padding: 24px; transition: border-color .15s, box-shadow .15s; }
+    .rel-card:hover { border-color: var(--blue-mid); box-shadow: 0 8px 22px rgba(0,0,0,0.06); }
+    .rel-card .rel-eyebrow { font-size: 11px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: var(--blue-mid); margin-bottom: 8px; }
+    .rel-card a { color: var(--blue-dark); text-decoration: none; font-weight: 700; font-size: 17px; line-height: 1.35; display: block; }
+    .rel-card a:hover { color: var(--blue-mid); }
+    .rel-card p { margin-top: 8px; color: var(--text2); font-size: 14px; line-height: 1.5; }
+    .rel-featured { background: linear-gradient(135deg, var(--blue-dark), var(--blue-mid)); color: #fff; border-radius: var(--radius-lg, 20px); padding: 32px; margin-bottom: 16px; }
+    .rel-featured .rel-eyebrow { color: rgba(255,255,255,0.7); font-size: 12px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; margin-bottom: 12px; }
+    .rel-featured h3 { margin: 0 0 16px; font-size: 24px; color: #fff; font-weight: 800; line-height: 1.25; }
+    .rel-featured a { color: #fff; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.4); padding-bottom: 2px; font-weight: 600; }
+    .rel-featured a:hover { border-bottom-color: #fff; }
+    .faq { max-width: 980px; margin: 32px auto 0; }
+    .author-block { background: #fff; border: 1px solid var(--border); border-radius: var(--radius-lg, 20px); padding: 28px; margin-top: 16px; }
+    .author-block p { margin: 6px 0; color: var(--text); line-height: 1.7; }
+  </style><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "TAGRA", "item": "https://tagra.app/ro/"}, {"@type": "ListItem", "position": 2, "name": "Articole", "item": "https://tagra.app/ro/articole/"}, {"@type": "ListItem", "position": 3, "name": "Tahograful pentru autoutilitare de 2,5–3,5 t este obligatoriu acum — cea mai rapidă cale de conformare", "item": "https://tagra.app/ro/articole/tahograf-autoutilitare-obligatie-iulie-2026/"}]}</script><style>#scroll-progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--green-brand),var(--blue-light));width:0%;z-index:9999;pointer-events:none;}.breadcrumb{font-size:14px;color:var(--text2);margin-bottom:18px;}.breadcrumb a{color:var(--text2);text-decoration:none;}.breadcrumb a:hover{color:var(--blue-mid);}.breadcrumb span{margin:0 5px;color:var(--border);}.art-hero{background:linear-gradient(180deg,var(--bg-apple) 0%,#fff 100%);padding:calc(var(--nav-h,64px) + 28px) 0 44px;}.art-meta{font-size:15px;color:var(--text2);padding-bottom:24px;border-bottom:1px solid var(--border);display:flex;gap:20px;flex-wrap:wrap;margin-bottom:8px;}</style><script>(function(){var bar=document.getElementById('scroll-progress');if(bar)window.addEventListener('scroll',function(){var t=document.documentElement.scrollTop||document.body.scrollTop;var h=document.documentElement.scrollHeight-document.documentElement.clientHeight;bar.style.width=(t/h*100)+'%';},{passive:true});})();</script><script>
+/* INTERSECTION OBSERVER – ANIMATIONS */
+if ('IntersectionObserver' in window) {
+  var io = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) {
+      if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.anim-up, .fly-left, .fly-right').forEach(function(el) { io.observe(el); });
+} else {
+  document.querySelectorAll('.anim-up, .fly-left, .fly-right').forEach(function(el) { el.classList.add('on'); });
+}
+</script>  <script defer src="/assets/js/nav.js?v=20260816b"></script>
+<noscript><style>.anim-up,.fly-left,.fly-right{opacity:1!important;transform:none!important}</style></noscript></head>
+<body class="art-page">
+<a class="skip-link" href="#main-content">Salt la conținut</a>
+<div aria-hidden="true" id="scroll-progress"></div>
+<nav aria-label="Navigare principală" class="site-nav" role="navigation">
+<div class="nav-inner">
+<a aria-label="TAGRA – Acasă" class="nav-logo" href="/ro/"><img alt="TAGRA" height="32" src="/assets/img/logo-light.svg?v=20260513zh" style="display:block;height:32px;width:auto;" width="140"/></a>
+<ul class="nav-links" id="nav-links">
+<li><a href="/ro/pentru-firme/">Pentru societăți</a></li>
+<li><a href="/ro/pentru-conducatori/">Pentru conducători auto</a></li>
+<li><a href="/ro/autoritati-de-control/">Control</a></li>
+<li><a aria-current="page" href="/ro/articole/">Articole</a></li><li><a href="/ro/manuale/">Manuale</a></li>
+<li><a href="/ro/intrebari-frecvente/">Întrebări frecvente</a></li>
+<li><a href="/ro/contact/">Contact</a></li>
+<li class="nav-cta-li"><a class="nav-cta" href="/ro/incercare-gratuita/?audience=fleet">Încercați gratuit timp de 30 de zile</a></li>
+</ul>
+<details class="nav-lang">
+<summary aria-label="Limbă: RO">RO</summary>
+<div class="nav-lang-menu" role="menu"><a href="/" hreflang="en">Engleză</a><a href="/de/ratgeber/tachograph-transporter-pflicht-juli-2026/" hreflang="de">Deutsch</a><a href="/pl/poradnik/tachograf-w-busach-obowiazek-lipiec-2026/" hreflang="pl">Polski</a><a href="/nl/artikelen/tachograafplicht-bestelbus-juli-2026/" hreflang="nl">Nederlands</a><a href="/fr/articles/tachygraphe-utilitaires-obligation-juillet-2026/" hreflang="fr">Français</a><a href="/it/articoli/tachigrafo-furgoni-obbligo-luglio-2026/" hreflang="it">Italiano</a><a href="/el/arthra/tachografos-van-ypochreosi-ioulios-2026/" hreflang="el">Ελληνικά</a><a href="/hu/cikkek/tachograf-furgon-kotelezettseg-2026/" hreflang="hu">Magyar</a><a href="/ro/articole/tahograf-autoutilitare-obligatie-iulie-2026/" hreflang="ro">Română</a><a href="https://www.tdt.cz/" hreflang="cs" rel="noopener" target="_blank">Čeština</a><a href="https://www.tdt.sk/" hreflang="sk" rel="noopener" target="_blank">Slovenčina</a></div>
+</details>
+<a class="nav-cta-mobile" href="/ro/incercare-gratuita/?audience=fleet">Încercați gratuit</a>
+<button aria-expanded="false" aria-label="Comutați meniul" class="nav-mobile-toggle" id="nav-toggle">
+<span></span><span></span><span></span>
+</button>
+</div>
+</nav>
+<header class="art-hero">
+<div class="art-wrap">
+<nav aria-label="Fir de navigare" class="breadcrumb"><a href="/ro/">TAGRA</a> <span>›</span> <a href="/ro/articole/">Articole</a> <span>›</span><span>Tahografe pentru autoutilitare</span></nav>
+<div class="eyebrow anim-up">În vigoare acum · Obligatoriu din 1 iulie 2026</div>
+<h1 class="art-title"><span class="grad">Tahograful pentru autoutilitare de 2,5–3,5 t este obligatoriu acum — cea mai rapidă cale de conformare</span></h1>
+<div class="art-meta"><span>Truck Data Technology</span><span>Actualizat în august 2026</span><span>Lectură de 12 min</span></div>
+<p class="hero-lede anim-up">
+<strong>Obligația este deja în vigoare.</strong> Din <strong>1 iulie 2026</strong>, autoutilitarele de <strong>2,5–3,5 t</strong> utilizate pentru <strong>transport internațional de mărfuri sau cabotaj</strong> în UE trebuie să fie echipate cu un <strong>tahograf inteligent versiunea 2 (G2v2)</strong> în temeiul Regulamentului (CE) nr. 561/2006, astfel cum a fost modificat prin Regulamentul (UE) 2020/1054. Termenul-limită a expirat — fiecare autoutilitară vizată, fără tahograf funcțional, este acum expusă la sancțiuni pentru <strong>„contravenție foarte gravă”</strong> la orice control rutier. Mai jos găsiți cea mai rapidă cale de a vă conforma, precum și informații despre cine este exceptat și cum vă puteți păstra datele în ordine (inclusiv note privind operațiunile UK-UE după Brexit).
+    </p>
+<div class="bento--hero">
+<div class="hero-card">
+<div class="eyebrow">În vigoare din</div>
+<div class="big">1 iul. 2026</div>
+<p>Obligația privind tahograful pentru autoutilitarele de 2,5–3,5 t utilizate în transport internațional și cabotaj este acum activă și aplicabilă.</p>
+</div>
+<div class="hero-card hero-card--blue">
+<div class="eyebrow">De la masa totală</div>
+<div class="big">2,5 t</div>
+<p>Se aplică vehiculelor sau combinațiilor de vehicule cu masa maximă admisibilă de 2,5–3,5 t atunci când sunt îndeplinite condițiile UE.</p>
+</div>
+<div class="hero-card">
+<div class="eyebrow">Tip de tahograf</div>
+<div class="big">G2v2</div>
+<p>Tahograf inteligent versiunea 2, obligatoriu în temeiul Regulamentului de punere în aplicare (UE) 2021/1228 al Comisiei.</p>
+</div>
+</div>
+</div>
+</header>
+<main id="main-content">
+<section class="band">
+<div class="container">
+<div class="cta-box">
+<h3>Obligația este deja în vigoare</h3>
+<p>Din 1 iulie 2026, autoutilitarele între 2,5 și 3,5 tone utilizate pentru curse internaționale necesită tahograf — iar datele trebuie descărcate, păstrate timp de un an și verificate. TAGRA efectuează descărcarea și evaluarea pentru întreaga dumneavoastră flotă.</p>
+<a class="cta-btn" href="/ro/incercare-gratuita/?audience=fleet&amp;src=vans">Încercați TAGRA gratuit timp de 30 de zile →</a>
+</div>
+</div>
+</section>
+<section class="band">
+<div class="container">
+<aside aria-label="Notificare urgentă privind conformitatea" class="warning-box warning-box--urgent anim-up">
+<div class="badge">În vigoare acum</div>
+<p class="warning-box__title">Termenul-limită a trecut — acționați acum pentru a evita amenzile</p>
+<p>Din <strong>1 iulie 2026</strong>, orice autoutilitară de 2,5–3,5 t care efectuează transport internațional sau cabotaj în UE fără un <strong>tahograf inteligent G2v2</strong> funcțional este deja expusă riscului. Lipsa unui tahograf, conducerea fără card de conducător auto sau nedescărcarea datelor constituie <strong>contravenții foarte grave</strong> în temeiul Directivei 2006/22/CE și pot ajunge la mii de euro pentru fiecare încălcare. Doi pași din planul de mai jos depind de terți și implică <strong>termene de așteptare de săptămâni</strong> — începeți-i astăzi.</p>
+<div class="cta-row">
+<a class="btn btn--primary" href="/ro/incercare-gratuita/?audience=fleet">Intrați în conformitate cu TAGRA — 30 de zile gratuite</a>
+<a class="btn btn--outline" href="#action-plan">Mergeți la planul de acțiune →</a>
+</div>
+</aside>
+</div>
+</section>
+<section class="band band--blue">
+<div class="container">
+<div class="eyebrow anim-up">Test rapid · Inspirat de ELA &amp; Ghid EUR-Lex</div>
+<h2 class="h2-grad anim-up">Am nevoie de tahograf?<br/>Aflați într-un minut</h2>
+<p style="max-width:760px; color:var(--text2); font-size:17px; line-height:1.6; margin-top:8px;">
+      Acest test în patru pași se bazează pe logica Regulamentului (CE) nr. 561/2006 și pe prezentarea generală a Autorității Europene a Muncii <em>„Tahografele în vehiculele comerciale ușoare din 2026”</em> (consultați <a href="https://www.ela.europa.eu/assets/lcv2026/index.html" rel="noopener" style="color:var(--blue-mid);" target="_blank">ghidul complet ELA</a>). Acesta este oferit numai în scop orientativ — evaluați întotdeauna fiecare caz individual și consultați orientările naționale din țările în care operați.
+    </p>
+<div aria-label="Instrument de decizie privind obligația de utilizare a tahografului" aria-live="polite" class="vq-root" id="vansQuiz" role="region"></div>
+</div>
+</section>
+<section class="band">
+<div class="container">
+<div class="eyebrow anim-up">Ce trebuie să faceți acum</div>
+<h2 class="h2-grad anim-up" id="action-plan">Plan de acțiune pentru conformitate: cinci pași</h2>
+<p style="max-width:760px; color:var(--text); line-height:1.65; margin-top:8px;">
+      Ordonat după urgență, nu după logică. <strong>Pașii 2 și 3 depind de terți</strong> — autoritățile naționale emitente de carduri și atelierele autorizate — și pot dura săptămâni, așadar începeți ambele demersuri în aceeași zi.
+    </p>
+<div class="steps">
+<div class="step anim-up">
+<div class="snum">Pasul 1 · Domeniul de aplicare</div>
+<h3>Confirmați care autoutilitare intră în domeniul de aplicare</h3>
+<p>Verificați documentele de înmatriculare, masa maximă autorizată și operațiunile efective. Obligația se aplică autoutilitarelor de <strong>2,5–3,5 t</strong> utilizate pentru transport internațional de mărfuri sau cabotaj — iar dacă tractați o remorcă, <strong>masa ansamblului</strong> este luată în considerare. Excludeți cazurile autentice de transport în cont propriu sau exclusiv național numai după verificarea excepțiilor de mai jos.</p>
+</div>
+<div class="step step--urgent anim-up">
+<div class="snum snum--urgent">Pasul 2 · Faceți acest lucru astăzi</div>
+<h3>Solicitați carduri de conducător auto și carduri ale societății</h3>
+<p>Eliberarea poate dura <strong>săptămâni</strong>. Fiecare persoană care poate conduce o autoutilitară vizată are nevoie de un <strong>card de conducător auto</strong> valabil emis de autoritatea națională emitentă; operatorul are nevoie de un <strong>card al societății</strong> pentru a autoriza descărcarea datelor, a securiza datele și a asocia vehiculele cu întreprinderea. Cardul al societății este necesar și înainte ca un atelier să poată bloca tahograful pentru întreprinderea dumneavoastră — depuneți cererea în aceeași zi și urmăriți datele de expirare.</p>
+</div>
+<div class="step step--urgent anim-up">
+<div class="snum snum--urgent">Pasul 3 · Faceți acest lucru astăzi</div>
+<h3>Programați-vă la un atelier pentru G2v2</h3>
+<p>Aveți nevoie de un <strong>tahograf inteligent versiunea 2</strong> în temeiul Regulamentului de punere în aplicare (UE) 2021/1228 al Comisiei — unitățile G1 și G2v1 nu sunt suficiente. Tahografele <strong>nu pot fi instalate de dumneavoastră</strong>: instalarea, activarea, sigilarea și calibrarea trebuie efectuate de un <strong>atelier autorizat de tahografe</strong> (Regulamentul de punere în aplicare (UE) 2016/799 al Comisiei, articolul 22). Capacitatea atelierelor este blocajul fizic, așadar rezervați un interval în paralel cu solicitările de carduri.</p>
+</div>
+<div class="step anim-up">
+<div class="snum">Pasul 4 · Date</div>
+<h3>Configurați descărcarea, evaluarea și arhivarea</h3>
+<p>Descărcați <strong>cardurile de conducător auto cel puțin o dată la fiecare 28 de zile</strong> și <strong>unitățile montate pe vehicul (UMV) cel puțin o dată la fiecare 90 de zile</strong>. Aveți nevoie de un cititor de carduri de conducător auto și de o cheie pentru descărcarea datelor din vehicul (sau de descărcare de la distanță, acolo unde este disponibilă), precum și de un responsabil desemnat pentru fiecare sarcină. Utilizați <a href="/ro/pentru-firme/" style="color:var(--green-cta); font-weight:600;">TAGRA for Fleet</a> sau serviciul nostru gestionat pentru a verifica contravențiile, a genera rapoarte și a arhiva <strong>arhivați</strong> datele timp de cel puțin un an — adesea 2–3 ani, în funcție de normele naționale.</p>
+</div>
+<div class="step anim-up">
+<div class="snum">Pasul 5 · Conducători auto</div>
+<h3>Pregătiți conducătorii auto pentru controalele rutiere</h3>
+<p>Instruiți fiecare conducător auto înainte de următoarea sa misiune transfrontalieră: introducerea cardului, <strong>introducerile manuale</strong> pentru perioadele petrecute în afara vehiculului și introducerile țării de început/sfârșit <strong>țării</strong>. Instruiți dispecerii să semnaleze fiecare misiune transfrontalieră cu autoutilitară, astfel încât nicio cursă acoperită să nu plece fără un card valabil și o unitate funcțională.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="band">
+<div class="container">
+<div class="eyebrow anim-up">Domeniu de aplicare</div>
+<h2 class="h2-grad anim-up">Cine este afectat — și cine nu este</h2>
+<div class="twocol">
+<div class="card anim-up">
+<h3>Afectați de noile norme</h3>
+<ul>
+<li>Operatorii de <strong>transport transfrontalier de mărfuri</strong> în UE, SEE și Elveția, utilizând autoutilitare cu masa maximă admisibilă de <strong>2,5–3,5 t</strong>.</li>
+<li>Operatorii care efectuează <strong>cabotaj</strong> cu astfel de autoutilitare într-un stat membru diferit de cel de stabilire.</li>
+<li>Vehiculele la care <strong>masa ansamblului (vehicul + remorcă)</strong> aduce masa totală la sau peste 2,5 t în cadrul definițiilor relevante.</li>
+<li>Întreprinderile care transportă mărfuri <strong>contra cost</strong> peste frontiere sau în cont propriu, atunci când conducătorul auto desfășoară activitatea de conducere cu titlu profesional.</li>
+<li>Pentru operatorii din Regatul Unit care conduc în UE după Brexit, normele UE se aplică pe segmentul din UE al călătoriilor; normele AETR se aplică pe segmentele transfrontaliere către Elveția/SEE, în funcție de înmatriculare.</li>
+</ul>
+</div>
+<div class="card card--blue anim-up">
+<h3>NU sunt afectate</h3>
+<ul>
+<li>Exclusiv <strong>operațiuni naționale</strong> într-o singură țară (fără segment transfrontalier și fără cabotaj), sub rezerva normelor naționale.</li>
+<li><strong>Utilizare privată, necomercială</strong> nelegată de o activitate economică.</li>
+<li><strong>În cont propriu</strong> deplasări în care conducerea nu este activitatea principală a conducătorului auto, în cadrul exceptării prevăzute la articolul 3 litera (h) din Regulamentul 561/2006.</li>
+<li>Vehicule cu masa admisibilă <strong>≤ 2,5 t</strong> și ansambluri care rămân sub prag.</li>
+<li>Vehicule construite pentru a transporta <strong>cel mult nouă persoane, inclusiv conducătorul auto</strong> atunci când sunt utilizate pentru transportul de persoane, în afara transportului de mărfuri.</li>
+</ul>
+</div>
+</div>
+<div class="info-card anim-up">
+<div class="badge">Exemplu practic</div>
+<h3>Traversez o frontieră pentru a ridica materiale pentru propria mea activitate</h3>
+<p>
+        Un meseriaș conduce o autoutilitară de 3,2 t din Țara A în Țara B pentru a ridica unelte și materiale pentru propria societate. Dacă aceasta este <em>transport în cont propriu</em> transport de mărfuri, iar activitatea principală a conducătorului auto nu este conducerea, exceptarea prevăzută la <strong>Articolul 3 litera (h) din Regulamentul (CE) nr. 561/2006</strong> se poate aplica. La un control rutier, autoritățile de control (ISCTR) se vor aștepta ca <strong>scopul</strong> călătoriei și <strong>legătura</strong> legăturile dintre conducătorul auto, activitatea comercială și bunuri trebuie să fie clare. Păstrați documentele la îndemână și fiți pregătiți să explicați succint deplasarea.
+      </p>
+<p style="margin-top:10px;">
+        Lecturi de referință: <a href="https://www.ela.europa.eu/" rel="noopener" style="color:var(--blue-mid);" target="_blank">Autoritatea Europeană a Muncii</a> și textul juridic consolidat pe <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A02006R0561-20240522" rel="noopener" style="color:var(--blue-mid);" target="_blank">EUR-Lex (Regulamentul 561/2006)</a>.
+      </p>
+</div>
+</div>
+</section>
+<section class="band band--gray">
+<div class="container">
+<div class="eyebrow anim-up">Practica autorităților de control</div>
+<h2 class="h2-grad anim-up">Transportul în cont propriu la un control rutier</h2>
+<p style="max-width:760px; color:var(--text); line-height:1.65; margin-top:8px;">
+      Dacă vă bazați pe scutirea pentru transportul în cont propriu, fiți pregătiți să o demonstrați rapid. Agenții de control sunt instruiți să întrebe cine deține bunurile, care este scopul deplasării, dacă transportul este auxiliar activității întreprinderii și dacă conducătorul auto este angajat într-un rol diferit de cel de conducător auto profesionist. Claritatea și documentația decid, de regulă, rezultatul.
+    </p>
+<div class="doc-bento">
+<div class="doc-card anim-up">
+<div class="num">Documentul nr. 1</div>
+<h3>Document pentru bunuri</h3>
+<p>Factură, aviz de livrare, chitanță sau confirmare de comandă care demonstrează că bunurile sunt pentru activitatea dumneavoastră — nu pentru transportul pentru terți.</p>
+</div>
+<div class="doc-card anim-up">
+<div class="num">Documentul nr. 2</div>
+<h3>Scopul deplasării</h3>
+<p>O notă internă scurtă pentru conducătorul auto: de unde, încotro și de ce (de exemplu, „colectarea pieselor pentru instalare la sediul clientului”).</p>
+</div>
+<div class="doc-card anim-up">
+<div class="num">Documentul nr. 3</div>
+<h3>Legătura dintre conducătorul auto și societate</h3>
+<p>Contractul de muncă sau o autorizație scrisă din partea societății, împreună cu documentele vehiculului (proprietate / leasing / închiriere) care corespund întreprinderii.</p>
+</div>
+</div>
+<p style="margin-top: 24px; color:var(--text); line-height:1.6; max-width:760px;">
+<strong>În practică:</strong> conducătorul auto trebuie să poată preciza pe scurt ce transportă, de unde, încotro și pentru cine. De regulă, acest lucru decide.
+    </p>
+</div>
+</section>
+<section class="band band--gray">
+<div class="container">
+<div class="eyebrow anim-up">Aveți nevoie de ajutor pentru a face acest lucru corect?</div>
+<h2 class="h2-grad anim-up">Discutați cu un specialist TAGRA</h2>
+<div class="contact-grid">
+<div class="card anim-up">
+<h3 style="margin-bottom:12px;">Contact direct</h3>
+<p style="color:var(--text); line-height:1.65;">
+          Specialiștii noștri au îndrumat sute de operatori în implementarea tahografelor. Vă putem ajuta să evaluați vehiculele, să planificați instalările, să configurați descărcarea datelor și să instruiți personalul — indiferent dacă aveți două autoutilitare sau două sute.
+        </p>
+<p style="margin-top:16px; line-height:1.8;">
+<strong>Telefon:</strong> <a href="tel:+420739005345" style="color:var(--blue-mid);">+420 739 005 345</a> · <a href="tel:+420739544322" style="color:var(--blue-mid);">+420 739 544 322</a><br/>
+<strong>E-mail:</strong> <a href="mailto:sales@tagra.app" style="color:var(--blue-mid);">sales@tagra.app</a>
+</p>
+<div class="cta-row">
+<a class="btn btn--primary" href="/ro/incercare-gratuita/">Încercați TAGRA gratuit timp de 30 de zile</a>
+<a class="btn btn--outline" href="/ro/contact/">Formular de contact →</a>
+</div>
+</div>
+<div class="callout--green anim-up">
+<div class="eyebrow" style="color:var(--green-cta);">Serviciu gestionat</div>
+<h3>Nu doriți să realizați singuri evaluarea?</h3>
+<ul>
+<li><strong>Mai puțină administrare</strong> — descărcăm și evaluăm datele pentru dumneavoastră</li>
+<li><strong>Urmărirea termenelor</strong> — monitorizăm regulile de 28/90 de zile, astfel încât să nu fie nevoie să o faceți dumneavoastră</li>
+<li><strong>Pregătit pentru audit</strong> rapoarte și arhive securizate, disponibile la cerere</li>
+<li>Compatibil cu telematica DKV LIVE pentru descărcare de la distanță</li>
+</ul>
+<p style="margin-top:16px; line-height:1.8;">
+<strong>Telefon:</strong> <a href="tel:+420739005345" style="color:var(--green-cta);">+420 739 005 345</a><br/>
+<strong>E-mail:</strong> <a href="mailto:sales@tagra.app" style="color:var(--green-cta);">sales@tagra.app</a>
+</p>
+<div class="cta-row">
+<a class="btn btn--outline" href="/ro/integrari/dkv-live/" style="border-color:var(--green-cta); color:var(--green-cta);">Integrare DKV LIVE →</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="band">
+<div class="container">
+<div class="cta-box">
+<h3>Obligația este deja în vigoare</h3>
+<p>Din 1 iulie 2026, autoutilitarele între 2,5 și 3,5 tone utilizate pentru curse internaționale necesită tahograf — iar datele trebuie descărcate, păstrate timp de un an și verificate. TAGRA efectuează descărcarea și evaluarea pentru întreaga dumneavoastră flotă.</p>
+<a class="cta-btn" href="/ro/incercare-gratuita/?audience=fleet&amp;src=vans">Încercați TAGRA gratuit timp de 30 de zile →</a>
+</div>
+</div>
+</section>
+<section class="band">
+<div class="container">
+<div class="eyebrow anim-up">Continuați să vă informați</div>
+<h2 class="h2-grad anim-up">Lecturi suplimentare</h2>
+<div class="rel-featured">
+<div class="rel-eyebrow">Ghid complet</div>
+<h3>Tahograf digital: cum să descărcați, evaluați și arhivați corect datele</h3>
+<p style="color:rgba(255,255,255,0.85); margin-bottom:16px; line-height:1.6;">Termenele de 28/90 de zile, ce trebuie să faceți, procedura corectă și ce verifică efectiv inspectorii în timpul controalelor rutiere și al auditurilor la întreprinderi.</p>
+<a href="/ro/articole/descarcare-evaluare-arhivare-date-tahograf/">Citiți ghidul complet →</a>
+</div>
+<h3 style="margin: 32px 0 12px; font-size: 14px; color: var(--text2); text-transform: uppercase; letter-spacing: .1em; font-weight: 700;">Surse oficiale</h3>
+<div class="related-grid">
+<div class="rel-card anim-up">
+<div class="rel-eyebrow">Oficial · ELA (UE)</div>
+<a href="https://www.ela.europa.eu/assets/lcv2026/index.html" rel="noopener" target="_blank">Tahografe în vehicule comerciale ușoare din 2026</a>
+<p>Prezentare generală a Autorității Europene a Muncii privind obligația extinsă referitoare la tahografe pentru vehicule comerciale ușoare în întreaga UE.</p>
+</div>
+<div class="rel-card anim-up">
+<div class="rel-eyebrow">Oficial · EUR-Lex</div>
+<a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=legissum%3A4382208" rel="noopener" target="_blank">Regulamentul (CE) nr. 561/2006 — rezumat</a>
+<p>Duratele de conducere, pauzele și perioadele de repaus — baza utilizării tahografului în întreaga UE.</p>
+</div>
+<div class="rel-card anim-up">
+<div class="rel-eyebrow">Oficial · UK DVSA</div>
+<a href="https://www.gov.uk/government/collections/drivers-hours-rules-and-regulations" rel="noopener" target="_blank">Regulile privind orele de lucru ale conducătorilor auto și tahografele</a>
+<p>Ghid oficial din Regatul Unit elaborat de Driver and Vehicle Standards Agency, relevant pentru operațiunile dintre Regatul Unit și UE.</p>
+</div>
+</div>
+<h3 style="margin: 32px 0 12px; font-size: 14px; color: var(--text2); text-transform: uppercase; letter-spacing: .1em; font-weight: 700;">Mai multe de la TAGRA</h3>
+<div class="related-grid">
+<div class="rel-card anim-up">
+<div class="rel-eyebrow">Prezentare generală</div>
+<a href="/ro/articole/cine-trebuie-sa-evalueze-datele-tahograf-2026/">Cine trebuie să evalueze datele tahografului din 2026</a>
+<p>Responsabilități și modele practice pentru operatorii de autoutilitare, camioane și autocare din întreaga UE.</p>
+</div>
+<div class="rel-card anim-up">
+<div class="rel-eyebrow">Referință</div>
+<a href="/ro/articole/simboluri-tahograf-digital/">Simboluri tahograf &amp; coduri de eroare</a>
+<p>Înțelegeți pictogramele, codurile de defecțiune și mesajele frecvente ale unităților VDO, Stoneridge, Actia și EFAS.</p>
+</div>
+<div class="rel-card anim-up">
+<div class="rel-eyebrow">Integrare</div>
+<a href="/ro/integrari/dkv-live/">Integrarea DKV LIVE cu TAGRA</a>
+<p>Conectați telematica pentru descărcări de la distanță, flux de lucru automatizat și informații operaționale utile.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="band band--blue">
+<div class="container">
+<div class="eyebrow anim-up">Întrebări frecvente</div>
+<h2 class="h2-grad anim-up">Întrebări frecvente</h2>
+<div class="faq">
+<details>
+<summary>Cine intră sub incidența obligației de utilizare a tahografului începând cu 1 iulie 2026?</summary>
+<div class="faq-a">
+          Începând cu 1 iulie 2026, <strong>vehiculele comerciale ușoare (LCV) de 2,5–3,5 t</strong> utilizate pentru <strong>transportul internațional de mărfuri</strong> sau <strong>cabotaj</strong> în UE intră sub incidența obligației de utilizare a tahografului introdusă prin Regulamentul (UE) 2020/1054, care modifică Regulamentul (CE) nr. 561/2006. Un <strong>tahograf inteligent G2v2</strong>, cardurile de conducător auto/cardurile societății și gestionarea structurată a datelor sunt toate obligatorii. Vehiculele de peste 3,5 t intră deja în domeniul de aplicare în prezent.
+        </div>
+</details>
+<details>
+<summary>Are nevoie o autoutilitară de tahograf dacă circulă doar pe teritoriul național?</summary>
+<div class="faq-a">
+          În general, <strong>nu</strong>. Dacă operațiunile dumneavoastră sunt strict naționale, fără segment transfrontalier și fără cabotaj, obligația UE privind transportul transfrontalier nu se aplică. Verificați întotdeauna <strong>naționale</strong> normelor, deoarece unele state membre impun cerințe suplimentare în cazuri specifice (de exemplu, mărfuri periculoase, contracte publice).
+        </div>
+</details>
+<details>
+<summary>Se aplică obligația dacă autoutilitara are sub 2,5 t, dar ansamblul depășește această limită?</summary>
+<div class="faq-a">
+<strong>Da</strong>, în majoritatea cazurilor. Autoritățile de control (ISCTR) iau în considerare <strong>masa ansamblului</strong> (vehicul + remorcă). Dacă atașați o remorcă, iar masa maximă admisibilă a ansamblului depășește pragul și efectuați transport internațional contra cost, normele se aplică. Evaluați combinațiile și rutele dumneavoastră obișnuite.
+        </div>
+</details>
+<details>
+<summary>De ce am nevoie în plus față de instalarea tahografului?</summary>
+<div class="faq-a">
+          Pe lângă dispozitivul propriu-zis, aveți nevoie de <strong>carduri de conducător auto</strong>, de un <strong>card al societății</strong>, de un proces pentru <strong>descărcări regulate</strong> (28/90 de zile), <strong>evaluarea</strong> contravențiilor și <strong>arhivare</strong> pe perioada prevăzută de lege. Instruirea conducătorilor auto și responsabilitățile interne clare sunt esențiale. <a href="/ro/pentru-firme/" style="color:var(--blue-mid);">TAGRA for Fleet</a> acoperă descărcările, evaluarea și raportarea într-un singur pachet.
+        </div>
+</details>
+<details>
+<summary>Cât de des trebuie descărcate datele?</summary>
+<div class="faq-a">
+          Descărcați <strong>datele cardului de conducător auto cel puțin o dată la 28 de zile</strong> și <strong>datele unității montate pe vehicul (UMV) cel puțin o dată la 90 de zile</strong>. Mulți operatori de transport rutier descarcă datele mai frecvent pentru a reduce riscurile și a simplifica evidențele. Prin descărcare de la distanță (de exemplu, DKV LIVE), acest lucru se realizează automat, fără intervenția conducătorului auto.
+        </div>
+</details>
+<details>
+<summary>Ce carduri sunt necesare?</summary>
+<div class="faq-a">
+          Fiecare conducător auto are nevoie de un <strong>card de conducător auto</strong>. Operatorul de transport rutier are nevoie de un <strong>card al societății</strong> pentru autorizarea și descărcarea securizată a datelor vehiculului. Există carduri de atelier și carduri de control, însă acestea sunt emise atelierelor autorizate și autorităților de control (ISCTR), nu operatorilor.
+        </div>
+</details>
+<details>
+<summary>Nu sunt transportator — trec ocazional o frontieră pentru propria mea activitate. Am nevoie de tahograf?</summary>
+<div class="faq-a">
+          Factorii decisivi sunt <strong>masa admisibilă</strong> (inclusiv orice remorcă) și <strong>scopul</strong> al transportului. Dacă nu este transport contra cost și conducerea nu reprezintă profesia dumneavoastră principală, <strong>exceptarea pentru transportul în cont propriu</strong> prevăzută la articolul 3 litera (h) din Regulamentul 561/2006 se aplică, de regulă. Vă recomandăm să evaluați fiecare situație individual — <a href="/ro/contact/" style="color:var(--blue-mid);">contactați-ne</a> pentru o verificare rapidă.
+        </div>
+</details>
+<details>
+<summary>Cum se dovedește în practică transportul în cont propriu?</summary>
+<div class="faq-a">
+          Nu există un formular universal unic. Cel mai frecvent: un <strong>document pentru marfă</strong> (factură, aviz de livrare, comandă), o <strong>scurtă notă privind scopul deplasării</strong> (de la–la și motivul), precum și <strong>legătura dintre conducătorul auto, societate și vehicul</strong> (autorizație, raport de muncă, documentația vehiculului).
+        </div>
+</details>
+<details>
+<summary>Există o exceptare pentru meseriași / artizani?</summary>
+<div class="faq-a">
+          Da — așa-numita <strong>exceptare pentru meseriași</strong> în temeiul articolului 3 litera (aa) din Regulamentul 561/2006. Dacă conducerea nu reprezintă activitatea dumneavoastră principală și transportați numai <em>materiale, echipamente sau utilaje pentru utilizarea proprie a conducătorului auto în cursul activității sale profesionale</em>, tahograful nu este, de regulă, necesar. Transpunerea națională poate adăuga detalii — verificați orientările din țara în care desfășurați activitatea.
+        </div>
+</details>
+<details>
+<summary>Ce este cabotajul?</summary>
+<div class="faq-a">
+<strong>Cabotajul</strong> este transportul de mărfuri pe teritoriul unui stat membru al UE de către un transportator stabilit într-un alt stat membru al UE. <strong>Exemplu:</strong> o autoutilitară cehă descarcă mărfuri în Hamburg și apoi preia un nou transport din Hamburg către Berlin. Ambele curse fac parte din operațiuni de cabotaj și declanșează obligația privind tahograful începând cu 1 iulie 2026 pentru autoutilitare de 2,5–3,5 t.
+        </div>
+</details>
+<details>
+<summary>Ce se întâmplă dacă aveți doar o autoutilitară închiriată? Cine se ocupă de tahograf?</summary>
+<div class="faq-a">
+          Dacă închiriați o autoutilitară de peste 2,5 t pentru transport comercial internațional, aceasta trebuie să fie echipată cu tahograf.  <strong>responsabilitatea pentru descărcarea corectă a datelor și respectarea cerințelor vă revine dumneavoastră, în calitate de operator de transport rutier</strong>, nu societății de închirieri. Nu uitați să autentificați tahograful cu cardul societății înainte de călătorie.
+        </div>
+</details>
+<details>
+<summary>Puteți instala singur tahograful sau aveți nevoie de un atelier?</summary>
+<div class="faq-a">
+          Nu  <strong>puteți</strong>  instala, activa sau calibra singur un tahograf. Instalarea, activarea, sigilarea și verificarea periodică (calibrarea) trebuie efectuate exclusiv de un <strong>atelier autorizat de tahografe</strong> utilizând instrumente securizate și carduri de atelier, în conformitate cu Regulamentul de punere în aplicare (UE) 2016/799 al Comisiei.
+        </div>
+</details>
+<details>
+<summary>Ce sancțiuni se aplică dacă nu aveți tahograf după 1 iulie 2026?</summary>
+<div class="faq-a">
+          Lipsa tahografului, conducerea fără card sau nedescărcarea datelor sunt clasificate ca <strong>contravenții foarte grave</strong> la nivelul UE, în temeiul Directivei 2006/22/CE și al cadrului privind cele mai grave contravenții (MSI). Sancțiunile diferă de la un stat membru la altul și pot ajunge la <strong>mii de euro</strong> pentru fiecare încălcare, cu posibila imobilizare a vehiculului în cadrul controlului rutier și, în cazul încălcărilor repetate, pierderea bunei reputații a operatorului de transport rutier.
+        </div>
+</details>
+<details>
+<summary>Ce se schimbă pentru operatorii din Regatul Unit după Brexit?</summary>
+<div class="faq-a">
+          Vehiculele înmatriculate în Regatul Unit care operează în UE rămân supuse normelor UE pentru partea din UE a călătoriilor lor (normele AETR aplicându-se în anumite situații transfrontaliere). Pentru vehicule comerciale ușoare de 2,5–3,5 t care efectuează transport internațional între Regatul Unit și UE, ar trebui să planificați aplicarea aceluiași regim G2v2 / card de conducător auto / descărcare la 28-90 de zile ca operatorii din UE, începând cu 1 iulie 2026. Operațiunile interne din Regatul Unit urmează normele GB Domestic în cadrul DVSA — consultați <a href="https://www.gov.uk/government/collections/drivers-hours-rules-and-regulations" rel="noopener" style="color:var(--blue-mid);" target="_blank">ghidul UK DVSA</a>.
+        </div>
+</details>
+</div>
+</div>
+</section>
+<section class="band band--gray"><div class="container">
+<div class="eyebrow anim-up">După piață</div>
+<h2 class="h2-grad anim-up">Se aplică în zona în care operați?</h2>
+<div class="twocol">
+<div class="info-card anim-up"><h3>UE &amp; Operatori din SEE</h3><p>Autoutilitare de <strong>2,5–3,5 t</strong> utilizate pentru <strong>transport internațional de mărfuri contra cost sau în regim de cabotaj</strong>, necesită un tahograf inteligent versiunea 2 începând cu 1 iulie 2026, în temeiul Regulamentului (CE) nr. 561/2006, astfel cum a fost modificat prin Regulamentul (UE) 2020/1054. Transportul exclusiv național în cadrul unui singur stat membru nu intră sub incidența obligației. Controlul și sancțiunile sunt de competență națională.</p></div>
+<div class="info-card anim-up"><h3>Operatori din Regatul Unit</h3><p>Același prag de 2,5 t se aplică pentru <strong>curse contra cost între Regatul Unit și UE</strong> — confirmat de DVSA în temeiul Acordului comercial și de cooperare UE–Regatul Unit. Autoutilitarele care nu trec niciodată o frontieră rămân sub incidența <strong>normelor privind timpul de lucru pentru conducătorii auto din Marea Britanie&#8217; reguli privind orele de conducere</strong> și nu necesită tahograf. Transportul în cont propriu poate fi exceptat atunci când conducerea nu reprezintă activitatea principală a conducătorului auto.&#8217;În cursele internaționale, conducătorii auto trebuie să prezinte <strong>56 days</strong> de date. <a href="/articles/tachograph-rules-uk-dvsa-operator-licence/">Ghid complet pentru operatorii din Regatul Unit → <span class="en-badge">(în engleză)</span></a></p></div>
+</div>
+<div class="warning-box anim-up"><p class="warning-box__title">Pe ambele piețe, licența reprezintă expunerea reală</p><p>Amenzile diferă — un depozit aplicat în cadrul unui control rutier în UE poate ajunge la 8.000 EUR pentru manipulare frauduloasă, iar sancțiunile fixe graduale din Regatul Unit variază de la aproximativ 50 GBP la peste 300 GBP pentru fiecare contravenție. Ceea ce duce la încetarea activității întreprinderilor în ambele cazuri este licența de operare: descărcările lipsă repetate și intervalele neexplicate sunt aspectele asupra cărora acționează autoritățile de reglementare, motiv pentru care operatorii evaluează datele, nu doar le stochează.</p></div>
+</div></section><section class="band">
+<div class="container">
+<div class="eyebrow anim-up">Autor &amp; asistență</div>
+<h2 class="h2-grad anim-up">Truck Data Technology, s.r.o.</h2>
+<div class="author-block">
+<p><strong>Birou &amp; asistență:</strong> Republica Cehă — oferim asistență operatorilor din întreaga UE și din Regatul Unit.</p>
+<p><strong>Telefon:</strong> <a href="tel:+420739005345" style="color:var(--blue-mid);">+420 739 005 345</a> · <a href="tel:+420739544322" style="color:var(--blue-mid);">+420 739 544 322</a></p>
+<p><strong>E-mail:</strong> <a href="mailto:sales@tagra.app" style="color:var(--blue-mid);">sales@tagra.app</a></p>
+<p><strong>Web:</strong> <a href="https://www.tdt.cz" rel="noopener" style="color:var(--blue-mid);" target="_blank">www.tdt.cz</a></p>
+<p style="margin-top:12px; color:var(--text2); font-size:14px;">Articol publicat la 17 martie 2026 · Actualizat la 12 august 2026</p>
+</div>
+</div>
+</section>
+</main>
+<footer class="site-footer" role="contentinfo">
+<div class="footer-inner">
+<div>
+<div class="footer-logo"><img alt="TAGRA" height="20" src="/assets/img/logo-dark.svg?v=20260513zh" width="88" loading="lazy"/></div>
+<p class="footer-desc">Software profesional de analiză a tahografelor. Descărcare date de pe cardul de conducător auto, analiză a tahografelor digitale, durată de conducere în UE și Directiva privind timpul de lucru pentru vehicule grele de marfă. Dezvoltat de Truck Data Technology, s.r.o.</p>
+</div>
+<div class="footer-col">
+<h2 class="footer-col-title">Produs</h2>
+<ul>
+<li><a href="/ro/pentru-firme/">Pentru operatorii de transport rutier</a></li>
+<li><a href="/ro/pentru-conducatori/">Pentru conducătorii auto profesioniști</a></li>
+<li><a href="/ro/autoritati-de-control/">Pentru autoritățile de control (ISCTR)</a></li>
+<li><a href="/ro/cum-functioneaza/">Cum funcționează</a></li>
+<li><a href="/ro/pentru-cine/">Pentru cine</a></li>
+<li><a href="/ro/intrebari-frecvente/">Întrebări frecvente</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h2 class="footer-col-title">Resurse</h2>
+<ul>
+<li><a href="/ro/articole/">Articole</a></li><li><a href="/ro/manuale/">Manuale</a></li>
+<li><a href="/ro/articole/simboluri-tahograf-digital/">Simboluri tahograf</a></li>
+<li><a href="/ro/integrari/dkv-live/">DKV LIVE®</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h2 class="footer-col-title">Societate</h2>
+<ul>
+<li><a href="/ro/contact/">Contact</a></li>
+<li><a href="https://www.tdt.cz" rel="noopener" target="_blank">Truck Data Technology</a></li>
+<li><a href="/ro/">Engleză</a></li><li><a href="/de/">Deutsch</a></li><li><a href="/pl/">Polski</a></li><li><a href="/el/">Ελληνικά</a></li><li><a href="/hu/">Magyar</a></li><li><a href="/it/">Italiano</a></li><li><a href="https://www.tdt.cz/" rel="noopener" target="_blank">Čeština</a></li><li><a href="https://www.tdt.sk/" rel="noopener" target="_blank">Slovenčina</a></li></ul>
+</div>
+</div>
+<div class="footer-bottom">
+<span>© 2026 Truck Data Technology, s.r.o. Toate drepturile rezervate.</span>
+<span><a href="/ro/contact/">Contact</a> · <a href="https://www.tdt.cz" rel="noopener" target="_blank">tdt.cz</a> · <a href="/ro/confidentialitate/">Confidențialitate &amp; cookie-uri</a></span>
+</div>
+</footer>
+<div aria-label="Înscriere rapidă pentru perioada de probă" class="sticky-cta" id="stickyCta" role="complementary">
+<div class="sticky-cta-inner">
+<span class="sticky-cta-text">Autoutilitarele de 2,5–3,5 t necesită tahograf din iulie 2026. TAGRA gestionează datele.</span>
+<a class="sticky-cta-btn" href="/ro/incercare-gratuita/?audience=fleet&amp;src=vans">Încercați TAGRA gratuit timp de 30 de zile →</a>
+<button aria-label="Închideți" class="sticky-cta-close" id="stickyCtaClose">×</button>
+</div>
+</div>
+<script>
+/* STICKY CTA BAR */
+(function(){
+  var bar = document.getElementById('stickyCta');
+  if(!bar) return;
+  var KEY = 'tmx-sticky-cta-dismissed';
+  var dismissed = false;
+  try { dismissed = localStorage.getItem(KEY) === '1'; } catch(e) {}
+  if (dismissed) return;
+  function check(){
+    var top = document.documentElement.scrollTop || document.body.scrollTop;
+    var nearBottom = (window.innerHeight + top) >= (document.documentElement.scrollHeight - 80);
+    if (top > 700 && !nearBottom) bar.classList.add('is-visible');
+    else bar.classList.remove('is-visible');
+  }
+  window.addEventListener('scroll', check, { passive: true });
+  check();
+  var closeBtn = document.getElementById('stickyCtaClose');
+  if (closeBtn) closeBtn.addEventListener('click', function(){
+    bar.classList.remove('is-visible');
+    try { localStorage.setItem(KEY, '1'); } catch(e) {}
+  });
+})();
+</script>
+<script>
+(function(){
+  const root = document.getElementById('vansQuiz');
+  if (!root) return;
+
+  const NODES = {
+    'start': {
+      step: 1, label: 'Vehicle weight',
+      question: 'Care este masa totală a vehiculului sau a ansamblului dumneavoastră?',
+      hint: 'Verificați masa maximă admisă din certificatul dumneavoastră de înmatriculare — includeți orice remorcă.',
+      options: [
+        { id: 'r-light', label: 'Up to 2.5 t' },
+        { id: 'q-trans-25', label: '2.5 – 3.5 t' },
+        { id: 'r-over-35', label: 'Above 3.5 t' }
+      ],
+      threeCol: true
+    },
+    'q-trans-25': {
+      step: 2, label: 'Type of transport',
+      question: 'Efectuați transport internațional de mărfuri cu vehiculul?',
+      hint: 'Aceasta include transportul transfrontalier între UE/SEE/Regatul Unit și cabotajul (operațiuni interne efectuate într-o altă țară).',
+      options: [
+        { id: 'r-domestic-25', label: 'No, domestic only' },
+        { id: 'q-purpose-25', label: 'Yes, cross-border or cabotage' }
+      ]
+    },
+    'q-purpose-25': {
+      step: 3, label: 'Purpose of transport',
+      question: 'Care este scopul transportului transfrontalier?',
+      hint: 'Transport în contul altuia = transportul de mărfuri pentru un client, contra cost. Transport în cont propriu = transportul propriilor mărfuri pentru propria activitate.',
+      options: [
+        { id: 'r-yes-25', label: "Hire or reward (carrying others' goods)" },
+        { id: 'q-driver-main-25', label: 'Own account (own goods, own company)' }
+      ]
+    },
+    'q-driver-main-25': {
+      step: 4, label: "Driver's profession",
+      question: "Conducerea auto este profesia principală a conducătorului auto?",
+      hint: 'Dacă conducătorul auto lucrează în principal ca șofer profesionist, scutirea pentru transportul în cont propriu NU se aplică. Dacă activitatea de conducere este secundară (de exemplu, meseriaș, tehnician, proprietar de afacere), scutirea se poate aplica.',
+      options: [
+        { id: 'r-yes-25', label: 'Yes, professional driver' },
+        { id: 'r-own-account-25', label: 'Nu, conducerea auto este o activitate secundară' }
+      ]
+    },
+    'r-light': {
+      kind: 'no',
+      title: 'Tachograph generally not required',
+      desc: 'Vehiculele și ansamblurile cu masa admisă <strong>de până la 2,5 t</strong> nu intră, în general, în domeniul de aplicare al Regulamentului (CE) nr. 561/2006 — nici după iulie 2026.',
+      bullets: [
+        'Aveți grijă la <strong>masa ansamblului</strong> — dacă atașați o remorcă și depășiți 2,5 t, intrați în categoria 2,5–3,5 t.',
+        'Pentru certitudine absolută, verificați situația dumneavoastră specifică în surse oficiale sau cu un specialist.'
+      ],
+      ctas: [
+        { href: 'https://www.ela.europa.eu/assets/lcv2026/index.html', label: 'Read ELA guidance', ext: true, outline: true }
+      ]
+    },
+    'r-domestic-25': {
+      kind: 'no',
+      title: 'Tachograph generally not required',
+      desc: 'If you operate a 2.5–3.5 t van <strong>strictly domestically</strong> (no cross-border leg and no cabotage), the new July 2026 obligation does not apply. The change targets international commercial transport and cabotage within the EU.',
+      bullets: [
+        'Dacă începeți operațiuni transfrontaliere, obligația se aplică automat.',
+        'Other operator duties (working time, goods documentation) still apply under national rules.'
+      ],
+      ctas: [
+        { href: 'https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=legissum%3A4382208', label: 'Read EUR-Lex summary', ext: true, outline: true }
+      ]
+    },
+    'q-purpose-25': null, // safety; will be redefined above
+    'r-own-account-25': {
+      kind: 'maybe',
+      title: 'Scutirea pentru transportul în cont propriu se aplică probabil',
+      desc: 'If the transport is <strong>not for hire or reward</strong> and <strong>driving is not the main profession</strong> of the driver, the exemption in <strong>Article 3(h) of Regulation 561/2006</strong> usually applies and a tachograph is generally not required. <strong>However:</strong> the specific situation and documentation matter.',
+      bullets: [
+        'Aveți în vehicul: <strong>documentul pentru mărfuri</strong> (factură, aviz de însoțire a mărfii), o <strong>notă scurtă privind scopul deplasării</strong> și dovada legăturii <strong>conducător auto–societate–vehicul</strong>.',
+        'Fiți pregătit să vi se solicite de către autorități de control (ISCTR) să demonstrați că nu este vorba despre transport în contul altuia.',
+        'În caz de dubiu, solicitați o evaluare individuală de la un specialist.'
+      ],
+      ctas: [
+        { href: '/contact/', label: 'Talk to a TAGRA expert', primary: true },
+        { href: 'https://www.ela.europa.eu/assets/lcv2026/index.html', label: 'Read ELA guidance', ext: true, outline: true }
+      ]
+    },
+    'r-yes-25': {
+      kind: 'yes',
+      title: 'Tahograful este obligatoriu (începând cu 1 iulie 2026)',
+      desc: 'You operate a 2.5–3.5 t van for <strong>international goods transport for hire or reward</strong> or <strong>cabotage</strong> within the EU. From <strong>1 July 2026</strong> you must have a smart tachograph version 2 (G2v2).',
+      bullets: [
+        '<strong>Installation:</strong> G2v2 tachograph at an approved tachograph workshop.',
+        '<strong>Carduri:</strong> card de conducător auto pentru fiecare conducător auto + card al societății pentru operatorul de transport rutier.',
+        '<strong>Descărcări de date:</strong> cardurile de conducător auto cel puțin o dată la 28 de zile, unitățile montate pe vehicul (UMV) cel puțin o dată la 90 de zile.',
+        '<strong>Evaluare și arhivare:</strong> prin software (de exemplu, TAGRA) sau printr-un serviciu. Arhivați cel puțin 1 an.'
+      ],
+      ctas: [
+        { href: '/try/', label: 'Try TAGRA free for 30 days', primary: true },
+        { href: '/integrations/dkv-live/', label: 'See DKV LIVE integration', outline: true }
+      ]
+    },
+    'r-over-35': {
+      kind: 'yes',
+      title: 'Tachograph already required today',
+      desc: 'For vehicles <strong>above 3.5 t</strong> in goods transport, the tachograph obligation under Regulation (EC) No 561/2006 applies <strong>today</strong> — not just from July 2026. New vehicles must be fitted with the smart tachograph version 2 (G2v2).',
+      bullets: [
+        '<strong>Carduri:</strong> card de conducător auto pentru fiecare conducător auto + card al societății pentru operatorul de transport rutier.',
+        '<strong>Descărcări de date:</strong> cardurile de conducător auto la fiecare 28 de zile, unitățile montate pe vehicul (UMV) la fiecare 90 de zile.',
+        '<strong>Evaluare și arhivare:</strong> prin software (de exemplu, TAGRA) sau printr-un serviciu. Arhivați cel puțin 1 an.',
+        'There are <strong>taxative exemptions</strong> under Articles 3 and 13 of Reg 561/2006 (agricultural, forestry, fire/rescue vehicles, tractors up to 40 km/h, etc.) — verify any applicable exemption with national authorities.'
+      ],
+      ctas: [
+        { href: '/try/', label: 'Try TAGRA free for 30 days', primary: true },
+        { href: 'https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A02006R0561-20240522', label: 'List of exemptions (EUR-Lex)', ext: true, outline: true }
+      ]
+    }
+  };
+  // Re-add q-purpose-25 properly
+  NODES['q-purpose-25'] = {
+    step: 3, label: 'Purpose of transport',
+    question: 'Care este scopul transportului transfrontalier?',
+    hint: 'Transport în contul altuia = transportul de mărfuri pentru un client, contra cost. Transport în cont propriu = transportul propriilor mărfuri pentru propria activitate.',
+    options: [
+      { id: 'r-yes-25', label: "Hire or reward (carrying others' goods)" },
+      { id: 'q-driver-main-25', label: 'Own account (own goods, own company)' }
+    ]
+  };
+
+  function escapeHtml(s){ return String(s).replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m])); }
+
+  let state = { nodeId: 'start', path: [] };
+
+  function progressDots(step){
+    let html = '<div class="vq-progress" aria-hidden="true">';
+    for(let i=1;i<=4;i++){
+      const cls = i < step ? 'vq-dot is-done' : (i===step ? 'vq-dot is-active' : 'vq-dot');
+      html += '<span class="'+cls+'"></span>';
+    }
+    html += '</div>';
+    return html;
+  }
+
+  function renderQuestion(node){
+    const optCols = node.threeCol ? 'vq-options vq-3col' : 'vq-options';
+    let html = '<div class="vq-stage">';
+    html += '<div class="vq-header">';
+    html += progressDots(node.step);
+    html += '<div class="vq-step">Step '+node.step+' · '+escapeHtml(node.label)+'</div>';
+    html += '</div>';
+    html += '<h3 class="vq-question">'+escapeHtml(node.question)+'</h3>';
+    if(node.hint) html += '<div class="vq-hint">'+escapeHtml(node.hint)+'</div>';
+    html += '<div class="'+optCols+'">';
+    node.options.forEach(o => {
+      html += '<button class="vq-opt" data-next="'+escapeHtml(o.id)+'">'+escapeHtml(o.label)+'</button>';
+    });
+    html += '</div>';
+    html += '<div class="vq-controls">';
+    html += '<button class="vq-btn-ctrl" data-act="back"'+(state.path.length===0?' disabled':'')+'>← Înapoi</button>';
+    html += '<button class="vq-btn-ctrl" data-act="reset"'+(state.path.length===0?' disabled':'')+'>↻ Start over</button>';
+    html += '</div>';
+    html += '</div>';
+    root.innerHTML = html;
+    bind();
+  }
+
+  function renderResult(nodeId){
+    const res = NODES[nodeId];
+    const kindClass = 'vq-result vq-result--'+res.kind;
+    let badge;
+    if(res.kind === 'no') badge = '✓ Tachograph not required';
+    else if(res.kind === 'yes') badge = '⚠ Tachograph needed';
+    else badge = 'ⓘ Depends on situation';
+    
+    let html = '<div class="vq-stage">';
+    html += '<div class="'+kindClass+'">';
+    html += '<div class="vq-result-badge">'+escapeHtml(badge)+'</div>';
+    html += '<h3 class="vq-result-title">'+escapeHtml(res.title)+'</h3>';
+    html += '<div class="vq-result-desc">'+res.desc+'</div>';
+    if(res.bullets && res.bullets.length){
+      html += '<ul class="vq-result-list">';
+      res.bullets.forEach(b => { html += '<li>'+b+'</li>'; });
+      html += '</ul>';
+    }
+    if(res.ctas && res.ctas.length){
+      html += '<div class="vq-result-cta">';
+      res.ctas.forEach(c => {
+        const cls = c.outline ? 'btn btn--outline' : 'btn btn--primary';
+        const attrs = c.ext ? ' target="_blank" rel="noopener"' : '';
+        html += '<a class="'+cls+'" href="'+escapeHtml(c.href)+'"'+attrs+'>'+escapeHtml(c.label)+'</a>';
+      });
+      html += '</div>';
+    }
+    html += '</div>';
+    if(state.path.length){
+      html += '<div class="vq-path"><strong>Parcursul dumneavoastră:</strong> '+state.path.map(p => escapeHtml(p.choice)).join(' → ')+'</div>';
+    }
+    html += '<div class="vq-controls">';
+    html += '<button class="vq-btn-ctrl" data-act="back">← Înapoi</button>';
+    html += '<button class="vq-btn-ctrl" data-act="reset">↻ Start over</button>';
+    html += '</div>';
+    html += '</div>';
+    root.innerHTML = html;
+    bind();
+  }
+
+  function go(nextId, label){
+    state.path.push({ nodeId: state.nodeId, choice: label });
+    state.nodeId = nextId;
+    const node = NODES[nextId];
+    if(!node) return;
+    if(node.kind) renderResult(nextId);
+    else renderQuestion(node);
+  }
+
+  function back(){
+    if(state.path.length === 0) return;
+    const last = state.path.pop();
+    state.nodeId = last.nodeId;
+    const node = NODES[state.nodeId];
+    if(node.kind) renderResult(state.nodeId);
+    else renderQuestion(node);
+  }
+
+  function reset(){
+    state = { nodeId: 'start', path: [] };
+    renderQuestion(NODES['start']);
+  }
+
+  function bind(){
+    root.querySelectorAll('.vq-opt').forEach(btn => {
+      btn.addEventListener('click', function(){
+        go(this.getAttribute('data-next'), this.textContent.trim());
+      });
+    });
+    root.querySelectorAll('.vq-btn-ctrl').forEach(b => {
+      b.addEventListener('click', function(){
+        const act = this.getAttribute('data-act');
+        if(act === 'back') back();
+        else if(act === 'reset') reset();
+      });
+    });
+  }
+
+  renderQuestion(NODES['start']);
+})();
+</script>
+<style>
+  /* Quiz inline styles since not in components.css */
+  .vq-root { max-width: 980px; margin: 32px 0 0; background: #fff; border-radius: var(--radius-lg, 20px); padding: 32px; box-shadow: 0 16px 48px rgba(19,74,142,0.08); border: 1px solid var(--border); }
+  @media(max-width:700px){ .vq-root { padding: 24px 20px; } }
+  .vq-header { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; flex-wrap: wrap; }
+  .vq-progress { display: inline-flex; gap: 6px; align-items: center; }
+  .vq-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--border); transition: background .25s, transform .25s; }
+  .vq-dot.is-done { background: var(--green-brand); }
+  .vq-dot.is-active { background: var(--blue-mid); transform: scale(1.3); }
+  .vq-step { margin-left: auto; color: var(--text2); font-size: 13px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; }
+  .vq-question { font-size: 26px; line-height: 1.3; font-weight: 800; color: var(--blue-dark); margin: 8px 0 8px; }
+  @media(max-width:700px){ .vq-question { font-size: 21px; } }
+  .vq-hint { font-size: 15px; color: var(--text2); margin-bottom: 24px; line-height: 1.55; }
+  .vq-options { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 20px; }
+  .vq-options.vq-3col { grid-template-columns: 1fr 1fr 1fr; }
+  @media(max-width:720px){ .vq-options, .vq-options.vq-3col { grid-template-columns: 1fr; } }
+  .vq-opt { background: #fff; color: var(--blue-dark); border: 2px solid var(--border); border-radius: 14px; padding: 18px 20px; font-size: 16px; font-weight: 700; cursor: pointer; text-align: left; line-height: 1.4; min-height: 60px; transition: all .15s; }
+  .vq-opt:hover { border-color: var(--green-brand); background: rgba(110,155,18,0.04); transform: translateY(-1px); box-shadow: 0 6px 14px rgba(110,155,18,0.1); }
+  .vq-controls { display: flex; gap: 10px; padding-top: 16px; border-top: 1px solid var(--border); }
+  .vq-btn-ctrl { background: transparent; color: var(--text2); border: 1px solid var(--border); border-radius: 999px; padding: 8px 16px; font-size: 13px; font-weight: 600; cursor: pointer; transition: all .15s; }
+  .vq-btn-ctrl:hover:not(:disabled) { border-color: var(--blue-mid); color: var(--blue-mid); background: var(--bg-apple-solid); }
+  .vq-btn-ctrl:disabled { opacity: 0.35; cursor: not-allowed; }
+  .vq-result { border-radius: 16px; padding: 28px; margin-bottom: 20px; border: 2px solid; }
+  .vq-result--no { background: linear-gradient(180deg, rgba(110,155,18,0.07), #fff); border-color: var(--green-brand); }
+  .vq-result--yes { background: linear-gradient(180deg, rgba(217,48,37,0.05), #fff); border-color: #d93025; }
+  .vq-result--maybe { background: linear-gradient(180deg, var(--bg-apple-solid), #fff); border-color: var(--blue-mid); }
+  .vq-result-badge { display: inline-flex; align-items: center; padding: 6px 14px; border-radius: 999px; font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: .06em; color: #fff; margin-bottom: 12px; }
+  .vq-result--no .vq-result-badge { background: var(--green-brand); }
+  .vq-result--yes .vq-result-badge { background: #d93025; }
+  .vq-result--maybe .vq-result-badge { background: var(--blue-mid); }
+  .vq-result-title { font-size: 28px; line-height: 1.2; font-weight: 800; color: var(--blue-dark); margin: 6px 0 10px; }
+  @media(max-width:700px){ .vq-result-title { font-size: 22px; } }
+  .vq-result-desc { font-size: 16px; line-height: 1.6; color: var(--text); margin-bottom: 12px; }
+  .vq-result-list { margin: 12px 0 0 20px; }
+  .vq-result-list li { font-size: 15px; line-height: 1.55; margin: 6px 0; color: var(--text); }
+  .vq-result-cta { margin-top: 20px; display: flex; gap: 12px; flex-wrap: wrap; }
+  .vq-path { background: rgba(0,0,0,0.03); border-radius: 12px; padding: 12px 16px; font-size: 13px; color: var(--text2); line-height: 1.5; margin-bottom: 12px; }
+  .vq-path strong { color: var(--blue-dark); }
+  .vq-stage { animation: vqfade 0.25s ease; }
+  @keyframes vqfade { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://tagra.app/ro/articole/tahograf-autoutilitare-obligatie-iulie-2026/"}, "headline": "Tahograf pentru autoutilitare de 2,5–3,5 t: norme, excepții și amenzi în 2026", "description": "Începând cu termenul-limită de 1 iulie 2026, autoutilitarele de 2,5–3,5 t utilizate pentru transport internațional sau cabotaj trebuie să fie echipate cu un tahograf inteligent G2v2. Aflați cine este exceptat, normele, obligațiile de descărcare și amenzile.", "image": "https://tagra.app/assets/img/hero-poster.jpg", "author": {"@type": "Organization", "name": "Truck Data Technology, s.r.o.", "url": "https://www.tdt.cz"}, "publisher": {"@type": "Organization", "name": "TAGRA", "logo": {"@type": "ImageObject", "url": "https://tagra.app/assets/img/logo-dark.svg"}}, "datePublished": "2026-03-17T09:00:00+02:00", "dateModified": "2026-08-12T09:00:00+02:00", "inLanguage": "ro"}</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "Cine intră sub incidența obligației de utilizare a tahografului începând cu 1 iulie 2026?", "acceptedAnswer": { "@type": "Answer", "text": "Începând cu 1 iulie 2026, vehiculele comerciale ușoare de 2,5–3,5 t utilizate pentru transportul internațional de mărfuri sau cabotaj în cadrul UE intră sub incidența obligației privind tahograful, introdusă prin Regulamentul (UE) 2020/1054 de modificare a Regulamentului (CE) nr. 561/2006. Sunt necesare un tahograf inteligent G2v2, carduri de conducător auto/carduri ale societății și gestionarea structurată a datelor." } },
+    { "@type": "Question", "name": "Are nevoie o autoutilitară de tahograf dacă circulă doar pe teritoriul național?", "acceptedAnswer": { "@type": "Answer", "text": "În general, nu. Dacă operațiunile sunt strict naționale, fără segment transfrontalier și fără cabotaj, obligația UE privind transportul transfrontalier nu se aplică. Verificați normele naționale — unele state membre pot impune cerințe suplimentare." } },
+    { "@type": "Question", "name": "Se aplică obligația dacă autoutilitara are sub 2,5 t, dar ansamblul depășește această limită?", "acceptedAnswer": { "@type": "Answer", "text": "Da, în majoritatea cazurilor. Autoritățile de control (ISCTR) iau în considerare masa combinată (vehicul + remorcă). Dacă masa totală maximă autorizată depășește pragul și efectuați transport internațional contra cost, se aplică normele." } },
+    { "@type": "Question", "name": "De ce am nevoie în plus față de instalarea tahografului?", "acceptedAnswer": { "@type": "Answer", "text": "Aveți nevoie de carduri de conducător auto, de un card al societății, de un proces pentru descărcări regulate (28/90 de zile), de evaluarea contravențiilor și de arhivare pentru perioada legală. Instruirea conducătorilor auto și responsabilitățile interne clare sunt esențiale." } },
+    { "@type": "Question", "name": "Cât de des trebuie descărcate datele?", "acceptedAnswer": { "@type": "Answer", "text": "Descărcați datele de pe cardul de conducător auto cel puțin o dată la 28 de zile și datele din unitatea montată pe vehicul (UMV) cel puțin o dată la 90 de zile. Mulți operatori de transport rutier efectuează descărcarea mai frecvent pentru a reduce riscurile." } },
+    { "@type": "Question", "name": "Ce carduri sunt necesare?", "acceptedAnswer": { "@type": "Answer", "text": "Fiecare conducător auto are nevoie de un card de conducător auto personal. Operatorul de transport rutier are nevoie de un card al societății pentru autorizare și descărcarea securizată a datelor vehiculului." } },
+    { "@type": "Question", "name": "Nu sunt transportator. Trec ocazional o frontieră pentru propria mea activitate. Am nevoie de tahograf?", "acceptedAnswer": { "@type": "Answer", "text": "Factorii decisivi sunt masa maximă autorizată (inclusiv orice remorcă) și scopul transportului. Dacă transportul nu este efectuat contra cost, iar conducerea nu este profesia dumneavoastră principală, se aplică de regulă excepția pentru transportul în cont propriu prevăzută la articolul 3 litera (h) din Regulamentul 561/2006." } },
+    { "@type": "Question", "name": "Cum se dovedește în practică transportul în cont propriu?", "acceptedAnswer": { "@type": "Answer", "text": "Cel mai frecvent: un document pentru marfă (factură, aviz de însoțire a mărfii, comandă), o notă scurtă privind scopul călătoriei (de unde până unde și de ce) și dovada legăturii dintre conducătorul auto, societate și vehicul (autorizație, contract de muncă, documentația vehiculului)." } },
+    { "@type": "Question", "name": "Există o exceptare pentru meseriași / artizani?", "acceptedAnswer": { "@type": "Answer", "text": "Da, excepția pentru meseriași prevăzută la articolul 3 litera (aa) din Regulamentul 561/2006. Dacă conducerea nu este activitatea dumneavoastră principală și transportați numai materiale, instrumente sau echipamente necesare profesiei dumneavoastră, tahograful nu este de regulă necesar." } },
+    { "@type": "Question", "name": "Ce este cabotajul?", "acceptedAnswer": { "@type": "Answer", "text": "Cabotajul este transportul de mărfuri în interiorul unui stat membru UE, efectuat de un transportator stabilit într-un alt stat membru UE. Exemplu: o autoutilitară cehă descarcă mărfuri în Hamburg, apoi preia un nou transport din Hamburg către Berlin." } },
+    { "@type": "Question", "name": "Ce se întâmplă dacă aveți doar o autoutilitară închiriată? Cine se ocupă de tahograf?", "acceptedAnswer": { "@type": "Answer", "text": "Dacă închiriați o autoutilitară de peste 2,5 t pentru transport comercial internațional, aceasta trebuie să fie echipată cu tahograf. Responsabilitatea pentru descărcarea corectă a datelor și respectarea normelor vă revine dumneavoastră, în calitate de operator de transport rutier, nu societății de închirieri." } },
+    { "@type": "Question", "name": "Puteți instala singur tahograful sau aveți nevoie de un atelier?", "acceptedAnswer": { "@type": "Answer", "text": "Nu puteți instala, activa sau calibra singur un tahograf. Aceste activități trebuie efectuate exclusiv de un atelier autorizat pentru tahografe, în conformitate cu Regulamentul de punere în aplicare (UE) 2016/799 al Comisiei." } },
+    { "@type": "Question", "name": "Ce sancțiuni se aplică dacă nu am tahograf după 1 iulie 2026?", "acceptedAnswer": { "@type": "Answer", "text": "Lipsa tahografului, conducerea fără card sau neefectuarea descărcării datelor sunt clasificate drept contravenții foarte grave în temeiul Directivei 2006/22/CE. Sancțiunile diferă de la un stat membru la altul și pot ajunge la mii de euro pentru fiecare încălcare." } }
+  ]
+}
+</script>
+</body>
+</html>

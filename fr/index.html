@@ -44,13 +44,17 @@
     function lc(){var l=(document.documentElement.getAttribute('lang')||'en').toLowerCase().split('-')[0];
       var m={cz:'cs',cs:'cs',sk:'sk',de:'de',pl:'pl',gr:'el',el:'el',hu:'hu',en:'en'};return m[l]||'en';}
     var T={
-      hu:{t:'Analitikai sütiket használunk (Google Analytics, Microsoft Clarity, Smartsupp), hogy megértsük a webhely használatát. Csak az Ön hozzájárulásával töltődnek be.',a:'Elfogadom',r:'Elutasítom',p:'Adatvédelem és sütik'},
+      hu:{t:'Analitikai s\u00fctiket haszn\u00e1lunk (Google Analytics, Microsoft Clarity, Smartsupp), hogy meg\u00e9rts\u00fck a webhely haszn\u00e1lat\u00e1t. Csak az \u00d6n hozz\u00e1j\u00e1rul\u00e1s\u00e1val t\u00f6lt\u0151dnek be.',a:'Elfogadom',r:'Elutas\u00edtom',p:'Adatv\u00e9delem \u00e9s s\u00fctik'},
+      ro:{t:'Utilizăm module cookie de analiză (Google Analytics, Microsoft Clarity, Smartsupp) pentru a înțelege modul de utilizare a site-ului. Se încarcă doar cu consimțământul dumneavoastră.',a:'Accept',r:'Refuz',p:'Confidențialitate și cookie-uri'},
+      nl:{t:'We gebruiken analytische cookies (Google Analytics, Microsoft Clarity, Smartsupp) om het gebruik van de site te begrijpen. Ze laden alleen met uw toestemming.',a:'Accepteren',r:'Weigeren',p:'Privacy en cookies'},
+      fr:{t:'Nous utilisons des cookies analytiques (Google Analytics, Microsoft Clarity, Smartsupp) pour comprendre l’utilisation du site. Ils ne se chargent qu’avec votre consentement.',a:'Accepter',r:'Refuser',p:'Confidentialité et cookies'},
+      it:{t:'Utilizziamo cookie analitici (Google Analytics, Microsoft Clarity, Smartsupp) per capire l’utilizzo del sito. Si caricano solo con il Suo consenso.',a:'Accetta',r:'Rifiuta',p:'Privacy e cookie'},
       en:{t:'We use analytics cookies (Google Analytics, Microsoft Clarity, Smartsupp) to understand site usage. They load only with your consent.',a:'Accept',r:'Reject',p:'Privacy &amp; cookies'},
-      cs:{t:'Používáme analytické cookies (Google Analytics, Microsoft Clarity, Smartsupp) k pochopení používání webu. Načtou se jen s vaším souhlasem.',a:'Přijmout',r:'Odmítnout',p:'Soukromí a cookies'},
-      sk:{t:'Používame analytické cookies (Google Analytics, Microsoft Clarity, Smartsupp) na pochopenie používania webu. Načítajú sa len s vaším súhlasom.',a:'Prijať',r:'Odmietnuť',p:'Súkromie a cookies'},
+      cs:{t:'Pou\u017e\u00edv\u00e1me analytick\u00e9 cookies (Google Analytics, Microsoft Clarity, Smartsupp) k pochopen\u00ed pou\u017e\u00edv\u00e1n\u00ed webu. Na\u010dtou se jen s va\u0161\u00edm souhlasem.',a:'P\u0159ijmout',r:'Odm\u00edtnout',p:'Soukrom\u00ed a cookies'},
+      sk:{t:'Pou\u017e\u00edvame analytick\u00e9 cookies (Google Analytics, Microsoft Clarity, Smartsupp) na pochopenie pou\u017e\u00edvania webu. Na\u010d\u00edtaj\u00fa sa len s va\u0161\u00edm s\u00fahlasom.',a:'Prija\u0165',r:'Odmietnu\u0165',p:'S\u00fakromie a cookies'},
       de:{t:'Wir verwenden Analyse-Cookies (Google Analytics, Microsoft Clarity, Smartsupp), um die Nutzung der Website zu verstehen. Sie werden nur mit Ihrer Einwilligung geladen.',a:'Akzeptieren',r:'Ablehnen',p:'Datenschutz &amp; Cookies'},
-      pl:{t:'Używamy plików cookie do analityki (Google Analytics, Microsoft Clarity, Smartsupp), aby zrozumieć korzystanie z witryny. Ładują się tylko za Twoją zgodą.',a:'Akceptuj',r:'Odrzuć',p:'Prywatność i cookies'},
-      el:{t:'Χρησιμοποιούμε cookies ανάλυσης (Google Analytics, Microsoft Clarity, Smartsupp) για να κατανοήσουμε τη χρήση. Φορτώνονται μόνο με τη συγκατάθεσή σας.',a:'Αποδοχή',r:'Απόρριψη',p:'Απόρρητο &amp; cookies'}
+      pl:{t:'U\u017cywamy plik\u00f3w cookie do analityki (Google Analytics, Microsoft Clarity, Smartsupp), aby zrozumie\u0107 korzystanie z witryny. \u0141aduj\u0105 si\u0119 tylko za Twoj\u0105 zgod\u0105.',a:'Akceptuj',r:'Odrzu\u0107',p:'Prywatno\u015b\u0107 i cookies'},
+      el:{t:'\u03a7\u03c1\u03b7\u03c3\u03b9\u03bc\u03bf\u03c0\u03bf\u03b9\u03bf\u03cd\u03bc\u03b5 cookies \u03b1\u03bd\u03ac\u03bb\u03c5\u03c3\u03b7\u03c2 (Google Analytics, Microsoft Clarity, Smartsupp) \u03b3\u03b9\u03b1 \u03bd\u03b1 \u03ba\u03b1\u03c4\u03b1\u03bd\u03bf\u03ae\u03c3\u03bf\u03c5\u03bc\u03b5 \u03c4\u03b7 \u03c7\u03c1\u03ae\u03c3\u03b7. \u03a6\u03bf\u03c1\u03c4\u03ce\u03bd\u03bf\u03bd\u03c4\u03b1\u03b9 \u03bc\u03cc\u03bd\u03bf \u03bc\u03b5 \u03c4\u03b7 \u03c3\u03c5\u03b3\u03ba\u03b1\u03c4\u03ac\u03b8\u03b5\u03c3\u03ae \u03c3\u03b1\u03c2.',a:'\u0391\u03c0\u03bf\u03b4\u03bf\u03c7\u03ae',r:'\u0391\u03c0\u03cc\u03c1\u03c1\u03b9\u03c8\u03b7',p:'\u0391\u03c0\u03cc\u03c1\u03c1\u03b7\u03c4\u03bf &amp; cookies'}
     };
     function loadClarity(){if(!CL||window.__tmxCl)return;window.__tmxCl=1;
       (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
@@ -63,7 +67,7 @@
     if(saved==='granted'){grant();return;} if(saved==='denied'){return;}
     function show(){var tx=T[lc()]||T.en;
       var b=document.createElement('div');b.className='tmx-cc';b.setAttribute('role','dialog');b.setAttribute('aria-live','polite');
-      b.innerHTML='<div class="tmx-cc__txt">'+tx.t+' <a href="/privacy/">'+tx.p+'</a></div>'+
+      b.innerHTML='<div class="tmx-cc__txt">'+tx.t+' <a href="/fr/confidentialite/">'+tx.p+'</a></div>'+
         '<div class="tmx-cc__btns"><button type="button" class="tmx-cc__b tmx-cc__b--no">'+tx.r+'</button>'+
         '<button type="button" class="tmx-cc__b tmx-cc__b--yes">'+tx.a+'</button></div>';
       document.body.appendChild(b);
@@ -75,20 +79,22 @@
 <!-- TMX-ANALYTICS END -->
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>TAGRA – Logiciel d'analyse du chronotachygraphe</title>
-<meta content="TAGRA aide les entreprises de transport et les conducteurs professionnels à respecter la réglementation européenne sur le chronotachygraphe. Évaluation, archivage et reporting. Essai gratuit de 30 jours." name="description"/>
+<title>TAGRA – logiciel d’analyse des tachygraphes</title>
+<meta content="TAGRA aide les entreprises de transport et les conducteurs professionnels à respecter les règles de l’UE relatives aux tachygraphes : évaluation et archivage." name="description"/>
 <meta content="#0b2c4a" name="theme-color"/>
 <link href="/manifest.json" rel="manifest"/>
 <link href="https://tagra.app/fr/" rel="canonical"/>
-<meta content="TAGRA – Logiciel d'analyse du chronotachygraphe" property="og:title"/>
-<meta content="TAGRA aide les entreprises de transport et les conducteurs professionnels à respecter la réglementation européenne sur le chronotachygraphe. Essai gratuit de 30 jours." property="og:description"/>
+<link href="https://tagra.app/de/" hreflang="de" rel="alternate"/><link href="https://tagra.app/el/" hreflang="el" rel="alternate"/><link href="https://tagra.app/" hreflang="en" rel="alternate"/><link href="https://tagra.app/fr/" hreflang="fr" rel="alternate"/><link href="https://tagra.app/hu/" hreflang="hu" rel="alternate"/><link href="https://tagra.app/it/" hreflang="it" rel="alternate"/><link href="https://tagra.app/nl/" hreflang="nl" rel="alternate"/><link href="https://tagra.app/pl/" hreflang="pl" rel="alternate"/>
+<link href="https://tagra.app/ro/" hreflang="ro" rel="alternate"/><link href="https://tagra.app/" hreflang="x-default" rel="alternate"/>
+<meta content="TAGRA – logiciel de gestion des données des tachygraphes" property="og:title"/>
+<meta content="TAGRA aide les entreprises de transport et les conducteurs professionnels à respecter les règlements de l’UE relatifs aux tachygraphes. Essai gratuit de 30 jours." property="og:description"/>
 <meta content="https://cdn.truckmall.cz/images/0/ff1952bcc480ca3d/1/tagra-1-vyhodnoceni-dat-z-tachografu.webp" property="og:image"/>
-<meta content="Logiciel d'analyse du chronotachygraphe TAGRA – rapport de conformité des conducteurs et véhicules" property="og:image:alt"/>
+<meta content="Logiciel d’analyse des tachygraphes TAGRA – rapport de conformité des conducteurs et des véhicules" property="og:image:alt"/>
 <meta content="website" property="og:type"/>
 <meta content="TAGRA" property="og:site_name"/>
-<meta content="fr_FR" property="og:locale"/>
 <meta content="https://cdn.truckmall.cz/images/0/ff1952bcc480ca3d/1/tagra-1-vyhodnoceni-dat-z-tachografu.webp" name="twitter:image"/>
-<meta content="Logiciel d'analyse du chronotachygraphe TAGRA – rapport de conformité des conducteurs et véhicules" name="twitter:image:alt"/>
+<meta content="Logiciel d’analyse des tachygraphes TAGRA – rapport de conformité des conducteurs et des véhicules" name="twitter:image:alt"/>
+<meta content="fr_FR" property="og:locale"/>
 <meta content="https://tagra.app/fr/" property="og:url"/>
 <meta content="summary_large_image" name="twitter:card"/>
 <style>
@@ -349,26 +355,26 @@
     }
 
     /* ─── BENTO GRID (reused from /fleet/) ─────────────────────────── */
-
+    
     .bc {
       background: var(--bg-white); border-radius: var(--radius);
       padding: 32px; border: 1px solid var(--border);
       position: relative; overflow: hidden;
     }
-
-
-
-
-
-
-
+    
+    
+    
+    
+    
+    
+    
     .bc-eyebrow {
       font-size: 12px; font-weight: 700; letter-spacing: .08em;
       text-transform: uppercase; color: var(--blue-mid);
       margin-bottom: 8px; display: block;
     }
-
-
+    
+    
     .bignum {
       font-size: 110px; font-weight: 800; line-height: 1;
       letter-spacing: -.04em; color: rgba(19,74,142,.06);
@@ -437,13 +443,13 @@
       mask-image: linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%);
       -webkit-mask-image: linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%);
     }
-
+    
     .rev-rail::-webkit-scrollbar { display: none; }
     .rev-rail:active { cursor: grabbing; }
-
-
-
-
+    
+    
+    
+    
 
     /* ─── PRICING TEASER ───────────────────────────────────────────── */
     .pricing-teaser {
@@ -480,22 +486,22 @@
 
     /* ─── FAQ TEASER ───────────────────────────────────────────────── */
     .faq-block { max-width: 760px; margin: 44px auto 0; }
-
-
+    
+    
     .faq-block summary {
       list-style: none; cursor: pointer;
       padding: 18px 44px 18px 0;
       font-weight: 700; font-size: 18px; line-height: 1.4;
       position: relative; color: var(--text-strong);
     }
-
+    
     .faq-block summary::after {
       content: '+'; position: absolute; right: 4px; top: 50%;
       transform: translateY(-50%); font-size: 28px; font-weight: 300;
       color: var(--green-brand); transition: transform .2s;
     }
-
-
+    
+    
     .faq-cta { text-align: center; margin-top: 28px; }
     .faq-cta a {
       font-size: 16px; font-weight: 600; color: var(--blue-mid);
@@ -505,10 +511,10 @@
     .faq-cta a:hover { color: var(--blue-dark); border-color: var(--blue-dark); }
 
     /* ─── BUTTONS (reuse from picker, but in case missing) ─────────── */
-
+    
     .btn-cta:hover { background: var(--green-brand); transform: scale(1.02); color: #fff !important; }
-
-
+    
+    
 
 
     /* ─── PICKER MOBILE CAROUSEL ─────────────────────────────────────
@@ -602,7 +608,7 @@
         outline-offset: 3px;
       }
     }
-
+    
     /* ─── STICKY CTA BAR ───────────────────────────────────────── */
     .sticky-cta{position:fixed;left:0;right:0;bottom:0;z-index:850;transform:translateY(110%);transition:transform .35s ease;background:linear-gradient(120deg,var(--blue-dark),var(--blue-mid) 70%);box-shadow:0 -4px 24px rgba(0,0,0,.14);}
     .sticky-cta.is-visible{transform:translateY(0);}
@@ -644,11 +650,11 @@
 {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "@id": "https://tagra.app/#organization",
+  "@id": "https://tagra.app/fr/#organization",
   "name": "Truck Data Technology, s.r.o.",
   "alternateName": "TDT",
   "url": "https://www.tdt.cz",
-  "logo": "https://tagra.app/assets/img/logo-light.svg?v=20260513zh",
+  "logo": "https://tagra.app/fr/assets/img/logo-light.svg?v=20260513zh",
   "foundingDate": "2000",
   "sameAs": [
     "https://www.linkedin.com/company/truckmall/",
@@ -676,11 +682,11 @@
 {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  "@id": "https://tagra.app/#website",
+  "@id": "https://tagra.app/fr/#website",
   "url": "https://tagra.app/fr/",
   "name": "TAGRA",
-  "description": "Logiciel professionnel de gestion des données du chronotachygraphe",
-  "publisher": { "@id": "https://tagra.app/#organization" },
+  "description": "Logiciel professionnel de gestion des données des tachygraphes",
+  "publisher": { "@id": "https://tagra.app/fr/#organization" },
   "inLanguage": "fr"
 }
 </script>
@@ -688,11 +694,11 @@
 {
   "@context": "https://schema.org",
   "@type": "Service",
-  "name": "TAGRA pour les opérateurs de flotte",
-  "url": "https://tagra.app/fleet/",
-  "provider": { "@id": "https://tagra.app/#organization" },
+  "name": "Comment acheter TAGRA Trucker après l'essai ?",
+  "url": "https://tagra.app/fr/fleet/",
+  "provider": { "@id": "https://tagra.app/fr/#organization" },
   "serviceType": "Tachograph data management software",
-  "description": "Évaluation, archivage et reporting pour les opérateurs de flotte, de 1 à un nombre illimité de véhicules. Conforme au règlement (CE) n° 561/2006 et à la directive sur le temps de travail.",
+  "description": "Évaluation, archivage et rapports pour les gestionnaires de flotte de 1 à un nombre illimité de véhicules. Conforme au règlement (CE) 561/2006 et à la directive sur le temps de travail.",
   "audience": {
     "@type": "BusinessAudience",
     "audienceType": "Fleet operators and transport companies"
@@ -709,10 +715,10 @@
   "@context": "https://schema.org",
   "@type": "Service",
   "name": "TAGRA Trucker pour les conducteurs professionnels",
-  "url": "https://tagra.app/fr/conducteurs/",
-  "provider": { "@id": "https://tagra.app/#organization" },
+  "url": "https://tagra.app/fr/driver/",
+  "provider": { "@id": "https://tagra.app/fr/#organization" },
   "serviceType": "Personal tachograph data tool",
-  "description": "Outil personnel destiné aux conducteurs professionnels pour télécharger les données de leur carte conducteur et vérifier les temps de conduite et les périodes de repos. Fonctionne avec un lecteur de carte USB standard.",
+  "description": "Outil personnel permettant aux conducteurs professionnels de télécharger leur propre carte de conducteur et de vérifier leurs temps de conduite et temps de repos. Fonctionne avec un lecteur de cartes USB standard.",
   "audience": {
     "@type": "Audience",
     "audienceType": "Professional truck and bus drivers"
@@ -724,10 +730,10 @@
   "@context": "https://schema.org",
   "@type": "Service",
   "name": "TAGRA Control pour les autorités de contrôle",
-  "url": "https://tagra.app/enforcement/",
-  "provider": { "@id": "https://tagra.app/#organization" },
+  "url": "https://tagra.app/fr/enforcement/",
+  "provider": { "@id": "https://tagra.app/fr/#organization" },
   "serviceType": "Inspection and enforcement software",
-  "description": "Logiciel de contrôle routier et en entreprise pour la police, les douanes, les inspections du travail et les ministères des Transports. La norme de facto en Europe centrale.",
+  "description": "Logiciel d’inspection routière et en entreprise pour la police, les douanes, les inspections du travail et les ministères des transports. Le standard de fait en Europe centrale.",
   "audience": {
     "@type": "GovernmentService",
     "audienceType": "Enforcement authorities, Police, Customs, Labour Inspectorates"
@@ -739,37 +745,35 @@
 <link href="/assets/css/components.css" rel="stylesheet"/>
 <link href="/assets/css/nav.css" rel="stylesheet"/>
 <script defer="" src="/assets/js/nav.js?v=20260816b"></script>
-<link href="/assets/css/footer.css" rel="stylesheet"/>
-<link href="https://tagra.app/" hreflang="en" rel="alternate"/><link href="https://tagra.app/de/" hreflang="de" rel="alternate"/><link href="https://tagra.app/pl/" hreflang="pl" rel="alternate"/><link href="https://tagra.app/el/" hreflang="el" rel="alternate"/><link href="https://tagra.app/hu/" hreflang="hu" rel="alternate"/><link href="https://tagra.app/it/" hreflang="it" rel="alternate"/><link href="https://tagra.app/fr/" hreflang="fr" rel="alternate"/><link href="https://tagra.app/" hreflang="x-default" rel="alternate"/></head>
+<link href="/assets/css/footer.css" rel="stylesheet"/></head>
 <body class="home-fullbleed">
 <a class="skip-link" href="#main-content">Passer au contenu</a>
 <div aria-hidden="true" id="scroll-progress"></div>
 <!-- ═══ NAVIGATION ═══════════════════════════════════════════════════ -->
 <nav aria-label="Navigation principale" class="site-nav" role="navigation">
 <div class="nav-inner">
-<a aria-label="TAGRA – Home" class="nav-logo" href="/fr/"><img alt="TAGRA" height="32" src="/assets/img/logo-light.svg?v=20260513zh" style="display:block;height:32px;width:auto;" width="140"/></a>
+<a aria-label="TAGRA – Accueil" class="nav-logo" href="/nl/"><img alt="TAGRA" height="32" src="/assets/img/logo-light.svg?v=20260513zh" style="display:block;height:32px;width:auto;" width="140"/></a>
 <ul class="nav-links" id="nav-links">
-<li><a href="/fleet/">Pour les entreprises</a></li>
+<li><a href="/fr/entreprises/">Pour les entreprises</a></li>
 <li><a href="/fr/conducteurs/">Pour les conducteurs</a></li>
-<li><a href="/enforcement/">Autorités de contrôle</a></li>
-<li><a href="/articles/">Articles</a></li><li><a href="/manuals/">Manuels</a></li>
-<li><a href="/faq/">FAQ</a></li>
-<li><a href="/contact/">Contact</a></li>
-<li class="nav-cta-li"><a class="nav-cta" href="/try/?audience=fleet">Essai gratuit de 30 jours</a></li>
+<li><a href="/fr/autorites-de-controle/">Contrôle</a></li>
+<li><a href="/fr/articles/">Articles</a></li><li><a href="/fr/manuels/">Manuels</a></li>
+<li><a href="/fr/faq/">FAQ</a></li>
+<li><a href="/fr/contact/">Contact</a></li>
+<li class="nav-cta-li"><a class="nav-cta" href="/fr/essai-gratuit/?audience=fleet">Essayez gratuitement pendant 30 jours</a></li>
 </ul>
 <details class="nav-lang">
-<summary aria-label="Language: FR">FR</summary>
-<div class="nav-lang-menu" role="menu">
-<a href="/" hreflang="en">English</a><a href="/de/" hreflang="de">Deutsch</a><a href="/pl/" hreflang="pl">Polski</a><a href="/el/" hreflang="el">Ελληνικά</a><a href="/hu/" hreflang="hu">Magyar</a><a href="/it/" hreflang="it">Italiano</a><a aria-current="page" class="active" href="/fr/" hreflang="fr">Français</a><a href="https://www.tdt.cz/" hreflang="cs" rel="noopener" target="_blank">Čeština</a><a href="https://www.tdt.sk/" hreflang="sk" rel="noopener" target="_blank">Slovenčina</a></div>
+<summary aria-label="Langue : FR">FR</summary>
+<div class="nav-lang-menu" role="menu"><a href="/" hreflang="en">English</a><a href="/de/" hreflang="de">Deutsch</a><a href="/pl/" hreflang="pl">Polski</a><a href="/nl/" hreflang="nl">Nederlands</a><a aria-current="page" class="active" href="/fr/" hreflang="fr">Français</a><a href="/it/" hreflang="it">Italiano</a><a href="/el/" hreflang="el">Ελληνικά</a><a href="/hu/" hreflang="hu">Magyar</a><a href="/ro/" hreflang="ro">Română</a><a href="https://www.tdt.cz/" hreflang="cs" rel="noopener" target="_blank">Čeština</a><a href="https://www.tdt.sk/" hreflang="sk" rel="noopener" target="_blank">Slovenčina</a></div>
 </details>
-<a class="nav-cta-mobile" href="/try/?audience=fleet">Essai gratuit</a>
-<button aria-expanded="false" aria-label="Toggle menu" class="nav-mobile-toggle" id="nav-toggle">
+<a class="nav-cta-mobile" href="/fr/essai-gratuit/?audience=fleet">Essai gratuit</a>
+<button aria-expanded="false" aria-label="Afficher/masquer le menu" class="nav-mobile-toggle" id="nav-toggle">
 <span></span><span></span><span></span>
 </button>
 </div>
 </nav>
 <!-- ═══ HERO ══════════════════════════════════════════════════════════ -->
-<section id="main-content" aria-label="TAGRA – Choose your solution" class="hero">
+<section id="main-content" aria-label="TAGRA – choisissez votre solution" class="hero">
 <img alt="" aria-hidden="true" class="hero-video-poster" fetchpriority="high" loading="eager" src="/assets/img/hero-poster.jpg?v=2026-05-13b" width="1920" height="1080"/>
 <video aria-hidden="true" class="hero-video" id="heroVideoA" muted="" playsinline="" poster="/assets/img/hero-poster.jpg?v=2026-05-13b" preload="auto">
 <source media="(max-width: 1024px)" src="/assets/video/hero-720.mp4?v=2026-05-13c" type="video/mp4">
@@ -783,104 +787,104 @@
 </source></source></source></video>
 <div class="container">
 <div class="hero-glass anim-up">
-<div class="eyebrow">TAGRA · Logiciel d'analyse du chronotachygraphe</div>
+<div class="eyebrow">TAGRA · logiciel d’analyse des tachygraphes</div>
 </div>
-<h1 class="anim-up" style="transition-delay:.05s">Analyse du chronotachygraphe <br/>avant que le contrôle ne la découvre</h1>
+<h1 class="anim-up" style="transition-delay:.05s">Analyse des tachygraphes <br/>avant que le contrôle ne le révèle</h1>
 <div class="hero-glass anim-up" style="transition-delay:.1s">
 <p class="hero-sub">
-        Télécharger ne suffit pas — la loi exige une <strong>évaluation et un archivage.</strong><br/>
-        TAGRA couvre tout. Essai gratuit de 30 jours, sans carte bancaire.
+        Le téléchargement ne suffit pas — la loi exige <strong>une évaluation et un archivage.</strong><br/>
+        TAGRA couvre tous vos besoins. Essai gratuit de 30 jours, sans carte bancaire.
       </p>
 </div>
 </div>
 </section>
 <!-- ═══ PICKER (3 audience cards) ═══════════════════════════════════ -->
-<section aria-label="Choose your TAGRA solution" class="picker">
+<section aria-label="Choisissez votre solution TAGRA" class="picker">
 <div class="container">
 <div class="picker-head anim-up">
-<span class="section-label">Choisissez votre profil</span>
+<span class="section-label">Choisissez votre rôle</span>
 </div>
 <div class="split anim-up" id="picker-rail">
 <!-- Fleet -->
-<a aria-label="TAGRA pour les opérateurs de flotte" class="split-card split-card--fleet" href="/fleet/">
-<div class="card-label">Opérateur de flotte</div>
-<h2 class="sr-only">TAGRA · Logiciel d'analyse du chronotachygraphe</h2><h3 class="card-title">TAGRA<br/>Company</h3>
-<p class="card-desc">Vous gérez des véhicules pour une entreprise. Vous devez télécharger et évaluer les données des <strong>unités embarquées et cartes conducteur</strong> — et tout archiver pour les contrôles.</p>
+<a aria-label="Comment acheter TAGRA Trucker après l'essai ?" class="split-card split-card--fleet" href="/fr/entreprises/">
+<div class="card-label">Gestionnaire de flotte</div>
+<h2 class="sr-only">TAGRA · logiciel d’analyse des tachygraphes</h2><h3 class="card-title">TAGRA<br/>Entreprise</h3>
+<p class="card-desc">Vous gérez les véhicules d’une entreprise. Vous devez télécharger et évaluer les données des <strong>unités embarquées des tachygraphes et des cartes de conducteur</strong> — et tout archiver pour les contrôles.</p>
 <ul class="card-list">
 <li>De 1 à un nombre illimité de véhicules</li>
-<li>Évaluation complète du temps de travail ((CE) n° 561/2006 + directive temps de travail)</li>
+<li>Évaluation complète du temps de travail ((CE) no 561/2006 + directive sur le temps de travail)</li>
 <li>Résultats acceptés par les autorités de contrôle</li>
-<li>Prêt pour les véhicules utilitaires légers dès juillet 2026</li>
+<li>Prêt pour les véhicules utilitaires à partir de juillet 2026</li>
 </ul>
-<span class="card-cta">Solution flotte →</span>
+<span class="card-cta">TAGRA pour les gestionnaires de flotte</span>
 <span class="card-note">Essai gratuit de 30 jours · sans carte bancaire</span>
 </a>
 <!-- Driver -->
 <a aria-label="TAGRA Trucker pour les conducteurs professionnels" class="split-card split-card--driver" href="/fr/conducteurs/">
 <div class="card-label">Conducteur professionnel</div>
 <h3 class="card-title">TAGRA<br/>Trucker</h3>
-<p class="card-desc">Vous conduisez à titre professionnel. Vous voulez suivre vos propres temps de conduite et périodes de repos à l'aide de votre <strong>carte conducteur</strong> — avec un lecteur de carte USB standard.</p>
+<p class="card-desc">Vous conduisez professionnellement. Vous souhaitez suivre vos propres heures et temps de repos à l’aide de <strong>votre carte de conducteur</strong> — avec un lecteur de cartes USB standard.</p>
 <ul class="card-list">
-<li>Pour 1 conducteur · carte conducteur uniquement</li>
-<li>Fonctionne avec un lecteur de carte USB standard</li>
-<li>Temps de conduite et périodes de repos en un coup d'œil</li>
-<li>Fonctionne hors ligne sur n'importe quel PC Windows</li>
+<li>Pour 1 conducteur · carte de conducteur uniquement</li>
+<li>Fonctionne avec un lecteur de cartes USB standard</li>
+<li>Temps de conduite et temps de repos en un coup d’œil</li>
+<li>Fonctionne hors ligne sur tout PC Windows</li>
 </ul>
-<span class="card-cta">Solution conducteur →</span>
+<span class="card-cta">Solution pour conducteurs →</span>
 <span class="card-note">Essai gratuit de 30 jours · sans carte bancaire</span>
 </a>
 <!-- Enforcement -->
-<a aria-label="TAGRA Control pour les autorités de contrôle" class="split-card split-card--enforce" href="/enforcement/">
+<a aria-label="TAGRA Control pour les autorités de contrôle" class="split-card split-card--enforce" href="/fr/autorites-de-controle/">
 <div class="card-label">Autorité de contrôle</div>
-<h3 class="card-title">TAGRA<br/>Control</h3>
-<p class="card-desc">Vous contrôlez les conducteurs et les opérateurs. <strong>Contrôles routiers et en entreprise</strong> au titre du (CE) 561/2006, du (UE) 2020/1054 et de l'AETR.</p>
+<h3 class="card-title">TAGRA<br/>Contrôle</h3>
+<p class="card-desc">Vous contrôlez les conducteurs et les exploitants. <strong>Contrôles routiers et en entreprise</strong> au titre des règlements (CE) 561/2006, (UE) 2020/1054 et de l’AETR.</p>
 <ul class="card-list">
 <li>Police · Douanes · Inspections du travail</li>
-<li>Autorités tchèques, slovaques et hongroises</li>
-<li>Rapports d'évaluation de qualité judiciaire</li>
-<li>Norme de facto en Europe centrale</li>
+<li>Autorités tchèques et slovaques &amp; Autorités hongroises</li>
+<li>Résultats d’évaluation utilisables devant les tribunaux</li>
+<li>Standard de fait en Europe centrale</li>
 </ul>
-<span class="card-cta">Solution contrôle →</span>
-<span class="card-note">Usage gouvernemental et institutionnel</span>
+<span class="card-cta">Solution de contrôle →</span>
+<span class="card-note">Gouvernement &amp; usage institutionnel</span>
 </a>
 </div>
-<div aria-label="Picker pagination" class="picker-dots" role="tablist">
-<button aria-label="Go to card 1" class="picker-dot is-active" data-target="0" type="button"></button>
-<button aria-label="Go to card 2" class="picker-dot" data-target="1" type="button"></button>
-<button aria-label="Go to card 3" class="picker-dot" data-target="2" type="button"></button>
+<div aria-label="Pagination du sélecteur" class="picker-dots" role="tablist">
+<button aria-label="Accéder à la carte 1" class="picker-dot is-active" data-target="0" type="button"></button>
+<button aria-label="Accéder à la carte 2" class="picker-dot" data-target="1" type="button"></button>
+<button aria-label="Accéder à la carte 3" class="picker-dot" data-target="2" type="button"></button>
 </div>
 </div>
 </section>
 <!-- ═══ TRUST BAR ══════════════════════════════════════════════════════ -->
 <div class="trust-bar anim-up">
 <div class="container">
-<p><strong>La confiance de milliers d'opérateurs à travers l'Europe.</strong> La même logique d'évaluation utilisée par la police, les administrations douanières et les inspections du travail.</p>
+<p><strong>Conçu pour les réalités du transport routier européen.</strong> La même logique d’évaluation que celle utilisée par les forces de police, les administrations douanières et les inspections du travail.</p>
 </div>
 </div>
 <!-- ═══ UI SHOWCASE ════════════════════════════════════════════════════ -->
-<section aria-label="What TAGRA flags — example outputs" class="section section--white">
+<section aria-label="Ce que TAGRA signale — exemples de résultats" class="section section--white">
 <div class="section-inner">
 <div class="section-head anim-up">
 <span class="section-label">Voyez-le en action</span>
-<h2 class="section-h2">Voyez exactement ce que TAGRA détecte</h2>
-<p class="section-intro">Des exemples concrets de ce que TAGRA fait apparaître — échéances de téléchargement, infractions aux temps de conduite et rapports de conformité prêts à l'export.</p>
+<h2 class="section-h2">Voyez exactement ce que TAGRA signale</h2>
+<p class="section-intro">Exemples réalistes de ce que TAGRA détecte — échéances de téléchargement, infractions relatives au temps de conduite et rapports de conformité prêts à être exportés.</p>
 </div>
 <div class="showcase-grid anim-up">
 <div class="showcase-card showcase-card--critical">
 <span class="showcase-badge">En retard</span>
-<p class="showcase-title">Téléchargement de la carte conducteur en retard</p>
-<div class="showcase-row"><span>Conducteur</span><strong>A. Walsh</strong></div>
-<div class="showcase-row"><span>Statut</span><strong>En retard de 3 jours</strong></div>
+<p class="showcase-title">Téléchargement de la carte de conducteur en retard</p>
+<div class="showcase-row"><span>Manuel du</span><strong>A. Walsh</strong></div>
+<div class="showcase-row"><span>Statut</span><strong>3 jours de retard</strong></div>
 <div class="showcase-row"><span>Dernier téléchargement</span><strong>2 juin 2026</strong></div>
 <p class="showcase-foot">Suivi automatique par rapport à la règle des 28 jours.</p>
 </div>
 <div class="showcase-card showcase-card--warn">
 <span class="showcase-badge">Infraction</span>
 <p class="showcase-title">Temps de conduite journalier dépassé</p>
-<div class="showcase-row"><span>Conducteur</span><strong>J. Kowalski</strong></div>
-<div class="showcase-row"><span>Conduit</span><strong>9 h 42</strong></div>
-<div class="showcase-row"><span>Limite</span><strong>9 h · Règl. 561/2006</strong></div>
-<p class="showcase-foot">Signalé avec le détail complet de l'heure, du type et de la durée.</p>
+<div class="showcase-row"><span>Manuel du</span><strong>J. Kowalski</strong></div>
+<div class="showcase-row"><span>Temps conduit</span><strong>9 h 42 min</strong></div>
+<div class="showcase-row"><span>Limite</span><strong>9 h · règlement 561/2006</strong></div>
+<p class="showcase-foot">Signalée avec le détail complet par heure, type et durée.</p>
 </div>
 <div class="showcase-card showcase-card--ready">
 <span class="showcase-badge">Rapport prêt</span>
@@ -888,164 +892,164 @@
 <div class="showcase-row"><span>Conducteurs analysés</span><strong>42</strong></div>
 <div class="showcase-row"><span>Infractions</span><strong>3 signalées</strong></div>
 <div class="showcase-row"><span>Semaine</span><strong>Semaine 26</strong></div>
-<p class="showcase-foot">Résultat prêt à l'export, de qualité audit, en un clic.</p>
+<p class="showcase-foot">Résultat prêt à être exporté et conforme aux exigences d’audit, en un clic.</p>
 </div>
 </div>
 </div>
 </section>
 <!-- ═══ USP BENTO ═════════════════════════════════════════════════════ -->
-<section aria-label="Why TAGRA — key features" class="section section--white">
+<section aria-label="Pourquoi TAGRA — fonctionnalités clés" class="section section--white">
 <div class="section-inner">
 <div class="section-head anim-up">
 <span class="section-label">Pourquoi TAGRA</span>
-<h2 class="section-h2">Téléchargement, analyse et archivage du chronotachygraphe</h2>
-<p class="section-intro">Un logiciel Windows puissant pour l'analyse du chronotachygraphe numérique, les temps de conduite européens et la directive sur le temps de travail des chauffeurs routiers — évolutif d'un seul véhicule à une flotte d'entreprise.</p>
+<h2 class="section-h2">Téléchargement, analyse et archivage des données des tachygraphes</h2>
+<p class="section-intro">Logiciel Windows puissant pour l’analyse des tachygraphes numériques, des temps de conduite des conducteurs dans l’UE et de la directive sur le temps de travail dans le transport routier — évolutif d’un seul véhicule aux flottes d’entreprise.</p>
 </div>
 <div class="bento">
 <div class="bc s7 fly-left">
 <span class="bc-eyebrow">Moteur de conformité</span>
-<div class="bc-title">Temps de conduite UE + directive temps de travail</div>
-<p class="bc-text">Évaluation automatique du <strong>règlement (CE) n° 561/2006</strong> et de la <strong>directive sur le temps de travail des chauffeurs routiers</strong> (2002/15/CE). Synthèses journalières et hebdomadaires claires, avec chaque infraction signalée par heure, type et durée.</p>
+<div class="bc-title">Temps de conduite dans l’UE + directive sur le temps de travail</div>
+<p class="bc-text">Évaluation automatique du <strong>règlement (CE) n° 561/2006</strong> et de la <strong>directive sur le temps de travail dans le transport routier</strong> (2002/15/CE). Synthèses quotidiennes et hebdomadaires claires, chaque infraction étant signalée par heure, type et durée.</p>
 <div class="bignum">01</div>
 </div>
 <div class="bc s5 bluefill fly-right">
 <span class="bc-eyebrow">Couverture</span>
-<div class="bc-title">Tous les chronotachygraphes pris en charge</div>
-<p class="bc-text">De la première génération numérique jusqu'au <strong>Smart Tachograph G2V2</strong>. Lit les fichiers <code>.DDD</code>, <code>.C1B</code>, <code>.V1B</code> et ESM issus des téléchargements de carte conducteur et d'unité embarquée.</p>
+<div class="bc-title">Tous les tachygraphes pris en charge</div>
+<p class="bc-text">Du tachygraphe numérique de première génération au <strong>tachygraphe intelligent G2V2</strong>. Lit les fichiers <code>Vous avez déjà téléchargé un fichier</code>, <code>ou</code>, <code>.V1B</code> et ESM issus des téléchargements de cartes de conducteur et d’unités embarquées.</p>
 </div>
 <div class="bc s6 fly-left" style="transition-delay:.05s">
 <span class="bc-eyebrow">Rapports</span>
-<div class="bc-title">Résultats de qualité audit</div>
-<p class="bc-text">Des rapports prêts pour l'inspection, que les agents de contrôle comprennent réellement. Imprimez, exportez ou partagez des résultats propres et structurés pour les audits, les revues internes et les contrôles routiers.</p>
+<div class="bc-title">Résultats conformes aux exigences d’audit</div>
+<p class="bc-text">Rapports prêts pour les inspecteurs, qu’ils comprennent réellement. Imprimez, exportez ou partagez des résultats clairs et structurés pour les audits, les contrôles internes et les contrôles routiers.</p>
 </div>
 <div class="bc s6 greenfill fly-right" style="transition-delay:.05s">
 <span class="bc-eyebrow">Évolutif</span>
 <div class="bc-title">De 1 à un nombre illimité de véhicules</div>
-<p class="bc-text">TAGRA Trucker, 1, 2, 4, 6 et MAX. Commencez avec un seul camion et évoluez vers une flotte d'entreprise sans changer d'outils ni de méthode de travail.</p>
+<p class="bc-text">Niveaux TAGRA Trucker : 1, 2, 4, 6 et MAX. Commencez avec un seul camion et développez votre flotte à l'échelle d'une entreprise sans changer d'outils ni de flux de travail.</p>
 <div class="bignum">∞</div>
 </div>
 <div class="bc s8 fly-left" style="transition-delay:.1s">
 <span class="bc-eyebrow">Confidentialité</span>
-<div class="bc-title">Sur votre poste. Rapide. À vous.</div>
-<p class="bc-text">Un logiciel Windows qui fonctionne hors ligne sur votre PC. Les données des conducteurs et des véhicules ne quittent jamais votre réseau — pas de dépendance au cloud, pas d'abonnement mensuel, aucune inquiétude RGPD liée à des sous-traitants tiers.</p>
+<div class="bc-title">Ordinateur. Rapide. À vous.</div>
+<p class="bc-text">Logiciel Windows qui fonctionne hors ligne sur votre PC. Les données des conducteurs et des véhicules ne quittent jamais votre réseau — aucun verrouillage lié au cloud, aucun abonnement mensuel, aucune inquiétude concernant le RGPD et les sous-traitants tiers.</p>
 </div>
 <div class="bc s4 bluefill fly-right" style="transition-delay:.1s">
-<span class="bc-eyebrow">Prêt pour l'avenir</span>
-<div class="bc-title">Prêt pour les VUL dès 2026</div>
-<p class="bc-text">Conformité totale avec la nouvelle obligation de chronotachygraphe pour les véhicules utilitaires légers (2,5–3,5 t) à partir du <strong>1er juillet 2026</strong>.</p>
+<span class="bc-eyebrow">À l'épreuve du temps</span>
+<div class="bc-title">Prêt pour les véhicules utilitaires en 2026</div>
+<p class="bc-text">Respect intégral de la nouvelle obligation relative aux tachygraphes pour les véhicules utilitaires légers (2,5–3,5 t) à partir du <strong>1er juillet 2026</strong>.</p>
 </div>
 </div>
 </div>
 </section>
 <!-- ═══ SOCIAL PROOF ══════════════════════════════════════════════════ -->
-<section aria-label="Trusted by authorities and fleets across Central Europe" class="section section--blue">
+<section aria-label="Plébiscité par les autorités de contrôle et les flottes d'Europe centrale" class="section section--blue">
 <div class="section-inner">
 <div class="section-head anim-up">
-<span class="section-label">Vérifié sur le terrain</span>
-<h2 class="section-h2">La confiance des autorités. Choisi par les flottes.</h2>
-<p class="section-intro">La même logique d'évaluation utilisée par la police, les douanes et les inspections du travail en République tchèque, en Slovaquie et en Hongrie.</p>
+<span class="section-label">Vérifié en pratique</span>
+<h2 class="section-h2">Reconnu par les autorités de contrôle. Choisi par les flottes.</h2>
+<p class="section-intro">La même logique d'évaluation que celle utilisée par la police, les douanes et les inspections du travail en République tchèque, en Slovaquie et en Hongrie.</p>
 </div>
 <div class="ref-grid">
 <div class="ref-card ref-card--cz">
 <div class="ref-country">République tchèque</div>
-<div class="ref-name">Police et douanes</div>
-<div class="ref-note">Contrôles routiers et en entreprise dans tout le pays.</div>
+<div class="ref-name">Police &amp; Douanes</div>
+<div class="ref-note">Contrôles routiers et contrôles en entreprise dans tout le pays.</div>
 </div>
 <div class="ref-card ref-card--sk">
 <div class="ref-country">Slovaquie</div>
 <div class="ref-name">Inspection du travail</div>
-<div class="ref-note">Contrôle des temps de conduite et du temps de travail.</div>
+<div class="ref-note">Contrôle du temps de conduite et du temps de travail des conducteurs.</div>
 </div>
 <div class="ref-card ref-card--hu">
 <div class="ref-country">Hongrie</div>
-<div class="ref-name">Autorités de contrôle et ministères</div>
-<div class="ref-note">Conformité du transport transfrontalier.</div>
+<div class="ref-name">Contrôle &amp; Ministères</div>
+<div class="ref-note">Respect des règles applicables au transport transfrontalier.</div>
 </div>
 <div class="ref-card">
 <div class="ref-country">Dans toute l'Europe centrale</div>
-<div class="ref-name">Des centaines d'opérateurs de flotte</div>
-<div class="ref-note">Transport routier, autocars, location, flottes municipales, ateliers.</div>
+<div class="ref-name">Des centaines de gestionnaires de flotte</div>
+<div class="ref-note">Transport routier, autobus, &amp; Autocars, flottes de location et flottes municipales, ateliers agréés.</div>
 </div>
 </div>
 <div class="name-marquee-wrap anim-up">
-<p class="name-marquee-label">Parmi les flottes et opérateurs qui utilisent déjà TAGRA</p>
+<p class="name-marquee-label">Parmi les flottes et les exploitants qui utilisent déjà TAGRA</p>
 <div class="name-marquee"><span>FCC Group</span><span>CS Cargo a.s.</span><span>ČEDOK a.s.</span><span>AGRO SERVIS CZ</span><span>ČSAD Jihotrans</span><span>ČSAD Karviná</span><span>Pivovar Holba</span><span>PORR a.s.</span><span>Klaus Timber a.s.</span><span>Mátra Transport a.s.</span><span>KAFKA Transport a.s.</span><span>DKC s.r.o.</span><span>TQM Holding</span><span>Synergies Logistiques</span><span>ČSAD Autobusy České Budějovice</span><span>ČSAD POLKOST</span><span>Cargospol</span><span>Energie stavební a báňská a.s.</span><span>SAP Mimoň</span><span>FCC Group</span><span>CS Cargo a.s.</span><span>ČEDOK a.s.</span><span>AGRO SERVIS CZ</span><span>ČSAD Jihotrans</span><span>ČSAD Karviná</span><span>Pivovar Holba</span><span>PORR a.s.</span><span>Klaus Timber a.s.</span><span>Mátra Transport a.s.</span><span>KAFKA Transport a.s.</span><span>DKC s.r.o.</span><span>TQM Holding</span><span>Synergies Logistiques</span><span>ČSAD Autobusy České Budějovice</span><span>ČSAD POLKOST</span><span>Cargospol</span><span>Energie stavební a báňská a.s.</span><span>SAP Mimoň</span></div>
 </div>
 </div>
 </section>
 <!-- ═══ REVIEWS (auto-scroll loop, matches /fleet/) ═══════════════════ -->
-<section aria-label="Customer reviews" class="section section--white">
+<section aria-label="Avis clients" class="section section--white">
 <div class="section-inner">
 <div class="section-head anim-up">
-<span class="section-label">Ce que disent nos clients</span>
-<h2 class="section-h2">Utilisé par des milliers d'opérateurs dans toute l'UE</h2>
-<p class="section-intro">Avis cinq étoiles de clients vérifiés dans toute l'Europe centrale.</p>
+<span class="section-label">Ce qu'en disent les clients</span>
+<h2 class="section-h2">Analyse professionnelle des tachygraphes pour les flottes européennes</h2>
+<p class="section-intro">Des évaluations cinq étoiles de clients vérifiés dans toute l'Europe centrale.</p>
 </div>
 </div>
 <div class="rev-rail-wrap anim-up" style="transition-delay:.05s">
 <div class="rev-rail" id="rev-rail">
-<div class="rev-card"><div aria-label="5 out of 5" class="rev-stars">★★★★★</div><p class="rev-txt">"TAGRA gère un énorme volume de données et a considérablement simplifié nos contrôles d'infractions et notre archivage."</p><p class="rev-meta">David C. · Client vérifié</p></div>
-<div class="rev-card"><div aria-label="5 out of 5" class="rev-stars">★★★★★</div><p class="rev-txt">"Nous utilisons TAGRA depuis quelques mois — téléchargement et évaluation faciles, résultats clairs. Enfin la tranquillité d'esprit."</p><p class="rev-meta">Patrik S. · Client vérifié</p></div>
-<div class="rev-card"><div aria-label="5 out of 5" class="rev-stars">★★★★★</div><p class="rev-txt">"Le logiciel est intuitif et facile à utiliser. Quand j'ai eu besoin d'aide, ils étaient là."</p><p class="rev-meta">Milan K. · Client vérifié</p></div>
+<div class="rev-card"><div aria-label="5 out of 5" class="rev-stars">★★★★★</div><p class="rev-txt">« TAGRA traite un volume considérable de données et a considérablement simplifié le contrôle et l'archivage de nos infractions. »</p><p class="rev-meta">David C. · Client vérifié</p></div>
+<div class="rev-card"><div aria-label="5 out of 5" class="rev-stars">★★★★★</div><p class="rev-txt">« Nous utilisons TAGRA depuis quelques mois — téléchargement et évaluation faciles, résultats clairs. Enfin, l'esprit tranquille. »</p><p class="rev-meta">Patrik S. · Client vérifié</p></div>
+<div class="rev-card"><div aria-label="5 out of 5" class="rev-stars">★★★★★</div><p class="rev-txt">« Le logiciel est intuitif et facile à utiliser. Lorsque j'ai eu besoin d'aide, l'équipe était là. »</p><p class="rev-meta">Milan K. · Client vérifié</p></div>
 <div class="rev-card"><div aria-label="5 out of 5" class="rev-stars">★★★★★</div><p class="rev-txt">"Simple et clair. Le téléchargement, l'évaluation et l'archivage des données ne prennent que quelques minutes."</p><p class="rev-meta">Josef Z. · Client vérifié</p></div>
-<div class="rev-card"><div aria-label="5 out of 5" class="rev-stars">★★★★★</div><p class="rev-txt">"TAGRA nous permet de garder le contrôle sur les infractions et l'archivage. Vraiment facile à utiliser."</p><p class="rev-meta">Client TRUCKMALL vérifié</p></div>
+<div class="rev-card"><div aria-label="5 out of 5" class="rev-stars">★★★★★</div><p class="rev-txt">« TAGRA nous aide à garder le contrôle des infractions et de l'archivage. Vraiment facile à utiliser. »</p><p class="rev-meta">Client TRUCKMALL vérifié</p></div>
 </div>
 </div>
 </section>
 <!-- ═══ PRICING TEASER ════════════════════════════════════════════════ -->
-<section aria-label="Pricing overview" class="section section--gray">
+<section aria-label="Aperçu des tarifs" class="section section--gray">
 <div class="section-inner">
 <div class="section-head anim-up">
-<span class="section-label">Tarifs</span>
-<h2 class="section-h2">Des tarifs justes. Sans surprise.</h2>
-<p class="section-intro">La première année est incluse dans le prix d'achat. À partir de la 2e année, une redevance annuelle de 19 à 149 € maintient votre logiciel actif, à jour et assisté.</p>
+<span class="section-label">C'est un matériel USB standard, que vous pouvez aussi utiliser avec d'autres logiciels compatibles. En revanche, le lecteur seul ne permet pas d'analyser vos données : c'est le logiciel qui s'en charge.</span>
+<h2 class="section-h2">Des tarifs équitables. Aucune surprise.</h2>
+<p class="section-intro">La première année est incluse dans le prix d'achat. À partir de la deuxième année, une redevance annuelle de 19–149 € permet de conserver un logiciel opérationnel, à jour et assisté.</p>
 </div>
 <div class="pricing-teaser anim-up">
 <div>
 <div class="pricing-teaser-headline">Commencez gratuitement. Licence à partir de 49 €.</div>
-<p class="pricing-teaser-price">Essai gratuit de 30 jours, sans carte bancaire. TAGRA coûte à partir de <strong>49 €</strong> (TAGRA Trucker) jusqu'à 749 € (TAGRA MAX, véhicules illimités), HT — la première année de mises à jour et d'assistance est incluse. À partir de la 2e année, une redevance annuelle de 19 à 149 € maintient la licence active.</p>
+<p class="pricing-teaser-price">Essai gratuit de 30 jours, sans carte bancaire. TAGRA est disponible à partir de <strong>€49</strong> (TAGRA Trucker) jusqu'à 749 € (TAGRA MAX, véhicules illimités), hors TVA — la première année de mises à jour et d'assistance est incluse. À partir de la deuxième année, une redevance annuelle de 19 à 149 € permet de le maintenir actif.</p>
 <ul class="pricing-teaser-features">
-<li>Analyse complète des temps de conduite UE et de la directive temps de travail</li>
-<li>Prise en charge de tous les chronotachygraphes numériques, y compris Smart G2V2</li>
+<li>Analyse complète du temps de conduite des conducteurs dans l'UE et de la directive relative au temps de travail</li>
+<li>Prise en charge de tous les tachygraphes numériques, y compris Smart G2V2</li>
 <li>Mises à jour logicielles gratuites à chaque évolution réglementaire</li>
 <li>Assistance technique dédiée toute l'année</li>
 </ul>
 </div>
 <div class="pricing-teaser-cta">
-<a class="btn-outline" href="/fleet/#tagra-pricing">Voir tous les niveaux et tarifs →</a>
-<a class="btn-cta" href="/try/">Essai gratuit de 30 jours</a>
-<span class="pricing-teaser-cta-note">Sans carte bancaire. Installeur Windows.</span>
+<a class="btn-outline" href="/fr/entreprises/#tagra-pricing">Voir toutes les formules et tous les tarifs →</a>
+<a class="btn-cta" href="/fr/essai-gratuit/">Essayez gratuitement pendant 30 jours</a>
+<span class="pricing-teaser-cta-note">Aucune carte bancaire. Programme d'installation Windows.</span>
 </div>
 </div>
 </div>
 </section>
 <!-- ═══ FAQ TEASER ════════════════════════════════════════════════════ -->
-<section aria-label="Frequently asked questions" class="section section--white">
+<section aria-label="Questions fréquemment posées" class="section section--white">
 <div class="section-inner">
 <div class="section-head anim-up">
 <span class="section-label">Questions</span>
 <h2 class="section-h2">Questions fréquentes</h2>
-<p class="section-intro">Réponses courtes aux questions les plus fréquentes. La FAQ complète en propose davantage.</p>
+<p class="section-intro">Des réponses courtes aux questions qui nous sont le plus souvent posées. La FAQ complète en contient davantage.</p>
 </div>
 <div class="faq-block anim-up">
 <details>
 <summary>TAGRA est-il basé sur le cloud ou installé localement ?</summary>
-<div class="faq-answer">TAGRA est un <strong>logiciel de bureau Windows</strong> qui fonctionne entièrement hors ligne sur votre propre ordinateur. Les données des conducteurs et des véhicules ne quittent jamais votre réseau — aucun envoi vers le cloud, aucun sous-traitant tiers, aucun abonnement mensuel. De nombreuses flottes préfèrent cette approche pour des raisons de RGPD et de protection des données.</div>
+<div class="faq-answer">TAGRA est un <strong>logiciel Windows pour ordinateur</strong> qui fonctionne entièrement hors ligne sur votre propre ordinateur. Les données des conducteurs et des véhicules ne quittent jamais votre réseau — il n'y a ni téléversement vers le cloud, ni sous-traitant tiers, ni abonnement mensuel. De nombreuses flottes privilégient cette solution pour des raisons liées au RGPD et à la protection des données.</div>
 </details>
 <details>
-<summary>TAGRA couvre-t-il les temps de conduite UE et la directive temps de travail ?</summary>
-<div class="faq-answer">Oui. TAGRA évalue le <strong>règlement (CE) n° 561/2006</strong> (temps de conduite UE) et la <strong>directive sur le temps de travail des chauffeurs routiers</strong> 2002/15/CE, ainsi que les règles AETR associées. Chaque infraction est mise en évidence dans des rapports clairs par conducteur et par véhicule, avec l'heure, le type et la durée exacts.</div>
+<summary>TAGRA couvre-t-il le temps de conduite des conducteurs dans l'UE et la directive sur le temps de travail ?</summary>
+<div class="faq-answer">Oui. TAGRA évalue le <strong>règlement (CE) n° 561/2006</strong> (temps de conduite des conducteurs dans l'UE) ainsi que la <strong>directive sur le temps de travail dans le transport routier</strong> 2002/15/CE, et les règles AETR associées. Chaque infraction est mise en évidence dans des rapports clairs sur les conducteurs et les véhicules, avec l'heure, le type et la durée exacts.</div>
 </details>
 <details>
-<summary>Quels chronotachygraphes et lecteurs de carte prend-il en charge ?</summary>
-<div class="faq-answer">Tous les chronotachygraphes numériques UE, de la première génération jusqu'au Smart Tachograph G2V2. Compatible avec les lecteurs de carte à puce standard (par ex. DOWNLOAD BOX II S) et lit les fichiers <code>.DDD</code>, <code>.C1B</code>, <code>.V1B</code> et ESM. Prêt pour les exigences de juillet 2026 applicables aux véhicules utilitaires légers.</div>
+<summary>Quels tachygraphes et lecteurs de cartes sont pris en charge ?</summary>
+<div class="faq-answer">Tous les tachygraphes numériques de l'UE, de la première génération jusqu'au tachygraphe intelligent G2V2. Compatible avec les lecteurs de cartes à puce standard (par exemple DOWNLOAD BOX II S) et permet de lire les fichiers <code>Vous avez déjà téléchargé un fichier</code>, <code>ou</code>, <code>.V1B</code> et ESM. Prêt pour les exigences de juillet 2026 applicables aux véhicules utilitaires légers.</div>
 </details>
 <details>
 <summary>Comment fonctionne l'essai gratuit de 30 jours ?</summary>
-<div class="faq-answer">Téléchargez et installez le package Windows — vous bénéficiez de <strong>30 jours d'accès complet et illimité</strong> à toutes les fonctionnalités. Aucune carte bancaire, aucune information de paiement. Si TAGRA convient à votre activité, vous achetez une licence pour continuer.</div>
+<div class="faq-answer">Téléchargez et installez le logiciel Windows — vous bénéficiez de <strong>30 jours d'accès complet et sans restriction</strong> à toutes les fonctionnalités. Aucune carte bancaire, aucune information de paiement. Si TAGRA convient à votre activité, achetez une licence pour continuer à l'utiliser.</div>
 </details>
 <div class="faq-cta">
-<a href="/faq/">See all FAQs →</a>
+<a href="/fr/faq/">Voir toutes les FAQ →</a>
 </div>
 </div>
 </div>
@@ -1055,44 +1059,44 @@
 <div class="footer-inner">
 <div>
 <div class="footer-logo"><img alt="TAGRA" height="20" src="/assets/img/logo-dark.svg?v=20260513zh" width="88" loading="lazy"/></div>
-<p class="footer-desc">Logiciel professionnel d'analyse du chronotachygraphe. Téléchargement de la carte conducteur, analyse du chronotachygraphe numérique, temps de conduite UE et directive sur le temps de travail des chauffeurs routiers. Développé par Truck Data Technology, s.r.o.</p>
+<p class="footer-desc">Logiciel professionnel d'analyse des tachygraphes. Téléchargement des cartes de conducteur, analyse des tachygraphes numériques, temps de conduite des conducteurs dans l'UE et directive relative au temps de travail des conducteurs de poids lourds. Développé par Truck Data Technology, s.r.o.</p>
 </div>
 <div class="footer-col">
 <h2 class="footer-col-title">Produit</h2>
 <ul>
-<li><a href="/fleet/">Pour les opérateurs de flotte</a></li>
+<li><a href="/fr/entreprises/">Pour les exploitants de parcs</a></li>
 <li><a href="/fr/conducteurs/">Pour les conducteurs professionnels</a></li>
-<li><a href="/enforcement/">Autorités de contrôle</a></li>
-<li><a href="/how-it-works/">Comment ça marche</a></li>
-<li><a href="/for-whom/">Pour qui</a></li>
-<li><a href="/faq/">FAQ</a></li>
+<li><a href="/fr/autorites-de-controle/">Pour les contrôles</a></li>
+<li><a href="/fr/fonctionnement/">Fonctionnement</a></li>
+<li><a href="/fr/pour-qui/">Pour qui</a></li>
+<li><a href="/fr/faq/">FAQ</a></li>
 </ul>
 </div>
 <div class="footer-col">
 <h2 class="footer-col-title">Ressources</h2>
 <ul>
-<li><a href="/articles/">Articles</a></li><li><a href="/manuals/">Manuels</a></li>
-<li><a href="/articles/digital-tachograph-symbols/">Symboles du chronotachygraphe</a></li>
-<li><a href="/integrations/dkv-live/">DKV LIVE®</a></li>
+<li><a href="/fr/articles/">Articles</a></li><li><a href="/fr/manuels/">Manuels</a></li>
+<li><a href="/fr/articles/symboles-tachygraphe/">Symboles du tachygraphe</a></li>
+<li><a href="/fr/integrations/dkv-live/">DKV LIVE®</a></li>
 </ul>
 </div>
 <div class="footer-col">
 <h2 class="footer-col-title">Entreprise</h2>
 <ul>
-<li><a href="/contact/">Contact</a></li>
+<li><a href="/fr/contact/">Contact</a></li>
 <li><a href="https://www.tdt.cz" rel="noopener" target="_blank">Truck Data Technology</a></li>
-<li><a href="/">English</a></li><li><a href="/de/">Deutsch</a></li><li><a href="/pl/">Polski</a></li><li><a href="/el/">Ελληνικά</a></li><li><a href="/hu/">Magyar</a></li><li><a href="/it/">Italiano</a></li><li><a href="/fr/">Français</a></li><li><a href="https://www.tdt.cz/" rel="noopener" target="_blank">Čeština</a></li><li><a href="https://www.tdt.sk/" rel="noopener" target="_blank">Slovenčina</a></li></ul>
+<li><a href="/nl/">English</a></li><li><a href="/de/">Deutsch</a></li><li><a href="/pl/">Polski</a></li><li><a href="/el/">Ελληνικά</a></li><li><a href="/hu/">Magyar</a></li><li><a href="/it/">Italiano</a></li><li><a href="https://www.tdt.cz/" rel="noopener" target="_blank">Čeština</a></li><li><a href="https://www.tdt.sk/" rel="noopener" target="_blank">Slovenčina</a></li></ul>
 </div>
 </div>
 <div class="footer-bottom">
 <span>© 2026 Truck Data Technology, s.r.o. Tous droits réservés.</span>
-<span><a href="/contact/">Contact</a> · <a href="https://www.tdt.cz" rel="noopener" target="_blank">tdt.cz</a> · <a href="/privacy/">Confidentialité et cookies</a></span>
+<span><a href="/fr/contact/">Contact</a> · <a href="https://www.tdt.cz" rel="noopener" target="_blank">tdt.cz</a> · <a href="/fr/confidentialite/">Confidentialité &amp; cookies</a></span>
 </div>
 </footer>
-<div aria-label="Quick trial signup" class="sticky-cta" id="stickyCta" role="complementary">
+<div aria-label="Inscription rapide à l'essai" class="sticky-cta" id="stickyCta" role="complementary">
 <div class="sticky-cta-inner">
 <span class="sticky-cta-text">Prêt à commencer ? Essayez TAGRA gratuitement pendant 30 jours.</span>
-<a class="sticky-cta-btn" href="/try/?audience=fleet">Essai gratuit →</a>
+<a class="sticky-cta-btn" href="/fr/essai-gratuit/?audience=fleet">Essayer gratuitement →</a>
 <button aria-label="Fermer" class="sticky-cta-close" id="stickyCtaClose">×</button>
 </div>
 </div>
@@ -1131,10 +1135,10 @@
 {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
-  "name": "TAGRA – Logiciel d'analyse du chronotachygraphe",
+  "name": "TAGRA – logiciel de gestion des données des tachygraphes",
   "applicationCategory": "BusinessApplication",
   "operatingSystem": "Windows",
-  "description": "Logiciel d'évaluation et d'archivage des données issues des chronotachygraphes numériques et des cartes conducteur. Disponible pour les opérateurs de flotte (de 1 à un nombre illimité de véhicules) et les conducteurs professionnels. Conforme au règlement (CE) 561/2006, à l'AETR et à la directive sur le temps de travail. Essai gratuit de 30 jours.",
+  "description": "Logiciel permettant d'évaluer et d'archiver les données des tachygraphes numériques et des cartes de conducteur. Disponible pour les gestionnaires de flotte (de 1 à un nombre illimité de véhicules) et les conducteurs professionnels. Conforme au règlement (CE) 561/2006, à l'AETR et à la directive sur le temps de travail. Essai gratuit de 30 jours.",
   "url": "https://tagra.app/fr/",
   "inLanguage": "fr",
   "author": {
@@ -1150,7 +1154,7 @@
     "offerCount": "6",
     "url": "https://tagra.app/fr/",
     "availability": "https://schema.org/InStock",
-    "description": "Le prix d'achat inclut la première année de mises à jour et d'assistance. À partir de la 2e année, une redevance annuelle de 19 à 149 € s'applique pour maintenir le logiciel actif."
+    "description": "Le prix d'achat comprend la première année de mises à jour et d'assistance. Une redevance annuelle de 19–149 € s'applique à partir de la deuxième année pour maintenir le logiciel actif."
   }
 }
 </script>
@@ -1165,23 +1169,23 @@
       "name": "TAGRA est-il basé sur le cloud ou installé localement ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "TAGRA est un logiciel de bureau Windows qui fonctionne entièrement hors ligne sur votre propre ordinateur. Les données des conducteurs et des véhicules ne quittent jamais votre réseau — aucun envoi vers le cloud, aucun sous-traitant tiers, aucun abonnement mensuel. De nombreuses flottes préfèrent cette approche pour des raisons de RGPD et de protection des données."
+        "text": "TAGRA est un logiciel Windows pour ordinateur qui fonctionne entièrement hors ligne sur votre propre ordinateur. Les données des conducteurs et des véhicules ne quittent jamais votre réseau — il n'y a ni téléversement vers le cloud, ni sous-traitant tiers, ni abonnement mensuel. De nombreuses flottes privilégient cette solution pour des raisons liées au RGPD et à la protection des données."
       }
     },
     {
       "@type": "Question",
-      "name": "TAGRA couvre-t-il les temps de conduite UE et la directive temps de travail ?",
+      "name": "TAGRA couvre-t-il le temps de conduite des conducteurs dans l'UE et la directive sur le temps de travail ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Oui. TAGRA évalue le règlement (CE) n° 561/2006 (temps de conduite UE) et la directive sur le temps de travail des chauffeurs routiers 2002/15/CE, ainsi que les règles AETR associées. Chaque infraction est mise en évidence dans des rapports clairs par conducteur et par véhicule, avec l'heure, le type et la durée exacts."
+        "text": "Oui. TAGRA évalue le règlement (CE) n° 561/2006 (temps de conduite des conducteurs dans l'UE) et la directive 2002/15/CE sur le temps de travail dans le transport routier, ainsi que les règles AETR associées. Chaque infraction est mise en évidence dans des rapports clairs sur les conducteurs et les véhicules, avec l'heure, le type et la durée exacts."
       }
     },
     {
       "@type": "Question",
-      "name": "Quels chronotachygraphes et lecteurs de carte prend-il en charge ?",
+      "name": "Quels tachygraphes et lecteurs de cartes sont pris en charge ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Tous les chronotachygraphes numériques UE, de la première génération jusqu'au Smart Tachograph G2V2. Compatible avec les lecteurs de carte à puce standard (par ex. DOWNLOAD BOX II S) et lit les fichiers .DDD, .C1B, .V1B et ESM. Prêt pour les exigences de juillet 2026 applicables aux véhicules utilitaires légers."
+        "text": "Tous les tachygraphes numériques de l'UE, de la première génération jusqu'au tachygraphe intelligent G2V2. Compatible avec les lecteurs de cartes à puce standard (par exemple DOWNLOAD BOX II S) et lit les fichiers .DDD, .C1B, .V1B et ESM. Prêt pour les exigences de juillet 2026 applicables aux véhicules utilitaires légers."
       }
     },
     {
@@ -1189,7 +1193,7 @@
       "name": "Comment fonctionne l'essai gratuit de 30 jours ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Téléchargez et installez le package Windows — vous bénéficiez de 30 jours d'accès complet et illimité à toutes les fonctionnalités. Aucune carte bancaire, aucune information de paiement. Si TAGRA convient à votre activité, vous achetez une licence pour continuer."
+        "text": "Téléchargez et installez le logiciel Windows — vous bénéficiez de 30 jours d'accès complet et sans restriction à toutes les fonctionnalités. Aucune carte bancaire, aucune information de paiement. Si TAGRA convient à votre activité, achetez une licence pour continuer à l'utiliser."
       }
     }
   ]

@@ -45,6 +45,10 @@
       var m={cz:'cs',cs:'cs',sk:'sk',de:'de',pl:'pl',gr:'el',el:'el',hu:'hu',en:'en'};return m[l]||'en';}
     var T={
       hu:{t:'Analitikai s\u00fctiket haszn\u00e1lunk (Google Analytics, Microsoft Clarity, Smartsupp), hogy meg\u00e9rts\u00fck a webhely haszn\u00e1lat\u00e1t. Csak az \u00d6n hozz\u00e1j\u00e1rul\u00e1s\u00e1val t\u00f6lt\u0151dnek be.',a:'Elfogadom',r:'Elutas\u00edtom',p:'Adatv\u00e9delem \u00e9s s\u00fctik'},
+      ro:{t:'Utilizăm module cookie de analiză (Google Analytics, Microsoft Clarity, Smartsupp) pentru a înțelege modul de utilizare a site-ului. Se încarcă doar cu consimțământul dumneavoastră.',a:'Accept',r:'Refuz',p:'Confidențialitate și cookie-uri'},
+      nl:{t:'We gebruiken analytische cookies (Google Analytics, Microsoft Clarity, Smartsupp) om het gebruik van de site te begrijpen. Ze laden alleen met uw toestemming.',a:'Accepteren',r:'Weigeren',p:'Privacy en cookies'},
+      fr:{t:'Nous utilisons des cookies analytiques (Google Analytics, Microsoft Clarity, Smartsupp) pour comprendre l’utilisation du site. Ils ne se chargent qu’avec votre consentement.',a:'Accepter',r:'Refuser',p:'Confidentialité et cookies'},
+      it:{t:'Utilizziamo cookie analitici (Google Analytics, Microsoft Clarity, Smartsupp) per capire l’utilizzo del sito. Si caricano solo con il Suo consenso.',a:'Accetta',r:'Rifiuta',p:'Privacy e cookie'},
       en:{t:'We use analytics cookies (Google Analytics, Microsoft Clarity, Smartsupp) to understand site usage. They load only with your consent.',a:'Accept',r:'Reject',p:'Privacy &amp; cookies'},
       cs:{t:'Pou\u017e\u00edv\u00e1me analytick\u00e9 cookies (Google Analytics, Microsoft Clarity, Smartsupp) k pochopen\u00ed pou\u017e\u00edv\u00e1n\u00ed webu. Na\u010dtou se jen s va\u0161\u00edm souhlasem.',a:'P\u0159ijmout',r:'Odm\u00edtnout',p:'Soukrom\u00ed a cookies'},
       sk:{t:'Pou\u017e\u00edvame analytick\u00e9 cookies (Google Analytics, Microsoft Clarity, Smartsupp) na pochopenie pou\u017e\u00edvania webu. Na\u010d\u00edtaj\u00fa sa len s va\u0161\u00edm s\u00fahlasom.',a:'Prija\u0165',r:'Odmietnu\u0165',p:'S\u00fakromie a cookies'},
@@ -76,21 +80,23 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>TAGRA Control – Fahrtenschreiber-Auswertung für Behörden</title>
-<meta content="Professionelle Software zur Auswertung von Fahrtenschreiberdaten für Straßen- und Betriebskontrollen. Im Einsatz bei Polizei, Zoll, Arbeitsinspektionen und Verkehrsministerien in Mitteleuropa." name="description"/>
+<meta content="Professionelle Software zur Auswertung von Tachograph-Daten für Straßen- und Betriebskontrollen." name="description"/>
 <meta content="#0b2c4a" name="theme-color"/>
 <link href="/manifest.json" rel="manifest"/>
 <link href="https://tagra.app/de/kontrollbehoerden/" rel="canonical"/>
+<link href="https://tagra.app/de/kontrollbehoerden/" hreflang="de" rel="alternate"/><link href="https://tagra.app/el/eleghos/" hreflang="el" rel="alternate"/><link href="https://tagra.app/enforcement/" hreflang="en" rel="alternate"/><link href="https://tagra.app/fr/autorites-de-controle/" hreflang="fr" rel="alternate"/><link href="https://tagra.app/hu/hatosagoknak/" hreflang="hu" rel="alternate"/><link href="https://tagra.app/it/organi-di-controllo/" hreflang="it" rel="alternate"/><link href="https://tagra.app/nl/handhaving/" hreflang="nl" rel="alternate"/><link href="https://tagra.app/pl/organy-kontrolne/" hreflang="pl" rel="alternate"/>
+<link href="https://tagra.app/ro/autoritati-de-control/" hreflang="ro" rel="alternate"/><link href="https://tagra.app/enforcement/" hreflang="x-default" rel="alternate"/>
 <meta content="website" property="og:type"/>
 <meta content="TAGRA Control – Fahrtenschreiber-Auswertung für Behörden" property="og:title"/>
-<meta content="Professionelle Software zur Auswertung von Fahrtenschreiberdaten für Straßen- und Betriebskontrollen. Im Einsatz bei Polizei, Zoll und Arbeitsinspektionen in Mitteleuropa." property="og:description"/>
+<meta content="Professionelle Software zur Auswertung von Tachograph-Daten für Straßen- und Betriebskontrollen. Im Einsatz bei Polizei, Zoll und Arbeitsinspektionen in Mitteleuropa." property="og:description"/>
 <meta content="https://tagra.app/assets/img/tagra-control-screenshot.webp" property="og:image"/>
-<meta content="TAGRA Control – digitale Oberfläche zur Fahrtenschreiberauswertung für Kontrollbehörden" property="og:image:alt"/>
+<meta content="TAGRA Control – digitale Oberfläche zur Tachograph-Auswertung für Kontrollbehörden" property="og:image:alt"/>
 <meta content="https://tagra.app/de/kontrollbehoerden/" property="og:url"/>
 <meta content="TAGRA" property="og:site_name"/>
 <meta content="de_DE" property="og:locale"/>
 <meta content="summary_large_image" name="twitter:card"/>
 <meta content="TAGRA Control – Software für Kontrollbehörden" name="twitter:title"/>
-<meta content="Professionelle Software zur Auswertung von Fahrtenschreiberdaten für Straßen- und Betriebskontrollen." name="twitter:description"/>
+<meta content="Professionelle Software zur Auswertung von Tachograph-Daten für Straßen- und Betriebskontrollen." name="twitter:description"/>
 <meta content="https://tagra.app/assets/img/tagra-control-screenshot.webp" name="twitter:image"/>
 <link href="/assets/img/favicon.ico" rel="icon"/>
 <style>
@@ -286,11 +292,6 @@
 <link href="/assets/css/nav.css" rel="stylesheet"/>
 <script defer="" src="/assets/js/nav.js?v=20260816b"></script>
 <meta content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" name="robots"/>
-<link href="https://tagra.app/enforcement/" hreflang="en" rel="alternate"/>
-<link href="https://tagra.app/de/kontrollbehoerden/" hreflang="de" rel="alternate"/>
-<link href="https://tagra.app/pl/organy-kontrolne/" hreflang="pl" rel="alternate"/>
-<link href="https://tagra.app/el/eleghos/" hreflang="el" rel="alternate"/>
-<link href="https://tagra.app/hu/hatosagoknak/" hreflang="hu" rel="alternate"/><link href="https://tagra.app/it/organi-di-controllo/" hreflang="it" rel="alternate"/><link href="https://tagra.app/enforcement/" hreflang="x-default" rel="alternate"/>
 <link href="/assets/css/footer.css" rel="stylesheet"/>
 </head>
 <body>
@@ -311,8 +312,7 @@
 </ul>
 <details class="nav-lang">
 <summary aria-label="Language: DE">DE</summary>
-<div class="nav-lang-menu" role="menu">
-<a href="/" hreflang="en">English</a><a aria-current="page" class="active" href="/de/" hreflang="de">Deutsch</a><a href="/pl/" hreflang="pl">Polski</a><a href="/el/" hreflang="el">Ελληνικά</a><a href="/hu/" hreflang="hu">Magyar</a><a href="/it/organi-di-controllo/" hreflang="it">Italiano</a><a href="https://www.tdt.cz/" hreflang="cs" rel="noopener" target="_blank">Čeština</a><a href="https://www.tdt.sk/" hreflang="sk" rel="noopener" target="_blank">Slovenčina</a></div>
+<div class="nav-lang-menu" role="menu"><a href="/enforcement/" hreflang="en">English</a><a aria-current="page" class="active" href="/de/kontrollbehoerden/" hreflang="de">Deutsch</a><a href="/pl/organy-kontrolne/" hreflang="pl">Polski</a><a href="/nl/handhaving/" hreflang="nl">Nederlands</a><a href="/fr/autorites-de-controle/" hreflang="fr">Français</a><a href="/it/organi-di-controllo/" hreflang="it">Italiano</a><a href="/el/eleghos/" hreflang="el">Ελληνικά</a><a href="/hu/hatosagoknak/" hreflang="hu">Magyar</a><a href="/ro/autoritati-de-control/" hreflang="ro">Română</a><a href="https://www.tdt.cz/" hreflang="cs" rel="noopener" target="_blank">Čeština</a><a href="https://www.tdt.sk/" hreflang="sk" rel="noopener" target="_blank">Slovenčina</a></div>
 </details>
 <a class="nav-cta-mobile" href="/de/testen/?audience=enforcement">Kostenlos testen</a>
 <button aria-expanded="false" aria-label="Menü umschalten" class="nav-mobile-toggle" id="nav-toggle">
@@ -332,7 +332,7 @@
 </div>
 <p class="anim-up" style="font-size:15px;color:var(--text2);margin-bottom:0;transition-delay:.2s">Windows · Demo auf Anfrage · Genutzt von Behörden in Tschechien, der Slowakei und Ungarn</p>
 <div class="tmx-media-frame anim-up" style="margin:44px auto 0;box-shadow:0 20px 40px rgba(0,0,0,.08);">
-<img alt="TAGRA Control – digitale Oberfläche zur Fahrtenschreiberauswertung für Kontrollbehörden" height="600" src="/assets/img/tagra-control-screenshot.webp" width="800"/>
+<img alt="TAGRA Control – digitale Oberfläche zur Tachograph-Auswertung für Kontrollbehörden" height="600" src="/assets/img/tagra-control-screenshot.webp" width="800"/>
 </div>
 </div>
 </section>
@@ -366,7 +366,7 @@
 <div class="bc greenfill s6 fly-right">
 <span class="bc-label">Berichte</span>
 <div class="bc-title">Formulare einsatzbereit für Kontrollen</div>
-<p class="bc-text" style="margin-top:8px;">Ausgaben vorbereitet für Straßen- und Betriebskontrollen — identisch zu dem, was Transportunternehmen den Behörden vorlegen.</p>
+<p class="bc-text" style="margin-top:8px;">Auswertungen für Straßen- und Betriebskontrollen — identisch mit denen, die Transportunternehmen den Behörden vorlegen.</p>
 </div>
 </div>
 </div>
@@ -432,9 +432,9 @@
 <div class="fly-left">
 <span class="section-label">Verstoßanalyse</span>
 <h2 class="section-h2">Was TAGRA Control sofort erkennt</h2>
-<p style="font-size:17px;color:#515154;line-height:1.6;margin-bottom:20px;">Die Software führt eine <strong>digitale Fahrtenschreiberauswertung</strong> für jeden Zeitabschnitt der Fahrerkarte oder des Fahrtenschreibers durch und kennzeichnet eindeutig Verstöße gegen die geltenden <strong>Lenk- und Ruhezeiten</strong>-Vorschriften.</p>
+<p style="font-size:17px;color:#515154;line-height:1.6;margin-bottom:20px;">Die Software führt eine <strong>digitale Fahrtenschreiberauswertung</strong> für jeden Zeitabschnitt der Fahrerkarte oder des Tachographen durch und kennzeichnet eindeutig Verstöße gegen die geltenden <strong>Lenk- und Ruhezeiten</strong>-Vorschriften.</p>
 <div class="feats">
-<div class="fi"><div class="fck"></div><span>Überschreitung der täglichen und wöchentlichen Lenkzeiten nach den EU-Lenk- und Ruhezeiten (Verordnung 561/2006)</span></div>
+<div class="fi"><div class="fck"></div><span>Überschreitung der täglichen und wöchentlichen Lenkzeiten gemäß den EU-Vorschriften zu Lenk- und Ruhezeiten (Verordnung 561/2006)</span></div>
 <div class="fi"><div class="fck"></div><span>Verkürzte Pflichtpause</span></div>
 <div class="fi"><div class="fck"></div><span>Unzureichende tägliche und wöchentliche Ruhezeit</span></div>
 <div class="fi"><div class="fck"></div><span>Fahren ohne eingesteckte Fahrerkarte</span></div>
@@ -465,7 +465,7 @@
 <div class="container anim-up">
 <span class="section-label">Einsatzbereit für die Praxis</span>
 <h2 class="section-h2">Berichte und Formulare für Kontrollbehörden</h2>
-<p class="section-intro">TAGRA Control enthält alle notwendigen Ausgaben und Formulare für Straßen- und Betriebskontrollen — sofort einsatzbereit.</p>
+<p class="section-intro">TAGRA Control enthält alle notwendigen Auswertungen und Formulare für Straßen- und Betriebskontrollen — sofort einsatzbereit.</p>
 <div class="reports-grid">
 <div class="report-item">
 <div class="report-icon">1</div>
@@ -518,14 +518,14 @@
 <div class="step-card anim-up">
 <div class="step-header"><span class="snum">02</span>
 <span class="stit">Sofortige Auswertung in TAGRA Control</span></div><div class="tmx-media-frame" style="margin:12px 0;">
-<img alt="TAGRA Control Oberfläche – sofortige digitale Fahrtenschreiberauswertung und Verstoßbericht" height="300" src="/assets/img/tagra-control-screenshot.webp" width="400" loading="lazy"/>
+<img alt="TAGRA-Control-Oberfläche – sofortige digitale Tachographenauswertung und Verstoßbericht" height="300" src="/assets/img/tagra-control-screenshot.webp" width="400" loading="lazy"/>
 </div>
 <p style="font-size:16px;color:#515154;line-height:1.55;">Das Programm wertet alle Aufzeichnungen automatisch aus und markiert jeden Verstoß mit genauer Uhrzeit, Art und Dauer.</p>
 </div>
 <div class="step-card fly-right">
 <div class="step-header"><span class="snum">03</span>
 <span class="stit">Bericht zur Straßenkontrolle</span></div><div class="tmx-media-frame" style="margin:12px 0;">
-<img alt="Formular zur Straßenkontrolle – TAGRA Control Ausgabe einsatzbereit für Kontrollbehörden" height="300" src="/assets/img/road-check-form-tagra.webp" width="400" loading="lazy"/>
+<img alt="Formular zur Straßenkontrolle – TAGRA-Control-Ausgabe, einsatzbereit für Kontrollbehörden" height="300" src="/assets/img/road-check-form-tagra.webp" width="400" loading="lazy"/>
 </div>
 <p style="font-size:16px;color:#515154;line-height:1.55;">Verstoßbericht druckfertig oder zum elektronischen Export. Vorbereitet für Verwaltungs- und Bußgeldverfahren.</p>
 </div>
@@ -562,7 +562,7 @@
 <h2 class="section-h2">Schulungen für Kontrollbehörden</h2>
 <p style="font-size:17px;color:#515154;line-height:1.6;margin-bottom:16px;">Truck Data Technology, s.r.o. bietet professionelle Schulungen zur Bedienung von TAGRA Control direkt für Kontrollbehörden an. Die Schulung wird an die Bedürfnisse und Arbeitsabläufe der jeweiligen Organisation angepasst.</p>
 <ul class="training-list">
-<li>Bedienung der Software — Einlesen von Fahrerkarten und Fahrtenschreibern</li>
+<li>Bedienung der Software — Auslesen von Fahrerkarten und Tachographen</li>
 <li>Interpretation der Ergebnisse — Verstoßberichte richtig lesen</li>
 <li>Rechtlicher Rahmen — EU 561/2006, AETR, nationale Vorschriften</li>
 <li>Exporte und Protokolle — Vorbereitung von Unterlagen für Verfahren</li>
@@ -574,6 +574,7 @@
 <div class="callout-green">
 <div class="cg-bg">TDT</div>
 <h2 style="font-size:clamp(24px,3vw,34px);font-weight:800;margin-bottom:14px;display:inline-block;">Interesse an TAGRA Control?</h2>
+<p style="margin-bottom:8px;"><strong>TAGRA Control: 749 € zzgl. MwSt.</strong> — das erste Jahr mit Updates und Support ist enthalten; ab dem 2. Jahr beträgt die jährliche Lizenzgebühr 149 € zzgl. MwSt.</p>
 <p style="margin-bottom:8px;">Wir erstellen Ihnen gerne ein Angebot und organisieren eine Schulung für Ihr Team.</p>
 <p>Kontaktieren Sie uns an Werktagen von 8:00 bis 16:00 Uhr. Wir antworten auf Englisch.</p>
 <p style="margin-top:20px;"><strong>Web:</strong> <a href="/de/kontrollbehoerden/">tagra.app/de/kontrollbehoerden</a></p>
@@ -610,15 +611,15 @@
 </details>
 <details>
 <summary>Auf welchen Geräten läuft TAGRA Control?</summary>
-<p class="faq-a">Die Software läuft auf Windows 7 SP1 und neuer (Windows 8.1, 10, 11 — sowohl 32-Bit als auch 64-Bit). Geeignet für Laptops und Desktop-Computer. Die Mindestanforderungen an die Hardware sind niedrig.</p>
+<p class="faq-a">Die Software läuft unter Windows 7 SP1 und neuer (Windows 8.1, 10, 11 — sowohl 32-Bit als auch 64-Bit). Geeignet für Laptops und Desktop-Computer. Die Mindestanforderungen an die Hardware sind niedrig.</p>
 </details>
 <details>
 <summary>Ist eine Schulung auf Englisch für internationale Kontrollbehörden verfügbar?</summary>
-<p class="faq-a">Ja. Truck Data Technology bietet Schulungen auf Englisch für internationale Kontrollbehörden und Partnerorganisationen an. Kontaktieren Sie uns unter sales@tagra.app, um Konditionen und Termin zu vereinbaren.</p>
+<p class="faq-a">Ja. Truck Data Technology bietet Schulungen auf Englisch für internationale Kontrollbehörden und Partnerorganisationen an. Kontaktieren Sie uns unter sales@tagra.app, um Konditionen und einen Termin zu vereinbaren.</p>
 </details>
 <details>
 <summary>Wie wird die Rechtsaktualität sichergestellt?</summary>
-<p class="faq-a">Die Software wird bei jeder relevanten Änderung der EU- und nationalen Rechtsvorschriften aktualisiert. Updates stehen allen gültigen Lizenzinhabern zur Verfügung. Das Programm benachrichtigt Sie selbst, wenn ein Update verfügbar ist.</p>
+<p class="faq-a">Die Software wird bei jeder relevanten Änderung der EU- und nationalen Rechtsvorschriften aktualisiert. Updates stehen allen Inhabern gültiger Lizenzen zur Verfügung. Das Programm benachrichtigt Sie automatisch, wenn ein Update verfügbar ist.</p>
 </details>
 </div>
 </div>
@@ -711,25 +712,7 @@
   }
 })();
 </script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "name": "TAGRA Control – Fahrtenschreiber-Auswertungssoftware für Kontrollbehörden",
-  "applicationCategory": "BusinessApplication",
-  "operatingSystem": "Windows",
-  "description": "Professionelle Fahrtenschreiber-Auswertungssoftware für die digitale Fahrtenschreiberauswertung bei Straßen- und Betriebskontrollen. Führt Fahrerkarten-Downloads durch und bewertet Verstöße gegen die EU-Lenk- und Ruhezeiten nach Verordnung (EG) Nr. 561/2006, (EU) 2020/1054 und AETR. Im Einsatz bei der Tschechischen Polizei, der Tschechischen Zollverwaltung, dem Tschechischen Verkehrsministerium, den Slowakischen Arbeitsinspektionen und dem Ungarischen Verkehrsministerium.",
-  "url": "https://tagra.app/de/kontrollbehoerden/",
-  "inLanguage": "de",
-  "author": {
-    "@type": "Organization",
-    "name": "Truck Data Technology, s.r.o.",
-    "url": "https://www.tdt.cz",
-    "telephone": "+420739005345",
-    "email": "sales@tagra.app"
-  }
-}
-</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "TAGRA Control – Fahrtenschreiber-Auswertungssoftware für Kontrollbehörden", "applicationCategory": "BusinessApplication", "operatingSystem": "Windows", "description": "Professionelle Fahrtenschreiber-Auswertungssoftware für die digitale Fahrtenschreiberauswertung bei Straßen- und Betriebskontrollen. Führt Fahrerkarten-Downloads durch und bewertet Verstöße gegen die EU-Lenk- und Ruhezeiten nach Verordnung (EG) Nr. 561/2006, (EU) 2020/1054 und AETR. Im Einsatz bei der Tschechischen Polizei, der Tschechischen Zollverwaltung, dem Tschechischen Verkehrsministerium, den Slowakischen Arbeitsinspektionen und dem Ungarischen Verkehrsministerium.", "url": "https://tagra.app/de/kontrollbehoerden/", "inLanguage": "de", "author": {"@type": "Organization", "name": "Truck Data Technology, s.r.o.", "url": "https://www.tdt.cz", "telephone": "+420739005345", "email": "sales@tagra.app"}, "offers": {"@type": "Offer", "@id": "https://tagra.app/de/kontrollbehoerden/#offer", "priceCurrency": "EUR", "price": "749", "availability": "https://schema.org/InStock", "url": "https://tagra.app/de/kontrollbehoerden/", "description": "Kaufpreis zzgl. MwSt. Das erste Jahr mit Updates und Support ist enthalten; ab dem 2. Jahr beträgt die jährliche Lizenzgebühr 149 € zzgl. MwSt.", "seller": {"@type": "Organization", "name": "Truck Data Technology, s.r.o.", "url": "https://www.tdt.cz"}}}</script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -737,12 +720,12 @@
   "inLanguage": "de",
   "mainEntity": [
     {"@type":"Question","name":"Welche Arten von Fahrtenschreibern unterstützt TAGRA Control?","acceptedAnswer":{"@type":"Answer","text":"TAGRA Control führt eine digitale Fahrtenschreiberauswertung für Aufzeichnungen von Fahrtenschreibern der ersten Generation (G1) und intelligenten Fahrtenschreibern der zweiten Generation (G2V2) durch. Unterstützte Dateiformate: .DDD, .C1B, .V1B und ESM."}},
-    {"@type":"Question","name":"Was zeigt die Auswertung der Fahrerkarte?","acceptedAnswer":{"@type":"Answer","text":"Nach dem Fahrerkarten-Download wertet die Software Lenk- und Ruhezeiten, Pausen, Ruhezeiten, Arbeitszeit und Fahren ohne Karte aus. Jeder Verstoß wird mit genauem Datum, Uhrzeit und Dauer angezeigt. Bei G2V2-Karten stehen zusätzlich GPS-Koordinaten aus der Fahrtenschreiberaufzeichnung zur Verfügung."}},
+    {"@type":"Question","name":"Was zeigt die Auswertung der Fahrerkarte?","acceptedAnswer":{"@type":"Answer","text":"Nach dem Auslesen der Fahrerkarte wertet die Software Lenk- und Ruhezeiten, Pausen, Arbeitszeit und Fahren ohne Karte aus. Jeder Verstoß wird mit genauem Datum, Uhrzeit und Dauer angezeigt. Bei G2V2-Karten stehen zusätzlich GPS-Koordinaten aus der Tachographenaufzeichnung zur Verfügung."}},
     {"@type":"Question","name":"Wie schnell läuft die Auswertung bei einer Straßenkontrolle ab?","acceptedAnswer":{"@type":"Answer","text":"Das Einlesen einer Fahrerkarte über die DOWNLOAD BOX II S dauert je nach Datenmenge auf der Karte in der Regel 10–60 Sekunden. Die eigentliche Auswertung und die Anzeige des Verstoßberichts erfolgen unmittelbar nach dem Einlesen der Daten."}},
     {"@type":"Question","name":"Kann TAGRA Control offline ohne Internetverbindung genutzt werden?","acceptedAnswer":{"@type":"Answer","text":"Ja. TAGRA Control funktioniert vollständig offline. Eine Internetverbindung ist nur zur Installation von Software-Updates erforderlich. Die Kontrolltätigkeit und die Datenauswertung funktionieren ohne Netzwerkverbindung."}},
-    {"@type":"Question","name":"Auf welchen Geräten läuft TAGRA Control?","acceptedAnswer":{"@type":"Answer","text":"Die Software läuft auf Windows 7 SP1 und neuer (Windows 8.1, 10, 11 — sowohl 32-Bit als auch 64-Bit). Geeignet für Laptops und Desktop-Computer. Die Mindestanforderungen an die Hardware sind niedrig."}},
-    {"@type":"Question","name":"Ist eine Schulung auf Englisch für internationale Kontrollbehörden verfügbar?","acceptedAnswer":{"@type":"Answer","text":"Ja. Truck Data Technology bietet Schulungen auf Englisch für internationale Kontrollbehörden und Partnerorganisationen an. Kontaktieren Sie uns unter sales@tagra.app, um Konditionen und Termin zu vereinbaren."}},
-    {"@type":"Question","name":"Wie wird die Rechtsaktualität sichergestellt?","acceptedAnswer":{"@type":"Answer","text":"Die Software wird bei jeder relevanten Änderung der EU- und nationalen Rechtsvorschriften aktualisiert. Updates stehen allen gültigen Lizenzinhabern zur Verfügung. Das Programm benachrichtigt Sie selbst, wenn ein Update verfügbar ist."}}
+    {"@type":"Question","name":"Auf welchen Geräten läuft TAGRA Control?","acceptedAnswer":{"@type":"Answer","text":"Die Software läuft unter Windows 7 SP1 und neuer (Windows 8.1, 10, 11 — sowohl 32-Bit als auch 64-Bit). Geeignet für Laptops und Desktop-Computer. Die Mindestanforderungen an die Hardware sind niedrig."}},
+    {"@type":"Question","name":"Ist eine Schulung auf Englisch für internationale Kontrollbehörden verfügbar?","acceptedAnswer":{"@type":"Answer","text":"Ja. Truck Data Technology bietet Schulungen auf Englisch für internationale Kontrollbehörden und Partnerorganisationen an. Kontaktieren Sie uns unter sales@tagra.app, um Konditionen und einen Termin zu vereinbaren."}},
+    {"@type":"Question","name":"Wie wird die Rechtsaktualität sichergestellt?","acceptedAnswer":{"@type":"Answer","text":"Die Software wird bei jeder relevanten Änderung der EU- und nationalen Rechtsvorschriften aktualisiert. Updates stehen allen Inhabern gültiger Lizenzen zur Verfügung. Das Programm benachrichtigt Sie automatisch, wenn ein Update verfügbar ist."}}
   ]
 }
 </script>

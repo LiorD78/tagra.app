@@ -45,6 +45,10 @@
       var m={cz:'cs',cs:'cs',sk:'sk',de:'de',pl:'pl',gr:'el',el:'el',hu:'hu',en:'en'};return m[l]||'en';}
     var T={
       hu:{t:'Analitikai s\u00fctiket haszn\u00e1lunk (Google Analytics, Microsoft Clarity, Smartsupp), hogy meg\u00e9rts\u00fck a webhely haszn\u00e1lat\u00e1t. Csak az \u00d6n hozz\u00e1j\u00e1rul\u00e1s\u00e1val t\u00f6lt\u0151dnek be.',a:'Elfogadom',r:'Elutas\u00edtom',p:'Adatv\u00e9delem \u00e9s s\u00fctik'},
+      ro:{t:'Utilizăm module cookie de analiză (Google Analytics, Microsoft Clarity, Smartsupp) pentru a înțelege modul de utilizare a site-ului. Se încarcă doar cu consimțământul dumneavoastră.',a:'Accept',r:'Refuz',p:'Confidențialitate și cookie-uri'},
+      nl:{t:'We gebruiken analytische cookies (Google Analytics, Microsoft Clarity, Smartsupp) om het gebruik van de site te begrijpen. Ze laden alleen met uw toestemming.',a:'Accepteren',r:'Weigeren',p:'Privacy en cookies'},
+      fr:{t:'Nous utilisons des cookies analytiques (Google Analytics, Microsoft Clarity, Smartsupp) pour comprendre l’utilisation du site. Ils ne se chargent qu’avec votre consentement.',a:'Accepter',r:'Refuser',p:'Confidentialité et cookies'},
+      it:{t:'Utilizziamo cookie analitici (Google Analytics, Microsoft Clarity, Smartsupp) per capire l’utilizzo del sito. Si caricano solo con il Suo consenso.',a:'Accetta',r:'Rifiuta',p:'Privacy e cookie'},
       en:{t:'We use analytics cookies (Google Analytics, Microsoft Clarity, Smartsupp) to understand site usage. They load only with your consent.',a:'Accept',r:'Reject',p:'Privacy &amp; cookies'},
       cs:{t:'Pou\u017e\u00edv\u00e1me analytick\u00e9 cookies (Google Analytics, Microsoft Clarity, Smartsupp) k pochopen\u00ed pou\u017e\u00edv\u00e1n\u00ed webu. Na\u010dtou se jen s va\u0161\u00edm souhlasem.',a:'P\u0159ijmout',r:'Odm\u00edtnout',p:'Soukrom\u00ed a cookies'},
       sk:{t:'Pou\u017e\u00edvame analytick\u00e9 cookies (Google Analytics, Microsoft Clarity, Smartsupp) na pochopenie pou\u017e\u00edvania webu. Na\u010d\u00edtaj\u00fa sa len s va\u0161\u00edm s\u00fahlasom.',a:'Prija\u0165',r:'Odmietnu\u0165',p:'S\u00fakromie a cookies'},
@@ -76,15 +80,17 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>TAGRA &amp; DKV LIVE – automatischer Fahrtenschreiber-Datenimport</title>
-<meta content="Nutzen Sie bereits DKV LIVE für die Fernauslesung von Tachographendaten? TAGRA importiert die Daten automatisch via SFTP — keine manuellen Dateiübertragungen, keine zusätzlichen Klicks." name="description"/>
+<meta content="Nutzen Sie DKV LIVE zur Fernauslesung von Tachographendaten? TAGRA importiert Daten automatisch via SFTP – ohne manuelle Übertragung oder zusätzliche Klicks." name="description"/>
 <meta content="#0b2c4a" name="theme-color"/>
 <link href="/manifest.json" rel="manifest"/>
 <link href="https://tagra.app/de/schnittstellen/dkv-live/" rel="canonical"/>
+<link href="https://tagra.app/de/schnittstellen/dkv-live/" hreflang="de" rel="alternate"/><link href="https://tagra.app/el/ensomatoseis/dkv-live/" hreflang="el" rel="alternate"/><link href="https://tagra.app/integrations/dkv-live/" hreflang="en" rel="alternate"/><link href="https://tagra.app/fr/integrations/dkv-live/" hreflang="fr" rel="alternate"/><link href="https://tagra.app/hu/integraciok/dkv-live/" hreflang="hu" rel="alternate"/><link href="https://tagra.app/it/integrazioni/dkv-live/" hreflang="it" rel="alternate"/><link href="https://tagra.app/nl/integraties/dkv-live/" hreflang="nl" rel="alternate"/><link href="https://tagra.app/pl/integracje/dkv-live/" hreflang="pl" rel="alternate"/>
+<link href="https://tagra.app/ro/integrari/dkv-live/" hreflang="ro" rel="alternate"/><link href="https://tagra.app/integrations/dkv-live/" hreflang="x-default" rel="alternate"/>
 <meta content="website" property="og:type"/>
 <meta content="de_DE" property="og:locale"/>
 <meta content="TAGRA" property="og:site_name"/>
 <meta content="TAGRA &amp; DKV LIVE – automatischer Fahrtenschreiber-Datenimport" property="og:title"/>
-<meta content="Nutzen Sie bereits DKV LIVE für die Fernauslesung von Tachographendaten? TAGRA importiert die Daten automatisch via SFTP — keine manuellen Dateiübertragungen, keine zusätzlichen Klicks." property="og:description"/>
+<meta content="Nutzen Sie DKV LIVE zur Fernauslesung von Tachographendaten? TAGRA importiert Daten automatisch via SFTP – ohne manuelle Übertragung oder zusätzliche Klicks." property="og:description"/>
 <meta content="https://cdn.truckmall.cz/data/user-content/TDT_TAGRA_MAX_wh.jpg" property="og:image"/>
 <meta content="https://tagra.app/de/schnittstellen/dkv-live/" property="og:url"/>
 <meta content="summary_large_image" name="twitter:card"/>
@@ -437,7 +443,7 @@
       "name": "Woher bekomme ich meine DKV LIVE-Anmeldedaten?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Von Ihrem DKV Mobility Kundenbetreuer oder Vertriebsmitarbeiter. TAGRA benötigt einen gültigen SFTP-Benutzernamen und ein Passwort für den DKV LIVE-Server."
+        "text": "Von Ihrem Kundenbetreuer oder Vertriebsmitarbeiter bei DKV Mobility. TAGRA benötigt einen gültigen SFTP-Benutzernamen und ein Passwort für den DKV LIVE-Server."
       }
     },
     {
@@ -461,7 +467,7 @@
       "name": "Benötige ich DKV LIVE für die Fernauslesung von Tachographen?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Nein. DKV LIVE ist eine von mehreren Möglichkeiten, Tachographendaten in TAGRA zu importieren. TAGRA akzeptiert auch standardmäßige .DDD-, .C1B- und .V1B-Dateien von jedem anderen Tachograph-Auslesewerkzeug."
+        "text": "Nein. DKV LIVE ist eine von mehreren Möglichkeiten, Tachographendaten in TAGRA zu importieren. TAGRA akzeptiert auch standardmäßige .DDD-, .C1B- und .V1B-Dateien von jedem anderen Tachographen-Auslesewerkzeug."
       }
     },
     {
@@ -479,8 +485,7 @@
 <link href="/assets/css/components.css" rel="stylesheet"/>
 <link href="/assets/css/nav.css" rel="stylesheet"/>
 <script defer="" src="/assets/js/nav.js?v=20260816b"></script>
-<link href="/assets/css/footer.css" rel="stylesheet"/>
-<link href="https://tagra.app/integrations/dkv-live/" hreflang="en" rel="alternate"/><link href="https://tagra.app/de/schnittstellen/dkv-live/" hreflang="de" rel="alternate"/><link href="https://tagra.app/pl/integracje/dkv-live/" hreflang="pl" rel="alternate"/><link href="https://tagra.app/el/ensomatoseis/dkv-live/" hreflang="el" rel="alternate"/><link href="https://tagra.app/hu/integraciok/dkv-live/" hreflang="hu" rel="alternate"/><link href="https://tagra.app/it/integrazioni/dkv-live/" hreflang="it" rel="alternate"/><link href="https://tagra.app/integrations/dkv-live/" hreflang="x-default" rel="alternate"/></head>
+<link href="/assets/css/footer.css" rel="stylesheet"/></head>
 <body>
 <a class="skip-link" href="#content">Zum Inhalt springen</a>
 <!-- ═══ NAVIGATION ═══════════════════════════════════════════════ -->
@@ -498,8 +503,7 @@
 </ul>
 <details class="nav-lang">
 <summary aria-label="Language: DE">DE</summary>
-<div class="nav-lang-menu" role="menu">
-<a href="/" hreflang="en">English</a><a aria-current="page" class="active" href="/de/" hreflang="de">Deutsch</a><a href="/pl/" hreflang="pl">Polski</a><a href="/el/" hreflang="el">Ελληνικά</a><a href="/hu/" hreflang="hu">Magyar</a><a href="/it/integrazioni/dkv-live/" hreflang="it">Italiano</a><a href="https://www.tdt.cz/" hreflang="cs" rel="noopener" target="_blank">Čeština</a><a href="https://www.tdt.sk/" hreflang="sk" rel="noopener" target="_blank">Slovenčina</a></div>
+<div class="nav-lang-menu" role="menu"><a href="/integrations/dkv-live/" hreflang="en">English</a><a aria-current="page" class="active" href="/de/schnittstellen/dkv-live/" hreflang="de">Deutsch</a><a href="/pl/integracje/dkv-live/" hreflang="pl">Polski</a><a href="/nl/integraties/dkv-live/" hreflang="nl">Nederlands</a><a href="/fr/integrations/dkv-live/" hreflang="fr">Français</a><a href="/it/integrazioni/dkv-live/" hreflang="it">Italiano</a><a href="/el/ensomatoseis/dkv-live/" hreflang="el">Ελληνικά</a><a href="/hu/integraciok/dkv-live/" hreflang="hu">Magyar</a><a href="/ro/integrari/dkv-live/" hreflang="ro">Română</a><a href="https://www.tdt.cz/" hreflang="cs" rel="noopener" target="_blank">Čeština</a><a href="https://www.tdt.sk/" hreflang="sk" rel="noopener" target="_blank">Slovenčina</a></div>
 </details>
 <a class="nav-cta-mobile" href="/de/testen/?audience=fleet">Kostenlos testen</a>
 <button aria-expanded="false" aria-label="Menü umschalten" class="nav-mobile-toggle" id="nav-toggle">
@@ -535,7 +539,7 @@
 <div class="note-box">
 <span class="note-badge">DKV LIVE®</span>
 <span class="note-title">Telematik + TAGRA = volle Automation</span>
-<p>Wenn Sie bereits für DKV LIVE® Telematik bezahlen, benötigen Sie keine zusätzliche Hardware, um Tachographendaten in TAGRA zu erhalten. Geben Sie einfach Ihre DKV Zugangsdaten im TAGRA <strong>Datenimport</strong> Bildschirm ein und Sie sind fertig.</p>
+<p>Wenn Sie bereits für DKV LIVE® Telematik bezahlen, benötigen Sie keine zusätzliche Hardware, um Tachographendaten in TAGRA zu erhalten. Geben Sie einfach Ihre DKV-Zugangsdaten im TAGRA <strong>Datenimport</strong> Bildschirm ein und Sie sind fertig.</p>
 </div>
 </div>
 </div>
@@ -550,17 +554,17 @@
 <div class="bc s4 anim-up">
 <div class="eyebrow" style="color:var(--blue-mid)">Software</div>
 <div class="bc-title">TAGRA Version 345 oder höher</div>
-<div class="bc-text">Die Datenimport-Funktion ist ab Version 345 verfügbar. Ihre aktuelle Version finden Sie unten im TAGRA Fenster. Updates sind in Ihrer jährlichen Lizenzgebühr enthalten.</div>
+<div class="bc-text">Die Datenimportfunktion ist ab Version 345 verfügbar. Ihre aktuelle Version finden Sie unten im TAGRA-Fenster. Updates sind in Ihrer jährlichen Lizenzgebühr enthalten.</div>
 </div>
 <div class="bc s4 bluefill anim-up" style="transition-delay:.05s">
 <div class="eyebrow" style="color:var(--blue-mid)">DKV LIVE® Konto</div>
 <div class="bc-title">Aktives Abonnement<br/>+ Zugangsdaten</div>
-<div class="bc-text">Ein aktives DKV LIVE® Abonnement mit Zugangsdaten (Benutzername und Passwort), bereitgestellt von Ihrem DKV Ansprechpartner oder Vertriebskontakt.</div>
+<div class="bc-text">Ein aktives DKV LIVE®-Abonnement mit Zugangsdaten (Benutzername und Passwort), bereitgestellt von Ihrem DKV-Ansprechpartner oder Vertriebskontakt.</div>
 </div>
 <div class="bc s4 anim-up" style="transition-delay:.1s">
 <div class="eyebrow" style="color:var(--blue-mid)">SFTP Server</div>
 <div class="bc-title">sftp.styletronic.eu<br/>port 22</div>
-<div class="bc-text">Der DKV LIVE® SFTP-Endpunkt, mit dem sich TAGRA verbindet. Dieselbe Adresse für alle Kunden; Ihre Zugangsdaten authentifizieren Sie für Ihren spezifischen Datenordner.</div>
+<div class="bc-text">Der DKV LIVE®-SFTP-Endpunkt, mit dem sich TAGRA verbindet. Dieselbe Adresse für alle Kunden; Ihre Zugangsdaten authentifizieren Sie für Ihren spezifischen Datenordner.</div>
 </div>
 </div>
 </div>
@@ -570,7 +574,7 @@
 <div class="container">
 <div class="eyebrow anim-up">Einrichtungsanleitung</div>
 <h2 class="anim-up">Schritt für Schritt</h2>
-<p class="anim-up" style="max-width:680px;margin:8px 0 40px;color:var(--text-muted)">Die Einrichtung des DKV LIVE® Imports in TAGRA dauert etwa zwei Minuten. Sie müssen dies nur einmal tun — danach ruft TAGRA die Daten automatisch ab.</p>
+<p class="anim-up" style="max-width:680px;margin:8px 0 40px;color:var(--text-muted)">Die Einrichtung des DKV LIVE®-Imports in TAGRA dauert etwa zwei Minuten. Sie müssen dies nur einmal tun — danach ruft TAGRA die Daten automatisch ab.</p>
 <div class="three-col" style="grid-template-columns:1fr;gap:32px">
 <div class="anim-up" style="display:flex;gap:24px;align-items:flex-start">
 <div class="snum">01</div>
@@ -626,13 +630,13 @@
 <li><code>6h</code>, <code>3h</code>, <code>1h</code>— häufiger</li>
 <li><code>0s</code>— nur manuell (Sie klicken auf <em>Import ausführen</em> selbst)</li>
 </ul>
-<p>Wir empfehlen mindestens täglich, damit Ihre Daten aktuell bleiben und die gesetzlichen <strong>28- und 90-Tage-Auslesefristen</strong> immer eingehalten werden.</p>
+<p>Wir empfehlen dies mindestens täglich, damit Ihre Daten aktuell bleiben und die gesetzlichen <strong>28- und 90-Tage-Auslesefristen</strong> immer eingehalten werden.</p>
 </div>
 <div class="anim-up" style="transition-delay:.1s">
 <div class="note-box">
 <span class="note-badge">Warum es wichtig ist</span>
 <span class="note-title">28 und 90 Tage sind gesetzliche Fristen</span>
-<p style="margin-bottom:10px">EU-Vorschriften verlangen, dass Fahrerkarte-Daten mindestens alle <strong>28 Tage</strong> und Tachograph-Daten mindestens alle <strong>90 Tage</strong>.</p>
+<p style="margin-bottom:10px">EU-Vorschriften verlangen, dass Daten von Fahrerkarten mindestens alle <strong>28 Tage</strong> und Tachograph-Daten mindestens alle <strong>90 Tage</strong>.</p>
 <p>Mit DKV LIVE® + TAGRA, das täglich läuft, werden diese Fristen automatisch eingehalten. Sie haben außerdem eine saubere, archivierte Dokumentation für jede Kontrolle.</p>
 </div>
 </div>
@@ -662,7 +666,7 @@
 </details>
 <details>
 <summary>Woher bekomme ich meine DKV LIVE®-Zugangsdaten?</summary>
-<div class="faq-a">Von Ihrem DKV Mobility Account Manager oder Vertriebsmitarbeiter. TAGRA benötigt einen gültigen SFTP-Benutzernamen und ein Passwort für den DKV LIVE®-Server — die gleichen, die Sie auch für den direkten Zugriff auf den Dienst verwenden würden. Wir übernehmen keine DKV-Konto-Bereitstellung.</div>
+<div class="faq-a">Von Ihrem DKV Mobility Account Manager oder Vertriebsmitarbeiter. TAGRA benötigt einen gültigen SFTP-Benutzernamen und ein Passwort für den DKV LIVE®-Server — dieselben, die Sie auch für den direkten Zugriff auf den Dienst verwenden würden. Wir übernehmen keine DKV-Kontobereitstellung.</div>
 </details>
 <details>
 <summary>Wie oft sollte TAGRA Daten von DKV LIVE® abrufen?</summary>

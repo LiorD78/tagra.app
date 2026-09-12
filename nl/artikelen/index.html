@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<!-- TMX-ANALYTICS START -->
+<meta content="7F7894081BE7FBB245FF03AF8810B22F" name="msvalidate.01"/>
+<!-- Consent Mode v2 defaults (deny) + gtag stub — runs BEFORE gtag.js -->
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent','default',{
+      ad_storage:'denied', ad_user_data:'denied', ad_personalization:'denied',
+      analytics_storage:'denied', functionality_storage:'denied',
+      personalization_storage:'denied', security_storage:'granted',
+      wait_for_update:500
+    });
+    gtag('set','ads_data_redaction',true);
+    gtag('set','url_passthrough',false);
+  </script>
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-92253QFBNX"></script>
+<script>
+    gtag('js', new Date());
+    gtag('config','G-92253QFBNX');
+  </script>
+<!-- Cookie consent banner (self-hosted) + Microsoft Clarity gating -->
+<style>
+    .tmx-cc{position:fixed;left:0;right:0;bottom:0;z-index:2147483000;background:linear-gradient(120deg,var(--blue-dark,#0b2c4a),var(--blue-mid,#134a8e) 62%,var(--blue-light,#1f5fa6));color:#fff;
+      font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+      padding:16px 20px;box-shadow:0 -4px 24px rgba(0,0,0,.18);display:flex;flex-wrap:wrap;
+      align-items:center;gap:14px;justify-content:center}
+    .tmx-cc__txt{flex:1 1 360px;max-width:760px}
+    .tmx-cc__txt a{color:#9ed0f5;text-decoration:underline}
+    .tmx-cc__btns{display:flex;gap:10px;flex:0 0 auto}
+    .tmx-cc__b{appearance:none;border:0;cursor:pointer;font:inherit;font-weight:600;
+      padding:10px 22px;border-radius:99px;transition:filter .15s;color:#fff}
+    .tmx-cc__b:hover{filter:brightness(1.08)}
+    .tmx-cc__b--no{background:rgba(255,255,255,.16)}
+    .tmx-cc__b--yes{background:var(--green-cta,#5C820F)}
+    @media(max-width:640px){.tmx-cc{padding:14px}.tmx-cc__btns{width:100%}.tmx-cc__b{flex:1}}
+  </style>
+<script>
+  (function(){
+    var KEY='tmx-consent-v1', CL='wt18054m0r';
+    function lc(){var l=(document.documentElement.getAttribute('lang')||'en').toLowerCase().split('-')[0];
+      var m={cz:'cs',cs:'cs',sk:'sk',de:'de',pl:'pl',gr:'el',el:'el',hu:'hu',en:'en'};return m[l]||'en';}
+    var T={
+      hu:{t:'Analitikai s\u00fctiket haszn\u00e1lunk (Google Analytics, Microsoft Clarity, Smartsupp), hogy meg\u00e9rts\u00fck a webhely haszn\u00e1lat\u00e1t. Csak az \u00d6n hozz\u00e1j\u00e1rul\u00e1s\u00e1val t\u00f6lt\u0151dnek be.',a:'Elfogadom',r:'Elutas\u00edtom',p:'Adatv\u00e9delem \u00e9s s\u00fctik'},
+      ro:{t:'Utilizăm module cookie de analiză (Google Analytics, Microsoft Clarity, Smartsupp) pentru a înțelege modul de utilizare a site-ului. Se încarcă doar cu consimțământul dumneavoastră.',a:'Accept',r:'Refuz',p:'Confidențialitate și cookie-uri'},
+      nl:{t:'We gebruiken analytische cookies (Google Analytics, Microsoft Clarity, Smartsupp) om het gebruik van de site te begrijpen. Ze laden alleen met uw toestemming.',a:'Accepteren',r:'Weigeren',p:'Privacy en cookies'},
+      fr:{t:'Nous utilisons des cookies analytiques (Google Analytics, Microsoft Clarity, Smartsupp) pour comprendre l’utilisation du site. Ils ne se chargent qu’avec votre consentement.',a:'Accepter',r:'Refuser',p:'Confidentialité et cookies'},
+      it:{t:'Utilizziamo cookie analitici (Google Analytics, Microsoft Clarity, Smartsupp) per capire l’utilizzo del sito. Si caricano solo con il Suo consenso.',a:'Accetta',r:'Rifiuta',p:'Privacy e cookie'},
+      en:{t:'We use analytics cookies (Google Analytics, Microsoft Clarity, Smartsupp) to understand site usage. They load only with your consent.',a:'Accept',r:'Reject',p:'Privacy &amp; cookies'},
+      cs:{t:'Pou\u017e\u00edv\u00e1me analytick\u00e9 cookies (Google Analytics, Microsoft Clarity, Smartsupp) k pochopen\u00ed pou\u017e\u00edv\u00e1n\u00ed webu. Na\u010dtou se jen s va\u0161\u00edm souhlasem.',a:'P\u0159ijmout',r:'Odm\u00edtnout',p:'Soukrom\u00ed a cookies'},
+      sk:{t:'Pou\u017e\u00edvame analytick\u00e9 cookies (Google Analytics, Microsoft Clarity, Smartsupp) na pochopenie pou\u017e\u00edvania webu. Na\u010d\u00edtaj\u00fa sa len s va\u0161\u00edm s\u00fahlasom.',a:'Prija\u0165',r:'Odmietnu\u0165',p:'S\u00fakromie a cookies'},
+      de:{t:'Wir verwenden Analyse-Cookies (Google Analytics, Microsoft Clarity, Smartsupp), um die Nutzung der Website zu verstehen. Sie werden nur mit Ihrer Einwilligung geladen.',a:'Akzeptieren',r:'Ablehnen',p:'Datenschutz &amp; Cookies'},
+      pl:{t:'U\u017cywamy plik\u00f3w cookie do analityki (Google Analytics, Microsoft Clarity, Smartsupp), aby zrozumie\u0107 korzystanie z witryny. \u0141aduj\u0105 si\u0119 tylko za Twoj\u0105 zgod\u0105.',a:'Akceptuj',r:'Odrzu\u0107',p:'Prywatno\u015b\u0107 i cookies'},
+      el:{t:'\u03a7\u03c1\u03b7\u03c3\u03b9\u03bc\u03bf\u03c0\u03bf\u03b9\u03bf\u03cd\u03bc\u03b5 cookies \u03b1\u03bd\u03ac\u03bb\u03c5\u03c3\u03b7\u03c2 (Google Analytics, Microsoft Clarity, Smartsupp) \u03b3\u03b9\u03b1 \u03bd\u03b1 \u03ba\u03b1\u03c4\u03b1\u03bd\u03bf\u03ae\u03c3\u03bf\u03c5\u03bc\u03b5 \u03c4\u03b7 \u03c7\u03c1\u03ae\u03c3\u03b7. \u03a6\u03bf\u03c1\u03c4\u03ce\u03bd\u03bf\u03bd\u03c4\u03b1\u03b9 \u03bc\u03cc\u03bd\u03bf \u03bc\u03b5 \u03c4\u03b7 \u03c3\u03c5\u03b3\u03ba\u03b1\u03c4\u03ac\u03b8\u03b5\u03c3\u03ae \u03c3\u03b1\u03c2.',a:'\u0391\u03c0\u03bf\u03b4\u03bf\u03c7\u03ae',r:'\u0391\u03c0\u03cc\u03c1\u03c1\u03b9\u03c8\u03b7',p:'\u0391\u03c0\u03cc\u03c1\u03c1\u03b7\u03c4\u03bf &amp; cookies'}
+    };
+    function loadClarity(){if(!CL||window.__tmxCl)return;window.__tmxCl=1;
+      (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+       t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+       y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script",CL);}
+    function grant(){try{localStorage.setItem(KEY,'granted')}catch(e){}
+      gtag('consent','update',{analytics_storage:'granted'});loadClarity();}
+    function deny(){try{localStorage.setItem(KEY,'denied')}catch(e){}}
+    var saved=null;try{saved=localStorage.getItem(KEY)}catch(e){}
+    if(saved==='granted'){grant();return;} if(saved==='denied'){return;}
+    function show(){var tx=T[lc()]||T.en;
+      var b=document.createElement('div');b.className='tmx-cc';b.setAttribute('role','dialog');b.setAttribute('aria-live','polite');
+      b.innerHTML='<div class="tmx-cc__txt">'+tx.t+' <a href="/nl/privacy/">'+tx.p+'</a></div>'+
+        '<div class="tmx-cc__btns"><button type="button" class="tmx-cc__b tmx-cc__b--no">'+tx.r+'</button>'+
+        '<button type="button" class="tmx-cc__b tmx-cc__b--yes">'+tx.a+'</button></div>';
+      document.body.appendChild(b);
+      b.querySelector('.tmx-cc__b--yes').addEventListener('click',function(){grant();b.remove();});
+      b.querySelector('.tmx-cc__b--no').addEventListener('click',function(){deny();b.remove();});}
+    if(document.body)show();else document.addEventListener('DOMContentLoaded',show);
+  })();
+  </script>
+<!-- TMX-ANALYTICS END -->
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Artikelen – handleidingen voor tachograafcompliance | TAGRA</title>
+<meta content="Praktische handleidingen over tachograafgegevens, wettelijke plichten en naleving voor vervoerders en beroepschauffeurs." name="description"/>
+<meta content="#0b2c4a" name="theme-color"/>
+<link href="/manifest.json" rel="manifest"/>
+<link href="https://tagra.app/nl/artikelen/" rel="canonical"/>
+<link href="https://tagra.app/de/ratgeber/" hreflang="de" rel="alternate"/><link href="https://tagra.app/el/arthra/" hreflang="el" rel="alternate"/><link href="https://tagra.app/articles/" hreflang="en" rel="alternate"/><link href="https://tagra.app/fr/articles/" hreflang="fr" rel="alternate"/><link href="https://tagra.app/hu/cikkek/" hreflang="hu" rel="alternate"/><link href="https://tagra.app/it/articoli/" hreflang="it" rel="alternate"/><link href="https://tagra.app/nl/artikelen/" hreflang="nl" rel="alternate"/><link href="https://tagra.app/pl/poradnik/" hreflang="pl" rel="alternate"/>
+<link href="https://tagra.app/ro/articole/" hreflang="ro" rel="alternate"/><link href="https://tagra.app/articles/" hreflang="x-default" rel="alternate"/>
+<meta content="website" property="og:type"/>
+<meta content="en_US" property="og:locale"/>
+<meta content="TAGRA" property="og:site_name"/>
+<meta content="Artikelen – handleidingen voor tachograafcompliance | TAGRA" property="og:title"/><meta content="Praktische handleidingen over tachograafgegevens, wettelijke plichten en naleving voor vervoerders en beroepschauffeurs." property="og:description"/>
+<meta content="https://cdn.truckmall.cz/data/user-content/TDT_TAGRA_MAX_wh.jpg" property="og:image"/>
+<meta content="https://tagra.app/nl/artikelen/" property="og:url"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    a{color:var(--green-brand);text-decoration:none;}
+    a:hover{color:var(--green-cta);text-decoration:underline;text-underline-offset:.18em;}
+    #scroll-progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--green-brand),var(--blue-light));width:0%;z-index:9999;pointer-events:none;transition:width .1s ease-out;}
+.nav-inner{margin:0 auto;padding:0 24px;height:100%;display:flex;align-items:center;justify-content:space-between;gap:24px;}
+    .nav-links{display:flex;align-items:center;gap:4px;list-style:none;}
+    .nav-links li a{font-size:15px;font-weight:500;color:var(--text);padding:8px 12px;border-radius:8px;transition:background .15s;text-decoration:none;}
+    .nav-links li a:hover{background:var(--bg-apple-solid);color:var(--blue-mid);}
+    .nav-links .nav-cta a{background:var(--green-cta);color:#fff!important;border-radius:99px;padding:8px 18px;font-weight:600;}
+    .nav-links .nav-cta a:hover{background:var(--green-brand);text-decoration:none;}
+    .nav-lang{display:flex;align-items:center;gap:4px;font-size:14px;font-weight:600;}
+    .nav-lang a{padding:5px 8px;border-radius:6px;color:var(--text2);text-decoration:none;transition:background .15s;}
+    .nav-lang a:hover,.nav-lang a.active{background:var(--bg-apple-solid);color:var(--blue-mid);}
+    .nav-lang span{color:var(--border);}
+    .nav-mobile-toggle{display:none;background:none;border:none;cursor:pointer;padding:8px;}
+    .nav-mobile-toggle span{display:block;width:22px;height:2px;background:var(--text);margin:5px 0;border-radius:2px;}
+    @media(max-width:900px){.nav-links{display:none;}.nav-mobile-toggle{display:block;}.nav-links.open{display:flex;flex-direction:column;align-items:flex-start;gap:2px;position:absolute;top:var(--nav-h);left:0;right:0;background:rgba(255,255,255,0.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:12px 24px 20px;}}
+    
+    
+    @media(max-width:768px){.band{padding:50px 0;}}
+    @media(max-width:768px){
+    }
+    .eyebrow{font-size:15px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--green-brand);margin-bottom:12px;}
+    
+    
+    .article-card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(0,0,0,.08);border-color:rgba(19,74,142,.3);}
+    .article-card-body{padding:28px;display:flex;flex-direction:column;flex:1;}
+    .article-card-eyebrow{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--blue-mid);margin-bottom:10px;}
+    .article-card-title{font-size:20px;font-weight:800;line-height:1.3;color:var(--text-strong);margin-bottom:12px;}
+    .article-card-desc{font-size:16px;line-height:1.6;color:var(--text2);margin-bottom:20px;flex:1;}
+    .article-card-meta{font-size:14px;color:var(--text2);display:flex;gap:16px;}
+    .article-card-cta{display:inline-flex;margin-top:16px;font-size:15px;font-weight:700;color:var(--blue-mid);align-items:center;gap:4px;}
+    .article-card:hover .article-card-cta{color:var(--blue-dark);}
+    .article-card-tag{display:inline-block;padding:3px 10px;border-radius:999px;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;margin-bottom:12px;}
+    .tag--new{background:rgba(92,130,15,.12);color:var(--green-cta);}
+    .tag--guide{background:rgba(19,74,142,.1);color:var(--blue-mid);}
+  </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://tagra.app/#organization",
+  "name": "Truck Data Technology, s.r.o.",
+  "alternateName": "TDT",
+  "url": "https://www.tdt.cz",
+  "logo": "https://tagra.app/assets/img/logo-light.svg?v=20260513zh",
+  "sameAs": [
+    "https://www.tdt.cz"
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+420-739-005-345",
+    "email": "sales@tagra.app",
+    "contactType": "sales",
+    "availableLanguage": ["English", "Czech", "Slovak"]
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "url": "https://tagra.app/nl/artikelen/",
+  "name": "Artikelen – handleidingen voor tachograafcompliance",
+  "description": "Praktische handleidingen over tachograafgegevens, wettelijke plichten en naleving voor vervoerders en beroepschauffeurs.",
+  "inLanguage": "nl",
+  "isPartOf": { "@id": "https://tagra.app/#website" },
+  "publisher": { "@id": "https://tagra.app/#organization" },
+  "mainEntity": {
+    "@type": "ItemList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "url": "https://tagra.app/nl/artikelen/aansprakelijkheid-vervoerder-overtredingen-chauffeurs/",
+        "name": "Wie betaalt wanneer een chauffeur de regels overtreedt?"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "url": "https://tagra.app/articles/tachograph-rules-uk-dvsa-operator-licence/",
+        "name": "Tachograph rules for UK operators: DVSA checks, 56 days of data and your Operator Licence"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "url": "https://tagra.app/nl/artikelen/tachograaf-symbolen/",
+        "name": "Tachograafsymbolen &amp; foutcodes: een handleiding voor chauffeurs"
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "url": "https://tagra.app/nl/artikelen/tachograafplicht-bestelbus-juli-2026/",
+        "name": "Tachograaf voor bestelwagens van 2,5–3,5 t nu verplicht — de snelste manier om aan de regels te voldoen"
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "url": "https://tagra.app/nl/artikelen/wie-moet-tachograafgegevens-analyseren-2026/",
+        "name": "Wie moet vanaf 2026 tachograafgegevens analyseren — compleet overzicht"
+      },
+      {
+        "@type": "ListItem",
+        "position": 6,
+        "url": "https://tagra.app/nl/artikelen/tachograafgegevens-uitlezen-analyseren-archiveren/",
+        "name": "Digitale tachograaf: zo leest u gegevens correct uit, beoordeelt en archiveert u ze"
+      },
+      {
+        "@type": "ListItem",
+        "position": 7,
+        "url": "https://tagra.app/nl/artikelen/tachograafkaart-aanvragen-verlengen/",
+        "name": "Tachograafkaart: aanvragen, verlengen en vervangen"
+      },
+      {
+        "@type": "ListItem",
+        "position": 8,
+        "url": "https://tagra.app/nl/artikelen/tachograaf-storing-84-interne-dsrc-storing/",
+        "name": "Interne DSRC-storing — foutcode 84 van de tachograaf"
+      },
+      {
+        "@type": "ListItem",
+        "position": 9,
+        "url": "https://tagra.app/nl/artikelen/tachograaf-storing-82-interne-gnss-storing/",
+        "name": "Interne GNSS-storing — foutcode 82 van de tachograaf"
+      },
+      {
+        "@type": "ListItem",
+        "position": 10,
+        "url": "https://tagra.app/nl/artikelen/tachograaf-storing-83-gnss-ontbreekt/",
+        "name": "GNSS ontbreekt — foutcode 83 van de tachograaf"
+      },
+      {
+        "@type": "ListItem",
+        "position": 11,
+        "url": "https://tagra.app/nl/artikelen/tachograaf-storing-34-uitwerpen-niet-mogelijk/",
+        "name": "Uitwerpen niet mogelijk — foutcode 34 van de tachograaf"
+      },
+      {
+        "@type": "ListItem",
+        "position": 12,
+        "url": "https://tagra.app/nl/artikelen/tachograaf-storing-36-afdrukken-niet-mogelijk/",
+        "name": "Afdrukken niet mogelijk — foutcode 36 van de tachograaf"
+      },
+      {
+        "@type": "ListItem",
+        "position": 13,
+        "url": "https://tagra.app/nl/artikelen/tachograaf-storing-80-bewegingsconflict/",
+        "name": "Bewegingsconflict — foutcode 80 van de tachograaf"
+      },
+      {
+        "@type": "ListItem",
+        "position": 14,
+        "url": "https://tagra.app/nl/artikelen/tachograaf-storing-85-dsrc-communicatiestoring/",
+        "name": "DSRC-communicatiestoring — foutcode 85 van de tachograaf"
+      },
+      {
+        "@type": "ListItem",
+        "position": 15,
+        "url": "https://tagra.app/nl/artikelen/tachograaf-storing-96-gnss-anomalie/",
+        "name": "GNSS-anomalie — foutcode 96 van de tachograaf"
+      },
+      {
+        "@type": "ListItem",
+        "position": 16,
+        "url": "https://tagra.app/nl/artikelen/tachograaf-storing-98-its-storing/",
+        "name": "ITS-storing — foutcode 98 van de tachograaf"
+      },
+      {
+        "@type": "ListItem",
+        "position": 17,
+        "url": "https://tagra.app/nl/artikelen/tachograaf-storing-21-bewegingssensor-storing/",
+        "name": "Storing bewegingssensor 21: wat deze betekent en wat u moet doen"
+      }
+    ]
+  }
+}
+</script>
+<link href="/assets/css/tokens.css" rel="stylesheet"/>
+<link href="/assets/css/base.css" rel="stylesheet"/>
+<link href="/assets/css/components.css" rel="stylesheet"/>
+<link href="/assets/css/nav.css" rel="stylesheet"/>
+<script defer="" src="/assets/js/nav.js?v=20260816b"></script>
+<link href="/assets/css/footer.css" rel="stylesheet"/></head>
+<body>
+<a class="skip-link" href="#main-content">Naar de inhoud</a>
+<div aria-hidden="true" id="scroll-progress"></div>
+<nav aria-label="Hoofdnavigatie" class="site-nav" role="navigation">
+<div class="nav-inner">
+<a aria-label="TAGRA – Startpagina" class="nav-logo" href="/nl/"><img alt="TAGRA" height="32" src="/assets/img/logo-light.svg?v=20260513zh" style="display:block;height:32px;width:auto;" width="140"/></a>
+<ul class="nav-links" id="nav-links">
+<li><a href="/nl/voor-transportbedrijven/">Voor transportbedrijven</a></li>
+<li><a href="/nl/voor-chauffeurs/">Voor chauffeurs</a></li>
+<li><a href="/nl/handhaving/">Handhaving</a></li>
+<li><a aria-current="page" href="/nl/artikelen/">Artikelen</a></li><li><a href="/nl/handleidingen/">Handleidingen</a></li>
+<li><a href="/nl/veelgestelde-vragen/">Veelgestelde vragen</a></li>
+<li><a href="/nl/contact/">Contact</a></li>
+<li class="nav-cta-li"><a class="nav-cta" href="/nl/gratis-proefversie/?audience=fleet">30 dagen gratis proberen</a></li>
+</ul>
+<details class="nav-lang">
+<summary aria-label="Taal: NL">NL</summary>
+<div class="nav-lang-menu" role="menu"><a href="/articles/" hreflang="en">English</a><a href="/de/ratgeber/" hreflang="de">Deutsch</a><a href="/pl/poradnik/" hreflang="pl">Polski</a><a aria-current="page" class="active" href="/nl/artikelen/" hreflang="nl">Nederlands</a><a href="/fr/articles/" hreflang="fr">Français</a><a href="/it/articoli/" hreflang="it">Italiano</a><a href="/el/arthra/" hreflang="el">Ελληνικά</a><a href="/hu/cikkek/" hreflang="hu">Magyar</a><a href="/ro/articole/" hreflang="ro">Română</a><a href="https://www.tdt.cz/" hreflang="cs" rel="noopener" target="_blank">Čeština</a><a href="https://www.tdt.sk/" hreflang="sk" rel="noopener" target="_blank">Slovenčina</a></div>
+</details>
+<a class="nav-cta-mobile" href="/nl/gratis-proefversie/?audience=fleet">Gratis proberen</a>
+<button aria-expanded="false" aria-label="Menu in- of uitschakelen" class="nav-mobile-toggle" id="nav-toggle">
+<span></span><span></span><span></span>
+</button>
+</div>
+</nav>
+<section id="main-content" class="band band--hero" style="text-align:left">
+<div class="container">
+<div class="eyebrow">Kennisbank</div>
+<h1 style="text-align:left">Handleidingen voor naleving van de tachograafregels</h1>
+<p style="font-size:19px;color:var(--text2);max-width:680px;margin:12px 0 0">Praktische artikelen over wettelijke verplichtingen, gegevensbeheer en voorbereiding op wegcontroles — geschreven door tachograafspecialisten.</p>
+</div>
+</section>
+<section class="band">
+<div class="container">
+<div class="article-carousel">
+<div class="article-grid" id="articleGrid">
+<a class="article-card" href="/nl/artikelen/aansprakelijkheid-vervoerder-overtredingen-chauffeurs/"><div class="article-card-body"><span class="article-card-tag tag--guide">Compliance</span><div class="article-card-eyebrow">Verplichtingen van exploitanten</div><h3 class="card-title">Wie betaalt wanneer een bestuurder de regels overtreedt? Aansprakelijkheid van de vervoerder uitgelegd</h3><p class="article-card-desc">De onderneming is verantwoordelijk voor haar bestuurders, ook in het buitenland — maar bewijs van instructies en regelmatige controles kan daar verandering in brengen.</p><div class="article-card-meta"><span>9 min leestijd</span></div><span class="article-card-cta">Lees het artikel →</span></div></a><a class="article-card" href="/articles/tachograph-rules-uk-dvsa-operator-licence/"><div class="article-card-body"><span class="article-card-tag tag--guide">Verenigd Koninkrijk</span><div class="article-card-eyebrow">Britse regeling</div><h3 class="card-title">Tachograafregels voor Britse vervoerders: DVSA, 56 dagen en uw exploitatievergunning <span class="en-badge">(in het Engels)</span></h3><p class="article-card-desc">Welke regeling na de brexit van toepassing is, waarom de periode voor wegcontroles is verdubbeld, wat boetes kosten en waar het werkelijke risico ligt.</p><div class="article-card-meta"><span>8 min leestijd</span></div><span class="article-card-cta">Lees het artikel →</span></div></a><a class="article-card" href="/nl/artikelen/tachograaf-symbolen/">
+<div class="article-card-body">
+<span class="article-card-tag tag--guide">Kennisbank voor chauffeurs</span>
+<div class="article-card-eyebrow">Naslaggids</div>
+<h2 class="sr-only">Kennisbank</h2><h3 class="card-title">Tachograafsymbolen: de betekenis van digitale pictogrammen uitgelegd</h3>
+<p class="article-card-desc">Duidelijke uitleg van de vier activiteitssymbolen (rijden, ander werk, beschikbaarheid, rust), kaart- en bemanningspictogrammen, OUT, veerboot-/treinmodus en waarschuwingssymbolen die elke vrachtwagenbestuurder moet kennen.</p>
+<div class="article-card-meta"><span>7 min leestijd</span></div>
+<span class="article-card-cta">Lees het artikel →</span>
+</div>
+</a>
+<a class="article-card" href="/nl/artikelen/tachograafplicht-bestelbus-juli-2026/">
+<div class="article-card-body">
+<span class="article-card-tag tag--new">Nieuwe wetgeving</span>
+<div class="article-card-eyebrow">Van kracht op 1 juli 2026</div>
+<h3 class="card-title">Tachografen voor bestelwagens: nieuwe verplichting vanaf juli 2026</h3>
+<p class="article-card-desc">Vanaf 1 juli 2026 moeten bestelwagens van 2,5–3,5 t in het internationale vervoer een digitale tachograaf hebben. Ontdek wie eronder valt, wat u nodig hebt en hoe u zich kunt voorbereiden.</p>
+<div class="article-card-meta"><span>8 min leestijd</span></div>
+<span class="article-card-cta">Lees het artikel →</span>
+</div>
+</a>
+<a class="article-card" href="/nl/artikelen/wie-moet-tachograafgegevens-analyseren-2026/">
+<div class="article-card-body">
+<span class="article-card-tag tag--guide">Overzicht</span>
+<div class="article-card-eyebrow">Bijgewerkt voor 2026</div>
+<h3 class="card-title">Wie moet vanaf 2026 tachograafgegevens analyseren</h3>
+<p class="article-card-desc">Vrachtwagens, bussen, bestelwagens in het internationale vervoer en zelfstandige bestuurders — een duidelijk overzicht van alle vervoerstypen waarvoor de uitleesplicht geldt.</p>
+<div class="article-card-meta"><span>7 min leestijd</span></div>
+<span class="article-card-cta">Lees het artikel →</span>
+</div>
+</a>
+<a class="article-card" href="/nl/artikelen/tachograafgegevens-uitlezen-analyseren-archiveren/">
+<div class="article-card-body">
+<span class="article-card-tag tag--guide">Complete handleiding</span>
+<div class="article-card-eyebrow">Stap voor stap</div>
+<h3 class="card-title">Digitale tachograaf: zo leest u gegevens correct uit, beoordeelt en archiveert u ze</h3>
+<p class="article-card-desc">De complete compliancehandleiding: termijnen van 28/90 dagen, wat u nodig hebt, de juiste werkwijze en wat inspecteurs daadwerkelijk controleren.</p>
+<div class="article-card-meta"><span>10 min leestijd</span></div>
+<span class="article-card-cta">Lees het artikel →</span>
+</div>
+</a>
+<a class="article-card" href="/nl/artikelen/tachograafkaart-aanvragen-verlengen/">
+<div class="article-card-body">
+<span class="article-card-tag tag--guide">Verenigd Koninkrijk</span>
+<div class="article-card-eyebrow">Kennisbank voor chauffeurs</div>
+<h3 class="card-title">Tachograafkaart: aanvragen, verlengen en vervangen</h3>
+<p class="article-card-desc">Waar u de kaart aanvraagt, wat deze kost, hoe lang deze geldig is en wat u moet doen als de tachograafkaart van uw bestuurder verloren of gestolen is. Britse regels, 2026.</p>
+<div class="article-card-meta"><span>5 min leestijd</span></div>
+<span class="article-card-cta">Lees het artikel →</span>
+</div>
+</a>
+<a class="article-card" href="/nl/artikelen/tachograaf-storing-84-interne-dsrc-storing/">
+<div class="article-card-body">
+<span class="article-card-tag tag--guide">Foutcode</span>
+<div class="article-card-eyebrow">Kennisbank voor chauffeurs</div>
+<h3 class="card-title">Interne DSRC-storing: wat foutcode 84 van de tachograaf betekent</h3>
+<p class="article-card-desc">Wat de code betekent, wat de handleiding voorschrijft en of u kunt blijven rijden. Ernst: laag.</p>
+<div class="article-card-meta"><span>3 min leestijd</span></div>
+<span class="article-card-cta">Lees het artikel →</span>
+</div>
+</a>
+<a class="article-card" href="/nl/artikelen/tachograaf-storing-82-interne-gnss-storing/">
+<div class="article-card-body">
+<span class="article-card-tag tag--guide">Foutcode</span>
+<div class="article-card-eyebrow">Kennisbank voor chauffeurs</div>
+<h3 class="card-title">Interne GNSS-storing: wat foutcode 82 van de tachograaf betekent</h3>
+<p class="article-card-desc">Wat de code betekent, wat de handleiding voorschrijft en of u kunt blijven rijden. Ernst: gemiddeld.</p>
+<div class="article-card-meta"><span>3 min leestijd</span></div>
+<span class="article-card-cta">Lees het artikel →</span>
+</div>
+</a>
+<a class="article-card" href="/nl/artikelen/tachograaf-storing-83-gnss-ontbreekt/">
+<div class="article-card-body">
+<span class="article-card-tag tag--guide">Foutcode</span>
+<div class="article-card-eyebrow">Kennisbank voor chauffeurs</div>
+<h3 class="card-title">GNSS ontbreekt: wat foutcode 83 van de tachograaf betekent</h3>
+<p class="article-card-desc">Wat de code betekent, wat de handleiding voorschrijft en of u kunt blijven rijden. Ernst: gemiddeld.</p>
+<div class="article-card-meta"><span>3 min leestijd</span></div>
+<span class="article-card-cta">Lees het artikel →</span>
+</div>
+</a>
+<a class="article-card" href="/nl/artikelen/tachograaf-storing-34-uitwerpen-niet-mogelijk/">
+<div class="article-card-body">
+<span class="article-card-tag tag--guide">Foutcode</span>
+<div class="article-card-eyebrow">Kennisbank voor chauffeurs</div>
+<h3 class="card-title">Uitwerpen niet mogelijk — foutcode 34 van de tachograaf</h3>
+<p class="article-card-desc">Foutcode 34 van de tachograaf, uitwerpen niet mogelijk: wat dit betekent, wat de handleiding van VDO DTCO 4.1 voorschrijft en of u kunt blijven rijden.</p>
+<div class="article-card-meta"><span>6 min leestijd</span></div>
+<span class="article-card-cta">Lees het artikel →</span>
+</div>
+</a>
+<a class="article-card" href="/nl/artikelen/tachograaf-storing-36-afdrukken-niet-mogelijk/">
+<div class="article-card-body">
+<span class="article-card-tag tag--guide">Foutcode</span>
+<div class="article-card-eyebrow">Kennisbank voor chauffeurs</div>
+<h3 class="card-title">Afdrukken niet mogelijk — foutcode 36 van de tachograaf</h3>
+<p class="article-card-desc">Foutcode 36 van de tachograaf: afdrukken niet mogelijk. Lees wat dit betekent, wat VDO DTCO 4.1 voorschrijft en of u kunt blijven rijden.</p>
+<div class="article-card-meta"><span>5 min leestijd</span></div>
+<span class="article-card-cta">Lees het artikel →</span>
+</div>
+</a>
+<a class="article-card" href="/nl/artikelen/tachograaf-storing-80-bewegingsconflict/">
+<div class="article-card-body">
+<span class="article-card-tag tag--guide">Foutcode</span>
+<div class="article-card-eyebrow">Kennisbank voor chauffeurs</div>
+<h3 class="card-title">Bewegingsconflict — foutcode 80 van de tachograaf</h3>
+<p class="article-card-desc">Foutcode 80 (bewegingsconflict): betekenis, aanwijzingen van VDO DTCO 4.1, Stoneridge, Actia en EFAS-4, en of doorrijden mag.</p>
+<div class="article-card-meta"><span>6 min leestijd</span></div>
+<span class="article-card-cta">Lees het artikel →</span>
+</div>
+</a>
+<a class="article-card" href="/nl/artikelen/tachograaf-storing-85-dsrc-communicatiestoring/">
+<div class="article-card-body">
+<span class="article-card-tag tag--guide">Foutcode</span>
+<div class="article-card-eyebrow">Kennisbank voor chauffeurs</div>
+<h3 class="card-title">DSRC-communicatiestoring — foutcode 85 van de tachograaf</h3>
+<p class="article-card-desc">Foutcode 85 van de tachograaf: DSRC-communicatiestoring. Lees wat dit betekent, wat VDO DTCO 4.1 voorschrijft en of u kunt blijven rijden.</p>
+<div class="article-card-meta"><span>5 min leestijd</span></div>
+<span class="article-card-cta">Lees het artikel →</span>
+</div>
+</a>
+<a class="article-card" href="/nl/artikelen/tachograaf-storing-96-gnss-anomalie/">
+<div class="article-card-body">
+<span class="article-card-tag tag--guide">Foutcode</span>
+<div class="article-card-eyebrow">Kennisbank voor chauffeurs</div>
+<h3 class="card-title">GNSS-anomalie — foutcode 96 van de tachograaf</h3>
+<p class="article-card-desc">Foutcode 96 van de tachograaf, GNSS-anomalie: wat dit betekent, wat de handleiding van VDO DTCO 4.1 voorschrijft en of u kunt blijven rijden. Ernst: hoog.</p>
+<div class="article-card-meta"><span>6 min leestijd</span></div>
+<span class="article-card-cta">Lees het artikel →</span>
+</div>
+</a>
+<a class="article-card" href="/nl/artikelen/tachograaf-storing-98-its-storing/">
+<div class="article-card-body">
+<span class="article-card-tag tag--guide">Foutcode</span>
+<div class="article-card-eyebrow">Kennisbank voor chauffeurs</div>
+<h3 class="card-title">ITS-storing — foutcode 98 van de tachograaf</h3>
+<p class="article-card-desc">Foutcode 98 van de tachograaf, ITS-storing: wat dit betekent, wat de handleiding van VDO DTCO 4.1 voorschrijft en of u kunt blijven rijden.</p>
+<div class="article-card-meta"><span>5 min leestijd</span></div>
+<span class="article-card-cta">Lees het artikel →</span>
+</div>
+</a>
+<a class="article-card" href="/nl/artikelen/tachograaf-storing-21-bewegingssensor-storing/">
+<div class="article-card-body">
+<span class="article-card-tag tag--guide">Foutcode</span>
+<div class="article-card-eyebrow">Kennisbank voor chauffeurs</div>
+<h3 class="card-title">Storing bewegingssensor 21: wat deze betekent en wat u moet doen</h3>
+<p class="article-card-desc">Tachograaffoutcode 21, storing van de bewegingssensor: wat de melding betekent, wat er in de handleiding van de VDO DTCO 4.1 over staat en of u kunt doorrijden.</p>
+<div class="article-card-meta"><span>5 min leestijd</span></div>
+<span class="article-card-cta">Lees het artikel →</span>
+</div>
+</a>
+</div>
+<div class="article-carousel-nav">
+<button aria-label="Vorige artikelen" class="article-carousel-btn" id="articlePrev">‹</button>
+<button aria-label="Volgende artikelen" class="article-carousel-btn" id="articleNext">›</button>
+</div>
+</div><!-- /.article-carousel -->
+</div>
+</section>
+<script>
+(function(){
+  const track = document.getElementById('articleGrid');
+  const prev = document.getElementById('articlePrev');
+  const next = document.getElementById('articleNext');
+  if (!track || !prev || !next) return;
+  function getStep(){
+    const card = track.querySelector('.article-card');
+    if (!card) return 320;
+    const cardW = card.getBoundingClientRect().width;
+    const cs = getComputedStyle(track);
+    const gap = parseFloat(cs.columnGap || cs.gap) || 20;
+    return cardW + gap;
+  }
+  function updateBtns(){
+    prev.disabled = track.scrollLeft <= 1;
+    next.disabled = track.scrollLeft >= track.scrollWidth - track.clientWidth - 1;
+  }
+  prev.addEventListener('click', ()=> track.scrollBy({left:-getStep(), behavior:'smooth'}));
+  next.addEventListener('click', ()=> track.scrollBy({left: getStep(), behavior:'smooth'}));
+  track.addEventListener('scroll', updateBtns, {passive:true});
+  window.addEventListener('resize', updateBtns);
+  updateBtns();
+})();
+</script>
+<footer class="site-footer" role="contentinfo">
+<div class="footer-inner">
+<div>
+<div class="footer-logo"><img alt="TAGRA" height="20" src="/assets/img/logo-dark.svg?v=20260513zh" width="88" loading="lazy"/></div>
+<p class="footer-desc">Professionele software voor tachograafanalyse. Uitlezen van bestuurderskaarten, analyse van digitale tachografen, rij- en rusttijden van EU-bestuurders en de arbeidstijdenrichtlijn voor vrachtwagenbestuurders. Ontwikkeld door Truck Data Technology, s.r.o.</p>
+</div>
+<div class="footer-col">
+<h2 class="footer-col-title">Product</h2>
+<ul>
+<li><a href="/nl/voor-transportbedrijven/">Voor wagenparkbeheerders</a></li>
+<li><a href="/nl/voor-chauffeurs/">Voor beroepschauffeurs</a></li>
+<li><a href="/nl/handhaving/">Voor handhaving</a></li>
+<li><a href="/nl/hoe-het-werkt/">Hoe het werkt</a></li>
+<li><a href="/nl/voor-wie/">Voor wie</a></li>
+<li><a href="/nl/veelgestelde-vragen/">Veelgestelde vragen</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h2 class="footer-col-title">Bronnen</h2>
+<ul>
+<li><a href="/nl/artikelen/">Artikelen</a></li><li><a href="/nl/handleidingen/">Handleidingen</a></li>
+<li><a href="/nl/artikelen/tachograaf-symbolen/">Tachograafsymbolen</a></li>
+<li><a href="/nl/integraties/dkv-live/">DKV LIVE®</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h2 class="footer-col-title">Bedrijf</h2>
+<ul>
+<li><a href="/nl/contact/">Contact</a></li>
+<li><a href="https://www.tdt.cz" rel="noopener" target="_blank">Truck Data Technology</a></li>
+<li><a href="/nl/">English</a></li><li><a href="/de/">Deutsch</a></li><li><a href="/pl/">Polski</a></li><li><a href="/el/">Ελληνικά</a></li><li><a href="/hu/">Magyar</a></li><li><a href="/it/articoli/">Italiano</a></li><li><a href="https://www.tdt.cz/" rel="noopener" target="_blank">Čeština</a></li><li><a href="https://www.tdt.sk/" rel="noopener" target="_blank">Slovenčina</a></li></ul>
+</div>
+</div>
+<div class="footer-bottom">
+<span>© 2026 Truck Data Technology, s.r.o. Alle rechten voorbehouden.</span>
+<span><a href="/nl/contact/">Contact</a> · <a href="https://www.tdt.cz" rel="noopener" target="_blank">tdt.cz</a> · <a href="/nl/privacy/">Privacy &amp; cookies</a></span>
+</div>
+</footer>
+<script>
+(function(){
+  var bar=document.getElementById('scroll-progress');
+  if(bar){window.addEventListener('scroll',function(){var t=document.documentElement.scrollTop||document.body.scrollTop;var h=document.documentElement.scrollHeight-document.documentElement.clientHeight;bar.style.width=(t/h*100)+'%';},{passive:true});}
+  var toggle=document.getElementById('nav-toggle'),links=document.getElementById('nav-links');
+  if(toggle&&links){toggle.addEventListener('click',function(){var open=links.classList.toggle('open');toggle.setAttribute('aria-expanded',open);});}
+})();
+</script>
+</body>
+</html>

@@ -44,13 +44,17 @@
     function lc(){var l=(document.documentElement.getAttribute('lang')||'en').toLowerCase().split('-')[0];
       var m={cz:'cs',cs:'cs',sk:'sk',de:'de',pl:'pl',gr:'el',el:'el',hu:'hu',en:'en'};return m[l]||'en';}
     var T={
-      hu:{t:'Analitikai sütiket használunk (Google Analytics, Microsoft Clarity, Smartsupp), hogy megértsük a webhely használatát. Csak az Ön hozzájárulásával töltődnek be.',a:'Elfogadom',r:'Elutasítom',p:'Adatvédelem és sütik'},
+      hu:{t:'Analitikai s\u00fctiket haszn\u00e1lunk (Google Analytics, Microsoft Clarity, Smartsupp), hogy meg\u00e9rts\u00fck a webhely haszn\u00e1lat\u00e1t. Csak az \u00d6n hozz\u00e1j\u00e1rul\u00e1s\u00e1val t\u00f6lt\u0151dnek be.',a:'Elfogadom',r:'Elutas\u00edtom',p:'Adatv\u00e9delem \u00e9s s\u00fctik'},
+      ro:{t:'Utilizăm module cookie de analiză (Google Analytics, Microsoft Clarity, Smartsupp) pentru a înțelege modul de utilizare a site-ului. Se încarcă doar cu consimțământul dumneavoastră.',a:'Accept',r:'Refuz',p:'Confidențialitate și cookie-uri'},
+      nl:{t:'We gebruiken analytische cookies (Google Analytics, Microsoft Clarity, Smartsupp) om het gebruik van de site te begrijpen. Ze laden alleen met uw toestemming.',a:'Accepteren',r:'Weigeren',p:'Privacy en cookies'},
+      fr:{t:'Nous utilisons des cookies analytiques (Google Analytics, Microsoft Clarity, Smartsupp) pour comprendre l’utilisation du site. Ils ne se chargent qu’avec votre consentement.',a:'Accepter',r:'Refuser',p:'Confidentialité et cookies'},
+      it:{t:'Utilizziamo cookie analitici (Google Analytics, Microsoft Clarity, Smartsupp) per capire l’utilizzo del sito. Si caricano solo con il Suo consenso.',a:'Accetta',r:'Rifiuta',p:'Privacy e cookie'},
       en:{t:'We use analytics cookies (Google Analytics, Microsoft Clarity, Smartsupp) to understand site usage. They load only with your consent.',a:'Accept',r:'Reject',p:'Privacy &amp; cookies'},
-      cs:{t:'Používáme analytické cookies (Google Analytics, Microsoft Clarity, Smartsupp) k pochopení používání webu. Načtou se jen s vaším souhlasem.',a:'Přijmout',r:'Odmítnout',p:'Soukromí a cookies'},
-      sk:{t:'Používame analytické cookies (Google Analytics, Microsoft Clarity, Smartsupp) na pochopenie používania webu. Načítajú sa len s vaším súhlasom.',a:'Prijať',r:'Odmietnuť',p:'Súkromie a cookies'},
+      cs:{t:'Pou\u017e\u00edv\u00e1me analytick\u00e9 cookies (Google Analytics, Microsoft Clarity, Smartsupp) k pochopen\u00ed pou\u017e\u00edv\u00e1n\u00ed webu. Na\u010dtou se jen s va\u0161\u00edm souhlasem.',a:'P\u0159ijmout',r:'Odm\u00edtnout',p:'Soukrom\u00ed a cookies'},
+      sk:{t:'Pou\u017e\u00edvame analytick\u00e9 cookies (Google Analytics, Microsoft Clarity, Smartsupp) na pochopenie pou\u017e\u00edvania webu. Na\u010d\u00edtaj\u00fa sa len s va\u0161\u00edm s\u00fahlasom.',a:'Prija\u0165',r:'Odmietnu\u0165',p:'S\u00fakromie a cookies'},
       de:{t:'Wir verwenden Analyse-Cookies (Google Analytics, Microsoft Clarity, Smartsupp), um die Nutzung der Website zu verstehen. Sie werden nur mit Ihrer Einwilligung geladen.',a:'Akzeptieren',r:'Ablehnen',p:'Datenschutz &amp; Cookies'},
-      pl:{t:'Używamy plików cookie do analityki (Google Analytics, Microsoft Clarity, Smartsupp), aby zrozumieć korzystanie z witryny. Ładują się tylko za Twoją zgodą.',a:'Akceptuj',r:'Odrzuć',p:'Prywatność i cookies'},
-      el:{t:'Χρησιμοποιούμε cookies ανάλυσης (Google Analytics, Microsoft Clarity, Smartsupp) για να κατανοήσουμε τη χρήση. Φορτώνονται μόνο με τη συγκατάθεσή σας.',a:'Αποδοχή',r:'Απόρριψη',p:'Απόρρητο &amp; cookies'}
+      pl:{t:'U\u017cywamy plik\u00f3w cookie do analityki (Google Analytics, Microsoft Clarity, Smartsupp), aby zrozumie\u0107 korzystanie z witryny. \u0141aduj\u0105 si\u0119 tylko za Twoj\u0105 zgod\u0105.',a:'Akceptuj',r:'Odrzu\u0107',p:'Prywatno\u015b\u0107 i cookies'},
+      el:{t:'\u03a7\u03c1\u03b7\u03c3\u03b9\u03bc\u03bf\u03c0\u03bf\u03b9\u03bf\u03cd\u03bc\u03b5 cookies \u03b1\u03bd\u03ac\u03bb\u03c5\u03c3\u03b7\u03c2 (Google Analytics, Microsoft Clarity, Smartsupp) \u03b3\u03b9\u03b1 \u03bd\u03b1 \u03ba\u03b1\u03c4\u03b1\u03bd\u03bf\u03ae\u03c3\u03bf\u03c5\u03bc\u03b5 \u03c4\u03b7 \u03c7\u03c1\u03ae\u03c3\u03b7. \u03a6\u03bf\u03c1\u03c4\u03ce\u03bd\u03bf\u03bd\u03c4\u03b1\u03b9 \u03bc\u03cc\u03bd\u03bf \u03bc\u03b5 \u03c4\u03b7 \u03c3\u03c5\u03b3\u03ba\u03b1\u03c4\u03ac\u03b8\u03b5\u03c3\u03ae \u03c3\u03b1\u03c2.',a:'\u0391\u03c0\u03bf\u03b4\u03bf\u03c7\u03ae',r:'\u0391\u03c0\u03cc\u03c1\u03c1\u03b9\u03c8\u03b7',p:'\u0391\u03c0\u03cc\u03c1\u03c1\u03b7\u03c4\u03bf &amp; cookies'}
     };
     function loadClarity(){if(!CL||window.__tmxCl)return;window.__tmxCl=1;
       (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
@@ -63,7 +67,7 @@
     if(saved==='granted'){grant();return;} if(saved==='denied'){return;}
     function show(){var tx=T[lc()]||T.en;
       var b=document.createElement('div');b.className='tmx-cc';b.setAttribute('role','dialog');b.setAttribute('aria-live','polite');
-      b.innerHTML='<div class="tmx-cc__txt">'+tx.t+' <a href="/privacy/">'+tx.p+'</a></div>'+
+      b.innerHTML='<div class="tmx-cc__txt">'+tx.t+' <a href="/fr/confidentialite/">'+tx.p+'</a></div>'+
         '<div class="tmx-cc__btns"><button type="button" class="tmx-cc__b tmx-cc__b--no">'+tx.r+'</button>'+
         '<button type="button" class="tmx-cc__b tmx-cc__b--yes">'+tx.a+'</button></div>';
       document.body.appendChild(b);
@@ -75,20 +79,22 @@
 <!-- TMX-ANALYTICS END -->
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>TAGRA Trucker – Logiciel chronotachygraphe pour conducteurs professionnels</title>
-<meta content="TAGRA Trucker aide les conducteurs professionnels à respecter la réglementation européenne sur le chronotachygraphe. Évaluez les données de votre carte conducteur, vérifiez vos temps de conduite et de repos. Fonctionne avec un lecteur de carte USB standard. Essai gratuit de 30 jours." name="description"/>
+<title>TAGRA Trucker : logiciel tachygraphe pour conducteurs</title>
+<meta content="TAGRA TRUCKER aide les conducteurs professionnels à respecter la réglementation européenne. Évaluez les données de votre carte avec un lecteur USB." name="description"/>
 <meta content="#0b2c4a" name="theme-color"/>
 <link href="/manifest.json" rel="manifest"/>
 <link href="https://tagra.app/fr/conducteurs/" rel="canonical"/>
+<link href="https://tagra.app/de/fahrer/" hreflang="de" rel="alternate"/><link href="https://tagra.app/el/odigoi/" hreflang="el" rel="alternate"/><link href="https://tagra.app/driver/" hreflang="en" rel="alternate"/><link href="https://tagra.app/fr/conducteurs/" hreflang="fr" rel="alternate"/><link href="https://tagra.app/hu/soforoknek/" hreflang="hu" rel="alternate"/><link href="https://tagra.app/it/per-autisti/" hreflang="it" rel="alternate"/><link href="https://tagra.app/nl/voor-chauffeurs/" hreflang="nl" rel="alternate"/><link href="https://tagra.app/pl/dla-kierowcow/" hreflang="pl" rel="alternate"/>
+<link href="https://tagra.app/ro/pentru-conducatori/" hreflang="ro" rel="alternate"/><link href="https://tagra.app/driver/" hreflang="x-default" rel="alternate"/>
 <meta content="website" property="og:type"/>
-<meta content="fr_FR" property="og:locale"/>
+<meta content="en_US" property="og:locale"/>
 <meta content="TAGRA" property="og:site_name"/>
-<meta content="TAGRA Trucker – Logiciel chronotachygraphe pour conducteurs professionnels" property="og:title"/>
+<meta content="TAGRA Trucker : logiciel tachygraphe pour conducteurs" property="og:title"/>
 <meta content="TAGRA Trucker aide les conducteurs professionnels à respecter la réglementation européenne sur le chronotachygraphe. Fonctionne avec un lecteur de carte USB standard. Essai gratuit de 30 jours." property="og:description"/>
 <meta content="https://cdn.truckmall.cz/data/user-content/TDT_TAGRA_TRUCKER_wh.jpg" property="og:image"/>
-<meta content="TAGRA Trucker – logiciel chronotachygraphe pour conducteurs professionnels avec lecteur de carte USB" property="og:image:alt"/>
+<meta content="TAGRA Trucker – logiciel de tachygraphe pour conducteurs professionnels avec lecteur de carte USB" property="og:image:alt"/>
 <meta content="https://cdn.truckmall.cz/data/user-content/TDT_TAGRA_TRUCKER_wh.jpg" name="twitter:image"/>
-<meta content="TAGRA Trucker – logiciel chronotachygraphe pour conducteurs professionnels avec lecteur de carte USB" name="twitter:image:alt"/>
+<meta content="TAGRA Trucker – logiciel de tachygraphe pour conducteurs professionnels avec lecteur de carte USB" name="twitter:image:alt"/>
 <meta content="https://tagra.app/fr/conducteurs/" property="og:url"/>
 <meta content="summary_large_image" name="twitter:card"/>
 <style>
@@ -125,10 +131,10 @@
     }
 
     /* ─── LAYOUT ────────────────────────────────────────────────────── */
-
-
-
-
+    
+    
+    
+    
     .band--green { background: var(--green-bg); }
     @media (max-width: 768px) { .band { padding: 50px 0; } }
     /* ─── TYPOGRAPHY ────────────────────────────────────────────────── */
@@ -159,44 +165,44 @@
     .eyebrow { font-size: 15px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--green-brand); margin-bottom: 12px; }
 
     /* ─── BUTTONS ───────────────────────────────────────────────────── */
-
+    
     .btn-cta:hover { background: var(--green-brand); transform: scale(1.02); color: #fff !important; }
-
+    
 
     /* ─── BENTO ─────────────────────────────────────────────────────── */
-
+    
     .bc { background: #fff; border-radius: var(--radius); padding: 32px; border: 1px solid var(--border); position: relative; overflow: hidden; }
-
-
-
-
-
-
+    
+    
+    
+    
+    
+    
     @media (max-width: 900px) { .bento { grid-template-columns: 1fr 1fr; } .bc.s7, .bc.s5 { grid-column: span 2; } .bc.s4, .bc.s6 { grid-column: span 1; } }
     @media (max-width: 600px) { .bento { grid-template-columns: 1fr; } .bc { grid-column: span 1 !important; } }
-
-
+    
+    
     .bignum { font-size: 110px; font-weight: 800; line-height: 1; letter-spacing: -.04em; color: rgba(19,74,142,.06); position: absolute; bottom: -16px; right: 16px; pointer-events: none; }
 
     /* ─── 2-COL ─────────────────────────────────────────────────────── */
-
-
+    
+    
     @media (max-width: 900px) { .g2 { grid-template-columns: 1fr; gap: 40px; } }
 
     /* ─── FEATURES ──────────────────────────────────────────────────── */
-
-
-
+    
+    
+    
 
     /* ─── REVIEWS ───────────────────────────────────────────────────── */
     .rev-rail-wrap { overflow: hidden; margin-top: 24px; mask-image: linear-gradient(to right, transparent 0%,black 6%,black 94%,transparent 100%); }
-
+    
     .rev-rail::-webkit-scrollbar { display: none; }
     .rev-rail:active { cursor: grabbing; }
-
-
-
-
+    
+    
+    
+    
 
     /* ─── MEDIA ─────────────────────────────────────────────────────── */
     .media-frame { width: 100%; border-radius: var(--radius); overflow: hidden; -webkit-mask-image: -webkit-radial-gradient(#fff,#000); }
@@ -214,18 +220,18 @@
     .note-box p { font-size: 17px; line-height: 1.6; color: var(--text2); margin-bottom: 12px; }
 
     /* ─── 3-STEP ────────────────────────────────────────────────────── */
-
+    
     @media (max-width: 860px) { .three-col { grid-template-columns: 1fr; } }
     @media (min-width: 600px) and (max-width: 860px) { .three-col { grid-template-columns: 1fr 1fr; } }
 
     /* ─── FAQ ───────────────────────────────────────────────────────── */
-
-
+    
+    
     .faq summary { list-style: none; cursor: pointer; padding: 18px 40px 18px 0; font-weight: 800; font-size: 18px; line-height: 1.4; position: relative; color: var(--text-strong); }
-
+    
     .faq summary::after { content: "+"; position: absolute; right: 4px; top: 50%; transform: translateY(-50%); font-size: 26px; font-weight: 300; color: var(--green-brand); }
-
-
+    
+    
 
     /* ─── FOOTER ────────────────────────────────────────────────────── */
 
@@ -245,7 +251,7 @@
       "@type": "ListItem",
       "position": 1,
       "name": "Home",
-      "item": "https://tagra.app/fr/"
+      "item": "https://tagra.app/nl/"
     },
     {
       "@type": "ListItem",
@@ -276,31 +282,29 @@
 <link href="/assets/css/components.css" rel="stylesheet"/>
 <link href="/assets/css/nav.css" rel="stylesheet"/>
 <script defer="" src="/assets/js/nav.js?v=20260816b"></script>
-<link href="/assets/css/footer.css" rel="stylesheet"/>
-<link href="https://tagra.app/driver/" hreflang="en" rel="alternate"/><link href="https://tagra.app/de/fahrer/" hreflang="de" rel="alternate"/><link href="https://tagra.app/pl/dla-kierowcow/" hreflang="pl" rel="alternate"/><link href="https://tagra.app/el/odigoi/" hreflang="el" rel="alternate"/><link href="https://tagra.app/hu/soforoknek/" hreflang="hu" rel="alternate"/><link href="https://tagra.app/it/per-autisti/" hreflang="it" rel="alternate"/><link href="https://tagra.app/fr/conducteurs/" hreflang="fr" rel="alternate"/><link href="https://tagra.app/driver/" hreflang="x-default" rel="alternate"/></head>
+<link href="/assets/css/footer.css" rel="stylesheet"/></head>
 <body>
 <a class="skip-link" href="#main-content">Passer au contenu</a>
 <div aria-hidden="true" id="scroll-progress"></div>
 <!-- ═══ NAVIGATION ════════════════════════════════════════════════════ -->
 <nav aria-label="Navigation principale" class="site-nav" role="navigation">
 <div class="nav-inner">
-<a aria-label="TAGRA Trucker – Home" class="nav-logo" href="/fr/"><img alt="TAGRA" height="32" src="/assets/img/logo-light.svg?v=20260513zh" style="display:block;height:32px;width:auto;" width="140"/><span class="nav-logo-variant">Trucker</span></a>
+<a aria-label="TAGRA Trucker – Home" class="nav-logo" href="/nl/"><img alt="TAGRA" height="32" src="/assets/img/logo-light.svg?v=20260513zh" style="display:block;height:32px;width:auto;" width="140"/><span class="nav-logo-variant">Trucker</span></a>
 <ul class="nav-links" id="nav-links">
-<li><a href="/fleet/">Pour les entreprises</a></li>
+<li><a href="/fr/entreprises/">Pour les entreprises</a></li>
 <li><a aria-current="page" href="/fr/conducteurs/">Pour les conducteurs</a></li>
-<li><a href="/enforcement/">Autorités de contrôle</a></li>
-<li><a href="/articles/">Articles</a></li><li><a href="/manuals/">Manuels</a></li>
-<li><a href="/faq/">FAQ</a></li>
-<li><a href="/contact/">Contact</a></li>
-<li class="nav-cta-li"><a class="nav-cta" href="/try/?audience=driver">Essai gratuit de 30 jours</a></li>
+<li><a href="/fr/autorites-de-controle/">Contrôle</a></li>
+<li><a href="/fr/articles/">Articles</a></li><li><a href="/fr/manuels/">Manuels</a></li>
+<li><a href="/fr/faq/">FAQ</a></li>
+<li><a href="/fr/contact/">Contact</a></li>
+<li class="nav-cta-li"><a class="nav-cta" href="/fr/essai-gratuit/?audience=driver">Essayez gratuitement pendant 30 jours</a></li>
 </ul>
 <details class="nav-lang">
-<summary aria-label="Language: FR">FR</summary>
-<div class="nav-lang-menu" role="menu">
-<a href="/" hreflang="en">English</a><a href="/de/" hreflang="de">Deutsch</a><a href="/pl/" hreflang="pl">Polski</a><a href="/el/" hreflang="el">Ελληνικά</a><a href="/hu/" hreflang="hu">Magyar</a><a href="/it/" hreflang="it">Italiano</a><a aria-current="page" class="active" href="/fr/conducteurs/" hreflang="fr">Français</a><a href="https://www.tdt.cz/" hreflang="cs" rel="noopener" target="_blank">Čeština</a><a href="https://www.tdt.sk/" hreflang="sk" rel="noopener" target="_blank">Slovenčina</a></div>
+<summary aria-label="Langue : FR">FR</summary>
+<div class="nav-lang-menu" role="menu"><a href="/driver/" hreflang="en">English</a><a href="/de/fahrer/" hreflang="de">Deutsch</a><a href="/pl/dla-kierowcow/" hreflang="pl">Polski</a><a href="/nl/voor-chauffeurs/" hreflang="nl">Nederlands</a><a aria-current="page" class="active" href="/fr/conducteurs/" hreflang="fr">Français</a><a href="/it/per-autisti/" hreflang="it">Italiano</a><a href="/el/odigoi/" hreflang="el">Ελληνικά</a><a href="/hu/soforoknek/" hreflang="hu">Magyar</a><a href="/ro/pentru-conducatori/" hreflang="ro">Română</a><a href="https://www.tdt.cz/" hreflang="cs" rel="noopener" target="_blank">Čeština</a><a href="https://www.tdt.sk/" hreflang="sk" rel="noopener" target="_blank">Slovenčina</a></div>
 </details>
-<a class="nav-cta-mobile" href="/try/?audience=driver">Essai gratuit</a>
-<button aria-expanded="false" aria-label="Toggle menu" class="nav-mobile-toggle" id="nav-toggle">
+<a class="nav-cta-mobile" href="/fr/essai-gratuit/?audience=driver">Essai gratuit</a>
+<button aria-expanded="false" aria-label="Afficher/masquer le menu" class="nav-mobile-toggle" id="nav-toggle">
 <span></span><span></span><span></span>
 </button>
 </div>
@@ -308,15 +312,15 @@
 <!-- ═══ HERO ═════════════════════════════════════════════════════════ -->
 <section id="main-content" aria-label="Aperçu de TAGRA Trucker" class="band band--hero band--hero--green">
 <div class="container">
-<div class="eyebrow anim-up">TAGRA · Logiciel chronotachygraphe pour conducteurs professionnels</div>
+<div class="eyebrow anim-up">TAGRA · Logiciel de tachygraphe pour conducteurs professionnels</div>
 <h1 class="anim-up" style="transition-delay:.05s">Analyse du chronotachygraphe avant <br/>votre prochain contrôle routier</h1>
 <p class="lead anim-up" style="transition-delay:.1s">
-<strong>Vos heures. Vos données.</strong> Sachez exactement ce qui se trouve sur votre <strong>carte conducteur</strong> — temps de conduite, pauses, périodes de repos et temps de conduite UE — avant tout contrôle routier. Téléchargement de la carte conducteur avec un lecteur de carte USB standard.
+<strong>Vos heures. Vos données.</strong> Sachez exactement ce qui se trouve sur votre <strong>carte conducteur</strong> — temps de conduite, pauses, temps de repos et temps de conduite UE — avant tout contrôle routier. Téléchargement des données de la carte de conducteur avec un lecteur de carte USB standard.
     </p>
 <div class="anim-up" style="margin-bottom:16px;transition-delay:.15s">
-<a class="btn-cta" href="/try/?audience=driver" rel="noopener" target="_blank">Essayer gratuitement pendant 30 jours</a>
+<a class="btn-cta" href="/fr/essai-gratuit/?audience=driver" rel="noopener" target="_blank">Essayer gratuitement pendant 30 jours</a>
 </div>
-<p class="anim-up" style="font-size:15px;color:var(--text2);transition-delay:.2s">Windows · Essai gratuit de 30 jours · Prêt pour les conducteurs de fourgon dès juillet 2026</p>
+<p class="anim-up" style="font-size:15px;color:var(--text2);transition-delay:.2s">Windows · Essai gratuit de 30 jours · Prêt pour les conducteurs de véhicules utilitaires dès juillet 2026</p>
 <!-- Hero video -->
 <div class="media-frame anim-up" style="margin:44px auto 0;box-shadow:0 20px 40px rgba(0,0,0,.08);transition-delay:.25s;border-radius:20px;overflow:hidden">
 <video id="hero-vid" loop="" muted="" playsinline="" poster="https://cdn.truckmall.cz/data/user-content/TDT_TAGRA_TRUCKER_wh.jpg" preload="metadata" style="width:100%;display:block">
@@ -364,7 +368,7 @@
 <section aria-label="Avis clients" class="band band--gray">
 <div class="container">
 <div class="eyebrow anim-up">Ce que disent les conducteurs</div>
-<h2 class="anim-up">La confiance des conducteurs professionnels</h2>
+<h2 class="anim-up">Conçu pour les conducteurs professionnels</h2>
 </div>
 <div class="rev-rail-wrap anim-up" style="transition-delay:.05s">
 <div class="rev-rail" id="rev-rail">
@@ -386,145 +390,148 @@
 <p style="margin-bottom:24px">Un <strong>logiciel d'analyse du chronotachygraphe</strong> léger pour un seul conducteur. Sachez à tout moment exactement ce qui se trouve sur votre carte conducteur — et soyez prêt pour tout contrôle routier.</p>
 <div class="feats">
 <div class="fi"><div class="fck"><svg fill="none" height="8" viewbox="0 0 10 8" width="10"><path d="M1 4l2.5 2.5L9 1" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></div><span><strong>Lecteur de carte USB standard</strong> — branchez, lisez votre carte, c'est fait</span></div>
-<div class="fi"><div class="fck"><svg fill="none" height="8" viewbox="0 0 10 8" width="10"><path d="M1 4l2.5 2.5L9 1" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></div><span>Évaluation des <strong>temps de conduite UE</strong> selon le règlement 561/2006 et l'AETR — temps de conduite, pauses et périodes de repos</span></div>
+<div class="fi"><div class="fck"><svg fill="none" height="8" viewbox="0 0 10 8" width="10"><path d="M1 4l2.5 2.5L9 1" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></div><span><strong>Évaluation des</strong> temps de conduite UE</span></div>
+<div class="fi"><div class="fck"><svg fill="none" height="8" viewbox="0 0 10 8" width="10"><path d="M1 4l2.5 2.5L9 1" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></div><span>selon le règlement 561/2006 et l'AETR — temps de conduite, pauses et périodes de repos</span></div>
 <div class="fi"><div class="fck"><svg fill="none" height="8" viewbox="0 0 10 8" width="10"><path d="M1 4l2.5 2.5L9 1" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></div><span>Aperçu instantané de ce qui est stocké sur votre carte conducteur</span></div>
 <div class="fi"><div class="fck"><svg fill="none" height="8" viewbox="0 0 10 8" width="10"><path d="M1 4l2.5 2.5L9 1" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></div><span>Archivage des données de la carte conducteur — conforme à la réglementation</span></div>
-<div class="fi"><div class="fck"><svg fill="none" height="8" viewbox="0 0 10 8" width="10"><path d="M1 4l2.5 2.5L9 1" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></div><span>Fonctionne hors ligne sur n'importe quel PC ou ordinateur portable Windows dans la cabine</span></div>
-<div class="fi"><div class="fck"><svg fill="none" height="8" viewbox="0 0 10 8" width="10"><path d="M1 4l2.5 2.5L9 1" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></div><span><strong>Prêt pour les conducteurs de fourgon dès juillet 2026</strong></span></div>
+<div class="fi"><div class="fck"><svg fill="none" height="8" viewbox="0 0 10 8" width="10"><path d="M1 4l2.5 2.5L9 1" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></div><span><strong>Fonctionne hors ligne sur n'importe quel PC ou ordinateur portable Windows dans la cabine</strong></span></div>
 </div>
 <div style="margin-top:28px">
-<a class="btn-cta btn-cta--sm" href="/try/?audience=driver" rel="noopener" target="_blank">Essayer Trucker gratuitement — 30 jours</a>
+<a class="btn-cta btn-cta--sm" href="/fr/essai-gratuit/?audience=driver" rel="noopener" target="_blank">Prêt pour les conducteurs de fourgon dès juillet 2026</a>
 </div>
 </div>
 <div class="anim-up" style="transition-delay:.1s">
 <div class="media-frame" style="background:var(--bg-gray);border-radius:var(--radius);overflow:hidden">
-<img alt="TAGRA Trucker – logiciel chronotachygraphe avec lecteur USB pour le téléchargement de la carte conducteur" height="600" loading="lazy" src="https://cdn.truckmall.cz/data/user-content/TDT_TAGRA_TRUCKER_wh.jpg" style="object-fit:contain;width:100%;height:auto;" width="600"/>
+<img alt="Essayer Trucker gratuitement — 30 jours" height="600" loading="lazy" src="https://cdn.truckmall.cz/data/user-content/TDT_TAGRA_TRUCKER_wh.jpg" style="object-fit:contain;width:100%;height:auto;" width="600"/>
 </div>
 </div>
 </div>
 </div>
 </section>
 <!-- ═══ MAC STAGE ═════════════════════════════════════════════════════ -->
-<section aria-label="Aperçu du logiciel" class="band" style="background:linear-gradient(180deg,var(--bg-apple-solid) 0%,#fff 74%);padding:60px 0">
+<section aria-label="TAGRA Trucker – logiciel de tachygraphe avec lecteur USB pour le téléchargement des données de la carte de conducteur" class="band" style="background:linear-gradient(180deg,var(--bg-apple-solid) 0%,#fff 74%);padding:60px 0">
 <div class="container">
 <div class="mac-stage">
-<img alt="TAGRA Trucker sur ordinateur portable — téléchargement de la carte conducteur et aperçu des temps de conduite UE" height="2076" id="mac-img" loading="lazy" src="https://cdn.truckmall.cz/data/user-content/Trucker_3_ntb.webp" width="3116"/>
+<img alt="Aperçu du logiciel" height="2076" id="mac-img" loading="lazy" src="https://cdn.truckmall.cz/data/user-content/Trucker_3_ntb.webp" width="3116"/>
 </div>
 </div>
 </section>
 <!-- ═══ HOW IT WORKS ══════════════════════════════════════════════════ -->
-<section aria-label="Comment importer vos données dans TAGRA Trucker" class="band band--gray">
+<section aria-label="TAGRA Trucker sur ordinateur portable — téléchargement des données de la carte de conducteur et aperçu des temps de conduite UE" class="band band--gray">
 <div class="container">
 <div class="anim-up" style="text-align:center;margin-bottom:40px">
-<div class="eyebrow">Processus simple</div>
-<h2>Trois étapes.<br/>C'est tout.</h2>
+<div class="eyebrow">Comment importer vos données dans TAGRA Trucker</div>
+<h2>Processus simple<br/>Trois étapes.</h2>
 </div>
 <div class="three-col anim-up" style="transition-delay:.05s">
 <div style="text-align:center;padding:28px 20px">
 <div style="font-size:52px;font-weight:900;line-height:1;color:rgba(19,74,142,.12);margin-bottom:8px">1</div>
-<div style="font-size:18px;font-weight:800;color:var(--text-strong);margin-bottom:8px">Branchez le lecteur USB</div>
-<p style="font-size:16px;color:var(--text2)">Insérez votre lecteur de carte USB dans votre PC ou ordinateur portable. Aucun logiciel supplémentaire n'est nécessaire.</p>
+<div style="font-size:18px;font-weight:800;color:var(--text-strong);margin-bottom:8px">1</div>
+<p style="font-size:16px;color:var(--text2)">Branchez le lecteur USB</p>
 </div>
 <div style="text-align:center;padding:28px 20px;border-left:1px solid var(--border);border-right:1px solid var(--border)">
 <div style="font-size:52px;font-weight:900;line-height:1;color:rgba(19,74,142,.12);margin-bottom:8px">2</div>
-<div style="font-size:18px;font-weight:800;color:var(--text-strong);margin-bottom:8px">Insérez votre carte conducteur</div>
-<p style="font-size:16px;color:var(--text2)">TAGRA effectue automatiquement le <strong>téléchargement de la carte conducteur</strong>. Toutes les données se chargent en quelques secondes.</p>
+<div style="font-size:18px;font-weight:800;color:var(--text-strong);margin-bottom:8px">2</div>
+<p style="font-size:16px;color:var(--text2)">Insérez votre carte conducteur <strong>TAGRA effectue automatiquement le</strong> téléchargement de la carte conducteur</p>
 </div>
 <div style="text-align:center;padding:28px 20px">
 <div style="font-size:52px;font-weight:900;line-height:1;color:rgba(19,74,142,.12);margin-bottom:8px">3</div>
-<div style="font-size:18px;font-weight:800;color:var(--text-strong);margin-bottom:8px">Consultez vos données</div>
-<p style="font-size:16px;color:var(--text2)">Temps de conduite, pauses, périodes de repos — vue d'ensemble claire. Prêt pour tout contrôle.</p>
+<div style="font-size:18px;font-weight:800;color:var(--text-strong);margin-bottom:8px">3</div>
+<p style="font-size:16px;color:var(--text2)">Consultez vos données</p>
 </div>
 </div>
 <div class="note-box anim-up" role="note">
-<span class="note-badge">Bon à savoir</span>
-<div class="note-title">L'obligation de téléchargement incombe à l'entreprise de transport — pas au conducteur</div>
-<p>En vertu du droit européen, l'obligation de télécharger les données du chronotachygraphe incombe à l'<strong>entreprise de transport</strong> — le transporteur ou l'entreprise qui exploite le véhicule (règlement (UE) n° 165/2014, article 33). Les intervalles maximaux sont d'<strong>au moins tous les 28 jours pour la carte conducteur</strong> et d'<strong>au moins tous les 90 jours pour l'unité embarquée</strong> (règlement (UE) n° 581/2010 de la Commission).</p>
-<p><strong>Si vous conduisez pour un employeur</strong>, l'obligation lui incombe — mais vous avez tout intérêt à conserver vos propres copies. <strong>TAGRA Trucker</strong> télécharge et archive les données de votre carte conducteur afin que vous puissiez vérifier vos propres temps de conduite et disposer de vos relevés si jamais vous changez d'employeur.</p>
-<p><strong>Si vous êtes conducteur indépendant ou conducteur-propriétaire</strong>, vous êtes également l'entreprise de transport — vous êtes donc légalement tenu de télécharger les données de la carte conducteur <em>et</em> celles de l'unité embarquée. Pour cela, il vous faut au minimum <a href="/fleet/" style="color:var(--blue-mid);font-weight:600">TAGRA 1</a>, qui gère à la fois le téléchargement de la carte conducteur et celui de l'unité embarquée pour un véhicule. TAGRA Trucker seul ne suffit pas dans ce cas.</p>
-<p style="margin-bottom:0;font-size:15px"><strong>Vous découvrez TAGRA ?</strong> Lisez notre guide de référence sur les <a href="/articles/digital-tachograph-symbols/">symboles du chronotachygraphe et leur signification</a> — les quatre pictogrammes d'activité que tout conducteur doit connaître.</p>
+<span class="note-badge">Temps de conduite, pauses, périodes de repos — vue d'ensemble claire. Prêt pour tout contrôle.</span>
+<div class="note-title">Bon à savoir</div>
+<p>L'obligation de téléchargement incombe à l'entreprise de transport — pas au conducteur <strong>En vertu du droit européen, l'obligation de télécharger les données du tachygraphe incombe à l'</strong> entreprise de transport <strong>— le transporteur ou l'entreprise qui exploite le véhicule (règlement (UE) n° 165/2014, article 33). Les intervalles maximaux sont d'</strong> et <strong>et d'</strong> au moins tous les 90 jours pour l'unité embarquée</p>
+<p><strong>(règlement (UE) n° 581/2010 de la Commission).</strong>Si vous conduisez pour un employeur <strong>TAGRA Trucker</strong> TAGRA Trucker</p>
+<p><strong>télécharge et archive les données de votre carte de conducteur afin que vous puissiez vérifier vos propres temps de conduite et disposer de vos relevés si jamais vous changez d'employeur.</strong>Si vous êtes conducteur indépendant ou conducteur-propriétaire <em>et</em> et <a href="/fr/entreprises/" style="color:var(--blue-mid);font-weight:600">celles de l'unité embarquée. Pour cela, il vous faut au minimum</a>TAGRA 1</p>
+<p style="margin-bottom:0;font-size:15px"><strong>, qui gère à la fois le téléchargement de la carte de conducteur et celui de l'unité embarquée pour un véhicule. TAGRA Trucker seul ne suffit pas dans ce cas.</strong> Vous découvrez TAGRA ? <a href="/fr/articles/symboles-tachygraphe/">Lisez notre guide de référence sur les</a> symboles du chronotachygraphe et leur signification</p>
 </div>
 </div>
 </section>
 <!-- ═══ TRY IT ════════════════════════════════════════════════════════ -->
-<section aria-label="Télécharger l'essai" class="band" id="try">
+<section aria-label="— les quatre pictogrammes d'activité que tout conducteur doit connaître." class="band" id="try">
 <div class="container">
 <div class="anim-up" style="text-align:center;max-width:600px;margin:0 auto">
-<h2>ESSAYEZ TAGRA TRUCKER GRATUITEMENT PENDANT 30 JOURS</h2>
-<p style="margin-top:8px;color:var(--text2)">Téléchargez, installez et utilisez le logiciel complet. Sans carte bancaire, sans inscription.</p>
+<h2>Télécharger l'essai</h2>
+<p style="margin-top:8px;color:var(--text2)">ESSAYEZ TAGRA TRUCKER GRATUITEMENT PENDANT 30 JOURS</p>
 <div style="margin-top:28px">
-<a class="btn-cta" href="/try/?audience=driver" rel="noopener" target="_blank">Télécharger la version d'essai</a>
+<a class="btn-cta" href="/fr/essai-gratuit/?audience=driver" rel="noopener" target="_blank">Téléchargez, installez et utilisez le logiciel complet. Sans carte bancaire.</a>
 </div>
-<p style="margin-top:14px;font-size:15px;color:var(--text2)">Windows · Gratuit · Fonctionne avec un lecteur de carte USB standard</p>
+<p style="margin-top:14px;font-size:15px;color:var(--text2)">Télécharger la version d'essai</p>
 </div>
 </div>
 </section>
 <!-- ═══ WHICH PATH FITS YOU ═══════════════════════════════════════════ -->
-<section aria-label="Choisissez comment démarrer" class="band">
+<section aria-label="Windows · Gratuit · Fonctionne avec un lecteur de carte USB standard" class="band">
 <div class="container">
 <div class="anim-up" style="text-align:center;max-width:640px;margin:0 auto 32px">
-<div class="eyebrow">Deux façons de commencer</div>
-<h2>Testez avec vos propres données —<br/>ou commencez avec le lecteur</h2>
+<div class="eyebrow">Choisissez comment démarrer</div>
+<h2>Deux façons de commencer<br/>Testez avec vos propres données —</h2>
 </div>
 <div class="path-split anim-up" style="transition-delay:.05s">
 <div class="path-card">
-<h3>Vous avez déjà des données de chronotachygraphe</h3>
-<p>Vous avez déjà téléchargé un fichier <code>.DDD</code> ou <code>.C1B</code> — auprès de votre employeur, d'un atelier ou d'un autre lecteur ? Installez l'essai et chargez-le. Fonctionnalités complètes, 30 jours, sans paiement et sans coordonnées bancaires.</p>
-<a class="btn-cta" href="/try/?audience=driver">Télécharger l'essai gratuit →</a>
+<h3>ou commencez avec le lecteur</h3>
+<p>Vous avez déjà des données de chronotachygraphe <code>Vous avez déjà téléchargé un fichier</code> ou une <code>ou</code> .C1B</p>
+<a class="btn-cta" href="/fr/essai-gratuit/?audience=driver">— auprès de votre employeur, d'un atelier ou d'un autre lecteur ? Installez l'essai et chargez-le. Fonctionnalités complètes, 30 jours, sans paiement et sans coordonnées bancaires.</a>
 </div>
 <div class="path-card path-card--buy">
-<h3>Vous n'avez pas de lecteur de carte ?</h3>
-<p>Dans ce cas, le lecteur est la pièce manquante. TAGRA Trucker fonctionne avec un lecteur de carte à puce USB compatible — comptez environ 25 à 45 € dans le commerce. Si vous n'en possédez pas, contactez-nous : nous vous recommanderons un modèle compatible.</p>
-<p><strong>Besoin d'un lecteur ? Nous pouvons vous en envoyer un.</strong> Écrivez à <a href="mailto:sales@tagra.app">sales@tagra.app</a> : nous vous recommanderons un modèle compatible ou vous en enverrons un — prix et frais de port indiqués selon votre pays.</p>
-<p><strong>Le lecteur vous sera toujours utile.</strong> C'est un matériel USB standard, que vous pouvez aussi utiliser avec d'autres logiciels compatibles. En revanche, le lecteur seul ne permet pas d'analyser vos données : c'est le logiciel qui s'en charge.</p>
-<a class="btn-cta" href="/contact/?product=trucker">Commander TAGRA Trucker — 49 € HT →</a>
-<p class="path-note">Confirmation de commande et envoi de la licence par e-mail.</p>
+<h3>Télécharger l'essai gratuit →</h3>
+<p>Vous n'avez pas de lecteur de carte ?</p>
+<p><strong>Dans ce cas, le lecteur est la pièce manquante. TAGRA Trucker fonctionne avec un lecteur de carte à puce USB compatible — comptez environ 25 à 45 € dans le commerce. Si vous n'en possédez pas, contactez-nous : nous vous recommanderons un modèle compatible.</strong> Besoin d'un lecteur ? Nous pouvons vous en envoyer un. <a href="mailto:sales@tagra.app">Écrivez à</a> sales@tagra.app</p>
+<a class="btn-cta" href="/fr/contact/?product=trucker">: nous vous recommanderons un modèle compatible ou vous en enverrons un — prix et frais de port indiqués selon votre pays.</a>
+<p class="path-note">Le lecteur vous sera toujours utile.</p>
 </div>
 </div>
 </div>
 </section>
 <!-- ═══ PRICING ════════════════════════════════════════════════════════ -->
-<section aria-label="Tarifs" class="band band--gray" id="pricing">
+<section aria-label="C'est un matériel USB standard, que vous pouvez aussi utiliser avec d'autres logiciels compatibles. En revanche, le lecteur seul ne permet pas d'analyser vos données : c'est le logiciel qui s'en charge." class="band band--gray" id="pricing">
 <div class="container">
 <div class="anim-up" style="max-width:560px">
-<div class="eyebrow">Prix et conditions</div>
-<h2 style="text-transform:none">Des tarifs transparents.<br/>Aucun frais caché.</h2>
-<p style="margin:16px 0 24px">Commencez par l'essai gratuit. Quand vous êtes prêt, sélectionnez votre licence directement dans le logiciel et payez en ligne.</p>
+<div class="eyebrow">Commander TAGRA Trucker — 49 € HT → &amp; Confirmation de commande et envoi de la licence par e-mail.</div>
+<h2 style="text-transform:none">Tarifs<br/>Prix et conditions</h2>
+<p style="margin:16px 0 24px">Des tarifs transparents.</p>
 <div style="background:#fff;border-radius:var(--radius);border:1px solid var(--border);overflow:hidden;margin-bottom:24px">
 <div style="display:flex;justify-content:space-between;padding:14px 20px;border-bottom:1px solid var(--border)"><span style="color:var(--text2)">Période d'essai</span><span style="font-weight:600;color:var(--green-brand)">30 jours gratuits</span></div>
-<div style="display:flex;justify-content:space-between;padding:14px 20px;border-bottom:1px solid var(--border)"><span style="color:var(--text2)">TAGRA Trucker</span><span style="font-weight:600">49 € HT</span></div>
+<div style="display:flex;justify-content:space-between;padding:14px 20px;border-bottom:1px solid var(--border)"><span style="color:var(--text2)">TAGRA Trucker</span><span style="font-weight:600">30 jours gratuits</span></div>
+<div style="display:flex;justify-content:space-between;padding:14px 20px;border-bottom:1px solid var(--border)"><span style="color:var(--text2)">TAGRA Trucker</span><span style="font-weight:600">19 € / an</span></div>
 <div style="display:flex;justify-content:space-between;padding:14px 20px;border-bottom:1px solid var(--border)"><span style="color:var(--text2)">Licence annuelle (dès la 2e année)</span><span style="font-weight:600">19 € / an</span></div>
-<div style="display:flex;justify-content:space-between;padding:14px 20px;border-bottom:1px solid var(--border)"><span style="color:var(--text2)">Inclut</span><span style="font-weight:600">Mises à jour + assistance</span></div>
-<div style="display:flex;justify-content:space-between;padding:14px 20px"><span style="color:var(--text2)">Paiement</span><span style="font-weight:600">En ligne · Code QR</span></div>
+<div style="display:flex;justify-content:space-between;padding:14px 20px"><span style="color:var(--text2)">Inclut</span><span style="font-weight:600">Mises à jour + assistance</span></div>
 </div>
-<p style="font-size:15px;color:var(--text2)">Des questions ? <a href="tel:+420739005345">+420 739 005 345</a> · <a href="mailto:sales@tagra.app">sales@tagra.app</a></p>
+<p style="font-size:15px;color:var(--text2)">Paiement <a href="tel:+420739005345">En ligne · Code QR</a> · <a href="mailto:sales@tagra.app">Écrivez à</a></p>
 <div style="margin-top:24px">
-<a class="btn-cta btn-cta--sm" href="/try/?audience=driver" rel="noopener" target="_blank">Télécharger la version d'essai</a>
+<a class="btn-cta btn-cta--sm" href="/fr/essai-gratuit/?audience=driver" rel="noopener" target="_blank">Téléchargez, installez et utilisez le logiciel complet. Sans carte bancaire.</a>
 </div>
 </div>
 </div>
 </section>
 <!-- ═══ FAQ ════════════════════════════════════════════════════════════ -->
-<section aria-label="Questions fréquentes" class="band band--blue">
+<section aria-label="Questions fréquemment posées" class="band band--blue">
 <div class="container">
-<div class="eyebrow anim-up">Questions fréquentes</div>
+<div class="eyebrow anim-up">Questions fréquemment posées</div>
 <h2 class="anim-up">FAQ</h2>
 <div class="faq anim-up" style="transition-delay:.05s">
 <details>
-<summary>À qui s'adresse TAGRA Trucker ?</summary>
-<div class="faq-a">TAGRA Trucker est un <strong>logiciel chronotachygraphe</strong> destiné aux conducteurs professionnels — chauffeurs de camion et de fourgon — qui souhaitent suivre les données de leur propre carte conducteur et contrôler le respect des temps de conduite et de repos UE.</div>
+<summary>Questions fréquentes</summary>
+<div class="faq-a">FAQ <strong>À qui s'adresse TAGRA Trucker ?</strong> TAGRA Trucker est un</div>
+</details>
+<details>
+<summary>logiciel chronotachygraphe</summary>
+<div class="faq-a">destiné aux conducteurs professionnels — chauffeurs de camion et de fourgon — qui souhaitent suivre les données de leur propre carte de conducteur et contrôler le respect des temps de conduite et de repos dans l'UE.</div>
 </details>
 <details>
 <summary>Ai-je besoin d'un lecteur de carte USB ?</summary>
-<div class="faq-a">Oui. TAGRA Trucker lit votre carte conducteur via un lecteur de carte USB standard. Si vous n'en avez pas, contactez-nous et nous vous recommanderons un modèle compatible — ou nous pouvons vous en envoyer un, prix et frais de port indiqués selon votre pays.</div>
+<div class="faq-a">Oui. TAGRA Trucker lit votre carte de conducteur via un lecteur de carte USB standard. Si vous n'en avez pas, contactez-nous et nous vous recommanderons un modèle compatible — ou nous pouvons vous en envoyer un, prix et frais de port indiqués selon votre pays. <strong>TAGRA effectue automatiquement le</strong> Connectez votre lecteur USB, insérez votre carte, et TAGRA effectue automatiquement le <strong>Vous avez déjà téléchargé un fichier</strong> ou une <strong>ou</strong> ou</div>
 </details>
 <details>
-<summary>Comment importer des données dans le logiciel ?</summary>
-<div class="faq-a">Connectez votre lecteur USB, insérez votre carte, et TAGRA effectue automatiquement le <strong>téléchargement de la carte conducteur</strong>. Vous pouvez également importer des fichiers <strong>.DDD</strong> ou <strong>.C1B</strong> déjà téléchargés ailleurs.</div>
+<summary>.C1B</summary>
+<div class="faq-a"><p>déjà téléchargés ailleurs. <strong>En vertu du droit européen, l'obligation de télécharger les données du tachygraphe incombe à l'</strong> En vertu du droit européen, l'obligation légale de télécharger les données du chronotachygraphe incombe à l' <strong>entreprise de transport</strong> (règlement (UE) n° 165/2014, article 33), et non au conducteur. Les intervalles maximaux sont d'au moins <strong>28 jours pour la carte conducteur</strong> au moins tous les 90 jours pour l'unité embarquée</p><p style="margin-top:10px"><strong>90 jours pour l'unité embarquée</strong>(règlement (UE) n° 581/2010 de la Commission).</p><p style="margin-top:10px"><strong>En tant que conducteur salarié</strong>, l'obligation incombe à votre employeur — mais télécharger votre propre carte avec TAGRA Trucker vous aide tout de même à garder le contrôle de vos temps de conduite et à conserver vos relevés personnels. <a href="/fr/entreprises/">celles de l'unité embarquée. Pour cela, il vous faut au minimum</a> , vous êtes vous-même l'entreprise de transport, l'obligation vous incombe donc à ce titre — et vous avez besoin d'une solution qui gère à la fois le téléchargement de la carte de conducteur et celui de l'unité embarquée. Dans ce cas,</p></div>
 </details>
 <details>
-<summary>À quelle fréquence dois-je télécharger ma carte ?</summary>
-<div class="faq-a"><p>En vertu du droit européen, l'obligation légale de télécharger les données du chronotachygraphe incombe à l'<strong>entreprise de transport</strong> (règlement (UE) n° 165/2014, article 33), et non au conducteur. Les intervalles maximaux sont d'au moins <strong>28 jours pour la carte conducteur</strong> et d'au moins <strong>90 jours pour l'unité embarquée</strong> (règlement (UE) n° 581/2010 de la Commission).</p><p style="margin-top:10px"><strong>En tant que conducteur salarié</strong>, l'obligation incombe à votre employeur — mais télécharger votre propre carte avec TAGRA Trucker vous aide tout de même à garder le contrôle de vos temps de conduite et à conserver vos relevés personnels.</p><p style="margin-top:10px"><strong>En tant que conducteur indépendant ou conducteur-propriétaire</strong>, vous êtes vous-même l'entreprise de transport, l'obligation vous incombe donc à ce titre — et vous avez besoin d'une solution qui gère à la fois le téléchargement de la carte conducteur et celui de l'unité embarquée. Dans ce cas, <a href="/fleet/">TAGRA 1</a> est le niveau minimum ; TAGRA Trucker seul ne couvre que la carte conducteur.</p></div>
+<summary>TAGRA 1</summary>
+<div class="faq-a">est le niveau minimum ; TAGRA Trucker seul ne couvre que la carte de conducteur.</div>
 </details>
 <details>
 <summary>TAGRA Trucker fonctionne-t-il hors ligne ?</summary>
@@ -534,35 +541,31 @@
 <summary>TAGRA Trucker est-il prêt pour l'obligation fourgon de juillet 2026 ?</summary>
 <div class="faq-a">Oui. TAGRA Trucker est pleinement prêt pour les conducteurs de fourgon (véhicules de 2,5 à 3,5 t en transport international) concernés par la nouvelle obligation de chronotachygraphe à partir de juillet 2026.</div>
 </details>
-<details>
-<summary>Comment acheter TAGRA Trucker après l'essai ?</summary>
-<div class="faq-a">À la fin de l'essai — ou dès que vous êtes prêt — ouvrez le menu des licences dans le logiciel, sélectionnez TAGRA Trucker et payez en ligne par code QR ou virement bancaire. Votre licence est activée immédiatement.</div>
-</details>
 </div>
 </div>
 </section>
 <!-- ═══ ALSO FOR COMPANIES ════════════════════════════════════════════ -->
-<section aria-label="TAGRA pour les opérateurs de flotte" class="band">
+<section aria-label="Comment acheter TAGRA Trucker après l'essai ?" class="band">
 <div class="container">
 <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:24px;padding:16px 0">
 <div>
-<div class="eyebrow">Également disponible</div>
-<p style="font-size:19px;font-weight:700;color:var(--text-strong);margin-top:4px">TAGRA pour les opérateurs de flotte</p>
-<p style="color:var(--text2);margin-top:6px;max-width:480px">Vous gérez des véhicules pour une entreprise ? TAGRA 1/2/4/6/MAX couvre les unités embarquées et les cartes conducteur, de 1 à un nombre illimité de véhicules.</p>
+<div class="eyebrow">À la fin de l'essai — ou dès que vous êtes prêt — ouvrez le menu des licences dans le logiciel, sélectionnez TAGRA Trucker et payez en ligne par code QR ou virement bancaire. Votre licence est activée immédiatement.</div>
+<p style="font-size:19px;font-weight:700;color:var(--text-strong);margin-top:4px">Comment acheter TAGRA Trucker après l'essai ?</p>
+<p style="color:var(--text2);margin-top:6px;max-width:480px">Également disponible</p>
 </div>
-<a class="btn-cta btn-cta--sm" href="/fleet/" style="flex-shrink:0;background:var(--blue-mid)">Solution flotte →</a>
+<a class="btn-cta btn-cta--sm" href="/fr/entreprises/" style="flex-shrink:0;background:var(--blue-mid)">TAGRA pour les gestionnaires de flotte</a>
 </div>
 </div>
 </section>
 <!-- ═══ MANUFACTURER ══════════════════════════════════════════════════ -->
-<section aria-label="Informations sur le fabricant" class="band band--gray">
+<section aria-label="Vous gérez des véhicules pour une entreprise ? TAGRA 1/2/4/6/MAX couvre les unités embarquées et les cartes de conducteur, de 1 à un nombre illimité de véhicules." class="band band--gray">
 <div class="container">
-<div class="eyebrow anim-up">Développeur et fabricant</div>
+<div class="eyebrow anim-up">Solution flotte → &amp; Informations sur le fabricant</div>
 <h2 class="anim-up">Truck Data Technology, s.r.o.</h2>
 <address class="anim-up" style="font-style:normal;margin-top:10px;line-height:1.8;transition-delay:.05s">
-<strong>Siège et assistance :</strong> République tchèque<br/>
-<strong>Téléphone :</strong> <a href="tel:+420739005345">+420 739 005 345</a><br/>
-<strong>E-mail :</strong> <a href="mailto:sales@tagra.app">sales@tagra.app</a><br/>
+<strong>Truck Data Technology, s.r.o. &amp; Siège et assistance :</strong> République tchèque<br/>
+<strong>Téléphone :</strong> <a href="tel:+420739005345">En ligne · Code QR</a><br/>
+<strong>E-mail :</strong> <a href="mailto:sales@tagra.app">Écrivez à</a><br/>
 <strong>Site web :</strong> <a href="https://www.tdt.cz" rel="noopener" target="_blank">www.tdt.cz</a>
 </address>
 </div>
@@ -572,38 +575,38 @@
 <div class="footer-inner">
 <div>
 <div class="footer-logo"><img alt="TAGRA" height="20" src="/assets/img/logo-dark.svg?v=20260513zh" width="88" loading="lazy"/></div>
-<p class="footer-desc">Logiciel professionnel d'analyse du chronotachygraphe. Téléchargement de la carte conducteur, analyse du chronotachygraphe numérique, temps de conduite UE et directive sur le temps de travail des chauffeurs routiers. Développé par Truck Data Technology, s.r.o.</p>
+<p class="footer-desc">Logiciel professionnel d'analyse des tachygraphes. Téléchargement des cartes de conducteur, analyse des tachygraphes numériques, temps de conduite des conducteurs dans l'UE et directive relative au temps de travail des conducteurs de poids lourds. Développé par Truck Data Technology, s.r.o.</p>
 </div>
 <div class="footer-col">
 <h2 class="footer-col-title">Produit</h2>
 <ul>
-<li><a href="/fleet/">Pour les opérateurs de flotte</a></li>
+<li><a href="/fr/entreprises/">Pour les exploitants de parcs</a></li>
 <li><a href="/fr/conducteurs/">Pour les conducteurs professionnels</a></li>
-<li><a href="/enforcement/">Autorités de contrôle</a></li>
-<li><a href="/how-it-works/">Comment ça marche</a></li>
-<li><a href="/for-whom/">Pour qui</a></li>
-<li><a href="/faq/">FAQ</a></li>
+<li><a href="/fr/autorites-de-controle/">Pour les contrôles</a></li>
+<li><a href="/fr/fonctionnement/">Fonctionnement</a></li>
+<li><a href="/fr/pour-qui/">Pour qui</a></li>
+<li><a href="/fr/faq/">FAQ</a></li>
 </ul>
 </div>
 <div class="footer-col">
 <h2 class="footer-col-title">Ressources</h2>
 <ul>
-<li><a href="/articles/">Articles</a></li><li><a href="/manuals/">Manuels</a></li>
-<li><a href="/articles/digital-tachograph-symbols/">Symboles du chronotachygraphe</a></li>
-<li><a href="/integrations/dkv-live/">DKV LIVE®</a></li>
+<li><a href="/fr/articles/">Articles</a></li><li><a href="/fr/manuels/">Manuels</a></li>
+<li><a href="/fr/articles/symboles-tachygraphe/">Symboles du tachygraphe</a></li>
+<li><a href="/fr/integrations/dkv-live/">DKV LIVE®</a></li>
 </ul>
 </div>
 <div class="footer-col">
 <h2 class="footer-col-title">Entreprise</h2>
 <ul>
-<li><a href="/contact/">Contact</a></li>
+<li><a href="/fr/contact/">Contact</a></li>
 <li><a href="https://www.tdt.cz" rel="noopener" target="_blank">Truck Data Technology</a></li>
-<li><a href="/">English</a></li><li><a href="/de/">Deutsch</a></li><li><a href="/pl/">Polski</a></li><li><a href="/el/">Ελληνικά</a></li><li><a href="/hu/">Magyar</a></li><li><a href="/it/">Italiano</a></li><li><a href="/fr/">Français</a></li><li><a href="https://www.tdt.cz/" rel="noopener" target="_blank">Čeština</a></li><li><a href="https://www.tdt.sk/" rel="noopener" target="_blank">Slovenčina</a></li></ul>
+<li><a href="/nl/">English</a></li><li><a href="/de/">Deutsch</a></li><li><a href="/pl/">Polski</a></li><li><a href="/el/">Ελληνικά</a></li><li><a href="/hu/">Magyar</a></li><li><a href="/it/">Italiano</a></li><li><a href="https://www.tdt.cz/" rel="noopener" target="_blank">Čeština</a></li><li><a href="https://www.tdt.sk/" rel="noopener" target="_blank">Slovenčina</a></li></ul>
 </div>
 </div>
 <div class="footer-bottom">
 <span>© 2026 Truck Data Technology, s.r.o. Tous droits réservés.</span>
-<span><a href="/contact/">Contact</a> · <a href="https://www.tdt.cz" rel="noopener" target="_blank">tdt.cz</a> · <a href="/privacy/">Confidentialité et cookies</a></span>
+<span><a href="/fr/contact/">Contact</a> · <a href="https://www.tdt.cz" rel="noopener" target="_blank">tdt.cz</a> · <a href="/fr/confidentialite/">Confidentialité &amp; cookies</a></span>
 </div>
 </footer>
 <!-- ═══ JAVASCRIPT ════════════════════════════════════════════════════ -->
@@ -677,10 +680,10 @@
 {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
-  "name": "TAGRA Trucker – Logiciel chronotachygraphe pour conducteurs professionnels",
+  "name": "TAGRA Trucker – Logiciel de tachygraphe pour conducteurs professionnels",
   "applicationCategory": "BusinessApplication",
   "operatingSystem": "Windows",
-  "description": "Logiciel chronotachygraphe pour conducteurs professionnels. Téléchargement de la carte conducteur avec un lecteur de carte USB standard. Évaluation et archivage des données de la carte conducteur, temps de conduite UE (règlement 561/2006), pauses et périodes de repos. Essai gratuit de 30 jours. Prêt pour les conducteurs de fourgon dès juillet 2026.",
+  "description": "Logiciel de tachygraphe pour conducteurs professionnels. Téléchargement de la carte de conducteur avec un lecteur de carte USB standard. Évaluation et archivage des données de la carte de conducteur, temps de conduite UE (règlement 561/2006), pauses et temps de repos. Essai gratuit de 30 jours. Prêt pour les conducteurs de véhicules utilitaires dès juillet 2026.",
   "url": "https://tagra.app/fr/conducteurs/",
   "inLanguage": "fr",
   "author": { "@type": "Organization", "name": "Truck Data Technology, s.r.o.", "url": "https://www.tdt.cz" },
@@ -695,10 +698,18 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "À qui s'adresse TAGRA Trucker ?",
+      "name": "Questions fréquentes",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "TAGRA Trucker est un logiciel chronotachygraphe destiné aux conducteurs professionnels — chauffeurs de camion et de fourgon — qui souhaitent suivre les données de leur propre carte conducteur et contrôler le respect des temps de conduite et de repos UE."
+        "text": "TAGRA Trucker est un logiciel de tachygraphe destiné aux conducteurs professionnels — chauffeurs de camion et de véhicules utilitaires — qui souhaitent suivre les données de leur propre carte de conducteur et contrôler le respect des temps de conduite et de repos UE."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "logiciel chronotachygraphe",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "destiné aux conducteurs professionnels — chauffeurs de camion et de fourgon — qui souhaitent suivre les données de leur propre carte de conducteur et contrôler le respect des temps de conduite et de repos dans l'UE."
       }
     },
     {
@@ -706,23 +717,23 @@
       "name": "Ai-je besoin d'un lecteur de carte USB ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Oui. TAGRA Trucker lit votre carte conducteur via un lecteur de carte USB standard. Si vous n'en avez pas, contactez-nous et nous vous recommanderons un modèle compatible — ou nous pouvons vous en envoyer un, prix et frais de port indiqués selon votre pays."
+        "text": "Connectez votre lecteur USB, insérez votre carte et TAGRA télécharge automatiquement les données de la carte de conducteur. Vous pouvez également importer des fichiers .DDD ou .C1B déjà téléchargés ailleurs."
       }
     },
     {
       "@type": "Question",
-      "name": "Comment importer des données dans le logiciel ?",
+      "name": ".C1B",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Connectez votre lecteur USB, insérez votre carte, et TAGRA effectue automatiquement le téléchargement de la carte conducteur. Vous pouvez également importer des fichiers .DDD ou .C1B déjà téléchargés ailleurs."
+        "text": "En vertu du droit européen, l'obligation légale de télécharger les données du tachygraphe incombe à l'entreprise de transport (règlement (UE) n° 165/2014, article 33), et non au conducteur. Les intervalles maximaux sont de 28 jours pour la carte de conducteur et de 90 jours pour l'unité embarquée (règlement (UE) n° 581/2010 de la Commission). En tant que conducteur salarié, l'obligation incombe à votre employeur — mais télécharger votre propre carte avec TAGRA Trucker vous aide tout de même à garder le contrôle de vos temps de conduite et à conserver vos relevés personnels. En tant que conducteur indépendant ou conducteur-propriétaire, vous êtes vous-même l'entreprise de transport, l'obligation vous incombe donc à ce titre — et vous avez besoin d'une solution qui gère à la fois le téléchargement de la carte de conducteur et celui de l'unité embarquée. Dans ce cas, TAGRA 1 est le niveau minimum ; TAGRA Trucker seul ne couvre que la carte de conducteur."
       }
     },
     {
       "@type": "Question",
-      "name": "À quelle fréquence dois-je télécharger ma carte ?",
+      "name": "TAGRA 1",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "En vertu du droit européen, l'obligation légale de télécharger les données du chronotachygraphe incombe à l'entreprise de transport (règlement (UE) n° 165/2014, article 33), et non au conducteur. Les intervalles maximaux sont d'au moins 28 jours pour la carte conducteur et d'au moins 90 jours pour l'unité embarquée (règlement (UE) n° 581/2010 de la Commission). En tant que conducteur salarié, l'obligation incombe à votre employeur — mais télécharger votre propre carte avec TAGRA Trucker vous aide tout de même à garder le contrôle de vos temps de conduite et à conserver vos relevés personnels. En tant que conducteur indépendant ou conducteur-propriétaire, vous êtes vous-même l'entreprise de transport, l'obligation vous incombe donc à ce titre — et vous avez besoin d'une solution qui gère à la fois le téléchargement de la carte conducteur et celui de l'unité embarquée. Dans ce cas, TAGRA 1 est le niveau minimum ; TAGRA Trucker seul ne couvre que la carte conducteur."
+        "text": "est le niveau minimum ; TAGRA Trucker seul ne couvre que la carte de conducteur."
       }
     },
     {
@@ -739,14 +750,6 @@
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Oui. TAGRA Trucker est pleinement prêt pour les conducteurs de fourgon (véhicules de 2,5 à 3,5 t en transport international) concernés par la nouvelle obligation de chronotachygraphe à partir de juillet 2026."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Comment acheter TAGRA Trucker après l'essai ?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "À la fin de l'essai — ou dès que vous êtes prêt — ouvrez le menu des licences dans le logiciel, sélectionnez TAGRA Trucker et payez en ligne par code QR ou virement bancaire. Votre licence est activée immédiatement."
       }
     }
   ]

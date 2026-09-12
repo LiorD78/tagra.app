@@ -1,0 +1,1558 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<!-- TMX-ANALYTICS START -->
+<meta content="7F7894081BE7FBB245FF03AF8810B22F" name="msvalidate.01"/>
+<!-- Consent Mode v2 defaults (deny) + gtag stub — runs BEFORE gtag.js -->
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent','default',{
+      ad_storage:'denied', ad_user_data:'denied', ad_personalization:'denied',
+      analytics_storage:'denied', functionality_storage:'denied',
+      personalization_storage:'denied', security_storage:'granted',
+      wait_for_update:500
+    });
+    gtag('set','ads_data_redaction',true);
+    gtag('set','url_passthrough',false);
+  </script>
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-92253QFBNX"></script>
+<script>
+    gtag('js', new Date());
+    gtag('config','G-92253QFBNX');
+  </script>
+<!-- Cookie consent banner (self-hosted) + Microsoft Clarity gating -->
+<style>
+    .tmx-cc{position:fixed;left:0;right:0;bottom:0;z-index:2147483000;background:linear-gradient(120deg,var(--blue-dark,#0b2c4a),var(--blue-mid,#134a8e) 62%,var(--blue-light,#1f5fa6));color:#fff;
+      font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+      padding:16px 20px;box-shadow:0 -4px 24px rgba(0,0,0,.18);display:flex;flex-wrap:wrap;
+      align-items:center;gap:14px;justify-content:center}
+    .tmx-cc__txt{flex:1 1 360px;max-width:760px}
+    .tmx-cc__txt a{color:#9ed0f5;text-decoration:underline}
+    .tmx-cc__btns{display:flex;gap:10px;flex:0 0 auto}
+    .tmx-cc__b{appearance:none;border:0;cursor:pointer;font:inherit;font-weight:600;
+      padding:10px 22px;border-radius:99px;transition:filter .15s;color:#fff}
+    .tmx-cc__b:hover{filter:brightness(1.08)}
+    .tmx-cc__b--no{background:rgba(255,255,255,.16)}
+    .tmx-cc__b--yes{background:var(--green-cta,#5C820F)}
+    @media(max-width:640px){.tmx-cc{padding:14px}.tmx-cc__btns{width:100%}.tmx-cc__b{flex:1}}
+  </style>
+<script>
+  (function(){
+    var KEY='tmx-consent-v1', CL='wt18054m0r';
+    function lc(){var l=(document.documentElement.getAttribute('lang')||'en').toLowerCase().split('-')[0];
+      var m={cz:'cs',cs:'cs',sk:'sk',de:'de',pl:'pl',gr:'el',el:'el',hu:'hu',en:'en'};return m[l]||'en';}
+    var T={
+      hu:{t:'Analitikai s\u00fctiket haszn\u00e1lunk (Google Analytics, Microsoft Clarity, Smartsupp), hogy meg\u00e9rts\u00fck a webhely haszn\u00e1lat\u00e1t. Csak az \u00d6n hozz\u00e1j\u00e1rul\u00e1s\u00e1val t\u00f6lt\u0151dnek be.',a:'Elfogadom',r:'Elutas\u00edtom',p:'Adatv\u00e9delem \u00e9s s\u00fctik'},
+      ro:{t:'Utilizăm module cookie de analiză (Google Analytics, Microsoft Clarity, Smartsupp) pentru a înțelege modul de utilizare a site-ului. Se încarcă doar cu consimțământul dumneavoastră.',a:'Accept',r:'Refuz',p:'Confidențialitate și cookie-uri'},
+      nl:{t:'We gebruiken analytische cookies (Google Analytics, Microsoft Clarity, Smartsupp) om het gebruik van de site te begrijpen. Ze laden alleen met uw toestemming.',a:'Accepteren',r:'Weigeren',p:'Privacy en cookies'},
+      fr:{t:'Nous utilisons des cookies analytiques (Google Analytics, Microsoft Clarity, Smartsupp) pour comprendre l’utilisation du site. Ils ne se chargent qu’avec votre consentement.',a:'Accepter',r:'Refuser',p:'Confidentialité et cookies'},
+      it:{t:'Utilizziamo cookie analitici (Google Analytics, Microsoft Clarity, Smartsupp) per capire l’utilizzo del sito. Si caricano solo con il Suo consenso.',a:'Accetta',r:'Rifiuta',p:'Privacy e cookie'},
+      en:{t:'We use analytics cookies (Google Analytics, Microsoft Clarity, Smartsupp) to understand site usage. They load only with your consent.',a:'Accept',r:'Reject',p:'Privacy &amp; cookies'},
+      cs:{t:'Pou\u017e\u00edv\u00e1me analytick\u00e9 cookies (Google Analytics, Microsoft Clarity, Smartsupp) k pochopen\u00ed pou\u017e\u00edv\u00e1n\u00ed webu. Na\u010dtou se jen s va\u0161\u00edm souhlasem.',a:'P\u0159ijmout',r:'Odm\u00edtnout',p:'Soukrom\u00ed a cookies'},
+      sk:{t:'Pou\u017e\u00edvame analytick\u00e9 cookies (Google Analytics, Microsoft Clarity, Smartsupp) na pochopenie pou\u017e\u00edvania webu. Na\u010d\u00edtaj\u00fa sa len s va\u0161\u00edm s\u00fahlasom.',a:'Prija\u0165',r:'Odmietnu\u0165',p:'S\u00fakromie a cookies'},
+      de:{t:'Wir verwenden Analyse-Cookies (Google Analytics, Microsoft Clarity, Smartsupp), um die Nutzung der Website zu verstehen. Sie werden nur mit Ihrer Einwilligung geladen.',a:'Akzeptieren',r:'Ablehnen',p:'Datenschutz &amp; Cookies'},
+      pl:{t:'U\u017cywamy plik\u00f3w cookie do analityki (Google Analytics, Microsoft Clarity, Smartsupp), aby zrozumie\u0107 korzystanie z witryny. \u0141aduj\u0105 si\u0119 tylko za Twoj\u0105 zgod\u0105.',a:'Akceptuj',r:'Odrzu\u0107',p:'Prywatno\u015b\u0107 i cookies'},
+      el:{t:'\u03a7\u03c1\u03b7\u03c3\u03b9\u03bc\u03bf\u03c0\u03bf\u03b9\u03bf\u03cd\u03bc\u03b5 cookies \u03b1\u03bd\u03ac\u03bb\u03c5\u03c3\u03b7\u03c2 (Google Analytics, Microsoft Clarity, Smartsupp) \u03b3\u03b9\u03b1 \u03bd\u03b1 \u03ba\u03b1\u03c4\u03b1\u03bd\u03bf\u03ae\u03c3\u03bf\u03c5\u03bc\u03b5 \u03c4\u03b7 \u03c7\u03c1\u03ae\u03c3\u03b7. \u03a6\u03bf\u03c1\u03c4\u03ce\u03bd\u03bf\u03bd\u03c4\u03b1\u03b9 \u03bc\u03cc\u03bd\u03bf \u03bc\u03b5 \u03c4\u03b7 \u03c3\u03c5\u03b3\u03ba\u03b1\u03c4\u03ac\u03b8\u03b5\u03c3\u03ae \u03c3\u03b1\u03c2.',a:'\u0391\u03c0\u03bf\u03b4\u03bf\u03c7\u03ae',r:'\u0391\u03c0\u03cc\u03c1\u03c1\u03b9\u03c8\u03b7',p:'\u0391\u03c0\u03cc\u03c1\u03c1\u03b7\u03c4\u03bf &amp; cookies'}
+    };
+    function loadClarity(){if(!CL||window.__tmxCl)return;window.__tmxCl=1;
+      (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+       t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+       y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script",CL);}
+    function grant(){try{localStorage.setItem(KEY,'granted')}catch(e){}
+      gtag('consent','update',{analytics_storage:'granted'});loadClarity();}
+    function deny(){try{localStorage.setItem(KEY,'denied')}catch(e){}}
+    var saved=null;try{saved=localStorage.getItem(KEY)}catch(e){}
+    if(saved==='granted'){grant();return;} if(saved==='denied'){return;}
+    function show(){var tx=T[lc()]||T.en;
+      var b=document.createElement('div');b.className='tmx-cc';b.setAttribute('role','dialog');b.setAttribute('aria-live','polite');
+      b.innerHTML='<div class="tmx-cc__txt">'+tx.t+' <a href="/nl/privacy/">'+tx.p+'</a></div>'+
+        '<div class="tmx-cc__btns"><button type="button" class="tmx-cc__b tmx-cc__b--no">'+tx.r+'</button>'+
+        '<button type="button" class="tmx-cc__b tmx-cc__b--yes">'+tx.a+'</button></div>';
+      document.body.appendChild(b);
+      b.querySelector('.tmx-cc__b--yes').addEventListener('click',function(){grant();b.remove();});
+      b.querySelector('.tmx-cc__b--no').addEventListener('click',function(){deny();b.remove();});}
+    if(document.body)show();else document.addEventListener('DOMContentLoaded',show);
+  })();
+  </script>
+<!-- TMX-ANALYTICS END -->
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Storingscodes tachograaf: 80, kaartfouten 41, 44 | TAGRA</title>
+<meta content="Betekenissen en maatregelen voor storingscodes van digitale tachografen, waaronder kaartfouten 41, 44, 50 en 68. VDO, Stoneridge, Actia en EFAS." name="description"/>
+<link href="https://tagra.app/nl/artikelen/tachograaf-symbolen/" rel="canonical"/>
+<link href="https://tagra.app/de/ratgeber/tachographen-symbole/" hreflang="de" rel="alternate"/><link href="https://tagra.app/el/arthra/symvola-tachografou/" hreflang="el" rel="alternate"/><link href="https://tagra.app/articles/digital-tachograph-symbols/" hreflang="en" rel="alternate"/><link href="https://tagra.app/fr/articles/symboles-tachygraphe/" hreflang="fr" rel="alternate"/><link href="https://tagra.app/hu/cikkek/tachograf-szimbolumok/" hreflang="hu" rel="alternate"/><link href="https://tagra.app/it/articoli/simboli-cronotachigrafo/" hreflang="it" rel="alternate"/><link href="https://tagra.app/nl/artikelen/tachograaf-symbolen/" hreflang="nl" rel="alternate"/><link href="https://tagra.app/pl/poradnik/symbole-tachografu/" hreflang="pl" rel="alternate"/>
+<link href="https://tagra.app/ro/articole/simboluri-tahograf-digital/" hreflang="ro" rel="alternate"/><link href="https://tagra.app/articles/digital-tachograph-symbols/" hreflang="x-default" rel="alternate"/>
+<meta content="Storingscodes tachograaf: 80, kaartfouten 41, 44" property="og:title"/>
+<meta content="Betekenissen en maatregelen voor storingscodes van digitale tachografen, waaronder kaartfouten 41, 44, 50 en 68. VDO, Stoneridge, Actia en EFAS." property="og:description"/>
+<meta content="article" property="og:type"/>
+<meta content="https://tagra.app/assets/img/hero-poster.jpg" property="og:image"/>
+<meta content="Tachograph fault codes &amp; symbols: what they mean &amp; fixes | TAGRA" name="twitter:title"/>
+<meta content="Elke waarschuwing en storingscode van digitale tachografen uitgelegd — VDO, Stoneridge, Actia en EFAS. Wat elke code betekent en wat u vervolgens moet doen." name="twitter:description"/>
+<meta content="https://tagra.app/assets/img/hero-poster.jpg" name="twitter:image"/>
+<meta content="nl_NL" property="og:locale"/>
+<meta content="https://tagra.app/nl/artikelen/tachograaf-symbolen/" property="og:url"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    a{color:var(--blue-mid);text-decoration:none;}
+    a:hover{color:var(--blue-dark);text-decoration:underline;text-underline-offset:.18em;}
+    img{max-width:100%;height:auto;display:block;}
+    p+p{margin-top:14px;}
+    ul,ol{padding-left:22px;}
+    li{margin:6px 0;line-height:1.65;}
+    li::marker{color:var(--blue-mid);}
+    strong{font-weight:700;color:var(--text);}
+    #scroll-progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--green-brand),var(--blue-light));width:0%;z-index:9999;pointer-events:none;}
+.nav-inner{margin:0 auto;padding:0 24px;height:100%;display:flex;align-items:center;justify-content:space-between;gap:24px;}
+    .nav-links{display:flex;align-items:center;gap:4px;list-style:none;}
+    .nav-links a{font-size:15px;font-weight:500;color:var(--text);padding:8px 12px;border-radius:8px;text-decoration:none;transition:background .15s;}
+    .nav-links a:hover{background:var(--bg-apple);color:var(--blue-mid);}
+    .nav-links .nav-cta a{background:var(--green-cta);color:#fff!important;border-radius:99px;padding:8px 18px;font-weight:600;}
+    .nav-links .nav-cta a:hover{background:var(--green-brand);text-decoration:none;}
+    .nav-lang{display:flex;align-items:center;gap:4px;font-size:14px;font-weight:600;}
+    .nav-lang a{padding:5px 8px;border-radius:6px;color:var(--text2);text-decoration:none;transition:background .15s;}
+    .nav-lang a:hover,.nav-lang a.active{background:var(--bg-apple);color:var(--blue-mid);}
+    .nav-lang span{color:var(--border);}
+    .nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:8px;}
+    .nav-toggle span{display:block;width:22px;height:2px;background:var(--text);margin:5px 0;border-radius:2px;}
+    @media(max-width:900px){.nav-links{display:none;}.nav-toggle{display:block;}.nav-links.open{display:flex;flex-direction:column;align-items:flex-start;gap:2px;position:absolute;top:var(--nav-h);left:0;right:0;background:rgba(255,255,255,.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:12px 24px 20px;}}
+    .art-hero{background:linear-gradient(180deg,var(--bg-apple) 0%,#fff 100%);padding:calc(var(--nav-h,64px) + 28px) 0 44px;}
+    .art-wrap{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 24px;}
+    .breadcrumb{font-size:14px;color:var(--text2);margin-bottom:18px;}
+    .breadcrumb a{color:var(--text2);text-decoration:none;}
+    .breadcrumb a:hover{color:var(--blue-mid);}
+    .breadcrumb span{margin:0 5px;color:var(--border);}
+    .eyebrow{font-size:14px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--green-brand);margin-bottom:10px;}
+    .art-title{font-size:38px;line-height:1.15;font-weight:800;margin-bottom:16px;letter-spacing:-.02em;padding-bottom:0.08em;color:var(--blue-dark);}
+    .art-title .grad{background:linear-gradient(90deg,var(--blue-dark) 0%,var(--blue-light) 50%,var(--blue-bright) 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;}
+    @media(max-width:700px){.art-title{font-size:26px;}}
+    .art-meta{font-size:15px;color:var(--text2);padding-bottom:24px;border-bottom:1px solid var(--border);display:flex;gap:20px;flex-wrap:wrap;}
+    .art-body{padding:44px 0 60px;}
+    /* H2 gradient mechanics: width:max-content shrinks the element to the text's
+       intrinsic width so the 3-stop gradient is rendered across the visible glyphs
+       (not the 949px wrapping width), giving the same visible 3-stop effect as H1.
+       Multi-line H2s wrap via max-width:100% (each wrapped line gets its own slice). */
+    .art-body h2 {
+      font-size: 36px; font-weight: 800;
+      line-height: 1.1; letter-spacing: 0;
+      text-transform: uppercase;
+      color: var(--blue-mid, #134a8e);
+      background: linear-gradient(90deg, var(--blue-dark, #0b2c4a) 0%, var(--blue-light, #1f5fa6) 50%, var(--blue-bright, #3a6ff0) 100%);
+      -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block; width: max-content; max-width: 100%;
+      margin-bottom: 14px;
+      padding: 0.12em 0.15em 0.08em 0;
+    }
+    .art-body h3{font-size:20px;font-weight:700;color:var(--text);margin:28px 0 10px;}
+    .art-body p{margin-bottom:18px;}
+    .art-body ul,.art-body ol{margin-bottom:20px;}
+    .deadline-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:24px 0;}
+    @media(max-width:580px){.deadline-grid{grid-template-columns:1fr;}}
+    .deadline-box{background:var(--bg-apple);border-radius:var(--radius);padding:28px;text-align:center;}
+    .deadline-num{font-size:54px;font-weight:900;line-height:1;background:linear-gradient(90deg,var(--blue-dark),var(--blue-mid));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:6px;}
+    .deadline-lbl{font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--text2);}
+    .deadline-desc{font-size:15px;color:var(--text2);margin-top:10px;line-height:1.5;}
+    .steps-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin:20px 0;}
+    @media(max-width:720px){.steps-grid{grid-template-columns:1fr;}}
+    .step-card{background:var(--bg-gray);border-radius:var(--radius);padding:22px;box-shadow:0 8px 24px rgba(0,0,0,.04);}
+    .step-num{font-size:13px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--green-cta);margin-bottom:8px;}
+    .step-title{font-size:17px;font-weight:800;color:var(--text);margin-bottom:6px;line-height:1.35;}
+    .step-desc{font-size:15px;color:var(--text2);line-height:1.5;}
+    
+    .callout--blue{background:var(--bg-apple);border-left:4px solid var(--blue-mid);}
+    
+    .callout-title{font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:.07em;color:var(--blue-mid);margin-bottom:8px;}
+    .callout--green .callout-title{color:var(--green-brand);}
+    .faq-item{border-top:1px solid var(--border);padding:14px 0;}
+    .faq-item:last-child{border-bottom:1px solid var(--border);}
+    .faq-item summary{list-style:none;cursor:pointer;font-weight:700;font-size:18px;line-height:1.4;padding-right:32px;position:relative;color:var(--text);}
+    .faq-item summary::-webkit-details-marker{display:none;}
+    .faq-item summary::after{content:"+";position:absolute;right:0;top:50%;transform:translateY(-50%);font-size:26px;font-weight:300;color:var(--green-cta);}
+    .faq-item[open] summary::after{content:"−";}
+    
+    .cta-box{background:linear-gradient(135deg,var(--blue-dark),var(--blue-mid));border-radius:var(--radius);padding:40px 36px;margin:44px 0;text-align:center;}
+    .cta-box h3{font-size:24px;font-weight:800;color:#fff;margin-bottom:12px;}
+    .cta-box p{color:rgba(255,255,255,.8);font-size:17px;margin-bottom:24px;}
+    .cta-box p.cta-note{font-size:14px;margin-bottom:0;color:rgba(255,255,255,.65);}
+
+    .btn:hover{background:var(--green-brand);transform:scale(1.02);}
+    .related{border-top:1px solid var(--border);padding-top:36px;margin-top:36px;}
+    .related-title{font-size:20px;font-weight:800;color:var(--text);margin-bottom:18px;}
+    .related-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+    @media(max-width:580px){.related-grid{grid-template-columns:1fr;}}
+    .related-card{display:block;padding:20px;border:1px solid var(--border);border-radius:var(--radius);text-decoration:none!important;transition:border-color .15s,transform .15s;}
+    .related-card:hover{border-color:var(--blue-mid);transform:translateY(-2px);}
+    .related-card-eye{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--blue-mid);margin-bottom:6px;}
+    .related-card-title{font-size:16px;font-weight:700;color:var(--text);line-height:1.4;}
+
+    .art-body table{width:100%;border-collapse:collapse;margin:20px 0;font-size:16px;background:#fff;box-shadow:0 8px 24px rgba(0,0,0,.04);border-radius:var(--radius);overflow:hidden;}
+    .sym-cell{display:flex;align-items:center;gap:14px;}
+    .sym-icon{flex-shrink:0;width:48px;height:48px;background:#fff;border:1px solid var(--border);border-radius:8px;padding:8px;color:var(--blue-dark);}
+    .sym-icon svg{display:block;width:100%;height:100%;}
+    .sym-icon img{display:block;width:100%;height:100%;}
+    @media(max-width:680px){.sym-icon{width:40px;height:40px;padding:7px;}}
+    .art-body thead{background:linear-gradient(135deg,var(--blue-dark),var(--blue-mid));color:#fff;}
+    .art-body th{padding:14px 16px;text-align:left;font-weight:700;font-size:14px;letter-spacing:.02em;}
+    .art-body td{padding:14px 16px;border-top:1px solid var(--border);vertical-align:top;line-height:1.55;font-size:15px;}
+    .art-body tbody tr:nth-child(even){background:var(--bg-gray);}
+    .art-body th:first-child,.art-body td:first-child{width:22%;}
+    @media(max-width:680px){.art-body table,.art-body thead,.art-body tbody,.art-body th,.art-body td,.art-body tr{display:block;}.art-body thead{display:none;}.art-body td{border-top:none;border-bottom:1px solid var(--border);}.art-body td:first-child{font-weight:700;background:var(--bg-apple);}}
+    .lead{font-size:20px;color:var(--text2);line-height:1.55;}
+
+    .dec-search{background:var(--bg-apple);border:1px solid var(--border);border-radius:var(--radius);padding:18px 18px 14px;margin:8px 0 26px;}
+    .dec-search-label{display:block;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--blue-mid);margin-bottom:10px;}
+    .dec-search-row{display:flex;gap:10px;align-items:center;}
+    #dec-search-input{flex:1;font-size:16px;padding:12px 14px;border:1px solid var(--border);border-radius:10px;background:#fff;color:var(--text);outline:none;}
+    #dec-search-input:focus{border-color:var(--blue-mid);box-shadow:0 0 0 3px rgba(19,74,142,.12);}
+    #dec-search-clear{flex-shrink:0;width:42px;height:42px;border:1px solid var(--border);background:#fff;border-radius:10px;font-size:22px;line-height:1;color:var(--text2);cursor:pointer;}
+    #dec-search-clear:hover{color:var(--text);border-color:var(--blue-mid);}
+    .dec-chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;}
+    .dec-chip{font-size:14px;font-weight:600;padding:7px 14px;border-radius:99px;border:1px solid var(--border);background:#fff;color:var(--text2);cursor:pointer;transition:all .15s;}
+    .dec-chip:hover{border-color:var(--blue-mid);color:var(--blue-mid);}
+    .dec-chip.is-active{background:var(--blue-mid);border-color:var(--blue-mid);color:#fff;}
+    .dec-count{font-size:14px;color:var(--text2);margin:12px 0 0;min-height:1.2em;}
+    .vendor.dec-hidden{display:none;}
+    tr.dec-hidden{display:none;}
+    .dec-nohit{font-size:14px;color:var(--text2);padding:10px 2px;}
+  
+</style>
+<link href="/assets/css/tokens.css" rel="stylesheet"/>
+<link href="/assets/css/base.css" rel="stylesheet"/>
+<link href="/assets/css/components.css" rel="stylesheet"/>
+<link href="/assets/css/nav.css" rel="stylesheet"/>
+<script defer="" src="/assets/js/nav.js?v=20260816b"></script>
+<link href="/assets/css/footer.css" rel="stylesheet"/><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "TAGRA", "item": "https://tagra.app/nl/"}, {"@type": "ListItem", "position": 2, "name": "Artikelen", "item": "https://tagra.app/nl/artikelen/"}, {"@type": "ListItem", "position": 3, "name": "Tachograafsymbolen &amp; foutcodes", "item": "https://tagra.app/nl/artikelen/tachograaf-symbolen/"}]}</script><noscript><style>.anim-up,.fly-left,.fly-right{opacity:1!important;transform:none!important}</style></noscript></head>
+<body class="art-page">
+<a class="skip-link" href="#main-content">Naar de inhoud</a>
+<div aria-hidden="true" id="scroll-progress"></div>
+<nav aria-label="Hoofdnavigatie" class="site-nav" role="navigation">
+<div class="nav-inner">
+<a aria-label="TAGRA – Startpagina" class="nav-logo" href="/nl/"><img alt="TAGRA" height="32" src="/assets/img/logo-light.svg?v=20260513zh" style="display:block;height:32px;width:auto;" width="140"/></a>
+<ul class="nav-links" id="nav-links">
+<li><a href="/nl/voor-transportbedrijven/">Voor transportbedrijven</a></li>
+<li><a href="/nl/voor-chauffeurs/">Voor chauffeurs</a></li>
+<li><a href="/nl/handhaving/">Handhaving</a></li>
+<li><a aria-current="page" href="/nl/artikelen/">Artikelen</a></li><li><a href="/nl/handleidingen/">Handleidingen</a></li>
+<li><a href="/nl/veelgestelde-vragen/">Veelgestelde vragen</a></li>
+<li><a href="/nl/contact/">Contact</a></li>
+<li class="nav-cta-li"><a class="nav-cta" href="/nl/gratis-proefversie/?audience=driver&amp;src=symbols">30 dagen gratis proberen</a></li>
+</ul>
+<details class="nav-lang">
+<summary aria-label="Taal: NL">NL</summary>
+<div class="nav-lang-menu" role="menu"><a href="/articles/digital-tachograph-symbols/" hreflang="en">English</a><a href="/de/ratgeber/tachographen-symbole/" hreflang="de">Deutsch</a><a href="/pl/poradnik/symbole-tachografu/" hreflang="pl">Polski</a><a aria-current="page" class="active" href="/nl/artikelen/tachograaf-symbolen/" hreflang="nl">Nederlands</a><a href="/fr/articles/symboles-tachygraphe/" hreflang="fr">Français</a><a href="/it/articoli/simboli-cronotachigrafo/" hreflang="it">Italiano</a><a href="/el/arthra/symvola-tachografou/" hreflang="el">Ελληνικά</a><a href="/hu/cikkek/tachograf-szimbolumok/" hreflang="hu">Magyar</a><a href="/ro/articole/simboluri-tahograf-digital/" hreflang="ro">Română</a><a href="https://www.tdt.cz/" hreflang="cs" rel="noopener" target="_blank">Čeština</a><a href="https://www.tdt.sk/" hreflang="sk" rel="noopener" target="_blank">Slovenčina</a></div>
+</details>
+<a class="nav-cta-mobile" href="/nl/gratis-proefversie/?audience=driver&amp;src=symbols">Gratis proberen</a>
+<button aria-expanded="false" aria-label="Menu in- of uitschakelen" class="nav-mobile-toggle" id="nav-toggle">
+<span></span><span></span><span></span>
+</button>
+</div>
+</nav>
+<header class="art-hero">
+<div class="art-wrap">
+<nav aria-label="Kruimelpad" class="breadcrumb"><a href="/nl/">TAGRA</a><span>›</span><a href="/nl/artikelen/">Artikelen</a><span>›</span><span>Tachograafsymbolen &amp; foutcodes</span></nav>
+<div class="eyebrow anim-up">Kennisbank voor chauffeurs</div>
+<h1 class="art-title"><span class="grad">Tachograafsymbolen &amp; foutcodes: een handleiding voor chauffeurs</span></h1>
+<div class="art-meta"><span>Truck Data Technology</span><span>Bijgewerkt in juni 2026</span><span>22 min leestijd</span></div>
+<div aria-label="Bestuurder die een digitale tachograaf bedient" class="art-hero-video">
+<video aria-label="Bestuurder die een digitale tachograaf bedient" autoplay="" loop="" muted="" playsinline="" poster="symboly-chybove-kody-hero-poster.webp" preload="metadata" webkit-playsinline="">
+<source src="symboly-chybove-kody-hero.webm" type="video/webm">
+<source src="symboly-chybove-kody-hero.mp4" type="video/mp4">
+</source></source></video>
+</div>
+<p class="hero-lede anim-up">Elke digitale tachograaf in de EU spreekt dezelfde visuele taal. Of u nu met een vrachtwagen van 7,5 t door Beieren rijdt of met een trekker-oplegger van 40 t van Rotterdam naar Athene, de symbolen op uw tachograafdisplay volgen één uniforme, wettelijk bindende standaard die is vastgesteld in Verordening (EU) 2016/799, bijlage IC — de technische specificatie voor slimme tachografen. Maar inzicht in de pictogrammen is slechts de helft van het werk. Op hetzelfde scherm waarop uw activiteiten worden weergegeven, verschijnen ook waarschuwingen, voorvallen, storingen en fabrikantspecifieke pop-upberichten — en als u deze verkeerd interpreteert, kan dat een boete opleveren, ertoe leiden dat een voertuig niet verder mag rijden of een verplicht bezoek aan een werkplaats tot gevolg hebben. In deze handleiding worden alle categorieën behandeld, met geverifieerde meldingen uit de officiële handleidingen van de vier meest ingebouwde voertuigeenheden in Europa: VDO DTCO 4.1, Stoneridge SE5000, Actia SmarTach en EFAS-4. Wat u in deze handleiding vindt Vier activiteitssymbolen die elke bestuurder moet kennen Universele waarschuwingscategorieën (voorvallen, storingen, tijd, opmerkingen) Meer dan 200 geverifieerde codes &amp; codes (doorzoekbaar) De 10 meest voorkomende tachograafmeldingen in de praktijk Stappenplan bij kritieke storingen: wat u onderweg moet doen Officiële bronnen &amp; handleidingen van fabrikanten FAQ — symbolen en foutcodes</p><div class="bento--hero"><div class="hero-card"><div class="eyebrow">Activiteitssymbolen</div><div class="big">4</div><p>Rijden, ander werk, beschikbaarheid en rust — de vier symbolen op elk tachograafdisplay.</p></div><div class="hero-card hero-card--blue"><div class="eyebrow">Geverifieerde foutcodes</div><div class="big">200+</div><p>Complete database met storingscodes, betekenis en aanbevolen actie.</p></div><div class="hero-card"><div class="eyebrow">Handleidingen van fabrikanten</div><div class="big">4</div><p>Codes geverifieerd aan de hand van officiële documentatie van VDO, Stoneridge, Intellic en Efkon.</p></div><div class="hero-card hero-card--blue"><div class="eyebrow">Meest voorkomende meldingen</div><div class="big">Top 10</div><p>De meldingen die bestuurders daadwerkelijk onderweg zien, met voor elke melding een oplossing.</p></div></div>
+</div>
+</header>
+<main id="main-content"><section class="band"><div class="container art-body"><div class="cta-box">
+<h3>Uw code is slechts het halve verhaal</h3>
+<p>Een storing die op het display wordt weergegeven, laat vrijwel altijd een spoor achter op de bestuurderskaart — een ontbrekende registratie, een onderbroken dienst of een overtreding waarnaar u tijdens een wegcontrole kunt worden gevraagd. TAGRA Trucker leest uw kaart uit en toont u precies wat er is geregistreerd. USB-kaartlezer inbegrepen, 49 € exclusief btw.</p>
+<a class="cta-btn" href="/nl/gratis-proefversie/?audience=driver&amp;src=symbols">Bekijk wat er op uw kaart staat →</a>
+</div><div class="info-card anim-up" style="margin-top:28px;">
+<span class="badge">Wat u nu moet doen</span>
+<h2 class="h2-grad anim-up" id="what-to-do-now" style="font-size:28px;">Een storing op het display: wat de wet van u verlangt</h2>
+<p>Voordat u hieronder uw code opzoekt, volgt hier de procedure die van toepassing is op elke storing van een digitale tachograaf. Voorvallen (te hoge snelheid, rijden zonder kaart) leiden hier niet toe — alleen storingen.</p>
+<ol style="margin:14px 0 0 18px;line-height:1.65;">
+<li><strong>Breng het voertuig veilig tot stilstand.</strong> Bevestig de melding op de voertuigeenheid. De tachograaf blijft registreren totdat u de kaart verwijdert.</li>
+<li><strong>Druk de dag af.</strong> Druk uw activiteiten af en noteer elke daaropvolgende activiteit met de hand op de achterzijde van de afdruk — tijd, plaats, activiteit.</li>
+<li><strong>Informeer de wagenparkbeheerder.</strong> Volgens artikel 37 van Verordening 165/2014 moet de reparatie worden uitgevoerd zodra de omstandigheden dit toelaten.</li>
+<li><strong>Ga zo snel mogelijk naar een erkende werkplaats.</strong> Als het voertuig niet binnen één week nadat de storing is ontdekt naar de vestiging van de wagenparkbeheerder kan terugkeren, moet de reparatie onderweg worden uitgevoerd.</li>
+</ol>
+<p style="margin-top:14px;"><strong>Eén uitzondering:</strong> Als de melding betrekking heeft op een inbreuk op de beveiliging of op een sensorstoring met een bewegingsconflict, kan de eenheid de kaart uitwerpen en volledig stoppen met registreren. In dat geval moet u onmiddellijk naar de werkplaats en mag u niet wachten tot het voertuig terug is op de vestiging.</p>
+</div><div class="eyebrow anim-up">Activiteitssymbolen</div><h2 class="h2-grad anim-up" id="activity-symbols">Vier activiteitssymbolen die elke chauffeur moet kennen</h2>
+<p>Elke digitale tachograaf registreert de tijd van de bestuurder in een van vier categorieën, die elk op het display worden weergegeven met één ISO-2575-pictogram. Dit zijn niet slechts visuele aanduidingen — het zijn <strong>wettelijk onderscheiden categorieën</strong> volgens Verordening (EG) 561/2006 (rijtijden) en Richtlijn 2002/15/EG (arbeidstijd van mobiele werknemers), en ze bepalen hoe uw dag meetelt voor rijtijdlimieten, pauzes en rusttijden.</p>
+<div class="activity-grid">
+<div class="activity-card anim-up">
+<div aria-hidden="true" class="ico ico--drive"><img alt="" height="28" src="icons/driving.svg?v=20260514c" width="28" loading="lazy"/></div>
+<h3>Rijden (stuurwiel)</h3>
+<p>Wordt <strong>automatisch ingesteld</strong> op het moment dat het voertuig in beweging komt. Kan niet handmatig worden gewijzigd. Telt mee voor uw limiet van 4,5 uur ononderbroken rijden, de dagelijkse limiet van 9/10 uur en de wekelijkse/tweewekelijkse rijtijdlimieten van 56/90 uur.</p>
+</div>
+<div class="activity-card anim-up">
+<div aria-hidden="true" class="ico ico--work"><img alt="" height="28" src="icons/other-work.svg?v=20260514c" width="28" loading="lazy"/></div>
+<h3>Ander werk (gekruiste hamers)</h3>
+<p>Alle betaalde werkzaamheden die <strong>geen rijden</strong>zijn: laden en lossen, tanken, papierwerk, controles van het voertuig en passagiers helpen. Telt als arbeidstijd volgens de arbeidstijdenrichtlijn. Telt <em>niet</em> als pauze.</p>
+</div>
+<div class="activity-card anim-up">
+<div aria-hidden="true" class="ico ico--avail"><img alt="" height="28" src="icons/availability.svg?v=20260514c" width="28" loading="lazy"/></div>
+<h3>Beschikbaarheid (vierkante ruit)</h3>
+<p>Wachttijd waarvan de duur vooraf bekend is: veerboot/trein, wachten bij een klant of een voertuig begeleiden dat wordt weggesleept. Een periode van beschikbaarheid telt volgens de rijtijden niet als pauze en wordt — wanneer de duur vooraf bekend is — volgens de arbeidstijdenrichtlijn ook niet meegerekend als arbeidstijd.</p>
+</div>
+<div class="activity-card anim-up">
+<div aria-hidden="true" class="ico ico--rest"><img alt="" height="28" src="icons/rest.svg?v=20260514c" width="28" loading="lazy"/></div>
+<h3>Pauze/rust (bed)</h3>
+<p>Een echte pauze of dagelijkse/wekelijkse rust. De bestuurder mag geen werk verrichten en moet vrij over zijn tijd kunnen beschikken. De enige categorie die de klok voor 4,5 uur ononderbroken rijden reset en meetelt voor de verplichte dagelijkse rust van 11 uur.</p>
+</div>
+</div>
+<p>Met de keuzeknoppen op de eenheid (bestuurder 1/bestuurder 2) kunt u wisselen tussen ander werk, beschikbaarheid en pauze/rust. Rijden wordt altijd automatisch ingesteld door de bewegingssensor — als u Rijden ziet terwijl het voertuig stilstaat, registreert de tachograaf een storing en geen activiteit (hieronder leest u daar meer over). Veelvoorkomende fouten van bestuurders met deze vier symbolen — en waarom „Beschikbaarheid” een pauze nooit wettelijk kan vervangen — worden behandeld in hoofdstuk 4.</p>
+<!-- ===================================================================== -->
+<!-- SECTION 2: UNIVERSAL WARNING CATEGORIES                                -->
+<!-- ===================================================================== --></div></section><section class="band band--blue"><div class="container art-body"><div class="eyebrow anim-up">Waarschuwingscategorieën</div><h2 class="h2-grad anim-up" id="universal-warnings">Universele waarschuwingscategorieën die elke tachograaf gebruikt</h2>
+<p>Als u verder kijkt dan de vier activiteitssymbolen, vallen alle waarschuwingsmeldingen die door digitale tachografen worden weergegeven in een van vier groepen. De <strong>handleiding van de VDO DTCO 4.1</strong> benoemt deze expliciet (pagina 109), en dezelfde logica wordt gevolgd door Stoneridge SE5000, Actia SmarTach en EFAS-4 — omdat <strong>bijlage IC de categorieën op het niveau van de verordening vastlegt</strong>. Als u weet tot welke groep een melding behoort, weet u meteen hoe ernstig deze is en of u uw dienst kunt voortzetten.</p>
+<div class="warn-grid">
+<div class="warn-card warn-card--warn anim-up">
+<h3>! Voorval</h3>
+<p>Een <strong>operationeel voorval</strong> dat door de tachograaf wordt geregistreerd en niet noodzakelijkerwijs op een hardwarestoring wijst — bijvoorbeeld rijden zonder een geldige kaart, de snelheidslimiet overschrijden of een kaart plaatsen terwijl het voertuig rijdt. De meeste voorvallen moeten met de knop OK worden bevestigd. De voertuigeenheid (VU) schrijft een registratie naar het massageheugen <em>en</em> naar de bestuurderskaart.</p>
+</div>
+<div class="warn-card warn-card--crit anim-up">
+<h3>x Storing</h3>
+<p>Een daadwerkelijke <strong>hardware- of softwarestoring</strong>: sensorstoring, printerstoring, interne tijdfout, storing bij het uitlezen, GNSS-storing. Storingen leiden tot de reparatieverplichting van artikel 37: de eenheid moet worden gerepareerd zodra de omstandigheden dit toelaten en als het voertuig niet binnen <strong>één week</strong> nadat de storing is ontdekt naar de vestiging kan terugkeren, moet de reparatie onderweg worden uitgevoerd. Rijden met een bekende storing is uitsluitend toegestaan als u handmatige registraties bijhoudt.</p>
+</div>
+<div class="warn-card warn-card--info anim-up">
+<h3>↻ Waarschuwing voor rijtijd</h3>
+<p>A <strong>nalevingswaarschuwing</strong>: het naderen van 4,5 uur ononderbroken rijden, het naderen van de dagelijkse/wekelijkse rijtijdlimiet of het aanbreken van de volgende verplichte rust. De knipperende achtergrondverlichting is het visuele signaal. Deze meldingen helpen u te voldoen aan Verordening 561/2006 — het zijn geen storingen.</p>
+</div>
+<div class="warn-card warn-card--ok anim-up">
+<h3>i Operationele opmerking</h3>
+<p>Een <strong>informatieve aanwijzing</strong>: „invoeren”, „geen papier”, „kaartfout”, „kalibratie over 28 dagen vereist”. Operationele opmerkingen verschijnen zonder knipperen en verdwijnen na enkele seconden automatisch. Er wordt geen gegeven naar het massageheugen geschreven; de melding is uitsluitend een aanwijzing in de gebruikersinterface.</p>
+</div>
+</div>
+<p>Elke foutmelding die u ziet — van een VDO DTCO 4.0, een Stoneridge SE5000 Exakt Duo², een Actia SmarTach of een ander type eenheid dat volgens bijlage IC typegoedgekeurd is — behoort tot precies één van deze vier groepen. Vanaf dit punt in de handleiding bekijken we elke groep in detail, met geverifieerde meldingsteksten uit de handleidingen van de fabrikanten.</p>
+<div class="cta-box" style="margin-top:36px;">
+<h3>Uw code is slechts het halve verhaal</h3>
+<p>Een storing die op het display wordt weergegeven, laat vrijwel altijd een spoor achter op de bestuurderskaart — een ontbrekende registratie, een onderbroken dienst of een overtreding waarnaar u tijdens een wegcontrole kunt worden gevraagd. TAGRA Trucker leest uw kaart uit en toont u precies wat er is geregistreerd. USB-kaartlezer inbegrepen, 49 € exclusief btw.</p>
+<a class="cta-btn" href="/nl/gratis-proefversie/?audience=driver&amp;src=symbols">Bekijk wat er op uw kaart staat →</a>
+</div>
+<!-- ===================================================================== -->
+<!-- SECTION 3: 120+ VERIFIED ERROR CODES BY MANUFACTURER                  -->
+<!-- ===================================================================== --></div></section><section class="band band--gray"><div class="container art-body"><div class="eyebrow anim-up">Volledige codedatabase</div><h2 class="h2-grad anim-up" id="vendor-codes">Meer dan 200 geverifieerde foutcodes uit vier handleidingen van fabrikanten</h2>
+<p>De vier meest geïnstalleerde modellen digitale tachografen in Europa zijn <strong>VDO DTCO 4.1</strong> (Continental — de dominante eenheid in Centraal-Europa en op de Tsjechische en Slowaakse markt), <strong>Stoneridge SE5000 Exakt Duo²</strong> (de standaard in het Verenigd Koninkrijk en Scandinavië), <strong>Actia SmarTach</strong> (populair in Frankrijk en Zuid-Europa) en <strong>EFAS-4</strong> (Intellic/Schneider, veelgebruikt in Duitsland en Polen). Elke fabrikant gebruikt enigszins andere bewoordingen op het scherm, maar alle eenheden voldoen aan bijlage IC — de onderliggende betekenis van een „interne storing”, een „sensorstoring” of een „kaart niet gesloten” is dus identiek, ongeacht de eenheid op uw dashboard.</p>
+<p>De onderstaande codes zijn rechtstreeks afkomstig uit de officiële, openbaar te downloaden gebruikershandleidingen — bestandsverwijzingen staan vermeld in het <a href="#sources">gedeelte met bronnen</a>. Waar de handleiding een Engelse formulering geeft, gebruiken we die letterlijk; we hebben alleen een kolom in eenvoudig Engels met „wat u moet doen” toegevoegd wanneer de handleiding dit aan het oordeel van de bestuurder overlaat.</p>
+<div class="dec-search" id="dec-search">
+<label class="dec-search-label" for="dec-search-input">Snel zoeken — voer een code, melding of symbool in</label>
+<div class="dec-search-row">
+<input autocomplete="off" id="dec-search-input" placeholder="bijv. sensor fault, 042, 002E80, GNSS…" spellcheck="false" type="search"/>
+<button aria-label="Zoekopdracht wissen" id="dec-search-clear" type="button">×</button>
+</div>
+<div aria-label="Filteren op fabrikant" class="dec-chips" role="group">
+<button class="dec-chip is-active" data-vendor="all" type="button">Alle</button>
+<button class="dec-chip" data-vendor="vdo" type="button">VDO DTCO</button>
+<button class="dec-chip" data-vendor="stoneridge" type="button">Stoneridge</button>
+<button class="dec-chip" data-vendor="actia" type="button">Actia</button>
+<button class="dec-chip" data-vendor="efas" type="button">EFAS</button>
+<button class="dec-chip" data-vendor="symbols" type="button">Symbolen ↑</button>
+</div>
+<p aria-live="polite" class="dec-count" id="dec-count"></p>
+</div>
+<!-- ===== TAGRA CTA Box — found your code ===== -->
+<div class="cta-box">
+<h3>Hebt u uw code gevonden? Controleer wat er op uw kaart is geregistreerd.</h3>
+<p>Een waarschuwing op het display laat vaak een spoor achter in de gegevens op uw bestuurderskaart. TAGRA Trucker leest uw kaart uit nadat u de gegevens hebt uitgelezen en toont overtredingen, rijtijden en rusttijden — zodat u weet waar u aan toe bent vóór een wegcontrole.</p>
+<p><a class="cta-btn" href="/nl/voor-chauffeurs/">TAGRA Trucker — 49 €, kaartlezer inbegrepen →</a></p>
+<p class="cta-note">Beheert u meerdere chauffeurs of voertuigen? <a href="/nl/voor-transportbedrijven/">Bekijk TAGRA voor wagenparken</a>.</p>
+</div>
+<div class="vendor-stack">
+<!-- ===== VDO DTCO 4.1 ===== -->
+<details class="vendor" id="vdo" open="">
+<summary>
+<span class="vendor-meta">Continental VDO · meest geïnstalleerd in Centraal-Europa</span>
+    VDO DTCO 4.1/4.1a/4.1b
+  </summary>
+<div class="vendor-body">
+<p>De VDO DTCO 4.1-familie is de tweede generatie slimme tachografen (Smart Tacho 2) en de meest voorkomende eenheid in Tsjechische, Slowaakse, Duitse en Oostenrijkse wagenparken. De onderstaande meldingen zijn afkomstig uit <strong>VDO DTCO 4.1 Instruction Manual, Edition 3 / 2024-08, BA00.1381.41 100 102</strong> (Continental Automotive Technologies GmbH). De officiële structuur van de meldingen is: <strong>Voorvallen</strong> (zoals rijden zonder kaart), <strong>Storingen</strong> (hardwarestoringen van de eenheid), <strong>Waarschuwingen voor rijtijd</strong> en <strong>Operationele opmerkingen</strong>.</p>
+<h3>Voorvallen — operationele gebeurtenissen (hoogste prioriteit)</h3>
+<div class="code-table-wrap">
+<table class="code-table">
+<thead>
+<tr>
+<th style="width: 22%;">Melding</th>
+<th style="width: 30%;">Oorzaak (uit de handleiding)</th>
+<th style="width: 32%;">Wat u moet doen</th>
+<th style="width: 12%;">Ernst</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>! security breach xx</td>
+<td>Fout in het datageheugen; de gegevensbeveiliging in de DTCO 4.1x is niet langer gewaarborgd. De sensorgegevens zijn niet langer betrouwbaar. De behuizing van de DTCO is zonder toestemming geopend.</td>
+<td>Bevestig de melding. De kaart wordt automatisch uitgeworpen — ook tijdens het rijden. Plaats de kaart opnieuw of laat deze controleren in een erkende werkplaats.</td>
+<td><span class="sev sev-crit">Kritiek</span></td>
+</tr>
+<tr>
+<td>!1 security breach xx</td>
+<td>De kaartvergrendeling is verstoord of defect. De DTCO detecteert een tachograafkaart die eerder correct was geplaatst niet meer. De identiteit en authenticiteit van de kaart en de opgeslagen gegevens zijn niet betrouwbaar.</td>
+<td>Bevestig de melding. Plaats de tachograafkaart opnieuw of laat deze controleren.</td>
+<td><span class="sev sev-crit">Kritiek</span></td>
+</tr>
+<tr>
+<td>! power interruption xx</td>
+<td>De voeding is onderbroken of de voeding naar de DTCO-sensor was te laag of te hoog. Dit kan ook worden weergegeven wanneer de motor wordt gestart.</td>
+<td>Bevestig de melding. Als de melding opnieuw verschijnt, controleert u de voeding van het voertuig.</td>
+<td><span class="sev sev-med">Gemiddeld</span></td>
+</tr>
+<tr>
+<td>x sensor fault</td>
+<td>De communicatie met de bewegingssensor is onderbroken. De melding verschijnt ook na een onderbreking van de spanning.</td>
+<td>Bevestig de melding. Neem bij herhaling contact op met een erkende gespecialiseerde werkplaats.</td>
+<td><span class="sev sev-crit">Kritiek</span></td>
+</tr>
+<tr>
+<td>! motion conflict xx</td>
+<td>Tegenstrijdigheid bij de beoordeling van de beweging van het voertuig tussen de sensor en een onafhankelijke signaalbron. Tijdens het vervoer per veerboot of trein is de veerboot-/treinfunctie mogelijk niet ingesteld.</td>
+<td>Bevestig de melding. Neem contact op met een erkende gespecialiseerde werkplaats — mogelijke manipulatie of beschadiging.</td>
+<td><span class="sev sev-crit">Kritiek</span></td>
+</tr>
+<tr>
+<td>! GNSS is missing xx</td>
+<td>Geen posit gegevens gedurende drie uur cumulatieve rijtijd.</td>
+<td>Bevestig de melding. Controleer of de GNSS-antenne niet is afgedekt of geblokkeerd.</td>
+<td><span class="sev sev-med">Gemiddeld</span></td>
+</tr>
+<tr>
+<td>!? GNSS anomaly</td>
+<td>Manipulatie of een externe aanval op het GNSS-signaal gedetecteerd (OSNMA ter bescherming tegen spoofing).</td>
+<td>Controleer de oorzaken van de manipulatie. Controleer de werking van GNSS. Vervang defecte onderdelen indien nodig.</td>
+<td><span class="sev sev-high">Hoog</span></td>
+</tr>
+<tr>
+<td>! time conflict xx</td>
+<td>Een verschil van meer dan één minuut tussen de interne klok van de DTCO en de tijd die via het GNSS-signaal wordt ontvangen.</td>
+<td>Bevestig de melding. Laat de tachograaf door een erkende werkplaats controleren en corrigeren als het probleem blijft bestaan.</td>
+<td><span class="sev sev-med">Gemiddeld</span></td>
+</tr>
+<tr>
+<td>! DSRC comm. error xx</td>
+<td>Er is een communicatiefout opgetreden tussen de DTCO 4.1x en de externe DSRC-CAN-module (gebruikt voor wegcontroles op afstand).</td>
+<td>Bevestig de melding. Neem bij herhaling contact op met een erkende gespecialiseerde werkplaats.</td>
+<td><span class="sev sev-med">Gemiddeld</span></td>
+</tr>
+<tr>
+<td>! driving without card xx</td>
+<td>Het rijden is begonnen zonder bestuurderskaart — of zonder geldige bestuurderskaart — in sleuf 1. Dit wordt ook geactiveerd wanneer vóór of na de rit een niet-toegestane kaartcombinatie wordt geplaatst.</td>
+<td>Breng het voertuig tot stilstand. Plaats een geldige bestuurderskaart. Verwijder indien nodig eerst een bedrijfskaart of controlekaart uit de DTCO.</td>
+<td><span class="sev sev-high">Hoog</span></td>
+</tr>
+<tr>
+<td>!1 insertion while driving xx</td>
+<td>De bestuurderskaart is geplaatst nadat het voertuig al in beweging was gekomen.</td>
+<td>Bevestig de melding. Plan het plaatsen van de kaart voortaan vóór het wegrijden.</td>
+<td><span class="sev sev-med">Gemiddeld</span></td>
+</tr>
+<tr>
+<td>!1 time overlap xx</td>
+<td>De UTC-tijd van deze tachograaf loopt achter op de UTC-tijd van de vorige tachograaf, waardoor een negatief tijdsverschil ontstaat (gebruikelijk bij het wisselen van voertuig).</td>
+<td>Bepaal welke tachograaf de onjuiste UTC-tijd heeft en laat deze door een erkende werkplaats controleren en corrigeren.</td>
+<td><span class="sev sev-med">Gemiddeld</span></td>
+</tr>
+<tr>
+<td>!1 card not valid xx</td>
+<td>De tachograafkaart is verlopen, nog niet geldig of de authenticatie is mislukt. Een kaart die na middernacht ongeldig wordt, wordt automatisch beschreven en uitgeworpen zodra het voertuig stilstaat.</td>
+<td>Bevestig de melding. Controleer de tachograafkaart en plaats deze opnieuw; vernieuw de kaart als deze is verlopen.</td>
+<td><span class="sev sev-med">Gemiddeld</span></td>
+</tr>
+<tr>
+<td>! cards conflict xx</td>
+<td>De twee tachograafkaarten mogen niet tegelijkertijd geplaatst zijn — bijvoorbeeld een bedrijfskaart samen met een controlekaart.</td>
+<td>Bevestig de melding. Verwijder de conflicterende kaart uit de betreffende sleuf.</td>
+<td><span class="sev sev-med">Gemiddeld</span></td>
+</tr>
+<tr>
+<td>!1 card not closed xx</td>
+<td>De bestuurderskaart is niet correct uit de vorige tachograaf verwijderd. Sommige bestuurdersgegevens zijn mogelijk niet opgeslagen.</td>
+<td>Bevestig de melding. Wacht voortaan altijd totdat de kaart is vrijgegeven voordat u deze verwijdert.</td>
+<td><span class="sev sev-med">Gemiddeld</span></td>
+</tr>
+<tr>
+<td>⊃ overspeed xx</td>
+<td>De ingestelde maximumsnelheid is langer overschreden dan <strong>60 seconden</strong>.</td>
+<td>Bevestig de melding. Verlaag uw snelheid. Herhaalde voorvallen van te hoge snelheid zijn bij het uitlezen zichtbaar voor de handhavingsinstanties.</td>
+<td><span class="sev sev-high">Hoog</span></td>
+</tr>
+<tr>
+<td>§ calibration in days ??</td>
+<td>De periodieke tweejaarlijkse controle van de tachograaf nadert (de waarschuwing verschijnt 28 dagen van tevoren).</td>
+<td>Bevestig de melding. Maak vóór de uiterste datum een afspraak met een erkende werkplaats.</td>
+<td><span class="sev sev-low">Laag</span></td>
+</tr>
+<tr>
+<td>1 download in days ??</td>
+<td>De volgende uitlezing van de bestuurderskaart moet worden uitgevoerd (de waarschuwing verschijnt 14 dagen van tevoren).</td>
+<td>Lees de bestuurderskaart uit voordat de uiterste termijn verstrijkt.</td>
+<td><span class="sev sev-low">Laag</span></td>
+</tr>
+<tr>
+<td>1 expires in days ??</td>
+<td>De bestuurderskaart verloopt binnenkort (meestal wordt dit 28 dagen van tevoren gemeld).</td>
+<td>Bevestig de melding. Vraag bij de bevoegde autoriteit van uw lidstaat een verlenging van de kaart aan.</td>
+<td><span class="sev sev-info">Informatie</span></td>
+</tr>
+<tr>
+<td>! end of normal operation in ??</td>
+<td>Het typegoedkeuringscertificaat van de DTCO 4.1x verloopt. De melding verschijnt 92 dagen van tevoren wanneer de kaart wordt verwijderd.</td>
+<td>Maak met uw werkplaats een afspraak om de DTCO vóór de uiterste datum te vervangen.</td>
+<td><span class="sev sev-med">Gemiddeld</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>Storingen — hardwarestoringen</h3>
+<div class="code-table-wrap">
+<table class="code-table">
+<thead>
+<tr>
+<th style="width: 22%;">Melding</th>
+<th style="width: 30%;">Oorzaak (uit de handleiding)</th>
+<th style="width: 32%;">Wat u moet doen</th>
+<th style="width: 12%;">Ernst</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>x internal fault xx</td>
+<td>Ernstige storing in de DTCO 4.1x. Mogelijke oorzaken: onverwachte timingfout in programma of proces, geblokkeerde toetsen, communicatiestoring met externe apparaten of het instrumentendisplay, of storing aan de pulsuitgang.</td>
+<td>Bevestig de melding. Controleer de toetsen. Laat de aansluitkabels en aangesloten registratieapparatuur door een erkende werkplaats controleren.</td>
+<td><span class="sev sev-crit">Kritiek</span></td>
+</tr>
+<tr>
+<td>x1 internal fault xx</td>
+<td>Storing in het kaartmechanisme (sleuf 1), bijvoorbeeld doordat de kaartvergrendeling niet sluit.</td>
+<td>Verwijder de tachograafkaart en plaats deze opnieuw. Neem contact op met een werkplaats als de storing blijft bestaan.</td>
+<td><span class="sev sev-high">Hoog</span></td>
+</tr>
+<tr>
+<td>x time fault xx</td>
+<td>De UTC-tijd van de DTCO is niet plausibel of de real-timeklok is defect. Nieuw geplaatste bestuurders- of bedrijfskaarten worden geweigerd om inconsistente gegevens te voorkomen.</td>
+<td>Bevestig de melding. De DTCO moet zo snel mogelijk door een erkende werkplaats worden vervangen of gereset.</td>
+<td><span class="sev sev-crit">Kritiek</span></td>
+</tr>
+<tr>
+<td>x printer malfunction</td>
+<td>De voedingsspanning van de printer is uitgevallen of de temperatuursensor voor de printkop is defect.</td>
+<td>Bevestig de melding. Herhaal de afdruk, eventueel nadat u het contact hebt uit- en ingeschakeld. Ga naar een werkplaats als het probleem niet is opgelost.</td>
+<td><span class="sev sev-med">Gemiddeld</span></td>
+</tr>
+<tr>
+<td>x download fault xx</td>
+<td>Storing tijdens het uitlezen van gegevens naar een extern apparaat (uitleesapparaat of kastje voor uitlezen op afstand).</td>
+<td>Bevestig de melding. Herhaal het uitlezen. Laat de aansluitkabels (los contact?) of het externe apparaat controleren.</td>
+<td><span class="sev sev-med">Gemiddeld</span></td>
+</tr>
+<tr>
+<td>x sensor fault xx</td>
+<td>De bewegingssensor meldt na de zelftest een interne storing.</td>
+<td>Bevestig de melding. Laat de sensor door een werkplaats controleren — vervanging van de sensor kan nodig zijn.</td>
+<td><span class="sev sev-crit">Kritiek</span></td>
+</tr>
+<tr>
+<td>x1 card fault xx</td>
+<td>Tijdens het lezen of schrijven van de tachograafkaart is een communicatiestoring opgetreden — meestal veroorzaakt door vuile contacten. Sommige bestuurdersgegevens zijn mogelijk niet geschreven.</td>
+<td>Bevestig de melding. Reinig de kaartcontacten (met een droge doek) en plaats de kaart opnieuw. Vervang de kaart bij herhaling.</td>
+<td><span class="sev sev-med">Gemiddeld</span></td>
+</tr>
+<tr>
+<td>x internal GNSS fault xx</td>
+<td>Fout in het GNSS-apparaat: interne storing, kortsluiting van de externe GNSS-antenne (optie) of geen verbinding met de externe antenne.</td>
+<td>Bevestig de melding. Neem contact op met een erkende werkplaats.</td>
+<td><span class="sev sev-high">Hoog</span></td>
+</tr>
+<tr>
+<td>x internal DSRC fault xx</td>
+<td>Interne fout in de DSRC-module (radio voor wegcontroles op afstand), of de antenne is defect of niet aangesloten.</td>
+<td>Bevestig de melding. De werkplaats moet de DSRC-module, kabels en externe antenne controleren.</td>
+<td><span class="sev sev-med">Gemiddeld</span></td>
+</tr>
+<tr>
+<td>x internal sensor fault xx</td>
+<td>De zelftest van de interne versnellingssensor is meer dan 10 keer mislukt en de poging tot resetten is mislukt.</td>
+<td>Bevestig de melding. Neem zonder uitstel contact op met een erkende gespecialiseerde werkplaats.</td>
+<td><span class="sev sev-crit">Kritiek</span></td>
+</tr>
+<tr>
+<td>x ITS fault xx</td>
+<td>Fout in het interne Bluetooth-onderdeel (ITS-gegevensinterface).</td>
+<td>Bevestig de melding. Neem contact op met een erkende gespecialiseerde werkplaats.</td>
+<td><span class="sev sev-low">Laag</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>Waarschuwingen voor rijtijd (voorwaarschuwingen voor naleving, geen storingen)</h3>
+<div class="code-table-wrap">
+<table class="code-table">
+<thead>
+<tr>
+<th style="width: 26%;">Melding</th>
+<th style="width: 44%;">Betekenis</th>
+<th style="width: 30%;">Maatregel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1 break! 04h15 00h15</td>
+<td>Neem een pauze — de ononderbroken rijtijd heeft 4 uur 15 minuten bereikt (voorwaarschuwing).</td>
+<td>Bevestig de melding. Plan binnen de volgende 15 minuten een pauze van 45 minuten.</td>
+</tr>
+<tr>
+<td>1 break! 04h30 00h15</td>
+<td>Rijtijd overschreden — de limiet van 4 uur en 30 minuten ononderbroken rijden is bereikt.</td>
+<td>Stop en neem een pauze (45 min, of gesplitst in 15 + 30).</td>
+</tr>
+<tr>
+<td>1 rijtijd 24 u / | / ||</td>
+<td>Het einde van de dagelijkse (24 u), wekelijkse (|) of tweewekelijkse (||) rijtijd nadert. De voorwaarschuwingstijd kan worden ingesteld.</td>
+<td>Bevestig. Beëindig het rijden en neem de vereiste rusttijd overeenkomstig Verordening 561/2006.</td>
+</tr>
+<tr>
+<td>1 rusttijd over 01 u 45</td>
+<td>De volgende dagelijkse of wekelijkse rusttijd is binnenkort vereist (instelbare voorwaarschuwing).</td>
+<td>Plan tijdig uw volgende stop voor een rusttijd.</td>
+</tr>
+<tr>
+<td>1 arbeidstijd 24 u 09 u 30</td>
+<td>Het einde van de dagelijkse (24 u) of wekelijkse (|) arbeidstijd overeenkomstig de arbeidstijdenrichtlijn nadert.</td>
+<td>Bevestig. Beëindig de werkdag en neem de vereiste rusttijd.</td>
+</tr>
+<tr>
+<td>1 arbeidstijd 04 u 15</td>
+<td>Het einde van de maximale ononderbroken arbeidstijd (6 uur overeenkomstig de arbeidstijdenrichtlijn) nadert.</td>
+<td>Plan binnen de komende 15 minuten een pauze.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>Operationele opmerkingen (informatief, verdwijnen automatisch na 3 s)</h3>
+<div class="code-table-wrap">
+<table class="code-table">
+<thead>
+<tr>
+<th style="width: 30%;">Opmerking</th>
+<th style="width: 70%;">Betekenis &amp; oplossing</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>? invoer vereist</td><td>De eenheid wacht op een invoer tijdens een reeks handmatige invoer. Druk op OK en ga verder.</td></tr>
+<tr><td>o geen papier xx</td><td>De printer heeft geen papier of de printerlade is niet correct geplaatst. Plaats een nieuwe rol; start een onderbroken afdruk opnieuw via het menu.</td></tr>
+<tr><td>afdrukken niet mogelijk xx</td><td>Afdrukken is niet mogelijk omdat het contact is uitgeschakeld (ADR-uitvoering), de printkop oververhit is, de printer bezet is of de voedingsspanning onjuist is. Wacht totdat de oorzaak is verholpen.</td></tr>
+<tr><td>afdruk vertraagd</td><td>Het afdrukken is onderbroken omdat de thermische printkop te heet is. Wacht — het afdrukken wordt automatisch voortgezet zodra de printkop is afgekoeld.</td></tr>
+<tr><td>uitwerpen niet mogelijk xx</td><td>Het uitwerpen van de kaart is geweigerd: gegevens worden gelezen of overgedragen, de dagwisseling is bezig, het voertuig rijdt of het contact is uitgeschakeld (ADR).</td></tr>
+<tr><td>?1 registraties inconsistent xx</td><td>De volgorde van de datums in de registraties op de bestuurderskaart is inconsistent. Dit wordt gewist zodra nieuwe gegevens de foutieve registraties overschrijven.</td></tr>
+<tr><td>1 kaart uitwerpen xx</td><td>Fout bij het schrijven van gegevens naar de bestuurderskaart. De kaart wordt uitgeworpen en opnieuw gelezen; als dit opnieuw mislukt, wordt een afdruk van de laatste activiteiten gestart.</td></tr>
+<tr><td>1 kaartfout xx</td><td>Er is een fout opgetreden bij het verwerken van de geplaatste tachograafkaart. De kaart wordt geweigerd en uitgeworpen. Reinig de contacten en plaats de kaart opnieuw.</td></tr>
+<tr><td>1 verkeerd kaarttype xx</td><td>De geplaatste kaart is geen tachograafkaart. Plaats een geldige tachograafkaart.</td></tr>
+<tr><td>1 kaart reinigen!</td><td>De DTCO had problemen met het lezen van of schrijven naar de kaart. Reinig zowel de kaart als de kaartladen.</td></tr>
+</tbody>
+</table>
+</div>
+<h3>Numerieke storingsgeheugencodes van VDO (001–099)</h3>
+<p style="font-size:14px;color:var(--text2);margin-bottom:12px;">Deze numerieke codes worden met een VDO-werkplaatsdiagnose-instrument uit het storingsgeheugen van de eenheid gelezen (<strong>SDS</strong> / <strong>CTCII</strong>) — tijdens normaal gebruik worden ze niet aan de bestuurder getoond. De nummering is consistent tussen DTCO-generaties (1381 en 4.1) en elk nummer komt overeen met een van de in de bovenstaande berichtentabellen beschreven voorvallen of storingen van bijlage I. Voer een nummer in, zoals <em>005</em> in het zoekveld bovenaan dit gedeelte.</p>
+<div class="code-table-wrap">
+<table class="code-table">
+<thead><tr><th style="width:24%;">Code</th><th style="width:58%;">Betekenis</th><th style="width:18%;">Ernst</th></tr></thead>
+<tbody>
+<tr><td>001–2, 004–5</td><td>Interne apparaatfout</td><td><span class="sev sev-crit">Kritiek</span></td></tr>
+<tr><td>006</td><td>Tijdfout</td><td><span class="sev sev-crit">Kritiek</span></td></tr>
+<tr><td>007</td><td>Poging tot inbreuk op de beveiliging (voertuigeenheid)</td><td><span class="sev sev-crit">Kritiek</span></td></tr>
+<tr><td>009</td><td>Kalibratiefout</td><td><span class="sev sev-high">Hoog</span></td></tr>
+<tr><td>010</td><td>Storing in de uitvoer van het snelheidssignaal (B7)</td><td><span class="sev sev-med">Gemiddeld</span></td></tr>
+<tr><td>012</td><td>Uitleesfout</td><td><span class="sev sev-med">Gemiddeld</span></td></tr>
+<tr><td>013–14</td><td>CAN-busstoring</td><td><span class="sev sev-med">Gemiddeld</span></td></tr>
+<tr><td>015</td><td>Verbinding met het display verbroken</td><td><span class="sev sev-med">Gemiddeld</span></td></tr>
+<tr><td>016</td><td>Storing in de sensor (zelftest)</td><td><span class="sev sev-crit">Kritiek</span></td></tr>
+<tr><td>017–18</td><td>Fout in de integriteit van sensorgegevens (018 op KITAS 4.0: vanaf R1.10 verschijnt dit na een onderbreking van de voeding, vaak samen met 019 — een vereiste beveiligingsfunctie, geen reden om de sensor te vervangen)</td><td><span class="sev sev-crit">Kritiek</span></td></tr>
+<tr><td>019</td><td>Onderbreking van de voeding van de sensor</td><td><span class="sev sev-med">Gemiddeld</span></td></tr>
+<tr><td>020–22</td><td>Communicatiefout van de sensor</td><td><span class="sev sev-high">Hoog</span></td></tr>
+<tr><td>023</td><td>Authenticatie- / koppelingsfout van de sensor</td><td><span class="sev sev-high">Hoog</span></td></tr>
+<tr><td>024</td><td>Onbekend serienummer van de sensor</td><td><span class="sev sev-high">Hoog</span></td></tr>
+<tr><td>025</td><td>Fout in het gegevensgeheugen</td><td><span class="sev sev-crit">Kritiek</span></td></tr>
+<tr><td>026</td><td>Behuizing geopend (inbreuk op de beveiliging)</td><td><span class="sev sev-crit">Kritiek</span></td></tr>
+<tr><td>028</td><td>Rijden zonder kaart</td><td><span class="sev sev-crit">Kritiek</span></td></tr>
+<tr><td>029</td><td>Conflict tussen kaarten</td><td><span class="sev sev-med">Gemiddeld</span></td></tr>
+<tr><td>030</td><td>Snelheid overschreden</td><td><span class="sev sev-high">Hoog</span></td></tr>
+<tr><td>031</td><td>Onderbreking van de voeding</td><td><span class="sev sev-med">Gemiddeld</span></td></tr>
+<tr><td>034</td><td>Kaart uitwerpen niet mogelijk</td><td><span class="sev sev-med">Gemiddeld</span></td></tr>
+<tr><td>036</td><td>Afdrukken / weergave niet mogelijk</td><td><span class="sev sev-med">Gemiddeld</span></td></tr>
+<tr><td>037</td><td>Afdrukken vertraagd</td><td><span class="sev sev-info">Informatie</span></td></tr>
+<tr><td>038</td><td>Printerlade open</td><td><span class="sev sev-med">Gemiddeld</span></td></tr>
+<tr><td>039</td><td>Papier op</td><td><span class="sev sev-med">Gemiddeld</span></td></tr>
+<tr><td>040</td><td>Storing in het kaartmechanisme, sleuf 1</td><td><span class="sev sev-high">Hoog</span></td></tr>
+<tr><td>041</td><td>Communicatiefout van de kaart, sleuf 1</td><td><span class="sev sev-high">Hoog</span></td></tr>
+<tr><td>042</td><td>Authenticiteit van kaartgegevens, sleuf 1</td><td><span class="sev sev-high">Hoog</span></td></tr>
+<tr><td>043</td><td>Kaart ontbreekt, sleuf 1</td><td><span class="sev sev-high">Hoog</span></td></tr>
+<tr><td>044</td><td>Kaart niet gesloten, sleuf 1</td><td><span class="sev sev-low">Laag</span></td></tr>
+<tr><td>045</td><td>Overlapping van tijden, sleuf 1</td><td><span class="sev sev-med">Gemiddeld</span></td></tr>
+<tr><td>046</td><td>Invoeren tijdens het rijden, sleuf 1</td><td><span class="sev sev-low">Laag</span></td></tr>
+<tr><td>047</td><td>Kaartauthenticatie, sleuf 1</td><td><span class="sev sev-high">Hoog</span></td></tr>
+<tr><td>048</td><td>Kaart niet geldig, sleuf 1</td><td><span class="sev sev-high">Hoog</span></td></tr>
+<tr><td>049</td><td>Inconsistentie in registraties, sleuf 1</td><td><span class="sev sev-med">Gemiddeld</span></td></tr>
+<tr><td>050</td><td>Kaart kan niet worden gelezen, sleuf 1</td><td><span class="sev sev-high">Hoog</span></td></tr>
+<tr><td>051</td><td>Verkeerd kaarttype, sleuf 1</td><td><span class="sev sev-med">Gemiddeld</span></td></tr>
+<tr><td>052</td><td>Kaart geblokkeerd, sleuf 1</td><td><span class="sev sev-high">Hoog</span></td></tr>
+<tr><td>053</td><td>Interne storing, sleuf 1 — kaart geweigerd en uitgeworpen</td><td><span class="sev sev-crit">Kritiek</span></td></tr>
+<tr><td>054</td><td>Kaart uitwerpen, sleuf 1 — bijwerken van kaart / herauthenticatie mislukt</td><td><span class="sev sev-med">Gemiddeld</span></td></tr>
+<tr><td>056</td><td>Pauze! sleuf 1 — 4 u 30 ononderbroken rijden</td><td><span class="sev sev-high">Hoog</span></td></tr>
+<tr><td>057</td><td>Binnenkort pauze, sleuf 1 — 4 u 15 ononderbroken rijden</td><td><span class="sev sev-med">Gemiddeld</span></td></tr>
+<tr><td>058–066</td><td>Kaartstoringen, sleuf 2 (tweede chauffeur) — equivalent aan 040–048</td><td><span class="sev sev-high">Hoog</span></td></tr>
+</tbody>
+</table>
+</div>
+<h3>DTCO 4.0 / 4.1 — wat een nummer op het display betekent (slimme tachograaf)</h3>
+<p style="font-size:14px;color:var(--text2);margin-bottom:12px;">Nieuwere VDO DTCO 4.0- en 4.1-eenheden tonen naast het pictogram een tweecijferig nummer. Lage nummers (001–066) staan in de bovenstaande tabel; de hoge nummers <strong>67–99</strong> horen bij functies van de slimme tachograaf (GNSS, DSRC, ITS). U kunt elk nummer rechtstreeks in het bovenstaande zoekveld invoeren.</p>
+<div class="code-table-wrap">
+<table class="code-table">
+<thead><tr><th style="width:24%;">Displaynummer</th><th style="width:58%;">Betekenis</th><th style="width:18%;">Ernst</th></tr></thead>
+<tbody>
+<tr><td>21</td><td><a href="/nl/artikelen/tachograaf-storing-21-bewegingssensor-storing/">Storing bewegingssensor</a></td><td><span class="sev sev-crit">Kritiek</span></td></tr>
+<tr><td>34</td><td><a href="/nl/artikelen/tachograaf-storing-34-uitwerpen-niet-mogelijk/">Kaart uitwerpen niet mogelijk → wat te doen</a></td><td><span class="sev sev-med">Gemiddeld</span></td></tr>
+<tr><td>36</td><td><a href="/nl/artikelen/tachograaf-storing-36-afdrukken-niet-mogelijk/">Afdrukken niet mogelijk</a></td><td><span class="sev sev-low">Laag</span></td></tr>
+<tr><td>80</td><td><a href="/nl/artikelen/tachograaf-storing-80-bewegingsconflict/">Bewegingsconflict van het voertuig → wat te doen</a></td><td><span class="sev sev-crit">Kritiek</span></td></tr>
+<tr><td>82</td><td><a href="/nl/artikelen/tachograaf-storing-82-interne-gnss-storing/">Interne GNSS-storing → wat te doen</a></td><td><span class="sev sev-med">Gemiddeld</span></td></tr>
+<tr><td>83</td><td><a href="/nl/artikelen/tachograaf-storing-83-gnss-ontbreekt/">GNSS-signaal ontbreekt → wat te doen</a></td><td><span class="sev sev-med">Gemiddeld</span></td></tr>
+<tr><td>84</td><td><a href="/nl/artikelen/tachograaf-storing-84-interne-dsrc-storing/">Interne DSRC-storing → wat te doen</a></td><td><span class="sev sev-low">Laag</span></td></tr>
+<tr><td>85</td><td><a href="/nl/artikelen/tachograaf-storing-85-dsrc-communicatiestoring/">DSRC-communicatiefout</a></td><td><span class="sev sev-low">Laag</span></td></tr>
+<tr><td>86</td><td>Tijdsconflict</td><td><span class="sev sev-med">Gemiddeld</span></td></tr>
+<tr><td>87</td><td>Sensorstoring</td><td><span class="sev sev-high">Hoog</span></td></tr>
+<tr><td>96</td><td><a href="/nl/artikelen/tachograaf-storing-96-gnss-anomalie/">GNSS-anomalie (GNSS-onregelmatigheden · anti-spoofing OSNMA)</a></td><td><span class="sev sev-high">Hoog</span></td></tr>
+<tr><td>97</td><td>Interne sensorstoring</td><td><span class="sev sev-high">Hoog</span></td></tr>
+<tr><td>98</td><td><a href="/nl/artikelen/tachograaf-storing-98-its-storing/">ITS- / Bluetooth-storing → wat te doen</a></td><td><span class="sev sev-low">Laag</span></td></tr>
+<tr><td>67, 99</td><td>Inconsistente registratie</td><td><span class="sev sev-med">Gemiddeld</span></td></tr>
+<tr><td>68–72</td><td>Kaart- / interne storing, sleuf 2 (tweede chauffeur)</td><td>Verschilt</td></tr>
+<tr><td>74–75</td><td>Pauze! sleuf 2 (tweede chauffeur) — 4 u 30 / 4 u 15</td><td><span class="sev sev-high">Hoog</span></td></tr>
+<tr><td>76</td><td>Voorwaarschuwing snelheid overschreden — minder dan 60 s, voorval nog niet geregistreerd</td><td><span class="sev sev-med">Gemiddeld</span></td></tr>
+<tr><td>78</td><td>Software-upgrade mislukt — integriteit van de updatemodule of beveiligingssleutel</td><td><span class="sev sev-high">Hoog</span></td></tr>
+<tr><td>79</td><td>Software-upgrade mislukt — voedingsspanning tijdens de upgrade buiten het bereik</td><td><span class="sev sev-high">Hoog</span></td></tr>
+<tr><td>88–95</td><td>Operationele opmerking over rijtijd / rusttijd — geen storing</td><td><span class="sev sev-info">Informatie</span></td></tr>
+</tbody>
+</table><p><strong>Hoe chauffeurs hier gewoonlijk naar zoeken:</strong> bewegingsconflict 80, bewegingsconflict van het voertuig 80 op de tachograaf, interne GNSS-storing 82, GNSS-signaal ontbreekt 83, interne DSRC-storing 84, DSRC-communicatiefout 85, sensorstoring 87, GNSS-anomalie 96, ITS-storing 98, interne storing van de voertuigeenheid. De formulering op het display verschilt per fabrikant — VDO DTCO, Stoneridge SE5000, Actia SmarTach en EFAS gebruiken verschillende aanduidingen voor hetzelfde voorval.</p>
+</div>
+<p>Voor de meest voorkomende storingen is gedetailleerde informatie beschikbaar: <a href="/nl/artikelen/tachograaf-storing-84-interne-dsrc-storing/">Interne DSRC-storing (84)</a>, <a href="/nl/artikelen/tachograaf-storing-82-interne-gnss-storing/">Interne GNSS-storing (82)</a>, <a href="/nl/artikelen/tachograaf-storing-83-gnss-ontbreekt/">GNSS ontbreekt (83)</a>, <a href="/nl/artikelen/tachograaf-storing-34-uitwerpen-niet-mogelijk/">Uitwerpen niet mogelijk (34)</a>, <a href="/nl/artikelen/tachograaf-storing-80-bewegingsconflict/">Bewegingsconflict (80)</a> en <a href="/nl/artikelen/tachograaf-storing-98-its-storing/">ITS-storing (98)</a>.</p>
+<h3>Wat uiteindelijk in de uitgelezen gegevens terechtkomt (EventFaultType)</h3>
+<p style="font-size:14px;color:var(--text2);margin-bottom:12px;">Niet elke melding op het display komt in de uitgelezen gegevens terecht. Alleen meldingen met een <strong>EventFaultType</strong> die is gedefinieerd in aanhangsel 1 van bijlage IC bij Verordening (EU) 2016/799, worden in het tachograafgeheugen opgeslagen, verschijnen op de afdruk en worden in een evaluatierapport weergegeven. Operationele meldingen en meldingen over werktijd worden alleen op het display weergegeven.</p>
+<div class="code-table-wrap">
+<table class="code-table">
+<thead><tr><th style="width:16%;">EventFaultType</th><th style="width:60%;">Voorval / storing (officiële bewoording in bijlage IC)</th><th style="width:24%;">Displaycode</th></tr></thead>
+<tbody>
+<tr><td>0x01</td><td>Inbrengen van een ongeldige kaart</td><td>048, 066</td></tr>
+<tr><td>0x02</td><td>Kaartconflict</td><td>029</td></tr>
+<tr><td>0x03</td><td>Tijdsoverlap</td><td>045, 063</td></tr>
+<tr><td>0x04</td><td>Rijden zonder passende kaart</td><td>028</td></tr>
+<tr><td>0x05</td><td>Kaart ingebracht tijdens het rijden</td><td>046, 064</td></tr>
+<tr><td>0x06</td><td>Laatste kaartsessie niet correct afgesloten</td><td>044, 062</td></tr>
+<tr><td>0x07</td><td>Te hoge snelheid</td><td>030</td></tr>
+<tr><td>0x08</td><td>Onderbreking van de voeding</td><td>019, 031</td></tr>
+<tr><td>0x09</td><td>Fout in bewegingsgegevens</td><td>020, 021, 022, 087</td></tr>
+<tr><td>0x0A</td><td>Bewegingsconflict van het voertuig</td><td>080</td></tr>
+<tr><td>0x0B</td><td>Tijdsconflict (GNSS versus interne klok van de voertuigeenheid)</td><td>086</td></tr>
+<tr><td>0x0C</td><td>Communicatiefout met de voorziening voor communicatie op afstand</td><td>085</td></tr>
+<tr><td>0x0D</td><td>Ontbreken van positie-informatie van de GNSS-ontvanger</td><td>083</td></tr>
+<tr><td>0x0F</td><td>GNSS-anomalie</td><td>096</td></tr>
+<tr><td>0x10</td><td>Poging tot inbreuk op de beveiliging van de voertuigeenheid — geen verdere bijzonderheden</td><td>007</td></tr>
+<tr><td>0x11</td><td>Authenticatiefout van de bewegingssensor</td><td>023</td></tr>
+<tr><td>0x12</td><td>Authenticatiefout van de tachograafkaart</td><td>043, 047, 061, 065</td></tr>
+<tr><td>0x13</td><td>Ongeoorloofde wijziging van de bewegingssensor</td><td>024</td></tr>
+<tr><td>0x14</td><td>Fout in de integriteit van de ingevoerde kaartgegevens</td><td>042, 060</td></tr>
+<tr><td>0x15</td><td>Fout in de integriteit van de opgeslagen gebruikersgegevens</td><td>025</td></tr>
+<tr><td>0x1C</td><td>Inconsistentie tussen bewegingsgegevens en opgeslagen gegevens over de activiteiten van de bestuurder</td><td>099</td></tr>
+<tr><td>0x21</td><td>Poging tot inbreuk op de beveiliging van de sensor — authenticatiefout</td><td>018</td></tr>
+<tr><td>0x22</td><td>Poging tot inbreuk op de beveiliging van de sensor — fout in de integriteit van de opgeslagen gegevens</td><td>017</td></tr>
+<tr><td>0x31</td><td>Interne storing van de voertuigeenheid</td><td>001, 002, 004, 005, 006, 009</td></tr>
+<tr><td>0x34</td><td>Storing bij het uitlezen</td><td>012</td></tr>
+<tr><td>0x35</td><td>Sensorstoring</td><td>016</td></tr>
+<tr><td>0x36</td><td>Interne GNSS-ontvanger</td><td>082</td></tr>
+<tr><td>0x38</td><td>Voorziening voor communicatie op afstand</td><td>084</td></tr>
+<tr><td>0x39</td><td>ITS-interface</td><td>098</td></tr>
+<tr><td>0x3A</td><td>Interne sensorstoring</td><td>097</td></tr>
+<tr><td>0x40</td><td>Kaartstoringen — geen verdere bijzonderheden</td><td>041, 059</td></tr>
+</tbody>
+</table>
+<p style="font-size:14px;color:var(--text2);margin-top:12px;">Codes zonder een EventFaultType (<strong>034, 036, 037, 039, 040, 049–054, 056–058, 067–079, 088–095</strong>) worden niet in de uitgelezen gegevens geschreven — het zijn operationele meldingen en herinneringen aan de rijtijd.</p>
+</div>
+</div>
+</details>
+<!-- ===== STONERIDGE SE5000 ===== -->
+<details class="vendor" id="stoneridge">
+<summary>
+<span class="vendor-meta">Stoneridge · standaarduitvoering in het VK en Scandinavië</span>
+    Stoneridge SE5000 Exakt Duo² (Rev 7.6)
+  </summary>
+<div class="vendor-body">
+<p>De Stoneridge SE5000 is de meest voorkomende slimme tachograaf in vrachtwagens die in het VK zijn geregistreerd en in wagenparken in de hele Scandinavische regio. De onderstaande meldingen zijn letterlijk overgenomen uit de officiële <strong>Stoneridge SE5000 Exakt Duo² Driver &amp; Company Manual, Rev 7.6</strong> (Stoneridge Electronics AB, Örebro). In de handleiding van Stoneridge worden meldingen in vier categorieën ingedeeld, die exact overeenkomen met de classificatie van bijlage I C: <em>Meldingen</em> (informatief), <em>Voorwaarschuwingen</em>, <em>Waarschuwingen</em> en <em>Storingen</em>.</p>
+<p style="font-size:14px;color:var(--text2);margin-bottom:18px;"><strong>Citaat uit de handleiding:</strong> „Storingen zijn kritieker dan waarschuwingen en worden weergegeven als er een storing in de tachograaf, de sensor of de bestuurderskaart is gedetecteerd. Daarnaast worden storingen weergegeven als manipulatie van de apparatuur wordt gedetecteerd. Storingen worden opgeslagen en kunnen worden afgedrukt.“</p>
+<h3>Kaartgerelateerde meldingen</h3>
+<div class="code-table-wrap">
+<table class="code-table">
+<thead>
+<tr>
+<th style="width: 26%;">Display</th>
+<th style="width: 14%;">Type</th>
+<th style="width: 32%;">Beschrijving (letterlijk uit de handleiding)</th>
+<th style="width: 28%;">Aanbevolen actie</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>Storing kaart 1</td><td><span class="sev sev-crit">Storing</span></td><td>De kaart in sleuf 1 is defect. Een vergelijkbare melding geldt voor sleuf 2. Heeft betrekking op de kaart.</td><td>Werp de kaart uit en inspecteer deze visueel. Reinig de kaart met een vochtige doek. Als de storing blijft optreden: bezoek een werkplaats.</td></tr>
+<tr><td>Auth.-storing kaart 1</td><td><span class="sev sev-crit">Storing</span></td><td>De beveiligingscontrole van de tachograaf voor de kaart in sleuf 1 is mislukt. Heeft betrekking op de tachograaf.</td><td>Werp de kaart uit en reinig deze. Als de storing blijft optreden, moet de werkplaats de kaart controleren.</td></tr>
+<tr><td>Tijdsoverlap kaart 1</td><td><span class="sev sev-med">Waarschuwing</span></td><td>Het tijdstip waarop de ingevoerde bestuurderskaart voor het laatst is uitgenomen, ligt later dan de datum/tijd van de tachograaf. Heeft betrekking op de tachograaf.</td><td>Controleer de datum/tijd op de tachograaf. Wacht totdat de overlap is verstreken.</td></tr>
+<tr><td>Fout in kaartintegriteit</td><td><span class="sev sev-crit">Storing</span></td><td>Bij het lezen van gegevens van de kaart zijn beschadigde gegevens gedetecteerd. Heeft betrekking op de kaart.</td><td>Reinig de kaart en probeer het opnieuw. Als de storing blijft optreden: vervang de kaart en bezoek een werkplaats.</td></tr>
+<tr><td>Kaartconflict</td><td><span class="sev sev-med">Waarschuwing</span></td><td>Er is een ongeldige kaartcombinatie gedetecteerd. Heeft betrekking op de kaart.</td><td>Neem de betreffende kaart uit.</td></tr>
+<tr><td>Kaart ingebracht tijdens het rijden</td><td><span class="sev sev-med">Waarschuwing</span></td><td>Een bestuurderskaart is ingebracht terwijl het voertuig in beweging was. Houdt verband met de wagenparkbeheerder.</td><td>Zet de rit voort als de bestuurderskaart geldig is; het voorval wordt geregistreerd.</td></tr>
+<tr><td>Kaart uitwerpen zonder opslaan</td><td><span class="sev sev-med">Melding</span></td><td>De gegevens konden door een fout niet worden opgeslagen op de kaart die uit sleuf 1 is verwijderd.</td><td>Werp de kaart uit, maak haar schoon en probeer het opnieuw. Voer een zelftest uit als het probleem aanhoudt.</td></tr>
+<tr><td>Kaart verlopen</td><td><span class="sev sev-info">Melding</span></td><td>De kaart in sleuf 1 is verlopen. Houdt verband met de wagenparkbeheerder.</td><td>Verwijder de kaart en vervang haar door een geldige kaart.</td></tr>
+<tr><td>Kaart verloopt over xx dagen</td><td><span class="sev sev-info">Melding</span></td><td>De kaart die in sleuf 1 is ingebracht, verloopt over xx dagen (0–30). Houdt verband met de wagenparkbeheerder.</td><td>Neem contact op met de bevoegde instantie om een nieuwe kaart te krijgen.</td></tr>
+<tr><td>Inbrengen van een ongeldige kaart</td><td><span class="sev sev-med">Waarschuwing</span></td><td>Er is een ongeldige kaart in een sleuf ingebracht. Houdt verband met de wagenparkbeheerder.</td><td>Werp de ongeldige kaart uit.</td></tr>
+<tr><td>Laatste sessie niet correct afgesloten</td><td><span class="sev sev-med">Waarschuwing</span></td><td>De bestuurderskaart in sleuf 1 is tijdens de laatste sessie onjuist uitgeworpen. De vorige kaartuitname uit sleuf 1 is niet correct door de tachograaf voltooid.</td><td>Werp de kaart uit en maak haar schoon. Voer een zelftest uit als het probleem aanhoudt.</td></tr>
+<tr><td>Verkeerde pincode! Kaart geblokkeerd</td><td><span class="sev sev-high">Melding</span></td><td>De verkeerde pincode is te vaak ingevoerd (werkplaatskaart). Houdt verband met de kaart.</td><td>Werp de kaart uit en vervang haar door een geldige kaart.</td></tr>
+</tbody>
+</table>
+</div>
+<h3>Sensor &amp; storingen in de voertuigbeweging</h3>
+<div class="code-table-wrap">
+<table class="code-table">
+<thead>
+<tr>
+<th style="width: 26%;">Display</th>
+<th style="width: 14%;">Type</th>
+<th style="width: 32%;">Beschrijving (ongewijzigd)</th>
+<th style="width: 28%;">Maatregel</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>Authenticatiefout sensor</td><td><span class="sev sev-crit">Storing</span></td><td>De tachograaf detecteert de sensor niet of herkent de aangesloten sensor niet als de geïnstalleerde sensor. Houdt verband met de bewegingssensor.</td><td>Ga naar een werkplaats voor digitale tachografen.</td></tr>
+<tr><td>Storing in sensorkabel</td><td><span class="sev sev-high">Waarschuwing</span></td><td>Fout in sensorgegevens / fout in gegevens van de bewegingssensor. Houdt verband met de bewegingssensor.</td><td>De werkplaats moet de bedrading en de sensor controleren.</td></tr>
+<tr><td>Communicatiefout sensor</td><td><span class="sev sev-crit">Storing</span></td><td>Communicatiefout van de bewegingssensor. Houdt verband met de bewegingssensor.</td><td>Vervanging door de werkplaats.</td></tr>
+<tr><td>Fout in sensorgegevens</td><td><span class="sev sev-high">Waarschuwing</span></td><td>Signaalstoring tussen de bewegingssensor en de tachograaf. Houdt verband met de bewegingssensor.</td><td>De werkplaats moet dit controleren.</td></tr>
+<tr><td>Fout in integriteit van sensorgegevens</td><td><span class="sev sev-crit">Storing</span></td><td>Interne storing in de bewegingssensor; fout in de integriteit van opgeslagen gegevens. Houdt verband met de bewegingssensor.</td><td>Vervanging van de sensor waarschijnlijk.</td></tr>
+<tr><td>Fout bij gegevensoverdracht van sensor</td><td><span class="sev sev-crit">Storing</span></td><td>De bewegingssensor en de tachograaf communiceren niet met elkaar. Houdt verband met de bewegingssensor.</td><td>Bezoek aan een werkplaats.</td></tr>
+<tr><td>Storing sensor, geen bevestiging</td><td><span class="sev sev-crit">Storing</span></td><td>Communicatiefout van de bewegingssensor.</td><td>Bezoek aan een werkplaats.</td></tr>
+<tr><td>Voeding sensor te hoog / te laag</td><td><span class="sev sev-crit">Storing</span></td><td>De voedingsspanning van de bewegingssensor is te hoog of te laag. Dit houdt verband met de bewegingssensor.</td><td>De werkplaats moet de voeding controleren.</td></tr>
+<tr><td>Geen voedingssignaal sensor</td><td><span class="sev sev-crit">Storing</span></td><td>De bewegingssensor krijgt geen voeding. Dit houdt verband met de bewegingssensor.</td><td>De werkplaats moet de voeding controleren.</td></tr>
+<tr><td>Niet-geautoriseerde sensor, behuizing geopend</td><td><span class="sev sev-crit">Storing</span></td><td>Er is een niet-geautoriseerde opening gedetecteerd. Dit houdt verband met de bewegingssensor.</td><td>De werkplaats moet een inspectie uitvoeren — mogelijke manipulatie.</td></tr>
+<tr><td>Storing secundaire sensor</td><td><span class="sev sev-crit">Storing</span></td><td>Geen of onjuiste gegevens van de bewegingssensor van de tweede bron. Houdt verband met de bewegingssensor.</td><td>De werkplaats moet dit controleren.</td></tr>
+<tr><td>Niet-geautoriseerde wijziging van sensor</td><td><span class="sev sev-crit">Storing</span></td><td>De sensor is sinds de laatste koppeling vervangen. Dit houdt verband met de bewegingssensor.</td><td>De werkplaats moet de koppeling opnieuw uitvoeren.</td></tr>
+<tr><td>Bewegingsconflict van het voertuig</td><td><span class="sev sev-crit">Storing</span></td><td>De gegevens van de bewegingssensor van de tweede bron spreken de gegevens van de primaire bewegingssensor tegen. Houdt verband met de bewegingssensor.</td><td>De werkplaats moet dit controleren.</td></tr>
+<tr><td>Sabotage van hardware</td><td><span class="sev sev-crit">Storing</span></td><td>De kaart is met geweld verwijderd of er is manipulatie van de hardware gedetecteerd.</td><td>Bezoek aan een werkplaats — onderzoek vereist.</td></tr>
+</tbody>
+</table>
+</div>
+<h3>Interne storingen in tachograaf (voertuigeenheid) &amp; voeding</h3>
+<div class="code-table-wrap">
+<table class="code-table">
+<thead>
+<tr>
+<th style="width: 26%;">Display</th>
+<th style="width: 14%;">Type</th>
+<th style="width: 32%;">Beschrijving (ongewijzigd)</th>
+<th style="width: 28%;">Maatregel</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>Interne storing van de voertuigeenheid</td><td><span class="sev sev-crit">Storing</span></td><td>De tachograaf heeft een interne storing gedetecteerd. Dit houdt verband met de tachograaf.</td><td>Ga naar een werkplaats.</td></tr>
+<tr><td>Fout in gegevensintegriteit</td><td><span class="sev sev-crit">Storing</span></td><td>De in de tachograaf opgeslagen gebruikersgegevens bevatten fouten. Dit houdt verband met de tachograaf.</td><td>Ga onmiddellijk naar een werkplaats.</td></tr>
+<tr><td>Niet-geautoriseerde opening van VU</td><td><span class="sev sev-crit">Storing</span></td><td>De behuizing van de tachograafeenheid is geopend. Dit houdt verband met de tachograaf.</td><td>De werkplaats moet de manipulatie onderzoeken.</td></tr>
+<tr><td>Onderbreking van de voeding</td><td><span class="sev sev-med">Waarschuwing</span></td><td>De voedingsspanning van de tachograaf ligt onder of boven de grens voor een correcte werking of is onderbroken. De voeding is langer dan 200 milliseconden onderbroken geweest. De startspanning mag dit voorval niet veroorzaken.</td><td>De werkplaats moet de elektrische voeding van het voertuig controleren als dit opnieuw optreedt.</td></tr>
+<tr><td>Rijden zonder geldige kaart</td><td><span class="sev sev-high">Waarschuwing</span></td><td>Rijden zonder geschikte kaart of met een ongeschikte kaartcombinatie. Dit houdt verband met de wagenparkbeheerder.</td><td>Stop en verwijder de ongeschikte kaart. Breng een geldige bestuurderskaart in.</td></tr>
+<tr><td>Te hoge snelheid</td><td><span class="sev sev-high">Waarschuwing</span></td><td>De voertuigsnelheid heeft gedurende 1 minuut de ingestelde snelheidslimiet overschreden en dit wordt opgeslagen. Dit houdt verband met de wagenparkbeheerder.</td><td>Houd u aan de aangegeven snelheidslimiet.</td></tr>
+<tr><td>Voorwaarschuwing te hoge snelheid</td><td><span class="sev sev-med">Melding</span></td><td>Het voertuig overschrijdt de ingestelde snelheidslimiet. Na 1 minuut onafgebroken te hoge snelheid wordt de waarschuwing opgeslagen.</td><td>Verlaag uw snelheid voordat de grens van 1 minuut wordt bereikt.</td></tr>
+<tr><td>Uitlezen mislukt</td><td><span class="sev sev-med">Waarschuwing</span></td><td>Er is een storing opgetreden bij het uitlezen van gegevens uit de tachograaf. Dit houdt verband met de tachograaf/kaart.</td><td>Controleer de connector en de apparatuur en probeer het opnieuw. Als het probleem aanhoudt: ga naar een werkplaats.</td></tr>
+<tr><td>UTC-aanpassing niet toegestaan</td><td><span class="sev sev-info">Melding</span></td><td>Een UTC-tijdaanpassing van meer dan ±1 minuut eenmaal per week is niet toegestaan.</td><td>Als de UTC-tijd meer dan 20 minuten afwijkt, moet de werkplaats een kalibratie uitvoeren.</td></tr>
+</tbody>
+</table>
+</div>
+<h3>Printermeldingen</h3>
+<div class="code-table-wrap">
+<table class="code-table">
+<thead>
+<tr>
+<th style="width: 26%;">Display</th>
+<th style="width: 14%;">Type</th>
+<th style="width: 32%;">Beschrijving (ongewijzigd)</th>
+<th style="width: 28%;">Maatregel</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>Printertemperatuur te hoog</td><td><span class="sev sev-low">Melding</span></td><td>Het afdrukken kon niet starten of het lopende afdrukken is onderbroken omdat de temperatuur van de printer te hoog is.</td><td>Wacht totdat de printer is afgekoeld en probeer het vervolgens opnieuw.</td></tr>
+<tr><td>Printertemperatuur te laag</td><td><span class="sev sev-low">Melding</span></td><td>Het afdrukken kon niet starten omdat de temperatuur van de printer te laag is.</td><td>Wacht totdat de printer is opgewarmd; ga naar een werkplaats als het probleem aanhoudt.</td></tr>
+<tr><td>Printervoeding te laag</td><td><span class="sev sev-low">Melding</span></td><td>Het lopende afdrukken is onderbroken omdat de ingangsspanning van de tachograaf te laag is.</td><td>Controleer of het contact is ingeschakeld; controleer de accuspanning en de aansluitingen.</td></tr>
+<tr><td>Printerpapier op</td><td><span class="sev sev-info">Melding</span></td><td>Het lopende afdrukken is onderbroken omdat het papier van de printer op is.</td><td>Vervang het papier.</td></tr>
+</tbody>
+</table>
+</div>
+<h3>Waarschuwingen voor rijtijd (voorwaarschuwingen van Stoneridge) &amp; waarschuwingen)</h3>
+<div class="code-table-wrap">
+<table class="code-table">
+<thead>
+<tr>
+<th style="width: 30%;">Display</th>
+<th style="width: 14%;">Type</th>
+<th style="width: 56%;">Betekenis (ongewijzigd)</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>Herinnering: nog een kwartier</td><td><span class="sev sev-info">Melding</span></td><td>De bestuurder heeft nog 15 minuten voordat de wettelijke maximale ononderbroken rijtijd van 4½ uur wordt overschreden.</td></tr>
+<tr><td>Tijd voor een pauze</td><td><span class="sev sev-med">Waarschuwing</span></td><td>De wettelijke maximale ononderbroken rijtijd van 4½ uur is verstreken (overeenkomstig Verordening 561/2006). Neem een pauze van minimaal 45 minuten of splits deze op in 15+30.</td></tr>
+<tr><td>herinnering pauze</td><td><span class="sev sev-info">Voorwaarschuwing</span></td><td>Een herinnering aan een pauze overeenkomstig de 6-uursregel van de WTD (Richtlijn 2002/15/EG).</td></tr>
+<tr><td>dagelijkse rijtijd</td><td><span class="sev sev-med">Waarschuwing</span></td><td>Voorwaarschuwing en waarschuwing voor een dagelijkse rijtijd van 9 uur.</td></tr>
+<tr><td>einde van de dagelijkse rit</td><td><span class="sev sev-med">Waarschuwing</span></td><td>Maximale dagelijkse rijtijd bereikt.</td></tr>
+<tr><td>wekelijkse rijtijd</td><td><span class="sev sev-med">Voorwaarschuwing</span></td><td>Maximale wekelijkse rijtijd (56 u) bijna bereikt.</td></tr>
+<tr><td>einde van de wekelijkse rit</td><td><span class="sev sev-med">Waarschuwing</span></td><td>Maximale wekelijkse rijtijd bereikt.</td></tr>
+<tr><td>rijtijd over 2 weken</td><td><span class="sev sev-med">Voorwaarschuwing</span></td><td>Maximale rijtijd over 2 weken (90 u) bijna bereikt.</td></tr>
+<tr><td>einde van de rit over 2 weken</td><td><span class="sev sev-med">Waarschuwing</span></td><td>Maximale rijtijd over 2 weken bereikt.</td></tr>
+<tr><td>wekelijkse arbeidstijd</td><td><span class="sev sev-med">Voorwaarschuwing</span></td><td>De wekelijkse arbeidstijd volgens de WTD-regel van 60 uur wordt bijna bereikt.</td></tr>
+<tr><td>einde van de wekelijkse arbeidstijd</td><td><span class="sev sev-med">Waarschuwing</span></td><td>De wekelijkse arbeidstijd volgens de WTD-regel van 60 uur is bereikt.</td></tr>
+<tr><td>herinnering dagelijkse rust</td><td><span class="sev sev-info">Voorwaarschuwing</span></td><td>Een herinnering voor de dagelijkse rusttijd.</td></tr>
+<tr><td>herinnering wekelijkse rust</td><td><span class="sev sev-info">Voorwaarschuwing</span></td><td>Een herinnering voor de wekelijkse rusttijd.</td></tr>
+<tr><td>tijd voor dagelijkse rust</td><td><span class="sev sev-med">Waarschuwing</span></td><td>Een waarschuwing voor het begin van de dagelijkse rust.</td></tr>
+<tr><td>tijd voor wekelijkse rust</td><td><span class="sev sev-med">Waarschuwing</span></td><td>Een waarschuwing voor het begin van de wekelijkse rust.</td></tr>
+<tr><td>Voorwaarschuwing service / tijd voor service</td><td><span class="sev sev-low">Melding</span></td><td>Voorwaarschuwing voor de volgende kalibratie / de tachograaf is niet gekalibreerd.</td></tr>
+</tbody>
+</table>
+</div>
+<h3>SE5000-8.1 Smart 2 — fabrikantspecifieke hexadecimale DTC's (ISO 16844-7)</h3>
+<p style="font-size:14px;color:var(--text2);margin-bottom:12px;">De huidige SE5000-8.1 (slimme tachograaf 2) meldt naast de melding op het scherm ook een 5-byte hexadecimale DTC volgens ISO 16844-7. De onderstaande codes zijn overgenomen uit de <strong>Stoneridge SE5000-8.1 Control Manual, document 9000-103766P_0109</strong> (Stoneridge Electronics AB).</p>
+<div class="code-table-wrap">
+<table class="code-table">
+<thead><tr><th style="width:13%;">DTC</th><th style="width:24%;">Melding</th><th style="width:30%;">Oorzaak</th><th style="width:21%;">Wat u moet doen</th><th style="width:12%;">Ernst</th></tr></thead>
+<tbody>
+<tr><td>0001C0</td><td>Afdrukken gestopt, papier op</td><td>De printer heeft geen papier.</td><td>Plaats een nieuwe papierrol.</td><td><span class="sev sev-low">Laag</span></td></tr>
+<tr><td>000900</td><td>Geen contact maar wel snelheidspulsen</td><td>Het contact is uitgeschakeld, maar de sensor detecteert snelheidspulsen.</td><td>Controleer op trillingen/interferentie; bij herhaling moet de werkplaats de sensor en pin B7 controleren.</td><td><span class="sev sev-high">Hoog</span></td></tr>
+<tr><td>000D40</td><td>Voorwaarschuwing te hoge snelheid</td><td>Snelheidslimiet overschreden, maar minder dan 60 seconden.</td><td>Verlaag uw snelheid. Bestuurdersgerelateerd — geen werkplaats nodig.</td><td><span class="sev sev-med">Gemiddeld</span></td></tr>
+<tr><td>000B78</td><td>Kalibratiefout</td><td>Er zijn twee jaar verstreken sinds de laatste kalibratie.</td><td>Laat de tachograaf opnieuw kalibreren bij een erkende werkplaats.</td><td><span class="sev sev-high">Hoog</span></td></tr>
+<tr><td>000C31</td><td>Interne GNSS-storing</td><td>De interne GNSS-ontvanger levert geen posit gegevens meer.</td><td>Schakel de tachograaf uit en weer in en maak een testrit; bij herhaling vervangen.</td><td><span class="sev sev-med">Gemiddeld</span></td></tr>
+<tr><td>002B80</td><td>Tijdconflict (GNSS versus VU)</td><td>De interne klok en de GNSS-klok verschillen na 12 uur meer dan 1 minuut.</td><td>Controleer de interne klok en de GNSS-tijd. Werkplaats.</td><td><span class="sev sev-med">Gemiddeld</span></td></tr>
+<tr><td>002C80</td><td>Ontbreken van GNSS-positie</td><td>Gedurende 3 uur cumulatieve rijtijd is geen geldig GNSS-signaal ontvangen.</td><td>Controleer de GNSS-ontvangst en eventuele obstakels rond de antenne.</td><td><span class="sev sev-med">Gemiddeld</span></td></tr>
+<tr><td>002D80</td><td>DSRC-communicatiefout</td><td>De voertuigeenheid kan niet correct communiceren met de DSRC-VU-module.</td><td>Controleer de DSRC-VU-eenheid, bekabeling en CAN-parameters.</td><td><span class="sev sev-med">Gemiddeld</span></td></tr>
+<tr><td>002E80</td><td>GNSS-anomalie</td><td>GNSS heeft een aanval gedetecteerd of de authenticatie van het bericht is mislukt (OSNMA).</td><td>Controleer op manipulatie. Start opnieuw op en controleer; bij herhaling vervangen.</td><td><span class="sev sev-crit">Kritiek</span></td></tr>
+<tr><td>00FD0B</td><td>CAN-bus uitgeschakeld, TCO</td><td>De A-connector (TCO-CAN) bevindt zich in de toestand "Bus Off".</td><td>Controleer de A-connector en bekabeling, de CAN-instellingen en de afsluiting (60 Ω).</td><td><span class="sev sev-high">Hoog</span></td></tr>
+</tbody>
+</table>
+</div>
+<h3>Algemene voorvallen &amp; inbreuk op de beveiliging (SE5000-8.1)</h3>
+<div class="code-table-wrap">
+<table class="code-table">
+<thead><tr><th style="width:24%;">Melding</th><th style="width:34%;">Oorzaak</th><th style="width:30%;">Wat u moet doen</th><th style="width:12%;">Ernst</th></tr></thead>
+<tbody>
+<tr><td>Kaartconflict</td><td>Er is een ongeldige kaartcombinatie gedetecteerd (bijvoorbeeld bedrijfskaart + controlekaart).</td><td>Neem de betreffende kaart uit.</td><td><span class="sev sev-med">Gemiddeld</span></td></tr>
+<tr><td>Rijden zonder passende kaart</td><td>Rijden zonder geldige kaart of met een ongeldige kaartcombinatie.</td><td>Stop, plaats een geldige kaart en verwijder de onjuiste kaart.</td><td><span class="sev sev-crit">Kritiek</span></td></tr>
+<tr><td>Te hoge snelheid</td><td>De snelheidslimiet is ten minste 60 seconden overschreden.</td><td>Houd u aan de toegestane snelheidslimiet voor het voertuig.</td><td><span class="sev sev-high">Hoog</span></td></tr>
+<tr><td>Onderbreking van de voeding (VU/MS)</td><td>De voeding van de tachograaf of sensor is langer dan 200 ms onderbroken.</td><td>Controleer de voeding van het voertuig en de bedrading.</td><td><span class="sev sev-med">Gemiddeld</span></td></tr>
+<tr><td>Fout in bewegingsgegevens (CNTR / No CNTR / Event)</td><td>De sensor meldt snelheid zonder pulsen, de teller wijkt af of er treedt een handtekeningmismatch op.</td><td>Controleer de sensor en bedrading en op manipulatie; kalibreer opnieuw indien nodig.</td><td><span class="sev sev-crit">Kritiek</span></td></tr>
+<tr><td>Authenticatiefout van de bewegingssensor</td><td>Een authenticatiepoging van de bewegingssensor is mislukt.</td><td>Controleer de sensor en bedrading; koppel opnieuw en kalibreer opnieuw.</td><td><span class="sev sev-crit">Kritiek</span></td></tr>
+<tr><td>Ongeoorloofde wijziging van de bewegingssensor</td><td>De sensor is sinds de laatste koppeling vervangen.</td><td>Controleer op manipulatie; repareer en kalibreer opnieuw.</td><td><span class="sev sev-crit">Kritiek</span></td></tr>
+<tr><td>Fout in de integriteit van opgeslagen gegevens</td><td>Gegevens in het geheugen voor 365 dagen zijn beschadigd.</td><td>Neem de tachograaf buiten gebruik en vervang deze.</td><td><span class="sev sev-crit">Kritiek</span></td></tr>
+<tr><td>Sabotage van hardware</td><td>De kaart is met geweld verwijderd.</td><td>Controleer de kaartlezer. Neem de tachograaf buiten gebruik en vervang deze.</td><td><span class="sev sev-crit">Kritiek</span></td></tr>
+<tr><td>Schending van de beveiliging</td><td>Er is manipulatie van de hardware gedetecteerd.</td><td>Neem de tachograaf buiten gebruik en vervang deze.</td><td><span class="sev sev-crit">Kritiek</span></td></tr>
+</tbody>
+</table>
+</div>
+<p style="font-size:14px;color:var(--text2);margin-bottom:18px;"><strong>Bron:</strong> Stoneridge Electronics AB, SE5000-8.1 Smart 2 Control Manual, document 9000-103766P_0109, blz. 32–37.</p>
+<p style="font-size:14px;color:var(--text2);margin-top:18px;"><strong>Bron:</strong> Alle bovenstaande Stoneridge-meldingen zijn overgenomen uit de SE5000 Exakt Duo² (Rev 7.6) Driver &amp; Company Manual, gepubliceerd door Stoneridge Electronics AB. De volledige tabel omvat alle meldingen die een bestuurder kan zien; meldingen die specifiek zijn voor de werkplaatsmodus (kalibratie) worden hier niet weergegeven. De SE5000-8.1 slimme tachograaf 2 gebruikt dezelfde structuur van de berichtenfamilie van bijlage I C, met kleine aanpassingen in de formulering.</p>
+</div>
+</details>
+<!-- ===== ACTIA SmarTach ===== -->
+<details class="vendor" id="actia">
+<summary>
+<span class="vendor-meta">Actia · standaard voor Frankrijk en Zuid-Europa</span>
+    Actia SmarTach (Gen1 &amp; Gen2)
+  </summary>
+<div class="vendor-body">
+<p>De SmarTach van Actia is de meest voorkomende digitale tachograaf in vrachtwagens die in Frankrijk zijn geregistreerd en wordt ook vaak ingebouwd in Spanje, Italië en Portugal. De onderstaande meldingen zijn overgenomen uit de <strong>Actia SmarTach Driver Manual (2021, ref. c1c)</strong>. Actia gebruikt een pictogram op het scherm met korte tekst; de formulering is in overeenstemming met de terminologie van bijlage I C.</p>
+<div class="code-table-wrap">
+<table class="code-table">
+<thead>
+<tr>
+<th style="width: 26%;">Melding</th>
+<th style="width: 36%;">Betekenis</th>
+<th style="width: 26%;">Wat u moet doen</th>
+<th style="width: 12%;">Ernst</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Rijden zonder kaart</td>
+<td>Voertuig rijdt met een ongeldige kaart in sleuf 1 — voorval volgens bijlage I C geregistreerd.</td>
+<td>Plaats een geldige bestuurderskaart. Maak een afdruk en noteer de periode.</td>
+<td><span class="sev sev-high">Hoog</span></td>
+</tr>
+<tr>
+<td>Invoeren tijdens het rijden</td>
+<td>De kaart is geplaatst nadat de rit al was begonnen.</td>
+<td>Bevestig — voorval geregistreerd op de kaart.</td>
+<td><span class="sev sev-med">Gemiddeld</span></td>
+</tr>
+<tr>
+<td>Kaart niet correct afgesloten</td>
+<td>De vorige sessie is niet correct beëindigd.</td>
+<td>Bevestig; noteer dit voor de registraties van de wagenparkbeheerder.</td>
+<td><span class="sev sev-med">Gemiddeld</span></td>
+</tr>
+<tr>
+<td>Kaart ongeldig/verlopen</td>
+<td>De bestuurderskaart is verlopen, nog niet geactiveerd of de authenticatie is mislukt.</td>
+<td>Vernieuw de kaart bij de bevoegde instantie van uw lidstaat.</td>
+<td><span class="sev sev-med">Gemiddeld</span></td>
+</tr>
+<tr>
+<td>Snelheidslimiet overschreden</td>
+<td>De ingestelde snelheidslimiet is langer dan 60 seconden overschreden.</td>
+<td>Verlaag uw snelheid; het voorval is zichtbaar bij het uitlezen.</td>
+<td><span class="sev sev-high">Hoog</span></td>
+</tr>
+<tr>
+<td>Bewegingsconflict</td>
+<td>Afwijking tussen de bewegingssensor en het GNSS-/kilometertellersignaal.</td>
+<td>Werkplaats — mogelijke manipulatie of schade aan de bedrading.</td>
+<td><span class="sev sev-crit">Kritiek</span></td>
+</tr>
+<tr>
+<td>onderbreking van de voeding</td>
+<td>De voedingsspanning is weggevallen of onderbroken.</td>
+<td>Bevestig. Controleer de voeding als dit opnieuw voorkomt.</td>
+<td><span class="sev sev-med">Gemiddeld</span></td>
+</tr>
+<tr>
+<td>inbreuk op de beveiliging</td>
+<td>De behuizing van de voertuigeenheid is geopend of de gegevensintegriteit is geschonden.</td>
+<td>Verplicht bezoek aan een werkplaats.</td>
+<td><span class="sev sev-crit">Kritiek</span></td>
+</tr>
+<tr>
+<td>storing van de bewegingssensor</td>
+<td>De bewegingssensor is niet geslaagd voor de zelftest.</td>
+<td>Vervanging door de werkplaats.</td>
+<td><span class="sev sev-crit">Kritiek</span></td>
+</tr>
+<tr>
+<td>printerfout</td>
+<td>De printer kan een afdruktaak niet voltooien.</td>
+<td>Controleer het papier / laat de printer afkoelen / vervang het mechanisme als de storing aanhoudt.</td>
+<td><span class="sev sev-med">Gemiddeld</span></td>
+</tr>
+<tr>
+<td>GNSS-gegevens ontbreken</td>
+<td>Er zijn gedurende 3 uur cumulatieve rijtijd geen positiegegevens beschikbaar.</td>
+<td>Bevestig. Controleer de antenne; zorg ervoor dat er geen metalen obstakel is.</td>
+<td><span class="sev sev-med">Gemiddeld</span></td>
+</tr>
+<tr>
+<td>UTC-tijd komt niet overeen</td>
+<td>Het verschil tussen de interne klok en de GNSS-tijd bedraagt meer dan 1 minuut.</td>
+<td>De werkplaats zal de tijd opnieuw synchroniseren.</td>
+<td><span class="sev sev-med">Gemiddeld</span></td>
+</tr>
+<tr>
+<td>interne storing</td>
+<td>Algemene storing van de voertuigeenheid — geheugen, RTC, softwarewaakhond.</td>
+<td>Ga zo spoedig mogelijk naar een werkplaats.</td>
+<td><span class="sev sev-crit">Kritiek</span></td>
+</tr>
+<tr>
+<td>Conflict tussen kaarten</td>
+<td>Incompatibele kaartcombinatie in sleuf 1 + 2.</td>
+<td>Verwijder de conflicterende kaart.</td>
+<td><span class="sev sev-med">Gemiddeld</span></td>
+</tr>
+<tr>
+<td>Rijden &gt; 4 u 30</td>
+<td>De ononderbroken rijtijd heeft 4 u 30 min overschreden zonder onderbreking (KITAS-bewegingssensor).</td>
+<td>Stop onmiddellijk en neem de verplichte onderbreking van 45 minuten.</td>
+<td><span class="sev sev-high">Hoog</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p style="font-size:14px;color:var(--text2);margin-top:14px;"><em>De gebruikersmeldingen van Actia zijn bewust beknopt; gedetailleerde numerieke DTC's zijn alleen toegankelijk via de CITO / SmarTach Tester van een werkplaats.</em></p>
+</div>
+</details>
+<!-- ===== EFAS-4 ===== -->
+<details class="vendor" id="efas">
+<summary>
+<span class="vendor-meta">Intellic / Schneider · gebruikelijk bij Duitse en Poolse wagenparken</span>
+    EFAS-4 / EFAS-4.10
+  </summary>
+<div class="vendor-body">
+<p>De EFAS-4 (oorspronkelijk Intellic, nu Schneider Electric) is ingebouwd in veel in Duitsland gebouwde trekkers (MAN, DAF in sommige configuraties) en in een aanzienlijk deel van de in Polen geregistreerde zware bedrijfsvoertuigen. De onderstaande meldingen zijn afkomstig uit de <strong>EFAS-4 Driver Manual, Edition 06.2022</strong>. EFAS gebruikt codes van twee letters op het scherm, plus een pictogram.</p>
+<div class="code-table-wrap">
+<table class="code-table">
+<thead>
+<tr>
+<th style="width: 14%;">Code</th>
+<th style="width: 24%;">Melding</th>
+<th style="width: 36%;">Betekenis</th>
+<th style="width: 14%;">Maatregel</th>
+<th style="width: 12%;">Ernst</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>E01</td><td>Geen kaart</td><td>Het voertuig heeft gereden zonder geldige bestuurderskaart.</td><td>Plaats de kaart; maak een afdruk en &amp; noteer dit.</td><td><span class="sev sev-high">Hoog</span></td></tr>
+<tr><td>E02</td><td>Kaart geplaatst</td><td>De kaart is geplaatst nadat het voertuig was gaan rijden.</td><td>Bevestig.</td><td><span class="sev sev-med">Gemiddeld</span></td></tr>
+<tr><td>E03</td><td>Laatste sessie</td><td>De vorige kaartsessie is niet afgesloten.</td><td>Bevestig; noteer dit voor de wagenparkbeheerder.</td><td><span class="sev sev-med">Gemiddeld</span></td></tr>
+<tr><td>E04</td><td>Snelheid overschreden</td><td>Snelheidslimiet overschreden &gt; 1 min.</td><td>Verlaag de snelheid.</td><td><span class="sev sev-high">Hoog</span></td></tr>
+<tr><td>E05</td><td>onderbreking van de voeding</td><td>De voedingsspanning is te laag of onderbroken.</td><td>Controleer de voeding als dit opnieuw voorkomt.</td><td><span class="sev sev-med">Gemiddeld</span></td></tr>
+<tr><td>E06</td><td>Bewegingsgegevens</td><td>Inconsistente pulsen van de bewegingssensor.</td><td>Werkplaats.</td><td><span class="sev sev-crit">Kritiek</span></td></tr>
+<tr><td>E07</td><td>Bewegingsconflict</td><td>De sensor komt niet overeen met de GNSS-gegevens / kilometerteller.</td><td>Werkplaats — controle op manipulatie.</td><td><span class="sev sev-crit">Kritiek</span></td></tr>
+<tr><td>E08</td><td>Kaartconflict</td><td>Ongeldige combinatie van kaarten.</td><td>Verwijder de conflicterende kaart.</td><td><span class="sev sev-med">Gemiddeld</span></td></tr>
+<tr><td>E09</td><td>Tijdsoverlap</td><td>Negatieve UTC-afwijking ten opzichte van de laatste voertuigeenheid.</td><td>De werkplaats moet dit corrigeren.</td><td><span class="sev sev-med">Gemiddeld</span></td></tr>
+<tr><td>E10</td><td>inbreuk op de beveiliging</td><td>Manipulatie van de behuizing of fout in de gegevensintegriteit.</td><td>Verplicht bezoek aan een werkplaats.</td><td><span class="sev sev-crit">Kritiek</span></td></tr>
+<tr><td>F01</td><td>interne storing</td><td>Algemene hardware-/softwarestoring van de voertuigeenheid.</td><td>Ga zo spoedig mogelijk naar een werkplaats.</td><td><span class="sev sev-crit">Kritiek</span></td></tr>
+<tr><td>F02</td><td>Kaartmechanisme</td><td>Fout in het kaartvergrendelingsmechanisme.</td><td>Werkplaats.</td><td><span class="sev sev-high">Hoog</span></td></tr>
+<tr><td>F03</td><td>Tijdfout</td><td>De real-timeklok geeft een onwaarschijnlijke tijd aan.</td><td>Werkplaats — nieuwe kaarten worden geweigerd.</td><td><span class="sev sev-crit">Kritiek</span></td></tr>
+<tr><td>F04</td><td>Printer</td><td>Storing van het printermechanisme.</td><td>Vervang het papier of ga naar een werkplaats.</td><td><span class="sev sev-med">Gemiddeld</span></td></tr>
+<tr><td>F05</td><td>Uitlezen</td><td>Fout tijdens het uitlezen van gegevens.</td><td>Probeer het opnieuw; controleer de kabel.</td><td><span class="sev sev-med">Gemiddeld</span></td></tr>
+<tr><td>F06</td><td>Sensorstoring</td><td>De bewegingssensor is niet geslaagd voor de zelftest.</td><td>De bewegingssensor moet in een werkplaats worden vervangen.</td><td><span class="sev sev-crit">Kritiek</span></td></tr>
+<tr><td>F07</td><td>GNSS</td><td>Storing van de interne GNSS-ontvanger of antenne.</td><td>Laat dit in een werkplaats controleren.</td><td><span class="sev sev-high">Hoog</span></td></tr>
+<tr><td>F08</td><td>DSRC</td><td>Storing van de DSRC-module voor controle op afstand.</td><td>De werkplaats zal de antenne en CAN controleren.</td><td><span class="sev sev-med">Gemiddeld</span></td></tr>
+</tbody>
+</table>
+</div>
+<h3>EFAS-4.10 / 4.11 — hexadecimale DTC's (ISO 16844-7), top 12</h3>
+<p style="font-size:14px;color:var(--text2);margin-bottom:12px;">EFAS-eenheden geven drie codetypen weer: <strong>EFT</strong> (type voorval/storing volgens ISO), <strong>DTC</strong> (5-byte hexadecimale code volgens ISO 16844-7) en een fabrikantspecifieke <strong>Service ID</strong>. De belangrijkste DTC's hieronder zijn overgenomen uit de <strong>Bosch Intellic EFAS-4.10 Workshop Manual, Table 18</strong> (DTC's en bijbehorende Service-ID's).</p>
+<div class="code-table-wrap">
+<table class="code-table">
+<thead><tr><th style="width:18%;">DTC</th><th style="width:42%;">Betekenis</th><th style="width:28%;">Wat u moet doen</th><th style="width:12%;">Ernst</th></tr></thead>
+<tbody>
+<tr><td>80 00 002007</td><td>Voedingsspanning van de bewegingssensor boven het maximum</td><td>Controleer de voeding en bedrading van de sensor.</td><td><span class="sev sev-high">Hoog</span></td></tr>
+<tr><td>80 00 002003</td><td>Voedingsspanning van de bewegingssensor onder het minimum</td><td>Controleer de voeding en bedrading van de sensor.</td><td><span class="sev sev-high">Hoog</span></td></tr>
+<tr><td>80 00 002180</td><td>Geen realtimesignaal van de bewegingssensor (pin B3 onderbroken)</td><td>Controleer pin B3 en de voeding van de sensor.</td><td><span class="sev sev-crit">Kritiek</span></td></tr>
+<tr><td>80 00 002280</td><td>Defect real-timesignaal van de sensor (pin B3 of IMS-fout)</td><td>Controleer pin B3 en de controlesom van de sensor.</td><td><span class="sev sev-crit">Kritiek</span></td></tr>
+<tr><td>80 00 002452</td><td>Fout in de gegevensintegriteit van de afstandssensor</td><td>Een erkende werkplaats moet de sensor controleren.</td><td><span class="sev sev-high">Hoog</span></td></tr>
+<tr><td>80 00 002508</td><td>Storing van de bewegingssensor</td><td>Erkende werkplaats — sensor vervangen.</td><td><span class="sev sev-crit">Kritiek</span></td></tr>
+<tr><td>40 00 000200</td><td>Kaartstoring, sleuf 1</td><td>Reinig de contacten en plaats de kaart opnieuw; plaats bij herhaling een nieuwe kaart.</td><td><span class="sev sev-high">Hoog</span></td></tr>
+<tr><td>40 00 000300</td><td>Kaartstoring, sleuf 2</td><td>Reinig de contacten en plaats de kaart opnieuw.</td><td><span class="sev sev-high">Hoog</span></td></tr>
+<tr><td>80 00 000660</td><td>Printerpapier op</td><td>Plaats een nieuwe papierrol.</td><td><span class="sev sev-low">Laag</span></td></tr>
+<tr><td>40 00 000900</td><td>Pulsen van de bewegingssensor terwijl het contact is uitgeschakeld</td><td>Controleer op trillingen en controleer de sensor en bedrading.</td><td><span class="sev sev-high">Hoog</span></td></tr>
+<tr><td>40 00 000C31</td><td>Storing van het interne geheugen</td><td>Erkende werkplaats; vervangen als reparatie niet mogelijk is.</td><td><span class="sev sev-crit">Kritiek</span></td></tr>
+<tr><td>80 00 000D40</td><td>Kalibratiegegevens onjuist of onvolledig</td><td>Laat de tachograaf opnieuw kalibreren bij een erkende werkplaats.</td><td><span class="sev sev-crit">Kritiek</span></td></tr>
+</tbody>
+</table>
+</div>
+<p style="font-size:14px;color:var(--text2);margin-top:14px;"><em>De numerieke codes van EFAS-4 (E01–E10, F01–F08) zijn de interne mnemonics van de eenheid — het onderliggende voorval/de onderliggende storing uit bijlage IC is de juridisch relevante identificatie en wordt op dezelfde wijze geregistreerd als op elke andere eenheid.</em></p>
+</div>
+</details>
+</div><!-- /.vendor-stack -->
+<!-- ===== TAGRA CTA Box ===== -->
+<div class="cta-box">
+<h3>TAGRA decodeert al deze meldingen automatisch.</h3>
+<p>Wanneer u een bestuurderskaart of voertuigeenheid uitleest in TAGRA, wordt elk voorval en elke storing gekoppeld aan de definitie uit bijlage IC, met een duidelijke uitleg in het Engels. Probeer de volledige software 30 dagen gratis — geen kaart vereist.</p>
+<a class="cta-btn" href="/nl/voor-chauffeurs/">Probeer TAGRA Trucker 30 dagen gratis →</a>
+</div>
+<!-- ===================================================================== -->
+<!-- SECTION 4: TOP 10 COMMON MISTAKES IN PRACTICE                          -->
+<!-- ===================================================================== --></div></section><section class="band"><div class="container art-body"><div class="eyebrow anim-up">Meest gebruikelijk in de praktijk</div><h2 class="h2-grad anim-up" id="common-mistakes">De 10 meest voorkomende tachograafmeldingen in de praktijk</h2>
+<p>Van de meer dan 200 bovenstaande meldingen zijn er tien verantwoordelijk voor het overgrote deel van wat echte bestuurders dagelijks zien — en bijna alle zijn <strong>operationeel</strong> en niet catastrofaal. Als u weet hoe u op deze tien moet reageren, verlopen de meeste diensten soepel en zijn de meeste handhavingsambtenaren tevreden.</p>
+<div class="code-table-wrap">
+<table class="code-table">
+<thead>
+<tr>
+<th style="width: 6%;">#</th>
+<th style="width: 26%;">Melding</th>
+<th style="width: 42%;">Waarom het gebeurt</th>
+<th style="width: 26%;">Eerste reactie</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>Communicatiefout kaart 1</strong></td>
+<td>Vuile contacten op de bestuurderskaart of in de kaartlade. Kaart iets uit de as geplaatst. Komt in de winter vaak voor wanneer kaarten in koude zakken zitten en er condens op de chipcontacten ontstaat.</td>
+<td>Uitwerpen. Veeg de chip af met een droge doek (geen vloeistof). Plaats de kaart opnieuw. Probeer de reservesleuf als de fout blijft optreden.</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>Geen papier / printerlade open</strong></td>
+<td>De papierrol is op, of de printerlade is tijdens een afdrukopdracht geopend. Verkeerde papiersoort (alleen thermisch papier met aanduiding voor digitale tachografen wordt geaccepteerd).</td>
+<td>Plaats een nieuwe rol; de lade moet dichtklikken. Neem altijd een reserverol mee.</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>1 pauze! 04h15</strong></td>
+<td>De timer voor ononderbroken rijden nadert 4 u 30 min. De voorwaarschuwing is instelbaar (vaak 15 minuten van tevoren).</td>
+<td>Plan in de komende 15 minuten een pauze van 45 minuten (of splits deze op in 15 + 30).</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>Kaart ingebracht tijdens het rijden</strong></td>
+<td>De bestuurder vergat de kaart vóór vertrek te plaatsen en merkte dit pas tijdens het rijden op.</td>
+<td>Stop kort. Plaats de kaart opnieuw op de juiste manier. Het voorval wordt op de kaart geregistreerd, maar is geen storing.</td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>Laatste sessie niet afgesloten</strong></td>
+<td>De bestuurder trok de kaart te snel uit het vorige voertuig, of de vorige voertuigeenheid werd uitgeschakeld voordat de afsluitende registratie kon worden geschreven.</td>
+<td>Bevestig. Meld dit aan de wagenparkbeheerder — mogelijk moet de vorige voertuigeenheid naar een werkplaats.</td>
+</tr>
+<tr>
+<td>6</td>
+<td><strong>Onderbreking van de voeding</strong></td>
+<td>De accu is met startkabels gestart, er is een bedradingsfout of het voertuig heeft 's nachts met een lege accu stilgestaan.</td>
+<td>Bevestig. Laat bij herhaling het voedingscircuit controleren — herhaald voedingsverlies is verdacht voor handhavingsinstanties.</td>
+</tr>
+<tr>
+<td>7</td>
+<td><strong>GNSS ontbreekt / geen posit gegevens</strong></td>
+<td>Cumulatief 3 uur rijden zonder bruikbare GNSS-fix — typisch in tunnels, ondergrondse depots of bij een geblokkeerde antenne.</td>
+<td>Bevestig. Controleer de antenneroute en of er niets van metaal op het dashboard boven de antenne is geplaatst.</td>
+</tr>
+<tr>
+<td>8</td>
+<td><strong>Landinvoer vereist</strong></td>
+<td>Smart Tachograph 2 vraagt u telkens wanneer u een nieuwe dienst begint, het land te bevestigen (en bij Smart Tacho 2 de grensovergang).</td>
+<td>Gebruik het menu: <em>begin land</em> → Selecteer de code. Bij Smart Tacho 2 vraagt de eenheid ook om bevestiging wanneer GNSS een grens detecteert.</td>
+</tr>
+<tr>
+<td>9</td>
+<td><strong>Kalibratie over ?? dagen</strong></td>
+<td>De tweejaarlijkse periodieke controle nadert (de waarschuwing verschijnt doorgaans 28 dagen van tevoren).</td>
+<td>Plan onmiddellijk een afspraak bij de werkplaats — rijden met een tachograaf waarvan de kalibratie is verlopen, is een ernstige overtreding.</td>
+</tr>
+<tr>
+<td>10</td>
+<td><strong>1 download in days ??</strong></td>
+<td>De volgende verplichte uitlezing van de bestuurderskaart is verschuldigd (de waarschuwing verschijnt doorgaans 14 dagen van tevoren). Volgens de EU-regels moet de kaart ten minste elke 28 dagen worden uitgelezen.</td>
+<td>Geef de kaart aan de wagenparkbeheerder of lees deze zelf uit. Als u de termijn overschrijdt, blijven de gegevens bewaard, maar het kantoor kan u een sanctie opleggen.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- ===================================================================== -->
+<!-- SECTION 5: CRISIS WORKFLOW                                             -->
+<!-- ===================================================================== --></div></section><section class="band band--gray"><div class="container art-body"><div class="eyebrow anim-up">Wat u moet doen</div><h2 class="h2-grad anim-up" id="crisis-workflow">Procedure bij een kritieke fout: wat u moet doen wanneer er onderweg een storing verschijnt</h2>
+<p>Een daadwerkelijke <strong>x Storing</strong> melding — sensorstoring, bewegingsconflict, interne storing, inbreuk op de beveiliging, tijdfout — verschilt van een operationele notitie: de tachograaf kan uw activiteiten niet langer betrouwbaar registreren en u bent wettelijk verplicht handmatige registraties bij te houden en de eenheid door een <strong>erkende werkplaats te laten repareren zodra de omstandigheden dat toelaten</strong> — als het voertuig niet binnen één week nadat de storing is ontdekt naar de vestiging van de exploitant kan terugkeren, moet de reparatie onderweg worden uitgevoerd (artikel 37 van Verordening 165/2014). De volgende procedure in vijf stappen is de officiële procedure die in de handleiding van elke fabrikant wordt beschreven.</p>
+<ol class="crisis-steps">
+<li>
+<span class="num">1</span>
+<span>
+<strong>Bevestig de melding en rijd veilig verder.</strong>
+<span class="lbl">Druk op de <em>OK</em> knop om het knipperende display stil te zetten. De storing is nu in het massageheugen en op uw kaart geregistreerd — door deze te bevestigen wordt het voorval niet gewist. Blijf kalm en zoek een veilige plaats om te stoppen.</span>
+</span>
+</li>
+<li>
+<span class="num">2</span>
+<span>
+<strong>Maak een afdruk van de bestuurdersactiviteiten vanuit de voertuigeenheid.</strong>
+<span class="lbl">Menu: <em>afdruk → chauffeur 1 → activiteiten → dag 24 u</em>. Op de afdruk staan de storing en een tijdstempel. Maak elke volgende dag een nieuwe afdruk totdat de tachograaf is gerepareerd.</span>
+</span>
+</li>
+<li>
+<span class="num">3</span>
+<span>
+<strong>Begin met handmatige registraties op de achterzijde van de afdruk.</strong>
+<span class="lbl">Schrijf voor elke periode waarin de tachograaf niet langer correct kan registreren, met de hand: <em>begintijd, eindtijd, activiteit (rijden / ander werk / beschikbaarheid / rust), locatie, kenteken van het voertuig</em>. Dit blad is uw wettelijke bewijs voor elke wegcontrole totdat de eenheid is gerepareerd.</span>
+</span>
+</li>
+<li>
+<span class="num">4</span>
+<span>
+<strong>Informeer uw wagenparkbeheerder onmiddellijk.</strong>
+<span class="lbl">Per telefoon, bericht of e-mail — wat uw bedrijf ook gebruikt. Het wagenpark moet de storing registreren, de afspraak bij de werkplaats plannen en bevestigen dat de rit met handmatige registraties kan worden voortgezet. Als de reparatie langer wordt uitgesteld dan de omstandigheden toestaan — of als het voertuig langer dan één week niet naar de basis terugkeert — stelt u de exploitant bloot aan aanzienlijke boetes.</span>
+</span>
+</li>
+<li>
+<span class="num">5</span>
+<span>
+<strong>Plan zo snel mogelijk een afspraak bij de erkende werkplaats.</strong>
+<span class="lbl">Alleen een <strong>erkende tachograafwerkplaats</strong> (met een werkplaatskaart en de juiste diagnoseapparatuur) mag de voertuigeenheid repareren, opnieuw kalibreren of vervangen. Na de reparatie voert de werkplaats een kalibratie uit en verstrekt zij een installatieplaat / kalibratieregistratie die bij het voertuig moet worden bewaard.</span>
+</span>
+</li>
+</ol>
+<p style="margin-top:24px;"><strong>Eén belangrijke uitzondering:</strong> als de storing een <em>inbreuk op de beveiliging</em> of een <em>sensorstoring met bewegingsconflict</em>is, kan de eenheid de kaart automatisch uitwerpen en verdere activiteiten helemaal niet meer registreren. In dat geval moet de volledige dienst met de hand worden geregistreerd en moet u onmiddellijk naar de werkplaats in plaats van zodra de omstandigheden dat toelaten. Doorrijden zonder handmatige registraties is in alle EU- en EER-lidstaten een ernstige overtreding.</p>
+<div class="cta-box" style="margin-top:36px;">
+<h3>Uw code is slechts het halve verhaal</h3>
+<p>Een storing die op het display wordt weergegeven, laat vrijwel altijd een spoor achter op de bestuurderskaart — een ontbrekende registratie, een onderbroken dienst of een overtreding waarnaar u tijdens een wegcontrole kunt worden gevraagd. TAGRA Trucker leest uw kaart uit en toont u precies wat er is geregistreerd. USB-kaartlezer inbegrepen, 49 € exclusief btw.</p>
+<a class="cta-btn" href="/nl/gratis-proefversie/?audience=driver&amp;src=symbols">Bekijk wat er op uw kaart staat →</a>
+</div>
+<!-- ===================================================================== -->
+<!-- SECTION 6: OFFICIAL SOURCES                                            -->
+<!-- ===================================================================== --></div></section><section class="band band--blue"><div class="container art-body">
+<div class="eyebrow anim-up">Waar u actief bent</div>
+<h2 class="h2-grad anim-up">Dezelfde foutcode, andere gevolgen</h2>
+<p>De bovenstaande codes zijn op elk voertuig identiek — ze komen uit de tachograaf, niet uit het nationale recht. Wat over de grenzen heen verandert, is <strong>wie de registratie controleert, hoe ver terug wordt gekeken en wat een hiaat u kost</strong>.</p>
+<div class="twocol">
+<div class="info-card anim-up"><h3>Europese Unie &amp; EEA</h3><p>De handhaving ligt bij nationale inspectiediensten op grond van Verordening (EU) 165/2014 en Verordening (EG) 561/2006. Bestuurders moeten bij een wegcontrole de huidige dag plus de voorgaande <strong>28 dagen</strong> kunnen overleggen. Sancties worden nationaal vastgesteld — in de ernstigste gevallen, zoals manipulatie, kan ter plaatse een waarborgsom van maximaal <strong>€8,000</strong>worden gevraagd. Kaarten worden elke 28 dagen uitgelezen, voertuigeenheden elke 90 dagen.</p></div>
+<div class="info-card anim-up"><h3>Verenigd Koninkrijk</h3><p>In Groot-Brittannië geldt geassimileerde wetgeving — dezelfde kernregels, gehandhaafd door de <strong>DVSA</strong>, die jaarlijks meer dan 20.000 fixed penalty notices oplegt. De oplopende vaste boetes variëren van ongeveer <strong>£50 tot meer dan £300</strong>. Bij internationale ritten tussen het VK en de EU moeten chauffeurs <strong>56 dagen</strong> aan gegevens kunnen overleggen, niet 28. Het grotere risico is de <strong>vergunning voor de vervoerder</strong>: herhaalde hiaten komen uiteindelijk voor de Traffic Commissioner. <a href="/articles/tachograph-rules-uk-dvsa-operator-licence/">Volledige handleiding voor vervoerders in het VK → <span class="en-badge">(in het Engels)</span></a></p></div>
+</div>
+<div class="callout callout--blue anim-up"><p><strong>Waarom de code belangrijker is dan het lijkt.</strong> Een storing zoals <em>bewegingsconflict 80</em> of een <em>interne GNSS-storing 82</em> is niet alleen hinderlijk voor de bestuurder — er ontstaat een hiaat of anomalie in de registratie die u wettelijk moet kunnen overleggen, ongeacht of het om 28 dagen in de EU of 56 dagen tijdens een rit tussen het VK en de EU gaat. Het goedkoopste moment om dit te ontdekken is bij het uitlezen van de gegevens, niet wanneer een controleur erom vraagt.</p>
+<p>TAGRA Trucker leest uw bestuurderskaart uit, ongeacht het land, markeert hiaten en overtredingen en bewaart het archief dat u op verzoek mogelijk moet overleggen. <a href="/nl/voor-chauffeurs/">Probeer TAGRA Trucker 30 dagen gratis</a> — Windows, zonder kaartgegevens.</p></div>
+</div></section><section class="band"><div class="container art-body"><div class="eyebrow anim-up">Officiële bronnen</div><h2 class="h2-grad anim-up" id="sources">Officiële bronnen &amp; handleidingen van fabrikanten</h2>
+<p>Elke bovenstaande melding, drempelwaarde en procedure is overgenomen uit een van de volgende openbaar beschikbare officiële documenten. Waar de Engelse formulering van de fabrikant afwijkt van het gangbare taalgebruik onder bestuurders, hebben we de exacte tekst van de fabrikant behouden en daarnaast een uitleg in gewone taal toegevoegd.</p>
+<ul class="sources-list">
+<li>
+<strong>EU-verordening — rijtijden en AETR</strong>
+    Verordening (EG) nr. 561/2006 — rijtijden, pauzes en rusttijden. Richtlijn 2002/15/EG — arbeidstijdenrichtlijn voor mobiele werknemers in het wegvervoer. AETR — Europese Overeenkomst nopens de arbeidsvoorwaarden voor de bemanningen van voertuigen in het internationale wegvervoer.
+    <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32006R0561" rel="noopener" target="_blank">EUR-Lex: Verordening 561/2006 (EN)</a>
+</li>
+<li>
+<strong>EU-verordening — technische specificatie van de tachograaf</strong>
+    Verordening (EU) nr. 165/2014 — rechtsgrondslag. Uitvoeringsverordening (EU) 2016/799 van de Commissie, bijlage IC — volledige technische specificatie van de slimme tachograaf (voorvallen, storingen, gegevensstructuren).
+    <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016R0799" rel="noopener" target="_blank">EUR-Lex: 2016/799 / bijlage IC (EN)</a>
+    ·
+    <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014R0165" rel="noopener" target="_blank">EUR-Lex: 165/2014 (EN)</a>
+</li>
+<li>
+<strong>VDO DTCO 4.1 — Continental Automotive Technologies</strong>
+    Instructiehandleiding voor bestuurders, editie 3 / 2024-08, BA00.1381.41 100 102. Behandelt DTCO 4.1, 4.1a en 4.1b.
+    <a href="https://www.fleet.vdo.com/media/sqrd5xnt/ba_dtco_41a_en_web_2024-08-27.pdf" rel="noopener" target="_blank">PDF-download (Engels) — fleet.vdo.com</a>
+</li>
+<li>
+<strong>VDO DTCO 4.0 — Continental Automotive Technologies</strong>
+    Eerdere Smart Tacho 1-eenheid, nog steeds veel in gebruik. Handleiding voor bestuurders, editie 2 / 2022.
+    <a href="https://www.fleet.vdo.com/media/lvnkmvhq/ba_dtco_40e_web_gb.pdf" rel="noopener" target="_blank">PDF-download (Engels) — fleet.vdo.com</a>
+</li>
+<li>
+<strong>Stoneridge SE5000 Exakt Duo² — Stoneridge Electronics</strong>
+    Bestuurder &amp; Bedrijfshandleiding, revisie 8.x. Referentie-eenheid voor de Britse en Scandinavische markten.
+    <a href="https://www.stoneridgeelectronics.com/tachographs/" rel="noopener" target="_blank">Handleidingen — stoneridgeelectronics.com</a>
+</li>
+<li>
+<strong>Actia SmarTach — Actia Group</strong>
+    Handleidingen voor bestuurders van SmarTach Gen1 en Gen2; veel gebruikt in wagenparken in Frankrijk en Zuid-Europa.
+    <a href="https://www.actia.com/en/solutions/tachograph/" rel="noopener" target="_blank">Productpagina — actia.com</a>
+</li>
+<li>
+<strong>Europese Commissie — DG MOVE</strong>
+    Gezaghebbende achtergrondinformatie over de invoering van de slimme tachograaf, wijzigingen en handhavingsrichtsnoeren.
+    <a href="https://transport.ec.europa.eu/transport-modes/road/social-provisions/smart-tachograph_en" rel="noopener" target="_blank">transport.ec.europa.eu — slimme tachograaf</a>
+</li>
+</ul>
+<!-- ===================================================================== -->
+<!-- RELATED ARTICLES                                                       -->
+<!-- ===================================================================== --></div></section><section class="band band--blue"><div class="container art-body"><div class="eyebrow anim-up">Gerelateerde handleidingen</div><h2 class="h2-grad anim-up" id="related">Gerelateerde handleidingen voor chauffeurs</h2>
+<div class="related-grid">
+<a class="related-card anim-up" href="/nl/artikelen/tachograafgegevens-uitlezen-analyseren-archiveren/">
+<span class="r-eyebrow">Naleving · 12 min lezen</span>
+<span class="r-title">Tachograafgegevens uitlezen, evalueren en archiveren</span>
+<span class="r-text">Volledige handleiding voor de 28-daagse cyclus voor het uitlezen van bestuurderskaarten en de 90-daagse cyclus voor voertuigeenheden, archiveringsregels en wat uw wagenpark moet bewaren.</span>
+<span class="r-chip">Lees de handleiding voor het uitlezen →</span>
+</a>
+<a class="related-card anim-up" href="/nl/artikelen/wie-moet-tachograafgegevens-analyseren-2026/">
+<span class="r-eyebrow">Verordening · 8 min lezen</span>
+<span class="r-title">Wie moet tachograafgegevens in 2026 evalueren</span>
+<span class="r-text">Verplichtingen van exploitanten op grond van Verordening 561/2006 en de arbeidstijdenrichtlijn — voor welke vervoerscategorieën gelden deze regels en wat moet u aan een inspecteur verstrekken?</span>
+<span class="r-chip">Lees de handleiding over verplichtingen →</span>
+</a>
+<a class="related-card anim-up" href="/nl/artikelen/tachograafplicht-bestelbus-juli-2026/">
+<span class="r-eyebrow">Nieuwe regels · 6 min lezen</span>
+<span class="r-title">Tachografen voor bestelwagens: de nieuwe verplichting vanaf juli 2026</span>
+<span class="r-text">Vanaf 1 juli 2026 moeten bestelwagens tussen 2,5 en 3,5 ton in het internationale vervoer zijn uitgerust met een slimme tachograaf. Checklist voor wagenparkbeheerders.</span>
+<span class="r-chip">Lees de handleiding voor bestelwagens →</span>
+</a>
+</div>
+<p style="margin-bottom:16px;">Rijdt u met uw eigen kaart en beheert u geen wagenpark? <a href="/nl/voor-chauffeurs/">TAGRA Trucker</a> is de versie voor één bestuurder — deze evalueert uw eigen kaartgegevens en signaleert overtredingen voordat een inspectie dat doet. USB-kaartlezer inbegrepen, 49 €.</p>
+<!-- ===== second TAGRA CTA Box ===== -->
+<div class="cta-box" style="margin-top:36px;">
+<h3>Uw code is slechts het halve verhaal</h3>
+<p>Een storing die op het display wordt weergegeven, laat vrijwel altijd een spoor achter op de bestuurderskaart — een ontbrekende registratie, een onderbroken dienst of een overtreding waarnaar u tijdens een wegcontrole kunt worden gevraagd. TAGRA Trucker leest uw kaart uit en toont u precies wat er is geregistreerd. USB-kaartlezer inbegrepen, 49 € exclusief btw.</p>
+<a class="cta-btn" href="/nl/gratis-proefversie/?audience=driver&amp;src=symbols">Bekijk wat er op uw kaart staat →</a>
+<p class="cta-note">Beheert u een wagenpark? <a href="/nl/gratis-proefversie/?audience=fleet&amp;src=symbols">Probeer de wagenparkversie →</a></p>
+</div>
+<!-- ===================================================================== -->
+<!-- FAQ                                                                    -->
+<!-- ===================================================================== --></div></section><section class="band band--gray"><div class="container art-body"><div class="eyebrow anim-up">Vragen & antwoorden</div><h2 class="h2-grad anim-up" id="faq">Veelgestelde vragen — foutcodes en waarschuwingssymbolen van tachografen</h2>
+<div class="faq-block">
+<details>
+<summary>Wat is het verschil tussen een „voorval” en een „storing” op een digitale tachograaf?</summary>
+<div class="faq-a">Een <strong>voorval</strong> is een voorval — rijden zonder kaart, de maximumsnelheid overschrijden, een kaart plaatsen tijdens het rijden of een tijdsoverlapping. De eenheid werkt correct; zij registreert iets wat de bestuurder heeft gedaan. Een <strong>storing</strong> is een hardware- of softwaredefect van de tachograaf zelf — sensorstoring, interne storing, tijdfout of printerstoring. Storingen leiden tot de reparatieverplichting van artikel 37 — zodra de omstandigheden dit toestaan, of onderweg als het voertuig niet binnen een week naar de basis kan terugkeren. Beide categorieën zijn gedefinieerd in bijlage IC bij Verordening (EU) 2016/799.</div>
+</details>
+<details>
+<summary>Ik zie „sensorstoring” op mijn VDO-display — kan ik blijven rijden?</summary>
+<div class="faq-a">Kort gezegd: ja — om een veilige stopplaats te bereiken. Vervolgens moet u (1) op OK drukken om de melding te bevestigen, (2) de activiteiten van die dag afdrukken, (3) alle verdere activiteiten handmatig op de achterzijde van die afdruk registreren, (4) uw wagenparkbeheerder informeren en (5) zo snel als de omstandigheden dit toestaan naar een erkende werkplaats gaan. Doorrijden zonder handmatige registraties terwijl u van een sensorstoring weet, is in elke EU-lidstaat een ernstige overtreding.</div>
+</details>
+<details>
+<summary>Wat betekent „GNSS-anomalie” op een slimme tachograaf 2?</summary>
+<div class="faq-a">Eenheden van de slimme tachograaf 2 (verplicht in voertuigen die na 21 augustus 2023 zijn geregistreerd, met retrofits die uiterlijk op 18 augustus 2025 vereist zijn) controleren het GNSS-signaal met behulp van de Galileo OSNMA-dienst op spoofing. Een <em>GNSS-anomalie</em> voorval betekent dat de eenheid óf een poging tot manipulatie van het GPS/Galileo-signaal heeft gedetecteerd óf dat de authenticatie van het signaal is mislukt. De eenheid registreert het voorval voor handhaving. Als dit zich bij een specifiek voertuig herhaalt, moeten de antenne en de directe bedrading op manipulatie worden gecontroleerd — mogelijk zijn ook diagnoses in een werkplaats nodig.</div>
+</details>
+<details>
+<summary>Wat is het verschil tussen „Andere werkzaamheden” en „Periode van beschikbaarheid”?</summary>
+<div class="faq-a"><strong>Andere werkzaamheden</strong> Andere werkzaamheden zijn betaalde werkzaamheden die geen rijwerk zijn: laden, lossen, tanken, papierwerk, passagiers helpen en voertuigcontroles. Deze tijd telt als arbeidstijd volgens de arbeidstijdenrichtlijn en <em>niet</em> als pauze. <strong>Periode van beschikbaarheid</strong> een periode van beschikbaarheid is wachttijd waarvan de bestuurder de duur vooraf kent — op een veerboot of trein, in een wachtrij voor een bekende afspraak of tijdens het begeleiden van een voertuig op een transporteur. Een periode van beschikbaarheid is geen arbeid, maar is ook <em>niet</em> geen pauze volgens de rij- en rusttijden; volgens de arbeidstijdenrichtlijn wordt deze tijd uitgesloten van de arbeidstijd wanneer de duur vooraf bekend is.</div>
+</details>
+<details>
+<summary>Kan een „Periode van beschikbaarheid” als pauze gelden volgens EG 561/2006?</summary>
+<div class="faq-a">Nee. Bijlage 1 bij Verordening 561/2006 vermeldt slechts één categorie die de klok voor 4,5 uur onafgebroken rijden opnieuw laat beginnen en meetelt voor de verplichte pauze van 45 minuten: de activiteit <em>pauze/rust</em> (bedsymbool). Bestuurders die „Beschikbaarheid” instellen terwijl zij denken dat zij pauze nemen, krijgen bij het uitlezen geen pauzetijd toegekend — en weginspecteurs leggen hiervoor regelmatig boetes op.</div>
+</details>
+<details>
+<summary>Wat moet ik doen als ik tijdens een pauze ben vergeten over te schakelen naar „Rust”?</summary>
+<div class="faq-a">Wanneer u uw kaart vervolgens in een voertuig plaatst, biedt de tachograaf een procedure voor <strong>handmatige invoer</strong> voor de periode sinds u uw kaart voor het laatst hebt verwijderd. Gebruik het menu om voor dat interval de juiste activiteit (Rust) in te stellen. Handmatige invoer krijgt een tijdstempel op de kaart en is zichtbaar voor handhavingsinstanties, maar wordt aanvaard als een legitieme correctie — anders dan een ontbrekende of onjuiste activiteit die nooit is opgegeven.</div>
+</details>
+<details>
+<summary>Hoe vaak moet ik mijn bestuurderskaart en de voertuigeenheid uitlezen?</summary>
+<div class="faq-a">Minstens elke <strong>28 dagen</strong> voor de bestuurderskaart en elke <strong>90 dagen</strong> voor de voertuigeenheid (artikel 33 van Verordening 165/2014, in samenhang met Verordening (EU) nr. 581/2010 van de Commissie). De uitgelezen gegevens moeten ten minste één jaar worden bewaard — en in veel lidstaten gedurende de volledige loopbaan van de bestuurder als onderdeel van ongevals- en verzekeringsdossiers.</div>
+</details>
+<details>
+<summary>Heeft een „kaartcommunicatiefout” invloed op mijn rijtijdregistraties?</summary>
+<div class="faq-a">Niet noodzakelijk. De meeste communicatiefouten worden eenvoudig veroorzaakt door vuile chipcontacten — de activiteit die vóór de fout is uitgevoerd, staat al in het geheugen van de kaart. Als de fout kort duurt en na reinigen en opnieuw plaatsen verdwijnt, gaat er geen periode verloren. Als de kaart helemaal niet meer kan worden gelezen, drukt de eenheid automatisch de laatste activiteit af en moet u vanaf dat moment alles handmatig registreren; de kaart moet worden vervangen.</div>
+</details>
+<details>
+<summary>Op het display staat „landinvoer vereist” — wat moet ik doen?</summary>
+<div class="faq-a">Slimme tachografen vereisen dat u het land opgeeft waar de dienst begint en eindigt. Bij een slimme tachograaf 2 vraagt de eenheid u ook om elke grensoverschrijding te bevestigen (de GNSS detecteert de overschrijding, waarna de bestuurder op OK drukt om deze te bevestigen). Gebruik het menu: <em>invoer → chauffeur 1 → beginland</em> (en <em>eindland</em> aan het einde van de dienst). Gemiste landinvoeren worden als voorvallen geregistreerd en zijn zichtbaar voor weginspecteurs.</div>
+</details>
+<details>
+<summary>Ondersteunt TAGRA alle vier de fabrikantspecifieke foutcodes die in deze handleiding worden weergegeven?</summary>
+<div class="faq-a">Ja. TAGRA leest de voorvallen en storingen uit bijlage IC rechtstreeks uit elk uitgelezen .DDD-bestand — het gegevensformaat is identiek, ongeacht de eenheid die het bestand heeft geschreven. Fabrikantspecifieke pop-upmeldingen worden gekoppeld aan het onderliggende voorval uit bijlage IC, zodat wagenparkbeheerders consistente, duidelijke uitleg zien, ongeacht of hun bestuurders een VDO-, Stoneridge-, Actia-, EFAS- of andere typegoedgekeurde slimme tachograaf gebruiken.</div>
+</details>
+<details>
+<summary>Wat vereist de reparatieregel van artikel 37 precies?</summary>
+<div class="faq-a">Artikel 37 van Verordening 165/2014 vereist dat, wanneer de tachograaf activiteiten door een storing niet correct kan registreren, de reparatie wordt uitgevoerd door een erkende installateur of werkplaats „zodra de omstandigheden dit toestaan”. Als het voertuig niet binnen <strong>één week</strong> na de ontdekking van de storing naar de vestiging van de exploitant kan terugkeren, moet de reparatie onderweg worden uitgevoerd. De bestuurder moet gedurende deze periode handmatige registraties bijhouden.</div>
+</details>
+<details>
+<summary>Kan ik blijven rijden wanneer het voorval „snelheidsovertreding” is geregistreerd?</summary>
+<div class="faq-a">Ja — een snelheidsovertreding is een voorval en geen storing. Het voertuig blijft correct registreren; alleen de snelheidslimiet is overschreden. Het voorval is zichtbaar bij het uitlezen en herhaalde registraties van snelheidsovertredingen tijdens dezelfde rit of op meerdere ritten vormen vaak aanleiding voor controles van vervoerders en wegcontroles.</div>
+</details>
+<details>
+<summary>Op mijn VDO-display staat een getal zoals 80, 82 of 98 — wat betekent dit?</summary>
+<div class="faq-a">Op DTCO 4.0 / 4.1 identificeert een tweecijferig getal naast het pictogram het voorval of de storing. Lage getallen (001–066) zijn codes uit het storingsgeheugen van de werkplaats; hoge getallen hebben betrekking op functies van de slimme tachograaf. De meest voorkomende zijn <strong>80 — bewegingsconflict van het voertuig</strong> (de bewegingssensor wijkt af van het GNSS-signaal; een ernstige melding — ga naar een erkende werkplaats), <strong>82 — interne GNSS-storing</strong> (de ontvanger kan tijdelijk geen positie bepalen; bevestig de melding en ga naar een werkplaats als de storing aanhoudt) en <strong>98 — ITS-/Bluetooth-storing</strong> (de interface voor gegevens op afstand; heeft geen invloed op de registratie, laat dit bij de volgende onderhoudsbeurt verhelpen). De volledige lijst van 34–98 staat hierboven in het VDO-gedeelte.</div>
+</details>
+<details>
+<summary>Wat betekent „bewegingsconflict” (code 80) en kan ik blijven rijden?</summary>
+<div class="faq-a">Code 80 is een <em>bewegingsconflict van het voertuig</em>: de tachograaf heeft een tegenstrijdigheid vastgesteld tussen de bewegingssensor en een onafhankelijke bron (GNSS). Een vaak onschuldige oorzaak is dat u tijdens het vervoer bent vergeten de veerboot-/treinmodus in te stellen. Als de melding tijdens normaal rijden verschijnt, kan dit wijzen op manipulatie of een bedradingsfout — bevestig de melding, houd handmatige registraties bij en laat de eenheid door een erkende werkplaats controleren.</div>
+</details>
+<details>
+<summary>Hoe zoek ik een numerieke of hexadecimale foutcode uit een werkplaatsuitlezing op?</summary>
+<div class="faq-a">Gebruik het zoekvak bovenaan het gedeelte met fabrikantspecifieke codes: voer het getal in (bijvoorbeeld <em>042</em>), een VDO-displaygetal (bijvoorbeeld <em>82</em>), een hexadecimale DTC van Stoneridge of EFAS (bijvoorbeeld <em>002E80</em>) of woorden uit de melding (bijvoorbeeld <em>sensorstoring</em>). Het relevante fabrikantenpaneel wordt automatisch geopend en toont alleen de overeenkomende rijen.</div>
+</details>
+<details>
+<summary>Kan TAGRA mij waarschuwen voor een tachograafstoring voordat deze optreedt?</summary>
+<div class="faq-a">Nee. TAGRA analyseert gegevens nadat u deze van de bestuurderskaart of voertuigeenheid hebt uitgelezen — het programma maakt geen realtimeverbinding met de tachograaf en kan storingen niet voorspellen. Wel laat het zien of een storing een spoor in uw geregistreerde gegevens heeft achtergelaten en of deze tot een overtreding heeft geleid.</div>
+</details>
+</div><!-- /.faq-block -->
+</article></div></section></main>
+<footer class="site-footer" role="contentinfo">
+<div class="footer-inner">
+<div>
+<div class="footer-logo"><img alt="TAGRA" height="20" src="/assets/img/logo-dark.svg?v=20260513zh" width="88" loading="lazy"/></div>
+<p class="footer-desc">Professionele software voor tachograafanalyse. Uitlezen van bestuurderskaarten, analyse van digitale tachografen, rij- en rusttijden van EU-bestuurders en de arbeidstijdenrichtlijn voor vrachtwagenbestuurders. Ontwikkeld door Truck Data Technology, s.r.o.</p>
+</div>
+<div class="footer-col">
+<h2 class="footer-col-title">Product</h2>
+<ul>
+<li><a href="/nl/voor-transportbedrijven/">Voor wagenparkbeheerders</a></li>
+<li><a href="/nl/voor-chauffeurs/">Voor beroepschauffeurs</a></li>
+<li><a href="/nl/handhaving/">Voor handhaving</a></li>
+<li><a href="/nl/hoe-het-werkt/">Hoe het werkt</a></li>
+<li><a href="/nl/voor-wie/">Voor wie</a></li>
+<li><a href="/nl/veelgestelde-vragen/">Veelgestelde vragen</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h2 class="footer-col-title">Bronnen</h2>
+<ul>
+<li><a href="/nl/artikelen/">Artikelen</a></li><li><a href="/nl/handleidingen/">Handleidingen</a></li>
+<li><a href="/nl/artikelen/tachograaf-symbolen/">Tachograafsymbolen</a></li>
+<li><a href="/nl/integraties/dkv-live/">DKV LIVE®</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h2 class="footer-col-title">Bedrijf</h2>
+<ul>
+<li><a href="/nl/contact/">Contact</a></li>
+<li><a href="https://www.tdt.cz" rel="noopener" target="_blank">Truck Data Technology</a></li>
+<li><a href="/nl/">English</a></li><li><a href="/de/">Deutsch</a></li><li><a href="/pl/">Polski</a></li><li><a href="/el/">Ελληνικά</a></li><li><a href="/hu/">Magyar</a></li><li><a href="/it/">Italiano</a></li><li><a href="https://www.tdt.cz/" rel="noopener" target="_blank">Čeština</a></li><li><a href="https://www.tdt.sk/" rel="noopener" target="_blank">Slovenčina</a></li></ul>
+</div>
+</div>
+<div class="footer-bottom">
+<span>© 2026 Truck Data Technology, s.r.o. Alle rechten voorbehouden.</span>
+<span><a href="/nl/contact/">Contact</a> · <a href="https://www.tdt.cz" rel="noopener" target="_blank">tdt.cz</a> · <a href="/nl/privacy/">Privacy &amp; cookies</a></span>
+</div>
+</footer>
+<div aria-label="Snelle aanmelding voor de proefperiode" class="sticky-cta" id="stickyCta" role="complementary">
+<div class="sticky-cta-inner">
+<span class="sticky-cta-text">Klaar om te beginnen? Probeer TAGRA 30 dagen gratis.</span>
+<a class="sticky-cta-btn" href="/nl/gratis-proefversie/?audience=driver&amp;src=symbols">Start uw gratis proefperiode van 30 dagen →</a>
+<button aria-label="Sluiten" class="sticky-cta-close" id="stickyCtaClose">×</button>
+</div>
+</div>
+<script>(function(){var bar=document.getElementById('scroll-progress');if(bar)window.addEventListener('scroll',function(){var t=document.documentElement.scrollTop||document.body.scrollTop;var h=document.documentElement.scrollHeight-document.documentElement.clientHeight;bar.style.width=(t/h*100)+'%';},{passive:true});var toggle=document.getElementById('nav-toggle'),links=document.getElementById('nav-links');if(toggle&&links)toggle.addEventListener('click',function(){var o=links.classList.toggle('open');toggle.setAttribute('aria-expanded',o);});})();</script><script>
+/* INTERSECTION OBSERVER – ANIMATIONS */
+if ('IntersectionObserver' in window) {
+  var io = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) {
+      if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.anim-up, .fly-left, .fly-right').forEach(function(el) { io.observe(el); });
+} else {
+  document.querySelectorAll('.anim-up, .fly-left, .fly-right').forEach(function(el) { el.classList.add('on'); });
+}
+</script>
+<script>
+(function(){
+  var input=document.getElementById('dec-search-input');
+  var clearBtn=document.getElementById('dec-search-clear');
+  var count=document.getElementById('dec-count');
+  var chips=Array.prototype.slice.call(document.querySelectorAll('.dec-chip'));
+  var vendors=Array.prototype.slice.call(document.querySelectorAll('details.vendor'));
+  if(!input||!vendors.length)return;
+  vendors.forEach(function(v){v._defaultOpen=v.hasAttribute('open');});
+  var activeVendor='all';
+  function apply(){
+    var q=(input.value||'').trim().toLowerCase();
+    var total=0;
+    vendors.forEach(function(v){
+      var scoped=(activeVendor==='all'||activeVendor===v.id);
+      if(!scoped){v.classList.add('dec-hidden');return;}
+      v.classList.remove('dec-hidden');
+      var rows=v.querySelectorAll('.code-table tbody tr');
+      var hits=0;
+      Array.prototype.forEach.call(rows,function(r){
+        var m=(q===''||r.textContent.toLowerCase().indexOf(q)!==-1);
+        if(m){r.classList.remove('dec-hidden');hits++;}else{r.classList.add('dec-hidden');}
+      });
+      total+=hits;
+      var body=v.querySelector('.vendor-body');
+      var note=v.querySelector('.dec-nohit');
+      if(q!==''&&hits===0){
+        if(!note&&body){note=document.createElement('p');note.className='dec-nohit';note.textContent='No matching rows in this manufacturer.';body.appendChild(note);}
+        if(note)note.style.display='';
+      } else if(note){note.style.display='none';}
+      if(q!==''||activeVendor!=='all'){v.open=hits>0;}else{v.open=v._defaultOpen;}
+    });
+    if(q===''&&activeVendor==='all'){count.textContent='';}
+    else{count.textContent=total+(total===1?' match':' matches')+(activeVendor!=='all'?' \u00b7 '+activeVendor.toUpperCase():'');}
+  }
+  input.addEventListener('input',apply);
+  clearBtn.addEventListener('click',function(){input.value='';apply();input.focus();});
+  chips.forEach(function(c){c.addEventListener('click',function(){
+    var v=c.getAttribute('data-vendor');
+    if(v==='symbols'){var s=document.getElementById('activity-symbols');if(s)s.scrollIntoView({behavior:'smooth'});return;}
+    chips.forEach(function(x){x.classList.toggle('is-active',x===c&&v!=='symbols');});
+    activeVendor=v;apply();
+    var firstVisible=vendors.filter(function(x){return !x.classList.contains('dec-hidden');})[0];
+    if(firstVisible&&v!=='all')firstVisible.scrollIntoView({behavior:'smooth',block:'start'});
+  });});
+})();
+
+/* STICKY CTA BAR */
+(function(){
+  var bar = document.getElementById('stickyCta');
+  if(!bar) return;
+  var KEY = 'tmx-sticky-cta-dismissed';
+  var dismissed = false;
+  try { dismissed = localStorage.getItem(KEY) === '1'; } catch(e) {}
+  if (dismissed) return;
+  function check(){
+    var top = document.documentElement.scrollTop || document.body.scrollTop;
+    var nearBottom = (window.innerHeight + top) >= (document.documentElement.scrollHeight - 80);
+    if (top > 700 && !nearBottom) bar.classList.add('is-visible');
+    else bar.classList.remove('is-visible');
+  }
+  window.addEventListener('scroll', check, { passive: true });
+  check();
+  var closeBtn = document.getElementById('stickyCtaClose');
+  if (closeBtn) closeBtn.addEventListener('click', function(){
+    bar.classList.remove('is-visible');
+    try { localStorage.setItem(KEY, '1'); } catch(e) {}
+  });
+})();
+</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Foutcodes en symbolen van tachografen: wat ze betekenen en hoe u ze verhelpt", "description": "Volledige bestuurdershandleiding voor foutcodes en waarschuwingssymbolen van digitale tachografen. Activiteitspictogrammen, waarschuwingspop-ups, foutcodes van VDO DTCO 4.1 / Stoneridge SE5000 / Actia / EFAS-4, wat elke storing betekent en precies wat u moet doen.", "image": "https://tagra.app/assets/img/og/digital-tachograph-symbols.jpg", "author": {"@type": "Organization", "name": "Truck Data Technology, s.r.o.", "url": "https://www.tdt.cz"}, "publisher": {"@type": "Organization", "name": "Truck Data Technology, s.r.o.", "logo": {"@type": "ImageObject", "url": "https://tagra.app/assets/img/logo.svg"}}, "datePublished": "2025-09-01T09:00:00+02:00", "dateModified": "2026-06-15T09:00:00+02:00", "inLanguage": "nl", "mainEntityOfPage": "https://tagra.app/nl/artikelen/tachograaf-symbolen/", "articleSection": "Kennisbank voor chauffeurs", "wordCount": 9600, "keywords": "tachograph fault codes, tachograph warning symbols, digital tachograph error codes, VDO DTCO error codes, Stoneridge SE5000 errors, Actia SmarTach faults, EFAS-4 faults, Annex 1C events, smart tachograph GNSS fault, drivers hours, Regulation 165/2014"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Wat is het verschil tussen een voorval en een storing op een digitale tachograaf?", "acceptedAnswer": {"@type": "Answer", "text": "Een voorval is een operationele gebeurtenis — rijden zonder kaart, de maximumsnelheid overschrijden, een kaart plaatsen tijdens het rijden of een tijdsoverlapping. De eenheid werkt correct; zij registreert iets wat de bestuurder heeft gedaan. Een storing is een hardware- of softwaredefect van de tachograaf zelf — sensorstoring, interne storing, tijdfout of printerstoring. Storingen leiden tot de reparatieverplichting van artikel 37 — zodra de omstandigheden dit toestaan, of onderweg als het voertuig niet binnen een week naar de basis kan terugkeren. Beide categorieën zijn gedefinieerd in bijlage IC bij Verordening (EU) 2016/799."}}, {"@type": "Question", "name": "Ik zie sensorstoring op mijn VDO-display — kan ik blijven rijden?", "acceptedAnswer": {"@type": "Answer", "text": "Kort gezegd: ja — om een veilige stopplaats te bereiken. Vervolgens moet u de melding bevestigen, de activiteiten van die dag afdrukken, alle verdere activiteiten handmatig op de achterzijde van die afdruk registreren, uw wagenparkbeheerder informeren en zo snel als de omstandigheden dit toestaan naar een erkende werkplaats gaan. Doorrijden zonder handmatige registraties terwijl u van een sensorstoring weet, is in elke EU-lidstaat een ernstige overtreding."}}, {"@type": "Question", "name": "Wat betekent GNSS-anomalie op een slimme tachograaf 2?", "acceptedAnswer": {"@type": "Answer", "text": "Eenheden van de slimme tachograaf 2 controleren het GNSS-signaal met behulp van de Galileo OSNMA-dienst op spoofing. Een GNSS-anomalie als voorval betekent dat de eenheid óf een poging tot manipulatie van het GPS/Galileo-signaal heeft gedetecteerd óf dat de authenticatie van het signaal is mislukt. De eenheid registreert het voorval voor handhaving. Als dit zich bij een specifiek voertuig herhaalt, moeten de antenne en de directe bedrading op manipulatie worden gecontroleerd."}}, {"@type": "Question", "name": "Wat is het verschil tussen Andere werkzaamheden en Periode van beschikbaarheid?", "acceptedAnswer": {"@type": "Answer", "text": "Andere werkzaamheden zijn betaalde werkzaamheden die geen rijwerk zijn: laden, lossen, tanken, papierwerk, passagiers helpen en voertuigcontroles. Een periode van beschikbaarheid is wachttijd waarvan de bestuurder de duur vooraf kent — op een veerboot of trein of in een wachtrij voor een bekende afspraak. Een periode van beschikbaarheid is geen arbeid, maar ook geen pauze volgens de rij- en rusttijden."}}, {"@type": "Question", "name": "Kan een Periode van beschikbaarheid als pauze gelden volgens EG 561/2006?", "acceptedAnswer": {"@type": "Answer", "text": "Nee. Bijlage 1 bij Verordening 561/2006 vermeldt slechts één categorie die de klok voor 4,5 uur onafgebroken rijden opnieuw laat beginnen en meetelt voor de verplichte pauze van 45 minuten: de activiteit pauze/rust. Bestuurders die „Beschikbaarheid” instellen terwijl zij pauze nemen, krijgen bij het uitlezen geen pauzetijd toegekend."}}, {"@type": "Question", "name": "Wat moet ik doen als ik tijdens een pauze ben vergeten over te schakelen naar Rust?", "acceptedAnswer": {"@type": "Answer", "text": "Wanneer u uw kaart vervolgens in een voertuig plaatst, biedt de tachograaf een procedure voor handmatige invoer voor de periode sinds u uw kaart voor het laatst hebt verwijderd. Gebruik het menu om voor dat interval de juiste activiteit in te stellen. Handmatige invoeren krijgen een tijdstempel op de kaart en worden aanvaard als een legitieme correctie."}}, {"@type": "Question", "name": "Hoe vaak moet ik mijn bestuurderskaart en de voertuigeenheid uitlezen?", "acceptedAnswer": {"@type": "Answer", "text": "Minstens elke 28 dagen voor de bestuurderskaart en elke 90 dagen voor de voertuigeenheid (artikel 33 van Verordening 165/2014, in samenhang met Verordening (EU) nr. 581/2010 van de Commissie). De uitgelezen gegevens moeten ten minste één jaar worden bewaard."}}, {"@type": "Question", "name": "Heeft een kaartcommunicatiefout invloed op mijn rijtijdregistraties?", "acceptedAnswer": {"@type": "Answer", "text": "Niet noodzakelijk. De meeste communicatiefouten worden eenvoudig veroorzaakt door vuile chipcontacten — de activiteit die vóór de fout is uitgevoerd, staat al in het geheugen van de kaart. Als de fout kort duurt en na reinigen en opnieuw plaatsen verdwijnt, gaat er geen periode verloren. Als de kaart helemaal niet meer kan worden gelezen, drukt de eenheid automatisch de laatste activiteit af."}}, {"@type": "Question", "name": "Op het display staat landinvoer vereist — wat moet ik doen?", "acceptedAnswer": {"@type": "Answer", "text": "Slimme tachografen vereisen dat u het land opgeeft waar de dienst begint en eindigt. Bij een slimme tachograaf 2 vraagt de eenheid u ook om elke grensoverschrijding te bevestigen. Gebruik het menu: invoer → bestuurder 1 → beginland aan het begin en eindland aan het einde van de dienst."}}, {"@type": "Question", "name": "Ondersteunt TAGRA alle vier de fabrikantspecifieke foutcodes die in deze handleiding worden weergegeven?", "acceptedAnswer": {"@type": "Answer", "text": "Ja. TAGRA leest de voorvallen en storingen uit bijlage IC rechtstreeks uit elk uitgelezen .DDD-bestand — het gegevensformaat is identiek, ongeacht de eenheid die het bestand heeft geschreven. Fabrikantspecifieke pop-upmeldingen worden gekoppeld aan het onderliggende voorval uit bijlage IC."}}, {"@type": "Question", "name": "Wat vereist de reparatieregel van artikel 37 precies?", "acceptedAnswer": {"@type": "Answer", "text": "Artikel 37 van Verordening 165/2014 vereist dat, wanneer de tachograaf activiteiten door een storing niet correct kan registreren, de reparatie wordt uitgevoerd door een erkende werkplaats zodra de omstandigheden dit toestaan. Als het voertuig niet binnen één week na de ontdekking van de storing naar de vestiging van de exploitant kan terugkeren, moet de reparatie onderweg worden uitgevoerd."}}, {"@type": "Question", "name": "Kan ik blijven rijden wanneer het voorval snelheidsovertreding is geregistreerd?", "acceptedAnswer": {"@type": "Answer", "text": "Ja — een snelheidsovertreding is een voorval en geen storing. Het voertuig blijft correct registreren; alleen de snelheidslimiet is overschreden. Het voorval is zichtbaar bij het uitlezen en herhaalde registraties van snelheidsovertredingen vormen vaak aanleiding voor controles bij exploitanten en wegcontroles."}}, {"@type": "Question", "name": "Op mijn VDO-display staat een getal zoals 80, 82 of 98 — wat betekent dit?", "acceptedAnswer": {"@type": "Answer", "text": "Op DTCO 4.0/4.1 identificeert een tweecijferig getal naast het pictogram het voorval of de storing. Lage getallen (001–066) zijn codes uit het storingsgeheugen van de werkplaats; hoge getallen hebben betrekking op functies van de slimme tachograaf. De meest voorkomende zijn 80 — bewegingsconflict van het voertuig (de bewegingssensor wijkt af van het GNSS-signaal; ga naar een erkende werkplaats), 82 — interne GNSS-storing (de ontvanger kan tijdelijk geen positie bepalen) en 98 — ITS-/Bluetooth-storing (de interface voor gegevens op afstand; heeft geen invloed op de registratie)."}}, {"@type": "Question", "name": "Wat betekent bewegingsconflict (code 80) en kan ik blijven rijden?", "acceptedAnswer": {"@type": "Answer", "text": "Code 80 is een bewegingsconflict van het voertuig: de tachograaf heeft een tegenstrijdigheid vastgesteld tussen de bewegingssensor en een onafhankelijke bron (GNSS). Een veelvoorkomende onschuldige oorzaak is dat u tijdens het vervoer bent vergeten de veerboot-/treinmodus in te schakelen. Verschijnt de melding tijdens normaal rijden, dan kan dit wijzen op manipulatie of een bedradingsstoring — bevestig de melding, houd handmatige registraties bij en laat de voertuigeenheid door een erkende werkplaats controleren."}}, {"@type": "Question", "name": "Hoe zoek ik een numerieke of hexadecimale foutcode uit een werkplaatsuitlezing op?", "acceptedAnswer": {"@type": "Answer", "text": "Gebruik het zoekveld bovenaan het gedeelte met codes van fabrikanten: voer het nummer in (bijv. 042), een VDO-displaynummer (bijv. 82), een hexadecimale DTC van Stoneridge of EFAS (bijv. 002E80) of woorden uit de melding (bijv. sensor fault). Het relevante fabrikantgedeelte wordt automatisch geopend en toont alleen de overeenkomende regels."}}, {"@type": "Question", "name": "Kan TAGRA mij waarschuwen voor een tachograafstoring voordat deze optreedt?", "acceptedAnswer": {"@type": "Answer", "text": "Nee. TAGRA analyseert gegevens nadat u deze van de bestuurderskaart of voertuigeenheid hebt uitgelezen — het programma maakt geen realtimeverbinding met de tachograaf en kan storingen niet voorspellen. Wel laat het zien of een storing een spoor in uw geregistreerde gegevens heeft achtergelaten en of deze tot een overtreding heeft geleid."}}]}</script>
+</body>
+</html>

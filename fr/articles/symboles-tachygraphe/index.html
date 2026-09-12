@@ -1,0 +1,1558 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<!-- TMX-ANALYTICS START -->
+<meta content="7F7894081BE7FBB245FF03AF8810B22F" name="msvalidate.01"/>
+<!-- Consent Mode v2 defaults (deny) + gtag stub — runs BEFORE gtag.js -->
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent','default',{
+      ad_storage:'denied', ad_user_data:'denied', ad_personalization:'denied',
+      analytics_storage:'denied', functionality_storage:'denied',
+      personalization_storage:'denied', security_storage:'granted',
+      wait_for_update:500
+    });
+    gtag('set','ads_data_redaction',true);
+    gtag('set','url_passthrough',false);
+  </script>
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-92253QFBNX"></script>
+<script>
+    gtag('js', new Date());
+    gtag('config','G-92253QFBNX');
+  </script>
+<!-- Cookie consent banner (self-hosted) + Microsoft Clarity gating -->
+<style>
+    .tmx-cc{position:fixed;left:0;right:0;bottom:0;z-index:2147483000;background:linear-gradient(120deg,var(--blue-dark,#0b2c4a),var(--blue-mid,#134a8e) 62%,var(--blue-light,#1f5fa6));color:#fff;
+      font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+      padding:16px 20px;box-shadow:0 -4px 24px rgba(0,0,0,.18);display:flex;flex-wrap:wrap;
+      align-items:center;gap:14px;justify-content:center}
+    .tmx-cc__txt{flex:1 1 360px;max-width:760px}
+    .tmx-cc__txt a{color:#9ed0f5;text-decoration:underline}
+    .tmx-cc__btns{display:flex;gap:10px;flex:0 0 auto}
+    .tmx-cc__b{appearance:none;border:0;cursor:pointer;font:inherit;font-weight:600;
+      padding:10px 22px;border-radius:99px;transition:filter .15s;color:#fff}
+    .tmx-cc__b:hover{filter:brightness(1.08)}
+    .tmx-cc__b--no{background:rgba(255,255,255,.16)}
+    .tmx-cc__b--yes{background:var(--green-cta,#5C820F)}
+    @media(max-width:640px){.tmx-cc{padding:14px}.tmx-cc__btns{width:100%}.tmx-cc__b{flex:1}}
+  </style>
+<script>
+  (function(){
+    var KEY='tmx-consent-v1', CL='wt18054m0r';
+    function lc(){var l=(document.documentElement.getAttribute('lang')||'en').toLowerCase().split('-')[0];
+      var m={cz:'cs',cs:'cs',sk:'sk',de:'de',pl:'pl',gr:'el',el:'el',hu:'hu',en:'en'};return m[l]||'en';}
+    var T={
+      hu:{t:'Analitikai s\u00fctiket haszn\u00e1lunk (Google Analytics, Microsoft Clarity, Smartsupp), hogy meg\u00e9rts\u00fck a webhely haszn\u00e1lat\u00e1t. Csak az \u00d6n hozz\u00e1j\u00e1rul\u00e1s\u00e1val t\u00f6lt\u0151dnek be.',a:'Elfogadom',r:'Elutas\u00edtom',p:'Adatv\u00e9delem \u00e9s s\u00fctik'},
+      ro:{t:'Utilizăm module cookie de analiză (Google Analytics, Microsoft Clarity, Smartsupp) pentru a înțelege modul de utilizare a site-ului. Se încarcă doar cu consimțământul dumneavoastră.',a:'Accept',r:'Refuz',p:'Confidențialitate și cookie-uri'},
+      nl:{t:'We gebruiken analytische cookies (Google Analytics, Microsoft Clarity, Smartsupp) om het gebruik van de site te begrijpen. Ze laden alleen met uw toestemming.',a:'Accepteren',r:'Weigeren',p:'Privacy en cookies'},
+      fr:{t:'Nous utilisons des cookies analytiques (Google Analytics, Microsoft Clarity, Smartsupp) pour comprendre l’utilisation du site. Ils ne se chargent qu’avec votre consentement.',a:'Accepter',r:'Refuser',p:'Confidentialité et cookies'},
+      it:{t:'Utilizziamo cookie analitici (Google Analytics, Microsoft Clarity, Smartsupp) per capire l’utilizzo del sito. Si caricano solo con il Suo consenso.',a:'Accetta',r:'Rifiuta',p:'Privacy e cookie'},
+      en:{t:'We use analytics cookies (Google Analytics, Microsoft Clarity, Smartsupp) to understand site usage. They load only with your consent.',a:'Accept',r:'Reject',p:'Privacy &amp; cookies'},
+      cs:{t:'Pou\u017e\u00edv\u00e1me analytick\u00e9 cookies (Google Analytics, Microsoft Clarity, Smartsupp) k pochopen\u00ed pou\u017e\u00edv\u00e1n\u00ed webu. Na\u010dtou se jen s va\u0161\u00edm souhlasem.',a:'P\u0159ijmout',r:'Odm\u00edtnout',p:'Soukrom\u00ed a cookies'},
+      sk:{t:'Pou\u017e\u00edvame analytick\u00e9 cookies (Google Analytics, Microsoft Clarity, Smartsupp) na pochopenie pou\u017e\u00edvania webu. Na\u010d\u00edtaj\u00fa sa len s va\u0161\u00edm s\u00fahlasom.',a:'Prija\u0165',r:'Odmietnu\u0165',p:'S\u00fakromie a cookies'},
+      de:{t:'Wir verwenden Analyse-Cookies (Google Analytics, Microsoft Clarity, Smartsupp), um die Nutzung der Website zu verstehen. Sie werden nur mit Ihrer Einwilligung geladen.',a:'Akzeptieren',r:'Ablehnen',p:'Datenschutz &amp; Cookies'},
+      pl:{t:'U\u017cywamy plik\u00f3w cookie do analityki (Google Analytics, Microsoft Clarity, Smartsupp), aby zrozumie\u0107 korzystanie z witryny. \u0141aduj\u0105 si\u0119 tylko za Twoj\u0105 zgod\u0105.',a:'Akceptuj',r:'Odrzu\u0107',p:'Prywatno\u015b\u0107 i cookies'},
+      el:{t:'\u03a7\u03c1\u03b7\u03c3\u03b9\u03bc\u03bf\u03c0\u03bf\u03b9\u03bf\u03cd\u03bc\u03b5 cookies \u03b1\u03bd\u03ac\u03bb\u03c5\u03c3\u03b7\u03c2 (Google Analytics, Microsoft Clarity, Smartsupp) \u03b3\u03b9\u03b1 \u03bd\u03b1 \u03ba\u03b1\u03c4\u03b1\u03bd\u03bf\u03ae\u03c3\u03bf\u03c5\u03bc\u03b5 \u03c4\u03b7 \u03c7\u03c1\u03ae\u03c3\u03b7. \u03a6\u03bf\u03c1\u03c4\u03ce\u03bd\u03bf\u03bd\u03c4\u03b1\u03b9 \u03bc\u03cc\u03bd\u03bf \u03bc\u03b5 \u03c4\u03b7 \u03c3\u03c5\u03b3\u03ba\u03b1\u03c4\u03ac\u03b8\u03b5\u03c3\u03ae \u03c3\u03b1\u03c2.',a:'\u0391\u03c0\u03bf\u03b4\u03bf\u03c7\u03ae',r:'\u0391\u03c0\u03cc\u03c1\u03c1\u03b9\u03c8\u03b7',p:'\u0391\u03c0\u03cc\u03c1\u03c1\u03b7\u03c4\u03bf &amp; cookies'}
+    };
+    function loadClarity(){if(!CL||window.__tmxCl)return;window.__tmxCl=1;
+      (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+       t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+       y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script",CL);}
+    function grant(){try{localStorage.setItem(KEY,'granted')}catch(e){}
+      gtag('consent','update',{analytics_storage:'granted'});loadClarity();}
+    function deny(){try{localStorage.setItem(KEY,'denied')}catch(e){}}
+    var saved=null;try{saved=localStorage.getItem(KEY)}catch(e){}
+    if(saved==='granted'){grant();return;} if(saved==='denied'){return;}
+    function show(){var tx=T[lc()]||T.en;
+      var b=document.createElement('div');b.className='tmx-cc';b.setAttribute('role','dialog');b.setAttribute('aria-live','polite');
+      b.innerHTML='<div class="tmx-cc__txt">'+tx.t+' <a href="/fr/confidentialite/">'+tx.p+'</a></div>'+
+        '<div class="tmx-cc__btns"><button type="button" class="tmx-cc__b tmx-cc__b--no">'+tx.r+'</button>'+
+        '<button type="button" class="tmx-cc__b tmx-cc__b--yes">'+tx.a+'</button></div>';
+      document.body.appendChild(b);
+      b.querySelector('.tmx-cc__b--yes').addEventListener('click',function(){grant();b.remove();});
+      b.querySelector('.tmx-cc__b--no').addEventListener('click',function(){deny();b.remove();});}
+    if(document.body)show();else document.addEventListener('DOMContentLoaded',show);
+  })();
+  </script>
+<!-- TMX-ANALYTICS END -->
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Codes d'anomalie tachygraphe : 80, 41, 44, 50, 68 | TAGRA</title>
+<meta content="Codes d'anomalie du tachygraphe numérique : signification et mesures à prendre pour les erreurs de carte 41, 44, 50 et 68. VDO, Stoneridge, Actia, EFAS." name="description"/>
+<link href="https://tagra.app/fr/articles/symboles-tachygraphe/" rel="canonical"/>
+<link href="https://tagra.app/de/ratgeber/tachographen-symbole/" hreflang="de" rel="alternate"/><link href="https://tagra.app/el/arthra/symvola-tachografou/" hreflang="el" rel="alternate"/><link href="https://tagra.app/articles/digital-tachograph-symbols/" hreflang="en" rel="alternate"/><link href="https://tagra.app/fr/articles/symboles-tachygraphe/" hreflang="fr" rel="alternate"/><link href="https://tagra.app/hu/cikkek/tachograf-szimbolumok/" hreflang="hu" rel="alternate"/><link href="https://tagra.app/it/articoli/simboli-cronotachigrafo/" hreflang="it" rel="alternate"/><link href="https://tagra.app/nl/artikelen/tachograaf-symbolen/" hreflang="nl" rel="alternate"/><link href="https://tagra.app/pl/poradnik/symbole-tachografu/" hreflang="pl" rel="alternate"/>
+<link href="https://tagra.app/ro/articole/simboluri-tahograf-digital/" hreflang="ro" rel="alternate"/><link href="https://tagra.app/articles/digital-tachograph-symbols/" hreflang="x-default" rel="alternate"/>
+<meta content="Codes d&#x27;anomalie tachygraphe : 80, 41, 44, 50, 68" property="og:title"/>
+<meta content="Codes d'anomalie du tachygraphe numérique : signification et mesures à prendre pour les erreurs de carte 41, 44, 50 et 68. VDO, Stoneridge, Actia, EFAS." property="og:description"/>
+<meta content="article" property="og:type"/>
+<meta content="https://tagra.app/assets/img/hero-poster.jpg" property="og:image"/>
+<meta content="Tachograph fault codes &amp; symbols: what they mean &amp; fixes | TAGRA" name="twitter:title"/>
+<meta content="Tous les symboles d’avertissement et codes d’anomalie du tachygraphe numérique décodés — VDO, Stoneridge, Actia et EFAS. Signification de chaque code et mesures à prendre ensuite." name="twitter:description"/>
+<meta content="https://tagra.app/assets/img/hero-poster.jpg" name="twitter:image"/>
+<meta content="fr_FR" property="og:locale"/>
+<meta content="https://tagra.app/fr/articles/symboles-tachygraphe/" property="og:url"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    a{color:var(--blue-mid);text-decoration:none;}
+    a:hover{color:var(--blue-dark);text-decoration:underline;text-underline-offset:.18em;}
+    img{max-width:100%;height:auto;display:block;}
+    p+p{margin-top:14px;}
+    ul,ol{padding-left:22px;}
+    li{margin:6px 0;line-height:1.65;}
+    li::marker{color:var(--blue-mid);}
+    strong{font-weight:700;color:var(--text);}
+    #scroll-progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--green-brand),var(--blue-light));width:0%;z-index:9999;pointer-events:none;}
+.nav-inner{margin:0 auto;padding:0 24px;height:100%;display:flex;align-items:center;justify-content:space-between;gap:24px;}
+    .nav-links{display:flex;align-items:center;gap:4px;list-style:none;}
+    .nav-links a{font-size:15px;font-weight:500;color:var(--text);padding:8px 12px;border-radius:8px;text-decoration:none;transition:background .15s;}
+    .nav-links a:hover{background:var(--bg-apple);color:var(--blue-mid);}
+    .nav-links .nav-cta a{background:var(--green-cta);color:#fff!important;border-radius:99px;padding:8px 18px;font-weight:600;}
+    .nav-links .nav-cta a:hover{background:var(--green-brand);text-decoration:none;}
+    .nav-lang{display:flex;align-items:center;gap:4px;font-size:14px;font-weight:600;}
+    .nav-lang a{padding:5px 8px;border-radius:6px;color:var(--text2);text-decoration:none;transition:background .15s;}
+    .nav-lang a:hover,.nav-lang a.active{background:var(--bg-apple);color:var(--blue-mid);}
+    .nav-lang span{color:var(--border);}
+    .nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:8px;}
+    .nav-toggle span{display:block;width:22px;height:2px;background:var(--text);margin:5px 0;border-radius:2px;}
+    @media(max-width:900px){.nav-links{display:none;}.nav-toggle{display:block;}.nav-links.open{display:flex;flex-direction:column;align-items:flex-start;gap:2px;position:absolute;top:var(--nav-h);left:0;right:0;background:rgba(255,255,255,.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:12px 24px 20px;}}
+    .art-hero{background:linear-gradient(180deg,var(--bg-apple) 0%,#fff 100%);padding:calc(var(--nav-h,64px) + 28px) 0 44px;}
+    .art-wrap{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 24px;}
+    .breadcrumb{font-size:14px;color:var(--text2);margin-bottom:18px;}
+    .breadcrumb a{color:var(--text2);text-decoration:none;}
+    .breadcrumb a:hover{color:var(--blue-mid);}
+    .breadcrumb span{margin:0 5px;color:var(--border);}
+    .eyebrow{font-size:14px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--green-brand);margin-bottom:10px;}
+    .art-title{font-size:38px;line-height:1.15;font-weight:800;margin-bottom:16px;letter-spacing:-.02em;padding-bottom:0.08em;color:var(--blue-dark);}
+    .art-title .grad{background:linear-gradient(90deg,var(--blue-dark) 0%,var(--blue-light) 50%,var(--blue-bright) 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;}
+    @media(max-width:700px){.art-title{font-size:26px;}}
+    .art-meta{font-size:15px;color:var(--text2);padding-bottom:24px;border-bottom:1px solid var(--border);display:flex;gap:20px;flex-wrap:wrap;}
+    .art-body{padding:44px 0 60px;}
+    /* H2 gradient mechanics: width:max-content shrinks the element to the text's
+       intrinsic width so the 3-stop gradient is rendered across the visible glyphs
+       (not the 949px wrapping width), giving the same visible 3-stop effect as H1.
+       Multi-line H2s wrap via max-width:100% (each wrapped line gets its own slice). */
+    .art-body h2 {
+      font-size: 36px; font-weight: 800;
+      line-height: 1.1; letter-spacing: 0;
+      text-transform: uppercase;
+      color: var(--blue-mid, #134a8e);
+      background: linear-gradient(90deg, var(--blue-dark, #0b2c4a) 0%, var(--blue-light, #1f5fa6) 50%, var(--blue-bright, #3a6ff0) 100%);
+      -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block; width: max-content; max-width: 100%;
+      margin-bottom: 14px;
+      padding: 0.12em 0.15em 0.08em 0;
+    }
+    .art-body h3{font-size:20px;font-weight:700;color:var(--text);margin:28px 0 10px;}
+    .art-body p{margin-bottom:18px;}
+    .art-body ul,.art-body ol{margin-bottom:20px;}
+    .deadline-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:24px 0;}
+    @media(max-width:580px){.deadline-grid{grid-template-columns:1fr;}}
+    .deadline-box{background:var(--bg-apple);border-radius:var(--radius);padding:28px;text-align:center;}
+    .deadline-num{font-size:54px;font-weight:900;line-height:1;background:linear-gradient(90deg,var(--blue-dark),var(--blue-mid));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:6px;}
+    .deadline-lbl{font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--text2);}
+    .deadline-desc{font-size:15px;color:var(--text2);margin-top:10px;line-height:1.5;}
+    .steps-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin:20px 0;}
+    @media(max-width:720px){.steps-grid{grid-template-columns:1fr;}}
+    .step-card{background:var(--bg-gray);border-radius:var(--radius);padding:22px;box-shadow:0 8px 24px rgba(0,0,0,.04);}
+    .step-num{font-size:13px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--green-cta);margin-bottom:8px;}
+    .step-title{font-size:17px;font-weight:800;color:var(--text);margin-bottom:6px;line-height:1.35;}
+    .step-desc{font-size:15px;color:var(--text2);line-height:1.5;}
+    
+    .callout--blue{background:var(--bg-apple);border-left:4px solid var(--blue-mid);}
+    
+    .callout-title{font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:.07em;color:var(--blue-mid);margin-bottom:8px;}
+    .callout--green .callout-title{color:var(--green-brand);}
+    .faq-item{border-top:1px solid var(--border);padding:14px 0;}
+    .faq-item:last-child{border-bottom:1px solid var(--border);}
+    .faq-item summary{list-style:none;cursor:pointer;font-weight:700;font-size:18px;line-height:1.4;padding-right:32px;position:relative;color:var(--text);}
+    .faq-item summary::-webkit-details-marker{display:none;}
+    .faq-item summary::after{content:"+";position:absolute;right:0;top:50%;transform:translateY(-50%);font-size:26px;font-weight:300;color:var(--green-cta);}
+    .faq-item[open] summary::after{content:"−";}
+    
+    .cta-box{background:linear-gradient(135deg,var(--blue-dark),var(--blue-mid));border-radius:var(--radius);padding:40px 36px;margin:44px 0;text-align:center;}
+    .cta-box h3{font-size:24px;font-weight:800;color:#fff;margin-bottom:12px;}
+    .cta-box p{color:rgba(255,255,255,.8);font-size:17px;margin-bottom:24px;}
+    .cta-box p.cta-note{font-size:14px;margin-bottom:0;color:rgba(255,255,255,.65);}
+
+    .btn:hover{background:var(--green-brand);transform:scale(1.02);}
+    .related{border-top:1px solid var(--border);padding-top:36px;margin-top:36px;}
+    .related-title{font-size:20px;font-weight:800;color:var(--text);margin-bottom:18px;}
+    .related-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+    @media(max-width:580px){.related-grid{grid-template-columns:1fr;}}
+    .related-card{display:block;padding:20px;border:1px solid var(--border);border-radius:var(--radius);text-decoration:none!important;transition:border-color .15s,transform .15s;}
+    .related-card:hover{border-color:var(--blue-mid);transform:translateY(-2px);}
+    .related-card-eye{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--blue-mid);margin-bottom:6px;}
+    .related-card-title{font-size:16px;font-weight:700;color:var(--text);line-height:1.4;}
+
+    .art-body table{width:100%;border-collapse:collapse;margin:20px 0;font-size:16px;background:#fff;box-shadow:0 8px 24px rgba(0,0,0,.04);border-radius:var(--radius);overflow:hidden;}
+    .sym-cell{display:flex;align-items:center;gap:14px;}
+    .sym-icon{flex-shrink:0;width:48px;height:48px;background:#fff;border:1px solid var(--border);border-radius:8px;padding:8px;color:var(--blue-dark);}
+    .sym-icon svg{display:block;width:100%;height:100%;}
+    .sym-icon img{display:block;width:100%;height:100%;}
+    @media(max-width:680px){.sym-icon{width:40px;height:40px;padding:7px;}}
+    .art-body thead{background:linear-gradient(135deg,var(--blue-dark),var(--blue-mid));color:#fff;}
+    .art-body th{padding:14px 16px;text-align:left;font-weight:700;font-size:14px;letter-spacing:.02em;}
+    .art-body td{padding:14px 16px;border-top:1px solid var(--border);vertical-align:top;line-height:1.55;font-size:15px;}
+    .art-body tbody tr:nth-child(even){background:var(--bg-gray);}
+    .art-body th:first-child,.art-body td:first-child{width:22%;}
+    @media(max-width:680px){.art-body table,.art-body thead,.art-body tbody,.art-body th,.art-body td,.art-body tr{display:block;}.art-body thead{display:none;}.art-body td{border-top:none;border-bottom:1px solid var(--border);}.art-body td:first-child{font-weight:700;background:var(--bg-apple);}}
+    .lead{font-size:20px;color:var(--text2);line-height:1.55;}
+
+    .dec-search{background:var(--bg-apple);border:1px solid var(--border);border-radius:var(--radius);padding:18px 18px 14px;margin:8px 0 26px;}
+    .dec-search-label{display:block;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--blue-mid);margin-bottom:10px;}
+    .dec-search-row{display:flex;gap:10px;align-items:center;}
+    #dec-search-input{flex:1;font-size:16px;padding:12px 14px;border:1px solid var(--border);border-radius:10px;background:#fff;color:var(--text);outline:none;}
+    #dec-search-input:focus{border-color:var(--blue-mid);box-shadow:0 0 0 3px rgba(19,74,142,.12);}
+    #dec-search-clear{flex-shrink:0;width:42px;height:42px;border:1px solid var(--border);background:#fff;border-radius:10px;font-size:22px;line-height:1;color:var(--text2);cursor:pointer;}
+    #dec-search-clear:hover{color:var(--text);border-color:var(--blue-mid);}
+    .dec-chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;}
+    .dec-chip{font-size:14px;font-weight:600;padding:7px 14px;border-radius:99px;border:1px solid var(--border);background:#fff;color:var(--text2);cursor:pointer;transition:all .15s;}
+    .dec-chip:hover{border-color:var(--blue-mid);color:var(--blue-mid);}
+    .dec-chip.is-active{background:var(--blue-mid);border-color:var(--blue-mid);color:#fff;}
+    .dec-count{font-size:14px;color:var(--text2);margin:12px 0 0;min-height:1.2em;}
+    .vendor.dec-hidden{display:none;}
+    tr.dec-hidden{display:none;}
+    .dec-nohit{font-size:14px;color:var(--text2);padding:10px 2px;}
+  
+</style>
+<link href="/assets/css/tokens.css" rel="stylesheet"/>
+<link href="/assets/css/base.css" rel="stylesheet"/>
+<link href="/assets/css/components.css" rel="stylesheet"/>
+<link href="/assets/css/nav.css" rel="stylesheet"/>
+<script defer="" src="/assets/js/nav.js?v=20260816b"></script>
+<link href="/assets/css/footer.css" rel="stylesheet"/><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "TAGRA", "item": "https://tagra.app/nl/"}, {"@type": "ListItem", "position": 2, "name": "Articles", "item": "https://tagra.app/fr/articles/"}, {"@type": "ListItem", "position": 3, "name": "Symboles et codes d’anomalie du tachygraphe", "item": "https://tagra.app/fr/articles/symboles-tachygraphe/"}]}</script><noscript><style>.anim-up,.fly-left,.fly-right{opacity:1!important;transform:none!important}</style></noscript></head>
+<body class="art-page">
+<a class="skip-link" href="#main-content">Passer au contenu</a>
+<div aria-hidden="true" id="scroll-progress"></div>
+<nav aria-label="Navigation principale" class="site-nav" role="navigation">
+<div class="nav-inner">
+<a aria-label="TAGRA – Accueil" class="nav-logo" href="/nl/"><img alt="TAGRA" height="32" src="/assets/img/logo-light.svg?v=20260513zh" style="display:block;height:32px;width:auto;" width="140"/></a>
+<ul class="nav-links" id="nav-links">
+<li><a href="/fr/entreprises/">Pour les entreprises</a></li>
+<li><a href="/fr/conducteurs/">Pour les conducteurs</a></li>
+<li><a href="/fr/autorites-de-controle/">Contrôle</a></li>
+<li><a aria-current="page" href="/fr/articles/">Articles</a></li><li><a href="/fr/manuels/">Manuels</a></li>
+<li><a href="/fr/faq/">FAQ</a></li>
+<li><a href="/fr/contact/">Contact</a></li>
+<li class="nav-cta-li"><a class="nav-cta" href="/fr/essai-gratuit/?audience=driver&amp;src=symbols">Essayez gratuitement pendant 30 jours</a></li>
+</ul>
+<details class="nav-lang">
+<summary aria-label="Langue : FR">FR</summary>
+<div class="nav-lang-menu" role="menu"><a href="/articles/digital-tachograph-symbols/" hreflang="en">English</a><a href="/de/ratgeber/tachographen-symbole/" hreflang="de">Deutsch</a><a href="/pl/poradnik/symbole-tachografu/" hreflang="pl">Polski</a><a href="/nl/artikelen/tachograaf-symbolen/" hreflang="nl">Nederlands</a><a aria-current="page" class="active" href="/fr/articles/symboles-tachygraphe/" hreflang="fr">Français</a><a href="/it/articoli/simboli-cronotachigrafo/" hreflang="it">Italiano</a><a href="/el/arthra/symvola-tachografou/" hreflang="el">Ελληνικά</a><a href="/hu/cikkek/tachograf-szimbolumok/" hreflang="hu">Magyar</a><a href="/ro/articole/simboluri-tahograf-digital/" hreflang="ro">Română</a><a href="https://www.tdt.cz/" hreflang="cs" rel="noopener" target="_blank">Čeština</a><a href="https://www.tdt.sk/" hreflang="sk" rel="noopener" target="_blank">Slovenčina</a></div>
+</details>
+<a class="nav-cta-mobile" href="/fr/essai-gratuit/?audience=driver&amp;src=symbols">Essai gratuit</a>
+<button aria-expanded="false" aria-label="Afficher/masquer le menu" class="nav-mobile-toggle" id="nav-toggle">
+<span></span><span></span><span></span>
+</button>
+</div>
+</nav>
+<header class="art-hero">
+<div class="art-wrap">
+<nav aria-label="Fil d’Ariane" class="breadcrumb"><a href="/nl/">TAGRA</a><span>›</span><a href="/fr/articles/">Articles</a><span>›</span><span>Symboles du tachygraphe &amp; codes d’anomalie</span></nav>
+<div class="eyebrow anim-up">Base de connaissances du conducteur</div>
+<h1 class="art-title"><span class="grad">Symboles du tachygraphe &amp; codes d’anomalie : guide du conducteur</span></h1>
+<div class="art-meta"><span>Truck Data Technology</span><span>Mis à jour en juin 2026</span><span>22 min de lecture</span></div>
+<div aria-label="Conducteur utilisant un tachygraphe numérique" class="art-hero-video">
+<video aria-label="Conducteur utilisant un tachygraphe numérique" autoplay="" loop="" muted="" playsinline="" poster="symboly-chybove-kody-hero-poster.webp" preload="metadata" webkit-playsinline="">
+<source src="symboly-chybove-kody-hero.webm" type="video/webm">
+<source src="symboly-chybove-kody-hero.mp4" type="video/mp4">
+</source></source></video>
+</div>
+<p class="hero-lede anim-up">Tous les tachygraphes numériques de l’UE utilisent le même langage visuel. Que vous conduisiez un poids lourd de 7,5 t en Bavière ou une semi-remorque de 40 t de Rotterdam à Athènes, les symboles affichés sur votre tachygraphe suivent un ensemble unique de normes juridiquement contraignantes, établi par le règlement (UE) 2016/799, annexe I C — la spécification technique applicable aux tachygraphes intelligents. Mais comprendre les icônes ne représente que la moitié du travail. Le même écran qui affiche votre activité présente également des avertissements, des événements, des anomalies et des messages contextuels propres au fabricant — et une mauvaise interprétation peut coûter une amende au conducteur, immobiliser un véhicule ou entraîner une visite obligatoire dans un atelier agréé. Ce guide passe en revue chaque catégorie, avec des messages vérifiés tirés des manuels officiels des quatre unités les plus couramment installées en Europe : VDO DTCO 4.1, Stoneridge SE5000, Actia SmarTach et EFAS-4. Contenu de ce guide Quatre symboles d’activité que tout conducteur doit connaître Catégories universelles d’avertissements (événements, anomalies, temps, notes) Plus de 200 codes vérifiés &amp; symboles (recherche) Les 10 messages de tachygraphe les plus courants en pratique Procédure en cas d’anomalie critique : que faire lors d’un contrôle routier Sources officielles &amp; manuels des fabricants FAQ — symboles et codes d’anomalie</p><div class="bento--hero"><div class="hero-card"><div class="eyebrow">Symboles d’activité</div><div class="big">4</div><p>CONDUITE, AUTRE TÂCHE, DISPONIBILITÉ et PAUSE/REPOS — les quatre symboles affichés sur chaque tachygraphe.</p></div><div class="hero-card hero-card--blue"><div class="eyebrow">Codes d’anomalie vérifiés</div><div class="big">200+</div><p>Base de données complète des codes d’anomalie, avec leur signification et les mesures recommandées.</p></div><div class="hero-card"><div class="eyebrow">Manuels des fabricants</div><div class="big">4</div><p>Codes vérifiés à partir de la documentation officielle de VDO, Stoneridge, Intellic et Efkon.</p></div><div class="hero-card hero-card--blue"><div class="eyebrow">Messages les plus courants</div><div class="big">Top 10</div><p>Les messages que les conducteurs voient réellement sur la route, avec une solution pour chacun.</p></div></div>
+</div>
+</header>
+<main id="main-content"><section class="band"><div class="container art-body"><div class="cta-box">
+<h3>Votre code ne raconte que la moitié de l’histoire</h3>
+<p>Une anomalie affichée à l’écran laisse presque toujours une trace sur la carte de conducteur — un enregistrement manquant, une période de travail interrompue ou une infraction sur laquelle vous pourriez être interrogé lors d’un contrôle routier. TAGRA Trucker lit votre carte et vous montre exactement ce qui a été enregistré. Lecteur de carte USB inclus, 49 € HT.</p>
+<a class="cta-btn" href="/fr/essai-gratuit/?audience=driver&amp;src=symbols">Voir ce qui figure sur votre carte →</a>
+</div><div class="info-card anim-up" style="margin-top:28px;">
+<span class="badge">Que faire maintenant</span>
+<h2 class="h2-grad anim-up" id="what-to-do-now" style="font-size:28px;">Une anomalie affichée à l’écran : ce que la loi exige de vous</h2>
+<p>Avant de rechercher votre code ci-dessous, voici la séquence applicable à toute anomalie sur un tachygraphe numérique. Les événements (excès de vitesse, conduite sans carte) ne la déclenchent pas — seules les anomalies la déclenchent.</p>
+<ol style="margin:14px 0 0 18px;line-height:1.65;">
+<li><strong>Arrêtez-vous en sécurité.</strong> Validez le message sur l’unité. Le tachygraphe continue d’enregistrer jusqu’à ce que vous retiriez la carte.</li>
+<li><strong>Imprimez la journée.</strong> Imprimez vos activités et inscrivez manuellement chaque activité ultérieure au dos du ticket imprimé — heure, lieu, activité.</li>
+<li><strong>Informez l’exploitant.</strong> En vertu de l’article 37 du règlement 165/2014, la réparation doit être effectuée dès que les circonstances le permettent.</li>
+<li><strong>Rejoignez un atelier agréé dès que possible.</strong> Si le véhicule ne peut pas retourner dans les locaux de l’exploitant dans la semaine suivant la découverte de l’anomalie, la réparation doit être effectuée en cours de route.</li>
+</ol>
+<p style="margin-top:14px;"><strong>Une exception :</strong> Si le message signale une atteinte à la sécurité ou une anomalie du capteur avec conflit de mouvement du véhicule, l’unité peut éjecter la carte et cesser complètement d’enregistrer. La visite à l’atelier agréé est alors immédiate et ne peut pas être reportée jusqu’au retour du véhicule au dépôt.</p>
+</div><div class="eyebrow anim-up">Symboles d’activité</div><h2 class="h2-grad anim-up" id="activity-symbols">Quatre symboles d’activité que tout conducteur doit connaître</h2>
+<p>Tout tachygraphe numérique enregistre le temps du conducteur dans l’une des quatre catégories, chacune étant représentée à l’écran par un pictogramme ISO-2575 unique. Il ne s’agit pas de simples libellés visuels — ce sont des <strong>catégories juridiquement distinctes</strong> au titre du règlement (CE) 561/2006 (temps de conduite des conducteurs) et de la directive 2002/15/CE (temps de travail des travailleurs mobiles), qui déterminent la manière dont votre journée est prise en compte pour les limites de conduite, les pauses et les temps de repos.</p>
+<div class="activity-grid">
+<div class="activity-card anim-up">
+<div aria-hidden="true" class="ico ico--drive"><img alt="" height="28" src="icons/driving.svg?v=20260514c" width="28" loading="lazy"/></div>
+<h3>CONDUITE (volant)</h3>
+<p>Définie <strong>automatiquement</strong> au moment où le véhicule se déplace. Ne peut pas être modifiée manuellement. Est prise en compte dans votre limite de conduite continue de 4,5 heures, ainsi que dans les limites de conduite journalière de 9/10 heures et hebdomadaire/bimensuelle de 56/90 heures.</p>
+</div>
+<div class="activity-card anim-up">
+<div aria-hidden="true" class="ico ico--work"><img alt="" height="28" src="icons/other-work.svg?v=20260514c" width="28" loading="lazy"/></div>
+<h3>AUTRE TÂCHE (marteaux croisés)</h3>
+<p>Tout travail rémunéré qui n’est <strong>pas de la conduite</strong> : chargement et déchargement, ravitaillement en carburant, tâches administratives, contrôles du véhicule, aide aux passagers. Est pris en compte comme temps de travail au titre de la directive sur le temps de travail. Ne <em>compte pas</em> comme une pause.</p>
+</div>
+<div class="activity-card anim-up">
+<div aria-hidden="true" class="ico ico--avail"><img alt="" height="28" src="icons/availability.svg?v=20260514c" width="28" loading="lazy"/></div>
+<h3>DISPONIBILITÉ (losange carré)</h3>
+<p>Temps d’attente dont la durée est connue à l’avance : ferry/train, file d’attente chez un client, accompagnement d’un véhicule remorqué. Une période de disponibilité ne compte pas comme une pause au titre de la réglementation relative aux temps de conduite et — lorsque sa durée est connue à l’avance — elle est également exclue du temps de travail au titre de la directive sur le temps de travail.</p>
+</div>
+<div class="activity-card anim-up">
+<div aria-hidden="true" class="ico ico--rest"><img alt="" height="28" src="icons/rest.svg?v=20260514c" width="28" loading="lazy"/></div>
+<h3>PAUSE/REPOS (lit)</h3>
+<p>Pause véritable ou temps de repos journalier/hebdomadaire. Le conducteur ne doit effectuer aucune tâche et doit être libre de disposer de son temps. Il s’agit de la seule catégorie qui réinitialise le compteur de conduite continue de 4,5 heures et qui est prise en compte dans le temps de repos journalier obligatoire de 11 heures.</p>
+</div>
+</div>
+<p>Les touches de sélection de l’unité (Conducteur 1 / Conducteur 2) vous permettent de basculer entre AUTRE TÂCHE, DISPONIBILITÉ et PAUSE/REPOS. La CONDUITE est toujours définie automatiquement par le capteur de mouvement — si vous voyez CONDUITE alors que le véhicule est à l’arrêt, le tachygraphe enregistre une anomalie, et non une activité (voir plus loin). Les erreurs courantes des conducteurs concernant ces quatre symboles — et les raisons pour lesquelles la « DISPONIBILITÉ » ne peut jamais remplacer légalement une pause — sont présentées à la section 4.</p>
+<!-- ===================================================================== -->
+<!-- SECTION 2: UNIVERSAL WARNING CATEGORIES                                -->
+<!-- ===================================================================== --></div></section><section class="band band--blue"><div class="container art-body"><div class="eyebrow anim-up">Catégories d’avertissements</div><h2 class="h2-grad anim-up" id="universal-warnings">Catégories universelles d’avertissements utilisées par tous les tachygraphes</h2>
+<p>Une fois les quatre symboles d’activité examinés, tous les messages d’avertissement affichés par les tachygraphes numériques relèvent de l’une des quatre familles suivantes. Le <strong>manuel VDO DTCO 4.1</strong> les présente explicitement (page 109), et la même logique est suivie par le Stoneridge SE5000, l’Actia SmarTach et l’EFAS-4 — car l’ <strong>annexe I C définit ces catégories au niveau réglementaire</strong>. Savoir à quelle famille appartient un message vous indique immédiatement sa gravité et si vous pouvez poursuivre votre période de travail.</p>
+<div class="warn-grid">
+<div class="warn-card warn-card--warn anim-up">
+<h3>! Événement</h3>
+<p>Un <strong>fait opérationnel</strong> enregistré par le tachygraphe, qui ne constitue pas nécessairement une anomalie matérielle — par exemple, la conduite sans carte valide, le dépassement de la limite de vitesse ou l’insertion d’une carte en conduite. La plupart des événements doivent être validés avec la touche OK. L’unité embarquée (UEV) inscrit un enregistrement dans la mémoire de masse <em>et</em> sur la carte de conducteur.</p>
+</div>
+<div class="warn-card warn-card--crit anim-up">
+<h3>x Anomalie</h3>
+<p>Un véritable <strong>dysfonctionnement matériel ou logiciel</strong> : anomalie du capteur, anomalie de l’imprimante, anomalie interne de l’heure, anomalie de téléchargement, anomalie GNSS. Les anomalies déclenchent l’obligation de réparation prévue à l’article 37 : l’unité doit être réparée dès que les circonstances le permettent et, si le véhicule ne peut pas retourner au dépôt dans la <strong>semaine</strong> suivant la découverte de l’anomalie, la réparation doit être effectuée en cours de route. La conduite avec une anomalie connue n’est autorisée qu’avec des saisies manuelles documentées.</p>
+</div>
+<div class="warn-card warn-card--info anim-up">
+<h3>↻ Avertissement de temps de conduite</h3>
+<p>A <strong>pré-avertissement de conformité</strong> : conduite continue approchant 4,5 heures, temps de conduite journalier/hebdomadaire approchant sa limite ou prochain repos requis imminent. Le clignotement de l’arrière-plan constitue le signal visuel. Ces messages vous aident à respecter le règlement 561/2006 — ce ne sont pas des anomalies.</p>
+</div>
+<div class="warn-card warn-card--ok anim-up">
+<h3>i Note opérationnelle</h3>
+<p>Un <strong>indication informative</strong> : « veuillez saisir », « pas de papier », « erreur de carte », « étalonnage requis dans 28 jours ». Les notes opérationnelles s’affichent sans clignotement et disparaissent automatiquement après quelques secondes. Aucune donnée n’est écrite dans la mémoire de masse ; le message constitue uniquement une indication de l’interface utilisateur.</p>
+</div>
+</div>
+<p>Tous les messages d’erreur que vous verrez — qu’ils proviennent d’un VDO DTCO 4.0, d’un Stoneridge SE5000 Exakt Duo², d’un Actia SmarTach ou de tout autre type d’unité homologué au titre de l’annexe I C — appartiennent exactement à l’une de ces quatre familles. À partir de maintenant, nous examinerons chaque famille en détail, avec le texte vérifié des messages issus des manuels des fabricants.</p>
+<div class="cta-box" style="margin-top:36px;">
+<h3>Votre code ne raconte que la moitié de l’histoire</h3>
+<p>Une anomalie affichée à l’écran laisse presque toujours une trace sur la carte de conducteur — un enregistrement manquant, une période de travail interrompue ou une infraction sur laquelle vous pourriez être interrogé lors d’un contrôle routier. TAGRA Trucker lit votre carte et vous montre exactement ce qui a été enregistré. Lecteur de carte USB inclus, 49 € HT.</p>
+<a class="cta-btn" href="/fr/essai-gratuit/?audience=driver&amp;src=symbols">Voir ce qui figure sur votre carte →</a>
+</div>
+<!-- ===================================================================== -->
+<!-- SECTION 3: 120+ VERIFIED ERROR CODES BY MANUFACTURER                  -->
+<!-- ===================================================================== --></div></section><section class="band band--gray"><div class="container art-body"><div class="eyebrow anim-up">Base de données complète des codes</div><h2 class="h2-grad anim-up" id="vendor-codes">Plus de 200 codes d’anomalie vérifiés à partir de quatre manuels de fabricants</h2>
+<p>Les quatre modèles de tachygraphes numériques les plus installés en Europe sont <strong>VDO DTCO 4.1</strong> (Continental — l’unité dominante en Europe centrale et sur les marchés tchèque et slovaque), <strong>Stoneridge SE5000 Exakt Duo²</strong> (le modèle standard au Royaume-Uni et en Scandinavie), <strong>Actia SmarTach</strong> (répandu en France et dans le sud de l’Europe) et <strong>EFAS-4</strong> (Intellic / Schneider, courant en Allemagne et en Pologne). Chaque fabricant utilise une formulation légèrement différente à l’écran, mais tous sont conformes à l’annexe I C — le sens sous-jacent d’une « anomalie interne », d’une « anomalie du capteur » ou d’une « carte non clôturée » est donc identique, quelle que soit l’unité installée sur le tableau de bord.</p>
+<p>Les codes ci-dessous sont tirés directement des manuels d’utilisation officiels téléchargeables publiquement — les références des fichiers sont indiquées dans la <a href="#sources">section des sources</a>. Lorsque le manuel donne une formulation anglaise, nous la reprenons verbatim ; nous avons seulement ajouté une colonne en anglais simple « what to do » lorsque le manuel laisse cette décision à l’appréciation du conducteur.</p>
+<div class="dec-search" id="dec-search">
+<label class="dec-search-label" for="dec-search-input">Recherche rapide — saisissez un code, un message ou un symbole</label>
+<div class="dec-search-row">
+<input autocomplete="off" id="dec-search-input" placeholder="par ex. anomalie du capteur, 042, 002E80, GNSS…" spellcheck="false" type="search"/>
+<button aria-label="Effacer la recherche" id="dec-search-clear" type="button">×</button>
+</div>
+<div aria-label="Filtrer par fabricant" class="dec-chips" role="group">
+<button class="dec-chip is-active" data-vendor="all" type="button">Tous</button>
+<button class="dec-chip" data-vendor="vdo" type="button">VDO DTCO</button>
+<button class="dec-chip" data-vendor="stoneridge" type="button">Stoneridge</button>
+<button class="dec-chip" data-vendor="actia" type="button">Actia</button>
+<button class="dec-chip" data-vendor="efas" type="button">EFAS</button>
+<button class="dec-chip" data-vendor="symbols" type="button">Symboles ↑</button>
+</div>
+<p aria-live="polite" class="dec-count" id="dec-count"></p>
+</div>
+<!-- ===== TAGRA CTA Box — found your code ===== -->
+<div class="cta-box">
+<h3>Vous avez trouvé votre code ? Vérifiez ce qu’il a enregistré sur votre carte.</h3>
+<p>Un avertissement affiché laisse souvent une trace dans les données de votre carte de conducteur. TAGRA Trucker lit votre carte après téléchargement et affiche les infractions, les temps de conduite et les temps de repos — vous savez ainsi où vous en êtes avant un contrôle routier.</p>
+<p><a class="cta-btn" href="/fr/conducteurs/">TAGRA Trucker — 49 € avec lecteur de carte inclus →</a></p>
+<p class="cta-note">Vous gérez plusieurs conducteurs ou véhicules ? <a href="/fr/entreprises/">Découvrez TAGRA pour les parcs</a>.</p>
+</div>
+<div class="vendor-stack">
+<!-- ===== VDO DTCO 4.1 ===== -->
+<details class="vendor" id="vdo" open="">
+<summary>
+<span class="vendor-meta">Continental VDO · le plus largement installé en Europe centrale</span>
+    VDO DTCO 4.1 / 4.1a / 4.1b
+  </summary>
+<div class="vendor-body">
+<p>La famille VDO DTCO 4.1 constitue la deuxième génération de tachygraphes intelligents (Smart Tacho 2) et l’unité la plus courante dans les parcs tchèques, slovaques, allemands et autrichiens. Les messages ci-dessous sont tirés du <strong>VDO DTCO 4.1 Instruction Manual, Edition 3 / 2024-08, BA00.1381.41 100 102</strong> (Continental Automotive Technologies GmbH). La structure officielle des messages est la suivante : <strong>Événements</strong> (tels que la conduite sans carte), <strong>Anomalies</strong> (dysfonctionnements matériels de l’unité), <strong>Avertissements de temps de conduite</strong> et <strong>Notes d’exploitation</strong>.</p>
+<h3>Événements — occurrences opérationnelles (priorité la plus élevée)</h3>
+<div class="code-table-wrap">
+<table class="code-table">
+<thead>
+<tr>
+<th style="width: 22%;">Message</th>
+<th style="width: 30%;">Cause (d’après le manuel)</th>
+<th style="width: 32%;">Que faire</th>
+<th style="width: 12%;">Gravité</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>! security breach xx</td>
+<td>Anomalie dans la mémoire de données ; la sécurité des données du DTCO 4.1x n’est plus assurée. Les données du capteur ne sont plus fiables. Le boîtier du DTCO a été ouvert sans autorisation.</td>
+<td>Acquittez le message. La carte est éjectée automatiquement — même pendant la conduite. Réinsérez-la ou faites-la contrôler dans un atelier agréé.</td>
+<td><span class="sev sev-crit">Critique</span></td>
+</tr>
+<tr>
+<td>!1 security breach xx</td>
+<td>Le verrouillage de la carte est perturbé ou défectueux. Le DTCO ne détecte plus une carte de tachygraphe qui avait été insérée correctement. L’identité, l’authenticité ou les données enregistrées sur la carte ne sont pas fiables.</td>
+<td>Confirmez le message. Réinsérez la carte de tachygraphe ou faites-la contrôler.</td>
+<td><span class="sev sev-crit">Critique</span></td>
+</tr>
+<tr>
+<td>! power interruption xx</td>
+<td>L’alimentation a été déconnectée ou l’alimentation du capteur du DTCO était trop faible ou trop élevée. Ce message peut également s’afficher au démarrage du moteur.</td>
+<td>Acquittez le message. S’il réapparaît, contrôlez l’alimentation du véhicule.</td>
+<td><span class="sev sev-med">Moyenne</span></td>
+</tr>
+<tr>
+<td>x sensor fault</td>
+<td>La communication avec le capteur de mouvement est interrompue. Le message apparaît également après une interruption de tension.</td>
+<td>Acquittez le message. S’il réapparaît, consultez un atelier agréé.</td>
+<td><span class="sev sev-crit">Critique</span></td>
+</tr>
+<tr>
+<td>! motion conflict xx</td>
+<td>Contradiction dans l’évaluation du mouvement du véhicule entre le capteur et une source de signal indépendante. La fonction ferry/train n’a peut-être pas été réglée pendant le transport.</td>
+<td>Confirmez le message. Consultez un atelier agréé — manipulation frauduleuse ou dommage possible.</td>
+<td><span class="sev sev-crit">Critique</span></td>
+</tr>
+<tr>
+<td>! GNSS is missing xx</td>
+<td>Aucune donnée de position pendant trois heures de temps de conduite cumulé.</td>
+<td>Acquittez le message. Vérifiez que l’antenne GNSS n’est pas couverte ou obstruée.</td>
+<td><span class="sev sev-med">Moyenne</span></td>
+</tr>
+<tr>
+<td>!? GNSS anomaly</td>
+<td>Une manipulation frauduleuse ou une attaque externe du signal GNSS a été détectée (anti-usurpation d’identité OSNMA).</td>
+<td>Recherchez les causes possibles de la manipulation frauduleuse. Vérifiez le fonctionnement du GNSS. Remplacez les composants défectueux si nécessaire.</td>
+<td><span class="sev sev-high">Élevée</span></td>
+</tr>
+<tr>
+<td>! time conflict xx</td>
+<td>Écart de plus d’une minute entre l’horloge interne du DTCO et l’heure reçue du signal GNSS.</td>
+<td>Acquittez le message. Si le problème persiste, faites inspecter et corriger le tachygraphe par un atelier agréé.</td>
+<td><span class="sev sev-med">Moyenne</span></td>
+</tr>
+<tr>
+<td>! DSRC comm. error xx</td>
+<td>Une erreur de communication s’est produite entre le DTCO 4.1x et le module DSRC-CAN externe (utilisé pour les contrôles routiers à distance).</td>
+<td>Confirmez le message. S’il réapparaît, consultez un atelier spécialisé agréé.</td>
+<td><span class="sev sev-med">Moyenne</span></td>
+</tr>
+<tr>
+<td>! driving without card xx</td>
+<td>La conduite a commencé sans carte de conducteur — ou sans carte de conducteur valide — dans le lecteur 1. L’événement est également déclenché si une combinaison de cartes non autorisée est insérée avant ou après le trajet.</td>
+<td>Arrêtez le véhicule. Insérez une carte de conducteur valide. Retirez d’abord toute carte d’entreprise ou carte de contrôleur du DTCO si nécessaire.</td>
+<td><span class="sev sev-high">Élevée</span></td>
+</tr>
+<tr>
+<td>!1 insertion while driving xx</td>
+<td>La carte de conducteur a été insérée après que le véhicule a commencé à se déplacer.</td>
+<td>Acquittez le message. À l’avenir, prévoyez d’insérer la carte avant de démarrer.</td>
+<td><span class="sev sev-med">Moyenne</span></td>
+</tr>
+<tr>
+<td>!1 time overlap xx</td>
+<td>L’heure UTC de ce tachygraphe est antérieure à l’heure UTC du tachygraphe précédent, ce qui produit un écart horaire négatif (situation typique lors d’un changement de véhicule).</td>
+<td>Identifiez le tachygraphe dont l’heure UTC est incorrecte et faites-le inspecter et corriger par un atelier agréé.</td>
+<td><span class="sev sev-med">Moyenne</span></td>
+</tr>
+<tr>
+<td>!1 card not valid xx</td>
+<td>La carte de tachygraphe a expiré, n’est pas encore valide ou son authentification a échoué. Une carte qui devient invalide après minuit est automatiquement enregistrée puis éjectée dès l’arrêt du véhicule.</td>
+<td>Confirmez le message. Contrôlez la carte de tachygraphe et réinsérez-la ; renouvelez-la si elle a expiré.</td>
+<td><span class="sev sev-med">Moyenne</span></td>
+</tr>
+<tr>
+<td>! cards conflict xx</td>
+<td>Les deux cartes de tachygraphe ne doivent pas être insérées simultanément — par exemple une carte d’entreprise avec une carte de contrôleur.</td>
+<td>Confirmez le message. Retirez la carte en conflit du lecteur concerné.</td>
+<td><span class="sev sev-med">Moyenne</span></td>
+</tr>
+<tr>
+<td>!1 card not closed xx</td>
+<td>La carte de conducteur n’a pas été correctement retirée du tachygraphe précédent. Certaines données liées au conducteur n’ont peut-être pas été enregistrées.</td>
+<td>Acquittez le message. À partir de maintenant, attendez toujours que la carte soit libérée avant de la retirer.</td>
+<td><span class="sev sev-med">Moyenne</span></td>
+</tr>
+<tr>
+<td>⊃ overspeed xx</td>
+<td>La vitesse maximale configurée a été dépassée pendant plus de <strong>60 secondes</strong>.</td>
+<td>Confirmez le message. Réduisez votre vitesse. Les événements répétés de dépassement de vitesse sont visibles par les agents de contrôle lors du téléchargement.</td>
+<td><span class="sev sev-high">Élevée</span></td>
+</tr>
+<tr>
+<td>§ calibration in days ??</td>
+<td>L’inspection périodique biennale du tachygraphe approche (l’avertissement apparaît 28 jours à l’avance).</td>
+<td>Confirmez. Prenez rendez-vous avec un atelier agréé avant l’échéance.</td>
+<td><span class="sev sev-low">Faible</span></td>
+</tr>
+<tr>
+<td>1 download in days ??</td>
+<td>Le prochain téléchargement de la carte de conducteur est dû (l’avertissement apparaît 14 jours à l’avance).</td>
+<td>Effectuez le téléchargement de la carte de conducteur avant l’expiration du délai.</td>
+<td><span class="sev sev-low">Faible</span></td>
+</tr>
+<tr>
+<td>1 expires in days ??</td>
+<td>La carte de conducteur expire prochainement (l’avertissement apparaît généralement 28 jours à l’avance).</td>
+<td>Confirmez le message. Demandez le renouvellement de la carte auprès de l’autorité de votre État membre.</td>
+<td><span class="sev sev-info">Information</span></td>
+</tr>
+<tr>
+<td>! end of normal operation in ??</td>
+<td>Le certificat d’homologation du DTCO 4.1x arrive à expiration. Le message apparaît 92 jours à l’avance lors du retrait de la carte.</td>
+<td>Prenez rendez-vous avec votre atelier pour remplacer le DTCO avant l’échéance.</td>
+<td><span class="sev sev-med">Moyenne</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>Anomalies — dysfonctionnements matériels</h3>
+<div class="code-table-wrap">
+<table class="code-table">
+<thead>
+<tr>
+<th style="width: 22%;">Message</th>
+<th style="width: 30%;">Cause (d’après le manuel)</th>
+<th style="width: 32%;">Que faire</th>
+<th style="width: 12%;">Gravité</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>x internal fault xx</td>
+<td>Dysfonctionnement grave du DTCO 4.1x. Causes possibles : erreur inattendue de synchronisation du programme ou du processus, touches bloquées, dysfonctionnement de la communication avec des appareils externes ou l’affichage des instruments, dysfonctionnement de la sortie d’impulsions.</td>
+<td>Acquittez le message. Contrôlez les touches. Faites inspecter les câbles de raccordement et les équipements d’enregistrement connectés par un atelier agréé.</td>
+<td><span class="sev sev-crit">Critique</span></td>
+</tr>
+<tr>
+<td>x1 internal fault xx</td>
+<td>Dysfonctionnement du mécanisme de carte (lecteur 1), par exemple le verrouillage de la carte ne se ferme pas.</td>
+<td>Retirez la carte de tachygraphe et réinsérez-la. Si le problème persiste, consultez un atelier.</td>
+<td><span class="sev sev-high">Élevée</span></td>
+</tr>
+<tr>
+<td>x time fault xx</td>
+<td>L’heure UTC du DTCO n’est pas plausible ou l’horloge en temps réel présente une anomalie. Les cartes de conducteur/d’entreprise nouvellement insérées sont refusées afin d’éviter des données incohérentes.</td>
+<td>Acquittez. Le DTCO doit être remplacé ou réinitialisé par un atelier agréé dès que possible.</td>
+<td><span class="sev sev-crit">Critique</span></td>
+</tr>
+<tr>
+<td>x anomalie de l’imprimante xx</td>
+<td>La tension d’alimentation de l’imprimante est coupée ou le capteur de température de la tête d’impression est défectueux.</td>
+<td>Confirmez. Répétez l’impression, éventuellement après avoir coupé puis remis le contact. Si le problème persiste, rendez-vous dans un atelier agréé.</td>
+<td><span class="sev sev-med">Moyenne</span></td>
+</tr>
+<tr>
+<td>x anomalie de téléchargement xx</td>
+<td>Une anomalie s’est produite lors du téléchargement des données vers un appareil externe (clé de téléchargement ou boîtier de téléchargement à distance).</td>
+<td>Confirmez. Répétez le téléchargement. Faites vérifier les câbles de raccordement (faux contact ?) ou l’appareil externe.</td>
+<td><span class="sev sev-med">Moyenne</span></td>
+</tr>
+<tr>
+<td>x anomalie du capteur xx</td>
+<td>Le capteur de mouvement signale une anomalie interne après son autotest.</td>
+<td>Acquittez. Contrôle par un atelier agréé — le remplacement du capteur peut être nécessaire.</td>
+<td><span class="sev sev-crit">Critique</span></td>
+</tr>
+<tr>
+<td>x1 anomalie de carte xx</td>
+<td>Lors de la lecture ou de l’écriture de la carte de tachygraphe, une anomalie de communication s’est produite — généralement en raison de contacts encrassés. Certaines données du conducteur peuvent ne pas avoir été écrites.</td>
+<td>Confirmez. Nettoyez les contacts de la carte (chiffon sec), puis réinsérez-la. Si le problème se reproduit, remplacez la carte.</td>
+<td><span class="sev sev-med">Moyenne</span></td>
+</tr>
+<tr>
+<td>x anomalie GNSS interne xx</td>
+<td>Anomalie du dispositif GNSS : défaillance interne, court-circuit de l’antenne GNSS externe (option) ou absence de connexion à l’antenne externe.</td>
+<td>Acquittez. Consultez un atelier agréé.</td>
+<td><span class="sev sev-high">Élevée</span></td>
+</tr>
+<tr>
+<td>x anomalie DSRC interne xx</td>
+<td>Anomalie interne du module DSRC (radio de contrôle routier à distance) ou antenne défectueuse / non raccordée.</td>
+<td>Confirmez. L’atelier agréé doit vérifier le module DSRC, les câbles et l’antenne externe.</td>
+<td><span class="sev sev-med">Moyenne</span></td>
+</tr>
+<tr>
+<td>x anomalie interne du capteur xx</td>
+<td>L’autotest du capteur d’accélération interne a échoué plus de 10 fois et la tentative de réinitialisation a échoué.</td>
+<td>Confirmez. Consultez sans délai un atelier spécialisé agréé.</td>
+<td><span class="sev sev-crit">Critique</span></td>
+</tr>
+<tr>
+<td>x anomalie ITS xx</td>
+<td>Une anomalie s’est produite sur le composant Bluetooth interne (interface de données ITS).</td>
+<td>Confirmez. Consultez un atelier spécialisé agréé.</td>
+<td><span class="sev sev-low">Faible</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>Avertissements de temps de conduite (préavertissements de conformité, pas des anomalies)</h3>
+<div class="code-table-wrap">
+<table class="code-table">
+<thead>
+<tr>
+<th style="width: 26%;">Message</th>
+<th style="width: 44%;">Signification</th>
+<th style="width: 30%;">Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1 pause ! 04h15 00h15</td>
+<td>Prenez une pause — la conduite continue a atteint 4 heures 15 minutes (préavertissement).</td>
+<td>Confirmez. Prévoyez une pause de 45 minutes au cours des 15 prochaines minutes.</td>
+</tr>
+<tr>
+<td>1 pause ! 04h30 00h15</td>
+<td>Temps de conduite dépassé — la limite de 4 heures 30 minutes de conduite continue est atteinte.</td>
+<td>Arrêtez-vous et prenez une pause (45 min, ou fractionnement 15 + 30).</td>
+</tr>
+<tr>
+<td>1 temps de conduite 24h / | / ||</td>
+<td>La fin du temps de conduite journalier (24 h), hebdomadaire (|) ou sur deux semaines (||) approche. La durée du préavertissement est configurable.</td>
+<td>Confirmez. Cessez de conduire et prenez le repos requis conformément au règlement 561/2006.</td>
+</tr>
+<tr>
+<td>1 repos dans 01h45</td>
+<td>Le prochain repos journalier ou hebdomadaire doit bientôt être pris (préavertissement configurable).</td>
+<td>Planifiez suffisamment à l’avance votre prochain arrêt pour prendre votre repos.</td>
+</tr>
+<tr>
+<td>1 temps de travail 24h 09h30</td>
+<td>La fin du temps de travail journalier (24 h) ou hebdomadaire (|) au titre de la DTR approche.</td>
+<td>Confirmez. Terminez la journée de travail et prenez le repos requis.</td>
+</tr>
+<tr>
+<td>1 temps de travail 04h15</td>
+<td>La fin du temps de travail maximal sans interruption (6 heures au titre de la DTR) approche.</td>
+<td>Prévoyez une pause au cours des 15 prochaines minutes.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>Notes opérationnelles (à titre informatif, disparition automatique après 3 s)</h3>
+<div class="code-table-wrap">
+<table class="code-table">
+<thead>
+<tr>
+<th style="width: 30%;">Note</th>
+<th style="width: 70%;">Signification &amp; résolution</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>? veuillez saisir</td><td>L’unité attend une saisie dans le cadre d’une séquence de saisie manuelle. Appuyez sur OK et continuez.</td></tr>
+<tr><td>o plus de papier xx</td><td>L’imprimante n’a plus de papier ou le tiroir de l’imprimante n’est pas correctement fermé. Insérez un nouveau rouleau ; relancez toute impression interrompue via le menu.</td></tr>
+<tr><td>impression impossible xx</td><td>L’impression est impossible parce que le contact est coupé (version ADR), que la tête d’impression est en surchauffe, que l’imprimante est occupée ou que la tension d’alimentation est incorrecte. Attendez que la cause disparaisse.</td></tr>
+<tr><td>impression retardée</td><td>L’impression a été interrompue parce que la tête thermique est trop chaude. Attendez — l’impression reprend automatiquement une fois la tête refroidie.</td></tr>
+<tr><td>éjection impossible xx</td><td>L’éjection de la carte a été refusée : données en cours de lecture ou de transfert, changement de jour en cours, véhicule en mouvement ou, en mode ADR, contact coupé.</td></tr>
+<tr><td>?1 enregistrement incohérent xx</td><td>Ordre incohérent des dates dans les enregistrements de la carte de conducteur. Le problème disparaîtra lorsque de nouvelles données écraseront les saisies incorrectes.</td></tr>
+<tr><td>1 veuillez éjecter la carte xx</td><td>Une anomalie s’est produite lors de l’écriture des données sur la carte de conducteur. La carte est éjectée puis relue ; en cas de nouvel échec, un ticket d’impression des dernières activités est lancé.</td></tr>
+<tr><td>1 anomalie de carte xx</td><td>Une anomalie s’est produite lors du traitement de la carte de tachygraphe insérée. La carte est refusée et éjectée. Nettoyez les contacts et réinsérez-la.</td></tr>
+<tr><td>1 type de carte incorrect xx</td><td>La carte insérée n’est pas une carte de tachygraphe. Insérez une carte de tachygraphe valide.</td></tr>
+<tr><td>1 veuillez nettoyer la carte !</td><td>Le DTCO a rencontré des problèmes lors de la lecture ou de l’écriture de la carte. Nettoyez la carte ainsi que les lecteurs de cartes.</td></tr>
+</tbody>
+</table>
+</div>
+<h3>Codes numériques de mémoire d’anomalies VDO (001–099)</h3>
+<p style="font-size:14px;color:var(--text2);margin-bottom:12px;">Ces codes numériques sont lus dans la mémoire d’anomalies de l’unité au moyen d’un outil de diagnostic d’atelier VDO (<strong>SDS</strong> / <strong>CTCII</strong>) — ils ne sont pas affichés au conducteur lors de l’utilisation normale. La numérotation est cohérente entre les générations de DTCO (1381 et 4.1), et chaque numéro correspond à l’un des événements / anomalies de la catégorie C de l’annexe I décrits dans les tableaux de messages ci-dessus. Saisissez un numéro tel que <em>005</em> dans le champ de recherche situé en haut de cette section.</p>
+<div class="code-table-wrap">
+<table class="code-table">
+<thead><tr><th style="width:24%;">Code</th><th style="width:58%;">Signification</th><th style="width:18%;">Gravité</th></tr></thead>
+<tbody>
+<tr><td>001–2, 004–5</td><td>Anomalie interne de l’appareil</td><td><span class="sev sev-crit">Critique</span></td></tr>
+<tr><td>006</td><td>Anomalie horaire</td><td><span class="sev sev-crit">Critique</span></td></tr>
+<tr><td>007</td><td>Tentative d’atteinte à la sécurité (unité embarquée)</td><td><span class="sev sev-crit">Critique</span></td></tr>
+<tr><td>009</td><td>Anomalie d’étalonnage</td><td><span class="sev sev-high">Élevée</span></td></tr>
+<tr><td>010</td><td>Anomalie de sortie du signal de vitesse (B7)</td><td><span class="sev sev-med">Moyenne</span></td></tr>
+<tr><td>012</td><td>Anomalie de téléchargement</td><td><span class="sev sev-med">Moyenne</span></td></tr>
+<tr><td>013–14</td><td>Anomalie du bus CAN</td><td><span class="sev sev-med">Moyenne</span></td></tr>
+<tr><td>015</td><td>Perte de communication avec l’affichage</td><td><span class="sev sev-med">Moyenne</span></td></tr>
+<tr><td>016</td><td>Anomalie du capteur (autotest)</td><td><span class="sev sev-crit">Critique</span></td></tr>
+<tr><td>017–18</td><td>Anomalie d’intégrité des données du capteur (018 sur KITAS 4.0 : à partir de R1.10, cette anomalie apparaît après une coupure d’alimentation, souvent avec 019 — fonction de sécurité requise, et non un motif de remplacement du capteur)</td><td><span class="sev sev-crit">Critique</span></td></tr>
+<tr><td>019</td><td>Coupure d’alimentation du capteur</td><td><span class="sev sev-med">Moyenne</span></td></tr>
+<tr><td>020–22</td><td>Anomalie de communication du capteur</td><td><span class="sev sev-high">Élevée</span></td></tr>
+<tr><td>023</td><td>Anomalie d’authentification / d’appariement du capteur</td><td><span class="sev sev-high">Élevée</span></td></tr>
+<tr><td>024</td><td>Numéro de série du capteur inconnu</td><td><span class="sev sev-high">Élevée</span></td></tr>
+<tr><td>025</td><td>Anomalie de mémoire de données</td><td><span class="sev sev-crit">Critique</span></td></tr>
+<tr><td>026</td><td>Boîtier ouvert (atteinte à la sécurité)</td><td><span class="sev sev-crit">Critique</span></td></tr>
+<tr><td>028</td><td>Conduite sans carte</td><td><span class="sev sev-crit">Critique</span></td></tr>
+<tr><td>029</td><td>Conflit de cartes</td><td><span class="sev sev-med">Moyenne</span></td></tr>
+<tr><td>030</td><td>Surrégime</td><td><span class="sev sev-high">Élevée</span></td></tr>
+<tr><td>031</td><td>Coupure d’alimentation</td><td><span class="sev sev-med">Moyenne</span></td></tr>
+<tr><td>034</td><td>Éjection de la carte impossible</td><td><span class="sev sev-med">Moyenne</span></td></tr>
+<tr><td>036</td><td>Impression / affichage impossible</td><td><span class="sev sev-med">Moyenne</span></td></tr>
+<tr><td>037</td><td>Impression retardée</td><td><span class="sev sev-info">Information</span></td></tr>
+<tr><td>038</td><td>Tiroir de l’imprimante ouvert</td><td><span class="sev sev-med">Moyenne</span></td></tr>
+<tr><td>039</td><td>Plus de papier</td><td><span class="sev sev-med">Moyenne</span></td></tr>
+<tr><td>040</td><td>Anomalie du mécanisme de carte, lecteur 1</td><td><span class="sev sev-high">Élevée</span></td></tr>
+<tr><td>041</td><td>Anomalie de communication de la carte, lecteur 1</td><td><span class="sev sev-high">Élevée</span></td></tr>
+<tr><td>042</td><td>Authenticité des données de la carte, lecteur 1</td><td><span class="sev sev-high">Élevée</span></td></tr>
+<tr><td>043</td><td>Carte absente, lecteur 1</td><td><span class="sev sev-high">Élevée</span></td></tr>
+<tr><td>044</td><td>Carte non verrouillée, lecteur 1</td><td><span class="sev sev-low">Faible</span></td></tr>
+<tr><td>045</td><td>Chevauchement horaire, lecteur 1</td><td><span class="sev sev-med">Moyenne</span></td></tr>
+<tr><td>046</td><td>Insertion en conduite, lecteur 1</td><td><span class="sev sev-low">Faible</span></td></tr>
+<tr><td>047</td><td>Authentification de la carte, lecteur 1</td><td><span class="sev sev-high">Élevée</span></td></tr>
+<tr><td>048</td><td>Carte non valide, lecteur 1</td><td><span class="sev sev-high">Élevée</span></td></tr>
+<tr><td>049</td><td>Incohérence de l’enregistrement, lecteur 1</td><td><span class="sev sev-med">Moyenne</span></td></tr>
+<tr><td>050</td><td>Carte illisible, lecteur 1</td><td><span class="sev sev-high">Élevée</span></td></tr>
+<tr><td>051</td><td>Type de carte incorrect, lecteur 1</td><td><span class="sev sev-med">Moyenne</span></td></tr>
+<tr><td>052</td><td>Carte bloquée, lecteur 1</td><td><span class="sev sev-high">Élevée</span></td></tr>
+<tr><td>053</td><td>Anomalie interne, lecteur 1 — carte refusée et éjectée</td><td><span class="sev sev-crit">Critique</span></td></tr>
+<tr><td>054</td><td>Éjectez la carte, lecteur 1 — échec de la mise à jour de la carte / de la réauthentification</td><td><span class="sev sev-med">Moyenne</span></td></tr>
+<tr><td>056</td><td>Pause ! lecteur 1 — 4 h 30 de conduite continue</td><td><span class="sev sev-high">Élevée</span></td></tr>
+<tr><td>057</td><td>Pause bientôt, lecteur 1 — 4 h 15 de conduite continue</td><td><span class="sev sev-med">Moyenne</span></td></tr>
+<tr><td>058–066</td><td>Anomalies de carte, lecteur 2 (deuxième conducteur) — voir 040–048</td><td><span class="sev sev-high">Élevée</span></td></tr>
+</tbody>
+</table>
+</div>
+<h3>DTCO 4.0 / 4.1 — signification d'un nombre affiché à l'écran (tachygraphe intelligent)</h3>
+<p style="font-size:14px;color:var(--text2);margin-bottom:12px;">Les unités VDO DTCO 4.0 et 4.1 plus récentes affichent un nombre à deux chiffres à côté du pictogramme. Les nombres faibles (001–066) figurent dans le tableau ci-dessus ; les nombres élevés <strong>67–99</strong> correspondent aux fonctions du tachygraphe intelligent (GNSS, DSRC, ITS). Vous pouvez saisir n'importe lequel directement dans le champ de recherche ci-dessus.</p>
+<div class="code-table-wrap">
+<table class="code-table">
+<thead><tr><th style="width:24%;">Numéro affiché</th><th style="width:58%;">Signification</th><th style="width:18%;">Gravité</th></tr></thead>
+<tbody>
+<tr><td>21</td><td><a href="/fr/articles/tachygraphe-erreur-21-defaut-capteur-de-mouvement/">Anomalie du capteur de mouvement</a></td><td><span class="sev sev-crit">Critique</span></td></tr>
+<tr><td>34</td><td><a href="/fr/articles/tachygraphe-erreur-34-ejection-impossible/">Éjection de la carte impossible → que faire</a></td><td><span class="sev sev-med">Moyenne</span></td></tr>
+<tr><td>36</td><td><a href="/fr/articles/tachygraphe-erreur-36-impression-impossible/">Impression impossible</a></td><td><span class="sev sev-low">Faible</span></td></tr>
+<tr><td>80</td><td><a href="/fr/articles/tachygraphe-erreur-80-conflit-de-mouvement/">Conflit de mouvement du véhicule → que faire</a></td><td><span class="sev sev-crit">Critique</span></td></tr>
+<tr><td>82</td><td><a href="/fr/articles/tachygraphe-erreur-82-anomalie-interne-gnss/">Anomalie interne GNSS → que faire</a></td><td><span class="sev sev-med">Moyenne</span></td></tr>
+<tr><td>83</td><td><a href="/fr/articles/tachygraphe-erreur-83-gnss-absent/">Signal GNSS manquant → que faire</a></td><td><span class="sev sev-med">Moyenne</span></td></tr>
+<tr><td>84</td><td><a href="/fr/articles/tachygraphe-erreur-84-anomalie-interne-dsrc/">Anomalie interne DSRC → que faire</a></td><td><span class="sev sev-low">Faible</span></td></tr>
+<tr><td>85</td><td><a href="/fr/articles/tachygraphe-erreur-85-anomalie-communication-dsrc/">Erreur de communication DSRC</a></td><td><span class="sev sev-low">Faible</span></td></tr>
+<tr><td>86</td><td>Conflit horaire</td><td><span class="sev sev-med">Moyenne</span></td></tr>
+<tr><td>87</td><td>Anomalie du capteur</td><td><span class="sev sev-high">Élevée</span></td></tr>
+<tr><td>96</td><td><a href="/fr/articles/tachygraphe-erreur-96-anomalie-gnss/">Anomalie GNSS (irrégularités GNSS · anti-usurpation OSNMA)</a></td><td><span class="sev sev-high">Élevée</span></td></tr>
+<tr><td>97</td><td>Anomalie interne du capteur</td><td><span class="sev sev-high">Élevée</span></td></tr>
+<tr><td>98</td><td><a href="/fr/articles/tachygraphe-erreur-98-anomalie-its/">Anomalie ITS / Bluetooth → que faire</a></td><td><span class="sev sev-low">Faible</span></td></tr>
+<tr><td>67, 99</td><td>Enregistrement incohérent</td><td><span class="sev sev-med">Moyenne</span></td></tr>
+<tr><td>68–72</td><td>Anomalie de carte / anomalie interne, lecteur 2 (deuxième conducteur)</td><td>Variable</td></tr>
+<tr><td>74–75</td><td>Pause ! lecteur 2 (deuxième conducteur) — 4 h 30 / 4 h 15</td><td><span class="sev sev-high">Élevée</span></td></tr>
+<tr><td>76</td><td>Avertissement anticipé de survitesse — moins de 60 s, événement pas encore enregistré</td><td><span class="sev sev-med">Moyenne</span></td></tr>
+<tr><td>78</td><td>Échec de la mise à niveau logicielle — intégrité du module de mise à niveau ou de la clé de sécurité</td><td><span class="sev sev-high">Élevée</span></td></tr>
+<tr><td>79</td><td>Échec de la mise à niveau logicielle — tension d'alimentation hors plage pendant la mise à niveau</td><td><span class="sev sev-high">Élevée</span></td></tr>
+<tr><td>88–95</td><td>Note opérationnelle relative au temps de conduite / repos — il ne s'agit pas d'une anomalie</td><td><span class="sev sev-info">Information</span></td></tr>
+</tbody>
+</table><p><strong>Comment les conducteurs recherchent généralement ces éléments :</strong> conflit de mouvement 80, conflit de mouvement du véhicule 80 sur le tachygraphe, anomalie interne GNSS 82, signal GNSS manquant 83, anomalie interne DSRC 84, erreur de communication DSRC 85, anomalie du capteur 87, anomalie GNSS 96, anomalie ITS 98, anomalie interne de l'UEV. Le libellé affiché à l'écran varie selon le fabricant — VDO DTCO, Stoneridge SE5000, Actia SmarTach et EFAS utilisent des libellés différents pour un même événement.</p>
+</div>
+<p>Des indications détaillées sont disponibles pour les anomalies les plus courantes : <a href="/fr/articles/tachygraphe-erreur-84-anomalie-interne-dsrc/">Anomalie interne DSRC (84)</a>, <a href="/fr/articles/tachygraphe-erreur-82-anomalie-interne-gnss/">Anomalie interne GNSS (82)</a>, <a href="/fr/articles/tachygraphe-erreur-83-gnss-absent/">GNSS manquant (83)</a>, <a href="/fr/articles/tachygraphe-erreur-34-ejection-impossible/">Éjection impossible (34)</a>, <a href="/fr/articles/tachygraphe-erreur-80-conflit-de-mouvement/">Conflit de mouvement (80)</a> et <a href="/fr/articles/tachygraphe-erreur-98-anomalie-its/">Anomalie ITS (98)</a>.</p>
+<h3>Ce qui est effectivement enregistré dans les données téléchargées (EventFaultType)</h3>
+<p style="font-size:14px;color:var(--text2);margin-bottom:12px;">Tous les messages affichés à l'écran ne figurent pas dans les données téléchargées. Seuls les messages comportant un <strong>EventFaultType</strong> défini à l'appendice 1 de l'annexe IC du règlement (UE) 2016/799 sont stockés dans la mémoire du tachygraphe, apparaissent sur le ticket d'impression et figurent dans un rapport d'évaluation. Les messages opérationnels et relatifs au temps de travail sont uniquement affichés à l'écran.</p>
+<div class="code-table-wrap">
+<table class="code-table">
+<thead><tr><th style="width:16%;">EventFaultType</th><th style="width:60%;">Événement / anomalie (libellé officiel de l'annexe IC)</th><th style="width:24%;">Code affiché</th></tr></thead>
+<tbody>
+<tr><td>0x01</td><td>Insertion d'une carte non valide</td><td>048, 066</td></tr>
+<tr><td>0x02</td><td>Conflit de cartes</td><td>029</td></tr>
+<tr><td>0x03</td><td>Chevauchement horaire</td><td>045, 063</td></tr>
+<tr><td>0x04</td><td>Conduite sans carte appropriée</td><td>028</td></tr>
+<tr><td>0x05</td><td>Insertion de carte en conduite</td><td>046, 064</td></tr>
+<tr><td>0x06</td><td>Dernière session de carte non correctement clôturée</td><td>044, 062</td></tr>
+<tr><td>0x07</td><td>Survitesse</td><td>030</td></tr>
+<tr><td>0x08</td><td>Coupure d'alimentation</td><td>019, 031</td></tr>
+<tr><td>0x09</td><td>Erreur des données de mouvement</td><td>020, 021, 022, 087</td></tr>
+<tr><td>0x0A</td><td>Conflit de mouvement du véhicule</td><td>080</td></tr>
+<tr><td>0x0B</td><td>Conflit horaire (GNSS par rapport à l'horloge interne de l'UEV)</td><td>086</td></tr>
+<tr><td>0x0C</td><td>Erreur de communication avec l'installation de communication à distance</td><td>085</td></tr>
+<tr><td>0x0D</td><td>Absence d'informations de position provenant du récepteur GNSS</td><td>083</td></tr>
+<tr><td>0x0F</td><td>Anomalie GNSS</td><td>096</td></tr>
+<tr><td>0x10</td><td>Tentative d'atteinte à la sécurité liée à l'unité embarquée — aucun autre détail</td><td>007</td></tr>
+<tr><td>0x11</td><td>Échec de l'authentification du capteur de mouvement</td><td>023</td></tr>
+<tr><td>0x12</td><td>Échec de l'authentification de la carte de tachygraphe</td><td>043, 047, 061, 065</td></tr>
+<tr><td>0x13</td><td>Modification non autorisée du capteur de mouvement</td><td>024</td></tr>
+<tr><td>0x14</td><td>Erreur d'intégrité des données saisies de la carte</td><td>042, 060</td></tr>
+<tr><td>0x15</td><td>Erreur d'intégrité des données utilisateur stockées</td><td>025</td></tr>
+<tr><td>0x1C</td><td>Incohérence entre les données de mouvement et les données d'activité du conducteur stockées</td><td>099</td></tr>
+<tr><td>0x21</td><td>Tentative d'atteinte à la sécurité liée au capteur — échec de l'authentification</td><td>018</td></tr>
+<tr><td>0x22</td><td>Tentative d'atteinte à la sécurité liée au capteur — erreur d'intégrité des données stockées</td><td>017</td></tr>
+<tr><td>0x31</td><td>Anomalie interne de l'UEV</td><td>001, 002, 004, 005, 006, 009</td></tr>
+<tr><td>0x34</td><td>Anomalie de téléchargement</td><td>012</td></tr>
+<tr><td>0x35</td><td>Anomalie du capteur</td><td>016</td></tr>
+<tr><td>0x36</td><td>Récepteur GNSS interne</td><td>082</td></tr>
+<tr><td>0x38</td><td>Installation de communication à distance</td><td>084</td></tr>
+<tr><td>0x39</td><td>Interface ITS</td><td>098</td></tr>
+<tr><td>0x3A</td><td>Anomalie interne du capteur</td><td>097</td></tr>
+<tr><td>0x40</td><td>Anomalies de carte — aucun autre détail</td><td>041, 059</td></tr>
+</tbody>
+</table>
+<p style="font-size:14px;color:var(--text2);margin-top:12px;">Les codes sans EventFaultType (<strong>034, 036, 037, 039, 040, 049–054, 056–058, 067–079, 088–095</strong>) ne sont pas inscrits dans les données téléchargées — ce sont des messages opérationnels et des rappels relatifs au temps de conduite.</p>
+</div>
+</div>
+</details>
+<!-- ===== STONERIDGE SE5000 ===== -->
+<details class="vendor" id="stoneridge">
+<summary>
+<span class="vendor-meta">Stoneridge · équipement monté par défaut au Royaume-Uni et en Scandinavie</span>
+    Stoneridge SE5000 Exakt Duo² (Rev 7.6)
+  </summary>
+<div class="vendor-body">
+<p>Le Stoneridge SE5000 est le tachygraphe intelligent le plus courant installé sur les poids lourds immatriculés au Royaume-Uni et dans les parcs des pays nordiques. Les messages ci-dessous sont reproduits verbatim à partir du document officiel <strong>Stoneridge SE5000 Exakt Duo² Driver &amp; Company Manual, Rev 7.6</strong> (Stoneridge Electronics AB, Örebro). Le manuel de Stoneridge classe les messages en quatre familles, conformément à la classification de l'annexe I C : <em>Messages</em> (informatifs), <em>Préavertissements</em>, <em>Avertissements</em> et <em>Anomalies</em>.</p>
+<p style="font-size:14px;color:var(--text2);margin-bottom:18px;"><strong>Citation du manuel :</strong> « Les anomalies sont plus critiques que les avertissements et sont affichées lorsqu'une anomalie est détectée dans le tachygraphe, le capteur ou la carte de conducteur. En outre, des anomalies sont présentées lorsqu'une manipulation frauduleuse de l'équipement est détectée. Les anomalies sont enregistrées et peuvent être imprimées. »</p>
+<h3>Messages relatifs aux cartes</h3>
+<div class="code-table-wrap">
+<table class="code-table">
+<thead>
+<tr>
+<th style="width: 26%;">Affichage</th>
+<th style="width: 14%;">Type</th>
+<th style="width: 32%;">Description (verbatim du manuel)</th>
+<th style="width: 28%;">Action recommandée</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>Anomalie carte 1</td><td><span class="sev sev-crit">Anomalie</span></td><td>La carte insérée dans le lecteur 1 est défectueuse. Un message similaire s'affiche pour le lecteur 2. Lié à la carte.</td><td>Éjectez-la et examinez-la visuellement. Nettoyez-la avec un chiffon humide. Si l'anomalie persiste : rendez-vous dans un atelier agréé.</td></tr>
+<tr><td>Échec authentification carte 1</td><td><span class="sev sev-crit">Anomalie</span></td><td>Le contrôle de sécurité du tachygraphe pour la carte insérée dans le lecteur 1 a échoué. Lié au tachygraphe.</td><td>Éjectez la carte et nettoyez-la. Si le problème persiste : l'atelier agréé doit procéder à une inspection.</td></tr>
+<tr><td>Chevauchement horaire carte 1</td><td><span class="sev sev-med">Avertissement</span></td><td>La dernière heure de retrait de la carte de conducteur insérée est postérieure à la date/heure du tachygraphe. Lié au tachygraphe.</td><td>Vérifiez la date/heure du tachygraphe. Attendez que le chevauchement soit terminé.</td></tr>
+<tr><td>Anomalie d'intégrité de la carte</td><td><span class="sev sev-crit">Anomalie</span></td><td>Des données corrompues ont été détectées lors de la lecture des données de la carte. Lié à la carte.</td><td>Nettoyez la carte et réessayez. Si le problème persiste : remplacez la carte et rendez-vous dans un atelier agréé.</td></tr>
+<tr><td>Conflit de cartes</td><td><span class="sev sev-med">Avertissement</span></td><td>Une combinaison de cartes non valide a été détectée. Lié à la carte.</td><td>Retirez la carte concernée.</td></tr>
+<tr><td>Insertion carte en conduite</td><td><span class="sev sev-med">Avertissement</span></td><td>Une carte de conducteur a été insérée alors que le véhicule était en mouvement. Lié à l'utilisateur.</td><td>Poursuivez le trajet si la carte de conducteur est valide ; l'événement est enregistré.</td></tr>
+<tr><td>Éjection carte sans enregistrement</td><td><span class="sev sev-med">Message</span></td><td>Les données n'ont pas pu être enregistrées sur la carte retirée du lecteur 1 en raison d'une anomalie.</td><td>Éjectez la carte, nettoyez-la et réessayez. Effectuez un autotest si le problème persiste.</td></tr>
+<tr><td>Carte expirée</td><td><span class="sev sev-info">Message</span></td><td>La carte insérée dans le lecteur 1 est expirée. Lié à l'utilisateur.</td><td>Retirez la carte et remplacez-la par une carte valide.</td></tr>
+<tr><td>Carte expire dans xx jours</td><td><span class="sev sev-info">Message</span></td><td>La carte insérée dans le lecteur 1 expire dans xx jours (0–30). Lié à l'utilisateur.</td><td>Contactez l'autorité compétente afin d'obtenir une nouvelle carte.</td></tr>
+<tr><td>Insertion d'une carte non valide</td><td><span class="sev sev-med">Avertissement</span></td><td>Une carte non valide a été insérée dans un lecteur. Lié à l'utilisateur.</td><td>Éjectez la carte non valide.</td></tr>
+<tr><td>Dernière session mal clôturée</td><td><span class="sev sev-med">Avertissement</span></td><td>La carte de conducteur insérée dans le lecteur 1 a été éjectée de manière incorrecte lors de la dernière session. Le retrait précédent de la carte du lecteur 1 n'a pas été correctement achevé par le tachygraphe.</td><td>Éjectez la carte et nettoyez-la. Effectuez un autotest si le problème persiste.</td></tr>
+<tr><td>PIN incorrect ! Carte verrouillée</td><td><span class="sev sev-high">Message</span></td><td>Un code PIN incorrect a été saisi trop de fois (carte d'atelier). Lié à la carte.</td><td>Éjectez-la et remplacez-la par une carte valide.</td></tr>
+</tbody>
+</table>
+</div>
+<h3>Capteur &amp; anomalies de mouvement du véhicule</h3>
+<div class="code-table-wrap">
+<table class="code-table">
+<thead>
+<tr>
+<th style="width: 26%;">Affichage</th>
+<th style="width: 14%;">Type</th>
+<th style="width: 32%;">Description (verbatim)</th>
+<th style="width: 28%;">Action</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>Échec authentification capteur</td><td><span class="sev sev-crit">Anomalie</span></td><td>Le tachygraphe ne détecte pas le capteur ou ne reconnaît pas le capteur connecté comme étant celui qui est installé. Lié au capteur de mouvement.</td><td>Rendez-vous dans un atelier agréé pour tachygraphes numériques.</td></tr>
+<tr><td>Anomalie câble du capteur</td><td><span class="sev sev-high">Avertissement</span></td><td>Anomalie de données du capteur / anomalie de données du capteur de mouvement. Lié au capteur de mouvement.</td><td>L'atelier agréé doit contrôler le câblage et le capteur.</td></tr>
+<tr><td>Anomalie de communication du capteur</td><td><span class="sev sev-crit">Anomalie</span></td><td>Anomalie de communication du capteur de mouvement. Lié au capteur de mouvement.</td><td>Remplacement par l'atelier agréé.</td></tr>
+<tr><td>Anomalie de données du capteur</td><td><span class="sev sev-high">Avertissement</span></td><td>Échec du signal entre le capteur de mouvement et le tachygraphe. Lié au capteur de mouvement.</td><td>L'atelier agréé doit effectuer un contrôle.</td></tr>
+<tr><td>Anomalie d'intégrité des données du capteur</td><td><span class="sev sev-crit">Anomalie</span></td><td>Anomalie interne du capteur de mouvement, échec de l'intégrité des données enregistrées. Lié au capteur de mouvement.</td><td>Remplacement probable du capteur.</td></tr>
+<tr><td>Anomalie de transfert des données du capteur</td><td><span class="sev sev-crit">Anomalie</span></td><td>Le capteur de mouvement et le tachygraphe ne communiquent pas. Lié au capteur de mouvement.</td><td>Rendez-vous dans un atelier agréé.</td></tr>
+<tr><td>Anomalie du capteur, absence d'accusé de réception</td><td><span class="sev sev-crit">Anomalie</span></td><td>Anomalie de communication du capteur de mouvement.</td><td>Rendez-vous dans un atelier agréé.</td></tr>
+<tr><td>Alimentation du capteur trop élevée / trop faible</td><td><span class="sev sev-crit">Anomalie</span></td><td>L'alimentation du capteur de mouvement est trop élevée ou trop faible. Lié au capteur de mouvement.</td><td>L'atelier agréé doit contrôler l'alimentation.</td></tr>
+<tr><td>Absence de signal d'alimentation du capteur</td><td><span class="sev sev-crit">Anomalie</span></td><td>Le capteur de mouvement n'est pas alimenté. Lié au capteur de mouvement.</td><td>L'atelier agréé doit contrôler l'alimentation.</td></tr>
+<tr><td>Ouverture non autorisée du capteur</td><td><span class="sev sev-crit">Anomalie</span></td><td>Une ouverture non autorisée a été détectée. Lié au capteur de mouvement.</td><td>L'atelier agréé doit effectuer une inspection — une manipulation frauduleuse est possible.</td></tr>
+<tr><td>Anomalie du capteur secondaire</td><td><span class="sev sev-crit">Anomalie</span></td><td>Absence de données ou données erronées provenant du deuxième capteur de mouvement source. Lié au capteur de mouvement.</td><td>L'atelier agréé doit effectuer un contrôle.</td></tr>
+<tr><td>Changement non autorisé du capteur</td><td><span class="sev sev-crit">Anomalie</span></td><td>Le capteur a été changé depuis le dernier appairage. Lié au capteur de mouvement.</td><td>L'atelier agréé doit effectuer un nouvel appairage.</td></tr>
+<tr><td>Conflit de mouvement du véhicule</td><td><span class="sev sev-crit">Anomalie</span></td><td>Les données du deuxième capteur de mouvement source et celles du capteur de mouvement principal se contredisent. Lié au capteur de mouvement.</td><td>L'atelier agréé doit effectuer un contrôle.</td></tr>
+<tr><td>Sabotage du matériel</td><td><span class="sev sev-crit">Anomalie</span></td><td>La carte a été retirée de force ou une manipulation frauduleuse du matériel a été détectée.</td><td>Rendez-vous dans un atelier agréé — une inspection est requise.</td></tr>
+</tbody>
+</table>
+</div>
+<h3>Anomalies internes du tachygraphe (UEV) &amp; alimentation</h3>
+<div class="code-table-wrap">
+<table class="code-table">
+<thead>
+<tr>
+<th style="width: 26%;">Affichage</th>
+<th style="width: 14%;">Type</th>
+<th style="width: 32%;">Description (verbatim)</th>
+<th style="width: 28%;">Action</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>Anomalie interne de l'UEV</td><td><span class="sev sev-crit">Anomalie</span></td><td>Le tachygraphe a détecté une anomalie interne. Lié au tachygraphe.</td><td>Rendez-vous dans un atelier agréé.</td></tr>
+<tr><td>Anomalie d'intégrité des données</td><td><span class="sev sev-crit">Anomalie</span></td><td>Les données utilisateur enregistrées dans le tachygraphe comportent des anomalies. Lié au tachygraphe.</td><td>Rendez-vous immédiatement dans un atelier agréé.</td></tr>
+<tr><td>Ouverture non autorisée de l'UEV</td><td><span class="sev sev-crit">Anomalie</span></td><td>Le boîtier de l'unité embarquée a été ouvert. Lié au tachygraphe.</td><td>L'atelier agréé doit rechercher une manipulation frauduleuse.</td></tr>
+<tr><td>Coupure d'alimentation</td><td><span class="sev sev-med">Avertissement</span></td><td>La tension d’alimentation du tachygraphe est inférieure ou supérieure à la limite permettant un fonctionnement correct, ou l’alimentation a été déconnectée. L’alimentation a été interrompue pendant plus de 200 millisecondes. La tension de démarrage ne doit pas provoquer cet événement.</td><td>Si le problème se reproduit, l'atelier agréé doit contrôler l'alimentation électrique du véhicule.</td></tr>
+<tr><td>Conduite sans carte valide</td><td><span class="sev sev-high">Avertissement</span></td><td>Conduite sans carte appropriée ou avec une combinaison de cartes inappropriée. Lié à l'utilisateur.</td><td>Arrêtez-vous et retirez la carte inappropriée. Insérez une carte de conducteur valide.</td></tr>
+<tr><td>Survitesse</td><td><span class="sev sev-high">Avertissement</span></td><td>La vitesse du véhicule a dépassé la limite de vitesse définie pendant 1 minute et sera enregistrée. Lié à l'utilisateur.</td><td>Respectez la limite de vitesse spécifiée.</td></tr>
+<tr><td>Préavertissement de dépassement de vitesse</td><td><span class="sev sev-med">Message</span></td><td>Le véhicule dépasse la limite de survitesse définie. Après 1 minute de survitesse continue, l’avertissement sera mémorisé.</td><td>Ralentissez avant le seuil d’1 minute.</td></tr>
+<tr><td>Échec du téléchargement</td><td><span class="sev sev-med">Avertissement</span></td><td>Échec lors de la tentative de téléchargement des données du tachygraphe. Lié au tachygraphe/à la carte.</td><td>Vérifiez le connecteur et l’équipement, puis réessayez. Si le problème persiste : atelier agréé.</td></tr>
+<tr><td>Réglage UTC non autorisé</td><td><span class="sev sev-info">Message</span></td><td>Un réglage de l’heure UTC supérieur à ±1 minute une fois par semaine n’est pas autorisé.</td><td>Si l’heure UTC présente un écart supérieur à 20 min, l’atelier agréé doit effectuer l’étalonnage.</td></tr>
+</tbody>
+</table>
+</div>
+<h3>Messages de l’imprimante</h3>
+<div class="code-table-wrap">
+<table class="code-table">
+<thead>
+<tr>
+<th style="width: 26%;">Affichage</th>
+<th style="width: 14%;">Type</th>
+<th style="width: 32%;">Description (verbatim)</th>
+<th style="width: 28%;">Action</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>Température élevée de l’imprimante</td><td><span class="sev sev-low">Message</span></td><td>L’impression n’a pas pu démarrer ou l’impression en cours a été interrompue parce que la température de l’imprimante est trop élevée.</td><td>Attendez que l’imprimante refroidisse, puis réessayez.</td></tr>
+<tr><td>Température basse de l’imprimante</td><td><span class="sev sev-low">Message</span></td><td>L’impression n’a pas pu démarrer parce que la température de l’imprimante est trop basse.</td><td>Attendez que l’imprimante se réchauffe ; atelier agréé si le problème persiste.</td></tr>
+<tr><td>Alimentation insuffisante de l’imprimante</td><td><span class="sev sev-low">Message</span></td><td>L’impression en cours a été interrompue parce que la tension d’entrée du tachygraphe est trop faible.</td><td>Vérifiez que le contact est mis ; vérifiez la tension de la batterie et les connexions.</td></tr>
+<tr><td>Imprimante sans papier</td><td><span class="sev sev-info">Message</span></td><td>L’impression en cours a été interrompue parce que l’imprimante n’a plus de papier.</td><td>Remplacez le papier.</td></tr>
+</tbody>
+</table>
+</div>
+<h3>Avertissements de temps de conduite (pré-avertissements Stoneridge) &amp; avertissements)</h3>
+<div class="code-table-wrap">
+<table class="code-table">
+<thead>
+<tr>
+<th style="width: 30%;">Affichage</th>
+<th style="width: 14%;">Type</th>
+<th style="width: 56%;">Signification (verbatim)</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>Rappel : un quart d’heure restant</td><td><span class="sev sev-info">Message</span></td><td>Il reste 15 minutes au conducteur avant de dépasser le temps de conduite continue maximal légal de 4½ heures.</td></tr>
+<tr><td>Temps de pause</td><td><span class="sev sev-med">Avertissement</span></td><td>Le temps de conduite continue maximal légal de 4½ heures est écoulé (conformément au règlement 561/2006). Prenez une pause minimale de 45 minutes, ou une pause fractionnée de 15+30.</td></tr>
+<tr><td>rappel de pause</td><td><span class="sev sev-info">Pré-avertissement</span></td><td>Rappel d’une pause conformément à la règle des 6 h relative au temps de travail des conducteurs (directive 2002/15/CE).</td></tr>
+<tr><td>temps de conduite journalier</td><td><span class="sev sev-med">Avertissement</span></td><td>Pré-avertissement et avertissement concernant le temps de conduite journalier de 9 heures.</td></tr>
+<tr><td>fin de la conduite journalière</td><td><span class="sev sev-med">Avertissement</span></td><td>Temps de conduite journalier maximal atteint.</td></tr>
+<tr><td>temps de conduite hebdomadaire</td><td><span class="sev sev-med">Pré-avertissement</span></td><td>Le temps de conduite hebdomadaire maximal (56 h) approche.</td></tr>
+<tr><td>fin de la conduite hebdomadaire</td><td><span class="sev sev-med">Avertissement</span></td><td>Temps de conduite hebdomadaire maximal atteint.</td></tr>
+<tr><td>temps de conduite sur 2 semaines</td><td><span class="sev sev-med">Pré-avertissement</span></td><td>Le temps de conduite maximal sur 2 semaines (90 h) approche.</td></tr>
+<tr><td>fin de la conduite sur 2 semaines</td><td><span class="sev sev-med">Avertissement</span></td><td>Temps de conduite maximal sur 2 semaines atteint.</td></tr>
+<tr><td>temps de travail hebdomadaire</td><td><span class="sev sev-med">Pré-avertissement</span></td><td>Le temps de travail hebdomadaire conformément à la règle des 60 heures relative au temps de travail des conducteurs approche.</td></tr>
+<tr><td>fin du travail hebdomadaire</td><td><span class="sev sev-med">Avertissement</span></td><td>Le temps de travail hebdomadaire est atteint conformément à la règle des 60 heures relative au temps de travail des conducteurs.</td></tr>
+<tr><td>rappel du repos journalier</td><td><span class="sev sev-info">Pré-avertissement</span></td><td>Rappel concernant le temps de repos journalier.</td></tr>
+<tr><td>rappel du repos hebdomadaire</td><td><span class="sev sev-info">Pré-avertissement</span></td><td>Rappel concernant le temps de repos hebdomadaire.</td></tr>
+<tr><td>temps de repos journalier</td><td><span class="sev sev-med">Avertissement</span></td><td>Avertissement indiquant le début du repos journalier.</td></tr>
+<tr><td>temps de repos hebdomadaire</td><td><span class="sev sev-med">Avertissement</span></td><td>Avertissement indiquant le début du repos hebdomadaire.</td></tr>
+<tr><td>Pré-avertissement d’entretien / Temps d’entretien</td><td><span class="sev sev-low">Message</span></td><td>Pré-avertissement du prochain étalonnage / le tachygraphe n’est plus étalonné.</td></tr>
+</tbody>
+</table>
+</div>
+<h3>SE5000-8.1 Smart 2 — DTC hexadécimaux spécifiques au constructeur selon ISO 16844-7</h3>
+<p style="font-size:14px;color:var(--text2);margin-bottom:12px;">Le SE5000-8.1 actuel (tachygraphe intelligent 2) signale un DTC hexadécimal de 5 octets selon ISO 16844-7 en plus du message affiché à l’écran. Les codes ci-dessous sont reproduits du <strong>Stoneridge SE5000-8.1 Control Manual, document 9000-103766P_0109</strong> (Stoneridge Electronics AB).</p>
+<div class="code-table-wrap">
+<table class="code-table">
+<thead><tr><th style="width:13%;">DTC</th><th style="width:24%;">Message</th><th style="width:30%;">Cause</th><th style="width:21%;">Que faire</th><th style="width:12%;">Gravité</th></tr></thead>
+<tbody>
+<tr><td>0001C0</td><td>Impression arrêtée, plus de papier</td><td>L’imprimante n’a plus de papier.</td><td>Insérez un nouveau rouleau de papier.</td><td><span class="sev sev-low">Faible</span></td></tr>
+<tr><td>000900</td><td>Pas de contact mais présence d’impulsions de vitesse</td><td>Le contact est coupé, mais le capteur détecte des impulsions de vitesse.</td><td>Vérifiez les vibrations / interférences ; si le problème réapparaît, l’atelier agréé doit contrôler le capteur et la broche B7.</td><td><span class="sev sev-high">Élevée</span></td></tr>
+<tr><td>000D40</td><td>Préavertissement de dépassement de vitesse</td><td>Limite de vitesse dépassée, mais pendant moins de 60 secondes.</td><td>Ralentissez. Lié au conducteur — aucun atelier agréé nécessaire.</td><td><span class="sev sev-med">Moyenne</span></td></tr>
+<tr><td>000B78</td><td>Anomalie d’étalonnage</td><td>Deux ans se sont écoulés depuis le dernier étalonnage.</td><td>Effectuez un nouvel étalonnage dans un atelier agréé.</td><td><span class="sev sev-high">Élevée</span></td></tr>
+<tr><td>000C31</td><td>Anomalie du GNSS interne</td><td>Le récepteur GNSS interne ne fournit plus de données de position.</td><td>Coupez puis rétablissez l’alimentation du tachygraphe et effectuez un essai sur route ; si le problème réapparaît, remplacez-le.</td><td><span class="sev sev-med">Moyenne</span></td></tr>
+<tr><td>002B80</td><td>Conflit horaire (GNSS et UEV)</td><td>Les horloges interne et GNSS présentent un écart supérieur à 1 minute après 12 heures.</td><td>Vérifiez l’horloge interne et l’heure GNSS. Atelier agréé.</td><td><span class="sev sev-med">Moyenne</span></td></tr>
+<tr><td>002C80</td><td>Absence de position GNSS</td><td>Aucun signal GNSS valide pendant 3 heures de conduite cumulée.</td><td>Vérifiez la réception GNSS et l’absence d’obstacles autour de l’antenne.</td><td><span class="sev sev-med">Moyenne</span></td></tr>
+<tr><td>002D80</td><td>Erreur de communication DSRC</td><td>L’unité embarquée ne peut pas communiquer correctement avec le module DSRC-UEV.</td><td>Vérifiez l’unité DSRC-UEV, le câblage et les paramètres CAN.</td><td><span class="sev sev-med">Moyenne</span></td></tr>
+<tr><td>002E80</td><td>Anomalie GNSS</td><td>Le GNSS a détecté une attaque ou l’authentification du message a échoué (OSNMA).</td><td>Vérifiez l’absence de manipulation frauduleuse. Redémarrez et vérifiez ; remplacez si le problème réapparaît.</td><td><span class="sev sev-crit">Critique</span></td></tr>
+<tr><td>00FD0B</td><td>Bus CAN hors service, TCO</td><td>Le connecteur A (TCO-CAN) est dans l’état « Bus Off ».</td><td>Vérifiez le connecteur A et le câblage, les réglages CAN ainsi que la terminaison (60 Ω).</td><td><span class="sev sev-high">Élevée</span></td></tr>
+</tbody>
+</table>
+</div>
+<h3>Événements généraux &amp; atteinte à la sécurité (SE5000-8.1)</h3>
+<div class="code-table-wrap">
+<table class="code-table">
+<thead><tr><th style="width:24%;">Message</th><th style="width:34%;">Cause</th><th style="width:30%;">Que faire</th><th style="width:12%;">Gravité</th></tr></thead>
+<tbody>
+<tr><td>Conflit de cartes</td><td>Une combinaison de cartes non valide est détectée (par exemple, carte d’entreprise + carte de contrôleur).</td><td>Retirez la carte concernée.</td><td><span class="sev sev-med">Moyenne</span></td></tr>
+<tr><td>Conduite sans carte appropriée</td><td>Conduite sans carte valide ou avec une combinaison de cartes non valide.</td><td>Arrêtez-vous, insérez une carte valide et retirez la carte inappropriée.</td><td><span class="sev sev-crit">Critique</span></td></tr>
+<tr><td>Survitesse</td><td>La limite de vitesse a été dépassée pendant au moins 60 secondes.</td><td>Respectez la limite de vitesse autorisée pour le véhicule.</td><td><span class="sev sev-high">Élevée</span></td></tr>
+<tr><td>Coupure d’alimentation (UEV / MS)</td><td>L’alimentation du tachygraphe ou du capteur a été interrompue pendant plus de 200 ms.</td><td>Vérifiez l’alimentation électrique du véhicule et le câblage.</td><td><span class="sev sev-med">Moyenne</span></td></tr>
+<tr><td>Erreur de données de mouvement (CNTR / No CNTR / Événement)</td><td>Le capteur signale une vitesse sans impulsions, le compteur ne concorde pas ou une discordance de signature se produit.</td><td>Vérifiez le capteur, le câblage et l’absence de manipulation frauduleuse ; réétalonnez si nécessaire.</td><td><span class="sev sev-crit">Critique</span></td></tr>
+<tr><td>Échec de l'authentification du capteur de mouvement</td><td>Une tentative d’authentification du capteur de mouvement a échoué.</td><td>Vérifiez le capteur et le câblage ; réassociez et réétalonnez.</td><td><span class="sev sev-crit">Critique</span></td></tr>
+<tr><td>Modification non autorisée du capteur de mouvement</td><td>Le capteur a été changé depuis la dernière association.</td><td>Recherchez toute manipulation frauduleuse ; réparez et réétalonnez.</td><td><span class="sev sev-crit">Critique</span></td></tr>
+<tr><td>Erreur d’intégrité des données mémorisées</td><td>Les données de la mémoire de 365 jours sont corrompues.</td><td>Mettre le tachygraphe hors service et le remplacer.</td><td><span class="sev sev-crit">Critique</span></td></tr>
+<tr><td>Sabotage du matériel</td><td>La carte a été retirée de force.</td><td>Inspectez le lecteur de carte. Mettez-le hors service et remplacez-le.</td><td><span class="sev sev-crit">Critique</span></td></tr>
+<tr><td>Atteinte à la sécurité</td><td>Une manipulation frauduleuse du matériel a été détectée.</td><td>Mettre le tachygraphe hors service et le remplacer.</td><td><span class="sev sev-crit">Critique</span></td></tr>
+</tbody>
+</table>
+</div>
+<p style="font-size:14px;color:var(--text2);margin-bottom:18px;"><strong>Source :</strong> Stoneridge Electronics AB, SE5000-8.1 Smart 2 Control Manual, document 9000-103766P_0109, pp. 32–37.</p>
+<p style="font-size:14px;color:var(--text2);margin-top:18px;"><strong>Source :</strong> Tous les messages Stoneridge ci-dessus sont reproduits du manuel du conducteur &amp; manuel de l’entreprise du SE5000 Exakt Duo² (Rev 7.6), publié par Stoneridge Electronics AB. Le tableau complet couvre tous les messages susceptibles d’être affichés par un conducteur ; les messages spécifiques au mode atelier (étalonnage) n’y figurent pas. L’unité SE5000-8.1 Smart Tachograph 2 utilise la même structure de famille de messages de l’annexe I C, avec des mises à jour mineures de formulation.</p>
+</div>
+</details>
+<!-- ===== ACTIA SmarTach ===== -->
+<details class="vendor" id="actia">
+<summary>
+<span class="vendor-meta">Actia · valeur par défaut française et sud-européenne</span>
+    Actia SmarTach (Gen1 &amp; Gen2)
+  </summary>
+<div class="vendor-body">
+<p>Le SmarTach d’Actia est le tachygraphe numérique le plus courant sur les poids lourds immatriculés en France et est également très répandu en Espagne, en Italie et au Portugal. Les messages ci-dessous sont reproduits du <strong>Actia SmarTach Driver Manual (2021, réf. c1c)</strong>. Actia utilise un pictogramme à l’écran accompagné d’un texte court ; la formulation est conforme à la terminologie de l’annexe I C.</p>
+<div class="code-table-wrap">
+<table class="code-table">
+<thead>
+<tr>
+<th style="width: 26%;">Message</th>
+<th style="width: 36%;">Signification</th>
+<th style="width: 26%;">Que faire</th>
+<th style="width: 12%;">Gravité</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Conduite sans carte</td>
+<td>Véhicule en mouvement sans carte valide dans le lecteur 1 — événement enregistré conformément à l’annexe I C.</td>
+<td>Insérez une carte de conducteur valide. Imprimez et annotez la période concernée.</td>
+<td><span class="sev sev-high">Élevée</span></td>
+</tr>
+<tr>
+<td>Insertion en mouvement</td>
+<td>La carte a été insérée après le début du trajet.</td>
+<td>Validez — événement enregistré sur la carte.</td>
+<td><span class="sev sev-med">Moyenne</span></td>
+</tr>
+<tr>
+<td>Carte non clôturée correctement</td>
+<td>La session précédente n’a pas été terminée correctement.</td>
+<td>Validez ; notez-le dans les dossiers du gestionnaire de parc.</td>
+<td><span class="sev sev-med">Moyenne</span></td>
+</tr>
+<tr>
+<td>Carte non valide / expirée</td>
+<td>La carte de conducteur est expirée, n’est pas encore activée ou l’authentification a échoué.</td>
+<td>Renouvelez la carte auprès de l’autorité de votre État membre.</td>
+<td><span class="sev sev-med">Moyenne</span></td>
+</tr>
+<tr>
+<td>Limite de vitesse dépassée</td>
+<td>La limite de vitesse définie a été dépassée pendant plus de 60 secondes.</td>
+<td>Réduisez la vitesse ; l’événement sera visible lors du téléchargement.</td>
+<td><span class="sev sev-high">Élevée</span></td>
+</tr>
+<tr>
+<td>Conflit de mouvement</td>
+<td>Discordance entre le capteur de mouvement et le signal GNSS / du compteur kilométrique.</td>
+<td>Atelier — possible manipulation frauduleuse ou détérioration du câblage.</td>
+<td><span class="sev sev-crit">Critique</span></td>
+</tr>
+<tr>
+<td>Perte d’alimentation</td>
+<td>La tension d’alimentation a chuté ou a été coupée.</td>
+<td>Validez. Vérifiez l’alimentation si le problème se reproduit.</td>
+<td><span class="sev sev-med">Moyenne</span></td>
+</tr>
+<tr>
+<td>Atteinte à la sécurité</td>
+<td>Le boîtier de l’UEV a été ouvert ou l’intégrité des données a été violée.</td>
+<td>Visite obligatoire dans un atelier agréé.</td>
+<td><span class="sev sev-crit">Critique</span></td>
+</tr>
+<tr>
+<td>Défaillance du capteur</td>
+<td>Le capteur de mouvement a échoué à l’autotest.</td>
+<td>Remplacement par l'atelier agréé.</td>
+<td><span class="sev sev-crit">Critique</span></td>
+</tr>
+<tr>
+<td>Anomalie de l’imprimante</td>
+<td>L’imprimante ne peut pas terminer un travail d’impression.</td>
+<td>Vérifiez le papier / laissez refroidir / remplacez le mécanisme si le problème persiste.</td>
+<td><span class="sev sev-med">Moyenne</span></td>
+</tr>
+<tr>
+<td>GNSS manquant</td>
+<td>Aucune donnée de position pendant 3 heures de conduite cumulée.</td>
+<td>Confirmez. Vérifiez l’antenne ; assurez-vous qu’aucun élément métallique ne fait obstacle.</td>
+<td><span class="sev sev-med">Moyenne</span></td>
+</tr>
+<tr>
+<td>Discordance de l’heure UTC</td>
+<td>La différence entre l’horloge interne et l’heure GNSS dépasse 1 minute.</td>
+<td>L’atelier resynchronisera l’heure.</td>
+<td><span class="sev sev-med">Moyenne</span></td>
+</tr>
+<tr>
+<td>Anomalie interne</td>
+<td>Dysfonctionnement générique de l’UEV — mémoire, RTC, chien de garde logiciel.</td>
+<td>Rendez-vous dans un atelier agréé dès que possible.</td>
+<td><span class="sev sev-crit">Critique</span></td>
+</tr>
+<tr>
+<td>Conflit de cartes</td>
+<td>Combinaison incompatible de cartes dans les lecteurs 1 + 2.</td>
+<td>Retirez la carte à l’origine du conflit.</td>
+<td><span class="sev sev-med">Moyenne</span></td>
+</tr>
+<tr>
+<td>Conduite &gt; 4 h 30</td>
+<td>La conduite continue a dépassé 4 h 30 sans pause (capteur de mouvement KITAS).</td>
+<td>Arrêtez-vous immédiatement et prenez la pause obligatoire de 45 minutes.</td>
+<td><span class="sev sev-high">Élevée</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p style="font-size:14px;color:var(--text2);margin-top:14px;"><em>Les messages destinés à l’utilisateur d’Actia sont volontairement concis ; les codes numériques détaillés d’anomalie sont accessibles uniquement au moyen du CITO / SmarTach Tester d’un atelier agréé.</em></p>
+</div>
+</details>
+<!-- ===== EFAS-4 ===== -->
+<details class="vendor" id="efas">
+<summary>
+<span class="vendor-meta">Intellic / Schneider · courant dans les parcs allemands et polonais</span>
+    EFAS-4 / EFAS-4.10
+  </summary>
+<div class="vendor-body">
+<p>L’EFAS-4 (à l’origine Intellic, désormais Schneider Electric) équipe de nombreux tracteurs routiers construits en Allemagne (MAN, certaines configurations DAF) ainsi qu’une part importante des poids lourds immatriculés en Pologne. Les messages ci-dessous proviennent du <strong>EFAS-4 Driver Manual, Edition 06.2022</strong>. EFAS utilise des codes à deux lettres affichés à l’écran, accompagnés d’un pictogramme.</p>
+<div class="code-table-wrap">
+<table class="code-table">
+<thead>
+<tr>
+<th style="width: 14%;">Code</th>
+<th style="width: 24%;">Message</th>
+<th style="width: 36%;">Signification</th>
+<th style="width: 14%;">Action</th>
+<th style="width: 12%;">Gravité</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>E01</td><td>Aucune carte</td><td>Le véhicule a roulé sans carte de conducteur valide.</td><td>Insérez la carte ; imprimez &amp; annotez.</td><td><span class="sev sev-high">Élevée</span></td></tr>
+<tr><td>E02</td><td>Insertion de carte</td><td>La carte a été insérée après le début du mouvement.</td><td>Validez.</td><td><span class="sev sev-med">Moyenne</span></td></tr>
+<tr><td>E03</td><td>Dernière session</td><td>La session précédente de la carte n’a pas été clôturée.</td><td>Validez ; notez-le dans le dossier du gestionnaire de parc.</td><td><span class="sev sev-med">Moyenne</span></td></tr>
+<tr><td>E04</td><td>Surrégime</td><td>Limite de vitesse dépassée &gt; 1 min.</td><td>Réduisez la vitesse.</td><td><span class="sev sev-high">Élevée</span></td></tr>
+<tr><td>E05</td><td>Perte d’alimentation</td><td>La tension d’alimentation est trop faible ou a été interrompue.</td><td>Vérifiez l’alimentation si le problème se reproduit.</td><td><span class="sev sev-med">Moyenne</span></td></tr>
+<tr><td>E06</td><td>Données de mouvement</td><td>Impulsions incohérentes du capteur de mouvement.</td><td>Atelier agréé.</td><td><span class="sev sev-crit">Critique</span></td></tr>
+<tr><td>E07</td><td>Conflit de mouvement</td><td>Le capteur est en désaccord avec le GNSS / le compteur kilométrique.</td><td>Atelier agréé — contrôle d’une éventuelle manipulation frauduleuse.</td><td><span class="sev sev-crit">Critique</span></td></tr>
+<tr><td>E08</td><td>Conflit de cartes</td><td>Combinaison de cartes non valide.</td><td>Retirez la carte à l’origine du conflit.</td><td><span class="sev sev-med">Moyenne</span></td></tr>
+<tr><td>E09</td><td>Chevauchement horaire</td><td>Décalage UTC négatif par rapport au dernier UEV.</td><td>L’atelier agréé doit effectuer la correction.</td><td><span class="sev sev-med">Moyenne</span></td></tr>
+<tr><td>E10</td><td>Atteinte à la sécurité</td><td>Manipulation frauduleuse du boîtier ou anomalie d’intégrité des données.</td><td>Atelier agréé obligatoire.</td><td><span class="sev sev-crit">Critique</span></td></tr>
+<tr><td>F01</td><td>Anomalie interne</td><td>Dysfonctionnement générique du matériel ou du logiciel de l’UEV.</td><td>Rendez-vous dans un atelier agréé dès que possible.</td><td><span class="sev sev-crit">Critique</span></td></tr>
+<tr><td>F02</td><td>Mécanisme de carte</td><td>Anomalie du mécanisme de verrouillage de la carte.</td><td>Atelier agréé.</td><td><span class="sev sev-high">Élevée</span></td></tr>
+<tr><td>F03</td><td>Anomalie horaire</td><td>L’horloge temps réel indique une valeur incohérente.</td><td>Atelier agréé — les nouvelles cartes seront refusées.</td><td><span class="sev sev-crit">Critique</span></td></tr>
+<tr><td>F04</td><td>Imprimante</td><td>Anomalie du mécanisme de l’imprimante.</td><td>Remplacez le papier ou rendez-vous dans un atelier agréé.</td><td><span class="sev sev-med">Moyenne</span></td></tr>
+<tr><td>F05</td><td>Téléchargement</td><td>Anomalie lors du téléchargement des données.</td><td>Réessayez ; vérifiez le câble.</td><td><span class="sev sev-med">Moyenne</span></td></tr>
+<tr><td>F06</td><td>Anomalie du capteur</td><td>Le capteur de mouvement a échoué à l’autotest.</td><td>Remplacement du capteur dans un atelier agréé.</td><td><span class="sev sev-crit">Critique</span></td></tr>
+<tr><td>F07</td><td>GNSS</td><td>Anomalie du récepteur GNSS interne ou de l’antenne.</td><td>Contrôle dans un atelier agréé.</td><td><span class="sev sev-high">Élevée</span></td></tr>
+<tr><td>F08</td><td>DSRC</td><td>Anomalie du module DSRC de contrôle à distance.</td><td>L’atelier agréé inspectera l’antenne et le CAN.</td><td><span class="sev sev-med">Moyenne</span></td></tr>
+</tbody>
+</table>
+</div>
+<h3>EFAS-4.10 / 4.11 — codes hexadécimaux d’anomalie (ISO 16844-7), top 12</h3>
+<p style="font-size:14px;color:var(--text2);margin-bottom:12px;">Les unités EFAS présentent trois types de codes : <strong>EFT</strong> (type d’événement/anomalie selon l’ISO), <strong>DTC</strong> (code hexadécimal de 5 octets selon l’ISO 16844-7) et un code spécifique au fabricant <strong>Identifiant de service</strong>. Les DTC les plus importants ci-dessous sont reproduits d’après le <strong>Bosch Intellic EFAS-4.10 Workshop Manual, Table 18</strong> (DTC et identifiants de service correspondants).</p>
+<div class="code-table-wrap">
+<table class="code-table">
+<thead><tr><th style="width:18%;">DTC</th><th style="width:42%;">Signification</th><th style="width:28%;">Que faire</th><th style="width:12%;">Gravité</th></tr></thead>
+<tbody>
+<tr><td>80 00 002007</td><td>Tension d’alimentation du capteur de mouvement supérieure au maximum</td><td>Vérifiez l’alimentation électrique et le câblage du capteur.</td><td><span class="sev sev-high">Élevée</span></td></tr>
+<tr><td>80 00 002003</td><td>Tension d’alimentation du capteur de mouvement inférieure au minimum</td><td>Vérifiez l’alimentation électrique et le câblage du capteur.</td><td><span class="sev sev-high">Élevée</span></td></tr>
+<tr><td>80 00 002180</td><td>Aucun signal en temps réel du capteur de mouvement (broche B3 interrompue)</td><td>Vérifiez la broche B3 et l’alimentation électrique du capteur.</td><td><span class="sev sev-crit">Critique</span></td></tr>
+<tr><td>80 00 002280</td><td>Signal du capteur en temps réel défectueux (erreur de la broche B3 ou de l’IMS)</td><td>Vérifiez la broche B3 et la somme de contrôle du capteur.</td><td><span class="sev sev-crit">Critique</span></td></tr>
+<tr><td>80 00 002452</td><td>Erreur d’intégrité des données du capteur de distance</td><td>L’atelier agréé doit contrôler le capteur.</td><td><span class="sev sev-high">Élevée</span></td></tr>
+<tr><td>80 00 002508</td><td>Anomalie du capteur de mouvement</td><td>Atelier agréé — remplacement du capteur.</td><td><span class="sev sev-crit">Critique</span></td></tr>
+<tr><td>40 00 000200</td><td>Anomalie de carte, lecteur 1</td><td>Nettoyez les contacts et réinsérez la carte ; si le problème réapparaît, remplacez la carte.</td><td><span class="sev sev-high">Élevée</span></td></tr>
+<tr><td>40 00 000300</td><td>Anomalie de carte, lecteur 2</td><td>Nettoyez les contacts et réinsérez la carte.</td><td><span class="sev sev-high">Élevée</span></td></tr>
+<tr><td>80 00 000660</td><td>Imprimante sans papier</td><td>Insérez un nouveau rouleau de papier.</td><td><span class="sev sev-low">Faible</span></td></tr>
+<tr><td>40 00 000900</td><td>Impulsions du capteur de mouvement alors que le contact est coupé</td><td>Vérifiez l’absence de vibrations, ainsi que le capteur et le câblage.</td><td><span class="sev sev-high">Élevée</span></td></tr>
+<tr><td>40 00 000C31</td><td>Anomalie de la mémoire interne</td><td>Atelier agréé ; remplacement si l’anomalie ne peut pas être réparée.</td><td><span class="sev sev-crit">Critique</span></td></tr>
+<tr><td>80 00 000D40</td><td>Données d’étalonnage incorrectes ou incomplètes</td><td>Effectuez un nouvel étalonnage dans un atelier agréé.</td><td><span class="sev sev-crit">Critique</span></td></tr>
+</tbody>
+</table>
+</div>
+<p style="font-size:14px;color:var(--text2);margin-top:14px;"><em>Les codes numériques EFAS-4 (E01–E10, F01–F08) sont les mnémoniques internes de l’unité — l’événement ou l’anomalie sous-jacent de l’annexe I C constitue l’identifiant juridiquement pertinent et est enregistré de la même manière que sur toute autre unité.</em></p>
+</div>
+</details>
+</div><!-- /.vendor-stack -->
+<!-- ===== TAGRA CTA Box ===== -->
+<div class="cta-box">
+<h3>TAGRA décode automatiquement chacun de ces messages.</h3>
+<p>Lorsque vous téléchargez une carte de conducteur ou une unité embarquée dans TAGRA, chaque événement et chaque anomalie sont associés à leur définition de l’annexe I C, avec une explication en langage clair. Essayez gratuitement le logiciel complet pendant 30 jours — aucune carte requise.</p>
+<a class="cta-btn" href="/fr/conducteurs/">Essayez TAGRA Trucker gratuitement pendant 30 jours →</a>
+</div>
+<!-- ===================================================================== -->
+<!-- SECTION 4: TOP 10 COMMON MISTAKES IN PRACTICE                          -->
+<!-- ===================================================================== --></div></section><section class="band"><div class="container art-body"><div class="eyebrow anim-up">Les plus courants en pratique</div><h2 class="h2-grad anim-up" id="common-mistakes">Les 10 messages de tachygraphe les plus courants en pratique</h2>
+<p>Parmi les plus de 200 messages ci-dessus, dix représentent la grande majorité de ceux que les conducteurs voient réellement au quotidien — et presque tous sont <strong>opérationnels</strong> plutôt que catastrophiques. Savoir comment réagir à ces dix messages permettra à la plupart de vos journées de travail de se dérouler sans problème et satisfera la plupart des agents de contrôle.</p>
+<div class="code-table-wrap">
+<table class="code-table">
+<thead>
+<tr>
+<th style="width: 6%;">#</th>
+<th style="width: 26%;">Message</th>
+<th style="width: 42%;">Pourquoi cela se produit</th>
+<th style="width: 26%;">Première réaction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>Erreur de communication de la carte 1</strong></td>
+<td>Contacts sales sur la carte de conducteur ou dans le lecteur de carte. Carte insérée légèrement de travers. Situation fréquente en hiver, lorsque les cartes restent dans des poches froides et que de la condensation se forme sur les contacts de la puce.</td>
+<td>Éjectez la carte. Essuyez la puce avec un chiffon sec (sans liquide). Réinsérez-la. Si le problème persiste, essayez l’autre lecteur.</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>Pas de papier / tiroir de l’imprimante ouvert</strong></td>
+<td>Le rouleau de papier est épuisé ou le tiroir de l’imprimante a été ouvert pendant l’impression d’un ticket. Type de papier incorrect (seul le papier thermique prévu pour les tachygraphes numériques est accepté).</td>
+<td>Insérez un nouveau rouleau ; le tiroir doit s’enclencher. Ayez toujours un rouleau de rechange à bord.</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>1 pause ! 04h15</strong></td>
+<td>Le compteur de conduite continue approche de 4 h 30 min. Le pré-avertissement est configurable (généralement 15 minutes avant).</td>
+<td>Planifiez une pause de 45 minutes au cours des 15 prochaines minutes (ou fractionnez-la en 15 + 30).</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>Insertion de carte en conduite</strong></td>
+<td>Le conducteur a oublié d’insérer la carte avant de prendre la route, puis s’en est aperçu et l’a insérée alors que le véhicule roulait.</td>
+<td>Arrêtez-vous brièvement. Réinsérez correctement la carte. L’événement est enregistré sur la carte, mais il ne s’agit pas d’une anomalie.</td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>Dernière session non clôturée</strong></td>
+<td>Le conducteur a retiré trop rapidement la carte du véhicule précédent ou l’UEV précédente s’est arrêtée avant d’enregistrer la clôture.</td>
+<td>Acquittez le message. Informez le gestionnaire de parc — l’UEV précédente peut nécessiter une visite à l’atelier.</td>
+</tr>
+<tr>
+<td>6</td>
+<td><strong>Coupure d'alimentation</strong></td>
+<td>Batterie démarrée à l’aide de câbles, anomalie de câblage ou véhicule resté toute la nuit avec une batterie déchargée.</td>
+<td>Acquittez le message. Si le problème réapparaît, faites contrôler le circuit d’alimentation — les pertes d’alimentation répétées éveillent les soupçons des agents de contrôle.</td>
+</tr>
+<tr>
+<td>7</td>
+<td><strong>GNSS absent / aucune donnée de position</strong></td>
+<td>Cumul de 3 heures de conduite sans position GNSS exploitable — situation typique dans les tunnels, les dépôts souterrains ou lorsque l’antenne est obstruée.</td>
+<td>Confirmez. Vérifiez le cheminement de l’antenne et assurez-vous qu’aucun objet métallique n’a été placé sur le tableau de bord au-dessus de celle-ci.</td>
+</tr>
+<tr>
+<td>8</td>
+<td><strong>Saisie du pays requise</strong></td>
+<td>Le tachygraphe intelligent 2 vous demande de confirmer le pays (et, sur le tachygraphe intelligent 2, le franchissement de la frontière) chaque fois que vous commencez une nouvelle journée de travail.</td>
+<td>Utilisez le menu : <em>begin country</em> → sélectionnez le code. Sur le tachygraphe intelligent 2, l’unité demande également une confirmation lorsque le GNSS détecte une frontière.</td>
+</tr>
+<tr>
+<td>9</td>
+<td><strong>Étalonnage dans ?? jours</strong></td>
+<td>Le contrôle périodique biennal approche (avertissement généralement 28 jours à l’avance).</td>
+<td>Prenez immédiatement rendez-vous à l’atelier — conduire avec un tachygraphe dont l’étalonnage n’est plus valide constitue une infraction grave.</td>
+</tr>
+<tr>
+<td>10</td>
+<td><strong>1 download in days ??</strong></td>
+<td>La date du prochain téléchargement obligatoire de la carte de conducteur approche (avertissement généralement 14 jours à l’avance). Les règles de l’UE imposent un téléchargement au moins tous les 28 jours.</td>
+<td>Remettez la carte au gestionnaire de parc ou effectuez vous-même le téléchargement. Si vous dépassez le délai, les données sont toujours conservées, mais le bureau peut vous sanctionner.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- ===================================================================== -->
+<!-- SECTION 5: CRISIS WORKFLOW                                             -->
+<!-- ===================================================================== --></div></section><section class="band band--gray"><div class="container art-body"><div class="eyebrow anim-up">Que faire</div><h2 class="h2-grad anim-up" id="crisis-workflow">Procédure en cas d’anomalie critique : que faire lorsqu’un message apparaît sur la route</h2>
+<p>Un véritable <strong>x Anomalie</strong> message — anomalie du capteur, conflit de mouvement, anomalie interne, atteinte à la sécurité, anomalie horaire — est différent d’une note opérationnelle : le tachygraphe ne peut plus enregistrer votre activité de manière fiable et vous êtes légalement tenu de conserver des enregistrements manuels et de faire réparer l’unité par un atelier agréé. <strong>atelier agréé dès que les circonstances le permettent</strong> — si le véhicule ne peut pas regagner les locaux de l’exploitant dans un délai d’une semaine à compter de la découverte de l’anomalie, la réparation doit être effectuée en cours de route (article 37 du règlement 165/2014). La procédure en cinq étapes suivante est la procédure officielle décrite dans le manuel de chaque fabricant.</p>
+<ol class="crisis-steps">
+<li>
+<span class="num">1</span>
+<span>
+<strong>Acquittez le message et poursuivez votre route en toute sécurité.</strong>
+<span class="lbl">Appuyez sur le <em>OK</em> bouton pour faire taire l’affichage clignotant. L’anomalie est désormais enregistrée dans la mémoire de masse et sur votre carte — cela confirme que son acquittement n’efface pas l’événement. Restez calme et trouvez un endroit sûr pour vous arrêter.</span>
+</span>
+</li>
+<li>
+<span class="num">2</span>
+<span>
+<strong>Imprimez un ticket d’impression des activités du conducteur depuis l’UEV.</strong>
+<span class="lbl">Menu : <em>print → driver 1 → activities → 24h day</em>. Le ticket d’impression comprendra l’enregistrement de l’anomalie et un horodatage. Imprimez un nouveau ticket chaque jour suivant jusqu’à la réparation du tachygraphe.</span>
+</span>
+</li>
+<li>
+<span class="num">3</span>
+<span>
+<strong>Commencez les saisies manuelles au verso du ticket d’impression.</strong>
+<span class="lbl">Pour chaque période pendant laquelle le tachygraphe ne peut plus enregistrer correctement, écrivez à la main : <em>heure de début, heure de fin, activité (conduite / autre tâche / disponibilité / repos), lieu, immatriculation du véhicule</em>. Cette feuille constitue votre preuve légale lors de tout contrôle routier jusqu’à la réparation de l’unité.</span>
+</span>
+</li>
+<li>
+<span class="num">4</span>
+<span>
+<strong>Informez immédiatement votre gestionnaire de parc.</strong>
+<span class="lbl">Téléphone, message ou courriel — selon les moyens utilisés par votre entreprise. Le gestionnaire de flotte doit consigner l’anomalie, planifier le rendez-vous à l’atelier et confirmer que le trajet peut se poursuivre avec des enregistrements manuels. Retarder la réparation au-delà de ce que les circonstances permettent — ou au-delà d’une semaine sans retour à la base — expose l’exploitant à de lourdes amendes.</span>
+</span>
+</li>
+<li>
+<span class="num">5</span>
+<span>
+<strong>Prenez rendez-vous dans un atelier agréé dès que possible.</strong>
+<span class="lbl">Seul un <strong>atelier agréé pour tachygraphes</strong> (détenant une carte d’atelier et les outils de diagnostic appropriés) peut réparer, réétalonner ou remplacer l’UEV. Après la réparation, l’atelier effectue un étalonnage et fournit une plaque d’installation / un relevé d’étalonnage qui doit être conservé avec le véhicule.</span>
+</span>
+</li>
+</ol>
+<p style="margin-top:24px;"><strong>Une exception critique :</strong> si l’anomalie est une <em>atteinte à la sécurité</em> ou une <em>anomalie du capteur avec conflit de mouvement</em>, l’unité peut éjecter automatiquement la carte et refuser totalement d’enregistrer toute activité supplémentaire. Dans ce cas, toute la journée de travail doit être inscrite à la main et la visite à l’atelier devient immédiate, au lieu d’être effectuée dès que les circonstances le permettent. Continuer à conduire sans enregistrements manuels dans ce scénario constitue une infraction grave dans tous les États membres de l’UE et de l’EEE.</p>
+<div class="cta-box" style="margin-top:36px;">
+<h3>Votre code ne raconte que la moitié de l’histoire</h3>
+<p>Une anomalie affichée à l’écran laisse presque toujours une trace sur la carte de conducteur — un enregistrement manquant, une période de travail interrompue ou une infraction sur laquelle vous pourriez être interrogé lors d’un contrôle routier. TAGRA Trucker lit votre carte et vous montre exactement ce qui a été enregistré. Lecteur de carte USB inclus, 49 € HT.</p>
+<a class="cta-btn" href="/fr/essai-gratuit/?audience=driver&amp;src=symbols">Voir ce qui figure sur votre carte →</a>
+</div>
+<!-- ===================================================================== -->
+<!-- SECTION 6: OFFICIAL SOURCES                                            -->
+<!-- ===================================================================== --></div></section><section class="band band--blue"><div class="container art-body">
+<div class="eyebrow anim-up">Selon le lieu d’exploitation</div>
+<h2 class="h2-grad anim-up">Même code d’anomalie, conséquences différentes</h2>
+<p>Les codes ci-dessus sont identiques sur tous les véhicules — ils proviennent du tachygraphe et non du droit national. Ce qui varie d’un pays à l’autre, c’est <strong>l’organisme qui contrôle les enregistrements, la période examinée et le coût d’une lacune pour vous</strong>.</p>
+<div class="twocol">
+<div class="info-card anim-up"><h3>Union européenne &amp; EEA</h3><p>Les contrôles relèvent des autorités nationales d’inspection en vertu du règlement (UE) 165/2014 et du règlement (CE) 561/2006. Lors d’un contrôle routier, les conducteurs doivent présenter les données du jour en cours ainsi que celles des <strong>28 jours précédents</strong> . Les sanctions sont fixées au niveau national — les cas les plus graves, tels que la manipulation frauduleuse, peuvent entraîner le versement immédiat d’une consignation pouvant atteindre <strong>€8,000</strong>. Les cartes sont téléchargées tous les 28 jours et les unités embarquées tous les 90 jours.</p></div>
+<div class="info-card anim-up"><h3>Royaume-Uni</h3><p>La Grande-Bretagne applique un droit assimilé — les mêmes règles fondamentales, mises en œuvre par le <strong>DVSA</strong>, qui délivre plus de 20 000 avis de pénalité forfaitaire par an. Les pénalités forfaitaires graduées vont d’environ <strong>50 £ à plus de 300 £</strong>. Pour les trajets internationaux entre le Royaume-Uni et l’UE, les conducteurs doivent présenter <strong>56 jours</strong> de données, et non 28. Le principal risque concerne la <strong>licence d’exploitation</strong> : les lacunes répétées sont portées devant le Traffic Commissioner. <a href="/articles/tachograph-rules-uk-dvsa-operator-licence/">Guide complet pour les exploitants britanniques → <span class="en-badge">(en anglais)</span></a></p></div>
+</div>
+<div class="callout callout--blue anim-up"><p><strong>Pourquoi le code est plus important qu’il n’y paraît.</strong> Une anomalie telle que <em>conflit de mouvement du véhicule 80</em> ou une <em>anomalie GNSS interne 82</em> ne se contente pas d’ennuyer le conducteur — elle laisse une lacune ou une anomalie dans les enregistrements que vous êtes légalement tenu de présenter, qu’il s’agisse de 28 jours dans l’UE ou de 56 jours pour un trajet Royaume-Uni–UE. Le moment le moins coûteux pour la détecter est lors du téléchargement des données, et non lorsqu’un agent de contrôle la demande.</p>
+<p>TAGRA Trucker lit votre carte de conducteur quel que soit le pays, signale les lacunes et les infractions, et conserve l’archive que vous pourriez devoir présenter sur demande. <a href="/fr/conducteurs/">Essayez gratuitement TAGRA Trucker pendant 30 jours</a> — Windows, aucune donnée de carte bancaire.</p></div>
+</div></section><section class="band"><div class="container art-body"><div class="eyebrow anim-up">Sources officielles</div><h2 class="h2-grad anim-up" id="sources">Sources officielles &amp; manuels des fabricants</h2>
+<p>Chaque message, seuil et procédure ci-dessus est reproduit à partir de l’un des documents officiels accessibles au public suivants. Lorsque la formulation anglaise du fabricant diffère du vocabulaire couramment utilisé par les conducteurs, nous avons conservé le texte exact du fabricant et ajouté une explication en langage courant à côté.</p>
+<ul class="sources-list">
+<li>
+<strong>Réglementation de l’UE — temps de conduite des conducteurs et AETR</strong>
+    Règlement (CE) n° 561/2006 — temps de conduite, pauses et temps de repos. Directive 2002/15/CE — directive relative au temps de travail des travailleurs mobiles dans le transport routier. AETR — Accord européen relatif au travail des équipages des véhicules effectuant des transports internationaux par route.
+    <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32006R0561" rel="noopener" target="_blank">EUR-Lex : règlement 561/2006 (EN)</a>
+</li>
+<li>
+<strong>Réglementation de l’UE — spécification technique des tachygraphes</strong>
+    Règlement (UE) n° 165/2014 — base juridique. Règlement d’exécution (UE) 2016/799 de la Commission, annexe I C — spécification technique complète du tachygraphe intelligent (événements, anomalies, structures de données).
+    <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016R0799" rel="noopener" target="_blank">EUR-Lex : 2016/799 / annexe I C (EN)</a>
+    ·
+    <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014R0165" rel="noopener" target="_blank">EUR-Lex : 165/2014 (EN)</a>
+</li>
+<li>
+<strong>VDO DTCO 4.1 — Continental Automotive Technologies</strong>
+    Manuel d’instructions du conducteur, édition 3 / 2024-08, BA00.1381.41 100 102. Couvre les modèles DTCO 4.1, 4.1a et 4.1b.
+    <a href="https://www.fleet.vdo.com/media/sqrd5xnt/ba_dtco_41a_en_web_2024-08-27.pdf" rel="noopener" target="_blank">Téléchargement PDF (anglais) — fleet.vdo.com</a>
+</li>
+<li>
+<strong>VDO DTCO 4.0 — Continental Automotive Technologies</strong>
+    Unité Smart Tacho 1 antérieure, toujours largement utilisée. Manuel du conducteur, édition 2 / 2022.
+    <a href="https://www.fleet.vdo.com/media/lvnkmvhq/ba_dtco_40e_web_gb.pdf" rel="noopener" target="_blank">Téléchargement PDF (anglais) — fleet.vdo.com</a>
+</li>
+<li>
+<strong>Stoneridge SE5000 Exakt Duo² — Stoneridge Electronics</strong>
+    Manuel du &amp; conducteur et entreprise, rév. 8.x. Unité de référence pour les marchés britannique et nordique.
+    <a href="https://www.stoneridgeelectronics.com/tachographs/" rel="noopener" target="_blank">Manuels — stoneridgeelectronics.com</a>
+</li>
+<li>
+<strong>Actia SmarTach — Actia Group</strong>
+    Guides du conducteur SmarTach Gen1 et Gen2 ; largement utilisé dans les parcs français et du sud de l’Europe.
+    <a href="https://www.actia.com/en/solutions/tachograph/" rel="noopener" target="_blank">Page produit — actia.com</a>
+</li>
+<li>
+<strong>Commission européenne — DG MOVE</strong>
+    Informations de référence sur le déploiement du tachygraphe intelligent, les modifications et les orientations en matière de contrôle.
+    <a href="https://transport.ec.europa.eu/transport-modes/road/social-provisions/smart-tachograph_en" rel="noopener" target="_blank">transport.ec.europa.eu — Tachygraphe intelligent</a>
+</li>
+</ul>
+<!-- ===================================================================== -->
+<!-- RELATED ARTICLES                                                       -->
+<!-- ===================================================================== --></div></section><section class="band band--blue"><div class="container art-body"><div class="eyebrow anim-up">Guides associés</div><h2 class="h2-grad anim-up" id="related">Guides associés pour les conducteurs</h2>
+<div class="related-grid">
+<a class="related-card anim-up" href="/fr/articles/telecharger-analyser-archiver-donnees-tachygraphe/">
+<span class="r-eyebrow">Conformité · lecture de 12 min</span>
+<span class="r-title">Comment télécharger, évaluer et archiver les données du tachygraphe</span>
+<span class="r-text">Guide complet du cycle de téléchargement des données de la carte de conducteur tous les 28 jours et de l’unité embarquée tous les 90 jours, des règles d’archivage et des documents que votre parc doit conserver.</span>
+<span class="r-chip">Lire le guide du téléchargement →</span>
+</a>
+<a class="related-card anim-up" href="/fr/articles/qui-doit-analyser-donnees-tachygraphe-2026/">
+<span class="r-eyebrow">Réglementation · lecture de 8 min</span>
+<span class="r-title">Qui doit évaluer les données du tachygraphe en 2026</span>
+<span class="r-text">Obligations des exploitants au titre du règlement 561/2006 et de la directive relative au temps de travail — catégories de transport concernées et documents à remettre à un agent de contrôle.</span>
+<span class="r-chip">Lire le guide des obligations →</span>
+</a>
+<a class="related-card anim-up" href="/fr/articles/tachygraphe-utilitaires-obligation-juillet-2026/">
+<span class="r-eyebrow">Nouvelles règles · lecture de 6 min</span>
+<span class="r-title">Tachygraphes pour les camionnettes : la nouvelle obligation à partir de juillet 2026</span>
+<span class="r-text">À partir du 1er juillet 2026, les véhicules utilitaires de 2,5 à 3,5 tonnes affectés au transport international doivent être équipés d’un tachygraphe intelligent. Liste de contrôle pour l’exploitant.</span>
+<span class="r-chip">Lire le guide sur les camionnettes →</span>
+</a>
+</div>
+<p style="margin-bottom:16px;">Vous conduisez avec votre propre carte et ne gérez pas un parc ? <a href="/fr/conducteurs/">TAGRA Trucker</a> est la version pour conducteur unique — elle évalue les données de votre propre carte et signale les infractions avant un contrôle. Lecteur de carte USB inclus, 49 €.</p>
+<!-- ===== second TAGRA CTA Box ===== -->
+<div class="cta-box" style="margin-top:36px;">
+<h3>Votre code ne raconte que la moitié de l’histoire</h3>
+<p>Une anomalie affichée à l’écran laisse presque toujours une trace sur la carte de conducteur — un enregistrement manquant, une période de travail interrompue ou une infraction sur laquelle vous pourriez être interrogé lors d’un contrôle routier. TAGRA Trucker lit votre carte et vous montre exactement ce qui a été enregistré. Lecteur de carte USB inclus, 49 € HT.</p>
+<a class="cta-btn" href="/fr/essai-gratuit/?audience=driver&amp;src=symbols">Voir ce qui figure sur votre carte →</a>
+<p class="cta-note">Vous gérez un parc ? <a href="/fr/essai-gratuit/?audience=fleet&amp;src=symbols">Essayez la version pour parcs →</a></p>
+</div>
+<!-- ===================================================================== -->
+<!-- FAQ                                                                    -->
+<!-- ===================================================================== --></div></section><section class="band band--gray"><div class="container art-body"><div class="eyebrow anim-up">Questions & réponses</div><h2 class="h2-grad anim-up" id="faq">FAQ — codes d’anomalie et symboles d’avertissement du tachygraphe</h2>
+<div class="faq-block">
+<details>
+<summary>Quelle est la différence entre un « événement » et une « anomalie » sur un tachygraphe numérique ?</summary>
+<div class="faq-a">Un <strong>événement</strong> est une occurrence liée à l’exploitation — conduite sans carte, dépassement de la limite de vitesse, insertion de carte en conduite, chevauchement horaire. L’unité fonctionne correctement ; elle enregistre une action du conducteur. Une <strong>anomalie</strong> est un dysfonctionnement matériel ou logiciel du tachygraphe lui-même — anomalie du capteur, anomalie interne, anomalie horaire, défaillance de l’imprimante. Les anomalies déclenchent l’obligation de réparation prévue à l’article 37 — dès que les circonstances le permettent, ou en cours de route si le véhicule ne peut pas regagner sa base dans un délai d’une semaine. Les deux catégories sont définies à l’annexe I C du règlement (UE) 2016/799.</div>
+</details>
+<details>
+<summary>Je vois « SENSOR FAULT » sur l’écran de mon VDO — puis-je continuer à conduire ?</summary>
+<div class="faq-a">Brièvement, oui — pour atteindre un lieu d’arrêt sûr. Ensuite, vous devez (1) appuyer sur OK pour acquitter le message, (2) imprimer les activités de la journée, (3) inscrire les saisies manuelles de chaque activité effectuée ensuite au verso de ce ticket imprimé, (4) informer votre gestionnaire de flotte et (5) vous rendre dans un atelier agréé dès que les circonstances le permettent. Continuer à conduire sans saisies manuelles une fois que vous avez connaissance d’une anomalie du capteur constitue une infraction grave dans chaque État membre de l’UE.</div>
+</details>
+<details>
+<summary>Que signifie « GNSS ANOMALY » sur un tachygraphe intelligent 2 ?</summary>
+<div class="faq-a">Les unités embarquées de tachygraphe intelligent 2 (obligatoires sur les véhicules immatriculés après le 21 août 2023, avec des mises à niveau obligatoires avant le 18 août 2025) vérifient l’authenticité du signal GNSS afin de détecter une usurpation au moyen du service Galileo OSNMA. Un <em>Anomalie GNSS</em> événement signifie que l’unité a détecté soit une tentative de manipulation du signal GPS/Galileo, soit l’échec de l’authentification du signal. L’unité enregistre l’événement à des fins de contrôle. S’il se reproduit sur un véhicule donné, l’antenne et son câblage immédiat doivent être contrôlés afin de détecter une manipulation frauduleuse — des diagnostics en atelier peuvent être nécessaires.</div>
+</details>
+<details>
+<summary>Quelle est la différence entre « AUTRE TÂCHE » et « DISPONIBILITÉ » ?</summary>
+<div class="faq-a"><strong>AUTRE TÂCHE</strong> est un travail rémunéré qui n’est pas de la conduite : chargement, déchargement, ravitaillement en carburant, tâches administratives, aide aux passagers, contrôles du véhicule. Elle compte comme temps de travail au titre de la directive relative au temps de travail et ne <em>compte pas</em> comme une pause. <strong>DISPONIBILITÉ</strong> est un temps d’attente dont le conducteur connaît la durée à l’avance — ferry/train, file d’attente à un rendez-vous fixé, accompagnement d’un véhicule sur un transporteur. La disponibilité n’est pas du travail, mais elle ne constitue pas non plus <em>compte pas</em> une pause au titre de la réglementation relative aux temps de conduite ; au titre de la directive relative au temps de travail, elle est exclue du temps de travail lorsque sa durée est connue à l’avance.</div>
+</details>
+<details>
+<summary>La « DISPONIBILITÉ » peut-elle compter comme une pause au titre du règlement CE 561/2006 ?</summary>
+<div class="faq-a">Non. L’annexe 1 du règlement 561/2006 ne cite qu’une seule catégorie qui remet à zéro le compteur de 4,5 heures de conduite continue et compte pour la pause obligatoire de 45 minutes : l’activité <em>PAUSE/REPOS</em> (pictogramme du lit). Les conducteurs qui sélectionnent « DISPONIBILITÉ » alors qu’ils pensent prendre une pause n’obtiennent aucun crédit de pause lors du téléchargement — et les agents chargés du contrôle routier infligent régulièrement des amendes pour cette raison.</div>
+</details>
+<details>
+<summary>Que dois-je faire si j’ai oublié de passer sur « REPOS » pendant une pause ?</summary>
+<div class="faq-a">Lorsque vous insérez à nouveau votre carte dans un véhicule, le tachygraphe vous propose une procédure de <strong>saisie manuelle</strong> pour la période écoulée depuis le retrait précédent de votre carte. Utilisez le menu pour définir l’activité correcte (repos) pour cet intervalle. Les saisies manuelles sont horodatées sur la carte et visibles par les autorités de contrôle, mais elles sont acceptées comme une correction légitime — contrairement à une activité manquante ou incorrecte qui n’a jamais été déclarée.</div>
+</details>
+<details>
+<summary>À quelle fréquence dois-je télécharger ma carte de conducteur et l’unité embarquée ?</summary>
+<div class="faq-a">Au moins tous les <strong>28 jours précédents</strong> pour la carte de conducteur et tous les <strong>90 jours</strong> pour l’unité embarquée (article 33 du règlement 165/2014, en liaison avec le règlement 581/2010 de la Commission). Les données téléchargées doivent être conservées pendant au moins un an — et, dans de nombreux États membres, pendant toute la carrière du conducteur, au titre des dossiers d’accident et d’assurance.</div>
+</details>
+<details>
+<summary>Une « CARD COMMUNICATION ERROR » affecte-t-elle mes enregistrements de temps de conduite ?</summary>
+<div class="faq-a">Pas nécessairement. La plupart des erreurs de communication sont simplement dues à des contacts de puce sales — l’activité effectuée avant l’anomalie se trouve déjà dans la mémoire de la carte. Si l’anomalie est brève et disparaît après nettoyage et réinsertion, aucune période n’est perdue. Si la carte refuse complètement d’être lue, l’unité imprime automatiquement la dernière activité et vous devez enregistrer manuellement tout ce qui suit ; la carte doit être remplacée.</div>
+</details>
+<details>
+<summary>L’écran affiche « COUNTRY ENTRY REQUIRED » — que dois-je faire ?</summary>
+<div class="faq-a">Les tachygraphes intelligents vous obligent à déclarer le pays dans lequel la période de travail commence et se termine. Avec le tachygraphe intelligent 2, l’unité vous demande également de confirmer chaque franchissement de frontière (le GNSS détecte le franchissement, puis vous appuyez sur OK pour l’acquitter). Utilisez le menu : <em>entry → driver 1 → begin country</em> (et <em>end country</em> à la fin de la période de travail). Les entrées de pays manquantes sont enregistrées comme des événements et sont visibles par les agents chargés du contrôle routier.</div>
+</details>
+<details>
+<summary>TAGRA prend-il en charge les quatre codes d’anomalie des fabricants présentés dans ce guide ?</summary>
+<div class="faq-a">Oui. TAGRA lit directement les événements et anomalies de l’annexe I C dans tout fichier .DDD téléchargé — le format des données est identique, quelle que soit l’unité qui les a écrites. Les messages contextuels propres aux fabricants sont associés à l’événement sous-jacent de l’annexe I C, afin que les gestionnaires de flotte disposent d’explications cohérentes et claires en anglais, que leurs conducteurs utilisent un tachygraphe intelligent VDO, Stoneridge, Actia, EFAS ou tout autre modèle homologué.</div>
+</details>
+<details>
+<summary>Que prévoit réellement la règle de réparation de l’article 37 ?</summary>
+<div class="faq-a">L’article 37 du règlement 165/2014 exige que, lorsque le tachygraphe ne peut pas enregistrer correctement les activités en raison d’une anomalie, la réparation soit effectuée par un installateur ou un atelier agréé « dès que les circonstances le permettent ». Si le véhicule ne peut pas regagner les locaux de l’exploitant dans un délai de <strong>semaine</strong> à compter de la découverte de l’anomalie, la réparation doit être effectuée en cours de route. Le conducteur doit conserver des saisies manuelles pendant toute cette période.</div>
+</details>
+<details>
+<summary>Puis-je continuer à conduire si l’événement « OVERSPEED » est enregistré ?</summary>
+<div class="faq-a">Oui — le dépassement de vitesse est un événement, et non une anomalie. Le véhicule continue à enregistrer correctement ; seule la limite de vitesse a été dépassée. L’événement est visible lors du téléchargement, et des enregistrements répétés de dépassement de vitesse au cours du même trajet ou de plusieurs trajets constituent un motif courant d’audit de l’exploitant et d’enquête lors d’un contrôle routier.</div>
+</details>
+<details>
+<summary>Mon écran VDO affiche un nombre comme 80, 82 ou 98 — qu’est-ce que cela signifie ?</summary>
+<div class="faq-a">Sur les modèles DTCO 4.0 / 4.1, un nombre à deux chiffres placé à côté du pictogramme identifie l’événement ou l’anomalie. Les petits nombres (001–066) sont des codes de mémoire d’anomalies destinés à l’atelier ; les nombres élevés correspondent aux fonctions du tachygraphe intelligent. Les plus courants sont <strong>80 — conflit de mouvement du véhicule</strong> (le capteur de mouvement n'est pas cohérent avec le signal GNSS ; message grave — rendez-vous dans un atelier agréé), <strong>82 — anomalie GNSS interne</strong> (le récepteur ne peut temporairement pas déterminer une position ; acquittez le message et rendez-vous dans un atelier agréé si le problème persiste) et <strong>98 — anomalie ITS / Bluetooth</strong> (l’interface de données à distance ; aucun effet sur l’enregistrement, faites réparer le problème lors de la prochaine révision). La liste complète 34–98 figure dans la section VDO ci-dessus.</div>
+</details>
+<details>
+<summary>Que signifie « MOTION CONFLICT » (code 80) et puis-je continuer à conduire ?</summary>
+<div class="faq-a">Le code 80 est un <em>conflit de mouvement du véhicule</em> : le tachygraphe a détecté une contradiction entre le capteur de mouvement et une source indépendante (GNSS). Une cause fréquente et inoffensive est l'oubli d'activer le mode ferry/train pendant le transport. Si le message apparaît en conduite normale, il peut indiquer une manipulation frauduleuse ou un défaut de câblage — acquittez le message, effectuez des saisies manuelles et faites contrôler l'unité par un atelier agréé.</div>
+</details>
+<details>
+<summary>Comment rechercher un code d'anomalie numérique ou hexadécimal à partir d'un relevé d'atelier ?</summary>
+<div class="faq-a">Utilisez le champ de recherche en haut de la section des codes constructeur : saisissez le numéro (par ex. <em>042</em>), un numéro affiché par un VDO (par ex. <em>82</em>), un DTC hexadécimal Stoneridge ou EFAS (par ex. <em>002E80</em>) ou n'importe quel mot du message (par ex. <em>anomalie du capteur</em>). Le panneau du constructeur concerné s'ouvre automatiquement et affiche uniquement les lignes correspondantes.</div>
+</details>
+<details>
+<summary>TAGRA peut-il m'avertir d'une anomalie du tachygraphe avant qu'elle ne survienne ?</summary>
+<div class="faq-a">Non. TAGRA analyse les données après leur téléchargement depuis la carte de conducteur ou l'unité embarquée — il ne se connecte pas au tachygraphe en temps réel et ne peut pas prévoir les anomalies. En revanche, il indique si une anomalie a laissé une trace dans vos données enregistrées et si elle a entraîné une infraction.</div>
+</details>
+</div><!-- /.faq-block -->
+</article></div></section></main>
+<footer class="site-footer" role="contentinfo">
+<div class="footer-inner">
+<div>
+<div class="footer-logo"><img alt="TAGRA" height="20" src="/assets/img/logo-dark.svg?v=20260513zh" width="88" loading="lazy"/></div>
+<p class="footer-desc">Logiciel professionnel d'analyse des tachygraphes. Téléchargement des cartes de conducteur, analyse des tachygraphes numériques, temps de conduite des conducteurs dans l'UE et directive relative au temps de travail des conducteurs de poids lourds. Développé par Truck Data Technology, s.r.o.</p>
+</div>
+<div class="footer-col">
+<h2 class="footer-col-title">Produit</h2>
+<ul>
+<li><a href="/fr/entreprises/">Pour les exploitants de parcs</a></li>
+<li><a href="/fr/conducteurs/">Pour les conducteurs professionnels</a></li>
+<li><a href="/fr/autorites-de-controle/">Pour les contrôles</a></li>
+<li><a href="/fr/fonctionnement/">Fonctionnement</a></li>
+<li><a href="/fr/pour-qui/">Pour qui</a></li>
+<li><a href="/fr/faq/">FAQ</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h2 class="footer-col-title">Ressources</h2>
+<ul>
+<li><a href="/fr/articles/">Articles</a></li><li><a href="/fr/manuels/">Manuels</a></li>
+<li><a href="/fr/articles/symboles-tachygraphe/">Symboles du tachygraphe</a></li>
+<li><a href="/fr/integrations/dkv-live/">DKV LIVE®</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h2 class="footer-col-title">Entreprise</h2>
+<ul>
+<li><a href="/fr/contact/">Contact</a></li>
+<li><a href="https://www.tdt.cz" rel="noopener" target="_blank">Truck Data Technology</a></li>
+<li><a href="/nl/">English</a></li><li><a href="/de/">Deutsch</a></li><li><a href="/pl/">Polski</a></li><li><a href="/el/">Ελληνικά</a></li><li><a href="/hu/">Magyar</a></li><li><a href="/it/">Italiano</a></li><li><a href="https://www.tdt.cz/" rel="noopener" target="_blank">Čeština</a></li><li><a href="https://www.tdt.sk/" rel="noopener" target="_blank">Slovenčina</a></li></ul>
+</div>
+</div>
+<div class="footer-bottom">
+<span>© 2026 Truck Data Technology, s.r.o. Tous droits réservés.</span>
+<span><a href="/fr/contact/">Contact</a> · <a href="https://www.tdt.cz" rel="noopener" target="_blank">tdt.cz</a> · <a href="/fr/confidentialite/">Confidentialité &amp; cookies</a></span>
+</div>
+</footer>
+<div aria-label="Inscription rapide à l'essai" class="sticky-cta" id="stickyCta" role="complementary">
+<div class="sticky-cta-inner">
+<span class="sticky-cta-text">Prêt à commencer ? Essayez TAGRA gratuitement pendant 30 jours.</span>
+<a class="sticky-cta-btn" href="/fr/essai-gratuit/?audience=driver&amp;src=symbols">Commencer votre essai gratuit de 30 jours →</a>
+<button aria-label="Fermer" class="sticky-cta-close" id="stickyCtaClose">×</button>
+</div>
+</div>
+<script>(function(){var bar=document.getElementById('scroll-progress');if(bar)window.addEventListener('scroll',function(){var t=document.documentElement.scrollTop||document.body.scrollTop;var h=document.documentElement.scrollHeight-document.documentElement.clientHeight;bar.style.width=(t/h*100)+'%';},{passive:true});var toggle=document.getElementById('nav-toggle'),links=document.getElementById('nav-links');if(toggle&&links)toggle.addEventListener('click',function(){var o=links.classList.toggle('open');toggle.setAttribute('aria-expanded',o);});})();</script><script>
+/* INTERSECTION OBSERVER – ANIMATIONS */
+if ('IntersectionObserver' in window) {
+  var io = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) {
+      if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.anim-up, .fly-left, .fly-right').forEach(function(el) { io.observe(el); });
+} else {
+  document.querySelectorAll('.anim-up, .fly-left, .fly-right').forEach(function(el) { el.classList.add('on'); });
+}
+</script>
+<script>
+(function(){
+  var input=document.getElementById('dec-search-input');
+  var clearBtn=document.getElementById('dec-search-clear');
+  var count=document.getElementById('dec-count');
+  var chips=Array.prototype.slice.call(document.querySelectorAll('.dec-chip'));
+  var vendors=Array.prototype.slice.call(document.querySelectorAll('details.vendor'));
+  if(!input||!vendors.length)return;
+  vendors.forEach(function(v){v._defaultOpen=v.hasAttribute('open');});
+  var activeVendor='all';
+  function apply(){
+    var q=(input.value||'').trim().toLowerCase();
+    var total=0;
+    vendors.forEach(function(v){
+      var scoped=(activeVendor==='all'||activeVendor===v.id);
+      if(!scoped){v.classList.add('dec-hidden');return;}
+      v.classList.remove('dec-hidden');
+      var rows=v.querySelectorAll('.code-table tbody tr');
+      var hits=0;
+      Array.prototype.forEach.call(rows,function(r){
+        var m=(q===''||r.textContent.toLowerCase().indexOf(q)!==-1);
+        if(m){r.classList.remove('dec-hidden');hits++;}else{r.classList.add('dec-hidden');}
+      });
+      total+=hits;
+      var body=v.querySelector('.vendor-body');
+      var note=v.querySelector('.dec-nohit');
+      if(q!==''&&hits===0){
+        if(!note&&body){note=document.createElement('p');note.className='dec-nohit';note.textContent='No matching rows in this manufacturer.';body.appendChild(note);}
+        if(note)note.style.display='';
+      } else if(note){note.style.display='none';}
+      if(q!==''||activeVendor!=='all'){v.open=hits>0;}else{v.open=v._defaultOpen;}
+    });
+    if(q===''&&activeVendor==='all'){count.textContent='';}
+    else{count.textContent=total+(total===1?' match':' matches')+(activeVendor!=='all'?' \u00b7 '+activeVendor.toUpperCase():'');}
+  }
+  input.addEventListener('input',apply);
+  clearBtn.addEventListener('click',function(){input.value='';apply();input.focus();});
+  chips.forEach(function(c){c.addEventListener('click',function(){
+    var v=c.getAttribute('data-vendor');
+    if(v==='symbols'){var s=document.getElementById('activity-symbols');if(s)s.scrollIntoView({behavior:'smooth'});return;}
+    chips.forEach(function(x){x.classList.toggle('is-active',x===c&&v!=='symbols');});
+    activeVendor=v;apply();
+    var firstVisible=vendors.filter(function(x){return !x.classList.contains('dec-hidden');})[0];
+    if(firstVisible&&v!=='all')firstVisible.scrollIntoView({behavior:'smooth',block:'start'});
+  });});
+})();
+
+/* STICKY CTA BAR */
+(function(){
+  var bar = document.getElementById('stickyCta');
+  if(!bar) return;
+  var KEY = 'tmx-sticky-cta-dismissed';
+  var dismissed = false;
+  try { dismissed = localStorage.getItem(KEY) === '1'; } catch(e) {}
+  if (dismissed) return;
+  function check(){
+    var top = document.documentElement.scrollTop || document.body.scrollTop;
+    var nearBottom = (window.innerHeight + top) >= (document.documentElement.scrollHeight - 80);
+    if (top > 700 && !nearBottom) bar.classList.add('is-visible');
+    else bar.classList.remove('is-visible');
+  }
+  window.addEventListener('scroll', check, { passive: true });
+  check();
+  var closeBtn = document.getElementById('stickyCtaClose');
+  if (closeBtn) closeBtn.addEventListener('click', function(){
+    bar.classList.remove('is-visible');
+    try { localStorage.setItem(KEY, '1'); } catch(e) {}
+  });
+})();
+</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Codes d'anomalie et symboles du tachygraphe : signification et solutions", "description": "Guide complet du conducteur sur les codes d'anomalie et les symboles d'avertissement des tachygraphes numériques. Icônes d'activité, fenêtres contextuelles d'avertissement, codes d'anomalie VDO DTCO 4.1 / Stoneridge SE5000 / Actia / EFAS-4, signification de chaque anomalie et mesures à prendre.", "image": "https://tagra.app/assets/img/og/digital-tachograph-symbols.jpg", "author": {"@type": "Organization", "name": "Truck Data Technology, s.r.o.", "url": "https://www.tdt.cz"}, "publisher": {"@type": "Organization", "name": "Truck Data Technology, s.r.o.", "logo": {"@type": "ImageObject", "url": "https://tagra.app/assets/img/logo.svg"}}, "datePublished": "2025-09-01T09:00:00+02:00", "dateModified": "2026-06-15T09:00:00+02:00", "inLanguage": "fr", "mainEntityOfPage": "https://tagra.app/fr/articles/symboles-tachygraphe/", "articleSection": "Base de connaissances du conducteur", "wordCount": 9600, "keywords": "tachograph fault codes, tachograph warning symbols, digital tachograph error codes, VDO DTCO error codes, Stoneridge SE5000 errors, Actia SmarTach faults, EFAS-4 faults, Annex 1C events, smart tachograph GNSS fault, drivers hours, Regulation 165/2014"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Quelle est la différence entre un événement et une anomalie sur un tachygraphe numérique ?", "acceptedAnswer": {"@type": "Answer", "text": "Un événement est une occurrence opérationnelle — conduite sans carte, dépassement de la limite de vitesse, insertion de carte en conduite, chevauchement horaire. L'unité fonctionne correctement ; elle enregistre un fait imputable au conducteur. Une anomalie est un dysfonctionnement matériel ou logiciel du tachygraphe lui-même — anomalie du capteur, anomalie interne, anomalie horaire, défaillance de l'imprimante. Les anomalies déclenchent l'obligation de réparation prévue à l'article 37 — dès que les circonstances le permettent, ou en cours de route si le véhicule ne peut pas retourner à sa base dans un délai d'une semaine. Les deux catégories sont définies à l'annexe I C du règlement (UE) 2016/799."}}, {"@type": "Question", "name": "Mon écran VDO affiche SENSOR FAULT — puis-je continuer à conduire ?", "acceptedAnswer": {"@type": "Answer", "text": "Brièvement, oui — pour atteindre un lieu d'arrêt sûr. Vous devez ensuite acquitter le message, imprimer les activités de la journée, inscrire manuellement au dos de ce ticket d'impression chaque activité effectuée par la suite, informer votre gestionnaire de parc et rejoindre un atelier agréé dès que les circonstances le permettent. Continuer à conduire sans effectuer de saisies manuelles dès que vous avez connaissance d'une anomalie du capteur constitue une infraction grave dans chaque État membre de l'UE."}}, {"@type": "Question", "name": "Que signifie GNSS ANOMALY sur un tachygraphe intelligent 2 ?", "acceptedAnswer": {"@type": "Answer", "text": "Les unités de tachygraphe intelligent 2 vérifient l'authenticité du signal GNSS afin de détecter une usurpation, au moyen du service Galileo OSNMA. L'événement GNSS ANOMALY signifie que l'unité a détecté soit une tentative de manipulation du signal GPS/Galileo, soit l'échec de l'authentification du signal. L'unité enregistre l'événement à des fins de contrôle. S'il se reproduit sur un véhicule donné, il convient de vérifier l'antenne et le câblage adjacent afin de détecter toute manipulation frauduleuse."}}, {"@type": "Question", "name": "Quelle est la différence entre AUTRE TÂCHE et DISPONIBILITÉ ?", "acceptedAnswer": {"@type": "Answer", "text": "AUTRE TÂCHE désigne un travail rémunéré qui n'est pas de la conduite : chargement, déchargement, ravitaillement, formalités, assistance aux passagers, contrôles du véhicule. DISPONIBILITÉ désigne un temps d'attente dont la durée est connue à l'avance par le conducteur — ferry/train, attente à un rendez-vous planifié. La DISPONIBILITÉ n'est pas du travail, mais elle ne constitue pas non plus une pause au regard des règles relatives au temps de conduite."}}, {"@type": "Question", "name": "La DISPONIBILITÉ peut-elle compter comme une pause au titre du règlement (CE) 561/2006 ?", "acceptedAnswer": {"@type": "Answer", "text": "Non. L'annexe 1 du règlement 561/2006 ne prévoit qu'une seule catégorie qui remet à zéro le décompte de 4,5 heures de conduite continue et compte pour la pause obligatoire de 45 minutes : l'activité PAUSE/REPOS. Les conducteurs qui sélectionnent DISPONIBILITÉ pendant une pause n'obtiennent aucun crédit de pause lors du téléchargement."}}, {"@type": "Question", "name": "Que dois-je faire si j'ai oublié de passer en REPOS pendant une pause ?", "acceptedAnswer": {"@type": "Answer", "text": "Lors de la prochaine insertion de votre carte dans n'importe quel véhicule, le tachygraphe vous propose une procédure de saisie manuelle pour la période écoulée depuis le dernier retrait de votre carte. Utilisez le menu pour définir l'activité correcte pour cet intervalle. Les saisies manuelles sont horodatées sur la carte et acceptées comme une correction légitime."}}, {"@type": "Question", "name": "À quelle fréquence dois-je télécharger ma carte de conducteur et l’unité embarquée ?", "acceptedAnswer": {"@type": "Answer", "text": "Au moins tous les 28 jours pour la carte de conducteur et tous les 90 jours pour l'unité embarquée (article 33 du règlement 165/2014, conjointement avec le règlement (UE) n° 581/2010 de la Commission). Les données téléchargées doivent être conservées pendant au moins un an."}}, {"@type": "Question", "name": "Une erreur de communication avec la carte affecte-t-elle mes enregistrements de temps de conduite ?", "acceptedAnswer": {"@type": "Answer", "text": "Pas nécessairement. La plupart des erreurs de communication sont simplement dues à des contacts de la puce sales — l'activité effectuée avant l'erreur se trouve déjà dans la mémoire de la carte. Si l'erreur est brève et disparaît après nettoyage et réinsertion, aucune période n'est perdue. Si la carte refuse totalement d'être lue, l'unité imprime automatiquement la dernière activité."}}, {"@type": "Question", "name": "L'écran indique COUNTRY ENTRY REQUIRED — que dois-je faire ?", "acceptedAnswer": {"@type": "Answer", "text": "Les tachygraphes intelligents exigent que vous déclariez le pays dans lequel la période de travail commence et se termine. Avec un tachygraphe intelligent 2, l'unité vous demande également de confirmer chaque franchissement de frontière. Utilisez le menu : entrée → conducteur 1 → pays de début au commencement, et pays de fin à la fin de la période de travail."}}, {"@type": "Question", "name": "TAGRA prend-il en charge les quatre codes d’anomalie des fabricants présentés dans ce guide ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui. TAGRA lit directement les événements et anomalies de l'annexe I C dans tout fichier .DDD téléchargé — le format des données est identique, quelle que soit l'unité qui l'a créé. Les messages contextuels propres au constructeur sont associés à l'événement sous-jacent de l'annexe I C."}}, {"@type": "Question", "name": "Que prévoit réellement la règle de réparation de l’article 37 ?", "acceptedAnswer": {"@type": "Answer", "text": "L'article 37 du règlement 165/2014 exige que, lorsque le tachygraphe ne peut pas enregistrer correctement les activités en raison d'une anomalie, la réparation soit effectuée par un atelier agréé dès que les circonstances le permettent. Si le véhicule ne peut pas retourner dans les locaux de l'exploitant dans un délai d'une semaine après la découverte de l'anomalie, la réparation doit être effectuée en cours de route."}}, {"@type": "Question", "name": "Puis-je continuer à conduire avec l'événement de dépassement de vitesse enregistré ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui — le dépassement de vitesse est un événement, et non une anomalie. Le véhicule continue à enregistrer correctement ; seule la limite de vitesse a été dépassée. L'événement apparaît lors du téléchargement, et des enregistrements répétés de dépassement de vitesse déclenchent fréquemment des audits de l'exploitant et des enquêtes lors de contrôles routiers."}}, {"@type": "Question", "name": "Mon écran VDO affiche un nombre comme 80, 82 ou 98 — qu’est-ce que cela signifie ?", "acceptedAnswer": {"@type": "Answer", "text": "Sur les DTCO 4.0/4.1, un nombre à deux chiffres à côté du pictogramme identifie l'événement ou l'anomalie. Les numéros bas (001–066) sont des codes de mémoire d'anomalies d'atelier ; les numéros élevés correspondent aux fonctions du tachygraphe intelligent. Les plus courants sont 80 — conflit de mouvement du véhicule (le capteur de mouvement n'est pas cohérent avec le signal GNSS ; rendez-vous dans un atelier agréé), 82 — anomalie GNSS interne (le récepteur ne peut temporairement pas déterminer une position) et 98 — anomalie ITS/Bluetooth (l'interface de données à distance ; sans effet sur l'enregistrement)."}}, {"@type": "Question", "name": "Que signifie le conflit de mouvement (code 80) et puis-je continuer à conduire ?", "acceptedAnswer": {"@type": "Answer", "text": "Le code 80 correspond à un conflit de mouvement du véhicule : le tachygraphe a détecté une contradiction entre le capteur de mouvement et une source indépendante (GNSS). Une cause fréquente et inoffensive est l'oubli d'activer le mode ferry/train pendant le transport. Si le message apparaît en conduite normale, il peut indiquer une manipulation frauduleuse ou une anomalie de câblage — acquittez le message, effectuez des saisies manuelles et faites contrôler l'unité par un atelier agréé."}}, {"@type": "Question", "name": "Comment rechercher un code d'anomalie numérique ou hexadécimal à partir d'un relevé d'atelier ?", "acceptedAnswer": {"@type": "Answer", "text": "Utilisez le champ de recherche en haut de la section des codes constructeur : saisissez le numéro (par ex. 042), un numéro affiché par un VDO (par ex. 82), un DTC hexadécimal Stoneridge ou EFAS (par ex. 002E80) ou n'importe quel mot du message (par ex. anomalie du capteur). Le panneau du constructeur concerné s'ouvre automatiquement et affiche uniquement les lignes correspondantes."}}, {"@type": "Question", "name": "TAGRA peut-il m'avertir d'une anomalie du tachygraphe avant qu'elle ne survienne ?", "acceptedAnswer": {"@type": "Answer", "text": "Non. TAGRA analyse les données après leur téléchargement depuis la carte de conducteur ou l'unité embarquée — il ne se connecte pas au tachygraphe en temps réel et ne peut pas prévoir les anomalies. En revanche, il indique si une anomalie a laissé une trace dans vos données enregistrées et si elle a entraîné une infraction."}}]}</script>
+</body>
+</html>

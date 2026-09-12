@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<!-- TMX-ANALYTICS START -->
+<meta content="7F7894081BE7FBB245FF03AF8810B22F" name="msvalidate.01"/>
+<!-- Consent Mode v2 defaults (deny) + gtag stub — runs BEFORE gtag.js -->
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent','default',{
+      ad_storage:'denied', ad_user_data:'denied', ad_personalization:'denied',
+      analytics_storage:'denied', functionality_storage:'denied',
+      personalization_storage:'denied', security_storage:'granted',
+      wait_for_update:500
+    });
+    gtag('set','ads_data_redaction',true);
+    gtag('set','url_passthrough',false);
+  </script>
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-92253QFBNX"></script>
+<script>
+    gtag('js', new Date());
+    gtag('config','G-92253QFBNX');
+  </script>
+<!-- Cookie consent banner (self-hosted) + Microsoft Clarity gating -->
+<style>
+    .tmx-cc{position:fixed;left:0;right:0;bottom:0;z-index:2147483000;background:linear-gradient(120deg,var(--blue-dark,#0b2c4a),var(--blue-mid,#134a8e) 62%,var(--blue-light,#1f5fa6));color:#fff;
+      font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+      padding:16px 20px;box-shadow:0 -4px 24px rgba(0,0,0,.18);display:flex;flex-wrap:wrap;
+      align-items:center;gap:14px;justify-content:center}
+    .tmx-cc__txt{flex:1 1 360px;max-width:760px}
+    .tmx-cc__txt a{color:#9ed0f5;text-decoration:underline}
+    .tmx-cc__btns{display:flex;gap:10px;flex:0 0 auto}
+    .tmx-cc__b{appearance:none;border:0;cursor:pointer;font:inherit;font-weight:600;
+      padding:10px 22px;border-radius:99px;transition:filter .15s;color:#fff}
+    .tmx-cc__b:hover{filter:brightness(1.08)}
+    .tmx-cc__b--no{background:rgba(255,255,255,.16)}
+    .tmx-cc__b--yes{background:var(--green-cta,#5C820F)}
+    @media(max-width:640px){.tmx-cc{padding:14px}.tmx-cc__btns{width:100%}.tmx-cc__b{flex:1}}
+  </style>
+<script>
+  (function(){
+    var KEY='tmx-consent-v1', CL='wt18054m0r';
+    function lc(){var l=(document.documentElement.getAttribute('lang')||'en').toLowerCase().split('-')[0];
+      var m={cz:'cs',cs:'cs',sk:'sk',de:'de',pl:'pl',gr:'el',el:'el',hu:'hu',en:'en'};return m[l]||'en';}
+    var T={
+      hu:{t:'Analitikai s\u00fctiket haszn\u00e1lunk (Google Analytics, Microsoft Clarity, Smartsupp), hogy meg\u00e9rts\u00fck a webhely haszn\u00e1lat\u00e1t. Csak az \u00d6n hozz\u00e1j\u00e1rul\u00e1s\u00e1val t\u00f6lt\u0151dnek be.',a:'Elfogadom',r:'Elutas\u00edtom',p:'Adatv\u00e9delem \u00e9s s\u00fctik'},
+      ro:{t:'Utilizăm module cookie de analiză (Google Analytics, Microsoft Clarity, Smartsupp) pentru a înțelege modul de utilizare a site-ului. Se încarcă doar cu consimțământul dumneavoastră.',a:'Accept',r:'Refuz',p:'Confidențialitate și cookie-uri'},
+      nl:{t:'We gebruiken analytische cookies (Google Analytics, Microsoft Clarity, Smartsupp) om het gebruik van de site te begrijpen. Ze laden alleen met uw toestemming.',a:'Accepteren',r:'Weigeren',p:'Privacy en cookies'},
+      fr:{t:'Nous utilisons des cookies analytiques (Google Analytics, Microsoft Clarity, Smartsupp) pour comprendre l’utilisation du site. Ils ne se chargent qu’avec votre consentement.',a:'Accepter',r:'Refuser',p:'Confidentialité et cookies'},
+      it:{t:'Utilizziamo cookie analitici (Google Analytics, Microsoft Clarity, Smartsupp) per capire l’utilizzo del sito. Si caricano solo con il Suo consenso.',a:'Accetta',r:'Rifiuta',p:'Privacy e cookie'},
+      en:{t:'We use analytics cookies (Google Analytics, Microsoft Clarity, Smartsupp) to understand site usage. They load only with your consent.',a:'Accept',r:'Reject',p:'Privacy &amp; cookies'},
+      cs:{t:'Pou\u017e\u00edv\u00e1me analytick\u00e9 cookies (Google Analytics, Microsoft Clarity, Smartsupp) k pochopen\u00ed pou\u017e\u00edv\u00e1n\u00ed webu. Na\u010dtou se jen s va\u0161\u00edm souhlasem.',a:'P\u0159ijmout',r:'Odm\u00edtnout',p:'Soukrom\u00ed a cookies'},
+      sk:{t:'Pou\u017e\u00edvame analytick\u00e9 cookies (Google Analytics, Microsoft Clarity, Smartsupp) na pochopenie pou\u017e\u00edvania webu. Na\u010d\u00edtaj\u00fa sa len s va\u0161\u00edm s\u00fahlasom.',a:'Prija\u0165',r:'Odmietnu\u0165',p:'S\u00fakromie a cookies'},
+      de:{t:'Wir verwenden Analyse-Cookies (Google Analytics, Microsoft Clarity, Smartsupp), um die Nutzung der Website zu verstehen. Sie werden nur mit Ihrer Einwilligung geladen.',a:'Akzeptieren',r:'Ablehnen',p:'Datenschutz &amp; Cookies'},
+      pl:{t:'U\u017cywamy plik\u00f3w cookie do analityki (Google Analytics, Microsoft Clarity, Smartsupp), aby zrozumie\u0107 korzystanie z witryny. \u0141aduj\u0105 si\u0119 tylko za Twoj\u0105 zgod\u0105.',a:'Akceptuj',r:'Odrzu\u0107',p:'Prywatno\u015b\u0107 i cookies'},
+      el:{t:'\u03a7\u03c1\u03b7\u03c3\u03b9\u03bc\u03bf\u03c0\u03bf\u03b9\u03bf\u03cd\u03bc\u03b5 cookies \u03b1\u03bd\u03ac\u03bb\u03c5\u03c3\u03b7\u03c2 (Google Analytics, Microsoft Clarity, Smartsupp) \u03b3\u03b9\u03b1 \u03bd\u03b1 \u03ba\u03b1\u03c4\u03b1\u03bd\u03bf\u03ae\u03c3\u03bf\u03c5\u03bc\u03b5 \u03c4\u03b7 \u03c7\u03c1\u03ae\u03c3\u03b7. \u03a6\u03bf\u03c1\u03c4\u03ce\u03bd\u03bf\u03bd\u03c4\u03b1\u03b9 \u03bc\u03cc\u03bd\u03bf \u03bc\u03b5 \u03c4\u03b7 \u03c3\u03c5\u03b3\u03ba\u03b1\u03c4\u03ac\u03b8\u03b5\u03c3\u03ae \u03c3\u03b1\u03c2.',a:'\u0391\u03c0\u03bf\u03b4\u03bf\u03c7\u03ae',r:'\u0391\u03c0\u03cc\u03c1\u03c1\u03b9\u03c8\u03b7',p:'\u0391\u03c0\u03cc\u03c1\u03c1\u03b7\u03c4\u03bf &amp; cookies'}
+    };
+    function loadClarity(){if(!CL||window.__tmxCl)return;window.__tmxCl=1;
+      (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+       t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+       y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script",CL);}
+    function grant(){try{localStorage.setItem(KEY,'granted')}catch(e){}
+      gtag('consent','update',{analytics_storage:'granted'});loadClarity();}
+    function deny(){try{localStorage.setItem(KEY,'denied')}catch(e){}}
+    var saved=null;try{saved=localStorage.getItem(KEY)}catch(e){}
+    if(saved==='granted'){grant();return;} if(saved==='denied'){return;}
+    function show(){var tx=T[lc()]||T.en;
+      var b=document.createElement('div');b.className='tmx-cc';b.setAttribute('role','dialog');b.setAttribute('aria-live','polite');
+      b.innerHTML='<div class="tmx-cc__txt">'+tx.t+' <a href="/fr/confidentialite/">'+tx.p+'</a></div>'+
+        '<div class="tmx-cc__btns"><button type="button" class="tmx-cc__b tmx-cc__b--no">'+tx.r+'</button>'+
+        '<button type="button" class="tmx-cc__b tmx-cc__b--yes">'+tx.a+'</button></div>';
+      document.body.appendChild(b);
+      b.querySelector('.tmx-cc__b--yes').addEventListener('click',function(){grant();b.remove();});
+      b.querySelector('.tmx-cc__b--no').addEventListener('click',function(){deny();b.remove();});}
+    if(document.body)show();else document.addEventListener('DOMContentLoaded',show);
+  })();
+  </script>
+<!-- TMX-ANALYTICS END -->
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>TAGRA Control : logiciel pour autorités de contrôle</title>
+<meta content="Logiciel professionnel d’analyse des données des tachygraphes pour les contrôles routiers et en entreprise, utilisé par les autorités en Europe centrale." name="description"/>
+<meta content="#0b2c4a" name="theme-color"/>
+<link href="/manifest.json" rel="manifest"/>
+<link href="https://tagra.app/fr/autorites-de-controle/" rel="canonical"/>
+<link href="https://tagra.app/de/kontrollbehoerden/" hreflang="de" rel="alternate"/><link href="https://tagra.app/el/eleghos/" hreflang="el" rel="alternate"/><link href="https://tagra.app/enforcement/" hreflang="en" rel="alternate"/><link href="https://tagra.app/fr/autorites-de-controle/" hreflang="fr" rel="alternate"/><link href="https://tagra.app/hu/hatosagoknak/" hreflang="hu" rel="alternate"/><link href="https://tagra.app/it/organi-di-controllo/" hreflang="it" rel="alternate"/><link href="https://tagra.app/nl/handhaving/" hreflang="nl" rel="alternate"/><link href="https://tagra.app/pl/organy-kontrolne/" hreflang="pl" rel="alternate"/>
+<link href="https://tagra.app/ro/autoritati-de-control/" hreflang="ro" rel="alternate"/><link href="https://tagra.app/enforcement/" hreflang="x-default" rel="alternate"/>
+<meta content="website" property="og:type"/>
+<meta content="TAGRA Control – logiciel pour les autorités de contrôle" property="og:title"/>
+<meta content="Logiciel professionnel d'analyse des données des tachygraphes pour les contrôles routiers et en entreprise. Utilisé par la police, les douanes et les inspections du travail dans toute l'Europe centrale." property="og:description"/>
+<meta content="https://tagra.app/assets/img/tagra-control-screenshot.webp" property="og:image"/>
+<meta content="TAGRA Control – interface d'analyse des tachygraphes numériques pour les autorités de contrôle" property="og:image:alt"/>
+<meta content="https://tagra.app/fr/autorites-de-controle/" property="og:url"/>
+<meta content="TAGRA" property="og:site_name"/>
+<meta content="en_US" property="og:locale"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="TAGRA Control – logiciel pour les autorités de contrôle" name="twitter:title"/>
+<meta content="Logiciel professionnel d'analyse des données des tachygraphes pour les contrôles routiers et en entreprise." name="twitter:description"/>
+<meta content="https://tagra.app/assets/img/tagra-control-screenshot.webp" name="twitter:image"/>
+<meta content="TAGRA Control – interface d'analyse des tachygraphes numériques pour les autorités de contrôle" name="twitter:image:alt"/>
+<link href="/assets/img/favicon.ico" rel="icon"/>
+<style>
+    /* ── Enforcement-specific overrides ── */
+    .enf-hero { background: linear-gradient(180deg,#e8e8ed 0%,#f5f5f7 52%,#ffffff 100%); padding: calc(var(--nav-h, 64px) + 80px) 0 60px; text-align: center; }
+    .enf-hero
+    .enf-hero p.lead { font-size: 20px; color: #515154; max-width: 640px; margin: 0 auto 32px; line-height: 1.55; }
+    .enf-btn-row { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; margin-bottom: 24px; }
+    
+    .btn-cta:hover { background: var(--green-brand); transform: scale(1.02); color: #fff !important; }
+    .btn-cta.btn-blue { background: var(--blue-mid); }
+    .btn-cta.btn-blue:hover { background: var(--blue-dark); }
+
+    /* bento grid */
+    
+    .bc { background:#fff; border-radius: 20px; padding: 32px; border: 1px solid rgba(0,0,0,.08); position: relative; overflow: hidden; }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    .bc.darkfill .bc-title, .bc.darkfill .bc-text, .bc.darkfill p, .bc.darkfill li { color: rgba(255,255,255,.88) !important; }
+    .bc.darkfill .bc-label { color: rgba(255,255,255,.55) !important; }
+    @media (max-width: 900px) { .bento { grid-template-columns: 1fr 1fr; } .bc.s7, .bc.s8, .bc.s12 { grid-column: span 2; } .bc.s4, .bc.s5, .bc.s6 { grid-column: span 1; } }
+    @media (max-width: 600px) { .bento { grid-template-columns: 1fr; } .bc { grid-column: span 1 !important; } }
+    .bc-label { font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--green-brand); margin-bottom: 6px; display: block; }
+    
+    
+    .bignum { font-size: 110px; font-weight: 800; line-height: 1; color: rgba(19,74,142,.06); position: absolute; bottom: -16px; right: 16px; pointer-events: none; letter-spacing: -.04em; }
+
+    /* ref cards (who uses) */
+    .ref-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(210px,1fr)); gap: 14px; margin-top: 32px; }
+    .ref-card { background: #fff; border-radius: 20px; border: 1.5px solid rgba(0,0,0,.08); padding: 26px 20px; display: flex; flex-direction: column; gap: 4px; position: relative; overflow: hidden; transition: transform .18s, box-shadow .18s, border-color .18s; }
+    .ref-card::before { content: ''; position: absolute; inset: 0; background-size: cover; background-position: center; opacity: .05; pointer-events: none; }
+    .ref-card > * { position: relative; z-index: 1; }
+    .ref-card--cz::before { background-image: url('https://flagcdn.com/w320/cz.png'); }
+    .ref-card--sk::before { background-image: url('https://flagcdn.com/w320/sk.png'); }
+    .ref-card--hu::before { background-image: url('https://flagcdn.com/w320/hu.png'); }
+    .ref-card:hover { transform: translateY(-3px); box-shadow: 0 14px 28px rgba(19,74,142,.10); border-color: rgba(19,74,142,.3); }
+    .ref-flag { font-size: 28px; line-height: 1; margin-bottom: 4px; }
+    .ref-country { font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--blue); }
+    .ref-name { font-size: 17px; font-weight: 800; color: #0b0b0c; line-height: 1.3; }
+    .ref-note { font-size: 14px; color: #515154; margin-top: 4px; line-height: 1.4; }
+
+    /* feats list */
+    
+    
+    
+    .fck::after { content: ''; width: 12px; height: 12px; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E") no-repeat center/contain; }
+
+    /* steps */
+    .steps { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; margin-top: 32px; }
+    @media (max-width: 768px) { .steps { grid-template-columns: 1fr; } }
+    .step-card { background: #fff; border-radius: 20px; padding: 28px 24px; border: 1px solid rgba(0,0,0,.08); display: flex; flex-direction: column; }
+    .step-card .step-header { min-height: 100px; }
+    .snum { font-size: 44px; font-weight: 800; color: rgba(19,74,142,.15); line-height: 1; margin-bottom: 8px; display: block; letter-spacing: -.02em; }
+    .stit { font-size: 20px; font-weight: 800; color: #0b0b0c; margin-bottom: 8px; display: block; }
+
+    /* reports grid */
+    .reports-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(260px,1fr)); gap: 14px; margin-top: 28px; }
+    .report-item { background: #fff; border-radius: 16px; border: 1px solid rgba(0,0,0,.08); padding: 20px 22px; display: flex; align-items: flex-start; gap: 14px; }
+    .report-icon { font-size: 32px; font-weight: 800; color: rgba(19,74,142,.18); line-height: 1.1; padding-top: 2px; flex-shrink: 0; width: 36px; text-align: center; }
+    .report-label { font-size: 16px; font-weight: 700; color: #0b0b0c; line-height: 1.3; margin-bottom: 4px; display: block; }
+    .report-desc { font-size: 15px; color: #515154; line-height: 1.4; }
+
+    /* legislation table */
+    .leg-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 20px; }
+    @media (max-width: 600px) { .leg-grid { grid-template-columns: 1fr; } }
+    .leg-item { display: flex; align-items: center; gap: 10px; background: rgba(19,74,142,.04); border-radius: 10px; padding: 12px 16px; font-size: 16px; font-weight: 600; color: #0b2c4a; }
+    .leg-item::before { content: '✓'; font-size: 15px; font-weight: 800; color: var(--green-brand); flex-shrink: 0; }
+
+    /* device card */
+    .device-card { background: linear-gradient(135deg,#eaf3f8 0%,#f5f9fd 100%); border-radius: 20px; border: 1px solid rgba(31,95,166,.12); padding: 36px; display: flex; gap: 36px; align-items: center; margin-top: 32px; }
+    @media (max-width: 768px) { .device-card { flex-direction: column; gap: 24px; } }
+    .device-img { width: 180px; flex-shrink: 0; border-radius: 12px; overflow: hidden; }
+    .device-img img { width: 100%; height: auto; display: block; object-fit: contain; }
+    .device-specs { display: flex; flex-direction: column; gap: 8px; margin-top: 14px; }
+    .dspec { display: flex; gap: 10px; font-size: 16px; }
+    .dspec-k { color: #515154; min-width: 120px; flex-shrink: 0; }
+    .dspec-v { font-weight: 600; color: #0b0b0c; }
+
+    /* training list */
+    .training-list { list-style: none; padding: 0; margin: 16px 0 0; display: flex; flex-direction: column; gap: 10px; }
+    .training-list li { padding-left: 20px; position: relative; font-size: 17px; color: #1d1d1f; line-height: 1.5; }
+    .training-list li::before { content: ''; position: absolute; left: 0; top: 10px; width: 8px; height: 8px; border-radius: 50%; background: linear-gradient(135deg,#0b2c4a 0%,#134a8e 100%); }
+
+    /* callout green */
+    .callout-green { background: linear-gradient(90deg,#74A81A 0%,#6E9B12 55%,#638719 100%); border-radius: 20px; padding: 48px 40px; position: relative; overflow: hidden; box-shadow: 0 12px 32px rgba(0,0,0,.06); margin-top: 40px; }
+    .callout-green h2 { background: linear-gradient(90deg,#052037 0%,#0b2c4a 55%,#0e3a73 100%); -webkit-background-clip: text; background-clip: text; color: transparent; -webkit-text-fill-color: transparent; padding-bottom:0.08em;}
+    .callout-green p, .callout-green li { color: #0b0b0c !important; font-size: 17px; }
+    .callout-green a { color: #052037 !important; font-weight: 600; }
+    .callout-green a:hover { text-decoration: underline; text-decoration-color: rgba(0,0,0,.35); }
+    .cg-bg { font-size: 200px; font-weight: 900; position: absolute; right: -20px; bottom: -40px; color: rgba(255,255,255,.12); line-height: 1; pointer-events: none; }
+    @media (max-width: 600px) { .cg-bg { font-size: 80px; right: -10px; bottom: -20px; } .callout-green { padding: 36px 24px; } }
+
+    /* media frame */
+    .tmx-media-frame { border-radius: 20px; overflow: hidden; -webkit-mask-image: -webkit-radial-gradient(#fff,#000); }
+    .tmx-media-frame img { width: 100%; display: block; object-fit: cover; }
+    /* Hero image is already 16:9 (1080x608) so let it set its own aspect ratio. */
+    .enf-hero .tmx-media-frame img { height: auto; }
+
+    /* faq */
+    
+    
+    .faq-block summary { list-style: none; cursor: pointer; padding: 18px 40px 18px 0; font-weight: 700; font-size: 18px; line-height: 1.4; position: relative; color: #0b0b0c; }
+    
+    .faq-block summary::after { content: '+'; position: absolute; right: 4px; top: 50%; transform: translateY(-50%); font-size: 26px; font-weight: 300; color: var(--green-brand); }
+    
+    
+
+    /* anim */
+    .anim-up { opacity: 0; transform: translateY(28px); transition: opacity .75s cubic-bezier(.16,1,.3,1), transform .75s cubic-bezier(.16,1,.3,1); }
+    .fly-left { opacity: 0; transform: translateX(-50px); transition: opacity .8s cubic-bezier(.16,1,.3,1), transform .8s cubic-bezier(.16,1,.3,1); }
+    .fly-right { opacity: 0; transform: translateX(50px); transition: opacity .8s cubic-bezier(.16,1,.3,1), transform .8s cubic-bezier(.16,1,.3,1); }
+    .anim-up.on, .fly-left.on, .fly-right.on { opacity: 1; transform: none; }
+    @media (prefers-reduced-motion: reduce) { .anim-up, .fly-left, .fly-right { transition: none !important; opacity: 1 !important; transform: none !important; } }
+
+    /* section spacing */
+    .section { padding: 80px 0; }
+    .section--gray { background: #f5f5f7; }
+    .section--blue { background: #eaf3f8; }
+    @media (max-width: 768px) { .section { padding: 52px 0; } }
+    .section-label {
+      font-size: 16px; font-weight: 600; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--green-brand, #6E9B12);
+      margin-bottom: 12px; display: block;
+    }
+    .section-h2 {
+      font-size: 36px; font-weight: 800;
+      line-height: 1.1; letter-spacing: 0;
+      text-transform: uppercase;
+      color: var(--blue-mid, #134a8e);
+      background: linear-gradient(90deg, var(--blue-dark, #0b2c4a) 0%, var(--blue-mid, #134a8e) 55%, var(--blue-light, #1f5fa6) 100%);
+      -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block; max-width: 100%; margin-bottom: 14px;
+      padding: 0.12em 0.15em 0.08em 0;
+    }
+    @media (max-width: 768px) {
+      .section-h2 {
+      font-size: 36px; font-weight: 800;
+      line-height: 1.1; letter-spacing: 0;
+      text-transform: uppercase;
+      color: var(--blue-mid, #134a8e);
+      background: linear-gradient(90deg, var(--blue-dark, #0b2c4a) 0%, var(--blue-mid, #134a8e) 55%, var(--blue-light, #1f5fa6) 100%);
+      -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block; max-width: 100%; margin-bottom: 14px;
+      padding: 0.12em 0.15em 0.08em 0;
+    }
+    }
+    .section-intro { font-size: 18px; color: #515154; max-width: 680px; line-height: 1.6; margin-bottom: 8px; }
+    
+    
+    @media (max-width: 900px) { .g2 { grid-template-columns: 1fr; gap: 36px; } }
+  </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://tagra.app/nl/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Pour les autorités de contrôle",
+      "item": "https://tagra.app/fr/autorites-de-controle/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "url": "https://tagra.app/fr/autorites-de-controle/",
+  "name": "Pour les autorités de contrôle",
+  "isPartOf": {
+    "@id": "https://tagra.app/#website"
+  },
+  "about": {
+    "@id": "https://tagra.app/#organization"
+  },
+  "inLanguage": "fr"
+}
+</script>
+<link href="/assets/css/main.css" rel="stylesheet"/>
+<link href="/assets/css/tokens.css" rel="stylesheet"/>
+<link href="/assets/css/base.css" rel="stylesheet"/>
+<link href="/assets/css/components.css" rel="stylesheet"/>
+<link href="/assets/css/nav.css" rel="stylesheet"/>
+<script defer="" src="/assets/js/nav.js?v=20260816b"></script>
+<link href="/assets/css/footer.css" rel="stylesheet"/></head>
+<body>
+<a class="skip-link" href="#main-content">Passer au contenu</a>
+<div aria-hidden="true" id="scroll-progress"></div>
+<!-- ═══ NAVIGATION ═══════════════════════════════════════════════ -->
+<nav aria-label="Navigation principale" class="site-nav" role="navigation">
+<div class="nav-inner">
+<a aria-label="TAGRA Control – accueil" class="nav-logo" href="/nl/"><img alt="TAGRA" height="32" src="/assets/img/logo-light.svg?v=20260513zh" style="display:block;height:32px;width:auto;" width="140"/><span class="nav-logo-variant">Contrôle</span></a>
+<ul class="nav-links" id="nav-links">
+<li><a href="/fr/entreprises/">Pour les entreprises</a></li>
+<li><a href="/fr/conducteurs/">Pour les conducteurs</a></li>
+<li><a aria-current="page" href="/fr/autorites-de-controle/">Contrôle</a></li>
+<li><a href="/fr/articles/">Articles</a></li><li><a href="/fr/manuels/">Manuels</a></li>
+<li><a href="/fr/faq/">FAQ</a></li>
+<li><a href="/fr/contact/">Contact</a></li>
+<li class="nav-cta-li"><a class="nav-cta" href="/fr/essai-gratuit/?audience=enforcement">Essayez gratuitement pendant 30 jours</a></li>
+</ul>
+<details class="nav-lang">
+<summary aria-label="Langue : FR">FR</summary>
+<div class="nav-lang-menu" role="menu"><a href="/enforcement/" hreflang="en">English</a><a href="/de/kontrollbehoerden/" hreflang="de">Deutsch</a><a href="/pl/organy-kontrolne/" hreflang="pl">Polski</a><a href="/nl/handhaving/" hreflang="nl">Nederlands</a><a aria-current="page" class="active" href="/fr/autorites-de-controle/" hreflang="fr">Français</a><a href="/it/organi-di-controllo/" hreflang="it">Italiano</a><a href="/el/eleghos/" hreflang="el">Ελληνικά</a><a href="/hu/hatosagoknak/" hreflang="hu">Magyar</a><a href="/ro/autoritati-de-control/" hreflang="ro">Română</a><a href="https://www.tdt.cz/" hreflang="cs" rel="noopener" target="_blank">Čeština</a><a href="https://www.tdt.sk/" hreflang="sk" rel="noopener" target="_blank">Slovenčina</a></div>
+</details>
+<a class="nav-cta-mobile" href="/fr/essai-gratuit/?audience=enforcement">Essai gratuit</a>
+<button aria-expanded="false" aria-label="Afficher/masquer le menu" class="nav-mobile-toggle" id="nav-toggle">
+<span></span><span></span><span></span>
+</button>
+</div>
+</nav>
+<!-- HERO -->
+<section id="main-content" class="enf-hero">
+<div class="container">
+<div class="eyebrow anim-up">TAGRA · Pour les autorités de contrôle</div>
+<h1>Analyse des tachygraphes sur route en quelques minutes, pas en quelques heures</h1>
+<p class="lead">Professionnel <strong>logiciel d'analyse du chronotachygraphe</strong> pour l'analyse rapide des tachygraphes numériques lors des contrôles routiers et en entreprise. La référence dans toute l'Europe centrale.</p>
+<div class="enf-btn-row anim-up">
+<a class="btn-cta" href="/fr/essai-gratuit/?audience=enforcement">Demander un accès de démonstration</a>
+<a class="btn-cta btn-blue" href="/fr/contact/?topic=training">Contactez-nous pour une formation</a>
+</div>
+<p class="anim-up" style="font-size:15px;color:var(--text2);margin-bottom:0;transition-delay:.2s">Windows · Démonstration sur demande · Utilisé par les autorités de contrôle en République tchèque, en Slovaquie et en Hongrie</p>
+<div class="tmx-media-frame anim-up" style="margin:44px auto 0;box-shadow:0 20px 40px rgba(0,0,0,.08);">
+<img alt="TAGRA Control – interface d'analyse des tachygraphes numériques pour les autorités de contrôle" height="608" src="/assets/img/tagra-control-screenshot.webp?v=2026-05-13c" width="1080"/>
+</div>
+</div>
+</section>
+<!-- KEY METRICS BENTO -->
+<section class="section">
+<div class="container">
+<div class="bento">
+<div class="bc bluefill s4 anim-up" style="transition-delay:0s">
+<span class="bc-label">Rapidité</span>
+<div class="bc-title">Résultats en quelques secondes</div>
+<p class="bc-text" style="margin-top:8px;">Carte de conducteur ou tachygraphe → <strong>ainsi que leur archivage. TAGRA est un logiciel d’analyse de tachygraphes de bout en bout, avec une charge administrative minimale, pour 1 à un nombre illimité de véhicules.</strong> avec un rapport d'infraction en quelques secondes. Aucun traitement sur serveur, aucune attente.</p>
+<div class="bignum">01</div>
+</div>
+<div class="bc bluefill s4 anim-up" style="transition-delay:0.1s">
+<span class="bc-label">Législation</span>
+<div class="bc-title">Temps de conduite dans l’UE + directive sur le temps de travail</div>
+<p class="bc-text" style="margin-top:8px;">Entièrement à jour : règlements 561/2006, 2020/1054, AETR, 478/2000, 462/2007 et <strong>directive sur le temps de travail dans le transport routier</strong>. Mis à jour à chaque modification législative.</p>
+<div class="bignum">02</div>
+</div>
+<div class="bc bluefill s4 anim-up" style="transition-delay:0.2s">
+<span class="bc-label">Tachygraphes</span>
+<div class="bc-title">Toutes les générations</div>
+<p class="bc-text" style="margin-top:8px;">Tachygraphes numériques G1 et tachygraphes intelligents G2V2. Tous les formats dans un seul outil : .DDD, .C1B, .V1B, ESM.</p>
+<div class="bignum">03</div>
+</div>
+<div class="bc darkfill s6 fly-left">
+<span class="bc-label" style="color:rgba(255,255,255,.55);">Cocréé</span>
+<div class="bc-title">Avec les autorités de contrôle</div>
+<p class="bc-text" style="margin-top:8px;color:rgba(255,255,255,.82);">Les fonctionnalités sont développées en collaboration directe avec les contrôleurs sur le terrain. Le logiciel correspond aux pratiques réelles de contrôle.</p>
+</div>
+<div class="bc greenfill s6 fly-right">
+<span class="bc-label">Rapports</span>
+<div class="bc-title">Formulaires prêts pour les contrôles</div>
+<p class="bc-text" style="margin-top:8px;">Documents préparés pour les contrôles routiers et en entreprise — identiques à ceux que les gestionnaires de transport remettent aux autorités.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- WHO USES -->
+<section class="section section--gray">
+<div class="container anim-up">
+<span class="section-label">Vérifié en pratique</span>
+<h2 class="section-h2">Qui utilise TAGRA Control</h2>
+<p class="section-intro">TAGRA Control est la référence <strong>logiciel d'analyse du chronotachygraphe</strong> pour les autorités de contrôle en République tchèque, en Slovaquie et en Hongrie. Le logiciel est continuellement mis à jour sur la base des retours des contrôleurs sur le terrain.</p>
+<div class="ref-grid">
+<div class="ref-card ref-card--cz">
+<div class="ref-country">République tchèque</div>
+<div class="ref-name">Police tchèque</div>
+<div class="ref-note">Contrôles routiers dans toute la République tchèque</div>
+</div>
+<div class="ref-card ref-card--cz">
+<div class="ref-country">République tchèque</div>
+<div class="ref-name">Administration des douanes tchèques</div>
+<div class="ref-note">Contrôles aux frontières et sur le terrain</div>
+</div>
+<div class="ref-card ref-card--cz">
+<div class="ref-country">République tchèque</div>
+<div class="ref-name">Ministère des Transports de la République tchèque</div>
+<div class="ref-note">Contrôle administratif et méthodologique</div>
+</div>
+<div class="ref-card ref-card--cz">
+<div class="ref-country">République tchèque</div>
+<div class="ref-name">Inspection nationale du travail</div>
+<div class="ref-note">Contrôles du temps de travail chez les employeurs</div>
+</div>
+<div class="ref-card ref-card--cz">
+<div class="ref-country">République tchèque</div>
+<div class="ref-name">Autorités régionales &amp; ORP</div>
+<div class="ref-note">Communes à compétence étendue dans toute la République tchèque</div>
+</div>
+<div class="ref-card ref-card--sk">
+<div class="ref-country">République slovaque</div>
+<div class="ref-name">Inspections du travail de la République slovaque</div>
+<div class="ref-note">Contrôles routiers et en entreprise en Slovaquie</div>
+</div>
+<div class="ref-card ref-card--hu">
+<div class="ref-country">Hongrie</div>
+<div class="ref-name">Ministère des Transports de Hongrie</div>
+<div class="ref-note">Activités de contrôle et méthodologie</div>
+</div>
+<div class="ref-card ref-card--hu">
+<div class="ref-country">Hongrie</div>
+<div class="ref-name">Police du comitat de Komárom-Esztergom</div>
+<div class="ref-note">Contrôles des tachygraphes sur route en Hongrie</div>
+</div>
+</div>
+<div class="commitment-callout" style="margin:36px 0 0;padding:32px 36px;background:#fff;border-radius:16px;border-left:4px solid var(--green-brand);font-size:17px;color:#515154;line-height:1.65;">
+<div style="font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--green-brand);margin-bottom:10px;">Notre engagement</div>
+<p style="margin:0;color:#1d1d1f;">TAGRA Control est continuellement adapté à l'expérience pratique des contrôleurs sur le terrain — pour un processus de contrôle aussi efficace que possible. Chaque modification de la législation de l'UE et des États membres est intégrée au logiciel à chaque nouvelle version.</p>
+</div>
+</div>
+</section>
+<!-- WHAT IT DETECTS -->
+<section class="section">
+<div class="container">
+<div class="g2 anim-up">
+<div class="fly-left">
+<span class="section-label">Analyse des infractions</span>
+<h2 class="section-h2">Ce que TAGRA Control détecte immédiatement</h2>
+<p style="font-size:17px;color:#515154;line-height:1.6;margin-bottom:20px;">Le logiciel effectue une analyse <strong>ainsi que leur archivage. TAGRA est un logiciel d’analyse de tachygraphes de bout en bout, avec une charge administrative minimale, pour 1 à un nombre illimité de véhicules.</strong> de chaque segment de temps de la carte de conducteur ou du tachygraphe et signale sans ambiguïté les infractions à la <strong>temps de conduite</strong> législation applicable.</p>
+<div class="feats">
+<div class="fi"><div class="fck"></div><span>Dépassement des temps de conduite journaliers et hebdomadaires prévus par la réglementation européenne relative aux temps de conduite des conducteurs (règlement 561/2006)</span></div>
+<div class="fi"><div class="fck"></div><span>Pause de sécurité obligatoire raccourcie</span></div>
+<div class="fi"><div class="fck"></div><span>Temps de repos journalier et hebdomadaire insuffisant</span></div>
+<div class="fi"><div class="fck"></div><span>Conduite sans carte de conducteur insérée</span></div>
+<div class="fi"><div class="fck"></div><span>Manipulation frauduleuse du tachygraphe (enregistrements inhabituels)</span></div>
+<div class="fi"><div class="fck"></div><span>Contrôles des cycles de 14 jours et des heures supplémentaires cumulées</span></div>
+<div class="fi"><div class="fck"></div><span>Position GPS provenant des tachygraphes intelligents G2V2</span></div>
+</div>
+</div>
+<div class="fly-right">
+<span class="section-label" style="display:block;margin-bottom:12px;">Législation applicable</span>
+<div class="leg-grid">
+<div class="leg-item">Règlement (CE) 561/2006</div>
+<div class="leg-item">Règlement (UE) 2020/1054</div>
+<div class="leg-item">AETR (international)</div>
+<div class="leg-item">Règlement 478/2000</div>
+<div class="leg-item">Règlement 462/2007 (SK)</div>
+<div class="leg-item">Règlement 3821/1985</div>
+<div class="leg-item">Loi 589/2006 Sb. (CZ)</div>
+<div class="leg-item">Code du travail 262/2006 (CZ)</div>
+</div>
+<p style="margin-top:16px;font-size:15px;color:#515154;line-height:1.55;">Le logiciel est continuellement mis à jour à chaque modification de la législation européenne et nationale.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- REPORTS -->
+<section class="section section--blue">
+<div class="container anim-up">
+<span class="section-label">Prêt pour la pratique</span>
+<h2 class="section-h2">Rapports et formulaires pour les autorités de contrôle</h2>
+<p class="section-intro">TAGRA Control comprend tous les documents et formulaires nécessaires aux contrôles routiers et en entreprise — prêts à être utilisés immédiatement.</p>
+<div class="reports-grid">
+<div class="report-item">
+<div class="report-icon">1</div>
+<div><span class="report-label">Rapport d'infraction du conducteur</span><span class="report-desc">Vue chronologique de toutes les infractions avec l'heure exacte et le type d'infraction.</span></div>
+</div>
+<div class="report-item">
+<div class="report-icon">2</div>
+<div><span class="report-label">Rapport sur les temps de conduite et de repos</span><span class="report-desc">Cycles journaliers, hebdomadaires et de 14 jours conformément au règlement 561/2006.</span></div>
+</div>
+<div class="report-item">
+<div class="report-icon">3</div>
+<div><span class="report-label">Rapport sur le temps de travail</span><span class="report-desc">Heures de travail, y compris le travail de nuit, les heures supplémentaires et les astreintes.</span></div>
+</div>
+<div class="report-item">
+<div class="report-icon">4</div>
+<div><span class="report-label">Rapport d'utilisation du véhicule</span><span class="report-desc">Vue d'ensemble des trajets, arrêts et activités associés à la carte de conducteur.</span></div>
+</div>
+<div class="report-item">
+<div class="report-icon">5</div>
+<div><span class="report-label">Position GPS (G2V2)</span><span class="report-desc">Localisation du véhicule à partir des enregistrements du tachygraphe intelligent de deuxième génération.</span></div>
+</div>
+<div class="report-item">
+<div class="report-icon">6</div>
+<div><span class="report-label">Synthèse du contrôle en entreprise</span><span class="report-desc">Vue d'ensemble complète pour la période sélectionnée — pour les contrôles dans les locaux de l'opérateur.</span></div>
+</div>
+<div class="report-item">
+<div class="report-icon">7</div>
+<div><span class="report-label">Vue d'ensemble de la conduite sans carte</span><span class="report-desc">Identifie les segments durant lesquels le conducteur a conduit sans carte de conducteur insérée.</span></div>
+</div>
+<div class="report-item">
+<div class="report-icon">8</div>
+<div><span class="report-label">Export pour les procédures</span><span class="report-desc">Impression et export électronique pour les procédures administratives et les procédures d'infraction.</span></div>
+</div>
+</div>
+</div>
+</section>
+<!-- ROADSIDE STEPS -->
+<section class="section">
+<div class="container anim-up">
+<span class="section-label">Procédure de contrôle</span>
+<h2 class="section-h2">Contrôle routier en trois étapes</h2>
+<div class="steps">
+<div class="step-card fly-left">
+<div class="step-header"><span class="snum">01</span>
+<span class="stit">Charger la carte ou le tachygraphe</span></div><div class="tmx-media-frame" style="margin:12px 0;max-height:180px;background:#f5f5f7;">
+<img alt="DOWNLOAD BOX II S – lecteur de cartes pour les autorités de contrôle" src="https://cdn.truckmall.cz/data/user-content/Download%20Box%20IIS_produkt2.webp" style="width:100%;height:180px;object-fit:contain;object-position:center;" loading="lazy" width="1875" height="1172"/>
+</div>
+<p style="font-size:16px;color:#515154;line-height:1.55;">Insérez la carte de conducteur dans le DOWNLOAD BOX II S ou connectez l'appareil au port de données du tachygraphe. Le <strong>TAGRA effectue automatiquement le</strong> ne prend que quelques secondes.</p>
+</div>
+<div class="step-card anim-up">
+<div class="step-header"><span class="snum">02</span>
+<span class="stit">Analyse instantanée dans TAGRA Control</span></div><div class="tmx-media-frame" style="margin:12px 0;">
+<img alt="Interface de TAGRA Control – analyse instantanée du tachygraphe numérique et rapport d'infraction" height="300" src="/assets/img/tagra-control-screenshot.webp" width="400" loading="lazy"/>
+</div>
+<p style="font-size:16px;color:#515154;line-height:1.55;">Le programme évalue automatiquement tous les enregistrements et met en évidence chaque infraction avec son heure, son type et sa durée exacts.</p>
+</div>
+<div class="step-card fly-right">
+<div class="step-header"><span class="snum">03</span>
+<span class="stit">Rapport de contrôle routier</span></div><div class="tmx-media-frame" style="margin:12px 0;">
+<img alt="Formulaire de contrôle routier – document TAGRA Control prêt à l'emploi pour les autorités de contrôle" height="300" src="/assets/img/road-check-form-tagra.webp" width="400" loading="lazy"/>
+</div>
+<p style="font-size:16px;color:#515154;line-height:1.55;">Rapport d'infraction prêt à être imprimé ou exporté électroniquement. Préparé pour les procédures administratives et les procédures d'infraction.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- DEVICE -->
+<section class="section section--gray">
+<div class="container anim-up">
+<span class="section-label">Matériel recommandé</span>
+<h2 class="section-h2">DOWNLOAD BOX II S</h2>
+<div class="device-card">
+<div class="device-img">
+<img alt="DOWNLOAD BOX II S – lecteur de cartes pour les autorités de contrôle" height="180" src="https://cdn.truckmall.cz/data/user-content/Download%20Box%20IIS_produkt2.webp" width="180" loading="lazy"/>
+</div>
+<div>
+<p style="font-size:17px;color:#515154;line-height:1.6;margin-bottom:16px;">Lecteur compact de cartes de conducteur et clé de téléchargement pour tachygraphes numériques. Fabriqué en République tchèque, entièrement compatible avec tous les tachygraphes numériques et les tachygraphes intelligents G2V2.</p>
+<div class="device-specs">
+<div class="dspec"><span class="dspec-k">Compatibilité</span><span class="dspec-v">Tous les tachygraphes numériques + G2V2</span></div>
+<div class="dspec"><span class="dspec-k">Carte de conducteur</span><span class="dspec-v">Via le lecteur intégré</span></div>
+<div class="dspec"><span class="dspec-k">Connexion</span><span class="dspec-v">USB vers ordinateur portable</span></div>
+<div class="dspec"><span class="dspec-k">Fabricant</span><span class="dspec-v">Truck Data Technology, CZ</span></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- TRAINING -->
+<section class="section">
+<div class="container">
+<div class="g2 top anim-up">
+<div class="fly-left">
+<span class="section-label">Formation</span>
+<h2 class="section-h2">Formation pour les autorités de contrôle</h2>
+<p style="font-size:17px;color:#515154;line-height:1.6;margin-bottom:16px;">Truck Data Technology, s.r.o. dispense une formation professionnelle à l'utilisation de TAGRA Control directement destinée aux autorités de contrôle. La formation est adaptée aux besoins et aux procédures de travail de chaque organisation.</p>
+<ul class="training-list">
+<li>Utilisation du logiciel — téléchargement des cartes de conducteur et des tachygraphes</li>
+<li>Interprétation des résultats — comment lire les rapports d'infraction</li>
+<li>Contexte législatif — UE 561/2006, AETR, réglementations nationales</li>
+<li>Exports et procès-verbaux — préparation des documents pour les procédures</li>
+<li>Formation en anglais — disponible pour les autorités de contrôle internationales</li>
+</ul>
+<p style="margin-top:20px;font-size:16px;color:#515154;">Contact pour la formation : <strong><a href="tel:+420739005345">En ligne · Code QR</a> · <a href="mailto:sales@tagra.app">Écrivez à</a></strong></p>
+</div>
+<div class="fly-right">
+<div class="callout-green">
+<div class="cg-bg">TDT</div>
+<h2 style="font-size:clamp(24px,3vw,34px);font-weight:800;margin-bottom:14px;display:inline-block;">Vous êtes intéressé par TAGRA Control ?</h2>
+<p style="margin-bottom:8px;"><strong>TAGRA Control : 749 € hors TVA</strong> — la première année de mises à jour et d'assistance est incluse ; à partir de la 2e année, la redevance de licence annuelle s'élève à 149 € hors TVA.</p>
+<p style="margin-bottom:8px;">Nous préparerons avec plaisir une offre et organiserons une formation pour votre équipe.</p>
+<p>Contactez-nous les jours ouvrables de 8 h 00 à 16 h 00. Nous vous répondons en anglais.</p>
+<p style="margin-top:20px;"><strong>Site web :</strong> <a href="/fr/autorites-de-controle/">tagra.app/enforcement</a></p>
+<div style="margin-top:24px;display:flex;gap:12px;flex-wrap:wrap;">
+<a class="btn" href="mailto:sales@tagra.app" style="background:#fff;color:#0b2c4a;padding:12px 24px;border-radius:50px;font-weight:700;font-size:16px;text-decoration:none;">Envoyer un e-mail</a>
+<a class="btn" href="tel:+420739005345" style="background:rgba(255,255,255,.2);color:#fff;padding:12px 24px;border-radius:50px;font-weight:700;font-size:16px;text-decoration:none;border:1.5px solid rgba(255,255,255,.5);">Appelez-nous</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ -->
+<section class="section section--gray">
+<div class="container anim-up">
+<span class="section-label">FAQ</span>
+<h2 class="section-h2">Foire aux questions pour les autorités de contrôle</h2>
+<div class="faq-block" style="margin-top:28px;max-width:820px;">
+<details>
+<summary>Quels types de tachygraphes TAGRA Control prend-il en charge ?</summary>
+<p class="faq-a">TAGRA Control effectue <strong>ainsi que leur archivage. TAGRA est un logiciel d’analyse de tachygraphes de bout en bout, avec une charge administrative minimale, pour 1 à un nombre illimité de véhicules.</strong> Analyse des enregistrements provenant de tachygraphes de première génération (G1) et de tachygraphes intelligents de deuxième génération (G2V2). Formats de fichiers pris en charge : .DDD, .C1B, .V1B et ESM.</p>
+</details>
+<details>
+<summary>Que révèle l’analyse de la carte de conducteur ?</summary>
+<p class="faq-a">Après <strong>TAGRA effectue automatiquement le</strong>, le logiciel évalue <strong>temps de conduite</strong>, les pauses, les temps de repos, le temps de travail et la conduite sans carte. Chaque infraction est affichée avec sa date, son heure et sa durée exactes. Pour les cartes G2V2, les coordonnées GPS issues des enregistrements du tachygraphe sont également disponibles.</p>
+</details>
+<details>
+<summary>À quelle vitesse l’analyse s’effectue-t-elle lors d’un contrôle routier ?</summary>
+<p class="faq-a">Le chargement d’une carte de conducteur via DOWNLOAD BOX II S prend généralement 10 à 60 secondes, selon la quantité de données enregistrées sur la carte. L’analyse elle-même et l’affichage du rapport d’infraction sont immédiats après le chargement des données.</p>
+</details>
+<details>
+<summary>TAGRA Control peut-il être utilisé hors ligne, sans connexion internet ?</summary>
+<p class="faq-a">Oui. TAGRA Control fonctionne entièrement hors ligne. Une connexion internet est uniquement nécessaire pour installer les mises à jour du logiciel. Le contrôle et l’analyse des données s’effectuent sans connexion réseau.</p>
+</details>
+<details>
+<summary>Sur quels appareils TAGRA Control fonctionne-t-il ?</summary>
+<p class="faq-a">Le logiciel fonctionne sous Windows 7 SP1 et les versions ultérieures (Windows 8.1, 10, 11 — en 32 et 64 bits). Il convient aux ordinateurs portables et de bureau. La configuration matérielle minimale requise est modeste.</p>
+</details>
+<details>
+<summary>Une formation en anglais est-elle disponible pour les autorités de contrôle internationales ?</summary>
+<p class="faq-a">Oui. Truck Data Technology propose des formations en anglais aux autorités de contrôle internationales et aux institutions partenaires. Contactez-nous à l’adresse sales@tagra.app afin de convenir des modalités et du calendrier.</p>
+</details>
+<details>
+<summary>Comment la conformité à la législation en vigueur est-elle garantie ?</summary>
+<p class="faq-a">Le logiciel est continuellement mis à jour à chaque modification de la législation européenne et nationale applicable. Les mises à jour sont disponibles pour tous les titulaires d’une licence valide. Le programme vous avertit lui-même lorsqu’une mise à jour est disponible.</p>
+</details>
+</div>
+</div>
+</section>
+<!-- MANUFACTURER -->
+<section class="section">
+<div class="container anim-up">
+<div style="max-width:600px;">
+<span class="section-label">Solution flotte → &amp; Informations sur le fabricant</span>
+<h2 class="section-h2">Truck Data Technology, s.r.o.</h2>
+<p style="font-size:17px;color:#515154;line-height:1.6;margin-bottom:20px;">Fabricant tchèque de logiciels et de matériel pour la gestion des données des tachygraphes, fort de plus de 20 ans d’expérience. Fabricant direct — sans intermédiaire.</p>
+<div style="display:flex;flex-direction:column;gap:8px;font-size:16px;">
+<div><span style="color:#515154;min-width:80px;display:inline-block;">Adresse</span> <strong>République tchèque</strong></div>
+<div><span style="color:#515154;min-width:80px;display:inline-block;">Téléphone</span> <a href="tel:+420739005345" style="color:#134a8e;font-weight:600;">En ligne · Code QR</a></div>
+<div><span style="color:#515154;min-width:80px;display:inline-block;">E-mail</span> <a href="mailto:sales@tagra.app" style="color:#134a8e;font-weight:600;">Écrivez à</a></div>
+<div><span style="color:#515154;min-width:80px;display:inline-block;">Web</span> <a href="https://www.tdt.cz" rel="noopener" style="color:#134a8e;font-weight:600;" target="_blank">www.tdt.cz</a></div>
+</div>
+</div>
+</div>
+</section>
+<!-- FOOTER -->
+<footer class="site-footer" role="contentinfo">
+<div class="footer-inner">
+<div>
+<div class="footer-logo"><img alt="TAGRA" height="20" src="/assets/img/logo-dark.svg?v=20260513zh" width="88" loading="lazy"/></div>
+<p class="footer-desc">Logiciel professionnel d'analyse des tachygraphes. Téléchargement des cartes de conducteur, analyse des tachygraphes numériques, temps de conduite des conducteurs dans l'UE et directive relative au temps de travail des conducteurs de poids lourds. Développé par Truck Data Technology, s.r.o.</p>
+</div>
+<div class="footer-col">
+<h2 class="footer-col-title">Produit</h2>
+<ul>
+<li><a href="/fr/entreprises/">Pour les exploitants de parcs</a></li>
+<li><a href="/fr/conducteurs/">Pour les conducteurs professionnels</a></li>
+<li><a href="/fr/autorites-de-controle/">Pour les contrôles</a></li>
+<li><a href="/fr/fonctionnement/">Fonctionnement</a></li>
+<li><a href="/fr/pour-qui/">Pour qui</a></li>
+<li><a href="/fr/faq/">FAQ</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h2 class="footer-col-title">Ressources</h2>
+<ul>
+<li><a href="/fr/articles/">Articles</a></li><li><a href="/fr/manuels/">Manuels</a></li>
+<li><a href="/fr/articles/symboles-tachygraphe/">Symboles du tachygraphe</a></li>
+<li><a href="/fr/integrations/dkv-live/">DKV LIVE®</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h2 class="footer-col-title">Entreprise</h2>
+<ul>
+<li><a href="/fr/contact/">Contact</a></li>
+<li><a href="https://www.tdt.cz" rel="noopener" target="_blank">Truck Data Technology</a></li>
+<li><a href="/nl/">English</a></li><li><a href="/de/">Deutsch</a></li><li><a href="/pl/">Polski</a></li><li><a href="/el/">Ελληνικά</a></li><li><a href="/hu/">Magyar</a></li><li><a href="/it/">Italiano</a></li><li><a href="https://www.tdt.cz/" rel="noopener" target="_blank">Čeština</a></li><li><a href="https://www.tdt.sk/" rel="noopener" target="_blank">Slovenčina</a></li></ul>
+</div>
+</div>
+<div class="footer-bottom">
+<span>© 2026 Truck Data Technology, s.r.o. Tous droits réservés.</span>
+<span><a href="/fr/contact/">Contact</a> · <a href="https://www.tdt.cz" rel="noopener" target="_blank">tdt.cz</a> · <a href="/fr/confidentialite/">Confidentialité &amp; cookies</a></span>
+</div>
+</footer>
+<script>
+(function() {
+  /* scroll progress */
+  var bar = document.getElementById('scroll-progress');
+  if (bar) {
+    window.addEventListener('scroll', function() {
+      var top = document.documentElement.scrollTop || document.body.scrollTop;
+      var h = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      bar.style.width = (top / h * 100) + '%';
+    }, { passive: true });
+  }
+  /* mobile nav */
+  var toggle = document.getElementById('nav-toggle');
+  var links = document.getElementById('nav-links');
+  if (toggle && links) {
+    toggle.addEventListener('click', function() {
+      var open = links.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open);
+    });
+  }
+  /* intersection observer */
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) {
+        if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.anim-up, .fly-left, .fly-right').forEach(function(el) { io.observe(el); });
+  } else {
+    document.querySelectorAll('.anim-up, .fly-left, .fly-right').forEach(function(el) { el.classList.add('on'); });
+  }
+})();
+</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "TAGRA Control – logiciel d’analyse des tachygraphes pour les autorités de contrôle", "applicationCategory": "BusinessApplication", "operatingSystem": "Windows", "description": "Logiciel professionnel d’analyse des tachygraphes numériques lors des contrôles routiers et en entreprise. Il permet de télécharger les cartes de conducteur et d’évaluer les infractions relatives au temps de conduite des conducteurs conformément aux règlements 561/2006 et 2020/1054 ainsi qu’à l’AETR. Il est utilisé par la Police tchèque, l’Administration des douanes tchèque, le ministère tchèque des Transports, les inspections du travail slovaques et le ministère hongrois des Transports.", "url": "https://tagra.app/fr/autorites-de-controle/", "inLanguage": "fr", "author": {"@type": "Organization", "name": "Truck Data Technology, s.r.o.", "url": "https://www.tdt.cz", "telephone": "+420739005345", "email": "sales@tagra.app"}, "offers": {"@type": "Offer", "@id": "https://tagra.app/fr/autorites-de-controle/#offer", "priceCurrency": "EUR", "price": "749", "availability": "https://schema.org/InStock", "url": "https://tagra.app/fr/autorites-de-controle/", "description": "Prix d'achat hors TVA. La première année de mises à jour et d'assistance est incluse ; à partir de la 2e année, la redevance de licence annuelle s'élève à 149 € hors TVA.", "seller": {"@type": "Organization", "name": "Truck Data Technology, s.r.o.", "url": "https://www.tdt.cz"}}}</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "inLanguage": "fr",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Quels types de tachygraphes TAGRA Control prend-il en charge ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "TAGRA Control effectue une analyse des tachygraphes numériques à partir des enregistrements provenant de tachygraphes de première génération (G1) et de tachygraphes intelligents de deuxième génération (G2V2). Formats de fichiers pris en charge : .DDD, .C1B, .V1B et ESM."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Que révèle l’analyse de la carte de conducteur ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Après le téléchargement de la carte de conducteur, le logiciel évalue le temps de conduite des conducteurs, les pauses, les temps de repos, le temps de travail et la conduite sans carte. Chaque infraction est affichée avec sa date, son heure et sa durée exactes. Pour les cartes G2V2, les coordonnées GPS issues de l’enregistrement du tachygraphe sont également disponibles."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "À quelle vitesse l’analyse s’effectue-t-elle lors d’un contrôle routier ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Le chargement d’une carte de conducteur via DOWNLOAD BOX II S prend généralement 10 à 60 secondes, selon la quantité de données enregistrées sur la carte. L’analyse elle-même et l’affichage du rapport d’infraction sont immédiats après le chargement des données."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "TAGRA Control peut-il être utilisé hors ligne, sans connexion internet ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Oui. TAGRA Control fonctionne entièrement hors ligne. Une connexion internet est uniquement nécessaire pour installer les mises à jour du logiciel. Le contrôle et l’analyse des données s’effectuent sans connexion réseau."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Sur quels appareils TAGRA Control fonctionne-t-il ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Le logiciel fonctionne sous Windows 7 SP1 et les versions ultérieures (Windows 8.1, 10, 11 — en 32 et 64 bits). Il convient aux ordinateurs portables et de bureau. La configuration matérielle minimale requise est modeste."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Une formation en anglais est-elle disponible pour les autorités de contrôle internationales ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Oui. Truck Data Technology propose des formations en anglais aux autorités de contrôle internationales et aux institutions partenaires. Contactez-nous à l’adresse sales@tagra.app afin de convenir des modalités et du calendrier."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Comment la conformité à la législation en vigueur est-elle garantie ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Le logiciel est continuellement mis à jour à chaque modification de la législation européenne et nationale applicable. Les mises à jour sont disponibles pour tous les titulaires d’une licence valide. Le programme vous avertit lui-même lorsqu’une mise à jour est disponible."
+      }
+    }
+  ]
+}
+</script>
+</body>
+</html>

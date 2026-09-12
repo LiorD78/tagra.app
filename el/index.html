@@ -45,6 +45,10 @@
       var m={cz:'cs',cs:'cs',sk:'sk',de:'de',pl:'pl',gr:'el',el:'el',hu:'hu',en:'en'};return m[l]||'en';}
     var T={
       hu:{t:'Analitikai s\u00fctiket haszn\u00e1lunk (Google Analytics, Microsoft Clarity, Smartsupp), hogy meg\u00e9rts\u00fck a webhely haszn\u00e1lat\u00e1t. Csak az \u00d6n hozz\u00e1j\u00e1rul\u00e1s\u00e1val t\u00f6lt\u0151dnek be.',a:'Elfogadom',r:'Elutas\u00edtom',p:'Adatv\u00e9delem \u00e9s s\u00fctik'},
+      ro:{t:'Utilizăm module cookie de analiză (Google Analytics, Microsoft Clarity, Smartsupp) pentru a înțelege modul de utilizare a site-ului. Se încarcă doar cu consimțământul dumneavoastră.',a:'Accept',r:'Refuz',p:'Confidențialitate și cookie-uri'},
+      nl:{t:'We gebruiken analytische cookies (Google Analytics, Microsoft Clarity, Smartsupp) om het gebruik van de site te begrijpen. Ze laden alleen met uw toestemming.',a:'Accepteren',r:'Weigeren',p:'Privacy en cookies'},
+      fr:{t:'Nous utilisons des cookies analytiques (Google Analytics, Microsoft Clarity, Smartsupp) pour comprendre l’utilisation du site. Ils ne se chargent qu’avec votre consentement.',a:'Accepter',r:'Refuser',p:'Confidentialité et cookies'},
+      it:{t:'Utilizziamo cookie analitici (Google Analytics, Microsoft Clarity, Smartsupp) per capire l’utilizzo del sito. Si caricano solo con il Suo consenso.',a:'Accetta',r:'Rifiuta',p:'Privacy e cookie'},
       en:{t:'We use analytics cookies (Google Analytics, Microsoft Clarity, Smartsupp) to understand site usage. They load only with your consent.',a:'Accept',r:'Reject',p:'Privacy &amp; cookies'},
       cs:{t:'Pou\u017e\u00edv\u00e1me analytick\u00e9 cookies (Google Analytics, Microsoft Clarity, Smartsupp) k pochopen\u00ed pou\u017e\u00edv\u00e1n\u00ed webu. Na\u010dtou se jen s va\u0161\u00edm souhlasem.',a:'P\u0159ijmout',r:'Odm\u00edtnout',p:'Soukrom\u00ed a cookies'},
       sk:{t:'Pou\u017e\u00edvame analytick\u00e9 cookies (Google Analytics, Microsoft Clarity, Smartsupp) na pochopenie pou\u017e\u00edvania webu. Na\u010d\u00edtaj\u00fa sa len s va\u0161\u00edm s\u00fahlasom.',a:'Prija\u0165',r:'Odmietnu\u0165',p:'S\u00fakromie a cookies'},
@@ -80,6 +84,8 @@
 <meta content="#0b2c4a" name="theme-color"/>
 <link href="/manifest.json" rel="manifest"/>
 <link href="https://tagra.app/el/" rel="canonical"/>
+<link href="https://tagra.app/de/" hreflang="de" rel="alternate"/><link href="https://tagra.app/el/" hreflang="el" rel="alternate"/><link href="https://tagra.app/" hreflang="en" rel="alternate"/><link href="https://tagra.app/fr/" hreflang="fr" rel="alternate"/><link href="https://tagra.app/hu/" hreflang="hu" rel="alternate"/><link href="https://tagra.app/it/" hreflang="it" rel="alternate"/><link href="https://tagra.app/nl/" hreflang="nl" rel="alternate"/><link href="https://tagra.app/pl/" hreflang="pl" rel="alternate"/>
+<link href="https://tagra.app/ro/" hreflang="ro" rel="alternate"/><link href="https://tagra.app/" hreflang="x-default" rel="alternate"/>
 <meta content="TAGRA – Πρόγραμμα Διαχείρισης Δεδομένων Ταχογράφου" property="og:title"/>
 <meta content="Το TAGRA βοηθά τις εταιρείες μεταφορών και τους επαγγελματίες οδηγούς να παραμένουν σε συμμόρφωση με τους κανονισμούς ταχογράφου της ΕΕ. Δωρεάν δοκιμή 30 ημερών." property="og:description"/>
 <meta content="https://cdn.truckmall.cz/images/0/ff1952bcc480ca3d/1/tagra-1-vyhodnoceni-dat-z-tachografu.webp" property="og:image"/>
@@ -709,7 +715,7 @@
     "@id": "https://tagra.app/#organization"
   },
   "serviceType": "Tachograph data management software",
-  "description": "Αξιολόγηση, αρχειοθέτηση και έκδοση εκθέσεων για διαχειριστές στόλου από 1 έως απεριόριστα οχήματα. Συμβατό με τον Κανονισμό (ΕΚ) 561/2006 και την Οδηγία Χρόνου Εργασίας.",
+  "description": "Αξιολόγηση, αρχειοθέτηση και έκδοση εκθέσεων για διαχειριστές στόλου, από 1 έως απεριόριστα οχήματα. Συμβατό με τον Κανονισμό (ΕΚ) 561/2006 και την Οδηγία για τον χρόνο εργασίας.",
   "audience": {
     "@type": "BusinessAudience",
     "audienceType": "Fleet operators and transport companies"
@@ -738,7 +744,7 @@
     "@id": "https://tagra.app/#organization"
   },
   "serviceType": "Personal tachograph data tool",
-  "description": "Προσωπικό εργαλείο για επαγγελματίες οδηγούς για τη λήψη της δικής τους κάρτας οδηγού, την επανεξέταση των χρόνων οδήγησης και των χρόνων ανάπαυσης. Λειτουργεί με έναν τυπικό αναγνώστη καρτών USB.",
+  "description": "Προσωπικό εργαλείο για επαγγελματίες οδηγούς για τη λήψη δεδομένων από τη δική τους κάρτα οδηγού και την επανεξέταση των χρόνων οδήγησης και ανάπαυσης. Λειτουργεί με έναν τυπικό αναγνώστη καρτών USB.",
   "audience": {
     "@type": "Audience",
     "audienceType": "Professional truck and bus drivers"
@@ -764,8 +770,7 @@
 <link href="/assets/css/components.css" rel="stylesheet"/>
 <link href="/assets/css/nav.css" rel="stylesheet"/>
 <script defer="" src="/assets/js/nav.js?v=20260816b"></script>
-<link href="/assets/css/footer.css" rel="stylesheet"/>
-<link href="https://tagra.app/" hreflang="en" rel="alternate"/><link href="https://tagra.app/de/" hreflang="de" rel="alternate"/><link href="https://tagra.app/pl/" hreflang="pl" rel="alternate"/><link href="https://tagra.app/el/" hreflang="el" rel="alternate"/><link href="https://tagra.app/hu/" hreflang="hu" rel="alternate"/><link href="https://tagra.app/it/" hreflang="it" rel="alternate"/><link href="https://tagra.app/fr/" hreflang="fr" rel="alternate"/><link href="https://tagra.app/" hreflang="x-default" rel="alternate"/></head>
+<link href="/assets/css/footer.css" rel="stylesheet"/></head>
 <body class="home-fullbleed">
 <a class="skip-link" href="#main-content">Μετάβαση στο περιεχόμενο</a>
 <div aria-hidden="true" id="scroll-progress"></div>
@@ -784,8 +789,7 @@
 </ul>
 <details class="nav-lang">
 <summary aria-label="Language: EL">EL</summary>
-<div class="nav-lang-menu" role="menu">
-<a href="/" hreflang="en">English</a><a href="/de/" hreflang="de">Deutsch</a><a href="/pl/" hreflang="pl">Polski</a><a aria-current="page" class="active" href="/el/" hreflang="el">Ελληνικά</a><a href="/hu/" hreflang="hu">Magyar</a><a href="/it/" hreflang="it">Italiano</a><a href="https://tagra.app/fr/" hreflang="fr">Français</a><a href="https://www.tdt.cz/" hreflang="cs" rel="noopener" target="_blank">Čeština</a><a href="https://www.tdt.sk/" hreflang="sk" rel="noopener" target="_blank">Slovenčina</a></div>
+<div class="nav-lang-menu" role="menu"><a href="/" hreflang="en">English</a><a href="/de/" hreflang="de">Deutsch</a><a href="/pl/" hreflang="pl">Polski</a><a href="/nl/" hreflang="nl">Nederlands</a><a href="/fr/" hreflang="fr">Français</a><a href="/it/" hreflang="it">Italiano</a><a aria-current="page" class="active" href="/el/" hreflang="el">Ελληνικά</a><a href="/hu/" hreflang="hu">Magyar</a><a href="/ro/" hreflang="ro">Română</a><a href="https://www.tdt.cz/" hreflang="cs" rel="noopener" target="_blank">Čeština</a><a href="https://www.tdt.sk/" hreflang="sk" rel="noopener" target="_blank">Slovenčina</a></div>
 </details>
 <a class="nav-cta-mobile" href="/el/dokimi/?audience=fleet">Δοκιμάστε δωρεάν</a>
 <button aria-expanded="false" aria-label="Εναλλαγή μενού" class="nav-mobile-toggle" id="nav-toggle">
@@ -876,7 +880,7 @@
 <!-- ═══ TRUST BAR ══════════════════════════════════════════════════════ -->
 <div class="trust-bar anim-up">
 <div class="container">
-<p><strong>Το εμπιστεύονται χιλιάδες διαχειριστές στόλου σε όλη την Ευρώπη.</strong> Η ίδια λογική αξιολόγησης που χρησιμοποιείται από την Αστυνομία, τα Τελωνεία και τις Επιθεωρήσεις Εργασίας.</p>
+<p><strong>Σχεδιασμένο για τις πραγματικές ανάγκες των ευρωπαϊκών οδικών μεταφορών.</strong> Η ίδια λογική αξιολόγησης που χρησιμοποιείται από την Αστυνομία, τα Τελωνεία και τις Επιθεωρήσεις Εργασίας.</p>
 </div>
 </div>
 <!-- ═══ UI SHOWCASE ════════════════════════════════════════════════════ -->
@@ -920,8 +924,8 @@
 <div class="section-inner">
 <div class="section-head anim-up">
 <span class="section-label">Γιατί TAGRA</span>
-<h2 class="section-h2">Λήψη, ανάλυση και αρχειοθέτηση ταχογράφου</h2>
-<p class="section-intro">Ισχυρό λογισμικό Windows για την ανάλυση ψηφιακού ταχογράφου, τα ωράρια οδηγών της ΕΕ και την Οδηγία Χρόνου Εργασίας για βαρέα οχήματα — κλιμακώνεται από ένα όχημα έως εταιρικούς στόλους.</p>
+<h2 class="section-h2">Λήψη, ανάλυση και αρχειοθέτηση δεδομένων ταχογράφου</h2>
+<p class="section-intro">Ισχυρό λογισμικό Windows για την ανάλυση δεδομένων ψηφιακού ταχογράφου, των ωραρίων οδηγών στην ΕΕ και της Οδηγίας για τον χρόνο εργασίας για βαρέα οχήματα — κλιμακώνεται από ένα όχημα έως εταιρικούς στόλους.</p>
 </div>
 <div class="bento">
 <div class="bc s7 fly-left">
@@ -938,23 +942,23 @@
 <div class="bc s6 fly-left" style="transition-delay:.05s">
 <span class="bc-eyebrow">Εκθέσεις</span>
 <div class="bc-title">Αποτελέσματα ποιότητας ελέγχου</div>
-<p class="bc-text">Έτοιμες για επιθεωρητές εκθέσεις που κατανοούν πραγματικά οι ελεγκτές. Εκτυπώστε, εξάγετε ή μοιραστείτε καθαρά, δομημένα αποτελέσματα για ελέγχους, εσωτερικές ανασκοπήσεις και οδικούς ελέγχους.</p>
+<p class="bc-text">Εκθέσεις έτοιμες για επιθεωρητές, που κατανοούν πραγματικά οι ελεγκτές. Εκτυπώστε, εξάγετε ή μοιραστείτε σαφή, δομημένα αποτελέσματα για ελέγχους, εσωτερικές ανασκοπήσεις και επιτόπιους ελέγχους.</p>
 </div>
 <div class="bc s6 greenfill fly-right" style="transition-delay:.05s">
 <span class="bc-eyebrow">Επίπεδα</span>
 <div class="bc-title">1 έως απεριόριστα οχήματα</div>
-<p class="bc-text">TAGRA Trucker, 1, 2, 4, 6 και επίπεδα MAX. Ξεκινήστε με ένα μόνο φορτηγό και αναπτύξτε τον στόλο σας σε εταιρικό στόλο χωρίς να αλλάξετε εργαλεία ή ροές εργασίας.</p>
+<p class="bc-text">TAGRA Trucker, επίπεδα 1, 2, 4, 6 και MAX. Ξεκινήστε με ένα μόνο φορτηγό και αναπτύξτε τον στόλο σας σε εταιρικό στόλο χωρίς να αλλάξετε εργαλεία ή ροές εργασίας.</p>
 <div class="bignum">∞</div>
 </div>
 <div class="bc s8 fly-left" style="transition-delay:.1s">
 <span class="bc-eyebrow">Προστασία Προσωπικών Δεδομένων</span>
 <div class="bc-title">Επιτραπέζιο. Γρήγορο. Δικό σας.</div>
-<p class="bc-text">Λογισμικό Windows που λειτουργεί εκτός σύνδεσης στον υπολογιστή σας. Τα δεδομένα οδηγού και οχήματος δεν φεύγουν ποτέ από το δίκτυό σας — χωρίς εξάρτηση από το cloud, χωρίς μηνιαία συνδρομή, χωρίς ανησυχίες για GDPR σχετικά με επεξεργαστές τρίτων.</p>
+<p class="bc-text">Λογισμικό Windows που λειτουργεί εκτός σύνδεσης στον υπολογιστή σας. Τα δεδομένα οδηγών και οχημάτων δεν φεύγουν ποτέ από το δίκτυό σας — χωρίς εξάρτηση από το cloud, χωρίς μηνιαία συνδρομή, χωρίς ανησυχίες GDPR σχετικά με τρίτους επεξεργαστές.</p>
 </div>
 <div class="bc s4 bluefill fly-right" style="transition-delay:.1s">
 <span class="bc-eyebrow">Ασφαλές για το μέλλον</span>
 <div class="bc-title">Έτοιμο για ελαφρά φορτηγά 2026</div>
-<p class="bc-text">Πλήρης συμμόρφωση με τη νέα υποχρέωση ταχογράφου για ελαφρά επαγγελματικά οχήματα (βαν) (2,5–3,5 τόνων) από <strong>1 Ιουλίου 2026</strong>.</p>
+<p class="bc-text">Πλήρης συμμόρφωση με τη νέα υποχρέωση χρήσης ταχογράφου για ελαφρά επαγγελματικά οχήματα (βαν) (2,5–3,5 τόνων) από <strong>1 Ιουλίου 2026</strong>.</p>
 </div>
 </div>
 </div>
@@ -964,7 +968,7 @@
 <div class="section-inner">
 <div class="section-head anim-up">
 <span class="section-label">Επαληθευμένο στην πράξη</span>
-<h2 class="section-h2">Εμπιστεύονται οι αρχές. Επιλέγεται από τους στόλους.</h2>
+<h2 class="section-h2">Αξιόπιστο για τους ελέγχους. Σχεδιασμένο για στόλους.</h2>
 <p class="section-intro">Η ίδια λογική αξιολόγησης που χρησιμοποιείται από την Αστυνομία, τα Τελωνεία και τις Επιθεωρήσεις Εργασίας σε ολόκληρη την Τσεχική Δημοκρατία, τη Σλοβακία και την Ουγγαρία.</p>
 </div>
 <div class="ref-grid">
@@ -1000,7 +1004,7 @@
 <div class="section-inner">
 <div class="section-head anim-up">
 <span class="section-label">Τι λένε οι πελάτες</span>
-<h2 class="section-h2">Χρησιμοποιείται από χιλιάδες διαχειριστές σε όλη την ΕΕ</h2>
+<h2 class="section-h2">Επαγγελματική ανάλυση ταχογράφου για ευρωπαϊκούς στόλους</h2>
 <p class="section-intro">Αξιολογήσεις πέντε αστέρων από επαληθευμένους πελάτες σε όλη την Κεντρική Ευρώπη.</p>
 </div>
 </div>
@@ -1028,13 +1032,13 @@
 <p class="pricing-teaser-price">Δωρεάν δοκιμή 30 ημερών, χωρίς πιστωτική κάρτα. Η TAGRA κοστίζει από <strong>49 €</strong> (TAGRA Trucker) έως 749 € (TAGRA MAX, απεριόριστα οχήματα), χωρίς ΦΠΑ — το πρώτο έτος ενημερώσεων και υποστήριξης περιλαμβάνεται. Από το 2ο έτος, ετήσια χρέωση από 19 € έως 149 € διατηρεί το πρόγραμμα ενεργό.</p>
 <ul class="pricing-teaser-features">
 <li>Πλήρης ανάλυση ωραρίων οδηγών ΕΕ και Οδηγίας Χρόνου Εργασίας</li>
-<li>Υποστήριξη για όλους τους ψηφιακούς ταχογράφους, συμπεριλαμβανομένου του Ευφυούς G2V2.</li>
+<li>Υποστήριξη για όλους τους ψηφιακούς ταχογράφους, συμπεριλαμβανομένου του ευφυούς ταχογράφου G2V2.</li>
 <li>Δωρεάν ενημερώσεις λογισμικού για κάθε κανονιστική αλλαγή</li>
 <li>Αποκλειστική τεχνική υποστήριξη καθ' όλη τη διάρκεια του έτους</li>
 </ul>
 </div>
 <div class="pricing-teaser-cta">
-<a class="btn-outline" href="/el/stolos/#tagra-pricing">Δείτε όλα τα επίπεδα και τις τιμές →</a>
+<a class="btn-outline" href="/el/stolos/#tagra-pricing">Δείτε όλα τα πακέτα και τις τιμές →</a>
 <a class="btn-cta" href="/el/dokimi/">Δοκιμάστε δωρεάν για 30 ημέρες</a>
 <span class="pricing-teaser-cta-note">Χωρίς πιστωτική κάρτα. Πρόγραμμα εγκατάστασης Windows.</span>
 </div>
@@ -1047,7 +1051,7 @@
 <div class="section-head anim-up">
 <span class="section-label">Ερωτήσεις</span>
 <h2 class="section-h2">Συχνές ερωτήσεις</h2>
-<p class="section-intro">Σύντομες απαντήσεις στις ερωτήσεις που ακούμε συχνότερα. Οι πλήρεις Συχνές Ερωτήσεις έχουν περισσότερα.</p>
+<p class="section-intro">Σύντομες απαντήσεις στις ερωτήσεις που ακούμε συχνότερα. Οι πλήρεις Συχνές Ερωτήσεις περιέχουν περισσότερες πληροφορίες.</p>
 </div>
 <div class="faq-block anim-up">
 <details>
@@ -1055,12 +1059,12 @@
 <div class="faq-answer">Το TAGRA είναι <strong>λογισμικό επιτραπέζιου υπολογιστή Windows</strong> που λειτουργεί πλήρως εκτός σύνδεσης στον δικό σας υπολογιστή. Τα δεδομένα οδηγού και οχήματος δεν φεύγουν ποτέ από το δίκτυό σας — δεν υπάρχει μεταφόρτωση στο cloud, κανένας επεξεργαστής τρίτου μέρους και καμία μηνιαία συνδρομή. Πολλοί στόλοι το προτιμούν για λόγους GDPR και προστασίας δεδομένων.</div>
 </details>
 <details>
-<summary>Καλύπτει το TAGRA τα ωράρια οδηγών της ΕΕ και την Οδηγία Χρόνου Εργασίας;</summary>
-<div class="faq-answer">Ναι. Το TAGRA αξιολογεί <strong>Κανονισμός (ΕΚ) αριθ. 561/2006</strong>(ωράρια οδηγών της ΕΕ) και την <strong>Οδηγία Χρόνου Εργασίας</strong> 2002/15/ΕΚ, συν τους σχετικούς κανόνες AETR. Κάθε παράβαση επισημαίνεται σε σαφείς εκθέσεις οδηγού και οχήματος με ακριβή ώρα, τύπο και διάρκεια.</div>
+<summary>Καλύπτει το TAGRA τα ωράρια οδηγών στην ΕΕ και την Οδηγία για τον χρόνο εργασίας;</summary>
+<div class="faq-answer">Ναι. Το TAGRA αξιολογεί <strong>Κανονισμός (ΕΚ) αριθ. 561/2006</strong>(ωράρια οδηγών της ΕΕ) και την <strong>Οδηγία Χρόνου Εργασίας</strong> 2002/15/ΕΚ, καθώς και τους σχετικούς κανόνες AETR. Κάθε παράβαση επισημαίνεται σε σαφείς εκθέσεις οδηγού και οχήματος με ακριβή ώρα, τύπο και διάρκεια.</div>
 </details>
 <details>
 <summary>Ποιους ταχογράφους και αναγνώστες καρτών υποστηρίζει;</summary>
-<div class="faq-answer">Όλοι οι ψηφιακοί ταχογράφοι της ΕΕ, από την πρώτη γενιά έως τον Ευφυή Ταχογράφο G2V2. Συμβατό με τυπικούς αναγνώστες έξυπνων καρτών (π.χ. DOWNLOAD BOX II S) και διαβάζει<code>.DDD</code>, <code>.C1B</code>, <code>.V1B</code>και αρχεία ESM. Έτοιμο για τις απαιτήσεις του Ιουλίου 2026 για τα ελαφρά επαγγελματικά οχήματα.</div>
+<div class="faq-answer">Όλοι οι ψηφιακοί ταχογράφοι της ΕΕ, από την πρώτη γενιά έως τον ευφυή ταχογράφο G2V2. Συμβατό με τυπικούς αναγνώστες έξυπνων καρτών (π.χ. DOWNLOAD BOX II S) και διαβάζει<code>.DDD</code>, <code>.C1B</code>, <code>.V1B</code>και αρχεία ESM. Έτοιμο για τις απαιτήσεις του Ιουλίου 2026 για τα ελαφρά επαγγελματικά οχήματα.</div>
 </details>
 <details>
 <summary>Πώς λειτουργεί η δωρεάν δοκιμή 30 ημερών;</summary>
@@ -1077,7 +1081,7 @@
 <div class="footer-inner">
 <div>
 <div class="footer-logo"><img alt="TAGRA" height="20" src="/assets/img/logo-dark.svg?v=20260513zh" width="88" loading="lazy"/></div>
-<p class="footer-desc">Επαγγελματικό λογισμικό ανάλυσης δεδομένων ταχογράφου. Λήψη δεδομένων κάρτας οδηγού, ανάλυση δεδομένων ψηφιακών ταχογράφων, κανόνες της ΕΕ για τους χρόνους οδήγησης και ανάπαυσης, καθώς και Οδηγία για τον χρόνο εργασίας στις οδικές μεταφορές. Αναπτύχθηκε από την Truck Data Technology, s.r.o.</p>
+<p class="footer-desc">Επαγγελματικό λογισμικό ανάλυσης δεδομένων ταχογράφου. Λήψη δεδομένων από κάρτες οδηγού, ανάλυση δεδομένων ψηφιακών ταχογράφων, κανόνων της ΕΕ για τους χρόνους οδήγησης και ανάπαυσης, καθώς και της οδηγίας για τον χρόνο εργασίας στις οδικές μεταφορές. Αναπτύχθηκε από την Truck Data Technology, s.r.o.</p>
 </div>
 <div class="footer-col">
 <h2 class="footer-col-title">Προϊόν</h2>
@@ -1155,7 +1159,7 @@
   "name": "TAGRA – Πρόγραμμα Διαχείρισης Δεδομένων Ταχογράφου",
   "applicationCategory": "BusinessApplication",
   "operatingSystem": "Windows",
-  "description": "Λογισμικό για την αξιολόγηση και αρχειοθέτηση δεδομένων από ψηφιακούς ταχογράφους και κάρτες οδηγού. Διαθέσιμο για διαχειριστές στόλου (από 1 έως απεριόριστα οχήματα) και επαγγελματίες οδηγούς. Συμβατό με τον Κανονισμό (ΕΚ) 561/2006, το AETR και την Οδηγία Χρόνου Εργασίας. Δωρεάν δοκιμή 30 ημερών.",
+  "description": "Λογισμικό για την αξιολόγηση και αρχειοθέτηση δεδομένων από ψηφιακούς ταχογράφους και κάρτες οδηγού. Διαθέσιμο για διαχειριστές στόλου (από 1 έως απεριόριστα οχήματα) και επαγγελματίες οδηγούς. Συμβατό με τον Κανονισμό (ΕΚ) 561/2006, το AETR και την οδηγία για τον χρόνο εργασίας. Δωρεάν δοκιμή 30 ημερών.",
   "url": "https://tagra.app/el/",
   "inLanguage": "el",
   "author": {
@@ -1184,15 +1188,15 @@
       "name": "Είναι το TAGRA βασισμένο στο cloud ή εγκατεστημένο τοπικά;",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Το TAGRA είναι λογισμικό επιφάνειας εργασίας για Windows που λειτουργεί εξ ολοκλήρου offline στον δικό σας υπολογιστή. Τα δεδομένα οδηγού και οχήματος δεν φεύγουν ποτέ από το δίκτυό σας — δεν υπάρχει μεταφόρτωση στο cloud, κανένας τρίτος επεξεργαστής και καμία μηνιαία συνδρομή. Πολλοί στόλοι το προτιμούν αυτό για λόγους GDPR και προστασίας δεδομένων."
+        "text": "Το TAGRA είναι λογισμικό επιφάνειας εργασίας για Windows που λειτουργεί εξ ολοκλήρου εκτός σύνδεσης στον δικό σας υπολογιστή. Τα δεδομένα οδηγού και οχήματος δεν φεύγουν ποτέ από το δίκτυό σας — δεν υπάρχει μεταφόρτωση στο cloud, κανένας τρίτος επεξεργαστής και καμία μηνιαία συνδρομή. Πολλοί στόλοι το προτιμούν αυτό για λόγους GDPR και προστασίας δεδομένων."
       }
     },
     {
       "@type": "Question",
-      "name": "Καλύπτει το TAGRA τα ωράρια οδηγών της ΕΕ και την Οδηγία Χρόνου Εργασίας;",
+      "name": "Καλύπτει το TAGRA τα ωράρια οδηγών στην ΕΕ και την Οδηγία για τον χρόνο εργασίας;",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Ναι. Το TAGRA αξιολογεί τον Κανονισμό (ΕΚ) αριθ. 561/2006 (ώρες οδήγησης ΕΕ) και την Οδηγία Χρόνου Εργασίας για βαρέα οχήματα 2002/15/ΕΚ, καθώς και τους σχετικούς κανόνες AETR. Κάθε παράβαση επισημαίνεται σε σαφείς εκθέσεις οδηγού και οχήματος με ακριβή ώρα, τύπο και διάρκεια."
+        "text": "Ναι. Το TAGRA αξιολογεί τον Κανονισμό (ΕΚ) αριθ. 561/2006 (χρόνοι οδήγησης στην ΕΕ) και την Οδηγία 2002/15/ΕΚ για τον χρόνο εργασίας στις οδικές μεταφορές, καθώς και τους σχετικούς κανόνες AETR. Κάθε παράβαση επισημαίνεται σε σαφείς εκθέσεις οδηγού και οχήματος με ακριβή ώρα, τύπο και διάρκεια."
       }
     },
     {
@@ -1200,7 +1204,7 @@
       "name": "Ποιους ταχογράφους και αναγνώστες καρτών υποστηρίζει;",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Όλοι οι ψηφιακοί ταχογράφοι της ΕΕ, από την πρώτη γενιά έως τον Ευφυή Ταχογράφο G2V2. Συμβατό με τυπικούς αναγνώστες έξυπνων καρτών (π.χ. DOWNLOAD BOX II S) και διαβάζει αρχεία .DDD, .C1B, .V1B και ESM. Έτοιμο για τις απαιτήσεις του Ιουλίου 2026 για ελαφρά επαγγελματικά οχήματα."
+        "text": "Όλοι οι ψηφιακοί ταχογράφοι της ΕΕ, από την πρώτη γενιά έως τον ευφυή ταχογράφο G2V2. Συμβατό με τυπικούς αναγνώστες έξυπνων καρτών (π.χ. DOWNLOAD BOX II S) και διαβάζει αρχεία .DDD, .C1B, .V1B και ESM. Έτοιμο για τις απαιτήσεις του Ιουλίου 2026 για ελαφρά επαγγελματικά οχήματα."
       }
     },
     {
@@ -1208,7 +1212,7 @@
       "name": "Πώς λειτουργεί η δωρεάν δοκιμή 30 ημερών;",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Κατεβάστε και εγκαταστήστε το πακέτο Windows — αποκτάτε 30 ημέρες πλήρους, απεριόριστης πρόσβασης σε όλες τις λειτουργίες. Χωρίς πιστωτική κάρτα, χωρίς στοιχεία πληρωμής. Εάν το TAGRA ταιριάζει στη λειτουργία σας, αγοράζετε μια άδεια για να συνεχίσετε."
+        "text": "Κατεβάστε και εγκαταστήστε το πακέτο για Windows — αποκτάτε 30 ημέρες πλήρους, απεριόριστης πρόσβασης σε όλες τις λειτουργίες. Χωρίς πιστωτική κάρτα, χωρίς στοιχεία πληρωμής. Εάν το TAGRA ταιριάζει στη λειτουργία σας, αγοράζετε μια άδεια για να συνεχίσετε."
       }
     }
   ]

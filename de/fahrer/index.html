@@ -45,6 +45,10 @@
       var m={cz:'cs',cs:'cs',sk:'sk',de:'de',pl:'pl',gr:'el',el:'el',hu:'hu',en:'en'};return m[l]||'en';}
     var T={
       hu:{t:'Analitikai s\u00fctiket haszn\u00e1lunk (Google Analytics, Microsoft Clarity, Smartsupp), hogy meg\u00e9rts\u00fck a webhely haszn\u00e1lat\u00e1t. Csak az \u00d6n hozz\u00e1j\u00e1rul\u00e1s\u00e1val t\u00f6lt\u0151dnek be.',a:'Elfogadom',r:'Elutas\u00edtom',p:'Adatv\u00e9delem \u00e9s s\u00fctik'},
+      ro:{t:'Utilizăm module cookie de analiză (Google Analytics, Microsoft Clarity, Smartsupp) pentru a înțelege modul de utilizare a site-ului. Se încarcă doar cu consimțământul dumneavoastră.',a:'Accept',r:'Refuz',p:'Confidențialitate și cookie-uri'},
+      nl:{t:'We gebruiken analytische cookies (Google Analytics, Microsoft Clarity, Smartsupp) om het gebruik van de site te begrijpen. Ze laden alleen met uw toestemming.',a:'Accepteren',r:'Weigeren',p:'Privacy en cookies'},
+      fr:{t:'Nous utilisons des cookies analytiques (Google Analytics, Microsoft Clarity, Smartsupp) pour comprendre l’utilisation du site. Ils ne se chargent qu’avec votre consentement.',a:'Accepter',r:'Refuser',p:'Confidentialité et cookies'},
+      it:{t:'Utilizziamo cookie analitici (Google Analytics, Microsoft Clarity, Smartsupp) per capire l’utilizzo del sito. Si caricano solo con il Suo consenso.',a:'Accetta',r:'Rifiuta',p:'Privacy e cookie'},
       en:{t:'We use analytics cookies (Google Analytics, Microsoft Clarity, Smartsupp) to understand site usage. They load only with your consent.',a:'Accept',r:'Reject',p:'Privacy &amp; cookies'},
       cs:{t:'Pou\u017e\u00edv\u00e1me analytick\u00e9 cookies (Google Analytics, Microsoft Clarity, Smartsupp) k pochopen\u00ed pou\u017e\u00edv\u00e1n\u00ed webu. Na\u010dtou se jen s va\u0161\u00edm souhlasem.',a:'P\u0159ijmout',r:'Odm\u00edtnout',p:'Soukrom\u00ed a cookies'},
       sk:{t:'Pou\u017e\u00edvame analytick\u00e9 cookies (Google Analytics, Microsoft Clarity, Smartsupp) na pochopenie pou\u017e\u00edvania webu. Na\u010d\u00edtaj\u00fa sa len s va\u0161\u00edm s\u00fahlasom.',a:'Prija\u0165',r:'Odmietnu\u0165',p:'S\u00fakromie a cookies'},
@@ -76,10 +80,12 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>TAGRA Trucker – Fahrtenschreiber-Software für Berufskraftfahrer</title>
-<meta content="TAGRA Trucker hilft Berufskraftfahrern, die EU-Tachographen-Vorschriften einzuhalten. Werten Sie Ihre Fahrerkarte-Daten aus, überprüfen Sie Lenk- und Ruhezeiten. Funktioniert mit einem Standard-USB-Kartenleser. Kostenlose 30-Tage-Testversion." name="description"/>
+<meta content="TAGRA Trucker hilft Berufskraftfahrern, die EU-Tachographenvorschriften einzuhalten: Fahrerkartendaten auswerten sowie Lenk- und Ruhezeiten prüfen." name="description"/>
 <meta content="#0b2c4a" name="theme-color"/>
 <link href="/manifest.json" rel="manifest"/>
 <link href="https://tagra.app/de/fahrer/" rel="canonical"/>
+<link href="https://tagra.app/de/fahrer/" hreflang="de" rel="alternate"/><link href="https://tagra.app/el/odigoi/" hreflang="el" rel="alternate"/><link href="https://tagra.app/driver/" hreflang="en" rel="alternate"/><link href="https://tagra.app/fr/conducteurs/" hreflang="fr" rel="alternate"/><link href="https://tagra.app/hu/soforoknek/" hreflang="hu" rel="alternate"/><link href="https://tagra.app/it/per-autisti/" hreflang="it" rel="alternate"/><link href="https://tagra.app/nl/voor-chauffeurs/" hreflang="nl" rel="alternate"/><link href="https://tagra.app/pl/dla-kierowcow/" hreflang="pl" rel="alternate"/>
+<link href="https://tagra.app/ro/pentru-conducatori/" hreflang="ro" rel="alternate"/><link href="https://tagra.app/driver/" hreflang="x-default" rel="alternate"/>
 <meta content="website" property="og:type"/>
 <meta content="de_DE" property="og:locale"/>
 <meta content="TAGRA" property="og:site_name"/>
@@ -272,8 +278,7 @@
 <link href="/assets/css/components.css" rel="stylesheet"/>
 <link href="/assets/css/nav.css" rel="stylesheet"/>
 <script defer="" src="/assets/js/nav.js?v=20260816b"></script>
-<link href="/assets/css/footer.css" rel="stylesheet"/>
-<link href="https://tagra.app/driver/" hreflang="en" rel="alternate"/><link href="https://tagra.app/de/fahrer/" hreflang="de" rel="alternate"/><link href="https://tagra.app/el/odigoi/" hreflang="el" rel="alternate"/><link href="https://tagra.app/pl/dla-kierowcow/" hreflang="pl" rel="alternate"/><link href="https://tagra.app/hu/soforoknek/" hreflang="hu" rel="alternate"/><link href="https://tagra.app/it/per-autisti/" hreflang="it" rel="alternate"/><link href="https://tagra.app/fr/conducteurs/" hreflang="fr" rel="alternate"/><link href="https://tagra.app/driver/" hreflang="x-default" rel="alternate"/></head>
+<link href="/assets/css/footer.css" rel="stylesheet"/></head>
 <body>
 <a class="skip-link" href="#main-content">Zum Inhalt springen</a>
 <div aria-hidden="true" id="scroll-progress"></div>
@@ -292,8 +297,7 @@
 </ul>
 <details class="nav-lang">
 <summary aria-label="Language: DE">DE</summary>
-<div class="nav-lang-menu" role="menu">
-<a href="/" hreflang="en">English</a><a aria-current="page" class="active" href="/de/" hreflang="de">Deutsch</a><a href="/pl/" hreflang="pl">Polski</a><a href="/el/" hreflang="el">Ελληνικά</a><a href="/hu/" hreflang="hu">Magyar</a><a href="/it/" hreflang="it">Italiano</a><a href="https://tagra.app/fr/conducteurs/" hreflang="fr">Français</a><a href="https://www.tdt.cz/" hreflang="cs" rel="noopener" target="_blank">Čeština</a><a href="https://www.tdt.sk/" hreflang="sk" rel="noopener" target="_blank">Slovenčina</a></div>
+<div class="nav-lang-menu" role="menu"><a href="/driver/" hreflang="en">English</a><a aria-current="page" class="active" href="/de/fahrer/" hreflang="de">Deutsch</a><a href="/pl/dla-kierowcow/" hreflang="pl">Polski</a><a href="/nl/voor-chauffeurs/" hreflang="nl">Nederlands</a><a href="/fr/conducteurs/" hreflang="fr">Français</a><a href="/it/per-autisti/" hreflang="it">Italiano</a><a href="/el/odigoi/" hreflang="el">Ελληνικά</a><a href="/hu/soforoknek/" hreflang="hu">Magyar</a><a href="/ro/pentru-conducatori/" hreflang="ro">Română</a><a href="https://www.tdt.cz/" hreflang="cs" rel="noopener" target="_blank">Čeština</a><a href="https://www.tdt.sk/" hreflang="sk" rel="noopener" target="_blank">Slovenčina</a></div>
 </details>
 <a class="nav-cta-mobile" href="/de/testen/?audience=driver">Kostenlos testen</a>
 <button aria-expanded="false" aria-label="Menü umschalten" class="nav-mobile-toggle" id="nav-toggle">
@@ -307,7 +311,7 @@
 <div class="eyebrow anim-up">TAGRA · Tachographensoftware für Berufskraftfahrer</div>
 <h1 class="anim-up" style="transition-delay:.05s">Tachographenauswertung vor<br/>Ihrer nächsten Straßenkontrolle</h1>
 <p class="lead anim-up" style="transition-delay:.1s">
-<strong>Ihre Zeiten. Ihre Daten.</strong> Wissen Sie genau, was sich auf Ihrer <strong>Fahrerkarte</strong> — Lenkzeiten, Pausen, Ruhezeiten und EU-Lenk- und Ruhezeiten — vor jeder Straßenkontrolle befindet. Fahrerkarte-Herunterladen mit einem Standard-USB-Kartenleser.</p>
+<strong>Ihre Zeiten. Ihre Daten.</strong> Wissen Sie genau, was sich auf Ihrer <strong>Fahrerkarte</strong> — Lenkzeiten, Pausen, Ruhezeiten und EU-Lenk- und Ruhezeiten — vor jeder Straßenkontrolle. Fahrerkartendaten mit einem Standard-USB-Kartenleser auslesen.</p>
 <div class="anim-up" style="margin-bottom:16px;transition-delay:.15s">
 <a class="btn-cta" href="/de/testen/?audience=driver" rel="noopener" target="_blank">30 Tage kostenlos testen</a>
 </div>
@@ -393,7 +397,7 @@
 </div>
 <div class="anim-up" style="transition-delay:.1s">
 <div class="media-frame" style="background:var(--bg-gray);border-radius:var(--radius);overflow:hidden">
-<img alt="TAGRA Trucker – Tachograph-Software mit USB-Lesegerät für den Fahrerkarte-Download" height="600" loading="lazy" src="https://cdn.truckmall.cz/data/user-content/TDT_TAGRA_TRUCKER_wh.jpg" style="object-fit:contain;width:100%;height:auto;" width="600"/>
+<img alt="TAGRA Trucker – Tachograph-Software mit USB-Lesegerät zum Auslesen der Fahrerkarte" height="600" loading="lazy" src="https://cdn.truckmall.cz/data/user-content/TDT_TAGRA_TRUCKER_wh.jpg" style="object-fit:contain;width:100%;height:auto;" width="600"/>
 </div>
 </div>
 </div>
@@ -403,7 +407,7 @@
 <section aria-label="Software-Vorschau" class="band" style="background:linear-gradient(180deg,var(--bg-apple-solid) 0%,#fff 74%);padding:60px 0">
 <div class="container">
 <div class="mac-stage">
-<img alt="TAGRA Trucker auf Laptop — Fahrerkarte-Download und Überblick über EU-Lenk- und Ruhezeiten" height="2076" id="mac-img" loading="lazy" src="https://cdn.truckmall.cz/data/user-content/Trucker_3_ntb.webp" width="3116"/>
+<img alt="TAGRA Trucker auf dem Laptop — Auslesen der Fahrerkarte und Überblick über EU-Lenk- und Ruhezeiten" height="2076" id="mac-img" loading="lazy" src="https://cdn.truckmall.cz/data/user-content/Trucker_3_ntb.webp" width="3116"/>
 </div>
 </div>
 </section>
@@ -433,10 +437,10 @@
 </div>
 <div class="note-box anim-up" role="note">
 <span class="note-badge">Gut zu wissen</span>
-<div class="note-title">Die Pflicht zum Herunterladen liegt beim Transportunternehmen – nicht beim Fahrer</div>
+<div class="note-title">Die Pflicht zum Auslesen liegt beim Transportunternehmen – nicht beim Fahrer</div>
 <p>Nach EU-Recht liegt die Pflicht zum Herunterladen von Tachographen-Daten beim <strong>Transportunternehmen</strong> — dem Frachtführer oder Unternehmen, das das Fahrzeug betreibt (Verordnung (EU) Nr. 165/2014, Artikel 33). Die maximalen Intervalle sind <strong>mindestens alle 28 Tage für die Fahrerkarte</strong> und <strong>mindestens alle 90 Tage für das Fahrzeuggerät</strong>(Kommissionsverordnung (EU) Nr. 581/2010).</p>
-<p><strong>Wenn Sie für einen Arbeitgeber fahren</strong>, liegt die Verpflichtung bei diesem — aber Sie profitieren trotzdem davon, Ihre eigenen Kopien aufzubewahren. <strong>TAGRA Trucker</strong> lädt Ihre Fahrerkarte-Daten herunter und archiviert sie, damit Sie Ihre eigenen Lenk- und Ruhezeiten überprüfen und Ihre Aufzeichnungen bereit haben können, falls Sie jemals den Arbeitgeber wechseln.</p>
-<p><strong>Wenn Sie selbstständiger Fahrer oder Inhaber-Betreiber sind</strong>, sind Sie auch das Transportunternehmen — daher sind Sie gesetzlich verpflichtet, Fahrerkarte-Daten <em>und</em> und Fahrzeuggerät-Daten herunterzuladen. Dafür benötigen Sie mindestens <a href="/de/fuhrpark/" style="color:var(--blue-mid);font-weight:600">TAGRA 1</a>, das sowohl Fahrerkarte- als auch Fahrzeuggerät-Downloads für ein Fahrzeug handhabt. TAGRA Trucker allein ist in diesem Fall nicht ausreichend.</p>
+<p><strong>Wenn Sie für einen Arbeitgeber fahren</strong>, liegt die Verpflichtung bei diesem — aber Sie profitieren trotzdem davon, Ihre eigenen Kopien aufzubewahren. <strong>TAGRA Trucker</strong> liest die Daten Ihrer Fahrerkarte aus und archiviert sie, damit Sie Ihre eigenen Lenk- und Ruhezeiten überprüfen und Ihre Aufzeichnungen bereithalten können, falls Sie jemals den Arbeitgeber wechseln.</p>
+<p><strong>Wenn Sie selbstständiger Fahrer oder Inhaber-Betreiber sind</strong>, sind Sie auch das Transportunternehmen — daher sind Sie gesetzlich verpflichtet, Fahrerkarte-Daten <em>und</em> und Daten der Fahrzeugeinheit auszulesen. Dafür benötigen Sie mindestens <a href="/de/fuhrpark/" style="color:var(--blue-mid);font-weight:600">TAGRA 1</a>, das sowohl Daten von Fahrerkarten als auch von Fahrzeugeinheiten für ein Fahrzeug ausliest. TAGRA Trucker allein ist in diesem Fall nicht ausreichend.</p>
 <p style="margin-bottom:0;font-size:15px"><strong>Neu hier?</strong> Lesen Sie unseren Leitfaden zu <a href="/de/ratgeber/tachographen-symbole/">Tachographen-Piktogrammen und ihrer Bedeutung</a> — die vier Aktivitäts-Piktogramme, die jeder Fahrer kennen muss.</p>
 </div>
 </div>
@@ -446,7 +450,7 @@
 <div class="container">
 <div class="anim-up" style="text-align:center;max-width:600px;margin:0 auto">
 <h2>TAGRA TRUCKER 30 TAGE KOSTENLOS TESTEN</h2>
-<p style="margin-top:8px;color:var(--text2)">Laden Sie die vollständige Software herunter, installieren und nutzen Sie sie. Keine Kreditkarte, keine Registrierung erforderlich.</p>
+<p style="margin-top:8px;color:var(--text2)">Laden Sie die vollständige Software herunter, installieren und nutzen Sie sie. Keine Kreditkarte erforderlich.</p>
 <div style="margin-top:28px">
 <a class="btn-cta" href="/de/testen/?audience=driver" rel="noopener" target="_blank">Testversion herunterladen</a>
 </div>
@@ -464,7 +468,7 @@
 <div class="path-split anim-up" style="transition-delay:.05s">
 <div class="path-card">
 <h3>Sie haben bereits Tachographendaten</h3>
-<p>Schon einmal eine <code>.DDD</code>- oder <code>.C1B</code>-Datei heruntergeladen — von Ihrem Arbeitgeber, einer Werkstatt oder einem anderen Kartenleser? Installieren Sie die Testversion und laden Sie sie. Volle Funktionalität, 30 Tage, keine Zahlung, keine Kartendaten.</p>
+<p>Schon einmal eine <code>.DDD</code>- oder <code>.C1B</code>-Datei heruntergeladen — von Ihrem Arbeitgeber, einer Werkstatt oder einem anderen Kartenleser? Installieren Sie die Testversion und laden Sie die Datei. Volle Funktionalität, 30 Tage, keine Zahlung, keine Kartendaten.</p>
 <a class="btn-cta" href="/de/testen/?audience=driver">Kostenlose Testversion herunterladen →</a>
 </div>
 <div class="path-card path-card--buy">
@@ -510,7 +514,7 @@
 </details>
 <details>
 <summary>Benötige ich einen USB-Kartenleser?</summary>
-<div class="faq-a">Ja. TAGRA Trucker liest Ihre Fahrerkarte über einen handelsüblichen USB-Kartenleser aus. Sollten Sie keinen besitzen, kontaktieren Sie uns, und wir empfehlen Ihnen ein kompatibles Modell — oder senden Ihnen eines zu, Preis und Versand richten sich nach Ihrem Land.</div>
+<div class="faq-a">Ja. TAGRA Trucker liest Ihre Fahrerkarte über einen handelsüblichen USB-Kartenleser aus. Sollten Sie keinen besitzen, kontaktieren Sie uns; wir empfehlen Ihnen ein kompatibles Modell oder senden Ihnen eines zu. Preis und Versand richten sich nach Ihrem Land.</div>
 </details>
 <details>
 <summary>Wie bekomme ich Daten in die Software?</summary>
@@ -673,7 +677,7 @@
   "name": "TAGRA Trucker – Tachographensoftware für Berufskraftfahrer",
   "applicationCategory": "BusinessApplication",
   "operatingSystem": "Windows",
-  "description": "Tachograph-Software für Berufskraftfahrer. Fahrerkarte-Download mit einem Standard-USB-Kartenleser. Auswertung und Archivierung von Fahrerkarte-Daten, EU-Lenk- und Ruhezeiten (Verordnung 561/2006), Pausen und Ruhezeiten. Kostenlose 30-Tage-Testversion. Bereit für Transporter-Fahrer ab Juli 2026.",
+  "description": "Tachograph-Software für Berufskraftfahrer. Auslesen der Fahrerkarte mit einem Standard-USB-Kartenleser. Auswertung und Archivierung von Fahrerkartendaten, EU-Lenk- und Ruhezeiten (Verordnung 561/2006), Pausen und Ruhezeiten. Kostenlose 30-Tage-Testversion. Bereit für Fahrer von Transportern ab Juli 2026.",
   "url": "https://tagra.app/de/fahrer/",
   "inLanguage": "de",
   "author": {
@@ -699,7 +703,7 @@
       "name": "Für wen ist TAGRA Trucker konzipiert?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "TAGRA Trucker ist eine Tachograph-Software für Berufskraftfahrer — LKW- und Transporter-Fahrer —, die ihre eigenen Fahrerkarte-Daten im Blick behalten und die Einhaltung der EU-Lenk- und Ruhezeiten überwachen möchten."
+        "text": "TAGRA Trucker ist eine Tachograph-Software für Berufskraftfahrer — Lkw- und Transporterfahrer —, die ihre eigenen Fahrerkartendaten im Blick behalten und die Einhaltung der EU-Lenk- und Ruhezeiten überwachen möchten."
       }
     },
     {
@@ -707,7 +711,7 @@
       "name": "Benötige ich einen USB-Kartenleser?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Ja. TAGRA Trucker liest Ihre Fahrerkarte über einen handelsüblichen USB-Kartenleser aus. Sollten Sie keinen besitzen, kontaktieren Sie uns, und wir empfehlen Ihnen ein kompatibles Modell — oder senden Ihnen eines zu, Preis und Versand richten sich nach Ihrem Land."
+        "text": "Ja. TAGRA Trucker liest Ihre Fahrerkarte über einen handelsüblichen USB-Kartenleser aus. Sollten Sie keinen besitzen, kontaktieren Sie uns; wir empfehlen Ihnen ein kompatibles Modell oder senden Ihnen eines zu. Preis und Versand richten sich nach Ihrem Land."
       }
     },
     {
@@ -715,7 +719,7 @@
       "name": "Wie bekomme ich Daten in die Software?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Verbinden Sie Ihr USB-Lesegerät, legen Sie Ihre Karte ein und TAGRA führt den Fahrerkarte-Download automatisch durch. Sie können auch bereits an anderer Stelle heruntergeladene .DDD- oder .C1B-Dateien importieren."
+        "text": "Verbinden Sie Ihr USB-Lesegerät, legen Sie Ihre Karte ein, und TAGRA liest die Fahrerkarte automatisch aus. Sie können auch bereits an anderer Stelle ausgelesene .DDD- oder .C1B-Dateien importieren."
       }
     },
     {
@@ -723,7 +727,7 @@
       "name": "Wie oft sollte ich meine Karte auslesen?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Nach EU-Recht liegt die gesetzliche Pflicht zum Herunterladen der Tachograph-Daten beim Transportunternehmen (Verordnung (EU) Nr. 165/2014, Artikel 33), nicht beim Fahrer. Die maximalen Intervalle betragen mindestens alle 28 Tage für die Fahrerkarte und mindestens alle 90 Tage für die Fahrzeugeinheit (Kommissionsverordnung (EU) Nr. 581/2010). Als angestellter Fahrer obliegt die Verpflichtung Ihrem Arbeitgeber — aber das Herunterladen Ihrer eigenen Karte mit TAGRA Trucker hilft Ihnen dennoch, den Überblick über Ihre Lenk- und Ruhezeiten zu behalten und persönliche Aufzeichnungen zu führen. Als selbstständiger Fahrer oder Einzelunternehmer sind Sie das Transportunternehmen, sodass die Verpflichtung in dieser Rolle auf Sie fällt — und Sie benötigen eine Lösung, die sowohl Fahrerkarte- als auch Fahrzeugeinheit-Downloads abdeckt. In diesem Fall ist TAGRA 1 die Mindeststufe; TAGRA Trucker allein deckt nur die Fahrerkarte ab."
+        "text": "Nach EU-Recht liegt die gesetzliche Pflicht zum Auslesen der Tachograph-Daten beim Transportunternehmen (Verordnung (EU) Nr. 165/2014, Artikel 33), nicht beim Fahrer. Die maximalen Intervalle betragen mindestens alle 28 Tage für die Fahrerkarte und mindestens alle 90 Tage für die Fahrzeugeinheit (Kommissionsverordnung (EU) Nr. 581/2010). Als angestellter Fahrer obliegt die Verpflichtung Ihrem Arbeitgeber — aber das Auslesen Ihrer eigenen Karte mit TAGRA Trucker hilft Ihnen dennoch, den Überblick über Ihre Lenk- und Ruhezeiten zu behalten und persönliche Aufzeichnungen zu führen. Als selbstständiger Fahrer oder Einzelunternehmer sind Sie das Transportunternehmen, sodass die Verpflichtung in dieser Rolle auf Sie fällt — und Sie benötigen eine Lösung, die sowohl das Auslesen der Fahrerkarte als auch der Fahrzeugeinheit abdeckt. In diesem Fall ist TAGRA 1 die Mindeststufe; TAGRA Trucker allein deckt nur die Fahrerkarte ab."
       }
     },
     {

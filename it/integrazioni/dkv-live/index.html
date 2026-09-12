@@ -45,6 +45,10 @@
       var m={cz:'cs',cs:'cs',sk:'sk',de:'de',pl:'pl',gr:'el',el:'el',hu:'hu',en:'en'};return m[l]||'en';}
     var T={
       hu:{t:'Analitikai sütiket használunk (Google Analytics, Microsoft Clarity, Smartsupp), hogy megértsük a webhely használatát. Csak az Ön hozzájárulásával töltődnek be.',a:'Elfogadom',r:'Elutasítom',p:'Adatvédelem és sütik'},
+      ro:{t:'Utilizăm module cookie de analiză (Google Analytics, Microsoft Clarity, Smartsupp) pentru a înțelege modul de utilizare a site-ului. Se încarcă doar cu consimțământul dumneavoastră.',a:'Accept',r:'Refuz',p:'Confidențialitate și cookie-uri'},
+      nl:{t:'We gebruiken analytische cookies (Google Analytics, Microsoft Clarity, Smartsupp) om het gebruik van de site te begrijpen. Ze laden alleen met uw toestemming.',a:'Accepteren',r:'Weigeren',p:'Privacy en cookies'},
+      fr:{t:'Nous utilisons des cookies analytiques (Google Analytics, Microsoft Clarity, Smartsupp) pour comprendre l’utilisation du site. Ils ne se chargent qu’avec votre consentement.',a:'Accepter',r:'Refuser',p:'Confidentialité et cookies'},
+      it:{t:'Utilizziamo cookie analitici (Google Analytics, Microsoft Clarity, Smartsupp) per capire l’utilizzo del sito. Si caricano solo con il Suo consenso.',a:'Accetta',r:'Rifiuta',p:'Privacy e cookie'},
       en:{t:'We use analytics cookies (Google Analytics, Microsoft Clarity, Smartsupp) to understand site usage. They load only with your consent.',a:'Accept',r:'Reject',p:'Privacy &amp; cookies'},
       cs:{t:'Používáme analytické cookies (Google Analytics, Microsoft Clarity, Smartsupp) k pochopení používání webu. Načtou se jen s vaším souhlasem.',a:'Přijmout',r:'Odmítnout',p:'Soukromí a cookies'},
       sk:{t:'Používame analytické cookies (Google Analytics, Microsoft Clarity, Smartsupp) na pochopenie používania webu. Načítajú sa len s vaším súhlasom.',a:'Prijať',r:'Odmietnuť',p:'Súkromie a cookies'},
@@ -75,16 +79,18 @@
 <!-- TMX-ANALYTICS END -->
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>TAGRA — DKV LIVE — Importazione automatica dei dati del cronotachigrafo</title>
-<meta content="Usi già DKV LIVE per lo scarico remoto dei dati del cronotachigrafo? TAGRA importa i dati automaticamente via SFTP — nessun trasferimento manuale di file, nessun clic in più." name="description"/>
+<title>TAGRA — DKV LIVE: importazione automatica dati cronotachigrafo</title>
+<meta content="Usi DKV LIVE per lo scarico remoto dei dati del cronotachigrafo? TAGRA importa i dati automaticamente via SFTP, senza trasferimenti manuali o clic in più." name="description"/>
 <meta content="#0b2c4a" name="theme-color"/>
 <link href="/manifest.json" rel="manifest"/>
 <link href="https://tagra.app/it/integrazioni/dkv-live/" rel="canonical"/>
+<link href="https://tagra.app/de/schnittstellen/dkv-live/" hreflang="de" rel="alternate"/><link href="https://tagra.app/el/ensomatoseis/dkv-live/" hreflang="el" rel="alternate"/><link href="https://tagra.app/integrations/dkv-live/" hreflang="en" rel="alternate"/><link href="https://tagra.app/fr/integrations/dkv-live/" hreflang="fr" rel="alternate"/><link href="https://tagra.app/hu/integraciok/dkv-live/" hreflang="hu" rel="alternate"/><link href="https://tagra.app/it/integrazioni/dkv-live/" hreflang="it" rel="alternate"/><link href="https://tagra.app/nl/integraties/dkv-live/" hreflang="nl" rel="alternate"/><link href="https://tagra.app/pl/integracje/dkv-live/" hreflang="pl" rel="alternate"/>
+<link href="https://tagra.app/ro/integrari/dkv-live/" hreflang="ro" rel="alternate"/><link href="https://tagra.app/integrations/dkv-live/" hreflang="x-default" rel="alternate"/>
 <meta content="website" property="og:type"/>
 <meta content="it_IT" property="og:locale"/>
 <meta content="TAGRA" property="og:site_name"/>
-<meta content="TAGRA — DKV LIVE — Importazione automatica dei dati del cronotachigrafo" property="og:title"/>
-<meta content="Usi già DKV LIVE per lo scarico remoto dei dati del cronotachigrafo? TAGRA importa i dati automaticamente via SFTP — nessun trasferimento manuale di file, nessun clic in più." property="og:description"/>
+<meta content="TAGRA — DKV LIVE: importazione automatica dati cronotachigrafo" property="og:title"/>
+<meta content="Usi DKV LIVE per lo scarico remoto dei dati del cronotachigrafo? TAGRA importa i dati automaticamente via SFTP, senza trasferimenti manuali o clic in più." property="og:description"/>
 <meta content="https://cdn.truckmall.cz/data/user-content/TDT_TAGRA_MAX_wh.jpg" property="og:image"/>
 <meta content="https://tagra.app/it/integrazioni/dkv-live/" property="og:url"/>
 <meta content="summary_large_image" name="twitter:card"/>
@@ -438,7 +444,7 @@
       "name": "Dove trovo le mie credenziali DKV LIVE?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Dal tuo account manager DKV Mobility o dal rappresentante commerciale. TAGRA ha bisogno di un nome utente e una password SFTP validi per il server DKV LIVE."
+        "text": "Dal Suo account manager DKV Mobility o dal rappresentante commerciale. TAGRA ha bisogno di un nome utente e una password SFTP validi per il server DKV LIVE."
       }
     },
     {
@@ -446,7 +452,7 @@
       "name": "Ogni quanto TAGRA dovrebbe recuperare i dati da DKV LIVE?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Consigliamo almeno una volta al giorno (intervallo 1d). Questo mantiene i tuoi dati aggiornati e garantisce che tu sia ben all'interno delle finestre legali di scarico di 28 e 90 giorni."
+        "text": "Consigliamo almeno una volta al giorno (intervallo 1d). Questo mantiene i Suoi dati aggiornati e garantisce che Lei sia ben all'interno delle finestre legali di scarico di 28 e 90 giorni."
       }
     },
     {
@@ -454,15 +460,15 @@
       "name": "Cosa succede se l'importazione fallisce o restituisce un errore?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Controlla di nuovo il server SFTP (sftp.styletronic.eu), la porta (22) e le tue credenziali. Se sono corretti e l'importazione continua a fallire, contatta l'assistenza TAGRA."
+        "text": "Controlli di nuovo il server SFTP (sftp.styletronic.eu), la porta (22) e le Sue credenziali. Se sono corretti e l'importazione continua a fallire, contatti l'assistenza TAGRA."
       }
     },
     {
       "@type": "Question",
-      "name": "Ho bisogno di DKV LIVE per lo scarico remoto del cronotachigrafo?",
+      "name": "Ho bisogno di DKV LIVE per lo scarico remoto del tachigrafo?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No. DKV LIVE è uno dei diversi modi per portare i dati del cronotachigrafo in TAGRA. TAGRA accetta anche i file standard .DDD, .C1B e .V1B provenienti da qualsiasi altro strumento di scarico del tachigrafo."
+        "text": "No. DKV LIVE è uno dei diversi modi per portare i dati del tachigrafo in TAGRA. TAGRA accetta anche i file standard .DDD, .C1B e .V1B provenienti da qualsiasi altro strumento di scarico del tachigrafo."
       }
     },
     {
@@ -470,7 +476,7 @@
       "name": "TAGRA è ufficialmente partner di DKV?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "TAGRA importa i dati dal servizio SFTP di DKV LIVE utilizzando le tue credenziali DKV. Si tratta di una funzione di interoperabilità tecnica, non di una partnership formale o di un'approvazione. DKV LIVE è un marchio registrato di DKV Mobility."
+        "text": "TAGRA importa i dati dal servizio SFTP di DKV LIVE utilizzando le Sue credenziali DKV. Si tratta di una funzione di interoperabilità tecnica, non di una partnership formale o di un'approvazione. DKV LIVE è un marchio registrato di DKV Mobility."
       }
     }
   ]
@@ -481,8 +487,7 @@
 <link href="/assets/css/components.css" rel="stylesheet"/>
 <link href="/assets/css/nav.css" rel="stylesheet"/>
 <script defer="" src="/assets/js/nav.js?v=20260816b"></script>
-<link href="/assets/css/footer.css" rel="stylesheet"/>
-<link href="https://tagra.app/integrations/dkv-live/" hreflang="en" rel="alternate"/><link href="https://tagra.app/de/schnittstellen/dkv-live/" hreflang="de" rel="alternate"/><link href="https://tagra.app/pl/integracje/dkv-live/" hreflang="pl" rel="alternate"/><link href="https://tagra.app/el/ensomatoseis/dkv-live/" hreflang="el" rel="alternate"/><link href="https://tagra.app/hu/integraciok/dkv-live/" hreflang="hu" rel="alternate"/><link href="https://tagra.app/it/integrazioni/dkv-live/" hreflang="it" rel="alternate"/><link href="https://tagra.app/integrations/dkv-live/" hreflang="x-default" rel="alternate"/></head>
+<link href="/assets/css/footer.css" rel="stylesheet"/></head>
 <body>
 <a class="skip-link" href="#content">Vai al contenuto</a>
 <!-- ═══ NAVIGATION ═══════════════════════════════════════════════ -->
@@ -500,8 +505,7 @@
 </ul>
 <details class="nav-lang">
 <summary aria-label="Language: IT">IT</summary>
-<div class="nav-lang-menu" role="menu">
-<a href="/" hreflang="en">English</a><a href="/de/" hreflang="de">Deutsch</a><a href="/pl/" hreflang="pl">Polski</a><a href="/el/" hreflang="el">Ελληνικά</a><a href="/hu/" hreflang="hu">Magyar</a><a aria-current="page" class="active" href="/it/" hreflang="it">Italiano</a><a href="https://www.tdt.cz/" hreflang="cs" rel="noopener" target="_blank">Čeština</a><a href="https://www.tdt.sk/" hreflang="sk" rel="noopener" target="_blank">Slovenčina</a></div>
+<div class="nav-lang-menu" role="menu"><a href="/integrations/dkv-live/" hreflang="en">English</a><a href="/de/schnittstellen/dkv-live/" hreflang="de">Deutsch</a><a href="/pl/integracje/dkv-live/" hreflang="pl">Polski</a><a href="/nl/integraties/dkv-live/" hreflang="nl">Nederlands</a><a href="/fr/integrations/dkv-live/" hreflang="fr">Français</a><a aria-current="page" class="active" href="/it/integrazioni/dkv-live/" hreflang="it">Italiano</a><a href="/el/ensomatoseis/dkv-live/" hreflang="el">Ελληνικά</a><a href="/hu/integraciok/dkv-live/" hreflang="hu">Magyar</a><a href="/ro/integrari/dkv-live/" hreflang="ro">Română</a><a href="https://www.tdt.cz/" hreflang="cs" rel="noopener" target="_blank">Čeština</a><a href="https://www.tdt.sk/" hreflang="sk" rel="noopener" target="_blank">Slovenčina</a></div>
 </details>
 <a class="nav-cta-mobile" href="/it/prova-gratuita/?audience=fleet">Prova gratis</a>
 <button aria-expanded="false" aria-label="Attiva/disattiva menu" class="nav-mobile-toggle" id="nav-toggle">
@@ -516,7 +520,7 @@
 <div class="eyebrow anim-up">Integrazione</div>
 <h1 class="hero-h2 anim-up" style="transition-delay:.05s">I dati del cronotachigrafo<br/>direttamente in TAGRA</h1>
 <p class="anim-up" style="font-size:21px;line-height:1.5;max-width:680px;margin:16px auto 32px;color:var(--text-muted);transition-delay:.1s">
-      Usi già <strong>DKV LIVE®</strong> per lo scarico remoto dei dati del cronotachigrafo? TAGRA importa i dati automaticamente — nessun trasferimento manuale di file, nessun clic in più.
+      Usi già <strong>DKV LIVE®</strong> per lo scarico remoto dei dati del tachigrafo? TAGRA importa i dati automaticamente — nessun trasferimento manuale di file, nessun clic in più.
     </p>
 <div class="anim-up" style="margin-bottom:16px;transition-delay:.15s">
 <a class="btn-cta" href="/it/prova-gratuita/?audience=fleet" rel="noopener" target="_blank">Prova TAGRA gratis per 30 giorni</a>
@@ -529,27 +533,27 @@
 <div class="container">
 <div class="g2 top">
 <div class="anim-up">
-<div class="eyebrow">Cosa ti offre</div>
+<div class="eyebrow">Cosa Le offre</div>
 <h2>Zero trasferimenti<br/>manuali di file</h2>
-<p style="margin-bottom:16px">DKV LIVE® è un servizio di telematica che preleva i dati del cronotachigrafo e della carta conducente dai tuoi veicoli tramite la rete mobile e li memorizza su un server SFTP sicuro.</p>
+<p style="margin-bottom:16px">DKV LIVE® è un servizio di telematica che preleva i dati del cronotachigrafo e della carta conducente dai Suoi veicoli tramite la rete mobile e li memorizza su un server SFTP sicuro.</p>
 <p style="margin-bottom:16px">TAGRA si collega a quel server e importa i dati <strong>automaticamente</strong>, secondo la pianificazione che scegli — da una volta al giorno a ogni poche ore.</p>
-<p>Il risultato: i dati di ogni veicolo della tua flotta arrivano direttamente in TAGRA, pronti per la valutazione, i report delle infrazioni e l'archiviazione. Nessuna chiave di download, nessun giro per il piazzale, nessuna scadenza mancata.</p>
+<p>Il risultato: i dati di ogni veicolo della Sua flotta arrivano direttamente in TAGRA, pronti per la valutazione, i report delle infrazioni e l'archiviazione. Nessuna chiave di download, nessun giro per il piazzale, nessuna scadenza mancata.</p>
 </div>
 <div class="anim-up" style="transition-delay:.1s">
 <div class="note-box">
 <span class="note-badge">DKV LIVE®</span>
 <span class="note-title">Telematica + TAGRA = automazione completa</span>
-<p>Se paghi già per la telematica DKV LIVE®, non hai bisogno di alcun hardware aggiuntivo per portare i dati del cronotachigrafo in TAGRA. Basta inserire le tue credenziali DKV nella schermata <strong>Data Import</strong> di TAGRA ed è fatto.</p>
+<p>Se paga già per la telematica DKV LIVE®, non ha bisogno di alcun hardware aggiuntivo per portare i dati del tachigrafo in TAGRA. Basta inserire le Sue credenziali DKV nella schermata <strong>Data Import</strong> di TAGRA ed è fatto.</p>
 </div>
 </div>
 </div>
 </div>
 </section>
 <!-- ═══ WHAT YOU'LL NEED ═══════════════════════════════════════ -->
-<section aria-label="Cosa ti serve" class="band band--blue">
+<section aria-label="Cosa Le serve" class="band band--blue">
 <div class="container">
 <div class="eyebrow anim-up">Prima di iniziare</div>
-<h2 class="anim-up">Cosa ti serve</h2>
+<h2 class="anim-up">Cosa Le serve</h2>
 <div class="bento" style="margin-top:32px">
 <div class="bc s4 anim-up">
 <div class="eyebrow" style="color:var(--blue-mid)">Software</div>
@@ -559,12 +563,12 @@
 <div class="bc s4 bluefill anim-up" style="transition-delay:.05s">
 <div class="eyebrow" style="color:var(--blue-mid)">Account DKV LIVE®</div>
 <div class="bc-title">Abbonamento attivo<br/>+ credenziali</div>
-<div class="bc-text">Un abbonamento DKV LIVE® attivo con le credenziali di accesso (nome utente e password) fornite dal tuo referente DKV o dal contatto commerciale.</div>
+<div class="bc-text">Un abbonamento DKV LIVE® attivo con le credenziali di accesso (nome utente e password) fornite dal Suo referente DKV o dal contatto commerciale.</div>
 </div>
 <div class="bc s4 anim-up" style="transition-delay:.1s">
 <div class="eyebrow" style="color:var(--blue-mid)">Server SFTP</div>
 <div class="bc-title">sftp.styletronic.eu<br/>porta 22</div>
-<div class="bc-text">L'endpoint SFTP di DKV LIVE® a cui si collega TAGRA. Stesso indirizzo per tutti i clienti; le tue credenziali ti autenticano nella tua cartella dati specifica.</div>
+<div class="bc-text">L'endpoint SFTP di DKV LIVE® a cui si collega TAGRA. Stesso indirizzo per tutti i clienti; le Sue credenziali La autenticano nella Sua cartella dati specifica.</div>
 </div>
 </div>
 </div>
@@ -574,20 +578,20 @@
 <div class="container">
 <div class="eyebrow anim-up">Guida alla configurazione</div>
 <h2 class="anim-up">Passo dopo passo</h2>
-<p class="anim-up" style="max-width:680px;margin:8px 0 40px;color:var(--text-muted)">Configurare l'importazione DKV LIVE® in TAGRA richiede circa due minuti. Lo fai una sola volta — da quel momento in poi, TAGRA preleva i dati automaticamente.</p>
+<p class="anim-up" style="max-width:680px;margin:8px 0 40px;color:var(--text-muted)">Configurare l'importazione DKV LIVE® in TAGRA richiede circa due minuti. Lo fa una sola volta — da quel momento in poi, TAGRA preleva i dati automaticamente.</p>
 <div class="three-col" style="grid-template-columns:1fr;gap:32px">
 <div class="anim-up" style="display:flex;gap:24px;align-items:flex-start">
 <div class="snum">01</div>
 <div>
 <div class="stit">Apri Data Import</div>
-<p>Nella finestra principale di TAGRA, fai clic su <strong>Import dat</strong> (Data Import) nel menu a sinistra. È qui che configuri il collegamento tra DKV LIVE® e TAGRA.</p>
+<p>Nella finestra principale di TAGRA, faccia clic su <strong>Import dat</strong> (Data Import) nel menu a sinistra. È qui che configuri il collegamento tra DKV LIVE® e TAGRA.</p>
 </div>
 </div>
 <div class="anim-up" style="display:flex;gap:24px;align-items:flex-start;transition-delay:.05s">
 <div class="snum">02</div>
 <div>
 <div class="stit">Aggiungi una nuova importazione</div>
-<p>Nel pannello sinistro della schermata Data Import, fai clic su <strong>Add import</strong>. Si apre una finestra di configurazione.</p>
+<p>Nel pannello sinistro della schermata Data Import, faccia clic su <strong>Add import</strong>. Si apre una finestra di configurazione.</p>
 </div>
 </div>
 <div class="anim-up" style="display:flex;gap:24px;align-items:flex-start;transition-delay:.1s">
@@ -596,12 +600,12 @@
 <div class="stit">Configura la connessione</div>
 <p style="margin-bottom:12px">Compila la finestra di configurazione:</p>
 <ul style="margin-left:20px;color:var(--text-muted);font-size:16px;line-height:1.7">
-<li><strong>Import name</strong> — un'etichetta a tua scelta (ad es. «DKV»)</li>
+<li><strong>Import name</strong> — un'etichetta a Sua scelta (ad es. «DKV»)</li>
 <li><strong>Folder</strong> — inserisci <code>/</code> (una singola barra)</li>
 <li><strong>Run interval</strong> — ogni quanto TAGRA deve recuperare i dati (consigliato: <code>1d</code> per un recupero giornaliero)</li>
 <li><strong>SFTP server</strong> — <code>sftp.styletronic.eu</code></li>
 <li><strong>Port</strong> — <code>22</code></li>
-<li><strong>Username and password</strong> — le tue credenziali DKV LIVE®</li>
+<li><strong>Username and password</strong> — le Sue credenziali DKV LIVE®</li>
 </ul>
 <p style="margin-top:12px">Conferma con <strong>OK</strong>.</p>
 </div>
@@ -610,7 +614,7 @@
 <div class="snum">04</div>
 <div>
 <div class="stit">Esegui la prima importazione</div>
-<p>Fai clic sulla tua nuova connessione (si evidenzia in blu) e premi <strong>Run import</strong>. TAGRA scarica immediatamente gli ultimi file del cronotachigrafo e della carta conducente dal server DKV. Al termine, torna alla schermata principale e inizia la tua valutazione.</p>
+<p>Faccia clic sulla Sua nuova connessione (si evidenzia in blu) e prema <strong>Run import</strong>. TAGRA scarica immediatamente gli ultimi file del cronotachigrafo e della carta conducente dal server DKV. Al termine, torni alla schermata principale e inizi la Sua valutazione.</p>
 </div>
 </div>
 </div>
@@ -628,16 +632,16 @@
 <li><code>1d</code> — una volta al giorno (consigliato)</li>
 <li><code>12h</code> — ogni 12 ore</li>
 <li><code>6h</code>, <code>3h</code>, <code>1h</code> — più frequente</li>
-<li><code>0s</code> — solo manuale (fai clic tu stesso su <em>Run import</em>)</li>
+<li><code>0s</code> — solo manuale (faccia clic Lei stesso su <em>Run import</em>)</li>
 </ul>
-<p>Consigliamo almeno una frequenza giornaliera, così i tuoi dati restano aggiornati e sono sempre rispettate le <strong>finestre legali di scarico di 28 e 90 giorni</strong>.</p>
+<p>Consigliamo almeno una frequenza giornaliera, così i Suoi dati restano aggiornati e sono sempre rispettate le <strong>finestre legali di scarico di 28 e 90 giorni</strong>.</p>
 </div>
 <div class="anim-up" style="transition-delay:.1s">
 <div class="note-box">
 <span class="note-badge">Perché è importante</span>
 <span class="note-title">28 e 90 giorni sono scadenze di legge</span>
-<p style="margin-bottom:10px">Le normative UE richiedono che i dati della carta conducente siano scaricati almeno ogni <strong>28 giorni</strong> e i dati dell'unità di bordo del cronotachigrafo almeno ogni <strong>90 giorni</strong>.</p>
-<p>Con DKV LIVE® + TAGRA impostati su una pianificazione giornaliera, queste scadenze vengono rispettate automaticamente. Hai inoltre una traccia archiviata e ordinata per qualsiasi controllo.</p>
+<p style="margin-bottom:10px">Le normative UE richiedono che i dati della carta conducente siano scaricati almeno ogni <strong>28 giorni</strong> e i dati dell'unità di bordo (VU) del tachigrafo almeno ogni <strong>90 giorni</strong>.</p>
+<p>Con DKV LIVE® + TAGRA impostati su una pianificazione giornaliera, queste scadenze vengono rispettate automaticamente. Ha inoltre una traccia archiviata e ordinata per qualsiasi controllo.</p>
 </div>
 </div>
 </div>
@@ -648,8 +652,8 @@
 <div class="container">
 <div class="anim-up">
 <div class="eyebrow">Serve una mano?</div>
-<h2>Bloccato con la configurazione?<br/>Ti aiutiamo noi.</h2>
-<p style="max-width:680px;margin:16px 0 24px">Se l'importazione non si avvia, restituisce un errore, o vuoi semplicemente un secondo parere sulla tua configurazione — siamo felici di aiutarti a farla funzionare.</p>
+<h2>Bloccato con la configurazione?<br/>La aiutiamo noi.</h2>
+<p style="max-width:680px;margin:16px 0 24px">Se l'importazione non si avvia, restituisce un errore, o vuole semplicemente un secondo parere sulla Sua configurazione — siamo felici di aiutarLa a farla funzionare.</p>
 <p><strong>Email:</strong> <a href="mailto:helpdesk@tagra.app">helpdesk@tagra.app</a></p>
 </div>
 </div>
@@ -662,31 +666,31 @@
 <div class="faq" style="margin-top:24px">
 <details>
 <summary>Quali versioni di TAGRA supportano DKV LIVE®?</summary>
-<div class="faq-a">Tutte le versioni attuali di TAGRA — TAGRA 1, 2, 4, 6 e MAX — supportano l'importazione DKV LIVE® dalla <strong>versione 345 in poi</strong>. Il numero di versione è indicato nella parte inferiore della finestra di TAGRA. Se hai una build più vecchia, aggiorna tramite l'updater integrato nell'app — gli aggiornamenti sono compresi nella quota di rinnovo annuale.</div>
+<div class="faq-a">Tutte le versioni attuali di TAGRA — TAGRA 1, 2, 4, 6 e MAX — supportano l'importazione DKV LIVE® dalla <strong>versione 345 in poi</strong>. Il numero di versione è indicato nella parte inferiore della finestra di TAGRA. Se ha una build più vecchia, aggiorni tramite l'updater integrato nell'app — gli aggiornamenti sono compresi nella quota di rinnovo annuale.</div>
 </details>
 <details>
 <summary>Dove trovo le mie credenziali DKV LIVE®?</summary>
-<div class="faq-a">Dal tuo account manager DKV Mobility o dal rappresentante commerciale. TAGRA ha bisogno di un nome utente e una password SFTP validi per il server DKV LIVE® — gli stessi che utilizzeresti per accedere direttamente al servizio. Non gestiamo noi l'attivazione degli account DKV.</div>
+<div class="faq-a">Dal suo account manager DKV Mobility o dal rappresentante commerciale. TAGRA necessita di un nome utente e di una password SFTP validi per il server DKV LIVE® — gli stessi che utilizzerebbe per accedere direttamente al servizio. Non gestiamo l'attivazione degli account DKV.</div>
 </details>
 <details>
 <summary>Ogni quanto TAGRA dovrebbe recuperare i dati da DKV LIVE®?</summary>
-<div class="faq-a">Consigliamo <strong>almeno una volta al giorno</strong> (intervallo <code>1d</code>). Questo mantiene i tuoi dati aggiornati e garantisce che tu sia ben all'interno delle finestre legali di scarico di 28 e 90 giorni. Puoi impostarlo ogni poche ore se preferisci una valutazione quasi in tempo reale — entrambe le opzioni funzionano bene.</div>
+<div class="faq-a">Consigliamo <strong>almeno una volta al giorno</strong> (intervallo <code>1d</code>). Questo mantiene i suoi dati aggiornati e garantisce che rientri ampiamente nelle finestre legali di scarico di 28 e 90 giorni. Può impostarlo ogni poche ore se preferisce una valutazione quasi in tempo reale — entrambe le opzioni funzionano bene.</div>
 </details>
 <details>
 <summary>Cosa succede se l'importazione fallisce o restituisce un errore?</summary>
-<div class="faq-a">Per prima cosa, controlla di nuovo il server SFTP (<code>sftp.styletronic.eu</code>), la porta (<code>22</code>) e le tue credenziali. Se sono corretti e l'importazione continua a fallire, contattaci via e-mail all'indirizzo <a href="mailto:helpdesk@tagra.app">helpdesk@tagra.app</a>. Il messaggio di errore nell'elenco delle importazioni di TAGRA ci aiuta a diagnosticare rapidamente il problema.</div>
+<div class="faq-a">Per prima cosa, controlla di nuovo il server SFTP (<code>sftp.styletronic.eu</code>), la porta (<code>22</code>) e le sue credenziali. Se sono corrette e l'importazione continua a fallire, ci contatti via e-mail all'indirizzo <a href="mailto:helpdesk@tagra.app">helpdesk@tagra.app</a>. Il messaggio di errore nell'elenco delle importazioni di TAGRA ci aiuta a diagnosticare rapidamente il problema.</div>
 </details>
 <details>
-<summary>Ho bisogno di DKV LIVE® per lo scarico remoto del cronotachigrafo?</summary>
-<div class="faq-a">No. DKV LIVE® è uno dei diversi modi per portare i dati del cronotachigrafo in TAGRA — è un'ottima opzione se usi già il servizio di telematica DKV. In caso contrario, TAGRA accetta anche i file standard <code>.DDD</code>, <code>.C1B</code> e <code>.V1B</code> provenienti da qualsiasi altro strumento di scarico del tachigrafo. Contattaci se desideri un consiglio.</div>
+<summary>Ho bisogno di DKV LIVE® per lo scarico remoto del tachigrafo?</summary>
+<div class="faq-a">No. DKV LIVE® è uno dei diversi modi per trasferire i dati del tachigrafo in TAGRA — è un'ottima opzione se utilizza già il servizio di telematica DKV. In caso contrario, TAGRA accetta anche i file standard <code>.DDD</code>, <code>.C1B</code> e <code>.V1B</code> provenienti da qualsiasi altro strumento di scarico del tachigrafo. Ci contatti se desidera un consiglio.</div>
 </details>
 <details>
 <summary>TAGRA è ufficialmente partner di DKV?</summary>
-<div class="faq-a">TAGRA importa i dati dal servizio SFTP di DKV LIVE® utilizzando le tue credenziali DKV. Si tratta di una funzione di interoperabilità tecnica, non di una partnership formale o di un'approvazione. <em>DKV LIVE® è un marchio registrato di DKV Mobility.</em></div>
+<div class="faq-a">TAGRA importa i dati dal servizio SFTP di DKV LIVE® utilizzando le Sue credenziali DKV. Si tratta di una funzione di interoperabilità tecnica, non di una partnership formale o di un'approvazione. <em>DKV LIVE® è un marchio registrato di DKV Mobility.</em></div>
 </details>
 <details>
 <summary>L'importazione DKV LIVE® è inclusa nella mia licenza TAGRA?</summary>
-<div class="faq-a">Sì. La funzione Data Import (inclusa la connettività DKV LIVE®) fa parte di ogni licenza TAGRA attuale senza costi aggiuntivi. Paghi solo la normale licenza TAGRA e il normale abbonamento DKV LIVE® — nulla di più.</div>
+<div class="faq-a">Sì. La funzione Data Import (inclusa la connettività DKV LIVE®) fa parte di ogni licenza TAGRA attuale senza costi aggiuntivi. Paga solo la normale licenza TAGRA e il normale abbonamento DKV LIVE® — nulla di più.</div>
 </details>
 </div>
 </div>
@@ -831,10 +835,10 @@
 {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
-  "name": "TAGRA – Software di analisi del cronotachigrafo per operatori di flotta",
+  "name": "TAGRA – Software di analisi del tachigrafo per operatori di flotta",
   "applicationCategory": "BusinessApplication",
   "operatingSystem": "Windows",
-  "description": "Software di analisi del cronotachigrafo per operatori di flotta. Download della carta conducente, analisi del cronotachigrafo digitale, archiviazione e download remoto del tachigrafo per un numero di veicoli da 1 a illimitato. Valuta i tempi di guida UE (Regolamento (CE) n. 561/2006), l'AETR e la Direttiva sull'orario di lavoro degli autotrasportatori. Prova gratuita di 30 giorni. Pronto per i furgoni da luglio 2026.",
+  "description": "Software di analisi del tachigrafo per operatori di flotta. Download della carta conducente, analisi del tachigrafo digitale, archiviazione e download remoto del tachigrafo per un numero di veicoli da 1 a illimitato. Valuta i tempi di guida UE (Regolamento (CE) n. 561/2006), l'AETR e la Direttiva sull'orario di lavoro degli autotrasportatori. Prova gratuita di 30 giorni. Pronto per i furgoni da luglio 2026.",
   "url": "https://tagra.app/it/per-aziende/",
   "inLanguage": "it",
   "author": { "@type": "Organization", "name": "Truck Data Technology, s.r.o.", "url": "https://www.tdt.cz" },

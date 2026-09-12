@@ -45,6 +45,10 @@
       var m={cz:'cs',cs:'cs',sk:'sk',de:'de',pl:'pl',gr:'el',el:'el',hu:'hu',en:'en'};return m[l]||'en';}
     var T={
       hu:{t:'Analitikai s\u00fctiket haszn\u00e1lunk (Google Analytics, Microsoft Clarity, Smartsupp), hogy meg\u00e9rts\u00fck a webhely haszn\u00e1lat\u00e1t. Csak az \u00d6n hozz\u00e1j\u00e1rul\u00e1s\u00e1val t\u00f6lt\u0151dnek be.',a:'Elfogadom',r:'Elutas\u00edtom',p:'Adatv\u00e9delem \u00e9s s\u00fctik'},
+      ro:{t:'Utilizăm module cookie de analiză (Google Analytics, Microsoft Clarity, Smartsupp) pentru a înțelege modul de utilizare a site-ului. Se încarcă doar cu consimțământul dumneavoastră.',a:'Accept',r:'Refuz',p:'Confidențialitate și cookie-uri'},
+      nl:{t:'We gebruiken analytische cookies (Google Analytics, Microsoft Clarity, Smartsupp) om het gebruik van de site te begrijpen. Ze laden alleen met uw toestemming.',a:'Accepteren',r:'Weigeren',p:'Privacy en cookies'},
+      fr:{t:'Nous utilisons des cookies analytiques (Google Analytics, Microsoft Clarity, Smartsupp) pour comprendre l’utilisation du site. Ils ne se chargent qu’avec votre consentement.',a:'Accepter',r:'Refuser',p:'Confidentialité et cookies'},
+      it:{t:'Utilizziamo cookie analitici (Google Analytics, Microsoft Clarity, Smartsupp) per capire l’utilizzo del sito. Si caricano solo con il Suo consenso.',a:'Accetta',r:'Rifiuta',p:'Privacy e cookie'},
       en:{t:'We use analytics cookies (Google Analytics, Microsoft Clarity, Smartsupp) to understand site usage. They load only with your consent.',a:'Accept',r:'Reject',p:'Privacy &amp; cookies'},
       cs:{t:'Používáme analytické cookies (Google Analytics, Microsoft Clarity, Smartsupp) k pochopení používání webu. Načtou se jen s vaším souhlasem.',a:'Přijmout',r:'Odmítnout',p:'Soukromí a cookies'},
       sk:{t:'Používame analytické cookies (Google Analytics, Microsoft Clarity, Smartsupp) na pochopenie používania webu. Načítajú sa len s vaším súhlasom.',a:'Prijať',r:'Odmietnuť',p:'Súkromie a cookies'},
@@ -76,15 +80,17 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Odczyt i pobieranie danych z tachografu cyfrowego | TAGRA</title>
-<meta content="Program do odczytu i pobierania danych z tachografów cyfrowych i kart kierowców. Wykrywa naruszenia rozporządzenia 561/2006, archiwizuje pliki DDD i przygotowuje raporty na kontrolę." name="description"/>
+<meta content="Program do odczytu danych z tachografów cyfrowych i kart kierowców. Wykrywa naruszenia rozporządzenia 561/2006, archiwizuje pliki DDD i tworzy raporty na potrzeby kontroli." name="description"/>
 <meta content="#0b2c4a" name="theme-color"/>
 <link href="/manifest.json" rel="manifest"/>
 <link href="https://tagra.app/pl/dla-przewoznikow/" rel="canonical"/>
+<link href="https://tagra.app/de/fuhrpark/" hreflang="de" rel="alternate"/><link href="https://tagra.app/el/stolos/" hreflang="el" rel="alternate"/><link href="https://tagra.app/fleet/" hreflang="en" rel="alternate"/><link href="https://tagra.app/fr/entreprises/" hreflang="fr" rel="alternate"/><link href="https://tagra.app/hu/fuvarozoknak/" hreflang="hu" rel="alternate"/><link href="https://tagra.app/it/per-aziende/" hreflang="it" rel="alternate"/><link href="https://tagra.app/nl/voor-transportbedrijven/" hreflang="nl" rel="alternate"/><link href="https://tagra.app/pl/dla-przewoznikow/" hreflang="pl" rel="alternate"/>
+<link href="https://tagra.app/ro/pentru-firme/" hreflang="ro" rel="alternate"/><link href="https://tagra.app/fleet/" hreflang="x-default" rel="alternate"/>
 <meta content="website" property="og:type"/>
 <meta content="pl_PL" property="og:locale"/>
 <meta content="TAGRA" property="og:site_name"/>
 <meta content="Odczyt i pobieranie danych z tachografu cyfrowego | TAGRA" property="og:title"/>
-<meta content="Program do odczytu i pobierania danych z tachografów cyfrowych i kart kierowców. Wykrywa naruszenia rozporządzenia 561/2006, archiwizuje pliki DDD i przygotowuje raporty na kontrolę." property="og:description"/>
+<meta content="Program do odczytu danych z tachografów cyfrowych i kart kierowców. Wykrywa naruszenia rozporządzenia 561/2006, archiwizuje pliki DDD i tworzy raporty na potrzeby kontroli." property="og:description"/>
 <meta content="https://cdn.truckmall.cz/data/user-content/TDT_TAGRA_MAX_wh.jpg" property="og:image"/>
 <meta content="TAGRA – oprogramowanie do analizy danych z tachografu dla firm transportowych, od 1 do nieograniczonej liczby pojazdów" property="og:image:alt"/>
 <meta content="https://cdn.truckmall.cz/data/user-content/TDT_TAGRA_MAX_wh.jpg" name="twitter:image"/>
@@ -495,7 +501,7 @@
   "@type": "WebPage",
   "url": "https://tagra.app/pl/dla-przewoznikow/",
   "name": "Odczyt i analiza danych z tachografu cyfrowego dla firm transportowych",
-  "description": "TAGRA to program do odczytu i pobierania danych z tachografów cyfrowych i kart kierowców. Wykrywa naruszenia rozporządzenia 561/2006, archiwizuje pliki DDD i przygotowuje raporty na kontrolę.",
+  "description": "TAGRA to program do odczytu i pobierania danych z tachografów cyfrowych i kart kierowców. Wykrywa naruszenia rozporządzenia 561/2006, archiwizuje pliki DDD i przygotowuje raporty na potrzeby kontroli.",
   "isPartOf": {
     "@id": "https://tagra.app/#website"
   },
@@ -511,7 +517,6 @@
 <link href="/assets/css/nav.css" rel="stylesheet"/>
 <script defer="" src="/assets/js/nav.js?v=20260816b"></script>
 <link href="/assets/css/footer.css" rel="stylesheet"/>
-<link href="https://tagra.app/fleet/" hreflang="en" rel="alternate"/><link href="https://tagra.app/de/fuhrpark/" hreflang="de" rel="alternate"/><link href="https://tagra.app/pl/dla-przewoznikow/" hreflang="pl" rel="alternate"/><link href="https://tagra.app/el/stolos/" hreflang="el" rel="alternate"/><link href="https://tagra.app/hu/fuvarozoknak/" hreflang="hu" rel="alternate"/><link href="https://tagra.app/it/per-aziende/" hreflang="it" rel="alternate"/><link href="https://tagra.app/fleet/" hreflang="x-default" rel="alternate"/>
 </head>
 <body>
 <a class="skip-link" href="#main-content">Przejdź do treści</a>
@@ -527,14 +532,13 @@
 <li><a href="/pl/poradnik/">Artykuły</a></li><li><a href="/pl/instrukcje/">Instrukcje</a></li>
 <li><a href="/pl/faq/">FAQ</a></li>
 <li><a href="/pl/kontakt/">Kontakt</a></li>
-<li class="nav-cta-li"><a class="nav-cta" href="/pl/wyprobuj/?audience=fleet">Wypróbuj 30 dni za darmo</a></li>
+<li class="nav-cta-li"><a class="nav-cta" href="/pl/wyprobuj/?audience=fleet">Prosimy wypróbować przez 30 dni za darmo</a></li>
 </ul>
 <details class="nav-lang">
 <summary aria-label="Language: PL">PL</summary>
-<div class="nav-lang-menu" role="menu">
-<a href="/" hreflang="en">English</a><a href="/de/" hreflang="de">Deutsch</a><a aria-current="page" class="active" href="/pl/" hreflang="pl">Polski</a><a href="/el/" hreflang="el">Ελληνικά</a><a href="/hu/" hreflang="hu">Magyar</a><a href="/it/" hreflang="it">Italiano</a><a href="https://www.tdt.cz/" hreflang="cs" rel="noopener" target="_blank">Čeština</a><a href="https://www.tdt.sk/" hreflang="sk" rel="noopener" target="_blank">Slovenčina</a></div>
+<div class="nav-lang-menu" role="menu"><a href="/fleet/" hreflang="en">English</a><a href="/de/fuhrpark/" hreflang="de">Deutsch</a><a aria-current="page" class="active" href="/pl/dla-przewoznikow/" hreflang="pl">Polski</a><a href="/nl/voor-transportbedrijven/" hreflang="nl">Nederlands</a><a href="/fr/entreprises/" hreflang="fr">Français</a><a href="/it/per-aziende/" hreflang="it">Italiano</a><a href="/el/stolos/" hreflang="el">Ελληνικά</a><a href="/hu/fuvarozoknak/" hreflang="hu">Magyar</a><a href="/ro/pentru-firme/" hreflang="ro">Română</a><a href="https://www.tdt.cz/" hreflang="cs" rel="noopener" target="_blank">Čeština</a><a href="https://www.tdt.sk/" hreflang="sk" rel="noopener" target="_blank">Slovenčina</a></div>
 </details>
-<a class="nav-cta-mobile" href="/pl/wyprobuj/?audience=fleet">Wypróbuj za darmo</a>
+<a class="nav-cta-mobile" href="/pl/wyprobuj/?audience=fleet">Prosimy wypróbować za darmo</a>
 <button aria-expanded="false" aria-label="Przełącz menu" class="nav-mobile-toggle" id="nav-toggle">
 <span></span><span></span><span></span>
 </button>
@@ -546,12 +550,12 @@
 <div class="eyebrow anim-up">TAGRA · Dla firm transportowych</div>
 <h1 class="anim-up" style="transition-delay:.05s">Odczyt i analiza danych z tachografu cyfrowego</h1>
 <p class="lead anim-up" style="transition-delay:.1s">
-<strong>Zgodność z przepisami dla firm transportowych. Bez stresu.</strong> TAGRA to kompletne oprogramowanie do <strong>odczytu danych z tachografu</strong> — <strong>pobieranie danych z tachografu</strong>, odczyt kart kierowców, archiwizacja plików DDD i wykrywanie naruszeń rozporządzenia 561/2006. Skaluje się od 1 do nieograniczonej liczby pojazdów.
+<strong>Zgodność z przepisami dla firm transportowych. Bez stresu.</strong> TAGRA to kompletne oprogramowanie do <strong>odczytu danych z tachografu</strong> — <strong>pobieranie danych z tachografu</strong>, odczyt kart kierowców, archiwizacja plików DDD i wykrywanie naruszeń rozporządzenia 561/2006. Możliwość skalowania od 1 do nieograniczonej liczby pojazdów.
     </p>
 <div class="anim-up" style="margin-bottom:16px;transition-delay:.15s">
-<a class="btn-cta" href="/pl/wyprobuj/?audience=fleet" rel="noopener" target="_blank">Wypróbuj za darmo przez 30 dni</a>
+<a class="btn-cta" href="/pl/wyprobuj/?audience=fleet" rel="noopener" target="_blank">Prosimy wypróbować za darmo przez 30 dni</a>
 </div>
-<p class="anim-up" style="font-size:15px;color:var(--text2);transition-delay:.2s">Windows · Bezpłatny 30-dniowy okres próbny · Gotowe na busy od lipca 2026</p>
+<p class="anim-up" style="font-size:15px;color:var(--text2);transition-delay:.2s">Windows · Bezpłatny 30-dniowy okres próbny · Gotowe dla pojazdów dostawczych od lipca 2026</p>
 <!-- Hero video -->
 <div class="media-frame anim-up" style="margin:44px auto 0;box-shadow:0 20px 40px rgba(0,0,0,.08);transition-delay:.25s;border-radius:20px;overflow:hidden">
 <video id="hero-vid" loop="" muted="" playsinline="" poster="https://cdn.truckmall.cz/data/user-content/TAGRA-monitory-2.webp" preload="metadata" style="width:100%;display:block">
@@ -569,13 +573,13 @@
 <div class="bc s7 fly-left">
 <div class="eyebrow" style="color:var(--blue-mid)">Pojazdy</div>
 <div class="bc-title">Od 1 do nieograniczonej liczby pojazdów</div>
-<div class="bc-text">Analiza i archiwizacja danych z tachografów cyfrowych i kart kierowców. Wybierz wersję dopasowaną do Twojej floty — od jednoosobowej działalności po duże firmy transportowe.</div>
+<div class="bc-text">Analiza i archiwizacja danych z tachografów cyfrowych i kart kierowców. Wybierzcie Państwo wersję dopasowaną do Państwa floty — od jednoosobowej działalności po duże firmy transportowe.</div>
 <div class="bignum">∞</div>
 </div>
 <div class="bc s5 bluefill fly-right" style="transition-delay:.1s">
 <div class="eyebrow" style="color:var(--blue-mid)">Okres próbny</div>
 <div class="bc-title">30 dni za darmo</div>
-<div class="bc-text">Pobierz, zainstaluj, wypróbuj. Bez karty kredytowej, bez zobowiązań.</div>
+<div class="bc-text">Pobieranie, instalacja i wypróbowanie. Bez karty kredytowej, bez zobowiązań.</div>
 </div>
 <div class="bc s4 greenfill fly-left" style="transition-delay:.15s">
 <div class="eyebrow">Od 2. roku</div>
@@ -602,10 +606,10 @@
 <div>
 <div class="eyebrow">Dostępne również</div>
 <p style="font-size:19px;font-weight:700;color:var(--text-strong);margin-top:4px">TAGRA Trucker — dla zawodowych kierowców</p>
-<p style="color:var(--text2);margin-top:6px;max-width:480px">Jesteś zatrudnionym zawodowym kierowcą i chcesz prowadzić własną ewidencję danych z karty? TAGRA Trucker został stworzony do indywidualnego pobierania i archiwizacji danych z karty kierowcy — przy użyciu standardowego czytnika kart USB.</p>
-<p style="color:var(--text2);margin-top:6px;max-width:480px;font-size:14.5px"><strong>Samozatrudniony lub właściciel-kierowca?</strong> Jesteś jednocześnie przedsiębiorstwem transportowym — potrzebujesz wersji, która pobiera <strong>zarówno</strong> dane z karty kierowcy, jak i z jednostki pojazdowej. Minimum to <a href="#tagra-pricing" style="color:var(--blue-mid);font-weight:600">TAGRA 1</a>.</p>
+<p style="color:var(--text2);margin-top:6px;max-width:480px">Są Państwo zatrudnionym zawodowym kierowcą i chcą Państwo prowadzić własną ewidencję danych z karty? TAGRA Trucker został stworzony do indywidualnego pobierania i archiwizacji danych z karty kierowcy — przy użyciu standardowego czytnika kart USB.</p>
+<p style="color:var(--text2);margin-top:6px;max-width:480px;font-size:14.5px"><strong>Samozatrudniony lub właściciel-kierowca?</strong> Są Państwo jednocześnie przedsiębiorstwem transportowym — potrzebują Państwo wersji, która pobiera <strong>zarówno</strong> dane z karty kierowcy, jak i z jednostki pojazdowej. Minimum to <a href="#tagra-pricing" style="color:var(--blue-mid);font-weight:600">TAGRA 1</a>.</p>
 </div>
-<a class="btn-cta btn-cta--sm" href="/pl/dla-kierowcow/" style="flex-shrink:0">Dowiedz się więcej o TAGRA Trucker →</a>
+<a class="btn-cta btn-cta--sm" href="/pl/dla-kierowcow/" style="flex-shrink:0">Dowiedzcie się Państwo więcej o TAGRA Trucker →</a>
 </div>
 </div>
 </section>
@@ -613,15 +617,15 @@
 <section aria-label="Opinie klientów" class="band band--gray">
 <div class="container">
 <div class="eyebrow anim-up">Co mówią klienci</div>
-<h2 class="anim-up">Zaufały nam tysiące przewoźników w całej UE</h2>
+<h2 class="anim-up">Stworzone z myślą o realiach europejskiego transportu drogowego w całej UE.</h2>
 </div>
 <div class="rev-rail-wrap anim-up" style="transition-delay:.05s">
 <div class="rev-rail" id="rev-rail">
-<div class="rev-card"><div aria-label="5 na 5" class="rev-stars">★★★★★</div><p class="rev-txt">"TAGRA radzi sobie z ogromną ilością danych i znacznie uprościła nam kontrolę naruszeń oraz archiwizację."</p><p class="rev-meta">David C. · Zweryfikowany klient</p></div>
-<div class="rev-card"><div aria-label="5 na 5" class="rev-stars">★★★★★</div><p class="rev-txt">"Korzystamy z TAGRA od kilku miesięcy — łatwe pobieranie i analiza, przejrzyste raporty. Nareszcie spokój."</p><p class="rev-meta">Patrik S. · Zweryfikowany klient</p></div>
-<div class="rev-card"><div aria-label="5 na 5" class="rev-stars">★★★★★</div><p class="rev-txt">"Oprogramowanie jest intuicyjne i łatwe w obsłudze. Gdy potrzebowałem pomocy, byli dla mnie dostępni."</p><p class="rev-meta">Milan K. · Zweryfikowany klient</p></div>
-<div class="rev-card"><div aria-label="5 na 5" class="rev-stars">★★★★★</div><p class="rev-txt">"Proste i przejrzyste. Pobieranie, analiza i archiwizacja danych zajmuje tylko kilka minut."</p><p class="rev-meta">Josef Z. · Zweryfikowany klient</p></div>
-<div class="rev-card"><div aria-label="5 na 5" class="rev-stars">★★★★★</div><p class="rev-txt">"TAGRA pozwala nam mieć pod kontrolą naruszenia i archiwizację. Naprawdę łatwo się z tym pracuje."</p><p class="rev-meta">Zweryfikowany klient TRUCKMALL</p></div>
+<div class="rev-card"><div aria-label="5 na 5" class="rev-stars">★★★★★</div><p class="rev-txt">„TAGRA radzi sobie z ogromną ilością danych i znacznie uprościła nam kontrolę naruszeń oraz archiwizację.”</p><p class="rev-meta">David C. · Zweryfikowany klient</p></div>
+<div class="rev-card"><div aria-label="5 na 5" class="rev-stars">★★★★★</div><p class="rev-txt">„Korzystamy z TAGRA od kilku miesięcy — łatwe pobieranie i analiza, przejrzyste raporty. Nareszcie spokój.”</p><p class="rev-meta">Patrik S. · Zweryfikowany klient</p></div>
+<div class="rev-card"><div aria-label="5 na 5" class="rev-stars">★★★★★</div><p class="rev-txt">„Oprogramowanie jest intuicyjne i łatwe w obsłudze. Gdy potrzebowałem pomocy, była ona dostępna.”</p><p class="rev-meta">Milan K. · Zweryfikowany klient</p></div>
+<div class="rev-card"><div aria-label="5 na 5" class="rev-stars">★★★★★</div><p class="rev-txt">„Proste i przejrzyste. Pobieranie, analiza i archiwizacja danych zajmują tylko kilka minut.”</p><p class="rev-meta">Josef Z. · Zweryfikowany klient</p></div>
+<div class="rev-card"><div aria-label="5 na 5" class="rev-stars">★★★★★</div><p class="rev-txt">„TAGRA pozwala nam kontrolować naruszenia i archiwizację. Naprawdę łatwo się z tym pracuje.”</p><p class="rev-meta">Zweryfikowany klient TRUCKMALL</p></div>
 </div>
 </div>
 </section>
@@ -632,7 +636,7 @@
 <div class="anim-up">
 <div class="eyebrow">Co robi TAGRA</div>
 <h2>Więcej niż tylko<br/>pobieranie danych</h2>
-<p style="margin-bottom:24px">Sam <strong>odczyt tachografu</strong> i pobieranie danych z karty kierowcy to za mało — prawo wymaga regularnej <strong>analizy danych z tachografu cyfrowego</strong> i archiwizacji. TAGRA to kompleksowe oprogramowanie do odczytu i analizy danych z tachografu z minimalnym nakładem administracyjnym, dla od 1 do nieograniczonej liczby pojazdów.</p>
+<p style="margin-bottom:24px">Sam <strong>odczyt tachografu</strong> i pobieranie danych z karty kierowcy to za mało — prawo wymaga regularnej <strong>analizy danych z tachografu cyfrowego</strong> i archiwizacji. TAGRA to kompleksowe oprogramowanie do odczytu i analizy danych z tachografu przy minimalnym nakładzie pracy administracyjnej, dla od 1 do nieograniczonej liczby pojazdów.</p>
 <div class="feats">
 <div class="fi"><div class="fck"><svg fill="none" height="8" viewbox="0 0 10 8" width="10"><path d="M1 4l2.5 2.5L9 1" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></div><span>Analiza <strong>czasu prowadzenia pojazdu w UE</strong>, przerw i odpoczynku (rozporządzenie 561/2006 i AETR)</span></div>
 <div class="fi"><div class="fck"><svg fill="none" height="8" viewbox="0 0 10 8" width="10"><path d="M1 4l2.5 2.5L9 1" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></div><span>Analiza czasu pracy zgodnie z <strong>dyrektywą o czasie pracy kierowców</strong></span></div>
@@ -641,7 +645,7 @@
 <div class="fi"><div class="fck"><svg fill="none" height="8" viewbox="0 0 10 8" width="10"><path d="M1 4l2.5 2.5L9 1" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></div><span><strong>W pełni gotowe na busy od lipca 2026</strong></span></div>
 <div class="fi"><div class="fck"><svg fill="none" height="8" viewbox="0 0 10 8" width="10"><path d="M1 4l2.5 2.5L9 1" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></div><span>Przejrzyste raporty dla organów kontrolnych i użytku wewnętrznego</span></div>
 </div>
-<p style="margin-top:20px;font-size:14.5px;color:var(--text2)">TAGRA nie rozlicza wynagrodzeń ani delegacji. Zajmuje się danymi z tachografu: pobieraniem, archiwizacją i wykrywaniem naruszeń czasu jazdy i odpoczynku zgodnie z rozporządzeniem 561/2006.</p>
+<p style="margin-top:20px;font-size:14.5px;color:var(--text2)">TAGRA nie rozlicza wynagrodzeń ani delegacji. Zajmuje się danymi z tachografu: pobieraniem, archiwizacją i wykrywaniem naruszeń czasu prowadzenia i okresów odpoczynku zgodnie z rozporządzeniem 561/2006.</p>
 </div>
 <div class="anim-up" style="transition-delay:.1s">
 <div class="media-frame" style="background:var(--bg-gray);border-radius:var(--radius);overflow:hidden">
@@ -660,7 +664,7 @@
 <div class="bento anim-up" style="margin-top:0;transition-delay:.1s">
 <div class="bc s6">
 <div class="eyebrow">Karty kierowców</div>
-<p>Karty muszą być pobierane co najmniej co <strong>28 dni.</strong> TAGRA ostrzega Cię przed upływem terminu.</p>
+<p>Karty muszą być pobierane co najmniej co <strong>28 dni.</strong> TAGRA ostrzega Państwa przed upływem terminu.</p>
 </div>
 <div class="bc s6">
 <div class="eyebrow">Jednostka pojazdowa</div>
@@ -672,7 +676,7 @@
 </div>
 <div class="bc s6">
 <div class="eyebrow">Busy</div>
-<p>Od <strong>lipca 2026</strong> dotyczy to pojazdów 2,5–3,5 t w transporcie międzynarodowym. Jesteśmy gotowi.</p>
+<p>Od <strong>lipca 2026</strong> Dotyczy to pojazdów 2,5–3,5 t w transporcie międzynarodowym. Jesteśmy gotowi.</p>
 </div>
 </div>
 </div>
@@ -681,8 +685,8 @@
 <section class="band">
 <div class="container">
 <div class="anim-up" style="text-align:center;max-width:780px;margin:0 auto">
-<h2>Zaufanie organów, które Cię kontrolują</h2>
-<p>TAGRA jest aktywnie wykorzystywana do analizy danych przez <strong>krajowe siły policyjne, administracje celne, inspekcje pracy, ministerstwa transportu i organy regionalne</strong> w całej Europie. Otrzymujesz dokładnie taką samą logikę analizy i format danych wyjściowych, jak kontrolerzy.</p>
+<h2>TAGRA Control jest wykorzystywany przez wybrane organy kontrolne</h2>
+<p>TAGRA jest aktywnie wykorzystywana do analizy danych przez <strong>krajowe siły policyjne, administracje celne, inspekcje pracy, ministerstwa transportu i organy regionalne</strong> w całej Europie. Otrzymują Państwo dokładnie taką samą logikę analizy i format danych wyjściowych jak organy kontrolne.</p>
 </div>
 </div>
 </section>
@@ -744,8 +748,8 @@
 <div aria-label="Powiadomienie o obowiązku prawnym" class="note-box anim-up" role="note">
 <span class="note-badge">Obowiązek prawny</span>
 <div class="note-title">Analiza i archiwizacja danych z tachografu są obowiązkowe</div>
-<p>Zgodnie z rozporządzeniem UE (WE) nr 561/2006, rozdział III, art. 10 ust. 2, analiza i archiwizacja danych z tachografu to ścisły obowiązek prawny dla przewoźników.</p>
-<p style="margin-bottom:0"><strong>Bez specjalistycznego rozwiązania ryzykujesz kary do 14 000 €</strong> ze strony organu ds. transportu — oraz do <strong>80 000 €</strong> za naruszenia czasu pracy kierowców.</p>
+<p>Zgodnie z rozporządzeniem (WE) nr 561/2006, rozdział III, art. 10 ust. 2, analiza i archiwizacja danych z tachografu stanowią ścisły obowiązek prawny przewoźników.</p>
+<p style="margin-bottom:0"><strong>Bez specjalistycznego rozwiązania ryzykują Państwo kary do 14 000 €</strong> ze strony organu ds. transportu — oraz do <strong>80 000 €</strong> za naruszenia czasu pracy kierowców.</p>
 </div>
 </div>
 </section>
@@ -754,31 +758,31 @@
 <div class="container">
 <div class="anim-up" style="text-align:center;max-width:680px;margin:0 auto 48px">
 <h2>WYPRÓBUJ TAGRA ZA DARMO PRZEZ 30 DNI</h2>
-<p style="font-size:19px;color:var(--text2);margin-top:8px">Pobierz, zainstaluj i korzystaj z pełnej wersji oprogramowania — bez karty kredytowej, bez zobowiązań.</p>
+<p style="font-size:19px;color:var(--text2);margin-top:8px">Pobieranie, instalacja i korzystanie z pełnej wersji oprogramowania — bez karty kredytowej, bez zobowiązań.</p>
 </div>
 <!-- How it works: 3-step flow -->
 <div class="three-col anim-up" style="transition-delay:.05s;max-width:900px;margin:0 auto 40px">
 <div style="text-align:center;padding:28px 20px">
 <div style="font-size:52px;font-weight:900;line-height:1;color:rgba(19,74,142,.12);margin-bottom:8px">1</div>
-<div style="font-size:18px;font-weight:800;color:var(--text-strong);margin-bottom:8px">Pobierz i zainstaluj</div>
-<p style="font-size:16px;color:var(--text2)">Pobierz instalator i uruchom TAGRA na Windows. Wersja próbna daje Ci pełne oprogramowanie — bez ograniczeń.</p>
+<div style="font-size:18px;font-weight:800;color:var(--text-strong);margin-bottom:8px">Pobieranie i instalacja</div>
+<p style="font-size:16px;color:var(--text2)">Pobranie instalatora i uruchomienie TAGRA na Windows. Wersja próbna daje Państwu pełne oprogramowanie — bez ograniczeń.</p>
 </div>
 <div style="text-align:center;padding:28px 20px;border-left:1px solid var(--border);border-right:1px solid var(--border)">
 <div style="font-size:52px;font-weight:900;line-height:1;color:rgba(19,74,142,.12);margin-bottom:8px">2</div>
 <div style="font-size:18px;font-weight:800;color:var(--text-strong);margin-bottom:8px">Testuj do 30 dni</div>
-<p style="font-size:16px;color:var(--text2)">Używaj TAGRA z prawdziwymi danymi. Wybierz, ile pojazdów potrzebujesz — 1, 2, 4, 6 lub bez limitu. Oprogramowanie przeprowadzi Cię przez cały proces.</p>
+<p style="font-size:16px;color:var(--text2)">Używanie TAGRA z prawdziwymi danymi. Należy wybrać, ile pojazdów jest potrzebnych — 1, 2, 4, 6 lub bez limitu. Oprogramowanie przeprowadzi Państwa przez cały proces.</p>
 </div>
 <div style="text-align:center;padding:28px 20px">
 <div style="font-size:52px;font-weight:900;line-height:1;color:rgba(19,74,142,.12);margin-bottom:8px">3</div>
 <div style="font-size:18px;font-weight:800;color:var(--text-strong);margin-bottom:8px">Aktywuj licencję</div>
-<p style="font-size:16px;color:var(--text2)">Gdy będziesz gotowy, wybierz swoją wersję bezpośrednio w oprogramowaniu i zapłać online. Licencja zostaje wydana natychmiast — kontynuujesz pracę w tym samym środowisku.</p>
+<p style="font-size:16px;color:var(--text2)">Gdy będą Państwo gotowi, prosimy wybrać swoją wersję bezpośrednio w oprogramowaniu i zapłacić online. Licencja zostaje wydana natychmiast — kontynuują Państwo pracę w tym samym środowisku.</p>
 </div>
 </div>
 <div class="anim-up" style="text-align:center;transition-delay:.1s">
 <a class="btn-cta" href="/pl/wyprobuj/?audience=fleet" rel="noopener" target="_blank">
-        Pobierz wersję próbną
+        Pobieranie wersji próbnej
       </a>
-<p style="margin-top:14px;font-size:15px;color:var(--text2)">Windows · Za darmo · Bez rejestracji</p>
+<p style="margin-top:14px;font-size:15px;color:var(--text2)">Windows · Za darmo · Bez karty kredytowej</p>
 </div>
 </div>
 </section>
@@ -791,16 +795,16 @@
 <div class="eyebrow">Korzystasz już z telematyki?</div>
 <h2>DKV LIVE®<br/>importuje automatycznie</h2>
 <p style="margin-bottom:16px">Jeśli już korzystasz z <strong>DKV LIVE®</strong> do <strong>zdalnego pobierania danych z tachografu</strong>, TAGRA pobiera dane bezpośrednio z bezpiecznego serwera SFTP DKV — bez ręcznego przesyłania plików, bez obchodzenia pojazdów.</p>
-<p style="margin-bottom:24px">Ustaw harmonogram raz (codziennie, co godzinę, jak Ci pasuje), a każdy plik z kartą kierowcy i danymi pojazdu trafi do TAGRA, gotowy do analizy i archiwizacji.</p>
-<a class="btn-cta btn-cta--sm" href="/pl/integracje/dkv-live/">Zobacz przewodnik konfiguracji DKV LIVE</a>
+<p style="margin-bottom:24px">Należy jednorazowo ustawić harmonogram (codziennie, co godzinę — zgodnie z Państwa potrzebami), a każdy plik z karty kierowcy i dane pojazdu trafią do TAGRA, gotowe do analizy i archiwizacji.</p>
+<a class="btn-cta btn-cta--sm" href="/pl/integracje/dkv-live/">Przewodnik konfiguracji DKV LIVE</a>
 </div>
 <div class="anim-up" style="transition-delay:.1s">
 <div class="note-box">
 <span class="note-badge">Jak to działa</span>
 <span class="note-title">Oparte na SFTP, działa w tle</span>
-<p>Funkcja <strong>Import danych</strong> w TAGRA łączy się z <code>sftp.styletronic.eu</code> przy użyciu Twoich danych logowania DKV LIVE® i pobiera najnowsze pliki <code>.DDD</code> / <code>.C1B</code> / <code>.V1B</code> zgodnie z ustawionym harmonogramem. Od wersji 345 dołączone do każdej licencji TAGRA.</p>
+<p>Funkcja <strong>Import danych</strong> w TAGRA łączy się z <code>sftp.styletronic.eu</code> przy użyciu Państwa danych logowania DKV LIVE® i pobiera najnowsze pliki <code>.DDD</code> / <code>.C1B</code> / <code>.V1B</code> zgodnie z ustawionym harmonogramem. Od wersji 345 funkcja jest dołączona do każdej licencji TAGRA.</p>
 <p style="font-size:14px;color:var(--text-muted);margin-top:12px;font-style:italic">DKV LIVE® jest znakiem towarowym DKV Mobility. Integracja TAGRA to funkcja interoperacyjności technicznej.</p>
-</div><div class="warning-box" style="margin-top:28px"><p class="warning-box__title">Dlaczego dokumentacja jest Twoją obroną</p><p>Art. 10 ust. 3 czyni przewoźnika odpowiedzialnym za naruszenia popełnione przez kierowców — również te za granicą. Ten sam artykuł pozwala jednak państwom członkowskim uwzględnić <strong>dowód, że przewoźnika nie można racjonalnie obarczyć odpowiedzialnością</strong>. Właśnie takiego dowodu wymaga art. 10 ust. 2: potwierdzenia, że kierowcy zostali przeszkoleni i że prowadzisz regularne kontrole.</p><p>Inspektor nie oczekuje zera naruszeń. Sprawdza, czy naruszenia zostały <strong>wykryte, zbadane i rozwiązane</strong>. TAGRA tworzy raport naruszeń, który przekazujesz kierowcy i zachowujesz w dokumentacji — dokument zamieniający "nasz kierowca złamał przepisy" w "wykryliśmy to i zajęliśmy się tym".</p></div>
+</div><div class="warning-box" style="margin-top:28px"><p class="warning-box__title">Dlaczego dokumentacja jest Państwa obroną</p><p>Art. 10 ust. 3 czyni przewoźnika odpowiedzialnym za naruszenia popełnione przez kierowców — również te za granicą. Ten sam artykuł pozwala jednak państwom członkowskim uwzględnić <strong>dowód, że przewoźnika nie można racjonalnie obarczyć odpowiedzialnością</strong>. Właśnie takiego dowodu wymaga art. 10 ust. 2: potwierdzenia, że kierowcy zostali przeszkoleni i że prowadzą Państwo regularne kontrole.</p><p>Inspektor nie oczekuje zera naruszeń. Sprawdza, czy naruszenia zostały <strong>wykryte, zbadane i rozwiązane</strong>. TAGRA tworzy raport naruszeń, który przekazują Państwo kierowcy i zachowują w dokumentacji — dokument zamieniający „nasz kierowca złamał przepisy” w „wykryliśmy to i zajęliśmy się tym”.</p></div>
 </div>
 </div>
 </div>
@@ -808,7 +812,7 @@
 <section aria-label="Metody pobierania danych" class="band band--gray" style="padding-top:0">
 <div class="container">
 <div class="anim-up" style="text-align:center;margin-bottom:48px">
-<div class="eyebrow" style="color:var(--blue-mid);letter-spacing:.12em">Lub pobierz ręcznie</div>
+<div class="eyebrow" style="color:var(--blue-mid);letter-spacing:.12em">Lub pobieranie ręczne</div>
 </div>
 <div class="g2 top anim-up" style="gap:60px;align-items:center">
 <!-- Left: image -->
@@ -828,14 +832,14 @@
 <div class="fi"><div class="fck"><svg fill="none" height="8" viewbox="0 0 10 8" width="10"><path d="M1 4l2.5 2.5L9 1" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></div><span>Kompaktowe, przenośne — działa w pojeździe lub w biurze</span></div>
 <div class="fi"><div class="fck"><svg fill="none" height="8" viewbox="0 0 10 8" width="10"><path d="M1 4l2.5 2.5L9 1" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></div><span>Kompatybilne ze wszystkimi tachografami cyfrowymi, w tym G2V2</span></div>
 </div>
-<a href="mailto:sales@tagra.app" style="display:inline-block;margin-top:24px">Zapytaj o dostępność →</a><p style="font-size:14px;color:var(--text2);margin-top:10px;max-width:420px">Sprzęt dostarczamy obecnie bezpośrednio. Napisz na sales@tagra.app — powiemy, co jest dostępne w Twoim kraju.</p>
+<a href="mailto:sales@tagra.app" style="display:inline-block;margin-top:24px">Zapytaj o dostępność →</a><p style="font-size:14px;color:var(--text2);margin-top:10px;max-width:420px">Sprzęt dostarczamy obecnie bezpośrednio. Prosimy napisać na sales@tagra.app — poinformujemy, co jest dostępne w Państwa kraju.</p>
 </div>
 </div>
 <div aria-label="Powiadomienie o karcie przedsiębiorstwa" class="note-box anim-up" role="note" style="margin-top:72px">
 <span class="note-badge">Ważna informacja</span>
-<div class="note-title">Do pobrania danych z pojazdu wymagana jest karta przedsiębiorstwa</div>
-<p>Bez włożonej <strong>karty przedsiębiorstwa</strong> tachograf nie pozwoli na pobranie danych z pojazdu. Działa ona jak elektroniczny klucz, autoryzujący dostęp do danych Twojej firmy.</p>
-<p>Karta jest wydawana przez właściwy krajowy organ transportowy i jest ważna przez 5 lat. Upewnij się, że złożysz wniosek odpowiednio wcześnie.</p>
+<div class="note-title">Do pobrania danych z pojazdu wymagana jest karta przedsiębiorstwa.</div>
+<p>Bez włożonej <strong>karty przedsiębiorstwa</strong> Tachograf nie pozwoli na pobranie danych z pojazdu. Karta działa jak elektroniczny klucz, autoryzujący dostęp do danych Państwa firmy.</p>
+<p>Karta jest wydawana przez właściwy krajowy organ transportowy i jest ważna przez 5 lat. Należy złożyć wniosek odpowiednio wcześnie.</p>
 </div>
 </div>
 </section>
@@ -847,7 +851,7 @@
 <div class="callout callout--plain">
 <div class="eyebrow">Cena i warunki</div>
 <h2 style="text-transform:none">Przejrzyste ceny.<br/>Bez ukrytych opłat.</h2>
-<p style="margin:16px 0 24px">Zacznij od bezpłatnej wersji próbnej. Gdy będziesz gotowy, wybierz swoją wersję bezpośrednio w oprogramowaniu i zapłać online — licencja zostaje wydana natychmiast.</p>
+<p style="margin:16px 0 24px">Prosimy zacząć od bezpłatnej wersji próbnej. Gdy będą Państwo gotowi, prosimy wybrać odpowiednią wersję bezpośrednio w oprogramowaniu i zapłacić online — licencja zostanie wydana natychmiast.</p>
 <!-- Version price table -->
 <div class="price-table-wrap" style="width:100%;overflow-x:auto;margin-bottom:24px">
 <table class="price-table" style="width:100%;border-collapse:collapse;font-size:16px">
@@ -905,9 +909,9 @@
 <div class="spec"><span class="sk">Zawiera</span><span class="sv">Aktualizacje i wsparcie</span></div>
 <div class="spec"><span class="sk">Płatność</span><span class="sv">Online · kod QR</span></div>
 </div>
-<p style="margin-top:12px">Masz pytania? <a href="tel:+420739005345">+420 739 005 345</a> · <a href="mailto:sales@tagra.app">sales@tagra.app</a></p>
+<p style="margin-top:12px">Mają Państwo pytania? <a href="tel:+420739005345">+420 739 005 345</a> · <a href="mailto:sales@tagra.app">sales@tagra.app</a></p>
 <div style="margin-top:24px">
-<a class="btn-cta btn-cta--sm" href="/pl/wyprobuj/?audience=fleet" rel="noopener" target="_blank">Pobierz wersję próbną</a>
+<a class="btn-cta btn-cta--sm" href="/pl/wyprobuj/?audience=fleet" rel="noopener" target="_blank">Pobieranie wersji próbnej</a>
 </div>
 </div>
 </div>
@@ -927,11 +931,11 @@
 <div class="faq anim-up" style="transition-delay:.05s">
 <details>
 <summary>Jak kupić TAGRA po zakończeniu okresu próbnego?</summary>
-<div class="faq-a">Wszystko odbywa się bezpośrednio w oprogramowaniu. Pod koniec okresu próbnego — lub kiedy tylko będziesz gotowy — otwórz menu licencji, wybierz wersję odpowiadającą liczbie Twoich pojazdów (TAGRA 1, 2, 4, 6 lub MAX) i zapłać online. Płatność odbywa się kodem QR lub przelewem online. Licencja jest wydawana i aktywowana natychmiast — kontynuujesz pracę w tym samym środowisku, ze wszystkimi swoimi danymi.</div>
+<div class="faq-a">Wszystko odbywa się bezpośrednio w oprogramowaniu. Pod koniec okresu próbnego — lub gdy tylko będą Państwo gotowi — należy otworzyć menu licencji, wybrać wersję odpowiadającą liczbie Państwa pojazdów (TAGRA 1, 2, 4, 6 lub MAX) i zapłacić online. Płatność odbywa się za pomocą kodu QR lub przelewu online. Licencja jest wydawana i aktywowana natychmiast — mogą Państwo kontynuować pracę w tym samym środowisku, ze wszystkimi swoimi danymi.</div>
 </details>
 <details>
 <summary>Dla kogo przeznaczona jest TAGRA?</summary>
-<div class="faq-a">TAGRA to <strong>oprogramowanie do analizy danych z tachografu</strong> przeznaczone dla każdego przewoźnika zobowiązanego do <strong>pobierania kart kierowców</strong>, analizy i archiwizacji — od jednoosobowej działalności z jednym pojazdem po duże floty liczące setki pojazdów. Wybierz wersję odpowiadającą liczbie Twoich pojazdów: TAGRA 1, 2, 4, 6 lub MAX (bez limitu).</div>
+<div class="faq-a">TAGRA to <strong>oprogramowanie do analizy danych z tachografu</strong> przeznaczone dla każdego przewoźnika zobowiązanego do <strong>pobierania kart kierowców</strong>, analizy i archiwizacji — od jednoosobowej działalności z jednym pojazdem po duże floty liczące setki pojazdów. Proszę wybrać wersję odpowiadającą liczbie Państwa pojazdów: TAGRA 1, 2, 4, 6 lub MAX (bez limitu).</div>
 </details>
 <details>
 <summary>Jak wprowadzić dane do oprogramowania?</summary>
@@ -943,7 +947,7 @@
 </details>
 <details>
 <summary>Jakie formaty plików obsługuje TAGRA?</summary>
-<div class="faq-a">Dane z tachografu są najczęściej zapisywane jako pliki <strong>.DDD</strong>. W niektórych krajach używane są też <strong>.C1B</strong> (karta kierowcy) oraz <strong>.V1B</strong> lub <strong>ESM</strong> (pojazd). Tych plików <strong>nie można otworzyć standardową przeglądarką</strong> — do prawidłowej analizy danych z tachografu cyfrowego potrzebujesz dedykowanego <strong>oprogramowania do analizy danych z tachografu</strong>, takiego jak TAGRA.</div>
+<div class="faq-a">Dane z tachografu są najczęściej zapisywane jako pliki <strong>.DDD</strong>. W niektórych krajach używane są też <strong>.C1B</strong> (karta kierowcy) oraz <strong>.V1B</strong> lub <strong>ESM</strong> (pojazd). Tych plików <strong>nie można otworzyć standardową przeglądarką</strong> — do prawidłowej analizy danych z tachografu cyfrowego potrzebują Państwo dedykowanego <strong>oprogramowania do analizy danych z tachografu</strong>, takiego jak TAGRA.</div>
 </details>
 <details>
 <summary>Co obejmuje roczna opłata licencyjna?</summary>
@@ -951,7 +955,7 @@
 </details>
 <details>
 <summary>Czy TAGRA jest gotowa na obowiązek dla busów od lipca 2026?</summary>
-<div class="faq-a">Tak. Wszystkie wersje TAGRA są w pełni przygotowane na busy (pojazdy 2,5–3,5 t w transporcie międzynarodowym), których od lipca 2026 zgodnie z przepisami UE będzie dotyczyć nowy obowiązek montażu tachografu cyfrowego i regularnego pobierania danych.</div>
+<div class="faq-a">Tak. Wszystkie wersje TAGRA są w pełni przygotowane do obsługi pojazdów dostawczych (pojazdów 2,5–3,5 t w transporcie międzynarodowym), których od lipca 2026 r., zgodnie z przepisami UE, będzie dotyczył nowy obowiązek montażu tachografu cyfrowego i regularnego pobierania danych.</div>
 </details>
 <details>
 <summary>Czy TAGRA obsługuje inteligentne tachografy drugiej generacji V2?</summary>
@@ -959,7 +963,7 @@
 </details>
 <details>
 <summary>Czy TAGRA można zainstalować na kilku komputerach?</summary>
-<div class="faq-a">Każda licencja jest przypisana do jednego konkretnego komputera. Jeśli potrzebujesz przenieść oprogramowanie na inny komputer, skontaktuj się z producentem Truck Data Technology, aby ustalić przeniesienie licencji. Wersje sieciowe (TAGRA 4, 6, MAX) obsługują wiele stanowisk współdzielących centralną bazę danych — skontaktuj się z nami, aby poznać szczegóły.</div>
+<div class="faq-a">Każda licencja jest przypisana do jednego konkretnego komputera. Jeśli potrzebują Państwo przenieść oprogramowanie na inny komputer, prosimy skontaktować się z producentem Truck Data Technology, aby ustalić przeniesienie licencji. Wersje sieciowe (TAGRA 4, 6, MAX) obsługują wiele stanowisk współdzielących centralną bazę danych — prosimy skontaktować się z nami, aby poznać szczegóły.</div>
 </details>
 </div>
 </div>
@@ -967,19 +971,19 @@
 <!-- ═══ FURTHER READING ═══════════════════════════════════════════ -->
 <section aria-label="Powiązane przewodniki i artykuły" class="band band--gray">
 <div class="container anim-up">
-<div class="eyebrow">Dowiedz się więcej</div>
+<div class="eyebrow">Dowiedzcie się Państwo więcej</div>
 <h2>Dalsza lektura</h2>
 <a class="related-featured" href="/pl/poradnik/pobieranie-analiza-danych-tachografu/" rel="noopener" target="_blank">
 <span class="related-badge">Kompletny przewodnik</span>
 <span class="related-title">Tachograf cyfrowy: jak poprawnie pobierać, analizować i archiwizować dane</span>
-<span class="related-text">Przeczytaj kompletny przewodnik zgodności dla przewoźników. Dowiedz się dokładnie, co musisz zrobić, aby każda kontrola przebiegła bez kary i stresu.</span>
+<span class="related-text">Kompletny przewodnik zgodności dla przewoźników. Szczegółowe informacje o tym, co należy zrobić, aby każda kontrola przebiegła bez kary i stresu.</span>
 <span class="article-chip">Przeczytaj przewodnik →</span>
 </a>
 <div class="article-grid">
 <a class="article-card" href="/pl/poradnik/tachograf-w-busach-obowiazek-lipiec-2026/" rel="noopener" target="_blank">
 <span class="article-eyebrow">Nowe przepisy</span>
 <span class="article-title">Tachograf w busach: nowy obowiązek od lipca 2026</span>
-<span class="article-meta">Kogo dokładnie dotyczy i co jako przewoźnik musisz przygotować z wyprzedzeniem.</span>
+<span class="article-meta">Kogo dokładnie dotyczy i co jako przewoźnik muszą Państwo przygotować z wyprzedzeniem.</span>
 <span class="article-chip">Przeczytaj o tachografach dla busów 2026 →</span>
 </a>
 <a class="article-card" href="/pl/poradnik/obowiazek-analizy-tachografu-2026/" rel="noopener" target="_blank">
@@ -991,13 +995,13 @@
 <a class="article-card" href="/pl/poradnik/pobieranie-analiza-danych-tachografu/">
 <span class="article-eyebrow">Przegląd rozwiązania</span>
 <span class="article-title">Zdalne pobieranie danych: TAGRA + Download Box Remote</span>
-<span class="article-meta">Dowiedz się, jak w praktyce działa w pełni automatyczne pobieranie danych bez konieczności odwiedzania pojazdów.</span>
+<span class="article-meta">Więcej informacji o tym, jak w praktyce działa w pełni automatyczne pobieranie danych bez konieczności odwiedzania pojazdów.</span>
 <span class="article-chip">Przeczytaj o zdalnym pobieraniu danych z tachografu →</span>
 </a>
 <a class="article-card" href="/pl/poradnik/symbole-tachografu/">
 <span class="article-eyebrow">Baza wiedzy dla kierowców</span>
 <span class="article-title">Symbole tachografu: znaczenie ikon cyfrowych wyjaśnione</span>
-<span class="article-meta">Przewodnik referencyjny dla Twoich kierowców — cztery symbole aktywności, ikony kart, symbole ostrzegawcze i typowe błędy.</span>
+<span class="article-meta">Przewodnik referencyjny dla Państwa kierowców — cztery symbole aktywności, ikony kart, symbole ostrzegawcze i typowe błędy.</span>
 <span class="article-chip">Przeczytaj przewodnik po symbolach →</span>
 </a>
 </div>
@@ -1021,7 +1025,7 @@
 <div class="footer-inner">
 <div>
 <div class="footer-logo"><img alt="TAGRA" height="20" src="/assets/img/logo-dark.svg?v=20260513zh" width="88" loading="lazy"/></div>
-<p class="footer-desc">Profesjonalne oprogramowanie do analizy danych z tachografów. Pobieranie danych z kart kierowców, analiza danych z tachografów cyfrowych, unijne przepisy o czasie prowadzenia pojazdu i odpoczynku oraz dyrektywa o czasie pracy w transporcie drogowym. Opracowane przez Truck Data Technology, s.r.o.</p>
+<p class="footer-desc">Profesjonalne oprogramowanie do analizy danych z tachografów. Pobieranie danych z kart kierowców, analiza danych z tachografów cyfrowych, unijne przepisy dotyczące czasu prowadzenia pojazdu i okresów odpoczynku oraz dyrektywa o czasie pracy w transporcie drogowym. Opracowane przez Truck Data Technology, s.r.o.</p>
 </div>
 <div class="footer-col">
 <h2 class="footer-col-title">Produkt</h2>
@@ -1057,8 +1061,8 @@
 </footer>
 <div aria-label="Szybka rejestracja do wersji próbnej" class="sticky-cta" id="stickyCta" role="complementary">
 <div class="sticky-cta-inner">
-<span class="sticky-cta-text">Gotowy, aby zacząć? Wypróbuj TAGRA za darmo przez 30 dni.</span>
-<a class="sticky-cta-btn" href="/pl/wyprobuj/?audience=fleet">Wypróbuj za darmo →</a>
+<span class="sticky-cta-text">Gotowi, aby zacząć? Można bezpłatnie wypróbować TAGRA przez 30 dni.</span>
+<a class="sticky-cta-btn" href="/pl/wyprobuj/?audience=fleet">Wersja próbna za darmo →</a>
 <button aria-label="Zamknij" class="sticky-cta-close" id="stickyCtaClose">×</button>
 </div>
 </div>
@@ -1190,7 +1194,7 @@
   "name": "TAGRA – program do odczytu i pobierania danych z tachografu cyfrowego",
   "applicationCategory": "BusinessApplication",
   "operatingSystem": "Windows",
-  "description": "Program do odczytu i pobierania danych z tachografu cyfrowego dla firm transportowych. Pobieranie kart kierowców, analiza danych z tachografu cyfrowego, archiwizacja plików DDD i zdalne pobieranie danych z tachografu dla od 1 do nieograniczonej liczby pojazdów. Wykrywa naruszenia czasu prowadzenia pojazdu w UE (rozporządzenie 561/2006), AETR oraz dyrektywy o czasie pracy kierowców. Bezpłatny 30-dniowy okres próbny. Gotowe na busy od lipca 2026.",
+  "description": "Program do odczytu i pobierania danych z tachografu cyfrowego dla firm transportowych. Pobieranie danych z kart kierowców, analiza danych z tachografu cyfrowego, archiwizacja plików DDD i zdalne pobieranie danych z tachografu dla floty liczącej od 1 do nieograniczonej liczby pojazdów. Wykrywa naruszenia czasu prowadzenia w UE (rozporządzenie 561/2006), AETR oraz dyrektywy o czasie pracy kierowców. Bezpłatny 30-dniowy okres próbny. Gotowe do obsługi pojazdów dostawczych od lipca 2026.",
   "url": "https://tagra.app/pl/dla-przewoznikow/",
   "inLanguage": "pl",
   "author": { "@type": "Organization", "name": "Truck Data Technology, s.r.o.", "url": "https://www.tdt.cz" },
@@ -1208,7 +1212,7 @@
       "name": "Jak kupić TAGRA po zakończeniu okresu próbnego?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Wszystko odbywa się bezpośrednio w oprogramowaniu. Pod koniec okresu próbnego — lub kiedy tylko będziesz gotowy — otwórz menu licencji, wybierz wersję odpowiadającą liczbie Twoich pojazdów (TAGRA 1, 2, 4, 6 lub MAX) i zapłać online. Płatność odbywa się kodem QR lub przelewem online. Licencja jest wydawana i aktywowana natychmiast — kontynuujesz pracę w tym samym środowisku, ze wszystkimi swoimi danymi."
+        "text": "Wszystko odbywa się bezpośrednio w oprogramowaniu. Pod koniec okresu próbnego — lub gdy tylko będą Państwo gotowi — należy otworzyć menu licencji, wybrać wersję odpowiadającą liczbie Państwa pojazdów (TAGRA 1, 2, 4, 6 lub MAX) i zapłacić online. Płatność odbywa się za pomocą kodu QR lub przelewu online. Licencja jest wydawana i aktywowana natychmiast — mogą Państwo kontynuować pracę w tym samym środowisku, ze wszystkimi swoimi danymi."
       }
     },
     {
@@ -1216,7 +1220,7 @@
       "name": "Dla kogo przeznaczona jest TAGRA?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "TAGRA to oprogramowanie do analizy danych z tachografu przeznaczone dla każdego przewoźnika zobowiązanego do pobierania kart kierowców, analizy i archiwizacji — od jednoosobowej działalności z jednym pojazdem po duże floty liczące setki pojazdów. Wybierz wersję odpowiadającą liczbie Twoich pojazdów: TAGRA 1, 2, 4, 6 lub MAX (bez limitu)."
+        "text": "TAGRA to oprogramowanie do analizy danych z tachografu przeznaczone dla każdego przewoźnika zobowiązanego do pobierania danych z kart kierowców, analizy i archiwizacji — od jednoosobowej działalności z jednym pojazdem po duże floty liczące setki pojazdów. Należy wybrać wersję odpowiadającą liczbie Państwa pojazdów: TAGRA 1, 2, 4, 6 lub MAX (bez limitu)."
       }
     },
     {
@@ -1232,7 +1236,7 @@
       "name": "Jak często trzeba pobierać dane?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Karty kierowców co najmniej co 28 dni, a jednostkę pojazdową co najmniej co 90 dni. Pobrane dane trzeba przechowywać przez co najmniej 1 rok."
+        "text": "Dane z kart kierowców należy pobierać co najmniej co 28 dni, a z jednostki pojazdowej co najmniej co 90 dni. Pobrane dane trzeba przechowywać przez co najmniej 1 rok."
       }
     },
     {
@@ -1240,7 +1244,7 @@
       "name": "Jakie formaty plików obsługuje TAGRA?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Dane z tachografu są najczęściej zapisywane jako pliki .DDD. W niektórych krajach używane są też .C1B (karta kierowcy) oraz .V1B lub ESM (pojazd). Tych plików nie można otworzyć standardową przeglądarką — do prawidłowej analizy danych z tachografu cyfrowego potrzebujesz dedykowanego oprogramowania do analizy danych z tachografu, takiego jak TAGRA."
+        "text": "Dane z tachografu są najczęściej zapisywane jako pliki .DDD. W niektórych krajach używane są też pliki .C1B (karta kierowcy) oraz .V1B lub ESM (pojazd). Plików tych nie można otworzyć standardową przeglądarką — do prawidłowej analizy danych z tachografu cyfrowego potrzebne jest dedykowane oprogramowanie, takie jak TAGRA."
       }
     },
     {
@@ -1256,7 +1260,7 @@
       "name": "Czy TAGRA jest gotowa na obowiązek dla busów od lipca 2026?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Tak. Wszystkie wersje TAGRA są w pełni przygotowane na busy (pojazdy 2,5–3,5 t w transporcie międzynarodowym), których od lipca 2026 zgodnie z przepisami UE będzie dotyczyć nowy obowiązek montażu tachografu cyfrowego i regularnego pobierania danych."
+        "text": "Tak. Wszystkie wersje TAGRA są w pełni przygotowane do obsługi pojazdów dostawczych (pojazdów 2,5–3,5 t w transporcie międzynarodowym), których od lipca 2026 r., zgodnie z przepisami UE, będzie dotyczył nowy obowiązek montażu tachografu cyfrowego i regularnego pobierania danych."
       }
     },
     {
@@ -1272,7 +1276,7 @@
       "name": "Czy TAGRA można zainstalować na kilku komputerach?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Każda licencja jest przypisana do jednego konkretnego komputera. Jeśli potrzebujesz przenieść oprogramowanie na inny komputer, skontaktuj się z producentem Truck Data Technology, aby ustalić przeniesienie licencji. Wersje sieciowe (TAGRA 4, 6, MAX) obsługują wiele stanowisk współdzielących centralną bazę danych — skontaktuj się z nami, aby poznać szczegóły."
+        "text": "Każda licencja jest przypisana do jednego konkretnego komputera. Jeśli potrzebują Państwo przenieść oprogramowanie na inny komputer, prosimy skontaktować się z producentem Truck Data Technology, aby ustalić przeniesienie licencji. Wersje sieciowe (TAGRA 4, 6, MAX) obsługują wiele stanowisk współdzielących centralną bazę danych — prosimy skontaktować się z nami, aby poznać szczegóły."
       }
     }
   ]

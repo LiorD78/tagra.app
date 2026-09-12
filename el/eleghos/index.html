@@ -45,6 +45,10 @@
       var m={cz:'cs',cs:'cs',sk:'sk',de:'de',pl:'pl',gr:'el',el:'el',hu:'hu',en:'en'};return m[l]||'en';}
     var T={
       hu:{t:'Analitikai s\u00fctiket haszn\u00e1lunk (Google Analytics, Microsoft Clarity, Smartsupp), hogy meg\u00e9rts\u00fck a webhely haszn\u00e1lat\u00e1t. Csak az \u00d6n hozz\u00e1j\u00e1rul\u00e1s\u00e1val t\u00f6lt\u0151dnek be.',a:'Elfogadom',r:'Elutas\u00edtom',p:'Adatv\u00e9delem \u00e9s s\u00fctik'},
+      ro:{t:'Utilizăm module cookie de analiză (Google Analytics, Microsoft Clarity, Smartsupp) pentru a înțelege modul de utilizare a site-ului. Se încarcă doar cu consimțământul dumneavoastră.',a:'Accept',r:'Refuz',p:'Confidențialitate și cookie-uri'},
+      nl:{t:'We gebruiken analytische cookies (Google Analytics, Microsoft Clarity, Smartsupp) om het gebruik van de site te begrijpen. Ze laden alleen met uw toestemming.',a:'Accepteren',r:'Weigeren',p:'Privacy en cookies'},
+      fr:{t:'Nous utilisons des cookies analytiques (Google Analytics, Microsoft Clarity, Smartsupp) pour comprendre l’utilisation du site. Ils ne se chargent qu’avec votre consentement.',a:'Accepter',r:'Refuser',p:'Confidentialité et cookies'},
+      it:{t:'Utilizziamo cookie analitici (Google Analytics, Microsoft Clarity, Smartsupp) per capire l’utilizzo del sito. Si caricano solo con il Suo consenso.',a:'Accetta',r:'Rifiuta',p:'Privacy e cookie'},
       en:{t:'We use analytics cookies (Google Analytics, Microsoft Clarity, Smartsupp) to understand site usage. They load only with your consent.',a:'Accept',r:'Reject',p:'Privacy &amp; cookies'},
       cs:{t:'Pou\u017e\u00edv\u00e1me analytick\u00e9 cookies (Google Analytics, Microsoft Clarity, Smartsupp) k pochopen\u00ed pou\u017e\u00edv\u00e1n\u00ed webu. Na\u010dtou se jen s va\u0161\u00edm souhlasem.',a:'P\u0159ijmout',r:'Odm\u00edtnout',p:'Soukrom\u00ed a cookies'},
       sk:{t:'Pou\u017e\u00edvame analytick\u00e9 cookies (Google Analytics, Microsoft Clarity, Smartsupp) na pochopenie pou\u017e\u00edvania webu. Na\u010d\u00edtaj\u00fa sa len s va\u0161\u00edm s\u00fahlasom.',a:'Prija\u0165',r:'Odmietnu\u0165',p:'S\u00fakromie a cookies'},
@@ -75,24 +79,26 @@
 <!-- TMX-ANALYTICS END -->
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>TAGRA Control – Λογισμικό για Ελεγκτικές Αρχές | Ανάλυση Ταχογράφου</title>
-<meta content="TAGRA Control: λογισμικό ανάλυσης δεδομένων ταχογράφου για καθ' οδόν ελέγχους και ελέγχους σε επιχειρήσεις. Για αστυνομία και ελεγκτικές αρχές." name="description"/>
+<title>TAGRA Control – Λογισμικό ανάλυσης ταχογράφου για ελεγκτές</title>
+<meta content="TAGRA Control: λογισμικό ανάλυσης δεδομένων ταχογράφου για επιτόπιους ελέγχους και ελέγχους σε επιχειρήσεις. Για την αστυνομία και τις ελεγκτικές αρχές." name="description"/>
 <meta content="#0b2c4a" name="theme-color"/>
 <link href="/manifest.json" rel="manifest"/>
 <link href="https://tagra.app/el/eleghos/" rel="canonical"/>
+<link href="https://tagra.app/de/kontrollbehoerden/" hreflang="de" rel="alternate"/><link href="https://tagra.app/el/eleghos/" hreflang="el" rel="alternate"/><link href="https://tagra.app/enforcement/" hreflang="en" rel="alternate"/><link href="https://tagra.app/fr/autorites-de-controle/" hreflang="fr" rel="alternate"/><link href="https://tagra.app/hu/hatosagoknak/" hreflang="hu" rel="alternate"/><link href="https://tagra.app/it/organi-di-controllo/" hreflang="it" rel="alternate"/><link href="https://tagra.app/nl/handhaving/" hreflang="nl" rel="alternate"/><link href="https://tagra.app/pl/organy-kontrolne/" hreflang="pl" rel="alternate"/>
+<link href="https://tagra.app/ro/autoritati-de-control/" hreflang="ro" rel="alternate"/><link href="https://tagra.app/enforcement/" hreflang="x-default" rel="alternate"/>
 <meta content="website" property="og:type"/>
 <meta content="TAGRA Control – Λογισμικό για Ελεγκτικές Αρχές" property="og:title"/>
-<meta content="Επαγγελματικό λογισμικό ανάλυσης δεδομένων ταχογράφου για οδικούς ελέγχους και ελέγχους επιχειρήσεων. Χρησιμοποιείται από την Αστυνομία, τα Τελωνεία και τις Επιθεωρήσεις Εργασίας σε όλη την Κεντρική Ευρώπη." property="og:description"/>
+<meta content="Επαγγελματικό λογισμικό ανάλυσης δεδομένων ταχογράφου για επιτόπιους ελέγχους και ελέγχους επιχειρήσεων. Χρησιμοποιείται από την Αστυνομία, τα Τελωνεία και τις Επιθεωρήσεις Εργασίας σε όλη την Κεντρική Ευρώπη." property="og:description"/>
 <meta content="https://tagra.app/assets/img/tagra-control-screenshot.webp" property="og:image"/>
-<meta content="TAGRA Control – διεπαφή για έλεγχο ψηφιακού ταχογράφου για ελεγκτικές αρχές" property="og:image:alt"/>
+<meta content="TAGRA Control – διεπαφή ελέγχου ψηφιακών ταχογράφων για ελεγκτικές αρχές" property="og:image:alt"/>
 <meta content="https://tagra.app/el/eleghos/" property="og:url"/>
 <meta content="TAGRA" property="og:site_name"/>
 <meta content="el_GR" property="og:locale"/>
 <meta content="summary_large_image" name="twitter:card"/>
 <meta content="TAGRA Control – Λογισμικό για Ελεγκτικές Αρχές" name="twitter:title"/>
-<meta content="Επαγγελματικό λογισμικό ανάλυσης δεδομένων ταχογράφου για οδικούς ελέγχους και ελέγχους επιχειρήσεων." name="twitter:description"/>
+<meta content="Επαγγελματικό λογισμικό ανάλυσης δεδομένων ταχογράφου για επιτόπιους ελέγχους και ελέγχους επιχειρήσεων." name="twitter:description"/>
 <meta content="https://tagra.app/assets/img/tagra-control-screenshot.webp" name="twitter:image"/>
-<meta content="TAGRA Control – διεπαφή για έλεγχο ψηφιακού ταχογράφου για ελεγκτικές αρχές" name="twitter:image:alt"/>
+<meta content="TAGRA Control – διεπαφή ελέγχου ψηφιακών ταχογράφων για ελεγκτικές αρχές" name="twitter:image:alt"/>
 <link href="/assets/img/favicon.ico" rel="icon"/>
 <style>
     /* ── Enforcement-specific overrides ── */
@@ -289,8 +295,7 @@
 <link href="/assets/css/components.css" rel="stylesheet"/>
 <link href="/assets/css/nav.css" rel="stylesheet"/>
 <script defer="" src="/assets/js/nav.js?v=20260816b"></script>
-<link href="/assets/css/footer.css" rel="stylesheet"/>
-<link href="https://tagra.app/enforcement/" hreflang="en" rel="alternate"/><link href="https://tagra.app/de/kontrollbehoerden/" hreflang="de" rel="alternate"/><link href="https://tagra.app/pl/organy-kontrolne/" hreflang="pl" rel="alternate"/><link href="https://tagra.app/el/eleghos/" hreflang="el" rel="alternate"/><link href="https://tagra.app/hu/hatosagoknak/" hreflang="hu" rel="alternate"/><link href="https://tagra.app/it/organi-di-controllo/" hreflang="it" rel="alternate"/><link href="https://tagra.app/enforcement/" hreflang="x-default" rel="alternate"/></head>
+<link href="/assets/css/footer.css" rel="stylesheet"/></head>
 <body>
 <a class="skip-link" href="#main-content">Μετάβαση στο περιεχόμενο</a>
 <div aria-hidden="true" id="scroll-progress"></div>
@@ -309,8 +314,7 @@
 </ul>
 <details class="nav-lang">
 <summary aria-label="Language: EL">EL</summary>
-<div class="nav-lang-menu" role="menu">
-<a href="/" hreflang="en">English</a><a href="/de/" hreflang="de">Deutsch</a><a href="/pl/" hreflang="pl">Polski</a><a aria-current="page" class="active" href="/el/" hreflang="el">Ελληνικά</a><a href="/hu/" hreflang="hu">Magyar</a><a href="/it/organi-di-controllo/" hreflang="it">Italiano</a><a href="https://www.tdt.cz/" hreflang="cs" rel="noopener" target="_blank">Čeština</a><a href="https://www.tdt.sk/" hreflang="sk" rel="noopener" target="_blank">Slovenčina</a></div>
+<div class="nav-lang-menu" role="menu"><a href="/enforcement/" hreflang="en">English</a><a href="/de/kontrollbehoerden/" hreflang="de">Deutsch</a><a href="/pl/organy-kontrolne/" hreflang="pl">Polski</a><a href="/nl/handhaving/" hreflang="nl">Nederlands</a><a href="/fr/autorites-de-controle/" hreflang="fr">Français</a><a href="/it/organi-di-controllo/" hreflang="it">Italiano</a><a aria-current="page" class="active" href="/el/eleghos/" hreflang="el">Ελληνικά</a><a href="/hu/hatosagoknak/" hreflang="hu">Magyar</a><a href="/ro/autoritati-de-control/" hreflang="ro">Română</a><a href="https://www.tdt.cz/" hreflang="cs" rel="noopener" target="_blank">Čeština</a><a href="https://www.tdt.sk/" hreflang="sk" rel="noopener" target="_blank">Slovenčina</a></div>
 </details>
 <a class="nav-cta-mobile" href="/el/dokimi/?audience=enforcement">Δοκιμάστε δωρεάν</a>
 <button aria-expanded="false" aria-label="Εναλλαγή μενού" class="nav-mobile-toggle" id="nav-toggle">
@@ -323,14 +327,14 @@
 <div class="container">
 <div class="eyebrow anim-up">TAGRA · Για Ελεγκτικές Αρχές</div>
 <h1>Ανάλυση ταχογράφου στον έλεγχο σε λίγα λεπτά</h1>
-<p class="lead">Επαγγελματικό <strong>λογισμικό ανάλυσης ταχογράφου</strong> για ταχύ έλεγχο ψηφιακού ταχογράφου σε οδικούς ελέγχους και ελέγχους επιχειρήσεων. Το πρότυπο σε όλη την Κεντρική Ευρώπη.</p>
+<p class="lead">Επαγγελματικό <strong>λογισμικό ανάλυσης ταχογράφου</strong> για ταχύ έλεγχο ψηφιακών ταχογράφων σε επιτόπιους ελέγχους και ελέγχους επιχειρήσεων. Το πρότυπο σε όλη την Κεντρική Ευρώπη.</p>
 <div class="enf-btn-row anim-up">
 <a class="btn-cta" href="/el/dokimi/?audience=enforcement">Αίτημα πρόσβασης στο demo</a>
 <a class="btn-cta btn-blue" href="/el/epikoinonia/?topic=training">Επικοινωνήστε μαζί μας για εκπαίδευση</a>
 </div>
-<p class="anim-up" style="font-size:15px;color:var(--text2);margin-bottom:0;transition-delay:.2s">Windows · Demo κατόπιν αιτήματος · Χρησιμοποιείται από αρχές σε Τσεχία, Σλοβακία και Ουγγαρία</p>
+<p class="anim-up" style="font-size:15px;color:var(--text2);margin-bottom:0;transition-delay:.2s">Windows · Επίδειξη κατόπιν αιτήματος · Χρησιμοποιείται από αρχές σε Τσεχία, Σλοβακία και Ουγγαρία</p>
 <div class="tmx-media-frame anim-up" style="margin:44px auto 0;box-shadow:0 20px 40px rgba(0,0,0,.08);">
-<img alt="TAGRA Control – διεπαφή για έλεγχο ψηφιακού ταχογράφου για ελεγκτικές αρχές" height="608" src="/assets/img/tagra-control-screenshot.webp?v=2026-05-13c" width="1080"/>
+<img alt="TAGRA Control – διεπαφή ελέγχου ψηφιακών ταχογράφων για ελεγκτικές αρχές" height="608" src="/assets/img/tagra-control-screenshot.webp?v=2026-05-13c" width="1080"/>
 </div>
 </div>
 </section>
@@ -359,12 +363,12 @@
 <div class="bc darkfill s6 fly-left">
 <span class="bc-label" style="color:rgba(255,255,255,.55);">Αναπτύχθηκε σε συνεργασία</span>
 <div class="bc-title">Με ελεγκτικές αρχές</div>
-<p class="bc-text" style="margin-top:8px;color:rgba(255,255,255,.82);">Οι λειτουργίες αναπτύσσονται σε άμεση συνεργασία με ελεγκτές στο πεδίο. Το λογισμικό αντιστοιχεί στην πραγματική πρακτική ελέγχου.</p>
+<p class="bc-text" style="margin-top:8px;color:rgba(255,255,255,.82);">Οι λειτουργίες αναπτύσσονται σε άμεση συνεργασία με ελεγκτές στο πεδίο. Το λογισμικό ανταποκρίνεται στην πραγματική πρακτική ελέγχου.</p>
 </div>
 <div class="bc greenfill s6 fly-right">
 <span class="bc-label">Αναφορές</span>
 <div class="bc-title">Έντυπα έτοιμα για ελέγχους</div>
-<p class="bc-text" style="margin-top:8px;">Αποτελέσματα προετοιμασμένα για οδικούς ελέγχους και ελέγχους σε επιχειρήσεις — πανομοιότυπα με αυτά που υποβάλλουν οι μεταφορείς στις αρχές.</p>
+<p class="bc-text" style="margin-top:8px;">Αποτελέσματα προετοιμασμένα για επιτόπιους ελέγχους και ελέγχους σε επιχειρήσεις — πανομοιότυπα με αυτά που υποβάλλουν οι μεταφορείς στις αρχές.</p>
 </div>
 </div>
 </div>
@@ -419,7 +423,7 @@
 </div>
 <div class="commitment-callout" style="margin:36px 0 0;padding:32px 36px;background:#fff;border-radius:16px;border-left:4px solid var(--green-brand);font-size:17px;color:#515154;line-height:1.65;">
 <div style="font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--green-brand);margin-bottom:10px;">Η δέσμευσή μας</div>
-<p style="margin:0;color:#1d1d1f;">Το TAGRA Control προσαρμόζεται συνεχώς με βάση την πρακτική εμπειρία από ελεγκτές στο πεδίο — για την πιο αποτελεσματική ροή εργασίας ελέγχου. Κάθε νομοθετική αλλαγή στην ΕΕ και τα κράτη μέλη αντικατοπτρίζεται στο λογισμικό με κάθε έκδοση.</p>
+<p style="margin:0;color:#1d1d1f;">Το TAGRA Control προσαρμόζεται συνεχώς με βάση την πρακτική εμπειρία ελεγκτών στο πεδίο — για την αποτελεσματικότερη ροή εργασίας ελέγχου. Κάθε νομοθετική αλλαγή στην ΕΕ και στα κράτη μέλη αντικατοπτρίζεται στο λογισμικό με κάθε έκδοση.</p>
 </div>
 </div>
 </section>
@@ -432,7 +436,7 @@
 <h2 class="section-h2">Τι ανιχνεύει άμεσα το TAGRA Control</h2>
 <p style="font-size:17px;color:#515154;line-height:1.6;margin-bottom:20px;">Το λογισμικό εκτελεί <strong>ανάλυση ψηφιακού ταχογράφου</strong> σε κάθε χρονικό τμήμα από την κάρτα οδηγού ή τον ταχογράφο και επισημαίνει με σαφήνεια παραβάσεις της ισχύουσας <strong>ωραρίου οδηγών</strong> νομοθεσίας.</p>
 <div class="feats">
-<div class="fi"><div class="fck"></div><span>Υπέρβαση ημερήσιου και εβδομαδιαίου χρόνου οδήγησης βάσει ωραρίου οδηγών της ΕΕ (Κανονισμός (ΕΚ) 561/2006)</span></div>
+<div class="fi"><div class="fck"></div><span>Υπέρβαση ημερήσιου και εβδομαδιαίου χρόνου οδήγησης βάσει των κανόνων της ΕΕ για τους οδηγούς (Κανονισμός (ΕΚ) 561/2006)</span></div>
 <div class="fi"><div class="fck"></div><span>Μειωμένο υποχρεωτικό διάλειμμα ασφαλείας</span></div>
 <div class="fi"><div class="fck"></div><span>Ανεπαρκής ημερήσιος και εβδομαδιαίος χρόνος ανάπαυσης</span></div>
 <div class="fi"><div class="fck"></div><span>Οδήγηση χωρίς τοποθετημένη κάρτα οδηγού</span></div>
@@ -475,7 +479,7 @@
 </div>
 <div class="report-item">
 <div class="report-icon">3</div>
-<div><span class="report-label">Έκθεση χρόνου εργασίας</span><span class="report-desc">Ώρες εργασίας συμπεριλαμβανομένων νυχτερινής εργασίας, υπερωριών και εφημερίας.</span></div>
+<div><span class="report-label">Έκθεση χρόνου εργασίας</span><span class="report-desc">Ώρες εργασίας, συμπεριλαμβανομένης της νυχτερινής εργασίας, των υπερωριών και της εφημερίας.</span></div>
 </div>
 <div class="report-item">
 <div class="report-icon">4</div>
@@ -564,7 +568,7 @@
 <li>Ερμηνεία αποτελεσμάτων — πώς να διαβάζετε εκθέσεις παραβάσεων</li>
 <li>Νομοθετικό πλαίσιο — (ΕΚ) 561/2006, AETR, εθνικοί κανονισμοί</li>
 <li>Εξαγωγές και πρωτόκολλα — προετοιμασία εγγράφων για διαδικασίες</li>
-<li>Εκπαίδευση στα Αγγλικά — διαθέσιμη για διεθνείς ελεγκτικές αρχές</li>
+<li>Εκπαίδευση στα αγγλικά — διαθέσιμη για διεθνείς ελεγκτικές αρχές</li>
 </ul>
 <p style="margin-top:20px;font-size:16px;color:#515154;">Επικοινωνία εκπαίδευσης:<strong><a href="tel:+420739005345">+420 739 005 345</a> · <a href="mailto:sales@tagra.app">sales@tagra.app</a></strong></p>
 </div>
@@ -572,8 +576,9 @@
 <div class="callout-green">
 <div class="cg-bg">TDT</div>
 <h2 style="font-size:clamp(24px,3vw,34px);font-weight:800;margin-bottom:14px;display:inline-block;">Ενδιαφέρεστε για το TAGRA Control;</h2>
+<p style="margin-bottom:8px;"><strong>TAGRA Control: 749 € χωρίς ΦΠΑ</strong> — το πρώτο έτος ενημερώσεων και υποστήριξης περιλαμβάνεται· από το 2ο έτος το ετήσιο τέλος άδειας είναι 149 € χωρίς ΦΠΑ.</p>
 <p style="margin-bottom:8px;">Θα χαρούμε να ετοιμάσουμε μια πρόταση και να κανονίσουμε εκπαίδευση για την ομάδα σας.</p>
-<p>Επικοινωνήστε μαζί μας τις εργάσιμες ημέρες από 8:00 έως 16:00. Απαντάμε στα Αγγλικά.</p>
+<p>Επικοινωνήστε μαζί μας τις εργάσιμες ημέρες από τις 8:00 έως τις 16:00. Απαντάμε στα αγγλικά.</p>
 <p style="margin-top:20px;"><strong>Web:</strong> <a href="/el/eleghos/">tagra.app/el/eleghos</a></p>
 <div style="margin-top:24px;display:flex;gap:12px;flex-wrap:wrap;">
 <a class="btn" href="mailto:sales@tagra.app" style="background:#fff;color:#0b2c4a;padding:12px 24px;border-radius:50px;font-weight:700;font-size:16px;text-decoration:none;">Στείλτε email</a>
@@ -604,19 +609,19 @@
 </details>
 <details>
 <summary>Μπορεί το TAGRA Control να χρησιμοποιηθεί εκτός σύνδεσης χωρίς σύνδεση στο διαδίκτυο;</summary>
-<p class="faq-a">Ναι. Το TAGRA Control λειτουργεί πλήρως εκτός σύνδεσης. Μια σύνδεση στο διαδίκτυο απαιτείται μόνο για την εγκατάσταση ενημερώσεων λογισμικού. Η δραστηριότητα ελέγχου και η ανάλυση δεδομένων λειτουργεί χωρίς σύνδεση δικτύου.</p>
+<p class="faq-a">Ναι. Το TAGRA Control λειτουργεί πλήρως εκτός σύνδεσης. Σύνδεση στο διαδίκτυο απαιτείται μόνο για την εγκατάσταση ενημερώσεων λογισμικού. Η δραστηριότητα ελέγχου και η ανάλυση δεδομένων πραγματοποιούνται χωρίς σύνδεση δικτύου.</p>
 </details>
 <details>
 <summary>Σε ποιες συσκευές λειτουργεί το TAGRA Control;</summary>
 <p class="faq-a">Το λογισμικό λειτουργεί σε Windows 7 SP1 και νεότερες εκδόσεις (Windows 8.1, 10, 11 — και 32 και 64-bit). Κατάλληλο για φορητούς υπολογιστές και επιτραπέζιους υπολογιστές. Οι ελάχιστες απαιτήσεις υλικού είναι χαμηλές.</p>
 </details>
 <details>
-<summary>Είναι διαθέσιμη εκπαίδευση στα Αγγλικά για διεθνείς ελεγκτικές αρχές;</summary>
-<p class="faq-a">Ναι. Η Truck Data Technology παρέχει εκπαίδευση στα Αγγλικά για διεθνείς ελεγκτικές αρχές και συνεργαζόμενους φορείς. Επικοινωνήστε μαζί μας στο sales@tagra.app για να κανονίσετε τους όρους και το πρόγραμμα.</p>
+<summary>Είναι διαθέσιμη εκπαίδευση στα αγγλικά για διεθνείς ελεγκτικές αρχές;</summary>
+<p class="faq-a">Ναι. Η Truck Data Technology παρέχει εκπαίδευση στα αγγλικά για διεθνείς ελεγκτικές αρχές και συνεργαζόμενους φορείς. Επικοινωνήστε μαζί μας στο sales@tagra.app για να συμφωνήσετε τους όρους και το πρόγραμμα.</p>
 </details>
 <details>
 <summary>Πώς διασφαλίζεται η νομική επικαιρότητα;</summary>
-<p class="faq-a">Το λογισμικό ενημερώνεται συνεχώς με κάθε αλλαγή στη σχετική νομοθεσία της ΕΕ και εθνική νομοθεσία. Οι ενημερώσεις είναι διαθέσιμες σε όλους τους κατόχους έγκυρης άδειας. Το ίδιο το πρόγραμμα σας ειδοποιεί όταν είναι διαθέσιμη μια ενημέρωση.</p>
+<p class="faq-a">Το λογισμικό ενημερώνεται συνεχώς με κάθε αλλαγή στη σχετική νομοθεσία της ΕΕ και στην εθνική νομοθεσία. Οι ενημερώσεις είναι διαθέσιμες σε όλους τους κατόχους έγκυρης άδειας. Το ίδιο το πρόγραμμα σας ειδοποιεί όταν είναι διαθέσιμη μια ενημέρωση.</p>
 </details>
 </div>
 </div>
@@ -627,7 +632,7 @@
 <div style="max-width:600px;">
 <span class="section-label">Προγραμματιστής &amp; κατασκευαστής</span>
 <h2 class="section-h2">Truck Data Technology, s.r.o.</h2>
-<p style="font-size:17px;color:#515154;line-height:1.6;margin-bottom:20px;">Τσέχος κατασκευαστής λογισμικού και υλικού για τη διαχείριση δεδομένων ταχογράφου με πάνω από 20 χρόνια εμπειρίας. Άμεσος κατασκευαστής — χωρίς μεσάζοντα.</p>
+<p style="font-size:17px;color:#515154;line-height:1.6;margin-bottom:20px;">Τσέχος κατασκευαστής λογισμικού και υλικού για τη διαχείριση δεδομένων ταχογράφων με πάνω από 20 χρόνια εμπειρίας. Άμεσος κατασκευαστής — χωρίς μεσάζοντες.</p>
 <div style="display:flex;flex-direction:column;gap:8px;font-size:16px;">
 <div><span style="color:#515154;min-width:80px;display:inline-block;">Τοποθεσία</span> <strong>Τσεχική Δημοκρατία</strong></div>
 <div><span style="color:#515154;min-width:80px;display:inline-block;">Τηλέφωνο</span> <a href="tel:+420739005345" style="color:#134a8e;font-weight:600;">+420 739 005 345</a></div>
@@ -642,7 +647,7 @@
 <div class="footer-inner">
 <div>
 <div class="footer-logo"><img alt="TAGRA" height="20" src="/assets/img/logo-dark.svg?v=20260513zh" width="88" loading="lazy"/></div>
-<p class="footer-desc">Επαγγελματικό λογισμικό ανάλυσης δεδομένων ταχογράφου. Λήψη δεδομένων κάρτας οδηγού, ανάλυση δεδομένων ψηφιακών ταχογράφων, κανόνες της ΕΕ για τους χρόνους οδήγησης και ανάπαυσης, καθώς και Οδηγία για τον χρόνο εργασίας στις οδικές μεταφορές. Αναπτύχθηκε από την Truck Data Technology, s.r.o.</p>
+<p class="footer-desc">Επαγγελματικό λογισμικό ανάλυσης δεδομένων ταχογράφου. Λήψη δεδομένων από κάρτες οδηγού, ανάλυση δεδομένων ψηφιακών ταχογράφων, κανόνων της ΕΕ για τους χρόνους οδήγησης και ανάπαυσης, καθώς και της οδηγίας για τον χρόνο εργασίας στις οδικές μεταφορές. Αναπτύχθηκε από την Truck Data Technology, s.r.o.</p>
 </div>
 <div class="footer-col">
 <h2 class="footer-col-title">Προϊόν</h2>
@@ -709,23 +714,7 @@
   }
 })();
 </script>
-<script type="application/ld+json">{
-  "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "name": "TAGRA Control – Λογισμικό Ανάλυσης Ταχογράφου για Ελεγκτικές Αρχές",
-  "applicationCategory": "BusinessApplication",
-  "operatingSystem": "Windows",
-  "description": "Επαγγελματικό λογισμικό ανάλυσης ταχογράφου για ανάλυση ψηφιακού ταχογράφου σε οδικούς ελέγχους και ελέγχους επιχειρήσεων. Πραγματοποιεί λήψη κάρτας οδηγού, αξιολογεί παραβάσεις ωραρίου οδηγών της ΕΕ βάσει (ΕΚ) 561/2006, (ΕΕ) 2020/1054 και AETR. Χρησιμοποιείται από την Τσεχική Αστυνομία, την Τσεχική Τελωνειακή Διοίκηση, το Τσεχικό Υπουργείο Μεταφορών, τις Σλοβακικές Επιθεωρήσεις Εργασίας και το Ουγγρικό Υπουργείο Μεταφορών.",
-  "url": "https://tagra.app/el/eleghos/",
-  "inLanguage": "el",
-  "author": {
-    "@type": "Organization",
-    "name": "Truck Data Technology, s.r.o.",
-    "url": "https://www.tdt.cz",
-    "telephone": "+420739005345",
-    "email": "sales@tagra.app"
-  }
-}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "TAGRA Control – Λογισμικό ανάλυσης ταχογράφου για ελεγκτικές αρχές", "applicationCategory": "BusinessApplication", "operatingSystem": "Windows", "description": "Επαγγελματικό λογισμικό ανάλυσης ταχογράφου για την ανάλυση δεδομένων ψηφιακού ταχογράφου σε επιτόπιους ελέγχους και ελέγχους επιχειρήσεων. Πραγματοποιεί λήψη δεδομένων κάρτας οδηγού, αξιολογεί παραβάσεις του ωραρίου οδηγών της ΕΕ βάσει των κανονισμών (ΕΚ) 561/2006, (ΕΕ) 2020/1054 και AETR. Χρησιμοποιείται από την Τσεχική Αστυνομία, την Τσεχική Τελωνειακή Διοίκηση, το Τσεχικό Υπουργείο Μεταφορών, τις Σλοβακικές Επιθεωρήσεις Εργασίας και το Ουγγρικό Υπουργείο Μεταφορών.", "url": "https://tagra.app/el/eleghos/", "inLanguage": "el", "author": {"@type": "Organization", "name": "Truck Data Technology, s.r.o.", "url": "https://www.tdt.cz", "telephone": "+420739005345", "email": "sales@tagra.app"}, "offers": {"@type": "Offer", "@id": "https://tagra.app/el/eleghos/#offer", "priceCurrency": "EUR", "price": "749", "availability": "https://schema.org/InStock", "url": "https://tagra.app/el/eleghos/", "description": "Τιμή αγοράς χωρίς ΦΠΑ. Το πρώτο έτος ενημερώσεων και υποστήριξης περιλαμβάνεται· από το 2ο έτος το ετήσιο τέλος άδειας είναι 149 € χωρίς ΦΠΑ.", "seller": {"@type": "Organization", "name": "Truck Data Technology, s.r.o.", "url": "https://www.tdt.cz"}}}</script>
 <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -736,7 +725,7 @@
       "name": "Τι είδη ταχογράφων υποστηρίζει το TAGRA Control;",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Το TAGRA Control πραγματοποιεί ανάλυση ψηφιακού ταχογράφου σε δεδομένα από ταχογράφους πρώτης γενιάς (G1) και ευφυείς ταχογράφους δεύτερης γενιάς (G2V2). Υποστηριζόμενες μορφές αρχείων: .DDD, .C1B, .V1B και ESM."
+        "text": "Το TAGRA Control πραγματοποιεί ανάλυση δεδομένων ψηφιακού ταχογράφου από ταχογράφους πρώτης γενιάς (G1) και ευφυείς ταχογράφους δεύτερης γενιάς (G2V2). Υποστηριζόμενες μορφές αρχείων: .DDD, .C1B, .V1B και ESM."
       }
     },
     {
@@ -760,7 +749,7 @@
       "name": "Μπορεί το TAGRA Control να χρησιμοποιηθεί εκτός σύνδεσης χωρίς σύνδεση στο διαδίκτυο;",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Ναι. Το TAGRA Control λειτουργεί πλήρως εκτός σύνδεσης. Μια σύνδεση στο διαδίκτυο απαιτείται μόνο για την εγκατάσταση ενημερώσεων λογισμικού. Η δραστηριότητα ελέγχου και η ανάλυση δεδομένων λειτουργεί χωρίς σύνδεση δικτύου."
+        "text": "Ναι. Το TAGRA Control λειτουργεί πλήρως εκτός σύνδεσης. Σύνδεση στο διαδίκτυο απαιτείται μόνο για την εγκατάσταση ενημερώσεων λογισμικού. Η δραστηριότητα ελέγχου και η ανάλυση δεδομένων πραγματοποιούνται χωρίς σύνδεση δικτύου."
       }
     },
     {
@@ -773,10 +762,10 @@
     },
     {
       "@type": "Question",
-      "name": "Είναι διαθέσιμη εκπαίδευση στα Αγγλικά για διεθνείς ελεγκτικές αρχές;",
+      "name": "Είναι διαθέσιμη εκπαίδευση στα αγγλικά για διεθνείς ελεγκτικές αρχές;",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Ναι. Η Truck Data Technology παρέχει εκπαίδευση στα Αγγλικά για διεθνείς ελεγκτικές αρχές και συνεργαζόμενους φορείς. Επικοινωνήστε μαζί μας στο sales@tagra.app για να κανονίσετε τους όρους και το πρόγραμμα."
+        "text": "Ναι. Η Truck Data Technology παρέχει εκπαίδευση στα αγγλικά για διεθνείς ελεγκτικές αρχές και συνεργαζόμενους φορείς. Επικοινωνήστε μαζί μας στο sales@tagra.app για να συμφωνήσετε τους όρους και το πρόγραμμα."
       }
     },
     {
@@ -784,7 +773,7 @@
       "name": "Πώς διασφαλίζεται η νομική επικαιρότητα;",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Το λογισμικό ενημερώνεται συνεχώς με κάθε αλλαγή στη σχετική νομοθεσία της ΕΕ και εθνική νομοθεσία. Οι ενημερώσεις είναι διαθέσιμες σε όλους τους κατόχους έγκυρης άδειας. Το ίδιο το πρόγραμμα σας ειδοποιεί όταν είναι διαθέσιμη μια ενημέρωση."
+        "text": "Το λογισμικό ενημερώνεται συνεχώς με κάθε αλλαγή στη σχετική νομοθεσία της ΕΕ και στην εθνική νομοθεσία. Οι ενημερώσεις είναι διαθέσιμες σε όλους τους κατόχους έγκυρης άδειας. Το ίδιο το πρόγραμμα σας ειδοποιεί όταν είναι διαθέσιμη μια ενημέρωση."
       }
     }
   ]

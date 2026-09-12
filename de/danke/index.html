@@ -45,6 +45,10 @@
       var m={cz:'cs',cs:'cs',sk:'sk',de:'de',pl:'pl',gr:'el',el:'el',hu:'hu',en:'en'};return m[l]||'en';}
     var T={
       hu:{t:'Analitikai s\u00fctiket haszn\u00e1lunk (Google Analytics, Microsoft Clarity, Smartsupp), hogy meg\u00e9rts\u00fck a webhely haszn\u00e1lat\u00e1t. Csak az \u00d6n hozz\u00e1j\u00e1rul\u00e1s\u00e1val t\u00f6lt\u0151dnek be.',a:'Elfogadom',r:'Elutas\u00edtom',p:'Adatv\u00e9delem \u00e9s s\u00fctik'},
+      ro:{t:'Utilizăm module cookie de analiză (Google Analytics, Microsoft Clarity, Smartsupp) pentru a înțelege modul de utilizare a site-ului. Se încarcă doar cu consimțământul dumneavoastră.',a:'Accept',r:'Refuz',p:'Confidențialitate și cookie-uri'},
+      nl:{t:'We gebruiken analytische cookies (Google Analytics, Microsoft Clarity, Smartsupp) om het gebruik van de site te begrijpen. Ze laden alleen met uw toestemming.',a:'Accepteren',r:'Weigeren',p:'Privacy en cookies'},
+      fr:{t:'Nous utilisons des cookies analytiques (Google Analytics, Microsoft Clarity, Smartsupp) pour comprendre l’utilisation du site. Ils ne se chargent qu’avec votre consentement.',a:'Accepter',r:'Refuser',p:'Confidentialité et cookies'},
+      it:{t:'Utilizziamo cookie analitici (Google Analytics, Microsoft Clarity, Smartsupp) per capire l’utilizzo del sito. Si caricano solo con il Suo consenso.',a:'Accetta',r:'Rifiuta',p:'Privacy e cookie'},
       en:{t:'We use analytics cookies (Google Analytics, Microsoft Clarity, Smartsupp) to understand site usage. They load only with your consent.',a:'Accept',r:'Reject',p:'Privacy &amp; cookies'},
       cs:{t:'Používáme analytické cookies (Google Analytics, Microsoft Clarity, Smartsupp) k pochopení používání webu. Načtou se jen s vaším souhlasem.',a:'Přijmout',r:'Odmítnout',p:'Soukromí a cookies'},
       sk:{t:'Používame analytické cookies (Google Analytics, Microsoft Clarity, Smartsupp) na pochopenie používania webu. Načítajú sa len s vaším súhlasom.',a:'Prijať',r:'Odmietnuť',p:'Súkromie a cookies'},
@@ -77,14 +81,11 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Vielen Dank — TAGRA</title>
 <meta content="#0b2c4a" name="theme-color"/>
-<meta content="noindex,nofollow" name="robots"/>
+<meta content="noindex, follow" name="robots"/>
 <link href="/manifest.json" rel="manifest"/>
 <link href="https://tagra.app/de/danke/" rel="canonical"/>
-<link href="https://tagra.app/try/thanks/" hreflang="en" rel="alternate"/>
-<link href="https://tagra.app/de/danke/" hreflang="de" rel="alternate"/>
-<link href="https://tagra.app/pl/dziekujemy/" hreflang="pl" rel="alternate"/>
-<link href="https://tagra.app/el/efharisto/" hreflang="el" rel="alternate"/>
-<link href="https://tagra.app/hu/koszonjuk/" hreflang="hu" rel="alternate"/><link href="https://tagra.app/it/grazie/" hreflang="it" rel="alternate"/><link href="https://tagra.app/try/thanks/" hreflang="x-default" rel="alternate"/>
+<link href="https://tagra.app/de/danke/" hreflang="de" rel="alternate"/><link href="https://tagra.app/el/efharisto/" hreflang="el" rel="alternate"/><link href="https://tagra.app/try/thanks/" hreflang="en" rel="alternate"/><link href="https://tagra.app/fr/merci/" hreflang="fr" rel="alternate"/><link href="https://tagra.app/hu/koszonjuk/" hreflang="hu" rel="alternate"/><link href="https://tagra.app/it/grazie/" hreflang="it" rel="alternate"/><link href="https://tagra.app/nl/bedankt/" hreflang="nl" rel="alternate"/><link href="https://tagra.app/pl/dziekujemy/" hreflang="pl" rel="alternate"/>
+<link href="https://tagra.app/ro/multumim/" hreflang="ro" rel="alternate"/><link href="https://tagra.app/try/thanks/" hreflang="x-default" rel="alternate"/>
 <link href="/assets/css/main.css" rel="stylesheet"/>
 <link href="/assets/css/nav.css" rel="stylesheet"/>
 <script defer="" src="/assets/js/nav.js?v=20260816b"></script>
@@ -105,8 +106,7 @@
 </ul>
 <details class="nav-lang">
 <summary aria-label="Language: DE">DE</summary>
-<div class="nav-lang-menu" role="menu">
-<a href="/" hreflang="en">English</a><a aria-current="page" class="active" href="/de/" hreflang="de">Deutsch</a><a href="/pl/" hreflang="pl">Polski</a><a href="/el/" hreflang="el">Ελληνικά</a><a href="/hu/" hreflang="hu">Magyar</a><a href="/it/" hreflang="it">Italiano</a><a href="https://www.tdt.cz/" hreflang="cs" rel="noopener" target="_blank">Čeština</a><a href="https://www.tdt.sk/" hreflang="sk" rel="noopener" target="_blank">Slovenčina</a></div>
+<div class="nav-lang-menu" role="menu"><a href="/try/thanks/" hreflang="en">English</a><a aria-current="page" class="active" href="/de/danke/" hreflang="de">Deutsch</a><a href="/pl/dziekujemy/" hreflang="pl">Polski</a><a href="/nl/bedankt/" hreflang="nl">Nederlands</a><a href="/fr/merci/" hreflang="fr">Français</a><a href="/it/grazie/" hreflang="it">Italiano</a><a href="/el/efharisto/" hreflang="el">Ελληνικά</a><a href="/hu/koszonjuk/" hreflang="hu">Magyar</a><a href="/ro/multumim/" hreflang="ro">Română</a><a href="https://www.tdt.cz/" hreflang="cs" rel="noopener" target="_blank">Čeština</a><a href="https://www.tdt.sk/" hreflang="sk" rel="noopener" target="_blank">Slovenčina</a></div>
 </details>
 <button aria-expanded="false" aria-label="Menü umschalten" class="nav-mobile-toggle" id="nav-toggle">
 <span></span><span></span><span></span>
@@ -136,7 +136,7 @@
 <div aria-hidden="true" class="thanks-icon">
 <svg viewbox="0 0 24 24"><polyline points="4 12 10 18 20 6"></polyline></svg>
 </div>
-<h1 id="thanksEnfH1">Anfrage eingegangen</h1>
+<h2 id="thanksEnfH1">Anfrage eingegangen</h2>
 <p id="thanksEnfBody">Vielen Dank für Ihr Interesse an TAGRA Control. Unser Team wird Sie innerhalb eines Werktags mit den Zugangsdaten zur Demo kontaktieren.</p>
 <p class="thanks-meta" id="thanksEnfMeta">In der Zwischenzeit können Sie gerne unsere Dokumentation durchsuchen oder sich an sales@tagra.app wenden.</p>
 <p style="margin-top: 24px;">
@@ -157,7 +157,7 @@
 <div class="thanks-step">
 <div class="thanks-step-num">2</div>
 <h3 id="step2H">Testversion aktivieren</h3>
-<p id="step2P">Öffnen Sie TAGRA und wählen Sie "30-Tage-Testversion". Kein Lizenzschlüssel erforderlich.</p>
+<p id="step2P">Öffnen Sie TAGRA und wählen Sie „30-Tage-Testversion“. Kein Lizenzschlüssel erforderlich.</p>
 </div>
 <div class="thanks-step">
 <div class="thanks-step-num">3</div>

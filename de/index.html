@@ -45,6 +45,10 @@
       var m={cz:'cs',cs:'cs',sk:'sk',de:'de',pl:'pl',gr:'el',el:'el',hu:'hu',en:'en'};return m[l]||'en';}
     var T={
       hu:{t:'Analitikai s\u00fctiket haszn\u00e1lunk (Google Analytics, Microsoft Clarity, Smartsupp), hogy meg\u00e9rts\u00fck a webhely haszn\u00e1lat\u00e1t. Csak az \u00d6n hozz\u00e1j\u00e1rul\u00e1s\u00e1val t\u00f6lt\u0151dnek be.',a:'Elfogadom',r:'Elutas\u00edtom',p:'Adatv\u00e9delem \u00e9s s\u00fctik'},
+      ro:{t:'Utilizăm module cookie de analiză (Google Analytics, Microsoft Clarity, Smartsupp) pentru a înțelege modul de utilizare a site-ului. Se încarcă doar cu consimțământul dumneavoastră.',a:'Accept',r:'Refuz',p:'Confidențialitate și cookie-uri'},
+      nl:{t:'We gebruiken analytische cookies (Google Analytics, Microsoft Clarity, Smartsupp) om het gebruik van de site te begrijpen. Ze laden alleen met uw toestemming.',a:'Accepteren',r:'Weigeren',p:'Privacy en cookies'},
+      fr:{t:'Nous utilisons des cookies analytiques (Google Analytics, Microsoft Clarity, Smartsupp) pour comprendre l’utilisation du site. Ils ne se chargent qu’avec votre consentement.',a:'Accepter',r:'Refuser',p:'Confidentialité et cookies'},
+      it:{t:'Utilizziamo cookie analitici (Google Analytics, Microsoft Clarity, Smartsupp) per capire l’utilizzo del sito. Si caricano solo con il Suo consenso.',a:'Accetta',r:'Rifiuta',p:'Privacy e cookie'},
       en:{t:'We use analytics cookies (Google Analytics, Microsoft Clarity, Smartsupp) to understand site usage. They load only with your consent.',a:'Accept',r:'Reject',p:'Privacy &amp; cookies'},
       cs:{t:'Pou\u017e\u00edv\u00e1me analytick\u00e9 cookies (Google Analytics, Microsoft Clarity, Smartsupp) k pochopen\u00ed pou\u017e\u00edv\u00e1n\u00ed webu. Na\u010dtou se jen s va\u0161\u00edm souhlasem.',a:'P\u0159ijmout',r:'Odm\u00edtnout',p:'Soukrom\u00ed a cookies'},
       sk:{t:'Pou\u017e\u00edvame analytick\u00e9 cookies (Google Analytics, Microsoft Clarity, Smartsupp) na pochopenie pou\u017e\u00edvania webu. Na\u010d\u00edtaj\u00fa sa len s va\u0161\u00edm s\u00fahlasom.',a:'Prija\u0165',r:'Odmietnu\u0165',p:'S\u00fakromie a cookies'},
@@ -76,17 +80,14 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Fahrerkarte auslesen &amp; Tachographen-Software | TAGRA</title>
-<meta content="Gesetzeskonforme Software: Fahrerkarte auslesen, archivieren &amp; auswerten. Vermeiden Sie BALM-Strafen. Lenk- und Ruhezeiten im Blick. 30 Tage gratis!" name="description"/>
+<meta content="Software für gesetzeskonformes Arbeiten: Fahrerkarte auslesen, archivieren und auswerten, Verstöße erkennen sowie Lenk- und Ruhezeiten prüfen. 30 Tage gratis!" name="description"/>
 <meta content="#0b2c4a" name="theme-color"/>
 <link href="/manifest.json" rel="manifest"/>
 <link href="https://tagra.app/de/" rel="canonical"/>
-<link href="https://tagra.app/" hreflang="en" rel="alternate"/>
-<link href="https://tagra.app/de/" hreflang="de" rel="alternate"/>
-<link href="https://tagra.app/pl/" hreflang="pl" rel="alternate"/>
-<link href="https://tagra.app/el/" hreflang="el" rel="alternate"/>
-<link href="https://tagra.app/hu/" hreflang="hu" rel="alternate"/><link href="https://tagra.app/it/" hreflang="it" rel="alternate"/><link href="https://tagra.app/fr/" hreflang="fr" rel="alternate"/><link href="https://tagra.app/" hreflang="x-default" rel="alternate"/>
+<link href="https://tagra.app/de/" hreflang="de" rel="alternate"/><link href="https://tagra.app/el/" hreflang="el" rel="alternate"/><link href="https://tagra.app/" hreflang="en" rel="alternate"/><link href="https://tagra.app/fr/" hreflang="fr" rel="alternate"/><link href="https://tagra.app/hu/" hreflang="hu" rel="alternate"/><link href="https://tagra.app/it/" hreflang="it" rel="alternate"/><link href="https://tagra.app/nl/" hreflang="nl" rel="alternate"/><link href="https://tagra.app/pl/" hreflang="pl" rel="alternate"/>
+<link href="https://tagra.app/ro/" hreflang="ro" rel="alternate"/><link href="https://tagra.app/" hreflang="x-default" rel="alternate"/>
 <meta content="Fahrerkarte auslesen &amp; Tachographen-Software | TAGRA" property="og:title"/>
-<meta content="Gesetzeskonforme Software: Fahrerkarte auslesen, archivieren &amp; auswerten. Vermeiden Sie BALM-Strafen. Lenk- und Ruhezeiten im Blick. 30 Tage gratis!" property="og:description"/>
+<meta content="Software für gesetzeskonformes Arbeiten: Fahrerkarte auslesen, archivieren und auswerten, Verstöße erkennen sowie Lenk- und Ruhezeiten prüfen. 30 Tage gratis!" property="og:description"/>
 <meta content="https://cdn.truckmall.cz/images/0/ff1952bcc480ca3d/1/tagra-1-vyhodnoceni-dat-z-tachografu.webp" property="og:image"/>
 <meta content="TAGRA Tachographen-Auswertungssoftware – Fahrer- und Fahrzeugbericht" property="og:image:alt"/>
 <meta content="website" property="og:type"/>
@@ -696,7 +697,7 @@
   "url": "https://tagra.app/de/fuhrpark/",
   "provider": { "@id": "https://tagra.app/#organization" },
   "serviceType": "Tachograph data management software",
-  "description": "Evaluation, archiving and reporting for fleet operators from 1 to unlimited vehicles. Compliant with Regulation (EC) 561/2006 and the Working Time Directive.",
+  "description": "Auswertung, Archivierung und Berichterstellung für Fuhrparkbetreiber mit 1 bis unbegrenzt vielen Fahrzeugen. Konform mit der Verordnung (EG) Nr. 561/2006 und der Arbeitszeitrichtlinie.",
   "audience": {
     "@type": "BusinessAudience",
     "audienceType": "Fleet operators and transport companies"
@@ -716,7 +717,7 @@
   "url": "https://tagra.app/de/fahrer/",
   "provider": { "@id": "https://tagra.app/#organization" },
   "serviceType": "Personal tachograph data tool",
-  "description": "Personal tool for professional drivers to download their own driver card, review driving times and rest periods. Works with a standard USB card reader.",
+  "description": "Persönliches Tool für Berufskraftfahrer zum Auslesen der eigenen Fahrerkarte sowie zur Überprüfung von Lenkzeiten und Ruhezeiten. Funktioniert mit einem handelsüblichen USB-Kartenleser.",
   "audience": {
     "@type": "Audience",
     "audienceType": "Professional truck and bus drivers"
@@ -731,7 +732,7 @@
   "url": "https://tagra.app/de/kontrollbehoerden/",
   "provider": { "@id": "https://tagra.app/#organization" },
   "serviceType": "Inspection and enforcement software",
-  "description": "Roadside and company inspection software for Police, Customs, Labour Inspectorates and Ministries of Transport. The de-facto standard across Central Europe.",
+  "description": "Software für Straßen- und Betriebskontrollen für Polizei, Zoll, Arbeitsinspektionen und Verkehrsministerien. Der De-facto-Standard in ganz Mitteleuropa.",
   "audience": {
     "@type": "GovernmentService",
     "audienceType": "Enforcement authorities, Police, Customs, Labour Inspectorates"
@@ -763,8 +764,7 @@
 </ul>
 <details class="nav-lang">
 <summary aria-label="Language: DE">DE</summary>
-<div class="nav-lang-menu" role="menu">
-<a href="/" hreflang="en">English</a><a aria-current="page" class="active" href="/de/" hreflang="de">Deutsch</a><a href="/pl/" hreflang="pl">Polski</a><a href="/el/" hreflang="el">Ελληνικά</a><a href="/hu/" hreflang="hu">Magyar</a><a href="/it/" hreflang="it">Italiano</a><a href="https://tagra.app/fr/" hreflang="fr">Français</a><a href="https://www.tdt.cz/" hreflang="cs" rel="noopener" target="_blank">Čeština</a><a href="https://www.tdt.sk/" hreflang="sk" rel="noopener" target="_blank">Slovenčina</a></div>
+<div class="nav-lang-menu" role="menu"><a href="/" hreflang="en">English</a><a aria-current="page" class="active" href="/de/" hreflang="de">Deutsch</a><a href="/pl/" hreflang="pl">Polski</a><a href="/nl/" hreflang="nl">Nederlands</a><a href="/fr/" hreflang="fr">Français</a><a href="/it/" hreflang="it">Italiano</a><a href="/el/" hreflang="el">Ελληνικά</a><a href="/hu/" hreflang="hu">Magyar</a><a href="/ro/" hreflang="ro">Română</a><a href="https://www.tdt.cz/" hreflang="cs" rel="noopener" target="_blank">Čeština</a><a href="https://www.tdt.sk/" hreflang="sk" rel="noopener" target="_blank">Slovenčina</a></div>
 </details>
 <a class="nav-cta-mobile" href="/de/testen/?audience=fleet">Kostenlos testen</a>
 <button aria-expanded="false" aria-label="Toggle menu" class="nav-mobile-toggle" id="nav-toggle">
@@ -858,7 +858,7 @@
 <!-- ═══ TRUST BAR ══════════════════════════════════════════════════════ -->
 <div class="trust-bar anim-up">
 <div class="container">
-<p><strong>Tausende Unternehmen in ganz Europa vertrauen uns.</strong> Dieselbe Auswertungslogik, die Polizei, Zollverwaltungen und Arbeitsinspektionen einsetzen.</p>
+<p><strong>Entwickelt für die Realität des europäischen Straßentransports.</strong> Dieselbe Auswertungslogik, die Polizei, Zollverwaltungen und Arbeitsinspektionen einsetzen.</p>
 </div>
 </div>
 <!-- ═══ UI SHOWCASE ════════════════════════════════════════════════════ -->
@@ -903,19 +903,19 @@
 <div class="section-head anim-up">
 <span class="section-label">Warum TAGRA</span>
 <h2 class="section-h2">Alles für die Einhaltung der Tachographenvorschriften</h2>
-<p class="section-intro">Leistungsstarke Windows-Software zum Auslesen und Auswerten digitaler Tachographen (Fahrtenschreiber (auch Tachograph genannt)): Lenk- und Ruhezeiten, Verstöße und gesetzeskonforme Archivierung — vom Einzelfahrzeug bis zum Großfuhrpark.</p>
+<p class="section-intro">Leistungsstarke Windows-Software zum Auslesen und Auswerten digitaler Tachographen: Lenk- und Ruhezeiten, Verstöße und gesetzeskonforme Archivierung — vom Einzelfahrzeug bis zum Großfuhrpark.</p>
 </div>
 <div class="bento">
 <div class="bc s7 fly-left">
 <span class="bc-eyebrow">Gesetzeskonformität</span>
 <div class="bc-title">Lenk- und Ruhezeiten + Arbeitszeit</div>
-<p class="bc-text">Automatische Auswertung der <strong>Verordnung (EG) Nr. 561/2006</strong> und die <strong>Arbeitszeitrichtlinie für Kraftfahrer</strong> (2002/15/EG). Übersichtliche Tages- und Wochenauswertungen mit jedem Verstoß nach Zeit, Art und Dauer markiert.</p>
+<p class="bc-text">Automatische Auswertung der <strong>Verordnung (EG) Nr. 561/2006</strong> und die <strong>Arbeitszeitrichtlinie für Kraftfahrer</strong> (2002/15/EG). Übersichtliche Tages- und Wochenauswertungen, in denen jeder Verstoß nach Zeit, Art und Dauer markiert ist.</p>
 <div class="bignum">01</div>
 </div>
 <div class="bc s5 bluefill fly-right">
 <span class="bc-eyebrow">Abdeckung</span>
 <div class="bc-title">Alle Tachographen unterstützt</div>
-<p class="bc-text">Von digitalen Geräten der ersten Generation bis zum <strong>intelligenten Tachographen G2V2</strong>. Liest <code>.DDD</code>, <code>.C1B</code>, <code>.V1B</code> und ESM-Dateien aus Fahrerkarte und Massenspeicher (Fahrzeugeinheit).</p>
+<p class="bc-text">Von digitalen Geräten der ersten Generation bis zum <strong>intelligenten Tachographen G2V2</strong>. Liest <code>.DDD</code>, <code>.C1B</code>, <code>.V1B</code> und ESM-Dateien von der Fahrerkarte und aus dem Massenspeicher (Fahrzeugeinheit).</p>
 </div>
 <div class="bc s6 fly-left" style="transition-delay:.05s">
 <span class="bc-eyebrow">Berichte</span>
@@ -925,7 +925,7 @@
 <div class="bc s6 greenfill fly-right" style="transition-delay:.05s">
 <span class="bc-eyebrow">Skalierbar</span>
 <div class="bc-title">1 bis unbegrenzt viele Fahrzeuge</div>
-<p class="bc-text">Varianten TAGRA Trucker, 1, 2, 4, 6 und MAX. Starten Sie mit einem Lkw und wachsen Sie zum Großfuhrpark — ohne Software- oder Prozesswechsel.</p>
+<p class="bc-text">Varianten: TAGRA Trucker, 1, 2, 4, 6 und MAX. Starten Sie mit einem Lkw und wachsen Sie zum Großfuhrpark — ohne Software- oder Prozesswechsel.</p>
 <div class="bignum">∞</div>
 </div>
 <div class="bc s8 fly-left" style="transition-delay:.1s">
@@ -936,7 +936,7 @@
 <div class="bc s4 bluefill fly-right" style="transition-delay:.1s">
 <span class="bc-eyebrow">Zukunftssicher</span>
 <div class="bc-title">Bereit für Transporter 2026</div>
-<p class="bc-text">Vollständig konform mit der neuen Tachographenpflicht für leichte Nutzfahrzeuge (2,5–3,5 t) ab <strong>1. Juli 2026</strong>.</p>
+<p class="bc-text">Vollständig konform mit der neuen Tachographenpflicht für leichte Nutzfahrzeuge (2,5–3,5 t) ab <strong>1. Juli 2026</strong>.</p>
 </div>
 </div>
 </div>
@@ -946,7 +946,7 @@
 <div class="section-inner">
 <div class="section-head anim-up">
 <span class="section-label">In der Praxis bewährt</span>
-<h2 class="section-h2">Von Behörden genutzt. Von Unternehmen gewählt.</h2>
+<h2 class="section-h2">Von Behörden genutzt. Von Unternehmen geschätzt.</h2>
 <p class="section-intro">Dieselbe Auswertungslogik, die Polizei, Zoll und Arbeitsinspektionen in Tschechien, der Slowakei und Ungarn einsetzen.</p>
 </div>
 <div class="ref-grid">
@@ -982,7 +982,7 @@
 <div class="section-inner">
 <div class="section-head anim-up">
 <span class="section-label">Kundenstimmen</span>
-<h2 class="section-h2">Tausende Unternehmen vertrauen uns</h2>
+<h2 class="section-h2">Entwickelt für die Realität des europäischen Straßentransports.</h2>
 <p class="section-intro">Fünf-Sterne-Bewertungen verifizierter Kunden aus Mitteleuropa.</p>
 </div>
 </div>
@@ -1002,14 +1002,14 @@
 <div class="section-head anim-up">
 <span class="section-label">Preise</span>
 <h2 class="section-h2">Faire Preise. Keine Überraschungen.</h2>
-<p class="section-intro">Das erste Jahr ist im Kaufpreis enthalten. Ab dem 2. Jahr hält eine Jahresgebühr von 19–149 € Ihre Software aktiv, aktuell und im Support.</p>
+<p class="section-intro">Das erste Jahr ist im Kaufpreis enthalten. Ab dem 2. Jahr hält eine Jahresgebühr von 19–149 € Ihre Software aktiv, aktuell und mit Support.</p>
 </div>
 <div class="pricing-teaser anim-up">
 <div>
 <div class="pricing-teaser-headline">Kostenlos starten. Lizenz ab 49 €.</div>
 <p class="pricing-teaser-price">30 Tage kostenlos testen, ohne Kreditkarte. TAGRA kostet von <strong>49 €</strong> (TAGRA Trucker) bis 749 € (TAGRA MAX, unbegrenzte Fahrzeuge), zzgl. MwSt. — das erste Jahr mit Updates und Support ist enthalten. Ab dem 2. Jahr hält eine Jahresgebühr von 19 € bis 149 € die Software aktiv.</p>
 <ul class="pricing-teaser-features">
-<li>Vollständige Auswertung von EU-Lenkzeiten und Arbeitszeitrichtlinie</li>
+<li>Vollständige Auswertung der EU-Lenkzeiten und der Arbeitszeitrichtlinie</li>
 <li>Unterstützung aller digitalen Tachographen, inklusive Smart G2V2</li>
 <li>Kostenlose Updates bei jeder Gesetzesänderung</li>
 <li>Persönlicher technischer Support das ganze Jahr</li>
@@ -1034,7 +1034,7 @@
 <div class="faq-block anim-up">
 <details>
 <summary>Läuft TAGRA in der Cloud oder wird es lokal installiert?</summary>
-<div class="faq-answer">TAGRA ist <strong>Windows-Desktop-Software</strong> , die vollständig offline auf Ihrem eigenen Rechner läuft. Fahrer- und Fahrzeugdaten verlassen Ihr Netzwerk nie — kein Cloud-Upload, kein Auftragsverarbeitung, kein Monatsabo. Viele Unternehmen bevorzugen dies aus Gründen der DSGVO und des Datenschutzes.</div>
+<div class="faq-answer">TAGRA ist <strong>Windows-Desktop-Software</strong> , die vollständig offline auf Ihrem eigenen Rechner läuft. Fahrer- und Fahrzeugdaten verlassen Ihr Netzwerk nie — kein Cloud-Upload, keine Auftragsverarbeitung, kein Monatsabo. Viele Unternehmen bevorzugen dies aus Gründen der DSGVO und des Datenschutzes.</div>
 </details>
 <details>
 <summary>Deckt TAGRA EU-Lenkzeiten und die Arbeitszeitrichtlinie ab?</summary>
@@ -1138,7 +1138,7 @@
   "name": "TAGRA – Tachograph Data Management Software",
   "applicationCategory": "BusinessApplication",
   "operatingSystem": "Windows",
-  "description": "Software for evaluating and archiving data from digital tachographs and driver cards. Available for fleet operators (1 to unlimited vehicles) and professional drivers. Compliant with Regulation (EC) 561/2006, AETR and the Working Time Directive. Free 30-day trial.",
+  "description": "Software zur Auswertung und Archivierung von Daten aus digitalen Tachographen und Fahrerkarten. Verfügbar für Fuhrparkbetreiber (1 bis unbegrenzt viele Fahrzeuge) und Berufskraftfahrer. Konform mit der Verordnung (EG) Nr. 561/2006, dem AETR und der Arbeitszeitrichtlinie. Kostenloser 30-Tage-Test.",
   "url": "https://tagra.app/de/",
   "inLanguage": "de",
   "author": {
@@ -1169,7 +1169,7 @@
       "name": "Läuft TAGRA in der Cloud oder wird es lokal installiert?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "TAGRA ist Windows-Desktop-Software, die vollständig offline auf Ihrem eigenen Rechner läuft. Fahrer- und Fahrzeugdaten verlassen Ihr Netzwerk nie — kein Cloud-Upload, kein Auftragsverarbeitung, kein Monatsabo. Viele Unternehmen bevorzugen dies aus Gründen der DSGVO und des Datenschutzes."
+        "text": "TAGRA ist eine Windows-Desktop-Software, die vollständig offline auf Ihrem eigenen Rechner läuft. Fahrer- und Fahrzeugdaten verlassen Ihr Netzwerk nie — kein Cloud-Upload, keine Auftragsverarbeitung, kein Monatsabo. Viele Unternehmen bevorzugen dies aus Gründen der DSGVO und des Datenschutzes."
       }
     },
     {
@@ -1177,7 +1177,7 @@
       "name": "Deckt TAGRA EU-Lenkzeiten und die Arbeitszeitrichtlinie ab?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Ja. TAGRA wertet Verordnung (EG) Nr. 561/2006 (EU-Lenkzeiten) und die Arbeitszeitrichtlinie für Kraftfahrer 2002/15/EG sowie die zugehörigen AETR-Regeln aus. Jeder Verstoß wird in übersichtlichen Fahrer- und Fahrzeugberichten mit genauer Zeit, Art und Dauer hervorgehoben."
+        "text": "Ja. TAGRA wertet die Verordnung (EG) Nr. 561/2006 (EU-Lenkzeiten), die Arbeitszeitrichtlinie für Kraftfahrer 2002/15/EG sowie die zugehörigen AETR-Regeln aus. Jeder Verstoß wird in übersichtlichen Fahrer- und Fahrzeugauswertungen mit genauer Zeit, Art und Dauer hervorgehoben."
       }
     },
     {
@@ -1185,7 +1185,7 @@
       "name": "Welche Tachographen und Kartenleser werden unterstützt?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Alle digitalen Tachographen der EU — von der ersten Generation bis zum intelligenten Tachographen G2V2. Kompatibel mit gängigen Chipkartenlesern (z. B. DOWNLOAD BOX II S), liest .DDD, .C1B, .V1B und ESM-Dateien. Bereit für die Anforderungen an leichte Nutzfahrzeuge ab Juli 2026."
+        "text": "Alle digitalen Tachographen der EU — von der ersten Generation bis zum intelligenten Tachographen G2V2. Kompatibel mit gängigen Chipkartenlesern (z. B. DOWNLOAD BOX II S), liest .DDD-, .C1B-, .V1B- und ESM-Dateien aus. Bereit für die Anforderungen an leichte Nutzfahrzeuge ab Juli 2026."
       }
     },
     {

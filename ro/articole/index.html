@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<!-- TMX-ANALYTICS START -->
+<meta content="7F7894081BE7FBB245FF03AF8810B22F" name="msvalidate.01"/>
+<!-- Consent Mode v2 defaults (deny) + gtag stub — runs BEFORE gtag.js -->
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent','default',{
+      ad_storage:'denied', ad_user_data:'denied', ad_personalization:'denied',
+      analytics_storage:'denied', functionality_storage:'denied',
+      personalization_storage:'denied', security_storage:'granted',
+      wait_for_update:500
+    });
+    gtag('set','ads_data_redaction',true);
+    gtag('set','url_passthrough',false);
+  </script>
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-92253QFBNX"></script>
+<script>
+    gtag('js', new Date());
+    gtag('config','G-92253QFBNX');
+  </script>
+<!-- Cookie consent banner (self-hosted) + Microsoft Clarity gating -->
+<style>
+    .tmx-cc{position:fixed;left:0;right:0;bottom:0;z-index:2147483000;background:linear-gradient(120deg,var(--blue-dark,#0b2c4a),var(--blue-mid,#134a8e) 62%,var(--blue-light,#1f5fa6));color:#fff;
+      font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+      padding:16px 20px;box-shadow:0 -4px 24px rgba(0,0,0,.18);display:flex;flex-wrap:wrap;
+      align-items:center;gap:14px;justify-content:center}
+    .tmx-cc__txt{flex:1 1 360px;max-width:760px}
+    .tmx-cc__txt a{color:#9ed0f5;text-decoration:underline}
+    .tmx-cc__btns{display:flex;gap:10px;flex:0 0 auto}
+    .tmx-cc__b{appearance:none;border:0;cursor:pointer;font:inherit;font-weight:600;
+      padding:10px 22px;border-radius:99px;transition:filter .15s;color:#fff}
+    .tmx-cc__b:hover{filter:brightness(1.08)}
+    .tmx-cc__b--no{background:rgba(255,255,255,.16)}
+    .tmx-cc__b--yes{background:var(--green-cta,#5C820F)}
+    @media(max-width:640px){.tmx-cc{padding:14px}.tmx-cc__btns{width:100%}.tmx-cc__b{flex:1}}
+  </style>
+<script>
+  (function(){
+    var KEY='tmx-consent-v1', CL='wt18054m0r';
+    function lc(){var l=(document.documentElement.getAttribute('lang')||'en').toLowerCase().split('-')[0];
+      var m={cz:'cs',cs:'cs',sk:'sk',de:'de',pl:'pl',gr:'el',el:'el',hu:'hu',en:'en'};return m[l]||'en';}
+    var T={
+      hu:{t:'Analitikai s\u00fctiket haszn\u00e1lunk (Google Analytics, Microsoft Clarity, Smartsupp), hogy meg\u00e9rts\u00fck a webhely haszn\u00e1lat\u00e1t. Csak az \u00d6n hozz\u00e1j\u00e1rul\u00e1s\u00e1val t\u00f6lt\u0151dnek be.',a:'Elfogadom',r:'Elutas\u00edtom',p:'Adatv\u00e9delem \u00e9s s\u00fctik'},
+      ro:{t:'Utilizăm module cookie de analiză (Google Analytics, Microsoft Clarity, Smartsupp) pentru a înțelege modul de utilizare a site-ului. Se încarcă doar cu consimțământul dumneavoastră.',a:'Accept',r:'Refuz',p:'Confidențialitate și cookie-uri'},
+      nl:{t:'We gebruiken analytische cookies (Google Analytics, Microsoft Clarity, Smartsupp) om het gebruik van de site te begrijpen. Ze laden alleen met uw toestemming.',a:'Accepteren',r:'Weigeren',p:'Privacy en cookies'},
+      fr:{t:'Nous utilisons des cookies analytiques (Google Analytics, Microsoft Clarity, Smartsupp) pour comprendre l’utilisation du site. Ils ne se chargent qu’avec votre consentement.',a:'Accepter',r:'Refuser',p:'Confidentialité et cookies'},
+      it:{t:'Utilizziamo cookie analitici (Google Analytics, Microsoft Clarity, Smartsupp) per capire l’utilizzo del sito. Si caricano solo con il Suo consenso.',a:'Accetta',r:'Rifiuta',p:'Privacy e cookie'},
+      en:{t:'Utilizăm module cookie de analiză (Google Analytics, Microsoft Clarity, Smartsupp) pentru a înțelege modul de utilizare a site-ului. Acestea se încarcă numai cu consimțământul dumneavoastră.',a:'Accept',r:'Reject',p:'Privacy &amp; cookies'},
+      cs:{t:'Pou\u017e\u00edv\u00e1me analytick\u00e9 cookies (Google Analytics, Microsoft Clarity, Smartsupp) k pochopen\u00ed pou\u017e\u00edv\u00e1n\u00ed webu. Na\u010dtou se jen s va\u0161\u00edm souhlasem.',a:'P\u0159ijmout',r:'Odm\u00edtnout',p:'Soukrom\u00ed a cookies'},
+      sk:{t:'Pou\u017e\u00edvame analytick\u00e9 cookies (Google Analytics, Microsoft Clarity, Smartsupp) na pochopenie pou\u017e\u00edvania webu. Na\u010d\u00edtaj\u00fa sa len s va\u0161\u00edm s\u00fahlasom.',a:'Prija\u0165',r:'Odmietnu\u0165',p:'S\u00fakromie a cookies'},
+      de:{t:'Wir verwenden Analyse-Cookies (Google Analytics, Microsoft Clarity, Smartsupp), um die Nutzung der Website zu verstehen. Sie werden nur mit Ihrer Einwilligung geladen.',a:'Akzeptieren',r:'Ablehnen',p:'Datenschutz &amp; Cookies'},
+      pl:{t:'U\u017cywamy plik\u00f3w cookie do analityki (Google Analytics, Microsoft Clarity, Smartsupp), aby zrozumie\u0107 korzystanie z witryny. \u0141aduj\u0105 si\u0119 tylko za Twoj\u0105 zgod\u0105.',a:'Akceptuj',r:'Odrzu\u0107',p:'Prywatno\u015b\u0107 i cookies'},
+      el:{t:'\u03a7\u03c1\u03b7\u03c3\u03b9\u03bc\u03bf\u03c0\u03bf\u03b9\u03bf\u03cd\u03bc\u03b5 cookies \u03b1\u03bd\u03ac\u03bb\u03c5\u03c3\u03b7\u03c2 (Google Analytics, Microsoft Clarity, Smartsupp) \u03b3\u03b9\u03b1 \u03bd\u03b1 \u03ba\u03b1\u03c4\u03b1\u03bd\u03bf\u03ae\u03c3\u03bf\u03c5\u03bc\u03b5 \u03c4\u03b7 \u03c7\u03c1\u03ae\u03c3\u03b7. \u03a6\u03bf\u03c1\u03c4\u03ce\u03bd\u03bf\u03bd\u03c4\u03b1\u03b9 \u03bc\u03cc\u03bd\u03bf \u03bc\u03b5 \u03c4\u03b7 \u03c3\u03c5\u03b3\u03ba\u03b1\u03c4\u03ac\u03b8\u03b5\u03c3\u03ae \u03c3\u03b1\u03c2.',a:'\u0391\u03c0\u03bf\u03b4\u03bf\u03c7\u03ae',r:'\u0391\u03c0\u03cc\u03c1\u03c1\u03b9\u03c8\u03b7',p:'\u0391\u03c0\u03cc\u03c1\u03c1\u03b7\u03c4\u03bf &amp; cookies'}
+    };
+    function loadClarity(){if(!CL||window.__tmxCl)return;window.__tmxCl=1;
+      (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+       t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+       y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script",CL);}
+    function grant(){try{localStorage.setItem(KEY,'granted')}catch(e){}
+      gtag('consent','update',{analytics_storage:'granted'});loadClarity();}
+    function deny(){try{localStorage.setItem(KEY,'denied')}catch(e){}}
+    var saved=null;try{saved=localStorage.getItem(KEY)}catch(e){}
+    if(saved==='granted'){grant();return;} if(saved==='denied'){return;}
+    function show(){var tx=T[lc()]||T.en;
+      var b=document.createElement('div');b.className='tmx-cc';b.setAttribute('role','dialog');b.setAttribute('aria-live','polite');
+      b.innerHTML='<div class="tmx-cc__txt">'+tx.t+' <a href="/ro/confidentialitate/">'+tx.p+'</a></div>'+
+        '<div class="tmx-cc__btns"><button type="button" class="tmx-cc__b tmx-cc__b--no">'+tx.r+'</button>'+
+        '<button type="button" class="tmx-cc__b tmx-cc__b--yes">'+tx.a+'</button></div>';
+      document.body.appendChild(b);
+      b.querySelector('.tmx-cc__b--yes').addEventListener('click',function(){grant();b.remove();});
+      b.querySelector('.tmx-cc__b--no').addEventListener('click',function(){deny();b.remove();});}
+    if(document.body)show();else document.addEventListener('DOMContentLoaded',show);
+  })();
+  </script>
+<!-- TMX-ANALYTICS END -->
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Articole – Ghiduri de conformitate pentru tahografe | TAGRA</title>
+<meta content="Ghiduri practice privind gestionarea datelor tahografului, obligațiile legale și conformitatea pentru operatorii de transport rutier și conducătorii auto profesioniști din întreaga Europă." name="description"/>
+<meta content="#0b2c4a" name="theme-color"/>
+<link href="/manifest.json" rel="manifest"/>
+<link href="https://tagra.app/ro/articole/" rel="canonical"/>
+<link href="https://tagra.app/de/ratgeber/" hreflang="de" rel="alternate"/><link href="https://tagra.app/el/arthra/" hreflang="el" rel="alternate"/><link href="https://tagra.app/articles/" hreflang="en" rel="alternate"/><link href="https://tagra.app/fr/articles/" hreflang="fr" rel="alternate"/><link href="https://tagra.app/hu/cikkek/" hreflang="hu" rel="alternate"/><link href="https://tagra.app/it/articoli/" hreflang="it" rel="alternate"/><link href="https://tagra.app/nl/artikelen/" hreflang="nl" rel="alternate"/><link href="https://tagra.app/pl/poradnik/" hreflang="pl" rel="alternate"/>
+<link href="https://tagra.app/ro/articole/" hreflang="ro" rel="alternate"/><link href="https://tagra.app/articles/" hreflang="x-default" rel="alternate"/>
+<meta content="website" property="og:type"/>
+<meta content="en_US" property="og:locale"/>
+<meta content="TAGRA" property="og:site_name"/>
+<meta content="Articole – Ghiduri de conformitate pentru tahografe | TAGRA" property="og:title"/><meta content="Ghiduri practice privind gestionarea datelor tahografului, obligațiile legale și conformitatea pentru operatorii de transport rutier și conducătorii auto profesioniști din întreaga Europă." property="og:description"/>
+<meta content="https://cdn.truckmall.cz/data/user-content/TDT_TAGRA_MAX_wh.jpg" property="og:image"/>
+<meta content="https://tagra.app/ro/articole/" property="og:url"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    a{color:var(--green-brand);text-decoration:none;}
+    a:hover{color:var(--green-cta);text-decoration:underline;text-underline-offset:.18em;}
+    #scroll-progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--green-brand),var(--blue-light));width:0%;z-index:9999;pointer-events:none;transition:width .1s ease-out;}
+.nav-inner{margin:0 auto;padding:0 24px;height:100%;display:flex;align-items:center;justify-content:space-between;gap:24px;}
+    .nav-links{display:flex;align-items:center;gap:4px;list-style:none;}
+    .nav-links li a{font-size:15px;font-weight:500;color:var(--text);padding:8px 12px;border-radius:8px;transition:background .15s;text-decoration:none;}
+    .nav-links li a:hover{background:var(--bg-apple-solid);color:var(--blue-mid);}
+    .nav-links .nav-cta a{background:var(--green-cta);color:#fff!important;border-radius:99px;padding:8px 18px;font-weight:600;}
+    .nav-links .nav-cta a:hover{background:var(--green-brand);text-decoration:none;}
+    .nav-lang{display:flex;align-items:center;gap:4px;font-size:14px;font-weight:600;}
+    .nav-lang a{padding:5px 8px;border-radius:6px;color:var(--text2);text-decoration:none;transition:background .15s;}
+    .nav-lang a:hover,.nav-lang a.active{background:var(--bg-apple-solid);color:var(--blue-mid);}
+    .nav-lang span{color:var(--border);}
+    .nav-mobile-toggle{display:none;background:none;border:none;cursor:pointer;padding:8px;}
+    .nav-mobile-toggle span{display:block;width:22px;height:2px;background:var(--text);margin:5px 0;border-radius:2px;}
+    @media(max-width:900px){.nav-links{display:none;}.nav-mobile-toggle{display:block;}.nav-links.open{display:flex;flex-direction:column;align-items:flex-start;gap:2px;position:absolute;top:var(--nav-h);left:0;right:0;background:rgba(255,255,255,0.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:12px 24px 20px;}}
+    
+    
+    @media(max-width:768px){.band{padding:50px 0;}}
+    @media(max-width:768px){
+    }
+    .eyebrow{font-size:15px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--green-brand);margin-bottom:12px;}
+    
+    
+    .article-card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(0,0,0,.08);border-color:rgba(19,74,142,.3);}
+    .article-card-body{padding:28px;display:flex;flex-direction:column;flex:1;}
+    .article-card-eyebrow{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--blue-mid);margin-bottom:10px;}
+    .article-card-title{font-size:20px;font-weight:800;line-height:1.3;color:var(--text-strong);margin-bottom:12px;}
+    .article-card-desc{font-size:16px;line-height:1.6;color:var(--text2);margin-bottom:20px;flex:1;}
+    .article-card-meta{font-size:14px;color:var(--text2);display:flex;gap:16px;}
+    .article-card-cta{display:inline-flex;margin-top:16px;font-size:15px;font-weight:700;color:var(--blue-mid);align-items:center;gap:4px;}
+    .article-card:hover .article-card-cta{color:var(--blue-dark);}
+    .article-card-tag{display:inline-block;padding:3px 10px;border-radius:999px;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;margin-bottom:12px;}
+    .tag--new{background:rgba(92,130,15,.12);color:var(--green-cta);}
+    .tag--guide{background:rgba(19,74,142,.1);color:var(--blue-mid);}
+  </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://tagra.app/#organization",
+  "name": "Truck Data Technology, s.r.o.",
+  "alternateName": "TDT",
+  "url": "https://www.tdt.cz",
+  "logo": "https://tagra.app/assets/img/logo-light.svg?v=20260513zh",
+  "sameAs": [
+    "https://www.tdt.cz"
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+420-739-005-345",
+    "email": "sales@tagra.app",
+    "contactType": "sales",
+    "availableLanguage": ["English", "Czech", "Slovak"]
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "url": "https://tagra.app/ro/articole/",
+  "name": "Articole – Ghiduri de conformitate pentru tahografe",
+  "description": "Ghiduri practice privind gestionarea datelor tahografului, obligațiile legale și conformitatea pentru operatorii de transport rutier și conducătorii auto profesioniști din întreaga Europă.",
+  "inLanguage": "ro",
+  "isPartOf": { "@id": "https://tagra.app/#website" },
+  "publisher": { "@id": "https://tagra.app/#organization" },
+  "mainEntity": {
+    "@type": "ItemList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "url": "https://tagra.app/ro/articole/operator-liability-for-driver-infringements/",
+        "name": "Cine plătește atunci când un conducător auto încalcă regulile?"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "url": "https://tagra.app/ro/articole/tachograph-rules-uk-dvsa-operator-licence/",
+        "name": "Reguli privind tahograful pentru operatorii din Regatul Unit: controalele DVSA, 56 de zile de date și licența dumneavoastră de operator"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "url": "https://tagra.app/ro/articole/digital-tachograph-symbols/",
+        "name": "Simboluri ale tahografului &amp; coduri de eroare: ghid pentru conducătorii auto"
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "url": "https://tagra.app/ro/articole/tachographs-for-vans-new-obligation-july-2026/",
+        "name": "Tahograful pentru autoutilitare de 2,5–3,5 t este obligatoriu acum — cea mai rapidă cale de conformare"
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "url": "https://tagra.app/ro/articole/who-must-evaluate-tachograph-data-2026/",
+        "name": "Cine trebuie să evalueze datele tahografului din 2026 — prezentare completă"
+      },
+      {
+        "@type": "ListItem",
+        "position": 6,
+        "url": "https://tagra.app/ro/articole/how-to-download-evaluate-archive-tachograph-data/",
+        "name": "Tahograf digital: cum să descărcați, evaluați și arhivați corect datele"
+      },
+      {
+        "@type": "ListItem",
+        "position": 7,
+        "url": "https://tagra.app/ro/articole/tachograph-card-apply-renew/",
+        "name": "Card de tahograf: cum să solicitați, reînnoiți și înlocuiți cardul"
+      },
+      {
+        "@type": "ListItem",
+        "position": 8,
+        "url": "https://tagra.app/ro/articole/tachograph-error-84-internal-dsrc-fault/",
+        "name": "Defecțiune internă DSRC — cod de eroare al tahografului 84"
+      },
+      {
+        "@type": "ListItem",
+        "position": 9,
+        "url": "https://tagra.app/ro/articole/tachograph-error-82-internal-gnss-fault/",
+        "name": "Defecțiune internă GNSS — cod de eroare al tahografului 82"
+      },
+      {
+        "@type": "ListItem",
+        "position": 10,
+        "url": "https://tagra.app/ro/articole/tachograph-error-83-gnss-is-missing/",
+        "name": "GNSS lipsește — cod de eroare al tahografului 83"
+      },
+      {
+        "@type": "ListItem",
+        "position": 11,
+        "url": "https://tagra.app/ro/articole/tachograph-error-34-ejection-not-possible/",
+        "name": "Ejectarea nu este posibilă — cod de eroare al tahografului 34"
+      },
+      {
+        "@type": "ListItem",
+        "position": 12,
+        "url": "https://tagra.app/ro/articole/tachograph-error-36-printing-not-possible/",
+        "name": "Imprimarea nu este posibilă — cod de eroare al tahografului 36"
+      },
+      {
+        "@type": "ListItem",
+        "position": 13,
+        "url": "https://tagra.app/ro/articole/tachograph-error-80-motion-conflict/",
+        "name": "Conflict de mișcare — cod de eroare al tahografului 80"
+      },
+      {
+        "@type": "ListItem",
+        "position": 14,
+        "url": "https://tagra.app/ro/articole/tachograph-error-85-dsrc-communication-fault/",
+        "name": "Defecțiune de comunicare DSRC — cod de eroare al tahografului 85"
+      },
+      {
+        "@type": "ListItem",
+        "position": 15,
+        "url": "https://tagra.app/ro/articole/tachograph-error-96-gnss-anomaly/",
+        "name": "Anomalie GNSS — cod de eroare al tahografului 96"
+      },
+      {
+        "@type": "ListItem",
+        "position": 16,
+        "url": "https://tagra.app/ro/articole/tachograph-error-98-its-fault/",
+        "name": "Defecțiune ITS — cod de eroare al tahografului 98"
+      },
+      {
+        "@type": "ListItem",
+        "position": 17,
+        "url": "https://tagra.app/ro/articole/tachograph-error-21-motion-sensor-fault/",
+        "name": "Defecțiunea senzorului de mișcare 21: ce înseamnă și ce trebuie să faceți"
+      }
+    ]
+  }
+}
+</script>
+<link href="/assets/css/tokens.css" rel="stylesheet"/>
+<link href="/assets/css/base.css" rel="stylesheet"/>
+<link href="/assets/css/components.css" rel="stylesheet"/>
+<link href="/assets/css/nav.css" rel="stylesheet"/>
+<script defer="" src="/assets/js/nav.js?v=20260816b"></script>
+<link href="/assets/css/footer.css" rel="stylesheet"/></head>
+<body>
+<a class="skip-link" href="#main-content">Salt la conținut</a>
+<div aria-hidden="true" id="scroll-progress"></div>
+<nav aria-label="Navigare principală" class="site-nav" role="navigation">
+<div class="nav-inner">
+<a aria-label="TAGRA – Acasă" class="nav-logo" href="/ro/"><img alt="TAGRA" height="32" src="/assets/img/logo-light.svg?v=20260513zh" style="display:block;height:32px;width:auto;" width="140"/></a>
+<ul class="nav-links" id="nav-links">
+<li><a href="/ro/pentru-firme/">Pentru societăți</a></li>
+<li><a href="/ro/pentru-conducatori/">Pentru conducători auto</a></li>
+<li><a href="/ro/autoritati-de-control/">Control</a></li>
+<li><a aria-current="page" href="/articles/">Articole</a></li><li><a href="/ro/manuale/">Manuale</a></li>
+<li><a href="/ro/intrebari-frecvente/">Întrebări frecvente</a></li>
+<li><a href="/ro/contact/">Contact</a></li>
+<li class="nav-cta-li"><a class="nav-cta" href="/ro/incercare-gratuita/?audience=fleet">Încercați gratuit timp de 30 de zile</a></li>
+</ul>
+<details class="nav-lang">
+<summary aria-label="Limbă: RO">RO</summary>
+<div class="nav-lang-menu" role="menu"><a href="/" hreflang="en">Engleză</a><a href="/de/ratgeber/" hreflang="de">Deutsch</a><a href="/pl/poradnik/" hreflang="pl">Polski</a><a href="/nl/artikelen/" hreflang="nl">Nederlands</a><a href="/fr/articles/" hreflang="fr">Français</a><a href="/it/articoli/" hreflang="it">Italiano</a><a href="/el/arthra/" hreflang="el">Ελληνικά</a><a href="/hu/cikkek/" hreflang="hu">Magyar</a><a href="/ro/articole/" hreflang="ro">Română</a><a href="https://www.tdt.cz/" hreflang="cs" rel="noopener" target="_blank">Čeština</a><a href="https://www.tdt.sk/" hreflang="sk" rel="noopener" target="_blank">Slovenčina</a></div>
+</details>
+<a class="nav-cta-mobile" href="/ro/incercare-gratuita/?audience=fleet">Încercați gratuit</a>
+<button aria-expanded="false" aria-label="Comutați meniul" class="nav-mobile-toggle" id="nav-toggle">
+<span></span><span></span><span></span>
+</button>
+</div>
+</nav>
+<section id="main-content" class="band band--hero" style="text-align:left">
+<div class="container">
+<div class="eyebrow">Bază de cunoștințe</div>
+<h1 style="text-align:left">Ghiduri de conformare privind tahograful</h1>
+<p style="font-size:19px;color:var(--text2);max-width:680px;margin:12px 0 0">Articole practice despre obligațiile legale, gestionarea datelor și pregătirea pentru controalele autorităților de control (ISCTR) — redactate de specialiști în tahografe.</p>
+</div>
+</section>
+<section class="band">
+<div class="container">
+<div class="article-carousel">
+<div class="article-grid" id="articleGrid">
+<a class="article-card" href="/ro/articole/raspunderea-operatorului-contraventii-conducatori/"><div class="article-card-body"><span class="article-card-tag tag--guide">Conformare</span><div class="article-card-eyebrow">Obligațiile operatorului</div><h3 class="card-title">Cine plătește atunci când un conducător auto încalcă regulile? Răspunderea operatorului explicată</h3><p class="article-card-desc">Societatea răspunde pentru conducătorii săi auto, inclusiv în străinătate — însă dovezile privind instruirea și verificările periodice pot schimba situația.</p><div class="article-card-meta"><span>9 min de citit</span></div><span class="article-card-cta">Citiți articolul →</span></div></a><a class="article-card" href="/articles/tachograph-rules-uk-dvsa-operator-licence/"><div class="article-card-body"><span class="article-card-tag tag--guide">Regatul Unit</span><div class="article-card-eyebrow">Regimul din Regatul Unit</div><h3 class="card-title">Reguli privind tahograful pentru operatorii din Regatul Unit: DVSA, 56 de zile și licența dumneavoastră de operator <span class="en-badge">(în engleză)</span></h3><p class="article-card-desc">Ce regim se aplică după Brexit, de ce perioada pentru controlul rutier s-a dublat, cât costă sancțiunile și unde se află riscul real.</p><div class="article-card-meta"><span>Lectură de 8 min</span></div><span class="article-card-cta">Citiți articolul →</span></div></a><a class="article-card" href="/ro/articole/simboluri-tahograf-digital/">
+<div class="article-card-body">
+<span class="article-card-tag tag--guide">Bază de cunoștințe pentru conducători auto</span>
+<div class="article-card-eyebrow">Ghid de referință</div>
+<h2 class="sr-only">Bază de cunoștințe</h2><h3 class="card-title">Simbolurile tahografului: semnificația pictogramelor digitale explicată</h3>
+<p class="article-card-desc">Ghid clar privind cele patru simboluri de activitate (conducere, alte activități, disponibilitate, repaus), pictogramele pentru card și echipaj, OUT, modul feribot/tren și simbolurile de avertisment pe care trebuie să le cunoască fiecare conducător auto de vehicule grele.</p>
+<div class="article-card-meta"><span>Lectură de 7 min</span></div>
+<span class="article-card-cta">Citiți articolul →</span>
+</div>
+</a>
+<a class="article-card" href="/ro/articole/tahograf-autoutilitare-obligatie-iulie-2026/">
+<div class="article-card-body">
+<span class="article-card-tag tag--new">Legislație nouă</span>
+<div class="article-card-eyebrow">În vigoare de la 1 iulie 2026</div>
+<h3 class="card-title">Tahografe pentru autoutilitare: noua obligație din iulie 2026</h3>
+<p class="article-card-desc">De la 1 iulie 2026, autoutilitarele de 2,5–3,5 t utilizate în transport internațional trebuie să aibă tahograf digital. Aflați cine este vizat, de ce aveți nevoie și cum vă puteți pregăti.</p>
+<div class="article-card-meta"><span>Lectură de 8 min</span></div>
+<span class="article-card-cta">Citiți articolul →</span>
+</div>
+</a>
+<a class="article-card" href="/ro/articole/cine-trebuie-sa-evalueze-datele-tahograf-2026/">
+<div class="article-card-body">
+<span class="article-card-tag tag--guide">Prezentare generală</span>
+<div class="article-card-eyebrow">Actualizat pentru 2026</div>
+<h3 class="card-title">Cine trebuie să evalueze datele tahografului din 2026</h3>
+<p class="article-card-desc">Camioane, autobuze, autoutilitare utilizate în transport internațional și conducători auto independenți — o prezentare clară a tuturor tipurilor de transport supuse obligației de evaluare.</p>
+<div class="article-card-meta"><span>Lectură de 7 min</span></div>
+<span class="article-card-cta">Citiți articolul →</span>
+</div>
+</a>
+<a class="article-card" href="/ro/articole/descarcare-evaluare-arhivare-date-tahograf/">
+<div class="article-card-body">
+<span class="article-card-tag tag--guide">Ghid complet</span>
+<div class="article-card-eyebrow">Pas cu pas</div>
+<h3 class="card-title">Tahograf digital: cum să descărcați, evaluați și arhivați corect datele</h3>
+<p class="article-card-desc">Ghidul complet de conformitate: termenele de 28/90 de zile, de ce aveți nevoie, procesul corect și ce verifică în mod real inspectorii.</p>
+<div class="article-card-meta"><span>Lectură de 10 min</span></div>
+<span class="article-card-cta">Citiți articolul →</span>
+</div>
+</a>
+<a class="article-card" href="/ro/articole/card-tahograf-obtinere-reinnoire/">
+<div class="article-card-body">
+<span class="article-card-tag tag--guide">Regatul Unit</span>
+<div class="article-card-eyebrow">Bază de cunoștințe pentru conducători auto</div>
+<h3 class="card-title">Card de tahograf: cum să solicitați, reînnoiți și înlocuiți cardul</h3>
+<p class="article-card-desc">Unde puteți depune cererea, cât costă, cât timp este valabil și ce trebuie să faceți dacă cardul dumneavoastră de conducător auto pentru tahograf este pierdut sau furat. Reguli din Regatul Unit, 2026.</p>
+<div class="article-card-meta"><span>Lectură de 5 min</span></div>
+<span class="article-card-cta">Citiți articolul →</span>
+</div>
+</a>
+<a class="article-card" href="/ro/articole/tahograf-defectiune-84-defectiune-interna-dsrc/">
+<div class="article-card-body">
+<span class="article-card-tag tag--guide">Cod de eroare</span>
+<div class="article-card-eyebrow">Bază de cunoștințe pentru conducători auto</div>
+<h3 class="card-title">Defecțiune DSRC internă: ce înseamnă codul de eroare 84 al tahografului</h3>
+<p class="article-card-desc">Ce înseamnă codul, ce indică manualul că trebuie să faceți și dacă puteți continua conducerea. Gravitate: scăzută.</p>
+<div class="article-card-meta"><span>Timp de citire: 3 min</span></div>
+<span class="article-card-cta">Citiți articolul →</span>
+</div>
+</a>
+<a class="article-card" href="/articles/tacho-vu-internal-fault/">
+<div class="article-card-body">
+<span class="article-card-tag tag--guide">Cod de eroare</span>
+<div class="article-card-eyebrow">Bază de cunoștințe pentru conducători auto</div>
+<h3 class="card-title">Defecțiune internă a UMV <span class="en-badge">(în engleză)</span></h3>
+<p class="article-card-desc">Critică — unitatea montată pe vehicul trebuie înlocuită. Ce prevede articolul 37 și dacă puteți continua conducerea.</p>
+<div class="article-card-meta"><span>Timp de citire: 3 min</span></div>
+<span class="article-card-cta">Citiți articolul →</span>
+</div>
+</a>
+<a class="article-card" href="/articles/tacho-stored-data-integrity-error/">
+<div class="article-card-body">
+<span class="article-card-tag tag--guide">Cod de eroare</span>
+<div class="article-card-eyebrow">Bază de cunoștințe pentru conducători auto</div>
+<h3 class="card-title">Eroare de integritate a datelor stocate <span class="en-badge">(în engleză)</span></h3>
+<p class="article-card-desc">Memorie de masă de 365 de zile coruptă. De ce face parte din categoria încălcărilor de securitate și ce trebuie să faceți înainte de înlocuirea unității.</p>
+<div class="article-card-meta"><span>Timp de citire: 3 min</span></div>
+<span class="article-card-cta">Citiți articolul →</span>
+</div>
+</a>
+<a class="article-card" href="/ro/articole/tahograf-defectiune-82-defectiune-interna-gnss/">
+<div class="article-card-body">
+<span class="article-card-tag tag--guide">Cod de eroare</span>
+<div class="article-card-eyebrow">Bază de cunoștințe pentru conducători auto</div>
+<h3 class="card-title">Defecțiune GNSS internă: ce înseamnă codul de eroare 82 al tahografului</h3>
+<p class="article-card-desc">Ce înseamnă codul, ce indică manualul că trebuie să faceți și dacă puteți continua conducerea. Gravitate: medie.</p>
+<div class="article-card-meta"><span>Timp de citire: 3 min</span></div>
+<span class="article-card-cta">Citiți articolul →</span>
+</div>
+</a>
+<a class="article-card" href="/ro/articole/tahograf-defectiune-83-lipsa-semnal-gnss/">
+<div class="article-card-body">
+<span class="article-card-tag tag--guide">Cod de eroare</span>
+<div class="article-card-eyebrow">Bază de cunoștințe pentru conducători auto</div>
+<h3 class="card-title">GNSS lipsește: ce înseamnă codul de eroare 83 al tahografului</h3>
+<p class="article-card-desc">Ce înseamnă codul, ce indică manualul că trebuie să faceți și dacă puteți continua conducerea. Gravitate: medie.</p>
+<div class="article-card-meta"><span>Timp de citire: 3 min</span></div>
+<span class="article-card-cta">Citiți articolul →</span>
+</div>
+</a>
+<a class="article-card" href="/ro/articole/tahograf-defectiune-34-extragere-imposibila/">
+<div class="article-card-body">
+<span class="article-card-tag tag--guide">Cod de eroare</span>
+<div class="article-card-eyebrow">Bază de cunoștințe pentru conducători auto</div>
+<h3 class="card-title">Ejectarea nu este posibilă — cod de eroare al tahografului 34</h3>
+<p class="article-card-desc">Cod de eroare 34 al tahografului, ejectarea nu este posibilă: ce înseamnă, ce indică manualul VDO DTCO 4.1 că trebuie să faceți și dacă puteți continua conducerea.</p>
+<div class="article-card-meta"><span>Timp de citire: 6 min</span></div>
+<span class="article-card-cta">Citiți articolul →</span>
+</div>
+</a>
+<a class="article-card" href="/ro/articole/tahograf-defectiune-36-tiparire-imposibila/">
+<div class="article-card-body">
+<span class="article-card-tag tag--guide">Cod de eroare</span>
+<div class="article-card-eyebrow">Bază de cunoștințe pentru conducători auto</div>
+<h3 class="card-title">Imprimarea nu este posibilă — cod de eroare al tahografului 36</h3>
+<p class="article-card-desc">Cod de eroare 36 al tahografului, imprimarea nu este posibilă: ce înseamnă, ce indică manualul VDO DTCO 4.1 că trebuie să faceți și dacă puteți continua conducerea. Gravitate: medie.</p>
+<div class="article-card-meta"><span>Lectură de 5 min</span></div>
+<span class="article-card-cta">Citiți articolul →</span>
+</div>
+</a>
+<a class="article-card" href="/ro/articole/tahograf-defectiune-80-conflict-de-miscare/">
+<div class="article-card-body">
+<span class="article-card-tag tag--guide">Cod de eroare</span>
+<div class="article-card-eyebrow">Bază de cunoștințe pentru conducători auto</div>
+<h3 class="card-title">Conflict de mișcare — cod de eroare al tahografului 80</h3>
+<p class="article-card-desc">Cod de eroare 80 al tahografului, conflict de mișcare: ce înseamnă, ce indică manualele VDO DTCO 4.1, Stoneridge, Actia și EFAS-4 că trebuie să faceți și dacă puteți continua conducerea.</p>
+<div class="article-card-meta"><span>Timp de citire: 6 min</span></div>
+<span class="article-card-cta">Citiți articolul →</span>
+</div>
+</a>
+<a class="article-card" href="/ro/articole/tahograf-defectiune-85-comunicatie-dsrc/">
+<div class="article-card-body">
+<span class="article-card-tag tag--guide">Cod de eroare</span>
+<div class="article-card-eyebrow">Bază de cunoștințe pentru conducători auto</div>
+<h3 class="card-title">Defecțiune de comunicare DSRC — cod de eroare al tahografului 85</h3>
+<p class="article-card-desc">Cod de eroare 85 al tahografului, defecțiune de comunicație DSRC: ce înseamnă, ce indică manualul VDO DTCO 4.1 că trebuie să faceți și dacă puteți continua conducerea. Gravitate: scăzută.</p>
+<div class="article-card-meta"><span>Lectură de 5 min</span></div>
+<span class="article-card-cta">Citiți articolul →</span>
+</div>
+</a>
+<a class="article-card" href="/ro/articole/tahograf-defectiune-96-anomalie-gnss/">
+<div class="article-card-body">
+<span class="article-card-tag tag--guide">Cod de eroare</span>
+<div class="article-card-eyebrow">Bază de cunoștințe pentru conducători auto</div>
+<h3 class="card-title">Anomalie GNSS — cod de eroare al tahografului 96</h3>
+<p class="article-card-desc">Cod de eroare 96 al tahografului, anomalie GNSS: ce înseamnă, ce indică manualul VDO DTCO 4.1 că trebuie să faceți și dacă puteți continua conducerea. Gravitate: ridicată.</p>
+<div class="article-card-meta"><span>Timp de citire: 6 min</span></div>
+<span class="article-card-cta">Citiți articolul →</span>
+</div>
+</a>
+<a class="article-card" href="/ro/articole/tahograf-defectiune-98-defectiune-its/">
+<div class="article-card-body">
+<span class="article-card-tag tag--guide">Cod de eroare</span>
+<div class="article-card-eyebrow">Bază de cunoștințe pentru conducători auto</div>
+<h3 class="card-title">Defecțiune ITS — cod de eroare al tahografului 98</h3>
+<p class="article-card-desc">Cod de eroare 98 al tahografului, defecțiune ITS: ce înseamnă, ce indică manualul VDO DTCO 4.1 că trebuie să faceți și dacă puteți continua conducerea.</p>
+<div class="article-card-meta"><span>Lectură de 5 min</span></div>
+<span class="article-card-cta">Citiți articolul →</span>
+</div>
+</a>
+<a class="article-card" href="/ro/articole/tahograf-defectiune-21-senzor-de-miscare/">
+<div class="article-card-body">
+<span class="article-card-tag tag--guide">Cod de eroare</span>
+<div class="article-card-eyebrow">Bază de cunoștințe pentru conducători auto</div>
+<h3 class="card-title">Defecțiunea senzorului de mișcare 21: ce înseamnă și ce trebuie să faceți</h3>
+<p class="article-card-desc">Cod de eroare 21 al tahografului, defecțiune a senzorului de mișcare: ce înseamnă mesajul, ce indică manualul VDO DTCO 4.1 și dacă puteți continua conducerea.</p>
+<div class="article-card-meta"><span>Lectură de 5 min</span></div>
+<span class="article-card-cta">Citiți articolul →</span>
+</div>
+</a>
+</div>
+<div class="article-carousel-nav">
+<button aria-label="Articole anterioare" class="article-carousel-btn" id="articlePrev">‹</button>
+<button aria-label="Articole următoare" class="article-carousel-btn" id="articleNext">›</button>
+</div>
+</div><!-- /.article-carousel -->
+</div>
+</section>
+<script>
+(function(){
+  const track = document.getElementById('articleGrid');
+  const prev = document.getElementById('articlePrev');
+  const next = document.getElementById('articleNext');
+  if (!track || !prev || !next) return;
+  function getStep(){
+    const card = track.querySelector('.article-card');
+    if (!card) return 320;
+    const cardW = card.getBoundingClientRect().width;
+    const cs = getComputedStyle(track);
+    const gap = parseFloat(cs.columnGap || cs.gap) || 20;
+    return cardW + gap;
+  }
+  function updateBtns(){
+    prev.disabled = track.scrollLeft <= 1;
+    next.disabled = track.scrollLeft >= track.scrollWidth - track.clientWidth - 1;
+  }
+  prev.addEventListener('click', ()=> track.scrollBy({left:-getStep(), behavior:'smooth'}));
+  next.addEventListener('click', ()=> track.scrollBy({left: getStep(), behavior:'smooth'}));
+  track.addEventListener('scroll', updateBtns, {passive:true});
+  window.addEventListener('resize', updateBtns);
+  updateBtns();
+})();
+</script>
+<footer class="site-footer" role="contentinfo">
+<div class="footer-inner">
+<div>
+<div class="footer-logo"><img alt="TAGRA" height="20" src="/assets/img/logo-dark.svg?v=20260513zh" width="88" loading="lazy"/></div>
+<p class="footer-desc">Software profesional de analiză a tahografelor. Descărcare date de pe cardul de conducător auto, analiză a tahografelor digitale, durată de conducere în UE și Directiva privind timpul de lucru pentru vehicule grele de marfă. Dezvoltat de Truck Data Technology, s.r.o.</p>
+</div>
+<div class="footer-col">
+<h2 class="footer-col-title">Produs</h2>
+<ul>
+<li><a href="/ro/pentru-firme/">Pentru operatorii de transport rutier</a></li>
+<li><a href="/ro/pentru-conducatori/">Pentru conducătorii auto profesioniști</a></li>
+<li><a href="/ro/autoritati-de-control/">Pentru autoritățile de control (ISCTR)</a></li>
+<li><a href="/ro/cum-functioneaza/">Cum funcționează</a></li>
+<li><a href="/ro/pentru-cine/">Pentru cine</a></li>
+<li><a href="/ro/intrebari-frecvente/">Întrebări frecvente</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h2 class="footer-col-title">Resurse</h2>
+<ul>
+<li><a href="/articles/">Articole</a></li><li><a href="/ro/manuale/">Manuale</a></li>
+<li><a href="/ro/articole/simboluri-tahograf-digital/">Simboluri tahograf</a></li>
+<li><a href="/ro/integrari/dkv-live/">DKV LIVE®</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h2 class="footer-col-title">Societate</h2>
+<ul>
+<li><a href="/ro/contact/">Contact</a></li>
+<li><a href="https://www.tdt.cz" rel="noopener" target="_blank">Truck Data Technology</a></li>
+<li><a href="/ro/">Engleză</a></li><li><a href="/de/">Deutsch</a></li><li><a href="/pl/">Polski</a></li><li><a href="/el/">Ελληνικά</a></li><li><a href="/hu/">Magyar</a></li><li><a href="/it/articoli/">Italiano</a></li><li><a href="https://www.tdt.cz/" rel="noopener" target="_blank">Čeština</a></li><li><a href="https://www.tdt.sk/" rel="noopener" target="_blank">Slovenčina</a></li></ul>
+</div>
+</div>
+<div class="footer-bottom">
+<span>© 2026 Truck Data Technology, s.r.o. Toate drepturile rezervate.</span>
+<span><a href="/ro/contact/">Contact</a> · <a href="https://www.tdt.cz" rel="noopener" target="_blank">tdt.cz</a> · <a href="/ro/confidentialitate/">Confidențialitate &amp; cookie-uri</a></span>
+</div>
+</footer>
+<script>
+(function(){
+  var bar=document.getElementById('scroll-progress');
+  if(bar){window.addEventListener('scroll',function(){var t=document.documentElement.scrollTop||document.body.scrollTop;var h=document.documentElement.scrollHeight-document.documentElement.clientHeight;bar.style.width=(t/h*100)+'%';},{passive:true});}
+  var toggle=document.getElementById('nav-toggle'),links=document.getElementById('nav-links');
+  if(toggle&&links){toggle.addEventListener('click',function(){var open=links.classList.toggle('open');toggle.setAttribute('aria-expanded',open);});}
+})();
+</script>
+</body>
+</html>

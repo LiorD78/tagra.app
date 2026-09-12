@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<!-- TMX-ANALYTICS START -->
+<meta content="7F7894081BE7FBB245FF03AF8810B22F" name="msvalidate.01"/>
+<!-- Consent Mode v2 defaults (deny) + gtag stub — runs BEFORE gtag.js -->
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent','default',{
+      ad_storage:'denied', ad_user_data:'denied', ad_personalization:'denied',
+      analytics_storage:'denied', functionality_storage:'denied',
+      personalization_storage:'denied', security_storage:'granted',
+      wait_for_update:500
+    });
+    gtag('set','ads_data_redaction',true);
+    gtag('set','url_passthrough',false);
+  </script>
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-92253QFBNX"></script>
+<script>
+    gtag('js', new Date());
+    gtag('config','G-92253QFBNX');
+  </script>
+<!-- Cookie consent banner (self-hosted) + Microsoft Clarity gating -->
+<style>
+    .tmx-cc{position:fixed;left:0;right:0;bottom:0;z-index:2147483000;background:linear-gradient(120deg,var(--blue-dark,#0b2c4a),var(--blue-mid,#134a8e) 62%,var(--blue-light,#1f5fa6));color:#fff;
+      font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+      padding:16px 20px;box-shadow:0 -4px 24px rgba(0,0,0,.18);display:flex;flex-wrap:wrap;
+      align-items:center;gap:14px;justify-content:center}
+    .tmx-cc__txt{flex:1 1 360px;max-width:760px}
+    .tmx-cc__txt a{color:#9ed0f5;text-decoration:underline}
+    .tmx-cc__btns{display:flex;gap:10px;flex:0 0 auto}
+    .tmx-cc__b{appearance:none;border:0;cursor:pointer;font:inherit;font-weight:600;
+      padding:10px 22px;border-radius:99px;transition:filter .15s;color:#fff}
+    .tmx-cc__b:hover{filter:brightness(1.08)}
+    .tmx-cc__b--no{background:rgba(255,255,255,.16)}
+    .tmx-cc__b--yes{background:var(--green-cta,#5C820F)}
+    @media(max-width:640px){.tmx-cc{padding:14px}.tmx-cc__btns{width:100%}.tmx-cc__b{flex:1}}
+  </style>
+<script>
+  (function(){
+    var KEY='tmx-consent-v1', CL='wt18054m0r';
+    function lc(){var l=(document.documentElement.getAttribute('lang')||'en').toLowerCase().split('-')[0];
+      var m={cz:'cs',cs:'cs',sk:'sk',de:'de',pl:'pl',gr:'el',el:'el',hu:'hu',en:'en'};return m[l]||'en';}
+    var T={
+      hu:{t:'Analitikai s\u00fctiket haszn\u00e1lunk (Google Analytics, Microsoft Clarity, Smartsupp), hogy meg\u00e9rts\u00fck a webhely haszn\u00e1lat\u00e1t. Csak az \u00d6n hozz\u00e1j\u00e1rul\u00e1s\u00e1val t\u00f6lt\u0151dnek be.',a:'Elfogadom',r:'Elutas\u00edtom',p:'Adatv\u00e9delem \u00e9s s\u00fctik'},
+      ro:{t:'Utilizăm module cookie de analiză (Google Analytics, Microsoft Clarity, Smartsupp) pentru a înțelege modul de utilizare a site-ului. Se încarcă doar cu consimțământul dumneavoastră.',a:'Accept',r:'Refuz',p:'Confidențialitate și cookie-uri'},
+      nl:{t:'We gebruiken analytische cookies (Google Analytics, Microsoft Clarity, Smartsupp) om het gebruik van de site te begrijpen. Ze laden alleen met uw toestemming.',a:'Accepteren',r:'Weigeren',p:'Privacy en cookies'},
+      fr:{t:'Nous utilisons des cookies analytiques (Google Analytics, Microsoft Clarity, Smartsupp) pour comprendre l’utilisation du site. Ils ne se chargent qu’avec votre consentement.',a:'Accepter',r:'Refuser',p:'Confidentialité et cookies'},
+      it:{t:'Utilizziamo cookie analitici (Google Analytics, Microsoft Clarity, Smartsupp) per capire l’utilizzo del sito. Si caricano solo con il Suo consenso.',a:'Accetta',r:'Rifiuta',p:'Privacy e cookie'},
+      en:{t:'We use analytics cookies (Google Analytics, Microsoft Clarity, Smartsupp) to understand site usage. They load only with your consent.',a:'Accept',r:'Reject',p:'Privacy &amp; cookies'},
+      cs:{t:'Pou\u017e\u00edv\u00e1me analytick\u00e9 cookies (Google Analytics, Microsoft Clarity, Smartsupp) k pochopen\u00ed pou\u017e\u00edv\u00e1n\u00ed webu. Na\u010dtou se jen s va\u0161\u00edm souhlasem.',a:'P\u0159ijmout',r:'Odm\u00edtnout',p:'Soukrom\u00ed a cookies'},
+      sk:{t:'Pou\u017e\u00edvame analytick\u00e9 cookies (Google Analytics, Microsoft Clarity, Smartsupp) na pochopenie pou\u017e\u00edvania webu. Na\u010d\u00edtaj\u00fa sa len s va\u0161\u00edm s\u00fahlasom.',a:'Prija\u0165',r:'Odmietnu\u0165',p:'S\u00fakromie a cookies'},
+      de:{t:'Wir verwenden Analyse-Cookies (Google Analytics, Microsoft Clarity, Smartsupp), um die Nutzung der Website zu verstehen. Sie werden nur mit Ihrer Einwilligung geladen.',a:'Akzeptieren',r:'Ablehnen',p:'Datenschutz &amp; Cookies'},
+      pl:{t:'U\u017cywamy plik\u00f3w cookie do analityki (Google Analytics, Microsoft Clarity, Smartsupp), aby zrozumie\u0107 korzystanie z witryny. \u0141aduj\u0105 si\u0119 tylko za Twoj\u0105 zgod\u0105.',a:'Akceptuj',r:'Odrzu\u0107',p:'Prywatno\u015b\u0107 i cookies'},
+      el:{t:'\u03a7\u03c1\u03b7\u03c3\u03b9\u03bc\u03bf\u03c0\u03bf\u03b9\u03bf\u03cd\u03bc\u03b5 cookies \u03b1\u03bd\u03ac\u03bb\u03c5\u03c3\u03b7\u03c2 (Google Analytics, Microsoft Clarity, Smartsupp) \u03b3\u03b9\u03b1 \u03bd\u03b1 \u03ba\u03b1\u03c4\u03b1\u03bd\u03bf\u03ae\u03c3\u03bf\u03c5\u03bc\u03b5 \u03c4\u03b7 \u03c7\u03c1\u03ae\u03c3\u03b7. \u03a6\u03bf\u03c1\u03c4\u03ce\u03bd\u03bf\u03bd\u03c4\u03b1\u03b9 \u03bc\u03cc\u03bd\u03bf \u03bc\u03b5 \u03c4\u03b7 \u03c3\u03c5\u03b3\u03ba\u03b1\u03c4\u03ac\u03b8\u03b5\u03c3\u03ae \u03c3\u03b1\u03c2.',a:'\u0391\u03c0\u03bf\u03b4\u03bf\u03c7\u03ae',r:'\u0391\u03c0\u03cc\u03c1\u03c1\u03b9\u03c8\u03b7',p:'\u0391\u03c0\u03cc\u03c1\u03c1\u03b7\u03c4\u03bf &amp; cookies'}
+    };
+    function loadClarity(){if(!CL||window.__tmxCl)return;window.__tmxCl=1;
+      (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+       t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+       y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script",CL);}
+    function grant(){try{localStorage.setItem(KEY,'granted')}catch(e){}
+      gtag('consent','update',{analytics_storage:'granted'});loadClarity();}
+    function deny(){try{localStorage.setItem(KEY,'denied')}catch(e){}}
+    var saved=null;try{saved=localStorage.getItem(KEY)}catch(e){}
+    if(saved==='granted'){grant();return;} if(saved==='denied'){return;}
+    function show(){var tx=T[lc()]||T.en;
+      var b=document.createElement('div');b.className='tmx-cc';b.setAttribute('role','dialog');b.setAttribute('aria-live','polite');
+      b.innerHTML='<div class="tmx-cc__txt">'+tx.t+' <a href="/fr/confidentialite/">'+tx.p+'</a></div>'+
+        '<div class="tmx-cc__btns"><button type="button" class="tmx-cc__b tmx-cc__b--no">'+tx.r+'</button>'+
+        '<button type="button" class="tmx-cc__b tmx-cc__b--yes">'+tx.a+'</button></div>';
+      document.body.appendChild(b);
+      b.querySelector('.tmx-cc__b--yes').addEventListener('click',function(){grant();b.remove();});
+      b.querySelector('.tmx-cc__b--no').addEventListener('click',function(){deny();b.remove();});}
+    if(document.body)show();else document.addEventListener('DOMContentLoaded',show);
+  })();
+  </script>
+<!-- TMX-ANALYTICS END -->
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Articles – Guides de conformité du tachygraphe | TAGRA</title>
+<meta content="Guides pratiques sur la gestion des données du tachygraphe, les obligations légales et la conformité pour les transporteurs européens." name="description"/>
+<meta content="#0b2c4a" name="theme-color"/>
+<link href="/manifest.json" rel="manifest"/>
+<link href="https://tagra.app/fr/articles/" rel="canonical"/>
+<link href="https://tagra.app/de/ratgeber/" hreflang="de" rel="alternate"/><link href="https://tagra.app/el/arthra/" hreflang="el" rel="alternate"/><link href="https://tagra.app/articles/" hreflang="en" rel="alternate"/><link href="https://tagra.app/fr/articles/" hreflang="fr" rel="alternate"/><link href="https://tagra.app/hu/cikkek/" hreflang="hu" rel="alternate"/><link href="https://tagra.app/it/articoli/" hreflang="it" rel="alternate"/><link href="https://tagra.app/nl/artikelen/" hreflang="nl" rel="alternate"/><link href="https://tagra.app/pl/poradnik/" hreflang="pl" rel="alternate"/>
+<link href="https://tagra.app/ro/articole/" hreflang="ro" rel="alternate"/><link href="https://tagra.app/articles/" hreflang="x-default" rel="alternate"/>
+<meta content="website" property="og:type"/>
+<meta content="en_US" property="og:locale"/>
+<meta content="TAGRA" property="og:site_name"/>
+<meta content="Articles – Guides de conformité du tachygraphe | TAGRA" property="og:title"/><meta content="Guides pratiques sur la gestion des données du tachygraphe, les obligations légales et la conformité pour les transporteurs européens." property="og:description"/>
+<meta content="https://cdn.truckmall.cz/data/user-content/TDT_TAGRA_MAX_wh.jpg" property="og:image"/>
+<meta content="https://tagra.app/fr/articles/" property="og:url"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    a{color:var(--green-brand);text-decoration:none;}
+    a:hover{color:var(--green-cta);text-decoration:underline;text-underline-offset:.18em;}
+    #scroll-progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--green-brand),var(--blue-light));width:0%;z-index:9999;pointer-events:none;transition:width .1s ease-out;}
+.nav-inner{margin:0 auto;padding:0 24px;height:100%;display:flex;align-items:center;justify-content:space-between;gap:24px;}
+    .nav-links{display:flex;align-items:center;gap:4px;list-style:none;}
+    .nav-links li a{font-size:15px;font-weight:500;color:var(--text);padding:8px 12px;border-radius:8px;transition:background .15s;text-decoration:none;}
+    .nav-links li a:hover{background:var(--bg-apple-solid);color:var(--blue-mid);}
+    .nav-links .nav-cta a{background:var(--green-cta);color:#fff!important;border-radius:99px;padding:8px 18px;font-weight:600;}
+    .nav-links .nav-cta a:hover{background:var(--green-brand);text-decoration:none;}
+    .nav-lang{display:flex;align-items:center;gap:4px;font-size:14px;font-weight:600;}
+    .nav-lang a{padding:5px 8px;border-radius:6px;color:var(--text2);text-decoration:none;transition:background .15s;}
+    .nav-lang a:hover,.nav-lang a.active{background:var(--bg-apple-solid);color:var(--blue-mid);}
+    .nav-lang span{color:var(--border);}
+    .nav-mobile-toggle{display:none;background:none;border:none;cursor:pointer;padding:8px;}
+    .nav-mobile-toggle span{display:block;width:22px;height:2px;background:var(--text);margin:5px 0;border-radius:2px;}
+    @media(max-width:900px){.nav-links{display:none;}.nav-mobile-toggle{display:block;}.nav-links.open{display:flex;flex-direction:column;align-items:flex-start;gap:2px;position:absolute;top:var(--nav-h);left:0;right:0;background:rgba(255,255,255,0.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:12px 24px 20px;}}
+    
+    
+    @media(max-width:768px){.band{padding:50px 0;}}
+    @media(max-width:768px){
+    }
+    .eyebrow{font-size:15px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--green-brand);margin-bottom:12px;}
+    
+    
+    .article-card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(0,0,0,.08);border-color:rgba(19,74,142,.3);}
+    .article-card-body{padding:28px;display:flex;flex-direction:column;flex:1;}
+    .article-card-eyebrow{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--blue-mid);margin-bottom:10px;}
+    .article-card-title{font-size:20px;font-weight:800;line-height:1.3;color:var(--text-strong);margin-bottom:12px;}
+    .article-card-desc{font-size:16px;line-height:1.6;color:var(--text2);margin-bottom:20px;flex:1;}
+    .article-card-meta{font-size:14px;color:var(--text2);display:flex;gap:16px;}
+    .article-card-cta{display:inline-flex;margin-top:16px;font-size:15px;font-weight:700;color:var(--blue-mid);align-items:center;gap:4px;}
+    .article-card:hover .article-card-cta{color:var(--blue-dark);}
+    .article-card-tag{display:inline-block;padding:3px 10px;border-radius:999px;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;margin-bottom:12px;}
+    .tag--new{background:rgba(92,130,15,.12);color:var(--green-cta);}
+    .tag--guide{background:rgba(19,74,142,.1);color:var(--blue-mid);}
+  </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://tagra.app/#organization",
+  "name": "Truck Data Technology, s.r.o.",
+  "alternateName": "TDT",
+  "url": "https://www.tdt.cz",
+  "logo": "https://tagra.app/assets/img/logo-light.svg?v=20260513zh",
+  "sameAs": [
+    "https://www.tdt.cz"
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+420-739-005-345",
+    "email": "sales@tagra.app",
+    "contactType": "sales",
+    "availableLanguage": ["English", "Czech", "Slovak"]
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "url": "https://tagra.app/fr/articles/",
+  "name": "Articles – Guides de conformité du tachygraphe",
+  "description": "Guides pratiques sur la gestion des données du tachygraphe, les obligations légales et la conformité pour les opérateurs de transport et les conducteurs professionnels en Europe.",
+  "inLanguage": "fr",
+  "isPartOf": { "@id": "https://tagra.app/#website" },
+  "publisher": { "@id": "https://tagra.app/#organization" },
+  "mainEntity": {
+    "@type": "ItemList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "url": "https://tagra.app/fr/articles/responsabilite-transporteur-infractions-conducteurs/",
+        "name": "Qui paie lorsqu’un conducteur enfreint les règles ?"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "url": "https://tagra.app/articles/tachograph-rules-uk-dvsa-operator-licence/",
+        "name": "Tachograph rules for UK operators: DVSA checks, 56 days of data and your Operator Licence"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "url": "https://tagra.app/fr/articles/symboles-tachygraphe/",
+        "name": "Symboles du tachygraphe &amp; codes d’anomalie : guide du conducteur"
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "url": "https://tagra.app/fr/articles/tachygraphe-utilitaires-obligation-juillet-2026/",
+        "name": "Le tachygraphe est désormais obligatoire pour les véhicules utilitaires de 2,5–3,5 t — la manière la plus rapide de vous mettre en conformité"
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "url": "https://tagra.app/fr/articles/qui-doit-analyser-donnees-tachygraphe-2026/",
+        "name": "Qui doit évaluer les données du tachygraphe à partir de 2026 — vue d’ensemble complète"
+      },
+      {
+        "@type": "ListItem",
+        "position": 6,
+        "url": "https://tagra.app/fr/articles/telecharger-analyser-archiver-donnees-tachygraphe/",
+        "name": "Tachygraphe numérique : comment télécharger, évaluer et archiver correctement les données"
+      },
+      {
+        "@type": "ListItem",
+        "position": 7,
+        "url": "https://tagra.app/fr/articles/carte-tachygraphique-demande-renouvellement/",
+        "name": "Carte de tachygraphe : comment la demander, la renouveler et la remplacer"
+      },
+      {
+        "@type": "ListItem",
+        "position": 8,
+        "url": "https://tagra.app/fr/articles/tachygraphe-erreur-84-anomalie-interne-dsrc/",
+        "name": "Anomalie DSRC interne — code d’anomalie 84 du tachygraphe"
+      },
+      {
+        "@type": "ListItem",
+        "position": 9,
+        "url": "https://tagra.app/fr/articles/tachygraphe-erreur-82-anomalie-interne-gnss/",
+        "name": "Anomalie GNSS interne — code d’anomalie 82 du tachygraphe"
+      },
+      {
+        "@type": "ListItem",
+        "position": 10,
+        "url": "https://tagra.app/fr/articles/tachygraphe-erreur-83-gnss-absent/",
+        "name": "GNSS manquant — code d'anomalie du tachygraphe 83"
+      },
+      {
+        "@type": "ListItem",
+        "position": 11,
+        "url": "https://tagra.app/fr/articles/tachygraphe-erreur-34-ejection-impossible/",
+        "name": "Éjection impossible — code d'anomalie du tachygraphe 34"
+      },
+      {
+        "@type": "ListItem",
+        "position": 12,
+        "url": "https://tagra.app/fr/articles/tachygraphe-erreur-36-impression-impossible/",
+        "name": "Impression impossible — code d’anomalie du tachygraphe 36"
+      },
+      {
+        "@type": "ListItem",
+        "position": 13,
+        "url": "https://tagra.app/fr/articles/tachygraphe-erreur-80-conflit-de-mouvement/",
+        "name": "Conflit de mouvement — code d’anomalie du tachygraphe 80"
+      },
+      {
+        "@type": "ListItem",
+        "position": 14,
+        "url": "https://tagra.app/fr/articles/tachygraphe-erreur-85-anomalie-communication-dsrc/",
+        "name": "Anomalie de communication DSRC — code d'anomalie 85 du tachygraphe"
+      },
+      {
+        "@type": "ListItem",
+        "position": 15,
+        "url": "https://tagra.app/fr/articles/tachygraphe-erreur-96-anomalie-gnss/",
+        "name": "Anomalie GNSS — code d'anomalie 96 du tachygraphe"
+      },
+      {
+        "@type": "ListItem",
+        "position": 16,
+        "url": "https://tagra.app/fr/articles/tachygraphe-erreur-98-anomalie-its/",
+        "name": "Anomalie ITS — code d’anomalie du tachygraphe 98"
+      },
+      {
+        "@type": "ListItem",
+        "position": 17,
+        "url": "https://tagra.app/fr/articles/tachygraphe-erreur-21-defaut-capteur-de-mouvement/",
+        "name": "Anomalie du capteur de mouvement 21 : ce que cela signifie et ce que vous devez faire"
+      }
+    ]
+  }
+}
+</script>
+<link href="/assets/css/tokens.css" rel="stylesheet"/>
+<link href="/assets/css/base.css" rel="stylesheet"/>
+<link href="/assets/css/components.css" rel="stylesheet"/>
+<link href="/assets/css/nav.css" rel="stylesheet"/>
+<script defer="" src="/assets/js/nav.js?v=20260816b"></script>
+<link href="/assets/css/footer.css" rel="stylesheet"/></head>
+<body>
+<a class="skip-link" href="#main-content">Passer au contenu</a>
+<div aria-hidden="true" id="scroll-progress"></div>
+<nav aria-label="Navigation principale" class="site-nav" role="navigation">
+<div class="nav-inner">
+<a aria-label="TAGRA – Accueil" class="nav-logo" href="/nl/"><img alt="TAGRA" height="32" src="/assets/img/logo-light.svg?v=20260513zh" style="display:block;height:32px;width:auto;" width="140"/></a>
+<ul class="nav-links" id="nav-links">
+<li><a href="/fr/entreprises/">Pour les entreprises</a></li>
+<li><a href="/fr/conducteurs/">Pour les conducteurs</a></li>
+<li><a href="/fr/autorites-de-controle/">Contrôle</a></li>
+<li><a aria-current="page" href="/fr/articles/">Articles</a></li><li><a href="/fr/manuels/">Manuels</a></li>
+<li><a href="/fr/faq/">FAQ</a></li>
+<li><a href="/fr/contact/">Contact</a></li>
+<li class="nav-cta-li"><a class="nav-cta" href="/fr/essai-gratuit/?audience=fleet">Essayez gratuitement pendant 30 jours</a></li>
+</ul>
+<details class="nav-lang">
+<summary aria-label="Langue : FR">FR</summary>
+<div class="nav-lang-menu" role="menu"><a href="/articles/" hreflang="en">English</a><a href="/de/ratgeber/" hreflang="de">Deutsch</a><a href="/pl/poradnik/" hreflang="pl">Polski</a><a href="/nl/artikelen/" hreflang="nl">Nederlands</a><a aria-current="page" class="active" href="/fr/articles/" hreflang="fr">Français</a><a href="/it/articoli/" hreflang="it">Italiano</a><a href="/el/arthra/" hreflang="el">Ελληνικά</a><a href="/hu/cikkek/" hreflang="hu">Magyar</a><a href="/ro/articole/" hreflang="ro">Română</a><a href="https://www.tdt.cz/" hreflang="cs" rel="noopener" target="_blank">Čeština</a><a href="https://www.tdt.sk/" hreflang="sk" rel="noopener" target="_blank">Slovenčina</a></div>
+</details>
+<a class="nav-cta-mobile" href="/fr/essai-gratuit/?audience=fleet">Essai gratuit</a>
+<button aria-expanded="false" aria-label="Afficher/masquer le menu" class="nav-mobile-toggle" id="nav-toggle">
+<span></span><span></span><span></span>
+</button>
+</div>
+</nav>
+<section id="main-content" class="band band--hero" style="text-align:left">
+<div class="container">
+<div class="eyebrow">Base de connaissances</div>
+<h1 style="text-align:left">Guides de conformité du tachygraphe</h1>
+<p style="font-size:19px;color:var(--text2);max-width:680px;margin:12px 0 0">Articles pratiques sur les obligations légales, la gestion des données et la préparation aux contrôles — rédigés par des spécialistes des tachygraphes.</p>
+</div>
+</section>
+<section class="band">
+<div class="container">
+<div class="article-carousel">
+<div class="article-grid" id="articleGrid">
+<a class="article-card" href="/fr/articles/responsabilite-transporteur-infractions-conducteurs/"><div class="article-card-body"><span class="article-card-tag tag--guide">Conformité</span><div class="article-card-eyebrow">Obligations de l'opérateur</div><h3 class="card-title">Qui paie lorsqu'un conducteur enfreint les règles ? Explication de la responsabilité de l'opérateur</h3><p class="article-card-desc">L'entreprise répond des actes de ses conducteurs, y compris à l'étranger — mais les preuves de formation et les contrôles réguliers peuvent changer la situation.</p><div class="article-card-meta"><span>Lecture de 9 min</span></div><span class="article-card-cta">Lire l'article →</span></div></a><a class="article-card" href="/articles/tachograph-rules-uk-dvsa-operator-licence/"><div class="article-card-body"><span class="article-card-tag tag--guide">Royaume-Uni</span><div class="article-card-eyebrow">Régime britannique</div><h3 class="card-title">Règles relatives aux tachygraphes pour les opérateurs britanniques : DVSA, 56 jours et votre licence d'exploitation <span class="en-badge">(en anglais)</span></h3><p class="article-card-desc">Quel régime s'applique après le Brexit, pourquoi la période contrôlée lors d'un contrôle routier a doublé, combien coûtent les sanctions et où se situe le risque réel.</p><div class="article-card-meta"><span>Lecture de 8 min</span></div><span class="article-card-cta">Lire l'article →</span></div></a><a class="article-card" href="/fr/articles/symboles-tachygraphe/">
+<div class="article-card-body">
+<span class="article-card-tag tag--guide">Base de connaissances du conducteur</span>
+<div class="article-card-eyebrow">Guide de référence</div>
+<h2 class="sr-only">Base de connaissances</h2><h3 class="card-title">Symboles du tachygraphe : signification des icônes expliquée</h3>
+<p class="article-card-desc">Guide clair des quatre symboles d'activité (conduite, autre tâche, disponibilité, repos), des icônes de carte et d'équipage, du mode OUT, du mode ferry/train et des symboles d'avertissement que tout conducteur de poids lourds doit connaître.</p>
+<div class="article-card-meta"><span>Lecture de 7 min</span></div>
+<span class="article-card-cta">Lire l'article →</span>
+</div>
+</a>
+<a class="article-card" href="/fr/articles/tachygraphe-utilitaires-obligation-juillet-2026/">
+<div class="article-card-body">
+<span class="article-card-tag tag--new">Nouvelle législation</span>
+<div class="article-card-eyebrow">En vigueur le 1er juillet 2026</div>
+<h3 class="card-title">Tachygraphes pour les véhicules utilitaires : nouvelle obligation à partir de juillet 2026</h3>
+<p class="article-card-desc">À partir du 1er juillet 2026, les camionnettes de 2,5–3,5 t utilisées dans le transport international devront être équipées d'un tachygraphe numérique. Découvrez qui est concerné, ce dont vous avez besoin et comment vous préparer.</p>
+<div class="article-card-meta"><span>Lecture de 8 min</span></div>
+<span class="article-card-cta">Lire l'article →</span>
+</div>
+</a>
+<a class="article-card" href="/fr/articles/qui-doit-analyser-donnees-tachygraphe-2026/">
+<div class="article-card-body">
+<span class="article-card-tag tag--guide">Vue d'ensemble</span>
+<div class="article-card-eyebrow">Mis à jour pour 2026</div>
+<h3 class="card-title">Qui doit évaluer les données du tachygraphe à partir de 2026</h3>
+<p class="article-card-desc">Poids lourds, autobus, camionnettes en transport international et conducteurs indépendants — vue d'ensemble claire de tous les types de transport soumis à l'obligation d'évaluation.</p>
+<div class="article-card-meta"><span>Lecture de 7 min</span></div>
+<span class="article-card-cta">Lire l'article →</span>
+</div>
+</a>
+<a class="article-card" href="/fr/articles/telecharger-analyser-archiver-donnees-tachygraphe/">
+<div class="article-card-body">
+<span class="article-card-tag tag--guide">Guide complet</span>
+<div class="article-card-eyebrow">Étape par étape</div>
+<h3 class="card-title">Tachygraphe numérique : comment télécharger, évaluer et archiver correctement les données</h3>
+<p class="article-card-desc">Le guide complet de conformité : délais de 28/90 jours, éléments nécessaires, procédure correcte et points effectivement contrôlés par les agents de contrôle.</p>
+<div class="article-card-meta"><span>Lecture de 10 min</span></div>
+<span class="article-card-cta">Lire l'article →</span>
+</div>
+</a>
+<a class="article-card" href="/fr/articles/carte-tachygraphique-demande-renouvellement/">
+<div class="article-card-body">
+<span class="article-card-tag tag--guide">Royaume-Uni</span>
+<div class="article-card-eyebrow">Base de connaissances du conducteur</div>
+<h3 class="card-title">Carte de tachygraphe : comment la demander, la renouveler et la remplacer</h3>
+<p class="article-card-desc">Où faire la demande, combien cela coûte, quelle est sa durée de validité et que faire si votre carte de conducteur est perdue ou volée. Règles britanniques en 2026.</p>
+<div class="article-card-meta"><span>Lecture de 5 min</span></div>
+<span class="article-card-cta">Lire l'article →</span>
+</div>
+</a>
+<a class="article-card" href="/fr/articles/tachygraphe-erreur-84-anomalie-interne-dsrc/">
+<div class="article-card-body">
+<span class="article-card-tag tag--guide">Code d'anomalie</span>
+<div class="article-card-eyebrow">Base de connaissances du conducteur</div>
+<h3 class="card-title">Anomalie DSRC interne : que signifie le code d’anomalie 84 du tachygraphe ?</h3>
+<p class="article-card-desc">Ce que signifie le code, ce que prescrit le manuel et si vous pouvez continuer à conduire. Gravité : faible.</p>
+<div class="article-card-meta"><span>Lecture de 3 min</span></div>
+<span class="article-card-cta">Lire l'article →</span>
+</div>
+</a>
+<a class="article-card" href="/fr/articles/tachygraphe-erreur-82-anomalie-interne-gnss/">
+<div class="article-card-body">
+<span class="article-card-tag tag--guide">Code d'anomalie</span>
+<div class="article-card-eyebrow">Base de connaissances du conducteur</div>
+<h3 class="card-title">Anomalie GNSS interne : que signifie le code d’anomalie 82 du tachygraphe ?</h3>
+<p class="article-card-desc">Ce que signifie le code, ce que prescrit le manuel et si vous pouvez continuer à conduire. Gravité : moyenne.</p>
+<div class="article-card-meta"><span>Lecture de 3 min</span></div>
+<span class="article-card-cta">Lire l'article →</span>
+</div>
+</a>
+<a class="article-card" href="/fr/articles/tachygraphe-erreur-83-gnss-absent/">
+<div class="article-card-body">
+<span class="article-card-tag tag--guide">Code d'anomalie</span>
+<div class="article-card-eyebrow">Base de connaissances du conducteur</div>
+<h3 class="card-title">GNSS manquant : que signifie le code d'anomalie du tachygraphe 83 ?</h3>
+<p class="article-card-desc">Ce que signifie le code, ce que prescrit le manuel et si vous pouvez continuer à conduire. Gravité : moyenne.</p>
+<div class="article-card-meta"><span>Lecture de 3 min</span></div>
+<span class="article-card-cta">Lire l'article →</span>
+</div>
+</a>
+<a class="article-card" href="/fr/articles/tachygraphe-erreur-34-ejection-impossible/">
+<div class="article-card-body">
+<span class="article-card-tag tag--guide">Code d'anomalie</span>
+<div class="article-card-eyebrow">Base de connaissances du conducteur</div>
+<h3 class="card-title">Éjection impossible — code d'anomalie du tachygraphe 34</h3>
+<p class="article-card-desc">Code d'anomalie du tachygraphe 34, éjection impossible : ce que cela signifie, ce que prescrit le manuel VDO DTCO 4.1 et si vous pouvez continuer à conduire.</p>
+<div class="article-card-meta"><span>Lecture de 7 min</span></div>
+<span class="article-card-cta">Lire l'article →</span>
+</div>
+</a>
+<a class="article-card" href="/fr/articles/tachygraphe-erreur-36-impression-impossible/">
+<div class="article-card-body">
+<span class="article-card-tag tag--guide">Code d'anomalie</span>
+<div class="article-card-eyebrow">Base de connaissances du conducteur</div>
+<h3 class="card-title">Impression impossible — code d’anomalie du tachygraphe 36</h3>
+<p class="article-card-desc">Code d’anomalie 36 du tachygraphe : impression impossible, marche à suivre du manuel VDO DTCO 4.1, conduite possible. Gravité : moyenne.</p>
+<div class="article-card-meta"><span>Lecture de 5 min</span></div>
+<span class="article-card-cta">Lire l'article →</span>
+</div>
+</a>
+<a class="article-card" href="/fr/articles/tachygraphe-erreur-80-conflit-de-mouvement/">
+<div class="article-card-body">
+<span class="article-card-tag tag--guide">Code d'anomalie</span>
+<div class="article-card-eyebrow">Base de connaissances du conducteur</div>
+<h3 class="card-title">Conflit de mouvement — code d’anomalie du tachygraphe 80</h3>
+<p class="article-card-desc">Code d’anomalie 80 du tachygraphe : conflit de mouvement, marche à suivre selon VDO DTCO 4.1, Stoneridge, Actia et EFAS-4.</p>
+<div class="article-card-meta"><span>Lecture de 7 min</span></div>
+<span class="article-card-cta">Lire l'article →</span>
+</div>
+</a>
+<a class="article-card" href="/fr/articles/tachygraphe-erreur-85-anomalie-communication-dsrc/">
+<div class="article-card-body">
+<span class="article-card-tag tag--guide">Code d'anomalie</span>
+<div class="article-card-eyebrow">Base de connaissances du conducteur</div>
+<h3 class="card-title">Anomalie de communication DSRC — code d'anomalie 85 du tachygraphe</h3>
+<p class="article-card-desc">Code d'anomalie 85 du tachygraphe : anomalie de communication DSRC, mesures du manuel VDO DTCO 4.1, conduite possible. Gravité : faible.</p>
+<div class="article-card-meta"><span>Lecture de 5 min</span></div>
+<span class="article-card-cta">Lire l'article →</span>
+</div>
+</a>
+<a class="article-card" href="/fr/articles/tachygraphe-erreur-96-anomalie-gnss/">
+<div class="article-card-body">
+<span class="article-card-tag tag--guide">Code d'anomalie</span>
+<div class="article-card-eyebrow">Base de connaissances du conducteur</div>
+<h3 class="card-title">Anomalie GNSS — code d'anomalie 96 du tachygraphe</h3>
+<p class="article-card-desc">Code d'anomalie 96 du tachygraphe : anomalie GNSS, mesures du manuel VDO DTCO 4.1, conduite possible. Gravité : élevée.</p>
+<div class="article-card-meta"><span>Lecture de 7 min</span></div>
+<span class="article-card-cta">Lire l'article →</span>
+</div>
+</a>
+<a class="article-card" href="/fr/articles/tachygraphe-erreur-98-anomalie-its/">
+<div class="article-card-body">
+<span class="article-card-tag tag--guide">Code d'anomalie</span>
+<div class="article-card-eyebrow">Base de connaissances du conducteur</div>
+<h3 class="card-title">Anomalie ITS — code d’anomalie du tachygraphe 98</h3>
+<p class="article-card-desc">Code d'anomalie 98 du tachygraphe, anomalie ITS : ce que cela signifie, ce que le manuel VDO DTCO 4.1 indique de faire et si vous pouvez continuer à conduire.</p>
+<div class="article-card-meta"><span>Lecture de 5 min</span></div>
+<span class="article-card-cta">Lire l'article →</span>
+</div>
+</a>
+<a class="article-card" href="/fr/articles/tachygraphe-erreur-21-defaut-capteur-de-mouvement/">
+<div class="article-card-body">
+<span class="article-card-tag tag--guide">Code d'anomalie</span>
+<div class="article-card-eyebrow">Base de connaissances du conducteur</div>
+<h3 class="card-title">Anomalie du capteur de mouvement 21 : ce que cela signifie et ce que vous devez faire</h3>
+<p class="article-card-desc">Code d&#x27;Anomalie du tachygraphe 21, anomalie du capteur de mouvement : signification du message, indications du manuel VDO DTCO 4.1 à ce sujet et possibilité de continuer à conduire.</p>
+<div class="article-card-meta"><span>Lecture de 5 min</span></div>
+<span class="article-card-cta">Lire l'article →</span>
+</div>
+</a>
+</div>
+<div class="article-carousel-nav">
+<button aria-label="Articles précédents" class="article-carousel-btn" id="articlePrev">‹</button>
+<button aria-label="Articles suivants" class="article-carousel-btn" id="articleNext">›</button>
+</div>
+</div><!-- /.article-carousel -->
+</div>
+</section>
+<script>
+(function(){
+  const track = document.getElementById('articleGrid');
+  const prev = document.getElementById('articlePrev');
+  const next = document.getElementById('articleNext');
+  if (!track || !prev || !next) return;
+  function getStep(){
+    const card = track.querySelector('.article-card');
+    if (!card) return 320;
+    const cardW = card.getBoundingClientRect().width;
+    const cs = getComputedStyle(track);
+    const gap = parseFloat(cs.columnGap || cs.gap) || 20;
+    return cardW + gap;
+  }
+  function updateBtns(){
+    prev.disabled = track.scrollLeft <= 1;
+    next.disabled = track.scrollLeft >= track.scrollWidth - track.clientWidth - 1;
+  }
+  prev.addEventListener('click', ()=> track.scrollBy({left:-getStep(), behavior:'smooth'}));
+  next.addEventListener('click', ()=> track.scrollBy({left: getStep(), behavior:'smooth'}));
+  track.addEventListener('scroll', updateBtns, {passive:true});
+  window.addEventListener('resize', updateBtns);
+  updateBtns();
+})();
+</script>
+<footer class="site-footer" role="contentinfo">
+<div class="footer-inner">
+<div>
+<div class="footer-logo"><img alt="TAGRA" height="20" src="/assets/img/logo-dark.svg?v=20260513zh" width="88" loading="lazy"/></div>
+<p class="footer-desc">Logiciel professionnel d'analyse des tachygraphes. Téléchargement des cartes de conducteur, analyse des tachygraphes numériques, temps de conduite des conducteurs dans l'UE et directive relative au temps de travail des conducteurs de poids lourds. Développé par Truck Data Technology, s.r.o.</p>
+</div>
+<div class="footer-col">
+<h2 class="footer-col-title">Produit</h2>
+<ul>
+<li><a href="/fr/entreprises/">Pour les exploitants de parcs</a></li>
+<li><a href="/fr/conducteurs/">Pour les conducteurs professionnels</a></li>
+<li><a href="/fr/autorites-de-controle/">Pour les contrôles</a></li>
+<li><a href="/fr/fonctionnement/">Fonctionnement</a></li>
+<li><a href="/fr/pour-qui/">Pour qui</a></li>
+<li><a href="/fr/faq/">FAQ</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h2 class="footer-col-title">Ressources</h2>
+<ul>
+<li><a href="/fr/articles/">Articles</a></li><li><a href="/fr/manuels/">Manuels</a></li>
+<li><a href="/fr/articles/symboles-tachygraphe/">Symboles du tachygraphe</a></li>
+<li><a href="/fr/integrations/dkv-live/">DKV LIVE®</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h2 class="footer-col-title">Entreprise</h2>
+<ul>
+<li><a href="/fr/contact/">Contact</a></li>
+<li><a href="https://www.tdt.cz" rel="noopener" target="_blank">Truck Data Technology</a></li>
+<li><a href="/nl/">English</a></li><li><a href="/de/">Deutsch</a></li><li><a href="/pl/">Polski</a></li><li><a href="/el/">Ελληνικά</a></li><li><a href="/hu/">Magyar</a></li><li><a href="/it/articoli/">Italiano</a></li><li><a href="https://www.tdt.cz/" rel="noopener" target="_blank">Čeština</a></li><li><a href="https://www.tdt.sk/" rel="noopener" target="_blank">Slovenčina</a></li></ul>
+</div>
+</div>
+<div class="footer-bottom">
+<span>© 2026 Truck Data Technology, s.r.o. Tous droits réservés.</span>
+<span><a href="/fr/contact/">Contact</a> · <a href="https://www.tdt.cz" rel="noopener" target="_blank">tdt.cz</a> · <a href="/fr/confidentialite/">Confidentialité &amp; cookies</a></span>
+</div>
+</footer>
+<script>
+(function(){
+  var bar=document.getElementById('scroll-progress');
+  if(bar){window.addEventListener('scroll',function(){var t=document.documentElement.scrollTop||document.body.scrollTop;var h=document.documentElement.scrollHeight-document.documentElement.clientHeight;bar.style.width=(t/h*100)+'%';},{passive:true});}
+  var toggle=document.getElementById('nav-toggle'),links=document.getElementById('nav-links');
+  if(toggle&&links){toggle.addEventListener('click',function(){var open=links.classList.toggle('open');toggle.setAttribute('aria-expanded',open);});}
+})();
+</script>
+</body>
+</html>

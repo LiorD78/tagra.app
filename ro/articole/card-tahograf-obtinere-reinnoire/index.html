@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<!-- TMX-ANALYTICS START -->
+<meta content="7F7894081BE7FBB245FF03AF8810B22F" name="msvalidate.01"/>
+<!-- Consent Mode v2 defaults (deny) + gtag stub — runs BEFORE gtag.js -->
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent','default',{
+      ad_storage:'denied', ad_user_data:'denied', ad_personalization:'denied',
+      analytics_storage:'denied', functionality_storage:'denied',
+      personalization_storage:'denied', security_storage:'granted',
+      wait_for_update:500
+    });
+    gtag('set','ads_data_redaction',true);
+    gtag('set','url_passthrough',false);
+  </script>
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-92253QFBNX"></script>
+<script>
+    gtag('js', new Date());
+    gtag('config','G-92253QFBNX');
+  </script>
+<!-- Cookie consent banner (self-hosted) + Microsoft Clarity gating -->
+<style>
+    .tmx-cc{position:fixed;left:0;right:0;bottom:0;z-index:2147483000;background:linear-gradient(120deg,var(--blue-dark,#0b2c4a),var(--blue-mid,#134a8e) 62%,var(--blue-light,#1f5fa6));color:#fff;
+      font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+      padding:16px 20px;box-shadow:0 -4px 24px rgba(0,0,0,.18);display:flex;flex-wrap:wrap;
+      align-items:center;gap:14px;justify-content:center}
+    .tmx-cc__txt{flex:1 1 360px;max-width:760px}
+    .tmx-cc__txt a{color:#9ed0f5;text-decoration:underline}
+    .tmx-cc__btns{display:flex;gap:10px;flex:0 0 auto}
+    .tmx-cc__b{appearance:none;border:0;cursor:pointer;font:inherit;font-weight:600;
+      padding:10px 22px;border-radius:99px;transition:filter .15s;color:#fff}
+    .tmx-cc__b:hover{filter:brightness(1.08)}
+    .tmx-cc__b--no{background:rgba(255,255,255,.16)}
+    .tmx-cc__b--yes{background:var(--green-cta,#5C820F)}
+    @media(max-width:640px){.tmx-cc{padding:14px}.tmx-cc__btns{width:100%}.tmx-cc__b{flex:1}}
+  </style>
+<script>
+  (function(){
+    var KEY='tmx-consent-v1', CL='wt18054m0r';
+    function lc(){var l=(document.documentElement.getAttribute('lang')||'en').toLowerCase().split('-')[0];
+      var m={cz:'cs',cs:'cs',sk:'sk',de:'de',pl:'pl',gr:'el',el:'el',hu:'hu',en:'en'};return m[l]||'en';}
+    var T={
+      hu:{t:'Analitikai sütiket használunk (Google Analytics, Microsoft Clarity, Smartsupp), hogy megértsük a webhely használatát. Csak az Ön hozzájárulásával töltődnek be.',a:'Elfogadom',r:'Elutasítom',p:'Adatvédelem és sütik'},
+      ro:{t:'Utilizăm module cookie de analiză (Google Analytics, Microsoft Clarity, Smartsupp) pentru a înțelege modul de utilizare a site-ului. Se încarcă doar cu consimțământul dumneavoastră.',a:'Accept',r:'Refuz',p:'Confidențialitate și cookie-uri'},
+      nl:{t:'We gebruiken analytische cookies (Google Analytics, Microsoft Clarity, Smartsupp) om het gebruik van de site te begrijpen. Ze laden alleen met uw toestemming.',a:'Accepteren',r:'Weigeren',p:'Privacy en cookies'},
+      fr:{t:'Nous utilisons des cookies analytiques (Google Analytics, Microsoft Clarity, Smartsupp) pour comprendre l’utilisation du site. Ils ne se chargent qu’avec votre consentement.',a:'Accepter',r:'Refuser',p:'Confidentialité et cookies'},
+      it:{t:'Utilizziamo cookie analitici (Google Analytics, Microsoft Clarity, Smartsupp) per capire l’utilizzo del sito. Si caricano solo con il Suo consenso.',a:'Accetta',r:'Rifiuta',p:'Privacy e cookie'},
+      en:{t:'Utilizăm module cookie de analiză (Google Analytics, Microsoft Clarity, Smartsupp) pentru a înțelege modul de utilizare a site-ului. Acestea se încarcă numai cu consimțământul dumneavoastră.',a:'Accept',r:'Reject',p:'Privacy &amp; cookies'},
+      cs:{t:'Používáme analytické cookies (Google Analytics, Microsoft Clarity, Smartsupp) k pochopení používání webu. Načtou se jen s vaším souhlasem.',a:'Přijmout',r:'Odmítnout',p:'Soukromí a cookies'},
+      sk:{t:'Používame analytické cookies (Google Analytics, Microsoft Clarity, Smartsupp) na pochopenie používania webu. Načítajú sa len s vaším súhlasom.',a:'Prijať',r:'Odmietnuť',p:'Súkromie a cookies'},
+      de:{t:'Wir verwenden Analyse-Cookies (Google Analytics, Microsoft Clarity, Smartsupp), um die Nutzung der Website zu verstehen. Sie werden nur mit Ihrer Einwilligung geladen.',a:'Akzeptieren',r:'Ablehnen',p:'Datenschutz &amp; Cookies'},
+      pl:{t:'Używamy plików cookie do analityki (Google Analytics, Microsoft Clarity, Smartsupp), aby zrozumieć korzystanie z witryny. Ładują się tylko za Twoją zgodą.',a:'Akceptuj',r:'Odrzuć',p:'Prywatność i cookies'},
+      el:{t:'Χρησιμοποιούμε cookies ανάλυσης (Google Analytics, Microsoft Clarity, Smartsupp) για να κατανοήσουμε τη χρήση. Φορτώνονται μόνο με τη συγκατάθεσή σας.',a:'Αποδοχή',r:'Απόρριψη',p:'Απόρρητο &amp; cookies'}
+    };
+    function loadClarity(){if(!CL||window.__tmxCl)return;window.__tmxCl=1;
+      (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+       t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+       y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script",CL);}
+    function grant(){try{localStorage.setItem(KEY,'granted')}catch(e){}
+      gtag('consent','update',{analytics_storage:'granted'});loadClarity();}
+    function deny(){try{localStorage.setItem(KEY,'denied')}catch(e){}}
+    var saved=null;try{saved=localStorage.getItem(KEY)}catch(e){}
+    if(saved==='granted'){grant();return;} if(saved==='denied'){return;}
+    function show(){var tx=T[lc()]||T.en;
+      var b=document.createElement('div');b.className='tmx-cc';b.setAttribute('role','dialog');b.setAttribute('aria-live','polite');
+      b.innerHTML='<div class="tmx-cc__txt">'+tx.t+' <a href="/ro/confidentialitate/">'+tx.p+'</a></div>'+
+        '<div class="tmx-cc__btns"><button type="button" class="tmx-cc__b tmx-cc__b--no">'+tx.r+'</button>'+
+        '<button type="button" class="tmx-cc__b tmx-cc__b--yes">'+tx.a+'</button></div>';
+      document.body.appendChild(b);
+      b.querySelector('.tmx-cc__b--yes').addEventListener('click',function(){grant();b.remove();});
+      b.querySelector('.tmx-cc__b--no').addEventListener('click',function(){deny();b.remove();});}
+    if(document.body)show();else document.addEventListener('DOMContentLoaded',show);
+  })();
+  </script>
+<!-- TMX-ANALYTICS END -->
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Card de tahograf: cum depuneți cererea, reînnoiți și înlocuiți | TAGRA</title>
+<meta content="Cum solicitați un card de conducător auto pentru tahograf digital, cât costă, cât timp este valabil și ce trebuie să faceți dacă este pierdut sau furat. Normele din Regatul Unit, 2026." name="description"/>
+<link href="https://tagra.app/ro/articole/card-tahograf-obtinere-reinnoire/" rel="canonical"/>
+<link href="https://tagra.app/de/ratgeber/fahrerkarte-beantragen/" hreflang="de" rel="alternate"/><link href="https://tagra.app/el/arthra/karta-tachografou/" hreflang="el" rel="alternate"/><link href="https://tagra.app/articles/tachograph-card-apply-renew/" hreflang="en" rel="alternate"/><link href="https://tagra.app/fr/articles/carte-tachygraphique-demande-renouvellement/" hreflang="fr" rel="alternate"/><link href="https://tagra.app/hu/cikkek/soforkartya-igenyles/" hreflang="hu" rel="alternate"/><link href="https://tagra.app/it/articoli/carta-tachigrafica/" hreflang="it" rel="alternate"/><link href="https://tagra.app/nl/artikelen/tachograafkaart-aanvragen-verlengen/" hreflang="nl" rel="alternate"/><link href="https://tagra.app/pl/poradnik/karta-kierowcy/" hreflang="pl" rel="alternate"/>
+<link href="https://tagra.app/ro/articole/card-tahograf-obtinere-reinnoire/" hreflang="ro" rel="alternate"/><link href="https://tagra.app/articles/tachograph-card-apply-renew/" hreflang="x-default" rel="alternate"/>
+<meta content="Card de tahograf: cum depuneți cererea, reînnoiți și înlocuiți | TAGRA" property="og:title"/><meta content="Cum solicitați un card de conducător auto pentru tahograf digital, cât costă, cât timp este valabil și ce trebuie să faceți dacă este pierdut sau furat. Normele din Regatul Unit, 2026." property="og:description"/>
+<meta content="https://tagra.app/assets/img/hero-poster.jpg" property="og:image"/>
+<meta content="ro_RO" property="og:locale"/>
+<meta content="https://tagra.app/ro/articole/card-tahograf-obtinere-reinnoire/" property="og:url"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    a{color:var(--blue-mid);text-decoration:none;}
+    a:hover{color:var(--blue-dark);text-decoration:underline;text-underline-offset:.18em;}
+    p+p{margin-top:14px;}
+    ul,ol{padding-left:22px;}
+    li{margin:6px 0;line-height:1.65;}
+    li::marker{color:var(--blue-mid);}
+    strong{font-weight:700;color:var(--text-strong);}
+    #scroll-progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--green-brand),var(--blue-light));width:0%;z-index:9999;pointer-events:none;}
+.nav-inner{margin:0 auto;padding:0 24px;height:100%;display:flex;align-items:center;justify-content:space-between;gap:24px;}
+    .nav-links{display:flex;align-items:center;gap:4px;list-style:none;}
+    .nav-links a{font-size:15px;font-weight:500;color:var(--text);padding:8px 12px;border-radius:8px;text-decoration:none;transition:background .15s;}
+    .nav-links a:hover{background:var(--bg-apple);color:var(--blue-mid);}
+    .nav-links .nav-cta a{background:var(--green-cta);color:#fff!important;border-radius:99px;padding:8px 18px;font-weight:600;}
+    .nav-links .nav-cta a:hover{background:var(--green-brand);text-decoration:none;}
+    .nav-lang{display:flex;align-items:center;gap:4px;font-size:14px;font-weight:600;}
+    .nav-lang a{padding:5px 8px;border-radius:6px;color:var(--text2);text-decoration:none;transition:background .15s;}
+    .nav-lang a:hover,.nav-lang a.active{background:var(--bg-apple);color:var(--blue-mid);}
+    .nav-lang span{color:var(--border);}
+    .nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:8px;}
+    .nav-toggle span{display:block;width:22px;height:2px;background:var(--text);margin:5px 0;border-radius:2px;}
+    @media(max-width:900px){.nav-links{display:none;}.nav-toggle{display:block;}.nav-links.open{display:flex;flex-direction:column;align-items:flex-start;gap:2px;position:absolute;top:var(--nav-h);left:0;right:0;background:rgba(255,255,255,.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:12px 24px 20px;}}
+    .art-hero{background:linear-gradient(180deg,var(--bg-apple) 0%,#fff 100%);padding:calc(var(--nav-h,64px) + 28px) 0 44px;}
+    .art-wrap{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 24px;}
+    .breadcrumb{font-size:14px;color:var(--text2);margin-bottom:18px;}
+    .breadcrumb a{color:var(--text2);text-decoration:none;}
+    .breadcrumb a:hover{color:var(--blue-mid);}
+    .breadcrumb span{margin:0 5px;color:var(--border);}
+    .eyebrow{font-size:14px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--green-brand);margin-bottom:10px;}
+    .art-title{font-size:38px;line-height:1.15;font-weight:800;margin-bottom:16px;letter-spacing:-.02em;padding-bottom:0.08em;color:var(--blue-dark);}
+    .art-title .grad{background:linear-gradient(90deg,var(--blue-dark) 0%,var(--blue-light) 50%,var(--blue-bright) 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;}
+    @media(max-width:700px){.art-title{font-size:26px;}}
+    .art-meta{font-size:15px;color:var(--text2);padding-bottom:24px;border-bottom:1px solid var(--border);display:flex;gap:20px;flex-wrap:wrap;}
+    .art-body{padding:44px 0 60px;}
+    .art-body h2 {
+      font-size: 36px; font-weight: 800;
+      line-height: 1.1; letter-spacing: 0;
+      text-transform: uppercase;
+      color: var(--blue-mid, #134a8e);
+      background: linear-gradient(90deg, var(--blue-dark, #0b2c4a) 0%, var(--blue-light, #1f5fa6) 50%, var(--blue-bright, #3a6ff0) 100%);
+      -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block; max-width: 100%; margin-bottom: 14px;
+      padding: 0.12em 0.15em 0.08em 0;
+    }
+    .art-body h3{font-size:20px;font-weight:700;color:var(--text-strong);margin:28px 0 10px;}
+    .art-body p{margin-bottom:18px;}
+    .art-body ul,.art-body ol{margin-bottom:20px;}
+    /* CALLOUT */
+    .callout--blue{background:var(--bg-apple);border-left:4px solid var(--blue-mid);}
+    .callout-title{font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.07em;color:var(--blue-mid);margin-bottom:8px;}
+    .callout--green .callout-title{color:var(--green-brand);}
+    /* FAQ */
+    .faq-item{border-top:1px solid var(--border);padding:14px 0;}
+    .faq-item:last-child{border-bottom:1px solid var(--border);}
+    .faq-item summary{list-style:none;cursor:pointer;font-weight:700;font-size:18px;line-height:1.4;padding-right:32px;position:relative;color:var(--text-strong);}
+    .faq-item summary::-webkit-details-marker{display:none;}
+    .faq-item summary::after{content:"+";position:absolute;right:0;top:50%;transform:translateY(-50%);font-size:26px;font-weight:300;color:var(--green-cta);}
+    .faq-item[open] summary::after{content:"−";}
+    .faq-answer p+p{margin-top:10px;}
+    /* CTA */
+    .cta-box{background:linear-gradient(135deg,var(--blue-dark),var(--blue-mid));border-radius:var(--radius);padding:40px 36px;margin:44px 0;text-align:center;}
+    .cta-box h3{font-size:24px;font-weight:800;color:#fff;margin-bottom:12px;}
+    .cta-box p{color:rgba(255,255,255,.8);font-size:17px;margin-bottom:24px;}
+    .btn:hover{background:var(--green-brand);transform:scale(1.02);}
+    /* RELATED */
+    .related{border-top:1px solid var(--border);padding-top:36px;margin-top:36px;}
+    .related-title{font-size:20px;font-weight:800;color:var(--text-strong);margin-bottom:18px;}
+    .related-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+    @media(max-width:580px){.related-grid{grid-template-columns:1fr;}}
+    .related-card{display:block;padding:20px;border:1px solid var(--border);border-radius:var(--radius);text-decoration:none!important;transition:border-color .15s,transform .15s;}
+    .related-card:hover{border-color:var(--blue-mid);transform:translateY(-2px);}
+    .related-card-eye{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--blue-mid);margin-bottom:6px;}
+    .related-card-title{font-size:16px;font-weight:700;color:var(--text-strong);line-height:1.4;}
+    /* FOOTER */
+  </style>
+<link href="/assets/css/tokens.css" rel="stylesheet"/>
+<link href="/assets/css/base.css" rel="stylesheet"/>
+<link href="/assets/css/components.css" rel="stylesheet"/>
+<link href="/assets/css/nav.css" rel="stylesheet"/>
+<script defer="" src="/assets/js/nav.js?v=20260816b"></script>
+<link href="/assets/css/footer.css" rel="stylesheet"/><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Card de tahograf: cum să solicitați, reînnoiți și înlocuiți cardul", "description": "Cum solicitați un card de conducător auto pentru tahograf digital, cât costă, cât timp este valabil și ce trebuie să faceți dacă este pierdut sau furat. Normele din Regatul Unit, 2026.", "image": "https://tagra.app/assets/img/hero-poster.jpg", "author": {"@type": "Organization", "name": "Truck Data Technology, s.r.o.", "url": "https://www.tdt.cz"}, "publisher": {"@type": "Organization", "name": "Truck Data Technology, s.r.o.", "logo": {"@type": "ImageObject", "url": "https://tagra.app/assets/img/logo.svg"}}, "datePublished": "2026-09-03T09:00:00+02:00", "dateModified": "2026-09-03T09:00:00+02:00", "inLanguage": "ro", "mainEntityOfPage": "https://tagra.app/ro/articole/card-tahograf-obtinere-reinnoire/", "articleSection": "Bază de cunoștințe pentru conducători auto", "wordCount": 992}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "TAGRA", "item": "https://tagra.app/ro/"}, {"@type": "ListItem", "position": 2, "name": "Articole", "item": "https://tagra.app/ro/articole/"}, {"@type": "ListItem", "position": 3, "name": "Card de tahograf", "item": "https://tagra.app/ro/articole/card-tahograf-obtinere-reinnoire/"}]}</script><noscript><style>.anim-up,.fly-left,.fly-right{opacity:1!important;transform:none!important}</style></noscript></head>
+<body class="art-page">
+<a class="skip-link" href="#main-content">Salt la conținut</a>
+<div aria-hidden="true" id="scroll-progress"></div>
+<nav aria-label="Navigare principală" class="site-nav" role="navigation">
+<div class="nav-inner">
+<a aria-label="TAGRA – Acasă" class="nav-logo" href="/ro/"><img alt="TAGRA" height="32" src="/assets/img/logo-light.svg?v=20260513zh" style="display:block;height:32px;width:auto;" width="140"/></a>
+<ul class="nav-links" id="nav-links">
+<li><a href="/ro/pentru-firme/">Pentru societăți</a></li>
+<li><a href="/ro/pentru-conducatori/">Pentru conducători auto</a></li>
+<li><a href="/ro/autoritati-de-control/">Control</a></li>
+<li><a aria-current="page" href="/ro/articole/">Articole</a></li><li><a href="/ro/manuale/">Manuale</a></li>
+<li><a href="/ro/intrebari-frecvente/">Întrebări frecvente</a></li>
+<li><a href="/ro/contact/">Contact</a></li>
+<li class="nav-cta-li"><a class="nav-cta" href="/ro/incercare-gratuita/?audience=fleet">Încercați gratuit timp de 30 de zile</a></li>
+</ul>
+<details class="nav-lang">
+<summary aria-label="Limbă: RO">RO</summary>
+<div class="nav-lang-menu" role="menu"><a href="/" hreflang="en">Engleză</a><a href="/de/ratgeber/fahrerkarte-beantragen/" hreflang="de">Deutsch</a><a href="/pl/poradnik/karta-kierowcy/" hreflang="pl">Polski</a><a href="/nl/artikelen/tachograafkaart-aanvragen-verlengen/" hreflang="nl">Nederlands</a><a href="/fr/articles/carte-tachygraphique-demande-renouvellement/" hreflang="fr">Français</a><a href="/it/articoli/carta-tachigrafica/" hreflang="it">Italiano</a><a href="/el/arthra/karta-tachografou/" hreflang="el">Ελληνικά</a><a href="/hu/cikkek/soforkartya-igenyles/" hreflang="hu">Magyar</a><a href="/ro/articole/card-tahograf-obtinere-reinnoire/" hreflang="ro">Română</a><a href="https://www.tdt.cz/" hreflang="cs" rel="noopener" target="_blank">Čeština</a><a href="https://www.tdt.sk/" hreflang="sk" rel="noopener" target="_blank">Slovenčina</a></div>
+</details>
+<a class="nav-cta-mobile" href="/ro/incercare-gratuita/?audience=fleet">Încercați gratuit</a>
+<button aria-expanded="false" aria-label="Comutați meniul" class="nav-mobile-toggle" id="nav-toggle">
+<span></span><span></span><span></span>
+</button>
+</div>
+</nav>
+<header class="art-hero">
+<div class="art-wrap">
+<nav aria-label="Fir de navigare" class="breadcrumb"><a href="/ro/">TAGRA</a><span>›</span><a href="/ro/articole/">Articole</a><span>›</span><span>Card de tahograf</span></nav>
+<div class="eyebrow anim-up">Ghid · Actualizat pentru 2026</div>
+<h1 class="art-title"><span class="grad">Card de tahograf: cum să solicitați, reînnoiți și înlocuiți cardul</span></h1>
+<div class="art-meta"><span>Truck Data Technology</span><span>Actualizat în septembrie 2026</span><span>Lectură de 5 min</span></div>
+<p class="hero-lede anim-up">Fiecare conducător auto profesionist care utilizează un tahograf digital are nevoie de un card de conducător auto. Aflați unde puteți solicita cardul, cât costă, cât timp este valabil și ce trebuie să faceți dacă este pierdut, furat sau urmează să expire.</p><div class="bento--hero"><div class="hero-card"><div class="eyebrow">Valabilitate</div><div class="big">5 ani</div><p>Perioada în care un card de conducător auto pentru tahograf rămâne valabil înainte de a trebui reînnoit.</p></div><div class="hero-card hero-card--blue"><div class="eyebrow">Primul card</div><div class="big">£32</div><p>Taxă unică DVLA pentru solicitarea unui card de tahograf pentru prima dată.</p></div><div class="hero-card"><div class="eyebrow">Raportați pierderea în termen de</div><div class="big">7 zile</div><p>Termenul în care trebuie să informați DVLA dacă cardul dumneavoastră este pierdut, furat sau deteriorat.</p></div><div class="hero-card hero-card--blue"><div class="eyebrow">Reînnoiți până la</div><div class="big">cu 15 zile înainte de expirare</div><p>Termenul-limită pentru depunerea cererii, astfel încât să nu rămâneți fără un card valabil.</p></div></div>
+</div>
+</header>
+<main id="main-content"><section class="band"><div class="container art-body"><div class="eyebrow anim-up">Cine are nevoie de unul</div><h2 class="h2-grad anim-up">Cine are nevoie de un card de tahograf</h2>
+<p>Fiecare conducător auto al unui vehicul echipat cu un tahograf digital are nevoie de propriul <strong>card de conducător auto</strong>. Acesta înregistrează cine a condus, pentru cât timp și vă confirmă identitatea în fața tahografului — nu puteți conduce legal un vehicul care necesită un astfel de card fără acesta.</p>
+<p>Începând cu <strong>1 iulie 2026</strong>, acest lucru se aplică și autoutilitarelor de 2,5–3,5 t, însă <strong>numai în transportul internațional și cabotaj</strong> — nu autoutilitarelor utilizate exclusiv pentru deplasări naționale. Consultați <a href="/ro/articole/tahograf-autoutilitare-obligatie-iulie-2026/">Tahografe pentru autoutilitare: noua obligație din iulie 2026</a> pentru detalii complete despre persoanele vizate.</p></div></section><section class="band band--blue"><div class="container art-body"><div class="eyebrow anim-up">Solicitare</div><h2 class="h2-grad anim-up">Cum solicitați un card de conducător auto</h2>
+<p>În Marea Britanie, cardul de tahograf este eliberat de <strong>DVLA</strong>. În Irlanda de Nord, acesta este eliberat de <strong>DVA Coleraine</strong>.</p>
+<p>Formularul de cerere depinde de locul în care locuiți:</p>
+<ul>
+<li><strong>Marea Britanie</strong> — formularul <strong>D777B/DL</strong></li>
+<li><strong>Irlanda de Nord</strong> — formularul <strong>D777(NI)</strong> pentru un card nou sau <strong>D786(NI)</strong> pentru reînnoire</li>
+</ul>
+<p>Puteți depune cererea online prin serviciul oficial: <a href="https://www.gov.uk/apply-driver-digital-tachograph-card" rel="noopener" target="_blank">gov.uk/apply-driver-digital-tachograph-card</a>.</p></div></section><section class="band band--gray"><div class="container art-body"><div class="eyebrow anim-up">Cost</div><h2 class="h2-grad anim-up">Costul unui card de tahograf</h2>
+<ul>
+<li><strong>Primul card:</strong> £32</li>
+<li><strong>Reînnoire:</strong> £19</li>
+<li><strong>Înlocuirea unui card pierdut sau furat:</strong> £19</li>
+<li><strong>Schimbarea unui card UE/SEE sau din Irlanda de Nord cu un card din Marea Britanie:</strong> £32</li>
+</ul></div></section><section class="band"><div class="container art-body"><div class="eyebrow anim-up">Valabilitate</div><h2 class="h2-grad anim-up">Valabilitate și reînnoire</h2>
+<p>Un card de tahograf este valabil timp de <strong>5 ani</strong>.</p>
+<p>Îl puteți reînnoi online dacă urmează să expire <strong>în termen de 90 de zile</strong>. Pentru a evita să rămâneți fără un card valabil, solicitați reînnoirea <strong>cu cel puțin 15 zile înainte de expirare</strong>.</p></div></section><section class="band band--blue"><div class="container art-body"><div class="eyebrow anim-up">Pierdut sau furat</div><h2 class="h2-grad anim-up">Carduri pierdute, furate sau defecte</h2>
+<p>Dacă cardul dumneavoastră este pierdut, furat sau defect, raportați acest lucru la <strong>DVLA imediat</strong> și solicitați un card de înlocuire <strong>în termen de 7 zile</strong>. Un card de înlocuire este emis de obicei <strong>în termen de 5 zile lucrătoare</strong>.</p>
+<p>În timp ce așteptați, puteți continua să conduceți timp de <strong>maximum 15 zile</strong> folosind zilnic imprimări manuale de la unitatea montată pe vehicul în locul cardului dumneavoastră — însă aceste imprimări <strong>trebuie semnate pe verso</strong>.</p>
+<div class="callout callout--blue anim-up">
+<div class="callout-title">În timp ce așteptați un card de înlocuire</div>
+<p style="margin:0">Puteți începe deja să păstrați propria evidență descărcată a activității dumneavoastră de conducere cu <a href="/ro/pentru-conducatori/">TAGRA Trucker</a> — <a href="/ro/incercare-gratuita/?audience=driver&amp;src=driver-card" rel="noopener" target="_blank">încercați gratuit timp de 30 de zile</a>, fără obligații.</p>
+</div></div></section><section class="band band--gray"><div class="container art-body"><div class="eyebrow anim-up">Datele cardului</div><h2 class="h2-grad anim-up">Ce se întâmplă cu datele de pe cardul dumneavoastră</h2>
+<p>Conform legii, un card de tahograf trebuie să poată stoca <strong>cel puțin 28 de zile</strong> de activitate — aceasta este capacitatea minimă prevăzută de lege, nu o limită fixă. În practică, un card continuă să înregistreze până când memoria sa este plină, ceea ce pentru un conducător auto obișnuit poate însemna un istoric de câteva luni. Odată ce memoria este plină, cele mai vechi înregistrări sunt suprascrise primele.</p>
+<p>Indiferent de spațiul disponibil efectiv rămas, trebuie să <strong>descărcați datele la fiecare 28 de zile</strong>.</p>
+<p>Un card expirat trebuie <strong>păstrat timp de 28 de zile</strong> în cazul în care este necesar pentru un control rutier și trebuie să <strong>descărcați datele de pe acesta înainte de a-l elimina</strong>.</p>
+<p>Fără propria arhivă a datelor descărcate, nu aveți cum să dovediți ulterior duratele de conducere și perioadele de repaus.</p>
+<div class="cta-box">
+<h3>Păstrați propria evidență a datelor de pe cardul de conducător auto</h3>
+<p>TAGRA Trucker vă citește cardul, îl verifică pentru contravenții și arhivează datele — înainte ca o inspecție să facă acest lucru în locul dumneavoastră.</p>
+<a class="btn" href="/ro/incercare-gratuita/?audience=driver&amp;src=driver-card">Încercați gratuit timp de 30 de zile →</a>
+</div></div></section><section class="band"><div class="container art-body"><div class="eyebrow anim-up">Pentru conducători auto</div><h2 class="h2-grad anim-up">Urmăriți propriile date de pe cardul de tahograf: TAGRA Trucker</h2>
+<p>Sunteți persoană fizică autorizată sau doriți pur și simplu să vă verificați propriile durate de conducere și perioade de repaus, independent de angajatorul dumneavoastră? <a href="/ro/pentru-conducatori/">TAGRA Trucker</a> este conceput exact pentru acest scop — citiți cardul de conducător auto cu cititorul de carduri USB inclus și vedeți imediat dacă și unde există contravenții.</p>
+<p>TAGRA Trucker costă <strong>€49 fără TVA</strong>, inclusiv cititorul de carduri, apoi <strong>€19 pe an</strong> începând din al doilea an.</p>
+<p>Puteți <a href="/ro/incercare-gratuita/?audience=driver&amp;src=driver-card" rel="noopener" target="_blank">încercați gratuit timp de 30 de zile</a> — fără obligații.</p></div></section><section class="band band--blue"><div class="container art-body"><div class="eyebrow anim-up">Pentru societăți</div><h2 class="h2-grad anim-up">Operați și propriile vehicule? TAGRA pentru flote</h2>
+<p>Sunteți persoană fizică autorizată și operați, de asemenea, ca operator de transport rutier cu propriile vehicule? Pentru evaluarea datelor de la mai multe vehicule, există <a href="/ro/pentru-firme/">TAGRA</a> în cinci versiuni, în funcție de numărul de vehicule pe care le operați:</p>
+<div class="price-table-wrap" style="width:100%;overflow-x:auto;margin-bottom:24px">
+<table class="price-table" style="width:100%;border-collapse:collapse;font-size:16px">
+<thead>
+<tr style="border-bottom:2px solid var(--border)">
+<th style="text-align:left;padding:10px 12px;color:var(--text2);font-weight:600;font-size:14px">Versiune</th>
+<th style="text-align:left;padding:10px 12px;color:var(--text2);font-weight:600;font-size:14px">Vehicule</th>
+</tr>
+</thead>
+<tbody>
+<tr style="border-bottom:1px solid var(--border)"><td style="padding:12px;font-weight:700;color:var(--text-strong)"><a href="/ro/pentru-firme/">TAGRA 1</a></td><td style="padding:12px;color:var(--text2)">1 vehicul</td></tr>
+<tr style="border-bottom:1px solid var(--border)"><td style="padding:12px;font-weight:700;color:var(--text-strong)"><a href="/ro/pentru-firme/">TAGRA 2</a></td><td style="padding:12px;color:var(--text2)">2 vehicule</td></tr>
+<tr style="border-bottom:1px solid var(--border)"><td style="padding:12px;font-weight:700;color:var(--text-strong)"><a href="/ro/pentru-firme/">TAGRA 4</a></td><td style="padding:12px;color:var(--text2)">până la 4 vehicule</td></tr>
+<tr style="border-bottom:1px solid var(--border)"><td style="padding:12px;font-weight:700;color:var(--text-strong)"><a href="/ro/pentru-firme/">TAGRA 6</a></td><td style="padding:12px;color:var(--text2)">până la 6 vehicule</td></tr>
+<tr style="border-bottom:1px solid var(--border)"><td style="padding:12px;font-weight:700;color:var(--text-strong)"><a href="/ro/pentru-firme/">TAGRA MAX</a></td><td style="padding:12px;color:var(--text2)">număr nelimitat de vehicule</td></tr>
+</tbody>
+</table>
+</div></div></section><section class="band band--gray"><div class="container art-body"><div class="eyebrow anim-up">Întrebări & răspunsuri</div><h2 class="h2-grad anim-up">Întrebări frecvente</h2>
+<details class="faq-item"><summary>Cum solicit un card de tahograf?</summary>
+<div class="faq-answer"><p>În Marea Britanie, solicitați la DVLA utilizând formularul D777B/DL. În Irlanda de Nord, solicitați la DVA Coleraine utilizând formularul D777(NI) pentru un card nou sau D786(NI) pentru reînnoire. Puteți solicita online la <a href="https://www.gov.uk/apply-driver-digital-tachograph-card" rel="noopener" target="_blank">gov.uk/apply-driver-digital-tachograph-card</a>.</p></div>
+</details>
+<details class="faq-item"><summary>Cum îmi reînnoiesc cardul de tahograf?</summary>
+<div class="faq-answer"><p>Puteți reînnoi online dacă cardul dumneavoastră urmează să expire în termen de 90 de zile. Solicitați reînnoirea cu cel puțin 15 zile înainte de expirare, pentru a nu rămâne fără un card valabil.</p></div>
+</details>
+<details class="faq-item"><summary>Cât costă un card de tahograf?</summary>
+<div class="faq-answer"><p>Un prim card costă £32. Reînnoirea costă £19, iar înlocuirea unui card pierdut sau furat costă, de asemenea, £19. Schimbarea unui card UE/SEE sau din Irlanda de Nord cu un card GB costă £32.</p></div>
+</details>
+<details class="faq-item"><summary>Ce trebuie să fac dacă îmi pierd cardul de tahograf?</summary>
+<div class="faq-answer"><p>Raportați imediat pierderea la DVLA și solicitați un card de înlocuire în termen de 7 zile. Un card de înlocuire este emis, de regulă, în termen de 5 zile lucrătoare. Între timp, puteți conduce maximum 15 zile utilizând tipărituri zilnice completate manual de la unitatea montată pe vehicul (UMV), semnate pe verso.</p></div>
+</details>
+<details class="faq-item"><summary>Cât timp durează emiterea unui card de tahograf de înlocuire?</summary>
+<div class="faq-answer"><p>Un card de înlocuire este emis, de regulă, în termen de 5 zile lucrătoare de la primirea solicitării dumneavoastră de către DVLA, cu condiția să solicitați cardul în termen de 7 zile de la pierdere, furt sau defecțiune.</p></div>
+</details>
+<details class="faq-item"><summary>Este un card de tahograf același lucru cu un card al societății?</summary>
+<div class="faq-answer"><p>Nu. Cardul de conducător auto pentru tahograf vă aparține personal și vă identifică în fața tahografului. Un card al societății separat este utilizat de un operator de transport rutier pentru descărcarea datelor din unitatea montată pe vehicul (UMV) și nu înlocuiește un card de conducător auto. Dacă utilizați propriile vehicule, <a href="/ro/pentru-firme/">TAGRA</a> vă poate ajuta și cu această parte a evaluării.</p></div>
+</details>
+<div class="related">
+<div class="related-title">Articole asociate</div>
+<div class="related-grid">
+<a class="related-card anim-up" href="/ro/articole/tahograf-autoutilitare-obligatie-iulie-2026/">
+<div class="related-card-eye">Legislație nouă</div>
+<h3 class="card-title">Tahografe pentru autoutilitare: noua obligație din iulie 2026</h3>
+</a>
+<a class="related-card anim-up" href="/ro/articole/cine-trebuie-sa-evalueze-datele-tahograf-2026/">
+<div class="related-card-eye">Prezentare generală</div>
+<h3 class="card-title">Cine trebuie să evalueze datele tahografului din 2026</h3>
+</a>
+</div>
+</div></div></section></main>
+<footer class="site-footer" role="contentinfo">
+<div class="footer-inner">
+<div>
+<div class="footer-logo"><img alt="TAGRA" height="20" src="/assets/img/logo-dark.svg?v=20260513zh" width="88" loading="lazy"/></div>
+<p class="footer-desc">Software profesional de analiză a tahografelor. Descărcare date de pe cardul de conducător auto, analiză a tahografelor digitale, durată de conducere în UE și Directiva privind timpul de lucru pentru vehicule grele de marfă. Dezvoltat de Truck Data Technology, s.r.o.</p>
+</div>
+<div class="footer-col">
+<h2 class="footer-col-title">Produs</h2>
+<ul>
+<li><a href="/ro/pentru-firme/">Pentru operatorii de transport rutier</a></li>
+<li><a href="/ro/pentru-conducatori/">Pentru conducătorii auto profesioniști</a></li>
+<li><a href="/ro/autoritati-de-control/">Pentru autoritățile de control (ISCTR)</a></li>
+<li><a href="/ro/cum-functioneaza/">Cum funcționează</a></li>
+<li><a href="/ro/pentru-cine/">Pentru cine</a></li>
+<li><a href="/ro/intrebari-frecvente/">Întrebări frecvente</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h2 class="footer-col-title">Resurse</h2>
+<ul>
+<li><a href="/ro/articole/">Articole</a></li><li><a href="/ro/manuale/">Manuale</a></li>
+<li><a href="/ro/articole/simboluri-tahograf-digital/">Simboluri tahograf</a></li>
+<li><a href="/ro/integrari/dkv-live/">DKV LIVE®</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h2 class="footer-col-title">Societate</h2>
+<ul>
+<li><a href="/ro/contact/">Contact</a></li>
+<li><a href="https://www.tdt.cz" rel="noopener" target="_blank">Truck Data Technology</a></li>
+<li><a href="/ro/">Engleză</a></li><li><a href="/de/">Deutsch</a></li><li><a href="/pl/">Polski</a></li><li><a href="/el/">Ελληνικά</a></li><li><a href="/hu/">Magyar</a></li><li><a href="/it/">Italiano</a></li><li><a href="https://www.tdt.cz/" rel="noopener" target="_blank">Čeština</a></li><li><a href="https://www.tdt.sk/" rel="noopener" target="_blank">Slovenčina</a></li></ul>
+</div>
+</div>
+<div class="footer-bottom">
+<span>© 2026 Truck Data Technology, s.r.o. Toate drepturile rezervate.</span>
+<span><a href="/ro/contact/">Contact</a> · <a href="https://www.tdt.cz" rel="noopener" target="_blank">tdt.cz</a> · <a href="/ro/confidentialitate/">Confidențialitate &amp; cookie-uri</a></span>
+</div>
+</footer>
+<script>(function(){var bar=document.getElementById('scroll-progress');if(bar)window.addEventListener('scroll',function(){var t=document.documentElement.scrollTop||document.body.scrollTop;var h=document.documentElement.scrollHeight-document.documentElement.clientHeight;bar.style.width=(t/h*100)+'%';},{passive:true});var toggle=document.getElementById('nav-toggle'),links=document.getElementById('nav-links');if(toggle&&links)toggle.addEventListener('click',function(){var o=links.classList.toggle('open');toggle.setAttribute('aria-expanded',o);});})();</script><script>
+/* INTERSECTION OBSERVER – ANIMATIONS */
+if ('IntersectionObserver' in window) {
+  var io = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) {
+      if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.anim-up, .fly-left, .fly-right').forEach(function(el) { io.observe(el); });
+} else {
+  document.querySelectorAll('.anim-up, .fly-left, .fly-right').forEach(function(el) { el.classList.add('on'); });
+}
+</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Cum solicit un card de tahograf?","acceptedAnswer":{"@type":"Answer","text":"În Marea Britanie, solicitați la DVLA utilizând formularul D777B/DL. În Irlanda de Nord, solicitați la DVA Coleraine utilizând formularul D777(NI) pentru un card nou sau D786(NI) pentru reînnoire. Puteți solicita online la gov.uk/apply-driver-digital-tachograph-card."}},{"@type":"Question","name":"Cum îmi reînnoiesc cardul de tahograf?","acceptedAnswer":{"@type":"Answer","text":"Puteți reînnoi online dacă cardul dumneavoastră urmează să expire în termen de 90 de zile. Solicitați reînnoirea cu cel puțin 15 zile înainte de expirare, pentru a nu rămâne fără un card valabil."}},{"@type":"Question","name":"Cât costă un card de tahograf?","acceptedAnswer":{"@type":"Answer","text":"Un prim card costă £32. Reînnoirea costă £19, iar înlocuirea unui card pierdut sau furat costă, de asemenea, £19. Schimbarea unui card UE/SEE sau din Irlanda de Nord cu un card GB costă £32."}},{"@type":"Question","name":"Ce trebuie să fac dacă îmi pierd cardul de tahograf?","acceptedAnswer":{"@type":"Answer","text":"Raportați imediat pierderea la DVLA și solicitați un card de înlocuire în termen de 7 zile. Un card de înlocuire este emis, de regulă, în termen de 5 zile lucrătoare. Între timp, puteți conduce maximum 15 zile utilizând tipărituri zilnice completate manual de la unitatea montată pe vehicul (UMV), semnate pe verso."}},{"@type":"Question","name":"Cât timp durează emiterea unui card de tahograf de înlocuire?","acceptedAnswer":{"@type":"Answer","text":"Un card de înlocuire este emis, de regulă, în termen de 5 zile lucrătoare de la primirea solicitării dumneavoastră de către DVLA, cu condiția să solicitați cardul în termen de 7 zile de la pierdere, furt sau defecțiune."}},{"@type":"Question","name":"Este un card de tahograf același lucru cu un card al societății?","acceptedAnswer":{"@type":"Answer","text":"Nu. Cardul de conducător auto pentru tahograf vă aparține personal și vă identifică în fața tahografului. Un card al societății separat este utilizat de un operator de transport rutier pentru descărcarea datelor din unitatea montată pe vehicul (UMV) și nu înlocuiește un card de conducător auto."}}]}</script>
+</body>
+</html>

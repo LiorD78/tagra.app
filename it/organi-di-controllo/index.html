@@ -45,6 +45,10 @@
       var m={cz:'cs',cs:'cs',sk:'sk',de:'de',pl:'pl',gr:'el',el:'el',hu:'hu',en:'en'};return m[l]||'en';}
     var T={
       hu:{t:'Analitikai sütiket használunk (Google Analytics, Microsoft Clarity, Smartsupp), hogy megértsük a webhely használatát. Csak az Ön hozzájárulásával töltődnek be.',a:'Elfogadom',r:'Elutasítom',p:'Adatvédelem és sütik'},
+      ro:{t:'Utilizăm module cookie de analiză (Google Analytics, Microsoft Clarity, Smartsupp) pentru a înțelege modul de utilizare a site-ului. Se încarcă doar cu consimțământul dumneavoastră.',a:'Accept',r:'Refuz',p:'Confidențialitate și cookie-uri'},
+      nl:{t:'We gebruiken analytische cookies (Google Analytics, Microsoft Clarity, Smartsupp) om het gebruik van de site te begrijpen. Ze laden alleen met uw toestemming.',a:'Accepteren',r:'Weigeren',p:'Privacy en cookies'},
+      fr:{t:'Nous utilisons des cookies analytiques (Google Analytics, Microsoft Clarity, Smartsupp) pour comprendre l’utilisation du site. Ils ne se chargent qu’avec votre consentement.',a:'Accepter',r:'Refuser',p:'Confidentialité et cookies'},
+      it:{t:'Utilizziamo cookie analitici (Google Analytics, Microsoft Clarity, Smartsupp) per capire l’utilizzo del sito. Si caricano solo con il Suo consenso.',a:'Accetta',r:'Rifiuta',p:'Privacy e cookie'},
       en:{t:'We use analytics cookies (Google Analytics, Microsoft Clarity, Smartsupp) to understand site usage. They load only with your consent.',a:'Accept',r:'Reject',p:'Privacy &amp; cookies'},
       cs:{t:'Používáme analytické cookies (Google Analytics, Microsoft Clarity, Smartsupp) k pochopení používání webu. Načtou se jen s vaším souhlasem.',a:'Přijmout',r:'Odmítnout',p:'Soukromí a cookies'},
       sk:{t:'Používame analytické cookies (Google Analytics, Microsoft Clarity, Smartsupp) na pochopenie používania webu. Načítajú sa len s vaším súhlasom.',a:'Prijať',r:'Odmietnuť',p:'Súkromie a cookies'},
@@ -75,24 +79,26 @@
 <!-- TMX-ANALYTICS END -->
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>TAGRA Control – Software per gli enti di controllo | Analisi del cronotachigrafo</title>
-<meta content="Software professionale di analisi dei dati del cronotachigrafo per ispezioni su strada e in azienda. Utilizzato da Polizia, Dogana, Ispettorati del lavoro e Ministeri dei Trasporti in Europa centrale." name="description"/>
+<title>TAGRA Control – Analisi del cronotachigrafo</title>
+<meta content="Software professionale per analizzare i dati del tachigrafo durante i controlli su strada e in azienda, utilizzato dalle autorità dell'Europa centrale." name="description"/>
 <meta content="#0b2c4a" name="theme-color"/>
 <link href="/manifest.json" rel="manifest"/>
 <link href="https://tagra.app/it/organi-di-controllo/" rel="canonical"/>
+<link href="https://tagra.app/de/kontrollbehoerden/" hreflang="de" rel="alternate"/><link href="https://tagra.app/el/eleghos/" hreflang="el" rel="alternate"/><link href="https://tagra.app/enforcement/" hreflang="en" rel="alternate"/><link href="https://tagra.app/fr/autorites-de-controle/" hreflang="fr" rel="alternate"/><link href="https://tagra.app/hu/hatosagoknak/" hreflang="hu" rel="alternate"/><link href="https://tagra.app/it/organi-di-controllo/" hreflang="it" rel="alternate"/><link href="https://tagra.app/nl/handhaving/" hreflang="nl" rel="alternate"/><link href="https://tagra.app/pl/organy-kontrolne/" hreflang="pl" rel="alternate"/>
+<link href="https://tagra.app/ro/autoritati-de-control/" hreflang="ro" rel="alternate"/><link href="https://tagra.app/enforcement/" hreflang="x-default" rel="alternate"/>
 <meta content="website" property="og:type"/>
 <meta content="TAGRA Control – Software per gli enti di controllo" property="og:title"/>
-<meta content="Software professionale di analisi dei dati del cronotachigrafo per ispezioni su strada e in azienda. Utilizzato da Polizia, Dogana e Ispettorati del lavoro in Europa centrale." property="og:description"/>
+<meta content="Software professionale per l'analisi dei dati del tachigrafo per controlli su strada e in azienda. Utilizzato da Polizia, Dogana e Ispettorati del lavoro in Europa centrale." property="og:description"/>
 <meta content="https://tagra.app/assets/img/tagra-control-screenshot.webp" property="og:image"/>
-<meta content="TAGRA Control – interfaccia di analisi del cronotachigrafo digitale per gli enti di controllo" property="og:image:alt"/>
+<meta content="TAGRA Control – interfaccia di analisi del tachigrafo digitale per gli enti di controllo" property="og:image:alt"/>
 <meta content="https://tagra.app/it/organi-di-controllo/" property="og:url"/>
 <meta content="TAGRA" property="og:site_name"/>
 <meta content="it_IT" property="og:locale"/>
 <meta content="summary_large_image" name="twitter:card"/>
 <meta content="TAGRA Control – Software per gli enti di controllo" name="twitter:title"/>
-<meta content="Software professionale di analisi dei dati del cronotachigrafo per ispezioni su strada e in azienda." name="twitter:description"/>
+<meta content="Software professionale per l'analisi dei dati del tachigrafo per controlli su strada e in azienda." name="twitter:description"/>
 <meta content="https://tagra.app/assets/img/tagra-control-screenshot.webp" name="twitter:image"/>
-<meta content="TAGRA Control – interfaccia di analisi del cronotachigrafo digitale per gli enti di controllo" name="twitter:image:alt"/>
+<meta content="TAGRA Control – interfaccia di analisi del tachigrafo digitale per gli enti di controllo" name="twitter:image:alt"/>
 <link href="/assets/img/favicon.ico" rel="icon"/>
 <style>
     /* ── Enforcement-specific overrides ── */
@@ -293,8 +299,7 @@
 <link href="/assets/css/components.css" rel="stylesheet"/>
 <link href="/assets/css/nav.css" rel="stylesheet"/>
 <script defer="" src="/assets/js/nav.js?v=20260816b"></script>
-<link href="/assets/css/footer.css" rel="stylesheet"/>
-<link href="https://tagra.app/enforcement/" hreflang="en" rel="alternate"/><link href="https://tagra.app/de/kontrollbehoerden/" hreflang="de" rel="alternate"/><link href="https://tagra.app/pl/organy-kontrolne/" hreflang="pl" rel="alternate"/><link href="https://tagra.app/el/eleghos/" hreflang="el" rel="alternate"/><link href="https://tagra.app/hu/hatosagoknak/" hreflang="hu" rel="alternate"/><link href="https://tagra.app/it/organi-di-controllo/" hreflang="it" rel="alternate"/><link href="https://tagra.app/enforcement/" hreflang="x-default" rel="alternate"/></head>
+<link href="/assets/css/footer.css" rel="stylesheet"/></head>
 <body>
 <a class="skip-link" href="#main-content">Vai al contenuto</a>
 <div aria-hidden="true" id="scroll-progress"></div>
@@ -313,8 +318,7 @@
 </ul>
 <details class="nav-lang">
 <summary aria-label="Language: IT">IT</summary>
-<div class="nav-lang-menu" role="menu">
-<a href="/" hreflang="en">English</a><a href="/de/" hreflang="de">Deutsch</a><a href="/pl/" hreflang="pl">Polski</a><a href="/el/" hreflang="el">Ελληνικά</a><a href="/hu/" hreflang="hu">Magyar</a><a aria-current="page" class="active" href="/it/" hreflang="it">Italiano</a><a href="https://www.tdt.cz/" hreflang="cs" rel="noopener" target="_blank">Čeština</a><a href="https://www.tdt.sk/" hreflang="sk" rel="noopener" target="_blank">Slovenčina</a></div>
+<div class="nav-lang-menu" role="menu"><a href="/enforcement/" hreflang="en">English</a><a href="/de/kontrollbehoerden/" hreflang="de">Deutsch</a><a href="/pl/organy-kontrolne/" hreflang="pl">Polski</a><a href="/nl/handhaving/" hreflang="nl">Nederlands</a><a href="/fr/autorites-de-controle/" hreflang="fr">Français</a><a aria-current="page" class="active" href="/it/organi-di-controllo/" hreflang="it">Italiano</a><a href="/el/eleghos/" hreflang="el">Ελληνικά</a><a href="/hu/hatosagoknak/" hreflang="hu">Magyar</a><a href="/ro/autoritati-de-control/" hreflang="ro">Română</a><a href="https://www.tdt.cz/" hreflang="cs" rel="noopener" target="_blank">Čeština</a><a href="https://www.tdt.sk/" hreflang="sk" rel="noopener" target="_blank">Slovenčina</a></div>
 </details>
 <a class="nav-cta-mobile" href="/it/prova-gratuita/?audience=enforcement">Prova gratis</a>
 <button aria-expanded="false" aria-label="Attiva/disattiva menu" class="nav-mobile-toggle" id="nav-toggle">
@@ -326,15 +330,15 @@
 <section id="main-content" class="enf-hero">
 <div class="container">
 <div class="eyebrow anim-up">TAGRA · Per gli enti di controllo</div>
-<h1>Analisi del cronotachigrafo su strada in pochi minuti, non ore</h1>
-<p class="lead">Software professionale di <strong>analisi del cronotachigrafo</strong> per un'analisi rapida del cronotachigrafo digitale in occasione di ispezioni su strada e in azienda. Lo standard in Europa centrale.</p>
+<h1>Analisi del tachigrafo su strada in pochi minuti, non in ore</h1>
+<p class="lead">Software professionale di <strong>analisi del cronotachigrafo</strong> per un'analisi rapida del tachigrafo digitale in occasione di controlli su strada e in azienda. Lo standard in Europa centrale.</p>
 <div class="enf-btn-row anim-up">
 <a class="btn-cta" href="/it/prova-gratuita/?audience=enforcement">Richiedi accesso demo</a>
 <a class="btn-cta btn-blue" href="/it/contatti/?topic=training">Contattaci per la formazione</a>
 </div>
 <p class="anim-up" style="font-size:15px;color:var(--text2);margin-bottom:0;transition-delay:.2s">Windows · Demo su richiesta · Utilizzato dagli enti di controllo in Repubblica Ceca, Slovacchia e Ungheria</p>
 <div class="tmx-media-frame anim-up" style="margin:44px auto 0;box-shadow:0 20px 40px rgba(0,0,0,.08);">
-<img alt="TAGRA Control – interfaccia di analisi del cronotachigrafo digitale per gli enti di controllo" height="608" src="/assets/img/tagra-control-screenshot.webp?v=2026-05-13c" width="1080"/>
+<img alt="TAGRA Control – interfaccia di analisi del tachigrafo digitale per gli enti di controllo" height="608" src="/assets/img/tagra-control-screenshot.webp?v=2026-05-13c" width="1080"/>
 </div>
 </div>
 </section>
@@ -357,7 +361,7 @@
 <div class="bc bluefill s4 anim-up" style="transition-delay:0.2s">
 <span class="bc-label">Cronotachigrafi</span>
 <div class="bc-title">Tutte le generazioni</div>
-<p class="bc-text" style="margin-top:8px;">Cronotachigrafi digitali G1 e intelligenti G2V2. Tutti i formati in un unico strumento: .DDD, .C1B, .V1B, ESM.</p>
+<p class="bc-text" style="margin-top:8px;">Tachigrafi digitali G1 e intelligenti G2V2. Tutti i formati in un unico strumento: .DDD, .C1B, .V1B, ESM.</p>
 <div class="bignum">03</div>
 </div>
 <div class="bc darkfill s6 fly-left">
@@ -368,7 +372,7 @@
 <div class="bc greenfill s6 fly-right">
 <span class="bc-label">Report</span>
 <div class="bc-title">Moduli pronti per le ispezioni</div>
-<p class="bc-text" style="margin-top:8px;">Output predisposti per ispezioni su strada e in azienda — identici a quelli che gli operatori di trasporto presentano alle autorità.</p>
+<p class="bc-text" style="margin-top:8px;">Output predisposti per controlli su strada e in azienda — identici a quelli che gli operatori di trasporto presentano alle autorità.</p>
 </div>
 </div>
 </div>
@@ -423,7 +427,7 @@
 </div>
 <div class="commitment-callout" style="margin:36px 0 0;padding:32px 36px;background:#fff;border-radius:16px;border-left:4px solid var(--green-brand);font-size:17px;color:#515154;line-height:1.65;">
 <div style="font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--green-brand);margin-bottom:10px;">Il nostro impegno</div>
-<p style="margin:0;color:#1d1d1f;">TAGRA Control viene costantemente adattato in base all'esperienza pratica degli ispettori sul campo — per il flusso di ispezione più efficiente possibile. Ogni modifica legislativa nell'UE e negli Stati membri viene recepita nel software a ogni release.</p>
+<p style="margin:0;color:#1d1d1f;">TAGRA Control viene costantemente adattato in base all'esperienza pratica degli ispettori sul campo — per rendere il flusso di ispezione il più efficiente possibile. Ogni modifica legislativa nell'UE e negli Stati membri viene recepita nel software a ogni release.</p>
 </div>
 </div>
 </section>
@@ -434,9 +438,9 @@
 <div class="fly-left">
 <span class="section-label">Analisi delle infrazioni</span>
 <h2 class="section-h2">Cosa rileva immediatamente TAGRA Control</h2>
-<p style="font-size:17px;color:#515154;line-height:1.6;margin-bottom:20px;">Il software esegue l'<strong>analisi del cronotachigrafo digitale</strong> su ogni segmento temporale della carta conducente o del cronotachigrafo e segnala in modo inequivocabile le violazioni della normativa vigente sui <strong>tempi di guida</strong>.</p>
+<p style="font-size:17px;color:#515154;line-height:1.6;margin-bottom:20px;">Il software esegue l'<strong>analisi del cronotachigrafo digitale</strong> su ogni segmento temporale della carta conducente o del tachigrafo e segnala in modo inequivocabile le violazioni della normativa vigente sui <strong>tempi di guida</strong>.</p>
 <div class="feats">
-<div class="fi"><div class="fck"></div><span>Superamento dei tempi di guida giornalieri e settimanali secondo i tempi di guida UE (Regolamento 561/2006)</span></div>
+<div class="fi"><div class="fck"></div><span>Superamento dei tempi di guida giornalieri e settimanali secondo il Regolamento (CE) n. 561/2006</span></div>
 <div class="fi"><div class="fck"></div><span>Pausa di sicurezza obbligatoria abbreviata</span></div>
 <div class="fi"><div class="fck"></div><span>Periodo di riposo giornaliero e settimanale insufficiente</span></div>
 <div class="fi"><div class="fck"></div><span>Guida senza carta conducente inserita</span></div>
@@ -487,7 +491,7 @@
 </div>
 <div class="report-item">
 <div class="report-icon">5</div>
-<div><span class="report-label">Posizione GPS (G2V2)</span><span class="report-desc">Localizzazione del veicolo dai dati dei cronotachigrafi intelligenti di seconda generazione.</span></div>
+<div><span class="report-label">Posizione GPS (G2V2)</span><span class="report-desc">Localizzazione del veicolo dai dati dei tachigrafi intelligenti di seconda generazione.</span></div>
 </div>
 <div class="report-item">
 <div class="report-icon">6</div>
@@ -515,12 +519,12 @@
 <span class="stit">Carica la carta o il cronotachigrafo</span></div><div class="tmx-media-frame" style="margin:12px 0;max-height:180px;background:#f5f5f7;">
 <img alt="DOWNLOAD BOX II S – lettore di carte per gli enti di controllo" src="https://cdn.truckmall.cz/data/user-content/Download%20Box%20IIS_produkt2.webp" style="width:100%;height:180px;object-fit:contain;object-position:center;" loading="lazy" width="1875" height="1172"/>
 </div>
-<p style="font-size:16px;color:#515154;line-height:1.55;">Inserisci la carta conducente nel DOWNLOAD BOX II S oppure collega il dispositivo alla porta dati del cronotachigrafo. Il <strong>download della carta conducente</strong> richiede pochi secondi.</p>
+<p style="font-size:16px;color:#515154;line-height:1.55;">Inserisca la carta conducente nel DOWNLOAD BOX II S oppure colleghi il dispositivo alla porta dati del tachigrafo. Il <strong>download della carta conducente</strong> richiede pochi secondi.</p>
 </div>
 <div class="step-card anim-up">
 <div class="step-header"><span class="snum">02</span>
 <span class="stit">Analisi istantanea in TAGRA Control</span></div><div class="tmx-media-frame" style="margin:12px 0;">
-<img alt="Interfaccia TAGRA Control – analisi istantanea del cronotachigrafo digitale e report delle infrazioni" height="300" src="/assets/img/tagra-control-screenshot.webp" width="400" loading="lazy"/>
+<img alt="Interfaccia TAGRA Control – analisi istantanea del tachigrafo digitale e report delle infrazioni" height="300" src="/assets/img/tagra-control-screenshot.webp" width="400" loading="lazy"/>
 </div>
 <p style="font-size:16px;color:#515154;line-height:1.55;">Il programma valuta automaticamente tutte le registrazioni ed evidenzia ogni infrazione con orario esatto, tipo e durata.</p>
 </div>
@@ -544,7 +548,7 @@
 <img alt="DOWNLOAD BOX II S – lettore di carte per gli enti di controllo" height="180" src="https://cdn.truckmall.cz/data/user-content/Download%20Box%20IIS_produkt2.webp" width="180" loading="lazy"/>
 </div>
 <div>
-<p style="font-size:17px;color:#515154;line-height:1.6;margin-bottom:16px;">Lettore compatto di carte conducente e chiave di download per cronotachigrafi digitali. Prodotto in Repubblica Ceca, pienamente compatibile con tutti i cronotachigrafi digitali e intelligenti G2V2.</p>
+<p style="font-size:17px;color:#515154;line-height:1.6;margin-bottom:16px;">Lettore compatto di carte conducente e chiave di download per tachigrafi digitali. Prodotto nella Repubblica Ceca, pienamente compatibile con tutti i tachigrafi digitali e intelligenti G2V2.</p>
 <div class="device-specs">
 <div class="dspec"><span class="dspec-k">Compatibilità</span><span class="dspec-v">Tutti i cronotachigrafi digitali + G2V2</span></div>
 <div class="dspec"><span class="dspec-k">Carta conducente</span><span class="dspec-v">Tramite lettore integrato</span></div>
@@ -564,7 +568,7 @@
 <h2 class="section-h2">Formazione per gli enti di controllo</h2>
 <p style="font-size:17px;color:#515154;line-height:1.6;margin-bottom:16px;">Truck Data Technology, s.r.o. offre una formazione professionale sull'utilizzo di TAGRA Control direttamente agli enti di controllo. La formazione è adattata alle esigenze e alle procedure operative di ogni organizzazione.</p>
 <ul class="training-list">
-<li>Funzionamento del software — caricamento di carte conducente e cronotachigrafi</li>
+<li>Funzionamento del software — caricamento delle carte conducente e dei tachigrafi</li>
 <li>Interpretazione dei risultati — come leggere i report delle infrazioni</li>
 <li>Contesto normativo — UE 561/2006, AETR, normative nazionali</li>
 <li>Esportazioni e protocolli — preparazione dei documenti per i procedimenti</li>
@@ -576,7 +580,8 @@
 <div class="callout-green">
 <div class="cg-bg">TDT</div>
 <h2 style="font-size:clamp(24px,3vw,34px);font-weight:800;margin-bottom:14px;display:inline-block;">Interessato a TAGRA Control?</h2>
-<p style="margin-bottom:8px;">Saremo lieti di preparare una proposta e organizzare la formazione per il tuo team.</p>
+<p style="margin-bottom:8px;"><strong>TAGRA Control: 749 € IVA esclusa</strong> — il primo anno di aggiornamenti e assistenza è incluso; dal 2º anno il canone di licenza annuale è di 149 € IVA esclusa.</p>
+<p style="margin-bottom:8px;">Saremo lieti di preparare una proposta e organizzare la formazione per il Suo team.</p>
 <p>Contattaci nei giorni lavorativi dalle 8:00 alle 16:00. Rispondiamo in inglese.</p>
 <p style="margin-top:20px;"><strong>Web:</strong> <a href="/it/organi-di-controllo/">tagra.app/it/organi-di-controllo</a></p>
 <div style="margin-top:24px;display:flex;gap:12px;flex-wrap:wrap;">
@@ -596,11 +601,11 @@
 <div class="faq-block" style="margin-top:28px;max-width:820px;">
 <details>
 <summary>Quali tipi di cronotachigrafi supporta TAGRA Control?</summary>
-<p class="faq-a">TAGRA Control esegue l'<strong>analisi del cronotachigrafo digitale</strong> sui dati dei cronotachigrafi di prima generazione (G1) e dei cronotachigrafi intelligenti di seconda generazione (G2V2). Formati file supportati: .DDD, .C1B, .V1B ed ESM.</p>
+<p class="faq-a">TAGRA Control esegue l'<strong>analisi del cronotachigrafo digitale</strong> sui dati dei tachigrafi di prima generazione (G1) e dei tachigrafi intelligenti di seconda generazione (G2V2). Formati file supportati: .DDD, .C1B, .V1B ed ESM.</p>
 </details>
 <details>
 <summary>Cosa rivela l'analisi della carta conducente?</summary>
-<p class="faq-a">Dopo il <strong>download della carta conducente</strong>, il software valuta <strong>tempi di guida</strong>, pause, periodi di riposo, orario di lavoro e guida senza carta. Ogni infrazione viene mostrata con data, ora e durata esatte. Per le carte G2V2 sono disponibili anche le coordinate GPS dalla registrazione del cronotachigrafo.</p>
+<p class="faq-a">Dopo il <strong>download della carta conducente</strong>, il software valuta <strong>tempi di guida</strong>, pause, periodi di riposo, orario di lavoro e guida senza carta. Ogni infrazione viene mostrata con data, ora e durata esatte. Per le carte G2V2 sono disponibili anche le coordinate GPS dalla registrazione del tachigrafo.</p>
 </details>
 <details>
 <summary>Quanto è rapida l'analisi durante un'ispezione su strada?</summary>
@@ -631,7 +636,7 @@
 <div style="max-width:600px;">
 <span class="section-label">Sviluppatore e produttore</span>
 <h2 class="section-h2">Truck Data Technology, s.r.o.</h2>
-<p style="font-size:17px;color:#515154;line-height:1.6;margin-bottom:20px;">Produttore ceco di software e hardware per la gestione dei dati del cronotachigrafo con oltre 20 anni di esperienza. Produttore diretto — nessun intermediario.</p>
+<p style="font-size:17px;color:#515154;line-height:1.6;margin-bottom:20px;">Produttore ceco di software e hardware per la gestione dei dati del tachigrafo con oltre 20 anni di esperienza. Produttore diretto — nessun intermediario.</p>
 <div style="display:flex;flex-direction:column;gap:8px;font-size:16px;">
 <div><span style="color:#515154;min-width:80px;display:inline-block;">Sede</span> <strong>Repubblica Ceca</strong></div>
 <div><span style="color:#515154;min-width:80px;display:inline-block;">Telefono</span> <a href="tel:+420739005345" style="color:#134a8e;font-weight:600;">+420 739 005 345</a></div>
@@ -713,25 +718,7 @@
   }
 })();
 </script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "name": "TAGRA Control – Software di analisi del cronotachigrafo per gli enti di controllo",
-  "applicationCategory": "BusinessApplication",
-  "operatingSystem": "Windows",
-  "description": "Software professionale di analisi del cronotachigrafo per l'analisi del cronotachigrafo digitale durante ispezioni su strada e in azienda. Esegue il download della carta conducente, valuta le infrazioni dei tempi di guida UE secondo il Regolamento 561/2006, 2020/1054 e AETR. Utilizzato dalla Polizia ceca, dall'Amministrazione doganale ceca, dal Ministero dei Trasporti ceco, dagli Ispettorati del lavoro slovacchi e dal Ministero dei Trasporti ungherese.",
-  "url": "https://tagra.app/it/organi-di-controllo/",
-  "inLanguage": "it",
-  "author": {
-    "@type": "Organization",
-    "name": "Truck Data Technology, s.r.o.",
-    "url": "https://www.tdt.cz",
-    "telephone": "+420739005345",
-    "email": "sales@tagra.app"
-  }
-}
-</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "TAGRA Control – Software di analisi del tachigrafo per gli enti di controllo", "applicationCategory": "BusinessApplication", "operatingSystem": "Windows", "description": "Software professionale di analisi del tachigrafo per l'analisi dei dati del tachigrafo digitale durante controlli su strada e in azienda. Esegue il download della carta conducente, valuta le infrazioni dei tempi di guida UE secondo i Regolamenti 561/2006, 2020/1054 e AETR. Utilizzato dalla Polizia ceca, dall'Amministrazione doganale ceca, dal Ministero dei Trasporti ceco, dagli Ispettorati del lavoro slovacchi e dal Ministero dei Trasporti ungherese.", "url": "https://tagra.app/it/organi-di-controllo/", "inLanguage": "it", "author": {"@type": "Organization", "name": "Truck Data Technology, s.r.o.", "url": "https://www.tdt.cz", "telephone": "+420739005345", "email": "sales@tagra.app"}, "offers": {"@type": "Offer", "@id": "https://tagra.app/it/organi-di-controllo/#offer", "priceCurrency": "EUR", "price": "749", "availability": "https://schema.org/InStock", "url": "https://tagra.app/it/organi-di-controllo/", "description": "Prezzo di acquisto IVA esclusa. Il primo anno di aggiornamenti e assistenza è incluso; dal 2º anno il canone di licenza annuale è di 149 € IVA esclusa.", "seller": {"@type": "Organization", "name": "Truck Data Technology, s.r.o.", "url": "https://www.tdt.cz"}}}</script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -743,7 +730,7 @@
       "name": "Quali tipi di cronotachigrafi supporta TAGRA Control?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "TAGRA Control esegue l'analisi del cronotachigrafo digitale sui dati dei cronotachigrafi di prima generazione (G1) e dei cronotachigrafi intelligenti di seconda generazione (G2V2). Formati file supportati: .DDD, .C1B, .V1B ed ESM."
+        "text": "TAGRA Control esegue l'analisi dei dati del tachigrafo digitale di prima generazione (G1) e del tachigrafo intelligente di seconda generazione (G2V2). Formati di file supportati: .DDD, .C1B, .V1B ed ESM."
       }
     },
     {
@@ -751,7 +738,7 @@
       "name": "Cosa rivela l'analisi della carta conducente?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Dopo il download della carta conducente, il software valuta tempi di guida, pause, periodi di riposo, orario di lavoro e guida senza carta. Ogni infrazione viene mostrata con data, ora e durata esatte. Per le carte G2V2 sono disponibili anche le coordinate GPS dalla registrazione del cronotachigrafo."
+        "text": "Dopo il download della carta conducente, il software valuta i tempi di guida, le pause, i periodi di riposo, l'orario di lavoro e la guida senza carta. Ogni infrazione viene mostrata con data, ora e durata esatte. Per le carte G2V2 sono disponibili anche le coordinate GPS registrate dal tachigrafo."
       }
     },
     {

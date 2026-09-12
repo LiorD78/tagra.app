@@ -45,6 +45,10 @@
       var m={cz:'cs',cs:'cs',sk:'sk',de:'de',pl:'pl',gr:'el',el:'el',hu:'hu',en:'en'};return m[l]||'en';}
     var T={
       hu:{t:'Analitikai s\u00fctiket haszn\u00e1lunk (Google Analytics, Microsoft Clarity, Smartsupp), hogy meg\u00e9rts\u00fck a webhely haszn\u00e1lat\u00e1t. Csak az \u00d6n hozz\u00e1j\u00e1rul\u00e1s\u00e1val t\u00f6lt\u0151dnek be.',a:'Elfogadom',r:'Elutas\u00edtom',p:'Adatv\u00e9delem \u00e9s s\u00fctik'},
+      ro:{t:'Utilizăm module cookie de analiză (Google Analytics, Microsoft Clarity, Smartsupp) pentru a înțelege modul de utilizare a site-ului. Se încarcă doar cu consimțământul dumneavoastră.',a:'Accept',r:'Refuz',p:'Confidențialitate și cookie-uri'},
+      nl:{t:'We gebruiken analytische cookies (Google Analytics, Microsoft Clarity, Smartsupp) om het gebruik van de site te begrijpen. Ze laden alleen met uw toestemming.',a:'Accepteren',r:'Weigeren',p:'Privacy en cookies'},
+      fr:{t:'Nous utilisons des cookies analytiques (Google Analytics, Microsoft Clarity, Smartsupp) pour comprendre l’utilisation du site. Ils ne se chargent qu’avec votre consentement.',a:'Accepter',r:'Refuser',p:'Confidentialité et cookies'},
+      it:{t:'Utilizziamo cookie analitici (Google Analytics, Microsoft Clarity, Smartsupp) per capire l’utilizzo del sito. Si caricano solo con il Suo consenso.',a:'Accetta',r:'Rifiuta',p:'Privacy e cookie'},
       en:{t:'We use analytics cookies (Google Analytics, Microsoft Clarity, Smartsupp) to understand site usage. They load only with your consent.',a:'Accept',r:'Reject',p:'Privacy &amp; cookies'},
       cs:{t:'Pou\u017e\u00edv\u00e1me analytick\u00e9 cookies (Google Analytics, Microsoft Clarity, Smartsupp) k pochopen\u00ed pou\u017e\u00edv\u00e1n\u00ed webu. Na\u010dtou se jen s va\u0161\u00edm souhlasem.',a:'P\u0159ijmout',r:'Odm\u00edtnout',p:'Soukrom\u00ed a cookies'},
       sk:{t:'Pou\u017e\u00edvame analytick\u00e9 cookies (Google Analytics, Microsoft Clarity, Smartsupp) na pochopenie pou\u017e\u00edvania webu. Na\u010d\u00edtaj\u00fa sa len s va\u0161\u00edm s\u00fahlasom.',a:'Prija\u0165',r:'Odmietnu\u0165',p:'S\u00fakromie a cookies'},
@@ -75,13 +79,15 @@
 <!-- TMX-ANALYTICS END -->
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Tachográf kiértékelő szoftver – TAGRA</title>
-<meta content="Tachográf-kiértékelés és sofőrkártya letöltés fuvarozóknak: AETR, 561/2006/EK és munkaidő ellenőrzés, archiválás, kimutatások. Ingyenes 30 napos próbaverzió." name="description"/>
+<title>Tachográf-kiértékelő szoftver – TAGRA</title>
+<meta content="Tachográf-kiértékelés és sofőrkártya-letöltés fuvarozóknak: AETR, 561/2006/EK és munkaidő-ellenőrzés, archiválás, kimutatások. Ingyenes, 30 napos próbaverzió." name="description"/>
 <meta content="#0b2c4a" name="theme-color"/>
 <link href="/manifest.json" rel="manifest"/>
 <link href="https://tagra.app/hu/" rel="canonical"/>
-<meta content="Tachográf kiértékelő szoftver – TAGRA" property="og:title"/>
-<meta content="Tachográf-kiértékelés és sofőrkártya letöltés fuvarozóknak: AETR, 561/2006/EK és munkaidő ellenőrzés, archiválás, kimutatások. Ingyenes 30 napos próbaverzió." property="og:description"/>
+<link href="https://tagra.app/de/" hreflang="de" rel="alternate"/><link href="https://tagra.app/el/" hreflang="el" rel="alternate"/><link href="https://tagra.app/" hreflang="en" rel="alternate"/><link href="https://tagra.app/fr/" hreflang="fr" rel="alternate"/><link href="https://tagra.app/hu/" hreflang="hu" rel="alternate"/><link href="https://tagra.app/it/" hreflang="it" rel="alternate"/><link href="https://tagra.app/nl/" hreflang="nl" rel="alternate"/><link href="https://tagra.app/pl/" hreflang="pl" rel="alternate"/>
+<link href="https://tagra.app/ro/" hreflang="ro" rel="alternate"/><link href="https://tagra.app/" hreflang="x-default" rel="alternate"/>
+<meta content="Tachográf-kiértékelő szoftver – TAGRA" property="og:title"/>
+<meta content="Tachográf-kiértékelés és sofőrkártya-letöltés fuvarozóknak: AETR, 561/2006/EK és munkaidő-ellenőrzés, archiválás, kimutatások. Ingyenes, 30 napos próbaverzió." property="og:description"/>
 <meta content="https://cdn.truckmall.cz/images/0/ff1952bcc480ca3d/1/tagra-1-vyhodnoceni-dat-z-tachografu.webp" property="og:image"/>
 <meta content="TAGRA tachográfadat-kiértékelő szoftver – sofőr- és járműmegfelelőségi kimutatás" property="og:image:alt"/>
 <meta content="website" property="og:type"/>
@@ -738,7 +744,7 @@
     "@id": "https://tagra.app/#organization"
   },
   "serviceType": "Personal tachograph data tool",
-  "description": "Személyes eszköz sofőrök számára saját sofőrkártyájuk letöltésére, vezetési és pihenőidő ellenőrzésére. Standard USB kártyaolvasóval működik.",
+  "description": "Személyes eszköz sofőrök számára saját sofőrkártyájuk letöltésére, valamint vezetési és pihenőidejük ellenőrzésére. Szabványos USB-kártyaolvasóval működik.",
   "audience": {
     "@type": "Audience",
     "audienceType": "Professional truck and bus drivers"
@@ -753,7 +759,7 @@
     "@id": "https://tagra.app/#organization"
   },
   "serviceType": "Inspection and enforcement software",
-  "description": "Közúti és vállalati ellenőrzési szoftver rendőrség, vámhatóság, munkaügyi felügyelőségek és közlekedési minisztériumok számára. De facto standard Közép-Európában.",
+  "description": "Közúti és vállalati ellenőrzési szoftver rendőrség, vámhatóságok, munkaügyi felügyelőségek és közlekedési minisztériumok számára. De facto szabvány Közép-Európában.",
   "audience": {
     "@type": "GovernmentService",
     "audienceType": "Enforcement authorities, Police, Customs, Labour Inspectorates"
@@ -764,8 +770,7 @@
 <link href="/assets/css/components.css" rel="stylesheet"/>
 <link href="/assets/css/nav.css" rel="stylesheet"/>
 <script defer="" src="/assets/js/nav.js?v=20260816b"></script>
-<link href="/assets/css/footer.css" rel="stylesheet"/>
-<link href="https://tagra.app/" hreflang="en" rel="alternate"/><link href="https://tagra.app/de/" hreflang="de" rel="alternate"/><link href="https://tagra.app/pl/" hreflang="pl" rel="alternate"/><link href="https://tagra.app/el/" hreflang="el" rel="alternate"/><link href="https://tagra.app/hu/" hreflang="hu" rel="alternate"/><link href="https://tagra.app/it/" hreflang="it" rel="alternate"/><link href="https://tagra.app/fr/" hreflang="fr" rel="alternate"/><link href="https://tagra.app/" hreflang="x-default" rel="alternate"/></head>
+<link href="/assets/css/footer.css" rel="stylesheet"/></head>
 <body class="home-fullbleed">
 <a class="skip-link" href="#main-content">Ugrás a tartalomhoz</a>
 <div aria-hidden="true" id="scroll-progress"></div>
@@ -784,8 +789,7 @@
 </ul>
 <details class="nav-lang">
 <summary aria-label="Language: HU">HU</summary>
-<div class="nav-lang-menu" role="menu">
-<a href="/" hreflang="en">English</a><a href="/de/" hreflang="de">Deutsch</a><a href="/pl/" hreflang="pl">Polski</a><a href="/el/" hreflang="el">Ελληνικά</a><a aria-current="page" class="active" href="/hu/" hreflang="hu">Magyar</a><a href="/it/" hreflang="it">Italiano</a><a href="https://tagra.app/fr/" hreflang="fr">Français</a><a href="https://www.tdt.cz/" hreflang="cs" rel="noopener" target="_blank">Čeština</a><a href="https://www.tdt.sk/" hreflang="sk" rel="noopener" target="_blank">Slovenčina</a></div>
+<div class="nav-lang-menu" role="menu"><a href="/" hreflang="en">English</a><a href="/de/" hreflang="de">Deutsch</a><a href="/pl/" hreflang="pl">Polski</a><a href="/nl/" hreflang="nl">Nederlands</a><a href="/fr/" hreflang="fr">Français</a><a href="/it/" hreflang="it">Italiano</a><a href="/el/" hreflang="el">Ελληνικά</a><a aria-current="page" class="active" href="/hu/" hreflang="hu">Magyar</a><a href="/ro/" hreflang="ro">Română</a><a href="https://www.tdt.cz/" hreflang="cs" rel="noopener" target="_blank">Čeština</a><a href="https://www.tdt.sk/" hreflang="sk" rel="noopener" target="_blank">Slovenčina</a></div>
 </details>
 <a class="nav-cta-mobile" href="/hu/ingyenes-probaverzio/?audience=fleet">Próbálja ki ingyen</a>
 <button aria-expanded="false" aria-label="Menü váltása" class="nav-mobile-toggle" id="nav-toggle">
@@ -827,7 +831,7 @@
 <a aria-label="TAGRA fuvarozók részére" class="split-card split-card--fleet" href="/hu/fuvarozoknak/">
 <div class="card-label">Flottakezelő</div>
 <h2 class="sr-only">TAGRA · Tachográfadat-kiértékelő szoftver</h2><h3 class="card-title">TAGRA<br/>Cég</h3>
-<p class="card-desc">Járműveket kezel egy cég számára. Le kell töltenie és ki kell értékelnie az adatokat a <strong>tachográf egységekből és a sofőrkártyákról</strong> — és mindent archiválnia kell az ellenőrzésekhez.</p>
+<p class="card-desc">Egy vállalkozás járműveit kezeli. Le kell töltenie és ki kell értékelnie az adatokat a <strong>tachográf egységekből és a sofőrkártyákról</strong> — és mindent archiválnia kell az ellenőrzésekhez.</p>
 <ul class="card-list">
 <li>1-től korlátlan számú járműig</li>
 <li>Teljes munkaidő-kiértékelés ((EK) 561/2006 + Mird)</li>
@@ -876,7 +880,7 @@
 <!-- ═══ TRUST BAR ══════════════════════════════════════════════════════ -->
 <div class="trust-bar anim-up">
 <div class="container">
-<p><strong>Több ezer üzemeltető bízik benne Európa-szerte.</strong> Ugyanaz a kiértékelési logika, amelyet a rendőrség, a vámhatóságok és a munkaügyi felügyelőségek is használnak.</p>
+<p><strong>Az európai közúti szállítás valós körülményeire tervezve.</strong> Ugyanaz a kiértékelési logika, amelyet a rendőrség, a vámhatóságok és a munkaügyi felügyelőségek is használnak.</p>
 </div>
 </div>
 <!-- ═══ UI SHOWCASE ════════════════════════════════════════════════════ -->
@@ -902,7 +906,7 @@
 <div class="showcase-row"><span>Sofőr</span><strong>J. Kowalski</strong></div>
 <div class="showcase-row"><span>Vezetett</span><strong>9h 42m</strong></div>
 <div class="showcase-row"><span>Limit</span><strong>9h · Reg. 561/2006</strong></div>
-<p class="showcase-foot">Megjelölve teljes bontással idő, típus és időtartam szerint.</p>
+<p class="showcase-foot">Idő, típus és időtartam szerinti teljes bontással megjelölve.</p>
 </div>
 <div class="showcase-card showcase-card--ready">
 <span class="showcase-badge">Kimutatás kész</span>
@@ -921,13 +925,13 @@
 <div class="section-head anim-up">
 <span class="section-label">Miért TAGRA</span>
 <h2 class="section-h2">Tachográfadatok letöltése, kiértékelése és archiválása</h2>
-<p class="section-intro">Nagy teljesítményű Windows szoftver digitális tachográfadatok kiértékelésére, az EU-s vezetési és pihenőidőre, valamint a HGV munkaidő-irányelvre – egy járműtől a nagyvállalati flottákig skálázható.</p>
+<p class="section-intro">Nagy teljesítményű Windows-szoftver digitális tachográfadatok kiértékelésére, az EU vezetési és pihenőidőre vonatkozó szabályainak, valamint a HGV munkaidő-irányelvének ellenőrzésére – egy járműtől a nagyvállalati flottákig skálázható.</p>
 </div>
 <div class="bento">
 <div class="bc s7 fly-left">
 <span class="bc-eyebrow">Megfelelőségi motor</span>
 <div class="bc-title">EU-s vezetési és pihenőidő + munkaidő-irányelv</div>
-<p class="bc-text">A következők automatikus kiértékelése:<strong>(EC) 561/2006 rendelet</strong> és a <strong>HGV munkaidő-irányelv</strong>(2002/15/EC). Világos napi és heti összefoglalók minden szabálysértéssel, idő, típus és időtartam szerint megjelölve.</p>
+<p class="bc-text">A következők automatikus kiértékelése:<strong>(EC) 561/2006 rendelet</strong> és a <strong>HGV munkaidő-irányelv</strong>(2002/15/EK). Világos napi és heti összefoglalók minden szabálysértésről, idő, típus és időtartam szerint megjelölve.</p>
 <div class="bignum">01</div>
 </div>
 <div class="bc s5 bluefill fly-right">
@@ -938,18 +942,18 @@
 <div class="bc s6 fly-left" style="transition-delay:.05s">
 <span class="bc-eyebrow">Kimutatások</span>
 <div class="bc-title">Auditálható kimutatások</div>
-<p class="bc-text">Ellenőrökre szabott kimutatások, amelyeket az ellenőrző hatóságok valóban értenek. Nyomtasson, exportáljon vagy osszon meg tiszta, strukturált kimutatásokat auditokhoz, belső felülvizsgálatokhoz és közúti ellenőrzésekhez.</p>
+<p class="bc-text">Ellenőrökre szabott kimutatások, amelyeket az ellenőrző hatóságok valóban értenek. Nyomtasson, exportáljon vagy osszon meg áttekinthető, strukturált kimutatásokat auditokhoz, belső felülvizsgálatokhoz és közúti ellenőrzésekhez.</p>
 </div>
 <div class="bc s6 greenfill fly-right" style="transition-delay:.05s">
 <span class="bc-eyebrow">Skálázhatóság</span>
 <div class="bc-title">1-től korlátlan számú járműig</div>
-<p class="bc-text">TAGRA Trucker, 1, 2, 4, 6 és MAX szintek. Kezdje egyetlen teherautóval, és növelje nagyvállalati flottává az eszközök vagy munkafolyamatok megváltoztatása nélkül.</p>
+<p class="bc-text">TAGRA Trucker 1, 2, 4, 6 és MAX szint. Kezdje egyetlen teherautóval, és bővítse nagyvállalati flottára az eszközök vagy munkafolyamatok megváltoztatása nélkül.</p>
 <div class="bignum">∞</div>
 </div>
 <div class="bc s8 fly-left" style="transition-delay:.1s">
 <span class="bc-eyebrow">Adatvédelem</span>
 <div class="bc-title">Asztali. Gyors. Az Öné.</div>
-<p class="bc-text">Windows szoftver, amely offline fut a számítógépén. A sofőr- és járműadatok soha nem hagyják el a hálózatát – nincs felhőalapú kötöttség, nincs havi előfizetés, nincs GDPR aggály a harmadik fél adatfeldolgozókkal kapcsolatban.</p>
+<p class="bc-text">Windows-szoftver, amely offline fut a számítógépén. A sofőr- és járműadatok soha nem hagyják el a hálózatát – nincs felhőalapú kötöttség, nincs havi előfizetés, és nincs GDPR-aggály harmadik fél adatfeldolgozóival kapcsolatban.</p>
 </div>
 <div class="bc s4 bluefill fly-right" style="transition-delay:.1s">
 <span class="bc-eyebrow">Jövőbiztos</span>
@@ -976,7 +980,7 @@
 <div class="ref-card ref-card--sk">
 <div class="ref-country">Szlovákia</div>
 <div class="ref-name">Munkaügyi Felügyelőség</div>
-<div class="ref-note">Vezetési és munkaidő ellenőrzése.</div>
+<div class="ref-note">Vezetési és munkaidő-ellenőrzése.</div>
 </div>
 <div class="ref-card ref-card--hu">
 <div class="ref-country">Magyarország</div>
@@ -986,11 +990,11 @@
 <div class="ref-card">
 <div class="ref-country">Közép-Európa-szerte</div>
 <div class="ref-name">Flottakezelők százai</div>
-<div class="ref-note">Fuvarozás, autóbusz- és személyszállítás, bérlő cégek, önkormányzati flották, műhelyek.</div>
+<div class="ref-note">Fuvarozás, autóbusz- és személyszállítás, bérbeadó cégek, önkormányzati flották, műhelyek.</div>
 </div>
 </div>
 <div class="name-marquee-wrap anim-up">
-<p class="name-marquee-label">Azok között a flották és üzemeltetők között, akik már TAGRA-t használnak</p>
+<p class="name-marquee-label">Azon flották és üzemeltetők között, amelyek már TAGRA-t használnak</p>
 <div class="name-marquee"><span>FCC Group</span><span>CS Cargo a.s.</span><span>ČEDOK a.s.</span><span>AGRO SERVIS CZ</span><span>ČSAD Jihotrans</span><span>ČSAD Karviná</span><span>Pivovar Holba</span><span>PORR a.s.</span><span>Klaus Timber a.s.</span><span>Mátra Transport a.s.</span><span>KAFKA Transport a.s.</span><span>DKC s.r.o.</span><span>TQM Holding</span><span>Synergies Logistiques</span><span>ČSAD Autobusy České Budějovice</span><span>ČSAD POLKOST</span><span>Cargospol</span><span>Energie stavební a báňská a.s.</span><span>SAP Mimoň</span><span>FCC Group</span><span>CS Cargo a.s.</span><span>ČEDOK a.s.</span><span>AGRO SERVIS CZ</span><span>ČSAD Jihotrans</span><span>ČSAD Karviná</span><span>Pivovar Holba</span><span>PORR a.s.</span><span>Klaus Timber a.s.</span><span>Mátra Transport a.s.</span><span>KAFKA Transport a.s.</span><span>DKC s.r.o.</span><span>TQM Holding</span><span>Synergies Logistiques</span><span>ČSAD Autobusy České Budějovice</span><span>ČSAD POLKOST</span><span>Cargospol</span><span>Energie stavební a báňská a.s.</span><span>SAP Mimoň</span></div>
 </div>
 </div>
@@ -1000,7 +1004,7 @@
 <div class="section-inner">
 <div class="section-head anim-up">
 <span class="section-label">Amit az ügyfelek mondanak</span>
-<h2 class="section-h2">Több ezer üzemeltető használja az EU-ban</h2>
+<h2 class="section-h2">Professzionális tachográf-elemzés európai flották számára</h2>
 <p class="section-intro">Ötcsillagos visszajelzések ellenőrzött ügyfelektől Közép-Európa-szerte.</p>
 </div>
 </div>
@@ -1020,21 +1024,21 @@
 <div class="section-head anim-up">
 <span class="section-label">Árazás</span>
 <h2 class="section-h2">Korrekt árazás. Nincsenek meglepetések.</h2>
-<p class="section-intro">Az első év benne van a vételárban. A 2. évtől 19–149 € éves díj tartja aktívan, naprakészen és támogatottan a programot.</p>
+<p class="section-intro">Az első év benne van a vételárban. A 2. évtől 19–149 € éves díj biztosítja, hogy a program aktív, naprakész és támogatott maradjon.</p>
 </div>
 <div class="pricing-teaser anim-up">
 <div>
 <div class="pricing-teaser-headline">Kezdje ingyen. Licenc 49 €-tól.</div>
-<p class="pricing-teaser-price">30 napos ingyenes próba, bankkártya nélkül. A TAGRA ára <strong>49&nbsp;€</strong> (TAGRA Trucker) és 749 € (TAGRA MAX, korlátlan járműszám) között van, áfa nélkül — az első év frissítései és támogatása benne van az árban. A 2. évtől 19 € és 149 € közötti éves díj tartja aktívan a szoftvert.</p>
+<p class="pricing-teaser-price">30 napos ingyenes próba, bankkártya nélkül. A TAGRA ára <strong>49&nbsp;€</strong> (TAGRA Trucker) és 749 € (TAGRA MAX, korlátlan járműszám) között van, áfa nélkül — az első év frissítései és támogatása benne vannak az árban. A 2. évtől 19 € és 149 € közötti éves díj biztosítja, hogy a szoftver aktív maradjon.</p>
 <ul class="pricing-teaser-features">
 <li>Teljes EU vezetési és pihenőidő, valamint munkaidő-irányelv kiértékelés</li>
-<li>Támogatás minden digitális tachográfhoz, beleértve az okos Gen2v2 tachográfot is</li>
+<li>Minden digitális tachográf támogatása, beleértve az intelligens Gen2v2 tachográfokat is</li>
 <li>Ingyenes szoftverfrissítések minden jogszabályi változáshoz</li>
 <li>Dedikált technikai támogatás egész évben</li>
 </ul>
 </div>
 <div class="pricing-teaser-cta">
-<a class="btn-outline" href="/hu/fuvarozoknak/#tagra-pricing">Az összes díjcsomag és ár megtekintése →</a>
+<a class="btn-outline" href="/hu/fuvarozoknak/#tagra-pricing">Díjcsomagok és árak megtekintése →</a>
 <a class="btn-cta" href="/hu/ingyenes-probaverzio/">Próbálja ki 30 napig ingyen</a>
 <span class="pricing-teaser-cta-note">Nincs bankkártya. Windows telepítő.</span>
 </div>
@@ -1056,7 +1060,7 @@
 </details>
 <details>
 <summary>A TAGRA lefedi az (EU) vezetési és pihenőidőket, valamint a munkaidő-irányelvet?</summary>
-<div class="faq-answer">Igen. A TAGRA kiértékeli a<strong>(EC) 561/2006 rendelet</strong>(EU vezetési és pihenőidőket) és a <strong>HGV munkaidő-irányelv</strong> 2002/15/EK irányelvet, valamint a kapcsolódó AETR szabályokat. Minden szabálysértés kiemelve jelenik meg a világos sofőr- és járműkimutatásokban pontos idővel, típussal és időtartammal.</div>
+<div class="faq-answer">Igen. A TAGRA kiértékeli a<strong>(EC) 561/2006 rendelet</strong>(EU vezetési és pihenőidőket) és a <strong>HGV munkaidő-irányelv</strong> a 2002/15/EK irányelvet, valamint a kapcsolódó AETR-szabályokat. Minden szabálysértés kiemelve jelenik meg az áttekinthető sofőr- és járműkimutatásokban, pontos idővel, típussal és időtartammal.</div>
 </details>
 <details>
 <summary>Mely tachográfokat és kártyaolvasókat támogatja?</summary>
@@ -1089,7 +1093,7 @@
 <div class="ref-inner">
 <div class="ref-eyebrow">Referenciák</div>
 <h2 id="ref-title">Ők már a TAGRA-t használják Magyarországon</h2>
-<p class="ref-sub">Fuvarozók, flottaüzemeltetők és ellenőrző szervek – köztük a <strong>Nemzeti Közlekedési Hatóság</strong> és a <strong>Komárom-Esztergom Vármegyei Rendőr-főkapitányság</strong>. A magyarországi ügyfeleket hivatalos partnerünk, a Rukon Kft. szolgálja ki.</p>
+<p class="ref-sub">Fuvarozók, flottakezelők és ellenőrző hatóságok – köztük a <strong>Nemzeti Közlekedési Hatóság</strong> és a <strong>Komárom-Esztergom Vármegyei Rendőr-főkapitányság</strong>. A magyarországi ügyfeleket hivatalos partnerünk, a Rukon Kft. szolgálja ki.</p>
 <div class="ref-grid">
 <img alt="Nemzeti Közlekedési Hatóság – TAGRA referencia" height="56" loading="lazy" src="/assets/img/referenciak/nkh.png" title="Nemzeti Közlekedési Hatóság" width="124"/>
 <img alt="Komárom-Esztergom megyei Rendőr-főkapitányság – TAGRA referencia" height="56" loading="lazy" src="/assets/img/referenciak/szolgalunk_vedunk_logo_vegleges.png" title="Komárom-Esztergom megyei Rendőr-főkapitányság" width="357"/>
@@ -1131,7 +1135,7 @@
 <div class="footer-inner">
 <div>
 <div class="footer-logo"><img alt="TAGRA" height="20" src="/assets/img/logo-dark.svg?v=20260513zh" width="88" loading="lazy"/></div>
-<p class="footer-desc">Professzionális tachográf-kiértékelő szoftver. Sofőrkártya-letöltés, digitális tachográfadatok kiértékelése, EU-s vezetési és pihenőidők, valamint a közúti szállításra vonatkozó munkaidő-irányelv. Fejlesztette a Truck Data Technology, s.r.o.</p>
+<p class="footer-desc">Professzionális tachográf-kiértékelő szoftver. Sofőrkártya-letöltés, digitális tachográfadatok kiértékelése, EU-s vezetési és pihenőidők, valamint a közúti szállításra vonatkozó munkaidő-irányelv. Fejlesztő: Truck Data Technology, s.r.o.</p>
 </div>
 <div class="footer-col">
 <h2 class="footer-col-title">Termék</h2>
@@ -1165,7 +1169,7 @@
 <span><a href="/hu/kapcsolat/">Kapcsolat</a> · <a href="https://www.tdt.cz" rel="noopener" target="_blank">tdt.cz</a> · <a href="/hu/adatvedelmi-tajekoztato/">Adatvédelem és sütik</a></span>
 </div>
 </footer>
-<div aria-label="Gyors próbaverzió regisztráció" class="sticky-cta" id="stickyCta" role="complementary">
+<div aria-label="Gyors próbaverzió" class="sticky-cta" id="stickyCta" role="complementary">
 <div class="sticky-cta-inner">
 <span class="sticky-cta-text">Készen áll a kezdésre? Próbálja ki a TAGRA-t ingyen 30 napig.</span>
 <a class="sticky-cta-btn" href="/hu/ingyenes-probaverzio/?audience=fleet">Próbálja ki ingyen →</a>
@@ -1254,7 +1258,7 @@
       "name": "Mely tachográfokat és kártyaolvasókat támogatja?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Minden EU digitális tachográf, az első generációtól az okostachográf Gen2v2-ig. Kompatibilis standard okoskártya-olvasókkal (pl. DOWNLOAD BOX II S) és olvassa a .DDD, .C1B, .V1B és ESM fájlokat. Készen áll a könnyű haszongépjárművekre vonatkozó 2026. júliusi követelményekre."
+        "text": "Minden uniós digitális tachográf, az első generációtól az intelligens tachográf Gen2v2-ig. Kompatibilis szabványos okoskártya-olvasókkal (pl. DOWNLOAD BOX II S), és olvassa a .DDD, .C1B, .V1B és ESM fájlokat. Készen áll a könnyű haszongépjárművekre vonatkozó 2026. júliusi követelményekre."
       }
     },
     {

@@ -45,6 +45,10 @@
       var m={cz:'cs',cs:'cs',sk:'sk',de:'de',pl:'pl',gr:'el',el:'el',hu:'hu',en:'en'};return m[l]||'en';}
     var T={
       hu:{t:'Analitikai s\u00fctiket haszn\u00e1lunk (Google Analytics, Microsoft Clarity, Smartsupp), hogy meg\u00e9rts\u00fck a webhely haszn\u00e1lat\u00e1t. Csak az \u00d6n hozz\u00e1j\u00e1rul\u00e1s\u00e1val t\u00f6lt\u0151dnek be.',a:'Elfogadom',r:'Elutas\u00edtom',p:'Adatv\u00e9delem \u00e9s s\u00fctik'},
+      ro:{t:'Utilizăm module cookie de analiză (Google Analytics, Microsoft Clarity, Smartsupp) pentru a înțelege modul de utilizare a site-ului. Se încarcă doar cu consimțământul dumneavoastră.',a:'Accept',r:'Refuz',p:'Confidențialitate și cookie-uri'},
+      nl:{t:'We gebruiken analytische cookies (Google Analytics, Microsoft Clarity, Smartsupp) om het gebruik van de site te begrijpen. Ze laden alleen met uw toestemming.',a:'Accepteren',r:'Weigeren',p:'Privacy en cookies'},
+      fr:{t:'Nous utilisons des cookies analytiques (Google Analytics, Microsoft Clarity, Smartsupp) pour comprendre l’utilisation du site. Ils ne se chargent qu’avec votre consentement.',a:'Accepter',r:'Refuser',p:'Confidentialité et cookies'},
+      it:{t:'Utilizziamo cookie analitici (Google Analytics, Microsoft Clarity, Smartsupp) per capire l’utilizzo del sito. Si caricano solo con il Suo consenso.',a:'Accetta',r:'Rifiuta',p:'Privacy e cookie'},
       en:{t:'We use analytics cookies (Google Analytics, Microsoft Clarity, Smartsupp) to understand site usage. They load only with your consent.',a:'Accept',r:'Reject',p:'Privacy &amp; cookies'},
       cs:{t:'Pou\u017e\u00edv\u00e1me analytick\u00e9 cookies (Google Analytics, Microsoft Clarity, Smartsupp) k pochopen\u00ed pou\u017e\u00edv\u00e1n\u00ed webu. Na\u010dtou se jen s va\u0161\u00edm souhlasem.',a:'P\u0159ijmout',r:'Odm\u00edtnout',p:'Soukrom\u00ed a cookies'},
       sk:{t:'Pou\u017e\u00edvame analytick\u00e9 cookies (Google Analytics, Microsoft Clarity, Smartsupp) na pochopenie pou\u017e\u00edvania webu. Na\u010d\u00edtaj\u00fa sa len s va\u0161\u00edm s\u00fahlasom.',a:'Prija\u0165',r:'Odmietnu\u0165',p:'S\u00fakromie a cookies'},
@@ -75,20 +79,22 @@
 <!-- TMX-ANALYTICS END -->
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Flotta tachográf szoftver – sofőrkártya letöltés | TAGRA</title>
-<meta content="Tömeges sofőrkártya letöltés és automatikus szabálysértés-kiértékelés. AETR, 561/2006/EK vezetési-pihenőidő és munkaidő nyilvántartás. 30 napos próbaverzió." name="description"/>
+<title>Flotta tachográf szoftver – sofőrkártya-letöltés | TAGRA</title>
+<meta content="Tömeges sofőrkártya-letöltés és automatikus szabálysértés-kiértékelés. AETR-, 561/2006/EK szerinti vezetési- és pihenőidő-, valamint munkaidő-nyilvántartás. 30 napos próbaverzió." name="description"/>
 <meta content="#0b2c4a" name="theme-color"/>
 <link href="/manifest.json" rel="manifest"/>
 <link href="https://tagra.app/hu/fuvarozoknak/" rel="canonical"/>
+<link href="https://tagra.app/de/fuhrpark/" hreflang="de" rel="alternate"/><link href="https://tagra.app/el/stolos/" hreflang="el" rel="alternate"/><link href="https://tagra.app/fleet/" hreflang="en" rel="alternate"/><link href="https://tagra.app/fr/entreprises/" hreflang="fr" rel="alternate"/><link href="https://tagra.app/hu/fuvarozoknak/" hreflang="hu" rel="alternate"/><link href="https://tagra.app/it/per-aziende/" hreflang="it" rel="alternate"/><link href="https://tagra.app/nl/voor-transportbedrijven/" hreflang="nl" rel="alternate"/><link href="https://tagra.app/pl/dla-przewoznikow/" hreflang="pl" rel="alternate"/>
+<link href="https://tagra.app/ro/pentru-firme/" hreflang="ro" rel="alternate"/><link href="https://tagra.app/fleet/" hreflang="x-default" rel="alternate"/>
 <meta content="website" property="og:type"/>
 <meta content="hu_HU" property="og:locale"/>
 <meta content="TAGRA" property="og:site_name"/>
-<meta content="Flotta tachográf szoftver – sofőrkártya letöltés | TAGRA" property="og:title"/>
-<meta content="Tömeges sofőrkártya letöltés és automatikus szabálysértés-kiértékelés. AETR, 561/2006/EK vezetési-pihenőidő és munkaidő nyilvántartás. 30 napos próbaverzió." property="og:description"/>
+<meta content="Flotta tachográf szoftver – sofőrkártya-letöltés | TAGRA" property="og:title"/>
+<meta content="Tömeges sofőrkártya-letöltés és automatikus szabálysértés-kiértékelés. AETR-, 561/2006/EK szerinti vezetési- és pihenőidő-, valamint munkaidő-nyilvántartás. 30 napos próbaverzió." property="og:description"/>
 <meta content="https://cdn.truckmall.cz/data/user-content/TDT_TAGRA_MAX_wh.jpg" property="og:image"/>
-<meta content="TAGRA – tachográfadatok kiértékelése szoftver flottakezelőknek, 1-től korlátlan számú járműig" property="og:image:alt"/>
+<meta content="TAGRA – tachográfadat-kiértékelő szoftver flottakezelőknek, 1-től korlátlan számú járműig" property="og:image:alt"/>
 <meta content="https://cdn.truckmall.cz/data/user-content/TDT_TAGRA_MAX_wh.jpg" name="twitter:image"/>
-<meta content="TAGRA – tachográfadatok kiértékelése szoftver flottakezelőknek, 1-től korlátlan számú járműig" name="twitter:image:alt"/>
+<meta content="TAGRA – tachográfadat-kiértékelő szoftver flottakezelőknek, 1-től korlátlan számú járműig" name="twitter:image:alt"/>
 <meta content="https://tagra.app/hu/fuvarozoknak/" property="og:url"/>
 <meta content="summary_large_image" name="twitter:card"/>
 <style>
@@ -492,7 +498,7 @@
   "@type": "WebPage",
   "url": "https://tagra.app/hu/fuvarozoknak/",
   "name": "Tachográfadatok kiértékelő szoftver flottakezelőknek",
-  "description": "A TAGRA egy tachográfadatok kiértékelő szoftver flották számára – sofőrkártya letöltés, digitális tachográf-kiértékelés, (EU) vezetési és pihenőidő és a tehergépjárművek munkaidejéről szóló irányelv kiértékelése.",
+  "description": "A TAGRA egy flottáknak készült tachográfadat-kiértékelő szoftver – sofőrkártya-letöltéssel, digitális tachográfadatok kiértékelésével, az (EU) vezetési és pihenőidőre, valamint a tehergépjárművek munkaidejére vonatkozó irányelv kiértékelésével.",
   "isPartOf": {
     "@id": "https://tagra.app/#website"
   },
@@ -506,8 +512,7 @@
 <link href="/assets/css/components.css" rel="stylesheet"/>
 <link href="/assets/css/nav.css" rel="stylesheet"/>
 <script defer="" src="/assets/js/nav.js?v=20260816b"></script>
-<link href="/assets/css/footer.css" rel="stylesheet"/>
-<link href="https://tagra.app/fleet/" hreflang="en" rel="alternate"/><link href="https://tagra.app/de/fuhrpark/" hreflang="de" rel="alternate"/><link href="https://tagra.app/pl/dla-przewoznikow/" hreflang="pl" rel="alternate"/><link href="https://tagra.app/el/stolos/" hreflang="el" rel="alternate"/><link href="https://tagra.app/hu/fuvarozoknak/" hreflang="hu" rel="alternate"/><link href="https://tagra.app/it/per-aziende/" hreflang="it" rel="alternate"/><link href="https://tagra.app/fleet/" hreflang="x-default" rel="alternate"/></head>
+<link href="/assets/css/footer.css" rel="stylesheet"/></head>
 <body>
 <a class="skip-link" href="#main-content">Ugrás a tartalomhoz</a>
 <div aria-hidden="true" id="scroll-progress"></div>
@@ -526,8 +531,7 @@
 </ul>
 <details class="nav-lang">
 <summary aria-label="Language: HU">HU</summary>
-<div class="nav-lang-menu" role="menu">
-<a href="/" hreflang="en">English</a><a href="/de/" hreflang="de">Deutsch</a><a href="/pl/" hreflang="pl">Polski</a><a href="/el/" hreflang="el">Ελληνικά</a><a aria-current="page" class="active" href="/hu/" hreflang="hu">Magyar</a><a href="/it/" hreflang="it">Italiano</a><a href="https://www.tdt.cz/" hreflang="cs" rel="noopener" target="_blank">Čeština</a><a href="https://www.tdt.sk/" hreflang="sk" rel="noopener" target="_blank">Slovenčina</a></div>
+<div class="nav-lang-menu" role="menu"><a href="/fleet/" hreflang="en">English</a><a href="/de/fuhrpark/" hreflang="de">Deutsch</a><a href="/pl/dla-przewoznikow/" hreflang="pl">Polski</a><a href="/nl/voor-transportbedrijven/" hreflang="nl">Nederlands</a><a href="/fr/entreprises/" hreflang="fr">Français</a><a href="/it/per-aziende/" hreflang="it">Italiano</a><a href="/el/stolos/" hreflang="el">Ελληνικά</a><a aria-current="page" class="active" href="/hu/fuvarozoknak/" hreflang="hu">Magyar</a><a href="/ro/pentru-firme/" hreflang="ro">Română</a><a href="https://www.tdt.cz/" hreflang="cs" rel="noopener" target="_blank">Čeština</a><a href="https://www.tdt.sk/" hreflang="sk" rel="noopener" target="_blank">Slovenčina</a></div>
 </details>
 <a class="nav-cta-mobile" href="/hu/ingyenes-probaverzio/?audience=fleet">Próbálja ki ingyen</a>
 <button aria-expanded="false" aria-label="Menü váltása" class="nav-mobile-toggle" id="nav-toggle">
@@ -545,7 +549,7 @@
 <div class="anim-up" style="margin-bottom:16px;transition-delay:.15s">
 <a class="btn-cta" href="/hu/ingyenes-probaverzio/?audience=fleet" rel="noopener" target="_blank">Próbálja ki ingyen 30 napig</a>
 </div>
-<p class="anim-up" style="font-size:15px;color:var(--text2);transition-delay:.2s">Windows · Ingyenes 30 napos próbaverzió · Kisteherautókra is kész 2026 júliusától</p>
+<p class="anim-up" style="font-size:15px;color:var(--text2);transition-delay:.2s">Windows · Ingyenes, 30 napos próbaverzió · 2026 júliusától kisteherautókhoz is készen áll</p>
 <!-- Hero video -->
 <div class="media-frame anim-up" style="margin:44px auto 0;box-shadow:0 20px 40px rgba(0,0,0,.08);transition-delay:.25s;border-radius:20px;overflow:hidden">
 <video id="hero-vid" loop="" muted="" playsinline="" poster="https://cdn.truckmall.cz/data/user-content/TAGRA-monitory-2.webp" preload="metadata" style="width:100%;display:block">
@@ -574,12 +578,12 @@
 <div class="bc s4 greenfill fly-left" style="transition-delay:.15s">
 <div class="eyebrow">2. évtől</div>
 <div class="bc-title" style="color:var(--green-brand)">19&nbsp;€/évtől</div>
-<div class="bc-text">Éves licencdíj ÁFA nélkül — tartalmazza az összes szoftverfrissítést és dedikált technikai támogatást. 19&nbsp;€ (TAGRA Trucker), 79&nbsp;€ (TAGRA 1–2), 99&nbsp;€ (TAGRA 4–6), 149&nbsp;€ (TAGRA MAX).</div>
+<div class="bc-text">Éves licencdíj ÁFA nélkül — tartalmazza az összes szoftverfrissítést és a dedikált műszaki támogatást. 19&nbsp;€ (TAGRA Trucker), 79&nbsp;€ (TAGRA 1–2), 99&nbsp;€ (TAGRA 4–6), 149&nbsp;€ (TAGRA MAX).</div>
 </div>
 <div class="bc s4 anim-up" style="transition-delay:.25s">
 <div class="eyebrow">Készüljön fel a</div>
 <div class="bc-title">kisteherautókra 2026</div>
-<div class="bc-text">Teljesen kompatibilis a könnyű haszongépjárművekre vonatkozó új tachográf-kötelezettséggel 2026 júliusától.</div>
+<div class="bc-text">Teljes mértékben megfelel a könnyű haszongépjárművekre vonatkozó új tachográf-kötelezettségnek 2026 júliusától.</div>
 </div>
 <div class="bc s4 bluefill fly-right" style="transition-delay:.35s">
 <div class="eyebrow" style="color:var(--blue-mid)">Jogszabályok</div>
@@ -596,7 +600,7 @@
 <div>
 <div class="eyebrow">Szintén elérhető</div>
 <p style="font-size:19px;font-weight:700;color:var(--text-strong);margin-top:4px">TAGRA Trucker — professzionális sofőröknek</p>
-<p style="color:var(--text2);margin-top:6px;max-width:480px">Ön alkalmazott, professzionális sofőr, aki saját kártya nyilvántartást szeretne vezetni? A TAGRA Trucker az egyéni sofőrkártya letöltés és archiválás céljára készült — szabványos USB kártyaolvasóval.</p>
+<p style="color:var(--text2);margin-top:6px;max-width:480px">Ön alkalmazott, hivatásos sofőr, aki saját kártyanyilvántartást szeretne vezetni? A TAGRA Trucker egyéni sofőrkártya-letöltésre és archiválásra készült — szabványos USB-kártyaolvasóval.</p>
 <p style="color:var(--text2);margin-top:6px;max-width:480px;font-size:14.5px"><strong>Egyéni vállalkozó vagy cégtulajdonos?</strong> Ön a fuvarozó is — olyan csomagra van szüksége, amely letölti <strong>mind a(z)</strong> sofőrkártya, mind a járműegység adatait. <a href="#tagra-pricing" style="color:var(--blue-mid);font-weight:600">TAGRA 1</a> ez a minimum.</p>
 </div>
 <a class="btn-cta btn-cta--sm" href="/hu/soforoknek/" style="flex-shrink:0">Ismerje meg a TAGRA TRUCKER →</a>
@@ -607,7 +611,7 @@
 <section aria-label="Vásárlói vélemények" class="band band--gray">
 <div class="container">
 <div class="eyebrow anim-up">Amit az ügyfelek mondanak</div>
-<h2 class="anim-up">Több ezer üzemeltető használja az EU-ban</h2>
+<h2 class="anim-up">Professzionális tachográf-elemzés európai flották számára</h2>
 <p class="section-intro" style="margin-top:10px;">Magyarországon többek között a <strong>HOPI</strong>, a <strong>Huncargo</strong>, a <strong>Szegedi Közlekedési Társaság</strong> és a <strong>Kingsped</strong> is a TAGRA felhasználói közé tartozik.</p>
 </div>
 <div class="rev-rail-wrap anim-up" style="transition-delay:.05s">
@@ -627,11 +631,11 @@
 <div class="anim-up">
 <div class="eyebrow">Mit tud a TAGRA</div>
 <h2>Több, mint csupán<br/>adatok letöltése</h2>
-<p style="margin-bottom:24px">Egyszerűen <strong>sofőrkártya-letöltést</strong> nem elég — a törvény előírja a rendszeres <strong>digitális tachográfadatok kiértékelését</strong> és archiválását. A TAGRA egy végpontok közötti tachográfadatok kiértékelése szoftver minimális adminisztratív terheléssel, 1-től korlátlan számú járműhöz.</p>
+<p style="margin-bottom:24px">Egyszerűen <strong>sofőrkártya-letöltést</strong> nem elég — a törvény előírja a rendszeres <strong>digitális tachográfadatok kiértékelését</strong> és archiválására. A TAGRA egy teljes körű tachográfadat-kiértékelő szoftver minimális adminisztratív terheléssel, 1-től korlátlan számú járműhöz.</p>
 <div class="feats">
 <div class="fi"><div class="fck"><svg fill="none" height="8" viewbox="0 0 10 8" width="10"><path d="M1 4l2.5 2.5L9 1" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></div><span>vezetési és pihenőidő <strong>EU vezetési idők</strong>, szünetek és pihenőidők kiértékelése (561/2006/EK rendelet és AETR)</span></div>
 <div class="fi"><div class="fck"><svg fill="none" height="8" viewbox="0 0 10 8" width="10"><path d="M1 4l2.5 2.5L9 1" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></div><span>Munkaidő kiértékelése a(z) <strong>HGV munkaidő-irányelv</strong></span></div>
-<div class="fi"><div class="fck"><svg fill="none" height="8" viewbox="0 0 10 8" width="10"><path d="M1 4l2.5 2.5L9 1" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></div><span>sofőrkártya letöltés és tachográf távoli letöltés a DKV LIVE® vagy a Download Box segítségével</span></div>
+<div class="fi"><div class="fck"><svg fill="none" height="8" viewbox="0 0 10 8" width="10"><path d="M1 4l2.5 2.5L9 1" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></div><span>sofőrkártya-letöltés és távoli tachográfadat-letöltés a DKV LIVE® vagy a Download Box segítségével</span></div>
 <div class="fi"><div class="fck"><svg fill="none" height="8" viewbox="0 0 10 8" width="10"><path d="M1 4l2.5 2.5L9 1" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></div><span>sofőrkártya és digitális tachográfadatok archiválása</span></div>
 <div class="fi"><div class="fck"><svg fill="none" height="8" viewbox="0 0 10 8" width="10"><path d="M1 4l2.5 2.5L9 1" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></div><span><strong>Teljesen készen áll a kisteherautókra 2026 júliusától</strong></span></div>
 <div class="fi"><div class="fck"><svg fill="none" height="8" viewbox="0 0 10 8" width="10"><path d="M1 4l2.5 2.5L9 1" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></div><span>Világos kimutatások hatóságok és belső használatra</span></div>
@@ -639,7 +643,7 @@
 </div>
 <div class="anim-up" style="transition-delay:.1s">
 <div class="media-frame" style="background:var(--bg-gray);border-radius:var(--radius);overflow:hidden">
-<img alt="TAGRA MAX – tachográfadatok kiértékelő szoftver flottakezelőknek" height="800" loading="lazy" src="https://cdn.truckmall.cz/data/user-content/TDT_TAGRA_MAX_wh.jpg" style="object-fit:contain;width:100%;height:auto;" width="800"/>
+<img alt="TAGRA MAX – tachográfadat-kiértékelő szoftver flottakezelőknek" height="800" loading="lazy" src="https://cdn.truckmall.cz/data/user-content/TDT_TAGRA_MAX_wh.jpg" style="object-fit:contain;width:100%;height:auto;" width="800"/>
 </div>
 </div>
 </div>
@@ -650,7 +654,7 @@
 <div class="container">
 <div class="eyebrow">Miért fontos</div>
 <h2 class="anim-up">Önmagában a letöltés<br/>nem elég</h2>
-<p class="anim-up" style="max-width:580px;margin-bottom:32px;transition-delay:.05s">A törvény előírja az üzemeltetők számára a tachográfadatok rendszeres kiértékelését és archiválását. Megfelelő archiválás <strong>digitális tachográfadatok kiértékelését</strong> nélkül bírságokat kockáztat — még akkor is, ha az adatok már le vannak töltve.</p>
+<p class="anim-up" style="max-width:580px;margin-bottom:32px;transition-delay:.05s">A törvény előírja az üzemeltetők számára a tachográfadatok rendszeres kiértékelését és archiválását. Megfelelő archiválás <strong>digitális tachográfadatok kiértékelését</strong> nélkül bírságot kockáztat — még akkor is, ha az adatokat már letöltötték.</p>
 <div class="bento anim-up" style="margin-top:0;transition-delay:.1s">
 <div class="bc s6">
 <div class="eyebrow">Sofőrkártyák</div>
@@ -662,11 +666,11 @@
 </div>
 <div class="bc s6">
 <div class="eyebrow">Mit ellenőriznek az ellenőrök?</div>
-<p>Nem csak az adatokat magukat, hanem az <strong>egész kiértékelési folyamatot.</strong> A TAGRA olyan kimutatásokat generál, amelyeket az ellenőrző hatóságok teljes mértékben elfogadnak.</p>
+<p>Nem csak az adatokat magukat, hanem az <strong>egész kiértékelési folyamatot.</strong> A TAGRA olyan kimutatásokat készít, amelyeket az ellenőrző hatóságok teljes mértékben elfogadnak.</p>
 </div>
 <div class="bc s6">
 <div class="eyebrow">Kisteherautók</div>
-<p>Már <strong>2026 júliusától</strong> Ez a 2,5–3,5 t járművekre érvényes a nemzetközi fuvarozásban. Készen állunk.</p>
+<p>Már <strong>2026 júliusától</strong> Ez a nemzetközi fuvarozásban 2,5–3,5 t tömegű járművekre érvényes. Készen állunk.</p>
 </div>
 </div>
 </div>
@@ -676,7 +680,7 @@
 <div class="container">
 <div class="anim-up" style="text-align:center;max-width:780px;margin:0 auto">
 <h2>Megbízható az Önt ellenőrző hatóságok számára</h2>
-<p>A TAGRA-t aktívan használják az adatkiértékelésre <strong>országos rendőrségek, vámhatóságok, munkaügyi felügyelőségek, közlekedési minisztériumok és regionális hatóságok</strong> Európa-szerte. Ön pontosan ugyanazt a kiértékelési logikát és kimutatás formátumot kapja, mint az ellenőrök.</p>
+<p>A TAGRA-t aktívan használják az adatkiértékelésre <strong>országos rendőrségek, vámhatóságok, munkaügyi felügyelőségek, közlekedési minisztériumok és regionális hatóságok</strong> Európa-szerte. Ön pontosan ugyanazt a kiértékelési logikát és kimutatásformátumot kapja, mint az ellenőrök.</p>
 </div>
 </div>
 </section>
@@ -684,7 +688,7 @@
 <section aria-label="Szoftver előnézet" class="band band--machero">
 <div class="container">
 <div class="mac-stage">
-<img alt="TAGRA tachográfadatok kiértékelő szoftver felület – (EU) vezetési és pihenőidő áttekintés" height="2076" id="mac-img" loading="lazy" src="https://cdn.truckmall.cz/data/user-content/tagra/Tagra_screen_2xb.webp" width="3116"/>
+<img alt="TAGRA tachográfadat-kiértékelő szoftver felület – az (EU) vezetési és pihenőidők áttekintése" height="2076" id="mac-img" loading="lazy" src="https://cdn.truckmall.cz/data/user-content/tagra/Tagra_screen_2xb.webp" width="3116"/>
 </div>
 </div>
 </section>
@@ -738,8 +742,8 @@
 <div aria-label="Jogi kötelezettség értesítés" class="note-box anim-up" role="note">
 <span class="note-badge">Jogi kötelezettség</span>
 <div class="note-title">A tachográfadatok kiértékelése és archiválása kötelező</div>
-<p>Az 561/2006/EK (EU) rendelet III. fejezetének 10b. cikk (2) bekezdése értelmében a tachográfadatok kiértékelése és archiválása szigorú jogi kötelezettség a fuvarozók számára.</p>
-<p style="margin-bottom:0"><strong>Speciális megoldás nélkül akár 14 000 eurós bírságot is kockáztat</strong> a közlekedési hatóságtól – és akár<strong>80 000&nbsp;€</strong> a sofőrök vezetési és pihenőidőre vonatkozó szabálysértéseiért.</p>
+<p>Az 561/2006/EK rendelet III. fejezetének 10b. cikke (2) bekezdése értelmében a tachográfadatok kiértékelése és archiválása szigorú jogi kötelezettség a fuvarozók számára.</p>
+<p style="margin-bottom:0"><strong>Speciális megoldás nélkül akár 14 000 eurós bírságot is kockáztatnak</strong> a közlekedési hatóságtól – és akár<strong>80 000&nbsp;€</strong> a sofőrök vezetési és pihenőidőre vonatkozó szabálysértéseiért.</p>
 </div>
 </div>
 </section>
@@ -765,12 +769,12 @@
 <div style="text-align:center;padding:28px 20px">
 <div style="font-size:52px;font-weight:900;line-height:1;color:rgba(19,74,142,.12);margin-bottom:8px">3</div>
 <div style="font-size:18px;font-weight:800;color:var(--text-strong);margin-bottom:8px">A licenc aktiválása</div>
-<p style="font-size:16px;color:var(--text2)">Ha készen áll, válassza ki verzióját a szoftverben, és fizessen online. Licencét azonnal kiállítjuk – Ön ugyanabban a környezetben folytathatja.</p>
+<p style="font-size:16px;color:var(--text2)">Ha készen áll, válassza ki a verzióját a szoftverben, és fizessen online. Licencét azonnal kiállítjuk – Ön ugyanabban a környezetben folytathatja.</p>
 </div>
 </div>
 <div class="anim-up" style="text-align:center;transition-delay:.1s">
 <a class="btn-cta" href="/hu/ingyenes-probaverzio/?audience=fleet" rel="noopener" target="_blank">Próbaverzió letöltése</a>
-<p style="margin-top:14px;font-size:15px;color:var(--text2)">Windows · Ingyenes · Regisztráció nélkül</p>
+<p style="margin-top:14px;font-size:15px;color:var(--text2)">Windows · Ingyenes · Bankkártya nélkül</p>
 </div>
 </div>
 </section>
@@ -782,7 +786,7 @@
 <div class="anim-up">
 <div class="eyebrow">Már használ telematikát?</div>
 <h2>DKV LIVE®<br/>automatikusan importál</h2>
-<p style="margin-bottom:16px">Ha már használja a <strong>DKV LIVE®</strong> a <strong>tachográf távoli letöltéshez</strong> akkor a TAGRA közvetlenül a DKV biztonságos SFTP szerveréről húzza be az adatokat – kézi fájlátvitel és járművek körüli járkálás nélkül.</p>
+<p style="margin-bottom:16px">Ha már használja a <strong>DKV LIVE®</strong> a <strong>tachográf távoli letöltéshez</strong> akkor a TAGRA közvetlenül a DKV biztonságos SFTP-szerveréről tölti le az adatokat – kézi fájlátvitel és a járművek körüli járkálás nélkül.</p>
 <p style="margin-bottom:24px">Egyszer állítsa be az ütemezést (naponta, óránként, ahogy Önnek megfelelő), és minden sofőrkártya- és járműadatfájl a TAGRA-ba kerül, készen a kiértékelésre és archiválásra.</p>
 <a class="btn-cta btn-cta--sm" href="/hu/integraciok/dkv-live/">Lásd a DKV LIVE beállítási útmutatót</a>
 </div>
@@ -790,9 +794,9 @@
 <div class="note-box">
 <span class="note-badge">Hogyan működik</span>
 <span class="note-title">SFTP-alapú, a háttérben fut</span>
-<p>A TAGRA <strong>Adatimport</strong> funkció csatlakozik az<code>sftp.styletronic.eu</code>címhez a DKV LIVE® hitelesítő adataival, és letölti a legújabb<code>.DDD</code> / <code>.C1B</code> / <code>.V1B</code>fájlok az Ön által beállított ütemezés szerint. A 345-ös verziótól kezdődően minden TAGRA licenc tartalmazza.</p>
+<p>A TAGRA <strong>Adatimport</strong> funkció csatlakozik az<code>sftp.styletronic.eu</code>címhez a DKV LIVE® hitelesítő adataival, és letölti a legújabb<code>.DDD</code> / <code>.C1B</code> / <code>.V1B</code>fájlokat az Ön által beállított ütemezés szerint. A 345-ös verziótól kezdődően minden TAGRA licenc tartalmazza.</p>
 <p style="font-size:14px;color:var(--text-muted);margin-top:12px;font-style:italic">A DKV LIVE® a DKV Mobility védjegye. A TAGRA integrációja egy technikai interoperabilitási funkció.</p>
-</div><div class="warning-box" style="margin-top:28px"><p class="warning-box__title">Miért a dokumentáció a védelme</p><p>A 10. cikk (3) bekezdése a fuvarozót teszi felelőssé a sofőrjei által elkövetett szabálysértésekért — akkor is, ha azokra másik országban került sor. Ugyanez a cikk viszont lehetővé teszi a tagállamoknak, hogy figyelembe vegyék a <strong>bizonyítékot, amely szerint a fuvarozó ésszerűen nem tehető felelőssé</strong>. Pontosan ezt a bizonyítékot kéri a 10. cikk (2) bekezdése: igazolást arról, hogy a sofőröket megfelelően tájékoztatták és hogy rendszeres ellenőrzéseket végez.</p><p>Az ellenőr nem hibátlan nyilvántartást keres. Azt vizsgálja, hogy a szabálysértéseket <strong>észlelték, kivizsgálták és kezelték-e</strong>. A TAGRA elkészíti azt a szabálysértési jelentést, amelyet átad a sofőrnek és megőriz — ez a dokumentum teszi a "a sofőrünk megszegte a szabályt" mondatból azt, hogy "észleltük és kezeltük".</p></div>
+</div><div class="warning-box" style="margin-top:28px"><p class="warning-box__title">Miért a dokumentáció a védelme</p><p>A 10. cikk (3) bekezdése a fuvarozót teszi felelőssé a sofőrjei által elkövetett szabálysértésekért – akkor is, ha azokra másik országban került sor. Ugyanez a cikk viszont lehetővé teszi a tagállamok számára, hogy figyelembe vegyék a <strong>bizonyítékot, amely szerint a fuvarozó ésszerűen nem tehető felelőssé</strong>. Pontosan ezt a bizonyítékot kéri a 10. cikk (2) bekezdése: igazolást arról, hogy a sofőröket megfelelően tájékoztatták, és hogy rendszeres ellenőrzéseket végeznek.</p><p>Az ellenőr nem hibátlan nyilvántartást keres. Azt vizsgálja, hogy a szabálysértéseket <strong>észlelték, kivizsgálták és kezelték-e</strong>. A TAGRA elkészíti azt a szabálysértési jelentést, amelyet átad a sofőrnek és megőriz – ez a dokumentum a „sofőrünk megszegte a szabályt” mondatot „észleltük és kezeltük” üzenetté alakítja.</p></div>
 </div>
 </div>
 </div>
@@ -806,19 +810,19 @@
 <!-- Left: image -->
 <div>
 <div style="border-radius:var(--radius);overflow:hidden">
-<img alt="Download Box II S – kézi eszköz sofőrkártya letöltéshez és tachográf olvasáshoz" loading="lazy" src="https://cdn.truckmall.cz/data/user-content/Download%20Box%20IIS_produkt2.webp" style="object-fit:contain;width:100%;height:auto;display:block" width="1875" height="1172"/>
+<img alt="Download Box II S – kézi eszköz sofőrkártya-letöltéshez és tachográfolvasáshoz" loading="lazy" src="https://cdn.truckmall.cz/data/user-content/Download%20Box%20IIS_produkt2.webp" style="object-fit:contain;width:100%;height:auto;display:block" width="1875" height="1172"/>
 </div>
 </div>
 <!-- Right: text -->
 <div>
 <div class="eyebrow">Kézi olvasó</div>
 <h2>DOWNLOAD BOX II S</h2>
-<p style="margin:12px 0 24px">Egyszerű és megbízható kézi eszköz a tachográf egységből és a sofőrkártyákról történő manuális adatletöltéshez.</p>
+<p style="margin:12px 0 24px">Egyszerű és megbízható kézi eszköz a járműegységből és a sofőrkártyákról történő manuális adatletöltéshez.</p>
 <div class="feats">
 <div class="fi"><div class="fck"><svg fill="none" height="8" viewbox="0 0 10 8" width="10"><path d="M1 4l2.5 2.5L9 1" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></div><span>Mind a tachográf egységet, mind a sofőrkártyákat olvassa</span></div>
 <div class="fi"><div class="fck"><svg fill="none" height="8" viewbox="0 0 10 8" width="10"><path d="M1 4l2.5 2.5L9 1" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></div><span>USB-n keresztül továbbítja az adatokat a TAGRA-ba</span></div>
 <div class="fi"><div class="fck"><svg fill="none" height="8" viewbox="0 0 10 8" width="10"><path d="M1 4l2.5 2.5L9 1" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></div><span>Kompakt, hordozható — működik a járműben vagy az irodában</span></div>
-<div class="fi"><div class="fck"><svg fill="none" height="8" viewbox="0 0 10 8" width="10"><path d="M1 4l2.5 2.5L9 1" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></div><span>Kompatibilis minden digitális tachográffal, beleértve a G2V2-t is</span></div>
+<div class="fi"><div class="fck"><svg fill="none" height="8" viewbox="0 0 10 8" width="10"><path d="M1 4l2.5 2.5L9 1" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></div><span>Kompatibilis minden digitális tachográffal, beleértve a G2V2-t is.</span></div>
 </div>
 <a href="/hu/letoltokulcs/" style="display:inline-block;margin-top:24px">DOWNLOAD BOX II S megtekintése →</a>
 </div>
@@ -906,7 +910,7 @@
 <!-- Wide image: TAGRA on monitors at dispatch -->
 <div class="anim-up" style="margin-top:60px">
 <div class="media-frame" style="border-radius:var(--radius);overflow:hidden">
-<img alt="TAGRA tachográfadatok kiértékelő szoftver egy fuvarozási diszpécser irodában" height="840" loading="lazy" src="https://cdn.truckmall.cz/data/user-content/TAGRA-monitory-2.webp" style="width:100%;height:auto;display:block;object-fit:cover;max-height:480px" width="1920"/>
+<img alt="TAGRA tachográfadat-kiértékelő szoftver egy fuvarozási diszpécserirodában" height="840" loading="lazy" src="https://cdn.truckmall.cz/data/user-content/TAGRA-monitory-2.webp" style="width:100%;height:auto;display:block;object-fit:cover;max-height:480px" width="1920"/>
 </div>
 </div>
 </div>
@@ -919,7 +923,7 @@
 <div class="faq anim-up" style="transition-delay:.05s">
 <details>
 <summary>Hogyan vásárolhatom meg a TAGRA-t a próba után?</summary>
-<div class="faq-a">Minden közvetlenül a szoftveren belül történik. A próba végén — vagy amikor készen áll — nyissa meg a licenc menüt, válassza ki a járművei számának megfelelő verziót (TAGRA 1, 2, 4, 6 vagy MAX), és fizessen online. A fizetés QR-kóddal vagy online átutalással történik. A licencét azonnal kiállítjuk és aktiváljuk — továbbra is ugyanabban a környezetben dolgozhat, minden adata sértetlen marad.</div>
+<div class="faq-a">Minden közvetlenül a szoftverben történik. A próba végén — vagy amikor készen áll — nyissa meg a licenc menüt, válassza ki a járművei számának megfelelő verziót (TAGRA 1, 2, 4, 6 vagy MAX), és fizessen online. A fizetés QR-kóddal vagy online átutalással történik. A licencét azonnal kiállítjuk és aktiváljuk — továbbra is ugyanabban a környezetben dolgozhat, minden adata sértetlen marad.</div>
 </details>
 <details>
 <summary>Kinek készült a TAGRA?</summary>
@@ -935,7 +939,7 @@
 </details>
 <details>
 <summary>Milyen fájlformátumokat támogat a TAGRA?</summary>
-<div class="faq-a">A tachográfadatok leggyakrabban<strong>.DDD</strong> DDD fájlokként vannak tárolva. Néhány országban a<strong>.C1B</strong> TGD (sofőrkártya) és<strong>.V1B</strong> vagy <strong>ESM</strong> (jármű) fájlokat is használják. Ezeket a fájlokat <strong>nem lehet szabványos megjelenítővel megnyitni</strong> — speciális <strong>tachográfadatok kiértékelése szoftver</strong> szoftverre van szüksége, mint például a TAGRA, a digitális tachográfadatok megfelelő kiértékeléséhez.</div>
+<div class="faq-a">A tachográfadatok leggyakrabban<strong>.DDD</strong> DDD fájlokként vannak tárolva. Néhány országban a<strong>.C1B</strong> TGD (sofőrkártya) és<strong>.V1B</strong> vagy <strong>ESM</strong> (jármű) fájlokat is használják. Ezeket a fájlokat <strong>nem lehet szabványos megjelenítővel megnyitni</strong> — speciális <strong>tachográfadatok kiértékelése szoftver</strong> szoftverre van szüksége, például a TAGRA-ra, a digitális tachográfadatok megfelelő kiértékeléséhez.</div>
 </details>
 <details>
 <summary>Mit tartalmaz az éves licencdíj?</summary>
@@ -943,11 +947,11 @@
 </details>
 <details>
 <summary>Felkészült a TAGRA a 2026. júliusi kisteherautó-kötelezettségre?</summary>
-<div class="faq-a">Igen. A TAGRA minden verziója teljes mértékben felkészült a kisteherautókra (2,5–3,5 t járművek a nemzetközi fuvarozásban), amelyekre 2026 júliusától az új digitális tachográf beszerelési és rendszeres adatletöltési kötelezettség vonatkozik az (EU) rendeletek értelmében.</div>
+<div class="faq-a">Igen. A TAGRA minden verziója teljes mértékben felkészült a kisteherautókra (2,5–3,5 t-s járművek a nemzetközi fuvarozásban), amelyekre 2026 júliusától az új digitális tachográf beszerelési és rendszeres adatletöltési kötelezettség vonatkozik az uniós rendeletek értelmében.</div>
 </details>
 <details>
 <summary>Támogatja a TAGRA a második generációs okostachográfot (G2V2)?</summary>
-<div class="faq-a">Igen. A TAGRA teljes mértékben támogatja a második generációs okostachográfokat (G2V2), amelyek 2023 óta kötelezőek az új járműveknél. A szoftver helyesen dolgozza fel az adatokat ezekből az eszközökből, beleértve a kiterjesztett pozíciórekordokat is.</div>
+<div class="faq-a">Igen. A TAGRA teljes mértékben támogatja a második generációs intelligens tachográfokat (G2V2), amelyek 2023 óta kötelezőek az új járműveknél. A szoftver helyesen dolgozza fel az ezekből az eszközökből származó adatokat, beleértve a kiterjesztett pozícióadatokat is.</div>
 </details>
 <details>
 <summary>Telepíthető a TAGRA több számítógépre?</summary>
@@ -968,7 +972,7 @@
 <span class="article-chip">Olvassa el az útmutatót →</span>
 </a>
 <div class="article-grid">
-<a class="article-card" href="/hu/cikkek/kisteherauto-tachograf-2026/" rel="noopener" target="_blank">
+<a class="article-card" href="/hu/cikkek/tachograf-furgon-kotelezettseg-2026/" rel="noopener" target="_blank">
 <span class="article-eyebrow">Új jogszabályok</span>
 <span class="article-title">Tachográfok kisteherautókhoz: új kötelezettség 2026 júliusától</span>
 <span class="article-meta">Pontosan kire vonatkozik, és Önnek, mint üzembentartónak mit kell időben előkészítenie.</span>
@@ -988,8 +992,8 @@
 </a>
 <a class="article-card" href="/hu/cikkek/tachograf-szimbolumok/">
 <span class="article-eyebrow">Sofőr tudásbázis</span>
-<span class="article-title">Tachográf szimbólumok: digitális ikonok jelentése magyarázattal</span>
-<span class="article-meta">Egy referencia útmutató, amelyet sofőrjei használhatnak – a négy tevékenység szimbólum, kártya ikonok, figyelmeztető szimbólumok és gyakori hibák.</span>
+<span class="article-title">Tachográfszimbólumok: digitális ikonok jelentése magyarázattal</span>
+<span class="article-meta">Referencia-útmutató, amelyet sofőrjei használhatnak – a négy tevékenység szimbólumai, kártyaikonok, figyelmeztető szimbólumok és gyakori hibák.</span>
 <span class="article-chip">Olvassa el a szimbólumok útmutatóját →</span>
 </a>
 </div>
@@ -1013,7 +1017,7 @@
 <div class="footer-inner">
 <div>
 <div class="footer-logo"><img alt="TAGRA" height="20" src="/assets/img/logo-dark.svg?v=20260513zh" width="88" loading="lazy"/></div>
-<p class="footer-desc">Professzionális tachográf-kiértékelő szoftver. Sofőrkártya-letöltés, digitális tachográfadatok kiértékelése, EU-s vezetési és pihenőidők, valamint a közúti szállításra vonatkozó munkaidő-irányelv. Fejlesztette a Truck Data Technology, s.r.o.</p>
+<p class="footer-desc">Professzionális tachográf-kiértékelő szoftver. Sofőrkártya-letöltés, digitális tachográfadatok kiértékelése, EU-s vezetési és pihenőidők, valamint a közúti szállításra vonatkozó munkaidő-irányelv. Fejlesztő: Truck Data Technology, s.r.o.</p>
 </div>
 <div class="footer-col">
 <h2 class="footer-col-title">Termék</h2>
@@ -1047,7 +1051,7 @@
 <span><a href="/hu/kapcsolat/">Kapcsolat</a> · <a href="https://www.tdt.cz" rel="noopener" target="_blank">tdt.cz</a> · <a href="/hu/adatvedelmi-tajekoztato/">Adatvédelem és sütik</a></span>
 </div>
 </footer>
-<div aria-label="Gyors próbaverzió regisztráció" class="sticky-cta" id="stickyCta" role="complementary">
+<div aria-label="Gyors próbaverzió" class="sticky-cta" id="stickyCta" role="complementary">
 <div class="sticky-cta-inner">
 <span class="sticky-cta-text">Készen áll a kezdésre? Próbálja ki a TAGRA-t ingyen 30 napig.</span>
 <a class="sticky-cta-btn" href="/hu/ingyenes-probaverzio/?audience=fleet">Próbálja ki ingyen →</a>
@@ -1178,10 +1182,10 @@
 <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
-  "name": "TAGRA – Tachográfadatok kiértékelő szoftver flottakezelőknek",
+  "name": "TAGRA – Tachográfadat-kiértékelő szoftver flottakezelőknek",
   "applicationCategory": "BusinessApplication",
   "operatingSystem": "Windows",
-  "description": "Tachográfadatok kiértékelő szoftver flottakezelőknek. Sofőrkártya letöltés, digitális tachográf-kiértékelés, archiválás és tachográf távoli letöltés 1-től korlátlan számú járműhöz. Kiértékeli az (EU) vezetési és pihenőidőt (561/2006 (EU) rendelet), az AETR-t és a tehergépjárművek munkaidejéről szóló irányelvet. Ingyenes 30 napos próbaverzió. Felkészült a kisteherautókra 2026 júliusától.",
+  "description": "Tachográfadat-kiértékelő szoftver flottakezelőknek. Sofőrkártya-letöltés, digitális tachográfadat-kiértékelés, archiválás és távoli tachográfadat-letöltés 1-től korlátlan számú járműhöz. Kiértékeli az (EU) vezetési és pihenőidőt (561/2006 (EU) rendelet), az AETR-t és a tehergépjárművek munkaidejéről szóló irányelvet. Ingyenes 30 napos próbaverzió. Felkészült a kisteherautókra 2026 júliusától.",
   "url": "https://tagra.app/hu/fuvarozoknak/",
   "inLanguage": "hu",
   "author": {
@@ -1209,7 +1213,7 @@
       "name": "Hogyan vásárolhatom meg a TAGRA-t a próba után?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Minden közvetlenül a szoftveren belül történik. A próba végén — vagy amikor készen áll — nyissa meg a licenc menüt, válassza ki a járművei számának megfelelő verziót (TAGRA 1, 2, 4, 6 vagy MAX), és fizessen online. A fizetés QR-kóddal vagy online átutalással történik. A licencét azonnal kiállítjuk és aktiváljuk — továbbra is ugyanabban a környezetben dolgozhat, minden adata sértetlen marad."
+        "text": "Minden közvetlenül a szoftverben történik. A próba végén — vagy amikor készen áll — nyissa meg a licenc menüt, válassza ki a járművei számának megfelelő verziót (TAGRA 1, 2, 4, 6 vagy MAX), és fizessen online. A fizetés QR-kóddal vagy online átutalással történik. A licencét azonnal kiállítjuk és aktiváljuk — továbbra is ugyanabban a környezetben dolgozhat, minden adata sértetlen marad."
       }
     },
     {
@@ -1217,7 +1221,7 @@
       "name": "Kinek készült a TAGRA?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "A TAGRA egy tachográfadatok kiértékelő szoftver, amelyet minden olyan fuvarozó számára terveztek, akinek sofőrkártya letöltést, kiértékelést és archiválást kell végeznie – az egyéni vállalkozóktól egyetlen járművel a nagy flottákig, több száz járművel. Válassza ki a járművei számának megfelelő verziót: TAGRA 1, 2, 4, 6 vagy MAX (korlátlan)."
+        "text": "A TAGRA tachográfadat-kiértékelő szoftver, amelyet minden olyan fuvarozó számára terveztek, akinek sofőrkártya-letöltést, kiértékelést és archiválást kell végeznie – az egyetlen járművel rendelkező egyéni vállalkozóktól a több száz járművel rendelkező nagy flottákig. Válassza ki a járművei számának megfelelő verziót: TAGRA 1, 2, 4, 6 vagy MAX (korlátlan)."
       }
     },
     {
@@ -1225,7 +1229,7 @@
       "name": "Hogyan juttathatom be az adatokat a szoftverbe?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Az adatok a sofőrkártyáról (kártyaolvasón vagy letöltőkulcson keresztül) és a tachográf egységből töltődnek be. A TAGRA támogatja a manuális betöltést a DOWNLOAD BOX II S segítségével és a tachográf távoli letöltést a DOWNLOAD BOX REMOTE vagy DKV LIVE® integráció segítségével."
+        "text": "Az adatok a sofőrkártyáról (kártyaolvasón vagy letöltőkulcson keresztül) és a járműegységből töltődnek be. A TAGRA támogatja a manuális betöltést a DOWNLOAD BOX II S segítségével és a távoli tachográfadat-letöltést a DOWNLOAD BOX REMOTE vagy DKV LIVE® integráció segítségével."
       }
     },
     {
@@ -1233,7 +1237,7 @@
       "name": "Milyen gyakran kell letölteni az adatokat?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Sofőrkártyák legalább 28 naponta, a tachográf egység legalább 90 naponta. A letöltött adatokat legalább 1 évig meg kell őrizni."
+        "text": "Sofőrkártyák: legalább 28 naponta, a járműegység: legalább 90 naponta. A letöltött adatokat legalább 1 évig meg kell őrizni."
       }
     },
     {
@@ -1241,7 +1245,7 @@
       "name": "Milyen fájlformátumokat támogat a TAGRA?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "A tachográfadatok leggyakrabban .DDD fájlként tárolódnak. Egyes országokban .C1B (sofőrkártya) és .V1B vagy ESM (jármű) fájlokat is használnak. Ezek a fájlok nem nyithatók meg szabványos nézőkével – dedikált tachográfadat kiértékelő szoftverre, például a TAGRA-ra van szüksége a megfelelő digitális tachográfadatok kiértékeléséhez."
+        "text": "A tachográfadatokat leggyakrabban .DDD fájlként tárolják. Egyes országokban .C1B (sofőrkártya) és .V1B vagy ESM (jármű) fájlokat is használnak. Ezek a fájlok nem nyithatók meg szabványos nézőkével – dedikált tachográfadat-kiértékelő szoftverre, például a TAGRA-ra van szüksége a digitális tachográfadatok megfelelő kiértékeléséhez."
       }
     },
     {
@@ -1257,7 +1261,7 @@
       "name": "Felkészült a TAGRA a 2026. júliusi kisteherautó-kötelezettségre?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Igen. A TAGRA minden verziója teljes mértékben felkészült a kisteherautókra (2,5–3,5 t járművek a nemzetközi fuvarozásban), amelyekre 2026 júliusától az új digitális tachográf beszerelési és rendszeres adatletöltési kötelezettség vonatkozik az (EU) rendeletek értelmében."
+        "text": "Igen. A TAGRA minden verziója teljes mértékben felkészült a kisteherautókra (2,5–3,5 t-s járművek a nemzetközi fuvarozásban), amelyekre 2026 júliusától az új digitális tachográf beszerelési és rendszeres adatletöltési kötelezettség vonatkozik az uniós rendeletek értelmében."
       }
     },
     {
@@ -1265,7 +1269,7 @@
       "name": "Támogatja a TAGRA a második generációs okostachográfot (G2V2)?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Igen. A TAGRA teljes mértékben támogatja a második generációs okostachográfokat (G2V2), amelyek 2023 óta kötelezőek az új járműveknél. A szoftver helyesen dolgozza fel az adatokat ezekből az eszközökből, beleértve a kiterjesztett pozíciórekordokat is."
+        "text": "Igen. A TAGRA teljes mértékben támogatja a második generációs intelligens tachográfokat (G2V2), amelyek 2023 óta kötelezőek az új járműveknél. A szoftver helyesen dolgozza fel az ezekből az eszközökből származó adatokat, beleértve a kiterjesztett pozícióadatokat is."
       }
     },
     {

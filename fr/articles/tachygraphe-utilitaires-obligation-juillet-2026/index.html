@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<!-- TMX-ANALYTICS START -->
+<meta content="7F7894081BE7FBB245FF03AF8810B22F" name="msvalidate.01"/>
+<!-- Consent Mode v2 defaults (deny) + gtag stub — runs BEFORE gtag.js -->
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent','default',{
+      ad_storage:'denied', ad_user_data:'denied', ad_personalization:'denied',
+      analytics_storage:'denied', functionality_storage:'denied',
+      personalization_storage:'denied', security_storage:'granted',
+      wait_for_update:500
+    });
+    gtag('set','ads_data_redaction',true);
+    gtag('set','url_passthrough',false);
+  </script>
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-92253QFBNX"></script>
+<script>
+    gtag('js', new Date());
+    gtag('config','G-92253QFBNX');
+  </script>
+<!-- Cookie consent banner (self-hosted) + Microsoft Clarity gating -->
+<style>
+    .tmx-cc{position:fixed;left:0;right:0;bottom:0;z-index:2147483000;background:linear-gradient(120deg,var(--blue-dark,#0b2c4a),var(--blue-mid,#134a8e) 62%,var(--blue-light,#1f5fa6));color:#fff;
+      font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+      padding:16px 20px;box-shadow:0 -4px 24px rgba(0,0,0,.18);display:flex;flex-wrap:wrap;
+      align-items:center;gap:14px;justify-content:center}
+    .tmx-cc__txt{flex:1 1 360px;max-width:760px}
+    .tmx-cc__txt a{color:#9ed0f5;text-decoration:underline}
+    .tmx-cc__btns{display:flex;gap:10px;flex:0 0 auto}
+    .tmx-cc__b{appearance:none;border:0;cursor:pointer;font:inherit;font-weight:600;
+      padding:10px 22px;border-radius:99px;transition:filter .15s;color:#fff}
+    .tmx-cc__b:hover{filter:brightness(1.08)}
+    .tmx-cc__b--no{background:rgba(255,255,255,.16)}
+    .tmx-cc__b--yes{background:var(--green-cta,#5C820F)}
+    @media(max-width:640px){.tmx-cc{padding:14px}.tmx-cc__btns{width:100%}.tmx-cc__b{flex:1}}
+  </style>
+<script>
+  (function(){
+    var KEY='tmx-consent-v1', CL='wt18054m0r';
+    function lc(){var l=(document.documentElement.getAttribute('lang')||'en').toLowerCase().split('-')[0];
+      var m={cz:'cs',cs:'cs',sk:'sk',de:'de',pl:'pl',gr:'el',el:'el',hu:'hu',en:'en'};return m[l]||'en';}
+    var T={
+      hu:{t:'Analitikai s\u00fctiket haszn\u00e1lunk (Google Analytics, Microsoft Clarity, Smartsupp), hogy meg\u00e9rts\u00fck a webhely haszn\u00e1lat\u00e1t. Csak az \u00d6n hozz\u00e1j\u00e1rul\u00e1s\u00e1val t\u00f6lt\u0151dnek be.',a:'Elfogadom',r:'Elutas\u00edtom',p:'Adatv\u00e9delem \u00e9s s\u00fctik'},
+      ro:{t:'Utilizăm module cookie de analiză (Google Analytics, Microsoft Clarity, Smartsupp) pentru a înțelege modul de utilizare a site-ului. Se încarcă doar cu consimțământul dumneavoastră.',a:'Accept',r:'Refuz',p:'Confidențialitate și cookie-uri'},
+      nl:{t:'We gebruiken analytische cookies (Google Analytics, Microsoft Clarity, Smartsupp) om het gebruik van de site te begrijpen. Ze laden alleen met uw toestemming.',a:'Accepteren',r:'Weigeren',p:'Privacy en cookies'},
+      fr:{t:'Nous utilisons des cookies analytiques (Google Analytics, Microsoft Clarity, Smartsupp) pour comprendre l’utilisation du site. Ils ne se chargent qu’avec votre consentement.',a:'Accepter',r:'Refuser',p:'Confidentialité et cookies'},
+      it:{t:'Utilizziamo cookie analitici (Google Analytics, Microsoft Clarity, Smartsupp) per capire l’utilizzo del sito. Si caricano solo con il Suo consenso.',a:'Accetta',r:'Rifiuta',p:'Privacy e cookie'},
+      en:{t:'We use analytics cookies (Google Analytics, Microsoft Clarity, Smartsupp) to understand site usage. They load only with your consent.',a:'Accept',r:'Reject',p:'Privacy &amp; cookies'},
+      cs:{t:'Používáme analytické cookies (Google Analytics, Microsoft Clarity, Smartsupp) k pochopení používání webu. Načtou se jen s vaším souhlasem.',a:'Přijmout',r:'Odmítnout',p:'Soukromí a cookies'},
+      sk:{t:'Používame analytické cookies (Google Analytics, Microsoft Clarity, Smartsupp) na pochopenie používania webu. Načítajú sa len s vaším súhlasom.',a:'Prijať',r:'Odmietnuť',p:'Súkromie a cookies'},
+      de:{t:'Wir verwenden Analyse-Cookies (Google Analytics, Microsoft Clarity, Smartsupp), um die Nutzung der Website zu verstehen. Sie werden nur mit Ihrer Einwilligung geladen.',a:'Akzeptieren',r:'Ablehnen',p:'Datenschutz &amp; Cookies'},
+      pl:{t:'Używamy plików cookie do analityki (Google Analytics, Microsoft Clarity, Smartsupp), aby zrozumieć korzystanie z witryny. Ładują się tylko za Twoją zgodą.',a:'Akceptuj',r:'Odrzuć',p:'Prywatność i cookies'},
+      el:{t:'Χρησιμοποιούμε cookies ανάλυσης (Google Analytics, Microsoft Clarity, Smartsupp) για να κατανοήσουμε τη χρήση. Φορτώνονται μόνο με τη συγκατάθεσή σας.',a:'Αποδοχή',r:'Απόρριψη',p:'Απόρρητο &amp; cookies'}
+    };
+    function loadClarity(){if(!CL||window.__tmxCl)return;window.__tmxCl=1;
+      (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+       t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+       y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script",CL);}
+    function grant(){try{localStorage.setItem(KEY,'granted')}catch(e){}
+      gtag('consent','update',{analytics_storage:'granted'});loadClarity();}
+    function deny(){try{localStorage.setItem(KEY,'denied')}catch(e){}}
+    var saved=null;try{saved=localStorage.getItem(KEY)}catch(e){}
+    if(saved==='granted'){grant();return;} if(saved==='denied'){return;}
+    function show(){var tx=T[lc()]||T.en;
+      var b=document.createElement('div');b.className='tmx-cc';b.setAttribute('role','dialog');b.setAttribute('aria-live','polite');
+      b.innerHTML='<div class="tmx-cc__txt">'+tx.t+' <a href="/fr/confidentialite/">'+tx.p+'</a></div>'+
+        '<div class="tmx-cc__btns"><button type="button" class="tmx-cc__b tmx-cc__b--no">'+tx.r+'</button>'+
+        '<button type="button" class="tmx-cc__b tmx-cc__b--yes">'+tx.a+'</button></div>';
+      document.body.appendChild(b);
+      b.querySelector('.tmx-cc__b--yes').addEventListener('click',function(){grant();b.remove();});
+      b.querySelector('.tmx-cc__b--no').addEventListener('click',function(){deny();b.remove();});}
+    if(document.body)show();else document.addEventListener('DOMContentLoaded',show);
+  })();
+  </script>
+<!-- TMX-ANALYTICS END -->
+<meta charset="utf-8"/>
+<title>Tachygraphe utilitaire 2,5–3,5 t : règles 2026 | TAGRA</title>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="Tachygraphe pour véhicules de 2,5–3,5 t dès le 1er juillet 2026 : exemptions, règles, téléchargements et amendes encourues." name="description"/>
+<meta content="article" property="og:type"/>
+<meta content="Van tachograph 2.5–3.5 t: 2026 rules, exemptions &amp; fines | TAGRA" property="og:title"/>
+<meta content="Votre véhicule utilitaire de 2,5–3,5 t doit-il être équipé d’un tachygraphe depuis le 1er juillet 2026 ? Découvrez qui est exempté (transport pour compte propre, artisans), les règles G2v2, les obligations de téléchargement et les amendes encourues." property="og:description"/>
+<meta content="https://tagra.app/assets/img/hero-poster.jpg" property="og:image"/>
+<meta content="fr_FR" property="og:locale"/>
+<meta content="https://tagra.app/fr/articles/tachygraphe-utilitaires-obligation-juillet-2026/" property="og:url"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Van tachograph 2.5–3.5 t: 2026 rules, exemptions &amp; fines | TAGRA" name="twitter:title"/>
+<meta content="Depuis le 1er juillet 2026, les véhicules utilitaires de 2,5–3,5 t utilisés pour le transport international ou le cabotage doivent être équipés d’un tachygraphe G2v2. Découvrez qui est exempté, les règles et les amendes." name="twitter:description"/>
+<meta content="https://tagra.app/assets/img/hero-poster.jpg" name="twitter:image"/>
+<link href="https://tagra.app/fr/articles/tachygraphe-utilitaires-obligation-juillet-2026/" rel="canonical"/>
+<link href="https://tagra.app/de/ratgeber/tachograph-transporter-pflicht-juli-2026/" hreflang="de" rel="alternate"/><link href="https://tagra.app/el/arthra/tachografos-van-ypochreosi-ioulios-2026/" hreflang="el" rel="alternate"/><link href="https://tagra.app/articles/tachographs-for-vans-new-obligation-july-2026/" hreflang="en" rel="alternate"/><link href="https://tagra.app/fr/articles/tachygraphe-utilitaires-obligation-juillet-2026/" hreflang="fr" rel="alternate"/><link href="https://tagra.app/hu/cikkek/tachograf-furgon-kotelezettseg-2026/" hreflang="hu" rel="alternate"/><link href="https://tagra.app/it/articoli/tachigrafo-furgoni-obbligo-luglio-2026/" hreflang="it" rel="alternate"/><link href="https://tagra.app/nl/artikelen/tachograafplicht-bestelbus-juli-2026/" hreflang="nl" rel="alternate"/><link href="https://tagra.app/pl/poradnik/tachograf-w-busach-obowiazek-lipiec-2026/" hreflang="pl" rel="alternate"/>
+<link href="https://tagra.app/ro/articole/tahograf-autoutilitare-obligatie-iulie-2026/" hreflang="ro" rel="alternate"/><link href="https://tagra.app/articles/tachographs-for-vans-new-obligation-july-2026/" hreflang="x-default" rel="alternate"/>
+<link href="/assets/css/tokens.css" rel="stylesheet"/>
+<link href="/assets/css/base.css" rel="stylesheet"/>
+<link href="/assets/css/components.css" rel="stylesheet"/>
+<link href="/assets/css/nav.css" rel="stylesheet"/>
+<link href="/assets/css/footer.css" rel="stylesheet"/>
+
+<style>
+    .art-hero { background: var(--bg-apple-solid); padding: calc(var(--nav-h, 64px) + 20px) 0 10px; border-bottom: 1px solid var(--border); }
+    .art-wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
+    
+    
+    
+    
+    .art-title{font-size:38px;line-height:1.15;font-weight:800;margin-bottom:16px;letter-spacing:-.02em;padding-bottom:0.08em;color:var(--blue-dark);}
+    .art-title .grad{background:linear-gradient(90deg,var(--blue-dark) 0%,var(--blue-light) 50%,var(--blue-bright) 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;}
+    @media(max-width:700px){.art-title{font-size:26px;}}
+    
+    .hero-lede { font-size: 18px; line-height: 1.6; color: var(--text); max-width: 920px; margin-top: 16px; }
+    .band { padding: 60px 0; }
+    .band--gray { background: var(--bg-gray); }
+    .band--blue { background: var(--bg-apple-solid); }
+    .container { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
+    .h2-grad { background: var(--heading-gradient); -webkit-background-clip: text; background-clip: text; color: transparent; -webkit-text-fill-color: transparent; display: inline-block; font-weight: 800; text-transform: uppercase; font-size: 36px; line-height: 1.06; padding: 0.12em 0.15em 0.08em 0; margin: 0 0 12px; }
+    @media(max-width:700px){.h2-grad{font-size:28px;}}
+    .eyebrow { font-size: 14px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--green-brand); margin-bottom: 8px; display: block; }
+    .bento--hero { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; max-width: 1080px; margin: 32px 0; }
+    @media (max-width: 900px) { .bento--hero { grid-template-columns: 1fr; } }
+    .hero-card { background: #fff; border: 1px solid var(--border); border-radius: var(--radius-lg, 20px); padding: 24px; }
+    .hero-card--blue { background: rgba(31,95,166,0.06); }
+    .hero-card .eyebrow { color: var(--blue-mid); margin-bottom: 8px; }
+    .hero-card .big { font-size: 44px; font-weight: 800; color: var(--blue-dark); margin-bottom: 8px; letter-spacing: -0.02em; line-height: 1; }
+    .hero-card p { margin: 0; color: var(--text2); font-size: 15px; line-height: 1.5; }
+    .twocol { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 32px; }
+    @media (max-width: 900px) { .twocol { grid-template-columns: 1fr; } }
+    .card { background: #fff; border: 1px solid var(--border); border-radius: var(--radius-lg, 20px); padding: 28px; }
+    .card--blue { background: rgba(31,95,166,0.06); }
+    .card--green { background: rgba(110,155,18,0.07); }
+    .card h3 { margin: 6px 0 12px; font-size: 22px; color: var(--blue-dark); font-weight: 800; }
+    .card ul { margin: 8px 0 0 18px; color: var(--text); line-height: 1.65; }
+    .card ul li { margin: 6px 0; }
+    .info-card { margin-top: 24px; border-left: 4px solid var(--blue-bright); background: #fff; border-radius: var(--radius-lg, 20px); padding: 24px; box-shadow: 0 1px 0 var(--border); }
+    .info-card .badge { display: inline-block; font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: .08em; color: var(--blue-mid); background: rgba(31,95,166,0.09); padding: 5px 10px; border-radius: 999px; margin-bottom: 10px; }
+    .info-card h3 { margin: 4px 0 8px; font-size: 22px; color: var(--blue-dark); }
+    .info-card p { color: var(--text); line-height: 1.6; }
+    .doc-bento { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 24px; }
+    @media (max-width: 900px) { .doc-bento { grid-template-columns: 1fr; } }
+    .doc-card { background: #fff; border: 1px solid var(--border); border-radius: var(--radius-lg, 20px); padding: 24px; }
+    .doc-card h3 { font-size: 20px; margin: 4px 0 10px; color: var(--blue-dark); font-weight: 800; }
+    .doc-card .num { font-weight: 800; color: var(--blue-mid); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; }
+    .doc-card p { color: var(--text2); line-height: 1.6; }
+    .prep-bento { display: grid; grid-template-columns: repeat(6, 1fr); gap: 16px; margin-top: 24px; }
+    .prep-bento .s4 { grid-column: span 2; }
+    .prep-bento .s6 { grid-column: span 3; }
+    @media (max-width: 1080px) { .prep-bento { grid-template-columns: 1fr 1fr; } .prep-bento .s4, .prep-bento .s6 { grid-column: span 1; } }
+    @media (max-width: 700px) { .prep-bento { grid-template-columns: 1fr; } }
+    .prep-card { background: #fff; border: 1px solid var(--border); border-radius: var(--radius-lg, 20px); padding: 24px; }
+    .prep-card--blue { background: rgba(31,95,166,0.06); }
+    .prep-card--green { background: rgba(110,155,18,0.08); }
+    .prep-card .k { font-weight: 800; color: var(--blue-mid); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; }
+    .prep-card h3 { margin: 6px 0 10px; font-size: 22px; color: var(--blue-dark); font-weight: 800; }
+    .prep-card p { color: var(--text2); line-height: 1.6; }
+    .steps { display: grid; grid-template-columns: 1fr; gap: 14px; margin-top: 24px; }
+    .step { background: #fff; border: 1px solid var(--border); border-radius: var(--radius-lg, 20px); padding: 24px; }
+    .step .snum { font-weight: 800; color: var(--blue-mid); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; }
+    .step h3 { margin: 6px 0 8px; font-size: 22px; color: var(--blue-dark); font-weight: 800; }
+    .step p { color: var(--text2); line-height: 1.6; }
+    .step--urgent { border-color: var(--blue-mid); }
+    .snum--urgent { color: var(--warn); }
+    .art-wrap, .container { --warn: #c96a00; }
+    .warning-box { margin-top: 24px; border: 1px solid rgba(220,120,0,0.25); background: linear-gradient(180deg, rgba(255,190,120,0.14), rgba(255,190,120,0.06)); border-left: 4px solid var(--warn); border-radius: var(--radius-lg, 20px); padding: 24px; }
+    .warning-box--urgent { margin-top: 0; }
+    .warning-box .badge { display: inline-block; font-weight: 800; color: var(--warn); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; background: rgba(255,160,80,0.2); padding: 5px 10px; border-radius: 999px; margin-bottom: 8px; }
+    .warning-box__title { margin: 4px 0 8px; font-size: 22px; color: var(--blue-dark); font-weight: 800; line-height: 1.3; }
+    .warning-box p { color: var(--text); line-height: 1.6; }
+    .cta-row { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 16px; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 44px; padding: 0 18px; border-radius: 999px; text-decoration: none; font-weight: 700; font-size: 15px; }
+    .btn--primary { background: var(--green-cta); color: #fff; border: 1.5px solid var(--green-cta); }
+    .btn--primary:hover { background: var(--green-brand); border-color: var(--green-brand); }
+    .btn--outline { background: transparent; color: var(--blue-mid); border: 1.5px solid rgba(19,74,142,0.4); }
+    .btn--outline:hover { background: var(--bg-apple-solid); }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 32px; }
+    @media (max-width: 900px) { .contact-grid { grid-template-columns: 1fr; } }
+    .callout--green h3 { font-size: 24px; color: var(--green-cta); margin: 4px 0 12px; font-weight: 800; }
+    .callout--green ul { margin: 12px 0 12px 18px; color: var(--text); line-height: 1.7; }
+    .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 16px; }
+    @media (max-width: 900px) { .related-grid { grid-template-columns: 1fr; } }
+    .rel-card { background: #fff; border: 1px solid var(--border); border-radius: var(--radius-lg, 20px); padding: 24px; transition: border-color .15s, box-shadow .15s; }
+    .rel-card:hover { border-color: var(--blue-mid); box-shadow: 0 8px 22px rgba(0,0,0,0.06); }
+    .rel-card .rel-eyebrow { font-size: 11px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: var(--blue-mid); margin-bottom: 8px; }
+    .rel-card a { color: var(--blue-dark); text-decoration: none; font-weight: 700; font-size: 17px; line-height: 1.35; display: block; }
+    .rel-card a:hover { color: var(--blue-mid); }
+    .rel-card p { margin-top: 8px; color: var(--text2); font-size: 14px; line-height: 1.5; }
+    .rel-featured { background: linear-gradient(135deg, var(--blue-dark), var(--blue-mid)); color: #fff; border-radius: var(--radius-lg, 20px); padding: 32px; margin-bottom: 16px; }
+    .rel-featured .rel-eyebrow { color: rgba(255,255,255,0.7); font-size: 12px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; margin-bottom: 12px; }
+    .rel-featured h3 { margin: 0 0 16px; font-size: 24px; color: #fff; font-weight: 800; line-height: 1.25; }
+    .rel-featured a { color: #fff; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.4); padding-bottom: 2px; font-weight: 600; }
+    .rel-featured a:hover { border-bottom-color: #fff; }
+    .faq { max-width: 980px; margin: 32px auto 0; }
+    .author-block { background: #fff; border: 1px solid var(--border); border-radius: var(--radius-lg, 20px); padding: 28px; margin-top: 16px; }
+    .author-block p { margin: 6px 0; color: var(--text); line-height: 1.7; }
+  </style><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "TAGRA", "item": "https://tagra.app/nl/"}, {"@type": "ListItem", "position": 2, "name": "Articles", "item": "https://tagra.app/fr/articles/"}, {"@type": "ListItem", "position": 3, "name": "Le tachygraphe est désormais obligatoire pour les véhicules utilitaires de 2,5–3,5 t — la manière la plus rapide de vous mettre en conformité", "item": "https://tagra.app/fr/articles/tachygraphe-utilitaires-obligation-juillet-2026/"}]}</script><style>#scroll-progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--green-brand),var(--blue-light));width:0%;z-index:9999;pointer-events:none;}.breadcrumb{font-size:14px;color:var(--text2);margin-bottom:18px;}.breadcrumb a{color:var(--text2);text-decoration:none;}.breadcrumb a:hover{color:var(--blue-mid);}.breadcrumb span{margin:0 5px;color:var(--border);}.art-hero{background:linear-gradient(180deg,var(--bg-apple) 0%,#fff 100%);padding:calc(var(--nav-h,64px) + 28px) 0 44px;}.art-meta{font-size:15px;color:var(--text2);padding-bottom:24px;border-bottom:1px solid var(--border);display:flex;gap:20px;flex-wrap:wrap;margin-bottom:8px;}</style><script>(function(){var bar=document.getElementById('scroll-progress');if(bar)window.addEventListener('scroll',function(){var t=document.documentElement.scrollTop||document.body.scrollTop;var h=document.documentElement.scrollHeight-document.documentElement.clientHeight;bar.style.width=(t/h*100)+'%';},{passive:true});})();</script><script>
+/* INTERSECTION OBSERVER – ANIMATIONS */
+if ('IntersectionObserver' in window) {
+  var io = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) {
+      if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.anim-up, .fly-left, .fly-right').forEach(function(el) { io.observe(el); });
+} else {
+  document.querySelectorAll('.anim-up, .fly-left, .fly-right').forEach(function(el) { el.classList.add('on'); });
+}
+</script>  <script defer src="/assets/js/nav.js?v=20260816b"></script>
+<noscript><style>.anim-up,.fly-left,.fly-right{opacity:1!important;transform:none!important}</style></noscript></head>
+<body class="art-page">
+<a class="skip-link" href="#main-content">Passer au contenu</a>
+<div aria-hidden="true" id="scroll-progress"></div>
+<nav aria-label="Navigation principale" class="site-nav" role="navigation">
+<div class="nav-inner">
+<a aria-label="TAGRA – Accueil" class="nav-logo" href="/nl/"><img alt="TAGRA" height="32" src="/assets/img/logo-light.svg?v=20260513zh" style="display:block;height:32px;width:auto;" width="140"/></a>
+<ul class="nav-links" id="nav-links">
+<li><a href="/fr/entreprises/">Pour les entreprises</a></li>
+<li><a href="/fr/conducteurs/">Pour les conducteurs</a></li>
+<li><a href="/fr/autorites-de-controle/">Contrôle</a></li>
+<li><a aria-current="page" href="/fr/articles/">Articles</a></li><li><a href="/fr/manuels/">Manuels</a></li>
+<li><a href="/fr/faq/">FAQ</a></li>
+<li><a href="/fr/contact/">Contact</a></li>
+<li class="nav-cta-li"><a class="nav-cta" href="/fr/essai-gratuit/?audience=fleet">Essayez gratuitement pendant 30 jours</a></li>
+</ul>
+<details class="nav-lang">
+<summary aria-label="Langue : FR">FR</summary>
+<div class="nav-lang-menu" role="menu"><a href="/articles/tachographs-for-vans-new-obligation-july-2026/" hreflang="en">English</a><a href="/de/ratgeber/tachograph-transporter-pflicht-juli-2026/" hreflang="de">Deutsch</a><a href="/pl/poradnik/tachograf-w-busach-obowiazek-lipiec-2026/" hreflang="pl">Polski</a><a href="/nl/artikelen/tachograafplicht-bestelbus-juli-2026/" hreflang="nl">Nederlands</a><a aria-current="page" class="active" href="/fr/articles/tachygraphe-utilitaires-obligation-juillet-2026/" hreflang="fr">Français</a><a href="/it/articoli/tachigrafo-furgoni-obbligo-luglio-2026/" hreflang="it">Italiano</a><a href="/el/arthra/tachografos-van-ypochreosi-ioulios-2026/" hreflang="el">Ελληνικά</a><a href="/hu/cikkek/tachograf-furgon-kotelezettseg-2026/" hreflang="hu">Magyar</a><a href="/ro/articole/tahograf-autoutilitare-obligatie-iulie-2026/" hreflang="ro">Română</a><a href="https://www.tdt.cz/" hreflang="cs" rel="noopener" target="_blank">Čeština</a><a href="https://www.tdt.sk/" hreflang="sk" rel="noopener" target="_blank">Slovenčina</a></div>
+</details>
+<a class="nav-cta-mobile" href="/fr/essai-gratuit/?audience=fleet">Essai gratuit</a>
+<button aria-expanded="false" aria-label="Afficher/masquer le menu" class="nav-mobile-toggle" id="nav-toggle">
+<span></span><span></span><span></span>
+</button>
+</div>
+</nav>
+<header class="art-hero">
+<div class="art-wrap">
+<nav aria-label="Fil d’Ariane" class="breadcrumb"><a href="/nl/">TAGRA</a> <span>›</span> <a href="/fr/articles/">Articles</a> <span>›</span><span>Tachygraphes pour véhicules utilitaires</span></nav>
+<div class="eyebrow anim-up">En vigueur actuellement · Obligatoire depuis le 1er juillet 2026</div>
+<h1 class="art-title"><span class="grad">Le tachygraphe est désormais obligatoire pour les véhicules utilitaires de 2,5–3,5 t — la manière la plus rapide de vous mettre en conformité</span></h1>
+<div class="art-meta"><span>Truck Data Technology</span><span>Mis à jour en août 2026</span><span>Lecture de 12 min</span></div>
+<p class="hero-lede anim-up">
+<strong>L’obligation est déjà en vigueur.</strong> Depuis le <strong>1er juillet 2026</strong>, les véhicules utilitaires de <strong>2,5–3,5 t</strong> utilisés pour le <strong>transport international de marchandises ou le cabotage</strong> dans l’UE doivent être équipés d’un <strong>tachygraphe intelligent version 2 (G2v2)</strong> en vertu du règlement (CE) n° 561/2006, tel que modifié par le règlement (UE) 2020/1054. Le délai est expiré — tout véhicule utilitaire concerné dépourvu d’un tachygraphe en état de fonctionnement est désormais exposé à des <strong>infractions « très graves »</strong> lors de tout contrôle routier. Voici la manière la plus rapide de vous mettre en conformité, ainsi que les personnes exemptées et la façon de tenir vos données en ordre (y compris des informations sur les opérations entre le Royaume-Uni et l’UE après le Brexit).
+    </p>
+<div class="bento--hero">
+<div class="hero-card">
+<div class="eyebrow">En vigueur depuis le</div>
+<div class="big">1er juillet 2026</div>
+<p>L’obligation d’utiliser un tachygraphe pour les véhicules utilitaires de 2,5–3,5 t affectés au transport international et au cabotage est désormais applicable et contrôlable.</p>
+</div>
+<div class="hero-card hero-card--blue">
+<div class="eyebrow">À partir de la masse brute</div>
+<div class="big">2.5 t</div>
+<p>S’applique aux véhicules ou ensembles dont la masse maximale autorisée est de 2,5–3,5 t lorsque les conditions de l’UE sont remplies.</p>
+</div>
+<div class="hero-card">
+<div class="eyebrow">Type de tachygraphe</div>
+<div class="big">G2v2</div>
+<p>Tachygraphe intelligent version 2, requis par le règlement d’exécution (UE) 2021/1228 de la Commission.</p>
+</div>
+</div>
+</div>
+</header>
+<main id="main-content">
+<section class="band">
+<div class="container">
+<div class="cta-box">
+<h3>L’obligation est déjà en vigueur</h3>
+<p>Depuis le 1er juillet 2026, les véhicules utilitaires de 2,5 à 3,5 tonnes effectuant des trajets internationaux doivent être équipés d’un tachygraphe — et les données doivent être téléchargées, conservées pendant un an et contrôlées. TAGRA se charge du téléchargement et de l’évaluation pour l’ensemble de votre flotte.</p>
+<a class="cta-btn" href="/fr/essai-gratuit/?audience=fleet&amp;src=vans">Essayez TAGRA gratuitement pendant 30 jours →</a>
+</div>
+</div>
+</section>
+<section class="band">
+<div class="container">
+<aside aria-label="Avis urgent de mise en conformité" class="warning-box warning-box--urgent anim-up">
+<div class="badge">En vigueur actuellement</div>
+<p class="warning-box__title">Le délai est expiré — agissez maintenant pour éviter les amendes</p>
+<p>Depuis le <strong>1er juillet 2026</strong>, tout véhicule utilitaire de 2,5–3,5 t effectuant du transport international ou du cabotage dans l’UE sans <strong>tachygraphe intelligent G2v2</strong> est déjà exposé à des sanctions. L’absence de tachygraphe, la conduite sans carte ou le défaut de téléchargement des données constituent des <strong>infractions très graves</strong> au titre de la directive 2006/22/CE et peuvent atteindre plusieurs milliers d’euros par infraction. Deux étapes du plan ci-dessous dépendent de tiers et nécessitent <strong>plusieurs semaines de délai</strong> — commencez-les dès aujourd’hui.</p>
+<div class="cta-row">
+<a class="btn btn--primary" href="/fr/essai-gratuit/?audience=fleet">Mettez-vous en conformité avec TAGRA — 30 jours gratuits</a>
+<a class="btn btn--outline" href="#action-plan">Accéder au plan d’action →</a>
+</div>
+</aside>
+</div>
+</section>
+<section class="band band--blue">
+<div class="container">
+<div class="eyebrow anim-up">Test rapide · Inspiré de l’ELA &amp; Orientations d’EUR-Lex</div>
+<h2 class="h2-grad anim-up">Ai-je besoin d’un tachygraphe ?<br/>Obtenez la réponse en une minute</h2>
+<p style="max-width:760px; color:var(--text2); font-size:17px; line-height:1.6; margin-top:8px;">
+      Ce test en quatre étapes repose sur la logique du règlement (CE) n° 561/2006 et sur la vue d’ensemble de l’Autorité européenne du travail <em>« Tachygraphes dans les véhicules utilitaires légers à partir de 2026 »</em> (voir le <a href="https://www.ela.europa.eu/assets/lcv2026/index.html" rel="noopener" style="color:var(--blue-mid);" target="_blank">guide complet de l’ELA</a>). Il est fourni à titre indicatif uniquement — évaluez toujours chaque situation individuellement et consultez les orientations nationales des pays où vous exercez.
+    </p>
+<div aria-label="Assistant de décision concernant l’obligation d’utiliser un tachygraphe" aria-live="polite" class="vq-root" id="vansQuiz" role="region"></div>
+</div>
+</section>
+<section class="band">
+<div class="container">
+<div class="eyebrow anim-up">Que faire maintenant</div>
+<h2 class="h2-grad anim-up" id="action-plan">Plan d’action de mise en conformité : cinq étapes</h2>
+<p style="max-width:760px; color:var(--text); line-height:1.65; margin-top:8px;">
+      Classées par ordre d’urgence plutôt que par logique. <strong>Les étapes 2 et 3 dépendent de tiers</strong> — autorités nationales de délivrance des cartes et ateliers agréés — et peuvent prendre plusieurs semaines ; commencez donc les deux le même jour.
+    </p>
+<div class="steps">
+<div class="step anim-up">
+<div class="snum">Étape 1 · Champ d’application</div>
+<h3>Confirmez quels véhicules utilitaires sont concernés</h3>
+<p>Examinez les documents d’immatriculation, la masse maximale autorisée et les opérations réellement effectuées. L’obligation couvre les véhicules utilitaires de <strong>2,5–3,5 t</strong> utilisés pour le transport international de marchandises ou le cabotage — et, si vous tractez une remorque, la <strong>masse de l’ensemble</strong> compte. Ne retenez les véritables cas de transport pour compte propre ou d’opérations exclusivement nationales qu’après avoir vérifié les exemptions ci-dessous.</p>
+</div>
+<div class="step step--urgent anim-up">
+<div class="snum snum--urgent">Étape 2 · À faire aujourd’hui</div>
+<h3>Demandez les cartes de conducteur et d’entreprise</h3>
+<p>La délivrance peut prendre <strong>plusieurs semaines</strong>. Toute personne susceptible de conduire un véhicule utilitaire concerné doit disposer d’une <strong>carte conducteur</strong> délivrée par l’autorité nationale compétente ; le gestionnaire doit disposer d’une <strong>insérée</strong> pour autoriser les téléchargements, sécuriser les données et associer les véhicules à l’entreprise. La carte d’entreprise est également nécessaire avant qu’un atelier puisse verrouiller le tachygraphe pour votre entreprise — faites les demandes le même jour et suivez les dates d’expiration.</p>
+</div>
+<div class="step step--urgent anim-up">
+<div class="snum snum--urgent">Étape 3 · À faire aujourd’hui</div>
+<h3>Réservez un créneau dans un atelier G2v2</h3>
+<p>Vous avez besoin d’un <strong>tachygraphe intelligent version 2</strong> conforme au règlement d’exécution (UE) 2021/1228 de la Commission — les unités G1 et G2v1 ne suffisent pas. Les tachygraphes <strong>ne peuvent pas être installés par l’utilisateur</strong>: l’installation, l’activation, le scellement et l’étalonnage doivent être effectués par un <strong>atelier agréé</strong> (règlement d’exécution (UE) 2016/799 de la Commission, article 22). La capacité des ateliers constitue le goulet d’étranglement matériel ; réservez donc un créneau en parallèle de vos demandes de cartes.</p>
+</div>
+<div class="step anim-up">
+<div class="snum">Étape 4 · Données</div>
+<h3>Mettez en place le téléchargement, l’évaluation et l’archivage</h3>
+<p>installer <strong>des cartes de conducteur au moins tous les 28 jours</strong> et <strong>des unités embarquées au moins tous les 90 jours</strong>. Vous avez besoin d’un lecteur de cartes de conducteur et d’une clé de téléchargement de l’unité embarquée (ou d’un téléchargement à distance lorsqu’il est pris en charge), ainsi que d’un responsable désigné pour chaque tâche. Utilisez <a href="/fr/entreprises/" style="color:var(--green-cta); font-weight:600;">TAGRA for Fleet</a> ou notre service géré pour contrôler les infractions, produire des rapports et <strong>archiver</strong> les données pendant au moins un an — souvent 2–3 ans selon les règles nationales.</p>
+</div>
+<div class="step anim-up">
+<div class="snum">Étape 5 · Conducteurs</div>
+<h3>Préparez les conducteurs aux contrôles routiers</h3>
+<p>Informez chaque conducteur avant sa prochaine mission transfrontalière : insertion de la carte, <strong>saisies manuelles</strong> pour les périodes passées à l’écart du véhicule, et saisie des <strong>pays au début et à la fin</strong>. Formez les répartiteurs à signaler chaque mission transfrontalière d’un véhicule utilitaire afin qu’aucun trajet concerné ne soit effectué sans carte valide et unité en état de fonctionnement.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="band">
+<div class="container">
+<div class="eyebrow anim-up">Champ d’application</div>
+<h2 class="h2-grad anim-up">Qui est concerné — et qui ne l’est pas</h2>
+<div class="twocol">
+<div class="card anim-up">
+<h3>Concernés par les nouvelles règles</h3>
+<ul>
+<li>Les gestionnaires de <strong>transport transfrontalier de marchandises</strong> dans l’UE, l’EEE et en Suisse, utilisant des véhicules utilitaires dont la masse maximale autorisée est de <strong>2,5–3,5 t</strong>.</li>
+<li>Les opérateurs effectuant du <strong>cabotage</strong> avec de tels véhicules dans un État membre autre que celui de leur établissement.</li>
+<li>Les véhicules dont la <strong>masse de l’ensemble (véhicule + remorque)</strong> atteint ou dépasse 2,5 t selon les définitions applicables.</li>
+<li>Les entreprises transportant des marchandises <strong>pour le compte d’autrui</strong> au-delà des frontières, ou pour compte propre lorsque le conducteur exerce professionnellement la conduite.</li>
+<li>Pour les opérateurs britanniques se rendant dans l’UE après le Brexit, les règles de l’UE s’appliquent sur la partie UE des trajets ; les règles AETR s’appliquent aux trajets transfrontaliers en Suisse et dans l’EEE selon l’immatriculation.</li>
+</ul>
+</div>
+<div class="card card--blue anim-up">
+<h3>NON concernés</h3>
+<ul>
+<li>Les opérations <strong>exclusivement nationales</strong> dans un seul pays (sans trajet transfrontalier ni cabotage), sous réserve des règles nationales.</li>
+<li><strong>Privé, à des fins non commerciales</strong> utilisation sans lien avec une activité économique.</li>
+<li><strong>Pour compte propre</strong> déplacements lors desquels la conduite n'est pas l'activité principale du conducteur, dans le cadre de l'exemption prévue à l'article 3, point h), du règlement (CE) n° 561/2006.</li>
+<li>Véhicules dont la masse autorisée <strong>≤ 2,5 t</strong> et ensembles qui restent en dessous du seuil.</li>
+<li>Véhicules conçus pour transporter <strong>au maximum neuf personnes, conducteur compris</strong> lorsqu'ils sont utilisés pour le transport de personnes et non pour le transport de marchandises.</li>
+</ul>
+</div>
+</div>
+<div class="info-card anim-up">
+<div class="badge">Exemple pratique</div>
+<h3>Je franchis une frontière pour récupérer des matériaux pour ma propre entreprise</h3>
+<p>
+        Un artisan conduit un véhicule utilitaire de 3,2 t du pays A vers le pays B pour récupérer des outils et des fournitures destinés à sa propre entreprise. S'il s'agit d'un <em>transport pour compte propre</em> de marchandises et si l'activité principale du conducteur n'est pas la conduite, l'exemption prévue à l' <strong>article 3, point h), du règlement (CE) n° 561/2006</strong> peut s'appliquer. Lors d'un contrôle routier, les autorités de contrôle s'attendront à ce que l' <strong>objet</strong> du trajet et le <strong>lien</strong> entre le conducteur, l'entreprise et les marchandises soit clairement établi. Gardez les documents à portée de main et soyez prêt à expliquer brièvement le trajet.
+      </p>
+<p style="margin-top:10px;">
+        Documentation de référence : <a href="https://www.ela.europa.eu/" rel="noopener" style="color:var(--blue-mid);" target="_blank">Autorité européenne du travail</a> et le texte juridique consolidé sur <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A02006R0561-20240522" rel="noopener" style="color:var(--blue-mid);" target="_blank">EUR-Lex (règlement 561/2006)</a>.
+      </p>
+</div>
+</div>
+</section>
+<section class="band band--gray">
+<div class="container">
+<div class="eyebrow anim-up">Pratique en matière de contrôle</div>
+<h2 class="h2-grad anim-up">Transport pour compte propre lors d'un contrôle routier</h2>
+<p style="max-width:760px; color:var(--text); line-height:1.65; margin-top:8px;">
+      Si vous invoquez l'exemption relative au transport pour compte propre, soyez prêt à le démontrer rapidement. Les agents sont formés pour demander à qui appartiennent les marchandises, quel est l'objet du trajet, si le transport est accessoire à l'activité de l'entreprise et si le conducteur exerce une fonction autre que celle de conducteur professionnel. La clarté et les documents disponibles déterminent généralement l'issue du contrôle.
+    </p>
+<div class="doc-bento">
+<div class="doc-card anim-up">
+<div class="num">Document n° 1</div>
+<h3>Document relatif aux marchandises</h3>
+<p>Facture, bon de livraison, reçu ou confirmation de commande montrant que les marchandises sont destinées à votre entreprise — et non à un transport pour le compte d'un tiers.</p>
+</div>
+<div class="doc-card anim-up">
+<div class="num">Document n° 2</div>
+<h3>Objet du trajet</h3>
+<p>Une courte note interne destinée au conducteur : lieu de départ, destination et motif (par exemple : « récupération de pièces pour une installation chez un client »).</p>
+</div>
+<div class="doc-card anim-up">
+<div class="num">Document n° 3</div>
+<h3>Lien entre le conducteur et l'entreprise</h3>
+<p>Contrat de travail ou autorisation écrite de l'entreprise, ainsi que les documents du véhicule (propriété / crédit-bail / location) correspondant à l'entreprise.</p>
+</div>
+</div>
+<p style="margin-top: 24px; color:var(--text); line-height:1.6; max-width:760px;">
+<strong>En pratique :</strong> Le conducteur doit être capable d'indiquer brièvement ce qu'il transporte, d'où viennent les marchandises, où elles vont et à qui elles sont destinées. C'est généralement ce qui détermine l'issue du contrôle.
+    </p>
+</div>
+</section>
+<section class="band band--gray">
+<div class="container">
+<div class="eyebrow anim-up">Besoin d'aide pour tout mettre en place correctement ?</div>
+<h2 class="h2-grad anim-up">Échangez avec un spécialiste TAGRA</h2>
+<div class="contact-grid">
+<div class="card anim-up">
+<h3 style="margin-bottom:12px;">Contact direct</h3>
+<p style="color:var(--text); line-height:1.65;">
+          Nos spécialistes ont accompagné des centaines d'opérateurs lors du déploiement de tachygraphes. Nous pouvons vous aider à évaluer vos véhicules, planifier les installations, configurer les téléchargements et former votre personnel — que vous exploitiez deux véhicules utilitaires ou deux cents.
+        </p>
+<p style="margin-top:16px; line-height:1.8;">
+<strong>Téléphone :</strong> <a href="tel:+420739005345" style="color:var(--blue-mid);">En ligne · Code QR</a> · <a href="tel:+420739544322" style="color:var(--blue-mid);">+420 739 544 322</a><br/>
+<strong>E-mail :</strong> <a href="mailto:sales@tagra.app" style="color:var(--blue-mid);">Écrivez à</a>
+</p>
+<div class="cta-row">
+<a class="btn btn--primary" href="/fr/essai-gratuit/">Essayez TAGRA gratuitement pendant 30 jours</a>
+<a class="btn btn--outline" href="/fr/contact/">Formulaire de contact →</a>
+</div>
+</div>
+<div class="callout--green anim-up">
+<div class="eyebrow" style="color:var(--green-cta);">Service géré</div>
+<h3>Vous ne souhaitez pas effectuer vous-même l'évaluation ?</h3>
+<ul>
+<li><strong>Moins d'administration</strong> — nous téléchargeons et évaluons les données pour vous</li>
+<li><strong>Suivi des échéances</strong> — nous surveillons les règles des 28/90 jours pour que vous n'ayez pas à le faire</li>
+<li><strong>Prêt pour un audit</strong> rapports et archives sécurisées, disponibles à la demande</li>
+<li>Compatible avec la télématique DKV LIVE pour le téléchargement à distance</li>
+</ul>
+<p style="margin-top:16px; line-height:1.8;">
+<strong>Téléphone :</strong> <a href="tel:+420739005345" style="color:var(--green-cta);">En ligne · Code QR</a><br/>
+<strong>E-mail :</strong> <a href="mailto:sales@tagra.app" style="color:var(--green-cta);">Écrivez à</a>
+</p>
+<div class="cta-row">
+<a class="btn btn--outline" href="/fr/integrations/dkv-live/" style="border-color:var(--green-cta); color:var(--green-cta);">Intégration DKV LIVE →</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="band">
+<div class="container">
+<div class="cta-box">
+<h3>L’obligation est déjà en vigueur</h3>
+<p>Depuis le 1er juillet 2026, les véhicules utilitaires de 2,5 à 3,5 tonnes effectuant des trajets internationaux doivent être équipés d’un tachygraphe — et les données doivent être téléchargées, conservées pendant un an et contrôlées. TAGRA se charge du téléchargement et de l’évaluation pour l’ensemble de votre flotte.</p>
+<a class="cta-btn" href="/fr/essai-gratuit/?audience=fleet&amp;src=vans">Essayez TAGRA gratuitement pendant 30 jours →</a>
+</div>
+</div>
+</section>
+<section class="band">
+<div class="container">
+<div class="eyebrow anim-up">Poursuivre votre apprentissage</div>
+<h2 class="h2-grad anim-up">Pour aller plus loin</h2>
+<div class="rel-featured">
+<div class="rel-eyebrow">Guide complet</div>
+<h3>Tachygraphe numérique : comment télécharger, évaluer et archiver correctement les données</h3>
+<p style="color:rgba(255,255,255,0.85); margin-bottom:16px; line-height:1.6;">Échéances de 28/90 jours, éléments nécessaires, procédure correcte et contrôles effectivement réalisés par les inspecteurs lors des contrôles routiers et des audits en entreprise.</p>
+<a href="/fr/articles/telecharger-analyser-archiver-donnees-tachygraphe/">Lire le guide complet →</a>
+</div>
+<h3 style="margin: 32px 0 12px; font-size: 14px; color: var(--text2); text-transform: uppercase; letter-spacing: .1em; font-weight: 700;">Sources officielles</h3>
+<div class="related-grid">
+<div class="rel-card anim-up">
+<div class="rel-eyebrow">Officiel · AET (UE)</div>
+<a href="https://www.ela.europa.eu/assets/lcv2026/index.html" rel="noopener" target="_blank">Tachygraphes dans les véhicules utilitaires légers à partir de 2026</a>
+<p>Vue d'ensemble de l'Autorité européenne du travail sur l'extension de l'obligation d'utiliser un tachygraphe aux véhicules utilitaires légers dans toute l'UE.</p>
+</div>
+<div class="rel-card anim-up">
+<div class="rel-eyebrow">Officiel · EUR-Lex</div>
+<a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=legissum%3A4382208" rel="noopener" target="_blank">Règlement (CE) n° 561/2006 — résumé</a>
+<p>Temps de conduite, pauses et temps de repos — le fondement de l'utilisation des tachygraphes dans toute l'UE.</p>
+</div>
+<div class="rel-card anim-up">
+<div class="rel-eyebrow">Officiel · DVSA du Royaume-Uni</div>
+<a href="https://www.gov.uk/government/collections/drivers-hours-rules-and-regulations" rel="noopener" target="_blank">Temps de conduite des conducteurs et règles relatives aux tachygraphes</a>
+<p>Guide officiel britannique de la Driver and Vehicle Standards Agency, pertinent pour les opérations entre le Royaume-Uni et l'UE.</p>
+</div>
+</div>
+<h3 style="margin: 32px 0 12px; font-size: 14px; color: var(--text2); text-transform: uppercase; letter-spacing: .1em; font-weight: 700;">Plus de contenus de TAGRA</h3>
+<div class="related-grid">
+<div class="rel-card anim-up">
+<div class="rel-eyebrow">Vue d'ensemble</div>
+<a href="/fr/articles/qui-doit-analyser-donnees-tachygraphe-2026/">Qui doit évaluer les données du tachygraphe à partir de 2026</a>
+<p>Responsabilités et modèles pratiques pour les opérateurs de véhicules utilitaires, de poids lourds et d'autocars dans toute l'UE.</p>
+</div>
+<div class="rel-card anim-up">
+<div class="rel-eyebrow">Référence</div>
+<a href="/fr/articles/symboles-tachygraphe/">Symboles du tachygraphe &amp; codes d’anomalie</a>
+<p>Comprenez les pictogrammes, les codes d'anomalie et les messages courants des unités VDO, Stoneridge, Actia et EFAS.</p>
+</div>
+<div class="rel-card anim-up">
+<div class="rel-eyebrow">Intégration</div>
+<a href="/fr/integrations/dkv-live/">Intégration de DKV LIVE avec TAGRA</a>
+<p>Connectez la télématique pour les téléchargements à distance, l'automatisation des processus et une meilleure visibilité opérationnelle.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="band band--blue">
+<div class="container">
+<div class="eyebrow anim-up">FAQ</div>
+<h2 class="h2-grad anim-up">Questions fréquemment posées</h2>
+<div class="faq">
+<details>
+<summary>Qui est soumis à l'obligation d'utiliser un tachygraphe depuis le 1er juillet 2026 ?</summary>
+<div class="faq-a">
+          Depuis le 1er juillet 2026, <strong>les véhicules utilitaires légers (VUL) de 2,5–3,5 t</strong> utilisés pour le <strong>effectuant un transport international de marchandises</strong> ou une <strong>cabotage</strong> au sein de l'UE sont soumis à l'obligation d'utiliser un tachygraphe introduite par le règlement (UE) 2020/1054 modifiant le règlement (CE) n° 561/2006. Un <strong>tachygraphe intelligent G2v2</strong>, des cartes de conducteur et des cartes d'entreprise ainsi qu'une gestion structurée des données sont également obligatoires. Les véhicules de plus de 3,5 t entrent déjà aujourd'hui dans le champ d'application.
+        </div>
+</details>
+<details>
+<summary>Un véhicule utilitaire doit-il être équipé d'un tachygraphe s'il ne circule que sur le territoire national ?</summary>
+<div class="faq-a">
+          En règle générale, <strong>non</strong>. Si vos opérations sont strictement nationales, sans trajet transfrontalier ni cabotage, l'obligation de l'UE applicable au transport transfrontalier ne s'applique pas. Vérifiez toujours les <strong>règles nationales</strong> , car certains États membres imposent des exigences supplémentaires dans des cas précis (par exemple, pour les marchandises dangereuses ou les marchés publics).
+        </div>
+</details>
+<details>
+<summary>L'obligation s'applique-t-elle si le véhicule utilitaire fait moins de 2,5 t, mais que l'ensemble dépasse ce seuil ?</summary>
+<div class="faq-a">
+<strong>Oui</strong>, dans la plupart des cas. Le contrôle porte sur la <strong>masse de l’ensemble</strong> (véhicule + remorque) pertinente. Si vous attachez une remorque et que la masse autorisée de l'ensemble franchit le seuil, et que vous effectuez un transport international pour compte d'autrui ou contre rémunération, les règles s'appliquent. Évaluez vos ensembles et itinéraires habituels.
+        </div>
+</details>
+<details>
+<summary>De quoi ai-je besoin en plus de l'installation du tachygraphe ?</summary>
+<div class="faq-a">
+          Au-delà de l'appareil lui-même, vous avez besoin de <strong>cartes de conducteur</strong>, d'une <strong>insérée</strong>, d'une procédure de <strong>téléchargements réguliers</strong> (28/90 jours), d'une <strong>évaluation</strong> des infractions et de l' <strong>archivage</strong> pendant la durée légale de conservation. La formation des conducteurs et la définition claire des responsabilités internes sont essentielles. <a href="/fr/entreprises/" style="color:var(--blue-mid);">TAGRA for Fleet</a> couvre les téléchargements, l'évaluation et les rapports dans une seule offre.
+        </div>
+</details>
+<details>
+<summary>À quelle fréquence les données doivent-elles être téléchargées ?</summary>
+<div class="faq-a">
+          installer <strong>des données de la carte de conducteur au moins tous les 28 jours</strong> et <strong>des données de l'unité embarquée au moins tous les 90 jours</strong>. De nombreux opérateurs téléchargent les données plus fréquemment afin de réduire les risques et de simplifier les enregistrements. Avec le téléchargement à distance (par exemple, DKV LIVE), cette opération s'effectue automatiquement, sans intervention du conducteur.
+        </div>
+</details>
+<details>
+<summary>Quelles cartes sont nécessaires ?</summary>
+<div class="faq-a">
+          Chaque conducteur a besoin d'une <strong>carte conducteur</strong>. Le gestionnaire a besoin d'une <strong>insérée</strong> pour l'autorisation et le téléchargement sécurisé des données du véhicule. Les cartes d'atelier et de contrôleur existent, mais elles sont délivrées aux ateliers agréés et aux autorités, et non aux opérateurs.
+        </div>
+</details>
+<details>
+<summary>Je ne suis pas transporteur — je franchis occasionnellement une frontière pour ma propre entreprise. Ai-je besoin d'un tachygraphe ?</summary>
+<div class="faq-a">
+          Les facteurs déterminants sont la <strong>masse autorisée</strong> (y compris toute remorque) et le <strong>objet</strong> du transport. S’il ne s’agit pas d’un transport pour compte d’autrui et que la conduite n’est pas votre profession principale, l’ <strong>exemption pour compte propre</strong> prévue à l’article 3, point h), du règlement 561/2006 s’applique généralement. Nous vous recommandons d’évaluer chaque situation individuellement — <a href="/fr/contact/" style="color:var(--blue-mid);">contactez-nous</a> pour une vérification rapide.
+        </div>
+</details>
+<details>
+<summary>Comment démontrer en pratique qu’il s’agit d’un transport pour compte propre ?</summary>
+<div class="faq-a">
+          Il n’existe pas de formulaire universel unique. Le plus souvent : un <strong>document relatif aux marchandises</strong> (facture, bon de livraison, commande), une <strong>brève note indiquant le motif du trajet</strong> (de–à et motif), ainsi que le <strong>lien entre le conducteur, l’entreprise et le véhicule</strong> (autorisation, relation de travail, documents du véhicule).
+        </div>
+</details>
+<details>
+<summary>Existe-t-il une exemption pour les artisans ?</summary>
+<div class="faq-a">
+          Oui — l’« <strong>exemption pour les artisans</strong> » prévue à l’article 3, point aa), du règlement 561/2006. Si la conduite n’est pas votre activité principale et que vous transportez uniquement des <em>matériaux, instruments ou équipements nécessaires à votre activité professionnelle</em>, le tachygraphe n’est généralement pas requis. La transposition nationale peut apporter des précisions — consultez les orientations du pays dans lequel vous exercez.
+        </div>
+</details>
+<details>
+<summary>Qu’est-ce que le cabotage ?</summary>
+<div class="faq-a">
+<strong>Le cabotage</strong> est le transport de marchandises à l’intérieur d’un pays de l’UE par un transporteur établi dans un autre pays de l’UE. <strong>Exemple :</strong> un véhicule utilitaire tchèque décharge des marchandises à Hambourg, puis prend un nouveau chargement de Hambourg à Berlin. Les deux trajets relèvent d’opérations de cabotage et déclenchent l’obligation d’utiliser un tachygraphe à partir du 1er juillet 2026 pour les véhicules utilitaires de 2,5–3,5 t.
+        </div>
+</details>
+<details>
+<summary>Que se passe-t-il si je dispose uniquement d’un véhicule utilitaire de location ? Qui s’occupe du tachygraphe ?</summary>
+<div class="faq-a">
+          Si vous louez un véhicule utilitaire de plus de 2,5 t pour un transport commercial international, celui-ci doit être équipé d’un tachygraphe. La <strong>responsabilité du téléchargement correct des données et du respect des règles vous incombe en tant qu’exploitant</strong>, et non à la société de location. N’oubliez pas d’authentifier le tachygraphe avec votre carte d’entreprise avant le trajet.
+        </div>
+</details>
+<details>
+<summary>Puis-je installer moi-même le tachygraphe ou dois-je m’adresser à un atelier ?</summary>
+<div class="faq-a">
+          Vous <strong>ne pouvez pas</strong> installer, activer ou étalonner vous-même un tachygraphe. L’installation, l’activation, le scellement et la vérification périodique (étalonnage) doivent être réalisés exclusivement par un <strong>atelier agréé</strong> atelier agréé
+        </div>
+</details>
+<details>
+<summary>Quelles sanctions s’appliquent si je n’ai pas de tachygraphe après le 1er juillet 2026 ?</summary>
+<div class="faq-a">
+          L’absence de tachygraphe, la conduite sans carte ou le défaut de téléchargement des données sont classés parmi les <strong>infractions très graves</strong> infractions les plus graves <strong>dans l’ensemble de l’UE au titre de la directive 2006/22/CE et du cadre des infractions les plus graves (MSI). Les sanctions varient selon l’État membre et peuvent atteindre</strong> des milliers d’euros
+        </div>
+</details>
+<details>
+<summary>par infraction, avec une immobilisation éventuelle du véhicule lors d’un contrôle routier et, en cas d’infractions répétées, la perte de l’honorabilité du gestionnaire.</summary>
+<div class="faq-a">
+          Qu’est-ce qui change pour les gestionnaires britanniques après le Brexit ? <a href="https://www.gov.uk/government/collections/drivers-hours-rules-and-regulations" rel="noopener" style="color:var(--blue-mid);" target="_blank">orientations de la DVSA britannique</a>.
+        </div>
+</details>
+</div>
+</div>
+</section>
+<section class="band band--gray"><div class="container">
+<div class="eyebrow anim-up">Par marché</div>
+<h2 class="h2-grad anim-up">Cela s’applique-t-il dans le pays où vous exercez ?</h2>
+<div class="twocol">
+<div class="info-card anim-up"><h3>EU &amp; Exploitants de l’EEE</h3><p>Les véhicules utilitaires effectuant un <strong>2,5–3,5 t</strong> utilisés pour le <strong>transport international de marchandises pour compte d’autrui ou du cabotage</strong>, doivent être équipés d’un tachygraphe intelligent version 2 à partir du 1er juillet 2026 au titre du règlement (CE) 561/2006, modifié par le règlement (UE) 2020/1054. Le transport exclusivement national à l’intérieur d’un seul État membre reste en dehors du champ de l’obligation. Le contrôle et les sanctions relèvent des autorités nationales.</p></div>
+<div class="info-card anim-up"><h3>Exploitants britanniques</h3><p>Le même seuil de 2,5 t s’applique aux <strong>trajets pour compte d’autrui entre le Royaume-Uni et l’UE</strong> — ce que confirme la DVSA au titre de l’accord de commerce et de coopération entre le Royaume-Uni et l’UE. Les véhicules utilitaires qui ne franchissent jamais de frontière restent soumis aux <strong>règles relatives aux temps de conduite des conducteurs&#8217; britanniques</strong> et n’ont pas besoin de tachygraphe. Le transport pour compte propre peut être exempté lorsque la conduite n’est pas l’&#8217;activité principale du conducteur. Pour les trajets internationaux, les conducteurs doivent présenter <strong>56 jours</strong> les enregistrements des données. <a href="/articles/tachograph-rules-uk-dvsa-operator-licence/">Guide complet pour les exploitants britanniques → <span class="en-badge">(en anglais)</span></a></p></div>
+</div>
+<div class="warning-box anim-up"><p class="warning-box__title">Sur les deux marchés, c’est la licence qui constitue le véritable risque</p><p>Les amendes diffèrent — le dépôt exigé lors d’un contrôle routier dans l’UE peut atteindre 8 000 € en cas de manipulation frauduleuse ; au Royaume-Uni, les sanctions fixes graduées vont d’environ 50 £ à plus de 300 £ par infraction. Ce qui met les entreprises en difficulté dans les deux cas, c’est la licence d’exploitation : les téléchargements manquants répétés et les lacunes inexpliquées sont les éléments sur lesquels les autorités interviennent, raison pour laquelle les gestionnaires évaluent les données au lieu de simplement les stocker.</p></div>
+</div></section><section class="band">
+<div class="container">
+<div class="eyebrow anim-up">Auteur &amp; assistance</div>
+<h2 class="h2-grad anim-up">Truck Data Technology, s.r.o.</h2>
+<div class="author-block">
+<p><strong>Bureau &amp; Siège et assistance :</strong> République tchèque — au service des exploitants dans l’UE et au Royaume-Uni.</p>
+<p><strong>Téléphone :</strong> <a href="tel:+420739005345" style="color:var(--blue-mid);">En ligne · Code QR</a> · <a href="tel:+420739544322" style="color:var(--blue-mid);">+420 739 544 322</a></p>
+<p><strong>E-mail :</strong> <a href="mailto:sales@tagra.app" style="color:var(--blue-mid);">Écrivez à</a></p>
+<p><strong>Site web :</strong> <a href="https://www.tdt.cz" rel="noopener" style="color:var(--blue-mid);" target="_blank">www.tdt.cz</a></p>
+<p style="margin-top:12px; color:var(--text2); font-size:14px;">Article publié le 17 mars 2026 · Mis à jour le 12 août 2026</p>
+</div>
+</div>
+</section>
+</main>
+<footer class="site-footer" role="contentinfo">
+<div class="footer-inner">
+<div>
+<div class="footer-logo"><img alt="TAGRA" height="20" src="/assets/img/logo-dark.svg?v=20260513zh" width="88" loading="lazy"/></div>
+<p class="footer-desc">Logiciel professionnel d'analyse des tachygraphes. Téléchargement des cartes de conducteur, analyse des tachygraphes numériques, temps de conduite des conducteurs dans l'UE et directive relative au temps de travail des conducteurs de poids lourds. Développé par Truck Data Technology, s.r.o.</p>
+</div>
+<div class="footer-col">
+<h2 class="footer-col-title">Produit</h2>
+<ul>
+<li><a href="/fr/entreprises/">Pour les exploitants de parcs</a></li>
+<li><a href="/fr/conducteurs/">Pour les conducteurs professionnels</a></li>
+<li><a href="/fr/autorites-de-controle/">Pour les contrôles</a></li>
+<li><a href="/fr/fonctionnement/">Fonctionnement</a></li>
+<li><a href="/fr/pour-qui/">Pour qui</a></li>
+<li><a href="/fr/faq/">FAQ</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h2 class="footer-col-title">Ressources</h2>
+<ul>
+<li><a href="/fr/articles/">Articles</a></li><li><a href="/fr/manuels/">Manuels</a></li>
+<li><a href="/fr/articles/symboles-tachygraphe/">Symboles du tachygraphe</a></li>
+<li><a href="/fr/integrations/dkv-live/">DKV LIVE®</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h2 class="footer-col-title">Entreprise</h2>
+<ul>
+<li><a href="/fr/contact/">Contact</a></li>
+<li><a href="https://www.tdt.cz" rel="noopener" target="_blank">Truck Data Technology</a></li>
+<li><a href="/nl/">English</a></li><li><a href="/de/">Deutsch</a></li><li><a href="/pl/">Polski</a></li><li><a href="/el/">Ελληνικά</a></li><li><a href="/hu/">Magyar</a></li><li><a href="/it/">Italiano</a></li><li><a href="https://www.tdt.cz/" rel="noopener" target="_blank">Čeština</a></li><li><a href="https://www.tdt.sk/" rel="noopener" target="_blank">Slovenčina</a></li></ul>
+</div>
+</div>
+<div class="footer-bottom">
+<span>© 2026 Truck Data Technology, s.r.o. Tous droits réservés.</span>
+<span><a href="/fr/contact/">Contact</a> · <a href="https://www.tdt.cz" rel="noopener" target="_blank">tdt.cz</a> · <a href="/fr/confidentialite/">Confidentialité &amp; cookies</a></span>
+</div>
+</footer>
+<div aria-label="Inscription rapide à l'essai" class="sticky-cta" id="stickyCta" role="complementary">
+<div class="sticky-cta-inner">
+<span class="sticky-cta-text">Les véhicules utilitaires de 2,5–3,5 t doivent être équipés d’un tachygraphe depuis juillet 2026. TAGRA gère les données.</span>
+<a class="sticky-cta-btn" href="/fr/essai-gratuit/?audience=fleet&amp;src=vans">Essayez TAGRA gratuitement pendant 30 jours →</a>
+<button aria-label="Fermer" class="sticky-cta-close" id="stickyCtaClose">×</button>
+</div>
+</div>
+<script>
+/* STICKY CTA BAR */
+(function(){
+  var bar = document.getElementById('stickyCta');
+  if(!bar) return;
+  var KEY = 'tmx-sticky-cta-dismissed';
+  var dismissed = false;
+  try { dismissed = localStorage.getItem(KEY) === '1'; } catch(e) {}
+  if (dismissed) return;
+  function check(){
+    var top = document.documentElement.scrollTop || document.body.scrollTop;
+    var nearBottom = (window.innerHeight + top) >= (document.documentElement.scrollHeight - 80);
+    if (top > 700 && !nearBottom) bar.classList.add('is-visible');
+    else bar.classList.remove('is-visible');
+  }
+  window.addEventListener('scroll', check, { passive: true });
+  check();
+  var closeBtn = document.getElementById('stickyCtaClose');
+  if (closeBtn) closeBtn.addEventListener('click', function(){
+    bar.classList.remove('is-visible');
+    try { localStorage.setItem(KEY, '1'); } catch(e) {}
+  });
+})();
+</script>
+<script>
+(function(){
+  const root = document.getElementById('vansQuiz');
+  if (!root) return;
+
+  const NODES = {
+    'start': {
+      step: 1, label: 'Vehicle weight',
+      question: 'What is the gross weight of your vehicle or combination?',
+      hint: 'Check the permissible maximum mass on your registration document — include any trailer.',
+      options: [
+        { id: 'r-light', label: 'Up to 2.5 t' },
+        { id: 'q-trans-25', label: '2.5 – 3.5 t' },
+        { id: 'r-over-35', label: 'Above 3.5 t' }
+      ],
+      threeCol: true
+    },
+    'q-trans-25': {
+      step: 2, label: 'Type of transport',
+      question: 'Do you operate international goods transport with the vehicle?',
+      hint: 'This covers cross-border carriage between EU/EEA/UK and cabotage (domestic operations performed in another country).',
+      options: [
+        { id: 'r-domestic-25', label: 'No, domestic only' },
+        { id: 'q-purpose-25', label: 'Yes, cross-border or cabotage' }
+      ]
+    },
+    'q-purpose-25': {
+      step: 3, label: 'Purpose of transport',
+      question: 'What is the purpose of the cross-border transport?',
+      hint: 'Hire or reward = carrying goods for a customer for payment. Own account = transporting your own goods for your own business.',
+      options: [
+        { id: 'r-yes-25', label: "Hire or reward (carrying others' goods)" },
+        { id: 'q-driver-main-25', label: 'Own account (own goods, own company)' }
+      ]
+    },
+    'q-driver-main-25': {
+      step: 4, label: "Driver's profession",
+      question: "Is driving the driver's main profession?",
+      hint: 'If the driver works primarily as a professional driver, the own-account exemption does NOT apply. If driving is secondary (e.g. tradesperson, technician, business owner), the exemption may apply.',
+      options: [
+        { id: 'r-yes-25', label: 'Yes, professional driver' },
+        { id: 'r-own-account-25', label: 'No, driving is secondary' }
+      ]
+    },
+    'r-light': {
+      kind: 'no',
+      title: 'Tachograph generally not required',
+      desc: 'Vehicles and combinations <strong>up to 2.5 t</strong> permissible mass generally fall outside the scope of Regulation (EC) No 561/2006 — even after July 2026.',
+      bullets: [
+        'Watch the <strong>combination mass</strong> — if you attach a trailer and exceed 2.5 t, you enter the 2.5–3.5 t bracket.',
+        'For absolute certainty, verify your specific situation in official sources or with a specialist.'
+      ],
+      ctas: [
+        { href: 'https://www.ela.europa.eu/assets/lcv2026/index.html', label: 'Read ELA guidance', ext: true, outline: true }
+      ]
+    },
+    'r-domestic-25': {
+      kind: 'no',
+      title: 'Tachograph generally not required',
+      desc: 'If you operate a 2.5–3.5 t van <strong>strictly domestically</strong> (no cross-border leg and no cabotage), the new July 2026 obligation does not apply. The change targets international commercial transport and cabotage within the EU.',
+      bullets: [
+        'If you start cross-border operations, the obligation kicks in automatically.',
+        'Other operator duties (working time, goods documentation) still apply under national rules.'
+      ],
+      ctas: [
+        { href: 'https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=legissum%3A4382208', label: 'Read EUR-Lex summary', ext: true, outline: true }
+      ]
+    },
+    'q-purpose-25': null, // safety; will be redefined above
+    'r-own-account-25': {
+      kind: 'maybe',
+      title: 'Own-account exemption likely applies',
+      desc: 'If the transport is <strong>not for hire or reward</strong> and <strong>driving is not the main profession</strong> of the driver, the exemption in <strong>Article 3(h) of Regulation 561/2006</strong> usually applies and a tachograph is generally not required. <strong>However:</strong> the specific situation and documentation matter.',
+      bullets: [
+        'Carry in the vehicle: <strong>document for the goods</strong> (invoice, delivery note), a <strong>brief journey-purpose note</strong>, and proof of the <strong>driver–company–vehicle</strong> link.',
+        'Be prepared for the control authority to ask you to demonstrate that it is not transport for hire or reward.',
+        'In doubt, assess individually with a specialist.'
+      ],
+      ctas: [
+        { href: '/contact/', label: 'Talk to a TAGRA expert', primary: true },
+        { href: 'https://www.ela.europa.eu/assets/lcv2026/index.html', label: 'Read ELA guidance', ext: true, outline: true }
+      ]
+    },
+    'r-yes-25': {
+      kind: 'yes',
+      title: 'Tachograph is required (since 1 July 2026)',
+      desc: 'You operate a 2.5–3.5 t van for <strong>international goods transport for hire or reward</strong> or <strong>cabotage</strong> within the EU. From <strong>1 July 2026</strong> you must have a smart tachograph version 2 (G2v2).',
+      bullets: [
+        '<strong>Installation:</strong> G2v2 tachograph at an approved tachograph workshop.',
+        '<strong>Cards:</strong> driver card for every driver + company card for the operator.',
+        '<strong>Data downloads:</strong> driver cards at least every 28 days, vehicle units at least every 90 days.',
+        '<strong>Evaluation and archiving:</strong> by software (e.g. TAGRA) or service. Archive at least 1 year.'
+      ],
+      ctas: [
+        { href: '/try/', label: 'Try TAGRA free for 30 days', primary: true },
+        { href: '/integrations/dkv-live/', label: 'See DKV LIVE integration', outline: true }
+      ]
+    },
+    'r-over-35': {
+      kind: 'yes',
+      title: 'Tachograph already required today',
+      desc: 'For vehicles <strong>above 3.5 t</strong> in goods transport, the tachograph obligation under Regulation (EC) No 561/2006 applies <strong>today</strong> — not just from July 2026. New vehicles must be fitted with the smart tachograph version 2 (G2v2).',
+      bullets: [
+        '<strong>Cards:</strong> driver card for every driver + company card for the operator.',
+        '<strong>Data downloads:</strong> driver cards every 28 days, vehicle units every 90 days.',
+        '<strong>Evaluation and archiving:</strong> by software (e.g. TAGRA) or service. Archive at least 1 year.',
+        'There are <strong>taxative exemptions</strong> under Articles 3 and 13 of Reg 561/2006 (agricultural, forestry, fire/rescue vehicles, tractors up to 40 km/h, etc.) — verify any applicable exemption with national authorities.'
+      ],
+      ctas: [
+        { href: '/try/', label: 'Try TAGRA free for 30 days', primary: true },
+        { href: 'https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A02006R0561-20240522', label: 'List of exemptions (EUR-Lex)', ext: true, outline: true }
+      ]
+    }
+  };
+  // Re-add q-purpose-25 properly
+  NODES['q-purpose-25'] = {
+    step: 3, label: 'Purpose of transport',
+    question: 'What is the purpose of the cross-border transport?',
+    hint: 'Hire or reward = carrying goods for a customer for payment. Own account = transporting your own goods for your own business.',
+    options: [
+      { id: 'r-yes-25', label: "Hire or reward (carrying others' goods)" },
+      { id: 'q-driver-main-25', label: 'Own account (own goods, own company)' }
+    ]
+  };
+
+  function escapeHtml(s){ return String(s).replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m])); }
+
+  let state = { nodeId: 'start', path: [] };
+
+  function progressDots(step){
+    let html = '<div class="vq-progress" aria-hidden="true">';
+    for(let i=1;i<=4;i++){
+      const cls = i < step ? 'vq-dot is-done' : (i===step ? 'vq-dot is-active' : 'vq-dot');
+      html += '<span class="'+cls+'"></span>';
+    }
+    html += '</div>';
+    return html;
+  }
+
+  function renderQuestion(node){
+    const optCols = node.threeCol ? 'vq-options vq-3col' : 'vq-options';
+    let html = '<div class="vq-stage">';
+    html += '<div class="vq-header">';
+    html += progressDots(node.step);
+    html += '<div class="vq-step">Step '+node.step+' · '+escapeHtml(node.label)+'</div>';
+    html += '</div>';
+    html += '<h3 class="vq-question">'+escapeHtml(node.question)+'</h3>';
+    if(node.hint) html += '<div class="vq-hint">'+escapeHtml(node.hint)+'</div>';
+    html += '<div class="'+optCols+'">';
+    node.options.forEach(o => {
+      html += '<button class="vq-opt" data-next="'+escapeHtml(o.id)+'">'+escapeHtml(o.label)+'</button>';
+    });
+    html += '</div>';
+    html += '<div class="vq-controls">';
+    html += '<button class="vq-btn-ctrl" data-act="back"'+(state.path.length===0?' disabled':'')+'>← Back</button>';
+    html += '<button class="vq-btn-ctrl" data-act="reset"'+(state.path.length===0?' disabled':'')+'>↻ Start over</button>';
+    html += '</div>';
+    html += '</div>';
+    root.innerHTML = html;
+    bind();
+  }
+
+  function renderResult(nodeId){
+    const res = NODES[nodeId];
+    const kindClass = 'vq-result vq-result--'+res.kind;
+    let badge;
+    if(res.kind === 'no') badge = '✓ Tachograph not required';
+    else if(res.kind === 'yes') badge = '⚠ Tachograph needed';
+    else badge = 'ⓘ Depends on situation';
+    
+    let html = '<div class="vq-stage">';
+    html += '<div class="'+kindClass+'">';
+    html += '<div class="vq-result-badge">'+escapeHtml(badge)+'</div>';
+    html += '<h3 class="vq-result-title">'+escapeHtml(res.title)+'</h3>';
+    html += '<div class="vq-result-desc">'+res.desc+'</div>';
+    if(res.bullets && res.bullets.length){
+      html += '<ul class="vq-result-list">';
+      res.bullets.forEach(b => { html += '<li>'+b+'</li>'; });
+      html += '</ul>';
+    }
+    if(res.ctas && res.ctas.length){
+      html += '<div class="vq-result-cta">';
+      res.ctas.forEach(c => {
+        const cls = c.outline ? 'btn btn--outline' : 'btn btn--primary';
+        const attrs = c.ext ? ' target="_blank" rel="noopener"' : '';
+        html += '<a class="'+cls+'" href="'+escapeHtml(c.href)+'"'+attrs+'>'+escapeHtml(c.label)+'</a>';
+      });
+      html += '</div>';
+    }
+    html += '</div>';
+    if(state.path.length){
+      html += '<div class="vq-path"><strong>Your path:</strong> '+state.path.map(p => escapeHtml(p.choice)).join(' → ')+'</div>';
+    }
+    html += '<div class="vq-controls">';
+    html += '<button class="vq-btn-ctrl" data-act="back">← Back</button>';
+    html += '<button class="vq-btn-ctrl" data-act="reset">↻ Start over</button>';
+    html += '</div>';
+    html += '</div>';
+    root.innerHTML = html;
+    bind();
+  }
+
+  function go(nextId, label){
+    state.path.push({ nodeId: state.nodeId, choice: label });
+    state.nodeId = nextId;
+    const node = NODES[nextId];
+    if(!node) return;
+    if(node.kind) renderResult(nextId);
+    else renderQuestion(node);
+  }
+
+  function back(){
+    if(state.path.length === 0) return;
+    const last = state.path.pop();
+    state.nodeId = last.nodeId;
+    const node = NODES[state.nodeId];
+    if(node.kind) renderResult(state.nodeId);
+    else renderQuestion(node);
+  }
+
+  function reset(){
+    state = { nodeId: 'start', path: [] };
+    renderQuestion(NODES['start']);
+  }
+
+  function bind(){
+    root.querySelectorAll('.vq-opt').forEach(btn => {
+      btn.addEventListener('click', function(){
+        go(this.getAttribute('data-next'), this.textContent.trim());
+      });
+    });
+    root.querySelectorAll('.vq-btn-ctrl').forEach(b => {
+      b.addEventListener('click', function(){
+        const act = this.getAttribute('data-act');
+        if(act === 'back') back();
+        else if(act === 'reset') reset();
+      });
+    });
+  }
+
+  renderQuestion(NODES['start']);
+})();
+</script>
+<style>
+  /* Quiz inline styles since not in components.css */
+  .vq-root { max-width: 980px; margin: 32px 0 0; background: #fff; border-radius: var(--radius-lg, 20px); padding: 32px; box-shadow: 0 16px 48px rgba(19,74,142,0.08); border: 1px solid var(--border); }
+  @media(max-width:700px){ .vq-root { padding: 24px 20px; } }
+  .vq-header { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; flex-wrap: wrap; }
+  .vq-progress { display: inline-flex; gap: 6px; align-items: center; }
+  .vq-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--border); transition: background .25s, transform .25s; }
+  .vq-dot.is-done { background: var(--green-brand); }
+  .vq-dot.is-active { background: var(--blue-mid); transform: scale(1.3); }
+  .vq-step { margin-left: auto; color: var(--text2); font-size: 13px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; }
+  .vq-question { font-size: 26px; line-height: 1.3; font-weight: 800; color: var(--blue-dark); margin: 8px 0 8px; }
+  @media(max-width:700px){ .vq-question { font-size: 21px; } }
+  .vq-hint { font-size: 15px; color: var(--text2); margin-bottom: 24px; line-height: 1.55; }
+  .vq-options { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 20px; }
+  .vq-options.vq-3col { grid-template-columns: 1fr 1fr 1fr; }
+  @media(max-width:720px){ .vq-options, .vq-options.vq-3col { grid-template-columns: 1fr; } }
+  .vq-opt { background: #fff; color: var(--blue-dark); border: 2px solid var(--border); border-radius: 14px; padding: 18px 20px; font-size: 16px; font-weight: 700; cursor: pointer; text-align: left; line-height: 1.4; min-height: 60px; transition: all .15s; }
+  .vq-opt:hover { border-color: var(--green-brand); background: rgba(110,155,18,0.04); transform: translateY(-1px); box-shadow: 0 6px 14px rgba(110,155,18,0.1); }
+  .vq-controls { display: flex; gap: 10px; padding-top: 16px; border-top: 1px solid var(--border); }
+  .vq-btn-ctrl { background: transparent; color: var(--text2); border: 1px solid var(--border); border-radius: 999px; padding: 8px 16px; font-size: 13px; font-weight: 600; cursor: pointer; transition: all .15s; }
+  .vq-btn-ctrl:hover:not(:disabled) { border-color: var(--blue-mid); color: var(--blue-mid); background: var(--bg-apple-solid); }
+  .vq-btn-ctrl:disabled { opacity: 0.35; cursor: not-allowed; }
+  .vq-result { border-radius: 16px; padding: 28px; margin-bottom: 20px; border: 2px solid; }
+  .vq-result--no { background: linear-gradient(180deg, rgba(110,155,18,0.07), #fff); border-color: var(--green-brand); }
+  .vq-result--yes { background: linear-gradient(180deg, rgba(217,48,37,0.05), #fff); border-color: #d93025; }
+  .vq-result--maybe { background: linear-gradient(180deg, var(--bg-apple-solid), #fff); border-color: var(--blue-mid); }
+  .vq-result-badge { display: inline-flex; align-items: center; padding: 6px 14px; border-radius: 999px; font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: .06em; color: #fff; margin-bottom: 12px; }
+  .vq-result--no .vq-result-badge { background: var(--green-brand); }
+  .vq-result--yes .vq-result-badge { background: #d93025; }
+  .vq-result--maybe .vq-result-badge { background: var(--blue-mid); }
+  .vq-result-title { font-size: 28px; line-height: 1.2; font-weight: 800; color: var(--blue-dark); margin: 6px 0 10px; }
+  @media(max-width:700px){ .vq-result-title { font-size: 22px; } }
+  .vq-result-desc { font-size: 16px; line-height: 1.6; color: var(--text); margin-bottom: 12px; }
+  .vq-result-list { margin: 12px 0 0 20px; }
+  .vq-result-list li { font-size: 15px; line-height: 1.55; margin: 6px 0; color: var(--text); }
+  .vq-result-cta { margin-top: 20px; display: flex; gap: 12px; flex-wrap: wrap; }
+  .vq-path { background: rgba(0,0,0,0.03); border-radius: 12px; padding: 12px 16px; font-size: 13px; color: var(--text2); line-height: 1.5; margin-bottom: 12px; }
+  .vq-path strong { color: var(--blue-dark); }
+  .vq-stage { animation: vqfade 0.25s ease; }
+  @keyframes vqfade { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://tagra.app/fr/articles/tachygraphe-utilitaires-obligation-juillet-2026/"}, "headline": "Tachygraphe pour véhicule utilitaire de 2,5–3,5 t : règles, exemptions et amendes en 2026", "description": "Depuis l’échéance du 1er juillet 2026, les véhicules utilitaires de 2,5–3,5 t affectés au transport international ou au cabotage doivent être équipés d’un tachygraphe intelligent G2v2. Qui est exempté ? Quelles sont les règles, les obligations de téléchargement et les amendes ?", "image": "https://tagra.app/assets/img/hero-poster.jpg", "author": {"@type": "Organization", "name": "Truck Data Technology, s.r.o.", "url": "https://www.tdt.cz"}, "publisher": {"@type": "Organization", "name": "TAGRA", "logo": {"@type": "ImageObject", "url": "https://tagra.app/assets/img/logo-dark.svg"}}, "datePublished": "2026-03-17T09:00:00+02:00", "dateModified": "2026-08-12T09:00:00+02:00", "inLanguage": "fr"}</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "Qui est soumis à l'obligation d'utiliser un tachygraphe depuis le 1er juillet 2026 ?", "acceptedAnswer": { "@type": "Answer", "text": "Depuis le 1er juillet 2026, les véhicules utilitaires légers (VUL) de 2,5–3,5 t utilisés pour le transport international de marchandises ou le cabotage dans l’UE sont soumis à l’obligation d’utiliser un tachygraphe, introduite par le règlement (UE) 2020/1054 modifiant le règlement (CE) n° 561/2006. Un tachygraphe intelligent G2v2, des cartes de conducteur et des cartes d’entreprise, ainsi qu’une gestion structurée des données sont requis." } },
+    { "@type": "Question", "name": "Un véhicule utilitaire doit-il être équipé d'un tachygraphe s'il ne circule que sur le territoire national ?", "acceptedAnswer": { "@type": "Answer", "text": "En règle générale, non. Si les opérations sont strictement nationales, sans trajet transfrontalier ni cabotage, l’obligation européenne applicable au transport transfrontalier ne s’applique pas. Vérifiez les règles nationales — certains États membres peuvent imposer des exigences supplémentaires." } },
+    { "@type": "Question", "name": "L'obligation s'applique-t-elle si le véhicule utilitaire fait moins de 2,5 t, mais que l'ensemble dépasse ce seuil ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui, dans la plupart des cas. Le contrôle tient compte de la masse de l’ensemble (véhicule + remorque). Si la masse maximale autorisée de l’ensemble dépasse le seuil et que vous effectuez un transport international pour compte d’autrui, les règles s’appliquent." } },
+    { "@type": "Question", "name": "De quoi ai-je besoin en plus de l'installation du tachygraphe ?", "acceptedAnswer": { "@type": "Answer", "text": "Vous avez besoin de cartes de conducteur, d’une carte d’entreprise, d’un processus de téléchargement régulier (28/90 jours), de l’évaluation des infractions et de l’archivage pendant la durée légale. La formation des conducteurs et une définition claire des responsabilités internes sont essentielles." } },
+    { "@type": "Question", "name": "À quelle fréquence les données doivent-elles être téléchargées ?", "acceptedAnswer": { "@type": "Answer", "text": "Téléchargez les données de la carte de conducteur au moins tous les 28 jours et celles de l’unité embarquée au moins tous les 90 jours. De nombreux gestionnaires téléchargent les données plus fréquemment afin de réduire les risques." } },
+    { "@type": "Question", "name": "Quelles cartes sont nécessaires ?", "acceptedAnswer": { "@type": "Answer", "text": "Chaque conducteur a besoin d’une carte de conducteur personnelle. Le gestionnaire a besoin d’une carte d’entreprise pour l’autorisation et le téléchargement sécurisé des données du véhicule." } },
+    { "@type": "Question", "name": "Je ne suis pas transporteur. Il m’arrive de franchir une frontière pour les besoins de ma propre entreprise. Ai-je besoin d’un tachygraphe ?", "acceptedAnswer": { "@type": "Answer", "text": "Les facteurs déterminants sont la masse maximale autorisée (y compris toute remorque) et la finalité du transport. S’il ne s’agit pas d’un transport pour compte d’autrui et que la conduite n’est pas votre profession principale, l’exemption pour compte propre prévue à l’article 3, point h), du règlement 561/2006 s’applique généralement." } },
+    { "@type": "Question", "name": "Comment démontrer en pratique qu’il s’agit d’un transport pour compte propre ?", "acceptedAnswer": { "@type": "Answer", "text": "Le plus souvent : un document relatif aux marchandises (facture, bon de livraison, commande), une brève note indiquant le motif du trajet (de-à et motif), ainsi que le lien entre le conducteur, l’entreprise et le véhicule (autorisation, relation de travail, documents du véhicule)." } },
+    { "@type": "Question", "name": "Existe-t-il une exemption pour les artisans ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui, l’exemption pour les artisans prévue à l’article 3, point aa), du règlement 561/2006. Si la conduite n’est pas votre activité principale et que vous transportez uniquement des matériaux, instruments ou équipements nécessaires à votre activité professionnelle, le tachygraphe n’est généralement pas requis." } },
+    { "@type": "Question", "name": "Qu’est-ce que le cabotage ?", "acceptedAnswer": { "@type": "Answer", "text": "Le cabotage est le transport de marchandises à l’intérieur d’un pays de l’UE effectué par un transporteur établi dans un autre pays de l’UE. Exemple : un véhicule utilitaire tchèque décharge des marchandises à Hambourg, puis prend un nouveau chargement de Hambourg à Berlin." } },
+    { "@type": "Question", "name": "Que se passe-t-il si je dispose uniquement d’un véhicule utilitaire de location ? Qui s’occupe du tachygraphe ?", "acceptedAnswer": { "@type": "Answer", "text": "Si vous louez un véhicule utilitaire de plus de 2,5 t pour un transport commercial international, celui-ci doit être équipé d’un tachygraphe. La responsabilité du téléchargement correct des données et du respect des règles vous incombe en tant qu’exploitant, et non à la société de location." } },
+    { "@type": "Question", "name": "Puis-je installer moi-même le tachygraphe ou dois-je m’adresser à un atelier ?", "acceptedAnswer": { "@type": "Answer", "text": "Vous ne pouvez pas installer, activer ou étalonner vous-même un tachygraphe. Ces opérations doivent être réalisées exclusivement par un atelier agréé conformément au règlement d’exécution (UE) 2016/799 de la Commission." } },
+    { "@type": "Question", "name": "Quelles sanctions s’appliquent si je n’ai pas de tachygraphe après le 1er juillet 2026 ?", "acceptedAnswer": { "@type": "Answer", "text": "L’absence de tachygraphe, la conduite sans carte ou le défaut de téléchargement des données sont classés parmi les infractions très graves au titre de la directive 2006/22/CE. Les sanctions varient selon l’État membre et peuvent atteindre des milliers d’euros par infraction." } }
+  ]
+}
+</script>
+</body>
+</html>

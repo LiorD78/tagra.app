@@ -1,0 +1,1560 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<!-- TMX-ANALYTICS START -->
+<meta content="7F7894081BE7FBB245FF03AF8810B22F" name="msvalidate.01"/>
+<!-- Consent Mode v2 defaults (deny) + gtag stub — runs BEFORE gtag.js -->
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent','default',{
+      ad_storage:'denied', ad_user_data:'denied', ad_personalization:'denied',
+      analytics_storage:'denied', functionality_storage:'denied',
+      personalization_storage:'denied', security_storage:'granted',
+      wait_for_update:500
+    });
+    gtag('set','ads_data_redaction',true);
+    gtag('set','url_passthrough',false);
+  </script>
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-92253QFBNX"></script>
+<script>
+    gtag('js', new Date());
+    gtag('config','G-92253QFBNX');
+  </script>
+<!-- Cookie consent banner (self-hosted) + Microsoft Clarity gating -->
+<style>
+    .tmx-cc{position:fixed;left:0;right:0;bottom:0;z-index:2147483000;background:linear-gradient(120deg,var(--blue-dark,#0b2c4a),var(--blue-mid,#134a8e) 62%,var(--blue-light,#1f5fa6));color:#fff;
+      font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+      padding:16px 20px;box-shadow:0 -4px 24px rgba(0,0,0,.18);display:flex;flex-wrap:wrap;
+      align-items:center;gap:14px;justify-content:center}
+    .tmx-cc__txt{flex:1 1 360px;max-width:760px}
+    .tmx-cc__txt a{color:#9ed0f5;text-decoration:underline}
+    .tmx-cc__btns{display:flex;gap:10px;flex:0 0 auto}
+    .tmx-cc__b{appearance:none;border:0;cursor:pointer;font:inherit;font-weight:600;
+      padding:10px 22px;border-radius:99px;transition:filter .15s;color:#fff}
+    .tmx-cc__b:hover{filter:brightness(1.08)}
+    .tmx-cc__b--no{background:rgba(255,255,255,.16)}
+    .tmx-cc__b--yes{background:var(--green-cta,#5C820F)}
+    @media(max-width:640px){.tmx-cc{padding:14px}.tmx-cc__btns{width:100%}.tmx-cc__b{flex:1}}
+  </style>
+<script>
+  (function(){
+    var KEY='tmx-consent-v1', CL='wt18054m0r';
+    function lc(){var l=(document.documentElement.getAttribute('lang')||'en').toLowerCase().split('-')[0];
+      var m={cz:'cs',cs:'cs',sk:'sk',de:'de',pl:'pl',gr:'el',el:'el',hu:'hu',en:'en'};return m[l]||'en';}
+    var T={
+      hu:{t:'Analitikai s\u00fctiket haszn\u00e1lunk (Google Analytics, Microsoft Clarity, Smartsupp), hogy meg\u00e9rts\u00fck a webhely haszn\u00e1lat\u00e1t. Csak az \u00d6n hozz\u00e1j\u00e1rul\u00e1s\u00e1val t\u00f6lt\u0151dnek be.',a:'Elfogadom',r:'Elutas\u00edtom',p:'Adatv\u00e9delem \u00e9s s\u00fctik'},
+      ro:{t:'Utilizăm module cookie de analiză (Google Analytics, Microsoft Clarity, Smartsupp) pentru a înțelege modul de utilizare a site-ului. Se încarcă doar cu consimțământul dumneavoastră.',a:'Accept',r:'Refuz',p:'Confidențialitate și cookie-uri'},
+      nl:{t:'We gebruiken analytische cookies (Google Analytics, Microsoft Clarity, Smartsupp) om het gebruik van de site te begrijpen. Ze laden alleen met uw toestemming.',a:'Accepteren',r:'Weigeren',p:'Privacy en cookies'},
+      fr:{t:'Nous utilisons des cookies analytiques (Google Analytics, Microsoft Clarity, Smartsupp) pour comprendre l’utilisation du site. Ils ne se chargent qu’avec votre consentement.',a:'Accepter',r:'Refuser',p:'Confidentialité et cookies'},
+      it:{t:'Utilizziamo cookie analitici (Google Analytics, Microsoft Clarity, Smartsupp) per capire l’utilizzo del sito. Si caricano solo con il Suo consenso.',a:'Accetta',r:'Rifiuta',p:'Privacy e cookie'},
+      en:{t:'Utilizăm module cookie de analiză (Google Analytics, Microsoft Clarity, Smartsupp) pentru a înțelege modul de utilizare a site-ului. Acestea se încarcă numai cu consimțământul dumneavoastră.',a:'Accept',r:'Reject',p:'Privacy &amp; cookies'},
+      cs:{t:'Pou\u017e\u00edv\u00e1me analytick\u00e9 cookies (Google Analytics, Microsoft Clarity, Smartsupp) k pochopen\u00ed pou\u017e\u00edv\u00e1n\u00ed webu. Na\u010dtou se jen s va\u0161\u00edm souhlasem.',a:'P\u0159ijmout',r:'Odm\u00edtnout',p:'Soukrom\u00ed a cookies'},
+      sk:{t:'Pou\u017e\u00edvame analytick\u00e9 cookies (Google Analytics, Microsoft Clarity, Smartsupp) na pochopenie pou\u017e\u00edvania webu. Na\u010d\u00edtaj\u00fa sa len s va\u0161\u00edm s\u00fahlasom.',a:'Prija\u0165',r:'Odmietnu\u0165',p:'S\u00fakromie a cookies'},
+      de:{t:'Wir verwenden Analyse-Cookies (Google Analytics, Microsoft Clarity, Smartsupp), um die Nutzung der Website zu verstehen. Sie werden nur mit Ihrer Einwilligung geladen.',a:'Akzeptieren',r:'Ablehnen',p:'Datenschutz &amp; Cookies'},
+      pl:{t:'U\u017cywamy plik\u00f3w cookie do analityki (Google Analytics, Microsoft Clarity, Smartsupp), aby zrozumie\u0107 korzystanie z witryny. \u0141aduj\u0105 si\u0119 tylko za Twoj\u0105 zgod\u0105.',a:'Akceptuj',r:'Odrzu\u0107',p:'Prywatno\u015b\u0107 i cookies'},
+      el:{t:'\u03a7\u03c1\u03b7\u03c3\u03b9\u03bc\u03bf\u03c0\u03bf\u03b9\u03bf\u03cd\u03bc\u03b5 cookies \u03b1\u03bd\u03ac\u03bb\u03c5\u03c3\u03b7\u03c2 (Google Analytics, Microsoft Clarity, Smartsupp) \u03b3\u03b9\u03b1 \u03bd\u03b1 \u03ba\u03b1\u03c4\u03b1\u03bd\u03bf\u03ae\u03c3\u03bf\u03c5\u03bc\u03b5 \u03c4\u03b7 \u03c7\u03c1\u03ae\u03c3\u03b7. \u03a6\u03bf\u03c1\u03c4\u03ce\u03bd\u03bf\u03bd\u03c4\u03b1\u03b9 \u03bc\u03cc\u03bd\u03bf \u03bc\u03b5 \u03c4\u03b7 \u03c3\u03c5\u03b3\u03ba\u03b1\u03c4\u03ac\u03b8\u03b5\u03c3\u03ae \u03c3\u03b1\u03c2.',a:'\u0391\u03c0\u03bf\u03b4\u03bf\u03c7\u03ae',r:'\u0391\u03c0\u03cc\u03c1\u03c1\u03b9\u03c8\u03b7',p:'\u0391\u03c0\u03cc\u03c1\u03c1\u03b7\u03c4\u03bf &amp; cookies'}
+    };
+    function loadClarity(){if(!CL||window.__tmxCl)return;window.__tmxCl=1;
+      (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+       t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+       y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script",CL);}
+    function grant(){try{localStorage.setItem(KEY,'granted')}catch(e){}
+      gtag('consent','update',{analytics_storage:'granted'});loadClarity();}
+    function deny(){try{localStorage.setItem(KEY,'denied')}catch(e){}}
+    var saved=null;try{saved=localStorage.getItem(KEY)}catch(e){}
+    if(saved==='granted'){grant();return;} if(saved==='denied'){return;}
+    function show(){var tx=T[lc()]||T.en;
+      var b=document.createElement('div');b.className='tmx-cc';b.setAttribute('role','dialog');b.setAttribute('aria-live','polite');
+      b.innerHTML='<div class="tmx-cc__txt">'+tx.t+' <a href="/ro/confidentialitate/">'+tx.p+'</a></div>'+
+        '<div class="tmx-cc__btns"><button type="button" class="tmx-cc__b tmx-cc__b--no">'+tx.r+'</button>'+
+        '<button type="button" class="tmx-cc__b tmx-cc__b--yes">'+tx.a+'</button></div>';
+      document.body.appendChild(b);
+      b.querySelector('.tmx-cc__b--yes').addEventListener('click',function(){grant();b.remove();});
+      b.querySelector('.tmx-cc__b--no').addEventListener('click',function(){deny();b.remove();});}
+    if(document.body)show();else document.addEventListener('DOMContentLoaded',show);
+  })();
+  </script>
+<!-- TMX-ANALYTICS END -->
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Coduri de defecțiune ale tahografului: 80, erori de card 41, 44, 50, 68 | TAGRA</title>
+<meta content="Semnificații și măsuri pentru codurile de defecțiune ale tahografului digital, inclusiv erorile de card 41, 44, 50 și 68. VDO, Stoneridge, Actia și EFAS." name="description"/>
+<link href="https://tagra.app/ro/articole/simboluri-tahograf-digital/" rel="canonical"/>
+<link href="https://tagra.app/de/ratgeber/tachographen-symbole/" hreflang="de" rel="alternate"/><link href="https://tagra.app/el/arthra/symvola-tachografou/" hreflang="el" rel="alternate"/><link href="https://tagra.app/articles/digital-tachograph-symbols/" hreflang="en" rel="alternate"/><link href="https://tagra.app/fr/articles/symboles-tachygraphe/" hreflang="fr" rel="alternate"/><link href="https://tagra.app/hu/cikkek/tachograf-szimbolumok/" hreflang="hu" rel="alternate"/><link href="https://tagra.app/it/articoli/simboli-cronotachigrafo/" hreflang="it" rel="alternate"/><link href="https://tagra.app/nl/artikelen/tachograaf-symbolen/" hreflang="nl" rel="alternate"/><link href="https://tagra.app/pl/poradnik/symbole-tachografu/" hreflang="pl" rel="alternate"/>
+<link href="https://tagra.app/ro/articole/simboluri-tahograf-digital/" hreflang="ro" rel="alternate"/><link href="https://tagra.app/articles/digital-tachograph-symbols/" hreflang="x-default" rel="alternate"/>
+<meta content="Coduri de defecțiune ale tahografului: 80, erori de card 41, 44, 50, 68 | TAGRA" property="og:title"/>
+<meta content="Semnificații și măsuri pentru codurile de defecțiune ale tahografului digital, inclusiv erorile de card 41, 44, 50 și 68. VDO, Stoneridge, Actia și EFAS." property="og:description"/>
+<meta content="article" property="og:type"/>
+<meta content="https://tagra.app/assets/img/hero-poster.jpg" property="og:image"/>
+<meta content="Coduri de defecțiune și simboluri ale tahografului: semnificație și remedieri | TAGRA" name="twitter:title"/>
+<meta content="Toate simbolurile de avertisment și codurile de defecțiune ale tahografelor digitale, explicate — VDO, Stoneridge, Actia și EFAS. Ce înseamnă fiecare cod și ce trebuie să faceți în continuare." name="twitter:description"/>
+<meta content="https://tagra.app/assets/img/hero-poster.jpg" name="twitter:image"/>
+<meta content="ro_RO" property="og:locale"/>
+<meta content="https://tagra.app/ro/articole/simboluri-tahograf-digital/" property="og:url"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    a{color:var(--blue-mid);text-decoration:none;}
+    a:hover{color:var(--blue-dark);text-decoration:underline;text-underline-offset:.18em;}
+    img{max-width:100%;height:auto;display:block;}
+    p+p{margin-top:14px;}
+    ul,ol{padding-left:22px;}
+    li{margin:6px 0;line-height:1.65;}
+    li::marker{color:var(--blue-mid);}
+    strong{font-weight:700;color:var(--text);}
+    #scroll-progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--green-brand),var(--blue-light));width:0%;z-index:9999;pointer-events:none;}
+.nav-inner{margin:0 auto;padding:0 24px;height:100%;display:flex;align-items:center;justify-content:space-between;gap:24px;}
+    .nav-links{display:flex;align-items:center;gap:4px;list-style:none;}
+    .nav-links a{font-size:15px;font-weight:500;color:var(--text);padding:8px 12px;border-radius:8px;text-decoration:none;transition:background .15s;}
+    .nav-links a:hover{background:var(--bg-apple);color:var(--blue-mid);}
+    .nav-links .nav-cta a{background:var(--green-cta);color:#fff!important;border-radius:99px;padding:8px 18px;font-weight:600;}
+    .nav-links .nav-cta a:hover{background:var(--green-brand);text-decoration:none;}
+    .nav-lang{display:flex;align-items:center;gap:4px;font-size:14px;font-weight:600;}
+    .nav-lang a{padding:5px 8px;border-radius:6px;color:var(--text2);text-decoration:none;transition:background .15s;}
+    .nav-lang a:hover,.nav-lang a.active{background:var(--bg-apple);color:var(--blue-mid);}
+    .nav-lang span{color:var(--border);}
+    .nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:8px;}
+    .nav-toggle span{display:block;width:22px;height:2px;background:var(--text);margin:5px 0;border-radius:2px;}
+    @media(max-width:900px){.nav-links{display:none;}.nav-toggle{display:block;}.nav-links.open{display:flex;flex-direction:column;align-items:flex-start;gap:2px;position:absolute;top:var(--nav-h);left:0;right:0;background:rgba(255,255,255,.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:12px 24px 20px;}}
+    .art-hero{background:linear-gradient(180deg,var(--bg-apple) 0%,#fff 100%);padding:calc(var(--nav-h,64px) + 28px) 0 44px;}
+    .art-wrap{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 24px;}
+    .breadcrumb{font-size:14px;color:var(--text2);margin-bottom:18px;}
+    .breadcrumb a{color:var(--text2);text-decoration:none;}
+    .breadcrumb a:hover{color:var(--blue-mid);}
+    .breadcrumb span{margin:0 5px;color:var(--border);}
+    .eyebrow{font-size:14px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--green-brand);margin-bottom:10px;}
+    .art-title{font-size:38px;line-height:1.15;font-weight:800;margin-bottom:16px;letter-spacing:-.02em;padding-bottom:0.08em;color:var(--blue-dark);}
+    .art-title .grad{background:linear-gradient(90deg,var(--blue-dark) 0%,var(--blue-light) 50%,var(--blue-bright) 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;}
+    @media(max-width:700px){.art-title{font-size:26px;}}
+    .art-meta{font-size:15px;color:var(--text2);padding-bottom:24px;border-bottom:1px solid var(--border);display:flex;gap:20px;flex-wrap:wrap;}
+    .art-body{padding:44px 0 60px;}
+    /* H2 gradient mechanics: width:max-content shrinks the element to the text's
+       intrinsic width so the 3-stop gradient is rendered across the visible glyphs
+       (not the 949px wrapping width), giving the same visible 3-stop effect as H1.
+       Multi-line H2s wrap via max-width:100% (each wrapped line gets its own slice). */
+    .art-body h2 {
+      font-size: 36px; font-weight: 800;
+      line-height: 1.1; letter-spacing: 0;
+      text-transform: uppercase;
+      color: var(--blue-mid, #134a8e);
+      background: linear-gradient(90deg, var(--blue-dark, #0b2c4a) 0%, var(--blue-light, #1f5fa6) 50%, var(--blue-bright, #3a6ff0) 100%);
+      -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block; width: max-content; max-width: 100%;
+      margin-bottom: 14px;
+      padding: 0.12em 0.15em 0.08em 0;
+    }
+    .art-body h3{font-size:20px;font-weight:700;color:var(--text);margin:28px 0 10px;}
+    .art-body p{margin-bottom:18px;}
+    .art-body ul,.art-body ol{margin-bottom:20px;}
+    .deadline-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:24px 0;}
+    @media(max-width:580px){.deadline-grid{grid-template-columns:1fr;}}
+    .deadline-box{background:var(--bg-apple);border-radius:var(--radius);padding:28px;text-align:center;}
+    .deadline-num{font-size:54px;font-weight:900;line-height:1;background:linear-gradient(90deg,var(--blue-dark),var(--blue-mid));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:6px;}
+    .deadline-lbl{font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--text2);}
+    .deadline-desc{font-size:15px;color:var(--text2);margin-top:10px;line-height:1.5;}
+    .steps-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin:20px 0;}
+    @media(max-width:720px){.steps-grid{grid-template-columns:1fr;}}
+    .step-card{background:var(--bg-gray);border-radius:var(--radius);padding:22px;box-shadow:0 8px 24px rgba(0,0,0,.04);}
+    .step-num{font-size:13px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--green-cta);margin-bottom:8px;}
+    .step-title{font-size:17px;font-weight:800;color:var(--text);margin-bottom:6px;line-height:1.35;}
+    .step-desc{font-size:15px;color:var(--text2);line-height:1.5;}
+    
+    .callout--blue{background:var(--bg-apple);border-left:4px solid var(--blue-mid);}
+    
+    .callout-title{font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:.07em;color:var(--blue-mid);margin-bottom:8px;}
+    .callout--green .callout-title{color:var(--green-brand);}
+    .faq-item{border-top:1px solid var(--border);padding:14px 0;}
+    .faq-item:last-child{border-bottom:1px solid var(--border);}
+    .faq-item summary{list-style:none;cursor:pointer;font-weight:700;font-size:18px;line-height:1.4;padding-right:32px;position:relative;color:var(--text);}
+    .faq-item summary::-webkit-details-marker{display:none;}
+    .faq-item summary::after{content:"+";position:absolute;right:0;top:50%;transform:translateY(-50%);font-size:26px;font-weight:300;color:var(--green-cta);}
+    .faq-item[open] summary::after{content:"−";}
+    
+    .cta-box{background:linear-gradient(135deg,var(--blue-dark),var(--blue-mid));border-radius:var(--radius);padding:40px 36px;margin:44px 0;text-align:center;}
+    .cta-box h3{font-size:24px;font-weight:800;color:#fff;margin-bottom:12px;}
+    .cta-box p{color:rgba(255,255,255,.8);font-size:17px;margin-bottom:24px;}
+    .cta-box p.cta-note{font-size:14px;margin-bottom:0;color:rgba(255,255,255,.65);}
+
+    .btn:hover{background:var(--green-brand);transform:scale(1.02);}
+    .related{border-top:1px solid var(--border);padding-top:36px;margin-top:36px;}
+    .related-title{font-size:20px;font-weight:800;color:var(--text);margin-bottom:18px;}
+    .related-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+    @media(max-width:580px){.related-grid{grid-template-columns:1fr;}}
+    .related-card{display:block;padding:20px;border:1px solid var(--border);border-radius:var(--radius);text-decoration:none!important;transition:border-color .15s,transform .15s;}
+    .related-card:hover{border-color:var(--blue-mid);transform:translateY(-2px);}
+    .related-card-eye{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--blue-mid);margin-bottom:6px;}
+    .related-card-title{font-size:16px;font-weight:700;color:var(--text);line-height:1.4;}
+
+    .art-body table{width:100%;border-collapse:collapse;margin:20px 0;font-size:16px;background:#fff;box-shadow:0 8px 24px rgba(0,0,0,.04);border-radius:var(--radius);overflow:hidden;}
+    .sym-cell{display:flex;align-items:center;gap:14px;}
+    .sym-icon{flex-shrink:0;width:48px;height:48px;background:#fff;border:1px solid var(--border);border-radius:8px;padding:8px;color:var(--blue-dark);}
+    .sym-icon svg{display:block;width:100%;height:100%;}
+    .sym-icon img{display:block;width:100%;height:100%;}
+    @media(max-width:680px){.sym-icon{width:40px;height:40px;padding:7px;}}
+    .art-body thead{background:linear-gradient(135deg,var(--blue-dark),var(--blue-mid));color:#fff;}
+    .art-body th{padding:14px 16px;text-align:left;font-weight:700;font-size:14px;letter-spacing:.02em;}
+    .art-body td{padding:14px 16px;border-top:1px solid var(--border);vertical-align:top;line-height:1.55;font-size:15px;}
+    .art-body tbody tr:nth-child(even){background:var(--bg-gray);}
+    .art-body th:first-child,.art-body td:first-child{width:22%;}
+    @media(max-width:680px){.art-body table,.art-body thead,.art-body tbody,.art-body th,.art-body td,.art-body tr{display:block;}.art-body thead{display:none;}.art-body td{border-top:none;border-bottom:1px solid var(--border);}.art-body td:first-child{font-weight:700;background:var(--bg-apple);}}
+    .lead{font-size:20px;color:var(--text2);line-height:1.55;}
+
+    .dec-search{background:var(--bg-apple);border:1px solid var(--border);border-radius:var(--radius);padding:18px 18px 14px;margin:8px 0 26px;}
+    .dec-search-label{display:block;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--blue-mid);margin-bottom:10px;}
+    .dec-search-row{display:flex;gap:10px;align-items:center;}
+    #dec-search-input{flex:1;font-size:16px;padding:12px 14px;border:1px solid var(--border);border-radius:10px;background:#fff;color:var(--text);outline:none;}
+    #dec-search-input:focus{border-color:var(--blue-mid);box-shadow:0 0 0 3px rgba(19,74,142,.12);}
+    #dec-search-clear{flex-shrink:0;width:42px;height:42px;border:1px solid var(--border);background:#fff;border-radius:10px;font-size:22px;line-height:1;color:var(--text2);cursor:pointer;}
+    #dec-search-clear:hover{color:var(--text);border-color:var(--blue-mid);}
+    .dec-chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;}
+    .dec-chip{font-size:14px;font-weight:600;padding:7px 14px;border-radius:99px;border:1px solid var(--border);background:#fff;color:var(--text2);cursor:pointer;transition:all .15s;}
+    .dec-chip:hover{border-color:var(--blue-mid);color:var(--blue-mid);}
+    .dec-chip.is-active{background:var(--blue-mid);border-color:var(--blue-mid);color:#fff;}
+    .dec-count{font-size:14px;color:var(--text2);margin:12px 0 0;min-height:1.2em;}
+    .vendor.dec-hidden{display:none;}
+    tr.dec-hidden{display:none;}
+    .dec-nohit{font-size:14px;color:var(--text2);padding:10px 2px;}
+  
+</style>
+<link href="/assets/css/tokens.css" rel="stylesheet"/>
+<link href="/assets/css/base.css" rel="stylesheet"/>
+<link href="/assets/css/components.css" rel="stylesheet"/>
+<link href="/assets/css/nav.css" rel="stylesheet"/>
+<script defer="" src="/assets/js/nav.js?v=20260816b"></script>
+<link href="/assets/css/footer.css" rel="stylesheet"/><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "TAGRA", "item": "https://tagra.app/ro/"}, {"@type": "ListItem", "position": 2, "name": "Articole", "item": "https://tagra.app/ro/articole/"}, {"@type": "ListItem", "position": 3, "name": "Simboluri și coduri de eroare ale tahografului", "item": "https://tagra.app/ro/articole/simboluri-tahograf-digital/"}]}</script><noscript><style>.anim-up,.fly-left,.fly-right{opacity:1!important;transform:none!important}</style></noscript></head>
+<body class="art-page">
+<a class="skip-link" href="#main-content">Salt la conținut</a>
+<div aria-hidden="true" id="scroll-progress"></div>
+<nav aria-label="Navigare principală" class="site-nav" role="navigation">
+<div class="nav-inner">
+<a aria-label="TAGRA – Acasă" class="nav-logo" href="/ro/"><img alt="TAGRA" height="32" src="/assets/img/logo-light.svg?v=20260513zh" style="display:block;height:32px;width:auto;" width="140"/></a>
+<ul class="nav-links" id="nav-links">
+<li><a href="/ro/pentru-firme/">Pentru societăți</a></li>
+<li><a href="/ro/pentru-conducatori/">Pentru conducători auto</a></li>
+<li><a href="/ro/autoritati-de-control/">Control</a></li>
+<li><a aria-current="page" href="/ro/articole/">Articole</a></li><li><a href="/ro/manuale/">Manuale</a></li>
+<li><a href="/ro/intrebari-frecvente/">Întrebări frecvente</a></li>
+<li><a href="/ro/contact/">Contact</a></li>
+<li class="nav-cta-li"><a class="nav-cta" href="/ro/incercare-gratuita/?audience=driver&amp;src=symbols">Încercați gratuit timp de 30 de zile</a></li>
+</ul>
+<details class="nav-lang">
+<summary aria-label="Limbă: RO">RO</summary>
+<div class="nav-lang-menu" role="menu"><a href="/" hreflang="en">Engleză</a><a href="/de/ratgeber/tachographen-symbole/" hreflang="de">Deutsch</a><a href="/pl/poradnik/symbole-tachografu/" hreflang="pl">Polski</a><a href="/nl/artikelen/tachograaf-symbolen/" hreflang="nl">Nederlands</a><a href="/fr/articles/symboles-tachygraphe/" hreflang="fr">Français</a><a href="/it/articoli/simboli-cronotachigrafo/" hreflang="it">Italiano</a><a href="/el/arthra/symvola-tachografou/" hreflang="el">Ελληνικά</a><a href="/hu/cikkek/tachograf-szimbolumok/" hreflang="hu">Magyar</a><a href="/ro/articole/simboluri-tahograf-digital/" hreflang="ro">Română</a><a href="https://www.tdt.cz/" hreflang="cs" rel="noopener" target="_blank">Čeština</a><a href="https://www.tdt.sk/" hreflang="sk" rel="noopener" target="_blank">Slovenčina</a></div>
+</details>
+<a class="nav-cta-mobile" href="/ro/incercare-gratuita/?audience=driver&amp;src=symbols">Încercați gratuit</a>
+<button aria-expanded="false" aria-label="Comutați meniul" class="nav-mobile-toggle" id="nav-toggle">
+<span></span><span></span><span></span>
+</button>
+</div>
+</nav>
+<header class="art-hero">
+<div class="art-wrap">
+<nav aria-label="Fir de navigare" class="breadcrumb"><a href="/ro/">TAGRA</a><span>›</span><a href="/ro/articole/">Articole</a><span>›</span><span>Simboluri tahograf &amp; coduri de eroare</span></nav>
+<div class="eyebrow anim-up">Bază de cunoștințe pentru conducători auto</div>
+<h1 class="art-title"><span class="grad">Simboluri tahograf &amp; coduri de eroare: ghid pentru conducătorii auto</span></h1>
+<div class="art-meta"><span>Truck Data Technology</span><span>Actualizat în iunie 2026</span><span>Timp de citire: 22 min.</span></div>
+<div aria-label="Conducător auto care operează un tahograf digital" class="art-hero-video">
+<video aria-label="Conducător auto care operează un tahograf digital" autoplay="" loop="" muted="" playsinline="" poster="symboly-chybove-kody-hero-poster.webp" preload="metadata" webkit-playsinline="">
+<source src="symboly-chybove-kody-hero.webm" type="video/webm">
+<source src="symboly-chybove-kody-hero.mp4" type="video/mp4">
+</source></source></video>
+</div>
+<p class="hero-lede anim-up">Fiecare tahograf digital din UE utilizează același limbaj vizual. Indiferent dacă conduceți un camion de 7,5 tone prin Bavaria sau un ansamblu articulat de 40 de tone de la Rotterdam la Atena, simbolurile de pe afișajul tahografului dumneavoastră respectă un standard unic, obligatoriu din punct de vedere juridic, stabilit prin Regulamentul (UE) 2016/799, anexa I C — specificația tehnică pentru tahografe inteligente. Însă înțelegerea pictogramelor reprezintă doar jumătate din sarcină. Același ecran care afișează activitatea dumneavoastră prezintă și avertismente, evenimente, defecțiuni și mesaje pop-up specifice producătorului — iar interpretarea greșită a acestora poate duce la aplicarea unei amenzi conducătorului auto, la imobilizarea vehiculului sau la obligativitatea de a vizita un atelier autorizat. Acest ghid prezintă fiecare categorie, cu mesaje verificate, extrase din manualele oficiale ale celor patru unități cel mai frecvent montate în Europa: VDO DTCO 4.1, Stoneridge SE5000, Actia SmarTach și EFAS-4. Ce cuprinde acest ghid: patru simboluri de activitate pe care fiecare conducător auto trebuie să le cunoască; categorii universale de avertismente (evenimente, defecțiuni, oră, note); peste 200 de coduri verificate &amp; Simboluri (cu funcție de căutare) Top 10 cele mai frecvente mesaje ale tahografului în practică Flux de lucru pentru erori critice: ce trebuie să faceți la control rutier Surse oficiale &amp; Manualele producătorilor Întrebări frecvente — simboluri și coduri de eroare</p><div class="bento--hero"><div class="hero-card"><div class="eyebrow">Simboluri de activitate</div><div class="big">4</div><p>Conducere, alte activități, disponibilitate și repaus — cele patru simboluri de pe fiecare afișaj al tahografului.</p></div><div class="hero-card hero-card--blue"><div class="eyebrow">Coduri de eroare verificate</div><div class="big">peste 200</div><p>Bază de date completă cu coduri de defecțiune, semnificația acestora și acțiunea recomandată.</p></div><div class="hero-card"><div class="eyebrow">Manualele producătorilor</div><div class="big">4</div><p>Coduri verificate în raport cu documentația oficială de la VDO, Stoneridge, Intellic și Efkon.</p></div><div class="hero-card hero-card--blue"><div class="eyebrow">Cele mai frecvente mesaje</div><div class="big">Top 10</div><p>Mesajele pe care conducătorii auto le văd efectiv în trafic, cu o soluție pentru fiecare.</p></div></div>
+</div>
+</header>
+<main id="main-content"><section class="band"><div class="container art-body"><div class="cta-box">
+<h3>Codul dumneavoastră reprezintă doar jumătate din poveste</h3>
+<p>O defecțiune afișată pe ecran lasă aproape întotdeauna o urmă pe cardul de conducător auto — o înregistrare lipsă, o tură întreruptă sau o contravenție despre care vi se poate cere să dați explicații la un control rutier. TAGRA Trucker vă citește cardul și vă arată exact ce a fost înregistrat. Cititor de carduri USB inclus, €49 fără TVA.</p>
+<a class="cta-btn" href="/ro/incercare-gratuita/?audience=driver&amp;src=symbols">Vedeți ce este pe cardul dumneavoastră →</a>
+</div><div class="info-card anim-up" style="margin-top:28px;">
+<span class="badge">Ce trebuie să faceți acum</span>
+<h2 class="h2-grad anim-up" id="what-to-do-now" style="font-size:28px;">O defecțiune afișată pe ecran: ce vă impune legea</h2>
+<p>Înainte de a căuta codul mai jos, aceasta este succesiunea de măsuri aplicabilă fiecărei defecțiuni a unui tahograf digital. Evenimentele (depășirea vitezei, conducerea fără card) nu o declanșează — numai defecțiunile.</p>
+<ol style="margin:14px 0 0 18px;line-height:1.65;">
+<li><strong>Opriți în siguranță.</strong> Confirmați mesajul pe unitate. Tahograful continuă să înregistreze până când scoateți cardul.</li>
+<li><strong>Tipăriți ziua.</strong> Tipăriți activitățile dumneavoastră și notați de mână pe verso-ul tipăriturii fiecare activitate ulterioară — ora, locul, activitatea.</li>
+<li><strong>Informați operatorul de transport rutier.</strong> În temeiul articolului 37 din Regulamentul 165/2014, reparația trebuie efectuată de îndată ce circumstanțele permit acest lucru.</li>
+<li><strong>Ajungeți la un atelier autorizat cât mai curând posibil.</strong> În cazul în care vehiculul nu poate reveni la sediul operatorului de transport rutier în termen de o săptămână de la constatarea defecțiunii, reparația trebuie efectuată pe traseu.</li>
+</ol>
+<p style="margin-top:14px;"><strong>O excepție:</strong> Dacă mesajul indică o încălcare a securității sau o defecțiune a senzorului cu conflict de mișcare, unitatea poate ejecta cardul și poate înceta complet înregistrarea. În acest caz, vizita la atelier este imediată, nu se amână până la revenirea vehiculului la bază.</p>
+</div><div class="eyebrow anim-up">Simboluri de activitate</div><h2 class="h2-grad anim-up" id="activity-symbols">Patru simboluri de activitate pe care fiecare conducător auto trebuie să le cunoască</h2>
+<p>Fiecare tahograf digital înregistrează timpul conducătorului auto într-una dintre patru categorii, fiecare afișată pe ecran printr-o singură pictogramă ISO 2575. Acestea nu sunt doar etichete vizuale — sunt <strong>categorii distincte din punct de vedere juridic</strong> în temeiul Regulamentului (CE) nr. 561/2006 (durata de conducere) și al Directivei 2002/15/CE (timpul de lucru al lucrătorilor mobili) și determină modul în care ziua dumneavoastră este luată în calcul pentru limitele de conducere, pauze și perioadele de repaus.</p>
+<div class="activity-grid">
+<div class="activity-card anim-up">
+<div aria-hidden="true" class="ico ico--drive"><img alt="" height="28" src="icons/driving.svg?v=20260514c" width="28" loading="lazy"/></div>
+<h3>Conducere (volan)</h3>
+<p>Setat <strong>automat</strong> în momentul în care vehiculul se deplasează. Nu poate fi modificat manual. Se ia în calcul pentru limita dumneavoastră neîntreruptă de 4½ ore, limitele zilnice de 9/10 ore și limitele săptămânale/bisăptămânale de 56/90 de ore de conducere.</p>
+</div>
+<div class="activity-card anim-up">
+<div aria-hidden="true" class="ico ico--work"><img alt="" height="28" src="icons/other-work.svg?v=20260514c" width="28" loading="lazy"/></div>
+<h3>Alte activități (ciocane încrucișate)</h3>
+<p>Toate activitățile remunerate care <strong>nu reprezintă conducere</strong>: încărcare și descărcare, alimentare cu combustibil, documente, verificări ale vehiculului, asistarea pasagerilor. Se consideră timp de lucru în temeiul Directivei privind timpul de lucru. Are <em>nu</em> se consideră pauză.</p>
+</div>
+<div class="activity-card anim-up">
+<div aria-hidden="true" class="ico ico--avail"><img alt="" height="28" src="icons/availability.svg?v=20260514c" width="28" loading="lazy"/></div>
+<h3>Disponibilitate (romb pătrat)</h3>
+<p>Timp de așteptare a cărui durată este cunoscută în avans: feribot/tren, așteptare la un client, însoțirea unui vehicul remorcat. Perioada de disponibilitate nu se consideră pauză în temeiul normelor privind timpul de lucru al conducătorilor auto și — atunci când durata sa este cunoscută în avans — este, de asemenea, exclusă din timpul de lucru în temeiul Directivei privind timpul de lucru (WTD).</p>
+</div>
+<div class="activity-card anim-up">
+<div aria-hidden="true" class="ico ico--rest"><img alt="" height="28" src="icons/rest.svg?v=20260514c" width="28" loading="lazy"/></div>
+<h3>Pauză / repaus (pat)</h3>
+<p>Pauză efectivă sau repaus zilnic/săptămânal. Conducătorul auto nu trebuie să desfășoare nicio activitate și trebuie să poată dispune liber de timpul său. Singura categorie care resetează intervalul de 4½ ore de conducere continuă și se ia în calcul pentru perioada obligatorie de repaus zilnic de 11 ore.</p>
+</div>
+</div>
+<p>Butoanele de selectare de pe unitate (Conducător auto 1 / Conducător auto 2) vă permit să comutați între Alte activități, Disponibilitate și Pauză/repaus. Conducerea este întotdeauna setată automat de senzorul de mișcare — dacă vedeți Conducere în timp ce vehiculul staționează, tahograful înregistrează o defecțiune, nu o activitate (mai multe detalii mai jos). Erorile frecvente ale conducătorilor auto privind aceste patru simboluri — și motivul pentru care „Disponibilitate” nu poate înlocui niciodată legal o pauză — sunt prezentate în secțiunea 4.</p>
+<!-- ===================================================================== -->
+<!-- SECTION 2: UNIVERSAL WARNING CATEGORIES                                -->
+<!-- ===================================================================== --></div></section><section class="band band--blue"><div class="container art-body"><div class="eyebrow anim-up">Categorii de avertismente</div><h2 class="h2-grad anim-up" id="universal-warnings">Categorii universale de avertismente utilizate de fiecare tahograf</h2>
+<p>După cele patru simboluri de activitate, toate mesajele de avertisment afișate de tahografele digitale se încadrează într-una dintre patru categorii. Manualul <strong>manual VDO DTCO 4.1</strong> le menționează explicit (pagina 109), iar aceeași logică este urmată de Stoneridge SE5000, Actia SmarTach și EFAS-4 — deoarece <strong>Anexa I C definește categoriile la nivelul regulamentului</strong>. Cunoașterea categoriei din care face parte un mesaj vă indică imediat cât de grav este acesta și dacă vă puteți continua tura.</p>
+<div class="warn-grid">
+<div class="warn-card warn-card--warn anim-up">
+<h3>! Eveniment</h3>
+<p>Un <strong>incident operațional</strong> înregistrat de tahograf, care nu reprezintă neapărat o defecțiune hardware — de exemplu, conducerea fără un card valabil, depășirea limitei de viteză sau introducerea unui card în timpul deplasării. Majoritatea evenimentelor trebuie confirmate prin apăsarea butonului OK. Unitatea montată pe vehicul (UMV) scrie o înregistrare în memoria de masă <em>și</em> pe cardul de conducător auto.</p>
+</div>
+<div class="warn-card warn-card--crit anim-up">
+<h3>x Defecțiune</h3>
+<p>O <strong>defecțiune hardware sau software</strong>autentică: defecțiune a senzorului, defecțiune a imprimantei, eroare internă de timp, defecțiune la descărcare, defecțiune GNSS. Defecțiunile declanșează obligația de reparare prevăzută la articolul 37: unitatea trebuie reparată de îndată ce circumstanțele permit acest lucru, iar dacă vehiculul nu se poate întoarce la bază în termen de <strong>o săptămână</strong> După constatarea defecțiunii, reparația trebuie efectuată pe traseu. Conducerea cu o defecțiune cunoscută este permisă numai cu înregistrări manuale documentate.</p>
+</div>
+<div class="warn-card warn-card--info anim-up">
+<h3>↻ Avertisment privind durata de conducere</h3>
+<p>A <strong>preavertisment de conformitate</strong>Durata de conducere continuă se apropie de 4½ ore, durata zilnică/săptămânală de conducere se apropie de limită sau urmează perioada de repaus obligatorie. Lumina de fundal intermitentă este semnalul vizual. Aceste mesaje vă ajută să respectați Regulamentul 561/2006 — nu sunt defecțiuni.</p>
+</div>
+<div class="warn-card warn-card--ok anim-up">
+<h3>i Notă operațională</h3>
+<p>Un <strong>mesaj informativ</strong>: „please enter”, „no paper”, „card error”, „calibration due in 28 days”. Notele operaționale apar fără intermitență și dispar automat după câteva secunde. Nu se scriu date în memoria de masă; mesajul este doar o indicație a interfeței cu utilizatorul.</p>
+</div>
+</div>
+<p>Fiecare mesaj de eroare pe care îl veți vedea — fie de la un VDO DTCO 4.0, un Stoneridge SE5000 Exakt Duo², un Actia SmarTach sau orice alt tip de unitate omologată în conformitate cu anexa I C — aparține exact uneia dintre aceste patru categorii. În continuarea ghidului vom analiza în detaliu fiecare categorie, cu texte de mesaje verificate din manualele producătorilor.</p>
+<div class="cta-box" style="margin-top:36px;">
+<h3>Codul dumneavoastră reprezintă doar jumătate din poveste</h3>
+<p>O defecțiune afișată pe ecran lasă aproape întotdeauna o urmă pe cardul de conducător auto — o înregistrare lipsă, o tură întreruptă sau o contravenție despre care vi se poate cere să dați explicații la un control rutier. TAGRA Trucker vă citește cardul și vă arată exact ce a fost înregistrat. Cititor de carduri USB inclus, €49 fără TVA.</p>
+<a class="cta-btn" href="/ro/incercare-gratuita/?audience=driver&amp;src=symbols">Vedeți ce este pe cardul dumneavoastră →</a>
+</div>
+<!-- ===================================================================== -->
+<!-- SECTION 3: 120+ VERIFIED ERROR CODES BY MANUFACTURER                  -->
+<!-- ===================================================================== --></div></section><section class="band band--gray"><div class="container art-body"><div class="eyebrow anim-up">Bază de date completă de coduri</div><h2 class="h2-grad anim-up" id="vendor-codes">Peste 200 de coduri de eroare verificate din patru manuale ale producătorilor</h2>
+<p>Cele mai răspândite patru modele de tahografe digitale din Europa sunt <strong>VDO DTCO 4.1</strong> (Continental — unitatea dominantă în Europa Centrală și pe piața cehă/slovacă), <strong>Stoneridge SE5000 Exakt Duo²</strong> (varianta standard în Regatul Unit și Scandinavia), <strong>Actia SmarTach</strong> (popular în Franța și Europa de Sud) și <strong>EFAS-4</strong> (Intellic / Schneider, frecvent în Germania și Polonia). Fiecare producător utilizează o formulare ușor diferită pe ecran, însă toate respectă anexa I C — astfel, sensul de bază al unui „internal fault”, al unui „sensor fault” sau al unui „card not closed” este identic, indiferent de unitatea montată pe vehiculul dumneavoastră.</p>
+<p>Codurile de mai jos sunt preluate direct din manualele de utilizare oficiale, disponibile public pentru descărcare — referințele fișierelor sunt indicate în <a href="#sources">secțiunea surse</a>. Acolo unde manualul oferă formularea în limba engleză, o folosim întocmai; am adăugat doar o coloană clară cu „ce trebuie să faceți” atunci când manualul lasă această decizie la aprecierea conducătorului auto.</p>
+<div class="dec-search" id="dec-search">
+<label class="dec-search-label" for="dec-search-input">Căutare rapidă — introduceți un cod, un mesaj sau un simbol</label>
+<div class="dec-search-row">
+<input autocomplete="off" id="dec-search-input" placeholder="de exemplu, defecțiune a senzorului, 042, 002E80, GNSS…" spellcheck="false" type="search"/>
+<button aria-label="Ștergeți căutarea" id="dec-search-clear" type="button">×</button>
+</div>
+<div aria-label="Filtrați după producător" class="dec-chips" role="group">
+<button class="dec-chip is-active" data-vendor="all" type="button">Toate</button>
+<button class="dec-chip" data-vendor="vdo" type="button">VDO DTCO</button>
+<button class="dec-chip" data-vendor="stoneridge" type="button">Stoneridge</button>
+<button class="dec-chip" data-vendor="actia" type="button">Actia</button>
+<button class="dec-chip" data-vendor="efas" type="button">EFAS</button>
+<button class="dec-chip" data-vendor="symbols" type="button">Simboluri ↑</button>
+</div>
+<p aria-live="polite" class="dec-count" id="dec-count"></p>
+</div>
+<!-- ===== TAGRA CTA Box — found your code ===== -->
+<div class="cta-box">
+<h3>Ați găsit codul? Verificați ce s-a înregistrat pe cardul dumneavoastră.</h3>
+<p>Un avertisment pe afișaj lasă adesea o urmă în datele cardului dumneavoastră de conducător auto. TAGRA Trucker citește cardul dumneavoastră după ce îl descărcați și afișează contravențiile, duratele de conducere și perioadele de repaus — astfel știți care este situația dumneavoastră înainte de un control rutier.</p>
+<p><a class="cta-btn" href="/ro/pentru-conducatori/">TAGRA Trucker — €49, cititorul de card inclus →</a></p>
+<p class="cta-note">Gestionați mai mulți conducători auto sau mai multe vehicule? <a href="/ro/pentru-firme/">Vedeți TAGRA pentru flote</a>.</p>
+</div>
+<div class="vendor-stack">
+<!-- ===== VDO DTCO 4.1 ===== -->
+<details class="vendor" id="vdo" open="">
+<summary>
+<span class="vendor-meta">Continental VDO · cel mai răspândit în Europa Centrală</span>
+    VDO DTCO 4.1 / 4.1a / 4.1b
+  </summary>
+<div class="vendor-body">
+<p>Familia VDO DTCO 4.1 este tahograful inteligent de a doua generație (Smart Tacho 2) și cea mai frecventă unitate din flotele cehe, slovace, germane și austriece. Mesajele de mai jos sunt preluate din <strong>VDO DTCO 4.1 Instruction Manual, Edition 3 / 2024-08, BA00.1381.41 100 102</strong> (Continental Automotive Technologies GmbH). Structura oficială a mesajelor este: <strong>Evenimente</strong> (cum ar fi conducerea fără card), <strong>Defecțiuni</strong> (defecțiuni hardware ale unității), <strong>Avertismente privind durata de conducere</strong> și <strong>Note operaționale</strong>.</p>
+<h3>Evenimente — apariții operaționale (prioritate maximă)</h3>
+<div class="code-table-wrap">
+<table class="code-table">
+<thead>
+<tr>
+<th style="width: 22%;">Mesaj</th>
+<th style="width: 30%;">Cauză (din manual)</th>
+<th style="width: 32%;">Ce trebuie să faceți</th>
+<th style="width: 12%;">Gravitate</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>! security breach xx</td>
+<td>Eroare în memoria de date; securitatea datelor în DTCO 4.1x nu mai este asigurată. Datele senzorului nu mai sunt fiabile. Carcasa DTCO a fost deschisă fără autorizare.</td>
+<td>Confirmați mesajul. Cardul este ejectat automat — inclusiv în timpul conducerii. Reintroduceți-l sau solicitați verificarea într-un atelier autorizat.</td>
+<td><span class="sev sev-crit">Critică</span></td>
+</tr>
+<tr>
+<td>!1 security breach xx</td>
+<td>Blocarea cardului este întreruptă sau defectă. DTCO nu mai detectează un card de tahograf introdus anterior în mod corect. Identitatea cardului, autenticitatea sau datele stocate nu sunt fiabile.</td>
+<td>Confirmați mesajul. Reintroduceți cardul de tahograf sau solicitați verificarea acestuia.</td>
+<td><span class="sev sev-crit">Critică</span></td>
+</tr>
+<tr>
+<td>! power interruption xx</td>
+<td>Alimentarea electrică a fost întreruptă sau tensiunea de alimentare a senzorului DTCO a fost prea scăzută sau prea ridicată. Mesajul poate fi afișat și la pornirea motorului.</td>
+<td>Confirmați mesajul. Dacă acesta reapare, verificați alimentarea electrică a vehiculului.</td>
+<td><span class="sev sev-med">Medie</span></td>
+</tr>
+<tr>
+<td>x sensor fault</td>
+<td>Comunicarea cu senzorul de mișcare este întreruptă. Mesajul apare și după o întrerupere a tensiunii.</td>
+<td>Confirmați mesajul. Dacă apare în mod repetat, consultați un atelier autorizat de specialitate.</td>
+<td><span class="sev sev-crit">Critică</span></td>
+</tr>
+<tr>
+<td>! motion conflict xx</td>
+<td>Există o contradicție în evaluarea mișcării vehiculului între senzor și o sursă de semnal independentă. Este posibil ca funcția feribot/tren să nu fi fost setată în timpul transportului naval.</td>
+<td>Confirmați mesajul. Consultați un atelier autorizat de specialitate — posibilă manipulare frauduloasă sau deteriorare.</td>
+<td><span class="sev sev-crit">Critică</span></td>
+</tr>
+<tr>
+<td>! GNSS is missing xx</td>
+<td>Nu există date de poziție pe parcursul a mai mult de trei ore de durată de conducere cumulată.</td>
+<td>Confirmați mesajul. Verificați ca antena GNSS să nu fie acoperită sau obstrucționată.</td>
+<td><span class="sev sev-med">Medie</span></td>
+</tr>
+<tr>
+<td>!? GNSS anomaly</td>
+<td>A fost detectată o manipulare frauduloasă sau un atac extern asupra semnalului GNSS (anti-spoofing OSNMA).</td>
+<td>Verificați cauzele posibile ale manipulării frauduloase. Verificați funcționarea GNSS. Înlocuiți componentele defecte, dacă este necesar.</td>
+<td><span class="sev sev-high">Ridicat</span></td>
+</tr>
+<tr>
+<td>! conflict de oră xx</td>
+<td>Există o diferență de peste un minut între ceasul intern al DTCO și ora primită de la semnalul GNSS.</td>
+<td>Confirmați. Dacă problema persistă, solicitați unui atelier autorizat să inspecteze și să corecteze tahograful.</td>
+<td><span class="sev sev-med">Medie</span></td>
+</tr>
+<tr>
+<td>! eroare com. DSRC xx</td>
+<td>A apărut o eroare de comunicare între DTCO 4.1x și modulul DSRC-CAN extern (utilizat pentru controale rutiere de la distanță).</td>
+<td>Confirmați mesajul. Dacă reapare, consultați un atelier autorizat specializat.</td>
+<td><span class="sev sev-med">Medie</span></td>
+</tr>
+<tr>
+<td>! conducere fără card xx</td>
+<td>Conducerea a început fără un card de conducător auto — sau fără un card de conducător auto valid — în sertarul pentru card 1. Este declanșat și dacă este introdusă o combinație neautorizată de carduri înainte sau după deplasare.</td>
+<td>Opriți vehiculul. Introduceți un card de conducător auto valid. Dacă este necesar, scoateți mai întâi din DTCO orice card al societății / card de control.</td>
+<td><span class="sev sev-high">Ridicat</span></td>
+</tr>
+<tr>
+<td>!1 introducere în timpul conducerii xx</td>
+<td>Cardul de conducător auto a fost introdus după ce vehiculul începuse deja să se deplaseze.</td>
+<td>Confirmați mesajul. Pe viitor, planificați introducerea cardului înainte de plecare.</td>
+<td><span class="sev sev-med">Medie</span></td>
+</tr>
+<tr>
+<td>!1 suprapunere de timp xx</td>
+<td>Ora UTC a acestui tahograf este în urma orei UTC a tahografului anterior, rezultând o diferență de timp negativă (situație tipică la schimbarea vehiculelor).</td>
+<td>Identificați tahograful cu ora UTC incorectă și solicitați unui atelier autorizat să îl inspecteze și să îl corecteze.</td>
+<td><span class="sev sev-med">Medie</span></td>
+</tr>
+<tr>
+<td>!1 card nevalid xx</td>
+<td>Cardul tahografic a expirat, nu este încă valabil sau autentificarea acestuia a eșuat. Un card care devine nevalabil după miezul nopții este inscripționat automat și evacuat după oprirea vehiculului.</td>
+<td>Confirmați mesajul. Verificați cardul tahografic și reintroduceți-l; reînnoiți-l dacă a expirat.</td>
+<td><span class="sev sev-med">Medie</span></td>
+</tr>
+<tr>
+<td>! conflict carduri xx</td>
+<td>Cele două carduri tahografice nu trebuie introduse împreună — de exemplu, un card al societății împreună cu un card de control.</td>
+<td>Confirmați mesajul. Scoateți cardul aflat în conflict din sertarul corespunzător.</td>
+<td><span class="sev sev-med">Medie</span></td>
+</tr>
+<tr>
+<td>!1 card neînchis xx</td>
+<td>Cardul de conducător auto nu a fost scos corect din tahograful anterior. Este posibil ca unele date aferente conducătorului auto să nu fi fost salvate.</td>
+<td>Confirmați. De acum înainte, așteptați întotdeauna eliberarea cardului înainte de a-l scoate.</td>
+<td><span class="sev sev-med">Medie</span></td>
+</tr>
+<tr>
+<td>⊃ depășire viteză xx</td>
+<td>Viteza maximă configurată a fost depășită mai mult de <strong>60 de secunde</strong>.</td>
+<td>Confirmați mesajul. Reduceți viteza. Evenimentele repetate de depășire a vitezei sunt vizibile autorităților de control (ISCTR) la descărcare.</td>
+<td><span class="sev sev-high">Ridicat</span></td>
+</tr>
+<tr>
+<td>§ calibrare în zile ??</td>
+<td>Se apropie inspecția periodică la fiecare doi ani a tahografului (avertismentul apare cu 28 de zile înainte).</td>
+<td>Confirmați. Programați-vă la un atelier autorizat înainte de termenul-limită.</td>
+<td><span class="sev sev-low">Scăzut</span></td>
+</tr>
+<tr>
+<td>1 descărcare în zile ??</td>
+<td>Următoarea descărcare a cardului de conducător auto este scadentă (avertismentul apare cu 14 zile înainte).</td>
+<td>Efectuați o descărcare a cardului de conducător auto înainte de expirarea termenului-limită.</td>
+<td><span class="sev sev-low">Scăzut</span></td>
+</tr>
+<tr>
+<td>1 expiră în zile ??</td>
+<td>Cardul de conducător auto expiră în curând (de regulă, avertismentul apare cu 28 de zile înainte).</td>
+<td>Confirmați mesajul. Solicitați reînnoirea cardului la autoritatea din statul dumneavoastră membru.</td>
+<td><span class="sev sev-info">Informații</span></td>
+</tr>
+<tr>
+<td>! sfârșitul funcționării normale în ??</td>
+<td>Certificatul de omologare de tip al DTCO 4.1x expiră. Mesajul apare cu 92 de zile înainte, la scoaterea cardului.</td>
+<td>Programați-vă la atelierul dumneavoastră pentru înlocuirea DTCO înainte de termenul-limită.</td>
+<td><span class="sev sev-med">Medie</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>Defecțiuni — disfuncționalități hardware</h3>
+<div class="code-table-wrap">
+<table class="code-table">
+<thead>
+<tr>
+<th style="width: 22%;">Mesaj</th>
+<th style="width: 30%;">Cauză (din manual)</th>
+<th style="width: 32%;">Ce trebuie să faceți</th>
+<th style="width: 12%;">Gravitate</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>x defecțiune internă xx</td>
+<td>Disfuncționalitate gravă în DTCO 4.1x. Cauze posibile: eroare neașteptată de temporizare a programului/procesului, butoane blocate, disfuncționalitate de comunicare cu dispozitive externe sau cu afișajul de bord, disfuncționalitate la ieșirea de impulsuri.</td>
+<td>Confirmați. Verificați butoanele. Solicitați inspectarea de către un atelier autorizat a cablurilor de conectare / echipamentelor de înregistrare conectate.</td>
+<td><span class="sev sev-crit">Critică</span></td>
+</tr>
+<tr>
+<td>x1 defecțiune internă xx</td>
+<td>Defecțiune la mecanismul cardului (fanta 1), de exemplu blocarea cardului nu se închide.</td>
+<td>Scoateți cardul tahografic și reintroduceți-l. Dacă problema persistă, consultați un atelier autorizat.</td>
+<td><span class="sev sev-high">Ridicat</span></td>
+</tr>
+<tr>
+<td>x defecțiune de timp xx</td>
+<td>Ora UTC a DTCO nu este plauzibilă sau ceasul în timp real este defect. Cardurile de conducător auto/cardurile societății nou introduse sunt respinse pentru a evita datele neconsecvente.</td>
+<td>Confirmați. DTCO trebuie înlocuit sau resetat de un atelier autorizat cât mai curând posibil.</td>
+<td><span class="sev sev-crit">Critică</span></td>
+</tr>
+<tr>
+<td>x defecțiune imprimantă</td>
+<td>Tensiunea de alimentare a imprimantei a căzut sau senzorul de temperatură al capului de imprimare este defect.</td>
+<td>Confirmați. Repetați imprimarea, eventual după oprirea și repornirea contactului. Dacă problema nu se rezolvă, vizitați un atelier autorizat.</td>
+<td><span class="sev sev-med">Medie</span></td>
+</tr>
+<tr>
+<td>x defecțiune la descărcare xx</td>
+<td>Defecțiune în timpul descărcării datelor către un dispozitiv extern (cheie de descărcare sau dispozitiv pentru descărcare de la distanță).</td>
+<td>Confirmați. Repetați descărcarea. Solicitați verificarea cablurilor de conexiune (contact imperfect?) sau a dispozitivului extern.</td>
+<td><span class="sev sev-med">Medie</span></td>
+</tr>
+<tr>
+<td>x defecțiune senzor xx</td>
+<td>Senzorul de mișcare indică o defecțiune internă după autotestare.</td>
+<td>Confirmați. Este necesară verificarea într-un atelier autorizat — poate fi necesară înlocuirea senzorului.</td>
+<td><span class="sev sev-crit">Critică</span></td>
+</tr>
+<tr>
+<td>x1 defecțiune card xx</td>
+<td>În timpul citirii sau scrierii cardului tahografic a apărut o defecțiune de comunicare — cauzată de obicei de contacte murdare. Este posibil ca unele date ale conducătorului auto să nu fi fost scrise.</td>
+<td>Confirmați. Curățați contactele cardului (cu o cârpă uscată) și reintroduceți-l. Dacă problema reapare, înlocuiți cardul.</td>
+<td><span class="sev sev-med">Medie</span></td>
+</tr>
+<tr>
+<td>x defecțiune GNSS internă xx</td>
+<td>Eroare la dispozitivul GNSS: defecțiune internă, scurtcircuit al antenei GNSS externe (opțional) sau lipsa conexiunii la antena externă.</td>
+<td>Confirmați. Consultați un atelier autorizat.</td>
+<td><span class="sev sev-high">Ridicat</span></td>
+</tr>
+<tr>
+<td>x defecțiune DSRC internă xx</td>
+<td>Eroare internă la modulul DSRC (radio pentru control rutier de la distanță) sau antenă defectă / neconectată.</td>
+<td>Confirmați. Atelierul autorizat trebuie să verifice modulul DSRC, cablurile și antena externă.</td>
+<td><span class="sev sev-med">Medie</span></td>
+</tr>
+<tr>
+<td>x defecțiune senzor intern xx</td>
+<td>Autotestarea senzorului intern de accelerație a eșuat de mai mult de 10 ori, iar încercarea de resetare a fost defectuoasă.</td>
+<td>Confirmați. Consultați fără întârziere un atelier autorizat specializat.</td>
+<td><span class="sev sev-crit">Critică</span></td>
+</tr>
+<tr>
+<td>x defecțiune ITS xx</td>
+<td>Eroare la componenta Bluetooth internă (interfața de date ITS).</td>
+<td>Confirmați. Consultați un atelier autorizat specializat.</td>
+<td><span class="sev sev-low">Scăzut</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>Avertismente privind durata de conducere (pre-avertismente de conformitate, nu defecțiuni)</h3>
+<div class="code-table-wrap">
+<table class="code-table">
+<thead>
+<tr>
+<th style="width: 26%;">Mesaj</th>
+<th style="width: 44%;">Semnificație</th>
+<th style="width: 30%;">Acțiune</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1 pauză! 04h15 00h15</td>
+<td>Luați o pauză — durata de conducere neîntreruptă a ajuns la 4 ore și 15 minute (pre-avertisment).</td>
+<td>Confirmați. Planificați o pauză de 45 de minute în următoarele 15 minute.</td>
+</tr>
+<tr>
+<td>1 pauză! 04h30 00h15</td>
+<td>Durata de conducere a fost depășită — a fost atinsă limita de 4 ore și 30 de minute de conducere neîntreruptă.</td>
+<td>Opriți și luați o pauză (45 min sau împărțită în 15 + 30).</td>
+</tr>
+<tr>
+<td>1 durată de conducere 24h / | / ||</td>
+<td>Se apropie sfârșitul duratei de conducere zilnice (24h), săptămânale (|) sau bisăptămânale (||). Timpul de pre-avertisment este configurabil.</td>
+<td>Confirmați. Încheiați conducerea și luați perioada de repaus necesară în temeiul Regulamentului 561/2006.</td>
+</tr>
+<tr>
+<td>1 repaus în 01h45</td>
+<td>Următoarea perioadă de repaus zilnic sau săptămânal este scadentă în curând (preavertisment configurabil).</td>
+<td>Planificați din timp următoarea oprire pentru repaus.</td>
+</tr>
+<tr>
+<td>1 timp de lucru 24h 09h30</td>
+<td>Se apropie sfârșitul timpului de lucru zilnic (24 h) sau săptămânal (|) în temeiul WTD.</td>
+<td>Confirmați. Încheiați ziua de lucru și luați perioada de repaus necesară.</td>
+</tr>
+<tr>
+<td>1 timp de lucru 04h15</td>
+<td>Se apropie sfârșitul timpului de lucru neîntrerupt maxim (6 ore în temeiul WTD).</td>
+<td>Planificați o pauză în următoarele 15 minute.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>Note de funcționare (informative, se închid automat după 3 s)</h3>
+<div class="code-table-wrap">
+<table class="code-table">
+<thead>
+<tr>
+<th style="width: 30%;">Notă</th>
+<th style="width: 70%;">Semnificație &amp; rezoluție</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>? vă rugăm să introduceți</td><td>Unitatea așteaptă o introducere în timpul unei secvențe de introducere manuală. Apăsați OK și continuați.</td></tr>
+<tr><td>o no paper xx</td><td>Imprimanta nu are hârtie sau sertarul imprimantei nu este poziționat corect. Introduceți o rolă nouă; reluați din meniu orice imprimare întreruptă.</td></tr>
+<tr><td>printout not possible xx</td><td>Imprimarea este imposibilă deoarece contactul este oprit (varianta ADR), capul de imprimare este supraîncălzit, imprimanta este ocupată sau tensiunea de alimentare este incorectă. Așteptați remedierea cauzei.</td></tr>
+<tr><td>imprimare întârziată</td><td>Imprimarea a fost întreruptă deoarece capul termic este prea fierbinte. Așteptați — imprimarea continuă automat după răcire.</td></tr>
+<tr><td>ejection not possible xx</td><td>Ejectarea cardului a fost refuzată: datele sunt citite sau transferate, schimbarea zilei este în curs, vehiculul este în mișcare sau contactul este oprit (ADR).</td></tr>
+<tr><td>?1 recording inconsistent xx</td><td>Ordine neconsecventă a datelor în înregistrările cardului de conducător auto. Se va remedia când datele noi vor suprascrie înregistrările defectuoase.</td></tr>
+<tr><td>1 please eject the card xx</td><td>Eroare la scrierea datelor pe cardul de conducător auto. Cardul este ejectat și recitit; dacă eroarea apare din nou, se inițiază imprimarea ultimelor activități.</td></tr>
+<tr><td>1 card error xx</td><td>A apărut o eroare la procesarea cardului de tahograf introdus. Cardul este respins și ejectat. Curățați contactele și reintroduceți-l.</td></tr>
+<tr><td>1 wrong card type xx</td><td>Cardul introdus nu este un card de tahograf. Introduceți un card de tahograf valabil.</td></tr>
+<tr><td>1 please clean card!</td><td>DTCO a întâmpinat probleme la citirea sau scrierea pe card. Curățați atât cardul, cât și sertarele pentru carduri.</td></tr>
+</tbody>
+</table>
+</div>
+<h3>Coduri numerice VDO din memoria de defecțiuni (001–099)</h3>
+<p style="font-size:14px;color:var(--text2);margin-bottom:12px;">Aceste coduri numerice sunt citite din memoria de defecțiuni a unității cu un instrument de diagnosticare VDO pentru atelier (<strong>SDS</strong> / <strong>CTCII</strong>) — acestea nu sunt afișate conducătorului auto în timpul utilizării normale. Numerotarea este consecventă între generațiile DTCO (1381 și 4.1), iar fiecare număr corespunde unuia dintre evenimentele / defecțiunile din anexa I C descrise în tabelele cu mesaje de mai sus. Introduceți un număr precum <em>005</em> în caseta de căutare din partea de sus a acestei secțiuni.</p>
+<div class="code-table-wrap">
+<table class="code-table">
+<thead><tr><th style="width:24%;">Cod</th><th style="width:58%;">Semnificație</th><th style="width:18%;">Gravitate</th></tr></thead>
+<tbody>
+<tr><td>001–2, 004–5</td><td>Eroare internă a dispozitivului</td><td><span class="sev sev-crit">Critică</span></td></tr>
+<tr><td>006</td><td>Eroare de timp</td><td><span class="sev sev-crit">Critică</span></td></tr>
+<tr><td>007</td><td>Tentativă de încălcare a securității (unitate montată pe vehicul)</td><td><span class="sev sev-crit">Critică</span></td></tr>
+<tr><td>009</td><td>Eroare de calibrare</td><td><span class="sev sev-high">Ridicat</span></td></tr>
+<tr><td>010</td><td>Defecțiune la ieșirea semnalului de viteză (B7)</td><td><span class="sev sev-med">Medie</span></td></tr>
+<tr><td>012</td><td>Eroare de descărcare</td><td><span class="sev sev-med">Medie</span></td></tr>
+<tr><td>013–14</td><td>Defecțiune la magistrala CAN</td><td><span class="sev sev-med">Medie</span></td></tr>
+<tr><td>015</td><td>Pierderea comunicării cu afișajul</td><td><span class="sev sev-med">Medie</span></td></tr>
+<tr><td>016</td><td>Defecțiune a senzorului (autotest)</td><td><span class="sev sev-crit">Critică</span></td></tr>
+<tr><td>017–18</td><td>Eroare de integritate a datelor senzorului (018 la KITAS 4.0: de la R1.10 aceasta apare după o întrerupere a alimentării, adesea împreună cu 019 — o funcție de securitate necesară, nu un motiv pentru înlocuirea senzorului)</td><td><span class="sev sev-crit">Critică</span></td></tr>
+<tr><td>019</td><td>Întreruperea alimentării senzorului</td><td><span class="sev sev-med">Medie</span></td></tr>
+<tr><td>020–22</td><td>Eroare de comunicare a senzorului</td><td><span class="sev sev-high">Ridicat</span></td></tr>
+<tr><td>023</td><td>Eroare de autentificare / asociere a senzorului</td><td><span class="sev sev-high">Ridicat</span></td></tr>
+<tr><td>024</td><td>Număr de serie necunoscut al senzorului</td><td><span class="sev sev-high">Ridicat</span></td></tr>
+<tr><td>025</td><td>Eroare a memoriei de date</td><td><span class="sev sev-crit">Critică</span></td></tr>
+<tr><td>026</td><td>Carcasă deschisă (încălcare a securității)</td><td><span class="sev sev-crit">Critică</span></td></tr>
+<tr><td>028</td><td>Conducere fără card</td><td><span class="sev sev-crit">Critică</span></td></tr>
+<tr><td>029</td><td>Conflict între carduri</td><td><span class="sev sev-med">Medie</span></td></tr>
+<tr><td>030</td><td>Depășire de viteză</td><td><span class="sev sev-high">Ridicat</span></td></tr>
+<tr><td>031</td><td>Întreruperea alimentării</td><td><span class="sev sev-med">Medie</span></td></tr>
+<tr><td>034</td><td>Extragerea cardului nu este posibilă</td><td><span class="sev sev-med">Medie</span></td></tr>
+<tr><td>036</td><td>Imprimarea/afișarea nu este posibilă</td><td><span class="sev sev-med">Medie</span></td></tr>
+<tr><td>037</td><td>Imprimare întârziată</td><td><span class="sev sev-info">Informații</span></td></tr>
+<tr><td>038</td><td>Sertarul imprimantei este deschis</td><td><span class="sev sev-med">Medie</span></td></tr>
+<tr><td>039</td><td>Hârtie epuizată</td><td><span class="sev sev-med">Medie</span></td></tr>
+<tr><td>040</td><td>Defecțiune a mecanismului cardului, fanta 1</td><td><span class="sev sev-high">Ridicat</span></td></tr>
+<tr><td>041</td><td>Eroare de comunicare a cardului, fanta 1</td><td><span class="sev sev-high">Ridicat</span></td></tr>
+<tr><td>042</td><td>Autenticitatea datelor cardului, fanta 1</td><td><span class="sev sev-high">Ridicat</span></td></tr>
+<tr><td>043</td><td>Card lipsă, fanta 1</td><td><span class="sev sev-high">Ridicat</span></td></tr>
+<tr><td>044</td><td>Card neînchis, fanta 1</td><td><span class="sev sev-low">Scăzut</span></td></tr>
+<tr><td>045</td><td>Suprapunere de timp, fanta 1</td><td><span class="sev sev-med">Medie</span></td></tr>
+<tr><td>046</td><td>Introducere în timpul conducerii, fanta 1</td><td><span class="sev sev-low">Scăzut</span></td></tr>
+<tr><td>047</td><td>Autentificarea cardului, fanta 1</td><td><span class="sev sev-high">Ridicat</span></td></tr>
+<tr><td>048</td><td>Card nevalid, fanta 1</td><td><span class="sev sev-high">Ridicat</span></td></tr>
+<tr><td>049</td><td>Incoerență a înregistrărilor, slot 1</td><td><span class="sev sev-med">Medie</span></td></tr>
+<tr><td>050</td><td>Cardul nu poate fi citit, slot 1</td><td><span class="sev sev-high">Ridicat</span></td></tr>
+<tr><td>051</td><td>Tip de card incorect, slot 1</td><td><span class="sev sev-med">Medie</span></td></tr>
+<tr><td>052</td><td>Card blocat, slot 1</td><td><span class="sev sev-high">Ridicat</span></td></tr>
+<tr><td>053</td><td>Defecțiune internă, slot 1 — card respins și ejectat</td><td><span class="sev sev-crit">Critică</span></td></tr>
+<tr><td>054</td><td>Ejectați cardul, slot 1 — actualizarea cardului / reautentificarea a eșuat</td><td><span class="sev sev-med">Medie</span></td></tr>
+<tr><td>056</td><td>Repaus! slot 1 — 4 h 30 de conducere continuă</td><td><span class="sev sev-high">Ridicat</span></td></tr>
+<tr><td>057</td><td>Repaus în curând, slot 1 — 4 h 15 de conducere continuă</td><td><span class="sev sev-med">Medie</span></td></tr>
+<tr><td>058–066</td><td>Defecțiuni ale cardului, slot 2 (copilot) — corespund codurilor 040–048</td><td><span class="sev sev-high">Ridicat</span></td></tr>
+</tbody>
+</table>
+</div>
+<h3>DTCO 4.0 / 4.1 — semnificația unui număr afișat pe ecran (tahograf inteligent)</h3>
+<p style="font-size:14px;color:var(--text2);margin-bottom:12px;">Unitățile VDO DTCO 4.0 și 4.1 mai noi afișează un număr din două cifre lângă pictogramă. Numerele mici (001–066) se găsesc în tabelul de mai sus; numerele mari <strong>67–99</strong> aparțin funcțiilor tahografului inteligent (GNSS, DSRC, ITS). Puteți introduce oricare dintre acestea direct în caseta de căutare de mai sus.</p>
+<div class="code-table-wrap">
+<table class="code-table">
+<thead><tr><th style="width:24%;">Număr afișat</th><th style="width:58%;">Semnificație</th><th style="width:18%;">Gravitate</th></tr></thead>
+<tbody>
+<tr><td>21</td><td><a href="/ro/articole/tahograf-defectiune-21-senzor-de-miscare/">Defecțiune a senzorului de mișcare</a></td><td><span class="sev sev-crit">Critică</span></td></tr>
+<tr><td>34</td><td><a href="/ro/articole/tahograf-defectiune-34-extragere-imposibila/">Ejectarea cardului nu este posibilă → ce trebuie să faceți</a></td><td><span class="sev sev-med">Medie</span></td></tr>
+<tr><td>36</td><td><a href="/ro/articole/tahograf-defectiune-36-tiparire-imposibila/">Imprimarea nu este posibilă</a></td><td><span class="sev sev-low">Scăzut</span></td></tr>
+<tr><td>80</td><td><a href="/ro/articole/tahograf-defectiune-80-conflict-de-miscare/">Conflict privind mișcarea vehiculului → ce trebuie să faceți</a></td><td><span class="sev sev-crit">Critică</span></td></tr>
+<tr><td>82</td><td><a href="/ro/articole/tahograf-defectiune-82-defectiune-interna-gnss/">Defecțiune internă GNSS → ce trebuie să faceți</a></td><td><span class="sev sev-med">Medie</span></td></tr>
+<tr><td>83</td><td><a href="/ro/articole/tahograf-defectiune-83-lipsa-semnal-gnss/">Lipsă semnal GNSS → ce trebuie să faceți</a></td><td><span class="sev sev-med">Medie</span></td></tr>
+<tr><td>84</td><td><a href="/ro/articole/tahograf-defectiune-84-defectiune-interna-dsrc/">Defecțiune internă DSRC → ce trebuie să faceți</a></td><td><span class="sev sev-low">Scăzut</span></td></tr>
+<tr><td>—</td><td><a href="/articles/tacho-vu-internal-fault/">Defecțiune internă DSRC → ce trebuie să faceți <span class="en-badge">(în engleză)</span></a></td><td><span class="sev sev-low">Scăzut</span></td></tr>
+<tr><td>—</td><td><a href="/articles/tacho-stored-data-integrity-error/">Defecțiune internă DSRC → ce trebuie să faceți <span class="en-badge">(în engleză)</span></a></td><td><span class="sev sev-low">Scăzut</span></td></tr>
+<tr><td>85</td><td><a href="/ro/articole/tahograf-defectiune-85-comunicatie-dsrc/">Eroare de comunicare DSRC</a></td><td><span class="sev sev-low">Scăzut</span></td></tr>
+<tr><td>86</td><td>Conflict de timp</td><td><span class="sev sev-med">Medie</span></td></tr>
+<tr><td>87</td><td>Defecțiune a senzorului</td><td><span class="sev sev-high">Ridicat</span></td></tr>
+<tr><td>96</td><td><a href="/ro/articole/tahograf-defectiune-96-anomalie-gnss/">Anomalie GNSS (neregularități GNSS · anti-spoofing OSNMA)</a></td><td><span class="sev sev-high">Ridicat</span></td></tr>
+<tr><td>97</td><td>Defecțiune internă a senzorului</td><td><span class="sev sev-high">Ridicat</span></td></tr>
+<tr><td>98</td><td><a href="/ro/articole/tahograf-defectiune-98-defectiune-its/">Defecțiune ITS / Bluetooth → ce trebuie să faceți</a></td><td><span class="sev sev-low">Scăzut</span></td></tr>
+<tr><td>67, 99</td><td>Înregistrare neconsecventă</td><td><span class="sev sev-med">Medie</span></td></tr>
+<tr><td>68–72</td><td>Defecțiune a cardului / defecțiune internă, fanta 2 (al doilea conducător auto)</td><td>Variează</td></tr>
+<tr><td>74–75</td><td>Pauză! fanta 2 (al doilea conducător auto) — 4 h 30 / 4 h 15</td><td><span class="sev sev-high">Ridicat</span></td></tr>
+<tr><td>76</td><td>Avertisment prealabil de depășire a vitezei — sub 60 s, evenimentul nu este încă înregistrat</td><td><span class="sev sev-med">Medie</span></td></tr>
+<tr><td>78</td><td>Actualizarea software-ului a eșuat — integritatea modulului de actualizare sau a cheii de securitate</td><td><span class="sev sev-high">Ridicat</span></td></tr>
+<tr><td>79</td><td>Actualizarea software-ului a eșuat — tensiunea de alimentare în afara intervalului în timpul actualizării</td><td><span class="sev sev-high">Ridicat</span></td></tr>
+<tr><td>88–95</td><td>Notă operațională privind durata de conducere / repaus — nu este o defecțiune</td><td><span class="sev sev-info">Informații</span></td></tr>
+</tbody>
+</table><p><strong>Cum caută de obicei conducătorii auto aceste informații:</strong> conflict de mișcare 80, conflict de mișcare a vehiculului 80 pe tahograf, defecțiune GNSS internă 82, semnal GNSS lipsă 83, defecțiune DSRC internă 84, eroare de comunicare DSRC 85, defecțiune a senzorului 87, anomalie GNSS 96, defecțiune ITS 98, defecțiune internă UMV. Formularea de pe afișaj variază în funcție de producător — VDO DTCO, Stoneridge SE5000, Actia SmarTach și EFAS utilizează etichete diferite pentru același eveniment.</p>
+</div>
+<p>Sunt disponibile instrucțiuni detaliate pentru cele mai frecvente defecțiuni: <a href="/ro/articole/tahograf-defectiune-84-defectiune-interna-dsrc/">Defecțiune DSRC internă (84)</a>, <a href="/ro/articole/tahograf-defectiune-82-defectiune-interna-gnss/">Defecțiune GNSS internă (82)</a>, <a href="/ro/articole/tahograf-defectiune-83-lipsa-semnal-gnss/">GNSS lipsește (83)</a>, <a href="/ro/articole/tahograf-defectiune-34-extragere-imposibila/">Ejectarea nu este posibilă (34)</a>, <a href="/ro/articole/tahograf-defectiune-80-conflict-de-miscare/">Conflict de mișcare (80)</a> și <a href="/ro/articole/tahograf-defectiune-98-defectiune-its/">Defecțiune ITS (98)</a>.</p>
+<h3>Ce ajunge de fapt în datele descărcate (EventFaultType)</h3>
+<p style="font-size:14px;color:var(--text2);margin-bottom:12px;">Nu fiecare mesaj afișat ajunge în datele descărcate. Numai mesajele cu un <strong>EventFaultType</strong> definit în apendicele 1 al anexei IC la Regulamentul (UE) 2016/799 sunt stocate în memoria de masă a tahografului, apar pe imprimare și sunt incluse într-un raport de evaluare. Mesajele operaționale și cele privind timpul de lucru sunt afișate numai pe ecran.</p>
+<div class="code-table-wrap">
+<table class="code-table">
+<thead><tr><th style="width:16%;">EventFaultType</th><th style="width:60%;">Eveniment / defecțiune (formulare oficială din anexa IC)</th><th style="width:24%;">Cod afișat</th></tr></thead>
+<tbody>
+<tr><td>0x01</td><td>Introducerea unui card nevalid</td><td>048, 066</td></tr>
+<tr><td>0x02</td><td>Conflict de carduri</td><td>029</td></tr>
+<tr><td>0x03</td><td>Suprapunere temporală</td><td>045, 063</td></tr>
+<tr><td>0x04</td><td>Conducere fără un card corespunzător</td><td>028</td></tr>
+<tr><td>0x05</td><td>Introducerea cardului în timpul conducerii</td><td>046, 064</td></tr>
+<tr><td>0x06</td><td>Ultima sesiune a cardului nu a fost încheiată corect</td><td>044, 062</td></tr>
+<tr><td>0x07</td><td>Depășirea vitezei</td><td>030</td></tr>
+<tr><td>0x08</td><td>Întreruperea alimentării cu energie electrică</td><td>019, 031</td></tr>
+<tr><td>0x09</td><td>Eroare privind datele de mișcare</td><td>020, 021, 022, 087</td></tr>
+<tr><td>0x0A</td><td>Conflict privind mișcarea vehiculului</td><td>080</td></tr>
+<tr><td>0x0B</td><td>Conflict de timp (GNSS față de ceasul intern al UMV)</td><td>086</td></tr>
+<tr><td>0x0C</td><td>Eroare de comunicare cu instalația de comunicare de la distanță</td><td>085</td></tr>
+<tr><td>0x0D</td><td>Lipsa informațiilor privind poziția de la receptorul GNSS</td><td>083</td></tr>
+<tr><td>0x0F</td><td>Anomalie GNSS</td><td>096</td></tr>
+<tr><td>0x10</td><td>Tentativă de încălcare a securității legată de unitatea montată pe vehicul — fără detalii suplimentare</td><td>007</td></tr>
+<tr><td>0x11</td><td>Eșecul autentificării senzorului de mișcare</td><td>023</td></tr>
+<tr><td>0x12</td><td>Eșecul autentificării cardului de tahograf</td><td>043, 047, 061, 065</td></tr>
+<tr><td>0x13</td><td>Modificare neautorizată a senzorului de mișcare</td><td>024</td></tr>
+<tr><td>0x14</td><td>Eroare de integritate a datelor introduse de pe card</td><td>042, 060</td></tr>
+<tr><td>0x15</td><td>Eroare de integritate a datelor utilizatorului stocate</td><td>025</td></tr>
+<tr><td>0x1C</td><td>Neconcordanță între datele de mișcare și datele privind activitatea conducătorului auto stocate</td><td>099</td></tr>
+<tr><td>0x21</td><td>Tentativă de încălcare a securității legată de senzor — eșecul autentificării</td><td>018</td></tr>
+<tr><td>0x22</td><td>Tentativă de încălcare a securității legată de senzor — eroare de integritate a datelor stocate</td><td>017</td></tr>
+<tr><td>0x31</td><td>Defecțiune internă a UMV</td><td>001, 002, 004, 005, 006, 009</td></tr>
+<tr><td>0x34</td><td>Defecțiune la descărcare</td><td>012</td></tr>
+<tr><td>0x35</td><td>Defecțiune a senzorului</td><td>016</td></tr>
+<tr><td>0x36</td><td>Receptor GNSS intern</td><td>082</td></tr>
+<tr><td>0x38</td><td>Facilitate de comunicare de la distanță</td><td>084</td></tr>
+<tr><td>0x39</td><td>Interfață ITS</td><td>098</td></tr>
+<tr><td>0x3A</td><td>Defecțiune senzor intern</td><td>097</td></tr>
+<tr><td>0x40</td><td>Defecțiuni ale cardului — fără detalii suplimentare</td><td>041, 059</td></tr>
+</tbody>
+</table>
+<p style="font-size:14px;color:var(--text2);margin-top:12px;">Codurile fără un EventFaultType (<strong>034, 036, 037, 039, 040, 049–054, 056–058, 067–079, 088–095</strong>) nu sunt înscrise în datele descărcate — acestea sunt mesaje operaționale și mementouri privind durata de conducere.</p>
+</div>
+</div>
+</details>
+<!-- ===== STONERIDGE SE5000 ===== -->
+<details class="vendor" id="stoneridge">
+<summary>
+<span class="vendor-meta">Stoneridge · echipare implicită în Regatul Unit și Scandinavia</span>
+    Stoneridge SE5000 Exakt Duo² (Rev 7.6)
+  </summary>
+<div class="vendor-body">
+<p>Stoneridge SE5000 este cel mai răspândit tahograf inteligent instalat pe vehiculele grele înmatriculate în Regatul Unit și în flotele din țările nordice. Mesajele de mai jos sunt reproduse textual din manualul oficial <strong>Stoneridge SE5000 Exakt Duo² pentru conducătorul auto &amp; Manualul societății, Rev. 7.6</strong> (Stoneridge Electronics AB, Örebro). Manualul Stoneridge organizează mesajele în patru categorii, reflectând exact clasificarea din anexa I C: <em>Mesaje</em> (informative), <em>Pre-avertismente</em>, <em>Avertismente</em> și <em>Defecțiuni</em>.</p>
+<p style="font-size:14px;color:var(--text2);margin-bottom:18px;"><strong>Citat din manual:</strong> „Defecțiunile sunt mai critice decât avertismentele și sunt afișate dacă este detectată o defecțiune în tahograf, în senzor sau în cardul de conducător auto. În plus, defecțiunile sunt prezentate dacă este detectată manipularea frauduloasă a echipamentului. Defecțiunile sunt stocate și pot fi tipărite.”</p>
+<h3>Mesaje referitoare la card</h3>
+<div class="code-table-wrap">
+<table class="code-table">
+<thead>
+<tr>
+<th style="width: 26%;">Afișaj</th>
+<th style="width: 14%;">Tip</th>
+<th style="width: 32%;">Descriere (citat exact din manual)</th>
+<th style="width: 28%;">Acțiune recomandată</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>Defecțiune card 1</td><td><span class="sev sev-crit">Defecțiune</span></td><td>Cardul din sertarul 1 este defect. Mesaj similar pentru sertarul 2. Se referă la card.</td><td>Scoateți cardul și inspectați-l vizual. Curățați-l cu o lavetă umedă. Dacă defecțiunea persistă: vizitați un atelier autorizat.</td></tr>
+<tr><td>Eșec autentificare card 1</td><td><span class="sev sev-crit">Defecțiune</span></td><td>Verificarea de securitate a tahografului pentru cardul din sertarul 1 a eșuat. Se referă la tahograf.</td><td>Scoateți cardul și curățați-l. Dacă problema persistă: un atelier autorizat trebuie să îl inspecteze.</td></tr>
+<tr><td>Suprapunere timp card 1</td><td><span class="sev sev-med">Avertisment</span></td><td>Ultima oră de scoatere a cardului de conducător auto introdus este ulterioară datei/orei tahografului. Se referă la card.</td><td>Verificați data/ora tahografului. Așteptați să expire suprapunerea.</td></tr>
+<tr><td>Eroare de integritate a cardului</td><td><span class="sev sev-crit">Defecțiune</span></td><td>Au fost detectate date corupte la citirea datelor de pe card. Se referă la card.</td><td>Curățați și încercați din nou. Dacă problema persistă: înlocuiți cardul și vizitați un atelier autorizat.</td></tr>
+<tr><td>Conflict de carduri</td><td><span class="sev sev-med">Avertisment</span></td><td>A fost detectată o combinație nevalidă de carduri. Se referă la card.</td><td>Scoateți cardul neconform.</td></tr>
+<tr><td>Introducere card în timpul conducerii</td><td><span class="sev sev-med">Avertisment</span></td><td>Un card de conducător auto a fost introdus în timp ce vehiculul era în mișcare. Se referă la operatorul de transport rutier.</td><td>Continuați călătoria dacă cardul de conducător auto este valabil; evenimentul este înregistrat.</td></tr>
+<tr><td>Scoaterea cardului fără salvare</td><td><span class="sev sev-med">Mesaj</span></td><td>Datele nu au putut fi stocate pe cardul scos din sertarul 1 din cauza unei erori.</td><td>Scoateți cardul, curățați-l, reîncercați. Efectuați autotestul dacă problema persistă.</td></tr>
+<tr><td>Card expirat</td><td><span class="sev sev-info">Mesaj</span></td><td>Cardul din sertarul 1 a expirat. În responsabilitatea operatorului.</td><td>Scoateți cardul și înlocuiți-l cu unul valabil.</td></tr>
+<tr><td>Cardul expiră în xx zile</td><td><span class="sev sev-info">Mesaj</span></td><td>Cardul introdus în sertarul 1 expiră în xx zile (0–30). În responsabilitatea operatorului de transport rutier.</td><td>Contactați autoritatea responsabilă pentru a obține un card nou.</td></tr>
+<tr><td>Introducerea unui card nevalid</td><td><span class="sev sev-med">Avertisment</span></td><td>A fost introdus un card nevalabil într-un slot. În responsabilitatea operatorului.</td><td>Scoateți cardul nevalabil.</td></tr>
+<tr><td>Ultima sesiune nu s-a încheiat corect</td><td><span class="sev sev-med">Avertisment</span></td><td>Cardul de conducător auto din sertarul 1 a fost scos incorect în timpul ultimei sesiuni. Scoaterea anterioară a cardului din sertarul 1 nu a fost finalizată corect de tahograf.</td><td>Scoateți cardul și curățați-l. Efectuați autotestul dacă problema persistă.</td></tr>
+<tr><td>PIN greșit! Card blocat</td><td><span class="sev sev-high">Mesaj</span></td><td>PIN greșit introdus de prea multe ori (card de atelier). În responsabilitatea cardului de atelier.</td><td>Scoateți cardul și înlocuiți-l cu un card valabil.</td></tr>
+</tbody>
+</table>
+</div>
+<h3>Senzor &amp; defecțiuni privind mișcarea vehiculului</h3>
+<div class="code-table-wrap">
+<table class="code-table">
+<thead>
+<tr>
+<th style="width: 26%;">Afișaj</th>
+<th style="width: 14%;">Tip</th>
+<th style="width: 32%;">Descriere (verbatim)</th>
+<th style="width: 28%;">Acțiune</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>Eșec autentificare senzor</td><td><span class="sev sev-crit">Defecțiune</span></td><td>Tahograful nu detectează senzorul / nu recunoaște senzorul conectat ca fiind cel instalat. În responsabilitatea senzorului de mișcare.</td><td>Vizitați un atelier de tahografe digitale.</td></tr>
+<tr><td>Defecțiune cablu senzor</td><td><span class="sev sev-high">Avertisment</span></td><td>Eroare a datelor senzorului / eroare a datelor senzorului de mișcare. Asociată cu senzorul de mișcare.</td><td>Atelierul trebuie să verifice cablajul și senzorul.</td></tr>
+<tr><td>Eroare de comunicare a senzorului</td><td><span class="sev sev-crit">Defecțiune</span></td><td>Eroare de comunicare a senzorului de mișcare. Asociată cu senzorul de mișcare.</td><td>Înlocuire la atelier.</td></tr>
+<tr><td>Eroare date senzor</td><td><span class="sev sev-high">Avertisment</span></td><td>Defecțiune de semnal între senzorul de mișcare și tahograf. Asociată cu senzorul de mișcare.</td><td>Atelierul trebuie să verifice.</td></tr>
+<tr><td>Eroare de integritate a datelor senzorului</td><td><span class="sev sev-crit">Defecțiune</span></td><td>Eroare internă a senzorului de mișcare, defecțiune privind integritatea datelor stocate. Asociată cu senzorul de mișcare.</td><td>Este probabil necesară înlocuirea senzorului.</td></tr>
+<tr><td>Eroare de transfer al datelor senzorului</td><td><span class="sev sev-crit">Defecțiune</span></td><td>Senzorul de mișcare și tahograful nu comunică. Asociat cu senzorul de mișcare.</td><td>Vizită la atelier.</td></tr>
+<tr><td>Defecțiune senzor fără confirmare</td><td><span class="sev sev-crit">Defecțiune</span></td><td>Eroare de comunicare a senzorului de mișcare.</td><td>Vizită la atelier.</td></tr>
+<tr><td>Alimentare senzor prea ridicată / prea scăzută</td><td><span class="sev sev-crit">Defecțiune</span></td><td>Alimentarea senzorului de mișcare este prea ridicată sau prea scăzută. Asociată cu senzorul de mișcare.</td><td>Atelierul trebuie să verifice alimentarea.</td></tr>
+<tr><td>Senzor fără semnal de alimentare</td><td><span class="sev sev-crit">Defecțiune</span></td><td>Senzorul de mișcare nu este alimentat. Asociată cu senzorul de mișcare.</td><td>Atelierul trebuie să verifice alimentarea.</td></tr>
+<tr><td>Carcasă senzor deschisă neautorizat</td><td><span class="sev sev-crit">Defecțiune</span></td><td>A fost detectată o deschidere neautorizată. Asociată cu senzorul de mișcare.</td><td>Atelierul trebuie să inspecteze — posibilă manipulare frauduloasă.</td></tr>
+<tr><td>Defecțiune senzor secundar</td><td><span class="sev sev-crit">Defecțiune</span></td><td>Lipsesc datele de la a doua sursă a senzorului de mișcare sau acestea sunt eronate. Referitor la senzorul de mișcare.</td><td>Atelierul trebuie să verifice.</td></tr>
+<tr><td>Schimbare neautorizată a senzorului</td><td><span class="sev sev-crit">Defecțiune</span></td><td>Senzorul a fost schimbat de la ultima asociere. Referitor la senzorul de mișcare.</td><td>Atelierul trebuie să efectueze din nou asocierea.</td></tr>
+<tr><td>Conflict privind mișcarea vehiculului</td><td><span class="sev sev-crit">Defecțiune</span></td><td>Datele celei de-a doua surse a senzorului de mișcare și cele ale senzorului de mișcare principal se contrazic. Referitor la senzorul de mișcare.</td><td>Atelierul trebuie să verifice.</td></tr>
+<tr><td>Sabotaj hardware</td><td><span class="sev sev-crit">Defecțiune</span></td><td>Cardul a fost scos forțat sau a fost detectată o manipulare frauduloasă a hardware-ului.</td><td>Este necesară vizitarea unui atelier pentru investigații.</td></tr>
+</tbody>
+</table>
+</div>
+<h3>Defecțiuni interne ale tahografului (UMV) &amp; alimentare</h3>
+<div class="code-table-wrap">
+<table class="code-table">
+<thead>
+<tr>
+<th style="width: 26%;">Afișaj</th>
+<th style="width: 14%;">Tip</th>
+<th style="width: 32%;">Descriere (verbatim)</th>
+<th style="width: 28%;">Acțiune</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>Defecțiune internă a UMV</td><td><span class="sev sev-crit">Defecțiune</span></td><td>Tahograful a detectat o defecțiune internă. Referitor la tahograf.</td><td>Vizitați un atelier.</td></tr>
+<tr><td>Eroare de integritate a datelor</td><td><span class="sev sev-crit">Defecțiune</span></td><td>Datele utilizatorului stocate în tahograf conțin erori. Referitor la tahograf.</td><td>Vizitați imediat un atelier.</td></tr>
+<tr><td>Deschidere neautorizată a UMV</td><td><span class="sev sev-crit">Defecțiune</span></td><td>Carcasa unității tahografului a fost deschisă. Referitor la tahograf.</td><td>Atelierul trebuie să investigheze manipularea frauduloasă.</td></tr>
+<tr><td>Întreruperea alimentării cu energie electrică</td><td><span class="sev sev-med">Avertisment</span></td><td>Tensiunea de alimentare a tahografului este sub sau peste limita pentru funcționarea corectă ori a fost deconectată. Alimentarea a fost întreruptă pentru mai mult de 200 de milisecunde. Tensiunea la pornirea motorului nu ar trebui să provoace acest eveniment.</td><td>Atelierul trebuie să verifice alimentarea electrică a vehiculului dacă situația se repetă.</td></tr>
+<tr><td>Conducere fără card valabil</td><td><span class="sev sev-high">Avertisment</span></td><td>Conducere fără un card corespunzător sau cu o combinație necorespunzătoare de carduri. Referitor la operatorul de transport rutier.</td><td>Opriți și scoateți cardul necorespunzător. Introduceți un card de conducător auto valabil.</td></tr>
+<tr><td>Depășirea vitezei</td><td><span class="sev sev-high">Avertisment</span></td><td>Viteza vehiculului a depășit timp de 1 minut limita de viteză setată și evenimentul va fi stocat. Referitor la operatorul de transport rutier.</td><td>Respectați limita de viteză specificată.</td></tr>
+<tr><td>Preavertisment de depășire a vitezei</td><td><span class="sev sev-med">Mesaj</span></td><td>Vehiculul depășește limita de viteză setată. După 1 minut de depășire continuă a vitezei, avertismentul va fi stocat.</td><td>Reduceți viteza înainte de pragul de 1 minut.</td></tr>
+<tr><td>Descărcare eșuată</td><td><span class="sev sev-med">Avertisment</span></td><td>O defecțiune la încercarea de descărcare a datelor din tahograf. Asociată cu tahograful/cardul.</td><td>Verificați conectorul și echipamentul, apoi reîncercați. Dacă problema persistă: atelier autorizat.</td></tr>
+<tr><td>Ajustarea UTC nu este permisă</td><td><span class="sev sev-info">Mesaj</span></td><td>Nu este permisă ajustarea orei UTC cu mai mult de ±1 minut o dată pe săptămână.</td><td>Dacă ora UTC a deviat cu mai mult de 20 min, un atelier autorizat trebuie să efectueze calibrarea.</td></tr>
+</tbody>
+</table>
+</div>
+<h3>Mesaje ale imprimantei</h3>
+<div class="code-table-wrap">
+<table class="code-table">
+<thead>
+<tr>
+<th style="width: 26%;">Afișaj</th>
+<th style="width: 14%;">Tip</th>
+<th style="width: 32%;">Descriere (verbatim)</th>
+<th style="width: 28%;">Acțiune</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>Temperatură ridicată a imprimantei</td><td><span class="sev sev-low">Mesaj</span></td><td>Imprimarea nu a putut începe sau imprimarea în curs a fost întreruptă deoarece temperatura imprimantei este prea ridicată.</td><td>Așteptați până când imprimanta se răcește, apoi reîncercați.</td></tr>
+<tr><td>Temperatură scăzută a imprimantei</td><td><span class="sev sev-low">Mesaj</span></td><td>Imprimarea nu a putut începe deoarece temperatura imprimantei este prea scăzută.</td><td>Așteptați până când imprimanta se încălzește; atelier autorizat dacă problema persistă.</td></tr>
+<tr><td>Alimentare insuficientă a imprimantei</td><td><span class="sev sev-low">Mesaj</span></td><td>Imprimarea în curs a fost întreruptă deoarece tensiunea de intrare a tahografului este prea scăzută.</td><td>Verificați dacă contactul este pornit; verificați tensiunea bateriei și conexiunile.</td></tr>
+<tr><td>Imprimanta nu are hârtie</td><td><span class="sev sev-info">Mesaj</span></td><td>Imprimarea în curs a fost întreruptă deoarece imprimanta nu mai are hârtie.</td><td>Înlocuiți hârtia.</td></tr>
+</tbody>
+</table>
+</div>
+<h3>Avertismente privind durata de conducere (preavertismente Stoneridge &amp; avertismente)</h3>
+<div class="code-table-wrap">
+<table class="code-table">
+<thead>
+<tr>
+<th style="width: 30%;">Afișaj</th>
+<th style="width: 14%;">Tip</th>
+<th style="width: 56%;">Semnificație (literal)</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>Memento: mai aveți un sfert</td><td><span class="sev sev-info">Mesaj</span></td><td>Conducătorului auto îi mai rămân 15 minute până la depășirea duratei maxime legale de conducere continuă de 4½ ore.</td></tr>
+<tr><td>Este timpul pentru pauză</td><td><span class="sev sev-med">Avertisment</span></td><td>Durata maximă legală de conducere continuă de 4½ ore a fost atinsă [conform Regulamentului 561/2006]. Luați o pauză de minimum 45 de minute sau o pauză fracționată de 15+30 de minute.</td></tr>
+<tr><td>Memento pauză</td><td><span class="sev sev-info">Preavertisment</span></td><td>Un memento pentru o pauză, conform regulii privind timpul de lucru de 6 h [Directiva 2002/15/CE].</td></tr>
+<tr><td>durata zilnică de conducere</td><td><span class="sev sev-med">Avertisment</span></td><td>Preavertisment și avertisment pentru durata zilnică de conducere de 9 ore.</td></tr>
+<tr><td>sfârșitul conducerii zilnice</td><td><span class="sev sev-med">Avertisment</span></td><td>Durata maximă zilnică de conducere a fost atinsă.</td></tr>
+<tr><td>durata săptămânală de conducere</td><td><span class="sev sev-med">Preavertisment</span></td><td>Durata maximă săptămânală de conducere [56 h] se apropie.</td></tr>
+<tr><td>sfârșitul conducerii săptămânale</td><td><span class="sev sev-med">Avertisment</span></td><td>Durata maximă săptămânală de conducere a fost atinsă.</td></tr>
+<tr><td>durata de conducere în 2 săptămâni</td><td><span class="sev sev-med">Preavertisment</span></td><td>Durata maximă de conducere în 2 săptămâni [90 h] se apropie.</td></tr>
+<tr><td>sfârșitul conducerii în 2 săptămâni</td><td><span class="sev sev-med">Avertisment</span></td><td>Durata maximă de conducere în 2 săptămâni a fost atinsă.</td></tr>
+<tr><td>timpul de lucru săptămânal</td><td><span class="sev sev-med">Preavertisment</span></td><td>Se apropie atingerea limitei săptămânale a timpului de lucru, conform regulii de 60 de ore.</td></tr>
+<tr><td>sfârșitul lucrului săptămânal</td><td><span class="sev sev-med">Avertisment</span></td><td>Limita săptămânală a timpului de lucru a fost atinsă, conform regulii de 60 de ore.</td></tr>
+<tr><td>Memento repaus zilnic</td><td><span class="sev sev-info">Preavertisment</span></td><td>Un memento pentru perioada de repaus zilnic.</td></tr>
+<tr><td>memento pentru repausul săptămânal</td><td><span class="sev sev-info">Preavertisment</span></td><td>Un memento pentru perioada de repaus săptămânal.</td></tr>
+<tr><td>este timpul pentru repausul zilnic</td><td><span class="sev sev-med">Avertisment</span></td><td>Un avertisment pentru începerea repausului zilnic.</td></tr>
+<tr><td>este timpul pentru repausul săptămânal</td><td><span class="sev sev-med">Avertisment</span></td><td>Un avertisment pentru începerea repausului săptămânal.</td></tr>
+<tr><td>Preavertisment de service / Este timpul pentru service</td><td><span class="sev sev-low">Mesaj</span></td><td>Preavertisment pentru următoarea calibrare / tahograful nu este calibrat.</td></tr>
+</tbody>
+</table>
+</div>
+<h3>SE5000-8.1 Smart 2 — DTC-uri hexazecimale specifice producătorului (ISO 16844-7)</h3>
+<p style="font-size:14px;color:var(--text2);margin-bottom:12px;">Actualul SE5000-8.1 (tahograf inteligent 2) raportează un DTC hexazecimal de 5 octeți conform ISO 16844-7, pe lângă mesajul afișat pe ecran. Codurile de mai jos sunt reproduse din <strong>Manualul de control Stoneridge SE5000-8.1, documentul 9000-103766P_0109</strong> (Stoneridge Electronics AB).</p>
+<div class="code-table-wrap">
+<table class="code-table">
+<thead><tr><th style="width:13%;">DTC</th><th style="width:24%;">Mesaj</th><th style="width:30%;">Cauză</th><th style="width:21%;">Ce trebuie să faceți</th><th style="width:12%;">Gravitate</th></tr></thead>
+<tbody>
+<tr><td>0001C0</td><td>Tipărire oprită, fără hârtie</td><td>Imprimanta nu are hârtie.</td><td>Introduceți o rolă nouă de hârtie.</td><td><span class="sev sev-low">Scăzut</span></td></tr>
+<tr><td>000900</td><td>Fără contact, dar sunt prezente impulsuri de viteză</td><td>Contactul este oprit, însă senzorul detectează impulsuri de viteză.</td><td>Verificați dacă există vibrații / interferențe; dacă situația reapare, atelierul autorizat trebuie să verifice senzorul și pinul B7.</td><td><span class="sev sev-high">Ridicat</span></td></tr>
+<tr><td>000D40</td><td>Preavertisment de depășire a vitezei</td><td>Limita de viteză a fost depășită, însă pentru mai puțin de 60 de secunde.</td><td>Reduceți viteza. Cauză legată de conducătorul auto — nu este necesar un atelier autorizat.</td><td><span class="sev sev-med">Medie</span></td></tr>
+<tr><td>000B78</td><td>Eroare de calibrare</td><td>Au trecut doi ani de la ultima calibrare.</td><td>Efectuați recalibrarea la un atelier autorizat.</td><td><span class="sev sev-high">Ridicat</span></td></tr>
+<tr><td>000C31</td><td>Defecțiune GNSS internă</td><td>Receptorul GNSS intern a încetat să furnizeze date de poziție.</td><td>Opriți și reporniți tahograful, apoi efectuați un test de conducere; dacă problema reapare, înlocuiți-l.</td><td><span class="sev sev-med">Medie</span></td></tr>
+<tr><td>002B80</td><td>Conflict de timp (GNSS față de UMV)</td><td>Ceasurile intern și GNSS diferă cu mai mult de 1 minut după 12 ore.</td><td>Verificați ceasul intern și ora GNSS. Atelier autorizat.</td><td><span class="sev sev-med">Medie</span></td></tr>
+<tr><td>002C80</td><td>Lipsă poziție GNSS</td><td>Niciun semnal GNSS valid pe durata a 3 ore de conducere cumulate.</td><td>Verificați recepția GNSS și eventualele obstacole din jurul antenei.</td><td><span class="sev sev-med">Medie</span></td></tr>
+<tr><td>002D80</td><td>Eroare de comunicare DSRC</td><td>Unitatea montată pe vehicul (UMV) nu poate comunica corect cu modulul DSRC-VU.</td><td>Verificați unitatea DSRC-VU, cablajul și parametrii CAN.</td><td><span class="sev sev-med">Medie</span></td></tr>
+<tr><td>002E80</td><td>Anomalie GNSS</td><td>GNSS a detectat un atac sau autentificarea mesajului a eșuat (OSNMA).</td><td>Verificați dacă există manipulare frauduloasă. Reporniți și verificați; înlocuiți dacă problema reapare.</td><td><span class="sev sev-crit">Critică</span></td></tr>
+<tr><td>00FD0B</td><td>CAN bus off, TCO</td><td>Conectorul A (TCO-CAN) este în starea „Bus Off”.</td><td>Verificați conectorul A și cablajul, setările CAN și terminația (60 Ω).</td><td><span class="sev sev-high">Ridicat</span></td></tr>
+</tbody>
+</table>
+</div>
+<h3>Evenimente generale &amp; încălcare a securității (SE5000-8.1)</h3>
+<div class="code-table-wrap">
+<table class="code-table">
+<thead><tr><th style="width:24%;">Mesaj</th><th style="width:34%;">Cauză</th><th style="width:30%;">Ce trebuie să faceți</th><th style="width:12%;">Gravitate</th></tr></thead>
+<tbody>
+<tr><td>Conflict de carduri</td><td>Este detectată o combinație nevalidă de carduri (de exemplu, card al societății + card de control).</td><td>Scoateți cardul neconform.</td><td><span class="sev sev-med">Medie</span></td></tr>
+<tr><td>Conducere fără card corespunzător</td><td>Conducere fără card valabil sau cu o combinație nevalidă de carduri.</td><td>Opriți, introduceți un card valabil și scoateți-l pe cel necorespunzător.</td><td><span class="sev sev-crit">Critică</span></td></tr>
+<tr><td>Depășirea vitezei</td><td>Limita de viteză a fost depășită timp de cel puțin 60 de secunde.</td><td>Respectați limita de viteză permisă pentru vehicul.</td><td><span class="sev sev-high">Ridicat</span></td></tr>
+<tr><td>Întreruperea alimentării cu energie (UMV / SM)</td><td>Alimentarea cu energie a tahografului sau a senzorului a fost întreruptă pentru mai mult de 200 ms.</td><td>Verificați alimentarea cu energie a vehiculului și cablajul.</td><td><span class="sev sev-med">Medie</span></td></tr>
+<tr><td>Eroare de date privind mișcarea (CNTR / No CNTR / Event)</td><td>Senzorul raportează viteză fără impulsuri, contorul nu corespunde sau apare o neconcordanță de semnătură.</td><td>Verificați senzorul, cablajul și manipularea frauduloasă; recalibrați dacă este necesar.</td><td><span class="sev sev-crit">Critică</span></td></tr>
+<tr><td>Eșecul autentificării senzorului de mișcare</td><td>O încercare de autentificare a senzorului de mișcare a eșuat.</td><td>Verificați senzorul și cablajul; asociați din nou și recalibrați.</td><td><span class="sev sev-crit">Critică</span></td></tr>
+<tr><td>Modificare neautorizată a senzorului de mișcare</td><td>Senzorul a fost schimbat de la ultima asociere.</td><td>Verificați dacă există manipulare frauduloasă; reparați și recalibrați.</td><td><span class="sev sev-crit">Critică</span></td></tr>
+<tr><td>Eroare de integritate a datelor stocate</td><td>Datele din memoria de 365 de zile sunt corupte.</td><td>Scoateți tahograful din uz și înlocuiți-l.</td><td><span class="sev sev-crit">Critică</span></td></tr>
+<tr><td>Sabotaj hardware</td><td>Cardul a fost scos forțat.</td><td>Verificați cititorul de carduri. Scoateți din uz și înlocuiți.</td><td><span class="sev sev-crit">Critică</span></td></tr>
+<tr><td>Încălcare a securității</td><td>A fost detectată o manipulare frauduloasă a componentelor hardware.</td><td>Scoateți tahograful din uz și înlocuiți-l.</td><td><span class="sev sev-crit">Critică</span></td></tr>
+</tbody>
+</table>
+</div>
+<p style="font-size:14px;color:var(--text2);margin-bottom:18px;"><strong>Sursă:</strong> Stoneridge Electronics AB, SE5000-8.1 Smart 2 Control Manual, document 9000-103766P_0109, pp. 32–37.</p>
+<p style="font-size:14px;color:var(--text2);margin-top:18px;"><strong>Sursă:</strong> Toate mesajele Stoneridge de mai sus sunt reproduse din manualul pentru conducători auto SE5000 Exakt Duo² (Rev. 7.6). &amp; și din manualul pentru societăți publicat de Stoneridge Electronics AB. Tabelul complet acoperă toate mesajele pe care le poate vedea un conducător auto; mesajele specifice modului atelier (calibrare) nu sunt prezentate aici. Unitatea SE5000-8.1 Smart Tachograph 2 utilizează aceeași structură a familiei de mesaje din anexa IC, cu actualizări minore ale formulării.</p>
+</div>
+</details>
+<!-- ===== ACTIA SmarTach ===== -->
+<details class="vendor" id="actia">
+<summary>
+<span class="vendor-meta">Actia · setare implicită franceză și sud-europeană</span>
+    Actia SmarTach (Gen1 &amp; Gen2)
+  </summary>
+<div class="vendor-body">
+<p>SmarTach de la Actia este cel mai frecvent tahograf digital pe vehiculele de transport greu înmatriculate în Franța și este montat frecvent în Spania, Italia și Portugalia. Mesajele de mai jos sunt reproduse din <strong>Actia SmarTach Driver Manual (2021, ref. c1c)</strong>. Actia utilizează pe ecran o pictogramă + text scurt; formularea este consecventă cu terminologia din anexa IC.</p>
+<div class="code-table-wrap">
+<table class="code-table">
+<thead>
+<tr>
+<th style="width: 26%;">Mesaj</th>
+<th style="width: 36%;">Semnificație</th>
+<th style="width: 26%;">Ce trebuie să faceți</th>
+<th style="width: 12%;">Gravitate</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Conducere fără card</td>
+<td>Vehicul în mișcare fără card valid în slotul 1 — eveniment din anexa IC înregistrat.</td>
+<td>Introduceți un card de conducător auto valid. Tipăriți și adnotați perioada.</td>
+<td><span class="sev sev-high">Ridicat</span></td>
+</tr>
+<tr>
+<td>Introducere în timpul deplasării</td>
+<td>Cardul a fost introdus după ce călătoria începuse deja.</td>
+<td>Confirmați — eveniment înregistrat pe card.</td>
+<td><span class="sev sev-med">Medie</span></td>
+</tr>
+<tr>
+<td>Card închis incorect</td>
+<td>Sesiunea anterioară nu a fost încheiată corect.</td>
+<td>Confirmați; notați pentru evidențele operatorului de transport rutier.</td>
+<td><span class="sev sev-med">Medie</span></td>
+</tr>
+<tr>
+<td>Card nevalid / expirat</td>
+<td>Cardul de conducător auto a expirat, nu a fost încă activat sau autentificarea a eșuat.</td>
+<td>Reînnoiți cardul la autoritatea din statul dumneavoastră membru.</td>
+<td><span class="sev sev-med">Medie</span></td>
+</tr>
+<tr>
+<td>Limită de viteză depășită</td>
+<td>Limita de viteză setată a fost depășită timp de peste 60 de secunde.</td>
+<td>Reduceți viteza; eveniment vizibil la descărcare.</td>
+<td><span class="sev sev-high">Ridicat</span></td>
+</tr>
+<tr>
+<td>Conflict de mișcare</td>
+<td>Neconcordanță între senzorul de mișcare și semnalul GNSS/odometru.</td>
+<td>Atelier — posibilă manipulare frauduloasă sau deteriorare a cablajului.</td>
+<td><span class="sev sev-crit">Critică</span></td>
+</tr>
+<tr>
+<td>Pierdere de alimentare</td>
+<td>Tensiunea de alimentare a scăzut sau a fost deconectată.</td>
+<td>Confirmați. Verificați alimentarea dacă se repetă.</td>
+<td><span class="sev sev-med">Medie</span></td>
+</tr>
+<tr>
+<td>Încălcare a securității</td>
+<td>Carcasa UMV a fost deschisă sau integritatea datelor a fost încălcată.</td>
+<td>Vizită obligatorie la atelier.</td>
+<td><span class="sev sev-crit">Critică</span></td>
+</tr>
+<tr>
+<td>Defecțiune a senzorului</td>
+<td>Senzorul de mișcare nu a trecut autotestul.</td>
+<td>Înlocuire la atelier.</td>
+<td><span class="sev sev-crit">Critică</span></td>
+</tr>
+<tr>
+<td>Eroare imprimantă</td>
+<td>Imprimanta nu poate finaliza o operațiune de imprimare.</td>
+<td>Verificați hârtia / lăsați-o să se răcească / înlocuiți mecanismul dacă problema persistă.</td>
+<td><span class="sev sev-med">Medie</span></td>
+</tr>
+<tr>
+<td>Lipsă GNSS</td>
+<td>Nu există date de poziție pentru 3 ore de durată de conducere cumulată.</td>
+<td>Confirmați. Verificați antena; asigurați-vă că nu există obstacole metalice.</td>
+<td><span class="sev sev-med">Medie</span></td>
+</tr>
+<tr>
+<td>Nepotrivire oră UTC</td>
+<td>Diferența dintre ceasul intern și ora GNSS depășește 1 minut.</td>
+<td>Atelierul va resincroniza.</td>
+<td><span class="sev sev-med">Medie</span></td>
+</tr>
+<tr>
+<td>Defecțiune internă</td>
+<td>Defecțiune generică a UMV — memorie, RTC, supraveghere software.</td>
+<td>Atelier cât mai curând posibil.</td>
+<td><span class="sev sev-crit">Critică</span></td>
+</tr>
+<tr>
+<td>Conflict între carduri</td>
+<td>Combinație incompatibilă de carduri în fantele 1 + 2.</td>
+<td>Scoateți cardul aflat în conflict.</td>
+<td><span class="sev sev-med">Medie</span></td>
+</tr>
+<tr>
+<td>Conducere &gt; 4 h 30</td>
+<td>Durata de conducere continuă a depășit 4 h 30 min fără pauză (senzor de mișcare KITAS).</td>
+<td>Opriți imediat și efectuați pauza obligatorie de 45 de minute.</td>
+<td><span class="sev sev-high">Ridicat</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p style="font-size:14px;color:var(--text2);margin-top:14px;"><em>Mesajele Actia destinate utilizatorilor sunt în mod deliberat concise; codurile DTC numerice detaliate sunt accesibile numai prin CITO / SmarTach Tester al unui atelier autorizat.</em></p>
+</div>
+</details>
+<!-- ===== EFAS-4 ===== -->
+<details class="vendor" id="efas">
+<summary>
+<span class="vendor-meta">Intellic / Schneider · întâlnit frecvent în flotele germane și poloneze</span>
+    EFAS-4 / EFAS-4.10
+  </summary>
+<div class="vendor-body">
+<p>EFAS-4 (inițial Intellic, în prezent Schneider Electric) este montat pe multe capete tractor fabricate în Germania (MAN, DAF în anumite configurații) și pe o parte semnificativă a vehiculelor grele înmatriculate în Polonia. Mesajele de mai jos provin din <strong>Manualul conducătorului auto EFAS-4, ediția 06.2022</strong>. EFAS utilizează coduri afișate pe ecran din două litere, plus o pictogramă.</p>
+<div class="code-table-wrap">
+<table class="code-table">
+<thead>
+<tr>
+<th style="width: 14%;">Cod</th>
+<th style="width: 24%;">Mesaj</th>
+<th style="width: 36%;">Semnificație</th>
+<th style="width: 14%;">Acțiune</th>
+<th style="width: 12%;">Gravitate</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>E01</td><td>Fără card</td><td>Vehiculul s-a deplasat fără un card de conducător auto valabil.</td><td>Introduceți cardul; imprimați &amp; adăugați o mențiune.</td><td><span class="sev sev-high">Ridicat</span></td></tr>
+<tr><td>E02</td><td>Introducerea cardului</td><td>Cardul a fost introdus după începerea deplasării.</td><td>Confirmați.</td><td><span class="sev sev-med">Medie</span></td></tr>
+<tr><td>E03</td><td>Ultima sesiune</td><td>Sesiunea anterioară a cardului nu a fost închisă.</td><td>Confirmați; notați pentru operatorul de transport rutier.</td><td><span class="sev sev-med">Medie</span></td></tr>
+<tr><td>E04</td><td>Depășire de viteză</td><td>Limită de viteză depășită &gt; 1 min.</td><td>Reduceți viteza.</td><td><span class="sev sev-high">Ridicat</span></td></tr>
+<tr><td>E05</td><td>Pierdere de alimentare</td><td>Tensiunea de alimentare este prea scăzută sau întreruptă.</td><td>Verificați alimentarea dacă se repetă.</td><td><span class="sev sev-med">Medie</span></td></tr>
+<tr><td>E06</td><td>Date de mișcare</td><td>Impulsuri neconsecvente ale senzorului de mișcare.</td><td>Atelier autorizat.</td><td><span class="sev sev-crit">Critică</span></td></tr>
+<tr><td>E07</td><td>Conflict de mișcare</td><td>Senzorul nu corespunde cu GNSS / odometrul.</td><td>Atelier autorizat — verificare pentru manipulare frauduloasă.</td><td><span class="sev sev-crit">Critică</span></td></tr>
+<tr><td>E08</td><td>Conflict de carduri</td><td>Combinație nevalidă de carduri.</td><td>Scoateți cardul incompatibil.</td><td><span class="sev sev-med">Medie</span></td></tr>
+<tr><td>E09</td><td>Suprapunere temporală</td><td>Decalaj UTC negativ față de ultima UMV.</td><td>Atelierul autorizat trebuie să corecteze.</td><td><span class="sev sev-med">Medie</span></td></tr>
+<tr><td>E10</td><td>Încălcare a securității</td><td>Manipulare frauduloasă a carcasei sau eroare de integritate a datelor.</td><td>Atelier autorizat obligatoriu.</td><td><span class="sev sev-crit">Critică</span></td></tr>
+<tr><td>F01</td><td>Defecțiune internă</td><td>Defecțiune generică hardware/software a UMV.</td><td>Atelier cât mai curând posibil.</td><td><span class="sev sev-crit">Critică</span></td></tr>
+<tr><td>F02</td><td>Mecanism card</td><td>Eroare a mecanismului de blocare a cardului.</td><td>Atelier autorizat.</td><td><span class="sev sev-high">Ridicat</span></td></tr>
+<tr><td>F03</td><td>Defecțiune de timp</td><td>Ceasul în timp real este neplauzibil.</td><td>Atelier — cardurile noi vor fi respinse.</td><td><span class="sev sev-crit">Critică</span></td></tr>
+<tr><td>F04</td><td>Imprimantă</td><td>Defecțiune a mecanismului imprimantei.</td><td>Înlocuiți hârtia sau mergeți la atelier.</td><td><span class="sev sev-med">Medie</span></td></tr>
+<tr><td>F05</td><td>Descărcare</td><td>Eroare în timpul descărcării datelor.</td><td>Reîncercați; verificați cablul.</td><td><span class="sev sev-med">Medie</span></td></tr>
+<tr><td>F06</td><td>Defecțiune a senzorului</td><td>Senzorul de mișcare nu a trecut autotestul.</td><td>Înlocuirea senzorului la atelier.</td><td><span class="sev sev-crit">Critică</span></td></tr>
+<tr><td>F07</td><td>GNSS</td><td>Defecțiune a receptorului GNSS intern sau a antenei.</td><td>Verificare la atelier.</td><td><span class="sev sev-high">Ridicat</span></td></tr>
+<tr><td>F08</td><td>DSRC</td><td>Defecțiune a modulului DSRC pentru control de la distanță.</td><td>Atelierul va inspecta antena și CAN.</td><td><span class="sev sev-med">Medie</span></td></tr>
+</tbody>
+</table>
+</div>
+<h3>EFAS-4.10 / 4.11 — DTC-uri hexazecimale (ISO 16844-7), primele 12</h3>
+<p style="font-size:14px;color:var(--text2);margin-bottom:12px;">Unitățile EFAS afișează trei tipuri de coduri: <strong>EFT</strong> (tip de eveniment/defecțiune conform ISO), <strong>DTC</strong> (hexazecimal pe 5 octeți conform ISO 16844-7) și un cod specific producătorului <strong>ID de service</strong>. Cele mai importante DTC-uri de mai jos sunt reproduse din <strong>Manualul de atelier Bosch Intellic EFAS-4.10, Tabelul 18</strong> (DTC-uri și ID-uri de service corespunzătoare).</p>
+<div class="code-table-wrap">
+<table class="code-table">
+<thead><tr><th style="width:18%;">DTC</th><th style="width:42%;">Semnificație</th><th style="width:28%;">Ce trebuie să faceți</th><th style="width:12%;">Gravitate</th></tr></thead>
+<tbody>
+<tr><td>80 00 002007</td><td>Tensiunea de alimentare a senzorului de mișcare depășește valoarea maximă</td><td>Verificați alimentarea și cablajul senzorului.</td><td><span class="sev sev-high">Ridicat</span></td></tr>
+<tr><td>80 00 002003</td><td>Tensiunea de alimentare a senzorului de mișcare este sub valoarea minimă</td><td>Verificați alimentarea și cablajul senzorului.</td><td><span class="sev sev-high">Ridicat</span></td></tr>
+<tr><td>80 00 002180</td><td>Lipsă semnal în timp real de la senzorul de mișcare (pinul B3 întrerupt)</td><td>Verificați pinul B3 și alimentarea senzorului.</td><td><span class="sev sev-crit">Critică</span></td></tr>
+<tr><td>80 00 002280</td><td>Semnal defect al senzorului în timp real (eroare la pinul B3 sau IMS)</td><td>Verificați pinul B3 și suma de control a senzorului.</td><td><span class="sev sev-crit">Critică</span></td></tr>
+<tr><td>80 00 002452</td><td>Eroare de integritate a datelor senzorului de distanță</td><td>Atelierul autorizat trebuie să verifice senzorul.</td><td><span class="sev sev-high">Ridicat</span></td></tr>
+<tr><td>80 00 002508</td><td>Defecțiune a senzorului de mișcare</td><td>Atelier autorizat — înlocuirea senzorului.</td><td><span class="sev sev-crit">Critică</span></td></tr>
+<tr><td>40 00 000200</td><td>Defecțiune card, fanta 1</td><td>Curățați contactele și reintroduceți cardul; dacă se repetă, card nou.</td><td><span class="sev sev-high">Ridicat</span></td></tr>
+<tr><td>40 00 000300</td><td>Defecțiune card, fanta 2</td><td>Curățați contactele și reintroduceți cardul.</td><td><span class="sev sev-high">Ridicat</span></td></tr>
+<tr><td>80 00 000660</td><td>Imprimanta nu are hârtie</td><td>Introduceți o rolă nouă de hârtie.</td><td><span class="sev sev-low">Scăzut</span></td></tr>
+<tr><td>40 00 000900</td><td>Impulsuri ale senzorului de mișcare cu contactul oprit</td><td>Verificați vibrațiile, senzorul și cablajul.</td><td><span class="sev sev-high">Ridicat</span></td></tr>
+<tr><td>40 00 000C31</td><td>Defecțiune a memoriei interne</td><td>Atelier autorizat; înlocuiți-o dacă nu poate fi reparată.</td><td><span class="sev sev-crit">Critică</span></td></tr>
+<tr><td>80 00 000D40</td><td>Date de calibrare incorecte sau incomplete</td><td>Efectuați recalibrarea la un atelier autorizat.</td><td><span class="sev sev-crit">Critică</span></td></tr>
+</tbody>
+</table>
+</div>
+<p style="font-size:14px;color:var(--text2);margin-top:14px;"><em>Codurile numerice EFAS-4 (E01–E10, F01–F08) sunt mnemonice interne ale unității — evenimentul/defecțiunea de bază din anexa I C reprezintă identificatorul relevant din punct de vedere legal și este înregistrat la fel ca pe orice altă unitate.</em></p>
+</div>
+</details>
+</div><!-- /.vendor-stack -->
+<!-- ===== TAGRA CTA Box ===== -->
+<div class="cta-box">
+<h3>TAGRA decodifică automat fiecare dintre aceste mesaje.</h3>
+<p>Când descărcați date de pe un card de conducător auto sau dintr-o unitate montată pe vehicul (UMV) în TAGRA, fiecare eveniment și defecțiune este asociat cu definiția sa din anexa I C, împreună cu o explicație clară în limba engleză. Încercați gratuit software-ul complet timp de 30 de zile — nu este necesar niciun card.</p>
+<a class="cta-btn" href="/ro/pentru-conducatori/">Încercați gratuit TAGRA Trucker timp de 30 de zile →</a>
+</div>
+<!-- ===================================================================== -->
+<!-- SECTION 4: TOP 10 COMMON MISTAKES IN PRACTICE                          -->
+<!-- ===================================================================== --></div></section><section class="band"><div class="container art-body"><div class="eyebrow anim-up">Cele mai frecvente în practică</div><h2 class="h2-grad anim-up" id="common-mistakes">Primele 10 cele mai frecvente mesaje de tahograf în practică</h2>
+<p>Dintre cele peste 200 de mesaje de mai sus, zece reprezintă marea majoritate a celor pe care conducătorii auto le întâlnesc zilnic în practică — iar aproape toate sunt <strong>operaționale</strong> mai degrabă decât catastrofale. Dacă știți cum să reacționați la aceste zece mesaje, majoritatea turelor se vor desfășura fără probleme, iar majoritatea autorităților de control (ISCTR) vor fi mulțumite.</p>
+<div class="code-table-wrap">
+<table class="code-table">
+<thead>
+<tr>
+<th style="width: 6%;">#</th>
+<th style="width: 26%;">Mesaj</th>
+<th style="width: 42%;">De ce apare</th>
+<th style="width: 26%;">Prima reacție</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>Eroare de comunicare card 1</strong></td>
+<td>Contacte murdare pe cardul de conducător auto sau în sertarul cardului. Card introdus ușor dezaxat. Situație frecventă iarna, când cardurile sunt ținute în buzunare reci și se formează condens pe contactele cipului.</td>
+<td>Scoateți cardul. Ștergeți cipul cu o cârpă uscată (fără lichid). Reintroduceți-l. Dacă problema persistă, încercați celălalt slot.</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>Fără hârtie / sertar imprimantă deschis</strong></td>
+<td>Rola de hârtie s-a terminat sau sertarul imprimantei a fost deschis în timpul unei operațiuni de imprimare. Tip de hârtie greșit (este acceptată numai hârtia termică marcată pentru tahografe digitale).</td>
+<td>Introduceți o rolă nouă; sertarul trebuie să se închidă cu un clic. Aveți întotdeauna o rolă de rezervă.</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>1 break! 04h15</strong></td>
+<td>Cronometrul pentru durata de conducere neîntreruptă se apropie de 4 h 30 min. Preavertismentul este configurabil (de obicei cu 15 minute înainte).</td>
+<td>Planificați o pauză de 45 de minute în următoarele 15 minute (sau împărțită în 15 + 30).</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>Introducerea cardului în timpul conducerii</strong></td>
+<td>Conducătorul auto a uitat să introducă cardul înainte de plecare, apoi și-a dat seama și l-a introdus în timpul deplasării.</td>
+<td>Opriți pentru scurt timp. Reintroduceți corect cardul. Evenimentul este înregistrat pe card, dar nu reprezintă o defecțiune.</td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>Ultima sesiune nu a fost închisă</strong></td>
+<td>Conducătorul auto a scos cardul prea repede din vehiculul anterior sau UMV anterioară s-a oprit înainte de a scrie înregistrarea de închidere.</td>
+<td>Confirmați. Informați managerul flotei — UMV anterioară poate necesita o vizită la un atelier autorizat.</td>
+</tr>
+<tr>
+<td>6</td>
+<td><strong>Întreruperea alimentării cu energie electrică</strong></td>
+<td>Baterie pornită cu cabluri, defecțiune la cablaj sau vehiculul a staționat peste noapte cu bateria descărcată.</td>
+<td>Confirmați. Dacă situația se repetă, solicitați verificarea circuitului de alimentare — pierderea repetată a alimentării este suspectă pentru autoritățile de control (ISCTR).</td>
+</tr>
+<tr>
+<td>7</td>
+<td><strong>GNSS lipsă / fără date de poziție</strong></td>
+<td>Cumulat, 3 ore de conducere fără poziționare GNSS utilizabilă — situație tipică în tuneluri, depozite subterane sau când antena este blocată.</td>
+<td>Confirmați. Verificați traseul antenei și asigurați-vă că nu a fost amplasat nimic metalic pe bord, deasupra acesteia.</td>
+</tr>
+<tr>
+<td>8</td>
+<td><strong>Este necesară introducerea țării</strong></td>
+<td>Tahograful inteligent 2 vă solicită să confirmați țara (iar la Smart Tacho 2, și trecerea frontierei) de fiecare dată când începeți un nou schimb.</td>
+<td>Utilizați meniul: <em>început țară</em> → Selectați codul. La Smart Tacho 2, unitatea solicită confirmarea și atunci când GNSS detectează o frontieră.</td>
+</tr>
+<tr>
+<td>9</td>
+<td><strong>Calibrare în zile ??</strong></td>
+<td>Se apropie inspecția periodică la doi ani (avertismentul apare, de regulă, cu 28 de zile înainte).</td>
+<td>Programați imediat o vizită la atelier — conducerea cu un tahograf necalibrat constituie o contravenție gravă.</td>
+</tr>
+<tr>
+<td>10</td>
+<td><strong>1 descărcare în zile ??</strong></td>
+<td>Urmează data-limită pentru descărcarea obligatorie a cardului de conducător auto (avertismentul apare, de regulă, cu 14 zile înainte). Normele UE impun descărcarea cel puțin o dată la 28 de zile.</td>
+<td>Predați cardul operatorului de transport rutier sau efectuați dumneavoastră descărcarea. Dacă depășiți termenul, datele sunt păstrate în continuare, însă biroul vă poate sancționa.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- ===================================================================== -->
+<!-- SECTION 5: CRISIS WORKFLOW                                             -->
+<!-- ===================================================================== --></div></section><section class="band band--gray"><div class="container art-body"><div class="eyebrow anim-up">Ce trebuie să faceți</div><h2 class="h2-grad anim-up" id="crisis-workflow">Procedura pentru erori critice: ce trebuie să faceți când apare o defecțiune în timpul unui control rutier</h2>
+<p>O <strong>x Defecțiune</strong> Mesajul — defecțiune a senzorului, conflict de mișcare, defecțiune internă, încălcare a securității, defecțiune de timp — diferă de o notă operațională: tahograful nu mai poate înregistra activitatea dumneavoastră în mod fiabil, iar prin lege trebuie să păstrați înregistrări manuale și să reparați unitatea la un <strong>atelier autorizat de îndată ce circumstanțele permit</strong> — dacă vehiculul nu se poate întoarce la sediul operatorului de transport rutier în termen de o săptămână de la descoperirea defecțiunii, reparația trebuie efectuată pe traseu (articolul 37 din Regulamentul 165/2014). Următoarea procedură în cinci pași este procedura oficială descrisă în manualul fiecărui producător.</p>
+<ol class="crisis-steps">
+<li>
+<span class="num">1</span>
+<span>
+<strong>Confirmați mesajul și continuați în siguranță.</strong>
+<span class="lbl">Apăsați butonul <em>OK</em> pentru a opri afișajul intermitent. Defecțiunea este acum înregistrată în memoria de masă și pe cardul dumneavoastră — confirmarea acesteia nu șterge evenimentul. Păstrați-vă calmul și găsiți un loc sigur pentru a opri.</span>
+</span>
+</li>
+<li>
+<span class="num">2</span>
+<span>
+<strong>Imprimați de la UMV un raport al activităților conducătorului auto.</strong>
+<span class="lbl">Meniu: <em>print → driver 1 → activities → 24h day</em>. Raportul imprimat va include înregistrarea defecțiunii și o marcă temporală. Obțineți un nou raport imprimat în fiecare zi următoare, până la repararea tahografului.</span>
+</span>
+</li>
+<li>
+<span class="num">3</span>
+<span>
+<strong>Începeți înregistrările manuale pe verso-ul imprimării.</strong>
+<span class="lbl">Pentru fiecare perioadă în care tahograful nu mai poate înregistra corect, notați de mână: <em>ora de început, ora de sfârșit, activitatea (conducere / alte activități / disponibilitate / repaus), locația, numărul de înmatriculare al vehiculului</em>. Această foaie reprezintă dovada dumneavoastră legală pentru orice control rutier până la repararea unității.</span>
+</span>
+</li>
+<li>
+<span class="num">4</span>
+<span>
+<strong>Informați imediat managerul flotei.</strong>
+<span class="lbl">Telefon, mesaj sau e-mail — indiferent ce utilizează operațiunea dumneavoastră. Flota trebuie să înregistreze defecțiunea, să planifice programarea la atelier și să confirme că deplasarea poate continua cu înregistrare manuală. Amânarea reparației peste ceea ce permit circumstanțele — sau peste o săptămână fără revenirea la bază — expune operatorul de transport rutier la amenzi substanțiale.</span>
+</span>
+</li>
+<li>
+<span class="num">5</span>
+<span>
+<strong>Programați cât mai curând posibil o vizită la atelierul autorizat.</strong>
+<span class="lbl">Numai un <strong>atelier autorizat de tahografe</strong> (care deține un card de atelier și instrumentele de diagnosticare corespunzătoare) poate repara, recalibra sau înlocui UMV. După reparație, atelierul va efectua o calibrare și va furniza o plăcuță de montaj / înregistrare de calibrare, care trebuie păstrată în vehicul.</span>
+</span>
+</li>
+</ol>
+<p style="margin-top:24px;"><strong>O excepție critică:</strong> dacă defecțiunea este <em>încălcare a securității</em> sau <em>defecțiune a senzorului cu conflict de mișcare</em>, unitatea poate ejecta automat cardul și poate refuza să mai înregistreze orice activități. În acest caz, întreaga tură trebuie consemnată de mână, iar vizita la atelier devine imediată, în loc să fie efectuată de îndată ce circumstanțele permit. Continuarea conducerii fără înregistrări manuale în acest scenariu constituie o abatere gravă în fiecare stat membru al UE și SEE.</p>
+<div class="cta-box" style="margin-top:36px;">
+<h3>Codul dumneavoastră reprezintă doar jumătate din poveste</h3>
+<p>O defecțiune afișată pe ecran lasă aproape întotdeauna o urmă pe cardul de conducător auto — o înregistrare lipsă, o tură întreruptă sau o contravenție despre care vi se poate cere să dați explicații la un control rutier. TAGRA Trucker vă citește cardul și vă arată exact ce a fost înregistrat. Cititor de carduri USB inclus, €49 fără TVA.</p>
+<a class="cta-btn" href="/ro/incercare-gratuita/?audience=driver&amp;src=symbols">Vedeți ce este pe cardul dumneavoastră →</a>
+</div>
+<!-- ===================================================================== -->
+<!-- SECTION 6: OFFICIAL SOURCES                                            -->
+<!-- ===================================================================== --></div></section><section class="band band--blue"><div class="container art-body">
+<div class="eyebrow anim-up">Unde desfășurați activitatea</div>
+<h2 class="h2-grad anim-up">Același cod de defecțiune, consecințe diferite</h2>
+<p>Codurile de mai sus sunt identice pe fiecare vehicul — provin de la tahograf, nu din legislația națională. Ceea ce se schimbă peste granițe este <strong>cine inspectează înregistrarea, cât de mult în urmă verifică și cât vă costă o lipsă</strong>.</p>
+<div class="twocol">
+<div class="info-card anim-up"><h3>Uniunea Europeană &amp; SEE</h3><p>Controlul este efectuat de inspectoratele naționale în temeiul Regulamentului (UE) 165/2014 și al Regulamentului (CE) 561/2006. Conducătorii auto trebuie să prezinte ziua curentă plus precedentele <strong>28 de zile</strong> la un control rutier. Sancțiunile sunt stabilite la nivel național — cele mai grave cazuri, precum manipularea frauduloasă, pot atrage o garanție pe loc de până la <strong>€8,000</strong>. Cardurile sunt descărcate la fiecare 28 de zile, iar unitățile montate pe vehicul la fiecare 90 de zile.</p></div>
+<div class="info-card anim-up"><h3>Regatul Unit</h3><p>Marea Britanie aplică legislația asimilată — aceleași norme de bază, aplicate de <strong>DVSA</strong>, care emite peste 20.000 de notificări de sancțiune fixă pe an. Sancțiunile fixe graduale variază de la aproximativ <strong>£50 to over £300</strong>. În cursele internaționale UK–UE, conducătorii auto trebuie să prezinte <strong>56 days</strong> de date, nu 28. Expunerea mai mare este <strong>Operator Licence</strong>: lipsurile repetate ajung în fața comisarului pentru trafic. <a href="/articles/tachograph-rules-uk-dvsa-operator-licence/">Ghid complet pentru operatorii din Regatul Unit → <span class="en-badge">(în engleză)</span></a></p></div>
+</div>
+<div class="callout callout--blue anim-up"><p><strong>De ce contează codul mai mult decât pare.</strong> O defecțiune precum <em>motion conflict 80</em> sau <em>internal GNSS fault 82</em> nu doar îl deranjează pe conducătorul auto — lasă o lipsă sau o anomalie în înregistrarea pe care aveți obligația legală să o prezentați, fie că este vorba despre 28 de zile în UE sau 56 de zile într-o cursă UK–UE. Cel mai ieftin moment pentru a o identifica este atunci când datele sunt descărcate, nu când o solicită un inspector.</p>
+<p>TAGRA Trucker citește cardul de conducător auto indiferent de țară, semnalează lipsurile și contravențiile și păstrează arhiva pe care este posibil să trebuiască să o prezentați la cerere. <a href="/ro/pentru-conducatori/">Încercați gratuit TAGRA Trucker timp de 30 de zile</a> — Windows, fără detalii despre card.</p></div>
+</div></section><section class="band"><div class="container art-body"><div class="eyebrow anim-up">Surse oficiale</div><h2 class="h2-grad anim-up" id="sources">Surse oficiale &amp; manualele producătorilor</h2>
+<p>Fiecare mesaj, prag și procedură de mai sus este reprodus din unul dintre următoarele documente oficiale disponibile public. În cazul în care formularea în limba engleză a producătorului diferă de vocabularul uzual al conducătorilor auto, am păstrat textul exact al producătorului și am adăugat alături o explicație în limbaj simplu.</p>
+<ul class="sources-list">
+<li>
+<strong>Reglementarea UE — durata de conducere și AETR</strong>
+    Regulamentul (CE) nr. 561/2006 — durate de conducere, pauze și perioade de repaus. Directiva 2002/15/CE — Directiva privind timpul de lucru pentru lucrătorii mobili din transportul rutier. AETR — Acordul european privind activitatea echipajelor vehiculelor care efectuează transporturi rutiere internaționale.
+    <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32006R0561" rel="noopener" target="_blank">EUR-Lex: Regulamentul 561/2006 (EN)</a>
+</li>
+<li>
+<strong>Reglementare UE — specificația tehnică a tahografului</strong>
+    Regulamentul (UE) nr. 165/2014 — temei juridic. Regulamentul de punere în aplicare (UE) 2016/799 al Comisiei, anexa I C — specificația tehnică integrală a tahografului inteligent (evenimente, defecțiuni, structuri de date).
+    <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016R0799" rel="noopener" target="_blank">EUR-Lex: 2016/799 / Anexa I C (EN)</a>
+    ·
+    <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014R0165" rel="noopener" target="_blank">EUR-Lex: 165/2014 (EN)</a>
+</li>
+<li>
+<strong>VDO DTCO 4.1 — Continental Automotive Technologies</strong>
+    Manual de instrucțiuni pentru conducătorul auto, ediția 3 / 2024-08, BA00.1381.41 100 102. Se aplică modelelor DTCO 4.1, 4.1a și 4.1b.
+    <a href="https://www.fleet.vdo.com/media/sqrd5xnt/ba_dtco_41a_en_web_2024-08-27.pdf" rel="noopener" target="_blank">Descărcare PDF (engleză) — fleet.vdo.com</a>
+</li>
+<li>
+<strong>VDO DTCO 4.0 — Continental Automotive Technologies</strong>
+    Unitate Smart Tacho 1 mai veche, încă utilizată pe scară largă. Manual pentru conducătorul auto, ediția 2 / 2022.
+    <a href="https://www.fleet.vdo.com/media/lvnkmvhq/ba_dtco_40e_web_gb.pdf" rel="noopener" target="_blank">Descărcare PDF (engleză) — fleet.vdo.com</a>
+</li>
+<li>
+<strong>Stoneridge SE5000 Exakt Duo² — Stoneridge Electronics</strong>
+    Conducător auto &amp; Manual al societății, rev. 8.x. Unitate de referință pentru piețele din Regatul Unit și țările nordice.
+    <a href="https://www.stoneridgeelectronics.com/tachographs/" rel="noopener" target="_blank">Manuale — stoneridgeelectronics.com</a>
+</li>
+<li>
+<strong>Actia SmarTach — Actia Group</strong>
+    Ghiduri pentru conducătorul auto SmarTach Gen1 și Gen2; utilizate pe scară largă de operatorii de transport rutier francezi și sud-europeni.
+    <a href="https://www.actia.com/en/solutions/tachograph/" rel="noopener" target="_blank">Pagina produsului — actia.com</a>
+</li>
+<li>
+<strong>Comisia Europeană — DG MOVE</strong>
+    Informații de referință privind implementarea tahografului inteligent, modificările și orientările privind controlul.
+    <a href="https://transport.ec.europa.eu/transport-modes/road/social-provisions/smart-tachograph_en" rel="noopener" target="_blank">transport.ec.europa.eu — Tahograf inteligent</a>
+</li>
+</ul>
+<!-- ===================================================================== -->
+<!-- RELATED ARTICLES                                                       -->
+<!-- ===================================================================== --></div></section><section class="band band--blue"><div class="container art-body"><div class="eyebrow anim-up">Ghiduri conexe</div><h2 class="h2-grad anim-up" id="related">Ghiduri conexe pentru conducătorii auto</h2>
+<div class="related-grid">
+<a class="related-card anim-up" href="/ro/articole/descarcare-evaluare-arhivare-date-tahograf/">
+<span class="r-eyebrow">Conformitate · lectură de 12 min.</span>
+<span class="r-title">Cum să descărcați, să evaluați și să arhivați datele tahografului</span>
+<span class="r-text">Ghid complet privind ciclul de descărcare la 28 de zile pentru cardul de conducător auto și la 90 de zile pentru UMV, regulile de arhivare și documentele pe care flota dumneavoastră trebuie să le păstreze în evidențe.</span>
+<span class="r-chip">Citiți ghidul privind descărcarea →</span>
+</a>
+<a class="related-card anim-up" href="/ro/articole/cine-trebuie-sa-evalueze-datele-tahograf-2026/">
+<span class="r-eyebrow">Regulament · lectură de 8 min</span>
+<span class="r-title">Cine trebuie să evalueze datele tahografului în 2026</span>
+<span class="r-text">Obligațiile operatorului în temeiul Regulamentului 561/2006 și al Directivei privind timpul de lucru — ce categorii de transport intră în domeniul de aplicare și ce trebuie prezentat unui inspector.</span>
+<span class="r-chip">Citiți ghidul privind obligațiile →</span>
+</a>
+<a class="related-card anim-up" href="/ro/articole/tahograf-autoutilitare-obligatie-iulie-2026/">
+<span class="r-eyebrow">Reguli noi · lectură de 6 min</span>
+<span class="r-title">Tahografe pentru autoutilitare: noua obligație din iulie 2026</span>
+<span class="r-text">De la 1 iulie 2026, autoutilitarele cu masa între 2,5 și 3,5 tone utilizate în transport internațional trebuie să fie echipate cu un tahograf inteligent. Listă de verificare pentru operatori.</span>
+<span class="r-chip">Citiți ghidul pentru autoutilitare →</span>
+</a>
+</div>
+<p style="margin-bottom:16px;">Conduceți folosind propriul card, fără să gestionați o flotă? <a href="/ro/pentru-conducatori/">TAGRA Trucker</a> este versiunea pentru un singur conducător auto — evaluează datele propriului dumneavoastră card și semnalează contravențiile înainte ca acestea să fie constatate la un control. Cititor de carduri USB inclus, €49.</p>
+<!-- ===== second TAGRA CTA Box ===== -->
+<div class="cta-box" style="margin-top:36px;">
+<h3>Codul dumneavoastră reprezintă doar jumătate din poveste</h3>
+<p>O defecțiune afișată pe ecran lasă aproape întotdeauna o urmă pe cardul de conducător auto — o înregistrare lipsă, o tură întreruptă sau o contravenție despre care vi se poate cere să dați explicații la un control rutier. TAGRA Trucker vă citește cardul și vă arată exact ce a fost înregistrat. Cititor de carduri USB inclus, €49 fără TVA.</p>
+<a class="cta-btn" href="/ro/incercare-gratuita/?audience=driver&amp;src=symbols">Vedeți ce este pe cardul dumneavoastră →</a>
+<p class="cta-note">Gestionați o flotă? <a href="/ro/incercare-gratuita/?audience=fleet&amp;src=symbols">Încercați versiunea pentru flote →</a></p>
+</div>
+<!-- ===================================================================== -->
+<!-- FAQ                                                                    -->
+<!-- ===================================================================== --></div></section><section class="band band--gray"><div class="container art-body"><div class="eyebrow anim-up">Întrebări & răspunsuri</div><h2 class="h2-grad anim-up" id="faq">Întrebări frecvente — coduri de defecțiune și simboluri de avertisment ale tahografului</h2>
+<div class="faq-block">
+<details>
+<summary>Care este diferența dintre un „eveniment” și o „defecțiune” la un tahograf digital?</summary>
+<div class="faq-a">Un <strong>eveniment</strong> este o situație operațională — conducere fără card, depășirea limitei de viteză, introducerea cardului în timpul conducerii, suprapunere de timp. Unitatea funcționează corect; aceasta înregistrează o acțiune efectuată de conducătorul auto. <strong>defecțiune</strong> este o funcționare necorespunzătoare a componentelor hardware sau software ale tahografului — defecțiune a senzorului, defecțiune internă, defecțiune privind ora, defectarea imprimantei. Defecțiunile declanșează obligația de reparare prevăzută la articolul 37 — de îndată ce circumstanțele permit sau pe traseu, dacă vehiculul nu se poate întoarce la bază în termen de o săptămână. Ambele categorii sunt definite în anexa I C la Regulamentul (UE) 2016/799.</div>
+</details>
+<details>
+<summary>Văd „sensor fault” pe afișajul VDO — pot continua să conduc?</summary>
+<div class="faq-a">Pe scurt, da — pentru a ajunge într-un loc sigur de oprire. Apoi trebuie să (1) apăsați OK pentru confirmare, (2) tipăriți activitățile zilei, (3) înscrieți manual pe verso-ul acelei tipărituri fiecare activitate ulterioară, (4) informați operatorul de transport rutier și (5) ajungeți la un atelier autorizat de îndată ce circumstanțele permit. Continuarea conducerii fără înregistrări manuale după ce ați luat cunoștință de o defecțiune a senzorului constituie o contravenție gravă în fiecare stat membru al UE.</div>
+</details>
+<details>
+<summary>Ce înseamnă „GNSS anomaly” pe un tahograf inteligent 2?</summary>
+<div class="faq-a">Unitățile montate pe vehicule ale tahografelor inteligente 2 (obligatorii pentru vehiculele înmatriculate după 21 august 2023, cu modernizări obligatorii până la 18 august 2025) verifică semnalul GNSS pentru detectarea manipulării frauduloase prin serviciul Galileo OSNMA. Un <em>Anomalie GNSS</em> eveniment înseamnă că unitatea a detectat fie o tentativă de manipulare frauduloasă a semnalului GPS/Galileo, fie că semnalul nu a trecut autentificarea. Unitatea înregistrează evenimentul pentru autoritățile de control (ISCTR). Dacă acesta se repetă la un anumit vehicul, antena și cablajul din imediata apropiere trebuie verificate pentru manipulare frauduloasă — și pot fi necesare diagnosticări într-un atelier autorizat.</div>
+</details>
+<details>
+<summary>Care este diferența dintre „Alte activități” și „Perioadă de disponibilitate”?</summary>
+<div class="faq-a"><strong>Alte activități</strong> reprezintă muncă plătită care nu constă în conducere: încărcare, descărcare, alimentare cu combustibil, acte, asistarea pasagerilor, verificări ale vehiculului. Aceasta este considerată timp de lucru în conformitate cu Directiva privind timpul de lucru și <em>nu</em> se consideră pauză. <strong>Perioadă de disponibilitate</strong> reprezintă timp de așteptare a cărui durată este cunoscută în avans de către conducătorul auto — feribot/tren, așteptarea la o programare cunoscută, însoțirea unui vehicul pe un transportator auto. Perioada de disponibilitate nu este muncă, dar nici nu este <em>nu</em> o pauză în sensul normelor privind durata de conducere; în conformitate cu Directiva privind timpul de lucru, aceasta este exclusă din timpul de lucru atunci când durata sa este cunoscută în avans.</div>
+</details>
+<details>
+<summary>Poate „Perioada de disponibilitate” să fie considerată pauză în temeiul Regulamentului (CE) nr. 561/2006?</summary>
+<div class="faq-a">Nu. Anexa 1 la Regulamentul 561/2006 enumeră o singură categorie care resetează perioada de conducere continuă de 4½ ore și este luată în calcul pentru pauza obligatorie de 45 de minute: activitatea <em>pauză / repaus</em> (pictograma pat). Conducătorii auto care selectează „Disponibilitate” în timpul a ceea ce consideră a fi o pauză nu beneficiază de pauză la descărcare — iar inspectorii de la controlul rutier aplică în mod regulat amenzi pentru aceasta.</div>
+</details>
+<details>
+<summary>Ce trebuie să fac dacă am uitat să trec pe „Repaus” în timpul unei pauze?</summary>
+<div class="faq-a">Data viitoare când introduceți cardul de conducător auto în orice vehicul, tahograful vă oferă o procedură de <strong>introducere manuală</strong> pentru perioada de la ultima scoatere a cardului. Utilizați meniul pentru a seta activitatea corectă (Repaus) pentru acel interval. Introducerile manuale sunt marcate temporal pe card și vizibile pentru autoritățile de control (ISCTR), însă sunt acceptate ca o corecție legitimă — spre deosebire de o activitate lipsă sau incorectă care nu a fost niciodată declarată.</div>
+</details>
+<details>
+<summary>Cât de des trebuie să descărcați cardul de conducător auto și unitatea montată pe vehicul (UMV)?</summary>
+<div class="faq-a">Cel puțin o dată la <strong>28 de zile</strong> pentru cardul de conducător auto și o dată la <strong>90 de zile</strong> pentru unitatea montată pe vehicul (UMV) [articolul 33 din Regulamentul 165/2014, coroborat cu Regulamentul (UE) nr. 581/2010 al Comisiei]. Datele descărcate trebuie păstrate cel puțin un an — iar în multe state membre, pe întreaga durată a carierei profesionale a conducătorului auto, ca parte a evidențelor privind accidentele/asigurările.</div>
+</details>
+<details>
+<summary>O „eroare de comunicare a cardului” afectează înregistrările privind durata de conducere?</summary>
+<div class="faq-a">Nu neapărat. Majoritatea erorilor de comunicare sunt pur și simplu cauzate de contacte murdare ale cipului — activitatea desfășurată înainte de eroare este deja în memoria cardului. Dacă eroarea este de scurtă durată și dispare după curățare și reintroducere, nu se pierde nicio perioadă. Dacă cardul nu poate fi citit deloc, unitatea va tipări automat ultima activitate, iar dumneavoastră trebuie să înregistrați manual totul din acel moment; cardul trebuie înlocuit.</div>
+</details>
+<details>
+<summary>Afișajul indică „country entry required” — ce trebuie să faceți?</summary>
+<div class="faq-a">Tahografele inteligente vă solicită să declarați țara în care începe și se încheie tura. Cu tahograful inteligent 2, unitatea vă solicită și să confirmați fiecare trecere a frontierei (GNSS detectează trecerea, iar conducătorul auto apasă OK pentru confirmare). Utilizați meniul: <em>intrare → conducător auto 1 → țara de început</em> (și <em>țara de încheiere</em> la sfârșitul turei). Introducerile omise ale țării sunt înregistrate ca evenimente și sunt vizibile inspectorilor la controlul rutier.</div>
+</details>
+<details>
+<summary>TAGRA acceptă toate cele patru coduri de defecțiune ale producătorilor prezentate în acest ghid?</summary>
+<div class="faq-a">Da. TAGRA citește evenimentele și defecțiunile din Anexa I C direct din orice fișier .DDD descărcat — formatul datelor este identic, indiferent de unitatea care l-a generat. Mesajele pop-up specifice producătorului sunt corelate cu evenimentul aferent din Anexa I C, astfel încât managerii flotei să vadă explicații consecvente, în limbaj clar, indiferent dacă conducătorii auto utilizează VDO, Stoneridge, Actia, EFAS sau orice alt tahograf inteligent omologat.</div>
+</details>
+<details>
+<summary>Ce impune în mod concret regula privind repararea prevăzută la articolul 37?</summary>
+<div class="faq-a">Articolul 37 din Regulamentul 165/2014 impune ca, în cazul în care tahograful nu poate înregistra corect activitățile din cauza unei defecțiuni, repararea să fie efectuată de un montator sau de un atelier autorizat „de îndată ce circumstanțele permit”. Dacă vehiculul nu poate reveni la sediul operatorului de transport rutier în termen de <strong>o săptămână</strong> de la constatarea defecțiunii, repararea trebuie efectuată pe traseu. Conducătorul auto trebuie să păstreze înregistrări manuale pe toată durata acestei perioade.</div>
+</details>
+<details>
+<summary>Pot continua să conduc dacă este înregistrat evenimentul „overspeed”?</summary>
+<div class="faq-a">Da — overspeed este un eveniment, nu o defecțiune. Vehiculul continuă să înregistreze corect; a fost depășită doar limita de viteză. Evenimentul este vizibil la descărcare, iar înregistrările repetate de overspeed în aceeași cursă sau în mai multe curse reprezintă un motiv frecvent pentru audituri ale operatorului de transport rutier și investigații la controlul rutier.</div>
+</details>
+<details>
+<summary>Afișajul meu VDO indică un număr precum 80, 82 sau 98 — ce înseamnă acesta?</summary>
+<div class="faq-a">La DTCO 4.0 / 4.1, un număr din două cifre afișat lângă pictogramă identifică evenimentul sau defecțiunea. Numerele mici (001–066) sunt coduri de memorie a defecțiunilor de atelier; numerele mari aparțin funcțiilor tahografului inteligent. Cele mai frecvente sunt <strong>80 — conflict privind mișcarea vehiculului</strong> (senzorul de mișcare nu corespunde semnalului GNSS; mesaj grav — mergeți la un atelier autorizat), <strong>82 — defecțiune internă GNSS</strong> (receptorul nu poate stabili temporar o poziție; confirmați mesajul și mergeți la un atelier dacă persistă) și <strong>98 — defecțiune ITS / Bluetooth</strong> (interfața de date de la distanță; nu afectează înregistrarea, remediați la următoarea revizie). Lista completă 34–98 se află în secțiunea VDO de mai sus.</div>
+</details>
+<details>
+<summary>Ce înseamnă „motion conflict” (codul 80) și pot continua să conduc?</summary>
+<div class="faq-a">Codul 80 reprezintă un <em>conflict privind mișcarea vehiculului</em>: tahograful a detectat o contradicție între senzorul de mișcare și o sursă independentă (GNSS). O cauză frecventă și inofensivă este uitarea activării modului feribot/tren în timpul transportului. Dacă apare în condiții normale de conducere, poate indica o manipulare frauduloasă sau o defecțiune a cablajului — confirmați mesajul, păstrați înregistrări manuale și solicitați unui atelier autorizat să inspecteze unitatea.</div>
+</details>
+<details>
+<summary>Cum pot căuta un cod numeric sau hexazecimal de defecțiune dintr-o citire de atelier?</summary>
+<div class="faq-a">Utilizați caseta de căutare din partea de sus a secțiunii privind codurile producătorilor: introduceți numărul (de exemplu <em>042</em>), un număr afișat de VDO (de exemplu <em>82</em>), un cod DTC hexazecimal Stoneridge sau EFAS (de ex. <em>002E80</em>) sau orice cuvinte din mesaj (de ex. <em>defecțiune senzor</em>). Panoul producătorului relevant se deschide automat și afișează numai rândurile corespunzătoare.</div>
+</details>
+<details>
+<summary>Mă poate avertiza TAGRA cu privire la o defecțiune a tahografului înainte ca aceasta să apară?</summary>
+<div class="faq-a">Nu. TAGRA analizează datele după ce le descărcați de pe cardul de conducător auto sau din unitatea montată pe vehicul — nu se conectează la tahograf în timp real și nu poate anticipa defecțiunile. Totuși, vă arată dacă o defecțiune a lăsat o urmă în datele înregistrate și dacă a cauzat o contravenție.</div>
+</details>
+</div><!-- /.faq-block -->
+</article></div></section></main>
+<footer class="site-footer" role="contentinfo">
+<div class="footer-inner">
+<div>
+<div class="footer-logo"><img alt="TAGRA" height="20" src="/assets/img/logo-dark.svg?v=20260513zh" width="88" loading="lazy"/></div>
+<p class="footer-desc">Software profesional de analiză a tahografelor. Descărcare date de pe cardul de conducător auto, analiză a tahografelor digitale, durată de conducere în UE și Directiva privind timpul de lucru pentru vehicule grele de marfă. Dezvoltat de Truck Data Technology, s.r.o.</p>
+</div>
+<div class="footer-col">
+<h2 class="footer-col-title">Produs</h2>
+<ul>
+<li><a href="/ro/pentru-firme/">Pentru operatorii de transport rutier</a></li>
+<li><a href="/ro/pentru-conducatori/">Pentru conducătorii auto profesioniști</a></li>
+<li><a href="/ro/autoritati-de-control/">Pentru autoritățile de control (ISCTR)</a></li>
+<li><a href="/ro/cum-functioneaza/">Cum funcționează</a></li>
+<li><a href="/ro/pentru-cine/">Pentru cine</a></li>
+<li><a href="/ro/intrebari-frecvente/">Întrebări frecvente</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h2 class="footer-col-title">Resurse</h2>
+<ul>
+<li><a href="/ro/articole/">Articole</a></li><li><a href="/ro/manuale/">Manuale</a></li>
+<li><a href="/articles/digital-tachograph-symbols/">Simboluri tahograf</a></li>
+<li><a href="/ro/integrari/dkv-live/">DKV LIVE®</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h2 class="footer-col-title">Societate</h2>
+<ul>
+<li><a href="/ro/contact/">Contact</a></li>
+<li><a href="https://www.tdt.cz" rel="noopener" target="_blank">Truck Data Technology</a></li>
+<li><a href="/ro/">Engleză</a></li><li><a href="/de/">Deutsch</a></li><li><a href="/pl/">Polski</a></li><li><a href="/el/">Ελληνικά</a></li><li><a href="/hu/">Magyar</a></li><li><a href="/it/">Italiano</a></li><li><a href="https://www.tdt.cz/" rel="noopener" target="_blank">Čeština</a></li><li><a href="https://www.tdt.sk/" rel="noopener" target="_blank">Slovenčina</a></li></ul>
+</div>
+</div>
+<div class="footer-bottom">
+<span>© 2026 Truck Data Technology, s.r.o. Toate drepturile rezervate.</span>
+<span><a href="/ro/contact/">Contact</a> · <a href="https://www.tdt.cz" rel="noopener" target="_blank">tdt.cz</a> · <a href="/ro/confidentialitate/">Confidențialitate &amp; cookie-uri</a></span>
+</div>
+</footer>
+<div aria-label="Înscriere rapidă pentru perioada de probă" class="sticky-cta" id="stickyCta" role="complementary">
+<div class="sticky-cta-inner">
+<span class="sticky-cta-text">Sunteți gata să începeți? Încercați TAGRA gratuit timp de 30 de zile.</span>
+<a class="sticky-cta-btn" href="/ro/incercare-gratuita/?audience=driver&amp;src=symbols">Începeți perioada de probă gratuită de 30 de zile →</a>
+<button aria-label="Închideți" class="sticky-cta-close" id="stickyCtaClose">×</button>
+</div>
+</div>
+<script>(function(){var bar=document.getElementById('scroll-progress');if(bar)window.addEventListener('scroll',function(){var t=document.documentElement.scrollTop||document.body.scrollTop;var h=document.documentElement.scrollHeight-document.documentElement.clientHeight;bar.style.width=(t/h*100)+'%';},{passive:true});var toggle=document.getElementById('nav-toggle'),links=document.getElementById('nav-links');if(toggle&&links)toggle.addEventListener('click',function(){var o=links.classList.toggle('open');toggle.setAttribute('aria-expanded',o);});})();</script><script>
+/* INTERSECTION OBSERVER – ANIMATIONS */
+if ('IntersectionObserver' in window) {
+  var io = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) {
+      if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.anim-up, .fly-left, .fly-right').forEach(function(el) { io.observe(el); });
+} else {
+  document.querySelectorAll('.anim-up, .fly-left, .fly-right').forEach(function(el) { el.classList.add('on'); });
+}
+</script>
+<script>
+(function(){
+  var input=document.getElementById('dec-search-input');
+  var clearBtn=document.getElementById('dec-search-clear');
+  var count=document.getElementById('dec-count');
+  var chips=Array.prototype.slice.call(document.querySelectorAll('.dec-chip'));
+  var vendors=Array.prototype.slice.call(document.querySelectorAll('details.vendor'));
+  if(!input||!vendors.length)return;
+  vendors.forEach(function(v){v._defaultOpen=v.hasAttribute('open');});
+  var activeVendor='all';
+  function apply(){
+    var q=(input.value||'').trim().toLowerCase();
+    var total=0;
+    vendors.forEach(function(v){
+      var scoped=(activeVendor==='all'||activeVendor===v.id);
+      if(!scoped){v.classList.add('dec-hidden');return;}
+      v.classList.remove('dec-hidden');
+      var rows=v.querySelectorAll('.code-table tbody tr');
+      var hits=0;
+      Array.prototype.forEach.call(rows,function(r){
+        var m=(q===''||r.textContent.toLowerCase().indexOf(q)!==-1);
+        if(m){r.classList.remove('dec-hidden');hits++;}else{r.classList.add('dec-hidden');}
+      });
+      total+=hits;
+      var body=v.querySelector('.vendor-body');
+      var note=v.querySelector('.dec-nohit');
+      if(q!==''&&hits===0){
+        if(!note&&body){note=document.createElement('p');note.className='dec-nohit';note.textContent='No matching rows in this manufacturer.';body.appendChild(note);}
+        if(note)note.style.display='';
+      } else if(note){note.style.display='none';}
+      if(q!==''||activeVendor!=='all'){v.open=hits>0;}else{v.open=v._defaultOpen;}
+    });
+    if(q===''&&activeVendor==='all'){count.textContent='';}
+    else{count.textContent=total+(total===1?' match':' matches')+(activeVendor!=='all'?' \u00b7 '+activeVendor.toUpperCase():'');}
+  }
+  input.addEventListener('input',apply);
+  clearBtn.addEventListener('click',function(){input.value='';apply();input.focus();});
+  chips.forEach(function(c){c.addEventListener('click',function(){
+    var v=c.getAttribute('data-vendor');
+    if(v==='symbols'){var s=document.getElementById('activity-symbols');if(s)s.scrollIntoView({behavior:'smooth'});return;}
+    chips.forEach(function(x){x.classList.toggle('is-active',x===c&&v!=='symbols');});
+    activeVendor=v;apply();
+    var firstVisible=vendors.filter(function(x){return !x.classList.contains('dec-hidden');})[0];
+    if(firstVisible&&v!=='all')firstVisible.scrollIntoView({behavior:'smooth',block:'start'});
+  });});
+})();
+
+/* STICKY CTA BAR */
+(function(){
+  var bar = document.getElementById('stickyCta');
+  if(!bar) return;
+  var KEY = 'tmx-sticky-cta-dismissed';
+  var dismissed = false;
+  try { dismissed = localStorage.getItem(KEY) === '1'; } catch(e) {}
+  if (dismissed) return;
+  function check(){
+    var top = document.documentElement.scrollTop || document.body.scrollTop;
+    var nearBottom = (window.innerHeight + top) >= (document.documentElement.scrollHeight - 80);
+    if (top > 700 && !nearBottom) bar.classList.add('is-visible');
+    else bar.classList.remove('is-visible');
+  }
+  window.addEventListener('scroll', check, { passive: true });
+  check();
+  var closeBtn = document.getElementById('stickyCtaClose');
+  if (closeBtn) closeBtn.addEventListener('click', function(){
+    bar.classList.remove('is-visible');
+    try { localStorage.setItem(KEY, '1'); } catch(e) {}
+  });
+})();
+</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Coduri de defecțiune și simboluri ale tahografului: ce înseamnă și cum se remediază", "description": "Ghid complet pentru conducători auto privind codurile de defecțiune și simbolurile de avertisment ale tahografului digital. Pictograme de activitate, ferestre de avertisment, coduri de defecțiune VDO DTCO 4.1 / Stoneridge SE5000 / Actia / EFAS-4, semnificația fiecărei defecțiuni și ce trebuie să faceți exact.", "image": "https://tagra.app/assets/img/og/digital-tachograph-symbols.jpg", "author": {"@type": "Organization", "name": "Truck Data Technology, s.r.o.", "url": "https://www.tdt.cz"}, "publisher": {"@type": "Organization", "name": "Truck Data Technology, s.r.o.", "logo": {"@type": "ImageObject", "url": "https://tagra.app/assets/img/logo.svg"}}, "datePublished": "2025-09-01T09:00:00+02:00", "dateModified": "2026-06-15T09:00:00+02:00", "inLanguage": "ro", "mainEntityOfPage": "https://tagra.app/ro/articole/simboluri-tahograf-digital/", "articleSection": "Bază de cunoștințe pentru conducători auto", "wordCount": 9600, "keywords": "tachograph fault codes, tachograph warning symbols, digital tachograph error codes, VDO DTCO error codes, Stoneridge SE5000 errors, Actia SmarTach faults, EFAS-4 faults, Annex 1C events, smart tachograph GNSS fault, drivers hours, Regulation 165/2014"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Care este diferența dintre un eveniment și o defecțiune la un tahograf digital?", "acceptedAnswer": {"@type": "Answer", "text": "Un eveniment este o situație operațională — conducere fără card, depășirea limitei de viteză, introducerea cardului în timpul conducerii, suprapunere de timp. Unitatea funcționează corect; aceasta înregistrează ceva ce a făcut conducătorul auto. O defecțiune este o funcționare necorespunzătoare a hardware-ului sau software-ului tahografului — defecțiune a senzorului, defecțiune internă, defecțiune de timp, defectarea imprimantei. Defecțiunile declanșează obligația de reparare prevăzută la articolul 37 — de îndată ce circumstanțele permit sau pe traseu dacă vehiculul nu poate reveni la bază în decurs de o săptămână. Ambele categorii sunt definite în anexa I C la Regulamentul (UE) 2016/799."}}, {"@type": "Question", "name": "Văd „sensor fault” pe afișajul VDO — pot continua să conduc?", "acceptedAnswer": {"@type": "Answer", "text": "Pe scurt, da — pentru a ajunge într-un loc sigur de oprire. Apoi trebuie să confirmați mesajul, să imprimați activitățile zilei, să înscrieți manual evidențele pentru fiecare activitate ulterioară pe verso-ul acelei imprimări, să vă informați managerul de flotă și să ajungeți la un atelier autorizat de îndată ce circumstanțele permit. Continuarea conducerii fără evidențe manuale după ce aflați despre o defecțiune a senzorului reprezintă o contravenție gravă în fiecare stat membru al UE."}}, {"@type": "Question", "name": "Ce înseamnă anomalie GNSS la un tahograf inteligent 2?", "acceptedAnswer": {"@type": "Answer", "text": "Unitățile de tahograf inteligent 2 verifică semnalul GNSS pentru detectarea manipulării frauduloase prin serviciul Galileo OSNMA. Un eveniment de anomalie GNSS înseamnă că unitatea a detectat fie o tentativă de manipulare frauduloasă a semnalului GPS/Galileo, fie că semnalul nu a trecut autentificarea. Unitatea înregistrează evenimentul pentru autoritățile de control (ISCTR). Dacă acesta reapare la un anumit vehicul, antena și cablajul imediat adiacent trebuie verificate pentru manipulare frauduloasă."}}, {"@type": "Question", "name": "Care este diferența dintre „Other work” și „Period of availability”?", "acceptedAnswer": {"@type": "Answer", "text": "„Other work” reprezintă muncă plătită care nu constă în conducere: încărcare, descărcare, alimentare cu combustibil, documente, ajutorarea pasagerilor, verificări ale vehiculului. „Period of availability” reprezintă timpul de așteptare a cărui durată conducătorul auto o cunoaște în avans — feribot/tren, așteptare la o programare cunoscută. Perioada de disponibilitate nu este muncă, dar nici pauză în sensul normelor privind timpul de conducere."}}, {"@type": "Question", "name": "Poate „Period of availability” să fie considerată pauză în temeiul Regulamentului (CE) nr. 561/2006?", "acceptedAnswer": {"@type": "Answer", "text": "Nu. Anexa 1 la Regulamentul 561/2006 enumeră o singură categorie care resetează intervalul de 4,5 ore de conducere continuă și este luată în calcul pentru pauza obligatorie de 45 de minute: activitatea de pauză/repaus. Conducătorii auto care selectează „Availability” în timpul unei pauze nu primesc credit de pauză la descărcare."}}, {"@type": "Question", "name": "Ce trebuie să fac dacă am uitat să comut pe repaus în timpul unei pauze?", "acceptedAnswer": {"@type": "Answer", "text": "Data viitoare când introduceți cardul în orice vehicul, tahograful vă oferă o procedură de introducere manuală pentru perioada de la ultima extragere a cardului. Utilizați meniul pentru a seta activitatea corectă pentru acel interval. Introducerile manuale sunt marcate temporal pe card și sunt acceptate ca o corecție legitimă."}}, {"@type": "Question", "name": "Cât de des trebuie să descărcați cardul de conducător auto și unitatea montată pe vehicul (UMV)?", "acceptedAnswer": {"@type": "Answer", "text": "Cel puțin o dată la fiecare 28 de zile pentru cardul de conducător auto și o dată la fiecare 90 de zile pentru unitatea montată pe vehicul (articolul 33 din Regulamentul 165/2014, coroborat cu Regulamentul (UE) nr. 581/2010 al Comisiei). Datele descărcate trebuie păstrate timp de cel puțin un an."}}, {"@type": "Question", "name": "O eroare de comunicare a cardului afectează evidențele duratei mele de conducere?", "acceptedAnswer": {"@type": "Answer", "text": "Nu neapărat. Majoritatea erorilor de comunicare sunt cauzate doar de contacte murdare ale cipului — activitatea efectuată înainte de eroare este deja în memoria cardului. Dacă eroarea este scurtă și dispare după curățare și reintroducere, nu se pierde nicio perioadă. Dacă cardul refuză să fie citit deloc, unitatea va imprima automat ultima activitate."}}, {"@type": "Question", "name": "Afișajul indică „country entry required” — ce trebuie să fac?", "acceptedAnswer": {"@type": "Answer", "text": "Tahografele inteligente vă solicită să declarați țara în care începe și se încheie tura. Cu tahograful inteligent 2, unitatea vă solicită, de asemenea, să confirmați fiecare trecere a frontierei. Utilizați meniul: entry → driver 1 → begin country la început și end country la sfârșitul turei."}}, {"@type": "Question", "name": "TAGRA acceptă toate cele patru coduri de defecțiune ale producătorilor prezentate în acest ghid?", "acceptedAnswer": {"@type": "Answer", "text": "Da. TAGRA citește evenimentele și defecțiunile din Anexa I C direct din orice fișier .DDD descărcat — formatul datelor este identic, indiferent de unitatea care l-a creat. Mesajele pop-up specifice producătorului sunt corelate cu evenimentul corespunzător din Anexa I C."}}, {"@type": "Question", "name": "Ce impune în mod concret regula privind repararea prevăzută la articolul 37?", "acceptedAnswer": {"@type": "Answer", "text": "Articolul 37 din Regulamentul 165/2014 prevede că, atunci când tahograful nu poate înregistra corect activitățile din cauza unei defecțiuni, reparația trebuie efectuată de un atelier autorizat de îndată ce circumstanțele permit acest lucru. Dacă vehiculul nu poate reveni la sediul operatorului de transport rutier în termen de o săptămână de la constatarea defecțiunii, reparația trebuie efectuată pe traseu."}}, {"@type": "Question", "name": "Pot continua să conduc cu evenimentul de depășire a vitezei înregistrat?", "acceptedAnswer": {"@type": "Answer", "text": "Da — depășirea vitezei este un eveniment, nu o defecțiune. Vehiculul continuă să înregistreze corect; a fost depășită doar limita de viteză. Evenimentul este vizibil la descărcare, iar înregistrările repetate de depășire a vitezei reprezintă un motiv frecvent pentru audituri ale operatorului de transport rutier și investigații în cadrul controalelor rutiere."}}, {"@type": "Question", "name": "Afișajul meu VDO indică un număr precum 80, 82 sau 98 — ce înseamnă acesta?", "acceptedAnswer": {"@type": "Answer", "text": "Pe DTCO 4.0/4.1, un număr format din două cifre lângă pictogramă identifică evenimentul sau defecțiunea. Numerele mici (001–066) sunt coduri de memorie a defecțiunilor pentru atelier; numerele mari aparțin funcțiilor tahografului inteligent. Cele mai frecvente sunt 80 — conflict de mișcare a vehiculului (senzorul de mișcare nu corespunde semnalului GNSS; vizitați un atelier autorizat), 82 — defecțiune GNSS internă (receptorul nu poate stabili temporar o poziție) și 98 — defecțiune ITS/Bluetooth (interfața pentru date de la distanță; fără efect asupra înregistrării)."}}, {"@type": "Question", "name": "Ce înseamnă conflictul de mișcare (codul 80) și pot continua să conduc?", "acceptedAnswer": {"@type": "Answer", "text": "Codul 80 indică un conflict de mișcare a vehiculului: tahograful a detectat o contradicție între senzorul de mișcare și o sursă independentă (GNSS). O cauză frecventă și inofensivă este uitarea activării modului feribot/tren în timpul transportului. Dacă apare în timpul conducerii normale, poate indica o manipulare frauduloasă sau o defecțiune a cablajului — confirmați mesajul, păstrați înregistrări manuale și solicitați unui atelier autorizat să inspecteze unitatea."}}, {"@type": "Question", "name": "Cum pot căuta un cod numeric sau hexazecimal de defecțiune dintr-o citire de atelier?", "acceptedAnswer": {"@type": "Answer", "text": "Utilizați caseta de căutare din partea superioară a secțiunii cu coduri ale producătorilor: introduceți numărul (de exemplu, 042), un număr afișat VDO (de exemplu, 82), un DTC hexazecimal Stoneridge sau EFAS (de exemplu, 002E80) ori orice cuvinte din mesaj (de exemplu, defecțiune senzor). Panoul producătorului relevant se deschide automat și afișează numai rândurile corespunzătoare."}}, {"@type": "Question", "name": "Mă poate avertiza TAGRA cu privire la o defecțiune a tahografului înainte ca aceasta să apară?", "acceptedAnswer": {"@type": "Answer", "text": "Nu. TAGRA analizează datele după ce le descărcați de pe cardul de conducător auto sau din unitatea montată pe vehicul — nu se conectează la tahograf în timp real și nu poate anticipa defecțiunile. Totuși, vă arată dacă o defecțiune a lăsat o urmă în datele înregistrate și dacă a cauzat o contravenție."}}]}</script>
+</body>
+</html>
