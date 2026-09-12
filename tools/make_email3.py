@@ -11,7 +11,7 @@ Klíčová fakta (ověřena na tagra.app/faq/ a /fleet/):
   - licence aktivní okamžitě, pokračuje se ve stejném prostředí
     → uživatel NEPŘIJDE o data naimportovaná během trialu
   - roční poplatek od 2. roku (bez DPH): Trucker 19 €, TAGRA 1-2 79 €,
-    TAGRA 4-6 99 €, MAX 139 €; první rok je v ceně
+    TAGRA 4-6 99 €, MAX 149 €; první rok je v ceně
 """
 import re
 import sys
@@ -100,7 +100,7 @@ FLEET = [
 
     ("closing",
      "              I will suggest the right TAGRA edition and compatible hardware, so you don't pay for more than you need. I reply personally. If you manage a larger fleet, I can also arrange a guided setup consultation for you.\n",
-     "              The annual licence fee starts at &euro;79 excl. VAT (TAGRA MAX &euro;139) and the first year is included in the purchase price — it covers updates and support. If something in the trial didn't work, tell me before it expires; I'd rather fix it than lose you over it. I reply personally.\n"),
+     "              The annual licence fee starts at &euro;79 excl. VAT (TAGRA MAX &euro;149) and the first year is included in the purchase price — it covers updates and support. If something in the trial didn't work, tell me before it expires; I'd rather fix it than lose you over it. I reply personally.\n"),
 ]
 
 # ─────────────────────────────────────────────────────────────
@@ -163,12 +163,12 @@ DRIVER = [
      "                    One practical question\n",
      "                    Before it expires — one question\n"),
     ("band-body",
-     "                    Do you have a USB card reader? Reply to this email with <strong class=\"dm-text\" style=\"color:#0b2c4a;\">&quot;reader: yes&quot;</strong> or <strong class=\"dm-text\" style=\"color:#0b2c4a;\">&quot;reader: no&quot;</strong>. If you don't have one, I will recommend a compatible model \u2014 TAGRA TRUCKER ships with a reader included.\n",
+     "                    Do you have a USB card reader? Reply to this email with <strong class=\"dm-text\" style=\"color:#0b2c4a;\">&quot;reader: yes&quot;</strong> or <strong class=\"dm-text\" style=\"color:#0b2c4a;\">&quot;reader: no&quot;</strong>. If you don't have one, I will recommend a compatible model.\n",
      "                    Did anything in the trial not work the way you expected \u2014 reading the card, an infringement you disagree with, or the archive? Reply and tell me before it expires. I would rather fix it than have you leave over something that takes me five minutes to solve.\n"),
 
     ("closing",
      "              If you have any questions, please reply to this email. I read and answer every one.\n",
-     "              TAGRA TRUCKER costs &euro;19 excl. VAT per year from the second year — the first year is included in the purchase price, and it covers updates and support. If you still don't have a USB card reader, reply and I will recommend a compatible model; TRUCKER ships with a reader included.\n"),
+     "              TAGRA TRUCKER costs &euro;19 excl. VAT per year from the second year — the first year is included in the purchase price, and it covers updates and support. If you still don't have a USB card reader, reply and I will recommend a compatible model.\n"),
 ]
 
 

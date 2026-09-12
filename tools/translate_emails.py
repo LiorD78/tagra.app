@@ -9,10 +9,11 @@ Princip: deterministický walk přes textové uzly + <title> + alt="".
 Segment se přeloží, jen pokud je ve slovníku; jinak zůstane (TAGRA,
 čísla kroků, telefony, e-maily, názvy sítí).
 
-CENY (roční licenční poplatek, bez DPH — ověřeno v TRUCKMALL-MASTER):
-  cz          TAGRA 1/2/4/6 = 1 990 Kč · MAX = 3 490 Kč · TRUCKER = 490 Kč
-  sk          TAGRA 1/2/4/6 = 83 EUR   · MAX = 145 EUR  · TRUCKER = 19 EUR
-  de/pl/gr    dle tagra.app: od 79 €   · MAX = 139 €    · TRUCKER = 19 €
+CENY (roční licenční poplatek, bez DPH — dle tagra.app/fleet/):
+  cz          TAGRA 1/2/4/6 = 1 990 Kč · MAX = ??? Kč (TODO: potvrdit u Libora,
+              dosavadní 3 490 Kč vycházelo z chybných 139 €/145 € níže) · TRUCKER = 490 Kč
+  sk          TAGRA 1/2/4/6 = 79 EUR   · MAX = 149 EUR  · TRUCKER = 19 EUR
+  de/pl/gr    dle tagra.app: od 79 €   · MAX = 149 €    · TRUCKER = 19 €
 
 SK GATE: žádné ř / ě / ů. Kontroluje se automaticky na konci.
 """
@@ -96,8 +97,8 @@ TR["cz"] = {
     "&quot;reader: yes&quot;": "„čtečka: ano“",
     "or": "nebo",
     "&quot;reader: no&quot;": "„čtečka: ne“",
-    ". If you don't have one, I will recommend a compatible model — TAGRA TRUCKER ships with a reader included.":
-        ". Pokud ji nemáte, doporučím vám kompatibilní model — TAGRA TRUCKER se dodává i se čtečkou.",
+    ". If you don't have one, I will recommend a compatible model.":
+        ". Pokud ji nemáte, doporučím vám kompatibilní model.",
     "If you have any questions, please reply to this email. I read and answer every one.":
         "Máte-li jakýkoli dotaz, odpovězte na tento e-mail. Čtu je a odpovídám na všechny.",
 
@@ -125,7 +126,7 @@ TR["cz"] = {
         "Neplaťte zbytečně — verzi určuje počet vozidel. Odpovězte na tyto dvě otázky a řeknu vám, kterou zvolit:",
     "Is there anything in the trial that did not work the way you expected?":
         "Nefungovalo ve zkušební verzi něco tak, jak jste čekali?",
-    "The annual licence fee starts at &euro;79 excl. VAT (TAGRA MAX &euro;139) and the first year is included in the purchase price — it covers updates and support. If something in the trial didn't work, tell me before it expires; I'd rather fix it than lose you over it. I reply personally.":
+    "The annual licence fee starts at &euro;79 excl. VAT (TAGRA MAX &euro;149) and the first year is included in the purchase price — it covers updates and support. If something in the trial didn't work, tell me before it expires; I'd rather fix it than lose you over it. I reply personally.":
         "Roční licenční poplatek je 1 990 Kč bez DPH (TAGRA MAX 3 490 Kč) a první rok je zahrnutý v ceně — kryje aktualizace a technickou podporu. Pokud ve zkušební verzi něco nefungovalo, napište mi dřív, než vyprší; radši to spravím, než abych o vás kvůli tomu přišel. Odpovídám osobně.",
 
     # --- email3 DRIVER ---
@@ -145,8 +146,8 @@ TR["cz"] = {
     "Before it expires — one question": "Než vyprší — jedna otázka",
     "Did anything in the trial not work the way you expected — reading the card, an infringement you disagree with, or the archive? Reply and tell me before it expires. I would rather fix it than have you leave over something that takes me five minutes to solve.":
         "Nefungovalo ve zkušební verzi něco tak, jak jste čekali — načtení karty, přestupek, se kterým nesouhlasíte, nebo záloha? Napište mi to, než vyprší. Radši to spravím, než abyste odešli kvůli něčemu, co mi zabere pět minut.",
-    "TAGRA TRUCKER costs &euro;19 excl. VAT per year from the second year — the first year is included in the purchase price, and it covers updates and support. If you still don't have a USB card reader, reply and I will recommend a compatible model; TRUCKER ships with a reader included.":
-        "TAGRA TRUCKER stojí od druhého roku 490 Kč bez DPH ročně — první rok je zahrnutý v ceně a kryje aktualizace i technickou podporu. Pokud pořád nemáte USB čtečku karet, odpovězte a doporučím vám kompatibilní model; TRUCKER se dodává i se čtečkou.",
+    "TAGRA TRUCKER costs &euro;19 excl. VAT per year from the second year — the first year is included in the purchase price, and it covers updates and support. If you still don't have a USB card reader, reply and I will recommend a compatible model.":
+        "TAGRA TRUCKER stojí od druhého roku 490 Kč bez DPH ročně — první rok je zahrnutý v ceně a kryje aktualizace i technickou podporu. Pokud pořád nemáte USB čtečku karet, odpovězte a doporučím vám kompatibilní model.",
 }
 
 # ─────────────────────────────── SLOVENŠTINA ───────────────────────────
@@ -209,15 +210,15 @@ TR["sk"] = {
     "&quot;reader: yes&quot;": "„čítačka: áno“",
     "or": "alebo",
     "&quot;reader: no&quot;": "„čítačka: nie“",
-    ". If you don't have one, I will recommend a compatible model — TAGRA TRUCKER ships with a reader included.":
-        ". Ak ju nemáte, odporučím vám kompatibilný model — TAGRA TRUCKER sa dodáva aj s čítačkou.",
+    ". If you don't have one, I will recommend a compatible model.":
+        ". Ak ju nemáte, odporučím vám kompatibilný model.",
     "If you have any questions, please reply to this email. I read and answer every one.":
         "Ak máte akúkoľvek otázku, odpovedzte na tento e-mail. Čítam ich a odpovedám na všetky.",
 
     "Your TAGRA trial ends in 5 days — here is how to keep your data":
         "Skúšobná verzia programu TAGRA končí o 5 dní — o dáta neprídete",
     "Your licence activates inside the same software — nothing you imported gets lost. From €79 a year.":
-        "Licenciu aktivujete priamo v programe — nič z naimportovaných dát nestratíte. Od 83 EUR ročne.",
+        "Licenciu aktivujete priamo v programe — nič z naimportovaných dát nestratíte. Od 79 EUR ročne.",
     "Your trial is ending": "Skúšobná verzia sa končí",
     "{NAME}, your trial ends in 5 days": "{NAME}, skúšobná verzia končí o 5 dní",
     "Your 30-day TAGRA trial expires in 5 days. If it has been doing its job, you don't need to reinstall anything or import your files again — the licence activates inside the same software you are already using, and everything you have imported stays where it is. It takes about two minutes:":
@@ -237,8 +238,8 @@ TR["sk"] = {
         "Neplaťte zbytočne — verziu určuje počet vozidiel. Odpovedzte na tieto dve otázky a poviem vám, ktorú zvoliť:",
     "Is there anything in the trial that did not work the way you expected?":
         "Nefungovalo v skúšobnej verzii niečo tak, ako ste čakali?",
-    "The annual licence fee starts at &euro;79 excl. VAT (TAGRA MAX &euro;139) and the first year is included in the purchase price — it covers updates and support. If something in the trial didn't work, tell me before it expires; I'd rather fix it than lose you over it. I reply personally.":
-        "Ročný licenčný poplatok je 83 EUR bez DPH (TAGRA MAX 145 EUR) a prvý rok je zahrnutý v cene — kryje aktualizácie a technickú podporu. Ak v skúšobnej verzii niečo nefungovalo, napíšte mi skôr, než vyprší; radšej to opravím, než by som o vás kvôli tomu prišiel. Odpovedám osobne.",
+    "The annual licence fee starts at &euro;79 excl. VAT (TAGRA MAX &euro;149) and the first year is included in the purchase price — it covers updates and support. If something in the trial didn't work, tell me before it expires; I'd rather fix it than lose you over it. I reply personally.":
+        "Ročný licenčný poplatok je 79 EUR bez DPH (TAGRA MAX 149 EUR) a prvý rok je zahrnutý v cene — kryje aktualizácie a technickú podporu. Ak v skúšobnej verzii niečo nefungovalo, napíšte mi skôr, než vyprší; radšej to opravím, než by som o vás kvôli tomu prišiel. Odpovedám osobne.",
 
     "Your TAGRA TRUCKER trial ends in 5 days": "Skúšobná verzia TAGRA TRUCKER končí o 5 dní",
     "Your licence activates inside the same software — your archived card data stays. €19 a year from year two.":
@@ -256,8 +257,8 @@ TR["sk"] = {
     "Before it expires — one question": "Skôr než vyprší — jedna otázka",
     "Did anything in the trial not work the way you expected — reading the card, an infringement you disagree with, or the archive? Reply and tell me before it expires. I would rather fix it than have you leave over something that takes me five minutes to solve.":
         "Nefungovalo v skúšobnej verzii niečo tak, ako ste čakali — načítanie karty, priestupok, s ktorým nesúhlasíte, alebo záloha? Napíšte mi to skôr, než vyprší. Radšej to opravím, než by ste odišli kvôli niečomu, čo mi zaberie päť minút.",
-    "TAGRA TRUCKER costs &euro;19 excl. VAT per year from the second year — the first year is included in the purchase price, and it covers updates and support. If you still don't have a USB card reader, reply and I will recommend a compatible model; TRUCKER ships with a reader included.":
-        "TAGRA TRUCKER stojí od druhého roka 19 EUR bez DPH ročne — prvý rok je zahrnutý v cene a kryje aktualizácie aj technickú podporu. Ak stále nemáte USB čítačku kariet, odpovedzte a odporučím vám kompatibilný model; TRUCKER sa dodáva aj s čítačkou.",
+    "TAGRA TRUCKER costs &euro;19 excl. VAT per year from the second year — the first year is included in the purchase price, and it covers updates and support. If you still don't have a USB card reader, reply and I will recommend a compatible model.":
+        "TAGRA TRUCKER stojí od druhého roka 19 EUR bez DPH ročne — prvý rok je zahrnutý v cene a kryje aktualizácie aj technickú podporu. Ak stále nemáte USB čítačku kariet, odpovedzte a odporučím vám kompatibilný model.",
 }
 
 # ─────────────────────────────── NĚMČINA ───────────────────────────────
@@ -320,8 +321,8 @@ TR["de"] = {
     "&quot;reader: yes&quot;": "„Leser: ja“",
     "or": "oder",
     "&quot;reader: no&quot;": "„Leser: nein“",
-    ". If you don't have one, I will recommend a compatible model — TAGRA TRUCKER ships with a reader included.":
-        ". Falls Sie keinen haben, empfehle ich Ihnen ein kompatibles Modell — TAGRA TRUCKER wird inklusive Kartenleser geliefert.",
+    ". If you don't have one, I will recommend a compatible model.":
+        ". Falls Sie keinen haben, empfehle ich Ihnen ein kompatibles Modell.",
     "If you have any questions, please reply to this email. I read and answer every one.":
         "Bei Fragen antworten Sie einfach auf diese E-Mail. Ich lese und beantworte jede einzelne.",
 
@@ -348,8 +349,8 @@ TR["de"] = {
         "Zahlen Sie nicht zu viel — die Version richtet sich nach der Fahrzeuganzahl. Antworten Sie auf diese beiden Fragen und ich sage Ihnen, welche Sie wählen sollten:",
     "Is there anything in the trial that did not work the way you expected?":
         "Hat in der Testversion etwas nicht so funktioniert, wie Sie es erwartet haben?",
-    "The annual licence fee starts at &euro;79 excl. VAT (TAGRA MAX &euro;139) and the first year is included in the purchase price — it covers updates and support. If something in the trial didn't work, tell me before it expires; I'd rather fix it than lose you over it. I reply personally.":
-        "Die jährliche Lizenzgebühr beginnt bei 79 € zzgl. MwSt. (TAGRA MAX 139 €), das erste Jahr ist im Kaufpreis enthalten — sie deckt Updates und Support ab. Wenn in der Testversion etwas nicht funktioniert hat, schreiben Sie mir, bevor sie abläuft; ich behebe es lieber, als Sie deswegen zu verlieren. Ich antworte persönlich.",
+    "The annual licence fee starts at &euro;79 excl. VAT (TAGRA MAX &euro;149) and the first year is included in the purchase price — it covers updates and support. If something in the trial didn't work, tell me before it expires; I'd rather fix it than lose you over it. I reply personally.":
+        "Die jährliche Lizenzgebühr beginnt bei 79 € zzgl. MwSt. (TAGRA MAX 149 €), das erste Jahr ist im Kaufpreis enthalten — sie deckt Updates und Support ab. Wenn in der Testversion etwas nicht funktioniert hat, schreiben Sie mir, bevor sie abläuft; ich behebe es lieber, als Sie deswegen zu verlieren. Ich antworte persönlich.",
 
     "Your TAGRA TRUCKER trial ends in 5 days": "Ihre TAGRA-TRUCKER-Testversion endet in 5 Tagen",
     "Your licence activates inside the same software — your archived card data stays. €19 a year from year two.":
@@ -367,8 +368,8 @@ TR["de"] = {
     "Before it expires — one question": "Bevor sie abläuft — eine Frage",
     "Did anything in the trial not work the way you expected — reading the card, an infringement you disagree with, or the archive? Reply and tell me before it expires. I would rather fix it than have you leave over something that takes me five minutes to solve.":
         "Hat in der Testversion etwas nicht so funktioniert, wie Sie es erwartet haben — das Auslesen der Karte, ein Verstoß, den Sie anders sehen, oder das Archiv? Schreiben Sie mir, bevor sie abläuft. Ich behebe es lieber, als dass Sie wegen etwas gehen, das mich fünf Minuten kostet.",
-    "TAGRA TRUCKER costs &euro;19 excl. VAT per year from the second year — the first year is included in the purchase price, and it covers updates and support. If you still don't have a USB card reader, reply and I will recommend a compatible model; TRUCKER ships with a reader included.":
-        "TAGRA TRUCKER kostet ab dem zweiten Jahr 19 € zzgl. MwSt. jährlich — das erste Jahr ist im Kaufpreis enthalten und deckt Updates und Support ab. Falls Sie noch keinen USB-Kartenleser haben, antworten Sie mir und ich empfehle Ihnen ein kompatibles Modell; TRUCKER wird inklusive Kartenleser geliefert.",
+    "TAGRA TRUCKER costs &euro;19 excl. VAT per year from the second year — the first year is included in the purchase price, and it covers updates and support. If you still don't have a USB card reader, reply and I will recommend a compatible model.":
+        "TAGRA TRUCKER kostet ab dem zweiten Jahr 19 € zzgl. MwSt. jährlich — das erste Jahr ist im Kaufpreis enthalten und deckt Updates und Support ab. Falls Sie noch keinen USB-Kartenleser haben, antworten Sie mir und ich empfehle Ihnen ein kompatibles Modell.",
 }
 
 # ─────────────────────────────── POLŠTINA ──────────────────────────────
@@ -431,8 +432,8 @@ TR["pl"] = {
     "&quot;reader: yes&quot;": "„czytnik: tak”",
     "or": "lub",
     "&quot;reader: no&quot;": "„czytnik: nie”",
-    ". If you don't have one, I will recommend a compatible model — TAGRA TRUCKER ships with a reader included.":
-        ". Jeśli go nie masz, polecę kompatybilny model — TAGRA TRUCKER jest dostarczana razem z czytnikiem.",
+    ". If you don't have one, I will recommend a compatible model.":
+        ". Jeśli go nie masz, polecę kompatybilny model.",
     "If you have any questions, please reply to this email. I read and answer every one.":
         "Jeśli masz jakiekolwiek pytania, odpowiedz na tę wiadomość. Czytam je i odpowiadam na każde.",
 
@@ -459,8 +460,8 @@ TR["pl"] = {
         "Nie przepłacaj — wersję wyznacza liczba pojazdów. Odpowiedz na te dwa pytania, a powiem Ci, którą wybrać:",
     "Is there anything in the trial that did not work the way you expected?":
         "Czy coś w wersji próbnej nie zadziałało tak, jak oczekiwałeś?",
-    "The annual licence fee starts at &euro;79 excl. VAT (TAGRA MAX &euro;139) and the first year is included in the purchase price — it covers updates and support. If something in the trial didn't work, tell me before it expires; I'd rather fix it than lose you over it. I reply personally.":
-        "Roczna opłata licencyjna zaczyna się od 79 € netto (TAGRA MAX 139 €), a pierwszy rok jest wliczony w cenę zakupu — obejmuje aktualizacje i wsparcie techniczne. Jeśli coś w wersji próbnej nie działało, napisz do mnie, zanim wygaśnie; wolę to naprawić, niż stracić Cię z tego powodu. Odpowiadam osobiście.",
+    "The annual licence fee starts at &euro;79 excl. VAT (TAGRA MAX &euro;149) and the first year is included in the purchase price — it covers updates and support. If something in the trial didn't work, tell me before it expires; I'd rather fix it than lose you over it. I reply personally.":
+        "Roczna opłata licencyjna zaczyna się od 79 € netto (TAGRA MAX 149 €), a pierwszy rok jest wliczony w cenę zakupu — obejmuje aktualizacje i wsparcie techniczne. Jeśli coś w wersji próbnej nie działało, napisz do mnie, zanim wygaśnie; wolę to naprawić, niż stracić Cię z tego powodu. Odpowiadam osobiście.",
 
     "Your TAGRA TRUCKER trial ends in 5 days": "Wersja próbna TAGRA TRUCKER kończy się za 5 dni",
     "Your licence activates inside the same software — your archived card data stays. €19 a year from year two.":
@@ -478,8 +479,8 @@ TR["pl"] = {
     "Before it expires — one question": "Zanim wygaśnie — jedno pytanie",
     "Did anything in the trial not work the way you expected — reading the card, an infringement you disagree with, or the archive? Reply and tell me before it expires. I would rather fix it than have you leave over something that takes me five minutes to solve.":
         "Czy coś w wersji próbnej nie zadziałało tak, jak oczekiwałeś — odczyt karty, naruszenie, z którym się nie zgadzasz, albo archiwum? Napisz do mnie, zanim wygaśnie. Wolę to naprawić, niż stracić Cię przez coś, co zajmie mi pięć minut.",
-    "TAGRA TRUCKER costs &euro;19 excl. VAT per year from the second year — the first year is included in the purchase price, and it covers updates and support. If you still don't have a USB card reader, reply and I will recommend a compatible model; TRUCKER ships with a reader included.":
-        "TAGRA TRUCKER kosztuje od drugiego roku 19 € netto rocznie — pierwszy rok jest wliczony w cenę zakupu i obejmuje aktualizacje oraz wsparcie techniczne. Jeśli wciąż nie masz czytnika kart USB, odpowiedz, a polecę kompatybilny model; TRUCKER jest dostarczana razem z czytnikiem.",
+    "TAGRA TRUCKER costs &euro;19 excl. VAT per year from the second year — the first year is included in the purchase price, and it covers updates and support. If you still don't have a USB card reader, reply and I will recommend a compatible model.":
+        "TAGRA TRUCKER kosztuje od drugiego roku 19 € netto rocznie — pierwszy rok jest wliczony w cenę zakupu i obejmuje aktualizacje oraz wsparcie techniczne. Jeśli wciąż nie masz czytnika kart USB, odpowiedz, a polecę kompatybilny model.",
 }
 
 # ─────────────────────────────── ŘEČTINA ───────────────────────────────
@@ -542,8 +543,8 @@ TR["gr"] = {
     "&quot;reader: yes&quot;": "«αναγνώστης: ναι»",
     "or": "ή",
     "&quot;reader: no&quot;": "«αναγνώστης: όχι»",
-    ". If you don't have one, I will recommend a compatible model — TAGRA TRUCKER ships with a reader included.":
-        ". Αν δεν έχετε, θα σας προτείνω ένα συμβατό μοντέλο — το TAGRA TRUCKER παραδίδεται μαζί με αναγνώστη.",
+    ". If you don't have one, I will recommend a compatible model.":
+        ". Αν δεν έχετε, θα σας προτείνω ένα συμβατό μοντέλο.",
     "If you have any questions, please reply to this email. I read and answer every one.":
         "Αν έχετε οποιαδήποτε ερώτηση, απαντήστε σε αυτό το email. Τα διαβάζω και απαντώ σε όλα.",
 
@@ -570,8 +571,8 @@ TR["gr"] = {
         "Μην πληρώσετε παραπάνω — την έκδοση την καθορίζει ο αριθμός των οχημάτων. Απαντήστε σε αυτά τα δύο και θα σας πω ποια να επιλέξετε:",
     "Is there anything in the trial that did not work the way you expected?":
         "Υπήρξε κάτι στη δοκιμαστική έκδοση που δεν λειτούργησε όπως περιμένατε;",
-    "The annual licence fee starts at &euro;79 excl. VAT (TAGRA MAX &euro;139) and the first year is included in the purchase price — it covers updates and support. If something in the trial didn't work, tell me before it expires; I'd rather fix it than lose you over it. I reply personally.":
-        "Η ετήσια άδεια ξεκινά από 79 € χωρίς ΦΠΑ (TAGRA MAX 139 €) και ο πρώτος χρόνος περιλαμβάνεται στην τιμή αγοράς — καλύπτει ενημερώσεις και τεχνική υποστήριξη. Αν κάτι στη δοκιμαστική έκδοση δεν λειτούργησε, πείτε μου πριν λήξει· προτιμώ να το διορθώσω παρά να σας χάσω γι' αυτό. Απαντώ προσωπικά.",
+    "The annual licence fee starts at &euro;79 excl. VAT (TAGRA MAX &euro;149) and the first year is included in the purchase price — it covers updates and support. If something in the trial didn't work, tell me before it expires; I'd rather fix it than lose you over it. I reply personally.":
+        "Η ετήσια άδεια ξεκινά από 79 € χωρίς ΦΠΑ (TAGRA MAX 149 €) και ο πρώτος χρόνος περιλαμβάνεται στην τιμή αγοράς — καλύπτει ενημερώσεις και τεχνική υποστήριξη. Αν κάτι στη δοκιμαστική έκδοση δεν λειτούργησε, πείτε μου πριν λήξει· προτιμώ να το διορθώσω παρά να σας χάσω γι' αυτό. Απαντώ προσωπικά.",
 
     "Your TAGRA TRUCKER trial ends in 5 days": "Η δοκιμαστική έκδοση TAGRA TRUCKER λήγει σε 5 ημέρες",
     "Your licence activates inside the same software — your archived card data stays. €19 a year from year two.":
@@ -589,8 +590,8 @@ TR["gr"] = {
     "Before it expires — one question": "Πριν λήξει — μία ερώτηση",
     "Did anything in the trial not work the way you expected — reading the card, an infringement you disagree with, or the archive? Reply and tell me before it expires. I would rather fix it than have you leave over something that takes me five minutes to solve.":
         "Υπήρξε κάτι στη δοκιμαστική έκδοση που δεν λειτούργησε όπως περιμένατε — η ανάγνωση της κάρτας, μια παράβαση με την οποία διαφωνείτε ή η αρχειοθέτηση; Πείτε μου πριν λήξει. Προτιμώ να το διορθώσω παρά να φύγετε για κάτι που μου παίρνει πέντε λεπτά.",
-    "TAGRA TRUCKER costs &euro;19 excl. VAT per year from the second year — the first year is included in the purchase price, and it covers updates and support. If you still don't have a USB card reader, reply and I will recommend a compatible model; TRUCKER ships with a reader included.":
-        "Το TAGRA TRUCKER κοστίζει από τον δεύτερο χρόνο 19 € χωρίς ΦΠΑ ετησίως — ο πρώτος χρόνος περιλαμβάνεται στην τιμή αγοράς και καλύπτει ενημερώσεις και υποστήριξη. Αν εξακολουθείτε να μην έχετε αναγνώστη καρτών USB, απαντήστε και θα σας προτείνω ένα συμβατό μοντέλο· το TRUCKER παραδίδεται μαζί με αναγνώστη.",
+    "TAGRA TRUCKER costs &euro;19 excl. VAT per year from the second year — the first year is included in the purchase price, and it covers updates and support. If you still don't have a USB card reader, reply and I will recommend a compatible model.":
+        "Το TAGRA TRUCKER κοστίζει από τον δεύτερο χρόνο 19 € χωρίς ΦΠΑ ετησίως — ο πρώτος χρόνος περιλαμβάνεται στην τιμή αγοράς και καλύπτει ενημερώσεις και υποστήριξη. Αν εξακολουθείτε να μην έχετε αναγνώστη καρτών USB, απαντήστε και θα σας προτείνω ένα συμβατό μοντέλο.",
 }
 
 # ═══════════════════════════════════════════════════════════════════════
