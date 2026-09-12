@@ -4,7 +4,7 @@ Vznikl 13. 8. 2026 po auditu, který odhalil, že maďarská verze byla spuště
 s 211 odkazy do anglické sekce, bez `hreflang` na 61 stránkách a s 1 542
 chybějícími mezerami. Všechny ty chyby by tenhle seznam zachytil předem.
 
-Aktualizováno 12. 9. 2026 o překladovou pipeline a stav lokalizací (sekce 12–13).
+Aktualizováno 12. 9. 2026 o překladovou pipeline a stav lokalizací (sekce 12–14).
 
 Zkratka: `{L}` = kód jazyka (de, pl, el, hu…), `{X}` = existující jazyk pro srovnání.
 
@@ -70,6 +70,7 @@ Zkratka: `{L}` = kód jazyka (de, pl, el, hu…), `{X}` = existující jazyk pro
 - [ ] Uvozovky, pomlčky a desetinné oddělovače podle zvyklostí jazyka
 - [ ] Ceny ve správné měně, telefonní čísla s předvolbou země
 - [ ] Odborná terminologie ověřená proti úřednímu znění nařízení, ne volný překlad
+      — viz `docs/glossaire-{L}.md`
 - [ ] Diakritika: u slovenštiny scan na `ř/ě/ů`, u maďarštiny na `ő/ű`
 
 ## 7. Strukturovaná data
@@ -94,6 +95,8 @@ Zkratka: `{L}` = kód jazyka (de, pl, el, hu…), `{X}` = existující jazyk pro
 - [ ] Google Search Console: property ověřena
 - [ ] IndexNow: nové URL odeslány
 - [ ] Přesměrování ze starých cest, pokud se slug mění
+- [ ] Měřicí nástroj je **jen GSC**. Collabim je CZ/SK-only a na tagra.app se
+      nepoužívá
 
 ## 10. Před nasazením a po něm
 
@@ -138,12 +141,14 @@ zahlásilo chybu. Proto je potřeba kontrolovat vazby staticky.
 
 ---
 
-## 12. Stav lokalizací (ověřeno proti repu 12. 9. 2026)
+## 12. Stav lokalizací a priorita jazyků
 
-**Tahle tabulka je jediný zdroj pravdy o tom, co existuje.** Zjištění z auditu:
+**Tahle sekce je jediný zdroj pravdy o tom, co existuje.** Zjištění z auditu:
 externí poznámky o stavu jazyků zastarávaly rychleji, než se četly, a dvakrát
 poslaly práci na něco, co už bylo hotové. Před jakoukoli lokalizační prací
 **ověř `ls` v repu**, ne dokument.
+
+### Stav (ověřeno proti repu 12. 9. 2026)
 
 | Jazyk | Stav | Poznámka |
 |---|---|---|
@@ -157,13 +162,30 @@ poslaly práci na něco, co už bylo hotové. Před jakoukoli lokalizační prac
 `/articles/` (hub), `/fleet/`, `/enforcement/`, `/manuals/`, `/faq/`, `/contact/`,
 `/privacy/`, `/try/`. Odpadají s dalším FR obsahem.
 
-**Pořadí dalších jazyků** podle kliků v GSC: **NL → RO → ES**
-(NL 928 impresí + Belgie 334, silný dotaz „vu interne fout tacho").
-Sleeper: chorvatština — jeden obsah pokryje HR + SR + BIH.
+### Priorita dalších jazyků — GSC country data (28 dní, srpen 2026)
+
+Kliky = nejtvrdší signál. CZ/SK se neřeší, ty obsluhuje tdt.cz/.sk.
+
+| Trh | Imprese | Kliky | Pozice | CTR | Pozn. |
+|---|---|---|---|---|---|
+| Itálie (IT) | 565 | 11 | 4,43 | 1,95 % | ✅ hotovo |
+| **Nizozemí (NL)** | **928** | **8** | 6,80 | 0,86 % | + Belgie 334 |
+| Rumunsko (RO) | 613 | 6 | 3,67 | 0,98 % | + Moldávie |
+| Francie (FR) | 451 | 5 | 4,96 | 1,11 % | ✅ symbols hotový |
+| Španělsko (ES) | 347 | 4 | 5,33 | 1,15 % | + LatAm |
+| HR + SR + BIH | 427 | 10 | ~4 | ~2,3 % | **1 obsah → 3 trhy** |
+| Dánsko (DA) | 320 | 5 | 4,81 | 1,56 % | |
+
+**Další pořadí: NL → RO → ES.** RO má nejlepší pozici, ale reálných kliků míň
+než NL. Sleeper: chorvatština — jeden obsah pokryje tři trhy.
+
+### Pravidlo pořadí uvnitř jazyka
 
 Money-pages po překladu **spí** (PL fleet pos 22, driver 45, DE fleet 0 impresí).
-Kliky nosí informační symbols/error obsah. Proto se u nového jazyka dělá
-**nejdřív symbols článek**, money-page až potom.
+Kliky nosí informační symbols/error obsah a chytá hned po nasazení
+(DE symbols 2 660 impresí / 23 kliků, PL 2 003 / 14). Proto se u nového jazyka
+dělá **nejdřív symbols článek**, money-page až potom — ta chce autoritu a čas,
+ne další překlad.
 
 ---
 
@@ -201,10 +223,9 @@ reference manuálů, cesty v menu přístroje (`print → driver 1 → activitie
 ### Překlad
 
 Crew přes multi-LLM worker, model **gpt-5.6-luna**, `reasoning_effort: none`,
-dávky **110 stringů**, JSON dovnitř i ven, **glosář v system promptu**.
-Glosář se staví z úředního znění nařízení (EU) 165/2014 v cílovém jazyce —
-ne z volného překladu. U FR to je např. `fault` → *anomalie* (nikdy *défaut*),
-`tachograph` → *tachygraphe* (nikdy *chronotachygraphe*), `workshop` → *atelier agréé*.
+dávky **110 stringů**, JSON dovnitř i ven, **glosář v system promptu**
+(`docs/glossaire-{L}.md`). Glosář se staví z úředního znění nařízení
+(EU) 165/2014 v cílovém jazyce — ne z volného překladu jiného glosáře.
 
 **Worker se dá volat přímo z shellu** přes JSON-RPC `tools/call`, takže payload
 vůbec neprojde kontextem konverzace. 11 tisíc slov se přeloží bez zátěže.
@@ -238,3 +259,16 @@ vůbec neprojde kontextem konverzace. 11 tisíc slov se přeloží bez zátěže
 > **Postup při globální náhradě URL:** hreflang blok nejdřív nahraď zástupkou,
 > pak proveď globální náhradu, pak blok vrať. Jinak si přepíšeš `hreflang="en"`
 > a `x-default` na novou jazykovou verzi a rozbiješ celou skupinu.
+
+---
+
+## 14. Otevřená zjištění (mimo lokalizaci)
+
+- **Hero blok EN symbols článku** (`<p class="hero-lede anim-up">`) obsahuje
+  1 192 znaků čistého textu — včetně obsahu „What's in this guide" jako
+  **run-on textu bez seznamu a bez kotvicích odkazů**. Na stránce s 26 142
+  impresemi (~55 % webu). Označkovaný seznam kotev = kandidát na SERP jump-links
+  a lepší skenovatelnost. Levná úprava s vysokou pákou. Po nasazení replikovat
+  do všech locales.
+- **Van-článek EN**: technicky bezvadný, 0 kliků = nízká EN poptávka po tématu,
+  **ne defekt**. Nehonit jako chybu.
