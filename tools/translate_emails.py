@@ -146,8 +146,8 @@ TR["cz"] = {
     "Before it expires — one question": "Než vyprší — jedna otázka",
     "Did anything in the trial not work the way you expected — reading the card, an infringement you disagree with, or the archive? Reply and tell me before it expires. I would rather fix it than have you leave over something that takes me five minutes to solve.":
         "Nefungovalo ve zkušební verzi něco tak, jak jste čekali — načtení karty, přestupek, se kterým nesouhlasíte, nebo záloha? Napište mi to, než vyprší. Radši to spravím, než abyste odešli kvůli něčemu, co mi zabere pět minut.",
-    "TAGRA TRUCKER costs &euro;19 excl. VAT per year from the second year — the first year is included in the purchase price, and it covers updates and support. If you still don't have a USB card reader, reply and I will recommend a compatible model.":
-        "TAGRA TRUCKER stojí od druhého roku 490 Kč bez DPH ročně — první rok je zahrnutý v ceně a kryje aktualizace i technickou podporu. Pokud pořád nemáte USB čtečku karet, odpovězte a doporučím vám kompatibilní model.",
+    "TAGRA TRUCKER costs &euro;19 excl. VAT per year from the second year — the first year is included in the purchase price, and it covers updates and support. You get the USB card reader free when you buy a licence — only a flat &euro;9.90 (incl. VAT) shipping fee applies anywhere in the EU.":
+        "TAGRA TRUCKER stojí 1 232 Kč bez DPH; USB čtečku karet k licenci dostanete zdarma, poštovné 9,90 € s DPH kamkoliv v EU. První rok licence je zahrnutý — kryje aktualizace i technickou podporu; od druhého roku platíte 490 Kč ročně. Pokud ve zkušební verzi něco nefungovalo, napište mi dřív, než vyprší; radši to spravím, než abych o vás kvůli tomu přišel.",
 }
 
 # ─────────────────────────────── SLOVENŠTINA ───────────────────────────
@@ -257,8 +257,8 @@ TR["sk"] = {
     "Before it expires — one question": "Skôr než vyprší — jedna otázka",
     "Did anything in the trial not work the way you expected — reading the card, an infringement you disagree with, or the archive? Reply and tell me before it expires. I would rather fix it than have you leave over something that takes me five minutes to solve.":
         "Nefungovalo v skúšobnej verzii niečo tak, ako ste čakali — načítanie karty, priestupok, s ktorým nesúhlasíte, alebo záloha? Napíšte mi to skôr, než vyprší. Radšej to opravím, než by ste odišli kvôli niečomu, čo mi zaberie päť minút.",
-    "TAGRA TRUCKER costs &euro;19 excl. VAT per year from the second year — the first year is included in the purchase price, and it covers updates and support. If you still don't have a USB card reader, reply and I will recommend a compatible model.":
-        "TAGRA TRUCKER stojí od druhého roka 19 EUR bez DPH ročne — prvý rok je zahrnutý v cene a kryje aktualizácie aj technickú podporu. Ak stále nemáte USB čítačku kariet, odpovedzte a odporučím vám kompatibilný model.",
+    "TAGRA TRUCKER costs &euro;19 excl. VAT per year from the second year — the first year is included in the purchase price, and it covers updates and support. You get the USB card reader free when you buy a licence — only a flat &euro;9.90 (incl. VAT) shipping fee applies anywhere in the EU.":
+        "TAGRA TRUCKER stojí 49 EUR bez DPH; USB čítačku kariet k licencii dostanete zadarmo, poštovné 9,90 € s DPH kamkoľvek v EÚ. Prvý rok licencie je zahrnutý — kryje aktualizácie aj technickú podporu; od druhého roka platíte 19 EUR ročne. Ak v skúšobnej verzii niečo nefungovalo, napíšte mi skôr, než vyprší; radšej to opravím, než by som o vás kvôli tomu prišiel.",
 }
 
 # ─────────────────────────────── NĚMČINA ───────────────────────────────

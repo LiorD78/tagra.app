@@ -168,7 +168,7 @@ DRIVER = [
 
     ("closing",
      "              If you have any questions, please reply to this email. I read and answer every one.\n",
-     "              TAGRA TRUCKER costs &euro;19 excl. VAT per year from the second year — the first year is included in the purchase price, and it covers updates and support. If you still don't have a USB card reader, reply and I will recommend a compatible model.\n"),
+     "              TAGRA TRUCKER costs &euro;19 excl. VAT per year from the second year — the first year is included in the purchase price, and it covers updates and support. You get the USB card reader free when you buy a licence — only a flat &euro;9.90 (incl. VAT) shipping fee applies anywhere in the EU.\n"),
 ]
 
 
