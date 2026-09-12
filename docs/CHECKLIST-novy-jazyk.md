@@ -4,6 +4,8 @@ Vznikl 13. 8. 2026 po auditu, který odhalil, že maďarská verze byla spuště
 s 211 odkazy do anglické sekce, bez `hreflang` na 61 stránkách a s 1 542
 chybějícími mezerami. Všechny ty chyby by tenhle seznam zachytil předem.
 
+Aktualizováno 12. 9. 2026 o překladovou pipeline a stav lokalizací (sekce 12–13).
+
 Zkratka: `{L}` = kód jazyka (de, pl, el, hu…), `{X}` = existující jazyk pro srovnání.
 
 ---
@@ -26,6 +28,10 @@ Zkratka: `{L}` = kód jazyka (de, pl, el, hu…), `{X}` = existující jazyk pro
 - [ ] Hub článků odkazuje na lokalizované články, ne na `/articles/…`
 - [ ] Integrace, návody, FAQ — všechno v rámci `/{L}/`
 - [ ] Žádný mrtvý odkaz: každý cíl musí existovat jako soubor
+- [ ] **Výjimka pro rozpracovaný jazyk:** dokud `/{L}/` nemá plnou sadu stránek,
+      platí konvence stubu — **lokalizované popisky, anglické hrefy** u toho, co
+      ještě neexistuje. Lepší než 404 nebo falešná stránka. Zapiš do sekce 12,
+      které cesty jsou zatím anglické, ať se na to nezapomene.
 
 ## 3. hreflang — musí být obousměrný
 
@@ -41,6 +47,10 @@ Zkratka: `{L}` = kód jazyka (de, pl, el, hu…), `{X}` = existující jazyk pro
 - [ ] Popisky menu totožné na všech stránkách daného jazyka (jedna varianta, ne tři)
 - [ ] Jazykový přepínač: `hreflang="en"` → `/`, `hreflang="{L}"` → `/{L}/`
       — **pozor, `hreflang` bývá až za `href`**, filtry na to musí být připravené
+- [ ] **Endonym se nikdy nepřekládá** — Deutsch zůstává Deutsch, Français zůstává
+      Français, i na maďarské stránce
+- [ ] Popisek přepínače (`<summary aria-label="Langue : XX">XX</summary>`) musí
+      odpovídat jazyku stránky — snadno se zapomene, protože je to jen dva znaky
 - [ ] Aktivní jazyk označen `aria-current="page"`
 - [ ] Tlačítko v menu míří na lokalizovanou zkušební verzi s `?audience=…`
 - [ ] Zkušební a děkovací stránka tlačítko v menu **nemají** (odkazovalo by samo na sebe)
@@ -128,15 +138,103 @@ zahlásilo chybu. Proto je potřeba kontrolovat vazby staticky.
 
 ---
 
-## Poučení z 13. 8. 2026
+## 12. Stav lokalizací (ověřeno proti repu 12. 9. 2026)
 
-**Hromadné úpravy HTML regulárními výrazy jsou nejrizikovější operace na webu.**
-Toho dne rozbily hreflang bloky (zachyceno před nasazením) a jazykový přepínač
-(dvě hodiny na produkci). Pravidla:
+**Tahle tabulka je jediný zdroj pravdy o tom, co existuje.** Zjištění z auditu:
+externí poznámky o stavu jazyků zastarávaly rychleji, než se četly, a dvakrát
+poslaly práci na něco, co už bylo hotové. Před jakoukoli lokalizační prací
+**ověř `ls` v repu**, ne dokument.
 
-1. Parsuj DOM, ne text — vždy, když jde o atributy nebo strukturu.
-2. Filtry piš na celý tag, ne na to, co je před `href`.
-3. Po každém hromadném zásahu spusť sadu kontrol znovu **celou**, ne jen tu,
-   které se změna týkala.
-4. Indexy do řetězce přepočítej po každé úpravě, která do něj vkládá text.
-5. Nasazuj po malých commitech, ať jde regrese izolovat.
+| Jazyk | Stav | Poznámka |
+|---|---|---|
+| en | plný | zdroj pravdy pro překlad |
+| de, pl, hu, el | plné | symbols + články + money-pages |
+| it | **plný** | 13 sekcí, 6 článků, `per-aziende` + `per-autisti` přeložené, CTA neuniká na EN |
+| fr | **částečný** | `/fr/`, `/fr/conducteurs/`, `/fr/articles/symboles-tachygraphe/` |
+| nl, da, ro, tr | neexistují | prokázaná error-poptávka v GSC long-tailu |
+
+**Anglické cesty zatím ve FR** (úmyslně, konvence stubu ze sekce 2):
+`/articles/` (hub), `/fleet/`, `/enforcement/`, `/manuals/`, `/faq/`, `/contact/`,
+`/privacy/`, `/try/`. Odpadají s dalším FR obsahem.
+
+**Pořadí dalších jazyků** podle kliků v GSC: **NL → RO → ES**
+(NL 928 impresí + Belgie 334, silný dotaz „vu interne fout tacho").
+Sleeper: chorvatština — jeden obsah pokryje HR + SR + BIH.
+
+Money-pages po překladu **spí** (PL fleet pos 22, driver 45, DE fleet 0 impresí).
+Kliky nosí informační symbols/error obsah. Proto se u nového jazyka dělá
+**nejdřív symbols článek**, money-page až potom.
+
+---
+
+## 13. Překladová pipeline (ověřena na FR 12. 9. 2026)
+
+Symbols článek má ~139 KB, **1 212 unikátních stringů / 11 629 slov**, 18 tabulek,
+21 accordionů, 200+ chybových kódů. Ruční psaní per jazyk je neudržitelné.
+Struktura je napříč locales identická — mění se jen textové uzly.
+
+### Princip
+
+**Offset-based replacement na RAW stringu, NIKDY reserializace přes bs4/lxml.**
+Reserializace přeformátuje celý dokument → obří diff a riziko rozbití.
+
+- spany se nahrazují **zprava doleva** → žádné kolize indexů
+- round-trip s identity mapou musí vrátit **BYTE-IDENTICAL**; dokud nevrátí,
+  pipeline se nepouští na ostro
+
+### Extrahované jednotky
+
+| Kód | Co |
+|---|---|
+| `T` | textové uzly mimo `<script>`/`<style>` |
+| `A` | atributy `alt`, `title`, `aria-label`, `placeholder` |
+| `M` | `<title>` + meta `description` / `og:*` / `twitter:*` |
+| `J` | hodnoty stringů v `application/ld+json` (name, headline, description, text…) |
+
+### Verbatim — nepřekládat
+
+Automaticky se odfiltruje ~167 stringů: čisté kódy a čísla, řetězce celé
+VERZÁLKAMI (display-hlášení přístroje typu `! security breach xx`), přípony
+`.DDD/.C1B/.V1B`, akronymy (VDO, DTCO, GNSS, DSRC, ITS, CAN, AETR),
+reference manuálů, cesty v menu přístroje (`print → driver 1 → activities`).
+
+### Překlad
+
+Crew přes multi-LLM worker, model **gpt-5.6-luna**, `reasoning_effort: none`,
+dávky **110 stringů**, JSON dovnitř i ven, **glosář v system promptu**.
+Glosář se staví z úředního znění nařízení (EU) 165/2014 v cílovém jazyce —
+ne z volného překladu. U FR to je např. `fault` → *anomalie* (nikdy *défaut*),
+`tachograph` → *tachygraphe* (nikdy *chronotachygraphe*), `workshop` → *atelier agréé*.
+
+**Worker se dá volat přímo z shellu** přes JSON-RPC `tools/call`, takže payload
+vůbec neprojde kontextem konverzace. 11 tisíc slov se přeloží bez zátěže.
+
+> **Past:** egress proxy vrací **403** na hlavičku `User-Agent: Python-urllib/3.x`.
+> Nastav `User-Agent: curl/8.5.0`, jinak to vypadá jako výpadek workeru.
+
+### QA gate (automatický, před injekcí)
+
+- **entity match** — `&amp;`, `&nbsp;`, `&rarr;` musí sedět 1:1 zdroj vs. překlad
+  (model je nesmí dekódovat ani přidat)
+- **unchanged** — >3slovný string identický se zdrojem = podezřelý.
+  Pozor: display-hlášení a reference manuálů se tu hlásí **správně**, nejsou to chyby
+- **length** — překlad >2,6× delší než zdroj = podezřelý
+- **tag-inject** — model vložil HTML tag do čistého textu
+- **coverage** — musí sedět 100 %, jinak zůstane anglický ostrůvek
+
+### Strukturální vrstva (pipeline ji neudělá, dělá se zvlášť)
+
+1. cesta dle konvence locale: `/de/ratgeber/…`, `/pl/poradnik/…`, `/hu/cikkek/…`,
+   `/el/arthra/…`, `/it/articoli/…`, `/fr/articles/…`
+2. `<html lang>`, canonical, `og:url`, `og:locale`, breadcrumb (HTML **i** schema),
+   `inLanguage`
+3. logo v navigaci → `/{L}/` (globální náhrada URL ho mine, je relativní)
+4. **self-link v patičce** — globální náhrada absolutní URL mine relativní variantu
+   `/articles/digital-tachograph-symbols/`; hledej obě
+5. hreflang doplnit do **všech** sourozeneckých locales, ne jen do nové stránky
+6. endonym do přepínače ve všech locales + popisek přepínače
+7. sitemap.xml + prolinky z hubu
+
+> **Postup při globální náhradě URL:** hreflang blok nejdřív nahraď zástupkou,
+> pak proveď globální náhradu, pak blok vrať. Jinak si přepíšeš `hreflang="en"`
+> a `x-default` na novou jazykovou verzi a rozbiješ celou skupinu.
