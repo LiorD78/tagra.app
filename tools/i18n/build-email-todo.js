@@ -13,11 +13,6 @@
  * <title>, textové uzly mimo <script>/<style>, atributy alt/aria-label/placeholder.
  * Entity (&euro;, &nbsp; …) se ponechávají doslovně, nedekódují se.
  *
- * KNOWN_SOURCE_FIXES: EN šablona email3-fleet-en.html obsahuje zastaralých
- * "TAGRA MAX &euro;139" (viz issue #163, bod 3) — správná roční cena je 149 €.
- * Fronta se neopisuje s chybou dál; oprava je jen ve frontě, EN šablona
- * samotná se v tomto zadání nemění (mimo rozsah).
- *
  * Po sestavení fronta prochází kontrolou na 3 zakázané vzory z issue #163:
  *   1. tvrzení, že čtečka je součástí balení ("included in the box" / "ships
  *      with a reader included")
@@ -97,20 +92,6 @@ function build() {
   return out;
 }
 
-// Známá chyba ve zdrojové EN šabloně (issue #163, bod 3) — oprava jen ve frontě.
-const KNOWN_SOURCE_FIXES = [
-  ["TAGRA MAX &euro;139", "TAGRA MAX &euro;149"],
-];
-
-function applyKnownFixes(list) {
-  return list.map((s) => {
-    for (const [bad, good] of KNOWN_SOURCE_FIXES) {
-      if (s.includes(bad)) s = s.split(bad).join(good);
-    }
-    return s;
-  });
-}
-
 const FORBIDDEN = [
   [/included in the box/i, "čtečka jako součást balení (bod 1)"],
   [/ships with a reader included/i, "čtečka jako součást balení (bod 1)"],
@@ -134,10 +115,8 @@ if (!langs.length) {
   process.exit(1);
 }
 
-let todo = build();
+const todo = build();
 console.log(`  emails: ${todo.length} unikátních řetězců z ${SOURCES.length} šablon`);
-
-todo = applyKnownFixes(todo);
 
 const hits = checkForbidden(todo);
 if (hits.length) {
