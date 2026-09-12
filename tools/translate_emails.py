@@ -9,11 +9,11 @@ Princip: deterministický walk přes textové uzly + <title> + alt="".
 Segment se přeloží, jen pokud je ve slovníku; jinak zůstane (TAGRA,
 čísla kroků, telefony, e-maily, názvy sítí).
 
-CENY (roční licenční poplatek, bez DPH — dle tagra.app/fleet/):
-  cz          TAGRA 1/2/4/6 = 1 990 Kč · MAX = ??? Kč (TODO: potvrdit u Libora,
-              dosavadní 3 490 Kč vycházelo z chybných 139 €/145 € níže) · TRUCKER = 490 Kč
-  sk          TAGRA 1/2/4/6 = 79 EUR   · MAX = 149 EUR  · TRUCKER = 19 EUR
-  de/pl/gr    dle tagra.app: od 79 €   · MAX = 149 €    · TRUCKER = 19 €
+CENY (roční licenční poplatek od 2. roku, bez DPH):
+  cz          TAGRA 1/2/4/6 = 1 990 Kč · MAX = 3 490 Kč · TRUCKER = 490 Kč
+              (samostatný korunový ceník, NE přepočet z EUR)
+  sk          TAGRA 1/2 = 79 € · TAGRA 4/6 = 99 € · MAX = 149 € · TRUCKER = 19 €
+  de/pl/gr    od 79 € · MAX = 149 € · TRUCKER = 19 €
 
 SK GATE: žádné ř / ě / ů. Kontroluje se automaticky na konci.
 """
@@ -368,8 +368,8 @@ TR["de"] = {
     "Before it expires — one question": "Bevor sie abläuft — eine Frage",
     "Did anything in the trial not work the way you expected — reading the card, an infringement you disagree with, or the archive? Reply and tell me before it expires. I would rather fix it than have you leave over something that takes me five minutes to solve.":
         "Hat in der Testversion etwas nicht so funktioniert, wie Sie es erwartet haben — das Auslesen der Karte, ein Verstoß, den Sie anders sehen, oder das Archiv? Schreiben Sie mir, bevor sie abläuft. Ich behebe es lieber, als dass Sie wegen etwas gehen, das mich fünf Minuten kostet.",
-    "TAGRA TRUCKER costs &euro;19 excl. VAT per year from the second year — the first year is included in the purchase price, and it covers updates and support. If you still don't have a USB card reader, reply and I will recommend a compatible model.":
-        "TAGRA TRUCKER kostet ab dem zweiten Jahr 19 € zzgl. MwSt. jährlich — das erste Jahr ist im Kaufpreis enthalten und deckt Updates und Support ab. Falls Sie noch keinen USB-Kartenleser haben, antworten Sie mir und ich empfehle Ihnen ein kompatibles Modell.",
+    "TAGRA TRUCKER costs &euro;19 excl. VAT per year from the second year — the first year is included in the purchase price, and it covers updates and support. You get the USB card reader free when you buy a licence — only a flat &euro;9.90 (incl. VAT) shipping fee applies anywhere in the EU.":
+        "TAGRA TRUCKER kostet ab dem zweiten Jahr 19 € zzgl. MwSt. jährlich — das erste Jahr ist im Kaufpreis enthalten und deckt Updates und Support ab. Den USB-Kartenleser erhalten Sie beim Kauf einer Lizenz kostenlos — es fällt lediglich eine Versandpauschale von 9,90 € inkl. MwSt. EU-weit an.",
 }
 
 # ─────────────────────────────── POLŠTINA ──────────────────────────────
@@ -479,8 +479,8 @@ TR["pl"] = {
     "Before it expires — one question": "Zanim wygaśnie — jedno pytanie",
     "Did anything in the trial not work the way you expected — reading the card, an infringement you disagree with, or the archive? Reply and tell me before it expires. I would rather fix it than have you leave over something that takes me five minutes to solve.":
         "Czy coś w wersji próbnej nie zadziałało tak, jak oczekiwałeś — odczyt karty, naruszenie, z którym się nie zgadzasz, albo archiwum? Napisz do mnie, zanim wygaśnie. Wolę to naprawić, niż stracić Cię przez coś, co zajmie mi pięć minut.",
-    "TAGRA TRUCKER costs &euro;19 excl. VAT per year from the second year — the first year is included in the purchase price, and it covers updates and support. If you still don't have a USB card reader, reply and I will recommend a compatible model.":
-        "TAGRA TRUCKER kosztuje od drugiego roku 19 € netto rocznie — pierwszy rok jest wliczony w cenę zakupu i obejmuje aktualizacje oraz wsparcie techniczne. Jeśli wciąż nie masz czytnika kart USB, odpowiedz, a polecę kompatybilny model.",
+    "TAGRA TRUCKER costs &euro;19 excl. VAT per year from the second year — the first year is included in the purchase price, and it covers updates and support. You get the USB card reader free when you buy a licence — only a flat &euro;9.90 (incl. VAT) shipping fee applies anywhere in the EU.":
+        "TAGRA TRUCKER kosztuje od drugiego roku 19 € netto rocznie — pierwszy rok jest wliczony w cenę zakupu i obejmuje aktualizacje oraz wsparcie techniczne. Czytnik kart USB otrzymujesz bezpłatnie przy zakupie licencji — doliczana jest jedynie zryczałtowana opłata za wysyłkę 9,90 € brutto w całej UE.",
 }
 
 # ─────────────────────────────── ŘEČTINA ───────────────────────────────
@@ -590,8 +590,8 @@ TR["gr"] = {
     "Before it expires — one question": "Πριν λήξει — μία ερώτηση",
     "Did anything in the trial not work the way you expected — reading the card, an infringement you disagree with, or the archive? Reply and tell me before it expires. I would rather fix it than have you leave over something that takes me five minutes to solve.":
         "Υπήρξε κάτι στη δοκιμαστική έκδοση που δεν λειτούργησε όπως περιμένατε — η ανάγνωση της κάρτας, μια παράβαση με την οποία διαφωνείτε ή η αρχειοθέτηση; Πείτε μου πριν λήξει. Προτιμώ να το διορθώσω παρά να φύγετε για κάτι που μου παίρνει πέντε λεπτά.",
-    "TAGRA TRUCKER costs &euro;19 excl. VAT per year from the second year — the first year is included in the purchase price, and it covers updates and support. If you still don't have a USB card reader, reply and I will recommend a compatible model.":
-        "Το TAGRA TRUCKER κοστίζει από τον δεύτερο χρόνο 19 € χωρίς ΦΠΑ ετησίως — ο πρώτος χρόνος περιλαμβάνεται στην τιμή αγοράς και καλύπτει ενημερώσεις και υποστήριξη. Αν εξακολουθείτε να μην έχετε αναγνώστη καρτών USB, απαντήστε και θα σας προτείνω ένα συμβατό μοντέλο.",
+    "TAGRA TRUCKER costs &euro;19 excl. VAT per year from the second year — the first year is included in the purchase price, and it covers updates and support. You get the USB card reader free when you buy a licence — only a flat &euro;9.90 (incl. VAT) shipping fee applies anywhere in the EU.":
+        "Το TAGRA TRUCKER κοστίζει από τον δεύτερο χρόνο 19 € χωρίς ΦΠΑ ετησίως — ο πρώτος χρόνος περιλαμβάνεται στην τιμή αγοράς και καλύπτει ενημερώσεις και υποστήριξη. Ο αναγνώστης καρτών USB παρέχεται δωρεάν με την αγορά άδειας χρήσης — ισχύει μόνο ενιαία χρέωση αποστολής 9,90 € με ΦΠΑ, σε όλη την ΕΕ.",
 }
 
 # ═══════════════════════════════════════════════════════════════════════
