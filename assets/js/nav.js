@@ -27,14 +27,19 @@
      v <head> jako <link rel="alternate" hreflang="...">. Bereme je odtud —
      přepínač tak drží krok s obsahem i na stránkách přidaných později a není
      co udržovat na 100+ místech. Bez JS zůstává původní chování (homepage
-     daného jazyka), takže nejde o regresi. */
+     daného jazyka), takže nejde o regresi.
+
+     13. 9. 2026: selektor rozšířen o .site-footer. Patička byla zapomenutý
+     blok ze sedmijazyčné éry — na 124 stránkách vedla "angličtina" jinam
+     než na angličtinu, na 8 na /en/ (404) a chyběly v ní FR/NL/RO. Po
+     doplnění hreflang do patičky ji obsluhuje tentýž kód jako hlavičku. */
   function syncLangLinks() {
     var alts = {};
     document.querySelectorAll('link[rel="alternate"][hreflang]').forEach(function(l) {
       var lg = l.getAttribute('hreflang');
       if (lg && lg !== 'x-default') alts[lg] = l.href;
     });
-    document.querySelectorAll('.nav-lang-menu a[hreflang]').forEach(function(a) {
+    document.querySelectorAll('.nav-lang-menu a[hreflang], .site-footer a[hreflang]').forEach(function(a) {
       /* Čeština a slovenština míří na tdt.cz / tdt.sk (target=_blank) — ty
          nechat být, alternate pro ně neexistuje. */
       if (a.hasAttribute('target')) return;
