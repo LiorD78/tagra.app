@@ -22,3 +22,11 @@ Multilingual marketing website for TAGRA tachograph software.
 /fr/            France landing page
 /it/            Italy landing page
 ```
+
+## Sitemap
+
+Po přidání nebo změně stránek spusť `node tools/sitemap_lastmod.js` před
+commitem `sitemap.xml` — dopočítá `<lastmod>` z data posledního skutečného
+obsahového commitu daného souboru (plošné patičkové/verzovací sweepy
+ignoruje). Nikdy nepiš do sitemapy jednotné datum ručně; `--dry-run` vypíše
+tabulku beze změny souboru.
