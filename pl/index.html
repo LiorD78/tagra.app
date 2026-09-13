@@ -774,13 +774,16 @@
 </nav>
 <!-- ═══ HERO ══════════════════════════════════════════════════════════ -->
 <section id="main-content" aria-label="TAGRA – wybór rozwiązania" class="hero">
+<picture style="display:contents">
+<source type="image/webp" sizes="100vw" srcset="/.netlify/images?url=/assets/img/hero-poster.jpg&amp;w=480&amp;fm=webp 480w, /.netlify/images?url=/assets/img/hero-poster.jpg&amp;w=960&amp;fm=webp 960w, /.netlify/images?url=/assets/img/hero-poster.jpg&amp;w=1440&amp;fm=webp 1440w, /.netlify/images?url=/assets/img/hero-poster.jpg&amp;w=1920&amp;fm=webp 1920w"/>
 <img alt="" aria-hidden="true" class="hero-video-poster" fetchpriority="high" loading="eager" src="/assets/img/hero-poster.jpg?v=2026-05-13b" width="1920" height="1080"/>
-<video aria-hidden="true" class="hero-video" id="heroVideoA" muted="" playsinline="" poster="/assets/img/hero-poster.jpg?v=2026-05-13b" preload="auto">
+</picture>
+<video aria-hidden="true" class="hero-video" id="heroVideoA" muted="" playsinline="" preload="auto">
 <source media="(max-width: 1024px)" src="/assets/video/hero-720.mp4?v=2026-05-13c" type="video/mp4">
 <source src="/assets/video/hero-1080.webm?v=2026-05-13c" type="video/webm">
 <source src="/assets/video/hero-1080.mp4?v=2026-05-13c" type="video/mp4">
 </source></source></source></video>
-<video aria-hidden="true" class="hero-video" id="heroVideoB" muted="" playsinline="" poster="/assets/img/hero-poster.jpg?v=2026-05-13b" preload="auto">
+<video aria-hidden="true" class="hero-video" id="heroVideoB" muted="" playsinline="" preload="none">
 <source media="(max-width: 1024px)" src="/assets/video/hero-720.mp4?v=2026-05-13c" type="video/mp4">
 <source src="/assets/video/hero-1080.webm?v=2026-05-13c" type="video/webm">
 <source src="/assets/video/hero-1080.mp4?v=2026-05-13c" type="video/mp4">
@@ -1261,6 +1264,9 @@
     hero.classList.add('has-video-ready');
     current.classList.add('is-active');
     tryPlay(current);
+    // B má preload="none", aby nesoutěžilo s prvním vykreslením.
+    // Bufferovat začne teď, když A už hraje — swap() ho potřebuje ~1,2 s před koncem A.
+    try { next.preload = 'auto'; next.load(); } catch (e) {}
     if (rafId === null) rafId = requestAnimationFrame(tick);
   }
 
