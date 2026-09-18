@@ -378,13 +378,3 @@ p.lead {
    ale jakmile šířku přebije CSS, musí se výška dopočítat — jinak se obrázek
    roztáhne. Platí pro obrázky, které nemají výšku určenou vlastním pravidlem. */
 img[width][height]:not([style*="height"]) { height: auto; }
-
-/* ─── HEADING GRADIENT — single source of truth: tokens.css --heading-gradient ─────
-   Article pages (articles/, de/, pl/, …) and 404.html still carry an older inline
-   3-stop gradient (dark → light → bright). The `html` prefix raises specificity so
-   this shared rule wins over the inline <style> blocks until they are swept to
-   `background: var(--heading-gradient)` (truckmall-ops sweep). Remove this block
-   once that sweep is merged. */
-html .art-title .grad,
-html .art-body h2,
-html .nf-code { background-image: var(--heading-gradient); }
