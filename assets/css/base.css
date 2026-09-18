@@ -3,7 +3,8 @@
    buttons, container, animation primitives.
    
    Heading styles match TRUCKMALL.cz: UPPERCASE 36/30px section H2
-   with 3-stop blue gradient + brighter mid stop. Hero H2 stays
+   with the 3-stop blue gradient --heading-gradient (TRUCKMALL stops
+   #0b2c4a → #134a8e → #1f5fa6, tokens.css). Hero H2 stays
    mixed-case + larger (intentional differentiation).
    
    Last refactor: 2026-05-13.
@@ -71,8 +72,8 @@ h2, .section-h2 {
 
 /* === Hero heading — larger, mixed-case ===
    Applies to <h1> page headings AND any <h2 class="hero-h2"> hero
-   pattern. The brighter TRUCKMALL gradient is shared with section H2,
-   only the size and casing differ. */
+   pattern. The TRUCKMALL gradient (--heading-gradient) is shared with
+   section H2, only the size and casing differ. */
 h1, h2.hero-h2, .hero-h2 {
   font-size: 64px;
   font-weight: 800;
@@ -362,7 +363,7 @@ p.lead {
 }
 
 
-/* === Vizuálně skrytý text pro čtečky obrazovky ===
+/* === Vizuálně skrytý text pro čtečky obrazovek ===
    Používá se pro nadpisy, které drží správnou hierarchii úrovní,
    aniž by měnily vizuální podobu stránky. */
 .sr-only {
@@ -377,3 +378,13 @@ p.lead {
    ale jakmile šířku přebije CSS, musí se výška dopočítat — jinak se obrázek
    roztáhne. Platí pro obrázky, které nemají výšku určenou vlastním pravidlem. */
 img[width][height]:not([style*="height"]) { height: auto; }
+
+/* ─── HEADING GRADIENT — single source of truth: tokens.css --heading-gradient ─────
+   Article pages (articles/, de/, pl/, …) and 404.html still carry an older inline
+   3-stop gradient (dark → light → bright). The `html` prefix raises specificity so
+   this shared rule wins over the inline <style> blocks until they are swept to
+   `background: var(--heading-gradient)` (truckmall-ops sweep). Remove this block
+   once that sweep is merged. */
+html .art-title .grad,
+html .art-body h2,
+html .nf-code { background-image: var(--heading-gradient); }

@@ -9,8 +9,8 @@
   /* === Brand colors — aligned with TRUCKMALL.cz === */
   --blue-dark:   #0b2c4a;   /* darkest stop in heading gradient */
   --blue-mid:    #134a8e;   /* mid stop, also nav active color */
-  --blue-light:  #1f5fa6;
-  --blue-bright: #3a6ff0;   /* lightest stop in heading gradient */
+  --blue-light:  #1f5fa6;   /* lightest stop in heading gradient */
+  --blue-bright: #3a6ff0;   /* accent only (.info-card border); NOT a heading stop since 2026-09-18 */
   --green-brand: #6E9B12;   /* logo green, eyebrow color */
   --green-cta:   #5C820F;   /* darker green for buttons */
 
@@ -35,11 +35,13 @@
   --strong:  #0b0b0c;
   --border:  rgba(0,0,0,0.08);
 
-  /* === Heading gradient (3-stop, brighter — matches TRUCKMALL) === */
+  /* === Heading gradient (3-stop) — identical to TRUCKMALL.cz --tmx-grad-blue
+     #0b2c4a → #134a8e → #1f5fa6 (brand decision 2026-09-18). Single source of
+     truth: use `background: var(--heading-gradient)` on every H1/H2 gradient. === */
   --heading-gradient: linear-gradient(90deg,
     var(--blue-dark) 0%,
-    var(--blue-light) 50%,
-    var(--blue-bright) 100%);
+    var(--blue-mid) 50%,
+    var(--blue-light) 100%);
 
   /* === Layout === */
   --maxw:    1180px;
