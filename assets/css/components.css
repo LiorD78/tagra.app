@@ -1358,3 +1358,38 @@
    .btn, .btn--primary, .btn--primary:hover, .btn--outline, .btn--outline:hover,
    .warning-box, .warning-box--urgent, .warning-box .badge, .warning-box__title, .warning-box p,
    .related-grid */
+
+/* ─── Horní CTA na stránkách chybových kódů (tools/code_cta/sweep.py, 19. 9. 2026)
+   Desktop: tlačítko na zkušební verzi. Mobil (≤720 px): jméno + e-mail,
+   odkaz ke stažení přijde e-mailem na PC (formulář tagra-trial přes nav.js). */
+.cta-box.cc-top { margin: 28px 0 8px; }
+.cc-top .cc-mail { display: none; }
+.cc-top .cc-lead { font-weight: 600; color: #fff; }
+.cc-top .cc-mail input[type="text"],
+.cc-top .cc-mail input[type="email"] {
+  width: 100%; box-sizing: border-box;
+  font: inherit; font-size: 16px; /* 16 px = iOS nezoomuje */
+  padding: 12px 14px; border-radius: 12px;
+  border: 1.5px solid rgba(255,255,255,.35); background: #fff; color: #1d1d1f;
+}
+.cc-top .cc-mail input:focus-visible { outline: 3px solid var(--green-cta); outline-offset: 1px; }
+.cc-top .cc-gdpr { display: flex; gap: 10px; align-items: flex-start; font-size: 13px; line-height: 1.45; color: rgba(255,255,255,.82); }
+.cc-top .cc-gdpr input { margin-top: 2px; width: 18px; height: 18px; flex: 0 0 auto; }
+.cc-top .cc-gdpr a { color: #fff; text-decoration: underline; }
+.cc-top button.cta-btn {
+  display: inline-flex; justify-content: center; align-items: center; gap: 8px;
+  width: 100%; border: 0; cursor: pointer; font: inherit; font-weight: 600; font-size: 16px;
+  padding: 13px 24px; border-radius: 99px; color: #fff;
+  background: linear-gradient(135deg, var(--green-brand) 0%, var(--green-cta) 100%);
+  box-shadow: 0 6px 18px rgba(110,155,18,0.30), 0 1px 0 rgba(255,255,255,0.25) inset;
+}
+.cc-top button.cta-btn[disabled] { opacity: .7; cursor: default; }
+.cc-top .cc-msg:empty { display: none; }
+.cc-top .cc-msg { font-weight: 600; color: #fff; }
+.cc-top .cc-msg a { color: #fff; text-decoration: underline; }
+.cc-top .cc-mail.is-done input, .cc-top .cc-mail.is-done label,
+.cc-top .cc-mail.is-done button, .cc-top .cc-mail.is-done .cc-lead { display: none; }
+@media (max-width: 720px) {
+  .cta-box.cc-top a.cc-desk { display: none; }
+  .cc-top .cc-mail { display: grid; gap: 10px; width: 100%; }
+}
