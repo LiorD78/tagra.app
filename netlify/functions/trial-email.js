@@ -49,7 +49,7 @@ const FOLLOWUP_SCHEDULE = [
 const SEQUENCE_AUDIENCES = ["fleet", "driver"];
 
 const VALID_AUDIENCES = ["fleet", "driver", "enforcement"];
-const VALID_LANGS     = ["en", "de", "pl", "cz", "sk", "gr", "hu", "it", "fr"];
+const VALID_LANGS     = ["en", "de", "pl", "cz", "sk", "gr", "hu", "it", "fr", "ro", "nl"];
 
 // Jednorázové / testovací e-mailové domény — odeslání se tiše ignoruje.
 const DISPOSABLE_DOMAINS = [
@@ -67,7 +67,7 @@ const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[a-z]{2,}$/i;
 // Segment v source_url → jazyk šablony. Rozhoduje první výskyt zleva
 // (source_url má tvar "referrer → cílová URL", jazyk stránky odkud
 // návštěvník přišel je spolehlivější než jazyk cílové stránky).
-const LANG_URL_SEGMENTS = { de: "de", pl: "pl", el: "gr", hu: "hu", cz: "cz", sk: "sk", it: "it", fr: "fr" };
+const LANG_URL_SEGMENTS = { de: "de", pl: "pl", el: "gr", hu: "hu", cz: "cz", sk: "sk", it: "it", fr: "fr", ro: "ro", nl: "nl" };
 
 // Předměty uvítacího mailu (#1). U #2/#3 se čtou z <title> šablony.
 const SUBJECTS = {
@@ -115,6 +115,15 @@ const SUBJECTS = {
     fleet:       "Votre essai TAGRA est prêt — téléchargement à l'intérieur",
     driver:      "Votre essai TAGRA TRUCKER est prêt — téléchargement à l'intérieur",
     enforcement: "Merci pour votre intérêt pour TAGRA Control",
+  },  ro: {
+    fleet:       "Versiunea dumneavoastră de probă TAGRA este gata — linkul de descărcare este în interior",
+    driver:      "Versiunea dumneavoastră de probă TAGRA TRUCKER este gata — linkul de descărcare este în interior",
+    enforcement: "Vă mulțumim pentru interesul acordat TAGRA Control",
+  },
+  nl: {
+    fleet:       "Uw TAGRA-proefversie is klaar — downloadlink in deze e-mail",
+    driver:      "Uw TAGRA TRUCKER-proefversie is klaar — downloadlink in deze e-mail",
+    enforcement: "Bedankt voor uw interesse in TAGRA Control",
   },
 };
 
