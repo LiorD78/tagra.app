@@ -134,3 +134,25 @@
     init();
   }
 })();
+
+/* ─── First-touch attribution pro trial formulář (19. 9. 2026) ───
+ * Uloží do sessionStorage první stránku návštěvy (cesta + ?src= + externí
+ * referrer). try.js ji připojí do skrytého pole source_url, takže u každé
+ * registrace zkušební verze uvidíme vstupní stránku z Google, i když návštěvník
+ * šel přes další stránky. Jen sessionStorage (zmizí se zavřením karty), žádné
+ * cookies, žádná osobní data. */
+(function () {
+  try {
+    var KEY = 'tagra_landing';
+    if (!sessionStorage.getItem(KEY)) {
+      var ref = document.referrer || '';
+      var internal = ref && ref.indexOf(location.origin) === 0;
+      sessionStorage.setItem(KEY, JSON.stringify({
+        p: location.pathname,
+        s: new URLSearchParams(location.search).get('src') || '',
+        r: internal ? '' : ref.replace(/^https?:\/\//, '').split('/')[0],
+        t: new Date().toISOString().slice(0, 16)
+      }));
+    }
+  } catch (e) { /* sessionStorage nedostupné — atribuce se přeskočí */ }
+})();

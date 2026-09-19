@@ -70,7 +70,15 @@
   const sourceUrl = document.getElementById('source_url');
   if (sourceUrl) {
     const ref = document.referrer || '(direct)';
-    sourceUrl.value = ref + ' → ' + window.location.href;
+    let landing = '';
+    try {
+      const l = JSON.parse(sessionStorage.getItem('tagra_landing') || 'null');
+      if (l && l.p) {
+        landing = ' | landing: ' + l.p + (l.s ? ' src=' + l.s : '') +
+          ' via ' + (l.r || '(direct/internal)') + ' @' + l.t;
+      }
+    } catch (e) { /* bez atribuce */ }
+    sourceUrl.value = ref + ' → ' + window.location.href + landing;
   }
 
   // ─── 3. Mobile nav toggle ───
