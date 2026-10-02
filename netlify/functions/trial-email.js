@@ -32,12 +32,27 @@
  * ── KONFIGURACE ──────────────────────────────────────────────────────
  *   RESEND_API_KEY   povinné
  *   RESEND_FROM      volitelné (výchozí "TAGRA <sales@tagra.app>")
+ *   LEAD_NOTIFY_TO   volitelné, příjemce interní notifikace (výchozí libor.dospel@gmail.com)
+ *
+ * ── OPAKOVANÉ REGISTRACE ─────────────────────────────────────────────
+ * Stav leadu je v Netlify Blobs (store "trial-leads", klíč = normalizovaný
+ * e-mail). Nový lead: #1 + #2/#3. Opakování ≥ 60 min: jen #1 znovu (nový
+ * idempotency key -r{count}). Opakování < 60 min: nic. Jiné publikum: #1
+ * pro něj, #2/#3 jen pokud pro ně ještě neběžely. Chyba Blobs = fail-open.
+ * Každé odeslání (i ignorované) vyvolá interní notifikaci s unikátním předmětem.
  */
 
 const RESEND_API    = "https://api.resend.com/emails";
 const TEMPLATE_BASE = "https://tagra.app/try/email-preview";
 
 const DAY_MS = 24 * 60 * 60 * 1000;
+
+// Opakovaná registrace dřív než za tolik minut od poslední = zákazník nedostane nic.
+const REPEAT_MIN = 60;
+
+const LEAD_STORE         = "trial-leads";
+const NOTIFY_FROM        = "TAGRA leads <sales@tagra.app>";
+const NOTIFY_TO_DEFAULT  = "libor.dospel@gmail.com";
 
 // Kdy odeslat navazující maily (dny od registrace)
 const FOLLOWUP_SCHEDULE = [
@@ -236,6 +251,97 @@ async function sendViaResend(apiKey, payload, idempotencyKey) {
   return resp.json();
 }
 
+// ── STAV LEADU (Netlify Blobs) ────────────────────────────────────────
+// Chyba Blobs je vždy fail-open: lead se bere jako nový a chyba se jen loguje.
+
+async function getLeadStore(event) {
+  try {
+    const blobs = require("@netlify/blobs");
+    // Funkce ve formátu exports.handler (Lambda režim) potřebují connectLambda.
+    if (typeof blobs.connectLambda === "function") blobs.connectLambda(event);
+    return blobs.getStore(LEAD_STORE);
+  } catch (e) {
+    logError(`Blobs unavailable: ${e.message}`);
+    return null;
+  }
+}
+
+async function readLead(store, key) {
+  if (!store) return null;
+  try {
+    return (await store.get(key, { type: "json" })) || null;
+  } catch (e) {
+    logError(`Blobs read failed (${key}): ${e.message}`);
+    return null;
+  }
+}
+
+async function writeLead(store, key, value) {
+  if (!store) return;
+  try {
+    await store.setJSON(key, value);
+  } catch (e) {
+    logError(`Blobs write failed (${key}): ${e.message}`);
+  }
+}
+
+// ── INTERNÍ NOTIFIKACE ────────────────────────────────────────────────
+
+const escapeHtml = (s) => String(s ?? "")
+  .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+
+/** Co se zákazníkovi odeslalo — krátký popis do těla notifikace. */
+function describeSent(situation, aud, result) {
+  if (!result) return "nic (viz důvod v předmětu)";
+  const parts = [];
+  if (result.welcome) parts.push(`#1 uvítací mail (${aud})`);
+  for (const s of result.scheduled) parts.push(`${s.mail} naplánován na ${s.at}`);
+  for (const f of result.failed) parts.push(`${f} se nepodařilo naplánovat`);
+  return parts.length ? parts.join(", ") : "nic (opakování do 60 min od poslední registrace)";
+}
+
+/**
+ * Pošle Liborovi notifikaci o leadu (nahrazuje Netlify notifikaci formuláře,
+ * která měla pořád stejný předmět a Gmail ji slepoval do vláken).
+ * Nikdy nevyhazuje chybu.
+ */
+async function notifyLead(apiKey, { data, name, aud, lang, prev, count, situation, result, ignored }) {
+  if (!apiKey) return;
+  try {
+    const company = String(data.company || "").trim();
+    let country = String(data.country || "").trim();
+    if (!country) country = lang;
+    if (country.length <= 3) country = country.toUpperCase();
+
+    const isRepeat = !!prev;
+    const prefix =
+      (ignored ? `[ignorováno: ${ignored}] ` : "") +
+      (isRepeat && !ignored ? `↻ ${count}× ` : "");
+    const subject = `${prefix}TAGRA lead · ${aud} · ${country} · ${name || "(bez jména)"}${company ? ` (${company})` : ""}`
+      .replace(/[\r\n]+/g, " ");
+
+    const rows = Object.entries(data)
+      .filter(([k]) => k !== "bot-field" && k !== "form_name")
+      .map(([k, v]) => `<tr><td style="padding:2px 12px 2px 0;color:#666;vertical-align:top">${escapeHtml(k)}</td><td>${escapeHtml(typeof v === "string" ? v : JSON.stringify(v))}</td></tr>`)
+      .join("");
+
+    const extra = [];
+    if (isRepeat) extra.push(`<p>Opakovaná registrace (${count}×). První registrace: <b>${escapeHtml(prev.first_at)}</b>, poslední předtím: ${escapeHtml(prev.last_at)}.</p>`);
+    if (!ignored) extra.push(`<p>Zákazník dostal: <b>${escapeHtml(describeSent(situation, aud, result))}</b></p>`);
+    else extra.push(`<p>Zákazníkovi nebylo nic odesláno — ${escapeHtml(ignored)}.</p>`);
+
+    await sendViaResend(apiKey, {
+      from: NOTIFY_FROM,
+      to: (process.env.LEAD_NOTIFY_TO || NOTIFY_TO_DEFAULT).split(",").map((s) => s.trim()).filter(Boolean),
+      subject,
+      html: `${extra.join("")}<table style="font:14px sans-serif">${rows}</table>`,
+      tags: [{ name: "campaign", value: "lead-notify" }],
+    });
+  } catch (e) {
+    logError(`Lead notification failed: ${e.message}`);
+  }
+}
+
 exports.handler = async (event) => {
   if (event.httpMethod !== "POST") {
     return { statusCode: 405, body: "Method Not Allowed" };
@@ -257,15 +363,34 @@ exports.handler = async (event) => {
     return { statusCode: 200, body: "Ignored: not tagra-trial" };
   }
 
-  if (String(data.source_url || "").includes("test=1") || data.test === "1") {
-    logInfo("Ignored: test submission");
-    return { statusCode: 200, body: "Ignored: test submission" };
-  }
-
   const email    = (data.email || "").trim();
   const name     = (data.name || "").trim();
   const audience = normalizeAudience(data.audience);
   let   language = (data.language || "en").toLowerCase();
+
+  if (!language || language === "en") {
+    const derived = deriveLangFromSourceUrl(data.source_url);
+    if (derived) language = derived;
+  }
+
+  const aud      = VALID_AUDIENCES.includes(audience) ? audience : "fleet";
+  const lang     = VALID_LANGS.includes(language) ? language : "en";
+  const greeting = firstName(name);
+  const emailKey = normalizeEmailForKey(email);
+
+  const apiKey = process.env.RESEND_API_KEY;
+  const lead   = { data, name, aud, lang };
+
+  // Ignorované odeslání (test, disposable) → Libor o něm přesto ví.
+  const ignore = async (reason, body) => {
+    await notifyLead(apiKey, { ...lead, ignored: reason });
+    return { statusCode: 200, body };
+  };
+
+  if (String(data.source_url || "").includes("test=1") || data.test === "1") {
+    logInfo("Ignored: test submission");
+    return ignore("test", "Ignored: test submission");
+  }
 
   if (!email) {
     logError("Missing email in submission");
@@ -285,75 +410,48 @@ exports.handler = async (event) => {
   const emailDomain = email.split("@")[1]?.toLowerCase() || "";
   if (DISPOSABLE_DOMAINS.includes(emailDomain)) {
     logInfo(`Ignored: disposable domain (${emailDomain})`);
-    return { statusCode: 200, body: "Ignored: disposable domain" };
+    return ignore("disposable", "Ignored: disposable domain");
   }
 
-  const apiKey = process.env.RESEND_API_KEY;
   if (!apiKey) {
     logError("RESEND_API_KEY not configured — skipping send");
     return { statusCode: 200, body: "Not configured: no API key" };
   }
 
-  if (!language || language === "en") {
-    const derived = deriveLangFromSourceUrl(data.source_url);
-    if (derived) language = derived;
-  }
-
-  const aud      = VALID_AUDIENCES.includes(audience) ? audience : "fleet";
-  const lang     = VALID_LANGS.includes(language) ? language : "en";
-  const greeting = firstName(name);
-  const emailKey = normalizeEmailForKey(email);
-
   const fromAddr = process.env.RESEND_FROM || "TAGRA <sales@tagra.app>";
   const replyTo  = "sales@tagra.app";
+
+  // ── STAV LEADU (Netlify Blobs, fail-open) ───────────────────────────
+  const store = await getLeadStore(event);
+  const prev  = await readLead(store, emailKey);
+  const now   = Date.now();
+
+  const prevAudiences = prev ? (prev.audiences || [prev.audience]) : [];
+  const prevSequenced = prev ? (prev.sequenced || [prev.audience].filter((a) => SEQUENCE_AUDIENCES.includes(a))) : [];
+  const sinceLastMin  = prev ? (now - Date.parse(prev.last_at)) / 60000 : Infinity;
+  const count         = prev ? (Number(prev.count) || 1) + 1 : 1;
+
+  let situation;
+  if (!prev)                                  situation = "new";
+  else if (!prevAudiences.includes(aud))      situation = "new-audience";
+  else if (sinceLastMin >= REPEAT_MIN)        situation = "repeat";
+  else                                        situation = "repeat-throttled";
+
+  const sendWelcome = situation !== "repeat-throttled";
+  // #2/#3 jen pro nový lead / nové publikum, kterému ještě neběžely.
+  const scheduleSeq = SEQUENCE_AUDIENCES.includes(aud) && !prevSequenced.includes(aud)
+                      && (situation === "new" || situation === "new-audience");
 
   const result = { welcome: null, scheduled: [], failed: [] };
 
   // ── #1 UVÍTACÍ MAIL (hned) ──────────────────────────────────────────
-  try {
-    const html    = await fetchTemplate(`${TEMPLATE_BASE}/${lang}-${aud}.html`);
-    const subject = (SUBJECTS[lang] && SUBJECTS[lang][aud]) || SUBJECTS.en[aud];
-
-    const sent = await sendViaResend(apiKey, {
-      from: fromAddr,
-      to: [email],
-      reply_to: replyTo,
-      subject,
-      html: html.replaceAll("{NAME}", greeting),
-      tags: [
-        { name: "campaign", value: "trial-signup" },
-        { name: "audience", value: aud },
-        { name: "language", value: lang },
-      ],
-    }, `trial1-${emailKey}-${lang}-${aud}`);
-
-    result.welcome = sent.id;
-    logInfo(`#1 sent to ${email} (lang=${lang}, audience=${aud}, id=${sent.id})`);
-  } catch (e) {
-    logError(`#1 failed for ${email}: ${e.message}`);
-    // Bez uvítacího mailu nemá smysl plánovat zbytek sekvence.
-    return { statusCode: 200, body: "Welcome email failed" };
-  }
-
-  // ── #2 a #3 (naplánované) ───────────────────────────────────────────
-  // Enforcement přeskakujeme: trial jim začíná až Ivanovým mailem s odkazem.
-  if (!SEQUENCE_AUDIENCES.includes(aud)) {
-    logInfo(`Sequence skipped for audience=${aud} (handled manually)`);
-    return {
-      statusCode: 200,
-      body: JSON.stringify({ sent: true, id: result.welcome, sequence: "skipped" }),
-    };
-  }
-
-  const now = Date.now();
-
-  for (const step of FOLLOWUP_SCHEDULE) {
-    const tplUrl      = `${TEMPLATE_BASE}/${step.mail}-${aud}-${lang}.html`;
-    const scheduledAt = new Date(now + step.days * DAY_MS).toISOString();
-
+  if (sendWelcome) {
     try {
-      const html    = await fetchTemplate(tplUrl);
-      const subject = subjectFromTemplate(html, SUBJECTS.en[aud]);
+      const html    = await fetchTemplate(`${TEMPLATE_BASE}/${lang}-${aud}.html`);
+      const subject = (SUBJECTS[lang] && SUBJECTS[lang][aud]) || SUBJECTS.en[aud];
+      // Opakování stejného publika dostane nový klíč, jinak by ho Resend
+      // 24 h dedupoval a člověk by odkaz znovu nedostal.
+      const keySuffix = situation === "repeat" ? `-r${count}` : "";
 
       const sent = await sendViaResend(apiKey, {
         from: fromAddr,
@@ -361,28 +459,84 @@ exports.handler = async (event) => {
         reply_to: replyTo,
         subject,
         html: html.replaceAll("{NAME}", greeting),
-        scheduled_at: scheduledAt,
         tags: [
-          { name: "campaign", value: step.campaign },
+          { name: "campaign", value: "trial-signup" },
           { name: "audience", value: aud },
           { name: "language", value: lang },
         ],
-      }, `${step.idPrefix}-${emailKey}-${lang}-${aud}`);
+      }, `trial1-${emailKey}-${lang}-${aud}${keySuffix}`);
 
-      result.scheduled.push({ mail: step.mail, at: scheduledAt, id: sent.id });
-      logInfo(`${step.mail} scheduled for ${email} at ${scheduledAt} (id=${sent.id})`);
+      result.welcome = sent.id;
+      logInfo(`#1 sent to ${email} (lang=${lang}, audience=${aud}, ${situation}, id=${sent.id})`);
     } catch (e) {
-      // Jeden neúspěšný krok nesmí shodit další ani uvítací mail.
-      result.failed.push(step.mail);
-      logError(`${step.mail} scheduling failed for ${email}: ${e.message}`);
+      logError(`#1 failed for ${email}: ${e.message}`);
+      await notifyLead(apiKey, { ...lead, prev, count, situation, ignored: `uvítací mail selhal: ${e.message}` });
+      // Bez uvítacího mailu nemá smysl plánovat zbytek sekvence ani ukládat stav.
+      return { statusCode: 200, body: "Welcome email failed" };
     }
+  } else {
+    logInfo(`#1 skipped for ${email}: repeat ${Math.round(sinceLastMin)} min after last (< ${REPEAT_MIN})`);
   }
+
+  // ── #2 a #3 (naplánované) ───────────────────────────────────────────
+  // Enforcement přeskakujeme: trial jim začíná až Ivanovým mailem s odkazem.
+  if (scheduleSeq) {
+    for (const step of FOLLOWUP_SCHEDULE) {
+      const tplUrl      = `${TEMPLATE_BASE}/${step.mail}-${aud}-${lang}.html`;
+      const scheduledAt = new Date(now + step.days * DAY_MS).toISOString();
+
+      try {
+        const html    = await fetchTemplate(tplUrl);
+        const subject = subjectFromTemplate(html, SUBJECTS.en[aud]);
+
+        const sent = await sendViaResend(apiKey, {
+          from: fromAddr,
+          to: [email],
+          reply_to: replyTo,
+          subject,
+          html: html.replaceAll("{NAME}", greeting),
+          scheduled_at: scheduledAt,
+          tags: [
+            { name: "campaign", value: step.campaign },
+            { name: "audience", value: aud },
+            { name: "language", value: lang },
+          ],
+        }, `${step.idPrefix}-${emailKey}-${lang}-${aud}`);
+
+        result.scheduled.push({ mail: step.mail, at: scheduledAt, id: sent.id });
+        logInfo(`${step.mail} scheduled for ${email} at ${scheduledAt} (id=${sent.id})`);
+      } catch (e) {
+        // Jeden neúspěšný krok nesmí shodit další ani uvítací mail.
+        result.failed.push(step.mail);
+        logError(`${step.mail} scheduling failed for ${email}: ${e.message}`);
+      }
+    }
+  } else if (sendWelcome) {
+    logInfo(`Sequence not scheduled for ${email} (audience=${aud}, ${situation})`);
+  }
+
+  // ── ULOŽENÍ STAVU ───────────────────────────────────────────────────
+  const nowIso = new Date(now).toISOString();
+  await writeLead(store, emailKey, {
+    first_at: prev ? prev.first_at : nowIso,
+    last_at: nowIso,
+    count,
+    audience: aud,
+    lang,
+    welcome_ids: [...(prev ? prev.welcome_ids || [] : []), ...(result.welcome ? [result.welcome] : [])],
+    audiences: [...new Set([...prevAudiences, ...(sendWelcome ? [aud] : [])])],
+    sequenced: [...new Set([...prevSequenced, ...(scheduleSeq ? [aud] : [])])],
+  });
+
+  // ── INTERNÍ NOTIFIKACE ──────────────────────────────────────────────
+  await notifyLead(apiKey, { ...lead, prev, count, situation, result });
 
   return {
     statusCode: 200,
     body: JSON.stringify({
-      sent: true,
+      sent: sendWelcome,
       id: result.welcome,
+      situation,
       scheduled: result.scheduled,
       failed: result.failed,
     }),
