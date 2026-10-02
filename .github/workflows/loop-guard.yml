@@ -1,0 +1,79 @@
+# tagra.app/.github/workflows/loop-guard.yml
+# Automerge pojistka pro PR ze smyčky optimalizace (label `loop`).
+name: Smyčka — guard a automerge
+
+on:
+  pull_request:
+    types: [labeled, opened, synchronize, reopened]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: loop-guard-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  guard:
+    if: contains(github.event.pull_request.labels.*.name, 'loop')
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      GH_TOKEN: ${{ github.token }}
+      PR: ${{ github.event.pull_request.number }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ github.event.pull_request.head.sha }}
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Kontrola obsahu (loop-guard)
+        id: guard
+        run: |
+          git fetch origin main
+          git diff --name-only origin/main...HEAD > /tmp/files.txt
+          set +e
+          git diff origin/main...HEAD | node tools/loop-guard.js /tmp/files.txt > /tmp/guard.txt
+          CODE=$?
+          set -e
+          cat /tmp/guard.txt
+          echo "code=$CODE" >> "$GITHUB_OUTPUT"
+
+      - name: Syntaxe JS
+        run: |
+          for f in $(git diff --name-only origin/main...HEAD | grep -E '\.js$' || true); do
+            [ -f "$f" ] && node --check "$f"
+          done
+
+      - name: Zablokováno — čeká na Libora
+        if: steps.guard.outputs.code != '0'
+        run: |
+          gh pr edit "$PR" --add-label needs-libor || gh label create needs-libor --color D93F0B && gh pr edit "$PR" --add-label needs-libor
+          { echo "🛑 **Smyčka: automerge zablokován** — PR sahá na chráněnou oblast:"; echo; sed 's/^/    /' /tmp/guard.txt; } > /tmp/c.md
+          gh pr comment "$PR" --body-file /tmp/c.md
+
+      - name: Počkat na Netlify deploy preview
+        if: steps.guard.outputs.code == '0'
+        run: |
+          sleep 60
+          gh pr checks "$PR" --watch --interval 30 --fail-fast || { gh pr comment "$PR" --body "🛑 Smyčka: deploy preview / checky neprošly — automerge zrušen."; exit 1; }
+
+      - name: Merge (squash)
+        if: steps.guard.outputs.code == '0'
+        run: |
+          gh pr merge "$PR" --squash --delete-branch
+          gh pr comment "$PR" --body "✅ Smyčka: guard prošel, checky zelené — mergnuto automaticky. $(cat /tmp/guard.txt)"
+
+      - name: Reindexace změněných stránek
+        if: steps.guard.outputs.code == '0'
+        run: |
+          URLS=$(grep -E '\.html$' /tmp/files.txt | grep -vE '^(404|tools|try)/' | sed -E 's#(^|/)index\.html$#\1#; s#\.html$#/#; s#^#https://tagra.app/#' | head -10 | jq -R . | jq -sc .)
+          [ "$URLS" = "[]" ] && exit 0
+          sleep 120   # počkat na produkční deploy po merge
+          curl -sS -X POST "https://hook.eu1.make.com/0ubzg99wpirfa6gu8050ktt3mzrbumb6" \
+            -H "Content-Type: application/json" -d "{\"host\":\"tagra.app\",\"urls\":$URLS}"
