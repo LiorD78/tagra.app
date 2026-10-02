@@ -250,6 +250,10 @@
     if (COMMERCIAL_RE.test(p)) return 'commercial';
     return 'other';
   }
+  // Sdílí analytics.js — pageType() jako funkce, k ní isTrialPath a TRIAL_PATHS
+  pageType.isTrialPath = isTrialPath;
+  pageType.TRIAL_PATHS = TRIAL_PATHS;
+  window.tagraPageType = pageType;
   function trialLink(el) {
     var a = el && el.closest ? el.closest('a[href]') : null;
     if (!a) return null;
@@ -280,8 +284,10 @@
       sessionStorage.setItem(KEY, '1');
     } catch (e) { /* bez guardu */ }
     var l = landing();
+    var ai = 'none';
+    try { ai = sessionStorage.getItem('tagra_ai_source') || 'none'; } catch (e) { /* bez ai_source */ }
     track('generate_lead', {
-      audience: audience || '', language: lang || '', src: src || '',
+      audience: audience || '', language: lang || '', src: src || '', ai_source: ai,
       landing_page: l.p || '', landing_referrer: l.r || '', form_variant: variant
     });
     clar('event', 'trial_lead');
