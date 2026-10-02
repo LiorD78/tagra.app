@@ -177,7 +177,15 @@
       if (l && l.p) landing = ' | landing: ' + l.p + (l.s ? ' src=' + l.s : '') +
         ' via ' + (l.r || '(direct/internal)') + ' @' + l.t;
     } catch (x) { /* bez atribuce */ }
-    if (src) src.value = location.href.split('#')[0] + ' | quick-mail-form' + landing;
+    // src atribuce: ?src= z URL, jinak vstupní stránka ze sessionStorage
+    var srcVal = new URLSearchParams(location.search).get('src') || '';
+    if (!srcVal) {
+      try { srcVal = (JSON.parse(sessionStorage.getItem('tagra_landing') || 'null') || {}).p || ''; } catch (x) { /* bez src */ }
+    }
+    var srcField = f.querySelector('input[name="src"]');
+    if (srcField) srcField.value = srcVal;
+    if (src) src.value = location.href.split('#')[0] + ' | quick-mail-form' + landing +
+      (srcVal ? ' | src: ' + srcVal : '');
     var label = btn ? btn.textContent : '';
     if (btn) { btn.disabled = true; btn.textContent = f.getAttribute('data-sending') || label; }
     var body = new URLSearchParams(new FormData(f)).toString();
@@ -189,6 +197,11 @@
       if (!r.ok) throw new Error('HTTP ' + r.status);
       f.classList.add('is-done');
       if (msg) msg.textContent = f.getAttribute('data-ok') || '';
+      try {
+        var aud = f.querySelector('input[name="audience"]');
+        var lng = f.querySelector('input[name="language"]');
+        if (window.tagraTrackLead) window.tagraTrackLead('quick-mail', aud ? aud.value : '', lng ? lng.value : '', srcVal);
+      } catch (x) { /* měření nesmí hlásit chybu odeslání */ }
     }).catch(function () {
       if (btn) { btn.disabled = false; btn.textContent = label; }
       if (msg) {
@@ -201,4 +214,119 @@
       }
     });
   });
+})();
+
+/* ─── Měření konverzí trialu: ?src= atribuce, GA4 eventy, Clarity (2. 10. 2026) ───
+ * Jen JS, žádný zásah do textu ani vzhledu. GA4 i Clarity jsou za consent
+ * bannerem (Consent Mode v2, default denied) — gtag() jen řadí do dataLayeru
+ * a Google si sám hlídá souhlas; Clarity se volá jen když už existuje.
+ * Bez gtag / clarity se vše tiše přeskočí.
+ *  1. Odkazům na trial stránky se doplní ?src=<cesta aktuální stránky>, aby
+ *     atribuce přežila otevření v nové kartě (sessionStorage se tam ztratí).
+ *  2. trial_cta_click (klik na trial odkaz), trial_download (klik na
+ *     #downloadBtn), generate_lead (thanks stránka; u rychlého formuláře
+ *     po úspěšném odeslání).
+ *  3. Clarity: page_type, lang, na thanks event trial_lead + audience,
+ *     na download event trial_download.
+ * Slugy trial stránek jsou z i18n/slugmap.json (klíč "try"). */
+(function () {
+  'use strict';
+  // i18n/slugmap.json (klíč "try") neobsahuje ro/fr/nl — doplněno ručně podle živých stránek
+  var TRIAL_PATHS = ['/try', '/de/testen', '/pl/wyprobuj', '/el/dokimi',
+    '/hu/ingyenes-probaverzio', '/it/prova-gratuita',
+    '/ro/incercare-gratuita', '/fr/essai-gratuit', '/nl/gratis-proefversie'];
+  var ARTICLE_RE = /^\/(articles|de\/ratgeber|pl\/poradnik|hu\/cikkek|ro\/articole|nl\/artikelen|it\/articoli|el\/arthra|fr\/articles)(\/|$)/;
+  var COMMERCIAL_RE = /^\/((de\/|pl\/|el\/|hu\/|it\/|fr\/|ro\/|nl\/)?$|(driver|fleet|enforcement|how-it-works|for-whom|faq|contact)(\/|$)|de\/(fahrer|fuhrpark|kontrollbehoerden|so-funktioniert-es|fuer-wen|faq|kontakt)(\/|$)|pl\/(dla-kierowcow|dla-przewoznikow|organy-kontrolne|jak-to-dziala|dla-kogo|faq|kontakt)(\/|$)|el\/(odigoi|stolos|eleghos|pos-leitourgei|gia-poion|faq|epikoinonia)(\/|$)|hu\/(soforoknek|fuvarozoknak|hatosagoknak|hogyan-mukodik|kinek-szol|gyakori-kerdesek|kapcsolat)(\/|$)|it\/(per-autisti|per-aziende|organi-di-controllo|come-funziona|a-chi-si-rivolge|faq|contatti)(\/|$)|fr\/(conducteurs|entreprises|autorites-de-controle|fonctionnement|pour-qui|faq|contact)(\/|$)|ro\/(pentru-conducatori|pentru-firme|autoritati-de-control|cum-functioneaza|pentru-cine|intrebari-frecvente|contact)(\/|$)|nl\/(voor-chauffeurs|voor-transportbedrijven|handhaving|hoe-het-werkt|voor-wie|veelgestelde-vragen|contact)(\/|$))/;
+
+  function normPath(p) {
+    p = p.replace(/\/index\.html$/, '/');
+    return p.length > 1 ? p.replace(/\/+$/, '') : p;
+  }
+  function isTrialPath(p) { return TRIAL_PATHS.indexOf(normPath(p)) !== -1; }
+  function pageType() {
+    var p = location.pathname;
+    if (isTrialPath(p)) return 'trial';
+    if (ARTICLE_RE.test(p)) return 'article';
+    if (COMMERCIAL_RE.test(p)) return 'commercial';
+    return 'other';
+  }
+  function trialLink(el) {
+    var a = el && el.closest ? el.closest('a[href]') : null;
+    if (!a) return null;
+    try {
+      var u = new URL(a.href, location.href);
+      if (u.origin !== location.origin || !isTrialPath(u.pathname)) return null;
+      return { a: a, u: u };
+    } catch (e) { return null; }
+  }
+  function track(name, params) {
+    if (typeof window.gtag === 'function') {
+      try { window.gtag('event', name, params); } catch (e) { /* měření nesmí rozbít stránku */ }
+    }
+  }
+  function clar() {
+    if (typeof window.clarity === 'function') {
+      try { window.clarity.apply(null, arguments); } catch (e) { /* viz výše */ }
+    }
+  }
+  function landing() {
+    try { return JSON.parse(sessionStorage.getItem('tagra_landing') || 'null') || {}; } catch (e) { return {}; }
+  }
+  // Sdílené s kódem rychlého e-mailového formuláře níže — jednotné odeslání leadu.
+  window.tagraTrackLead = function (variant, audience, lang, src) {
+    var KEY = 'tagra_lead_tracked_' + variant;
+    try {
+      if (sessionStorage.getItem(KEY)) return;
+      sessionStorage.setItem(KEY, '1');
+    } catch (e) { /* bez guardu */ }
+    var l = landing();
+    track('generate_lead', {
+      audience: audience || '', language: lang || '', src: src || '',
+      landing_page: l.p || '', landing_referrer: l.r || '', form_variant: variant
+    });
+    clar('event', 'trial_lead');
+    if (audience) clar('set', 'audience', audience);
+  };
+
+  function init() {
+    var type = pageType();
+    var lang = (document.documentElement.getAttribute('lang') || '').slice(0, 2).toLowerCase();
+    clar('set', 'page_type', type);
+    clar('set', 'lang', lang);
+
+    // 1. ?src= na odkazech na trial (existující query se zachová)
+    document.querySelectorAll('a[href]').forEach(function (a) {
+      var t = trialLink(a);
+      if (!t || t.u.searchParams.has('src')) return;
+      var search = (t.u.search ? t.u.search + '&' : '?') + 'src=' + encodeURIComponent(location.pathname);
+      a.setAttribute('href', t.u.pathname + search + t.u.hash);
+    });
+
+    // 2. trial_cta_click + trial_download
+    document.addEventListener('click', function (e) {
+      var t = trialLink(e.target);
+      if (t) track('trial_cta_click', { page_path: location.pathname, cta_target: t.u.pathname, page_type: type });
+      var dl = e.target.closest ? e.target.closest('#downloadBtn') : null;
+      if (dl) {
+        track('trial_download', { product: /Trucker/i.test(dl.href) ? 'trucker' : 'tagra' });
+        clar('event', 'trial_download');
+      }
+    });
+
+    // 3. thanks stránka hlavního formuláře (inline skript stránky už proběhl)
+    var dlBtn = document.getElementById('downloadBtn');
+    if (dlBtn) {
+      var enf = document.getElementById('thanksEnforcement');
+      var aud = new URLSearchParams(location.search).get('audience');
+      if (!aud) aud = (enf && !enf.hidden) ? 'enforcement' : (/Trucker/i.test(dlBtn.href) ? 'driver' : 'fleet');
+      var src = '';
+      try { src = sessionStorage.getItem('tagra_src') || ''; } catch (e) { /* bez src */ }
+      window.tagraTrackLead('main', aud, lang, src);
+    }
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
 })();
