@@ -67,6 +67,14 @@
   });
 
   // ─── 2. Source URL tracking (for admin notification email) ───
+  // src atribuce: ?src= z odkazu (přežije novou kartu), jinak vstupní stránka
+  // ze sessionStorage (tagra_landing, plní nav.js).
+  let srcValue = new URLSearchParams(window.location.search).get('src') || '';
+  if (!srcValue) {
+    try {
+      srcValue = (JSON.parse(sessionStorage.getItem('tagra_landing') || 'null') || {}).p || '';
+    } catch (e) { /* bez src */ }
+  }
   const sourceUrl = document.getElementById('source_url');
   if (sourceUrl) {
     const ref = document.referrer || '(direct)';
@@ -78,8 +86,10 @@
           ' via ' + (l.r || '(direct/internal)') + ' @' + l.t;
       }
     } catch (e) { /* bez atribuce */ }
-    sourceUrl.value = ref + ' → ' + window.location.href + landing;
+    sourceUrl.value = ref + ' → ' + window.location.href + landing + (srcValue ? ' | src: ' + srcValue : '');
   }
+  const srcField = document.getElementById('src');
+  if (srcField) srcField.value = srcValue;
 
   // ─── 3. Mobile nav toggle ───
   const navToggle = document.getElementById('nav-toggle');
@@ -117,6 +127,7 @@
     try {
       sessionStorage.setItem('tagra_audience', chosenAudience);
       sessionStorage.setItem('tagra_language', language);
+      sessionStorage.setItem('tagra_src', srcValue); // pro generate_lead na thanks stránce (nav.js)
     } catch (e) { /* private mode — thanks page falls back to defaults */ }
 
     // 6. Ochrana proti kolizi query stringu s polem formuláře.
