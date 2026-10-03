@@ -166,9 +166,8 @@
   function loadVitals() {
     if (!once('wv')) return;
     var s = doc.createElement('script');
-    s.src = 'https://cdn.jsdelivr.net/npm/web-vitals@4.2.4/dist/web-vitals.umd.cjs';
-    s.integrity = 'sha384-cJvQhh9IE90PcCND48rkFpjhRUb8wENKhn5hg1iOiFZypWI+0IIw0xq+8Rocq3YD';
-    s.crossOrigin = 'anonymous'; s.defer = true;
+    // self-host: CSP (script-src) nepovoluje cdn.jsdelivr.net a jsDelivr posílá .cjs jako application/node
+    s.src = '/assets/js/vendor/web-vitals-4.2.4.iife.js'; s.defer = true;
     s.onload = function () {
       var v = W.webVitals; if (!v) return;
       function rep(m) {
