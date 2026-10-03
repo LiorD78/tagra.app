@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<!-- TMX-ANALYTICS START -->
+<meta content="7F7894081BE7FBB245FF03AF8810B22F" name="msvalidate.01"/>
+<!-- Consent Mode v2 defaults (deny) + gtag stub — runs BEFORE gtag.js -->
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent','default',{
+      ad_storage:'denied', ad_user_data:'denied', ad_personalization:'denied',
+      analytics_storage:'denied', functionality_storage:'denied',
+      personalization_storage:'denied', security_storage:'granted',
+      wait_for_update:500
+    });
+    gtag('set','ads_data_redaction',true);
+    gtag('set','url_passthrough',false);
+  </script>
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-92253QFBNX"></script>
+<script>
+    gtag('js', new Date());
+    gtag('config','G-92253QFBNX');
+  </script>
+<!-- Cookie consent banner (self-hosted) + Microsoft Clarity gating -->
+<style>
+    .tmx-cc{position:fixed;left:0;right:0;bottom:0;z-index:2147483000;background:linear-gradient(120deg,var(--blue-dark,#0b2c4a),var(--blue-mid,#134a8e) 62%,var(--blue-light,#1f5fa6));color:#fff;
+      font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+      padding:16px 20px;box-shadow:0 -4px 24px rgba(0,0,0,.18);display:flex;flex-wrap:wrap;
+      align-items:center;gap:14px;justify-content:center}
+    .tmx-cc__txt{flex:1 1 360px;max-width:760px}
+    .tmx-cc__txt a{color:#9ed0f5;text-decoration:underline}
+    .tmx-cc__btns{display:flex;gap:10px;flex:0 0 auto}
+    .tmx-cc__b{appearance:none;border:0;cursor:pointer;font:inherit;font-weight:600;
+      padding:10px 22px;border-radius:99px;transition:filter .15s;color:#fff}
+    .tmx-cc__b:hover{filter:brightness(1.08)}
+    .tmx-cc__b--no{background:rgba(255,255,255,.16)}
+    .tmx-cc__b--yes{background:var(--green-cta,#5C820F)}
+    @media(max-width:640px){.tmx-cc{padding:14px}.tmx-cc__btns{width:100%}.tmx-cc__b{flex:1}}
+  </style>
+<script>
+  (function(){
+    var KEY='tmx-consent-v1', CL='wt18054m0r';
+    function lc(){var l=(document.documentElement.getAttribute('lang')||'en').toLowerCase().split('-')[0];
+      var m={cz:'cs',cs:'cs',sk:'sk',de:'de',pl:'pl',gr:'el',el:'el',hu:'hu',en:'en'};return m[l]||'en';}
+    var T={
+      hu:{t:'Analitikai s\u00fctiket haszn\u00e1lunk (Google Analytics, Microsoft Clarity, Smartsupp), hogy meg\u00e9rts\u00fck a webhely haszn\u00e1lat\u00e1t. Csak az \u00d6n hozz\u00e1j\u00e1rul\u00e1s\u00e1val t\u00f6lt\u0151dnek be.',a:'Elfogadom',r:'Elutas\u00edtom',p:'Adatv\u00e9delem \u00e9s s\u00fctik'},
+      ro:{t:'Utilizăm module cookie de analiză (Google Analytics, Microsoft Clarity, Smartsupp) pentru a înțelege modul de utilizare a site-ului. Se încarcă doar cu consimțământul dumneavoastră.',a:'Accept',r:'Refuz',p:'Confidențialitate și cookie-uri'},
+      nl:{t:'We gebruiken analytische cookies (Google Analytics, Microsoft Clarity, Smartsupp) om het gebruik van de site te begrijpen. Ze laden alleen met uw toestemming.',a:'Accepteren',r:'Weigeren',p:'Privacy en cookies'},
+      fr:{t:'Nous utilisons des cookies analytiques (Google Analytics, Microsoft Clarity, Smartsupp) pour comprendre l’utilisation du site. Ils ne se chargent qu’avec votre consentement.',a:'Accepter',r:'Refuser',p:'Confidentialité et cookies'},
+      it:{t:'Utilizziamo cookie analitici (Google Analytics, Microsoft Clarity, Smartsupp) per capire l’utilizzo del sito. Si caricano solo con il Suo consenso.',a:'Accetta',r:'Rifiuta',p:'Privacy e cookie'},
+      en:{t:'We use analytics cookies (Google Analytics, Microsoft Clarity, Smartsupp) to understand site usage. They load only with your consent.',a:'Accept',r:'Reject',p:'Privacy &amp; cookies'},
+      cs:{t:'Pou\u017e\u00edv\u00e1me analytick\u00e9 cookies (Google Analytics, Microsoft Clarity, Smartsupp) k pochopen\u00ed pou\u017e\u00edv\u00e1n\u00ed webu. Na\u010dtou se jen s va\u0161\u00edm souhlasem.',a:'P\u0159ijmout',r:'Odm\u00edtnout',p:'Soukrom\u00ed a cookies'},
+      sk:{t:'Pou\u017e\u00edvame analytick\u00e9 cookies (Google Analytics, Microsoft Clarity, Smartsupp) na pochopenie pou\u017e\u00edvania webu. Na\u010d\u00edtaj\u00fa sa len s va\u0161\u00edm s\u00fahlasom.',a:'Prija\u0165',r:'Odmietnu\u0165',p:'S\u00fakromie a cookies'},
+      de:{t:'Wir verwenden Analyse-Cookies (Google Analytics, Microsoft Clarity, Smartsupp), um die Nutzung der Website zu verstehen. Sie werden nur mit Ihrer Einwilligung geladen.',a:'Akzeptieren',r:'Ablehnen',p:'Datenschutz &amp; Cookies'},
+      pl:{t:'U\u017cywamy plik\u00f3w cookie do analityki (Google Analytics, Microsoft Clarity, Smartsupp), aby zrozumie\u0107 korzystanie z witryny. \u0141aduj\u0105 si\u0119 tylko za Twoj\u0105 zgod\u0105.',a:'Akceptuj',r:'Odrzu\u0107',p:'Prywatno\u015b\u0107 i cookies'},
+      el:{t:'\u03a7\u03c1\u03b7\u03c3\u03b9\u03bc\u03bf\u03c0\u03bf\u03b9\u03bf\u03cd\u03bc\u03b5 cookies \u03b1\u03bd\u03ac\u03bb\u03c5\u03c3\u03b7\u03c2 (Google Analytics, Microsoft Clarity, Smartsupp) \u03b3\u03b9\u03b1 \u03bd\u03b1 \u03ba\u03b1\u03c4\u03b1\u03bd\u03bf\u03ae\u03c3\u03bf\u03c5\u03bc\u03b5 \u03c4\u03b7 \u03c7\u03c1\u03ae\u03c3\u03b7. \u03a6\u03bf\u03c1\u03c4\u03ce\u03bd\u03bf\u03bd\u03c4\u03b1\u03b9 \u03bc\u03cc\u03bd\u03bf \u03bc\u03b5 \u03c4\u03b7 \u03c3\u03c5\u03b3\u03ba\u03b1\u03c4\u03ac\u03b8\u03b5\u03c3\u03ae \u03c3\u03b1\u03c2.',a:'\u0391\u03c0\u03bf\u03b4\u03bf\u03c7\u03ae',r:'\u0391\u03c0\u03cc\u03c1\u03c1\u03b9\u03c8\u03b7',p:'\u0391\u03c0\u03cc\u03c1\u03c1\u03b7\u03c4\u03bf &amp; cookies'}
+    };
+    function loadClarity(){if(!CL||window.__tmxCl)return;window.__tmxCl=1;
+      (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+       t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+       y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script",CL);}
+    function grant(){try{localStorage.setItem(KEY,'granted')}catch(e){}
+      gtag('consent','update',{analytics_storage:'granted'});loadClarity();}
+    function deny(){try{localStorage.setItem(KEY,'denied')}catch(e){}}
+    var saved=null;try{saved=localStorage.getItem(KEY)}catch(e){}
+    if(saved==='granted'){grant();return;} if(saved==='denied'){return;}
+    function show(){var tx=T[lc()]||T.en;
+      var b=document.createElement('div');b.className='tmx-cc';b.setAttribute('role','dialog');b.setAttribute('aria-live','polite');
+      b.innerHTML='<div class="tmx-cc__txt">'+tx.t+' <a href="/hu/adatvedelmi-tajekoztato/">'+tx.p+'</a></div>'+
+        '<div class="tmx-cc__btns"><button type="button" class="tmx-cc__b tmx-cc__b--no">'+tx.r+'</button>'+
+        '<button type="button" class="tmx-cc__b tmx-cc__b--yes">'+tx.a+'</button></div>';
+      document.body.appendChild(b);
+      b.querySelector('.tmx-cc__b--yes').addEventListener('click',function(){grant();b.remove();});
+      b.querySelector('.tmx-cc__b--no').addEventListener('click',function(){deny();b.remove();});}
+    if(document.body)show();else document.addEventListener('DOMContentLoaded',show);
+  })();
+  </script>
+<!-- TMX-ANALYTICS END -->
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Vállalkozáskártya tachográfhoz: igénylés és díjak</title>
+<meta content="Hogyan igényelhető a vállalkozáskártya: kibocsátó, költségek, vállalkozói zárolás, 90/28 napos adatletöltés, és miért kötelező az adatok kiértékelése." name="description"/>
+<link href="https://tagra.app/hu/cikkek/vallalkozaskartya-tachograf/" rel="canonical"/>
+<link href="https://tagra.app/de/ratgeber/unternehmenskarte-tachograph/" hreflang="de" rel="alternate"/><link href="https://tagra.app/el/arthra/karta-epicheirisis-tachografou/" hreflang="el" rel="alternate"/><link href="https://tagra.app/articles/tachograph-company-card/" hreflang="en" rel="alternate"/><link href="https://tagra.app/fr/articles/carte-entreprise-chronotachygraphe/" hreflang="fr" rel="alternate"/><link href="https://tagra.app/hu/cikkek/vallalkozaskartya-tachograf/" hreflang="hu" rel="alternate"/><link href="https://tagra.app/it/articoli/carta-azienda-tachigrafo/" hreflang="it" rel="alternate"/><link href="https://tagra.app/nl/artikelen/bedrijfskaart-tachograaf/" hreflang="nl" rel="alternate"/><link href="https://tagra.app/pl/poradnik/karta-przedsiebiorstwa/" hreflang="pl" rel="alternate"/><link href="https://tagra.app/ro/articole/card-intreprindere-tahograf/" hreflang="ro" rel="alternate"/><link href="https://tagra.app/articles/tachograph-company-card/" hreflang="x-default" rel="alternate"/>
+<meta content="Vállalkozáskártya tachográfhoz: igénylés és díjak" property="og:title"/><meta content="Hogyan igényelhető a vállalkozáskártya: kibocsátó, költségek, vállalkozói zárolás, 90/28 napos adatletöltés, és miért kötelező az adatok kiértékelése." property="og:description"/>
+<meta content="https://cdn.truckmall.cz/data/user-content/karta-podniku-tachograf-og.jpg" property="og:image"/><meta content="1200" property="og:image:width"/><meta content="630" property="og:image:height"/><meta content="Vállalkozáskártya behelyezése egy digitális menetíróba a teherautó fülkéjében" property="og:image:alt"/>
+<meta content="https://tagra.app/hu/cikkek/vallalkozaskartya-tachograf/" property="og:url"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    a{color:var(--blue-mid);text-decoration:none;}
+    a:hover{color:var(--blue-dark);text-decoration:underline;text-underline-offset:.18em;}
+    p+p{margin-top:14px;}
+    ul,ol{padding-left:22px;}
+    li{margin:6px 0;line-height:1.65;}
+    li::marker{color:var(--blue-mid);}
+    strong{font-weight:700;color:var(--text-strong);}
+    #scroll-progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--green-brand),var(--blue-light));width:0%;z-index:9999;pointer-events:none;}
+.nav-inner{margin:0 auto;padding:0 24px;height:100%;display:flex;align-items:center;justify-content:space-between;gap:24px;}
+    .nav-links{display:flex;align-items:center;gap:4px;list-style:none;}
+    .nav-links a{font-size:15px;font-weight:500;color:var(--text);padding:8px 12px;border-radius:8px;text-decoration:none;transition:background .15s;}
+    .nav-links a:hover{background:var(--bg-apple);color:var(--blue-mid);}
+    .nav-links .nav-cta a{background:var(--green-cta);color:#fff!important;border-radius:99px;padding:8px 18px;font-weight:600;}
+    .nav-links .nav-cta a:hover{background:var(--green-brand);text-decoration:none;}
+    .nav-lang{display:flex;align-items:center;gap:4px;font-size:14px;font-weight:600;}
+    .nav-lang a{padding:5px 8px;border-radius:6px;color:var(--text2);text-decoration:none;transition:background .15s;}
+    .nav-lang a:hover,.nav-lang a.active{background:var(--bg-apple);color:var(--blue-mid);}
+    .nav-lang span{color:var(--border);}
+    .nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:8px;}
+    .nav-toggle span{display:block;width:22px;height:2px;background:var(--text);margin:5px 0;border-radius:2px;}
+    @media(max-width:900px){.nav-links{display:none;}.nav-toggle{display:block;}.nav-links.open{display:flex;flex-direction:column;align-items:flex-start;gap:2px;position:absolute;top:var(--nav-h);left:0;right:0;background:rgba(255,255,255,.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:12px 24px 20px;}}
+    .art-hero{background:linear-gradient(180deg,var(--bg-apple) 0%,#fff 100%);padding:calc(var(--nav-h,64px) + 28px) 0 44px;}
+    .art-wrap{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 24px;}
+    .breadcrumb{font-size:14px;color:var(--text2);margin-bottom:18px;}
+    .breadcrumb a{color:var(--text2);text-decoration:none;}
+    .breadcrumb a:hover{color:var(--blue-mid);}
+    .breadcrumb span{margin:0 5px;color:var(--border);}
+    .eyebrow{font-size:14px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--green-brand);margin-bottom:10px;}
+    .art-title{font-size:38px;line-height:1.15;font-weight:800;margin-bottom:16px;letter-spacing:-.02em;padding-bottom:0.08em;color:var(--blue-dark);}
+    .art-title .grad{background:var(--heading-gradient);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;}
+    @media(max-width:700px){.art-title{font-size:26px;}}
+    .art-meta{font-size:15px;color:var(--text2);padding-bottom:24px;border-bottom:1px solid var(--border);display:flex;gap:20px;flex-wrap:wrap;}
+    .art-body{padding:44px 0 60px;}
+    .art-body h2 {
+      font-size: 36px; font-weight: 800;
+      line-height: 1.1; letter-spacing: 0;
+      text-transform: uppercase;
+      color: var(--blue-mid, #134a8e);
+      background: var(--heading-gradient);
+      -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block; max-width: 100%; margin-bottom: 14px;
+      padding: 0.12em 0.15em 0.08em 0;
+    }
+    .art-body h3{font-size:20px;font-weight:700;color:var(--text-strong);margin:28px 0 10px;}
+    .art-body p{margin-bottom:18px;}
+    .art-body ul,.art-body ol{margin-bottom:20px;}
+    /* QUICK TEST CARDS */
+    .test-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:20px 0;}
+    @media(max-width:640px){.test-grid{grid-template-columns:1fr;}}
+    .test-card{background:#fff;border-radius:var(--radius);padding:22px;box-shadow:0 8px 28px rgba(0,0,0,.06);}
+    .test-tag{font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--green-cta);margin-bottom:8px;}
+    .test-title{font-size:17px;font-weight:800;color:var(--text-strong);margin-bottom:6px;line-height:1.35;}
+    .test-desc{font-size:15px;color:var(--text2);line-height:1.5;}
+    /* CALLOUT */
+    
+    .callout--blue{background:var(--bg-apple);border-left:4px solid var(--blue-mid);}
+    
+    .callout-title{font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.07em;color:var(--blue-mid);margin-bottom:8px;}
+    .callout--green .callout-title{color:var(--green-brand);}
+    /* FAQ */
+    .faq-item{border-top:1px solid var(--border);padding:14px 0;}
+    .faq-item:last-child{border-bottom:1px solid var(--border);}
+    .faq-item summary{list-style:none;cursor:pointer;font-weight:700;font-size:18px;line-height:1.4;padding-right:32px;position:relative;color:var(--text-strong);}
+    .faq-item summary::-webkit-details-marker{display:none;}
+    .faq-item summary::after{content:"+";position:absolute;right:0;top:50%;transform:translateY(-50%);font-size:26px;font-weight:300;color:var(--green-cta);}
+    .faq-item[open] summary::after{content:"−";}
+    
+    .faq-answer p+p{margin-top:10px;}
+    /* CTA */
+    .cta-box{background:linear-gradient(135deg,var(--blue-dark),var(--blue-mid));border-radius:var(--radius);padding:40px 36px;margin:44px 0;text-align:center;}
+    .cta-box h3{font-size:24px;font-weight:800;color:#fff;margin-bottom:12px;}
+    .cta-box p{color:rgba(255,255,255,.8);font-size:17px;margin-bottom:24px;}
+    
+    .btn:hover{background:var(--green-brand);transform:scale(1.02);}
+    /* RELATED */
+    .related{border-top:1px solid var(--border);padding-top:36px;margin-top:36px;}
+    .related-title{font-size:20px;font-weight:800;color:var(--text-strong);margin-bottom:18px;}
+    .related-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+    @media(max-width:580px){.related-grid{grid-template-columns:1fr;}}
+    .related-card{display:block;padding:20px;border:1px solid var(--border);border-radius:var(--radius);text-decoration:none!important;transition:border-color .15s,transform .15s;}
+    .related-card:hover{border-color:var(--blue-mid);transform:translateY(-2px);}
+    .related-card-eye{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--blue-mid);margin-bottom:6px;}
+    .related-card-title{font-size:16px;font-weight:700;color:var(--text-strong);line-height:1.4;}
+    /* FOOTER */
+  
+    /* company card article */
+    .art-figure{margin:28px 0 0;border-radius:var(--radius,16px);overflow:hidden;box-shadow:0 10px 30px rgba(11,44,74,.12);}
+    .art-figure img{display:block;width:100%;height:auto;}
+    .kc-table-wrap{overflow-x:auto;margin:18px 0 12px;border:1px solid var(--border);border-radius:var(--radius,16px);}
+    .kc-table{width:100%;border-collapse:collapse;font-size:15px;min-width:620px;}
+    .kc-table th,.kc-table td{padding:11px 14px;text-align:left;vertical-align:top;border-bottom:1px solid var(--border);}
+    .kc-table th{background:var(--bg-apple);font-weight:700;color:var(--text-strong);}
+    .kc-table tr:last-child td{border-bottom:0;}
+    .art-body h3{font-size:20px;font-weight:700;color:var(--text-strong);margin:28px 0 10px;}
+</style>
+<link href="/assets/css/tokens.css" rel="stylesheet"/>
+<link href="/assets/css/base.css" rel="stylesheet"/>
+<link href="/assets/css/components.css" rel="stylesheet"/>
+<link href="/assets/css/nav.css" rel="stylesheet"/>
+<script defer="" src="/assets/js/nav.js?v=20261002b"></script><script defer="" src="/assets/js/analytics.js?v=20261002b"></script>
+<link href="/assets/css/footer.css" rel="stylesheet"/><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Vállalkozáskártya tachográfhoz: igénylés és díjak", "description": "Hogyan igényelhető a vállalkozáskártya: kibocsátó, költségek, vállalkozói zárolás, 90/28 napos adatletöltés, és miért kötelező az adatok kiértékelése.", "image": "https://cdn.truckmall.cz/data/user-content/karta-podniku-tachograf-og.jpg", "inLanguage": "hu", "datePublished": "2026-10-03", "dateModified": "2026-10-03", "mainEntityOfPage": "https://tagra.app/hu/cikkek/vallalkozaskartya-tachograf/", "author": {"@type": "Organization", "name": "Truck Data Technology, s.r.o.", "url": "https://www.tdt.cz"}, "publisher": {"@type": "Organization", "name": "Truck Data Technology, s.r.o.", "logo": {"@type": "ImageObject", "url": "https://tagra.app/assets/img/logo-dark.svg"}}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "TAGRA", "item": "https://tagra.app/hu/"}, {"@type": "ListItem", "position": 2, "name": "Cikkek", "item": "https://tagra.app/hu/cikkek/"}, {"@type": "ListItem", "position": 3, "name": "Vállalkozáskártya", "item": "https://tagra.app/hu/cikkek/vallalkozaskartya-tachograf/"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Mi az a tachográf vállalkozáskártya?", "acceptedAnswer": {"@type": "Answer", "text": "A digitális tachográfhoz való csipkártya, amely azonosítja a közúti közlekedési vállalkozást. Lehetővé teszi a vállalkozás számára a tachográf vállalkozói zárolását, valamint adatainak megjelenítését, nyomtatását és adatletöltését. Nem kötődik egyetlen járműhöz, és nem tárolja a járművezetők tevékenységére vonatkozó adatokat – csupán a saját használatát rögzíti, például a vállalkozói zárolásokat és az adatletöltéseket."}}, {"@type": "Question", "name": "Kinek kötelező a vállalkozáskártya?", "acceptedAnswer": {"@type": "Answer", "text": "Minden olyan üzemeltetőnek, amelynek járműveire a tachográfszabályok vonatkoznak. 2026. július 1-jétől ide tartoznak a nemzetközi árufuvarozásra vagy kabotázsra használt, 2,5 tonna megengedett legnagyobb össztömeget meghaladó járművek és járműszerelvények üzemeltetői is, kivéve, ha mentesség érvényes rájuk."}}, {"@type": "Question", "name": "Szükségem van vállalkozáskártyára 2,5 tonna feletti kisteherautó (furgon) esetén?", "acceptedAnswer": {"@type": "Answer", "text": "2,5 t feletti és legfeljebb 3,5 t megengedett legnagyobb össztömegű kisteherautó (furgon) vagy járműszerelvény esetén: igen, 2026. július 1-jétől, ha azt nemzetközi árufuvarozásra vagy kabotázsra használják, és nem vonatkozik rá mentesség (például bizonyos saját számlás fuvarozás esetén). A járműnek ekkor G2V2 intelligens menetíróval (tachográffal) kell rendelkeznie, és Önnek vállalkozáskártyára van szüksége. A 3,5 tonna feletti járművekre főszabályként a belföldi fuvarozásban is vonatkoznak a tachográfszabályok, kivéve, ha mentesség érvényes rájuk."}}, {"@type": "Question", "name": "Hol igényelhetek vállalkozáskártyát Magyarországon?", "acceptedAnswer": {"@type": "Answer", "text": "A kormányhivatal közlekedési hatóságánál. Közúti közlekedési vállalkozás esetén az igénylést a szakmai vezető nyújtja be."}}, {"@type": "Question", "name": "Mennyibe kerül a vállalkozáskártya Magyarországon?", "acceptedAnswer": {"@type": "Answer", "text": "7 700 Ft kártyánként – ugyanez a díj vonatkozik a kiadásra, cserére és pótlásra is."}}, {"@type": "Question", "name": "Meddig érvényes a vállalkozáskártya?", "acceptedAnswer": {"@type": "Answer", "text": "Legfeljebb 5 évig. A hivatalos ügyintézési határidő akár 60 nap is lehet, ezért az első kártyát vagy a megújítást időben igényelje."}}, {"@type": "Question", "name": "Lehet egy vállalkozásnak több vállalkozáskártyája?", "acceptedAnswer": {"@type": "Answer", "text": "Igen. Egyetlen kártya is elegendő a teljes flottához, de egy cég többet is tarthat – több telephelyhez, távoli letöltéshez, ahol a kártya az irodai olvasóban marad, vagy tartalékként. Az összes kártyát ugyanannak a vállalkozásnak állítják ki."}}, {"@type": "Question", "name": "Hogyan történik a tachográf vállalkozói zárolása a vállalkozáskártyával?", "acceptedAnswer": {"@type": "Answer", "text": "Helyezze be a vállalkozáskártyát a tachográfba, és válassza ki a menüben a vállalkozói zárolást. A lépések gyártónként kissé eltérnek, ezért ellenőrizze a használati útmutatót. A jármű eladása vagy visszaadása előtt végezzen adatletöltést, és oldja fel a tachográf zárolását."}}, {"@type": "Question", "name": "Milyen gyakran kötelező a tachográf és a járművezetői kártya adatletöltése?", "acceptedAnswer": {"@type": "Answer", "text": "A járműegység adatait legalább 90 naponta, a járművezetői kártya adatait pedig legalább 28 naponta le kell tölteni. Őrizze meg a letöltött adatokat legalább 12 hónapig."}}, {"@type": "Question", "name": "Elegendő csak a tachográf adatletöltés és archiválás?", "acceptedAnswer": {"@type": "Answer", "text": "Nem. Az archiválás az adatok megőrzési kötelezettségét teljesíti, nem pedig a járművezetők ellenőrzésének kötelezettségét. Az 561/2006/EK rendelet 10. cikke értelmében a vállalkozásnak meg kell szerveznie a járművezetők munkáját, utasításokkal kell ellátnia őket, és rendszeresen ellenőriznie kell a vezetési idő, szünetek és pihenőidők betartását – a gyakorlatban a letöltött adatok kiértékelésével. A TAGRA ezt megkönnyíti a jogsértések automatikus jelzésével."}}]}</script>
+<noscript><style>.anim-up,.fly-left,.fly-right{opacity:1!important;transform:none!important}</style></noscript></head>
+<body class="art-page">
+<a class="skip-link" href="#main-content">Ugrás a tartalomhoz</a>
+<div aria-hidden="true" id="scroll-progress"></div>
+<nav aria-label="Fő navigáció" class="site-nav" role="navigation">
+<div class="nav-inner">
+<a aria-label="TAGRA – Kezdőlap" class="nav-logo" href="/hu/"><img alt="TAGRA" height="32" src="/assets/img/logo-light.svg?v=20260513zh" style="display:block;height:32px;width:auto;" width="140"/></a>
+<ul class="nav-links" id="nav-links">
+<li><a href="/hu/fuvarozoknak/">Cégeknek</a></li>
+<li><a href="/hu/soforoknek/">Sofőröknek</a></li>
+<li><a href="/hu/hatosagoknak/">Ellenőrzés</a></li>
+<li><a aria-current="page" href="/hu/cikkek/">Cikkek</a></li><li><a href="/hu/kezikonyvek/">Kézikönyvek</a></li>
+<li><a href="/hu/letolto-eszkozok/">Eszközök</a></li><li><a href="/hu/gyakori-kerdesek/">GYIK</a></li>
+<li><a href="/hu/kapcsolat/">Kapcsolat</a></li>
+<li class="nav-cta-li"><a class="nav-cta" href="/hu/ingyenes-probaverzio/?audience=fleet">Próbálja ki 30 napig ingyen</a></li>
+</ul>
+<details class="nav-lang">
+<summary aria-label="Language: HU">HU</summary>
+<div class="nav-lang-menu" role="menu"><a href="/articles/tachograph-company-card/" hreflang="en">English</a><a href="/de/ratgeber/unternehmenskarte-tachograph/" hreflang="de">Deutsch</a><a href="/pl/poradnik/karta-przedsiebiorstwa/" hreflang="pl">Polski</a><a href="/nl/artikelen/bedrijfskaart-tachograaf/" hreflang="nl">Nederlands</a><a href="/fr/articles/carte-entreprise-chronotachygraphe/" hreflang="fr">Français</a><a href="/it/articoli/carta-azienda-tachigrafo/" hreflang="it">Italiano</a><a href="/el/arthra/karta-epicheirisis-tachografou/" hreflang="el">Ελληνικά</a><a aria-current="page" class="active" href="/hu/cikkek/vallalkozaskartya-tachograf/" hreflang="hu">Magyar</a><a href="/ro/articole/card-intreprindere-tahograf/" hreflang="ro">Română</a><a href="https://www.tdt.cz/" hreflang="cs" rel="noopener" target="_blank">Čeština</a><a href="https://www.tdt.sk/" hreflang="sk" rel="noopener" target="_blank">Slovenčina</a></div>
+</details>
+<a class="nav-cta-mobile" href="/hu/ingyenes-probaverzio/?audience=fleet">Próbálja ki ingyen</a>
+<button aria-expanded="false" aria-label="Menü váltása" class="nav-mobile-toggle" id="nav-toggle">
+<span></span><span></span><span></span>
+</button>
+</div>
+</nav>
+<header class="art-hero">
+<div class="art-wrap">
+<nav aria-label="Breadcrumb" class="breadcrumb"><a href="/hu/">TAGRA</a><span>›</span><a href="/hu/cikkek/">Cikkek</a><span>›</span><span>Vállalkozáskártya</span></nav>
+<div class="eyebrow anim-up">Útmutató fuvarozóknak · 2026</div>
+<h1 class="art-title"><span class="grad">Tachográf vállalkozáskártya: igénylés, költségek és a további teendők</span></h1>
+<div class="art-meta"><span>Truck Data Technology</span><span>Frissítve: 2026. október</span><span>8 perc olvasás</span></div>
+<p class="hero-lede anim-up">Minden olyan üzemeltetőnek, amelynek járművei a menetírókra vonatkozó szabályok hatálya alá tartoznak, vállalkozáskártyával kell rendelkeznie. Ez az útmutató bemutatja, ki állítja ki a kártyát, mennyibe kerül, és mik az első naptól esedékes teendők: a tachográf vállalkozói zárolása, a határidőben történő adatletöltés és mindenekelőtt az adatok kiértékelése. Kitérünk továbbá a 2,5 tonna feletti kisteherautókra (furgonokra) is, amelyek 2026. július 1-jétől kerülnek a szabályozás hatálya alá.</p>
+<div class="bento--hero"><div class="hero-card"><div class="eyebrow">Kiállító</div><div class="big">Illetékes hatóság</div><p>A kártyát annak az országnak a kibocsátó hatósága állítja ki, ahol a vállalkozása székhelye található.</p></div><div class="hero-card hero-card--blue"><div class="eyebrow">Érvényesség</div><div class="big">5 év</div><p>Ezt követően időben új kártyát kell igényelnie.</p></div><div class="hero-card"><div class="eyebrow">Első lépés</div><div class="big">Vállalkozói zárolás</div><p>Helyezze be a kártyát, és végezze el a tachográfon a vállalkozói zárolást.</p></div><div class="hero-card hero-card--blue"><div class="eyebrow">Letöltési időköz</div><div class="big">90 / 28 nap</div><p>Járműegység esetén 90 naponta, járművezetői kártya esetén 28 naponta.</p></div></div>
+<figure class="art-figure anim-up"><img src="https://cdn.truckmall.cz/data/user-content/karta-podniku-tachograf-hero.webp" onerror="this.parentNode.style.display='none'" alt="Vállalkozáskártya behelyezése egy teherautó fülkéjében lévő digitális menetíróba" width="1536" height="806" fetchpriority="high" decoding="async"/></figure>
+</div>
+</header>
+<main id="main-content"><section class="band"><div class="container art-body"><div class="eyebrow anim-up">Az alapok</div><h2 class="h2-grad anim-up">Mi az a vállalkozáskártya (és mi nem)?</h2>
+<p>A <strong>vállalkozáskártya</strong> egy, a digitális tachográfhoz való csipkártya, amely azonosítja a közúti közlekedési vállalkozást. Kulcsként működik: lehetővé teszi a tachográf vállalkozói zárolását, valamint a járművek <strong>tachográfjából történő adatletöltést</strong>, illetve az adatok megjelenítését és nyomtatását. Nem tárol adatokat a járművezetők útjairól vagy tevékenységeiről – csupán a saját használatát, például a vállalkozói zárolásokat és az adatletöltéseket rögzíti.</p>
+<p>A kártya <strong>nincs egy adott járműhöz kötve</strong>. Egyetlen kártya kiszolgálja az összes digitális tachográffal felszerelt járművet, amelyet Ön üzemeltet. Ne keverje össze a járművezetői kártyával (amely személyre szóló, a járművezető nevére van kiállítva), a műhelykártyával (engedéllyel rendelkező műhelyek számára) vagy az ellenőrző kártyával (az ellenőrző hatóságok számára).</p>
+<div class="callout callout--blue anim-up">
+<div class="callout-title">Nem azonos a cégprofillal</div>
+<p style="margin:0">A keresőmotorokban vagy a térképeken megjelenő cégprofilnak semmi köze a tachográfokhoz. Ez az útmutató kizárólag a 165/2014/EU rendelet szerinti, digitális tachográfhoz használt csipkártyáról szól.</p>
+</div></div></section>
+<section class="band band--blue"><div class="container art-body"><div class="eyebrow anim-up">Kinek van rá szüksége?</div><h2 class="h2-grad anim-up">Kinek van szüksége vállalkozáskártyára?</h2>
+<p>Minden olyan vállalkozásnak szüksége van vállalkozáskártyára, amelynek járművei a menetírókra vonatkozó szabályok hatálya alá tartoznak – enélkül ugyanis nem végezhető el a tachográf vállalkozói zárolása, és az adatok letöltése sem lehetséges.</p>
+<p><strong>2026. július 1-jétől</strong> bővül az érintett vállalkozások köre. A tachográfok, és ezáltal a vállalkozáskártyák használata kötelezővé válik a <strong>nemzetközi árufuvarozást vagy kabotázst végző, 2,5 tonna megengedett legnagyobb össztömeget meghaladó járművek és járműszerelvények</strong> esetében is. A jármű felhasználási módja a döntő – bizonyos esetekben mentességek érvényesek, például a saját számlás fuvarozás egy részénél. Az új szabály nem terjeszti ki a tachográf használatára vonatkozó kötelezettséget a 2,5 és 3,5 tonna közötti járművekkel végzett, kizárólag belföldi árufuvarozásra. A 3,5 tonna feletti járművek belföldi fuvarozás esetén főszabály szerint már most is a tachográf-szabályok hatálya alá tartoznak, kivéve, ha valamilyen mentesség érvényesül. A részletekről és a kivételekről a <a href="/hu/cikkek/tachograf-furgon-kotelezettseg-2026/">kisteherautók (furgonok) tachográfjairól</a> szóló cikkünkben olvashat bővebben.</p>
+<div class="callout callout--blue anim-up">
+<div class="callout-title">Új vállalkozás? A kártya csak a kezdet</div>
+<p style="margin:0">Sok új vállalkozás a közúti ellenőrzések miatt igényli a kártyát, és úgy gondolja, hogy ezzel le is tudta a feladatot. A kártya azonban további kötelezettségekkel jár: el kell végezni a tachográf vállalkozói zárolását, gondoskodni kell a rendszeres adatletöltésről és archiválásról, valamint <strong>ki kell értékelni, hogy a járművezetők betartják-e a vezetési idő, a szünetek és pihenőidők szabályait</strong>. Az alábbiakban mindezt lépésről lépésre elmagyarázzuk.</p>
+</div></div></section>
+<section class="band band--gray"><div class="container art-body"><div class="eyebrow anim-up">Igénylés</div><h2 class="h2-grad anim-up">Hogyan kell vállalkozáskártyát igényelni</h2>
+<p>Az eljárást minden EU-ország maga határozza meg, de a legfontosabb lépések mindenhol megegyeznek:</p>
+<ul>
+<li><strong>Abban az országban igényelje, ahol a vállalkozás székhelye található</strong> – az ottani kártyakibocsátó hatóságnál.</li>
+<li><strong>Az igénylést a vállalkozás nyújtja be</strong> – annak tulajdonosa, törvényes képviselője vagy egy meghatalmazással rendelkező személy.</li>
+<li><strong>Készítse elő a cégadatokat és a személyazonosító okmányokat</strong> – a cégkivonatot és az igénylő személyazonosító igazolványát.</li>
+<li><strong>Fizesse be a díjat és várja meg a kiszállítást</strong> – ami országtól függően körülbelül egy héttől akár több hétig terjedhet (Magyarországon a hivatalos ügyintézési határidő 60 nap).</li>
+</ul>
+<h3>Magyarország: a kormányhivatal közlekedési hatósága</h3>
+<p>Magyarországon a menetíró kártyákat a kormányhivatalok közlekedési hatósága bocsátja ki. Közúti közlekedési vállalkozás esetén a vállalkozáskártyát a szakmai vezető igényli, akinek igazolnia kell jogosultságát. Tekintse meg az <a href="https://kormanyhivatalok.hu/sites/default/files/2024-06/12.-tajekoztato-a-digitalis-tachograf-kartya-kiadasanak-eljarasarol.pdf" rel="noopener" target="_blank">eljárásról szóló hivatalos tájékoztatót</a>.</p>
+<ul>
+<li><strong>Díj:</strong> 7 700 Ft kártyánként (kiadás, csere vagy pótlás).</li>
+<li><strong>Ügyintézési idő:</strong> a hivatalos határidő akár 60 nap is lehet – érdemes időben igényelni.</li>
+<li><strong>Érvényesség:</strong> öt év.</li>
+<li><strong>Kártyák száma:</strong> egy vállalkozás egyszerre több érvényes vállalkozáskártyával is rendelkezhet.</li>
+</ul>
+<p>Az Ön vállalkozásának székhelye egy másik EU-országban van? Az Európai Bizottság közzéteszi az <a href="https://dtc.jrc.ec.europa.eu/dtc_contacts.php.html" rel="noopener" target="_blank">összes nemzeti kártyakibocsátó hatóság elérhetőségét</a>.</p>
+</div></section>
+<section class="band"><div class="container art-body"><div class="eyebrow anim-up">Érvényesség</div><h2 class="h2-grad anim-up">Érvényesség, megújítás és elveszett kártyák</h2>
+<ul>
+<li><strong>Érvényesség:</strong> a vállalkozáskártya legfeljebb 5 évig érvényes.</li>
+<li><strong>Megújítás:</strong> igényelje meg időben – általában legkésőbb 15 munkanappal a kártya lejárata előtt.</li>
+<li><strong>Elveszett, ellopott vagy hibás kártya:</strong> haladéktalanul jelentse be a kibocsátó hatóságnak, és igényeljen cserekártyát.</li>
+<li><strong>Megváltozott cégadatok:</strong> a név- vagy címváltozás új kártya igénylését teszi szükségessé.</li>
+</ul>
+<p>Tartsa a kártyát olyan helyen, ahol nem hajolhat meg és nem érheti túlzott hőhatás – ideális esetben védőtokban –, valamint akadályozza meg az illetéktelen használatot.</p></div></section>
+<section class="band band--blue"><div class="container art-body"><div class="eyebrow anim-up">Egy vagy több?</div><h2 class="h2-grad anim-up">Hány vállalkozáskártyára van szüksége</h2>
+<p>Egy vállalkozáskártya elegendő a teljes járműparkhoz. Egy vállalkozó tarthat többet is, és a gyakorlatban ez kifizetődő:</p>
+<ul>
+<li><strong>Több telephely</strong> – minden telephelynek lehet saját kártyája, így nem kell egy kártyát körbehordoznia.</li>
+<li><strong>Távoli letöltés</strong> – a vállalkozáskártya az irodai kártyaolvasóban marad. Egy második kártya jól jön a járműveknél végzett munkához.</li>
+<li><strong>Tartalék</strong> – ha egy kártya meghibásodik vagy elveszik, nem veszíti el adataihoz való hozzáférését, amíg a pótlásra vár.</li>
+</ul></div></section>
+<section class="band band--gray"><div class="container art-body"><div class="eyebrow anim-up">Az első nap a járművel</div><h2 class="h2-grad anim-up">A menetíró zárolása a vállalkozáskártyával</h2>
+<p>A jármű átvétele után az első lépés a <strong>vállalkozói zárolás</strong>. Helyezze be a vállalkozáskártyát a menetíróba, és válassza ki a menüben a vállalkozói zárolást. A pontos lépések gyártónként kissé eltérnek – olvassa el a menetíró kézikönyvét. A zárolást a műhelyben történő beszerelés vagy kalibrálás során is beállíttathatja, ha magával viszi a vállalkozáskártyát.</p>
+<ul>
+<li><strong>A zárolás szerepe:</strong> más vállalkozások nem tudnak adatokat letölteni a zárolt időszakból. Az ellenőrző hatóságok és – jogosultságuk keretein belül – a műhelyek továbbra is hozzáférhetnek.</li>
+<li><strong>Zárolás nélkül:</strong> a nem zárolt időszak adatai bármely vállalkozáskártyával letölthetők.</li>
+<li><strong>Jármű eladásakor vagy leadásakor:</strong> először végezze el az adatletöltést, majd oldja fel a menetírót (vállalkozói zárolás feloldása).</li>
+</ul></div></section>
+<section class="band"><div class="container art-body"><div class="eyebrow anim-up">Vállalkozás kötelezettségei</div><h2 class="h2-grad anim-up">Adatletöltés: 90 és 28 nap</h2>
+<p>A vállalkozáskártyával Ön birtokolja az adatokhoz való kulcsot – és a kötelezettséget, hogy rendszeresen letöltse azokat. Az 581/2010/EU rendelet értelmében:</p>
+<ul>
+<li><strong>Járműegység (menetíró):</strong> legalább 90 naponta.</li>
+<li><strong>Járművezetői kártya:</strong> legalább 28 naponta.</li>
+<li><strong>Archiválás:</strong> őrizze meg az adatokat legalább 12 hónapig (az 165/2014/EU rendelet 33. cikke), és kérésre tegye elérhetővé az ellenőrök számára – közvetlenül vagy távolról az Ön telephelyéről.</li>
+</ul>
+<p>A letöltéshez letöltő eszközre van szüksége: egy hordozható letöltőkulcsra, egy irodai letöltőállomásra, vagy távoli letöltésre anélkül, hogy felkeresné a járművet. Bővebben a <a href="/hu/cikkek/tachograf-adatok-letoltese-kiertekelese/">menetíró adatok letöltéséről, értékeléséről és archiválásáról</a> szóló útmutatónkban.</p></div></section>
+<section class="band band--blue"><div class="container art-body"><div class="eyebrow anim-up">Amiről az új vállalkozók megfeledkeznek</div><h2 class="h2-grad anim-up">Az adatletöltés nem elég – értékelnie is kell</h2>
+<p>Itt hibázik a legtöbb új vállalkozó. Az adatok letöltése és tárolása megfelel az archiválási kötelezettségnek, de nem a járművezetők ellenőrzésére vonatkozó kötelezettségnek. Az 561/2006/EK rendelet 10. cikkének értelmében a vállalkozónak úgy kell szerveznie a járművezetők munkáját, hogy azok be tudják tartani a szabályokat, megfelelő utasításokat kell adnia nekik, és <strong>rendszeresen ellenőriznie kell</strong>, hogy a vezetési idők, szünetek és pihenőidők be vannak-e tartva. A gyakorlatban ezeket az ellenőrzéseket a letöltött adatok értékelésével végzik.</p>
+<p>Több száz rekord esetén a kézi ellenőrzések lassúak és könnyen hibázhatók. A <strong>TAGRA</strong> kiolvassa az adatokat a menetírókból és a járművezetői kártyákról, archiválja azokat, és automatikusan jelzi a szabálysértéseket. Jelentéseket készít az ellenőrzésekhez és a bérszámfejtéshez – és teljesen felkészült a kisteherautókra is. Azt, hogy pontosan kinek kell adatokat értékelnie, a <a href="/hu/cikkek/tachograf-kiertekeles-kotelezettseg-2026/">kinek kell menetíró adatokat értékelnie 2026-tól</a> című cikk foglalja össze.</p>
+<div class="cta-box">
+<h3>Próbálja ki ingyen a TAGRA-t</h3>
+<p>Importálja első menetíró és járművezetői kártya fájljait, és tekintse meg a szabálysértéseket egy pillantásra.</p>
+<a class="btn" href="/hu/ingyenes-probaverzio/">Indítsa el az ingyenes próbaverziót →</a>
+</div></div></section>
+<section class="band band--gray"><div class="container art-body"><div class="eyebrow anim-up">Kérdések &amp; válaszok</div><h2 class="h2-grad anim-up">Gyakran ismételt kérdések</h2>
+<details class="faq-item"><summary>Mi az a tachográf vállalkozáskártya?</summary>
+<div class="faq-answer"><p>A digitális tachográfhoz való csipkártya, amely azonosítja a közúti közlekedési vállalkozást. Lehetővé teszi a vállalkozás számára a tachográf vállalkozói zárolását, valamint adatainak megjelenítését, nyomtatását és adatletöltését. Nem kötődik egyetlen járműhöz, és nem tárolja a járművezetők tevékenységére vonatkozó adatokat – csupán a saját használatát rögzíti, például a vállalkozói zárolásokat és az adatletöltéseket.</p></div>
+</details>
+<details class="faq-item"><summary>Kinek kötelező a vállalkozáskártya?</summary>
+<div class="faq-answer"><p>Minden olyan üzemeltetőnek, amelynek járműveire a tachográfszabályok vonatkoznak. 2026. július 1-jétől ide tartoznak a nemzetközi árufuvarozásra vagy kabotázsra használt, 2,5 tonna megengedett legnagyobb össztömeget meghaladó járművek és járműszerelvények üzemeltetői is, kivéve, ha mentesség érvényes rájuk.</p></div>
+</details>
+<details class="faq-item"><summary>Szükségem van vállalkozáskártyára 2,5 tonna feletti kisteherautó (furgon) esetén?</summary>
+<div class="faq-answer"><p>2,5 t feletti és legfeljebb 3,5 t megengedett legnagyobb össztömegű kisteherautó (furgon) vagy járműszerelvény esetén: igen, 2026. július 1-jétől, ha azt nemzetközi árufuvarozásra vagy kabotázsra használják, és nem vonatkozik rá mentesség (például bizonyos saját számlás fuvarozás esetén). A járműnek ekkor G2V2 intelligens menetíróval (tachográffal) kell rendelkeznie, és Önnek vállalkozáskártyára van szüksége. A 3,5 tonna feletti járművekre főszabályként a belföldi fuvarozásban is vonatkoznak a tachográfszabályok, kivéve, ha mentesség érvényes rájuk.</p></div>
+</details>
+<details class="faq-item"><summary>Hol igényelhetek vállalkozáskártyát Magyarországon?</summary>
+<div class="faq-answer"><p>A kormányhivatal közlekedési hatóságánál. Közúti közlekedési vállalkozás esetén az igénylést a szakmai vezető nyújtja be.</p></div>
+</details>
+<details class="faq-item"><summary>Mennyibe kerül a vállalkozáskártya Magyarországon?</summary>
+<div class="faq-answer"><p>7 700 Ft kártyánként – ugyanez a díj vonatkozik a kiadásra, cserére és pótlásra is.</p></div>
+</details>
+<details class="faq-item"><summary>Meddig érvényes a vállalkozáskártya?</summary>
+<div class="faq-answer"><p>Legfeljebb 5 évig. A hivatalos ügyintézési határidő akár 60 nap is lehet, ezért az első kártyát vagy a megújítást időben igényelje.</p></div>
+</details>
+<details class="faq-item"><summary>Lehet egy vállalkozásnak több vállalkozáskártyája?</summary>
+<div class="faq-answer"><p>Igen. Egyetlen kártya is elegendő a teljes flottához, de egy cég többet is tarthat – több telephelyhez, távoli letöltéshez, ahol a kártya az irodai olvasóban marad, vagy tartalékként. Az összes kártyát ugyanannak a vállalkozásnak állítják ki.</p></div>
+</details>
+<details class="faq-item"><summary>Hogyan történik a tachográf vállalkozói zárolása a vállalkozáskártyával?</summary>
+<div class="faq-answer"><p>Helyezze be a vállalkozáskártyát a tachográfba, és válassza ki a menüben a vállalkozói zárolást. A lépések gyártónként kissé eltérnek, ezért ellenőrizze a használati útmutatót. A jármű eladása vagy visszaadása előtt végezzen adatletöltést, és oldja fel a tachográf zárolását.</p></div>
+</details>
+<details class="faq-item"><summary>Milyen gyakran kötelező a tachográf és a járművezetői kártya adatletöltése?</summary>
+<div class="faq-answer"><p>A járműegység adatait legalább 90 naponta, a járművezetői kártya adatait pedig legalább 28 naponta le kell tölteni. Őrizze meg a letöltött adatokat legalább 12 hónapig.</p></div>
+</details>
+<details class="faq-item"><summary>Elegendő csak a tachográf adatletöltés és archiválás?</summary>
+<div class="faq-answer"><p>Nem. Az archiválás az adatok megőrzési kötelezettségét teljesíti, nem pedig a járművezetők ellenőrzésének kötelezettségét. Az 561/2006/EK rendelet 10. cikke értelmében a vállalkozásnak meg kell szerveznie a járművezetők munkáját, utasításokkal kell ellátnia őket, és rendszeresen ellenőriznie kell a vezetési idő, szünetek és pihenőidők betartását – a gyakorlatban a letöltött adatok kiértékelésével. A TAGRA ezt megkönnyíti a jogsértések automatikus jelzésével.</p></div>
+</details>
+<div class="related">
+<div class="related-title">Kapcsolódó cikkek</div>
+<div class="related-grid">
+<a class="related-card anim-up" href="/hu/cikkek/tachograf-furgon-kotelezettseg-2026/">
+<div class="related-card-eye">Új szabályozás</div>
+<h3 class="card-title">Tachográfok kisteherautókba: új kötelezettség 2026 júliusától</h3>
+</a>
+<a class="related-card anim-up" href="/hu/cikkek/soforkartya-igenyles/">
+<div class="related-card-eye">Kártyák</div>
+<h3 class="card-title">Járművezetői kártya: igénylés és megújítás</h3>
+</a>
+<a class="related-card anim-up" href="/hu/cikkek/tachograf-adatok-letoltese-kiertekelese/">
+<div class="related-card-eye">Teljes útmutató</div>
+<h3 class="card-title">Hogyan kell letölteni, kiértékelni és archiválni a tachográf adatokat</h3>
+</a>
+<a class="related-card anim-up" href="/hu/cikkek/tachograf-kiertekeles-kotelezettseg-2026/">
+<div class="related-card-eye">Áttekintés</div>
+<h3 class="card-title">Kinek kell kiértékelnie a tachográf adatokat 2026-tól</h3>
+</a>
+</div>
+</div></div></section></main>
+<footer class="site-footer" role="contentinfo">
+<div class="footer-inner">
+<div>
+<div class="footer-logo"><img alt="TAGRA" height="20" src="/assets/img/logo-dark.svg?v=20260513zh" width="88" loading="lazy"/></div>
+<p class="footer-desc">Professzionális tachográf-kiértékelő szoftver. Sofőrkártya-letöltés, digitális tachográfadatok kiértékelése, EU-s vezetési és pihenőidők, valamint a közúti szállításra vonatkozó munkaidő-irányelv. Fejlesztő: Truck Data Technology, s.r.o.</p>
+</div>
+<div class="footer-col">
+<h2 class="footer-col-title">Termék</h2>
+<ul>
+<li><a href="/hu/fuvarozoknak/">Fuvarozók részére</a></li>
+<li><a href="/hu/soforoknek/">Professzionális sofőrök részére</a></li>
+<li><a href="/hu/hatosagoknak/">Ellenőrző hatóságok részére</a></li>
+<li><a href="/hu/hogyan-mukodik/">Hogyan működik</a></li>
+<li><a href="/hu/kinek-szol/">Kinek szól</a></li>
+<li><a href="/hu/gyakori-kerdesek/">GYIK</a></li>
+<li><a href="/hu/letolto-eszkozok/">Letöltő eszközök</a></li><li><a href="/hu/gps-nyomkovetes/">GPS nyomkövetés</a></li></ul>
+</div>
+<div class="footer-col">
+<h2 class="footer-col-title">Tudástár</h2>
+<ul>
+<li><a href="/hu/cikkek/">Cikkek</a></li><li><a href="/hu/kezikonyvek/">Kézikönyvek</a></li>
+<li><a href="/hu/cikkek/tachograf-szimbolumok/">Tachográf szimbólumok</a></li>
+<li><a href="/hu/integraciok/dkv-live/">DKV LIVE®</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h2 class="footer-col-title">Cég</h2>
+<ul>
+<li><a href="/hu/kapcsolat/">Kapcsolat</a></li>
+<li><a href="https://www.tdt.cz" rel="noopener" target="_blank">Truck Data Technology</a></li>
+<li><a href="/" hreflang="en">English</a></li><li><a href="/de/" hreflang="de">Deutsch</a></li><li><a href="/pl/" hreflang="pl">Polski</a></li><li><a href="/nl/" hreflang="nl">Nederlands</a></li><li><a href="/fr/" hreflang="fr">Français</a></li><li><a href="/it/" hreflang="it">Italiano</a></li><li><a href="/el/" hreflang="el">Ελληνικά</a></li><li><a aria-current="page" class="active" href="/hu/" hreflang="hu">Magyar</a></li><li><a href="/ro/" hreflang="ro">Română</a></li><li><a href="https://www.tdt.cz/" hreflang="cs" rel="noopener" target="_blank">Čeština</a></li><li><a href="https://www.tdt.sk/" hreflang="sk" rel="noopener" target="_blank">Slovenčina</a></li></ul>
+</div>
+</div>
+<div class="footer-bottom">
+<span>© 2026 Truck Data Technology, s.r.o. Minden jog fenntartva.</span>
+<span><a href="/hu/kapcsolat/">Kapcsolat</a> · <a href="https://www.tdt.cz" rel="noopener" target="_blank">tdt.cz</a> · <a href="/hu/adatvedelmi-tajekoztato/">Adatvédelem és sütik</a></span>
+</div>
+</footer>
+<script>(function(){var bar=document.getElementById('scroll-progress');if(bar)window.addEventListener('scroll',function(){var t=document.documentElement.scrollTop||document.body.scrollTop;var h=document.documentElement.scrollHeight-document.documentElement.clientHeight;bar.style.width=(t/h*100)+'%';},{passive:true});var toggle=document.getElementById('nav-toggle'),links=document.getElementById('nav-links');if(toggle&&links)toggle.addEventListener('click',function(){var o=links.classList.toggle('open');toggle.setAttribute('aria-expanded',o);});})();</script><script>
+/* INTERSECTION OBSERVER – ANIMATIONS */
+if ('IntersectionObserver' in window) {
+  var io = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) {
+      if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.anim-up, .fly-left, .fly-right').forEach(function(el) { io.observe(el); });
+} else {
+  document.querySelectorAll('.anim-up, .fly-left, .fly-right').forEach(function(el) { el.classList.add('on'); });
+}
+</script>
+
+</body>
+</html>
