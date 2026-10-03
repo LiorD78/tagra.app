@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<!-- TMX-ANALYTICS START -->
+<meta content="7F7894081BE7FBB245FF03AF8810B22F" name="msvalidate.01"/>
+<!-- Consent Mode v2 defaults (deny) + gtag stub — runs BEFORE gtag.js -->
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent','default',{
+      ad_storage:'denied', ad_user_data:'denied', ad_personalization:'denied',
+      analytics_storage:'denied', functionality_storage:'denied',
+      personalization_storage:'denied', security_storage:'granted',
+      wait_for_update:500
+    });
+    gtag('set','ads_data_redaction',true);
+    gtag('set','url_passthrough',false);
+  </script>
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-92253QFBNX"></script>
+<script>
+    gtag('js', new Date());
+    gtag('config','G-92253QFBNX');
+  </script>
+<!-- Cookie consent banner (self-hosted) + Microsoft Clarity gating -->
+<style>
+    .tmx-cc{position:fixed;left:0;right:0;bottom:0;z-index:2147483000;background:linear-gradient(120deg,var(--blue-dark,#0b2c4a),var(--blue-mid,#134a8e) 62%,var(--blue-light,#1f5fa6));color:#fff;
+      font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+      padding:16px 20px;box-shadow:0 -4px 24px rgba(0,0,0,.18);display:flex;flex-wrap:wrap;
+      align-items:center;gap:14px;justify-content:center}
+    .tmx-cc__txt{flex:1 1 360px;max-width:760px}
+    .tmx-cc__txt a{color:#9ed0f5;text-decoration:underline}
+    .tmx-cc__btns{display:flex;gap:10px;flex:0 0 auto}
+    .tmx-cc__b{appearance:none;border:0;cursor:pointer;font:inherit;font-weight:600;
+      padding:10px 22px;border-radius:99px;transition:filter .15s;color:#fff}
+    .tmx-cc__b:hover{filter:brightness(1.08)}
+    .tmx-cc__b--no{background:rgba(255,255,255,.16)}
+    .tmx-cc__b--yes{background:var(--green-cta,#5C820F)}
+    @media(max-width:640px){.tmx-cc{padding:14px}.tmx-cc__btns{width:100%}.tmx-cc__b{flex:1}}
+  </style>
+<script>
+  (function(){
+    var KEY='tmx-consent-v1', CL='wt18054m0r';
+    function lc(){var l=(document.documentElement.getAttribute('lang')||'en').toLowerCase().split('-')[0];
+      var m={cz:'cs',cs:'cs',sk:'sk',de:'de',pl:'pl',gr:'el',el:'el',hu:'hu',en:'en'};return m[l]||'en';}
+    var T={
+      hu:{t:'Analitikai s\u00fctiket haszn\u00e1lunk (Google Analytics, Microsoft Clarity, Smartsupp), hogy meg\u00e9rts\u00fck a webhely haszn\u00e1lat\u00e1t. Csak az \u00d6n hozz\u00e1j\u00e1rul\u00e1s\u00e1val t\u00f6lt\u0151dnek be.',a:'Elfogadom',r:'Elutas\u00edtom',p:'Adatv\u00e9delem \u00e9s s\u00fctik'},
+      ro:{t:'Utilizăm module cookie de analiză (Google Analytics, Microsoft Clarity, Smartsupp) pentru a înțelege modul de utilizare a site-ului. Se încarcă doar cu consimțământul dumneavoastră.',a:'Accept',r:'Refuz',p:'Confidențialitate și cookie-uri'},
+      nl:{t:'We gebruiken analytische cookies (Google Analytics, Microsoft Clarity, Smartsupp) om het gebruik van de site te begrijpen. Ze laden alleen met uw toestemming.',a:'Accepteren',r:'Weigeren',p:'Privacy en cookies'},
+      fr:{t:'Nous utilisons des cookies analytiques (Google Analytics, Microsoft Clarity, Smartsupp) pour comprendre l’utilisation du site. Ils ne se chargent qu’avec votre consentement.',a:'Accepter',r:'Refuser',p:'Confidentialité et cookies'},
+      it:{t:'Utilizziamo cookie analitici (Google Analytics, Microsoft Clarity, Smartsupp) per capire l’utilizzo del sito. Si caricano solo con il Suo consenso.',a:'Accetta',r:'Rifiuta',p:'Privacy e cookie'},
+      en:{t:'We use analytics cookies (Google Analytics, Microsoft Clarity, Smartsupp) to understand site usage. They load only with your consent.',a:'Accept',r:'Reject',p:'Privacy &amp; cookies'},
+      cs:{t:'Pou\u017e\u00edv\u00e1me analytick\u00e9 cookies (Google Analytics, Microsoft Clarity, Smartsupp) k pochopen\u00ed pou\u017e\u00edv\u00e1n\u00ed webu. Na\u010dtou se jen s va\u0161\u00edm souhlasem.',a:'P\u0159ijmout',r:'Odm\u00edtnout',p:'Soukrom\u00ed a cookies'},
+      sk:{t:'Pou\u017e\u00edvame analytick\u00e9 cookies (Google Analytics, Microsoft Clarity, Smartsupp) na pochopenie pou\u017e\u00edvania webu. Na\u010d\u00edtaj\u00fa sa len s va\u0161\u00edm s\u00fahlasom.',a:'Prija\u0165',r:'Odmietnu\u0165',p:'S\u00fakromie a cookies'},
+      de:{t:'Wir verwenden Analyse-Cookies (Google Analytics, Microsoft Clarity, Smartsupp), um die Nutzung der Website zu verstehen. Sie werden nur mit Ihrer Einwilligung geladen.',a:'Akzeptieren',r:'Ablehnen',p:'Datenschutz &amp; Cookies'},
+      pl:{t:'U\u017cywamy plik\u00f3w cookie do analityki (Google Analytics, Microsoft Clarity, Smartsupp), aby zrozumie\u0107 korzystanie z witryny. \u0141aduj\u0105 si\u0119 tylko za Twoj\u0105 zgod\u0105.',a:'Akceptuj',r:'Odrzu\u0107',p:'Prywatno\u015b\u0107 i cookies'},
+      el:{t:'\u03a7\u03c1\u03b7\u03c3\u03b9\u03bc\u03bf\u03c0\u03bf\u03b9\u03bf\u03cd\u03bc\u03b5 cookies \u03b1\u03bd\u03ac\u03bb\u03c5\u03c3\u03b7\u03c2 (Google Analytics, Microsoft Clarity, Smartsupp) \u03b3\u03b9\u03b1 \u03bd\u03b1 \u03ba\u03b1\u03c4\u03b1\u03bd\u03bf\u03ae\u03c3\u03bf\u03c5\u03bc\u03b5 \u03c4\u03b7 \u03c7\u03c1\u03ae\u03c3\u03b7. \u03a6\u03bf\u03c1\u03c4\u03ce\u03bd\u03bf\u03bd\u03c4\u03b1\u03b9 \u03bc\u03cc\u03bd\u03bf \u03bc\u03b5 \u03c4\u03b7 \u03c3\u03c5\u03b3\u03ba\u03b1\u03c4\u03ac\u03b8\u03b5\u03c3\u03ae \u03c3\u03b1\u03c2.',a:'\u0391\u03c0\u03bf\u03b4\u03bf\u03c7\u03ae',r:'\u0391\u03c0\u03cc\u03c1\u03c1\u03b9\u03c8\u03b7',p:'\u0391\u03c0\u03cc\u03c1\u03c1\u03b7\u03c4\u03bf &amp; cookies'}
+    };
+    function loadClarity(){if(!CL||window.__tmxCl)return;window.__tmxCl=1;
+      (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+       t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+       y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script",CL);}
+    function grant(){try{localStorage.setItem(KEY,'granted')}catch(e){}
+      gtag('consent','update',{analytics_storage:'granted'});loadClarity();}
+    function deny(){try{localStorage.setItem(KEY,'denied')}catch(e){}}
+    var saved=null;try{saved=localStorage.getItem(KEY)}catch(e){}
+    if(saved==='granted'){grant();return;} if(saved==='denied'){return;}
+    function show(){var tx=T[lc()]||T.en;
+      var b=document.createElement('div');b.className='tmx-cc';b.setAttribute('role','dialog');b.setAttribute('aria-live','polite');
+      b.innerHTML='<div class="tmx-cc__txt">'+tx.t+' <a href="/fr/confidentialite/">'+tx.p+'</a></div>'+
+        '<div class="tmx-cc__btns"><button type="button" class="tmx-cc__b tmx-cc__b--no">'+tx.r+'</button>'+
+        '<button type="button" class="tmx-cc__b tmx-cc__b--yes">'+tx.a+'</button></div>';
+      document.body.appendChild(b);
+      b.querySelector('.tmx-cc__b--yes').addEventListener('click',function(){grant();b.remove();});
+      b.querySelector('.tmx-cc__b--no').addEventListener('click',function(){deny();b.remove();});}
+    if(document.body)show();else document.addEventListener('DOMContentLoaded',show);
+  })();
+  </script>
+<!-- TMX-ANALYTICS END -->
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Carte entreprise chronotachygraphe : demande et coûts</title>
+<meta content="Comment obtenir une carte entreprise: émetteur, coûts, verrouillage entreprise, téléchargement des données à 90/28 jours et analyse obligatoire." name="description"/>
+<link href="https://tagra.app/fr/articles/carte-entreprise-chronotachygraphe/" rel="canonical"/>
+<link href="https://tagra.app/de/ratgeber/unternehmenskarte-tachograph/" hreflang="de" rel="alternate"/><link href="https://tagra.app/el/arthra/karta-epicheirisis-tachografou/" hreflang="el" rel="alternate"/><link href="https://tagra.app/articles/tachograph-company-card/" hreflang="en" rel="alternate"/><link href="https://tagra.app/fr/articles/carte-entreprise-chronotachygraphe/" hreflang="fr" rel="alternate"/><link href="https://tagra.app/hu/cikkek/vallalkozaskartya-tachograf/" hreflang="hu" rel="alternate"/><link href="https://tagra.app/it/articoli/carta-azienda-tachigrafo/" hreflang="it" rel="alternate"/><link href="https://tagra.app/nl/artikelen/bedrijfskaart-tachograaf/" hreflang="nl" rel="alternate"/><link href="https://tagra.app/pl/poradnik/karta-przedsiebiorstwa/" hreflang="pl" rel="alternate"/><link href="https://tagra.app/ro/articole/card-intreprindere-tahograf/" hreflang="ro" rel="alternate"/><link href="https://tagra.app/articles/tachograph-company-card/" hreflang="x-default" rel="alternate"/>
+<meta content="Carte entreprise chronotachygraphe : demande et coûts" property="og:title"/><meta content="Comment obtenir une carte entreprise: émetteur, coûts, verrouillage entreprise, téléchargement des données à 90/28 jours et analyse obligatoire." property="og:description"/>
+<meta content="https://cdn.truckmall.cz/data/user-content/karta-podniku-tachograf-og.jpg" property="og:image"/><meta content="1200" property="og:image:width"/><meta content="630" property="og:image:height"/><meta content="Insertion d&#x27;une carte entreprise dans un chronotachygraphe numérique" property="og:image:alt"/>
+<meta content="fr_FR" property="og:locale"/>
+<meta content="https://tagra.app/fr/articles/carte-entreprise-chronotachygraphe/" property="og:url"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    a{color:var(--blue-mid);text-decoration:none;}
+    a:hover{color:var(--blue-dark);text-decoration:underline;text-underline-offset:.18em;}
+    p+p{margin-top:14px;}
+    ul,ol{padding-left:22px;}
+    li{margin:6px 0;line-height:1.65;}
+    li::marker{color:var(--blue-mid);}
+    strong{font-weight:700;color:var(--text-strong);}
+    #scroll-progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--green-brand),var(--blue-light));width:0%;z-index:9999;pointer-events:none;}
+.nav-inner{margin:0 auto;padding:0 24px;height:100%;display:flex;align-items:center;justify-content:space-between;gap:24px;}
+    .nav-links{display:flex;align-items:center;gap:4px;list-style:none;}
+    .nav-links a{font-size:15px;font-weight:500;color:var(--text);padding:8px 12px;border-radius:8px;text-decoration:none;transition:background .15s;}
+    .nav-links a:hover{background:var(--bg-apple);color:var(--blue-mid);}
+    .nav-links .nav-cta a{background:var(--green-cta);color:#fff!important;border-radius:99px;padding:8px 18px;font-weight:600;}
+    .nav-links .nav-cta a:hover{background:var(--green-brand);text-decoration:none;}
+    .nav-lang{display:flex;align-items:center;gap:4px;font-size:14px;font-weight:600;}
+    .nav-lang a{padding:5px 8px;border-radius:6px;color:var(--text2);text-decoration:none;transition:background .15s;}
+    .nav-lang a:hover,.nav-lang a.active{background:var(--bg-apple);color:var(--blue-mid);}
+    .nav-lang span{color:var(--border);}
+    .nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:8px;}
+    .nav-toggle span{display:block;width:22px;height:2px;background:var(--text);margin:5px 0;border-radius:2px;}
+    @media(max-width:900px){.nav-links{display:none;}.nav-toggle{display:block;}.nav-links.open{display:flex;flex-direction:column;align-items:flex-start;gap:2px;position:absolute;top:var(--nav-h);left:0;right:0;background:rgba(255,255,255,.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:12px 24px 20px;}}
+    .art-hero{background:linear-gradient(180deg,var(--bg-apple) 0%,#fff 100%);padding:calc(var(--nav-h,64px) + 28px) 0 44px;}
+    .art-wrap{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 24px;}
+    .breadcrumb{font-size:14px;color:var(--text2);margin-bottom:18px;}
+    .breadcrumb a{color:var(--text2);text-decoration:none;}
+    .breadcrumb a:hover{color:var(--blue-mid);}
+    .breadcrumb span{margin:0 5px;color:var(--border);}
+    .eyebrow{font-size:14px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--green-brand);margin-bottom:10px;}
+    .art-title{font-size:38px;line-height:1.15;font-weight:800;margin-bottom:16px;letter-spacing:-.02em;padding-bottom:0.08em;color:var(--blue-dark);}
+    .art-title .grad{background:var(--heading-gradient);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;}
+    @media(max-width:700px){.art-title{font-size:26px;}}
+    .art-meta{font-size:15px;color:var(--text2);padding-bottom:24px;border-bottom:1px solid var(--border);display:flex;gap:20px;flex-wrap:wrap;}
+    .art-body{padding:44px 0 60px;}
+    .art-body h2 {
+      font-size: 36px; font-weight: 800;
+      line-height: 1.1; letter-spacing: 0;
+      text-transform: uppercase;
+      color: var(--blue-mid, #134a8e);
+      background: var(--heading-gradient);
+      -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block; max-width: 100%; margin-bottom: 14px;
+      padding: 0.12em 0.15em 0.08em 0;
+    }
+    .art-body h3{font-size:20px;font-weight:700;color:var(--text-strong);margin:28px 0 10px;}
+    .art-body p{margin-bottom:18px;}
+    .art-body ul,.art-body ol{margin-bottom:20px;}
+    /* QUICK TEST CARDS */
+    .test-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:20px 0;}
+    @media(max-width:640px){.test-grid{grid-template-columns:1fr;}}
+    .test-card{background:#fff;border-radius:var(--radius);padding:22px;box-shadow:0 8px 28px rgba(0,0,0,.06);}
+    .test-tag{font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--green-cta);margin-bottom:8px;}
+    .test-title{font-size:17px;font-weight:800;color:var(--text-strong);margin-bottom:6px;line-height:1.35;}
+    .test-desc{font-size:15px;color:var(--text2);line-height:1.5;}
+    /* CALLOUT */
+    
+    .callout--blue{background:var(--bg-apple);border-left:4px solid var(--blue-mid);}
+    
+    .callout-title{font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.07em;color:var(--blue-mid);margin-bottom:8px;}
+    .callout--green .callout-title{color:var(--green-brand);}
+    /* FAQ */
+    .faq-item{border-top:1px solid var(--border);padding:14px 0;}
+    .faq-item:last-child{border-bottom:1px solid var(--border);}
+    .faq-item summary{list-style:none;cursor:pointer;font-weight:700;font-size:18px;line-height:1.4;padding-right:32px;position:relative;color:var(--text-strong);}
+    .faq-item summary::-webkit-details-marker{display:none;}
+    .faq-item summary::after{content:"+";position:absolute;right:0;top:50%;transform:translateY(-50%);font-size:26px;font-weight:300;color:var(--green-cta);}
+    .faq-item[open] summary::after{content:"−";}
+    
+    .faq-answer p+p{margin-top:10px;}
+    /* CTA */
+    .cta-box{background:linear-gradient(135deg,var(--blue-dark),var(--blue-mid));border-radius:var(--radius);padding:40px 36px;margin:44px 0;text-align:center;}
+    .cta-box h3{font-size:24px;font-weight:800;color:#fff;margin-bottom:12px;}
+    .cta-box p{color:rgba(255,255,255,.8);font-size:17px;margin-bottom:24px;}
+    
+    .btn:hover{background:var(--green-brand);transform:scale(1.02);}
+    /* RELATED */
+    .related{border-top:1px solid var(--border);padding-top:36px;margin-top:36px;}
+    .related-title{font-size:20px;font-weight:800;color:var(--text-strong);margin-bottom:18px;}
+    .related-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+    @media(max-width:580px){.related-grid{grid-template-columns:1fr;}}
+    .related-card{display:block;padding:20px;border:1px solid var(--border);border-radius:var(--radius);text-decoration:none!important;transition:border-color .15s,transform .15s;}
+    .related-card:hover{border-color:var(--blue-mid);transform:translateY(-2px);}
+    .related-card-eye{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--blue-mid);margin-bottom:6px;}
+    .related-card-title{font-size:16px;font-weight:700;color:var(--text-strong);line-height:1.4;}
+    /* FOOTER */
+  
+    /* company card article */
+    .art-figure{margin:28px 0 0;border-radius:var(--radius,16px);overflow:hidden;box-shadow:0 10px 30px rgba(11,44,74,.12);}
+    .art-figure img{display:block;width:100%;height:auto;}
+    .kc-table-wrap{overflow-x:auto;margin:18px 0 12px;border:1px solid var(--border);border-radius:var(--radius,16px);}
+    .kc-table{width:100%;border-collapse:collapse;font-size:15px;min-width:620px;}
+    .kc-table th,.kc-table td{padding:11px 14px;text-align:left;vertical-align:top;border-bottom:1px solid var(--border);}
+    .kc-table th{background:var(--bg-apple);font-weight:700;color:var(--text-strong);}
+    .kc-table tr:last-child td{border-bottom:0;}
+    .art-body h3{font-size:20px;font-weight:700;color:var(--text-strong);margin:28px 0 10px;}
+</style>
+<link href="/assets/css/tokens.css" rel="stylesheet"/>
+<link href="/assets/css/base.css" rel="stylesheet"/>
+<link href="/assets/css/components.css" rel="stylesheet"/>
+<link href="/assets/css/nav.css" rel="stylesheet"/>
+<script defer="" src="/assets/js/nav.js?v=20261002b"></script><script defer="" src="/assets/js/analytics.js?v=20261002b"></script>
+<link href="/assets/css/footer.css" rel="stylesheet"/><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Carte entreprise chronotachygraphe : demande et coûts", "description": "Comment obtenir une carte entreprise: émetteur, coûts, verrouillage entreprise, téléchargement des données à 90/28 jours et analyse obligatoire.", "image": "https://cdn.truckmall.cz/data/user-content/karta-podniku-tachograf-og.jpg", "inLanguage": "fr", "datePublished": "2026-10-03", "dateModified": "2026-10-03", "mainEntityOfPage": "https://tagra.app/fr/articles/carte-entreprise-chronotachygraphe/", "author": {"@type": "Organization", "name": "Truck Data Technology, s.r.o.", "url": "https://www.tdt.cz"}, "publisher": {"@type": "Organization", "name": "Truck Data Technology, s.r.o.", "logo": {"@type": "ImageObject", "url": "https://tagra.app/assets/img/logo-dark.svg"}}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "TAGRA", "item": "https://tagra.app/fr/"}, {"@type": "ListItem", "position": 2, "name": "Articles", "item": "https://tagra.app/fr/articles/"}, {"@type": "ListItem", "position": 3, "name": "Carte entreprise", "item": "https://tagra.app/fr/articles/carte-entreprise-chronotachygraphe/"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Qu'est-ce qu'une carte entreprise?", "acceptedAnswer": {"@type": "Answer", "text": "Une carte à puce pour le chronotachygraphe numérique qui identifie l'entreprise de transport. Elle permet à l'entreprise de verrouiller le tachygraphe et d'afficher, imprimer et télécharger ses données. Elle n'est pas liée à un seul véhicule et ne stocke pas de données sur les activités des conducteurs – elle n'enregistre que sa propre utilisation, comme les verrouillages entreprise et les téléchargements."}}, {"@type": "Question", "name": "Qui doit posséder une carte entreprise?", "acceptedAnswer": {"@type": "Answer", "text": "Tout opérateur dont les véhicules sont soumis à la réglementation sur les tachygraphes. À partir du 1er juillet 2026, cela inclut également les opérateurs de véhicules et d'ensembles de véhicules de plus de 2,5 t de PTAC utilisés pour le transport international de marchandises ou le cabotage, sauf si une exemption s'applique."}}, {"@type": "Question", "name": "Ai-je besoin d'une carte entreprise pour un VUL de plus de 2,5 t?", "acceptedAnswer": {"@type": "Answer", "text": "Pour un VUL ou un ensemble de véhicules de plus de 2,5 t et jusqu'à 3,5 t de PTAC: oui, à partir du 1er juillet 2026, s'il est utilisé pour le transport international de marchandises ou le cabotage et qu'aucune exemption ne s'applique (par exemple pour certains transports pour compte propre). Le véhicule doit alors être équipé d'un tachygraphe intelligent G2V2 et vous avez besoin d'une carte entreprise. Les véhicules de plus de 3,5 t de PTAC sont, en principe, déjà soumis à la réglementation sur les tachygraphes, y compris en transport national, sauf exemption."}}, {"@type": "Question", "name": "Où faire la demande de carte entreprise en France?", "acceptedAnswer": {"@type": "Answer", "text": "Auprès de Chronoservices, qui délivre les cartes tachygraphiques pour le compte de l'État – en ligne sur chronoservices.fr ou par courrier."}}, {"@type": "Question", "name": "Combien coûte une carte entreprise en France?", "acceptedAnswer": {"@type": "Answer", "text": "Le tarif est fixé par Chronoservices; vérifiez le montant actuel sur chronoservices.fr avant de faire votre demande."}}, {"@type": "Question", "name": "Quelle est la durée de validité d'une carte entreprise?", "acceptedAnswer": {"@type": "Answer", "text": "Un maximum de 5 ans. En France, vous pouvez demander le renouvellement jusqu'à trois mois avant l'expiration; Chronoservices doit recevoir le dossier complet au plus tard un mois avant l'expiration de la carte."}}, {"@type": "Question", "name": "Une entreprise peut-elle avoir plusieurs cartes entreprise?", "acceptedAnswer": {"@type": "Answer", "text": "Oui. Une seule carte suffit pour toute la flotte, mais une entreprise peut en posséder plusieurs – pour plusieurs sites, pour le téléchargement à distance où la carte reste dans le lecteur au bureau, ou comme carte de secours. Toutes les cartes sont délivrées au nom de la même entreprise."}}, {"@type": "Question", "name": "Comment verrouiller le tachygraphe avec la carte entreprise?", "acceptedAnswer": {"@type": "Answer", "text": "Insérez la carte entreprise dans le tachygraphe et sélectionnez le verrouillage entreprise dans le menu. Les étapes diffèrent légèrement selon le fabricant, consultez donc le manuel. Avant de vendre ou de restituer le véhicule, procédez au téléchargement des données et déverrouillez le tachygraphe."}}, {"@type": "Question", "name": "À quelle fréquence faut-il télécharger les données du tachygraphe et de la carte conducteur?", "acceptedAnswer": {"@type": "Answer", "text": "Les données de l'unité embarquée au moins tous les 90 jours et celles de la carte conducteur au moins tous les 28 jours. Conservez les données téléchargées pendant au moins 12 mois."}}, {"@type": "Question", "name": "Suffit-il de télécharger et d'archiver les données du tachygraphe?", "acceptedAnswer": {"@type": "Answer", "text": "Non. L'archivage répond à l'obligation de conservation des données, mais pas à l'obligation de contrôle des conducteurs. En vertu de l'article 10 du règlement (CE) n° 561/2006, l'entreprise doit organiser le travail des conducteurs, leur donner des instructions et vérifier régulièrement le respect des temps de conduite, pauses et temps de repos – en pratique, en évaluant les données téléchargées. TAGRA facilite cette tâche en signalant automatiquement les infractions."}}]}</script>
+<noscript><style>.anim-up,.fly-left,.fly-right{opacity:1!important;transform:none!important}</style></noscript></head>
+<body class="art-page">
+<a class="skip-link" href="#main-content">Passer au contenu</a>
+<div aria-hidden="true" id="scroll-progress"></div>
+<nav aria-label="Navigation principale" class="site-nav" role="navigation">
+<div class="nav-inner">
+<a aria-label="TAGRA – Accueil" class="nav-logo" href="/fr/"><img alt="TAGRA" height="32" src="/assets/img/logo-light.svg?v=20260513zh" style="display:block;height:32px;width:auto;" width="140"/></a>
+<ul class="nav-links" id="nav-links">
+<li><a href="/fr/entreprises/">Pour les entreprises</a></li>
+<li><a href="/fr/conducteurs/">Pour les conducteurs</a></li>
+<li><a href="/fr/autorites-de-controle/">Contrôle</a></li>
+<li><a aria-current="page" href="/fr/articles/">Articles</a></li><li><a href="/fr/manuels/">Manuels</a></li>
+<li><a href="/fr/faq/">FAQ</a></li>
+<li><a href="/fr/contact/">Contact</a></li>
+<li class="nav-cta-li"><a class="nav-cta" href="/fr/essai-gratuit/?audience=fleet">Essayez gratuitement pendant 30 jours</a></li>
+</ul>
+<details class="nav-lang">
+<summary aria-label="Langue : FR">FR</summary>
+<div class="nav-lang-menu" role="menu"><a href="/articles/tachograph-company-card/" hreflang="en">English</a><a href="/de/ratgeber/unternehmenskarte-tachograph/" hreflang="de">Deutsch</a><a href="/pl/poradnik/karta-przedsiebiorstwa/" hreflang="pl">Polski</a><a href="/nl/artikelen/bedrijfskaart-tachograaf/" hreflang="nl">Nederlands</a><a aria-current="page" class="active" href="/fr/articles/carte-entreprise-chronotachygraphe/" hreflang="fr">Français</a><a href="/it/articoli/carta-azienda-tachigrafo/" hreflang="it">Italiano</a><a href="/el/arthra/karta-epicheirisis-tachografou/" hreflang="el">Ελληνικά</a><a href="/hu/cikkek/vallalkozaskartya-tachograf/" hreflang="hu">Magyar</a><a href="/ro/articole/card-intreprindere-tahograf/" hreflang="ro">Română</a><a href="https://www.tdt.cz/" hreflang="cs" rel="noopener" target="_blank">Čeština</a><a href="https://www.tdt.sk/" hreflang="sk" rel="noopener" target="_blank">Slovenčina</a></div>
+</details>
+<a class="nav-cta-mobile" href="/fr/essai-gratuit/?audience=fleet">Essai gratuit</a>
+<button aria-expanded="false" aria-label="Afficher/masquer le menu" class="nav-mobile-toggle" id="nav-toggle">
+<span></span><span></span><span></span>
+</button>
+</div>
+</nav>
+<header class="art-hero">
+<div class="art-wrap">
+<nav aria-label="Fil d’Ariane" class="breadcrumb"><a href="/fr/">TAGRA</a><span>›</span><a href="/fr/articles/">Articles</a><span>›</span><span>Carte entreprise</span></nav>
+<div class="eyebrow anim-up">Guide pour les transporteurs · 2026</div>
+<h1 class="art-title"><span class="grad">Carte entreprise: comment la demander, coûts et prochaines étapes</span></h1>
+<div class="art-meta"><span>Truck Data Technology</span><span>Mis à jour en octobre 2026</span><span>8 min de lecture</span></div>
+<p class="hero-lede anim-up">Tout opérateur dont les véhicules sont soumis à la réglementation sur le chronotachygraphe a besoin d'une carte entreprise. Ce guide explique qui la délivre, combien elle coûte, et que faire dès le premier jour: verrouiller le chronotachygraphe, télécharger les données à temps et, surtout, les analyser. Il couvre également les véhicules utilitaires légers (VUL) de plus de 2,5 t qui seront soumis à ces règles à partir du 1er juillet 2026.</p>
+<div class="bento--hero"><div class="hero-card"><div class="eyebrow">Délivrée par</div><div class="big">Autorité compétente</div><p>La carte est délivrée par l'autorité compétente du pays où votre entreprise est établie.</p></div><div class="hero-card hero-card--blue"><div class="eyebrow">Valide pendant</div><div class="big">5 ans</div><p>Vous devrez ensuite demander une nouvelle carte en temps utile.</p></div><div class="hero-card"><div class="eyebrow">Première étape</div><div class="big">Verrouillage entreprise</div><p>Insérez la carte et procédez au verrouillage entreprise du chronotachygraphe.</p></div><div class="hero-card hero-card--blue"><div class="eyebrow">Intervalle de téléchargement</div><div class="big">90 / 28 jours</div><p>Unité embarquée tous les 90 jours, cartes conducteur tous les 28 jours.</p></div></div>
+<figure class="art-figure anim-up"><img src="https://cdn.truckmall.cz/data/user-content/karta-podniku-tachograf-hero.webp" onerror="this.parentNode.style.display='none'" alt="Insertion d'une carte entreprise dans un chronotachygraphe numérique dans une cabine de camion" width="1536" height="806" fetchpriority="high" decoding="async"/></figure>
+</div>
+</header>
+<main id="main-content"><section class="band"><div class="container art-body"><div class="eyebrow anim-up">L'essentiel</div><h2 class="h2-grad anim-up">Ce qu'est une carte entreprise (et ce qu'elle n'est pas)</h2>
+<p>La <strong>carte entreprise</strong> est une carte à puce pour le chronotachygraphe numérique qui identifie l'entreprise de transport. Elle fonctionne comme une clé: elle vous permet de verrouiller le tachygraphe pour votre entreprise et d'afficher, imprimer et <strong>télécharger les données du tachygraphe</strong> de vos véhicules. Elle ne stocke pas de données sur les trajets ou les activités des conducteurs, elle enregistre uniquement sa propre utilisation, comme les verrouillages entreprise et les téléchargements.</p>
+<p>La carte n'est <strong>pas liée à un véhicule spécifique</strong>. Une seule carte peut servir pour tous les véhicules équipés d'un chronotachygraphe numérique que vous exploitez. Ne la confondez pas avec la carte conducteur (personnelle, au nom du conducteur), la carte atelier (pour les ateliers agréés) ou la carte de contrôle (pour les agents de contrôle).</p>
+<div class="callout callout--blue anim-up">
+<div class="callout-title">Différent d'un profil d'entreprise</div>
+<p style="margin:0">Un profil d'entreprise sur les moteurs de recherche ou les cartes n'a rien à voir avec les tachygraphes. Ce guide couvre uniquement la carte à puce pour le chronotachygraphe numérique en vertu du règlement (UE) n° 165/2014.</p>
+</div></div></section>
+<section class="band band--blue"><div class="container art-body"><div class="eyebrow anim-up">Qui en a besoin</div><h2 class="h2-grad anim-up">Qui a besoin d'une carte entreprise</h2>
+<p>Tout transporteur dont les véhicules sont soumis à la réglementation sur les tachygraphes a besoin d'une carte entreprise – sans elle, vous ne pouvez pas verrouiller le tachygraphe ni en télécharger les données.</p>
+<p>À partir du <strong>1er juillet 2026</strong>, le cercle des transporteurs concernés s'élargit. Les tachygraphes, et donc les cartes entreprise, sont désormais également obligatoires pour <strong>les véhicules et ensembles de véhicules dont la masse maximale autorisée dépasse 2,5 t utilisés pour le transport international de marchandises ou le cabotage</strong>. Ce qui compte, c'est l'utilisation du véhicule – des dérogations s'appliquent, par exemple, à certains transports pour compte propre. La nouvelle règle n'étend pas les exigences relatives aux tachygraphes au transport de marchandises purement national par des véhicules de plus de 2,5 t et jusqu'à 3,5 t. Les véhicules de plus de 3,5 t sont, en principe, déjà soumis à la réglementation sur les tachygraphes pour le transport national également, à moins qu'une dérogation ne s'applique. Les détails et les dérogations se trouvent dans notre article sur <a href="/fr/articles/tachygraphe-utilitaires-obligation-juillet-2026/">les tachygraphes pour les véhicules utilitaires légers (VUL)</a>.</p>
+<div class="callout callout--blue anim-up">
+<div class="callout-title">Nouvelle entreprise? La carte n'est que le début</div>
+<p style="margin:0">De nombreux nouveaux transporteurs demandent la carte en raison des contrôles routiers et pensent que le travail est terminé. La carte entraîne d'autres obligations: verrouiller le tachygraphe, effectuer le téléchargement des données régulièrement, assurer leur archivage et <strong>évaluer si les conducteurs respectent les temps de conduite, les pauses et temps de repos</strong>. Tout cela est expliqué étape par étape ci-dessous.</p>
+</div></div></section>
+<section class="band band--gray"><div class="container art-body"><div class="eyebrow anim-up">Demande</div><h2 class="h2-grad anim-up">Comment demander une carte entreprise</h2>
+<p>La procédure est définie par chaque pays de l'UE, mais les étapes principales sont les mêmes partout:</p>
+<ul>
+<li><strong>Faites la demande dans le pays où votre entreprise est établie</strong> – auprès de l'autorité émettrice de cartes locale.</li>
+<li><strong>La demande est faite par l'entreprise</strong> – son propriétaire, son représentant légal ou une personne autorisée par procuration.</li>
+<li><strong>Préparez les informations de l'entreprise et une pièce d'identité</strong> – les informations d'immatriculation de l'entreprise et la pièce d'identité de la personne qui fait la demande.</li>
+<li><strong>Payez les frais et attendez la livraison</strong> – d'environ une semaine à un mois, selon le pays.</li>
+</ul>
+<h3>France: Chronoservices</h3>
+<p>En France, les cartes tachygraphes sont émises pour le compte de l'État par Chronoservices, une filiale du groupe Imprimerie Nationale. La carte entreprise est demandée par l'entreprise – en ligne sur le <a href="https://www.chronoservices.fr/" rel="noopener" target="_blank">site web de Chronoservices</a> ou par courrier.</p>
+<ul>
+<li><strong>Livraison:</strong> environ 15 jours ouvrés une fois que la demande est complète et valide.</li>
+<li><strong>Tarif:</strong> vérifiez le tarif en vigueur sur le site web de Chronoservices avant de faire votre demande.</li>
+<li><strong>Validité:</strong> cinq ans.</li>
+<li><strong>Renouvellement:</strong> vous pouvez faire la demande jusqu'à trois mois avant l'expiration de la carte; Chronoservices doit recevoir la demande complète au plus tard un mois avant la date d'expiration.</li>
+</ul>
+<p>Votre entreprise est-elle établie dans un autre pays de l'UE? La Commission européenne publie les <a href="https://dtc.jrc.ec.europa.eu/dtc_contacts.php.html" rel="noopener" target="_blank">coordonnées de toutes les autorités nationales émettrices de cartes</a>.</p>
+</div></section>
+<section class="band"><div class="container art-body"><div class="eyebrow anim-up">Validité</div><h2 class="h2-grad anim-up">Validité, renouvellement et cartes perdues</h2>
+<ul>
+<li><strong>Validité:</strong> une carte entreprise est valable pour une durée maximale de 5 ans.</li>
+<li><strong>Renouvellement:</strong> faites votre demande en temps utile ; en France, Chronoservices doit recevoir le dossier complet au plus tard un mois avant l'expiration de la carte.</li>
+<li><strong>Carte perdue, volée ou défectueuse:</strong> signalez-le sans délai à l'autorité de délivrance et demandez une carte de remplacement.</li>
+<li><strong>Modification des coordonnées de l'entreprise:</strong> tout changement de nom ou d'adresse nécessite une nouvelle carte.</li>
+</ul>
+<p>Conservez la carte dans un endroit où elle ne risque pas d'être pliée ou exposée à une chaleur excessive, idéalement dans un étui de protection, et empêchez toute utilisation non autorisée.</p></div></section>
+<section class="band band--blue"><div class="container art-body"><div class="eyebrow anim-up">Une ou plusieurs?</div><h2 class="h2-grad anim-up">Combien de cartes entreprise vous faut-il</h2>
+<p>Une seule carte entreprise suffit pour toute la flotte. Une entreprise peut en posséder plusieurs, et en pratique, c'est avantageux:</p>
+<ul>
+<li><strong>Plusieurs sites</strong> – chaque site peut avoir sa propre carte, ce qui vous évite de devoir la transporter.</li>
+<li><strong>Téléchargement à distance</strong> – la carte entreprise reste dans le lecteur de carte au bureau. Une seconde carte est pratique pour intervenir sur les véhicules.</li>
+<li><strong>Secours</strong> – en cas de défaillance ou de perte d'une carte, vous ne perdez pas l'accès à vos données en attendant une carte de remplacement.</li>
+</ul></div></section>
+<section class="band band--gray"><div class="container art-body"><div class="eyebrow anim-up">Premier jour avec le véhicule</div><h2 class="h2-grad anim-up">Verrouillage du tachygraphe avec la carte entreprise</h2>
+<p>La première étape après la prise en charge d'un véhicule est le <strong>verrouillage entreprise</strong>. Insérez la carte entreprise dans le tachygraphe et sélectionnez le verrouillage entreprise dans le menu. Les étapes exactes diffèrent légèrement selon le fabricant - consultez le manuel du tachygraphe. Vous pouvez également faire configurer le verrouillage lors de l'installation ou de l'étalonnage à l'atelier si vous apportez la carte entreprise avec vous.</p>
+<ul>
+<li><strong>Ce que fait le verrouillage:</strong> d'autres entreprises ne peuvent pas procéder au téléchargement des données de la période verrouillée. Les agents de contrôle et, dans la limite de leur autorisation, les ateliers y ont toujours accès.</li>
+<li><strong>Sans verrouillage:</strong> les données d'une période non verrouillée peuvent être téléchargées avec n'importe quelle carte entreprise.</li>
+<li><strong>Lors de la vente ou de la restitution d'un véhicule:</strong> effectuez d'abord le téléchargement des données, puis déverrouillez le tachygraphe (déverrouillage entreprise).</li>
+</ul></div></section>
+<section class="band"><div class="container art-body"><div class="eyebrow anim-up">Obligations de l'entreprise</div><h2 class="h2-grad anim-up">Téléchargement des données: 90 et 28 jours</h2>
+<p>Avec la carte entreprise, vous détenez la clé des données – et l'obligation de les télécharger régulièrement. Conformément au règlement (UE) n° 581/2010:</p>
+<ul>
+<li><strong>Unité embarquée (tachygraphe):</strong> au moins tous les 90 jours.</li>
+<li><strong>Carte conducteur:</strong> au moins tous les 28 jours.</li>
+<li><strong>Archivage:</strong> conservez les données pendant au moins 12 mois (article 33 du règlement (UE) n° 165/2014) et mettez-les à la disposition des contrôleurs sur demande – directement ou à distance depuis vos locaux.</li>
+</ul>
+<p>Pour télécharger, vous avez besoin d'un appareil de téléchargement: une clé de téléchargement portable, une borne de téléchargement au bureau ou le téléchargement à distance sans intervention sur le véhicule. Plus d'informations dans notre guide sur <a href="/fr/articles/telecharger-analyser-archiver-donnees-tachygraphe/">le téléchargement, l'analyse et l'archivage des données du tachygraphe</a>.</p></div></section>
+<section class="band band--blue"><div class="container art-body"><div class="eyebrow anim-up">Ce que les nouveaux transporteurs oublient</div><h2 class="h2-grad anim-up">Le téléchargement des données ne suffit pas – vous devez les évaluer</h2>
+<p>C'est là que la plupart des nouveaux transporteurs se trompent. Le téléchargement des données et leur stockage répondent à l'obligation d'archivage, mais pas à l'obligation de contrôler vos conducteurs. En vertu de l'article 10 du règlement (CE) n° 561/2006, le transporteur doit organiser le travail des conducteurs de manière à ce qu'ils puissent se conformer aux règles, leur donner les instructions appropriées et <strong>contrôler régulièrement</strong> que les temps de conduite, pauses et temps de repos sont respectés. Dans la pratique, ces contrôles s'effectuent en évaluant les données téléchargées.</p>
+<p>Avec des centaines d'enregistrements, les contrôles manuels sont lents et sources d'erreurs. <strong>TAGRA</strong> lit les données des tachygraphes et des cartes conducteur, effectue l'archivage et signale automatiquement les infractions. Il prépare les rapports pour les contrôles et la paie – et il est également parfaitement adapté aux véhicules utilitaires légers (VUL). Pour savoir exactement qui doit évaluer les données, consultez la section <a href="/fr/articles/qui-doit-analyser-donnees-tachygraphe-2026/">qui doit évaluer les données du tachygraphe à partir de 2026</a>.</p>
+<div class="cta-box">
+<h3>Essayez TAGRA gratuitement</h3>
+<p>Importez vos premiers fichiers de tachygraphe et de carte conducteur et visualisez les infractions en un coup d'œil.</p>
+<a class="btn" href="/fr/essai-gratuit/">Démarrer l'essai gratuit →</a>
+</div></div></section>
+<section class="band band--gray"><div class="container art-body"><div class="eyebrow anim-up">Questions &amp; réponses</div><h2 class="h2-grad anim-up">Foire aux questions</h2>
+<details class="faq-item"><summary>Qu&#x27;est-ce qu&#x27;une carte entreprise?</summary>
+<div class="faq-answer"><p>Une carte à puce pour le chronotachygraphe numérique qui identifie l&#x27;entreprise de transport. Elle permet à l&#x27;entreprise de verrouiller le tachygraphe et d&#x27;afficher, imprimer et télécharger ses données. Elle n&#x27;est pas liée à un seul véhicule et ne stocke pas de données sur les activités des conducteurs – elle n&#x27;enregistre que sa propre utilisation, comme les verrouillages entreprise et les téléchargements.</p></div>
+</details>
+<details class="faq-item"><summary>Qui doit posséder une carte entreprise?</summary>
+<div class="faq-answer"><p>Tout opérateur dont les véhicules sont soumis à la réglementation sur les tachygraphes. À partir du 1er juillet 2026, cela inclut également les opérateurs de véhicules et d&#x27;ensembles de véhicules de plus de 2,5 t de PTAC utilisés pour le transport international de marchandises ou le cabotage, sauf si une exemption s&#x27;applique.</p></div>
+</details>
+<details class="faq-item"><summary>Ai-je besoin d&#x27;une carte entreprise pour un VUL de plus de 2,5 t?</summary>
+<div class="faq-answer"><p>Pour un VUL ou un ensemble de véhicules de plus de 2,5 t et jusqu&#x27;à 3,5 t de PTAC: oui, à partir du 1er juillet 2026, s&#x27;il est utilisé pour le transport international de marchandises ou le cabotage et qu&#x27;aucune exemption ne s&#x27;applique (par exemple pour certains transports pour compte propre). Le véhicule doit alors être équipé d&#x27;un tachygraphe intelligent G2V2 et vous avez besoin d&#x27;une carte entreprise. Les véhicules de plus de 3,5 t de PTAC sont, en principe, déjà soumis à la réglementation sur les tachygraphes, y compris en transport national, sauf exemption.</p></div>
+</details>
+<details class="faq-item"><summary>Où faire la demande de carte entreprise en France?</summary>
+<div class="faq-answer"><p>Auprès de Chronoservices, qui délivre les cartes tachygraphiques pour le compte de l&#x27;État – en ligne sur chronoservices.fr ou par courrier.</p></div>
+</details>
+<details class="faq-item"><summary>Combien coûte une carte entreprise en France?</summary>
+<div class="faq-answer"><p>Le tarif est fixé par Chronoservices; vérifiez le montant actuel sur chronoservices.fr avant de faire votre demande.</p></div>
+</details>
+<details class="faq-item"><summary>Quelle est la durée de validité d&#x27;une carte entreprise?</summary>
+<div class="faq-answer"><p>Un maximum de 5 ans. En France, vous pouvez demander le renouvellement jusqu&#x27;à trois mois avant l&#x27;expiration; Chronoservices doit recevoir le dossier complet au plus tard un mois avant l&#x27;expiration de la carte.</p></div>
+</details>
+<details class="faq-item"><summary>Une entreprise peut-elle avoir plusieurs cartes entreprise?</summary>
+<div class="faq-answer"><p>Oui. Une seule carte suffit pour toute la flotte, mais une entreprise peut en posséder plusieurs – pour plusieurs sites, pour le téléchargement à distance où la carte reste dans le lecteur au bureau, ou comme carte de secours. Toutes les cartes sont délivrées au nom de la même entreprise.</p></div>
+</details>
+<details class="faq-item"><summary>Comment verrouiller le tachygraphe avec la carte entreprise?</summary>
+<div class="faq-answer"><p>Insérez la carte entreprise dans le tachygraphe et sélectionnez le verrouillage entreprise dans le menu. Les étapes diffèrent légèrement selon le fabricant, consultez donc le manuel. Avant de vendre ou de restituer le véhicule, procédez au téléchargement des données et déverrouillez le tachygraphe.</p></div>
+</details>
+<details class="faq-item"><summary>À quelle fréquence faut-il télécharger les données du tachygraphe et de la carte conducteur?</summary>
+<div class="faq-answer"><p>Les données de l&#x27;unité embarquée au moins tous les 90 jours et celles de la carte conducteur au moins tous les 28 jours. Conservez les données téléchargées pendant au moins 12 mois.</p></div>
+</details>
+<details class="faq-item"><summary>Suffit-il de télécharger et d&#x27;archiver les données du tachygraphe?</summary>
+<div class="faq-answer"><p>Non. L&#x27;archivage répond à l&#x27;obligation de conservation des données, mais pas à l&#x27;obligation de contrôle des conducteurs. En vertu de l&#x27;article 10 du règlement (CE) n° 561/2006, l&#x27;entreprise doit organiser le travail des conducteurs, leur donner des instructions et vérifier régulièrement le respect des temps de conduite, pauses et temps de repos – en pratique, en évaluant les données téléchargées. TAGRA facilite cette tâche en signalant automatiquement les infractions.</p></div>
+</details>
+<div class="related">
+<div class="related-title">Articles liés</div>
+<div class="related-grid">
+<a class="related-card anim-up" href="/fr/articles/tachygraphe-utilitaires-obligation-juillet-2026/">
+<div class="related-card-eye">Nouvelle législation</div>
+<h3 class="card-title">Tachygraphes pour véhicules utilitaires légers (VUL): nouvelle obligation à partir de juillet 2026</h3>
+</a>
+<a class="related-card anim-up" href="/fr/articles/carte-tachygraphique-demande-renouvellement/">
+<div class="related-card-eye">Cartes</div>
+<h3 class="card-title">Carte conducteur: comment la demander et la renouveler</h3>
+</a>
+<a class="related-card anim-up" href="/fr/articles/telecharger-analyser-archiver-donnees-tachygraphe/">
+<div class="related-card-eye">Guide complet</div>
+<h3 class="card-title">Comment procéder au téléchargement des données, à leur analyse et à leur archivage</h3>
+</a>
+<a class="related-card anim-up" href="/fr/articles/qui-doit-analyser-donnees-tachygraphe-2026/">
+<div class="related-card-eye">Aperçu</div>
+<h3 class="card-title">Qui doit analyser les données du tachygraphe à partir de 2026</h3>
+</a>
+</div>
+</div></div></section></main>
+<footer class="site-footer" role="contentinfo">
+<div class="footer-inner">
+<div>
+<div class="footer-logo"><img alt="TAGRA" height="20" src="/assets/img/logo-dark.svg?v=20260513zh" width="88" loading="lazy"/></div>
+<p class="footer-desc">Logiciel professionnel d'analyse des tachygraphes. Téléchargement des cartes de conducteur, analyse des tachygraphes numériques, temps de conduite des conducteurs dans l'UE et directive relative au temps de travail des conducteurs de poids lourds. Développé par Truck Data Technology, s.r.o.</p>
+</div>
+<div class="footer-col">
+<h2 class="footer-col-title">Produit</h2>
+<ul>
+<li><a href="/fr/entreprises/">Pour les exploitants de parcs</a></li>
+<li><a href="/fr/conducteurs/">Pour les conducteurs professionnels</a></li>
+<li><a href="/fr/autorites-de-controle/">Pour les contrôles</a></li>
+<li><a href="/fr/fonctionnement/">Fonctionnement</a></li>
+<li><a href="/fr/pour-qui/">Pour qui</a></li>
+<li><a href="/fr/faq/">FAQ</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h2 class="footer-col-title">Ressources</h2>
+<ul>
+<li><a href="/fr/articles/">Articles</a></li><li><a href="/fr/manuels/">Manuels</a></li>
+<li><a href="/fr/articles/symboles-tachygraphe/">Symboles du tachygraphe</a></li>
+<li><a href="/fr/integrations/dkv-live/">DKV LIVE®</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h2 class="footer-col-title">Entreprise</h2>
+<ul>
+<li><a href="/fr/contact/">Contact</a></li>
+<li><a href="https://www.tdt.cz" rel="noopener" target="_blank">Truck Data Technology</a></li>
+<li><a href="/" hreflang="en">English</a></li><li><a href="/de/" hreflang="de">Deutsch</a></li><li><a href="/pl/" hreflang="pl">Polski</a></li><li><a href="/nl/" hreflang="nl">Nederlands</a></li><li><a aria-current="page" class="active" href="/fr/" hreflang="fr">Français</a></li><li><a href="/it/" hreflang="it">Italiano</a></li><li><a href="/el/" hreflang="el">Ελληνικά</a></li><li><a href="/hu/" hreflang="hu">Magyar</a></li><li><a href="/ro/" hreflang="ro">Română</a></li><li><a href="https://www.tdt.cz/" hreflang="cs" rel="noopener" target="_blank">Čeština</a></li><li><a href="https://www.tdt.sk/" hreflang="sk" rel="noopener" target="_blank">Slovenčina</a></li></ul>
+</div>
+</div>
+<div class="footer-bottom">
+<span>© 2026 Truck Data Technology, s.r.o. Tous droits réservés.</span>
+<span><a href="/fr/contact/">Contact</a> · <a href="https://www.tdt.cz" rel="noopener" target="_blank">tdt.cz</a> · <a href="/fr/confidentialite/">Confidentialité &amp; cookies</a></span>
+</div>
+</footer>
+<script>(function(){var bar=document.getElementById('scroll-progress');if(bar)window.addEventListener('scroll',function(){var t=document.documentElement.scrollTop||document.body.scrollTop;var h=document.documentElement.scrollHeight-document.documentElement.clientHeight;bar.style.width=(t/h*100)+'%';},{passive:true});var toggle=document.getElementById('nav-toggle'),links=document.getElementById('nav-links');if(toggle&&links)toggle.addEventListener('click',function(){var o=links.classList.toggle('open');toggle.setAttribute('aria-expanded',o);});})();</script><script>
+/* INTERSECTION OBSERVER – ANIMATIONS */
+if ('IntersectionObserver' in window) {
+  var io = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) {
+      if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.anim-up, .fly-left, .fly-right').forEach(function(el) { io.observe(el); });
+} else {
+  document.querySelectorAll('.anim-up, .fly-left, .fly-right').forEach(function(el) { el.classList.add('on'); });
+}
+</script>
+
+</body>
+</html>
