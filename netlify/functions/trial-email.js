@@ -36,11 +36,20 @@
  *
  * ── OPAKOVANÉ REGISTRACE ─────────────────────────────────────────────
  * Stav leadu je v Netlify Blobs (store "trial-leads", klíč = normalizovaný
- * e-mail). Nový lead: #1 + #2/#3. Opakování ≥ 60 min: jen #1 znovu (nový
- * idempotency key -r{count}). Opakování < 60 min: nic. Jiné publikum: #1
- * pro něj, #2/#3 jen pokud pro ně ještě neběžely. Chyba Blobs = fail-open.
+ * e-mail). Nový lead: #1 + #2/#3. Pokud pro stejný e-mail běží sekvence
+ * spuštěná před méně než 30 dny (DEDUP_DAYS), zákazník nedostane NIC a Libor
+ * dostane notifikaci „OPAKOVANÁ POPTÁVKA“ s novou zprávou. Po 30 dnech se
+ * sekvence spustí znovu. Enforcement (bez sekvence): opakování ≥ 60 min
+ * pošle jen #1 znovu (klíč -r{count}), < 60 min nic. Chyba Blobs = fail-open
+ * (dedup pak nefunguje). Neplatný e-mail → žádná sekvence + notifikace
+ * „NEPLATNÝ E-MAIL“. ID naplánovaných mailů se ukládají do Blobs, aby je
+ * resend-webhook.js mohl při bounce/complaint zrušit.
  * Každé odeslání (i ignorované) vyvolá interní notifikaci s unikátním předmětem.
  */
+
+const {
+  EMAIL_RE, NOTIFY_FROM, NOTIFY_TO_DEFAULT, normalizeEmailForKey, escapeHtml, getLeadStore,
+} = require("./lib/lead-common");
 
 const RESEND_API    = "https://api.resend.com/emails";
 const TEMPLATE_BASE = "https://tagra.app/try/email-preview";
@@ -50,9 +59,8 @@ const DAY_MS = 24 * 60 * 60 * 1000;
 // Opakovaná registrace dřív než za tolik minut od poslední = zákazník nedostane nic.
 const REPEAT_MIN = 60;
 
-const LEAD_STORE         = "trial-leads";
-const NOTIFY_FROM        = "TAGRA leads <sales@tagra.app>";
-const NOTIFY_TO_DEFAULT  = "libor.dospel@gmail.com";
+// Sekvence spuštěná pro stejný e-mail v posledních N dnech → nová se nespouští.
+const DEDUP_DAYS = 30;
 
 // Kdy odeslat navazující maily (dny od registrace)
 const FOLLOWUP_SCHEDULE = [
@@ -76,8 +84,6 @@ const DISPOSABLE_DOMAINS = [
   "guerrillamail.com",
   "10minutemail.com",
 ];
-
-const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[a-z]{2,}$/i;
 
 // Segment v source_url → jazyk šablony. Rozhoduje první výskyt zleva
 // (source_url má tvar "referrer → cílová URL", jazyk stránky odkud
@@ -198,11 +204,6 @@ async function fetchTemplate(url) {
   return r.text();
 }
 
-/** E-mail → ASCII klíč pro Idempotency-Key (lowercase, non-alfanumerické → "-"). */
-function normalizeEmailForKey(email) {
-  return String(email || "").trim().toLowerCase().replace(/[^a-z0-9]/g, "-");
-}
-
 /**
  * Rozhoduje první výskyt jazykového segmentu zleva v source_url.
  * Viz LANG_URL_SEGMENTS výše. Bez shody vrací null (fallback na "en").
@@ -254,18 +255,6 @@ async function sendViaResend(apiKey, payload, idempotencyKey) {
 // ── STAV LEADU (Netlify Blobs) ────────────────────────────────────────
 // Chyba Blobs je vždy fail-open: lead se bere jako nový a chyba se jen loguje.
 
-async function getLeadStore(event) {
-  try {
-    const blobs = require("@netlify/blobs");
-    // Funkce ve formátu exports.handler (Lambda režim) potřebují connectLambda.
-    if (typeof blobs.connectLambda === "function") blobs.connectLambda(event);
-    return blobs.getStore(LEAD_STORE);
-  } catch (e) {
-    logError(`Blobs unavailable: ${e.message}`);
-    return null;
-  }
-}
-
 async function readLead(store, key) {
   if (!store) return null;
   try {
@@ -287,9 +276,6 @@ async function writeLead(store, key, value) {
 
 // ── INTERNÍ NOTIFIKACE ────────────────────────────────────────────────
 
-const escapeHtml = (s) => String(s ?? "")
-  .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
-
 /** Co se zákazníkovi odeslalo — krátký popis do těla notifikace. */
 function describeSent(situation, aud, result) {
   if (!result) return "nic (viz důvod v předmětu)";
@@ -305,7 +291,7 @@ function describeSent(situation, aud, result) {
  * která měla pořád stejný předmět a Gmail ji slepoval do vláken).
  * Nikdy nevyhazuje chybu.
  */
-async function notifyLead(apiKey, { data, name, aud, lang, prev, count, situation, result, ignored }) {
+async function notifyLead(apiKey, { data, name, aud, lang, prev, count, situation, result, ignored, label }) {
   if (!apiKey) return;
   try {
     const company = String(data.company || "").trim();
@@ -314,10 +300,11 @@ async function notifyLead(apiKey, { data, name, aud, lang, prev, count, situatio
     if (country.length <= 3) country = country.toUpperCase();
 
     const isRepeat = !!prev;
-    const prefix =
+    // `label` (NEPLATNÝ E-MAIL / OPAKOVANÁ POPTÁVKA) nahrazuje prefix a jde za „TAGRA lead · “.
+    const prefix = label ? "" :
       (ignored ? `[ignorováno: ${ignored}] ` : "") +
       (isRepeat && !ignored ? `↻ ${count}× ` : "");
-    const subject = `${prefix}TAGRA lead · ${aud} · ${country} · ${name || "(bez jména)"}${company ? ` (${company})` : ""}`
+    const subject = `${prefix}TAGRA lead · ${label ? `${label} · ` : ""}${aud} · ${country} · ${name || "(bez jména)"}${company ? ` (${company})` : ""}`
       .replace(/[\r\n]+/g, " ");
 
     const rows = Object.entries(data)
@@ -327,6 +314,7 @@ async function notifyLead(apiKey, { data, name, aud, lang, prev, count, situatio
 
     const extra = [];
     if (isRepeat) extra.push(`<p>Opakovaná registrace (${count}×). První registrace: <b>${escapeHtml(prev.first_at)}</b>, poslední předtím: ${escapeHtml(prev.last_at)}.</p>`);
+    if (label === "OPAKOVANÁ POPTÁVKA" && data.message) extra.push(`<p>Nová zpráva z formuláře:</p><blockquote style="margin:0 0 12px;padding-left:10px;border-left:3px solid #ccc;white-space:pre-wrap">${escapeHtml(data.message)}</blockquote>`);
     if (!ignored) extra.push(`<p>Zákazník dostal: <b>${escapeHtml(describeSent(situation, aud, result))}</b></p>`);
     else extra.push(`<p>Zákazníkovi nebylo nic odesláno — ${escapeHtml(ignored)}.</p>`);
 
@@ -399,6 +387,7 @@ exports.handler = async (event) => {
 
   if (!EMAIL_RE.test(email)) {
     logError(`Invalid email in submission: ${email}`);
+    await notifyLead(apiKey, { ...lead, label: "NEPLATNÝ E-MAIL", ignored: `neplatná adresa „${email}“` });
     return { statusCode: 200, body: "Ignored: invalid email" };
   }
 
@@ -431,6 +420,28 @@ exports.handler = async (event) => {
   const sinceLastMin  = prev ? (now - Date.parse(prev.last_at)) / 60000 : Infinity;
   const count         = prev ? (Number(prev.count) || 1) + 1 : 1;
 
+  // Kdy naposledy startovala sekvence (starší záznamy sequenced_at nemají → první registrace).
+  const seqStartMs = prev
+    ? Date.parse(prev.sequenced_at || (prevSequenced.length ? prev.first_at : "")) : NaN;
+  const seqAgeDays = Number.isFinite(seqStartMs) ? (now - seqStartMs) / DAY_MS : Infinity;
+
+  // Dřív bounce/complaint → e-mailům na tuhle adresu se nic neposílá.
+  if (prev && prev.suppressed) {
+    logInfo(`Ignored: ${email} suppressed (${prev.suppressed})`);
+    return ignore(`adresa je zablokovaná (${prev.suppressed})`, "Ignored: suppressed");
+  }
+
+  // Sekvence pro tenhle e-mail už běží (< DEDUP_DAYS) → zákazníkovi nic, Libor dostane notifikaci.
+  if (prev && seqAgeDays < DEDUP_DAYS) {
+    logInfo(`Duplicate within ${DEDUP_DAYS} d for ${email} (sequence ${Math.round(seqAgeDays)} d old)`);
+    await notifyLead(apiKey, {
+      ...lead, prev, count: (Number(prev.count) || 1) + 1, label: "OPAKOVANÁ POPTÁVKA",
+      ignored: `sekvence pro tento e-mail běží ${Math.round(seqAgeDays)} d (< ${DEDUP_DAYS} d)`,
+    });
+    await writeLead(store, emailKey, { ...prev, last_at: new Date(now).toISOString(), count: (Number(prev.count) || 1) + 1 });
+    return { statusCode: 200, body: JSON.stringify({ sent: false, situation: "duplicate" }) };
+  }
+
   let situation;
   if (!prev)                                  situation = "new";
   else if (!prevAudiences.includes(aud))      situation = "new-audience";
@@ -438,9 +449,10 @@ exports.handler = async (event) => {
   else                                        situation = "repeat-throttled";
 
   const sendWelcome = situation !== "repeat-throttled";
-  // #2/#3 jen pro nový lead / nové publikum, kterému ještě neběžely.
-  const scheduleSeq = SEQUENCE_AUDIENCES.includes(aud) && !prevSequenced.includes(aud)
-                      && (situation === "new" || situation === "new-audience");
+  // #2/#3 pro nový lead / nové publikum; po uplynutí DEDUP_DAYS i pro opakovanou registraci.
+  const scheduleSeq = SEQUENCE_AUDIENCES.includes(aud)
+                      && sendWelcome
+                      && (situation === "new" || situation === "new-audience" || prevSequenced.length > 0);
 
   const result = { welcome: null, scheduled: [], failed: [] };
 
@@ -526,6 +538,10 @@ exports.handler = async (event) => {
     welcome_ids: [...(prev ? prev.welcome_ids || [] : []), ...(result.welcome ? [result.welcome] : [])],
     audiences: [...new Set([...prevAudiences, ...(sendWelcome ? [aud] : [])])],
     sequenced: [...new Set([...prevSequenced, ...(scheduleSeq ? [aud] : [])])],
+    sequenced_at: scheduleSeq ? nowIso : (prev ? prev.sequenced_at : undefined),
+    // ID naplánovaných mailů pro resend-webhook.js (zrušení při bounce/complaint).
+    // Při nové sekvenci se staré (už odeslané) ID zahazují.
+    scheduled: [...(scheduleSeq ? [] : (prev ? prev.scheduled || [] : [])), ...result.scheduled],
   });
 
   // ── INTERNÍ NOTIFIKACE ──────────────────────────────────────────────

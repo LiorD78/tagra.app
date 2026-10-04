@@ -110,13 +110,20 @@
   // vypínáme, protože dál si chyby zvýrazňujeme sami (.has-error).
   form.setAttribute('novalidate', '');
 
+  // E-mail se kontroluje atributem `pattern` v HTML (stejné pravidlo jako na serveru
+  // v netlify/functions/trial-email.js — type="email" propouští např. "a//@x.com").
+  // Hlášku zobrazí prohlížeč nativně v jazyce prohlížeče; vlastní překlady nepřidáváme.
+  const emailInput = form.querySelector('input[name="email"]');
+
   form.addEventListener('submit', function (e) {
+    if (emailInput) emailInput.value = emailInput.value.trim();
     if (!form.checkValidity()) {
       e.preventDefault();
       const firstInvalid = form.querySelector(':invalid');
       if (firstInvalid) {
         firstInvalid.closest('.form-field, .audience-picker, .gdpr-check')?.classList.add('has-error');
         firstInvalid.focus({ preventScroll: false });
+        if (firstInvalid.reportValidity) firstInvalid.reportValidity();
       }
       return;
     }
