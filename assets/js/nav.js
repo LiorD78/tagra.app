@@ -75,17 +75,30 @@
      Cestinu zamerne NEposilame - tam ma zustat firemni "Podpora" (a na
      tagra.app ceska verze stejne neni, CZ vede na tdt.cz).
      Overeno v prohlizeci pro vsech pet jazyku 16. 8. 2026. */
-  var PODPOROVANE = { en: 1, de: 1, pl: 1, el: 1, hu: 1, sk: 1 };
+  /* 8. 10. 2026: doplneny FR/IT/NL/RO (dosud tam widget ukazoval ceske "Podpora"). Overit v prohlizeci. */
+  var PODPOROVANE = { en: 1, de: 1, pl: 1, el: 1, hu: 1, sk: 1, fr: 1, it: 1, nl: 1, ro: 1 };
   var lg = (document.documentElement.getAttribute('lang') || '').slice(0, 2).toLowerCase();
   if (PODPOROVANE[lg]) window.smartsupp('language', lg);
 
-  var s = document.getElementsByTagName('script')[0];
-  var c = document.createElement('script');
-  c.type = 'text/javascript';
-  c.charset = 'utf-8';
-  c.async = true;
-  c.src = 'https://www.smartsuppchat.com/loader.js?';
-  s.parentNode.insertBefore(c, s);
+  /* 8. 10. 2026: loader se nacita az po prvni interakci (scroll, dotyk, mys, klavesa)
+     nebo po 8 s necinnosti. Smartsupp je nejtezsi skript tretich stran a zhorsoval
+     INP/TBT na mobilu. Fronta window.smartsupp._ prikazy z mezicasu zachova. */
+  var loaded = false;
+  var EVENTS = ['scroll', 'pointerdown', 'mousemove', 'touchstart', 'keydown'];
+  function load() {
+    if (loaded) return;
+    loaded = true;
+    EVENTS.forEach(function (ev) { window.removeEventListener(ev, load, { passive: true }); });
+    var s = document.getElementsByTagName('script')[0];
+    var c = document.createElement('script');
+    c.type = 'text/javascript';
+    c.charset = 'utf-8';
+    c.async = true;
+    c.src = 'https://www.smartsuppchat.com/loader.js?';
+    s.parentNode.insertBefore(c, s);
+  }
+  EVENTS.forEach(function (ev) { window.addEventListener(ev, load, { passive: true, once: true }); });
+  setTimeout(load, 8000);
 })();
 
 /* Odsazeni chatove bubliny nad sticky CTA listu.
