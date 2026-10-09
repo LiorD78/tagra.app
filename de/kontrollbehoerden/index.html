@@ -594,7 +594,7 @@
 </details>
 <details>
 <summary>Was zeigt die Auswertung der Fahrerkarte?</summary>
-<p class="faq-a">Nach dem <strong>Fahrerkarten-Download</strong> wertet die Software <strong>Lenk- und Ruhezeiten</strong>, Pausen, Ruhezeiten, Arbeitszeit und Fahren ohne Karte aus. Jeder Verstoß wird mit genauem Datum, Uhrzeit und Dauer angezeigt. Bei G2V2-Karten stehen zusätzlich GPS-Koordinaten aus der Fahrtenschreiberaufzeichnung zur Verfügung.</p>
+<p class="faq-a">Nach dem Auslesen der <strong>Fahrerkarte</strong> wertet die Software <strong>Lenk- und Ruhezeiten</strong>, Pausen, Arbeitszeit und Fahren ohne Karte aus. Jeder Verstoß wird mit genauem Datum, Uhrzeit und Dauer angezeigt. Bei G2V2-Karten stehen zusätzlich GPS-Koordinaten aus der Fahrtenschreiberaufzeichnung zur Verfügung.</p>
 </details>
 <details>
 <summary>Wie schnell läuft die Auswertung bei einer Straßenkontrolle ab?</summary>
@@ -708,21 +708,68 @@
 })();
 </script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "TAGRA Control – Fahrtenschreiber-Auswertungssoftware für Kontrollbehörden", "applicationCategory": "BusinessApplication", "operatingSystem": "Windows", "description": "Professionelle Fahrtenschreiber-Auswertungssoftware für die digitale Fahrtenschreiberauswertung bei Straßen- und Betriebskontrollen. Führt Fahrerkarten-Downloads durch und bewertet Verstöße gegen die EU-Lenk- und Ruhezeiten nach Verordnung (EG) Nr. 561/2006, (EU) 2020/1054 und AETR. Im Einsatz bei der Tschechischen Polizei, der Tschechischen Zollverwaltung, dem Tschechischen Verkehrsministerium, den Slowakischen Arbeitsinspektionen und 8 Bezirksämtern in Ungarn.", "url": "https://tagra.app/de/kontrollbehoerden/", "inLanguage": "de", "author": {"@type": "Organization", "@id": "https://tagra.app/#organization", "name": "Truck Data Technology, s.r.o.", "url": "https://www.tdt.cz", "telephone": "+420739005345", "email": "sales@tagra.app"}, "offers": {"@type": "Offer", "@id": "https://tagra.app/de/kontrollbehoerden/#offer", "priceCurrency": "EUR", "price": "749", "availability": "https://schema.org/InStock", "url": "https://tagra.app/de/kontrollbehoerden/", "description": "Kaufpreis zzgl. MwSt. Das erste Jahr mit Updates und Support ist enthalten; ab dem 2. Jahr beträgt die jährliche Lizenzgebühr 149 € zzgl. MwSt.", "seller": {"@type": "Organization", "@id": "https://tagra.app/#organization", "name": "Truck Data Technology, s.r.o.", "url": "https://www.tdt.cz"}}}</script>
-<script type="application/ld+json">
-{
+<script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "inLanguage": "de",
   "mainEntity": [
-    {"@type":"Question","name":"Welche Arten von Fahrtenschreibern unterstützt TAGRA Control?","acceptedAnswer":{"@type":"Answer","text":"TAGRA Control führt eine digitale Fahrtenschreiberauswertung für Aufzeichnungen von Fahrtenschreibern der ersten Generation (G1) und intelligenten Fahrtenschreibern der zweiten Generation (G2V2) durch. Unterstützte Dateiformate: .DDD, .C1B, .V1B und ESM."}},
-    {"@type":"Question","name":"Was zeigt die Auswertung der Fahrerkarte?","acceptedAnswer":{"@type":"Answer","text":"Nach dem Auslesen der Fahrerkarte wertet die Software Lenk- und Ruhezeiten, Pausen, Arbeitszeit und Fahren ohne Karte aus. Jeder Verstoß wird mit genauem Datum, Uhrzeit und Dauer angezeigt. Bei G2V2-Karten stehen zusätzlich GPS-Koordinaten aus der Tachographenaufzeichnung zur Verfügung."}},
-    {"@type":"Question","name":"Wie schnell läuft die Auswertung bei einer Straßenkontrolle ab?","acceptedAnswer":{"@type":"Answer","text":"Das Einlesen einer Fahrerkarte über die DOWNLOAD BOX II S dauert je nach Datenmenge auf der Karte in der Regel 10–60 Sekunden. Die eigentliche Auswertung und die Anzeige des Verstoßberichts erfolgen unmittelbar nach dem Einlesen der Daten."}},
-    {"@type":"Question","name":"Kann TAGRA Control offline ohne Internetverbindung genutzt werden?","acceptedAnswer":{"@type":"Answer","text":"Ja. TAGRA Control funktioniert vollständig offline. Eine Internetverbindung ist nur zur Installation von Software-Updates erforderlich. Die Kontrolltätigkeit und die Datenauswertung funktionieren ohne Netzwerkverbindung."}},
-    {"@type":"Question","name":"Auf welchen Geräten läuft TAGRA Control?","acceptedAnswer":{"@type":"Answer","text":"Die Software läuft unter Windows 7 SP1 und neuer (Windows 8.1, 10, 11 — sowohl 32-Bit als auch 64-Bit). Geeignet für Laptops und Desktop-Computer. Die Mindestanforderungen an die Hardware sind niedrig."}},
-    {"@type":"Question","name":"Ist eine Schulung auf Englisch für internationale Kontrollbehörden verfügbar?","acceptedAnswer":{"@type":"Answer","text":"Ja. Truck Data Technology bietet Schulungen auf Englisch für internationale Kontrollbehörden und Partnerorganisationen an. Kontaktieren Sie uns unter sales@tagra.app, um Konditionen und einen Termin zu vereinbaren."}},
-    {"@type":"Question","name":"Wie wird die Rechtsaktualität sichergestellt?","acceptedAnswer":{"@type":"Answer","text":"Die Software wird bei jeder relevanten Änderung der EU- und nationalen Rechtsvorschriften aktualisiert. Updates stehen allen Inhabern gültiger Lizenzen zur Verfügung. Das Programm benachrichtigt Sie automatisch, wenn ein Update verfügbar ist."}}
+    {
+      "@type": "Question",
+      "name": "Welche Arten von Fahrtenschreibern unterstützt TAGRA Control?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "TAGRA Control führt eine digitale Fahrtenschreiberauswertung für Aufzeichnungen von Fahrtenschreibern der ersten Generation (G1) und intelligenten Fahrtenschreibern der zweiten Generation (G2V2) durch. Unterstützte Dateiformate: .DDD, .C1B, .V1B und ESM."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Was zeigt die Auswertung der Fahrerkarte?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nach dem Auslesen der Fahrerkarte wertet die Software Lenk- und Ruhezeiten, Pausen, Arbeitszeit und Fahren ohne Karte aus. Jeder Verstoß wird mit genauem Datum, Uhrzeit und Dauer angezeigt. Bei G2V2-Karten stehen zusätzlich GPS-Koordinaten aus der Fahrtenschreiberaufzeichnung zur Verfügung."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Wie schnell läuft die Auswertung bei einer Straßenkontrolle ab?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Das Einlesen einer Fahrerkarte über die DOWNLOAD BOX II S dauert je nach Datenmenge auf der Karte in der Regel 10–60 Sekunden. Die eigentliche Auswertung und die Anzeige des Verstoßberichts erfolgen unmittelbar nach dem Einlesen der Daten."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Kann TAGRA Control offline ohne Internetverbindung genutzt werden?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja. TAGRA Control funktioniert vollständig offline. Eine Internetverbindung ist nur zur Installation von Software-Updates erforderlich. Die Kontrolltätigkeit und die Datenauswertung funktionieren ohne Netzwerkverbindung."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Auf welchen Geräten läuft TAGRA Control?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Die Software läuft unter Windows 7 SP1 und neuer (Windows 8.1, 10, 11 — sowohl 32-Bit als auch 64-Bit). Geeignet für Laptops und Desktop-Computer. Die Mindestanforderungen an die Hardware sind niedrig."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Ist eine Schulung auf Englisch für internationale Kontrollbehörden verfügbar?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja. Truck Data Technology bietet Schulungen auf Englisch für internationale Kontrollbehörden und Partnerorganisationen an. Kontaktieren Sie uns unter sales@tagra.app, um Konditionen und einen Termin zu vereinbaren."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Wie wird die Rechtsaktualität sichergestellt?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Die Software wird bei jeder relevanten Änderung der EU- und nationalen Rechtsvorschriften aktualisiert. Updates stehen allen Inhabern gültiger Lizenzen zur Verfügung. Das Programm benachrichtigt Sie automatisch, wenn ein Update verfügbar ist."
+      }
+    }
   ]
-}
-</script>
+}</script>
 </body>
 </html>
