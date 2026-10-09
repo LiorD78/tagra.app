@@ -350,7 +350,7 @@ if ('IntersectionObserver' in window) {
 <ul>
 <li>Les opérations <strong>exclusivement nationales</strong> dans un seul pays (sans trajet transfrontalier ni cabotage), sous réserve des règles nationales.</li>
 <li><strong>Privé, à des fins non commerciales</strong> utilisation sans lien avec une activité économique.</li>
-<li><strong>Pour compte propre</strong> déplacements lors desquels la conduite n'est pas l'activité principale du conducteur, dans le cadre de l'exemption prévue à l'article 3, point h), du règlement (CE) n° 561/2006.</li>
+<li><strong>Pour compte propre</strong> déplacements lors desquels la conduite n'est pas l'activité principale du conducteur, dans le cadre de l'exemption prévue à l'article 3, point h bis), du règlement (CE) n° 561/2006.</li>
 <li>Véhicules dont la masse autorisée <strong>≤ 2,5 t</strong> et ensembles qui restent en dessous du seuil.</li>
 <li>Véhicules conçus pour transporter <strong>au maximum neuf personnes, conducteur compris</strong> lorsqu'ils sont utilisés pour le transport de personnes et non pour le transport de marchandises.</li>
 </ul>
@@ -360,7 +360,7 @@ if ('IntersectionObserver' in window) {
 <div class="badge">Exemple pratique</div>
 <h3>Je franchis une frontière pour récupérer des matériaux pour ma propre entreprise</h3>
 <p>
-        Un artisan conduit un véhicule utilitaire de 3,2 t du pays A vers le pays B pour récupérer des outils et des fournitures destinés à sa propre entreprise. S'il s'agit d'un <em>transport pour compte propre</em> de marchandises et si l'activité principale du conducteur n'est pas la conduite, l'exemption prévue à l' <strong>article 3, point h), du règlement (CE) n° 561/2006</strong> peut s'appliquer. Lors d'un contrôle routier, les autorités de contrôle s'attendront à ce que l' <strong>objet</strong> du trajet et le <strong>lien</strong> entre le conducteur, l'entreprise et les marchandises soit clairement établi. Gardez les documents à portée de main et soyez prêt à expliquer brièvement le trajet.
+        Un artisan conduit un véhicule utilitaire de 3,2 t du pays A vers le pays B pour récupérer des outils et des fournitures destinés à sa propre entreprise. S'il s'agit d'un <em>transport pour compte propre</em> de marchandises et si l'activité principale du conducteur n'est pas la conduite, l'exemption prévue à l' <strong>article 3, point h bis), du règlement (CE) n° 561/2006</strong> peut s'appliquer. Lors d'un contrôle routier, les autorités de contrôle s'attendront à ce que l' <strong>objet</strong> du trajet et le <strong>lien</strong> entre le conducteur, l'entreprise et les marchandises soit clairement établi. Gardez les documents à portée de main et soyez prêt à expliquer brièvement le trajet.
       </p>
 <p style="margin-top:10px;">
         Documentation de référence : <a href="https://www.ela.europa.eu/" rel="noopener" style="color:var(--blue-mid);" target="_blank">Autorité européenne du travail</a> et le texte juridique consolidé sur <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A02006R0561-20240522" rel="noopener" style="color:var(--blue-mid);" target="_blank">EUR-Lex (règlement 561/2006)</a>.
@@ -534,7 +534,7 @@ if ('IntersectionObserver' in window) {
 <details>
 <summary>Je ne suis pas transporteur — je franchis occasionnellement une frontière pour ma propre entreprise. Ai-je besoin d'un tachygraphe ?</summary>
 <div class="faq-a">
-          Les facteurs déterminants sont la <strong>masse autorisée</strong> (y compris toute remorque) et le <strong>objet</strong> du transport. S’il ne s’agit pas d’un transport pour compte d’autrui et que la conduite n’est pas votre profession principale, l’ <strong>exemption pour compte propre</strong> prévue à l’article 3, point h), du règlement 561/2006 s’applique généralement. Nous vous recommandons d’évaluer chaque situation individuellement — <a href="/fr/contact/" style="color:var(--blue-mid);">contactez-nous</a> pour une vérification rapide.
+          Les facteurs déterminants sont la <strong>masse autorisée</strong> (y compris toute remorque) et le <strong>objet</strong> du transport. S’il ne s’agit pas d’un transport pour compte d’autrui et que la conduite n’est pas votre profession principale, l’ <strong>exemption pour compte propre</strong> prévue à l’article 3, point h bis), du règlement 561/2006 s’applique généralement. Nous vous recommandons d’évaluer chaque situation individuellement — <a href="/fr/contact/" style="color:var(--blue-mid);">contactez-nous</a> pour une vérification rapide.
         </div>
 </details>
 <details>
@@ -676,121 +676,121 @@ if ('IntersectionObserver' in window) {
 
   const NODES = {
     'start': {
-      step: 1, label: 'Vehicle weight',
-      question: 'What is the gross weight of your vehicle or combination?',
-      hint: 'Check the permissible maximum mass on your registration document — include any trailer.',
+      step: 1, label: 'Masse du véhicule',
+      question: 'Quelle est la masse brute de votre véhicule ou ensemble ?',
+      hint: 'Vérifiez la masse maximale autorisée sur votre certificat d\'immatriculation — incluez toute remorque.',
       options: [
-        { id: 'r-light', label: 'Up to 2.5 t' },
-        { id: 'q-trans-25', label: '2.5 – 3.5 t' },
-        { id: 'r-over-35', label: 'Above 3.5 t' }
+        { id: 'r-light', label: 'Jusqu\'à 2,5 t' },
+        { id: 'q-trans-25', label: '2,5 – 3,5 t' },
+        { id: 'r-over-35', label: 'Plus de 3,5 t' }
       ],
       threeCol: true
     },
     'q-trans-25': {
-      step: 2, label: 'Type of transport',
-      question: 'Do you operate international goods transport with the vehicle?',
-      hint: 'This covers cross-border carriage between EU/EEA/UK and cabotage (domestic operations performed in another country).',
+      step: 2, label: 'Type de transport',
+      question: 'Effectuez-vous du transport international de marchandises avec le véhicule ?',
+      hint: 'Cela couvre le transport transfrontalier entre l\'UE/EEE/le Royaume-Uni et le cabotage (opérations nationales effectuées dans un autre pays).',
       options: [
-        { id: 'r-domestic-25', label: 'No, domestic only' },
-        { id: 'q-purpose-25', label: 'Yes, cross-border or cabotage' }
+        { id: 'r-domestic-25', label: 'Non, uniquement national' },
+        { id: 'q-purpose-25', label: 'Oui, transfrontalier ou cabotage' }
       ]
     },
     'q-purpose-25': {
-      step: 3, label: 'Purpose of transport',
-      question: 'What is the purpose of the cross-border transport?',
-      hint: 'Hire or reward = carrying goods for a customer for payment. Own account = transporting your own goods for your own business.',
+      step: 3, label: 'Objet du transport',
+      question: 'Quel est l\'objet du transport transfrontalier ?',
+      hint: 'Pour compte d\'autrui = transport de marchandises pour un client contre rémunération. Pour compte propre = transport de vos propres marchandises pour votre propre entreprise.',
       options: [
-        { id: 'r-yes-25', label: "Hire or reward (carrying others' goods)" },
-        { id: 'q-driver-main-25', label: 'Own account (own goods, own company)' }
+        { id: 'r-yes-25', label: "Pour compte d'autrui (transport des marchandises d'autrui)" },
+        { id: 'q-driver-main-25', label: 'Pour compte propre (vos propres marchandises, votre propre entreprise)' }
       ]
     },
     'q-driver-main-25': {
-      step: 4, label: "Driver's profession",
-      question: "Is driving the driver's main profession?",
-      hint: 'If the driver works primarily as a professional driver, the own-account exemption does NOT apply. If driving is secondary (e.g. tradesperson, technician, business owner), the exemption may apply.',
+      step: 4, label: "Profession du conducteur",
+      question: "La conduite est-elle la profession principale du conducteur ?",
+      hint: 'Si le conducteur travaille principalement comme conducteur professionnel, l\'exemption pour compte propre ne s\'applique PAS. Si la conduite est une activité secondaire (p. ex. artisan, technicien, chef d\'entreprise), l\'exemption peut s\'appliquer.',
       options: [
-        { id: 'r-yes-25', label: 'Yes, professional driver' },
-        { id: 'r-own-account-25', label: 'No, driving is secondary' }
+        { id: 'r-yes-25', label: 'Oui, conducteur professionnel' },
+        { id: 'r-own-account-25', label: 'Non, la conduite est secondaire' }
       ]
     },
     'r-light': {
       kind: 'no',
-      title: 'Tachograph generally not required',
-      desc: 'Vehicles and combinations <strong>up to 2.5 t</strong> permissible mass generally fall outside the scope of Regulation (EC) No 561/2006 — even after July 2026.',
+      title: 'Tachygraphe généralement non requis',
+      desc: 'Les véhicules et ensembles <strong>jusqu\'à 2,5 t</strong> de masse autorisée sont généralement hors du champ d\'application du règlement (CE) n° 561/2006 — même après juillet 2026.',
       bullets: [
-        'Watch the <strong>combination mass</strong> — if you attach a trailer and exceed 2.5 t, you enter the 2.5–3.5 t bracket.',
-        'For absolute certainty, verify your specific situation in official sources or with a specialist.'
+        'Surveillez la <strong>masse de l\'ensemble</strong> — si vous attachez une remorque et dépassez 2,5 t, vous entrez dans la catégorie 2,5–3,5 t.',
+        'Pour une certitude absolue, vérifiez votre situation spécifique dans les sources officielles ou auprès d\'un spécialiste.'
       ],
       ctas: [
-        { href: 'https://www.ela.europa.eu/assets/lcv2026/index.html', label: 'Read ELA guidance', ext: true, outline: true }
+        { href: 'https://www.ela.europa.eu/assets/lcv2026/index.html', label: 'Lire les orientations de l\'AET', ext: true, outline: true }
       ]
     },
     'r-domestic-25': {
       kind: 'no',
-      title: 'Tachograph generally not required',
-      desc: 'If you operate a 2.5–3.5 t van <strong>strictly domestically</strong> (no cross-border leg and no cabotage), the new July 2026 obligation does not apply. The change targets international commercial transport and cabotage within the EU.',
+      title: 'Tachygraphe généralement non requis',
+      desc: 'Si vous exploitez une camionnette de 2,5–3,5 t <strong>strictement au niveau national</strong> (sans trajet transfrontalier ni cabotage), la nouvelle obligation de juillet 2026 ne s\'applique pas. La modification vise le transport commercial international et le cabotage au sein de l\'UE.',
       bullets: [
-        'If you start cross-border operations, the obligation kicks in automatically.',
+        'Si vous commencez des opérations transfrontalières, l\'obligation s\'applique automatiquement.',
         'Other operator duties (working time, goods documentation) still apply under national rules.'
       ],
       ctas: [
-        { href: 'https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=legissum%3A4382208', label: 'Read EUR-Lex summary', ext: true, outline: true }
+        { href: 'https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=legissum%3A4382208', label: 'Lire le résumé EUR-Lex', ext: true, outline: true }
       ]
     },
     'q-purpose-25': null, // safety; will be redefined above
     'r-own-account-25': {
       kind: 'maybe',
-      title: 'Own-account exemption likely applies',
-      desc: 'If the transport is <strong>not for hire or reward</strong> and <strong>driving is not the main profession</strong> of the driver, the exemption in <strong>Article 3(h) of Regulation 561/2006</strong> usually applies and a tachograph is generally not required. <strong>However:</strong> the specific situation and documentation matter.',
+      title: 'L\'exemption pour compte propre s\'applique probablement',
+      desc: 'Si le transport <strong>n\'est pas effectué pour compte d\'autrui</strong> et que <strong>la conduite n\'est pas la profession principale</strong> du conducteur, l\'exemption prévue à l\'<strong>article 3, point h bis), du règlement 561/2006</strong> s\'applique généralement et un tachygraphe n\'est généralement pas requis. <strong>Toutefois :</strong> la situation spécifique et les documents sont importants.',
       bullets: [
-        'Carry in the vehicle: <strong>document for the goods</strong> (invoice, delivery note), a <strong>brief journey-purpose note</strong>, and proof of the <strong>driver–company–vehicle</strong> link.',
-        'Be prepared for the control authority to ask you to demonstrate that it is not transport for hire or reward.',
-        'In doubt, assess individually with a specialist.'
+        'Gardez dans le véhicule : un <strong>document relatif aux marchandises</strong> (facture, bon de livraison), une <strong>brève note sur l\'objet du trajet</strong> et la preuve du lien <strong>conducteur–entreprise–véhicule</strong>.',
+        'Soyez prêt à démontrer à l\'autorité de contrôle qu\'il ne s\'agit pas d\'un transport pour compte d\'autrui.',
+        'En cas de doute, faites évaluer votre situation individuellement par un spécialiste.'
       ],
       ctas: [
-        { href: '/contact/', label: 'Talk to a TAGRA expert', primary: true },
-        { href: 'https://www.ela.europa.eu/assets/lcv2026/index.html', label: 'Read ELA guidance', ext: true, outline: true }
+        { href: '/fr/contact/', label: 'Parler à un expert TAGRA', primary: true },
+        { href: 'https://www.ela.europa.eu/assets/lcv2026/index.html', label: 'Lire les orientations de l\'AET', ext: true, outline: true }
       ]
     },
     'r-yes-25': {
       kind: 'yes',
-      title: 'Tachograph is required (since 1 July 2026)',
-      desc: 'You operate a 2.5–3.5 t van for <strong>international goods transport for hire or reward</strong> or <strong>cabotage</strong> within the EU. From <strong>1 July 2026</strong> you must have a smart tachograph version 2 (G2v2).',
+      title: 'Tachygraphe requis (depuis le 1er juillet 2026)',
+      desc: 'Vous exploitez une camionnette de 2,5–3,5 t pour du <strong>transport international de marchandises pour compte d\'autrui</strong> ou du <strong>cabotage</strong> au sein de l\'UE. À partir du <strong>1er juillet 2026</strong>, vous devez disposer d\'un tachygraphe intelligent version 2 (G2v2).',
       bullets: [
-        '<strong>Installation:</strong> G2v2 tachograph at an approved tachograph workshop.',
-        '<strong>Cards:</strong> driver card for every driver + company card for the operator.',
-        '<strong>Data downloads:</strong> driver cards at least every 28 days, vehicle units at least every 90 days.',
-        '<strong>Evaluation and archiving:</strong> by software (e.g. TAGRA) or service. Archive at least 1 year.'
+        '<strong>Installation :</strong> tachygraphe G2v2 dans un atelier agréé pour tachygraphes.',
+        '<strong>Cartes :</strong> carte de conducteur pour chaque conducteur + carte d\'entreprise pour l\'exploitant.',
+        '<strong>Téléchargements des données :</strong> cartes de conducteur au moins tous les 28 jours, unités embarquées au moins tous les 90 jours.',
+        '<strong>Analyse et archivage :</strong> par logiciel (p. ex. TAGRA) ou service. Archivez au moins 1 an.'
       ],
       ctas: [
-        { href: '/try/', label: 'Try TAGRA free for 30 days', primary: true },
-        { href: '/integrations/dkv-live/', label: 'See DKV LIVE integration', outline: true }
+        { href: '/fr/essai-gratuit/', label: 'Essayer TAGRA gratuitement pendant 30 jours', primary: true },
+        { href: '/fr/integrations/dkv-live/', label: 'Voir l\'intégration DKV LIVE', outline: true }
       ]
     },
     'r-over-35': {
       kind: 'yes',
-      title: 'Tachograph already required today',
-      desc: 'For vehicles <strong>above 3.5 t</strong> in goods transport, the tachograph obligation under Regulation (EC) No 561/2006 applies <strong>today</strong> — not just from July 2026. New vehicles must be fitted with the smart tachograph version 2 (G2v2).',
+      title: 'Tachygraphe déjà requis aujourd\'hui',
+      desc: 'Pour les véhicules <strong>de plus de 3,5 t</strong> utilisés pour le transport de marchandises, l\'obligation de tachygraphe prévue par le règlement (CE) n° 561/2006 s\'applique <strong>aujourd\'hui</strong> — et pas seulement à partir de juillet 2026. Les nouveaux véhicules doivent être équipés du tachygraphe intelligent version 2 (G2v2).',
       bullets: [
-        '<strong>Cards:</strong> driver card for every driver + company card for the operator.',
-        '<strong>Data downloads:</strong> driver cards every 28 days, vehicle units every 90 days.',
-        '<strong>Evaluation and archiving:</strong> by software (e.g. TAGRA) or service. Archive at least 1 year.',
-        'There are <strong>taxative exemptions</strong> under Articles 3 and 13 of Reg 561/2006 (agricultural, forestry, fire/rescue vehicles, tractors up to 40 km/h, etc.) — verify any applicable exemption with national authorities.'
+        '<strong>Cartes :</strong> carte de conducteur pour chaque conducteur + carte d\'entreprise pour l\'exploitant.',
+        '<strong>Téléchargements des données :</strong> cartes de conducteur tous les 28 jours, unités embarquées tous les 90 jours.',
+        '<strong>Analyse et archivage :</strong> par logiciel (p. ex. TAGRA) ou service. Archivez au moins 1 an.',
+        'Il existe une <strong>liste exhaustive d\'exemptions</strong> au titre des articles 3 et 13 du règlement 561/2006 (véhicules agricoles, forestiers, de lutte contre l\'incendie/de secours, tracteurs jusqu\'à 40 km/h, etc.) — vérifiez toute exemption applicable auprès des autorités nationales.'
       ],
       ctas: [
-        { href: '/try/', label: 'Try TAGRA free for 30 days', primary: true },
-        { href: 'https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A02006R0561-20240522', label: 'List of exemptions (EUR-Lex)', ext: true, outline: true }
+        { href: '/fr/essai-gratuit/', label: 'Essayer TAGRA gratuitement pendant 30 jours', primary: true },
+        { href: 'https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A02006R0561-20240522', label: 'Liste des exemptions (EUR-Lex)', ext: true, outline: true }
       ]
     }
   };
   // Re-add q-purpose-25 properly
   NODES['q-purpose-25'] = {
-    step: 3, label: 'Purpose of transport',
-    question: 'What is the purpose of the cross-border transport?',
-    hint: 'Hire or reward = carrying goods for a customer for payment. Own account = transporting your own goods for your own business.',
+    step: 3, label: 'Objet du transport',
+    question: 'Quel est l\'objet du transport transfrontalier ?',
+    hint: 'Pour compte d\'autrui = transport de marchandises pour un client contre rémunération. Pour compte propre = transport de vos propres marchandises pour votre propre entreprise.',
     options: [
-      { id: 'r-yes-25', label: "Hire or reward (carrying others' goods)" },
-      { id: 'q-driver-main-25', label: 'Own account (own goods, own company)' }
+      { id: 'r-yes-25', label: "Pour compte d'autrui (transport des marchandises d'autrui)" },
+      { id: 'q-driver-main-25', label: 'Pour compte propre (vos propres marchandises, votre propre entreprise)' }
     ]
   };
 
@@ -813,7 +813,7 @@ if ('IntersectionObserver' in window) {
     let html = '<div class="vq-stage">';
     html += '<div class="vq-header">';
     html += progressDots(node.step);
-    html += '<div class="vq-step">Step '+node.step+' · '+escapeHtml(node.label)+'</div>';
+    html += '<div class="vq-step">Étape '+node.step+' · '+escapeHtml(node.label)+'</div>';
     html += '</div>';
     html += '<h3 class="vq-question">'+escapeHtml(node.question)+'</h3>';
     if(node.hint) html += '<div class="vq-hint">'+escapeHtml(node.hint)+'</div>';
@@ -823,8 +823,8 @@ if ('IntersectionObserver' in window) {
     });
     html += '</div>';
     html += '<div class="vq-controls">';
-    html += '<button class="vq-btn-ctrl" data-act="back"'+(state.path.length===0?' disabled':'')+'>← Back</button>';
-    html += '<button class="vq-btn-ctrl" data-act="reset"'+(state.path.length===0?' disabled':'')+'>↻ Start over</button>';
+    html += '<button class="vq-btn-ctrl" data-act="back"'+(state.path.length===0?' disabled':'')+'>← Retour</button>';
+    html += '<button class="vq-btn-ctrl" data-act="reset"'+(state.path.length===0?' disabled':'')+'>↻ Recommencer</button>';
     html += '</div>';
     html += '</div>';
     root.innerHTML = html;
@@ -835,9 +835,9 @@ if ('IntersectionObserver' in window) {
     const res = NODES[nodeId];
     const kindClass = 'vq-result vq-result--'+res.kind;
     let badge;
-    if(res.kind === 'no') badge = '✓ Tachograph not required';
-    else if(res.kind === 'yes') badge = '⚠ Tachograph needed';
-    else badge = 'ⓘ Depends on situation';
+    if(res.kind === 'no') badge = '✓ Tachygraphe non requis';
+    else if(res.kind === 'yes') badge = '⚠ Tachygraphe requis';
+    else badge = 'ⓘ Dépend de la situation';
     
     let html = '<div class="vq-stage">';
     html += '<div class="'+kindClass+'">';
@@ -860,11 +860,11 @@ if ('IntersectionObserver' in window) {
     }
     html += '</div>';
     if(state.path.length){
-      html += '<div class="vq-path"><strong>Your path:</strong> '+state.path.map(p => escapeHtml(p.choice)).join(' → ')+'</div>';
+      html += '<div class="vq-path"><strong>Votre parcours :</strong> '+state.path.map(p => escapeHtml(p.choice)).join(' → ')+'</div>';
     }
     html += '<div class="vq-controls">';
-    html += '<button class="vq-btn-ctrl" data-act="back">← Back</button>';
-    html += '<button class="vq-btn-ctrl" data-act="reset">↻ Start over</button>';
+    html += '<button class="vq-btn-ctrl" data-act="back">← Retour</button>';
+    html += '<button class="vq-btn-ctrl" data-act="reset">↻ Recommencer</button>';
     html += '</div>';
     html += '</div>';
     root.innerHTML = html;
@@ -955,7 +955,7 @@ if ('IntersectionObserver' in window) {
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://tagra.app/fr/articles/tachygraphe-utilitaires-obligation-juillet-2026/"}, "headline": "Tachygraphe pour véhicule utilitaire de 2,5–3,5 t : règles, exemptions et amendes en 2026", "description": "Depuis l’échéance du 1er juillet 2026, les véhicules utilitaires de 2,5–3,5 t affectés au transport international ou au cabotage doivent être équipés d’un tachygraphe intelligent G2v2. Qui est exempté ? Quelles sont les règles, les obligations de téléchargement et les amendes ?", "image": "https://tagra.app/assets/img/hero-poster.jpg", "author": {"@type": "Organization", "@id": "https://tagra.app/#organization", "name": "Truck Data Technology, s.r.o.", "url": "https://www.tdt.cz"}, "publisher": {"@type": "Organization", "@id": "https://tagra.app/#organization", "name": "TAGRA", "logo": {"@type": "ImageObject", "url": "https://tagra.app/assets/img/logo-dark.svg"}}, "datePublished": "2026-03-17T09:00:00+02:00", "dateModified": "2026-10-09T09:00:00+02:00", "inLanguage": "fr"}</script>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Qui est soumis à l'obligation d'utiliser un tachygraphe depuis le 1er juillet 2026 ?", "acceptedAnswer": {"@type": "Answer", "text": "Depuis le 1er juillet 2026, les véhicules utilitaires légers (VUL) de 2,5–3,5 t utilisés pour le transport international de marchandises ou le cabotage au sein de l’UE sont soumis à l’obligation d’utiliser un tachygraphe introduite par le règlement (UE) 2020/1054 modifiant le règlement (CE) n° 561/2006. Un tachygraphe intelligent G2v2, des cartes de conducteur et des cartes d’entreprise ainsi qu’une gestion structurée des données sont également obligatoires. Les véhicules de plus de 3,5 t entrent déjà aujourd’hui dans le champ d’application."}}, {"@type": "Question", "name": "Un véhicule utilitaire doit-il être équipé d'un tachygraphe s'il ne circule que sur le territoire national ?", "acceptedAnswer": {"@type": "Answer", "text": "En règle générale, non. Si vos opérations sont strictement nationales, sans trajet transfrontalier ni cabotage, l'obligation de l'UE applicable au transport transfrontalier ne s'applique pas. Vérifiez toujours les règles nationales , car certains États membres imposent des exigences supplémentaires dans des cas précis (par exemple, pour les marchandises dangereuses ou les marchés publics)."}}, {"@type": "Question", "name": "L'obligation s'applique-t-elle si le véhicule utilitaire fait moins de 2,5 t, mais que l'ensemble dépasse ce seuil ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui, dans la plupart des cas. La masse maximale autorisée de l’ensemble (véhicule + remorque) est déterminante. Si vous attachez une remorque et que cette masse franchit le seuil, et que vous effectuez un transport international pour compte d’autrui ou contre rémunération, les règles s’appliquent. Évaluez vos ensembles et itinéraires habituels."}}, {"@type": "Question", "name": "De quoi ai-je besoin en plus de l'installation du tachygraphe ?", "acceptedAnswer": {"@type": "Answer", "text": "Outre l’appareil lui-même, vous avez besoin de cartes de conducteur, d’une carte d’entreprise, d’une procédure de téléchargement régulier (28/90 jours), d’une évaluation des infractions et de l’ archivage pendant la durée légale de conservation. La formation des conducteurs et la définition claire des responsabilités internes sont essentielles. TAGRA for Fleet couvre les téléchargements, l’évaluation et les rapports dans une seule offre."}}, {"@type": "Question", "name": "À quelle fréquence les données doivent-elles être téléchargées ?", "acceptedAnswer": {"@type": "Answer", "text": "Téléchargez les données de la carte de conducteur au moins tous les 28 jours et les données de l'unité embarquée au moins tous les 90 jours. De nombreux opérateurs téléchargent les données plus fréquemment afin de réduire les risques et de simplifier les enregistrements. Avec le téléchargement à distance (par exemple, DKV LIVE), cette opération s'effectue automatiquement, sans intervention du conducteur."}}, {"@type": "Question", "name": "Quelles cartes sont nécessaires ?", "acceptedAnswer": {"@type": "Answer", "text": "Chaque conducteur a besoin d'une carte de conducteur. Le gestionnaire a besoin d'une carte d'entreprise pour l'autorisation et le téléchargement sécurisé des données du véhicule. Les cartes d'atelier et de contrôleur existent, mais elles sont délivrées aux ateliers agréés et aux autorités, et non aux opérateurs."}}, {"@type": "Question", "name": "Je ne suis pas transporteur — je franchis occasionnellement une frontière pour ma propre entreprise. Ai-je besoin d'un tachygraphe ?", "acceptedAnswer": {"@type": "Answer", "text": "Les facteurs déterminants sont la masse autorisée (y compris toute remorque) et le objet du transport. S’il ne s’agit pas d’un transport pour compte d’autrui et que la conduite n’est pas votre profession principale, l’ exemption pour compte propre prévue à l’article 3, point h), du règlement 561/2006 s’applique généralement. Nous vous recommandons d’évaluer chaque situation individuellement — contactez-nous pour une vérification rapide."}}, {"@type": "Question", "name": "Comment démontrer en pratique qu’il s’agit d’un transport pour compte propre ?", "acceptedAnswer": {"@type": "Answer", "text": "Il n’existe pas de formulaire universel unique. Le plus souvent : un document relatif aux marchandises (facture, bon de livraison, commande), une brève note indiquant le motif du trajet (de–à et motif), ainsi que le lien entre le conducteur, l’entreprise et le véhicule (autorisation, relation de travail, documents du véhicule)."}}, {"@type": "Question", "name": "Existe-t-il une exemption pour les artisans ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui — l’« exemption pour les artisans » prévue à l’article 3, point aa), du règlement 561/2006. Si la conduite n’est pas votre activité principale et que vous transportez uniquement des matériaux, instruments ou équipements nécessaires à votre activité professionnelle, le tachygraphe n’est généralement pas requis. La transposition nationale peut apporter des précisions — consultez les orientations du pays dans lequel vous exercez."}}, {"@type": "Question", "name": "Qu’est-ce que le cabotage ?", "acceptedAnswer": {"@type": "Answer", "text": "Le cabotage est le transport de marchandises à l’intérieur d’un pays de l’UE par un transporteur établi dans un autre pays de l’UE. Exemple : un véhicule utilitaire tchèque décharge des marchandises à Hambourg, puis prend un nouveau chargement de Hambourg à Berlin. Les deux trajets relèvent d’opérations de cabotage et déclenchent l’obligation d’utiliser un tachygraphe à partir du 1er juillet 2026 pour les véhicules utilitaires de 2,5–3,5 t."}}, {"@type": "Question", "name": "Que se passe-t-il si je dispose uniquement d’un véhicule utilitaire de location ? Qui s’occupe du tachygraphe ?", "acceptedAnswer": {"@type": "Answer", "text": "Si vous louez un véhicule utilitaire de plus de 2,5 t pour un transport commercial international, celui-ci doit être équipé d’un tachygraphe. La responsabilité du téléchargement correct des données et du respect des règles vous incombe en tant qu’exploitant, et non à la société de location. N’oubliez pas d’authentifier le tachygraphe avec votre carte d’entreprise avant le trajet."}}, {"@type": "Question", "name": "Puis-je installer moi-même le tachygraphe ou dois-je m’adresser à un atelier ?", "acceptedAnswer": {"@type": "Answer", "text": "Vous ne pouvez pas installer, activer ou étalonner vous-même un tachygraphe. L’installation, l’activation, le scellement et la vérification périodique (étalonnage) doivent être réalisés exclusivement par un atelier agréé, conformément au règlement d’exécution (UE) 2016/799 de la Commission."}}, {"@type": "Question", "name": "Quelles sanctions s’appliquent si je n’ai pas de tachygraphe après le 1er juillet 2026 ?", "acceptedAnswer": {"@type": "Answer", "text": "L’absence de tachygraphe, la conduite sans carte ou le défaut de téléchargement des données sont classés parmi les infractions très graves, c’est-à-dire les infractions les plus graves, dans l’ensemble de l’UE, au titre de la directive 2006/22/CE et du cadre des infractions les plus graves (MSI). Les sanctions varient selon l’État membre et peuvent atteindre des milliers d’euros. En Wallonie (Belgique), l’exploitation sans tachygraphe, sa non-utilisation ou la conduite sans carte de conducteur est sanctionnée par une amende administrative de 2 640 € par infraction."}}, {"@type": "Question", "name": "par infraction, avec une immobilisation éventuelle du véhicule lors d’un contrôle routier et, en cas d’infractions répétées, la perte de l’honorabilité du gestionnaire.", "acceptedAnswer": {"@type": "Answer", "text": "Qu’est-ce qui change pour les gestionnaires britanniques après le Brexit ? orientations de la DVSA britannique."}}]}
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Qui est soumis à l'obligation d'utiliser un tachygraphe depuis le 1er juillet 2026 ?", "acceptedAnswer": {"@type": "Answer", "text": "Depuis le 1er juillet 2026, les véhicules utilitaires légers (VUL) de 2,5–3,5 t utilisés pour le transport international de marchandises ou le cabotage au sein de l’UE sont soumis à l’obligation d’utiliser un tachygraphe introduite par le règlement (UE) 2020/1054 modifiant le règlement (CE) n° 561/2006. Un tachygraphe intelligent G2v2, des cartes de conducteur et des cartes d’entreprise ainsi qu’une gestion structurée des données sont également obligatoires. Les véhicules de plus de 3,5 t entrent déjà aujourd’hui dans le champ d’application."}}, {"@type": "Question", "name": "Un véhicule utilitaire doit-il être équipé d'un tachygraphe s'il ne circule que sur le territoire national ?", "acceptedAnswer": {"@type": "Answer", "text": "En règle générale, non. Si vos opérations sont strictement nationales, sans trajet transfrontalier ni cabotage, l'obligation de l'UE applicable au transport transfrontalier ne s'applique pas. Vérifiez toujours les règles nationales , car certains États membres imposent des exigences supplémentaires dans des cas précis (par exemple, pour les marchandises dangereuses ou les marchés publics)."}}, {"@type": "Question", "name": "L'obligation s'applique-t-elle si le véhicule utilitaire fait moins de 2,5 t, mais que l'ensemble dépasse ce seuil ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui, dans la plupart des cas. La masse maximale autorisée de l’ensemble (véhicule + remorque) est déterminante. Si vous attachez une remorque et que cette masse franchit le seuil, et que vous effectuez un transport international pour compte d’autrui ou contre rémunération, les règles s’appliquent. Évaluez vos ensembles et itinéraires habituels."}}, {"@type": "Question", "name": "De quoi ai-je besoin en plus de l'installation du tachygraphe ?", "acceptedAnswer": {"@type": "Answer", "text": "Outre l’appareil lui-même, vous avez besoin de cartes de conducteur, d’une carte d’entreprise, d’une procédure de téléchargement régulier (28/90 jours), d’une évaluation des infractions et de l’ archivage pendant la durée légale de conservation. La formation des conducteurs et la définition claire des responsabilités internes sont essentielles. TAGRA for Fleet couvre les téléchargements, l’évaluation et les rapports dans une seule offre."}}, {"@type": "Question", "name": "À quelle fréquence les données doivent-elles être téléchargées ?", "acceptedAnswer": {"@type": "Answer", "text": "Téléchargez les données de la carte de conducteur au moins tous les 28 jours et les données de l'unité embarquée au moins tous les 90 jours. De nombreux opérateurs téléchargent les données plus fréquemment afin de réduire les risques et de simplifier les enregistrements. Avec le téléchargement à distance (par exemple, DKV LIVE), cette opération s'effectue automatiquement, sans intervention du conducteur."}}, {"@type": "Question", "name": "Quelles cartes sont nécessaires ?", "acceptedAnswer": {"@type": "Answer", "text": "Chaque conducteur a besoin d'une carte de conducteur. Le gestionnaire a besoin d'une carte d'entreprise pour l'autorisation et le téléchargement sécurisé des données du véhicule. Les cartes d'atelier et de contrôleur existent, mais elles sont délivrées aux ateliers agréés et aux autorités, et non aux opérateurs."}}, {"@type": "Question", "name": "Je ne suis pas transporteur — je franchis occasionnellement une frontière pour ma propre entreprise. Ai-je besoin d'un tachygraphe ?", "acceptedAnswer": {"@type": "Answer", "text": "Les facteurs déterminants sont la masse autorisée (y compris toute remorque) et le objet du transport. S’il ne s’agit pas d’un transport pour compte d’autrui et que la conduite n’est pas votre profession principale, l’ exemption pour compte propre prévue à l’article 3, point h bis), du règlement 561/2006 s’applique généralement. Nous vous recommandons d’évaluer chaque situation individuellement — contactez-nous pour une vérification rapide."}}, {"@type": "Question", "name": "Comment démontrer en pratique qu’il s’agit d’un transport pour compte propre ?", "acceptedAnswer": {"@type": "Answer", "text": "Il n’existe pas de formulaire universel unique. Le plus souvent : un document relatif aux marchandises (facture, bon de livraison, commande), une brève note indiquant le motif du trajet (de–à et motif), ainsi que le lien entre le conducteur, l’entreprise et le véhicule (autorisation, relation de travail, documents du véhicule)."}}, {"@type": "Question", "name": "Existe-t-il une exemption pour les artisans ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui — l’« exemption pour les artisans » prévue à l’article 3, point aa), du règlement 561/2006. Si la conduite n’est pas votre activité principale et que vous transportez uniquement des matériaux, instruments ou équipements nécessaires à votre activité professionnelle, le tachygraphe n’est généralement pas requis. La transposition nationale peut apporter des précisions — consultez les orientations du pays dans lequel vous exercez."}}, {"@type": "Question", "name": "Qu’est-ce que le cabotage ?", "acceptedAnswer": {"@type": "Answer", "text": "Le cabotage est le transport de marchandises à l’intérieur d’un pays de l’UE par un transporteur établi dans un autre pays de l’UE. Exemple : un véhicule utilitaire tchèque décharge des marchandises à Hambourg, puis prend un nouveau chargement de Hambourg à Berlin. Les deux trajets relèvent d’opérations de cabotage et déclenchent l’obligation d’utiliser un tachygraphe à partir du 1er juillet 2026 pour les véhicules utilitaires de 2,5–3,5 t."}}, {"@type": "Question", "name": "Que se passe-t-il si je dispose uniquement d’un véhicule utilitaire de location ? Qui s’occupe du tachygraphe ?", "acceptedAnswer": {"@type": "Answer", "text": "Si vous louez un véhicule utilitaire de plus de 2,5 t pour un transport commercial international, celui-ci doit être équipé d’un tachygraphe. La responsabilité du téléchargement correct des données et du respect des règles vous incombe en tant qu’exploitant, et non à la société de location. N’oubliez pas d’authentifier le tachygraphe avec votre carte d’entreprise avant le trajet."}}, {"@type": "Question", "name": "Puis-je installer moi-même le tachygraphe ou dois-je m’adresser à un atelier ?", "acceptedAnswer": {"@type": "Answer", "text": "Vous ne pouvez pas installer, activer ou étalonner vous-même un tachygraphe. L’installation, l’activation, le scellement et la vérification périodique (étalonnage) doivent être réalisés exclusivement par un atelier agréé, conformément au règlement d’exécution (UE) 2016/799 de la Commission."}}, {"@type": "Question", "name": "Quelles sanctions s’appliquent si je n’ai pas de tachygraphe après le 1er juillet 2026 ?", "acceptedAnswer": {"@type": "Answer", "text": "L’absence de tachygraphe, la conduite sans carte ou le défaut de téléchargement des données sont classés parmi les infractions très graves, c’est-à-dire les infractions les plus graves, dans l’ensemble de l’UE, au titre de la directive 2006/22/CE et du cadre des infractions les plus graves (MSI). Les sanctions varient selon l’État membre et peuvent atteindre des milliers d’euros. En Wallonie (Belgique), l’exploitation sans tachygraphe, sa non-utilisation ou la conduite sans carte de conducteur est sanctionnée par une amende administrative de 2 640 € par infraction."}}, {"@type": "Question", "name": "par infraction, avec une immobilisation éventuelle du véhicule lors d’un contrôle routier et, en cas d’infractions répétées, la perte de l’honorabilité du gestionnaire.", "acceptedAnswer": {"@type": "Answer", "text": "Qu’est-ce qui change pour les gestionnaires britanniques après le Brexit ? orientations de la DVSA britannique."}}]}
 </script>
 </body>
 </html>
