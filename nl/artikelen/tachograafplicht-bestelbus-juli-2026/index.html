@@ -350,7 +350,7 @@ if ('IntersectionObserver' in window) {
 <ul>
 <li>Uitsluitend <strong>binnenlandse activiteiten</strong> binnen één land (geen grensoverschrijdend traject en geen cabotage), onder voorbehoud van de nationale regels.</li>
 <li><strong>Particulier, niet-commercieel</strong> gebruik dat geen verband houdt met een economische activiteit.</li>
-<li><strong>Vervoer voor eigen rekening</strong> waarbij rijden niet de hoofdactiviteit van de bestuurder is, binnen de vrijstelling van artikel 3, onder h), van Verordening 561/2006.</li>
+<li><strong>Vervoer voor eigen rekening</strong> waarbij rijden niet de hoofdactiviteit van de bestuurder is, binnen de vrijstelling van artikel 3, onder h bis), van Verordening 561/2006.</li>
 <li>Voertuigen met een toegestane massa van <strong>≤ 2,5 t</strong> en combinaties die onder de drempel blijven.</li>
 <li>Voertuigen die zijn gebouwd voor het vervoer van <strong>ten hoogste negen personen, met inbegrip van de chauffeur</strong> wanneer zij worden gebruikt voor personenvervoer en niet voor goederenvervoer.</li>
 </ul>
@@ -360,7 +360,7 @@ if ('IntersectionObserver' in window) {
 <div class="badge">Praktijkvoorbeeld</div>
 <h3>Ik steek een grens over om materialen voor mijn eigen bedrijf op te halen</h3>
 <p>
-        Een vakman rijdt met een bestelwagen van 3,2 t van land A naar land B om gereedschap en benodigdheden voor zijn eigen onderneming op te halen. Als dit <em>vervoer voor eigen rekening</em> van goederen is en rijden niet de hoofdactiviteit van de bestuurder is, kan de vrijstelling van toepassing zijn. <strong>artikel 3, onder h), van Verordening (EG) nr. 561/2006</strong> van toepassing zijn. Bij een wegcontrole zullen de handhavingsinstanties verwachten dat het <strong>doel</strong> van de rit en het <strong>verband</strong> tussen de bestuurder, de onderneming en de goederen duidelijk zijn. Houd documenten bij de hand en wees bereid de rit kort toe te lichten.
+        Een vakman rijdt met een bestelwagen van 3,2 t van land A naar land B om gereedschap en benodigdheden voor zijn eigen onderneming op te halen. Als dit <em>vervoer voor eigen rekening</em> van goederen is en rijden niet de hoofdactiviteit van de bestuurder is, kan de vrijstelling van toepassing zijn. <strong>artikel 3, onder h bis), van Verordening (EG) nr. 561/2006</strong> van toepassing zijn. Bij een wegcontrole zullen de handhavingsinstanties verwachten dat het <strong>doel</strong> van de rit en het <strong>verband</strong> tussen de bestuurder, de onderneming en de goederen duidelijk zijn. Houd documenten bij de hand en wees bereid de rit kort toe te lichten.
       </p>
 <p style="margin-top:10px;">
         Naslaginformatie: <a href="https://www.ela.europa.eu/" rel="noopener" style="color:var(--blue-mid);" target="_blank">Europese Arbeidsautoriteit</a> en de geconsolideerde wettekst op <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A02006R0561-20240522" rel="noopener" style="color:var(--blue-mid);" target="_blank">EUR-Lex (Verordening 561/2006)</a>.
@@ -674,121 +674,121 @@ if ('IntersectionObserver' in window) {
 
   const NODES = {
     'start': {
-      step: 1, label: 'Vehicle weight',
-      question: 'What is the gross weight of your vehicle or combination?',
-      hint: 'Check the permissible maximum mass on your registration document — include any trailer.',
+      step: 1, label: 'Voertuiggewicht',
+      question: 'Wat is het brutogewicht van uw voertuig of voertuigcombinatie?',
+      hint: 'Controleer de toegestane maximummassa op uw kentekenbewijs — tel eventuele aanhangwagens mee.',
       options: [
-        { id: 'r-light', label: 'Up to 2.5 t' },
-        { id: 'q-trans-25', label: '2.5 – 3.5 t' },
-        { id: 'r-over-35', label: 'Above 3.5 t' }
+        { id: 'r-light', label: 'Tot 2,5 t' },
+        { id: 'q-trans-25', label: '2,5 – 3,5 t' },
+        { id: 'r-over-35', label: 'Boven 3,5 t' }
       ],
       threeCol: true
     },
     'q-trans-25': {
-      step: 2, label: 'Type of transport',
-      question: 'Do you operate international goods transport with the vehicle?',
-      hint: 'This covers cross-border carriage between EU/EEA/UK and cabotage (domestic operations performed in another country).',
+      step: 2, label: 'Soort vervoer',
+      question: 'Verricht u met het voertuig internationaal goederenvervoer?',
+      hint: 'Dit omvat grensoverschrijdend vervoer tussen de EU/EER/het VK en cabotage (binnenlandse activiteiten uitgevoerd in een ander land).',
       options: [
-        { id: 'r-domestic-25', label: 'No, domestic only' },
-        { id: 'q-purpose-25', label: 'Yes, cross-border or cabotage' }
+        { id: 'r-domestic-25', label: 'Nee, alleen binnenlands' },
+        { id: 'q-purpose-25', label: 'Ja, grensoverschrijdend of cabotage' }
       ]
     },
     'q-purpose-25': {
-      step: 3, label: 'Purpose of transport',
-      question: 'What is the purpose of the cross-border transport?',
-      hint: 'Hire or reward = carrying goods for a customer for payment. Own account = transporting your own goods for your own business.',
+      step: 3, label: 'Doel van het vervoer',
+      question: 'Wat is het doel van het grensoverschrijdende vervoer?',
+      hint: 'Beroepsvervoer (voor rekening van derden) = goederen tegen betaling voor een klant vervoeren. Eigen vervoer = uw eigen goederen vervoeren voor uw eigen bedrijf.',
       options: [
-        { id: 'r-yes-25', label: "Hire or reward (carrying others' goods)" },
-        { id: 'q-driver-main-25', label: 'Own account (own goods, own company)' }
+        { id: 'r-yes-25', label: "Beroepsvervoer (goederen van anderen vervoeren)" },
+        { id: 'q-driver-main-25', label: 'Eigen vervoer (eigen goederen, eigen bedrijf)' }
       ]
     },
     'q-driver-main-25': {
-      step: 4, label: "Driver's profession",
-      question: "Is driving the driver's main profession?",
-      hint: 'If the driver works primarily as a professional driver, the own-account exemption does NOT apply. If driving is secondary (e.g. tradesperson, technician, business owner), the exemption may apply.',
+      step: 4, label: "Beroep van de bestuurder",
+      question: "Is rijden het hoofdberoep van de bestuurder?",
+      hint: 'Als de bestuurder voornamelijk als beroepschauffeur werkt, is de vrijstelling voor eigen vervoer NIET van toepassing. Als rijden een nevenactiviteit is (bijv. vakman, technicus, ondernemer), kan de vrijstelling van toepassing zijn.',
       options: [
-        { id: 'r-yes-25', label: 'Yes, professional driver' },
-        { id: 'r-own-account-25', label: 'No, driving is secondary' }
+        { id: 'r-yes-25', label: 'Ja, beroepschauffeur' },
+        { id: 'r-own-account-25', label: 'Nee, rijden is een nevenactiviteit' }
       ]
     },
     'r-light': {
       kind: 'no',
-      title: 'Tachograph generally not required',
-      desc: 'Vehicles and combinations <strong>up to 2.5 t</strong> permissible mass generally fall outside the scope of Regulation (EC) No 561/2006 — even after July 2026.',
+      title: 'Tachograaf is doorgaans niet vereist',
+      desc: 'Voertuigen en combinaties <strong>tot 2,5 t</strong> toegestane massa vallen doorgaans buiten het toepassingsgebied van Verordening (EG) nr. 561/2006 — ook na juli 2026.',
       bullets: [
-        'Watch the <strong>combination mass</strong> — if you attach a trailer and exceed 2.5 t, you enter the 2.5–3.5 t bracket.',
-        'For absolute certainty, verify your specific situation in official sources or with a specialist.'
+        'Let op de <strong>massa van de combinatie</strong> — als u een aanhangwagen koppelt en 2,5 t overschrijdt, valt u in de categorie 2,5–3,5 t.',
+        'Voor absolute zekerheid controleert u uw specifieke situatie in officiële bronnen of bij een specialist.'
       ],
       ctas: [
-        { href: 'https://www.ela.europa.eu/assets/lcv2026/index.html', label: 'Read ELA guidance', ext: true, outline: true }
+        { href: 'https://www.ela.europa.eu/assets/lcv2026/index.html', label: 'Lees de ELA-richtlijnen', ext: true, outline: true }
       ]
     },
     'r-domestic-25': {
       kind: 'no',
-      title: 'Tachograph generally not required',
-      desc: 'If you operate a 2.5–3.5 t van <strong>strictly domestically</strong> (no cross-border leg and no cabotage), the new July 2026 obligation does not apply. The change targets international commercial transport and cabotage within the EU.',
+      title: 'Tachograaf is doorgaans niet vereist',
+      desc: 'Als u een bestelwagen van 2,5–3,5 t <strong>uitsluitend binnenlands</strong> gebruikt (geen grensoverschrijdend traject en geen cabotage), geldt de nieuwe verplichting van juli 2026 niet. De wijziging is gericht op internationaal commercieel vervoer en cabotage binnen de EU.',
       bullets: [
-        'If you start cross-border operations, the obligation kicks in automatically.',
+        'Als u grensoverschrijdende activiteiten begint, geldt de verplichting automatisch.',
         'Other operator duties (working time, goods documentation) still apply under national rules.'
       ],
       ctas: [
-        { href: 'https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=legissum%3A4382208', label: 'Read EUR-Lex summary', ext: true, outline: true }
+        { href: 'https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=legissum%3A4382208', label: 'Lees de EUR-Lex-samenvatting', ext: true, outline: true }
       ]
     },
     'q-purpose-25': null, // safety; will be redefined above
     'r-own-account-25': {
       kind: 'maybe',
-      title: 'Own-account exemption likely applies',
-      desc: 'If the transport is <strong>not for hire or reward</strong> and <strong>driving is not the main profession</strong> of the driver, the exemption in <strong>Article 3(h) of Regulation 561/2006</strong> usually applies and a tachograph is generally not required. <strong>However:</strong> the specific situation and documentation matter.',
+      title: 'Vrijstelling voor eigen vervoer is waarschijnlijk van toepassing',
+      desc: 'Als het vervoer <strong>niet beroepsvervoer (voor rekening van derden) is</strong> en <strong>rijden niet het hoofdberoep</strong> van de bestuurder is, is de vrijstelling in <strong>artikel 3, onder h bis), van Verordening 561/2006</strong> doorgaans van toepassing en is een tachograaf doorgaans niet vereist. <strong>Let op:</strong> de specifieke situatie en documentatie zijn van belang.',
       bullets: [
-        'Carry in the vehicle: <strong>document for the goods</strong> (invoice, delivery note), a <strong>brief journey-purpose note</strong>, and proof of the <strong>driver–company–vehicle</strong> link.',
-        'Be prepared for the control authority to ask you to demonstrate that it is not transport for hire or reward.',
-        'In doubt, assess individually with a specialist.'
+        'Neem mee in het voertuig: een <strong>document voor de goederen</strong> (factuur, vrachtbrief), een <strong>korte notitie over het doel van de rit</strong> en bewijs van de relatie <strong>bestuurder–bedrijf–voertuig</strong>.',
+        'Wees erop voorbereid dat de controleautoriteit u kan vragen aan te tonen dat het geen beroepsvervoer (voor rekening van derden) betreft.',
+        'Beoordeel bij twijfel uw situatie individueel met een specialist.'
       ],
       ctas: [
-        { href: '/contact/', label: 'Talk to a TAGRA expert', primary: true },
-        { href: 'https://www.ela.europa.eu/assets/lcv2026/index.html', label: 'Read ELA guidance', ext: true, outline: true }
+        { href: '/nl/contact/', label: 'Spreek met een TAGRA-expert', primary: true },
+        { href: 'https://www.ela.europa.eu/assets/lcv2026/index.html', label: 'Lees de ELA-richtlijnen', ext: true, outline: true }
       ]
     },
     'r-yes-25': {
       kind: 'yes',
-      title: 'Tachograph is required (since 1 July 2026)',
-      desc: 'You operate a 2.5–3.5 t van for <strong>international goods transport for hire or reward</strong> or <strong>cabotage</strong> within the EU. From <strong>1 July 2026</strong> you must have a smart tachograph version 2 (G2v2).',
+      title: 'Tachograaf is vereist (sinds 1 juli 2026)',
+      desc: 'U gebruikt een bestelwagen van 2,5–3,5 t voor <strong>internationaal goederenvervoer voor rekening van derden</strong> of <strong>cabotage</strong> binnen de EU. Vanaf <strong>1 juli 2026</strong> moet u een slimme tachograaf versie 2 (G2v2) hebben.',
       bullets: [
-        '<strong>Installation:</strong> G2v2 tachograph at an approved tachograph workshop.',
-        '<strong>Cards:</strong> driver card for every driver + company card for the operator.',
-        '<strong>Data downloads:</strong> driver cards at least every 28 days, vehicle units at least every 90 days.',
-        '<strong>Evaluation and archiving:</strong> by software (e.g. TAGRA) or service. Archive at least 1 year.'
+        '<strong>Installatie:</strong> G2v2-tachograaf bij een erkende werkplaats voor tachografen.',
+        '<strong>Kaarten:</strong> bestuurderskaart voor elke bestuurder + bedrijfskaart voor de exploitant.',
+        '<strong>Gegevensdownloads:</strong> bestuurderskaarten minstens elke 28 dagen, voertuigunits minstens elke 90 dagen.',
+        '<strong>Analyse en archivering:</strong> via software (bijv. TAGRA) of een dienst. Archiveer minstens 1 jaar.'
       ],
       ctas: [
-        { href: '/try/', label: 'Try TAGRA free for 30 days', primary: true },
-        { href: '/integrations/dkv-live/', label: 'See DKV LIVE integration', outline: true }
+        { href: '/nl/gratis-proefversie/', label: 'Probeer TAGRA 30 dagen gratis', primary: true },
+        { href: '/nl/integraties/dkv-live/', label: 'Bekijk de DKV LIVE-integratie', outline: true }
       ]
     },
     'r-over-35': {
       kind: 'yes',
-      title: 'Tachograph already required today',
-      desc: 'For vehicles <strong>above 3.5 t</strong> in goods transport, the tachograph obligation under Regulation (EC) No 561/2006 applies <strong>today</strong> — not just from July 2026. New vehicles must be fitted with the smart tachograph version 2 (G2v2).',
+      title: 'Tachograaf is vandaag al vereist',
+      desc: 'Voor voertuigen <strong>boven 3,5 t</strong> in goederenvervoer geldt de tachograafverplichting op grond van Verordening (EG) nr. 561/2006 <strong>vandaag</strong> al — niet pas vanaf juli 2026. Nieuwe voertuigen moeten zijn uitgerust met de slimme tachograaf versie 2 (G2v2).',
       bullets: [
-        '<strong>Cards:</strong> driver card for every driver + company card for the operator.',
-        '<strong>Data downloads:</strong> driver cards every 28 days, vehicle units every 90 days.',
-        '<strong>Evaluation and archiving:</strong> by software (e.g. TAGRA) or service. Archive at least 1 year.',
-        'There are <strong>taxative exemptions</strong> under Articles 3 and 13 of Reg 561/2006 (agricultural, forestry, fire/rescue vehicles, tractors up to 40 km/h, etc.) — verify any applicable exemption with national authorities.'
+        '<strong>Kaarten:</strong> bestuurderskaart voor elke bestuurder + bedrijfskaart voor de exploitant.',
+        '<strong>Gegevensdownloads:</strong> bestuurderskaarten elke 28 dagen, voertuigunits elke 90 dagen.',
+        '<strong>Analyse en archivering:</strong> via software (bijv. TAGRA) of een dienst. Archiveer minstens 1 jaar.',
+        'Er is een <strong>uitputtende lijst van vrijstellingen</strong> op grond van de artikelen 3 en 13 van Verordening 561/2006 (landbouw-, bosbouw-, brandweer-/reddingsvoertuigen, tractoren tot 40 km/h enz.) — controleer elke toepasselijke vrijstelling bij de nationale autoriteiten.'
       ],
       ctas: [
-        { href: '/try/', label: 'Try TAGRA free for 30 days', primary: true },
-        { href: 'https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A02006R0561-20240522', label: 'List of exemptions (EUR-Lex)', ext: true, outline: true }
+        { href: '/nl/gratis-proefversie/', label: 'Probeer TAGRA 30 dagen gratis', primary: true },
+        { href: 'https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A02006R0561-20240522', label: 'Lijst van vrijstellingen (EUR-Lex)', ext: true, outline: true }
       ]
     }
   };
   // Re-add q-purpose-25 properly
   NODES['q-purpose-25'] = {
-    step: 3, label: 'Purpose of transport',
-    question: 'What is the purpose of the cross-border transport?',
-    hint: 'Hire or reward = carrying goods for a customer for payment. Own account = transporting your own goods for your own business.',
+    step: 3, label: 'Doel van het vervoer',
+    question: 'Wat is het doel van het grensoverschrijdende vervoer?',
+    hint: 'Beroepsvervoer (voor rekening van derden) = goederen tegen betaling voor een klant vervoeren. Eigen vervoer = uw eigen goederen vervoeren voor uw eigen bedrijf.',
     options: [
-      { id: 'r-yes-25', label: "Hire or reward (carrying others' goods)" },
-      { id: 'q-driver-main-25', label: 'Own account (own goods, own company)' }
+      { id: 'r-yes-25', label: "Beroepsvervoer (goederen van anderen vervoeren)" },
+      { id: 'q-driver-main-25', label: 'Eigen vervoer (eigen goederen, eigen bedrijf)' }
     ]
   };
 
@@ -811,7 +811,7 @@ if ('IntersectionObserver' in window) {
     let html = '<div class="vq-stage">';
     html += '<div class="vq-header">';
     html += progressDots(node.step);
-    html += '<div class="vq-step">Step '+node.step+' · '+escapeHtml(node.label)+'</div>';
+    html += '<div class="vq-step">Stap '+node.step+' · '+escapeHtml(node.label)+'</div>';
     html += '</div>';
     html += '<h3 class="vq-question">'+escapeHtml(node.question)+'</h3>';
     if(node.hint) html += '<div class="vq-hint">'+escapeHtml(node.hint)+'</div>';
@@ -821,8 +821,8 @@ if ('IntersectionObserver' in window) {
     });
     html += '</div>';
     html += '<div class="vq-controls">';
-    html += '<button class="vq-btn-ctrl" data-act="back"'+(state.path.length===0?' disabled':'')+'>← Back</button>';
-    html += '<button class="vq-btn-ctrl" data-act="reset"'+(state.path.length===0?' disabled':'')+'>↻ Start over</button>';
+    html += '<button class="vq-btn-ctrl" data-act="back"'+(state.path.length===0?' disabled':'')+'>← Terug</button>';
+    html += '<button class="vq-btn-ctrl" data-act="reset"'+(state.path.length===0?' disabled':'')+'>↻ Opnieuw beginnen</button>';
     html += '</div>';
     html += '</div>';
     root.innerHTML = html;
@@ -833,9 +833,9 @@ if ('IntersectionObserver' in window) {
     const res = NODES[nodeId];
     const kindClass = 'vq-result vq-result--'+res.kind;
     let badge;
-    if(res.kind === 'no') badge = '✓ Tachograph not required';
-    else if(res.kind === 'yes') badge = '⚠ Tachograph needed';
-    else badge = 'ⓘ Depends on situation';
+    if(res.kind === 'no') badge = '✓ Geen tachograaf vereist';
+    else if(res.kind === 'yes') badge = '⚠ Tachograaf vereist';
+    else badge = 'ⓘ Afhankelijk van de situatie';
     
     let html = '<div class="vq-stage">';
     html += '<div class="'+kindClass+'">';
@@ -858,11 +858,11 @@ if ('IntersectionObserver' in window) {
     }
     html += '</div>';
     if(state.path.length){
-      html += '<div class="vq-path"><strong>Your path:</strong> '+state.path.map(p => escapeHtml(p.choice)).join(' → ')+'</div>';
+      html += '<div class="vq-path"><strong>Uw pad:</strong> '+state.path.map(p => escapeHtml(p.choice)).join(' → ')+'</div>';
     }
     html += '<div class="vq-controls">';
-    html += '<button class="vq-btn-ctrl" data-act="back">← Back</button>';
-    html += '<button class="vq-btn-ctrl" data-act="reset">↻ Start over</button>';
+    html += '<button class="vq-btn-ctrl" data-act="back">← Terug</button>';
+    html += '<button class="vq-btn-ctrl" data-act="reset">↻ Opnieuw beginnen</button>';
     html += '</div>';
     html += '</div>';
     root.innerHTML = html;

@@ -350,7 +350,7 @@ if ('IntersectionObserver' in window) {
 <ul>
 <li>Exclusiv <strong>operațiuni naționale</strong> într-o singură țară (fără segment transfrontalier și fără cabotaj), sub rezerva normelor naționale.</li>
 <li><strong>Utilizare privată, necomercială</strong> nelegată de o activitate economică.</li>
-<li><strong>În cont propriu</strong> deplasări în care conducerea nu este activitatea principală a conducătorului auto, în cadrul exceptării prevăzute la articolul 3 litera (h) din Regulamentul 561/2006.</li>
+<li><strong>În cont propriu</strong> deplasări în care conducerea nu este activitatea principală a conducătorului auto, în cadrul exceptării prevăzute la articolul 3 litera (ha) din Regulamentul 561/2006.</li>
 <li>Vehicule cu masa admisibilă <strong>≤ 2,5 t</strong> și ansambluri care rămân sub prag.</li>
 <li>Vehicule construite pentru a transporta <strong>cel mult nouă persoane, inclusiv conducătorul auto</strong> atunci când sunt utilizate pentru transportul de persoane, în afara transportului de mărfuri.</li>
 </ul>
@@ -360,7 +360,7 @@ if ('IntersectionObserver' in window) {
 <div class="badge">Exemplu practic</div>
 <h3>Traversez o frontieră pentru a ridica materiale pentru propria mea activitate</h3>
 <p>
-        Un meseriaș conduce o autoutilitară de 3,2 t din Țara A în Țara B pentru a ridica unelte și materiale pentru propria societate. Dacă aceasta este <em>transport în cont propriu</em> transport de mărfuri, iar activitatea principală a conducătorului auto nu este conducerea, exceptarea prevăzută la <strong>Articolul 3 litera (h) din Regulamentul (CE) nr. 561/2006</strong> se poate aplica. La un control rutier, autoritățile de control (ISCTR) se vor aștepta ca <strong>scopul</strong> călătoriei și <strong>legătura</strong> legăturile dintre conducătorul auto, activitatea comercială și bunuri trebuie să fie clare. Păstrați documentele la îndemână și fiți pregătiți să explicați succint deplasarea.
+        Un meseriaș conduce o autoutilitară de 3,2 t din Țara A în Țara B pentru a ridica unelte și materiale pentru propria societate. Dacă aceasta este <em>transport în cont propriu</em> transport de mărfuri, iar activitatea principală a conducătorului auto nu este conducerea, exceptarea prevăzută la <strong>Articolul 3 litera (ha) din Regulamentul (CE) nr. 561/2006</strong> se poate aplica. La un control rutier, autoritățile de control (ISCTR) se vor aștepta ca <strong>scopul</strong> călătoriei și <strong>legătura</strong> legăturile dintre conducătorul auto, activitatea comercială și bunuri trebuie să fie clare. Păstrați documentele la îndemână și fiți pregătiți să explicați succint deplasarea.
       </p>
 <p style="margin-top:10px;">
         Lecturi de referință: <a href="https://www.ela.europa.eu/" rel="noopener" style="color:var(--blue-mid);" target="_blank">Autoritatea Europeană a Muncii</a> și textul juridic consolidat pe <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A02006R0561-20240522" rel="noopener" style="color:var(--blue-mid);" target="_blank">EUR-Lex (Regulamentul 561/2006)</a>.
@@ -534,7 +534,7 @@ if ('IntersectionObserver' in window) {
 <details>
 <summary>Nu sunt transportator — trec ocazional o frontieră pentru propria mea activitate. Am nevoie de tahograf?</summary>
 <div class="faq-a">
-          Factorii decisivi sunt <strong>masa admisibilă</strong> (inclusiv orice remorcă) și <strong>scopul</strong> al transportului. Dacă nu este transport contra cost și conducerea nu reprezintă profesia dumneavoastră principală, <strong>exceptarea pentru transportul în cont propriu</strong> prevăzută la articolul 3 litera (h) din Regulamentul 561/2006 se aplică, de regulă. Vă recomandăm să evaluați fiecare situație individual — <a href="/ro/contact/" style="color:var(--blue-mid);">contactați-ne</a> pentru o verificare rapidă.
+          Factorii decisivi sunt <strong>masa admisibilă</strong> (inclusiv orice remorcă) și <strong>scopul</strong> al transportului. Dacă nu este transport contra cost și conducerea nu reprezintă profesia dumneavoastră principală, <strong>exceptarea pentru transportul în cont propriu</strong> prevăzută la articolul 3 litera (ha) din Regulamentul 561/2006 se aplică, de regulă. Vă recomandăm să evaluați fiecare situație individual — <a href="/ro/contact/" style="color:var(--blue-mid);">contactați-ne</a> pentru o verificare rapidă.
         </div>
 </details>
 <details>
@@ -674,121 +674,121 @@ if ('IntersectionObserver' in window) {
 
   const NODES = {
     'start': {
-      step: 1, label: 'Vehicle weight',
+      step: 1, label: 'Masa vehiculului',
       question: 'Care este masa totală a vehiculului sau a ansamblului dumneavoastră?',
       hint: 'Verificați masa maximă admisă din certificatul dumneavoastră de înmatriculare — includeți orice remorcă.',
       options: [
-        { id: 'r-light', label: 'Up to 2.5 t' },
-        { id: 'q-trans-25', label: '2.5 – 3.5 t' },
-        { id: 'r-over-35', label: 'Above 3.5 t' }
+        { id: 'r-light', label: 'Până la 2,5 t' },
+        { id: 'q-trans-25', label: '2,5 – 3,5 t' },
+        { id: 'r-over-35', label: 'Peste 3,5 t' }
       ],
       threeCol: true
     },
     'q-trans-25': {
-      step: 2, label: 'Type of transport',
+      step: 2, label: 'Tipul transportului',
       question: 'Efectuați transport internațional de mărfuri cu vehiculul?',
       hint: 'Aceasta include transportul transfrontalier între UE/SEE/Regatul Unit și cabotajul (operațiuni interne efectuate într-o altă țară).',
       options: [
-        { id: 'r-domestic-25', label: 'No, domestic only' },
-        { id: 'q-purpose-25', label: 'Yes, cross-border or cabotage' }
+        { id: 'r-domestic-25', label: 'Nu, doar național' },
+        { id: 'q-purpose-25', label: 'Da, transfrontalier sau cabotaj' }
       ]
     },
     'q-purpose-25': {
-      step: 3, label: 'Purpose of transport',
+      step: 3, label: 'Scopul transportului',
       question: 'Care este scopul transportului transfrontalier?',
       hint: 'Transport în contul altuia = transportul de mărfuri pentru un client, contra cost. Transport în cont propriu = transportul propriilor mărfuri pentru propria activitate.',
       options: [
-        { id: 'r-yes-25', label: "Hire or reward (carrying others' goods)" },
-        { id: 'q-driver-main-25', label: 'Own account (own goods, own company)' }
+        { id: 'r-yes-25', label: "Transport contra cost (transportul mărfurilor altora)" },
+        { id: 'q-driver-main-25', label: 'Transport în cont propriu (propriile mărfuri, propria companie)' }
       ]
     },
     'q-driver-main-25': {
-      step: 4, label: "Driver's profession",
+      step: 4, label: "Profesia conducătorului auto",
       question: "Conducerea auto este profesia principală a conducătorului auto?",
       hint: 'Dacă conducătorul auto lucrează în principal ca șofer profesionist, scutirea pentru transportul în cont propriu NU se aplică. Dacă activitatea de conducere este secundară (de exemplu, meseriaș, tehnician, proprietar de afacere), scutirea se poate aplica.',
       options: [
-        { id: 'r-yes-25', label: 'Yes, professional driver' },
+        { id: 'r-yes-25', label: 'Da, șofer profesionist' },
         { id: 'r-own-account-25', label: 'Nu, conducerea auto este o activitate secundară' }
       ]
     },
     'r-light': {
       kind: 'no',
-      title: 'Tachograph generally not required',
+      title: 'Tahograful nu este, în general, necesar',
       desc: 'Vehiculele și ansamblurile cu masa admisă <strong>de până la 2,5 t</strong> nu intră, în general, în domeniul de aplicare al Regulamentului (CE) nr. 561/2006 — nici după iulie 2026.',
       bullets: [
         'Aveți grijă la <strong>masa ansamblului</strong> — dacă atașați o remorcă și depășiți 2,5 t, intrați în categoria 2,5–3,5 t.',
         'Pentru certitudine absolută, verificați situația dumneavoastră specifică în surse oficiale sau cu un specialist.'
       ],
       ctas: [
-        { href: 'https://www.ela.europa.eu/assets/lcv2026/index.html', label: 'Read ELA guidance', ext: true, outline: true }
+        { href: 'https://www.ela.europa.eu/assets/lcv2026/index.html', label: 'Citiți orientările ELA', ext: true, outline: true }
       ]
     },
     'r-domestic-25': {
       kind: 'no',
-      title: 'Tachograph generally not required',
-      desc: 'If you operate a 2.5–3.5 t van <strong>strictly domestically</strong> (no cross-border leg and no cabotage), the new July 2026 obligation does not apply. The change targets international commercial transport and cabotage within the EU.',
+      title: 'Tahograful nu este, în general, necesar',
+      desc: 'Dacă utilizați o autoutilitară de 2,5–3,5 t <strong>strict pe teritoriul național</strong> (fără segment transfrontalier și fără cabotaj), noua obligație din iulie 2026 nu se aplică. Modificarea vizează transportul comercial internațional și cabotajul în cadrul UE.',
       bullets: [
         'Dacă începeți operațiuni transfrontaliere, obligația se aplică automat.',
         'Other operator duties (working time, goods documentation) still apply under national rules.'
       ],
       ctas: [
-        { href: 'https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=legissum%3A4382208', label: 'Read EUR-Lex summary', ext: true, outline: true }
+        { href: 'https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=legissum%3A4382208', label: 'Citiți rezumatul EUR-Lex', ext: true, outline: true }
       ]
     },
     'q-purpose-25': null, // safety; will be redefined above
     'r-own-account-25': {
       kind: 'maybe',
       title: 'Scutirea pentru transportul în cont propriu se aplică probabil',
-      desc: 'If the transport is <strong>not for hire or reward</strong> and <strong>driving is not the main profession</strong> of the driver, the exemption in <strong>Article 3(h) of Regulation 561/2006</strong> usually applies and a tachograph is generally not required. <strong>However:</strong> the specific situation and documentation matter.',
+      desc: 'Dacă transportul <strong>nu este contra cost</strong> și <strong>conducerea nu este profesia principală</strong> a conducătorului auto, excepția de la <strong>articolul 3 litera (ha) din Regulamentul 561/2006</strong> se aplică de obicei, iar un tahograf nu este, în general, necesar. <strong>Totuși:</strong> situația specifică și documentele contează.',
       bullets: [
         'Aveți în vehicul: <strong>documentul pentru mărfuri</strong> (factură, aviz de însoțire a mărfii), o <strong>notă scurtă privind scopul deplasării</strong> și dovada legăturii <strong>conducător auto–societate–vehicul</strong>.',
         'Fiți pregătit să vi se solicite de către autorități de control (ISCTR) să demonstrați că nu este vorba despre transport în contul altuia.',
         'În caz de dubiu, solicitați o evaluare individuală de la un specialist.'
       ],
       ctas: [
-        { href: '/contact/', label: 'Talk to a TAGRA expert', primary: true },
-        { href: 'https://www.ela.europa.eu/assets/lcv2026/index.html', label: 'Read ELA guidance', ext: true, outline: true }
+        { href: '/ro/contact/', label: 'Discutați cu un expert TAGRA', primary: true },
+        { href: 'https://www.ela.europa.eu/assets/lcv2026/index.html', label: 'Citiți orientările ELA', ext: true, outline: true }
       ]
     },
     'r-yes-25': {
       kind: 'yes',
       title: 'Tahograful este obligatoriu (începând cu 1 iulie 2026)',
-      desc: 'You operate a 2.5–3.5 t van for <strong>international goods transport for hire or reward</strong> or <strong>cabotage</strong> within the EU. From <strong>1 July 2026</strong> you must have a smart tachograph version 2 (G2v2).',
+      desc: 'Utilizați o autoutilitară de 2,5–3,5 t pentru <strong>transport internațional de mărfuri contra cost</strong> sau <strong>cabotaj</strong> în cadrul UE. Începând cu <strong>1 iulie 2026</strong>, trebuie să aveți un tahograf inteligent versiunea 2 (G2v2).',
       bullets: [
-        '<strong>Installation:</strong> G2v2 tachograph at an approved tachograph workshop.',
+        '<strong>Instalare:</strong> tahograf G2v2 la un atelier autorizat pentru tahografe.',
         '<strong>Carduri:</strong> card de conducător auto pentru fiecare conducător auto + card al societății pentru operatorul de transport rutier.',
         '<strong>Descărcări de date:</strong> cardurile de conducător auto cel puțin o dată la 28 de zile, unitățile montate pe vehicul (UMV) cel puțin o dată la 90 de zile.',
         '<strong>Evaluare și arhivare:</strong> prin software (de exemplu, TAGRA) sau printr-un serviciu. Arhivați cel puțin 1 an.'
       ],
       ctas: [
-        { href: '/try/', label: 'Try TAGRA free for 30 days', primary: true },
-        { href: '/integrations/dkv-live/', label: 'See DKV LIVE integration', outline: true }
+        { href: '/ro/incercare-gratuita/', label: 'Încercați TAGRA gratuit timp de 30 de zile', primary: true },
+        { href: '/ro/integrari/dkv-live/', label: 'Vedeți integrarea DKV LIVE', outline: true }
       ]
     },
     'r-over-35': {
       kind: 'yes',
-      title: 'Tachograph already required today',
-      desc: 'For vehicles <strong>above 3.5 t</strong> in goods transport, the tachograph obligation under Regulation (EC) No 561/2006 applies <strong>today</strong> — not just from July 2026. New vehicles must be fitted with the smart tachograph version 2 (G2v2).',
+      title: 'Tahograful este deja obligatoriu astăzi',
+      desc: 'Pentru vehiculele <strong>peste 3,5 t</strong> utilizate pentru transport de mărfuri, obligația privind tahograful prevăzută de Regulamentul (CE) nr. 561/2006 se aplică <strong>astăzi</strong> — nu doar din iulie 2026. Vehiculele noi trebuie echipate cu tahograful inteligent versiunea 2 (G2v2).',
       bullets: [
         '<strong>Carduri:</strong> card de conducător auto pentru fiecare conducător auto + card al societății pentru operatorul de transport rutier.',
         '<strong>Descărcări de date:</strong> cardurile de conducător auto la fiecare 28 de zile, unitățile montate pe vehicul (UMV) la fiecare 90 de zile.',
         '<strong>Evaluare și arhivare:</strong> prin software (de exemplu, TAGRA) sau printr-un serviciu. Arhivați cel puțin 1 an.',
-        'There are <strong>taxative exemptions</strong> under Articles 3 and 13 of Reg 561/2006 (agricultural, forestry, fire/rescue vehicles, tractors up to 40 km/h, etc.) — verify any applicable exemption with national authorities.'
+        'Există o <strong>listă exhaustivă de excepții</strong> în temeiul articolelor 3 și 13 din Regulamentul 561/2006 (vehicule agricole, forestiere, de pompieri/salvare, tractoare de până la 40 km/h etc.) — verificați orice excepție aplicabilă la autoritățile naționale.'
       ],
       ctas: [
-        { href: '/try/', label: 'Try TAGRA free for 30 days', primary: true },
-        { href: 'https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A02006R0561-20240522', label: 'List of exemptions (EUR-Lex)', ext: true, outline: true }
+        { href: '/ro/incercare-gratuita/', label: 'Încercați TAGRA gratuit timp de 30 de zile', primary: true },
+        { href: 'https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A02006R0561-20240522', label: 'Lista excepțiilor (EUR-Lex)', ext: true, outline: true }
       ]
     }
   };
   // Re-add q-purpose-25 properly
   NODES['q-purpose-25'] = {
-    step: 3, label: 'Purpose of transport',
+    step: 3, label: 'Scopul transportului',
     question: 'Care este scopul transportului transfrontalier?',
     hint: 'Transport în contul altuia = transportul de mărfuri pentru un client, contra cost. Transport în cont propriu = transportul propriilor mărfuri pentru propria activitate.',
     options: [
-      { id: 'r-yes-25', label: "Hire or reward (carrying others' goods)" },
-      { id: 'q-driver-main-25', label: 'Own account (own goods, own company)' }
+      { id: 'r-yes-25', label: "Transport contra cost (transportul mărfurilor altora)" },
+      { id: 'q-driver-main-25', label: 'Transport în cont propriu (propriile mărfuri, propria companie)' }
     ]
   };
 
@@ -811,7 +811,7 @@ if ('IntersectionObserver' in window) {
     let html = '<div class="vq-stage">';
     html += '<div class="vq-header">';
     html += progressDots(node.step);
-    html += '<div class="vq-step">Step '+node.step+' · '+escapeHtml(node.label)+'</div>';
+    html += '<div class="vq-step">Pasul '+node.step+' · '+escapeHtml(node.label)+'</div>';
     html += '</div>';
     html += '<h3 class="vq-question">'+escapeHtml(node.question)+'</h3>';
     if(node.hint) html += '<div class="vq-hint">'+escapeHtml(node.hint)+'</div>';
@@ -822,7 +822,7 @@ if ('IntersectionObserver' in window) {
     html += '</div>';
     html += '<div class="vq-controls">';
     html += '<button class="vq-btn-ctrl" data-act="back"'+(state.path.length===0?' disabled':'')+'>← Înapoi</button>';
-    html += '<button class="vq-btn-ctrl" data-act="reset"'+(state.path.length===0?' disabled':'')+'>↻ Start over</button>';
+    html += '<button class="vq-btn-ctrl" data-act="reset"'+(state.path.length===0?' disabled':'')+'>↻ Începeți din nou</button>';
     html += '</div>';
     html += '</div>';
     root.innerHTML = html;
@@ -833,9 +833,9 @@ if ('IntersectionObserver' in window) {
     const res = NODES[nodeId];
     const kindClass = 'vq-result vq-result--'+res.kind;
     let badge;
-    if(res.kind === 'no') badge = '✓ Tachograph not required';
-    else if(res.kind === 'yes') badge = '⚠ Tachograph needed';
-    else badge = 'ⓘ Depends on situation';
+    if(res.kind === 'no') badge = '✓ Tahograful nu este necesar';
+    else if(res.kind === 'yes') badge = '⚠ Tahograf obligatoriu';
+    else badge = 'ⓘ Depinde de situație';
     
     let html = '<div class="vq-stage">';
     html += '<div class="'+kindClass+'">';
@@ -862,7 +862,7 @@ if ('IntersectionObserver' in window) {
     }
     html += '<div class="vq-controls">';
     html += '<button class="vq-btn-ctrl" data-act="back">← Înapoi</button>';
-    html += '<button class="vq-btn-ctrl" data-act="reset">↻ Start over</button>';
+    html += '<button class="vq-btn-ctrl" data-act="reset">↻ Începeți din nou</button>';
     html += '</div>';
     html += '</div>';
     root.innerHTML = html;
@@ -953,7 +953,7 @@ if ('IntersectionObserver' in window) {
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://tagra.app/ro/articole/tahograf-autoutilitare-obligatie-iulie-2026/"}, "headline": "Tahograf pentru autoutilitare de 2,5–3,5 t: norme, excepții și amenzi în 2026", "description": "Începând cu termenul-limită de 1 iulie 2026, autoutilitarele de 2,5–3,5 t utilizate pentru transport internațional sau cabotaj trebuie să fie echipate cu un tahograf inteligent G2v2. Aflați cine este exceptat, normele, obligațiile de descărcare și amenzile.", "image": "https://tagra.app/assets/img/hero-poster.jpg", "author": {"@type": "Organization", "@id": "https://tagra.app/#organization", "name": "Truck Data Technology, s.r.o.", "url": "https://www.tdt.cz"}, "publisher": {"@type": "Organization", "@id": "https://tagra.app/#organization", "name": "TAGRA", "logo": {"@type": "ImageObject", "url": "https://tagra.app/assets/img/logo-dark.svg"}}, "datePublished": "2026-03-17T09:00:00+02:00", "dateModified": "2026-10-09T09:00:00+02:00", "inLanguage": "ro"}</script>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Cine intră sub incidența obligației de utilizare a tahografului începând cu 1 iulie 2026?", "acceptedAnswer": {"@type": "Answer", "text": "Începând cu 1 iulie 2026, vehiculele comerciale ușoare (LCV) de 2,5–3,5 t utilizate pentru transportul internațional de mărfuri sau cabotaj în UE intră sub incidența obligației de utilizare a tahografului introdusă prin Regulamentul (UE) 2020/1054, care modifică Regulamentul (CE) nr. 561/2006. Un tahograf inteligent G2v2, cardurile de conducător auto/cardurile societății și gestionarea structurată a datelor sunt toate obligatorii. Vehiculele de peste 3,5 t intră deja în domeniul de aplicare în prezent."}}, {"@type": "Question", "name": "Are nevoie o autoutilitară de tahograf dacă circulă doar pe teritoriul național?", "acceptedAnswer": {"@type": "Answer", "text": "În general, nu. Dacă operațiunile dumneavoastră sunt strict naționale, fără segment transfrontalier și fără cabotaj, obligația UE privind transportul transfrontalier nu se aplică. Verificați întotdeauna normele naționale, deoarece unele state membre impun cerințe suplimentare în cazuri specifice (de exemplu, mărfuri periculoase, contracte publice)."}}, {"@type": "Question", "name": "Se aplică obligația dacă autoutilitara are sub 2,5 t, dar ansamblul depășește această limită?", "acceptedAnswer": {"@type": "Answer", "text": "Da, în majoritatea cazurilor. Autoritățile de control (ISCTR) iau în considerare masa ansamblului (vehicul + remorcă). Dacă atașați o remorcă, iar masa maximă admisibilă a ansamblului depășește pragul și efectuați transport internațional contra cost, normele se aplică. Evaluați combinațiile și rutele dumneavoastră obișnuite."}}, {"@type": "Question", "name": "De ce am nevoie în plus față de instalarea tahografului?", "acceptedAnswer": {"@type": "Answer", "text": "Pe lângă dispozitivul propriu-zis, aveți nevoie de carduri de conducător auto, de un card de întreprindere, de un proces pentru descărcări regulate (28/90 de zile), de evaluarea contravențiilor și de arhivarea datelor pe perioada prevăzută de lege. Instruirea conducătorilor auto și responsabilitățile interne clare sunt esențiale. TAGRA for Fleet acoperă descărcările, evaluarea și raportarea într-un singur pachet."}}, {"@type": "Question", "name": "Cât de des trebuie descărcate datele?", "acceptedAnswer": {"@type": "Answer", "text": "Descărcați datele de pe cardul de conducător auto cel puțin o dată la 28 de zile și datele din unitatea montată pe vehicul (UMV) cel puțin o dată la 90 de zile. Mulți operatori de transport rutier descarcă datele mai frecvent pentru a reduce riscurile și a simplifica evidențele. Prin descărcare de la distanță (de exemplu, DKV LIVE), acest lucru se realizează automat, fără intervenția conducătorului auto."}}, {"@type": "Question", "name": "Ce carduri sunt necesare?", "acceptedAnswer": {"@type": "Answer", "text": "Fiecare conducător auto are nevoie de un card de conducător auto. Operatorul de transport rutier are nevoie de un card de întreprindere pentru autorizare și descărcarea securizată a datelor vehiculului. Există carduri de atelier și carduri de control, însă acestea sunt emise atelierelor autorizate și autorităților de control (ISCTR), nu operatorilor."}}, {"@type": "Question", "name": "Nu sunt transportator — trec ocazional o frontieră pentru propria mea activitate. Am nevoie de tahograf?", "acceptedAnswer": {"@type": "Answer", "text": "Factorii decisivi sunt masa admisibilă (inclusiv orice remorcă) și scopul al transportului. Dacă nu este transport contra cost și conducerea nu reprezintă profesia dumneavoastră principală, exceptarea pentru transportul în cont propriu prevăzută la articolul 3 litera (h) din Regulamentul 561/2006 se aplică, de regulă. Vă recomandăm să evaluați fiecare situație individual — contactați-ne pentru o verificare rapidă."}}, {"@type": "Question", "name": "Cum se dovedește în practică transportul în cont propriu?", "acceptedAnswer": {"@type": "Answer", "text": "Nu există un formular universal unic. Cel mai frecvent, sunt necesare: un document privind marfa (factură, aviz de livrare, comandă), o notă scurtă privind scopul deplasării (de unde până unde și motivul), precum și dovada legăturii dintre conducătorul auto, societate și vehicul (autorizație, contract de muncă, documentația vehiculului)."}}, {"@type": "Question", "name": "Există o exceptare pentru meseriași / artizani?", "acceptedAnswer": {"@type": "Answer", "text": "Da — așa-numita excepție pentru meseriași, prevăzută la articolul 3 litera (aa) din Regulamentul 561/2006. Dacă conducerea nu reprezintă activitatea dumneavoastră principală și transportați numai materiale, echipamente sau utilaje necesare pentru desfășurarea propriei activități profesionale, tahograful nu este, de regulă, necesar. Transpunerea națională poate adăuga detalii — verificați orientările din țara în care desfășurați activitatea."}}, {"@type": "Question", "name": "Ce este cabotajul?", "acceptedAnswer": {"@type": "Answer", "text": "Cabotajul este transportul de mărfuri pe teritoriul unui stat membru al UE de către un transportator stabilit într-un alt stat membru al UE. Exemplu: o autoutilitară cehă descarcă mărfuri în Hamburg și apoi preia un nou transport din Hamburg către Berlin. Ambele curse fac parte din operațiuni de cabotaj și declanșează obligația privind tahograful începând cu 1 iulie 2026 pentru autoutilitare de 2,5–3,5 t."}}, {"@type": "Question", "name": "Ce se întâmplă dacă aveți doar o autoutilitară închiriată? Cine se ocupă de tahograf?", "acceptedAnswer": {"@type": "Answer", "text": "Dacă închiriați o autoutilitară de peste 2,5 t pentru transport comercial internațional, aceasta trebuie să fie echipată cu tahograf. Responsabilitatea pentru descărcarea corectă a datelor și respectarea cerințelor vă revine dumneavoastră, în calitate de operator de transport rutier, nu societății de închirieri. Nu uitați să autentificați tahograful cu cardul de întreprindere înainte de călătorie."}}, {"@type": "Question", "name": "Puteți instala singur tahograful sau aveți nevoie de un atelier?", "acceptedAnswer": {"@type": "Answer", "text": "Nu puteți instala, activa sau calibra singur un tahograf. Instalarea, activarea, sigilarea și verificarea periodică (calibrarea) trebuie efectuate exclusiv de un atelier autorizat de tahografe utilizând instrumente securizate și carduri de atelier, în conformitate cu Regulamentul de punere în aplicare (UE) 2016/799 al Comisiei."}}, {"@type": "Question", "name": "Ce sancțiuni se aplică dacă nu aveți tahograf după 1 iulie 2026?", "acceptedAnswer": {"@type": "Answer", "text": "Lipsa tahografului, conducerea fără card sau nedescărcarea datelor sunt clasificate ca contravenții foarte grave la nivelul UE, în temeiul Directivei 2006/22/CE și al cadrului privind cele mai grave contravenții (MSI). Sancțiunile diferă de la un stat membru la altul și pot ajunge la mii de euro pentru fiecare încălcare, cu posibila imobilizare a vehiculului în cadrul controlului rutier și, în cazul încălcărilor repetate, pierderea bunei reputații a operatorului de transport rutier."}}, {"@type": "Question", "name": "Ce se schimbă pentru operatorii din Regatul Unit după Brexit?", "acceptedAnswer": {"@type": "Answer", "text": "Vehiculele înmatriculate în Regatul Unit care operează în UE rămân supuse normelor UE pentru partea din UE a călătoriilor lor (normele AETR aplicându-se în anumite situații transfrontaliere). Pentru vehicule comerciale ușoare de 2,5–3,5 t care efectuează transport internațional între Regatul Unit și UE, ar trebui să planificați aplicarea aceluiași regim G2v2 / card de conducător auto / descărcare la 28-90 de zile ca operatorii din UE, începând cu 1 iulie 2026. Operațiunile interne din Regatul Unit urmează normele GB Domestic în cadrul DVSA — consultați ghidul UK DVSA."}}]}
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Cine intră sub incidența obligației de utilizare a tahografului începând cu 1 iulie 2026?", "acceptedAnswer": {"@type": "Answer", "text": "Începând cu 1 iulie 2026, vehiculele comerciale ușoare (LCV) de 2,5–3,5 t utilizate pentru transportul internațional de mărfuri sau cabotaj în UE intră sub incidența obligației de utilizare a tahografului introdusă prin Regulamentul (UE) 2020/1054, care modifică Regulamentul (CE) nr. 561/2006. Un tahograf inteligent G2v2, cardurile de conducător auto/cardurile societății și gestionarea structurată a datelor sunt toate obligatorii. Vehiculele de peste 3,5 t intră deja în domeniul de aplicare în prezent."}}, {"@type": "Question", "name": "Are nevoie o autoutilitară de tahograf dacă circulă doar pe teritoriul național?", "acceptedAnswer": {"@type": "Answer", "text": "În general, nu. Dacă operațiunile dumneavoastră sunt strict naționale, fără segment transfrontalier și fără cabotaj, obligația UE privind transportul transfrontalier nu se aplică. Verificați întotdeauna normele naționale, deoarece unele state membre impun cerințe suplimentare în cazuri specifice (de exemplu, mărfuri periculoase, contracte publice)."}}, {"@type": "Question", "name": "Se aplică obligația dacă autoutilitara are sub 2,5 t, dar ansamblul depășește această limită?", "acceptedAnswer": {"@type": "Answer", "text": "Da, în majoritatea cazurilor. Autoritățile de control (ISCTR) iau în considerare masa ansamblului (vehicul + remorcă). Dacă atașați o remorcă, iar masa maximă admisibilă a ansamblului depășește pragul și efectuați transport internațional contra cost, normele se aplică. Evaluați combinațiile și rutele dumneavoastră obișnuite."}}, {"@type": "Question", "name": "De ce am nevoie în plus față de instalarea tahografului?", "acceptedAnswer": {"@type": "Answer", "text": "Pe lângă dispozitivul propriu-zis, aveți nevoie de carduri de conducător auto, de un card de întreprindere, de un proces pentru descărcări regulate (28/90 de zile), de evaluarea contravențiilor și de arhivarea datelor pe perioada prevăzută de lege. Instruirea conducătorilor auto și responsabilitățile interne clare sunt esențiale. TAGRA for Fleet acoperă descărcările, evaluarea și raportarea într-un singur pachet."}}, {"@type": "Question", "name": "Cât de des trebuie descărcate datele?", "acceptedAnswer": {"@type": "Answer", "text": "Descărcați datele de pe cardul de conducător auto cel puțin o dată la 28 de zile și datele din unitatea montată pe vehicul (UMV) cel puțin o dată la 90 de zile. Mulți operatori de transport rutier descarcă datele mai frecvent pentru a reduce riscurile și a simplifica evidențele. Prin descărcare de la distanță (de exemplu, DKV LIVE), acest lucru se realizează automat, fără intervenția conducătorului auto."}}, {"@type": "Question", "name": "Ce carduri sunt necesare?", "acceptedAnswer": {"@type": "Answer", "text": "Fiecare conducător auto are nevoie de un card de conducător auto. Operatorul de transport rutier are nevoie de un card de întreprindere pentru autorizare și descărcarea securizată a datelor vehiculului. Există carduri de atelier și carduri de control, însă acestea sunt emise atelierelor autorizate și autorităților de control (ISCTR), nu operatorilor."}}, {"@type": "Question", "name": "Nu sunt transportator — trec ocazional o frontieră pentru propria mea activitate. Am nevoie de tahograf?", "acceptedAnswer": {"@type": "Answer", "text": "Factorii decisivi sunt masa admisibilă (inclusiv orice remorcă) și scopul al transportului. Dacă nu este transport contra cost și conducerea nu reprezintă profesia dumneavoastră principală, exceptarea pentru transportul în cont propriu prevăzută la articolul 3 litera (ha) din Regulamentul 561/2006 se aplică, de regulă. Vă recomandăm să evaluați fiecare situație individual — contactați-ne pentru o verificare rapidă."}}, {"@type": "Question", "name": "Cum se dovedește în practică transportul în cont propriu?", "acceptedAnswer": {"@type": "Answer", "text": "Nu există un formular universal unic. Cel mai frecvent, sunt necesare: un document privind marfa (factură, aviz de livrare, comandă), o notă scurtă privind scopul deplasării (de unde până unde și motivul), precum și dovada legăturii dintre conducătorul auto, societate și vehicul (autorizație, contract de muncă, documentația vehiculului)."}}, {"@type": "Question", "name": "Există o exceptare pentru meseriași / artizani?", "acceptedAnswer": {"@type": "Answer", "text": "Da — așa-numita excepție pentru meseriași, prevăzută la articolul 3 litera (aa) din Regulamentul 561/2006. Dacă conducerea nu reprezintă activitatea dumneavoastră principală și transportați numai materiale, echipamente sau utilaje necesare pentru desfășurarea propriei activități profesionale, tahograful nu este, de regulă, necesar. Transpunerea națională poate adăuga detalii — verificați orientările din țara în care desfășurați activitatea."}}, {"@type": "Question", "name": "Ce este cabotajul?", "acceptedAnswer": {"@type": "Answer", "text": "Cabotajul este transportul de mărfuri pe teritoriul unui stat membru al UE de către un transportator stabilit într-un alt stat membru al UE. Exemplu: o autoutilitară cehă descarcă mărfuri în Hamburg și apoi preia un nou transport din Hamburg către Berlin. Ambele curse fac parte din operațiuni de cabotaj și declanșează obligația privind tahograful începând cu 1 iulie 2026 pentru autoutilitare de 2,5–3,5 t."}}, {"@type": "Question", "name": "Ce se întâmplă dacă aveți doar o autoutilitară închiriată? Cine se ocupă de tahograf?", "acceptedAnswer": {"@type": "Answer", "text": "Dacă închiriați o autoutilitară de peste 2,5 t pentru transport comercial internațional, aceasta trebuie să fie echipată cu tahograf. Responsabilitatea pentru descărcarea corectă a datelor și respectarea cerințelor vă revine dumneavoastră, în calitate de operator de transport rutier, nu societății de închirieri. Nu uitați să autentificați tahograful cu cardul de întreprindere înainte de călătorie."}}, {"@type": "Question", "name": "Puteți instala singur tahograful sau aveți nevoie de un atelier?", "acceptedAnswer": {"@type": "Answer", "text": "Nu puteți instala, activa sau calibra singur un tahograf. Instalarea, activarea, sigilarea și verificarea periodică (calibrarea) trebuie efectuate exclusiv de un atelier autorizat de tahografe utilizând instrumente securizate și carduri de atelier, în conformitate cu Regulamentul de punere în aplicare (UE) 2016/799 al Comisiei."}}, {"@type": "Question", "name": "Ce sancțiuni se aplică dacă nu aveți tahograf după 1 iulie 2026?", "acceptedAnswer": {"@type": "Answer", "text": "Lipsa tahografului, conducerea fără card sau nedescărcarea datelor sunt clasificate ca contravenții foarte grave la nivelul UE, în temeiul Directivei 2006/22/CE și al cadrului privind cele mai grave contravenții (MSI). Sancțiunile diferă de la un stat membru la altul și pot ajunge la mii de euro pentru fiecare încălcare, cu posibila imobilizare a vehiculului în cadrul controlului rutier și, în cazul încălcărilor repetate, pierderea bunei reputații a operatorului de transport rutier."}}, {"@type": "Question", "name": "Ce se schimbă pentru operatorii din Regatul Unit după Brexit?", "acceptedAnswer": {"@type": "Answer", "text": "Vehiculele înmatriculate în Regatul Unit care operează în UE rămân supuse normelor UE pentru partea din UE a călătoriilor lor (normele AETR aplicându-se în anumite situații transfrontaliere). Pentru vehicule comerciale ușoare de 2,5–3,5 t care efectuează transport internațional între Regatul Unit și UE, ar trebui să planificați aplicarea aceluiași regim G2v2 / card de conducător auto / descărcare la 28-90 de zile ca operatorii din UE, începând cu 1 iulie 2026. Operațiunile interne din Regatul Unit urmează normele GB Domestic în cadrul DVSA — consultați ghidul UK DVSA."}}]}
 </script>
 </body>
 </html>
