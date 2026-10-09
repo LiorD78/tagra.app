@@ -69,6 +69,8 @@ jobs:
         with:
           mode: deploy-driven
           host: tagra.app
-          indexnow-key: ${{ secrets.INDEXNOW_KEY }}
+          # Klíč IndexNow je veřejný (servíruje se na https://tagra.app/f06a4d78c6d06fc3bea0fd7a1cb798ec.txt),
+          # proto fallback přímo zde. Bez něj se ping od začátku tiše přeskakoval (secret INDEXNOW_KEY chyběl).
+          indexnow-key: ${{ secrets.INDEXNOW_KEY || 'f06a4d78c6d06fc3bea0fd7a1cb798ec' }}
           fb-access-token: ${{ secrets.FB_APP_ACCESS_TOKEN }}
           url-list: ${{ steps.urls.outputs.list }}
