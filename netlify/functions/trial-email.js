@@ -39,7 +39,12 @@
  * e-mail). Nový lead: #1 + #2/#3. Opakování ≥ 60 min: jen #1 znovu (nový
  * idempotency key -r{count}). Opakování < 60 min: nic. Jiné publikum: #1
  * pro něj, #2/#3 jen pokud pro ně ještě neběžely. Chyba Blobs = fail-open.
- * Každé odeslání (i ignorované) vyvolá interní notifikaci s unikátním předmětem.
+ *
+ * ── INTERNÍ NOTIFIKACE ───────────────────────────────────────────────
+ * Liborovi chodí JEN při chybě (uvítací mail selhal, nebo se nepodařilo
+ * naplánovat #2/#3). Úspěšné odeslání ani ignorované odeslání (test,
+ * disposable) se nehlásí — o každém leadu informuje notifikace formuláře
+ * z Netlify ("TAGRA demo lead — tagra.app"). Rozhodnuto 13. 10. 2026.
  */
 
 const RESEND_API    = "https://api.resend.com/emails";
@@ -130,7 +135,8 @@ const SUBJECTS = {
     fleet:       "Votre essai TAGRA est prêt — téléchargement à l'intérieur",
     driver:      "Votre essai TAGRA TRUCKER est prêt — téléchargement à l'intérieur",
     enforcement: "Merci pour votre intérêt pour TAGRA Control",
-  },  ro: {
+  },
+  ro: {
     fleet:       "Versiunea dumneavoastră de probă TAGRA este gata — linkul de descărcare este în interior",
     driver:      "Versiunea dumneavoastră de probă TAGRA TRUCKER este gata — linkul de descărcare este în interior",
     enforcement: "Vă mulțumim pentru interesul acordat TAGRA Control",
@@ -285,7 +291,7 @@ async function writeLead(store, key, value) {
   }
 }
 
-// ── INTERNÍ NOTIFIKACE ────────────────────────────────────────────────
+// ── INTERNÍ NOTIFIKACE (jen při chybě) ────────────────────────────────
 
 const escapeHtml = (s) => String(s ?? "")
   .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
@@ -301,8 +307,8 @@ function describeSent(situation, aud, result) {
 }
 
 /**
- * Pošle Liborovi notifikaci o leadu (nahrazuje Netlify notifikaci formuláře,
- * která měla pořád stejný předmět a Gmail ji slepoval do vláken).
+ * Pošle Liborovi notifikaci, když se něco pokazilo (uvítací mail
+ * neodešel, nebo se nepodařilo naplánovat #2/#3). Při úspěchu se nevolá.
  * Nikdy nevyhazuje chybu.
  */
 async function notifyLead(apiKey, { data, name, aud, lang, prev, count, situation, result, ignored }) {
@@ -315,7 +321,7 @@ async function notifyLead(apiKey, { data, name, aud, lang, prev, count, situatio
 
     const isRepeat = !!prev;
     const prefix =
-      (ignored ? `[ignorováno: ${ignored}] ` : "") +
+      (ignored ? `[chyba: ${ignored}] ` : "[chyba] ") +
       (isRepeat && !ignored ? `↻ ${count}× ` : "");
     const subject = `${prefix}TAGRA lead · ${aud} · ${country} · ${name || "(bez jména)"}${company ? ` (${company})` : ""}`
       .replace(/[\r\n]+/g, " ");
@@ -381,15 +387,9 @@ exports.handler = async (event) => {
   const apiKey = process.env.RESEND_API_KEY;
   const lead   = { data, name, aud, lang };
 
-  // Ignorované odeslání (test, disposable) → Libor o něm přesto ví.
-  const ignore = async (reason, body) => {
-    await notifyLead(apiKey, { ...lead, ignored: reason });
-    return { statusCode: 200, body };
-  };
-
   if (String(data.source_url || "").includes("test=1") || data.test === "1") {
     logInfo("Ignored: test submission");
-    return ignore("test", "Ignored: test submission");
+    return { statusCode: 200, body: "Ignored: test submission" };
   }
 
   if (!email) {
@@ -410,7 +410,7 @@ exports.handler = async (event) => {
   const emailDomain = email.split("@")[1]?.toLowerCase() || "";
   if (DISPOSABLE_DOMAINS.includes(emailDomain)) {
     logInfo(`Ignored: disposable domain (${emailDomain})`);
-    return ignore("disposable", "Ignored: disposable domain");
+    return { statusCode: 200, body: "Ignored: disposable domain" };
   }
 
   if (!apiKey) {
@@ -528,8 +528,10 @@ exports.handler = async (event) => {
     sequenced: [...new Set([...prevSequenced, ...(scheduleSeq ? [aud] : [])])],
   });
 
-  // ── INTERNÍ NOTIFIKACE ──────────────────────────────────────────────
-  await notifyLead(apiKey, { ...lead, prev, count, situation, result });
+  // ── INTERNÍ NOTIFIKACE — jen když se nepodařilo naplánovat #2/#3 ────
+  if (result.failed.length) {
+    await notifyLead(apiKey, { ...lead, prev, count, situation, result });
+  }
 
   return {
     statusCode: 200,
