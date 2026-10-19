@@ -30,15 +30,21 @@
 }
 
 .footer-logo {
-  margin-bottom: 12px;
+  margin-bottom: 16px;
 }
 
-.footer-logo img {
+/* Logo v patičce stejně velké jako v navigaci (jednotný look s tdt.cz) */
+.footer-logo img,
+.footer-logo img[width][height] {
   display: block;
-  height: 20px;
+  height: 32px;
   width: auto;
-  max-height: 20px;
-  max-width: 88px;
+  max-height: none;
+  max-width: none;
+}
+
+@media (max-width: 768px) {
+  .footer-logo img, .footer-logo img[width][height] { height: 26px; }
 }
 
 .footer-desc {
