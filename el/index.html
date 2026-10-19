@@ -801,18 +801,13 @@
 <section id="main-content" aria-label="TAGRA – Επιλέξτε τη λύση σας" class="hero">
 <picture style="display:contents">
 <source type="image/webp" sizes="100vw" srcset="/.netlify/images?url=/assets/img/hero-poster.jpg&amp;w=480&amp;fm=webp 480w, /.netlify/images?url=/assets/img/hero-poster.jpg&amp;w=960&amp;fm=webp 960w, /.netlify/images?url=/assets/img/hero-poster.jpg&amp;w=1440&amp;fm=webp 1440w, /.netlify/images?url=/assets/img/hero-poster.jpg&amp;w=1920&amp;fm=webp 1920w"/>
-<img alt="" aria-hidden="true" class="hero-video-poster" fetchpriority="high" loading="eager" src="/assets/img/hero-poster.jpg?v=2026-05-13b" width="1920" height="1080"/>
+<img alt="" aria-hidden="true" class="hero-video-poster" fetchpriority="high" loading="eager" src="/assets/img/hero-poster.jpg?v=2026-10-20" width="1920" height="1080"/>
 </picture>
-<video aria-hidden="true" class="hero-video" id="heroVideoA" muted="" playsinline="" preload="auto">
-<source media="(max-width: 1024px)" src="/assets/video/hero-720.mp4?v=2026-10-19" type="video/mp4">
-<source src="/assets/video/hero-1080.webm?v=2026-10-19" type="video/webm">
-<source src="/assets/video/hero-1080.mp4?v=2026-10-19" type="video/mp4">
-</source></source></source></video>
-<video aria-hidden="true" class="hero-video" id="heroVideoB" muted="" playsinline="" preload="none">
-<source media="(max-width: 1024px)" src="/assets/video/hero-720.mp4?v=2026-10-19" type="video/mp4">
-<source src="/assets/video/hero-1080.webm?v=2026-10-19" type="video/webm">
-<source src="/assets/video/hero-1080.mp4?v=2026-10-19" type="video/mp4">
-</source></source></source></video>
+<video aria-hidden="true" autoplay="" class="hero-video" id="heroVideo" loop="" muted="" playsinline="" preload="auto">
+<source media="(max-width: 1024px)" src="/assets/video/hero-720.mp4?v=2026-10-20" type="video/mp4"/>
+<source src="/assets/video/hero-1080.webm?v=2026-10-20" type="video/webm"/>
+<source src="/assets/video/hero-1080.mp4?v=2026-10-20" type="video/mp4"/>
+</video>
 <div class="container">
 <div class="hero-glass anim-up">
 <div class="eyebrow">TAGRA · Πρόγραμμα ανάλυσης ταχογράφου</div>
@@ -1238,107 +1233,21 @@
   ]
 }</script>
 <script>
+/* Hero video: jedno <video loop>. Prolnutí konce do začátku je zapečené přímo v souboru (bezešvá smyčka 6,83 s)
+   → běží jediný dekodér, nic se nepřetáčí ani nestahuje dvakrát. Mimo obrazovku / na skryté záložce pauza. */
 (function() {
-  var videoA = document.getElementById('heroVideoA');
-  var videoB = document.getElementById('heroVideoB');
+  var v = document.getElementById('heroVideo');
   var hero = document.querySelector('.hero');
-  if (!videoA || !videoB || !hero) return;
-
-  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-
-  // Crossfade duration must match the CSS transition (.hero-video opacity 1.2s)
-  var CROSSFADE_MS = 1200;
-  var CROSSFADE_S = CROSSFADE_MS / 1000;
-
-  var current = videoA;   // currently playing & opaque
-  var next = videoB;      // pre-buffered, hidden
-  var swapping = false;
-  var rafId = null;
-  var isPaused = false;
-
-  function tryPlay(v) {
-    try {
-      var p = v.play();
-      if (p && typeof p.catch === 'function') p.catch(function() {});
-    } catch (e) {}
-  }
-
-  function swap() {
-    if (swapping || isPaused) return;
-    swapping = true;
-    // Start the next video from the beginning
-    try { next.currentTime = 0; } catch (e) {}
-    tryPlay(next);
-    // Crossfade: bring next to opacity 1, take current to 0
-    next.classList.add('is-active');
-    current.classList.remove('is-active');
-    // After the fade completes, the now-hidden video becomes "next"
-    setTimeout(function() {
-      try { current.pause(); current.currentTime = 0; } catch (e) {}
-      var tmp = current;
-      current = next;
-      next = tmp;
-      swapping = false;
-    }, CROSSFADE_MS + 50);
-  }
-
-  // rAF loop checks playback time; when current is within CROSSFADE_S of end, swap
-  function tick() {
-    rafId = null;
-    if (!isPaused && current && !current.paused && !isNaN(current.duration) && current.duration > 0) {
-      var timeLeft = current.duration - current.currentTime;
-      if (timeLeft <= CROSSFADE_S && !swapping) {
-        swap();
-      }
-    }
-    rafId = requestAnimationFrame(tick);
-  }
-
-  // Boot: when video A has data, mark it active and start playback + loop
-  function boot() {
-    hero.classList.add('has-video-ready');
-    current.classList.add('is-active');
-    tryPlay(current);
-    // B má preload="none", aby nesoutěžilo s prvním vykreslením.
-    // Bufferovat začne teď, když A už hraje — swap() ho potřebuje ~1,2 s před koncem A.
-    try { next.preload = 'auto'; next.load(); } catch (e) {}
-    if (rafId === null) rafId = requestAnimationFrame(tick);
-  }
-
-  // Both videos load the same file; boot as soon as A is ready
-  if (videoA.readyState >= 2) {
-    boot();
-  } else {
-    videoA.addEventListener('loadeddata', boot, { once: true });
-  }
-
-  // Pause loop while hero is off-screen, resume when it returns
+  if (!v || !hero) return;
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) { try { v.pause(); v.removeAttribute('autoplay'); v.preload = 'none'; } catch (e) {} return; }
+  var inView = true;
+  function play() { if (!inView || document.hidden) return; try { var p = v.play(); if (p && p.catch) p.catch(function() {}); } catch (e) {} }
+  function ready() { v.classList.add('is-active'); hero.classList.add('has-video-ready'); play(); }
+  if (v.readyState >= 3) ready(); else v.addEventListener('canplay', ready, { once: true });
   if ('IntersectionObserver' in window) {
-    var observer = new IntersectionObserver(function(entries) {
-      entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-          isPaused = false;
-          if (current && current.paused) tryPlay(current);
-        } else {
-          isPaused = true;
-          try { current.pause(); } catch (e) {}
-          try { next.pause(); } catch (e) {}
-        }
-      });
-    }, { threshold: 0.05 });
-    observer.observe(hero);
+    new IntersectionObserver(function(es) { inView = es[0].isIntersecting; if (inView) play(); else { try { v.pause(); } catch (e) {} } }, { threshold: 0.05 }).observe(hero);
   }
-
-  // Pause when tab loses visibility (saves CPU/bandwidth)
-  document.addEventListener('visibilitychange', function() {
-    if (document.hidden) {
-      isPaused = true;
-      try { current.pause(); } catch (e) {}
-      try { next.pause(); } catch (e) {}
-    } else if (!isPaused) {
-      if (current && current.paused) tryPlay(current);
-    }
-  });
+  document.addEventListener('visibilitychange', function() { if (document.hidden) { try { v.pause(); } catch (e) {} } else play(); });
 })();
 </script>
 <script>
