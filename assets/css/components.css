@@ -1393,3 +1393,18 @@
   .cta-box.cc-top a.cc-desk { display: none; }
   .cc-top .cc-mail { display: grid; gap: 10px; width: 100%; }
 }
+
+/* ─── HERO S VIDEEM NA ÚVODU: bez skleněných boxů (19. 10. 2026) ─────────────
+   Stejně jako na tdt.cz: bílý text (verzálky H1 beze změny) na tmavém přechodu
+   přes video, kamion zůstává vidět. Platí jen pro hero s videem (všech 11
+   jazykových úvodů); prohlížeče bez :has() dál ukazují původní skleněné boxy. */
+.hero:has(> .hero-video)::after { content: ""; position: absolute; inset: 0; z-index: 1; pointer-events: none;
+  background: linear-gradient(180deg, rgba(6,32,53,.70) 0%, rgba(6,32,53,.50) 42%, rgba(6,32,53,0) 72%); }
+.hero:has(> .hero-video) .hero-glass { background: none; border: 0; box-shadow: none;
+  -webkit-backdrop-filter: none; backdrop-filter: none; padding: 0; margin-bottom: 14px; }
+.hero:has(> .hero-video) .eyebrow { color: #b9e07a; text-shadow: 0 1px 8px rgba(6,32,53,.35); }
+.hero:has(> .hero-video) h1 { background: none; -webkit-text-fill-color: #fff; color: #fff; text-shadow: 0 1px 12px rgba(6,32,53,.35); }
+.hero:has(> .hero-video) .hero-sub, .hero:has(> .hero-video) .hero-sub strong { color: rgba(255,255,255,.94); text-shadow: 0 1px 8px rgba(6,32,53,.35); }
+@media (max-width: 1024px) {
+  .hero:has(> .hero-video)::after { background: linear-gradient(180deg, rgba(6,32,53,.74) 0%, rgba(6,32,53,.62) 60%, rgba(6,32,53,.50) 100%); }
+}
