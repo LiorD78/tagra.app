@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<!-- TMX-ANALYTICS START -->
+<meta content="7F7894081BE7FBB245FF03AF8810B22F" name="msvalidate.01"/>
+<!-- Consent Mode v2 defaults (deny) + gtag stub — runs BEFORE gtag.js -->
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent','default',{
+      ad_storage:'denied', ad_user_data:'denied', ad_personalization:'denied',
+      analytics_storage:'denied', functionality_storage:'denied',
+      personalization_storage:'denied', security_storage:'granted',
+      wait_for_update:500
+    });
+    gtag('set','ads_data_redaction',true);
+    gtag('set','url_passthrough',false);
+  </script>
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-92253QFBNX"></script>
+<script>
+    gtag('js', new Date());
+    gtag('config','G-92253QFBNX');
+  </script>
+<!-- Cookie consent banner (self-hosted) + Microsoft Clarity gating -->
+<style>
+    .tmx-cc{position:fixed;left:0;right:0;bottom:0;z-index:2147483000;background:linear-gradient(120deg,var(--blue-dark,#0b2c4a),var(--blue-mid,#134a8e) 62%,var(--blue-light,#1f5fa6));color:#fff;
+      font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+      padding:16px 20px;box-shadow:0 -4px 24px rgba(0,0,0,.18);display:flex;flex-wrap:wrap;
+      align-items:center;gap:14px;justify-content:center}
+    .tmx-cc__txt{flex:1 1 360px;max-width:760px}
+    .tmx-cc__txt a{color:#9ed0f5;text-decoration:underline}
+    .tmx-cc__btns{display:flex;gap:10px;flex:0 0 auto}
+    .tmx-cc__b{appearance:none;border:0;cursor:pointer;font:inherit;font-weight:600;
+      padding:10px 22px;border-radius:99px;transition:filter .15s;color:#fff}
+    .tmx-cc__b:hover{filter:brightness(1.08)}
+    .tmx-cc__b--no{background:rgba(255,255,255,.16)}
+    .tmx-cc__b--yes{background:var(--green-cta,#5C820F)}
+    @media(max-width:640px){.tmx-cc{padding:14px}.tmx-cc__btns{width:100%}.tmx-cc__b{flex:1}}
+  </style>
+<script>
+  (function(){
+    var KEY='tmx-consent-v1', CL='wt18054m0r';
+    function lc(){var l=(document.documentElement.getAttribute('lang')||'en').toLowerCase().split('-')[0];
+      var m={cz:'cs',cs:'cs',sk:'sk',de:'de',pl:'pl',gr:'el',el:'el',hu:'hu',fr:'fr',it:'it',nl:'nl',ro:'ro',en:'en'};return m[l]||'en';}
+    var T={
+      hu:{t:'Analitikai s\u00fctiket haszn\u00e1lunk (Google Analytics, Microsoft Clarity, Smartsupp), hogy meg\u00e9rts\u00fck a webhely haszn\u00e1lat\u00e1t. Csak az \u00d6n hozz\u00e1j\u00e1rul\u00e1s\u00e1val t\u00f6lt\u0151dnek be.',a:'Elfogadom',r:'Elutas\u00edtom',p:'Adatv\u00e9delem \u00e9s s\u00fctik'},
+      ro:{t:'Utilizăm module cookie de analiză (Google Analytics, Microsoft Clarity, Smartsupp) pentru a înțelege modul de utilizare a site-ului. Se încarcă doar cu consimțământul dumneavoastră.',a:'Accept',r:'Refuz',p:'Confidențialitate și cookie-uri'},
+      nl:{t:'We gebruiken analytische cookies (Google Analytics, Microsoft Clarity, Smartsupp) om het gebruik van de site te begrijpen. Ze laden alleen met uw toestemming.',a:'Accepteren',r:'Weigeren',p:'Privacy en cookies'},
+      fr:{t:'Nous utilisons des cookies analytiques (Google Analytics, Microsoft Clarity, Smartsupp) pour comprendre l’utilisation du site. Ils ne se chargent qu’avec votre consentement.',a:'Accepter',r:'Refuser',p:'Confidentialité et cookies'},
+      it:{t:'Utilizziamo cookie analitici (Google Analytics, Microsoft Clarity, Smartsupp) per capire l’utilizzo del sito. Si caricano solo con il Suo consenso.',a:'Accetta',r:'Rifiuta',p:'Privacy e cookie'},
+      en:{t:'We use analytics cookies (Google Analytics, Microsoft Clarity, Smartsupp) to understand site usage. They load only with your consent.',a:'Accept',r:'Reject',p:'Privacy &amp; cookies'},
+      cs:{t:'Pou\u017e\u00edv\u00e1me analytick\u00e9 cookies (Google Analytics, Microsoft Clarity, Smartsupp) k pochopen\u00ed pou\u017e\u00edv\u00e1n\u00ed webu. Na\u010dtou se jen s va\u0161\u00edm souhlasem.',a:'P\u0159ijmout',r:'Odm\u00edtnout',p:'Soukrom\u00ed a cookies'},
+      sk:{t:'Pou\u017e\u00edvame analytick\u00e9 cookies (Google Analytics, Microsoft Clarity, Smartsupp) na pochopenie pou\u017e\u00edvania webu. Na\u010d\u00edtaj\u00fa sa len s va\u0161\u00edm s\u00fahlasom.',a:'Prija\u0165',r:'Odmietnu\u0165',p:'S\u00fakromie a cookies'},
+      de:{t:'Wir verwenden Analyse-Cookies (Google Analytics, Microsoft Clarity, Smartsupp), um die Nutzung der Website zu verstehen. Sie werden nur mit Ihrer Einwilligung geladen.',a:'Akzeptieren',r:'Ablehnen',p:'Datenschutz &amp; Cookies'},
+      pl:{t:'U\u017cywamy plik\u00f3w cookie do analityki (Google Analytics, Microsoft Clarity, Smartsupp), aby zrozumie\u0107 korzystanie z witryny. \u0141aduj\u0105 si\u0119 tylko za Twoj\u0105 zgod\u0105.',a:'Akceptuj',r:'Odrzu\u0107',p:'Prywatno\u015b\u0107 i cookies'},
+      el:{t:'\u03a7\u03c1\u03b7\u03c3\u03b9\u03bc\u03bf\u03c0\u03bf\u03b9\u03bf\u03cd\u03bc\u03b5 cookies \u03b1\u03bd\u03ac\u03bb\u03c5\u03c3\u03b7\u03c2 (Google Analytics, Microsoft Clarity, Smartsupp) \u03b3\u03b9\u03b1 \u03bd\u03b1 \u03ba\u03b1\u03c4\u03b1\u03bd\u03bf\u03ae\u03c3\u03bf\u03c5\u03bc\u03b5 \u03c4\u03b7 \u03c7\u03c1\u03ae\u03c3\u03b7. \u03a6\u03bf\u03c1\u03c4\u03ce\u03bd\u03bf\u03bd\u03c4\u03b1\u03b9 \u03bc\u03cc\u03bd\u03bf \u03bc\u03b5 \u03c4\u03b7 \u03c3\u03c5\u03b3\u03ba\u03b1\u03c4\u03ac\u03b8\u03b5\u03c3\u03ae \u03c3\u03b1\u03c2.',a:'\u0391\u03c0\u03bf\u03b4\u03bf\u03c7\u03ae',r:'\u0391\u03c0\u03cc\u03c1\u03c1\u03b9\u03c8\u03b7',p:'\u0391\u03c0\u03cc\u03c1\u03c1\u03b7\u03c4\u03bf &amp; cookies'}
+    };
+    function loadClarity(){if(!CL||window.__tmxCl)return;window.__tmxCl=1;
+      (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+       t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+       y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script",CL);}
+    function grant(){try{localStorage.setItem(KEY,'granted')}catch(e){}
+      gtag('consent','update',{analytics_storage:'granted'});loadClarity();}
+    function deny(){try{localStorage.setItem(KEY,'denied')}catch(e){}}
+    var saved=null;try{saved=localStorage.getItem(KEY)}catch(e){}
+    if(saved==='granted'){grant();return;} if(saved==='denied'){return;}
+    function show(){var tx=T[lc()]||T.en;
+      var b=document.createElement('div');b.className='tmx-cc';b.setAttribute('role','dialog');b.setAttribute('aria-live','polite');
+      b.innerHTML='<div class="tmx-cc__txt">'+tx.t+' <a href="/hu/adatvedelmi-tajekoztato/">'+tx.p+'</a></div>'+
+        '<div class="tmx-cc__btns"><button type="button" class="tmx-cc__b tmx-cc__b--no">'+tx.r+'</button>'+
+        '<button type="button" class="tmx-cc__b tmx-cc__b--yes">'+tx.a+'</button></div>';
+      document.body.appendChild(b);
+      b.querySelector('.tmx-cc__b--yes').addEventListener('click',function(){grant();b.remove();});
+      b.querySelector('.tmx-cc__b--no').addEventListener('click',function(){deny();b.remove();});}
+    if(document.body)show();else document.addEventListener('DOMContentLoaded',show);
+  })();
+  </script>
+<!-- TMX-ANALYTICS END -->
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>TAGRA oktatás cégeknek – online és személyes</title>
+<meta content="Egyéni TAGRA oktatás 1–2 fő részére online vagy személyesen: telepítés, beállítás, adatletöltés és kiértékelés. Ajánlatot a Rukon Kft. ad Önnek." name="description"/>
+<meta content="#0b2c4a" name="theme-color"/>
+<link href="/manifest.json" rel="manifest"/>
+<link href="https://tagra.app/hu/tagra-oktatas-cegeknek/" rel="canonical"/>
+<link href="https://tagra.app/hu/tagra-oktatas-cegeknek/" hreflang="hu" rel="alternate"/><link href="https://tagra.app/hu/tagra-oktatas-cegeknek/" hreflang="x-default" rel="alternate"/>
+<meta content="website" property="og:type"/>
+<meta content="hu_HU" property="og:locale"/>
+<meta content="TAGRA" property="og:site_name"/>
+<meta content="TAGRA oktatás cégeknek – online és személyes" property="og:title"/><meta content="Egyéni TAGRA oktatás cégeknek, online vagy személyesen: telepítés, beállítás, adatletöltés és adatkiértékelés. Ajánlatot a Rukon Kft. ad." property="og:description"/>
+<meta content="https://tagra.app/assets/img/mac/tagra-mac4-vyhodnoceni-seznam-1600.webp" property="og:image"/>
+<meta content="https://tagra.app/hu/tagra-oktatas-cegeknek/" property="og:url"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="TAGRA oktatás cégeknek – online és személyes" name="twitter:title"/>
+<meta content="Egyéni TAGRA oktatás cégeknek, online vagy személyesen: telepítés, beállítás, adatletöltés és adatkiértékelés. Ajánlatot a Rukon Kft. ad." name="twitter:description"/>
+<meta content="https://tagra.app/assets/img/mac/tagra-mac4-vyhodnoceni-seznam-1600.webp" name="twitter:image"/>
+<style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    a{color:var(--green-brand);text-decoration:none;}
+    a:hover{color:var(--green-cta);text-decoration:underline;text-underline-offset:.18em;}
+    ul{list-style:none;}
+    p+p{margin-top:12px;}
+    #scroll-progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--green-brand),var(--blue-light));width:0%;z-index:9999;pointer-events:none;transition:width .1s ease-out;}
+.nav-inner{margin:0 auto;padding:0 24px;height:100%;display:flex;align-items:center;justify-content:space-between;gap:24px;}
+    .nav-links{display:flex;align-items:center;gap:4px;list-style:none;}
+    .nav-links li a{font-size:15px;font-weight:500;color:var(--text);padding:8px 12px;border-radius:8px;transition:background .15s,color .15s;text-decoration:none;}
+    .nav-links li a:hover{background:var(--bg-apple-solid);color:var(--blue-mid);}
+    .nav-links .nav-cta a{background:var(--green-cta);color:#fff!important;border-radius:99px;padding:8px 18px;font-weight:600;}
+    .nav-links .nav-cta a:hover{background:var(--green-brand);text-decoration:none;}
+    .nav-lang{display:flex;align-items:center;gap:4px;font-size:14px;font-weight:600;}
+    .nav-lang a{padding:5px 8px;border-radius:6px;color:var(--text2);text-decoration:none;transition:background .15s;}
+    .nav-lang a:hover,.nav-lang a.active{background:var(--bg-apple-solid);color:var(--blue-mid);}
+    .nav-lang span{color:var(--border);}
+    .nav-mobile-toggle{display:none;background:none;border:none;cursor:pointer;padding:8px;}
+    .nav-mobile-toggle span{display:block;width:22px;height:2px;background:var(--text);margin:5px 0;border-radius:2px;transition:.3s;}
+    @media(max-width:900px){.nav-links{display:none;}.nav-mobile-toggle{display:block;}.nav-links.open{display:flex;flex-direction:column;align-items:flex-start;gap:2px;position:absolute;top:var(--nav-h);left:0;right:0;background:rgba(255,255,255,0.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:12px 24px 20px;}}
+    
+    
+    
+    @media(max-width:768px){.band{padding:50px 0;}}
+    h2 {
+      font-size: 36px; font-weight: 800;
+      line-height: 1.1; letter-spacing: 0;
+      text-transform: uppercase;
+      color: var(--blue-mid, #134a8e);
+      background: var(--heading-gradient);
+      -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block; max-width: 100%; margin-bottom: 14px;
+      padding: 0.12em 0.15em 0.08em 0;
+    }
+    @media(max-width:768px){h2 {
+      font-size: 36px; font-weight: 800;
+      line-height: 1.1; letter-spacing: 0;
+      text-transform: uppercase;
+      color: var(--blue-mid, #134a8e);
+      background: var(--heading-gradient);
+      -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block; max-width: 100%; margin-bottom: 14px;
+      padding: 0.12em 0.15em 0.08em 0;
+    }}
+    h2.hero-h2{font-size:56px;line-height:1.15;display:block;text-transform:none;letter-spacing:-.02em;padding-bottom:0.08em;}
+    @media(max-width:768px){h2.hero-h2{font-size:36px;padding-bottom:0.08em;}}
+    .eyebrow{font-size:15px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--green-brand);margin-bottom:12px;}
+    
+    .btn-cta:hover{background:var(--green-brand);transform:scale(1.02);}
+    
+    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:48px;}
+    @media(max-width:768px){.contact-grid{grid-template-columns:1fr;}}
+    .contact-card{background:var(--bg-apple-solid);border-radius:var(--radius);padding:36px;border:1px solid rgba(19,74,142,.1);}
+    .contact-card--gray{background:var(--bg-gray);border-color:rgba(11,44,74,.08);}
+    .contact-card-title{font-size:20px;font-weight:800;color:var(--text-strong);margin-bottom:6px;}
+    .contact-card-sub{font-size:15px;color:var(--text2);margin-bottom:24px;}
+    .contact-avatar-wrap{position:relative;width:64px;height:80px;flex-shrink:0;}
+    .contact-avatar-wrap::before{content:'';position:absolute;left:50%;bottom:0;width:64px;height:64px;border-radius:50%;background:#fff;box-shadow:0 2px 10px rgba(11,44,74,.12);transform:translateX(-50%);}
+    .contact-avatar-photo{position:relative;z-index:1;display:block;width:100%;height:100%;object-fit:contain;object-position:center bottom;}
+    .contact-avatar-wrap--lg{width:84px;height:104px;}
+    .contact-avatar-wrap--lg::before{width:84px;height:84px;}
+    .contact-people{display:flex;flex-direction:column;gap:18px;margin-bottom:22px;}
+    .contact-person{display:flex;align-items:center;gap:14px;}
+    .contact-person-phone{font-size:16px;font-weight:600;color:var(--text-strong);text-decoration:none;}
+    .contact-person-phone:hover{color:var(--blue-mid);}
+    .contact-item{display:flex;gap:14px;align-items:flex-start;margin-bottom:20px;}
+    .contact-item-icon{width:40px;height:40px;border-radius:10px;background:linear-gradient(135deg,var(--blue-dark),var(--blue-mid));display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+    .contact-item-icon--green{background:linear-gradient(135deg,var(--green-cta),var(--green-brand));}
+    .contact-item-icon svg{width:18px;height:18px;}
+    .contact-item-label{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--text2);margin-bottom:4px;}
+    .contact-item-value{font-size:17px;font-weight:600;color:var(--text-strong);}
+    .contact-item-value a{color:var(--text-strong);text-decoration:none;}
+    .contact-item-value a:hover{color:var(--blue-mid);}
+    .anim-up{opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.16,1,.3,1),transform .8s cubic-bezier(.16,1,.3,1);}
+    .anim-up.on{opacity:1;transform:none;}
+    @media(prefers-reduced-motion:reduce){.anim-up{transition:none!important;opacity:1!important;transform:none!important;}}
+  </style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Főoldal","item":"https://tagra.app/hu/"},{"@type":"ListItem","position":2,"name":"TAGRA oktatás cégeknek","item":"https://tagra.app/hu/tagra-oktatas-cegeknek/"}]},{"@type":"Service","@id":"https://tagra.app/hu/tagra-oktatas-cegeknek/#service","name":"TAGRA oktatás cégeknek","serviceType":"TAGRA oktatás","description":"Egyéni TAGRA oktatás cégeknek, online vagy személyesen: telepítés, beállítás, adatletöltés és adatkiértékelés. Ajánlatot a Rukon Kft. ad.","url":"https://tagra.app/hu/tagra-oktatas-cegeknek/","provider":{"@id":"https://tagra.app/#organization"},"areaServed":"HU","offers":{"@type":"Offer","url":"https://tagra.app/hu/tagra-oktatas-cegeknek/","seller":{"@type":"Organization","name":"Rukon Kft."}}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Kinek szól a TAGRA oktatás?","acceptedAnswer":{"@type":"Answer","text":"A fuvarozókat a TAGRA program használatára oktatjuk. Az ellenőrző hatóságok számára a TAGRA Control használatára szolgáló oktatást biztosítunk. Tudnivalók az ellenőrző hatóságoknak."}},{"@type":"Question","name":"Milyen formában zajlik az oktatás?","acceptedAnswer":{"@type":"Answer","text":"Az oktatás zajlhat online vagy személyesen. Az egyéni oktatás 1–2 fő részére szól, az időpontot és a tempót az Önök igényeihez igazítjuk. Az oktatás részleteiről (helyszín, időpont, nyelv) a Rukon Kft. egyeztet Önnel."}},{"@type":"Question","name":"Mit tartalmaz az oktatás?","acceptedAnswer":{"@type":"Answer","text":"Az oktatás a TAGRA program telepítésétől és beállításától az adatok letöltésén, archiválásán és kiértékelésén át a hatósági ellenőrzésre való felkészülésig terjed. A teljes tematikát az oldal „Mit tartalmaz az oktatás” szakasza sorolja fel."}},{"@type":"Question","name":"Mennyibe kerül az oktatás?","acceptedAnswer":{"@type":"Answer","text":"Az árakról egyedi ajánlatot ad a Rukon Kft. Ajánlatot a fenti űrlapon, telefonon vagy e-mailben kérhet."}},{"@type":"Question","name":"Több munkatársunkat is oktatni szeretnénk. Mit tehetünk?","acceptedAnswer":{"@type":"Answer","text":"Ha több munkatársat szeretne bekapcsolni az oktatásba, írjon nekünk, és a Rukon Kft. egyedi ajánlatot készít Önnek."}}]}]}</script>
+
+<link href="/assets/css/tokens.css" rel="stylesheet"/>
+<link href="/assets/css/base.css" rel="stylesheet"/>
+<link href="/assets/css/components.css" rel="stylesheet"/>
+<link href="/assets/css/nav.css" rel="stylesheet"/>
+<script defer="" src="/assets/js/nav.js?v=20261008a"></script><script defer="" src="/assets/js/analytics.js?v=20261002b"></script>
+<link href="/assets/css/footer.css" rel="stylesheet"/>
+
+</head>
+<body>
+<a class="skip-link" href="#main-content">Ugrás a tartalomhoz</a>
+<div aria-hidden="true" id="scroll-progress"></div>
+<nav aria-label="Fő navigáció" class="site-nav" role="navigation">
+<div class="nav-inner">
+<a aria-label="TAGRA – Kezdőlap" class="nav-logo" href="/hu/"><img alt="TAGRA" height="32" src="/assets/img/logo-light.svg?v=20260513zh" style="display:block;height:32px;width:auto;" width="140"/></a>
+<ul class="nav-links" id="nav-links">
+<li><a href="/hu/fuvarozoknak/">Cégeknek</a></li>
+<li><a href="/hu/soforoknek/">Sofőröknek</a></li>
+<li><a href="/hu/hatosagoknak/">Ellenőrzés</a></li>
+<li><a href="/hu/cikkek/">Cikkek</a></li><li><a href="/hu/kezikonyvek/">Kézikönyvek</a></li>
+<li><a href="/hu/letolto-eszkozok/">Eszközök</a></li><li><a href="/hu/gyakori-kerdesek/">GYIK</a></li>
+<li><a href="/hu/kapcsolat/">Kapcsolat</a></li>
+<li class="nav-cta-li"><a class="nav-cta" href="/hu/ingyenes-probaverzio/?audience=fleet">Próbálja ki 30 napig ingyen</a></li>
+</ul>
+<details class="nav-lang">
+<summary aria-label="Language: HU">HU</summary>
+<div class="nav-lang-menu" role="menu"><a aria-current="page" class="active" href="/hu/tagra-oktatas-cegeknek/" hreflang="hu">Magyar</a></div>
+</details>
+<a class="nav-cta-mobile" href="/hu/ingyenes-probaverzio/?audience=fleet">Próbálja ki ingyen</a>
+<button aria-expanded="false" aria-label="Menü váltása" class="nav-mobile-toggle" id="nav-toggle">
+<span></span><span></span><span></span>
+</button>
+</div>
+</nav>
+<main id="main-content">
+<style>
+
+:not(html):not(body):has(#tmx-prod-wrap-dbr) {
+    overflow: visible !important;
+    overflow-x: visible !important;
+    overflow-y: visible !important;
+    clip-path: none !important;
+    contain: none !important;
+}
+
+/* ZÁKLADNÍ WRAPPER - BEZ OVERFLOW HIDDEN */
+#tmx-prod-wrap-dbr.tmx-cat-wrap {
+    position: relative;
+    width: 100%;
+    background: transparent;
+    padding: 0;
+    overflow: visible !important;
+    clip-path: none !important;
+    contain: none !important;
+}
+
+/* SCROLL PROGRESS BAR */
+
+#progress, .progress-bar, #progressbar {
+    display: none !important;
+}
+
+#tmx-prod-dbr {
+    --tmx-text: #1d1d1f;
+    --tmx-text2: #515154;
+    --tmx-strong: #0b0b0c;
+    --tmx-border: rgba(0,0,0,0.08);
+    --bg-page: #ffffff;
+    --bg-gray: #f5f5f7;
+    --tmx-green-logo: #6E9B12;
+    --tmx-green-cta: #5C820F;
+    --tmx-blue-l: #0b2c4a;
+    --tmx-blue-m: #134a8e;
+    --tmx-blue-r: #1f5fa6;
+    --tmx-radius: 20px;
+    --tmx-maxw: 1180px;
+    --tmx-bs-h1-ls: 0px;
+
+    /* TRUCKMALL Apple-like light paleta */
+    --tmx-bg-apple-light-solid: #eaf3f8;
+    --tmx-bg-apple-light: linear-gradient(180deg, var(--tmx-bg-apple-light-solid) 0%, #ffffff 100%);
+    --bg-blue: var(--tmx-bg-apple-light-solid);
+    
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: var(--tmx-text);
+    background: var(--bg-page);
+    font-size: 17px !important;
+    line-height: 1.6 !important;
+    -webkit-font-smoothing: antialiased;
+}
+
+#tmx-prod-dbr *, #tmx-prod-dbr *::before, #tmx-prod-dbr *::after {
+    box-sizing: border-box;
+}
+
+/* ROZLOŽENÍ – BANDS */
+#tmx-prod-dbr .tmx-band {
+    position: relative;
+    width: 100vw !important;
+    left: 50% !important;
+    right: 50% !important;
+    margin-left: -50vw !important;
+    margin-right: -50vw !important;
+    display: block;
+    padding: 80px 0;
+    background: var(--bg-page);
+}
+@media (max-width: 768px) {
+    #tmx-prod-dbr .tmx-band { padding: 50px 0; }
+}
+
+#tmx-prod-dbr .tmx-band--gray { background: var(--bg-gray); }
+#tmx-prod-dbr .tmx-band--blue { background: var(--bg-blue); }
+#tmx-prod-dbr .tmx-band--hero {
+    background: var(--tmx-bg-apple-light);
+    padding-top: calc(var(--nav-h, 64px) + 20px);
+    padding-bottom: 60px;
+    text-align: center;
+}
+#tmx-prod-dbr .tmx-band--machero {
+    background: linear-gradient(180deg, var(--tmx-bg-apple-light-solid) 0%, #ffffff 74%);
+    padding: 60px 0;
+    overflow: visible;
+}
+
+#tmx-prod-dbr .container {
+    position: relative;
+    width: 100%;
+    max-width: var(--tmx-maxw);
+    margin: 0 auto;
+    padding-left: 24px;
+    padding-right: 24px;
+    z-index: 1;
+}
+
+/* TYPOGRAFIE A ODSTRANĚNÍ PRÁZDNÝCH MEZER */
+#tmx-prod-dbr p, #tmx-prod-dbr li { margin: 0; font-size: 17px !important; line-height: 1.6 !important; }
+#tmx-prod-dbr p + p { margin-top: 12px; }
+#tmx-prod-dbr p:empty, #tmx-prod-dbr p:has(> br:only-child) { display: none !important; margin: 0 !important; padding: 0 !important; }
+#tmx-prod-dbr strong { font-weight: 700; color: var(--tmx-strong); }
+
+#tmx-prod-dbr h2 {
+    font-size: 36px !important;
+    line-height: 1.06 !important;
+    letter-spacing: var(--tmx-bs-h1-ls);
+    margin: 0 0 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--tmx-blue-m);
+    display: inline-block;
+    max-width: 100%;
+    padding: 0.22em 0.15em 0.08em 0;
+}
+#tmx-prod-dbr h2::after { content: none !important; }
+
+@supports ((-webkit-background-clip: text) or (background-clip: text)) {
+    #tmx-prod-dbr h2 {
+        background: linear-gradient(90deg, var(--tmx-blue-l) 0%, var(--tmx-blue-m) 55%, var(--tmx-blue-r) 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        -webkit-text-fill-color: transparent;
+    }
+}
+@media (max-width: 768px) {
+    #tmx-prod-dbr h2:not(.hero-h2) { font-size: 30px !important; }
+}
+
+/* HERO NADPIS - 64PX FIX */
+#tmx-prod-dbr h2.hero-h2 {
+    font-size: 64px !important;
+    line-height: 1.1 !important;
+    letter-spacing: var(--tmx-bs-h1-ls) !important;
+    font-weight: 800 !important;
+    background: linear-gradient(90deg, var(--tmx-blue-l) 0%, var(--tmx-blue-m) 55%, var(--tmx-blue-r) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    padding: 0.22em 0.15em 0.08em 0;
+}
+@media (max-width: 768px) {
+    #tmx-prod-dbr h2.hero-h2 { font-size: 42px !important; }
+}
+
+#tmx-prod-dbr .eyebrow {
+    font-size: 16px !important;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--tmx-green-logo);
+    margin-bottom: 12px;
+}
+
+/* Modrý marker pro všechny list items */
+#tmx-prod-dbr li::marker { color: var(--tmx-blue-m); }
+#tmx-prod-dbr .dummy-spacer { display: none; }
+@media (min-width: 992px) {
+    #tmx-prod-dbr .dummy-spacer { display: block; visibility: hidden; pointer-events: none; user-select: none; }
+}
+
+#tmx-prod-dbr a {
+    color: var(--tmx-green-logo);
+    font-weight: 400;
+    text-decoration: none;
+    text-underline-offset: 0.18em;
+    text-decoration-thickness: 1px;
+    transition: color 0.2s ease, text-decoration-color 0.2s ease;
+}
+#tmx-prod-dbr a:hover, #tmx-prod-dbr a:focus {
+    color: var(--tmx-green-cta);
+    text-decoration: underline;
+}
+
+#tmx-prod-dbr .btn-cta {
+    background: var(--tmx-green-cta);
+    color: #ffffff !important;
+    border: none;
+    padding: 14px 30px;
+    border-radius: 98px;
+    font-size: 18px !important;
+    font-weight: 500;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none !important;
+    transition: background 0.2s, transform 0.15s;
+}
+#tmx-prod-dbr .btn-cta:hover {
+    background: var(--tmx-green-logo);
+    transform: scale(1.02);
+}
+
+/* BENTO GRID */
+#tmx-prod-dbr .bento { display: grid; grid-template-columns: repeat(12, 1fr); gap: 20px; margin-top: 40px; }
+#tmx-prod-dbr .bc { background: #ffffff; border-radius: var(--tmx-radius); padding: 32px; border: 1px solid var(--tmx-border); position: relative; overflow: hidden; text-align: left; }
+#tmx-prod-dbr .bc.s7 { grid-column: span 7; }
+#tmx-prod-dbr .bc.s5 { grid-column: span 5; }
+#tmx-prod-dbr .bc.s4 { grid-column: span 4; }
+#tmx-prod-dbr .bc.s8 { grid-column: span 8; }
+#tmx-prod-dbr .bc.s6 { grid-column: span 6; }
+#tmx-prod-dbr .bc.s12 { grid-column: span 12; }
+#tmx-prod-dbr .bc.bluefill { background: var(--bg-blue); border-color: rgba(31,95,166,.1); }
+#tmx-prod-dbr .bc.greenfill { background: #f0f6e4; border-color: rgba(110,155,18,.2); }
+@media (max-width: 900px) {
+    #tmx-prod-dbr .bento { grid-template-columns: 1fr; }
+    #tmx-prod-dbr .bc { grid-column: span 1 !important; }
+}
+
+#tmx-prod-dbr .bc-title { font-size: 28px !important; line-height: 1.15; letter-spacing: -0.03em; font-weight: 800; color: var(--tmx-strong); margin-bottom: 8px; }
+#tmx-prod-dbr .bc-text { font-size: 16px !important; line-height: 1.5; color: var(--tmx-text2); }
+#tmx-prod-dbr .bignum { font-size: 110px !important; font-weight: 800; line-height: 1; letter-spacing: -0.04em; color: rgba(19,74,142,0.06); position: absolute; bottom: -16px; right: 16px; pointer-events: none; }
+
+/* LAYOUTS */
+#tmx-prod-dbr .g2 { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+#tmx-prod-dbr .g2.top { align-items: start; }
+@media (max-width: 900px) { #tmx-prod-dbr .g2 { grid-template-columns: 1fr; gap: 40px; } }
+#tmx-prod-dbr .tmx-three-col { display: grid; grid-template-columns: 1fr; gap: 40px 24px; }
+@media (min-width: 768px) { #tmx-prod-dbr .tmx-three-col { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+#tmx-prod-dbr .tmx-method-card { display: flex; flex-direction: column; height: 100%; }
+#tmx-prod-dbr .tmx-two-col { display: grid; grid-template-columns: 1fr; gap: 24px; align-items: start; }
+@media (min-width: 992px) {
+    #tmx-prod-dbr .tmx-two-col { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 38px; }
+    #tmx-prod-dbr .tmx-two-col.tmx-two-col--stretch { gap: 64px; align-items: stretch; }
+    #tmx-prod-dbr .tmx-two-col.tmx-two-col--stretch > .tmx-callout { height: 100%; }
+}
+
+#tmx-prod-dbr .tmx-callout { border-radius: var(--tmx-radius); background: #ffffff; padding: 32px; box-shadow: 0 12px 32px rgba(0,0,0,.04); border: 1px solid var(--tmx-border); position: relative; }
+#tmx-prod-dbr .tmx-callout--plain { border: none; background: transparent; padding: 0; box-shadow: none; }
+@media (min-width: 992px) { #tmx-prod-dbr .tmx-two-col--stretch > .tmx-callout--plain { padding-top: 40px; } }
+@media (max-width: 991px) {
+    #tmx-prod-dbr .tmx-two-col--swap .tmx-col-txt { order: 1; }
+    #tmx-prod-dbr .tmx-two-col--swap .tmx-col-img { order: 2; }
+}
+
+/* ZAROVNÁNÍ */
+#tmx-prod-dbr .feats { display: flex; flex-direction: column; gap: 14px; margin-top: 24px; }
+#tmx-prod-dbr .fi { display: flex; align-items: flex-start; gap: 12px; font-size: 17px !important; line-height: 1.5; }
+#tmx-prod-dbr .fi p { margin: 0 !important; padding: 0 !important; display: inline; font-size: inherit !important; }
+#tmx-prod-dbr .fck { width: 24px; height: 24px; border-radius: 50%; background: linear-gradient(135deg, var(--tmx-blue-l) 0%, var(--tmx-blue-m) 100%); border: none; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; }
+#tmx-prod-dbr .fck::after { content: ""; width: 12px; height: 12px; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E") no-repeat center center; background-size: contain; transform: translateX(-2px); }
+
+/* ZELENÝ RÁMEČEK */
+#tmx-prod-dbr .callout-green, #tmx-prod-dbr .tmx-callout--green {
+    background: linear-gradient(90deg, #74A81A 0%, #6E9B12 55%, #638719 100%); border-radius: var(--tmx-radius); padding: 40px; position: relative; overflow: hidden; box-shadow: 0 12px 32px rgba(0,0,0,.06);
+}
+@media (min-width: 992px) {
+    #tmx-prod-dbr .callout-green, #tmx-prod-dbr .tmx-callout--green { background: transparent !important; border-top-right-radius: 0 !important; border-bottom-right-radius: 0 !important; overflow: visible !important; box-shadow: none !important; clip-path: inset(0 -50vw 0 0); }
+    #tmx-prod-dbr .callout-green::before, #tmx-prod-dbr .tmx-callout--green::before { content: ""; position: absolute; top: 0; bottom: 0; left: 0; right: -50vw; background: linear-gradient(90deg, #74A81A 0%, #6E9B12 55%, #638719 100%); border-top-left-radius: var(--tmx-radius); border-bottom-left-radius: var(--tmx-radius); z-index: 0; }
+}
+#tmx-prod-dbr .callout-green *, #tmx-prod-dbr .tmx-callout--green * { position: relative; z-index: 1; }
+#tmx-prod-dbr .callout-green h2, #tmx-prod-dbr .tmx-callout--green h2 { line-height: 1.15 !important; color: #0b2c4a; margin-bottom: 8px; padding: 0.22em 0.15em 0.08em 0; }
+@supports ((-webkit-background-clip: text) or (background-clip: text)) {
+    #tmx-prod-dbr .callout-green h2, #tmx-prod-dbr .tmx-callout--green h2 { background: linear-gradient(90deg, #052037 0%, #07345c 55%, #0b2c4a 100%); -webkit-background-clip: text; background-clip: text; color: transparent; -webkit-text-fill-color: transparent; }
+}
+#tmx-prod-dbr .callout-green p, #tmx-prod-dbr .callout-green li, #tmx-prod-dbr .tmx-callout--green p, #tmx-prod-dbr .tmx-callout--green li { color: #0b0b0c !important; }
+#tmx-prod-dbr .callout-green a, #tmx-prod-dbr .tmx-callout--green a { color: #052037 !important; font-weight: 400; text-decoration: none; text-underline-offset: .18em; text-decoration-thickness: 1px; border-bottom: none; }
+#tmx-prod-dbr .callout-green a:hover, #tmx-prod-dbr .callout-green a:focus, #tmx-prod-dbr .tmx-callout--green a:hover, #tmx-prod-dbr .callout-green a:focus { color: #052037 !important; text-decoration: underline; text-decoration-color: rgba(0,0,0,.35) !important; outline: 2px solid rgba(0,0,0,.45); outline-offset: 2px; }
+#tmx-prod-dbr .callout-green .cg-bg, #tmx-prod-dbr .tmx-callout--green .cg-bg { font-size: 200px !important; font-weight: 900; position: absolute; right: -20px; bottom: -40px; color: rgba(255,255,255,0.12); line-height: 1; pointer-events: none; z-index: 0; }
+
+/* WARNING BOX */
+#tmx-prod-dbr .warning-box { position: relative; display: block !important; width: 100% !important; background: linear-gradient(180deg, #f0f6e4 0%, #ffffff 100%); border: 2px solid var(--tmx-green-logo); padding: 30px 24px 24px; border-radius: var(--tmx-radius); margin: 40px 0 0; box-shadow: 0 10px 26px rgba(110, 155, 18, 0.08); }
+#tmx-prod-dbr .warning-badge { position: absolute; top: -14px; left: 24px; padding: 6px 14px; border-radius: 999px; background: var(--tmx-green-logo); color: #fff; font-size: 15px !important; font-weight: 800; text-transform: uppercase; box-shadow: 0 6px 14px rgba(110, 155, 18, 0.22); }
+#tmx-prod-dbr .warning-box .note-main { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif; font-size: 26px !important; font-weight: 800; line-height: 1.2; margin: 10px 0 12px !important; color: var(--tmx-strong) !important; display: block; }
+#tmx-prod-dbr .warning-box p { font-size: 17px !important; line-height: 1.6 !important; color: var(--tmx-text2) !important; margin: 0 0 12px; display: block; }
+
+/* ČLÁNKY GRID */
+#tmx-prod-dbr .related-featured { position: relative; display: flex !important; flex-direction: column; width: 100% !important; margin-top: 34px; padding: 30px 24px 24px; text-decoration: none !important; color: inherit !important; background: linear-gradient(180deg, var(--bg-blue) 0%, #ffffff 100%); border: 2px solid var(--tmx-blue-m); border-radius: var(--tmx-radius); box-shadow: 0 10px 26px rgba(19, 74, 142, 0.08); transition: transform .18s ease, box-shadow .18s ease; }
+#tmx-prod-dbr .related-featured:hover { transform: translateY(-3px); box-shadow: 0 14px 28px rgba(19, 74, 142, 0.15); }
+#tmx-prod-dbr .related-badge { position: absolute; top: -14px; left: 24px; padding: 6px 14px; border-radius: 999px; background: var(--tmx-blue-m); color: #fff; font-size: 15px !important; font-weight: 800; text-transform: uppercase; box-shadow: 0 6px 14px rgba(19, 74, 142, 0.22); }
+#tmx-prod-dbr .related-featured-title { color: var(--tmx-strong) !important; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif; font-size: 26px !important; font-weight: 800; line-height: 1.2; margin: 10px 0 8px !important; display: block; }
+#tmx-prod-dbr .related-featured-text { font-size: 17px !important; line-height: 1.6 !important; color: var(--tmx-text2) !important; margin: 0 0 16px !important; display: block; }
+
+#tmx-prod-dbr .article-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; margin-top: 16px; }
+#tmx-prod-dbr .article-card { position: relative; display: flex !important; flex-direction: column; height: 100%; padding: 22px; text-decoration: none !important; color: inherit !important; background: #ffffff; border: 1.5px solid var(--tmx-border); border-radius: var(--tmx-radius); box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04); transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease; }
+#tmx-prod-dbr .article-card:hover { transform: translateY(-3px); box-shadow: 0 14px 28px rgba(0, 0, 0, 0.08); border-color: rgba(110, 155, 18, 0.45); }
+#tmx-prod-dbr .article-eyebrow { font-size: 16px !important; font-weight: 800; text-transform: uppercase; color: var(--tmx-blue-m) !important; margin-bottom: 10px; display: block; }
+#tmx-prod-dbr .article-title { font-size: 18px !important; font-weight: 800; line-height: 1.35; color: var(--tmx-strong) !important; margin-bottom: 10px; display: block; }
+#tmx-prod-dbr .article-meta { font-size: 16px !important; line-height: 1.5; color: var(--tmx-text2) !important; margin-bottom: 16px; display: block; }
+#tmx-prod-dbr .article-chip { display: inline-block !important; margin-top: auto; align-self: flex-start; font-size: 16px !important; font-weight: 700; color: var(--tmx-blue-l) !important; background: var(--bg-blue); padding: 8px 16px; border-radius: 20px; transition: background 0.2s; line-height: 1.4; }
+#tmx-prod-dbr .article-card:hover .article-chip, #tmx-prod-dbr .related-featured:hover .article-chip { background: var(--tmx-green-logo); color: #fff !important; }
+
+/* MÉDIA A VIDEO */
+#tmx-prod-dbr .tmx-media-frame { width: 100%; border-radius: var(--tmx-radius); overflow: hidden; -webkit-mask-image: -webkit-radial-gradient(#fff, #000); }
+#tmx-prod-dbr .tmx-media-frame img, #tmx-prod-dbr .tmx-media-frame video { width: 100%; height: 100%; object-fit: cover; display: block; }
+#tmx-prod-dbr .tmx-wide-after-callouts { margin-top: 64px; }
+@media (max-width: 720px) { #tmx-prod-dbr .tmx-wide-after-callouts { margin-top: 32px; } }
+
+/* RECENZE SLIDER */
+#tmx-prod-dbr .rev-rail-wrap { position: relative; width: 100vw !important; left: 50% !important; right: 50% !important; margin-left: -50vw !important; margin-right: -50vw !important; overflow: hidden; mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%); margin-top: 20px; }
+#tmx-prod-dbr .rev-rail { display: flex; align-items: stretch; gap: 0; padding: 16px 0 32px; overflow-x: auto; scrollbar-width: none; cursor: grab; -webkit-overflow-scrolling: touch; }
+#tmx-prod-dbr .rev-rail::-webkit-scrollbar { display: none; }
+#tmx-prod-dbr .rev-rail:active, #tmx-prod-dbr .rev-rail.is-dragging { cursor: grabbing; }
+#tmx-prod-dbr .rev-card { flex: 0 0 clamp(280px, 30vw, 400px); background: #ffffff; border-radius: 18px; border: 1px solid var(--tmx-border); padding: 24px; display: flex; flex-direction: column; min-height: 200px; margin-right: 20px; user-select: none; }
+#tmx-prod-dbr .rev-stars { color: #f5b400; font-size: 18px !important; letter-spacing: 2px; margin-bottom: 12px; }
+#tmx-prod-dbr .rev-txt { font-size: 17px !important; flex: 1; }
+#tmx-prod-dbr .rev-meta { font-size: 16px !important; color: var(--tmx-text2); margin-top: 16px; }
+
+/* YOUTUBE IFRAME BLOKY */
+#tmx-prod-dbr .video-shorts { display: block; }
+#tmx-prod-dbr .video-landscape { display: none; }
+@media (min-width: 600px) { #tmx-prod-dbr .video-shorts { display: none; } #tmx-prod-dbr .video-landscape { display: block; } }
+
+#tmx-prod-dbr .tmx-video-frame { position: relative; width: 100%; border-radius: var(--tmx-radius); overflow: hidden; border: 0 !important; box-shadow: 0 18px 46px rgba(0,0,0,.10); background: #000 !important; -webkit-mask-image: -webkit-radial-gradient(#fff, #000); }
+#tmx-prod-dbr .tmx-video-frame--shorts { aspect-ratio: 9/16; max-width: 480px; margin: 0; }
+@media (max-width: 720px) {
+    #tmx-prod-dbr .tmx-video-frame--shorts { margin: 0 auto; box-shadow: none; background: transparent !important; }
+    #tmx-prod-dbr .tmx-video-frame--shorts iframe { top: 0; left: 0; width: 100%; height: 100%; }
+}
+#tmx-prod-dbr .tmx-video-frame--landscape { aspect-ratio: 16/9; }
+#tmx-prod-dbr .tmx-video-frame iframe { position: absolute; top: -1px; left: -1px; width: calc(100% + 2px); height: calc(100% + 2px); display: block; border: 0 !important; }
+#tmx-prod-dbr .tmx-ytbox .tmx-yt-cover { position: absolute; inset: 0; display: block; cursor: pointer; background: transparent !important; z-index: 2; }
+#tmx-prod-dbr .tmx-ytbox .tmx-yt-cover img { width: 100%; height: 100%; object-fit: cover; display: block; border: 0; }
+#tmx-prod-dbr .tmx-playbtn { position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); width: 118px; height: 84px; border-radius: 18px; background: #ff0000; box-shadow: 0 18px 40px rgba(0,0,0,.22); pointer-events: none; z-index: 3; }
+#tmx-prod-dbr .tmx-playbtn::before { content: ""; position: absolute; left: 50%; top: 50%; transform: translate(-35%,-50%); width: 0; height: 0; border-left: 30px solid #fff; border-top: 18px solid transparent; border-bottom: 18px solid transparent; }
+@media (max-width: 820px) {
+    #tmx-prod-dbr .tmx-playbtn { width: 104px; height: 74px; border-radius: 16px; }
+    #tmx-prod-dbr .tmx-playbtn::before { border-left-width: 26px; border-top-width: 16px; border-bottom-width: 16px; }
+}
+#tmx-prod-dbr .tmx-ytbox.is-playing .tmx-yt-cover, #tmx-prod-dbr .tmx-ytbox.is-playing .tmx-playbtn { display: none; }
+
+/* KROKY A FAQ */
+#tmx-prod-dbr .snum { font-size: 44px !important; font-weight: 800; color: rgba(19,74,142,.15); line-height: 1; flex-shrink: 0; margin-bottom: 8px; letter-spacing: -0.02em; }
+#tmx-prod-dbr .stit { font-size: 22px !important; font-weight: 800; margin-bottom: 8px; color: var(--tmx-strong); }
+#tmx-prod-dbr .faq-block details { border-bottom: 1px solid var(--tmx-border); padding: 4px 0; }
+#tmx-prod-dbr .faq-block details:first-child { border-top: 1px solid var(--tmx-border); }
+#tmx-prod-dbr .faq-block summary { list-style: none; cursor: pointer; padding: 18px 40px 18px 0; font-weight: 800; font-size: 19px !important; line-height: 1.4; position: relative; color: var(--tmx-strong); }
+#tmx-prod-dbr .faq-block summary::-webkit-details-marker { display: none; }
+#tmx-prod-dbr .faq-block summary::after { content: "+"; position: absolute; right: 4px; top: 50%; transform: translateY(-50%); font-size: 26px !important; font-weight: 300; color: var(--tmx-green-logo); }
+#tmx-prod-dbr .faq-block details[open] summary::after { content: "−"; }
+#tmx-prod-dbr .faq-a { padding: 0 0 18px; font-size: 18px !important; line-height: 1.6 !important; color: var(--tmx-text2); }
+
+/* TABULKA VLASTNOSTÍ */
+#tmx-prod-dbr .specs { margin-top: 24px; }
+#tmx-prod-dbr .spec { display: flex; justify-content: space-between; padding: 14px 0; border-bottom: 1px solid var(--tmx-border); }
+#tmx-prod-dbr .spec:last-child { border-bottom: none; }
+#tmx-prod-dbr .sk { color: var(--tmx-text2); font-size: 17px !important; }
+#tmx-prod-dbr .sv { font-weight: 600; text-align: right; font-size: 17px !important; }
+
+/* ANIMACE PRO OBZERVRA */
+#tmx-prod-dbr .rev-anim { opacity: 0; transform: translateY(30px); transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
+#tmx-prod-dbr .rev-anim.on { opacity: 1; transform: translateY(0); }
+
+/* BENTO GRID dlaždice */
+#tmx-prod-dbr .fly-left { opacity: 0; transform: translateX(-100px); transition: opacity 3.0s cubic-bezier(0.16, 1, 0.3, 1), transform 3.0s cubic-bezier(0.16, 1, 0.3, 1); }
+#tmx-prod-dbr .fly-right { opacity: 0; transform: translateX(100px); transition: opacity 3.0s cubic-bezier(0.16, 1, 0.3, 1), transform 3.0s cubic-bezier(0.16, 1, 0.3, 1); }
+#tmx-prod-dbr .fly-up { opacity: 0; transform: translateY(100px); transition: opacity 3.0s cubic-bezier(0.16, 1, 0.3, 1), transform 3.0s cubic-bezier(0.16, 1, 0.3, 1); }
+#tmx-prod-dbr .fly-left.on, #tmx-prod-dbr .fly-right.on, #tmx-prod-dbr .fly-up.on { opacity: 1; transform: translate(0, 0); }
+
+/* SROVNÁVACÍ TABULKA */
+#tmx-prod-dbr .compare-table-wrap { width: 100%; overflow-x: auto; margin-top: 14px; padding-top: 32px; padding-bottom: 14px; -webkit-overflow-scrolling: touch; }
+@media (max-width: 1024px) {
+    #tmx-prod-dbr .compare-table-wrap {
+        width: calc(100% + 48px);
+        margin-left: -24px;
+        padding-left: 0;
+        padding-right: 24px;
+        scrollbar-width: none;
+    }
+    #tmx-prod-dbr .compare-table-wrap::-webkit-scrollbar {
+        display: none;
+    }
+    #tmx-prod-dbr .compare-table {
+        min-width: max-content;
+        width: max-content;
+    }
+    #tmx-prod-dbr .compare-table th, #tmx-prod-dbr .compare-table td {
+        width: 220px !important;
+        min-width: 220px;
+        padding: 12px 12px;
+    }
+    #tmx-prod-dbr .compare-table th:first-child, #tmx-prod-dbr .compare-table td:first-child {
+        width: 120px !important;
+        min-width: 120px;
+        padding-left: 20px;
+        padding-right: 8px;
+        position: sticky;
+        left: 0;
+        background: #ffffff;
+        z-index: 10;
+        border-right: 1px solid var(--tmx-border);
+        font-size: 14px !important;
+        line-height: 1.3 !important;
+    }
+    #tmx-prod-dbr .compare-table th:first-child {
+        z-index: 11;
+    }
+    #tmx-prod-dbr .compare-table th.col-dbr, #tmx-prod-dbr .compare-table td.col-dbr {
+        width: 240px !important;
+        min-width: 240px;
+    }
+    #tmx-prod-dbr .compare-table th.col-iis, #tmx-prod-dbr .compare-table td.col-iis {
+        width: 240px !important;
+        min-width: 240px;
+    }
+    #tmx-prod-dbr .compare-table th.col-dbr, #tmx-prod-dbr .compare-table th.col-iis {
+        padding-top: 40px !important;
+    }
+    #tmx-prod-dbr .tc-val {
+        font-size: 15px !important;
+        gap: 8px;
+    }
+    #tmx-prod-dbr .tc-val.no-icon {
+        padding-left: 12px;
+    }
+    #tmx-prod-dbr .winner-badge, #tmx-prod-dbr .winner-badge-green {
+        left: 12px;
+        font-size: 15px !important;
+        padding: 4px 10px;
+    }
+}
+
+#tmx-prod-dbr .compare-table { width: 100%; border-collapse: separate; border-spacing: 0; text-align: left; min-width: 700px; }
+#tmx-prod-dbr .compare-table th, #tmx-prod-dbr .compare-table td { padding: 14px 14px; border-bottom: 1px solid var(--tmx-border); vertical-align: top; text-align: left; }
+#tmx-prod-dbr .compare-table th { font-weight: 700; font-size: 16px !important; color: var(--tmx-text2); background: transparent; border-bottom: 2px solid var(--tmx-border); vertical-align: top; }
+#tmx-prod-dbr .compare-table tr:last-child td { border-bottom: 1px solid var(--tmx-border); }
+
+/* Vítězný sloupec (DB REMOTE) */
+#tmx-prod-dbr .compare-table .col-dbr { background: var(--bg-blue); position: relative; width: 27%; }
+#tmx-prod-dbr .compare-table th.col-dbr { padding-top: 48px !important; color: var(--tmx-blue-m); border-top: 2px solid var(--tmx-blue-m); border-left: 2px solid var(--tmx-blue-m); border-right: 2px solid var(--tmx-blue-m); border-top-left-radius: 16px; border-top-right-radius: 16px; border-bottom: 2px solid var(--tmx-border); }
+#tmx-prod-dbr .compare-table td.col-dbr { border-left: 2px solid var(--tmx-blue-m); border-right: 2px solid var(--tmx-blue-m); border-bottom: 1px solid rgba(19,74,142,.1); }
+#tmx-prod-dbr .compare-table tr:last-child td.col-dbr { border-bottom: 2px solid var(--tmx-blue-m); border-bottom-left-radius: 16px; border-bottom-right-radius: 16px; }
+
+/* Zelený sloupec (DOWNLOAD BOX II S) */
+#tmx-prod-dbr .compare-table .col-iis { background: #f4f9ea; position: relative; width: 27%; }
+#tmx-prod-dbr .compare-table th.col-iis { padding-top: 48px !important; color: var(--tmx-green-logo); border-top: 2px solid var(--tmx-green-logo); border-left: 2px solid var(--tmx-green-logo); border-right: 2px solid var(--tmx-green-logo); border-top-left-radius: 16px; border-top-right-radius: 16px; border-bottom: 2px solid var(--tmx-border); }
+#tmx-prod-dbr .compare-table td.col-iis { border-left: 2px solid var(--tmx-green-logo); border-right: 2px solid var(--tmx-green-logo); border-bottom: 1px solid rgba(110,155,18,.1); }
+#tmx-prod-dbr .compare-table tr:last-child td.col-iis { border-bottom: 2px solid var(--tmx-green-logo); border-bottom-left-radius: 16px; border-bottom-right-radius: 16px; }
+
+/* Badge v hlavičce */
+#tmx-prod-dbr .winner-badge, #tmx-prod-dbr .winner-badge-green {
+    position: absolute; top: -18px; left: 16px; display: inline-flex; align-items: center;
+    color: #fff; font-size: 15px !important; font-weight: 800;
+    text-transform: uppercase; padding: 6px 14px; border-radius: 20px; letter-spacing: 0.05em;
+    box-shadow: 0 6px 14px rgba(0,0,0,.15); z-index: 2; margin: 0;
+    white-space: normal; max-width: calc(100% - 32px); line-height: 1.25; text-align: left;
+}
+#tmx-prod-dbr .winner-badge { background: var(--tmx-blue-m); }
+#tmx-prod-dbr .winner-badge-green { background: var(--tmx-green-logo); }
+
+/* Flexbox pro ikonu a text */
+#tmx-prod-dbr .tc-val { display: flex; align-items: center; justify-content: flex-start; font-weight: 500; font-size: 16px !important; color: var(--tmx-text2); gap: 12px; }
+#tmx-prod-dbr td.col-dbr .tc-val, #tmx-prod-dbr td.col-iis .tc-val { font-weight: 700; color: var(--tmx-strong); }
+#tmx-prod-dbr .tc-val.no-icon { padding-left: 36px; }
+
+/* Ikony do tabulky */
+#tmx-prod-dbr .tb-icon { display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; border-radius: 50%; flex-shrink: 0; }
+#tmx-prod-dbr .tb-icon--blue { background: linear-gradient(135deg, var(--tmx-blue-l) 0%, var(--tmx-blue-m) 100%); box-shadow: 0 4px 10px rgba(19,74,142,.2); }
+#tmx-prod-dbr .tb-icon--blue::after { content: ""; width: 12px; height: 12px; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E") no-repeat center center; background-size: contain; transform: translateX(-1px); }
+#tmx-prod-dbr .tb-icon--green { background: linear-gradient(135deg, #74A81A 0%, var(--tmx-green-logo) 100%); box-shadow: 0 4px 10px rgba(110,155,18,.2); }
+#tmx-prod-dbr .tb-icon--green::after { content: ""; width: 12px; height: 12px; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E") no-repeat center center; background-size: contain; transform: translateX(-1px); }
+#tmx-prod-dbr .tb-icon--gray-check { background: #f2f2f7; }
+#tmx-prod-dbr .tb-icon--gray-check::after { content: ""; width: 12px; height: 12px; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%238e8e93' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E") no-repeat center center; background-size: contain; transform: translateX(-1px); }
+#tmx-prod-dbr .tb-icon--cross { background: #fff0f0; }
+#tmx-prod-dbr .tb-icon--cross::after { content: ""; width: 10px; height: 10px; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23d93025' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='18' y1='6' x2='6' y2='18'%3E%3C/line%3E%3Cline x1='6' y1='6' x2='18' y2='18'%3E%3C/line%3E%3C/svg%3E") no-repeat center center; background-size: contain; }
+
+/* POJISTKA PRO PŘÍSTUPNOST */
+@media (prefers-reduced-motion: reduce) {
+    #tmx-prod-dbr .rev-anim,
+    #tmx-prod-dbr .fly-left,
+    #tmx-prod-dbr .fly-right,
+    #tmx-prod-dbr .fly-up {
+        transition: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+    }
+}
+</style>
+
+<style>
+#tmx-prod-dbr .btn-row{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-top:28px;}
+#tmx-prod-dbr a.btn-ghost{display:inline-flex;align-items:center;padding:12px 28px;border-radius:98px;border:2px solid var(--tmx-blue-m);color:var(--tmx-blue-m);font-size:18px!important;font-weight:500;text-decoration:none!important;}
+#tmx-prod-dbr a.btn-ghost:hover{background:var(--tmx-blue-m);color:#fff;}
+#ajanlatkeres .try-form-wrap{background:#fff;border:1px solid rgba(11,44,74,.12);border-radius:20px;padding:36px;box-shadow:0 1px 3px rgba(0,0,0,.04),0 8px 24px rgba(11,44,74,.06);}
+@media(max-width:600px){#ajanlatkeres .try-form-wrap{padding:24px;}}
+#ajanlatkeres form>*+*{margin-top:20px;}
+#ajanlatkeres .contact-grid{margin-top:32px;align-items:start;}
+#ajanlatkeres .contact-card-sub{margin-bottom:20px;}
+#ajanlatkeres .form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+@media(max-width:600px){#ajanlatkeres .form-row{grid-template-columns:1fr;}}
+#ajanlatkeres .form-field{display:block;width:100%;}
+#ajanlatkeres .form-label{display:block;font-size:13px;font-weight:600;color:var(--blue-dark);margin-bottom:6px;letter-spacing:.02em;}
+#ajanlatkeres .form-label em{color:var(--green-cta);font-style:normal;font-weight:700;}
+#ajanlatkeres .form-hint{color:var(--text-muted);font-weight:400;font-size:12.5px;margin-left:4px;}
+#ajanlatkeres .form-field input,#ajanlatkeres .form-field textarea{width:100%;padding:12px 14px;font-size:15.5px;font-family:inherit;color:var(--text);background:#fff;border:1.5px solid rgba(11,44,74,.12);border-radius:12px;transition:border-color .15s ease,box-shadow .15s ease;-webkit-appearance:none;}
+#ajanlatkeres .form-field input:focus,#ajanlatkeres .form-field textarea:focus{outline:none;border-color:var(--blue-mid);box-shadow:0 0 0 3px rgba(19,74,142,.12);}
+#ajanlatkeres .form-field textarea{resize:vertical;min-height:80px;}
+#ajanlatkeres .gdpr-check{display:flex;align-items:flex-start;gap:10px;padding:12px 14px;background:#fbfcfd;border:1px solid rgba(11,44,74,.12);border-radius:12px;font-size:13.5px;line-height:1.5;color:var(--text-muted);cursor:pointer;}
+#ajanlatkeres .gdpr-check input[type=checkbox]{margin-top:2px;accent-color:var(--green-cta);width:17px;height:17px;flex-shrink:0;}
+#ajanlatkeres .gdpr-check a{color:var(--blue-mid);text-decoration:underline;}
+#ajanlatkeres .gdpr-check em{color:var(--green-cta);font-style:normal;font-weight:700;}
+#ajanlatkeres .btn-submit{width:100%;padding:16px 32px;font-size:16.5px;font-weight:600;background:var(--green-cta);color:#fff;border:none;border-radius:99px;cursor:pointer;transition:background .15s ease,transform .1s ease;}
+#ajanlatkeres .btn-submit:hover{background:var(--green-brand);transform:translateY(-1px);}
+#ajanlatkeres .form-footnote{text-align:center;font-size:12.5px!important;color:var(--text-muted);margin-top:8px;}
+</style>
+<div id="tmx-prod-wrap-dbr" class="tmx-cat-wrap">
+    <div id="tmx-prod-dbr">
+        <section class="tmx-band tmx-band--hero" aria-label="A TAGRA oktatás bemutatása">
+            <div class="container">
+                <div class="eyebrow rev-anim">TAGRA oktatás</div>
+                <h1 class="rev-anim hero-h2" style="margin-bottom: 24px;">TAGRA oktatás cégeknek</h1>
+                <p class="rev-anim" style="font-size: 19px !important; max-width: 920px; margin: 0 auto; line-height: 1.5 !important; color: var(--tmx-text2);">
+                    <strong>Megtanítjuk, hogyan dolgozzon a TAGRA programmal profi módon.</strong>
+                    Megmutatjuk, hogyan kell a programot helyesen telepíteni, kezelni, és hogyan értékelheti ki vele az adatokat.
+                </p>
+                <div class="btn-row rev-anim">
+                    <a class="btn-cta" href="#ajanlatkeres">Ajánlatot kérek</a>
+                    <a class="btn-ghost" href="tel:+36304742540">Hívás: +36 30 474 2540</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="tmx-band" aria-label="Egyéni TAGRA oktatás">
+            <div class="container">
+                <div class="eyebrow rev-anim">Oktatás személyre szabva</div>
+                <h2 class="rev-anim">Egyéni TAGRA oktatás</h2>
+                <p class="rev-anim">Szeretné, ha a TAGRA programot teljes mértékben kihasználná? Egyéni oktatást kínálunk 1–2 fő részére, amely az alapbeállításra, a program kezelésére és az adatok kiértékelésére összpontosít.</p>
+                <div class="bento">
+                    <div class="bc s6 bluefill fly-left">
+                        <div class="eyebrow" style="color: var(--tmx-blue-m);">Hogyan zajlik</div>
+                        <div class="bc-title">Online vagy személyesen</div>
+                        <div class="bc-text">Az oktatás zajlhat online vagy személyesen. Az időpontot és a tempót az Önök igényeihez igazítjuk.</div>
+                    </div>
+                    <div class="bc s6 fly-right" style="transition-delay: 0.1s;">
+                        <div class="eyebrow" style="color: var(--tmx-blue-m);">Kinek szól</div>
+                        <div class="bc-title">1–2 fő részére</div>
+                        <div class="bc-text">Az oktatás csak az Önök számára szól: nincsenek csoportok, nem kell sietni. Több munkatárs oktatásához egyedi ajánlatot készítünk.</div>
+                    </div>
+                    <div class="bc s6 greenfill fly-left" style="transition-delay: 0.15s;">
+                        <div class="eyebrow">Helyszín, időpont, nyelv</div>
+                        <div class="bc-text">Az oktatás részleteiről (helyszín, időpont, nyelv) a Rukon Kft. egyeztet Önnel.</div>
+                    </div>
+                    <div class="bc s6 fly-right" style="transition-delay: 0.25s;">
+                        <div class="eyebrow" style="color: var(--tmx-blue-m);">Ár</div>
+                        <div class="bc-text">Az árakról egyedi ajánlatot ad a Rukon Kft.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="tmx-band tmx-band--gray" aria-label="Mit tartalmaz az oktatás">
+            <div class="container">
+                <div class="eyebrow rev-anim">Tematika</div>
+                <h2 class="rev-anim">Mit tartalmaz az oktatás</h2>
+                <div class="feats rev-anim">
+                    <div class="fi"><div class="fck"></div><p>Bevezetés a TAGRA programba és a tachográfokra vonatkozó jogszabályi követelményekbe.</p></div>
+                    <div class="fi"><div class="fck"></div><p>A TAGRA program telepítése, a számítógép környezetének ellenőrzésével együtt.</p></div>
+                    <div class="fi"><div class="fck"></div><p>A program egyedi beállítása a cég igényei szerint, beleértve az adatok kiértékeléséhez használt normák helyes beállítását az érvényes jogszabályok szerint.</p></div>
+                    <div class="fi"><div class="fck"></div><p>A fuvarozó kötelezettségeinek áttekintése: milyen gyakran kell letölteni az adatokat a tachográfból és a sofőrkártyákról, és hogyan kell őket megfelelően megőrizni.</p></div>
+                    <div class="fi"><div class="fck"></div><p>A TAGRA program összes funkciójának részletes bemutatása, és használatuk a vezetési idő, a kötelező szünetek és a pihenőidők kiértékelésénél.</p></div>
+                    <div class="fi"><div class="fck"></div><p>Az adatok letöltésének és archiválásának gyakorlati menete digitális tachográfokból és sofőrkártyákról.</p></div>
+                    <div class="fi"><div class="fck"></div><p>Valós adatok kiértékelésének gyakorlása az 561/2006/EK rendelettel és az AETR-egyezménnyel összhangban.</p></div>
+                    <div class="fi"><div class="fck"></div><p>Gyakorlati bemutató az Önök saját adataival: szabálysértések elemzése, a vezetési és pihenőidők ellenőrzése.</p></div>
+                    <div class="fi"><div class="fck"></div><p>Tippek a gyakori hibák elkerüléséhez, és ahhoz, hogy könnyebb legyen a felkészülés a közúti vagy hatósági ellenőrzésre.</p></div>
+                    <div class="fi"><div class="fck"></div><p>Beszélgetés az Önök konkrét kérdéseiről, valamint záró javaslatok a program hatékony használatához és az archivált adatok kezeléséhez.</p></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="tmx-band" aria-label="Kinek szól az oktatás">
+            <div class="container">
+                <div class="tmx-two-col rev-anim">
+                    <div class="tmx-callout">
+                        <div class="eyebrow">Fuvarozóknak</div>
+                        <h2>Fuvarozók részére</h2>
+                        <p>A fuvarozókat a TAGRA program használatára oktatjuk. Az oktatást a szervezet méretéhez és igényeihez igazítjuk.</p>
+                        <p style="margin-top: 16px;"><a class="btn-cta" href="#ajanlatkeres">Ajánlatot kérek</a></p>
+                    </div>
+                    <div class="tmx-callout">
+                        <div class="eyebrow">Ellenőrző hatóságoknak</div>
+                        <h2>Ellenőrző hatóságok részére</h2>
+                        <p>Az ellenőrző hatóságokat a TAGRA Control használatára oktatjuk.</p>
+                        <p style="margin-top: 16px;"><a href="/hu/hatosagoknak/">Tudnivalók az ellenőrző hatóságoknak →</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="tmx-band tmx-band--blue" id="ajanlatkeres" aria-label="Ajánlatkérés">
+            <div class="container">
+                <div class="eyebrow rev-anim">Ajánlatkérés</div>
+                <h2 class="rev-anim">Kérjen ajánlatot a Rukon Kft.-től</h2>
+                <p class="rev-anim">Az oktatást Magyarországon hivatalos forgalmazónk, a Rukon Kft. értékesíti. Az árakról egyedi ajánlatot ad a Rukon Kft.</p>
+                <div class="contact-grid rev-anim">
+                    <div class="contact-card">
+                        <h3 class="contact-card-title">Magyarországi értékesítés</h3>
+                        <div class="contact-card-sub">Hivatalos magyarországi forgalmazónk, a <strong>Rukon Kft.</strong> segít a TAGRA szoftverrel, az árakkal és a rendelésekkel kapcsolatban.</div>
+                        <div class="contact-people">
+                            <div class="contact-person">
+                                <div>
+                                    <div class="contact-item-label">Varga Katalin — Rukon Kft.</div>
+                                    <a class="contact-person-phone" href="tel:+36304742540">+36 30 474 2540</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-item-icon">
+                                <svg fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                            </div>
+                            <div>
+                                <div class="contact-item-label">E-mail</div>
+                                <div class="contact-item-value"><a href="mailto:rukon@rukon.hu">rukon@rukon.hu</a></div>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-item-icon">
+                                <svg fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                            </div>
+                            <div>
+                                <div class="contact-item-label">Iroda</div>
+                                <div class="contact-item-value" style="font-weight:400;font-size:16px">1101 Budapest, Albertirsai út 2–4.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="try-form-wrap">
+                        <form name="ajanlatkeres-hu" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/hu/koszonjuk/">
+                            <input name="form-name" type="hidden" value="ajanlatkeres-hu"/>
+                            <input name="termek" type="hidden" value="TAGRA oktatás"/>
+                            <input name="source_url" type="hidden" value="https://tagra.app/hu/tagra-oktatas-cegeknek/"/>
+                            <p aria-hidden="true" hidden=""><label>Ezt ne töltse ki:<input autocomplete="off" name="bot-field" tabindex="-1"/></label></p>
+                            <div class="form-row">
+                                <label class="form-field"><span class="form-label">Név<em>*</em></span><input autocomplete="name" name="name" required="" type="text"/></label>
+                                <label class="form-field"><span class="form-label">Cégnév</span><input autocomplete="organization" name="company" type="text"/></label>
+                            </div>
+                            <div class="form-row">
+                                <label class="form-field"><span class="form-label">E-mail<em>*</em></span><input autocomplete="email" name="email" required="" type="email"/></label>
+                                <label class="form-field"><span class="form-label">Telefon</span><input autocomplete="tel" name="phone" type="tel"/></label>
+                            </div>
+                            <label class="form-field"><span class="form-label">Járművek száma</span><input min="1" name="vehicles" type="number"/></label>
+                            <label class="form-field"><span class="form-label">Üzenet<span class="form-hint">(opcionális)</span></span><textarea name="message" rows="3"></textarea></label>
+                            <label class="gdpr-check">
+                                <input name="gdpr_consent" required="" type="checkbox" value="yes"/>
+                                <span>Hozzájárulok személyes adataim kezeléséhez abból a célból, hogy az ajánlatkéréssel kapcsolatban felvegyék velem a kapcsolatot. Részletek az <a href="/hu/adatvedelmi-tajekoztato/" rel="noopener noreferrer" target="_blank">adatvédelmi tájékoztatóban</a>. <em>*</em></span>
+                            </label>
+                            <button class="btn-submit" type="submit">Ajánlatot kérek</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="tmx-band" aria-label="Gyakran ismételt kérdések az oktatásról">
+            <div class="container">
+                <div class="eyebrow rev-anim">Gyakran ismételt kérdések</div>
+                <h2 class="rev-anim">GYIK</h2>
+                <div class="faq-block rev-anim">
+                    <details>
+                        <summary>Kinek szól a TAGRA oktatás?</summary>
+                        <div class="faq-a"> <p>A fuvarozókat a TAGRA program használatára oktatjuk. Az ellenőrző hatóságok számára a TAGRA Control használatára szolgáló oktatást biztosítunk. <a href="/hu/hatosagoknak/">Tudnivalók az ellenőrző hatóságoknak</a>.</p> </div>
+                    </details>
+                    <details>
+                        <summary>Milyen formában zajlik az oktatás?</summary>
+                        <div class="faq-a"> <p>Az oktatás zajlhat online vagy személyesen. Az egyéni oktatás 1–2 fő részére szól, az időpontot és a tempót az Önök igényeihez igazítjuk. Az oktatás részleteiről (helyszín, időpont, nyelv) a Rukon Kft. egyeztet Önnel.</p> </div>
+                    </details>
+                    <details>
+                        <summary>Mit tartalmaz az oktatás?</summary>
+                        <div class="faq-a"> <p>Az oktatás a TAGRA program telepítésétől és beállításától az adatok letöltésén, archiválásán és kiértékelésén át a hatósági ellenőrzésre való felkészülésig terjed. A teljes tematikát az oldal „Mit tartalmaz az oktatás” szakasza sorolja fel.</p> </div>
+                    </details>
+                    <details>
+                        <summary>Mennyibe kerül az oktatás?</summary>
+                        <div class="faq-a"> <p>Az árakról egyedi ajánlatot ad a Rukon Kft. Ajánlatot a fenti űrlapon, telefonon vagy e-mailben kérhet.</p> </div>
+                    </details>
+                    <details>
+                        <summary>Több munkatársunkat is oktatni szeretnénk. Mit tehetünk?</summary>
+                        <div class="faq-a"> <p>Ha több munkatársat szeretne bekapcsolni az oktatásba, írjon nekünk, és a Rukon Kft. egyedi ajánlatot készít Önnek.</p> </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+<script>
+(function() {
+    'use strict';
+    if ('IntersectionObserver' in window) {
+        var ro = new IntersectionObserver(function(entries) {
+            entries.forEach(function(x) {
+                if (x.isIntersecting) { x.target.classList.add('on'); ro.unobserve(x.target); }
+            });
+        }, { threshold: 0.1 });
+        var anims = document.querySelectorAll('#tmx-prod-dbr .rev-anim, #tmx-prod-dbr .fly-left, #tmx-prod-dbr .fly-right, #tmx-prod-dbr .fly-up');
+        for (var i = 0; i < anims.length; i++) ro.observe(anims[i]);
+    } else {
+        var all = document.querySelectorAll('#tmx-prod-dbr .rev-anim, #tmx-prod-dbr .fly-left, #tmx-prod-dbr .fly-right, #tmx-prod-dbr .fly-up');
+        for (var k = 0; k < all.length; k++) all[k].classList.add('on');
+    }
+})();
+</script>
+</main>
+<footer class="site-footer" role="contentinfo">
+<div class="footer-inner">
+<div>
+<div class="footer-logo"><img alt="TAGRA" height="20" src="/assets/img/logo-dark.svg?v=20260513zh" width="88" loading="lazy"/></div>
+<p class="footer-desc">Professzionális tachográf-kiértékelő szoftver. Sofőrkártya-letöltés, digitális tachográfadatok kiértékelése, EU-s vezetési és pihenőidők, valamint a közúti szállításra vonatkozó munkaidő-irányelv. Fejlesztő: Truck Data Technology, s.r.o.</p>
+</div>
+<div class="footer-col">
+<h2 class="footer-col-title">Termék</h2>
+<ul>
+<li><a href="/hu/fuvarozoknak/">Fuvarozók részére</a></li>
+<li><a href="/hu/soforoknek/">Professzionális sofőrök részére</a></li>
+<li><a href="/hu/hatosagoknak/">Ellenőrző hatóságok részére</a></li>
+<li><a href="/hu/hogyan-mukodik/">Hogyan működik</a></li>
+<li><a href="/hu/kinek-szol/">Kinek szól</a></li>
+<li><a href="/hu/gyakori-kerdesek/">GYIK</a></li>
+<li><a href="/hu/letolto-eszkozok/">Letöltő eszközök</a></li>
+<li><a href="/hu/gps-nyomkovetes/">GPS nyomkövetés</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h2 class="footer-col-title">Tudástár</h2>
+<ul>
+<li><a href="/hu/cikkek/">Cikkek</a></li><li><a href="/hu/kezikonyvek/">Kézikönyvek</a></li>
+<li><a href="/hu/cikkek/tachograf-szimbolumok/">Tachográf szimbólumok</a></li>
+<li><a href="/hu/integraciok/dkv-live/">DKV LIVE®</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h2 class="footer-col-title">Cég</h2>
+<ul>
+<li><a href="/hu/kapcsolat/">Kapcsolat</a></li>
+<li><a href="/" hreflang="en">English</a></li><li><a href="/de/" hreflang="de">Deutsch</a></li><li><a href="/pl/" hreflang="pl">Polski</a></li><li><a href="/nl/" hreflang="nl">Nederlands</a></li><li><a href="/fr/" hreflang="fr">Français</a></li><li><a href="/it/" hreflang="it">Italiano</a></li><li><a href="/el/" hreflang="el">Ελληνικά</a></li><li><a aria-current="page" class="active" href="/hu/" hreflang="hu">Magyar</a></li><li><a href="/ro/" hreflang="ro">Română</a></li></ul>
+</div>
+</div>
+<div class="footer-bottom">
+<span>© 2026 Truck Data Technology, s.r.o. Minden jog fenntartva.</span>
+<span><a href="/hu/kapcsolat/">Kapcsolat</a> · <a href="/hu/adatvedelmi-tajekoztato/">Adatvédelem és sütik</a></span>
+</div>
+</footer>
+<script>
+(function() {
+  var bar = document.getElementById('scroll-progress');
+  if (bar) { window.addEventListener('scroll', function() { var top = document.documentElement.scrollTop || document.body.scrollTop; var h = document.documentElement.scrollHeight - document.documentElement.clientHeight; bar.style.width = (top / h * 100) + '%'; }, { passive: true }); }
+  var toggle = document.getElementById('nav-toggle'); var links = document.getElementById('nav-links');
+  if (toggle && links) { toggle.addEventListener('click', function() { var open = links.classList.toggle('open'); toggle.setAttribute('aria-expanded', open); }); }
+  if ('IntersectionObserver' in window) { var io = new IntersectionObserver(function(entries) { entries.forEach(function(e) { if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); } }); }, { threshold: 0.1 }); document.querySelectorAll('.anim-up').forEach(function(el) { io.observe(el); }); } else { document.querySelectorAll('.anim-up').forEach(function(el) { el.classList.add('on'); }); }
+})();
+</script>
+</body>
+</html>
