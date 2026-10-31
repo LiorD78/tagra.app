@@ -79,24 +79,29 @@
 <!-- TMX-ANALYTICS END -->
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Software tahograf pentru flote | TAGRA Company</title>
-<meta content="Software TAGRA pentru flote: descărcare date din tahograf și de pe card de conducător auto, analiză contravenții. Probă gratuită 30 de zile." name="description"/>
+<title>Program pentru tahografe digitale și flote – TAGRA III</title>
+<meta content="TAGRA III: program pentru tahografe. Date de pe carduri și vehicule, încălcări cu temei legal, durate de conducere și timp de lucru. Test gratuit 30 de zile." name="description"/>
 <meta content="#0b2c4a" name="theme-color"/>
 <link href="/manifest.json" rel="manifest"/>
 <link href="https://tagra.app/ro/pentru-firme/" rel="canonical"/>
+<link as="image" fetchpriority="high" href="/assets/img/tagra3/tagra3-evaluation.webp" media="(min-width: 621px)" imagesizes="(max-width: 1000px) 100vw, 1100px" imagesrcset="/assets/img/tagra3/tagra3-evaluation-960.webp 960w, /assets/img/tagra3/tagra3-evaluation.webp 1920w" rel="preload" type="image/webp"/>
 <link href="https://tagra.app/de/fuhrpark/" hreflang="de" rel="alternate"/><link href="https://tagra.app/el/stolos/" hreflang="el" rel="alternate"/><link href="https://tagra.app/fleet/" hreflang="en" rel="alternate"/><link href="https://tagra.app/fr/entreprises/" hreflang="fr" rel="alternate"/><link href="https://tagra.app/hu/fuvarozoknak/" hreflang="hu" rel="alternate"/><link href="https://tagra.app/it/per-aziende/" hreflang="it" rel="alternate"/><link href="https://tagra.app/nl/voor-transportbedrijven/" hreflang="nl" rel="alternate"/><link href="https://tagra.app/pl/dla-przewoznikow/" hreflang="pl" rel="alternate"/>
 <link href="https://tagra.app/ro/pentru-firme/" hreflang="ro" rel="alternate"/><link href="https://tagra.app/fleet/" hreflang="x-default" rel="alternate"/>
 <meta content="website" property="og:type"/>
 <meta content="en_US" property="og:locale"/>
 <meta content="TAGRA" property="og:site_name"/>
-<meta content="Software tahograf pentru flote | TAGRA Company" property="og:title"/>
-<meta content="Software pentru tahografe destinat flotelor: descărcare în masă a datelor de pe cardurile de conducător auto, analiză automată a contravențiilor, verificarea duratelor de conducere conform reglementărilor UE și a Directivei privind timpul de lucru pentru vehicule grele. Perioadă de probă gratuită de 30 de zile." property="og:description"/>
-<meta content="https://cdn.truckmall.cz/data/user-content/TDT_TAGRA_MAX_wh.jpg" property="og:image"/>
-<meta content="TAGRA – software de analiză a tahografului pentru operatorii de transport rutier, de la 1 la un număr nelimitat de vehicule" property="og:image:alt"/>
-<meta content="https://cdn.truckmall.cz/data/user-content/TDT_TAGRA_MAX_wh.jpg" name="twitter:image"/>
-<meta content="TAGRA – software de analiză a tahografului pentru operatorii de transport rutier, de la 1 la un număr nelimitat de vehicule" name="twitter:image:alt"/>
+<meta content="Program pentru tahografe digitale și flote – TAGRA III" property="og:title"/>
+<meta content="TAGRA III – noul program pentru tahografele flotei. Vedeți încălcările, descărcările, cardurile și calibrările care expiră. Test gratuit 30 de zile." property="og:description"/>
+<meta content="https://tagra.app/assets/img/tagra3/og-fleet-tagra3.jpg" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="TAGRA III – evaluarea conducătorului auto cu grafic de activitate și detalii despre încălcare, cu trimitere la regulament" property="og:image:alt"/>
+<meta content="https://tagra.app/assets/img/tagra3/og-fleet-tagra3.jpg" name="twitter:image"/>
+<meta content="TAGRA III – evaluarea conducătorului auto cu grafic de activitate și detalii despre încălcare, cu trimitere la regulament" name="twitter:image:alt"/>
 <meta content="https://tagra.app/ro/pentru-firme/" property="og:url"/>
 <meta content="summary_large_image" name="twitter:card"/>
+<meta content="Program pentru tahografe digitale și flote – TAGRA III" name="twitter:title"/>
+<meta content="TAGRA III – noul program pentru tahografele flotei. Vedeți încălcările, descărcările, cardurile și calibrările care expiră. Test gratuit 30 de zile." name="twitter:description"/>
 <style>
     /* ─── DESIGN TOKENS ────────────────────────────────────────── */
     /* ─── RESET & BASE ─────────────────────────────────────────── */
@@ -474,6 +479,33 @@
       }
       .price-table td:first-child::before { content: none; }
     }
+    /* ─── TAGRA III: HERO WINDOW ───────────────────────────────── */
+    .t3-window{margin:44px auto 0;border-radius:14px;overflow:hidden;background:#fff;border:1px solid var(--border);box-shadow:0 30px 70px rgba(11,44,74,.16),0 6px 18px rgba(11,44,74,.08)}
+    .t3-window__bar{display:flex;align-items:center;gap:7px;height:30px;padding:0 14px;background:#f3f5f8;border-bottom:1px solid var(--border)}
+    .t3-window__bar i{width:10px;height:10px;border-radius:50%;background:#d5dbe3;display:block}
+    .t3-window__bar span{margin-left:8px;font-size:12px;font-weight:600;color:var(--text2)}
+    .t3-window img{width:100%;height:auto;display:block}
+    .t3-badge{display:inline-flex;align-items:center;gap:8px;background:var(--green-brand);color:#fff;font-size:13px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:5px 12px;border-radius:999px;margin-right:10px;vertical-align:middle;box-shadow:0 6px 14px rgba(110,155,18,.22)}
+    /* ─── TAGRA III: FEATURE GRID ──────────────────────────────── */
+    .t3-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:36px}
+    @media (max-width:980px){.t3-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media (max-width:620px){.t3-grid{grid-template-columns:1fr}}
+    .t3-card{background:var(--bg-white,#fff);border:1px solid var(--border);border-radius:var(--radius);padding:26px 24px;position:relative;overflow:hidden;transition:transform .18s,box-shadow .18s,border-color .18s}
+    .t3-card:hover{transform:translateY(-3px);box-shadow:0 14px 28px rgba(11,44,74,.08);border-color:rgba(19,74,142,.28)}
+    .t3-card__n{font-size:13px;font-weight:800;letter-spacing:.08em;color:var(--green-brand);margin-bottom:10px;display:block}
+    .t3-card h3{font-size:19px;line-height:1.3;font-weight:800;color:var(--text-strong);margin-bottom:8px}
+    .t3-card p{font-size:16px;line-height:1.6;color:var(--text2)}
+    .t3-card--key{background:linear-gradient(180deg,var(--bg-apple-solid,#eaf3f8) 0%,#fff 100%);border:2px solid var(--blue-mid)}
+    /* ─── TAGRA III: SCREENSHOT GALLERY ────────────────────────── */
+    .t3-tabs{display:flex;flex-wrap:wrap;gap:8px;margin:28px 0 22px}
+    .t3-tab{appearance:none;border:1.5px solid var(--border);background:#fff;color:var(--text-strong);font:inherit;font-size:15px;font-weight:600;padding:9px 16px;border-radius:999px;cursor:pointer;transition:background .15s,border-color .15s,color .15s}
+    .t3-tab:hover{border-color:var(--blue-mid);color:var(--blue-mid)}
+    .t3-tab[aria-selected="true"]{background:linear-gradient(135deg,var(--blue-light,#1f5fa6) 0%,var(--blue-mid,#134a8e) 100%);border-color:var(--blue-mid);color:#fff}
+    .t3-panel[hidden]{display:none}
+    .t3-panel figure{margin:0}
+    .t3-panel figcaption{margin-top:16px;font-size:16px;line-height:1.6;color:var(--text2);max-width:860px}
+    .t3-panel figcaption strong{color:var(--text-strong)}
+    @media (max-width:620px){.t3-tabs{flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;padding-bottom:6px;margin-right:-16px}.t3-tab{white-space:nowrap;flex:0 0 auto}}
 </style>
 <script type="application/ld+json">
 {
@@ -500,8 +532,9 @@
   "@context": "https://schema.org",
   "@type": "WebPage",
   "url": "https://tagra.app/ro/pentru-firme/",
-  "name": "Software de analiză a tahografului pentru operatorii de transport rutier",
-  "description": "TAGRA este un software de analiză a tahografului pentru flote — descărcarea datelor de pe cardurile de conducător auto, analiza tahografelor digitale, evaluarea duratelor de conducere conform reglementărilor UE și a Directivei privind timpul de lucru pentru vehicule grele.",
+  "name": "TAGRA III – Software pentru tahografe digitale destinat flotelor",
+  "description": "TAGRA III este un software pentru tahografe digitale destinat flotelor — date din cardurile de conducător auto și din vehicule, încălcări cu trimiteri la reglementări, perioade de conducere, pauze și perioade de repaus conform normelor UE și AETR și timp de lucru conform Directivei 2002/15/CE și normelor naționale.",
+  "primaryImageOfPage": "https://tagra.app/assets/img/tagra3/tagra3-evaluation.webp",
   "isPartOf": {
     "@id": "https://tagra.app/#website"
   },
@@ -546,20 +579,21 @@
 <!-- ═══ HERO ══════════════════════════════════════════════════════ -->
 <section id="main-content" aria-label="Prezentare generală TAGRA" class="band band--hero band--hero--blue">
 <div class="container">
-<div class="eyebrow anim-up">TAGRA · Pentru operatorii de transport rutier</div>
+<div class="eyebrow anim-up"><span class="t3-badge">Nou</span>TAGRA III · Pentru operatorii de flote</div>
 <h1 class="anim-up" style="transition-delay:.05s">Analiza tahografului care identifică mai întâi<br/>contravențiile</h1>
 <p class="lead anim-up" style="transition-delay:.1s">
-<strong>Conformitate pentru flotă. Fără bătăi de cap.</strong> Descărcarea nu este suficientă — legea impune <strong>evaluare și arhivare</strong>. TAGRA este complet <strong>software de analiză a tahografului</strong> pentru flote — de la 1 la un număr nelimitat de vehicule.
+<strong>TAGRA III este noua generație a programului nostru pentru tahografe digitale destinat flotelor.</strong> O singură vedere de ansamblu arată ce necesită atenția dumneavoastră — încălcări, descărcări de pe carduri și vehicule, carduri și calibrări care expiră — înainte ca un control să le depisteze. Fiecare încălcare este însoțită de o trimitere la regulament și de o recomandare. Se adaptează de la un vehicul la un număr nelimitat de vehicule.
     </p>
 <div class="anim-up" style="margin-bottom:16px;transition-delay:.15s">
 <a class="btn-cta" href="/ro/incercare-gratuita/?audience=fleet" rel="noopener" target="_blank">Încercați gratuit timp de 30 de zile</a>
 </div>
 <p class="anim-up" style="font-size:15px;color:var(--text2);transition-delay:.2s">Windows · Perioadă de probă gratuită de 30 de zile · Pregătit pentru autoutilitare din iulie 2026</p>
-<!-- Hero video -->
-<div class="media-frame anim-up" style="margin:44px auto 0;box-shadow:0 20px 40px rgba(0,0,0,.08);transition-delay:.25s;border-radius:20px;overflow:hidden">
-<video id="hero-vid" loop="" muted="" playsinline="" poster="https://cdn.truckmall.cz/data/user-content/TAGRA-monitory-2.webp" preload="metadata" style="width:100%;display:block">
-<source src="https://cdn.truckmall.cz/data/user-content/Comp_2.webm" type="video/webm">
-</source></video>
+<!-- Hero: TAGRA III screenshot -->
+<div class="t3-window anim-up" style="transition-delay:.25s">
+<picture>
+<source media="(max-width: 620px)" srcset="/assets/img/tagra3/tagra3-overview-960.webp" type="image/webp" width="960" height="643"/>
+<img alt="TAGRA III – evaluarea conducătorului auto: grafic de activitate cu banda Țări și schimburi, detalii despre încălcare cu trimitere la Regulamentul (CE) nr. 561/2006 și totaluri pe activități" decoding="async" fetchpriority="high" height="1140" sizes="(max-width: 1000px) 100vw, 1100px" src="/assets/img/tagra3/tagra3-evaluation.webp" srcset="/assets/img/tagra3/tagra3-evaluation-960.webp 960w, /assets/img/tagra3/tagra3-evaluation.webp 1920w" width="1920"/>
+</picture>
 </div>
 </div>
 </section>
@@ -593,7 +627,7 @@
 <div class="bc s4 bluefill fly-right" style="transition-delay:.35s">
 <div class="eyebrow" style="color:var(--blue-mid)">Legislație</div>
 <div class="bc-title" style="color:var(--blue-mid)">Timpii de conducere UE<br/>&amp; Timp de lucru</div>
-<div class="bc-text">Una dintre puținele soluții care evaluează atât <strong>Timpii de conducere UE</strong> (Regulamentul 561/2006), cât și întreaga <strong>Directivei privind timpul de lucru pentru vehicule grele</strong> conform legislației muncii.</div>
+<div class="bc-text">Evaluează <strong>duratele de conducere în UE</strong> (Regulamentul (CE) nr. 561/2006, AETR) și <strong>timpul de lucru</strong> conform Directivei 2002/15/CE — precum și normelor naționale din Republica Cehă, Slovacia și Ungaria.</div>
 </div>
 </div>
 </div>
@@ -612,6 +646,108 @@
 </div>
 </div>
 </section>
+<!-- ═══ WHAT TAGRA III DOES ════════════════════════════════════════ -->
+<section aria-label="Funcțiile TAGRA III" class="band" id="tagra-iii">
+<div class="container">
+<div class="anim-up">
+<div class="eyebrow">Ce face TAGRA III</div>
+<h2>Mai mult decât simpla<br/>descărcare a datelor</h2>
+<p style="max-width:760px">Simpla operațiune de <strong>descărcare a datelor de pe cardul de conducător auto</strong> nu este suficientă — legea impune efectuarea periodică a <strong>analizei datelor tahografului digital</strong> și arhivarea acestora. TAGRA III evaluează datele de pe cardul de conducător auto și din unitatea montată pe vehicul în raport cu normele UE și cele naționale și vă arată ce trebuie să rezolvați mai întâi.</p>
+</div>
+<div class="t3-grid anim-up" style="transition-delay:.05s">
+<div class="t3-card"><span class="t3-card__n">01</span><h3>Date de pe cardul de conducător auto și din tahograf</h3><p>Citiți cardul de conducător auto cu un cititor de carduri inteligente și prelucrați datele descărcate de pe cardurile de conducător auto și din unitățile montate pe vehicul.</p></div>
+<div class="t3-card t3-card--key"><span class="t3-card__n">02</span><h3>Verificare conform reglementărilor</h3><p>Evaluare în conformitate cu Regulamentul (CE) nr. 561/2006, Acordul AETR, Directiva 2002/15/CE și normele naționale din Republica Cehă, Slovacia și Ungaria. Fiecare încălcare indică reglementarea aplicabilă și include o recomandare.</p></div>
+<div class="t3-card"><span class="t3-card__n">03</span><h3>Timpul de lucru al conducătorilor auto</h3><p>Timpul de lucru este evaluat conform normelor naționale din țara întreprinderii sau, în lipsa acestora, conform Directivei 2002/15/CE. Unui conducător auto i se pot aplica normele întreprinderii sau norme proprii.</p></div>
+<div class="t3-card"><span class="t3-card__n">04</span><h3>Graficul de activitate al conducătorului auto</h3><p>Activități, înregistrări și încălcări într-un singur grafic — inclusiv o bandă Țări și schimburi cu începuturile și sfârșiturile schimburilor, trecerile frontierelor, încărcările și descărcările.</p></div>
+<div class="t3-card t3-card--key"><span class="t3-card__n">05</span><h3>Închideți încălcările cu o declarație</h3><p>Înregistrați cele discutate cu conducătorul auto direct în fișa încălcării și închideți-o — individual sau în bloc. Fila Detalii afișează totalurile activităților pentru perioada încălcării.</p></div>
+<div class="t3-card"><span class="t3-card__n">06</span><h3>Timp nejustificat</h3><p>Perioadele pentru care lipsesc datele de pe cardul de conducător auto sunt afișate separat de încălcări și pot fi justificate printr-o adeverință privind activitățile.</p></div>
+<div class="t3-card"><span class="t3-card__n">07</span><h3>Adeverință privind activitățile</h3><p>Tipăriți formularul oficial al UE pentru conducătorii auto și perioadele selectate — în bloc sau câte un PDF pentru fiecare conducător auto. Limba formularului poate fi schimbată în previzualizare.</p></div>
+<div class="t3-card"><span class="t3-card__n">08</span><h3>Raport de lucru al conducătorului auto</h3><p>Pe zile sau pe schimburi, cu muncă de noapte, weekenduri și sărbători legale — și cu posibilitatea de a alege ce se consideră timp de lucru.</p></div>
+<div class="t3-card"><span class="t3-card__n">09</span><h3>Tipărirea rapoartelor</h3><p>Evaluarea conducătorului auto, Timp necunoscut, Conducere fără card, Prezentarea generală a sarcinilor și Raportul complet al întreprinderii. Tipăriți mai multe documente într-un singur PDF.</p></div>
+<div class="t3-card t3-card--key"><span class="t3-card__n">10</span><h3>Sarcini și termene</h3><p>Prezentarea generală arată ce trebuie făcut: încălcări, timp nejustificat, descărcarea datelor de pe carduri și din vehicule, valabilitatea cardurilor și a documentelor și calibrarea tahografelor.</p></div>
+<div class="t3-card"><span class="t3-card__n">11</span><h3>Datele dumneavoastră rămân la dumneavoastră</h3><p>O aplicație Windows care rulează pe propriul dumneavoastră calculator și stochează local datele conducătorilor auto și ale vehiculelor.</p></div>
+<div class="t3-card"><span class="t3-card__n">12</span><h3>Multilingv</h3><p>Programul și rapoartele sale sunt disponibile în engleză, germană, italiană, franceză, cehă și slovacă.</p></div>
+</div>
+</div>
+</section>
+<!-- ═══ TAGRA III SCREENSHOTS ═════════════════════════════════════ -->
+<section aria-label="Capturi de ecran TAGRA III" class="band band--machero">
+<div class="container">
+<div class="anim-up">
+<div class="eyebrow">Vedeți cum funcționează</div>
+<h2>TAGRA III, ecran cu ecran</h2>
+<p style="max-width:760px">De la prezentarea generală a sarcinilor de astăzi până la raportul pe care îl înmânați conducătorului auto — ecrane reale din TAGRA III. Datele cu caracter personal din capturile de ecran au fost înlocuite cu valori demonstrative.</p>
+<p style="max-width:760px;margin-top:10px;font-size:15px;color:var(--text2)">Capturile de ecran prezintă versiunea în limba engleză a programului.</p>
+</div>
+<div class="anim-up" style="transition-delay:.05s">
+<div aria-label="Ecranele TAGRA III" class="t3-tabs" role="tablist">
+<button aria-controls="t3p-overview" aria-selected="true" class="t3-tab" id="t3t-overview" role="tab" tabindex="0" type="button">Prezentare generală</button>
+<button aria-controls="t3p-driver" aria-selected="false" class="t3-tab" id="t3t-driver" role="tab" tabindex="-1" type="button">Conducător auto</button>
+<button aria-controls="t3p-infringements" aria-selected="false" class="t3-tab" id="t3t-infringements" role="tab" tabindex="-1" type="button">Încălcări</button>
+<button aria-controls="t3p-evaluation" aria-selected="false" class="t3-tab" id="t3t-evaluation" role="tab" tabindex="-1" type="button">Evaluare</button>
+<button aria-controls="t3p-driver-evaluation" aria-selected="false" class="t3-tab" id="t3t-driver-evaluation" role="tab" tabindex="-1" type="button">Evaluare conducător auto</button>
+<button aria-controls="t3p-work-report" aria-selected="false" class="t3-tab" id="t3t-work-report" role="tab" tabindex="-1" type="button">Raport de lucru</button>
+<button aria-controls="t3p-company-report" aria-selected="false" class="t3-tab" id="t3t-company-report" role="tab" tabindex="-1" type="button">Raport întreprindere</button>
+</div>
+<div aria-labelledby="t3t-overview" class="t3-panel" id="t3p-overview" role="tabpanel">
+<figure>
+<div class="t3-window" style="margin-top:0">
+<img alt="Prezentare generală TAGRA III – încărcarea datelor, conducători auto și vehicule cu sarcini, exportul datelor pentru control" decoding="async" height="939" sizes="(max-width: 1000px) 100vw, 1100px" src="/assets/img/tagra3/tagra3-overview.webp" srcset="/assets/img/tagra3/tagra3-overview-960.webp 960w, /assets/img/tagra3/tagra3-overview.webp 1402w" width="1402"/>
+</div>
+<figcaption><strong>Prezentare generală.</strong> Ce necesită atenție acum: conducătorii auto ale căror carduri trebuie descărcate, încălcările active, cardurile care expiră în curând, descărcările din unitățile montate pe vehicul și calibrările viitoare.</figcaption>
+</figure>
+</div>
+<div aria-labelledby="t3t-driver" class="t3-panel" id="t3p-driver" role="tabpanel" hidden>
+<figure>
+<div class="t3-window" style="margin-top:0">
+<img alt="Detalii despre conducătorul auto în TAGRA III – norme aplicate, încălcări nesoluționate, timp nejustificat și sarcini" decoding="async" height="939" loading="lazy" sizes="(max-width: 1000px) 100vw, 1100px" src="/assets/img/tagra3/tagra3-driver.webp" srcset="/assets/img/tagra3/tagra3-driver-960.webp 960w, /assets/img/tagra3/tagra3-driver.webp 1402w" width="1402"/>
+</div>
+<figcaption><strong>Detalii despre conducătorul auto.</strong> Normele aplicate conducătorului auto (Regulamentul (CE) nr. 561/2006, normele naționale privind timpul de lucru — preluate de la întreprindere sau stabilite individual), încălcările nesoluționate, timpul nejustificat și sarcinile conducătorului auto.</figcaption>
+</figure>
+</div>
+<div aria-labelledby="t3t-infringements" class="t3-panel" id="t3p-infringements" role="tabpanel" hidden>
+<figure>
+<div class="t3-window" style="margin-top:0">
+<img alt="Lista încălcărilor din TAGRA III cu filtre după regulament, grupă și gravitate, câmp pentru declarație și buton de închidere" decoding="async" height="939" loading="lazy" sizes="(max-width: 1000px) 100vw, 1100px" src="/assets/img/tagra3/tagra3-infringements.webp" srcset="/assets/img/tagra3/tagra3-infringements-960.webp 960w, /assets/img/tagra3/tagra3-infringements.webp 1402w" width="1402"/>
+</div>
+<figcaption><strong>Încălcări.</strong> Filtrați după actul normativ, categoria încălcării și gravitate. Pentru fiecare încălcare sunt afișate articolul invocat, ce s-a întâmplat și ce ar trebui să facă conducătorul auto — adăugați o declarație și închideți cazul.</figcaption>
+</figure>
+</div>
+<div aria-labelledby="t3t-evaluation" class="t3-panel" id="t3p-evaluation" role="tabpanel" hidden>
+<figure>
+<div class="t3-window" style="margin-top:0">
+<img alt="Evaluare TAGRA III – grafic de activitate, detalii despre încălcare, totaluri pe activități și textul regulamentului" decoding="async" height="1140" loading="lazy" sizes="(max-width: 1000px) 100vw, 1100px" src="/assets/img/tagra3/tagra3-evaluation.webp" srcset="/assets/img/tagra3/tagra3-evaluation-960.webp 960w, /assets/img/tagra3/tagra3-evaluation.webp 1920w" width="1920"/>
+</div>
+<figcaption><strong>Evaluare.</strong> Graficul de activitate cu banda Țări și schimburi, detaliile încălcării cu textul actului normativ și un link către textul integral de pe EUR-Lex, precum și totalurile pe activități pentru perioada încălcării.</figcaption>
+</figure>
+</div>
+<div aria-labelledby="t3t-driver-evaluation" class="t3-panel" id="t3p-driver-evaluation" role="tabpanel" hidden>
+<figure>
+<div class="t3-window" style="margin-top:0">
+<img alt="Raport de evaluare a conducătorului auto în TAGRA III – încălcări pe grupe și articole, cu gradul de gravitate" decoding="async" height="1140" loading="lazy" sizes="(max-width: 1000px) 100vw, 1100px" src="/assets/img/tagra3/tagra3-driver-evaluation.webp" srcset="/assets/img/tagra3/tagra3-driver-evaluation-960.webp 960w, /assets/img/tagra3/tagra3-driver-evaluation.webp 1920w" width="1920"/>
+</div>
+<figcaption><strong>Raport de evaluare a conducătorului auto.</strong> Încălcările sintetizate pe categorii și enumerate pe articole, fiecare cu nivelul său de gravitate — de la încălcări minore la cele mai grave încălcări.</figcaption>
+</figure>
+</div>
+<div aria-labelledby="t3t-work-report" class="t3-panel" id="t3p-work-report" role="tabpanel" hidden>
+<figure>
+<div class="t3-window" style="margin-top:0">
+<img alt="Raport de activitate al conducătorului auto pe schimburi în TAGRA III – conducere, alte activități, pauze, muncă de noapte și timp lucrat" decoding="async" height="1140" loading="lazy" sizes="(max-width: 1000px) 100vw, 1100px" src="/assets/img/tagra3/tagra3-work-report.webp" srcset="/assets/img/tagra3/tagra3-work-report-960.webp 960w, /assets/img/tagra3/tagra3-work-report.webp 1920w" width="1920"/>
+</div>
+<figcaption><strong>Raport de lucru al conducătorului auto.</strong> Pe schimburi sau pe zile — conducere, altă muncă, pauze, muncă de noapte și timp lucrat. Schimbați limba raportului direct în previzualizare.</figcaption>
+</figure>
+</div>
+<div aria-labelledby="t3t-company-report" class="t3-panel" id="t3p-company-report" role="tabpanel" hidden>
+<figure>
+<div class="t3-window" style="margin-top:0">
+<img alt="Raport complet al întreprinderii în TAGRA III, cu încălcări și rubrici pentru semnăturile conducătorului auto și angajatorului" decoding="async" height="1140" loading="lazy" sizes="(max-width: 1000px) 100vw, 1100px" src="/assets/img/tagra3/tagra3-company-report.webp" srcset="/assets/img/tagra3/tagra3-company-report-960.webp 960w, /assets/img/tagra3/tagra3-company-report.webp 1920w" width="1920"/>
+</div>
+<figcaption><strong>Raport complet al întreprinderii.</strong> Toate încălcările într-un singur document, cu spații pentru declarațiile și semnăturile conducătorului auto și angajatorului — documentul pe care îl păstrați la dosar.</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
 <!-- ═══ REVIEWS ═══════════════════════════════════════════════════ -->
 <section aria-label="Recenzii ale clienților" class="band band--gray">
 <div class="container">
@@ -625,31 +761,6 @@
 <div class="rev-card"><div aria-label="5 din 5" class="rev-stars">★★★★★</div><p class="rev-txt">„Software-ul este intuitiv și ușor de utilizat. Când am avut nevoie de ajutor, echipa a fost acolo.”</p><p class="rev-meta">Milan K. · Client verificat</p></div>
 <div class="rev-card"><div aria-label="5 din 5" class="rev-stars">★★★★★</div><p class="rev-txt">„Simplu și clar. Descărcarea, evaluarea și arhivarea datelor durează doar câteva minute.”</p><p class="rev-meta">Josef Z. · Client verificat</p></div>
 <div class="rev-card"><div aria-label="5 din 5" class="rev-stars">★★★★★</div><p class="rev-txt">„TAGRA ne ajută să ținem sub control contravențiile și arhivarea. Este foarte ușor de utilizat.”</p><p class="rev-meta">Client TRUCKMALL verificat</p></div>
-</div>
-</div>
-</section>
-<!-- ═══ WHAT TAGRA DOES ════════════════════════════════════════════ -->
-<section aria-label="Funcțiile software-ului" class="band">
-<div class="container">
-<div class="g2 top">
-<div class="anim-up">
-<div class="eyebrow">Ce face TAGRA</div>
-<h2>Mai mult decât<br/>descărcarea datelor</h2>
-<p style="margin-bottom:24px">Doar <strong>descărcarea datelor de pe cardul de conducător auto</strong> nu este suficient — legea impune în mod regulat <strong>analiză a tahografului digital</strong> și arhivarea acestora. TAGRA este un software complet pentru analiza tahografelor, cu sarcini administrative minime, pentru 1 până la un număr nelimitat de vehicule.</p>
-<div class="feats">
-<div class="fi"><div class="fck"><svg fill="none" height="8" viewbox="0 0 10 8" width="10"><path d="M1 4l2.5 2.5L9 1" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></div><span>Evaluarea <strong>Timpii de conducere UE</strong>, pauzelor și perioadelor de repaus (Regulamentul 561/2006 și AETR)</span></div>
-<div class="fi"><div class="fck"><svg fill="none" height="8" viewbox="0 0 10 8" width="10"><path d="M1 4l2.5 2.5L9 1" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></div><span>Evaluarea timpului de lucru conform <strong>Directivei privind timpul de lucru pentru vehicule grele</strong></span></div>
-<div class="fi"><div class="fck"><svg fill="none" height="8" viewbox="0 0 10 8" width="10"><path d="M1 4l2.5 2.5L9 1" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></div><span>Descărcarea datelor de pe cardul de conducător auto și descărcarea de la distanță a datelor din tahograf prin DKV LIVE® sau Download Box</span></div>
-<div class="fi"><div class="fck"><svg fill="none" height="8" viewbox="0 0 10 8" width="10"><path d="M1 4l2.5 2.5L9 1" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></div><span>Arhivarea datelor de pe cardul de conducător auto și din tahograful digital</span></div>
-<div class="fi"><div class="fck"><svg fill="none" height="8" viewbox="0 0 10 8" width="10"><path d="M1 4l2.5 2.5L9 1" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></div><span><strong>Complet pregătit pentru autoutilitare din iulie 2026</strong></span></div>
-<div class="fi"><div class="fck"><svg fill="none" height="8" viewbox="0 0 10 8" width="10"><path d="M1 4l2.5 2.5L9 1" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></div><span>Rapoarte clare pentru autorități și uz intern</span></div>
-</div>
-</div>
-<div class="anim-up" style="transition-delay:.1s">
-<div class="media-frame" style="background:var(--bg-gray);border-radius:var(--radius);overflow:hidden">
-<img alt="TAGRA MAX – software de analiză a tahografelor pentru operatori de transport rutier" height="800" loading="lazy" src="https://cdn.truckmall.cz/data/user-content/TDT_TAGRA_MAX_wh.jpg" style="object-fit:contain;width:100%;height:auto;" width="800"/>
-</div>
-</div>
 </div>
 </div>
 </section>
@@ -688,14 +799,6 @@
 </div>
 </div>
 </section>
-<!-- ═══ MAC STAGE ══════════════════════════════════════════════════ -->
-<section aria-label="Previzualizare software" class="band band--machero">
-<div class="container">
-<div class="mac-stage">
-<img alt="Interfața software-ului de analiză a tahografelor TAGRA – prezentare generală a duratelor de conducere și repaus din UE" height="2076" id="mac-img" loading="lazy" src="https://cdn.truckmall.cz/data/user-content/tagra/Tagra_screen_2xb.webp" width="3116"/>
-</div>
-</div>
-</section>
 <!-- ═══ COMPARISON TABLE ══════════════════════════════════════════ -->
 <section aria-label="Comparație soluții" class="band">
 <div class="container anim-up">
@@ -709,7 +812,7 @@
 <th style="width:33%">Software standard pentru tahografe</th>
 <th class="col-blue" style="width:33%">
 <span class="winner-badge">Cel mai bun raport calitate-preț</span>
-<span style="font-size:20px;font-weight:900;display:block;margin-top:4px">TAGRA</span>
+<span style="font-size:20px;font-weight:900;display:block;margin-top:4px">TAGRA III</span>
 </th>
 </tr>
 </thead>
@@ -733,6 +836,16 @@
 <td style="font-weight:700;color:var(--text-strong)">Detectarea contravențiilor</td>
 <td><div class="tc-val"><span class="tb-icon tb-icon--gray"><svg fill="none" stroke="#8e8e93" stroke-width="3" viewbox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></span>Da</div></td>
 <td class="col-blue"><div class="tc-val"><span class="tb-icon tb-icon--blue"><svg fill="none" stroke="white" stroke-width="3" viewbox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></span>Da, cu rapoarte clare</div></td>
+</tr>
+<tr>
+<td style="font-weight:700;color:var(--text-strong)">Actul normativ invocat și recomandarea pentru fiecare încălcare</td>
+<td><div class="tc-val no-icon">Rareori</div></td>
+<td class="col-blue"><div class="tc-val"><span class="tb-icon tb-icon--blue"><svg fill="none" stroke="white" stroke-width="3" viewbox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></span>Da — articolul, textul și ce trebuie făcut</div></td>
+</tr>
+<tr>
+<td style="font-weight:700;color:var(--text-strong)">Prezentarea generală a sarcinilor (descărcări, expirarea cardurilor, calibrare)</td>
+<td><div class="tc-val no-icon">Depinde de soluție</div></td>
+<td class="col-blue"><div class="tc-val"><span class="tb-icon tb-icon--blue"><svg fill="none" stroke="white" stroke-width="3" viewbox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></span>Da — pe ecranul principal</div></td>
 </tr>
 <tr>
 <td style="font-weight:700;color:var(--text-strong)">Este necesar efort manual</td>
@@ -800,7 +913,7 @@
 <div class="note-box">
 <span class="note-badge">Cum funcționează</span>
 <span class="note-title">Bazat pe SFTP, rulează în fundal</span>
-<p>Funcția <strong>Import de date</strong> a TAGRA se conectează la <code>sftp.styletronic.eu</code> folosind datele dumneavoastră de autentificare DKV LIVE® și descarcă cele mai recente <code>.DDD</code> / <code>.C1B</code> / <code>.V1B</code> fișiere conform programării stabilite de dumneavoastră. Începând cu versiunea 345, este inclusă în fiecare licență TAGRA.</p>
+<p>Funcția <strong>Import de date</strong> a TAGRA se conectează la <code>sftp.styletronic.eu</code> folosind datele dumneavoastră de autentificare DKV LIVE® și descarcă cele mai recente <code>.DDD</code> / <code>.C1B</code> / <code>.V1B</code> fișiere conform programării stabilite de dumneavoastră. Este inclusă în fiecare licență TAGRA.</p>
 <p style="font-size:14px;color:var(--text-muted);margin-top:12px;font-style:italic">DKV LIVE® este o marcă comercială a DKV Mobility. Integrarea TAGRA este o funcție tehnică de interoperabilitate.</p>
 </div><div class="warning-box" style="margin-top:28px"><p class="warning-box__title">De ce evidența propriu-zisă este apărarea dumneavoastră</p><p>Articolul 10 alineatul (3) face operatorul de transport rutier răspunzător pentru contravențiile comise de conducătorii auto — chiar și atunci când acestea au loc într-o altă țară. Însă același articol permite statelor membre să ia în considerare <strong>dovezi că operatorul de transport rutier nu poate fi considerat în mod rezonabil responsabil</strong>. Aceste dovezi sunt exact cele pe care articolul 10 alineatul (2) vă solicită să le prezentați: dovada că conducătorii auto au fost instruiți corespunzător și că efectuați controale periodice.</p><p>În practică, un inspector nu caută o evidență fără abateri. Acesta urmărește dacă contravențiile au fost <strong>detectate, investigate și soluționate</strong>. TAGRA generează raportul de contravenții pe care îl înmânați conducătorului auto și îl păstrați la dosar — documentul care transformă „conducătorul nostru auto a încălcat regulile” în „am identificat situația și am luat măsuri”.</p><p style="margin-top:10px"><a href="/ro/articole/raspunderea-operatorului-contraventii-conducatori/">Ce înseamnă în practică răspunderea operatorului de transport rutier →</a></p></div>
 </div>
@@ -913,12 +1026,6 @@
 </div>
 </div>
 </div>
-<!-- Wide image: TAGRA on monitors at dispatch -->
-<div class="anim-up" style="margin-top:60px">
-<div class="media-frame" style="border-radius:var(--radius);overflow:hidden">
-<img alt="Software-ul de analiză a tahografelor TAGRA utilizat într-un birou de dispecerat de transport" height="840" loading="lazy" src="https://cdn.truckmall.cz/data/user-content/TAGRA-monitory-2.webp" style="width:100%;height:auto;display:block;object-fit:cover;max-height:480px" width="1920"/>
-</div>
-</div>
 </div>
 </section>
 <!-- ═══ FAQ ════════════════════════════════════════════════════════ -->
@@ -927,6 +1034,22 @@
 <div class="eyebrow anim-up">Întrebări frecvente</div>
 <h2 class="anim-up">Întrebări frecvente</h2>
 <div class="faq anim-up" style="transition-delay:.05s">
+<details>
+<summary>Ce este TAGRA III?</summary>
+<div class="faq-a">TAGRA III este noua generație de software TAGRA pentru tahografe, destinată flotelor. Încarcă date din cardurile de conducător auto și din unitățile montate pe vehicul, le evaluează conform Regulamentului (CE) nr. 561/2006, Acordului AETR, Directivei 2002/15/CE și normelor naționale și arată într-o singură vedere de ansamblu ce necesită atenție — încălcări, timp nejustificat, descărcări de date din carduri și vehicule, valabilitatea cardurilor și calibrarea tahografelor.</div>
+</details>
+<details>
+<summary>Pe baza căror norme efectuează TAGRA III evaluarea?</summary>
+<div class="faq-a">Perioade de conducere, pauze și perioade de repaus conform <strong>Regulamentului (CE) nr. 561/2006</strong> și Acordului <strong>AETR</strong>, înregistrări conform Regulamentului (UE) nr. 165/2014 și timp de lucru conform <strong>Directivei 2002/15/CE</strong>. Sunt integrate normele naționale privind timpul de lucru din Republica Cehă, Slovacia și Ungaria; în celelalte țări, timpul de lucru este evaluat conform directivei. Pentru fiecare încălcare sunt afișate articolul citat, textul reglementării și o recomandare.</div>
+</details>
+<details>
+<summary>Unde sunt stocate datele mele?</summary>
+<div class="faq-a">TAGRA III este o aplicație Windows care rulează pe propriul dumneavoastră calculator. Datele conducătorilor auto și ale vehiculelor sunt stocate local — nu într-un cloud administrat de noi.</div>
+</details>
+<details>
+<summary>Ce limbi sunt disponibile?</summary>
+<div class="faq-a">Programul și rapoartele sale sunt disponibile în engleză, germană, italiană, franceză, cehă și slovacă. Limba raportului poate fi schimbată direct în previzualizarea pentru imprimare — util atunci când raportul este destinat unui conducător auto care vorbește altă limbă.</div>
+</details>
 <details>
 <summary>Cum cumpărați TAGRA după perioada de probă?</summary>
 <div class="faq-a">Totul se desfășoară direct în software. La finalul perioadei de probă — sau oricând sunteți pregătit — deschideți meniul de licențe, selectați versiunea corespunzătoare numărului dumneavoastră de vehicule (TAGRA 1, 2, 4, 6 sau MAX) și plătiți online. Plata se efectuează prin cod QR sau transfer online. Licența dumneavoastră este emisă și activată imediat — continuați să lucrați în același mediu, cu toate datele intacte.</div>
@@ -1159,6 +1282,34 @@
 
 
 
+  /* 7. TAGRA III SCREENSHOT TABS */
+  (function(){
+    var list = document.querySelector('.t3-tabs');
+    if (!list) return;
+    var tabs = Array.prototype.slice.call(list.querySelectorAll('[role="tab"]'));
+    function select(tab, focus){
+      tabs.forEach(function(t){
+        var on = t === tab;
+        t.setAttribute('aria-selected', on ? 'true' : 'false');
+        t.setAttribute('tabindex', on ? '0' : '-1');
+        var p = document.getElementById(t.getAttribute('aria-controls'));
+        if (p) { if (on) p.removeAttribute('hidden'); else p.setAttribute('hidden', ''); }
+      });
+      if (focus) tab.focus();
+    }
+    tabs.forEach(function(t, i){
+      t.addEventListener('click', function(){ select(t, false); });
+      t.addEventListener('keydown', function(e){
+        var n = null;
+        if (e.key === 'ArrowRight') n = tabs[(i + 1) % tabs.length];
+        else if (e.key === 'ArrowLeft') n = tabs[(i - 1 + tabs.length) % tabs.length];
+        else if (e.key === 'Home') n = tabs[0];
+        else if (e.key === 'End') n = tabs[tabs.length - 1];
+        if (n) { e.preventDefault(); select(n, true); }
+      });
+    });
+  })();
+
   /* STICKY CTA BAR */
   (function(){
     var bar = document.getElementById('stickyCta');
@@ -1189,10 +1340,13 @@
 {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
-  "name": "TAGRA – Software de analiză a tahografelor pentru operatori de transport rutier",
+  "name": "TAGRA III – Software pentru tahografe digitale destinat flotelor",
+  "alternateName": "TAGRA III",
   "applicationCategory": "BusinessApplication",
   "operatingSystem": "Windows",
-  "description": "Software de analiză a tahografelor pentru operatori de transport rutier. Descărcarea datelor de pe cardul de conducător auto, analiza tahografului digital, arhivarea și descărcarea de la distanță a datelor din tahograf pentru 1 până la un număr nelimitat de vehicule. Evaluează duratele de conducere din UE (Regulamentul 561/2006), AETR și Directiva privind timpul de lucru al conducătorilor auto de vehicule grele de marfă. Perioadă de probă gratuită de 30 de zile. Pregătit pentru autoutilitare din iulie 2026.",
+  "description": "TAGRA III — software pentru tahografe digitale destinat operatorilor de flote, de la un vehicul la un număr nelimitat de vehicule. Încarcă date din cardurile de conducător auto și din unitățile montate pe vehicul, le evaluează conform Regulamentului (CE) nr. 561/2006, AETR, Directivei 2002/15/CE și normelor naționale (CZ, SK, HU), indică reglementarea pentru fiecare încălcare și afișează o vedere de ansamblu a sarcinilor privind descărcările, expirarea cardurilor și calibrarea. Date stocate local. Versiune de încercare gratuită timp de 30 de zile. Pregătit pentru autoutilitare din iulie 2026.",
+  "screenshot": ["https://tagra.app/assets/img/tagra3/tagra3-overview.webp", "https://tagra.app/assets/img/tagra3/tagra3-driver.webp", "https://tagra.app/assets/img/tagra3/tagra3-infringements.webp", "https://tagra.app/assets/img/tagra3/tagra3-evaluation.webp", "https://tagra.app/assets/img/tagra3/tagra3-driver-evaluation.webp", "https://tagra.app/assets/img/tagra3/tagra3-work-report.webp", "https://tagra.app/assets/img/tagra3/tagra3-company-report.webp"],
+  "availableLanguage": ["en", "de", "it", "fr", "cs", "sk"],
   "url": "https://tagra.app/ro/pentru-firme/",
   "inLanguage": "ro",
   "author": { "@type": "Organization", "@id": "https://tagra.app/#organization", "name": "Truck Data Technology, s.r.o.", "url": "https://www.tdt.cz" },
@@ -1205,6 +1359,38 @@
   "@type": "FAQPage",
   "inLanguage": "ro",
   "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Ce este TAGRA III?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "TAGRA III este noua generație de software TAGRA pentru tahografe, destinată flotelor. Încarcă date din cardurile de conducător auto și din unitățile montate pe vehicul, le evaluează conform Regulamentului (CE) nr. 561/2006, Acordului AETR, Directivei 2002/15/CE și normelor naționale și arată într-o singură vedere de ansamblu ce necesită atenție — încălcări, timp nejustificat, descărcări de date din carduri și vehicule, valabilitatea cardurilor și calibrarea tahografelor."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Pe baza căror norme efectuează TAGRA III evaluarea?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Perioade de conducere, pauze și perioade de repaus conform Regulamentului (CE) nr. 561/2006 și Acordului AETR, înregistrări conform Regulamentului (UE) nr. 165/2014 și timp de lucru conform Directivei 2002/15/CE. Sunt integrate normele naționale privind timpul de lucru din Republica Cehă, Slovacia și Ungaria; în celelalte țări, timpul de lucru este evaluat conform directivei. Pentru fiecare încălcare sunt afișate articolul citat, textul reglementării și o recomandare."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Unde sunt stocate datele mele?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "TAGRA III este o aplicație Windows care rulează pe propriul dumneavoastră calculator. Datele conducătorilor auto și ale vehiculelor sunt stocate local — nu într-un cloud administrat de noi."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Ce limbi sunt disponibile?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Programul și rapoartele sale sunt disponibile în engleză, germană, italiană, franceză, cehă și slovacă. Limba raportului poate fi schimbată direct în previzualizarea pentru imprimare — util atunci când raportul este destinat unui conducător auto care vorbește altă limbă."
+      }
+    },
     {
       "@type": "Question",
       "name": "Cum cumpărați TAGRA după perioada de probă?",

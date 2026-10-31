@@ -79,24 +79,29 @@
 <!-- TMX-ANALYTICS END -->
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Flotta tachográf szoftver – sofőrkártya-letöltés | TAGRA Company</title>
-<meta content="Tömeges sofőrkártya-letöltés, automatikus szabálysértés-kiértékelés és AETR-, 561/2006/EK szerinti nyilvántartás. 30 napos próbaverzió." name="description"/>
+<title>Digitális menetíró-szoftver flottáknak – TAGRA III</title>
+<meta content="TAGRA III menetíró-szoftver flottáknak: kártya- és járműadatok, jogsértések jogszabályhivatkozással, uniós vezetési idők és munkaidő. Ingyenes 30 napos próba." name="description"/>
 <meta content="#0b2c4a" name="theme-color"/>
 <link href="/manifest.json" rel="manifest"/>
 <link href="https://tagra.app/hu/fuvarozoknak/" rel="canonical"/>
+<link as="image" fetchpriority="high" href="/assets/img/tagra3/tagra3-evaluation.webp" media="(min-width: 621px)" imagesizes="(max-width: 1000px) 100vw, 1100px" imagesrcset="/assets/img/tagra3/tagra3-evaluation-960.webp 960w, /assets/img/tagra3/tagra3-evaluation.webp 1920w" rel="preload" type="image/webp"/>
 <link href="https://tagra.app/de/fuhrpark/" hreflang="de" rel="alternate"/><link href="https://tagra.app/el/stolos/" hreflang="el" rel="alternate"/><link href="https://tagra.app/fleet/" hreflang="en" rel="alternate"/><link href="https://tagra.app/fr/entreprises/" hreflang="fr" rel="alternate"/><link href="https://tagra.app/hu/fuvarozoknak/" hreflang="hu" rel="alternate"/><link href="https://tagra.app/it/per-aziende/" hreflang="it" rel="alternate"/><link href="https://tagra.app/nl/voor-transportbedrijven/" hreflang="nl" rel="alternate"/><link href="https://tagra.app/pl/dla-przewoznikow/" hreflang="pl" rel="alternate"/>
 <link href="https://tagra.app/ro/pentru-firme/" hreflang="ro" rel="alternate"/><link href="https://tagra.app/fleet/" hreflang="x-default" rel="alternate"/>
 <meta content="website" property="og:type"/>
 <meta content="hu_HU" property="og:locale"/>
 <meta content="TAGRA" property="og:site_name"/>
-<meta content="Flotta tachográf szoftver – sofőrkártya-letöltés | TAGRA Company" property="og:title"/>
-<meta content="Tömeges sofőrkártya-letöltés és automatikus szabálysértés-kiértékelés. AETR-, 561/2006/EK szerinti vezetési- és pihenőidő-, valamint munkaidő-nyilvántartás. 30 napos próbaverzió." property="og:description"/>
-<meta content="https://cdn.truckmall.cz/data/user-content/TDT_TAGRA_MAX_wh.jpg" property="og:image"/>
-<meta content="TAGRA – tachográfadat-kiértékelő szoftver flottakezelőknek, 1-től korlátlan számú járműig" property="og:image:alt"/>
-<meta content="https://cdn.truckmall.cz/data/user-content/TDT_TAGRA_MAX_wh.jpg" name="twitter:image"/>
-<meta content="TAGRA – tachográfadat-kiértékelő szoftver flottakezelőknek, 1-től korlátlan számú járműig" name="twitter:image:alt"/>
+<meta content="Digitális menetíró-szoftver flottáknak – TAGRA III" property="og:title"/>
+<meta content="TAGRA III – új menetíró-szoftver flottáknak. Jogsértések, letöltések, lejáró kártyák és kalibrálások egyetlen áttekintésben. Ingyenes 30 napos próba." property="og:description"/>
+<meta content="https://tagra.app/assets/img/tagra3/og-fleet-tagra3.jpg" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="TAGRA III – járművezető kiértékelése tevékenységdiagrammal és a jogsértés részleteivel, jogszabályhivatkozással" property="og:image:alt"/>
+<meta content="https://tagra.app/assets/img/tagra3/og-fleet-tagra3.jpg" name="twitter:image"/>
+<meta content="TAGRA III – járművezető kiértékelése tevékenységdiagrammal és a jogsértés részleteivel, jogszabályhivatkozással" name="twitter:image:alt"/>
 <meta content="https://tagra.app/hu/fuvarozoknak/" property="og:url"/>
 <meta content="summary_large_image" name="twitter:card"/>
+<meta content="Digitális menetíró-szoftver flottáknak – TAGRA III" name="twitter:title"/>
+<meta content="TAGRA III – új menetíró-szoftver flottáknak. Jogsértések, letöltések, lejáró kártyák és kalibrálások egyetlen áttekintésben. Ingyenes 30 napos próba." name="twitter:description"/>
 <style>
     /* ─── DESIGN TOKENS ────────────────────────────────────────── */
     /* ─── RESET & BASE ─────────────────────────────────────────── */
@@ -474,6 +479,33 @@
       }
       .price-table td:first-child::before { content: none; }
     }
+    /* ─── TAGRA III: HERO WINDOW ───────────────────────────────── */
+    .t3-window{margin:44px auto 0;border-radius:14px;overflow:hidden;background:#fff;border:1px solid var(--border);box-shadow:0 30px 70px rgba(11,44,74,.16),0 6px 18px rgba(11,44,74,.08)}
+    .t3-window__bar{display:flex;align-items:center;gap:7px;height:30px;padding:0 14px;background:#f3f5f8;border-bottom:1px solid var(--border)}
+    .t3-window__bar i{width:10px;height:10px;border-radius:50%;background:#d5dbe3;display:block}
+    .t3-window__bar span{margin-left:8px;font-size:12px;font-weight:600;color:var(--text2)}
+    .t3-window img{width:100%;height:auto;display:block}
+    .t3-badge{display:inline-flex;align-items:center;gap:8px;background:var(--green-brand);color:#fff;font-size:13px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:5px 12px;border-radius:999px;margin-right:10px;vertical-align:middle;box-shadow:0 6px 14px rgba(110,155,18,.22)}
+    /* ─── TAGRA III: FEATURE GRID ──────────────────────────────── */
+    .t3-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:36px}
+    @media (max-width:980px){.t3-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media (max-width:620px){.t3-grid{grid-template-columns:1fr}}
+    .t3-card{background:var(--bg-white,#fff);border:1px solid var(--border);border-radius:var(--radius);padding:26px 24px;position:relative;overflow:hidden;transition:transform .18s,box-shadow .18s,border-color .18s}
+    .t3-card:hover{transform:translateY(-3px);box-shadow:0 14px 28px rgba(11,44,74,.08);border-color:rgba(19,74,142,.28)}
+    .t3-card__n{font-size:13px;font-weight:800;letter-spacing:.08em;color:var(--green-brand);margin-bottom:10px;display:block}
+    .t3-card h3{font-size:19px;line-height:1.3;font-weight:800;color:var(--text-strong);margin-bottom:8px}
+    .t3-card p{font-size:16px;line-height:1.6;color:var(--text2)}
+    .t3-card--key{background:linear-gradient(180deg,var(--bg-apple-solid,#eaf3f8) 0%,#fff 100%);border:2px solid var(--blue-mid)}
+    /* ─── TAGRA III: SCREENSHOT GALLERY ────────────────────────── */
+    .t3-tabs{display:flex;flex-wrap:wrap;gap:8px;margin:28px 0 22px}
+    .t3-tab{appearance:none;border:1.5px solid var(--border);background:#fff;color:var(--text-strong);font:inherit;font-size:15px;font-weight:600;padding:9px 16px;border-radius:999px;cursor:pointer;transition:background .15s,border-color .15s,color .15s}
+    .t3-tab:hover{border-color:var(--blue-mid);color:var(--blue-mid)}
+    .t3-tab[aria-selected="true"]{background:linear-gradient(135deg,var(--blue-light,#1f5fa6) 0%,var(--blue-mid,#134a8e) 100%);border-color:var(--blue-mid);color:#fff}
+    .t3-panel[hidden]{display:none}
+    .t3-panel figure{margin:0}
+    .t3-panel figcaption{margin-top:16px;font-size:16px;line-height:1.6;color:var(--text2);max-width:860px}
+    .t3-panel figcaption strong{color:var(--text-strong)}
+    @media (max-width:620px){.t3-tabs{flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;padding-bottom:6px;margin-right:-16px}.t3-tab{white-space:nowrap;flex:0 0 auto}}
 </style>
 <script type="application/ld+json">{
   "@context": "https://schema.org",
@@ -497,8 +529,9 @@
   "@context": "https://schema.org",
   "@type": "WebPage",
   "url": "https://tagra.app/hu/fuvarozoknak/",
-  "name": "Tachográfadatok kiértékelő szoftver flottakezelőknek",
-  "description": "A TAGRA egy flottáknak készült tachográfadat-kiértékelő szoftver – sofőrkártya-letöltéssel, digitális tachográfadatok kiértékelésével, az (EU) vezetési és pihenőidőre, valamint a tehergépjárművek munkaidejére vonatkozó irányelv kiértékelésével.",
+  "name": "TAGRA III – Digitális menetíró szoftver flottakezelőknek",
+  "description": "A TAGRA III digitális menetíró szoftver flották számára: járművezetői kártyák és járművek adatai, jogszabályi hivatkozással ellátott jogsértések, uniós vezetési idők, szünetek és pihenőidők, AETR, valamint munkaidő a 2002/15/EK irányelv és a nemzeti szabályok alapján.",
+  "primaryImageOfPage": "https://tagra.app/assets/img/tagra3/tagra3-evaluation.webp",
   "isPartOf": {
     "@id": "https://tagra.app/#website"
   },
@@ -542,19 +575,21 @@
 <!-- ═══ HERO ══════════════════════════════════════════════════════ -->
 <section id="main-content" aria-label="TAGRA áttekintés" class="band band--hero band--hero--blue">
 <div class="container">
-<div class="eyebrow anim-up">TAGRA · Flottakezelőknek</div>
+<div class="eyebrow anim-up"><span class="t3-badge">Új</span>TAGRA III · Flottaüzemeltetőknek</div>
 <h1 class="anim-up" style="transition-delay:.05s">Tachográfadatok kiértékelése,<br/>amely megelőzi az ellenőrzést</h1>
 <p class="lead anim-up" style="transition-delay:.1s">
-<strong>Flotta megfelelés. Főfájás nélkül.</strong> A letöltés nem elég — a törvény megköveteli <strong>kiértékelés és archiválás</strong>. A TAGRA teljes körű <strong>tachográfadatok kiértékelése szoftver</strong> flották számára — 1-től korlátlan számú járműig skálázható.</p>
+<strong>A TAGRA III a flották számára készült digitális menetíró-szoftverünk új generációja.</strong> Egyetlen áttekintés mutatja meg, mire kell Önnek figyelnie – jogsértések, kártya- és járműadat-letöltések, lejáró kártyák és kalibrálások –, még mielőtt egy ellenőrzés feltárná ezeket. Minden jogsértéshez jogszabályhivatkozás és ajánlás tartozik. Egy járműtől korlátlan számú járműig használható.
+    </p>
 <div class="anim-up" style="margin-bottom:16px;transition-delay:.15s">
 <a class="btn-cta" href="/hu/ingyenes-probaverzio/?audience=fleet" rel="noopener" target="_blank">Próbálja ki ingyen 30 napig</a>
 </div>
 <p class="anim-up" style="font-size:15px;color:var(--text2);transition-delay:.2s">Windows · Ingyenes, 30 napos próbaverzió · 2026 júliusától kisteherautókhoz is készen áll</p>
-<!-- Hero video -->
-<div class="media-frame anim-up" style="margin:44px auto 0;box-shadow:0 20px 40px rgba(0,0,0,.08);transition-delay:.25s;border-radius:20px;overflow:hidden">
-<video id="hero-vid" loop="" muted="" playsinline="" poster="https://cdn.truckmall.cz/data/user-content/TAGRA-monitory-2.webp" preload="metadata" style="width:100%;display:block">
-<source src="https://cdn.truckmall.cz/data/user-content/Comp_2.webm" type="video/webm">
-</source></video>
+<!-- Hero: TAGRA III screenshot -->
+<div class="t3-window anim-up" style="transition-delay:.25s">
+<picture>
+<source media="(max-width: 620px)" srcset="/assets/img/tagra3/tagra3-overview-960.webp" type="image/webp" width="960" height="643"/>
+<img alt="TAGRA III – járművezető kiértékelése: tevékenységdiagram Országok és műszakok sávval, a jogsértés részletei az 561/2006/EK rendeletre hivatkozva és tevékenységösszesítések" decoding="async" fetchpriority="high" height="1140" sizes="(max-width: 1000px) 100vw, 1100px" src="/assets/img/tagra3/tagra3-evaluation.webp" srcset="/assets/img/tagra3/tagra3-evaluation-960.webp 960w, /assets/img/tagra3/tagra3-evaluation.webp 1920w" width="1920"/>
+</picture>
 </div>
 </div>
 </section>
@@ -588,7 +623,7 @@
 <div class="bc s4 bluefill fly-right" style="transition-delay:.35s">
 <div class="eyebrow" style="color:var(--blue-mid)">Jogszabályok</div>
 <div class="bc-title" style="color:var(--blue-mid)">EU vezetési idők<br/>és munkaidő</div>
-<div class="bc-text">Azon kevés megoldások egyike, amely mindkettőt kiértékeli:<strong>EU vezetési idők</strong> (561/2006 rendelet) és a teljes <strong>HGV munkaidő-irányelv</strong> munkajogi szabályozást.</div>
+<div class="bc-text">Kiértékeli az <strong>uniós vezetési időket</strong> (561/2006/EK rendelet, AETR) és a <strong>munkaidőt</strong> a 2002/15/EK irányelv alapján, továbbá figyelembe veszi a Cseh Köztársaság, Szlovákia és Magyarország nemzeti szabályait.</div>
 </div>
 </div>
 </div>
@@ -607,6 +642,108 @@
 </div>
 </div>
 </section>
+<!-- ═══ WHAT TAGRA III DOES ════════════════════════════════════════ -->
+<section aria-label="A TAGRA III funkciói" class="band" id="tagra-iii">
+<div class="container">
+<div class="anim-up">
+<div class="eyebrow">Mit tud a TAGRA III?</div>
+<h2>Több mint egyszerű<br/>adatletöltés</h2>
+<p style="max-width:760px">A puszta <strong>járművezetői kártya adatainak letöltése</strong> nem elegendő – a jogszabály előírja a rendszeres <strong>digitális menetírókészülék-adatelemzést</strong> és archiválást. A TAGRA III az uniós és nemzeti szabályok alapján értékeli a járművezetői kártya és a járműegység adatait, és megmutatja Önnek, mivel foglalkozzon először.</p>
+</div>
+<div class="t3-grid anim-up" style="transition-delay:.05s">
+<div class="t3-card"><span class="t3-card__n">01</span><h3>Járművezetői kártyák és menetíró készülékek adatai</h3><p>Olvassa ki a járművezetői kártyát intelligenskártya-olvasóval, és dolgozza fel a járművezetői kártyákról és járműegységekről letöltött adatokat.</p></div>
+<div class="t3-card t3-card--key"><span class="t3-card__n">02</span><h3>Ellenőrzés a jogszabályok alapján</h3><p>Kiértékelés az 561/2006/EK rendelet, az AETR-megállapodás, a 2002/15/EK irányelv, valamint a Cseh Köztársaság, Szlovákia és Magyarország nemzeti szabályai alapján. Minden jogsértésnél szerepel a vonatkozó jogszabály és egy ajánlás.</p></div>
+<div class="t3-card"><span class="t3-card__n">03</span><h3>A járművezetők munkaideje</h3><p>A munkaidő kiértékelése a vállalkozás székhelye szerinti ország nemzeti szabályai, egyéb esetben a 2002/15/EK irányelv alapján történik. A járművezetőre a vállalkozás szabályai vagy saját szabályok is alkalmazhatók.</p></div>
+<div class="t3-card"><span class="t3-card__n">04</span><h3>Járművezetői tevékenységdiagram</h3><p>Tevékenységek, adatrögzítések és jogsértések egyetlen diagramon – az Országok és műszakok sávval, amely a műszakkezdéseket és -zárásokat, a határátlépéseket, valamint a be- és kirakodásokat mutatja.</p></div>
+<div class="t3-card t3-card--key"><span class="t3-card__n">05</span><h3>Jogsértések lezárása nyilatkozattal</h3><p>Rögzítse a járművezetővel megbeszélteket közvetlenül a jogsértés adatlapján, majd zárja le a jogsértéseket egyenként vagy csoportosan. A Részletek lap a jogsértés időszakára vonatkozó összesített tevékenységadatokat mutatja.</p></div>
+<div class="t3-card"><span class="t3-card__n">06</span><h3>Elszámolatlan idő</h3><p>A járművezetői kártya adataival nem lefedett időszakok a jogsértésektől elkülönítve jelennek meg, és tevékenységigazoló lappal igazolhatók.</p></div>
+<div class="t3-card"><span class="t3-card__n">07</span><h3>Tevékenységigazoló lap</h3><p>Nyomtassa ki a hivatalos uniós formanyomtatványt a kiválasztott járművezetőkre és időszakokra – csoportosan vagy járművezetőnként külön PDF-fájlba. A nyomtatvány nyelve az előnézetben módosítható.</p></div>
+<div class="t3-card"><span class="t3-card__n">08</span><h3>Járművezetői munkajelentés</h3><p>Napok vagy műszakok szerinti bontásban, az éjszakai munkával, hétvégékkel és munkaszüneti napokkal együtt – Ön választhatja ki, mi számít munkaidőnek.</p></div>
+<div class="t3-card"><span class="t3-card__n">09</span><h3>Jelentések nyomtatása</h3><p>Járművezető kiértékelése, Ismeretlen idő, Kártya nélküli vezetés, Feladatok áttekintése és Átfogó vállalati jelentés. Nyomtasson több dokumentumot egyetlen PDF-fájlba.</p></div>
+<div class="t3-card t3-card--key"><span class="t3-card__n">10</span><h3>Feladatok és határidők</h3><p>Az áttekintés megmutatja a teendőket: jogsértések, elszámolatlan idő, kártya- és járműadatok letöltése, kártyák és okmányok érvényessége, valamint a menetíró készülék kalibrálása.</p></div>
+<div class="t3-card"><span class="t3-card__n">11</span><h3>Az Ön adatai Önnél maradnak</h3><p>Windows-alkalmazás, amely az Ön saját számítógépén fut, és helyben tárolja a járművezetők és járművek adatait.</p></div>
+<div class="t3-card"><span class="t3-card__n">12</span><h3>Többnyelvű</h3><p>A program és jelentései angol, német, olasz, francia, cseh és szlovák nyelven érhetők el.</p></div>
+</div>
+</div>
+</section>
+<!-- ═══ TAGRA III SCREENSHOTS ═════════════════════════════════════ -->
+<section aria-label="TAGRA III képernyőképek" class="band band--machero">
+<div class="container">
+<div class="anim-up">
+<div class="eyebrow">Tekintse meg működés közben</div>
+<h2>TAGRA III, képernyőről képernyőre</h2>
+<p style="max-width:760px">A mai feladatok áttekintésétől a járművezetőnek átadott jelentésig – valódi képernyőképek a TAGRA III programból. A képernyőképeken szereplő személyes adatokat mintaadatokkal helyettesítettük.</p>
+<p style="max-width:760px;margin-top:10px;font-size:15px;color:var(--text2)">A képernyőképeken a program angol nyelvű változata látható.</p>
+</div>
+<div class="anim-up" style="transition-delay:.05s">
+<div aria-label="TAGRA III képernyők" class="t3-tabs" role="tablist">
+<button aria-controls="t3p-overview" aria-selected="true" class="t3-tab" id="t3t-overview" role="tab" tabindex="0" type="button">Áttekintés</button>
+<button aria-controls="t3p-driver" aria-selected="false" class="t3-tab" id="t3t-driver" role="tab" tabindex="-1" type="button">Járművezető</button>
+<button aria-controls="t3p-infringements" aria-selected="false" class="t3-tab" id="t3t-infringements" role="tab" tabindex="-1" type="button">Jogsértések</button>
+<button aria-controls="t3p-evaluation" aria-selected="false" class="t3-tab" id="t3t-evaluation" role="tab" tabindex="-1" type="button">Kiértékelés</button>
+<button aria-controls="t3p-driver-evaluation" aria-selected="false" class="t3-tab" id="t3t-driver-evaluation" role="tab" tabindex="-1" type="button">Járművezető kiértékelése</button>
+<button aria-controls="t3p-work-report" aria-selected="false" class="t3-tab" id="t3t-work-report" role="tab" tabindex="-1" type="button">Munkajelentés</button>
+<button aria-controls="t3p-company-report" aria-selected="false" class="t3-tab" id="t3t-company-report" role="tab" tabindex="-1" type="button">Vállalati jelentés</button>
+</div>
+<div aria-labelledby="t3t-overview" class="t3-panel" id="t3p-overview" role="tabpanel">
+<figure>
+<div class="t3-window" style="margin-top:0">
+<img alt="TAGRA III áttekintés – adatbetöltés, járművezetők és járművek feladatokkal, adatexport ellenőrzéshez" decoding="async" height="939" sizes="(max-width: 1000px) 100vw, 1100px" src="/assets/img/tagra3/tagra3-overview.webp" srcset="/assets/img/tagra3/tagra3-overview-960.webp 960w, /assets/img/tagra3/tagra3-overview.webp 1402w" width="1402"/>
+</div>
+<figcaption><strong>Áttekintés.</strong> Ami most figyelmet igényel: a kártyaletöltésre váró járművezetők, a nyitott jogsértések, a hamarosan lejáró kártyák, a járműegységek adatletöltései és a közelgő kalibrálások.</figcaption>
+</figure>
+</div>
+<div aria-labelledby="t3t-driver" class="t3-panel" id="t3p-driver" role="tabpanel" hidden>
+<figure>
+<div class="t3-window" style="margin-top:0">
+<img alt="TAGRA III járművezetői adatlap – alkalmazott szabályok, lezáratlan jogsértések, elszámolatlan idő és feladatok" decoding="async" height="939" loading="lazy" sizes="(max-width: 1000px) 100vw, 1100px" src="/assets/img/tagra3/tagra3-driver.webp" srcset="/assets/img/tagra3/tagra3-driver-960.webp 960w, /assets/img/tagra3/tagra3-driver.webp 1402w" width="1402"/>
+</div>
+<figcaption><strong>Járművezető részletes adatai.</strong> A járművezetőre alkalmazott szabályok (561/2006/EK rendelet, nemzeti munkaidő-szabályok — a vállalati beállításokból átvéve vagy egyedileg beállítva), nyitott jogsértések, elszámolatlan idő és a járművezető feladatai.</figcaption>
+</figure>
+</div>
+<div aria-labelledby="t3t-infringements" class="t3-panel" id="t3p-infringements" role="tabpanel" hidden>
+<figure>
+<div class="t3-window" style="margin-top:0">
+<img alt="TAGRA III jogsértéslista jogszabály, csoport és súlyosság szerinti szűrőkkel, nyilatkozatmezővel és lezárás gombbal" decoding="async" height="939" loading="lazy" sizes="(max-width: 1000px) 100vw, 1100px" src="/assets/img/tagra3/tagra3-infringements.webp" srcset="/assets/img/tagra3/tagra3-infringements-960.webp 960w, /assets/img/tagra3/tagra3-infringements.webp 1402w" width="1402"/>
+</div>
+<figcaption><strong>Jogsértések.</strong> Szűrés jogszabály, jogsértési csoport és súlyosság szerint. Minden jogsértésnél látható a hivatkozott cikk, a történtek és a járművezető teendője — rögzítse a nyilatkozatot, majd zárja le a jogsértést.</figcaption>
+</figure>
+</div>
+<div aria-labelledby="t3t-evaluation" class="t3-panel" id="t3p-evaluation" role="tabpanel" hidden>
+<figure>
+<div class="t3-window" style="margin-top:0">
+<img alt="TAGRA III kiértékelés – tevékenységdiagram, a jogsértés részletei, tevékenységösszesítések és a jogszabály szövege" decoding="async" height="1140" loading="lazy" sizes="(max-width: 1000px) 100vw, 1100px" src="/assets/img/tagra3/tagra3-evaluation.webp" srcset="/assets/img/tagra3/tagra3-evaluation-960.webp 960w, /assets/img/tagra3/tagra3-evaluation.webp 1920w" width="1920"/>
+</div>
+<figcaption><strong>Kiértékelés.</strong> Tevékenységdiagram az Országok és műszakok sávval, a jogsértés részletes adatai a jogszabály szövegével és az EUR-Lex oldalon elérhető teljes szövegre mutató hivatkozással, valamint a jogsértés időszakára összesített tevékenységek.</figcaption>
+</figure>
+</div>
+<div aria-labelledby="t3t-driver-evaluation" class="t3-panel" id="t3p-driver-evaluation" role="tabpanel" hidden>
+<figure>
+<div class="t3-window" style="margin-top:0">
+<img alt="TAGRA III járművezető-értékelési jelentés – jogsértések csoport és cikk szerint, súlyossági besorolással" decoding="async" height="1140" loading="lazy" sizes="(max-width: 1000px) 100vw, 1100px" src="/assets/img/tagra3/tagra3-driver-evaluation.webp" srcset="/assets/img/tagra3/tagra3-driver-evaluation-960.webp 960w, /assets/img/tagra3/tagra3-driver-evaluation.webp 1920w" width="1920"/>
+</div>
+<figcaption><strong>Járművezető-értékelési jelentés.</strong> Jogsértések csoportonként összesítve és cikkenként felsorolva, mindegyiknél feltüntetve a súlyosságot — a kisebb jogsértéstől a legsúlyosabb jogsértésig.</figcaption>
+</figure>
+</div>
+<div aria-labelledby="t3t-work-report" class="t3-panel" id="t3p-work-report" role="tabpanel" hidden>
+<figure>
+<div class="t3-window" style="margin-top:0">
+<img alt="TAGRA III járművezetői munkajelentés műszakonként – vezetés, egyéb munka, szünetek, éjszakai munka és ledolgozott idő" decoding="async" height="1140" loading="lazy" sizes="(max-width: 1000px) 100vw, 1100px" src="/assets/img/tagra3/tagra3-work-report.webp" srcset="/assets/img/tagra3/tagra3-work-report-960.webp 960w, /assets/img/tagra3/tagra3-work-report.webp 1920w" width="1920"/>
+</div>
+<figcaption><strong>Járművezetői munkajelentés.</strong> Műszakonként vagy naponként — vezetés, egyéb munka, szünetek, éjszakai munka és ledolgozott idő. A jelentés nyelvét közvetlenül az előnézetben válthatja át.</figcaption>
+</figure>
+</div>
+<div aria-labelledby="t3t-company-report" class="t3-panel" id="t3p-company-report" role="tabpanel" hidden>
+<figure>
+<div class="t3-window" style="margin-top:0">
+<img alt="TAGRA III átfogó vállalati jelentés jogsértésekkel, valamint a járművezető és a munkáltató aláírására szolgáló sorokkal" decoding="async" height="1140" loading="lazy" sizes="(max-width: 1000px) 100vw, 1100px" src="/assets/img/tagra3/tagra3-company-report.webp" srcset="/assets/img/tagra3/tagra3-company-report-960.webp 960w, /assets/img/tagra3/tagra3-company-report.webp 1920w" width="1920"/>
+</div>
+<figcaption><strong>Átfogó vállalati jelentés.</strong> Minden jogsértés egyetlen dokumentumban, a járművezető és a munkáltató nyilatkozatának és aláírásának fenntartott sorokkal — az irattárban megőrzendő dokumentum.</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
 <!-- ═══ REVIEWS ═══════════════════════════════════════════════════ -->
 <section aria-label="Vásárlói vélemények" class="band band--gray">
 <div class="container">
@@ -621,31 +758,6 @@
 <div class="rev-card"><div aria-label="5-ből 5" class="rev-stars">★★★★★</div><p class="rev-txt">"A szoftver intuitív és könnyen használható. Amikor segítségre volt szükségem, ott voltak."</p><p class="rev-meta">Milan K. · Ellenőrzött ügyfél</p></div>
 <div class="rev-card"><div aria-label="5-ből 5" class="rev-stars">★★★★★</div><p class="rev-txt">"Egyszerű és világos. Az adatok letöltése, kiértékelése és archiválása csak néhány percet vesz igénybe."</p><p class="rev-meta">Josef Z. · Ellenőrzött ügyfél</p></div>
 <div class="rev-card"><div aria-label="5-ből 5" class="rev-stars">★★★★★</div><p class="rev-txt">"A TAGRA segít naprakészen tartani minket a szabálysértések és az archiválás terén. Nagyon könnyű vele dolgozni."</p><p class="rev-meta">Ellenőrzött TRUCKMALL ügyfél</p></div>
-</div>
-</div>
-</section>
-<!-- ═══ WHAT TAGRA DOES ════════════════════════════════════════════ -->
-<section aria-label="Szoftver funkciók" class="band">
-<div class="container">
-<div class="g2 top">
-<div class="anim-up">
-<div class="eyebrow">Mit tud a TAGRA</div>
-<h2>Több, mint csupán<br/>adatok letöltése</h2>
-<p style="margin-bottom:24px">Egyszerűen <strong>sofőrkártya-letöltést</strong> nem elég — a törvény előírja a rendszeres <strong>digitális tachográfadatok kiértékelését</strong> és archiválására. A TAGRA egy teljes körű tachográfadat-kiértékelő szoftver minimális adminisztratív terheléssel, 1-től korlátlan számú járműhöz.</p>
-<div class="feats">
-<div class="fi"><div class="fck"><svg fill="none" height="8" viewbox="0 0 10 8" width="10"><path d="M1 4l2.5 2.5L9 1" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></div><span>vezetési és pihenőidő <strong>EU vezetési idők</strong>, szünetek és pihenőidők kiértékelése (561/2006/EK rendelet és AETR)</span></div>
-<div class="fi"><div class="fck"><svg fill="none" height="8" viewbox="0 0 10 8" width="10"><path d="M1 4l2.5 2.5L9 1" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></div><span>Munkaidő kiértékelése a(z) <strong>HGV munkaidő-irányelv</strong></span></div>
-<div class="fi"><div class="fck"><svg fill="none" height="8" viewbox="0 0 10 8" width="10"><path d="M1 4l2.5 2.5L9 1" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></div><span>sofőrkártya-letöltés és távoli tachográfadat-letöltés a DKV LIVE® vagy a Download Box segítségével</span></div>
-<div class="fi"><div class="fck"><svg fill="none" height="8" viewbox="0 0 10 8" width="10"><path d="M1 4l2.5 2.5L9 1" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></div><span>sofőrkártya és digitális tachográfadatok archiválása</span></div>
-<div class="fi"><div class="fck"><svg fill="none" height="8" viewbox="0 0 10 8" width="10"><path d="M1 4l2.5 2.5L9 1" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></div><span><strong>Teljesen készen áll a kisteherautókra 2026 júliusától</strong></span></div>
-<div class="fi"><div class="fck"><svg fill="none" height="8" viewbox="0 0 10 8" width="10"><path d="M1 4l2.5 2.5L9 1" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></div><span>Világos kimutatások hatóságok és belső használatra</span></div>
-</div>
-</div>
-<div class="anim-up" style="transition-delay:.1s">
-<div class="media-frame" style="background:var(--bg-gray);border-radius:var(--radius);overflow:hidden">
-<img alt="TAGRA MAX – tachográfadat-kiértékelő szoftver flottakezelőknek" height="800" loading="lazy" src="https://cdn.truckmall.cz/data/user-content/TDT_TAGRA_MAX_wh.jpg" style="object-fit:contain;width:100%;height:auto;" width="800"/>
-</div>
-</div>
 </div>
 </div>
 </section>
@@ -684,14 +796,6 @@
 </div>
 </div>
 </section>
-<!-- ═══ MAC STAGE ══════════════════════════════════════════════════ -->
-<section aria-label="Szoftver előnézet" class="band band--machero">
-<div class="container">
-<div class="mac-stage">
-<img alt="TAGRA tachográfadat-kiértékelő szoftver felület – az (EU) vezetési és pihenőidők áttekintése" height="2076" id="mac-img" loading="lazy" src="https://cdn.truckmall.cz/data/user-content/tagra/Tagra_screen_2xb.webp" width="3116"/>
-</div>
-</div>
-</section>
 <!-- ═══ COMPARISON TABLE ══════════════════════════════════════════ -->
 <section aria-label="Megoldások összehasonlítása" class="band">
 <div class="container anim-up">
@@ -705,7 +809,7 @@
 <th style="width:33%">Standard tachográf szoftver</th>
 <th class="col-blue" style="width:33%">
 <span class="winner-badge">Legjobb ár-érték arány</span>
-<span style="font-size:20px;font-weight:900;display:block;margin-top:4px">TAGRA</span>
+<span style="font-size:20px;font-weight:900;display:block;margin-top:4px">TAGRA III</span>
 </th>
 </tr>
 </thead>
@@ -729,6 +833,16 @@
 <td style="font-weight:700;color:var(--text-strong)">Szabálysértés észlelése</td>
 <td><div class="tc-val"><span class="tb-icon tb-icon--gray"><svg fill="none" stroke="#8e8e93" stroke-width="3" viewbox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></span> Igen</div></td>
 <td class="col-blue"><div class="tc-val"><span class="tb-icon tb-icon--blue"><svg fill="none" stroke="white" stroke-width="3" viewbox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></span> Igen, áttekinthető kimutatásokkal</div></td>
+</tr>
+<tr>
+<td style="font-weight:700;color:var(--text-strong)">Hivatkozott jogszabály és ajánlás minden jogsértésnél</td>
+<td><div class="tc-val no-icon">Ritkán</div></td>
+<td class="col-blue"><div class="tc-val"><span class="tb-icon tb-icon--blue"><svg fill="none" stroke="white" stroke-width="3" viewbox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></span>Igen — cikk, szöveg és teendők</div></td>
+</tr>
+<tr>
+<td style="font-weight:700;color:var(--text-strong)">Feladatok áttekintése (letöltések, kártyalejárat, kalibrálás)</td>
+<td><div class="tc-val no-icon">Megoldástól függ</div></td>
+<td class="col-blue"><div class="tc-val"><span class="tb-icon tb-icon--blue"><svg fill="none" stroke="white" stroke-width="3" viewbox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></span>Igen — a kezdőképernyőn</div></td>
 </tr>
 <tr>
 <td style="font-weight:700;color:var(--text-strong)">Kézi erőfeszítés szükséges</td>
@@ -794,7 +908,7 @@
 <div class="note-box">
 <span class="note-badge">Hogyan működik</span>
 <span class="note-title">SFTP-alapú, a háttérben fut</span>
-<p>A TAGRA <strong>Adatimport</strong> funkció csatlakozik az<code>sftp.styletronic.eu</code>címhez a DKV LIVE® hitelesítő adataival, és letölti a legújabb<code>.DDD</code> / <code>.C1B</code> / <code>.V1B</code>fájlokat az Ön által beállított ütemezés szerint. A 345-ös verziótól kezdődően minden TAGRA licenc tartalmazza.</p>
+<p>A TAGRA <strong>Adatimport</strong> funkció csatlakozik az<code>sftp.styletronic.eu</code>címhez a DKV LIVE® hitelesítő adataival, és letölti a legújabb<code>.DDD</code> / <code>.C1B</code> / <code>.V1B</code>fájlokat az Ön által beállított ütemezés szerint. Minden TAGRA licenc tartalmazza.</p>
 <p style="font-size:14px;color:var(--text-muted);margin-top:12px;font-style:italic">A DKV LIVE® a DKV Mobility védjegye. A TAGRA integrációja egy technikai interoperabilitási funkció.</p>
 </div><div class="warning-box" style="margin-top:28px"><p class="warning-box__title">Miért a dokumentáció a védelme</p><p>A 10. cikk (3) bekezdése a fuvarozót teszi felelőssé a sofőrjei által elkövetett szabálysértésekért – akkor is, ha azokra másik országban került sor. Ugyanez a cikk viszont lehetővé teszi a tagállamok számára, hogy figyelembe vegyék a <strong>bizonyítékot, amely szerint a fuvarozó ésszerűen nem tehető felelőssé</strong>. Pontosan ezt a bizonyítékot kéri a 10. cikk (2) bekezdése: igazolást arról, hogy a sofőröket megfelelően tájékoztatták, és hogy rendszeres ellenőrzéseket végeznek.</p><p>Az ellenőr nem hibátlan nyilvántartást keres. Azt vizsgálja, hogy a szabálysértéseket <strong>észlelték, kivizsgálták és kezelték-e</strong>. A TAGRA elkészíti azt a szabálysértési jelentést, amelyet átad a sofőrnek és megőriz – ez a dokumentum a „sofőrünk megszegte a szabályt” mondatot „észleltük és kezeltük” üzenetté alakítja.</p></div>
 </div>
@@ -907,12 +1021,6 @@
 </div>
 </div>
 </div>
-<!-- Wide image: TAGRA on monitors at dispatch -->
-<div class="anim-up" style="margin-top:60px">
-<div class="media-frame" style="border-radius:var(--radius);overflow:hidden">
-<img alt="TAGRA tachográfadat-kiértékelő szoftver egy fuvarozási diszpécserirodában" height="840" loading="lazy" src="https://cdn.truckmall.cz/data/user-content/TAGRA-monitory-2.webp" style="width:100%;height:auto;display:block;object-fit:cover;max-height:480px" width="1920"/>
-</div>
-</div>
 </div>
 </section>
 <!-- ═══ FAQ ════════════════════════════════════════════════════════ -->
@@ -921,6 +1029,22 @@
 <div class="eyebrow anim-up">Gyakran ismételt kérdések</div>
 <h2 class="anim-up">GYIK</h2>
 <div class="faq anim-up" style="transition-delay:.05s">
+<details>
+<summary>Mi a TAGRA III?</summary>
+<div class="faq-a">A TAGRA III a flották számára készült TAGRA menetíró szoftver új generációja. Betölti a járművezetői kártyák és a járműegységek adatait, kiértékeli azokat az 561/2006/EK rendelet, az AETR-megállapodás, a 2002/15/EK irányelv és a nemzeti szabályok alapján, és egyetlen áttekintésben mutatja meg, mire kell figyelmet fordítani: jogsértések, elszámolatlan idő, kártya- és járműadatok letöltése, kártyák érvényessége és a menetíró készülékek kalibrálása.</div>
+</details>
+<details>
+<summary>Mely szabályok alapján értékel a TAGRA III?</summary>
+<div class="faq-a">Vezetési idők, szünetek és pihenőidők az <strong>561/2006/EK rendelet</strong> és az <strong>AETR</strong>-megállapodás alapján, adatrögzítés a 165/2014/EU rendelet alapján, valamint munkaidő a <strong>2002/15/EK irányelv</strong> alapján. Csehország, Szlovákia és Magyarország nemzeti munkaidő-szabályai be vannak építve; más országok esetében a munkaidő értékelése az irányelv alapján történik. Minden jogsértésnél megjelenik a hivatkozott cikk, a jogszabály szövege és egy ajánlás.</div>
+</details>
+<details>
+<summary>Hol tárolódnak az adataim?</summary>
+<div class="faq-a">A TAGRA III egy Windows-alkalmazás, amely az Ön saját számítógépén fut. A járművezetői és járműadatok helyben tárolódnak, nem az általunk üzemeltetett felhőben.</div>
+</details>
+<details>
+<summary>Milyen nyelvek érhetők el?</summary>
+<div class="faq-a">A program és jelentései angol, német, olasz, francia, cseh és szlovák nyelven érhetők el. A jelentés nyelve közvetlenül a nyomtatási előnézetben váltható át, ami hasznos, ha a jelentés egy más nyelvet beszélő járművezetőnek készül.</div>
+</details>
 <details>
 <summary>Hogyan vásárolhatom meg a TAGRA-t a próba után?</summary>
 <div class="faq-a">Minden közvetlenül a szoftverben történik. A próba végén — vagy amikor készen áll — nyissa meg a licenc menüt, válassza ki a járművei számának megfelelő verziót (TAGRA 1, 2, 4, 6 vagy MAX), és fizessen online. A fizetés QR-kóddal vagy online átutalással történik. A licencét azonnal kiállítjuk és aktiváljuk — továbbra is ugyanabban a környezetben dolgozhat, minden adata sértetlen marad.</div>
@@ -1153,6 +1277,34 @@
 
 
 
+  /* 7. TAGRA III SCREENSHOT TABS */
+  (function(){
+    var list = document.querySelector('.t3-tabs');
+    if (!list) return;
+    var tabs = Array.prototype.slice.call(list.querySelectorAll('[role="tab"]'));
+    function select(tab, focus){
+      tabs.forEach(function(t){
+        var on = t === tab;
+        t.setAttribute('aria-selected', on ? 'true' : 'false');
+        t.setAttribute('tabindex', on ? '0' : '-1');
+        var p = document.getElementById(t.getAttribute('aria-controls'));
+        if (p) { if (on) p.removeAttribute('hidden'); else p.setAttribute('hidden', ''); }
+      });
+      if (focus) tab.focus();
+    }
+    tabs.forEach(function(t, i){
+      t.addEventListener('click', function(){ select(t, false); });
+      t.addEventListener('keydown', function(e){
+        var n = null;
+        if (e.key === 'ArrowRight') n = tabs[(i + 1) % tabs.length];
+        else if (e.key === 'ArrowLeft') n = tabs[(i - 1 + tabs.length) % tabs.length];
+        else if (e.key === 'Home') n = tabs[0];
+        else if (e.key === 'End') n = tabs[tabs.length - 1];
+        if (n) { e.preventDefault(); select(n, true); }
+      });
+    });
+  })();
+
   /* STICKY CTA BAR */
   (function(){
     var bar = document.getElementById('stickyCta');
@@ -1182,10 +1334,13 @@
 <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
-  "name": "TAGRA – Tachográfadat-kiértékelő szoftver flottakezelőknek",
+  "name": "TAGRA III – Digitális menetíró szoftver flottakezelőknek",
+  "alternateName": "TAGRA III",
   "applicationCategory": "BusinessApplication",
   "operatingSystem": "Windows",
-  "description": "Tachográfadat-kiértékelő szoftver flottakezelőknek. Sofőrkártya-letöltés, digitális tachográfadat-kiértékelés, archiválás és távoli tachográfadat-letöltés 1-től korlátlan számú járműhöz. Kiértékeli az (EU) vezetési és pihenőidőt (561/2006 (EU) rendelet), az AETR-t és a tehergépjárművek munkaidejéről szóló irányelvet. Ingyenes 30 napos próbaverzió. Felkészült a kisteherautókra 2026 júliusától.",
+  "description": "TAGRA III – digitális menetíró szoftver flottakezelőknek, egytől korlátlan számú járműig. Betölti a járművezetői kártyák és a járműegységek adatait, értékelést végez az 561/2006/EK rendelet, az AETR, a 2002/15/EK irányelv és a nemzeti szabályok (CZ, SK, HU) alapján, minden jogsértésnél hivatkozik a jogszabályra, és feladatáttekintést nyújt a letöltésekről, a kártyák lejáratáról és a kalibrálásról. Helyben tárolt adatok. Ingyenes, 30 napos próbaverzió. 2026 júliusától kisteherautókhoz is felkészítve.",
+  "screenshot": ["https://tagra.app/assets/img/tagra3/tagra3-overview.webp", "https://tagra.app/assets/img/tagra3/tagra3-driver.webp", "https://tagra.app/assets/img/tagra3/tagra3-infringements.webp", "https://tagra.app/assets/img/tagra3/tagra3-evaluation.webp", "https://tagra.app/assets/img/tagra3/tagra3-driver-evaluation.webp", "https://tagra.app/assets/img/tagra3/tagra3-work-report.webp", "https://tagra.app/assets/img/tagra3/tagra3-company-report.webp"],
+  "availableLanguage": ["en", "de", "it", "fr", "cs", "sk"],
   "url": "https://tagra.app/hu/fuvarozoknak/",
   "inLanguage": "hu",
   "author": {
@@ -1209,6 +1364,38 @@
   "@type": "FAQPage",
   "inLanguage": "hu",
   "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Mi a TAGRA III?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A TAGRA III a flották számára készült TAGRA menetíró szoftver új generációja. Betölti a járművezetői kártyák és a járműegységek adatait, kiértékeli azokat az 561/2006/EK rendelet, az AETR-megállapodás, a 2002/15/EK irányelv és a nemzeti szabályok alapján, és egyetlen áttekintésben mutatja meg, mire kell figyelmet fordítani: jogsértések, elszámolatlan idő, kártya- és járműadatok letöltése, kártyák érvényessége és a menetíró készülékek kalibrálása."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Mely szabályok alapján értékel a TAGRA III?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Vezetési idők, szünetek és pihenőidők az 561/2006/EK rendelet és az AETR-megállapodás alapján, adatrögzítés a 165/2014/EU rendelet alapján, valamint munkaidő a 2002/15/EK irányelv alapján. Csehország, Szlovákia és Magyarország nemzeti munkaidő-szabályai be vannak építve; más országok esetében a munkaidő értékelése az irányelv alapján történik. Minden jogsértésnél megjelenik a hivatkozott cikk, a jogszabály szövege és egy ajánlás."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Hol tárolódnak az adataim?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A TAGRA III egy Windows-alkalmazás, amely az Ön saját számítógépén fut. A járművezetői és járműadatok helyben tárolódnak, nem az általunk üzemeltetett felhőben."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Milyen nyelvek érhetők el?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A program és jelentései angol, német, olasz, francia, cseh és szlovák nyelven érhetők el. A jelentés nyelve közvetlenül a nyomtatási előnézetben váltható át, ami hasznos, ha a jelentés egy más nyelvet beszélő járművezetőnek készül."
+      }
+    },
     {
       "@type": "Question",
       "name": "Hogyan vásárolhatom meg a TAGRA-t a próba után?",

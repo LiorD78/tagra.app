@@ -79,24 +79,29 @@
 <!-- TMX-ANALYTICS END -->
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Tachograafsoftware: bestuurderskaart uitlezen | TAGRA Company</title>
-<meta content="Tachograafsoftware voor wagenparken: bestuurderskaarten bulk uitlezen, overtredingen automatisch analyseren en EU-rij- en arbeidstijden controleren." name="description"/>
+<title>Digitale tachograafsoftware voor wagenparken – TAGRA III</title>
+<meta content="TAGRA III-tachograafsoftware: kaart- en voertuiggegevens, inbreuken met wetsverwijzingen, EU-rij- en werktijden. 30 dagen gratis proberen." name="description"/>
 <meta content="#0b2c4a" name="theme-color"/>
 <link href="/manifest.json" rel="manifest"/>
 <link href="https://tagra.app/nl/voor-transportbedrijven/" rel="canonical"/>
+<link as="image" fetchpriority="high" href="/assets/img/tagra3/tagra3-evaluation.webp" media="(min-width: 621px)" imagesizes="(max-width: 1000px) 100vw, 1100px" imagesrcset="/assets/img/tagra3/tagra3-evaluation-960.webp 960w, /assets/img/tagra3/tagra3-evaluation.webp 1920w" rel="preload" type="image/webp"/>
 <link href="https://tagra.app/de/fuhrpark/" hreflang="de" rel="alternate"/><link href="https://tagra.app/el/stolos/" hreflang="el" rel="alternate"/><link href="https://tagra.app/fleet/" hreflang="en" rel="alternate"/><link href="https://tagra.app/fr/entreprises/" hreflang="fr" rel="alternate"/><link href="https://tagra.app/hu/fuvarozoknak/" hreflang="hu" rel="alternate"/><link href="https://tagra.app/it/per-aziende/" hreflang="it" rel="alternate"/><link href="https://tagra.app/nl/voor-transportbedrijven/" hreflang="nl" rel="alternate"/><link href="https://tagra.app/pl/dla-przewoznikow/" hreflang="pl" rel="alternate"/>
 <link href="https://tagra.app/ro/pentru-firme/" hreflang="ro" rel="alternate"/><link href="https://tagra.app/fleet/" hreflang="x-default" rel="alternate"/>
 <meta content="website" property="og:type"/>
 <meta content="en_US" property="og:locale"/>
 <meta content="TAGRA" property="og:site_name"/>
-<meta content="Tachograafsoftware: bestuurderskaart uitlezen | TAGRA Company" property="og:title"/>
-<meta content="Tachograafsoftware voor wagenparken: bestuurderskaart uitlezen, automatische analyse van overtredingen, rij- en arbeidstijden in de EU voor zware bedrijfsvoertuigen. Gratis proefperiode van 30 dagen." property="og:description"/>
-<meta content="https://cdn.truckmall.cz/data/user-content/TDT_TAGRA_MAX_wh.jpg" property="og:image"/>
-<meta content="TAGRA – tachograafsoftware voor wagenparkbeheerders, van 1 tot een onbeperkt aantal voertuigen" property="og:image:alt"/>
-<meta content="https://cdn.truckmall.cz/data/user-content/TDT_TAGRA_MAX_wh.jpg" name="twitter:image"/>
-<meta content="TAGRA – tachograafsoftware voor wagenparkbeheerders, van 1 tot een onbeperkt aantal voertuigen" name="twitter:image:alt"/>
+<meta content="Digitale tachograafsoftware voor wagenparken – TAGRA III" property="og:title"/>
+<meta content="TAGRA III – nieuwe tachograafsoftware voor wagenparken. Overzicht van inbreuken, downloads, aflopende kaarten en ijkingen. 30 dagen gratis proberen." property="og:description"/>
+<meta content="https://tagra.app/assets/img/tagra3/og-fleet-tagra3.jpg" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="TAGRA III – bestuurdersevaluatie met activiteitengrafiek en inbreukdetails met verwijzing naar de verordening" property="og:image:alt"/>
+<meta content="https://tagra.app/assets/img/tagra3/og-fleet-tagra3.jpg" name="twitter:image"/>
+<meta content="TAGRA III – bestuurdersevaluatie met activiteitengrafiek en inbreukdetails met verwijzing naar de verordening" name="twitter:image:alt"/>
 <meta content="https://tagra.app/nl/voor-transportbedrijven/" property="og:url"/>
 <meta content="summary_large_image" name="twitter:card"/>
+<meta content="Digitale tachograafsoftware voor wagenparken – TAGRA III" name="twitter:title"/>
+<meta content="TAGRA III – nieuwe tachograafsoftware voor wagenparken. Overzicht van inbreuken, downloads, aflopende kaarten en ijkingen. 30 dagen gratis proberen." name="twitter:description"/>
 <style>
     /* ─── DESIGN TOKENS ────────────────────────────────────────── */
     /* ─── RESET & BASE ─────────────────────────────────────────── */
@@ -474,6 +479,33 @@
       }
       .price-table td:first-child::before { content: none; }
     }
+    /* ─── TAGRA III: HERO WINDOW ───────────────────────────────── */
+    .t3-window{margin:44px auto 0;border-radius:14px;overflow:hidden;background:#fff;border:1px solid var(--border);box-shadow:0 30px 70px rgba(11,44,74,.16),0 6px 18px rgba(11,44,74,.08)}
+    .t3-window__bar{display:flex;align-items:center;gap:7px;height:30px;padding:0 14px;background:#f3f5f8;border-bottom:1px solid var(--border)}
+    .t3-window__bar i{width:10px;height:10px;border-radius:50%;background:#d5dbe3;display:block}
+    .t3-window__bar span{margin-left:8px;font-size:12px;font-weight:600;color:var(--text2)}
+    .t3-window img{width:100%;height:auto;display:block}
+    .t3-badge{display:inline-flex;align-items:center;gap:8px;background:var(--green-brand);color:#fff;font-size:13px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:5px 12px;border-radius:999px;margin-right:10px;vertical-align:middle;box-shadow:0 6px 14px rgba(110,155,18,.22)}
+    /* ─── TAGRA III: FEATURE GRID ──────────────────────────────── */
+    .t3-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:36px}
+    @media (max-width:980px){.t3-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media (max-width:620px){.t3-grid{grid-template-columns:1fr}}
+    .t3-card{background:var(--bg-white,#fff);border:1px solid var(--border);border-radius:var(--radius);padding:26px 24px;position:relative;overflow:hidden;transition:transform .18s,box-shadow .18s,border-color .18s}
+    .t3-card:hover{transform:translateY(-3px);box-shadow:0 14px 28px rgba(11,44,74,.08);border-color:rgba(19,74,142,.28)}
+    .t3-card__n{font-size:13px;font-weight:800;letter-spacing:.08em;color:var(--green-brand);margin-bottom:10px;display:block}
+    .t3-card h3{font-size:19px;line-height:1.3;font-weight:800;color:var(--text-strong);margin-bottom:8px}
+    .t3-card p{font-size:16px;line-height:1.6;color:var(--text2)}
+    .t3-card--key{background:linear-gradient(180deg,var(--bg-apple-solid,#eaf3f8) 0%,#fff 100%);border:2px solid var(--blue-mid)}
+    /* ─── TAGRA III: SCREENSHOT GALLERY ────────────────────────── */
+    .t3-tabs{display:flex;flex-wrap:wrap;gap:8px;margin:28px 0 22px}
+    .t3-tab{appearance:none;border:1.5px solid var(--border);background:#fff;color:var(--text-strong);font:inherit;font-size:15px;font-weight:600;padding:9px 16px;border-radius:999px;cursor:pointer;transition:background .15s,border-color .15s,color .15s}
+    .t3-tab:hover{border-color:var(--blue-mid);color:var(--blue-mid)}
+    .t3-tab[aria-selected="true"]{background:linear-gradient(135deg,var(--blue-light,#1f5fa6) 0%,var(--blue-mid,#134a8e) 100%);border-color:var(--blue-mid);color:#fff}
+    .t3-panel[hidden]{display:none}
+    .t3-panel figure{margin:0}
+    .t3-panel figcaption{margin-top:16px;font-size:16px;line-height:1.6;color:var(--text2);max-width:860px}
+    .t3-panel figcaption strong{color:var(--text-strong)}
+    @media (max-width:620px){.t3-tabs{flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;padding-bottom:6px;margin-right:-16px}.t3-tab{white-space:nowrap;flex:0 0 auto}}
 </style>
 <script type="application/ld+json">
 {
@@ -500,8 +532,9 @@
   "@context": "https://schema.org",
   "@type": "WebPage",
   "url": "https://tagra.app/nl/voor-transportbedrijven/",
-  "name": "Tachograafanalyסesoftware voor wagenparkbeheerders",
-  "description": "TAGRA is tachograafanalysesoftware voor wagenparken — bestuurderskaarten uitlezen, digitale tachograafanalyse, evaluatie van de rijtijden van bestuurders in de EU en van de arbeidstijd van bestuurders van zware bedrijfsvoertuigen.",
+  "name": "TAGRA III – Digitale tachograafsoftware voor wagenparkbeheerders",
+  "description": "TAGRA III is digitale tachograafsoftware voor wagenparken: bestuurderskaart- en voertuiggegevens, inbreuken met verwijzingen naar regelgeving, EU-regels voor rij- en rusttijden, AETR en arbeidstijd volgens Richtlijn 2002/15/EG en nationale regels.",
+  "primaryImageOfPage": "https://tagra.app/assets/img/tagra3/tagra3-evaluation.webp",
   "isPartOf": {
     "@id": "https://tagra.app/#website"
   },
@@ -546,20 +579,21 @@
 <!-- ═══ HERO ══════════════════════════════════════════════════════ -->
 <section id="main-content" aria-label="Overzicht van TAGRA" class="band band--hero band--hero--blue">
 <div class="container">
-<div class="eyebrow anim-up">TAGRA · Voor wagenparkbeheerders</div>
+<div class="eyebrow anim-up"><span class="t3-badge">Nieuw</span>TAGRA III · Voor wagenparkbeheerders</div>
 <h1 class="anim-up" style="transition-delay:.05s">Tachograafanalyse die<br/>overtredingen als eerste vindt</h1>
 <p class="lead anim-up" style="transition-delay:.1s">
-<strong>Naleving voor uw wagenpark. Zonder hoofdpijn.</strong> Uitlezen is niet genoeg — de wet vereist <strong>evaluatie en archivering</strong>. TAGRA is complete <strong>tachograafanalyסesoftware</strong> voor wagenparken — schaalbaar van 1 tot een onbeperkt aantal voertuigen.
+<strong>TAGRA III is de nieuwe generatie van onze digitale tachograafsoftware voor wagenparken.</strong> Eén overzicht laat zien wat uw aandacht nodig heeft — inbreuken, downloads van kaarten en voertuigen, aflopende kaarten en ijkingen — voordat een controle dit aan het licht brengt. Bij elke inbreuk staan een verwijzing naar de regelgeving en een aanbeveling. Schaalbaar van 1 tot een onbeperkt aantal voertuigen.
     </p>
 <div class="anim-up" style="margin-bottom:16px;transition-delay:.15s">
 <a class="btn-cta" href="/nl/gratis-proefversie/?audience=fleet" rel="noopener" target="_blank">30 dagen gratis proberen</a>
 </div>
 <p class="anim-up" style="font-size:15px;color:var(--text2);transition-delay:.2s">Windows · Gratis proefperiode van 30 dagen · Klaar voor bestelwagens vanaf juli 2026</p>
-<!-- Hero video -->
-<div class="media-frame anim-up" style="margin:44px auto 0;box-shadow:0 20px 40px rgba(0,0,0,.08);transition-delay:.25s;border-radius:20px;overflow:hidden">
-<video id="hero-vid" loop="" muted="" playsinline="" poster="https://cdn.truckmall.cz/data/user-content/TAGRA-monitory-2.webp" preload="metadata" style="width:100%;display:block">
-<source src="https://cdn.truckmall.cz/data/user-content/Comp_2.webm" type="video/webm">
-</source></video>
+<!-- Hero: TAGRA III screenshot -->
+<div class="t3-window anim-up" style="transition-delay:.25s">
+<picture>
+<source media="(max-width: 620px)" srcset="/assets/img/tagra3/tagra3-overview-960.webp" type="image/webp" width="960" height="643"/>
+<img alt="TAGRA III – bestuurdersevaluatie: activiteitengrafiek met de balk Landen en diensten, inbreukdetails met verwijzing naar Verordening (EG) nr. 561/2006 en activiteitentotalen" decoding="async" fetchpriority="high" height="1140" sizes="(max-width: 1000px) 100vw, 1100px" src="/assets/img/tagra3/tagra3-evaluation.webp" srcset="/assets/img/tagra3/tagra3-evaluation-960.webp 960w, /assets/img/tagra3/tagra3-evaluation.webp 1920w" width="1920"/>
+</picture>
 </div>
 </div>
 </section>
@@ -593,7 +627,7 @@
 <div class="bc s4 bluefill fly-right" style="transition-delay:.35s">
 <div class="eyebrow" style="color:var(--blue-mid)">Wetgeving</div>
 <div class="bc-title" style="color:var(--blue-mid)">Rijtijden van chauffeurs in de EU<br/>&amp; Arbeidstijd</div>
-<div class="bc-text">Een van de weinige oplossingen die zowel <strong>Rijtijden van chauffeurs in de EU</strong> (Verordening 561/2006) als de volledige <strong>arbeidstijdenrichtlijn voor vrachtwagenchauffeurs</strong> krachtens het arbeidsrecht evalueert.</div>
+<div class="bc-text">Evalueert de <strong>EU-rijtijden, onderbrekingen en rusttijden</strong> (Verordening (EG) nr. 561/2006, AETR) en de <strong>arbeidstijd</strong> volgens Richtlijn 2002/15/EG — plus de nationale regels van Tsjechië, Slowakije en Hongarije.</div>
 </div>
 </div>
 </div>
@@ -612,6 +646,108 @@
 </div>
 </div>
 </section>
+<!-- ═══ WHAT TAGRA III DOES ════════════════════════════════════════ -->
+<section aria-label="Functies van TAGRA III" class="band" id="tagra-iii">
+<div class="container">
+<div class="anim-up">
+<div class="eyebrow">Wat TAGRA III doet</div>
+<h2>Meer dan alleen<br/>gegevens downloaden</h2>
+<p style="max-width:760px">Alleen <strong>het downloaden van bestuurderskaartgegevens</strong> volstaat niet — de wet vereist regelmatige <strong>analyse van digitale tachograafgegevens</strong> en archivering. TAGRA III toetst gegevens van bestuurderskaarten en voertuigunits aan EU- en nationale regels en laat u zien wat u eerst moet aanpakken.</p>
+</div>
+<div class="t3-grid anim-up" style="transition-delay:.05s">
+<div class="t3-card"><span class="t3-card__n">01</span><h3>Bestuurderskaart- en tachograafgegevens</h3><p>Lees de bestuurderskaart uit met een smartcardlezer en verwerk gegevens die zijn gedownload van bestuurderskaarten en voertuigunits.</p></div>
+<div class="t3-card t3-card--key"><span class="t3-card__n">02</span><h3>Getoetst aan de regelgeving</h3><p>Beoordeling volgens Verordening (EG) nr. 561/2006, de AETR-overeenkomst, Richtlijn 2002/15/EG en de nationale voorschriften van Tsjechië, Slowakije en Hongarije. Bij elke inbreuk worden de toepasselijke voorschriften vermeld en wordt een aanbeveling gegeven.</p></div>
+<div class="t3-card"><span class="t3-card__n">03</span><h3>Arbeidstijd van bestuurders</h3><p>De arbeidstijd wordt beoordeeld volgens de nationale voorschriften van het land waar de onderneming is gevestigd, en anders volgens Richtlijn 2002/15/EG. Voor een bestuurder kunnen de voorschriften van de onderneming of eigen voorschriften worden toegepast.</p></div>
+<div class="t3-card"><span class="t3-card__n">04</span><h3>Activiteitengrafiek van de bestuurder</h3><p>Activiteiten, registraties en inbreuken in één grafiek — inclusief een strook Landen en diensten met het begin en einde van diensten, grensoverschrijdingen, laden en lossen.</p></div>
+<div class="t3-card t3-card--key"><span class="t3-card__n">05</span><h3>Inbreuken afsluiten met een verklaring</h3><p>Leg rechtstreeks op de inbreukkaart vast wat met de bestuurder is besproken en sluit de inbreuk af — afzonderlijk of meerdere tegelijk. Het tabblad Details toont de activiteitentotalen voor de periode van de inbreuk.</p></div>
+<div class="t3-card"><span class="t3-card__n">06</span><h3>Onverantwoorde tijd</h3><p>Perioden zonder bestuurderskaartgegevens worden afzonderlijk van inbreuken weergegeven en kunnen worden verantwoord met een verklaring van activiteiten.</p></div>
+<div class="t3-card"><span class="t3-card__n">07</span><h3>Verklaring van activiteiten</h3><p>Druk het officiële EU-formulier af voor geselecteerde bestuurders en perioden — meerdere tegelijk of één PDF per bestuurder. De taal van het formulier kan in het afdrukvoorbeeld worden gewijzigd.</p></div>
+<div class="t3-card"><span class="t3-card__n">08</span><h3>Arbeidsrapport van de bestuurder</h3><p>Per dag of per dienst, met nachtarbeid, weekenden en feestdagen — waarbij u kiest wat als arbeidstijd telt.</p></div>
+<div class="t3-card"><span class="t3-card__n">09</span><h3>Rapporten afdrukken</h3><p>Bestuurdersevaluatie, Onbekende tijd, Rijden zonder kaart, Takenoverzicht en het Uitgebreid bedrijfsrapport. Druk meerdere documenten af in één PDF.</p></div>
+<div class="t3-card t3-card--key"><span class="t3-card__n">10</span><h3>Taken en termijnen</h3><p>Het overzicht toont wat er moet gebeuren: inbreuken, onverantwoorde tijd, downloads van bestuurderskaarten en voertuigunits, geldigheid van kaarten en documenten en ijking van tachografen.</p></div>
+<div class="t3-card"><span class="t3-card__n">11</span><h3>Uw gegevens blijven bij u</h3><p>Een Windows-toepassing die op uw eigen computer draait en bestuurders- en voertuiggegevens lokaal opslaat.</p></div>
+<div class="t3-card"><span class="t3-card__n">12</span><h3>Meertalig</h3><p>Het programma en de rapporten zijn beschikbaar in het Engels, Duits, Italiaans, Frans, Tsjechisch en Slowaaks.</p></div>
+</div>
+</div>
+</section>
+<!-- ═══ TAGRA III SCREENSHOTS ═════════════════════════════════════ -->
+<section aria-label="Schermafbeeldingen van TAGRA III" class="band band--machero">
+<div class="container">
+<div class="anim-up">
+<div class="eyebrow">Bekijk het in actie</div>
+<h2>TAGRA III, scherm voor scherm</h2>
+<p style="max-width:760px">Van het overzicht van de taken voor vandaag tot het rapport dat u aan de bestuurder overhandigt — echte schermen uit TAGRA III. Persoonsgegevens in de schermafbeeldingen zijn vervangen door voorbeeldgegevens.</p>
+<p style="max-width:760px;margin-top:10px;font-size:15px;color:var(--text2)">De schermafbeeldingen tonen de Engelse versie van het programma.</p>
+</div>
+<div class="anim-up" style="transition-delay:.05s">
+<div aria-label="Schermen van TAGRA III" class="t3-tabs" role="tablist">
+<button aria-controls="t3p-overview" aria-selected="true" class="t3-tab" id="t3t-overview" role="tab" tabindex="0" type="button">Overzicht</button>
+<button aria-controls="t3p-driver" aria-selected="false" class="t3-tab" id="t3t-driver" role="tab" tabindex="-1" type="button">Bestuurder</button>
+<button aria-controls="t3p-infringements" aria-selected="false" class="t3-tab" id="t3t-infringements" role="tab" tabindex="-1" type="button">Inbreuken</button>
+<button aria-controls="t3p-evaluation" aria-selected="false" class="t3-tab" id="t3t-evaluation" role="tab" tabindex="-1" type="button">Evaluatie</button>
+<button aria-controls="t3p-driver-evaluation" aria-selected="false" class="t3-tab" id="t3t-driver-evaluation" role="tab" tabindex="-1" type="button">Bestuurdersevaluatie</button>
+<button aria-controls="t3p-work-report" aria-selected="false" class="t3-tab" id="t3t-work-report" role="tab" tabindex="-1" type="button">Arbeidsrapport</button>
+<button aria-controls="t3p-company-report" aria-selected="false" class="t3-tab" id="t3t-company-report" role="tab" tabindex="-1" type="button">Bedrijfsrapport</button>
+</div>
+<div aria-labelledby="t3t-overview" class="t3-panel" id="t3p-overview" role="tabpanel">
+<figure>
+<div class="t3-window" style="margin-top:0">
+<img alt="TAGRA III-overzicht – gegevens inladen, bestuurders en voertuigen met taken, gegevensexport voor controle" decoding="async" height="939" sizes="(max-width: 1000px) 100vw, 1100px" src="/assets/img/tagra3/tagra3-overview.webp" srcset="/assets/img/tagra3/tagra3-overview-960.webp 960w, /assets/img/tagra3/tagra3-overview.webp 1402w" width="1402"/>
+</div>
+<figcaption><strong>Overzicht.</strong> Wat nu aandacht vereist: bestuurders van wie de bestuurderskaart moet worden uitgelezen, openstaande inbreuken, kaarten die binnenkort verlopen, voertuigunits die moeten worden uitgelezen en aankomende ijkingen.</figcaption>
+</figure>
+</div>
+<div aria-labelledby="t3t-driver" class="t3-panel" id="t3p-driver" role="tabpanel" hidden>
+<figure>
+<div class="t3-window" style="margin-top:0">
+<img alt="TAGRA III-bestuurdersdetails – toegepaste regels, openstaande inbreuken, onverantwoorde tijd en taken" decoding="async" height="939" loading="lazy" sizes="(max-width: 1000px) 100vw, 1100px" src="/assets/img/tagra3/tagra3-driver.webp" srcset="/assets/img/tagra3/tagra3-driver-960.webp 960w, /assets/img/tagra3/tagra3-driver.webp 1402w" width="1402"/>
+</div>
+<figcaption><strong>Bestuurdersgegevens.</strong> De regels die op de bestuurder van toepassing zijn (Verordening (EG) nr. 561/2006, nationale arbeidstijdregels — overgenomen van het bedrijf of individueel ingesteld), openstaande inbreuken, onverantwoorde tijd en de taken van de bestuurder.</figcaption>
+</figure>
+</div>
+<div aria-labelledby="t3t-infringements" class="t3-panel" id="t3p-infringements" role="tabpanel" hidden>
+<figure>
+<div class="t3-window" style="margin-top:0">
+<img alt="TAGRA III-inbreukenlijst met filters op verordening, groep en ernst, verklaringsveld en afsluitknop" decoding="async" height="939" loading="lazy" sizes="(max-width: 1000px) 100vw, 1100px" src="/assets/img/tagra3/tagra3-infringements.webp" srcset="/assets/img/tagra3/tagra3-infringements-960.webp 960w, /assets/img/tagra3/tagra3-infringements.webp 1402w" width="1402"/>
+</div>
+<figcaption><strong>Inbreuken.</strong> Filter op verordening, inbreukgroep en ernst. Bij elke inbreuk ziet u het aangehaalde artikel, wat er is gebeurd en wat de bestuurder moet doen — voeg een verklaring toe en sluit de inbreuk af.</figcaption>
+</figure>
+</div>
+<div aria-labelledby="t3t-evaluation" class="t3-panel" id="t3p-evaluation" role="tabpanel" hidden>
+<figure>
+<div class="t3-window" style="margin-top:0">
+<img alt="TAGRA III-evaluatie – activiteitengrafiek, inbreukdetails, activiteitentotalen en tekst van de verordening" decoding="async" height="1140" loading="lazy" sizes="(max-width: 1000px) 100vw, 1100px" src="/assets/img/tagra3/tagra3-evaluation.webp" srcset="/assets/img/tagra3/tagra3-evaluation-960.webp 960w, /assets/img/tagra3/tagra3-evaluation.webp 1920w" width="1920"/>
+</div>
+<figcaption><strong>Evaluatie.</strong> Activiteitengrafiek met de balk Landen en diensten, inbreukdetails met de tekst van de verordening en een link naar de volledige tekst op EUR-Lex, en activiteitentotalen voor de periode van de inbreuk.</figcaption>
+</figure>
+</div>
+<div aria-labelledby="t3t-driver-evaluation" class="t3-panel" id="t3p-driver-evaluation" role="tabpanel" hidden>
+<figure>
+<div class="t3-window" style="margin-top:0">
+<img alt="TAGRA III-bestuurdersevaluatierapport – inbreuken per groep en artikel met ernst" decoding="async" height="1140" loading="lazy" sizes="(max-width: 1000px) 100vw, 1100px" src="/assets/img/tagra3/tagra3-driver-evaluation.webp" srcset="/assets/img/tagra3/tagra3-driver-evaluation-960.webp 960w, /assets/img/tagra3/tagra3-driver-evaluation.webp 1920w" width="1920"/>
+</div>
+<figcaption><strong>Bestuurdersevaluatierapport.</strong> Inbreuken samengevat per groep en opgesomd per artikel, telkens met de ernst — van kleine tot zeer ernstige inbreuk.</figcaption>
+</figure>
+</div>
+<div aria-labelledby="t3t-work-report" class="t3-panel" id="t3p-work-report" role="tabpanel" hidden>
+<figure>
+<div class="t3-window" style="margin-top:0">
+<img alt="TAGRA III-arbeidsrapport van de bestuurder per dienst – rijden, andere werkzaamheden, onderbrekingen, nachtarbeid en gewerkte tijd" decoding="async" height="1140" loading="lazy" sizes="(max-width: 1000px) 100vw, 1100px" src="/assets/img/tagra3/tagra3-work-report.webp" srcset="/assets/img/tagra3/tagra3-work-report-960.webp 960w, /assets/img/tagra3/tagra3-work-report.webp 1920w" width="1920"/>
+</div>
+<figcaption><strong>Arbeidsrapport van de bestuurder.</strong> Per dienst of per dag — rijtijd, andere werkzaamheden, onderbrekingen, nachtarbeid en gewerkte tijd. Wijzig de rapporttaal rechtstreeks in het afdrukvoorbeeld.</figcaption>
+</figure>
+</div>
+<div aria-labelledby="t3t-company-report" class="t3-panel" id="t3p-company-report" role="tabpanel" hidden>
+<figure>
+<div class="t3-window" style="margin-top:0">
+<img alt="TAGRA III – uitgebreid bedrijfsrapport met inbreuken en handtekeningregels voor bestuurder en werkgever" decoding="async" height="1140" loading="lazy" sizes="(max-width: 1000px) 100vw, 1100px" src="/assets/img/tagra3/tagra3-company-report.webp" srcset="/assets/img/tagra3/tagra3-company-report-960.webp 960w, /assets/img/tagra3/tagra3-company-report.webp 1920w" width="1920"/>
+</div>
+<figcaption><strong>Uitgebreid bedrijfsrapport.</strong> Alle inbreuken in één document, met ruimte voor de verklaring en handtekening van de bestuurder en de werkgever — het document dat u in uw dossier bewaart.</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
 <!-- ═══ REVIEWS ═══════════════════════════════════════════════════ -->
 <section aria-label="Klantbeoordelingen" class="band band--gray">
 <div class="container">
@@ -625,31 +761,6 @@
 <div class="rev-card"><div aria-label="5 van 5" class="rev-stars">★★★★★</div><p class="rev-txt">„De software is intuïtief en gebruiksvriendelijk. Toen ik hulp nodig had, stonden ze voor ons klaar.”</p><p class="rev-meta">Milan K. · Geverifieerde klant</p></div>
 <div class="rev-card"><div aria-label="5 van 5" class="rev-stars">★★★★★</div><p class="rev-txt">„Eenvoudig en duidelijk. Het uitlezen, evalueren en archiveren van gegevens duurt slechts enkele minuten.”</p><p class="rev-meta">Josef Z. · Geverifieerde klant</p></div>
 <div class="rev-card"><div aria-label="5 van 5" class="rev-stars">★★★★★</div><p class="rev-txt">„Met TAGRA houden we onze overtredingen en archivering goed bij. Echt eenvoudig om mee te werken.”</p><p class="rev-meta">Geverifieerde TRUCKMALL-klant</p></div>
-</div>
-</div>
-</section>
-<!-- ═══ WHAT TAGRA DOES ════════════════════════════════════════════ -->
-<section aria-label="Softwarefuncties" class="band">
-<div class="container">
-<div class="g2 top">
-<div class="anim-up">
-<div class="eyebrow">Wat TAGRA doet</div>
-<h2>Meer dan alleen<br/>gegevens uitlezen</h2>
-<p style="margin-bottom:24px">Alleen <strong>de bestuurderskaart uitlezen</strong> is niet genoeg — de wet vereist regelmatige <strong>analyse van de digitale tachograaf</strong> en archivering. TAGRA is end-to-end-tachograafanalyסesoftware met minimale administratieve lasten, voor 1 tot een onbeperkt aantal voertuigen.</p>
-<div class="feats">
-<div class="fi"><div class="fck"><svg fill="none" height="8" viewbox="0 0 10 8" width="10"><path d="M1 4l2.5 2.5L9 1" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></div><span>Evaluatie van <strong>Rijtijden van chauffeurs in de EU</strong>, onderbrekingen en rusttijden (Verordening 561/2006 en AETR)</span></div>
-<div class="fi"><div class="fck"><svg fill="none" height="8" viewbox="0 0 10 8" width="10"><path d="M1 4l2.5 2.5L9 1" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></div><span>Evaluatie van de arbeidstijd volgens de <strong>arbeidstijdenrichtlijn voor vrachtwagenchauffeurs</strong></span></div>
-<div class="fi"><div class="fck"><svg fill="none" height="8" viewbox="0 0 10 8" width="10"><path d="M1 4l2.5 2.5L9 1" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></div><span>Uitlezen van bestuurderskaarten en op afstand uitlezen van tachografen via DKV LIVE® of Download Box</span></div>
-<div class="fi"><div class="fck"><svg fill="none" height="8" viewbox="0 0 10 8" width="10"><path d="M1 4l2.5 2.5L9 1" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></div><span>Archivering van bestuurderskaart- en digitale tachograafgegevens</span></div>
-<div class="fi"><div class="fck"><svg fill="none" height="8" viewbox="0 0 10 8" width="10"><path d="M1 4l2.5 2.5L9 1" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></div><span><strong>Volledig klaar voor bestelwagens vanaf juli 2026</strong></span></div>
-<div class="fi"><div class="fck"><svg fill="none" height="8" viewbox="0 0 10 8" width="10"><path d="M1 4l2.5 2.5L9 1" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></div><span>Duidelijke uitvoer voor autoriteiten en intern gebruik</span></div>
-</div>
-</div>
-<div class="anim-up" style="transition-delay:.1s">
-<div class="media-frame" style="background:var(--bg-gray);border-radius:var(--radius);overflow:hidden">
-<img alt="TAGRA MAX – tachograafanalysesoftware voor wagenparkbeheerders" height="800" loading="lazy" src="https://cdn.truckmall.cz/data/user-content/TDT_TAGRA_MAX_wh.jpg" style="object-fit:contain;width:100%;height:auto;" width="800"/>
-</div>
-</div>
 </div>
 </div>
 </section>
@@ -688,14 +799,6 @@
 </div>
 </div>
 </section>
-<!-- ═══ MAC STAGE ══════════════════════════════════════════════════ -->
-<section aria-label="Voorbeeld van de software" class="band band--machero">
-<div class="container">
-<div class="mac-stage">
-<img alt="Interface van TAGRA-tachograafanalysesoftware – overzicht van de rijtijden van bestuurders in de EU" height="2076" id="mac-img" loading="lazy" src="https://cdn.truckmall.cz/data/user-content/tagra/Tagra_screen_2xb.webp" width="3116"/>
-</div>
-</div>
-</section>
 <!-- ═══ COMPARISON TABLE ══════════════════════════════════════════ -->
 <section aria-label="Vergelijking van oplossingen" class="band">
 <div class="container anim-up">
@@ -709,7 +812,7 @@
 <th style="width:33%">Standaardtachograafsoftware</th>
 <th class="col-blue" style="width:33%">
 <span class="winner-badge">Beste prijs-kwaliteitverhouding</span>
-<span style="font-size:20px;font-weight:900;display:block;margin-top:4px">TAGRA</span>
+<span style="font-size:20px;font-weight:900;display:block;margin-top:4px">TAGRA III</span>
 </th>
 </tr>
 </thead>
@@ -733,6 +836,16 @@
 <td style="font-weight:700;color:var(--text-strong)">Detectie van overtredingen</td>
 <td><div class="tc-val"><span class="tb-icon tb-icon--gray"><svg fill="none" stroke="#8e8e93" stroke-width="3" viewbox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></span>Ja</div></td>
 <td class="col-blue"><div class="tc-val"><span class="tb-icon tb-icon--blue"><svg fill="none" stroke="white" stroke-width="3" viewbox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></span>Ja, met duidelijke rapporten</div></td>
+</tr>
+<tr>
+<td style="font-weight:700;color:var(--text-strong)">Aangehaalde verordening en aanbeveling bij elke inbreuk</td>
+<td><div class="tc-val no-icon">Zelden</div></td>
+<td class="col-blue"><div class="tc-val"><span class="tb-icon tb-icon--blue"><svg fill="none" stroke="white" stroke-width="3" viewbox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></span>Ja — artikel, tekst en te nemen maatregelen</div></td>
+</tr>
+<tr>
+<td style="font-weight:700;color:var(--text-strong)">Takenoverzicht (uitlezen, vervaldatum kaart, ijking)</td>
+<td><div class="tc-val no-icon">Afhankelijk van de oplossing</div></td>
+<td class="col-blue"><div class="tc-val"><span class="tb-icon tb-icon--blue"><svg fill="none" stroke="white" stroke-width="3" viewbox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></span>Ja — op het startscherm</div></td>
 </tr>
 <tr>
 <td style="font-weight:700;color:var(--text-strong)">Handmatige inspanning vereist</td>
@@ -800,7 +913,7 @@
 <div class="note-box">
 <span class="note-badge">Hoe het werkt</span>
 <span class="note-title">Op basis van SFTP, werkt op de achtergrond</span>
-<p>De <strong>functie Gegevens importeren van TAGRA</strong> maakt verbinding met <code>sftp.styletronic.eu</code> met uw DKV LIVE®-inloggegevens en leest de nieuwste <code>.DDD</code> / <code>.C1B</code> / <code>.V1B</code> bestanden uit volgens het door u ingestelde schema. Vanaf versie 345 inbegrepen in elke TAGRA-licentie.</p>
+<p>De <strong>functie Gegevens importeren van TAGRA</strong> maakt verbinding met <code>sftp.styletronic.eu</code> met uw DKV LIVE®-inloggegevens en leest de nieuwste <code>.DDD</code> / <code>.C1B</code> / <code>.V1B</code> bestanden uit volgens het door u ingestelde schema. Inbegrepen in elke TAGRA-licentie.</p>
 <p style="font-size:14px;color:var(--text-muted);margin-top:12px;font-style:italic">DKV LIVE® is een handelsmerk van DKV Mobility. De integratie van TAGRA is een technische interoperabiliteitsfunctie.</p>
 </div><div class="warning-box" style="margin-top:28px"><p class="warning-box__title">Waarom de registratie zelf uw verdediging is</p><p>Artikel 10, lid 3, stelt de vervoerder aansprakelijk voor overtredingen die door zijn bestuurders worden begaan — ook wanneer deze in een ander land plaatsvinden. Maar op grond van hetzelfde artikel mogen lidstaten rekening houden met <strong>bewijs waarvoor de vervoerder redelijkerwijs niet verantwoordelijk kan worden gehouden</strong>. Precies dat bewijs vraagt artikel 10, lid 2, u te leveren: bewijs dat bestuurders naar behoren zijn geïnstrueerd en dat u regelmatig controles uitvoert.</p><p>In de praktijk zoekt een inspecteur niet naar een vlekkeloze registratie. Hij wil weten of overtredingen zijn <strong>vastgesteld, onderzocht en aangepakt</strong>. TAGRA maakt het overtredingsrapport dat u aan de bestuurder overhandigt en in uw dossier bewaart — het document dat „onze bestuurder heeft de regels overtreden” verandert in „we hebben het vastgesteld en aangepakt”.</p><p style="margin-top:10px"><a href="/nl/artikelen/aansprakelijkheid-vervoerder-overtredingen-chauffeurs/">Wat aansprakelijkheid van de vervoerder in de praktijk betekent →</a></p></div>
 </div>
@@ -913,12 +1026,6 @@
 </div>
 </div>
 </div>
-<!-- Wide image: TAGRA on monitors at dispatch -->
-<div class="anim-up" style="margin-top:60px">
-<div class="media-frame" style="border-radius:var(--radius);overflow:hidden">
-<img alt="TAGRA-software voor tachograafanalyse in gebruik bij een transportplanningskantoor" height="840" loading="lazy" src="https://cdn.truckmall.cz/data/user-content/TAGRA-monitory-2.webp" style="width:100%;height:auto;display:block;object-fit:cover;max-height:480px" width="1920"/>
-</div>
-</div>
 </div>
 </section>
 <!-- ═══ FAQ ════════════════════════════════════════════════════════ -->
@@ -927,6 +1034,22 @@
 <div class="eyebrow anim-up">Veelgestelde vragen</div>
 <h2 class="anim-up">Veelgestelde vragen</h2>
 <div class="faq anim-up" style="transition-delay:.05s">
+<details>
+<summary>Wat is TAGRA III?</summary>
+<div class="faq-a">TAGRA III is de nieuwe generatie TAGRA-tachograafsoftware voor wagenparken. Het programma leest gegevens van bestuurderskaarten en voertuigunits in, beoordeelt deze volgens Verordening (EG) nr. 561/2006, de AETR-overeenkomst, Richtlijn 2002/15/EG en nationale regels, en toont in één overzicht wat aandacht vereist: inbreuken, onverantwoorde tijd, downloads van kaarten en voertuigen, kaartgeldigheid en ijking van tachografen.</div>
+</details>
+<details>
+<summary>Welke regels beoordeelt TAGRA III?</summary>
+<div class="faq-a">Rij- en rusttijden volgens <strong>Verordening (EG) nr. 561/2006</strong> en de <strong>AETR</strong>-overeenkomst, registraties volgens Verordening (EU) nr. 165/2014 en arbeidstijd volgens <strong>Richtlijn 2002/15/EG</strong>. Nationale arbeidstijdregels zijn ingebouwd voor Tsjechië, Slowakije en Hongarije; elders wordt de arbeidstijd volgens de richtlijn beoordeeld. Bij elke inbreuk worden het aangehaalde artikel, de tekst van de regelgeving en een aanbeveling getoond.</div>
+</details>
+<details>
+<summary>Waar worden mijn gegevens opgeslagen?</summary>
+<div class="faq-a">TAGRA III is een Windows-toepassing die op uw eigen computer draait. Bestuurders- en voertuiggegevens worden lokaal opgeslagen, niet in een door ons beheerde cloud.</div>
+</details>
+<details>
+<summary>Welke talen zijn beschikbaar?</summary>
+<div class="faq-a">Het programma en de rapporten zijn beschikbaar in het Engels, Duits, Italiaans, Frans, Tsjechisch en Slowaaks. U kunt de rapporttaal rechtstreeks in het afdrukvoorbeeld wijzigen. Dat is handig wanneer een rapport bestemd is voor een bestuurder die een andere taal spreekt.</div>
+</details>
 <details>
 <summary>Hoe koop ik TAGRA na de proefperiode?</summary>
 <div class="faq-a">Alles gebeurt rechtstreeks in de software. Open aan het einde van de proefperiode — of wanneer u klaar bent — het licentiemenu, selecteer de versie die overeenkomt met uw aantal voertuigen (TAGRA 1, 2, 4, 6 of MAX) en betaal online. U betaalt via een QR-code of onlineoverschrijving. Uw licentie wordt onmiddellijk verstrekt en geactiveerd — u werkt verder in dezelfde omgeving, met behoud van al uw gegevens.</div>
@@ -1159,6 +1282,34 @@
 
 
 
+  /* 7. TAGRA III SCREENSHOT TABS */
+  (function(){
+    var list = document.querySelector('.t3-tabs');
+    if (!list) return;
+    var tabs = Array.prototype.slice.call(list.querySelectorAll('[role="tab"]'));
+    function select(tab, focus){
+      tabs.forEach(function(t){
+        var on = t === tab;
+        t.setAttribute('aria-selected', on ? 'true' : 'false');
+        t.setAttribute('tabindex', on ? '0' : '-1');
+        var p = document.getElementById(t.getAttribute('aria-controls'));
+        if (p) { if (on) p.removeAttribute('hidden'); else p.setAttribute('hidden', ''); }
+      });
+      if (focus) tab.focus();
+    }
+    tabs.forEach(function(t, i){
+      t.addEventListener('click', function(){ select(t, false); });
+      t.addEventListener('keydown', function(e){
+        var n = null;
+        if (e.key === 'ArrowRight') n = tabs[(i + 1) % tabs.length];
+        else if (e.key === 'ArrowLeft') n = tabs[(i - 1 + tabs.length) % tabs.length];
+        else if (e.key === 'Home') n = tabs[0];
+        else if (e.key === 'End') n = tabs[tabs.length - 1];
+        if (n) { e.preventDefault(); select(n, true); }
+      });
+    });
+  })();
+
   /* STICKY CTA BAR */
   (function(){
     var bar = document.getElementById('stickyCta');
@@ -1189,10 +1340,13 @@
 {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
-  "name": "TAGRA – software voor tachograafanalyse voor wagenparkbeheerders",
+  "name": "TAGRA III – Digitale tachograafsoftware voor wagenparkbeheerders",
+  "alternateName": "TAGRA III",
   "applicationCategory": "BusinessApplication",
   "operatingSystem": "Windows",
-  "description": "Software voor tachograafanalyse voor wagenparkbeheerders. Uitlezen van bestuurderskaarten, analyse en archivering van digitale tachograafgegevens en op afstand uitlezen van tachograafgegevens voor 1 tot een onbeperkt aantal voertuigen. Evalueert de rij- en rusttijden van EU-bestuurders (Verordening 561/2006), AETR en de richtlijn inzake arbeidstijd voor bestuurders van zware bedrijfsvoertuigen. Gratis proefperiode van 30 dagen. Klaar voor bestelwagens vanaf juli 2026.",
+  "description": "TAGRA III — digitale tachograafsoftware voor wagenparkbeheerders, voor 1 tot een onbeperkt aantal voertuigen. Leest gegevens van bestuurderskaarten en voertuigunits in, beoordeelt deze volgens Verordening (EG) nr. 561/2006, AETR, Richtlijn 2002/15/EG en nationale regels (CZ, SK, HU), vermeldt bij elke inbreuk de regelgeving en toont een takenoverzicht voor downloads, het verlopen van kaarten en ijking. Gegevens worden lokaal opgeslagen. Gratis proefversie van 30 dagen. Klaar voor bestelwagens vanaf juli 2026.",
+  "screenshot": ["https://tagra.app/assets/img/tagra3/tagra3-overview.webp", "https://tagra.app/assets/img/tagra3/tagra3-driver.webp", "https://tagra.app/assets/img/tagra3/tagra3-infringements.webp", "https://tagra.app/assets/img/tagra3/tagra3-evaluation.webp", "https://tagra.app/assets/img/tagra3/tagra3-driver-evaluation.webp", "https://tagra.app/assets/img/tagra3/tagra3-work-report.webp", "https://tagra.app/assets/img/tagra3/tagra3-company-report.webp"],
+  "availableLanguage": ["en", "de", "it", "fr", "cs", "sk"],
   "url": "https://tagra.app/nl/voor-transportbedrijven/",
   "inLanguage": "nl",
   "author": { "@type": "Organization", "@id": "https://tagra.app/#organization", "name": "Truck Data Technology, s.r.o.", "url": "https://www.tdt.cz" },
@@ -1205,6 +1359,38 @@
   "@type": "FAQPage",
   "inLanguage": "nl",
   "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Wat is TAGRA III?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "TAGRA III is de nieuwe generatie TAGRA-tachograafsoftware voor wagenparken. Het programma leest gegevens van bestuurderskaarten en voertuigunits in, beoordeelt deze volgens Verordening (EG) nr. 561/2006, de AETR-overeenkomst, Richtlijn 2002/15/EG en nationale regels, en toont in één overzicht wat aandacht vereist: inbreuken, onverantwoorde tijd, downloads van kaarten en voertuigen, kaartgeldigheid en ijking van tachografen."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Welke regels beoordeelt TAGRA III?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Rij- en rusttijden volgens Verordening (EG) nr. 561/2006 en de AETR-overeenkomst, registraties volgens Verordening (EU) nr. 165/2014 en arbeidstijd volgens Richtlijn 2002/15/EG. Nationale arbeidstijdregels zijn ingebouwd voor Tsjechië, Slowakije en Hongarije; elders wordt de arbeidstijd volgens de richtlijn beoordeeld. Bij elke inbreuk worden het aangehaalde artikel, de tekst van de regelgeving en een aanbeveling getoond."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Waar worden mijn gegevens opgeslagen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "TAGRA III is een Windows-toepassing die op uw eigen computer draait. Bestuurders- en voertuiggegevens worden lokaal opgeslagen, niet in een door ons beheerde cloud."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Welke talen zijn beschikbaar?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Het programma en de rapporten zijn beschikbaar in het Engels, Duits, Italiaans, Frans, Tsjechisch en Slowaaks. U kunt de rapporttaal rechtstreeks in het afdrukvoorbeeld wijzigen. Dat is handig wanneer een rapport bestemd is voor een bestuurder die een andere taal spreekt."
+      }
+    },
     {
       "@type": "Question",
       "name": "Hoe koop ik TAGRA na de proefperiode?",

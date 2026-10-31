@@ -79,24 +79,29 @@
 <!-- TMX-ANALYTICS END -->
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Fahrtenschreiber-Software für Unternehmen | TAGRA Company</title>
-<meta content="Fahrtenschreiber-Software für Unternehmen: Massendownload von Fahrerkarten, automatische Verstoßauswertung sowie Prüfung von EU-Lenk- und Arbeitszeiten." name="description"/>
+<title>Fahrtenschreibersoftware für Fuhrparks – TAGRA III</title>
+<meta content="TAGRA III: Fahrerkarte und Fahrzeugdaten, Verstöße mit Rechtsgrundlage, EU-Lenk- und Ruhezeiten sowie Arbeitszeit. 30 Tage kostenlos testen." name="description"/>
 <meta content="#0b2c4a" name="theme-color"/>
 <link href="/manifest.json" rel="manifest"/>
 <link href="https://tagra.app/de/fuhrpark/" rel="canonical"/>
+<link as="image" fetchpriority="high" href="/assets/img/tagra3/tagra3-evaluation.webp" media="(min-width: 621px)" imagesizes="(max-width: 1000px) 100vw, 1100px" imagesrcset="/assets/img/tagra3/tagra3-evaluation-960.webp 960w, /assets/img/tagra3/tagra3-evaluation.webp 1920w" rel="preload" type="image/webp"/>
 <link href="https://tagra.app/de/fuhrpark/" hreflang="de" rel="alternate"/><link href="https://tagra.app/el/stolos/" hreflang="el" rel="alternate"/><link href="https://tagra.app/fleet/" hreflang="en" rel="alternate"/><link href="https://tagra.app/fr/entreprises/" hreflang="fr" rel="alternate"/><link href="https://tagra.app/hu/fuvarozoknak/" hreflang="hu" rel="alternate"/><link href="https://tagra.app/it/per-aziende/" hreflang="it" rel="alternate"/><link href="https://tagra.app/nl/voor-transportbedrijven/" hreflang="nl" rel="alternate"/><link href="https://tagra.app/pl/dla-przewoznikow/" hreflang="pl" rel="alternate"/>
 <link href="https://tagra.app/ro/pentru-firme/" hreflang="ro" rel="alternate"/><link href="https://tagra.app/fleet/" hreflang="x-default" rel="alternate"/>
 <meta content="website" property="og:type"/>
 <meta content="de_DE" property="og:locale"/>
 <meta content="TAGRA" property="og:site_name"/>
-<meta content="Fahrtenschreiber-Software für Unternehmen | TAGRA Company" property="og:title"/>
-<meta content="Fahrtenschreiber-Software für Unternehmen: Fahrerkarten-Download, automatische Verstoßauswertung, EU-Lenkzeiten und Lkw-Arbeitszeitrichtlinie. 30 Tage kostenlos testen." property="og:description"/>
-<meta content="https://cdn.truckmall.cz/data/user-content/TDT_TAGRA_MAX_wh.jpg" property="og:image"/>
-<meta content="TAGRA – Fahrtenschreiber-Auswertungssoftware für Unternehmen, 1 bis unbegrenzt viele Fahrzeuge" property="og:image:alt"/>
-<meta content="https://cdn.truckmall.cz/data/user-content/TDT_TAGRA_MAX_wh.jpg" name="twitter:image"/>
-<meta content="TAGRA – Fahrtenschreiber-Auswertungssoftware für Unternehmen, 1 bis unbegrenzt viele Fahrzeuge" name="twitter:image:alt"/>
+<meta content="Fahrtenschreibersoftware für Fuhrparks – TAGRA III" property="og:title"/>
+<meta content="TAGRA III – neue Fahrtenschreibersoftware für Fuhrparks. Verstöße, Downloads, ablaufende Karten und Kalibrierungen im Überblick. 30 Tage kostenlos testen." property="og:description"/>
+<meta content="https://tagra.app/assets/img/tagra3/og-fleet-tagra3.jpg" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="TAGRA III – Fahrerauswertung mit Aktivitätsdiagramm und Verstoßdetails mit Angabe der Verordnung" property="og:image:alt"/>
+<meta content="https://tagra.app/assets/img/tagra3/og-fleet-tagra3.jpg" name="twitter:image"/>
+<meta content="TAGRA III – Fahrerauswertung mit Aktivitätsdiagramm und Verstoßdetails mit Angabe der Verordnung" name="twitter:image:alt"/>
 <meta content="https://tagra.app/de/fuhrpark/" property="og:url"/>
 <meta content="summary_large_image" name="twitter:card"/>
+<meta content="Fahrtenschreibersoftware für Fuhrparks – TAGRA III" name="twitter:title"/>
+<meta content="TAGRA III – neue Fahrtenschreibersoftware für Fuhrparks. Verstöße, Downloads, ablaufende Karten und Kalibrierungen im Überblick. 30 Tage kostenlos testen." name="twitter:description"/>
 <style>
     /* ─── DESIGN TOKENS ────────────────────────────────────────── */
     /* ─── RESET & BASE ─────────────────────────────────────────── */
@@ -474,6 +479,33 @@
       }
       .price-table td:first-child::before { content: none; }
     }
+    /* ─── TAGRA III: HERO WINDOW ───────────────────────────────── */
+    .t3-window{margin:44px auto 0;border-radius:14px;overflow:hidden;background:#fff;border:1px solid var(--border);box-shadow:0 30px 70px rgba(11,44,74,.16),0 6px 18px rgba(11,44,74,.08)}
+    .t3-window__bar{display:flex;align-items:center;gap:7px;height:30px;padding:0 14px;background:#f3f5f8;border-bottom:1px solid var(--border)}
+    .t3-window__bar i{width:10px;height:10px;border-radius:50%;background:#d5dbe3;display:block}
+    .t3-window__bar span{margin-left:8px;font-size:12px;font-weight:600;color:var(--text2)}
+    .t3-window img{width:100%;height:auto;display:block}
+    .t3-badge{display:inline-flex;align-items:center;gap:8px;background:var(--green-brand);color:#fff;font-size:13px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:5px 12px;border-radius:999px;margin-right:10px;vertical-align:middle;box-shadow:0 6px 14px rgba(110,155,18,.22)}
+    /* ─── TAGRA III: FEATURE GRID ──────────────────────────────── */
+    .t3-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:36px}
+    @media (max-width:980px){.t3-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media (max-width:620px){.t3-grid{grid-template-columns:1fr}}
+    .t3-card{background:var(--bg-white,#fff);border:1px solid var(--border);border-radius:var(--radius);padding:26px 24px;position:relative;overflow:hidden;transition:transform .18s,box-shadow .18s,border-color .18s}
+    .t3-card:hover{transform:translateY(-3px);box-shadow:0 14px 28px rgba(11,44,74,.08);border-color:rgba(19,74,142,.28)}
+    .t3-card__n{font-size:13px;font-weight:800;letter-spacing:.08em;color:var(--green-brand);margin-bottom:10px;display:block}
+    .t3-card h3{font-size:19px;line-height:1.3;font-weight:800;color:var(--text-strong);margin-bottom:8px}
+    .t3-card p{font-size:16px;line-height:1.6;color:var(--text2)}
+    .t3-card--key{background:linear-gradient(180deg,var(--bg-apple-solid,#eaf3f8) 0%,#fff 100%);border:2px solid var(--blue-mid)}
+    /* ─── TAGRA III: SCREENSHOT GALLERY ────────────────────────── */
+    .t3-tabs{display:flex;flex-wrap:wrap;gap:8px;margin:28px 0 22px}
+    .t3-tab{appearance:none;border:1.5px solid var(--border);background:#fff;color:var(--text-strong);font:inherit;font-size:15px;font-weight:600;padding:9px 16px;border-radius:999px;cursor:pointer;transition:background .15s,border-color .15s,color .15s}
+    .t3-tab:hover{border-color:var(--blue-mid);color:var(--blue-mid)}
+    .t3-tab[aria-selected="true"]{background:linear-gradient(135deg,var(--blue-light,#1f5fa6) 0%,var(--blue-mid,#134a8e) 100%);border-color:var(--blue-mid);color:#fff}
+    .t3-panel[hidden]{display:none}
+    .t3-panel figure{margin:0}
+    .t3-panel figcaption{margin-top:16px;font-size:16px;line-height:1.6;color:var(--text2);max-width:860px}
+    .t3-panel figcaption strong{color:var(--text-strong)}
+    @media (max-width:620px){.t3-tabs{flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;padding-bottom:6px;margin-right:-16px}.t3-tab{white-space:nowrap;flex:0 0 auto}}
 </style>
 <script type="application/ld+json">
 {
@@ -500,8 +532,9 @@
   "@context": "https://schema.org",
   "@type": "WebPage",
   "url": "https://tagra.app/de/fuhrpark/",
-  "name": "Fahrtenschreiber-Auswertungssoftware für Unternehmen",
-  "description": "TAGRA ist Fahrtenschreiber-Auswertungssoftware für Unternehmen — Fahrerkarten-Download, digitale Tachographenanalyse, Auswertung von EU-Lenkzeiten und der Lkw-Arbeitszeitrichtlinie.",
+  "name": "TAGRA III – Tachographensoftware für Fuhrparkbetreiber",
+  "description": "TAGRA III ist Tachographensoftware für Fuhrparks — mit Fahrerkarten- und Fahrzeugdaten, Verstößen mit Angabe der Rechtsgrundlage, EU-Lenk- und Ruhezeiten, AETR und Arbeitszeiten nach der Richtlinie 2002/15/EG und nationalen Vorschriften.",
+  "primaryImageOfPage": "https://tagra.app/assets/img/tagra3/tagra3-evaluation.webp",
   "isPartOf": {
     "@id": "https://tagra.app/#website"
   },
@@ -547,20 +580,21 @@
 <!-- ═══ HERO ══════════════════════════════════════════════════════ -->
 <section id="main-content" aria-label="TAGRA Übersicht" class="band band--hero band--hero--blue">
 <div class="container">
-<div class="eyebrow anim-up">TAGRA · Für Unternehmen</div>
+<div class="eyebrow anim-up"><span class="t3-badge">Neu</span>TAGRA III · Für Fuhrparkbetreiber</div>
 <h1 class="anim-up" style="transition-delay:.05s">Tachographenauswertung, die<br/>Verstöße zuerst erkennt</h1>
 <p class="lead anim-up" style="transition-delay:.1s">
-<strong>Compliance für Unternehmen. Ohne Kopfzerbrechen.</strong> Reines Herunterladen reicht nicht — das Gesetz verlangt <strong>Auswertung und Archivierung</strong>. TAGRA ist eine vollständige <strong>Fahrtenschreiber-Auswertungssoftware</strong> für Unternehmen — skaliert von einem bis zu unbegrenzt vielen Fahrzeugen.
+<strong>TAGRA III ist die neue Generation unserer Software für digitale Fahrtenschreiber in Fuhrparks.</strong> Eine Übersicht zeigt Ihnen, wo Handlungsbedarf besteht – Verstöße, Downloads von Fahrerkarten und Fahrzeugdaten, ablaufende Karten und anstehende Kalibrierungen –, bevor dies bei einer Kontrolle auffällt. Zu jedem Verstoß erhalten Sie die zugehörige Rechtsgrundlage und eine Empfehlung. Für ein Fahrzeug bis hin zu einer unbegrenzten Fahrzeugzahl geeignet.
     </p>
 <div class="anim-up" style="margin-bottom:16px;transition-delay:.15s">
 <a class="btn-cta" href="/de/testen/?audience=fleet" rel="noopener" target="_blank">30 Tage kostenlos testen</a>
 </div>
 <p class="anim-up" style="font-size:15px;color:var(--text2);transition-delay:.2s">Windows · 30 Tage kostenlos testen · Bereit für Transporter ab Juli 2026</p>
-<!-- Hero video -->
-<div class="media-frame anim-up" style="margin:44px auto 0;box-shadow:0 20px 40px rgba(0,0,0,.08);transition-delay:.25s;border-radius:20px;overflow:hidden">
-<video id="hero-vid" loop="" muted="" playsinline="" poster="https://cdn.truckmall.cz/data/user-content/TAGRA-monitory-2.webp" preload="metadata" style="width:100%;display:block">
-<source src="https://cdn.truckmall.cz/data/user-content/Comp_2.webm" type="video/webm">
-</source></video>
+<!-- Hero: TAGRA III screenshot -->
+<div class="t3-window anim-up" style="transition-delay:.25s">
+<picture>
+<source media="(max-width: 620px)" srcset="/assets/img/tagra3/tagra3-overview-960.webp" type="image/webp" width="960" height="643"/>
+<img alt="TAGRA III – Fahrerauswertung: Aktivitätsdiagramm mit Leiste „Länder &amp; Schichten“, Verstoßdetails mit Verweis auf die Verordnung (EG) Nr. 561/2006 und Aktivitätssummen" decoding="async" fetchpriority="high" height="1140" sizes="(max-width: 1000px) 100vw, 1100px" src="/assets/img/tagra3/tagra3-evaluation.webp" srcset="/assets/img/tagra3/tagra3-evaluation-960.webp 960w, /assets/img/tagra3/tagra3-evaluation.webp 1920w" width="1920"/>
+</picture>
 </div>
 </div>
 </section>
@@ -594,7 +628,7 @@
 <div class="bc s4 bluefill fly-right" style="transition-delay:.35s">
 <div class="eyebrow" style="color:var(--blue-mid)">Gesetzgebung</div>
 <div class="bc-title" style="color:var(--blue-mid)">EU-Lenkzeiten<br/>&amp; Arbeitszeit</div>
-<div class="bc-text">Eine der wenigen Lösungen, die sowohl die <strong>EU-Lenkzeiten</strong> (Verordnung 561/2006) als auch die vollständige <strong>Lkw-Arbeitszeitrichtlinie</strong> nach Arbeitsrecht auswertet.</div>
+<div class="bc-text">Bewertet die <strong>EU-Lenkzeiten, Fahrtunterbrechungen und Ruhezeiten</strong> (Verordnung (EG) Nr. 561/2006, AETR) und die <strong>Arbeitszeit</strong> gemäß der Richtlinie 2002/15/EG – sowie die nationalen Vorschriften der Tschechischen Republik, der Slowakei und Ungarns.</div>
 </div>
 </div>
 </div>
@@ -613,6 +647,108 @@
 </div>
 </div>
 </section>
+<!-- ═══ WHAT TAGRA III DOES ════════════════════════════════════════ -->
+<section aria-label="Funktionen von TAGRA III" class="band" id="tagra-iii">
+<div class="container">
+<div class="anim-up">
+<div class="eyebrow">Was TAGRA III leistet</div>
+<h2>Mehr als nur<br/>Daten herunterladen</h2>
+<p style="max-width:760px">Das bloße <strong>Herunterladen der Fahrerkarte</strong> reicht nicht aus – der Gesetzgeber verlangt die regelmäßige <strong>Auswertung digitaler Fahrtenschreiberdaten</strong> und deren Archivierung. TAGRA III wertet Daten von Fahrerkarten und Fahrzeugeinheiten nach EU- und nationalen Vorschriften aus und zeigt Ihnen, was Sie zuerst erledigen sollten.</p>
+</div>
+<div class="t3-grid anim-up" style="transition-delay:.05s">
+<div class="t3-card"><span class="t3-card__n">01</span><h3>Fahrerkarten- und Fahrtenschreiberdaten</h3><p>Lesen Sie die Fahrerkarte mit einem Chipkartenleser aus und verarbeiten Sie Daten, die von Fahrerkarten und Fahrzeugeinheiten heruntergeladen wurden.</p></div>
+<div class="t3-card t3-card--key"><span class="t3-card__n">02</span><h3>Prüfung anhand der Vorschriften</h3><p>Auswertung nach der Verordnung (EG) Nr. 561/2006, dem AETR-Übereinkommen, der Richtlinie 2002/15/EG und den nationalen Vorschriften der Tschechischen Republik, der Slowakei und Ungarns. Zu jedem Verstoß werden die Rechtsgrundlage und eine Empfehlung angegeben.</p></div>
+<div class="t3-card"><span class="t3-card__n">03</span><h3>Arbeitszeit der Fahrer</h3><p>Die Arbeitszeit wird nach den nationalen Vorschriften des Landes ausgewertet, in dem das Unternehmen seinen Sitz hat, andernfalls nach der Richtlinie 2002/15/EG. Für einen Fahrer können die Vorschriften des Unternehmens übernommen oder eigene festgelegt werden.</p></div>
+<div class="t3-card"><span class="t3-card__n">04</span><h3>Fahreraktivitätsdiagramm</h3><p>Tätigkeiten, Aufzeichnungen und Verstöße in einem Diagramm – einschließlich einer Leiste „Länder &amp; Schichten“ mit Schichtbeginn und -ende, Grenzübertritten sowie Be- und Entladungen.</p></div>
+<div class="t3-card t3-card--key"><span class="t3-card__n">05</span><h3>Verstöße mit einer Stellungnahme abschließen</h3><p>Halten Sie direkt in der Verstoßkarte fest, was mit dem Fahrer besprochen wurde, und schließen Sie den Verstoß ab – einzeln oder mehrere zugleich. Die Registerkarte „Details“ zeigt die Gesamtdauer der Tätigkeiten für den Zeitraum des Verstoßes.</p></div>
+<div class="t3-card"><span class="t3-card__n">06</span><h3>Nicht belegte Zeiten</h3><p>Zeiträume ohne Fahrerkartendaten werden getrennt von Verstößen angezeigt und können mit einer Bescheinigung von Tätigkeiten belegt werden.</p></div>
+<div class="t3-card"><span class="t3-card__n">07</span><h3>Bescheinigung von Tätigkeiten</h3><p>Drucken Sie das offizielle EU-Formblatt für ausgewählte Fahrer und Zeiträume – gesammelt oder als eine PDF pro Fahrer. Die Sprache des Formblatts lässt sich in der Vorschau ändern.</p></div>
+<div class="t3-card"><span class="t3-card__n">08</span><h3>Fahrerarbeitsbericht</h3><p>Nach Tag oder Schicht, mit Nachtarbeit, Wochenenden und Feiertagen – wobei Sie festlegen, was als Arbeitszeit zählt.</p></div>
+<div class="t3-card"><span class="t3-card__n">09</span><h3>Berichte drucken</h3><p>Fahrerauswertung, Unbekannte Zeit, Fahren ohne Karte, Aufgabenübersicht und Umfassender Unternehmensbericht. Drucken Sie mehrere Dokumente in eine PDF.</p></div>
+<div class="t3-card t3-card--key"><span class="t3-card__n">10</span><h3>Aufgaben und Fristen</h3><p>Die Übersicht zeigt, was zu erledigen ist: Verstöße, nicht belegte Zeiten, Downloads von Fahrerkarten und Fahrzeugeinheiten, Gültigkeit von Karten und Dokumenten sowie Kalibrierung der Fahrtenschreiber.</p></div>
+<div class="t3-card"><span class="t3-card__n">11</span><h3>Ihre Daten bleiben bei Ihnen</h3><p>Eine Windows-Anwendung, die auf Ihrem eigenen Computer läuft und Fahrer- und Fahrzeugdaten lokal speichert.</p></div>
+<div class="t3-card"><span class="t3-card__n">12</span><h3>Mehrsprachig</h3><p>Das Programm und seine Berichte sind auf Englisch, Deutsch, Italienisch, Französisch, Tschechisch und Slowakisch verfügbar.</p></div>
+</div>
+</div>
+</section>
+<!-- ═══ TAGRA III SCREENSHOTS ═════════════════════════════════════ -->
+<section aria-label="Screenshots von TAGRA III" class="band band--machero">
+<div class="container">
+<div class="anim-up">
+<div class="eyebrow">Sehen Sie das Programm im Einsatz</div>
+<h2>TAGRA III, Bildschirm für Bildschirm</h2>
+<p style="max-width:760px">Von der Übersicht der heutigen Aufgaben bis zum Bericht, den Sie dem Fahrer aushändigen – echte Bildschirmansichten aus TAGRA III. Personenbezogene Daten in den Bildschirmaufnahmen wurden durch Beispieldaten ersetzt.</p>
+<p style="max-width:760px;margin-top:10px;font-size:15px;color:var(--text2)">Die Screenshots zeigen die englische Programmversion.</p>
+</div>
+<div class="anim-up" style="transition-delay:.05s">
+<div aria-label="Programmansichten von TAGRA III" class="t3-tabs" role="tablist">
+<button aria-controls="t3p-overview" aria-selected="true" class="t3-tab" id="t3t-overview" role="tab" tabindex="0" type="button">Übersicht</button>
+<button aria-controls="t3p-driver" aria-selected="false" class="t3-tab" id="t3t-driver" role="tab" tabindex="-1" type="button">Fahrer</button>
+<button aria-controls="t3p-infringements" aria-selected="false" class="t3-tab" id="t3t-infringements" role="tab" tabindex="-1" type="button">Verstöße</button>
+<button aria-controls="t3p-evaluation" aria-selected="false" class="t3-tab" id="t3t-evaluation" role="tab" tabindex="-1" type="button">Auswertung</button>
+<button aria-controls="t3p-driver-evaluation" aria-selected="false" class="t3-tab" id="t3t-driver-evaluation" role="tab" tabindex="-1" type="button">Fahrerauswertung</button>
+<button aria-controls="t3p-work-report" aria-selected="false" class="t3-tab" id="t3t-work-report" role="tab" tabindex="-1" type="button">Arbeitsbericht</button>
+<button aria-controls="t3p-company-report" aria-selected="false" class="t3-tab" id="t3t-company-report" role="tab" tabindex="-1" type="button">Unternehmensbericht</button>
+</div>
+<div aria-labelledby="t3t-overview" class="t3-panel" id="t3p-overview" role="tabpanel">
+<figure>
+<div class="t3-window" style="margin-top:0">
+<img alt="TAGRA III Übersicht – Daten einlesen, Fahrer und Fahrzeuge mit Aufgaben, Datenexport für Kontrollen" decoding="async" height="939" sizes="(max-width: 1000px) 100vw, 1100px" src="/assets/img/tagra3/tagra3-overview.webp" srcset="/assets/img/tagra3/tagra3-overview-960.webp 960w, /assets/img/tagra3/tagra3-overview.webp 1402w" width="1402"/>
+</div>
+<figcaption><strong>Übersicht.</strong> Was jetzt Ihre Aufmerksamkeit erfordert: Fahrer, deren Fahrerkarten heruntergeladen werden müssen, offene Verstöße, bald ablaufende Fahrerkarten, anstehende Downloads von Fahrzeugeinheiten und bevorstehende Kalibrierungen.</figcaption>
+</figure>
+</div>
+<div aria-labelledby="t3t-driver" class="t3-panel" id="t3p-driver" role="tabpanel" hidden>
+<figure>
+<div class="t3-window" style="margin-top:0">
+<img alt="TAGRA III Fahrerdetails – angewandte Vorschriften, offene Verstöße, nicht belegte Zeiten und Aufgaben" decoding="async" height="939" loading="lazy" sizes="(max-width: 1000px) 100vw, 1100px" src="/assets/img/tagra3/tagra3-driver.webp" srcset="/assets/img/tagra3/tagra3-driver-960.webp 960w, /assets/img/tagra3/tagra3-driver.webp 1402w" width="1402"/>
+</div>
+<figcaption><strong>Fahrerdetails.</strong> Die für den Fahrer geltenden Vorschriften (Verordnung (EG) Nr. 561/2006, nationale Arbeitszeitvorschriften — vom Unternehmen übernommen oder individuell festgelegt), offene Verstöße, nicht belegte Zeiten und die Aufgaben des Fahrers.</figcaption>
+</figure>
+</div>
+<div aria-labelledby="t3t-infringements" class="t3-panel" id="t3p-infringements" role="tabpanel" hidden>
+<figure>
+<div class="t3-window" style="margin-top:0">
+<img alt="TAGRA III Verstoßliste mit Filtern nach Verordnung, Gruppe und Schweregrad, Stellungnahmefeld und Schaltfläche zum Abschließen" decoding="async" height="939" loading="lazy" sizes="(max-width: 1000px) 100vw, 1100px" src="/assets/img/tagra3/tagra3-infringements.webp" srcset="/assets/img/tagra3/tagra3-infringements-960.webp 960w, /assets/img/tagra3/tagra3-infringements.webp 1402w" width="1402"/>
+</div>
+<figcaption><strong>Verstöße.</strong> Filtern Sie nach Vorschrift, Verstoßgruppe und Schweregrad. Zu jedem Verstoß werden der betreffende Artikel, der Sachverhalt und die erforderlichen Maßnahmen für den Fahrer angezeigt — fügen Sie eine Stellungnahme hinzu und schließen Sie den Verstoß ab.</figcaption>
+</figure>
+</div>
+<div aria-labelledby="t3t-evaluation" class="t3-panel" id="t3p-evaluation" role="tabpanel" hidden>
+<figure>
+<div class="t3-window" style="margin-top:0">
+<img alt="TAGRA III Auswertung – Aktivitätsdiagramm, Verstoßdetails, Aktivitätssummen und Wortlaut der Verordnung" decoding="async" height="1140" loading="lazy" sizes="(max-width: 1000px) 100vw, 1100px" src="/assets/img/tagra3/tagra3-evaluation.webp" srcset="/assets/img/tagra3/tagra3-evaluation-960.webp 960w, /assets/img/tagra3/tagra3-evaluation.webp 1920w" width="1920"/>
+</div>
+<figcaption><strong>Auswertung.</strong> Aktivitätsdiagramm mit dem Bereich „Länder &amp; Schichten“, Verstoßdetails mit dem Wortlaut der Vorschrift und einem Link zum Volltext auf EUR-Lex sowie Aktivitätssummen für den Verstoßzeitraum.</figcaption>
+</figure>
+</div>
+<div aria-labelledby="t3t-driver-evaluation" class="t3-panel" id="t3p-driver-evaluation" role="tabpanel" hidden>
+<figure>
+<div class="t3-window" style="margin-top:0">
+<img alt="TAGRA III Fahrerauswertungsbericht – Verstöße nach Gruppe und Artikel mit Schweregrad" decoding="async" height="1140" loading="lazy" sizes="(max-width: 1000px) 100vw, 1100px" src="/assets/img/tagra3/tagra3-driver-evaluation.webp" srcset="/assets/img/tagra3/tagra3-driver-evaluation-960.webp 960w, /assets/img/tagra3/tagra3-driver-evaluation.webp 1920w" width="1920"/>
+</div>
+<figcaption><strong>Fahrerauswertungsbericht.</strong> Verstöße nach Gruppen zusammengefasst und nach Artikeln aufgelistet, jeweils mit Schweregrad — vom geringfügigen bis zum schwersten Verstoß.</figcaption>
+</figure>
+</div>
+<div aria-labelledby="t3t-work-report" class="t3-panel" id="t3p-work-report" role="tabpanel" hidden>
+<figure>
+<div class="t3-window" style="margin-top:0">
+<img alt="TAGRA III Fahrerarbeitsbericht nach Schichten – Lenkzeit, andere Arbeiten, Fahrtunterbrechungen, Nachtarbeit und geleistete Arbeitszeit" decoding="async" height="1140" loading="lazy" sizes="(max-width: 1000px) 100vw, 1100px" src="/assets/img/tagra3/tagra3-work-report.webp" srcset="/assets/img/tagra3/tagra3-work-report-960.webp 960w, /assets/img/tagra3/tagra3-work-report.webp 1920w" width="1920"/>
+</div>
+<figcaption><strong>Fahrerarbeitsbericht.</strong> Nach Schicht oder Tag — Lenkzeiten, andere Arbeiten, Fahrtunterbrechungen, Nachtarbeit und geleistete Arbeitszeit. Wechseln Sie die Berichtssprache direkt in der Vorschau.</figcaption>
+</figure>
+</div>
+<div aria-labelledby="t3t-company-report" class="t3-panel" id="t3p-company-report" role="tabpanel" hidden>
+<figure>
+<div class="t3-window" style="margin-top:0">
+<img alt="TAGRA III umfassender Unternehmensbericht mit Verstößen und Unterschriftszeilen für Fahrer und Arbeitgeber" decoding="async" height="1140" loading="lazy" sizes="(max-width: 1000px) 100vw, 1100px" src="/assets/img/tagra3/tagra3-company-report.webp" srcset="/assets/img/tagra3/tagra3-company-report-960.webp 960w, /assets/img/tagra3/tagra3-company-report.webp 1920w" width="1920"/>
+</div>
+<figcaption><strong>Umfassender Unternehmensbericht.</strong> Alle Verstöße in einem Dokument, mit Zeilen für die Stellungnahmen und Unterschriften von Fahrer und Arbeitgeber — als Nachweis für Ihre Unterlagen.</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
 <!-- ═══ REVIEWS ═══════════════════════════════════════════════════ -->
 <section aria-label="Kundenbewertungen" class="band band--gray">
 <div class="container">
@@ -626,31 +762,6 @@
 <div class="rev-card"><div aria-label="5 von 5" class="rev-stars">★★★★★</div><p class="rev-txt">"Die Software ist intuitiv und einfach zu bedienen. Als ich Hilfe brauchte, war jemand da."</p><p class="rev-meta">Milan K. · Verifizierter Kunde</p></div>
 <div class="rev-card"><div aria-label="5 von 5" class="rev-stars">★★★★★</div><p class="rev-txt">„Einfach und klar. Das Herunterladen, Auswerten und Archivieren der Daten dauert nur wenige Minuten.“</p><p class="rev-meta">Josef Z. · Verifizierter Kunde</p></div>
 <div class="rev-card"><div aria-label="5 von 5" class="rev-stars">★★★★★</div><p class="rev-txt">"TAGRA hilft uns, Verstöße und Archivierung im Griff zu behalten. Wirklich einfach in der Anwendung."</p><p class="rev-meta">Verifizierter TRUCKMALL-Kunde</p></div>
-</div>
-</div>
-</section>
-<!-- ═══ WHAT TAGRA DOES ════════════════════════════════════════════ -->
-<section aria-label="Softwarefunktionen" class="band">
-<div class="container">
-<div class="g2 top">
-<div class="anim-up">
-<div class="eyebrow">Was TAGRA leistet</div>
-<h2>Mehr als nur<br/>Daten herunterladen</h2>
-<p style="margin-bottom:24px">Der reine <strong>Fahrerkarten-Download</strong> reicht nicht aus — das Gesetz verlangt regelmäßige <strong>digitale Tachographenanalyse</strong> und Archivierung. TAGRA ist eine durchgängige Tachographen-Auswertungssoftware mit minimalem Verwaltungsaufwand für 1 bis unbegrenzt viele Fahrzeuge.</p>
-<div class="feats">
-<div class="fi"><div class="fck"><svg fill="none" height="8" viewbox="0 0 10 8" width="10"><path d="M1 4l2.5 2.5L9 1" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></div><span>Auswertung der <strong>EU-Lenkzeiten</strong>, Pausen und Ruhezeiten (Verordnung 561/2006 und AETR)</span></div>
-<div class="fi"><div class="fck"><svg fill="none" height="8" viewbox="0 0 10 8" width="10"><path d="M1 4l2.5 2.5L9 1" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></div><span>Arbeitszeitauswertung gemäß der <strong>Lkw-Arbeitszeitrichtlinie</strong></span></div>
-<div class="fi"><div class="fck"><svg fill="none" height="8" viewbox="0 0 10 8" width="10"><path d="M1 4l2.5 2.5L9 1" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></div><span>Fahrerkarten-Download und Fahrtenschreiber-Fernauslesung über DKV LIVE® oder Download Box</span></div>
-<div class="fi"><div class="fck"><svg fill="none" height="8" viewbox="0 0 10 8" width="10"><path d="M1 4l2.5 2.5L9 1" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></div><span>Archivierung von Fahrerkarten- und digitalen Tachographendaten</span></div>
-<div class="fi"><div class="fck"><svg fill="none" height="8" viewbox="0 0 10 8" width="10"><path d="M1 4l2.5 2.5L9 1" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></div><span><strong>Vollständig bereit für Transporter ab Juli 2026</strong></span></div>
-<div class="fi"><div class="fck"><svg fill="none" height="8" viewbox="0 0 10 8" width="10"><path d="M1 4l2.5 2.5L9 1" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></div><span>Übersichtliche Auswertungen für Behörden und den internen Gebrauch</span></div>
-</div>
-</div>
-<div class="anim-up" style="transition-delay:.1s">
-<div class="media-frame" style="background:var(--bg-gray);border-radius:var(--radius);overflow:hidden">
-<img alt="TAGRA MAX – Fahrtenschreiber-Auswertungssoftware für Unternehmen" height="800" loading="lazy" src="https://cdn.truckmall.cz/data/user-content/TDT_TAGRA_MAX_wh.jpg" style="object-fit:contain;width:100%;height:auto;" width="800"/>
-</div>
-</div>
 </div>
 </div>
 </section>
@@ -689,14 +800,6 @@
 </div>
 </div>
 </section>
-<!-- ═══ MAC STAGE ══════════════════════════════════════════════════ -->
-<section aria-label="Software-Vorschau" class="band band--machero">
-<div class="container">
-<div class="mac-stage">
-<img alt="TAGRA-Fahrtenschreiber-Auswertungssoftware – Übersicht der EU-Lenkzeiten" height="2076" id="mac-img" loading="lazy" src="https://cdn.truckmall.cz/data/user-content/tagra/Tagra_screen_2xb.webp" width="3116"/>
-</div>
-</div>
-</section>
 <!-- ═══ COMPARISON TABLE ══════════════════════════════════════════ -->
 <section aria-label="Lösungsvergleich" class="band">
 <div class="container anim-up">
@@ -710,7 +813,7 @@
 <th style="width:33%">Standard-Fahrtenschreiber-Software</th>
 <th class="col-blue" style="width:33%">
 <span class="winner-badge">Bestes Preis-Leistungs-Verhältnis</span>
-<span style="font-size:20px;font-weight:900;display:block;margin-top:4px">TAGRA</span>
+<span style="font-size:20px;font-weight:900;display:block;margin-top:4px">TAGRA III</span>
 </th>
 </tr>
 </thead>
@@ -734,6 +837,16 @@
 <td style="font-weight:700;color:var(--text-strong)">Verstoßerkennung</td>
 <td><div class="tc-val"><span class="tb-icon tb-icon--gray"><svg fill="none" stroke="#8e8e93" stroke-width="3" viewbox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></span> Ja</div></td>
 <td class="col-blue"><div class="tc-val"><span class="tb-icon tb-icon--blue"><svg fill="none" stroke="white" stroke-width="3" viewbox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></span> Ja, mit übersichtlichen Berichten</div></td>
+</tr>
+<tr>
+<td style="font-weight:700;color:var(--text-strong)">Angabe der Vorschrift und Handlungsempfehlung zu jedem Verstoß</td>
+<td><div class="tc-val no-icon">Selten</div></td>
+<td class="col-blue"><div class="tc-val"><span class="tb-icon tb-icon--blue"><svg fill="none" stroke="white" stroke-width="3" viewbox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></span>Ja — Artikel, Wortlaut und Handlungsempfehlung</div></td>
+</tr>
+<tr>
+<td style="font-weight:700;color:var(--text-strong)">Aufgabenübersicht (Downloads, Ablauf der Fahrerkarte, Kalibrierung)</td>
+<td><div class="tc-val no-icon">Je nach Lösung</div></td>
+<td class="col-blue"><div class="tc-val"><span class="tb-icon tb-icon--blue"><svg fill="none" stroke="white" stroke-width="3" viewbox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></span>Ja — auf dem Startbildschirm</div></td>
 </tr>
 <tr>
 <td style="font-weight:700;color:var(--text-strong)">Erforderlicher manueller Aufwand</td>
@@ -801,7 +914,7 @@
 <div class="note-box">
 <span class="note-badge">So funktioniert's</span>
 <span class="note-title">SFTP-basiert, läuft im Hintergrund</span>
-<p>Die Funktion <strong>Datenimport</strong> von TAGRA verbindet sich mit <code>sftp.styletronic.eu</code> über Ihre DKV-LIVE®-Zugangsdaten und lädt die neuesten <code>.DDD</code> / <code>.C1B</code> / <code>.V1B</code>-Dateien nach dem von Ihnen festgelegten Zeitplan herunter. Ab Version 345 in jeder TAGRA-Lizenz enthalten.</p>
+<p>Die Funktion <strong>Datenimport</strong> von TAGRA verbindet sich mit <code>sftp.styletronic.eu</code> über Ihre DKV-LIVE®-Zugangsdaten und lädt die neuesten <code>.DDD</code> / <code>.C1B</code> / <code>.V1B</code>-Dateien nach dem von Ihnen festgelegten Zeitplan herunter. In jeder TAGRA-Lizenz enthalten.</p>
 <p style="font-size:14px;color:var(--text-muted);margin-top:12px;font-style:italic">DKV LIVE® ist eine Marke von DKV Mobility. Die Integration von TAGRA ist eine technische Interoperabilitätsfunktion.</p>
 </div><div class="warning-box" style="margin-top:28px"><p class="warning-box__title">Warum die Aufzeichnung Ihre Verteidigung ist</p><p>Artikel 10 Absatz 3 macht das Unternehmen für Verstöße seiner Fahrer haftbar — auch wenn diese im Ausland begangen werden. Derselbe Artikel erlaubt es den Mitgliedstaaten jedoch, <strong>Nachweise zu berücksichtigen, dass das Unternehmen nicht verantwortlich gemacht werden kann</strong>. Genau diesen Nachweis verlangt Artikel 10 Absatz 2: Beleg dafür, dass Fahrer unterwiesen wurden und dass Sie regelmäßige Kontrollen durchführen.</p><p>Ein Kontrolleur erwartet keine makellose Bilanz. Er prüft, ob Verstöße <strong>erkannt, untersucht und bearbeitet</strong> wurden. TAGRA erstellt den Verstoßbericht, den Sie dem Fahrer aushändigen und zu den Akten nehmen — das Dokument, das aus "unser Fahrer hat gegen die Regeln verstoßen" ein "wir haben es gefunden und behandelt" macht.</p></div>
 </div>
@@ -914,12 +1027,6 @@
 </div>
 </div>
 </div>
-<!-- Wide image: TAGRA on monitors at dispatch -->
-<div class="anim-up" style="margin-top:60px">
-<div class="media-frame" style="border-radius:var(--radius);overflow:hidden">
-<img alt="TAGRA-Fahrtenschreiber-Auswertungssoftware im Einsatz bei einer Speditionsdisposition" height="840" loading="lazy" src="https://cdn.truckmall.cz/data/user-content/TAGRA-monitory-2.webp" style="width:100%;height:auto;display:block;object-fit:cover;max-height:480px" width="1920"/>
-</div>
-</div>
 </div>
 </section>
 <!-- ═══ FAQ ════════════════════════════════════════════════════════ -->
@@ -928,6 +1035,22 @@
 <div class="eyebrow anim-up">Häufig gestellte Fragen</div>
 <h2 class="anim-up">FAQ</h2>
 <div class="faq anim-up" style="transition-delay:.05s">
+<details>
+<summary>Was ist TAGRA III?</summary>
+<div class="faq-a">TAGRA III ist die neue Generation der TAGRA-Tachographensoftware für Fuhrparks. Sie liest Daten aus Fahrerkarten und Fahrzeugeinheiten ein, wertet sie nach der Verordnung (EG) Nr. 561/2006, dem AETR-Übereinkommen, der Richtlinie 2002/15/EG und nationalen Vorschriften aus und zeigt in einer Übersicht, wo Handlungsbedarf besteht — bei Verstößen, nicht belegten Zeiten, Downloads von Fahrer- und Fahrzeugdaten, der Gültigkeit von Fahrerkarten und der Kalibrierung von Fahrtenschreibern.</div>
+</details>
+<details>
+<summary>Welche Vorschriften berücksichtigt TAGRA III bei der Auswertung?</summary>
+<div class="faq-a">Lenkzeiten, Fahrtunterbrechungen und Ruhezeiten nach der <strong>Verordnung (EG) Nr. 561/2006</strong> und dem <strong>AETR</strong>-Übereinkommen, Aufzeichnungen nach der Verordnung (EU) Nr. 165/2014 sowie Arbeitszeiten nach der <strong>Richtlinie 2002/15/EG</strong>. Die nationalen Arbeitszeitvorschriften der Tschechischen Republik, der Slowakei und Ungarns sind integriert; in anderen Ländern wird die Arbeitszeit nach der Richtlinie ausgewertet. Zu jedem Verstoß werden der betreffende Artikel, der Wortlaut der Vorschrift und eine Empfehlung angezeigt.</div>
+</details>
+<details>
+<summary>Wo werden meine Daten gespeichert?</summary>
+<div class="faq-a">TAGRA III ist eine Windows-Anwendung, die auf Ihrem eigenen Computer läuft. Fahrer- und Fahrzeugdaten werden lokal gespeichert — nicht in einer von uns betriebenen Cloud.</div>
+</details>
+<details>
+<summary>Welche Sprachen sind verfügbar?</summary>
+<div class="faq-a">Das Programm und seine Berichte sind auf Englisch, Deutsch, Italienisch, Französisch, Tschechisch und Slowakisch verfügbar. Die Berichtssprache lässt sich direkt in der Druckvorschau umstellen — praktisch, wenn ein Bericht für einen Fahrer bestimmt ist, der eine andere Sprache spricht.</div>
+</details>
 <details>
 <summary>Wie kaufe ich TAGRA nach der Testphase?</summary>
 <div class="faq-a">Alles erfolgt direkt in der Software. Am Ende der Testphase — oder wann immer Sie bereit sind — öffnen Sie das Lizenzmenü, wählen die Version passend zur Anzahl Ihrer Fahrzeuge (TAGRA 1, 2, 4, 6 oder MAX) und bezahlen online. Die Zahlung erfolgt per QR-Code oder Online-Überweisung. Ihre Lizenz wird sofort ausgestellt und aktiviert — Sie arbeiten in derselben Umgebung mit allen Ihren Daten weiter.</div>
@@ -1160,6 +1283,34 @@
 
 
 
+  /* 7. TAGRA III SCREENSHOT TABS */
+  (function(){
+    var list = document.querySelector('.t3-tabs');
+    if (!list) return;
+    var tabs = Array.prototype.slice.call(list.querySelectorAll('[role="tab"]'));
+    function select(tab, focus){
+      tabs.forEach(function(t){
+        var on = t === tab;
+        t.setAttribute('aria-selected', on ? 'true' : 'false');
+        t.setAttribute('tabindex', on ? '0' : '-1');
+        var p = document.getElementById(t.getAttribute('aria-controls'));
+        if (p) { if (on) p.removeAttribute('hidden'); else p.setAttribute('hidden', ''); }
+      });
+      if (focus) tab.focus();
+    }
+    tabs.forEach(function(t, i){
+      t.addEventListener('click', function(){ select(t, false); });
+      t.addEventListener('keydown', function(e){
+        var n = null;
+        if (e.key === 'ArrowRight') n = tabs[(i + 1) % tabs.length];
+        else if (e.key === 'ArrowLeft') n = tabs[(i - 1 + tabs.length) % tabs.length];
+        else if (e.key === 'Home') n = tabs[0];
+        else if (e.key === 'End') n = tabs[tabs.length - 1];
+        if (n) { e.preventDefault(); select(n, true); }
+      });
+    });
+  })();
+
   /* STICKY CTA BAR */
   (function(){
     var bar = document.getElementById('stickyCta');
@@ -1190,10 +1341,13 @@
 {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
-  "name": "TAGRA – Fahrtenschreiber-Auswertungssoftware für Unternehmen",
+  "name": "TAGRA III – Tachographensoftware für Fuhrparkbetreiber",
+  "alternateName": "TAGRA III",
   "applicationCategory": "BusinessApplication",
   "operatingSystem": "Windows",
-  "description": "Fahrtenschreiber-Auswertungssoftware für Unternehmen. Fahrerkarten-Download, digitale Tachographenanalyse, Archivierung und Fahrtenschreiber-Fernauslesung für 1 bis unbegrenzt viele Fahrzeuge. Wertet EU-Lenkzeiten (Verordnung 561/2006), AETR und die Lkw-Arbeitszeitrichtlinie aus. 30 Tage kostenlos testen. Bereit für Transporter ab Juli 2026.",
+  "description": "TAGRA III — Tachographensoftware für Fuhrparkbetreiber, für ein bis unbegrenzt viele Fahrzeuge. Liest Daten aus Fahrerkarten und Fahrzeugeinheiten ein, wertet sie nach der Verordnung (EG) Nr. 561/2006, AETR, der Richtlinie 2002/15/EG und nationalen Vorschriften (CZ, SK, HU) aus, nennt bei jedem Verstoß die Rechtsgrundlage und zeigt eine Aufgabenübersicht zu Downloads, ablaufenden Fahrerkarten und Kalibrierungen. Lokale Datenspeicherung. 30 Tage kostenlos testen. Bereit für Transporter ab Juli 2026.",
+  "screenshot": ["https://tagra.app/assets/img/tagra3/tagra3-overview.webp", "https://tagra.app/assets/img/tagra3/tagra3-driver.webp", "https://tagra.app/assets/img/tagra3/tagra3-infringements.webp", "https://tagra.app/assets/img/tagra3/tagra3-evaluation.webp", "https://tagra.app/assets/img/tagra3/tagra3-driver-evaluation.webp", "https://tagra.app/assets/img/tagra3/tagra3-work-report.webp", "https://tagra.app/assets/img/tagra3/tagra3-company-report.webp"],
+  "availableLanguage": ["en", "de", "it", "fr", "cs", "sk"],
   "url": "https://tagra.app/de/fuhrpark/",
   "inLanguage": "de",
   "author": { "@type": "Organization", "@id": "https://tagra.app/#organization", "name": "Truck Data Technology, s.r.o.", "url": "https://www.tdt.cz" },
@@ -1206,6 +1360,38 @@
   "@type": "FAQPage",
   "inLanguage": "de",
   "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Was ist TAGRA III?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "TAGRA III ist die neue Generation der TAGRA-Tachographensoftware für Fuhrparks. Sie liest Daten aus Fahrerkarten und Fahrzeugeinheiten ein, wertet sie nach der Verordnung (EG) Nr. 561/2006, dem AETR-Übereinkommen, der Richtlinie 2002/15/EG und nationalen Vorschriften aus und zeigt in einer Übersicht, wo Handlungsbedarf besteht — bei Verstößen, nicht belegten Zeiten, Downloads von Fahrer- und Fahrzeugdaten, der Gültigkeit von Fahrerkarten und der Kalibrierung von Fahrtenschreibern."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Welche Vorschriften berücksichtigt TAGRA III bei der Auswertung?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Lenkzeiten, Fahrtunterbrechungen und Ruhezeiten nach der Verordnung (EG) Nr. 561/2006 und dem AETR-Übereinkommen, Aufzeichnungen nach der Verordnung (EU) Nr. 165/2014 sowie Arbeitszeiten nach der Richtlinie 2002/15/EG. Die nationalen Arbeitszeitvorschriften der Tschechischen Republik, der Slowakei und Ungarns sind integriert; in anderen Ländern wird die Arbeitszeit nach der Richtlinie ausgewertet. Zu jedem Verstoß werden der betreffende Artikel, der Wortlaut der Vorschrift und eine Empfehlung angezeigt."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Wo werden meine Daten gespeichert?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "TAGRA III ist eine Windows-Anwendung, die auf Ihrem eigenen Computer läuft. Fahrer- und Fahrzeugdaten werden lokal gespeichert — nicht in einer von uns betriebenen Cloud."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Welche Sprachen sind verfügbar?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Das Programm und seine Berichte sind auf Englisch, Deutsch, Italienisch, Französisch, Tschechisch und Slowakisch verfügbar. Die Berichtssprache lässt sich direkt in der Druckvorschau umstellen — praktisch, wenn ein Bericht für einen Fahrer bestimmt ist, der eine andere Sprache spricht."
+      }
+    },
     {
       "@type": "Question",
       "name": "Wie kaufe ich TAGRA nach der Testphase?",

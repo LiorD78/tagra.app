@@ -79,24 +79,29 @@
 <!-- TMX-ANALYTICS END -->
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Logiciel tachygraphe flotte : cartes et analyse | TAGRA Company</title>
-<meta content="Logiciel de tachygraphe pour flottes : téléchargement groupé des cartes, analyse des infractions et contrôle des temps de conduite dans l’UE." name="description"/>
+<title>Logiciel pour tachygraphes numériques des flottes – TAGRA III</title>
+<meta content="TAGRA III : logiciel pour flottes, données des cartes et véhicules, infractions, temps de conduite et de travail dans l’UE. Essai gratuit de 30 jours." name="description"/>
 <meta content="#0b2c4a" name="theme-color"/>
 <link href="/manifest.json" rel="manifest"/>
 <link href="https://tagra.app/fr/entreprises/" rel="canonical"/>
+<link as="image" fetchpriority="high" href="/assets/img/tagra3/tagra3-evaluation.webp" media="(min-width: 621px)" imagesizes="(max-width: 1000px) 100vw, 1100px" imagesrcset="/assets/img/tagra3/tagra3-evaluation-960.webp 960w, /assets/img/tagra3/tagra3-evaluation.webp 1920w" rel="preload" type="image/webp"/>
 <link href="https://tagra.app/de/fuhrpark/" hreflang="de" rel="alternate"/><link href="https://tagra.app/el/stolos/" hreflang="el" rel="alternate"/><link href="https://tagra.app/fleet/" hreflang="en" rel="alternate"/><link href="https://tagra.app/fr/entreprises/" hreflang="fr" rel="alternate"/><link href="https://tagra.app/hu/fuvarozoknak/" hreflang="hu" rel="alternate"/><link href="https://tagra.app/it/per-aziende/" hreflang="it" rel="alternate"/><link href="https://tagra.app/nl/voor-transportbedrijven/" hreflang="nl" rel="alternate"/><link href="https://tagra.app/pl/dla-przewoznikow/" hreflang="pl" rel="alternate"/>
 <link href="https://tagra.app/ro/pentru-firme/" hreflang="ro" rel="alternate"/><link href="https://tagra.app/fleet/" hreflang="x-default" rel="alternate"/>
 <meta content="website" property="og:type"/>
 <meta content="en_US" property="og:locale"/>
 <meta content="TAGRA" property="og:site_name"/>
-<meta content="Logiciel tachygraphe flotte : cartes et analyse | TAGRA Company" property="og:title"/>
-<meta content="Logiciel de tachygraphe pour les flottes : téléchargement des cartes de conducteur, analyse automatique des infractions, contrôle des temps de conduite des conducteurs dans l'UE et de la directive sur le temps de travail dans le transport routier. Essai gratuit de 30 jours." property="og:description"/>
-<meta content="https://cdn.truckmall.cz/data/user-content/TDT_TAGRA_MAX_wh.jpg" property="og:image"/>
-<meta content="TAGRA – logiciel d'analyse des tachygraphes pour les gestionnaires de flotte, de 1 à un nombre illimité de véhicules" property="og:image:alt"/>
-<meta content="https://cdn.truckmall.cz/data/user-content/TDT_TAGRA_MAX_wh.jpg" name="twitter:image"/>
-<meta content="TAGRA – logiciel d'analyse des tachygraphes pour les gestionnaires de flotte, de 1 à un nombre illimité de véhicules" name="twitter:image:alt"/>
+<meta content="Logiciel pour tachygraphes numériques des flottes – TAGRA III" property="og:title"/>
+<meta content="TAGRA III, nouveau logiciel pour tachygraphes : vue d’ensemble des infractions, téléchargements, cartes et étalonnages à échéance. Essai gratuit de 30 jours." property="og:description"/>
+<meta content="https://tagra.app/assets/img/tagra3/og-fleet-tagra3.jpg" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="TAGRA III – évaluation du conducteur avec graphique des activités et détail d’une infraction citant le règlement" property="og:image:alt"/>
+<meta content="https://tagra.app/assets/img/tagra3/og-fleet-tagra3.jpg" name="twitter:image"/>
+<meta content="TAGRA III – évaluation du conducteur avec graphique des activités et détail d’une infraction citant le règlement" name="twitter:image:alt"/>
 <meta content="https://tagra.app/fr/entreprises/" property="og:url"/>
 <meta content="summary_large_image" name="twitter:card"/>
+<meta content="Logiciel pour tachygraphes numériques des flottes – TAGRA III" name="twitter:title"/>
+<meta content="TAGRA III, nouveau logiciel pour tachygraphes : vue d’ensemble des infractions, téléchargements, cartes et étalonnages à échéance. Essai gratuit de 30 jours." name="twitter:description"/>
 <style>
     /* ─── DESIGN TOKENS ────────────────────────────────────────── */
     /* ─── RESET & BASE ─────────────────────────────────────────── */
@@ -474,6 +479,33 @@
       }
       .price-table td:first-child::before { content: none; }
     }
+    /* ─── TAGRA III: HERO WINDOW ───────────────────────────────── */
+    .t3-window{margin:44px auto 0;border-radius:14px;overflow:hidden;background:#fff;border:1px solid var(--border);box-shadow:0 30px 70px rgba(11,44,74,.16),0 6px 18px rgba(11,44,74,.08)}
+    .t3-window__bar{display:flex;align-items:center;gap:7px;height:30px;padding:0 14px;background:#f3f5f8;border-bottom:1px solid var(--border)}
+    .t3-window__bar i{width:10px;height:10px;border-radius:50%;background:#d5dbe3;display:block}
+    .t3-window__bar span{margin-left:8px;font-size:12px;font-weight:600;color:var(--text2)}
+    .t3-window img{width:100%;height:auto;display:block}
+    .t3-badge{display:inline-flex;align-items:center;gap:8px;background:var(--green-brand);color:#fff;font-size:13px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:5px 12px;border-radius:999px;margin-right:10px;vertical-align:middle;box-shadow:0 6px 14px rgba(110,155,18,.22)}
+    /* ─── TAGRA III: FEATURE GRID ──────────────────────────────── */
+    .t3-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:36px}
+    @media (max-width:980px){.t3-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media (max-width:620px){.t3-grid{grid-template-columns:1fr}}
+    .t3-card{background:var(--bg-white,#fff);border:1px solid var(--border);border-radius:var(--radius);padding:26px 24px;position:relative;overflow:hidden;transition:transform .18s,box-shadow .18s,border-color .18s}
+    .t3-card:hover{transform:translateY(-3px);box-shadow:0 14px 28px rgba(11,44,74,.08);border-color:rgba(19,74,142,.28)}
+    .t3-card__n{font-size:13px;font-weight:800;letter-spacing:.08em;color:var(--green-brand);margin-bottom:10px;display:block}
+    .t3-card h3{font-size:19px;line-height:1.3;font-weight:800;color:var(--text-strong);margin-bottom:8px}
+    .t3-card p{font-size:16px;line-height:1.6;color:var(--text2)}
+    .t3-card--key{background:linear-gradient(180deg,var(--bg-apple-solid,#eaf3f8) 0%,#fff 100%);border:2px solid var(--blue-mid)}
+    /* ─── TAGRA III: SCREENSHOT GALLERY ────────────────────────── */
+    .t3-tabs{display:flex;flex-wrap:wrap;gap:8px;margin:28px 0 22px}
+    .t3-tab{appearance:none;border:1.5px solid var(--border);background:#fff;color:var(--text-strong);font:inherit;font-size:15px;font-weight:600;padding:9px 16px;border-radius:999px;cursor:pointer;transition:background .15s,border-color .15s,color .15s}
+    .t3-tab:hover{border-color:var(--blue-mid);color:var(--blue-mid)}
+    .t3-tab[aria-selected="true"]{background:linear-gradient(135deg,var(--blue-light,#1f5fa6) 0%,var(--blue-mid,#134a8e) 100%);border-color:var(--blue-mid);color:#fff}
+    .t3-panel[hidden]{display:none}
+    .t3-panel figure{margin:0}
+    .t3-panel figcaption{margin-top:16px;font-size:16px;line-height:1.6;color:var(--text2);max-width:860px}
+    .t3-panel figcaption strong{color:var(--text-strong)}
+    @media (max-width:620px){.t3-tabs{flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;padding-bottom:6px;margin-right:-16px}.t3-tab{white-space:nowrap;flex:0 0 auto}}
 </style>
 <script type="application/ld+json">
 {
@@ -500,8 +532,9 @@
   "@context": "https://schema.org",
   "@type": "WebPage",
   "url": "https://tagra.app/fr/entreprises/",
-  "name": "Logiciel d'analyse des tachygraphes pour les gestionnaires de flotte",
-  "description": "TAGRA est un logiciel d'analyse des tachygraphes pour les flottes — téléchargement des cartes de conducteur, analyse des tachygraphes numériques, contrôle des temps de conduite des conducteurs dans l'UE et de la directive sur le temps de travail dans le transport routier.",
+  "name": "TAGRA III – Logiciel de tachygraphe pour flottes",
+  "description": "TAGRA III est un logiciel d’analyse des données des tachygraphes numériques pour les flottes : données des cartes de conducteur et des véhicules, infractions avec références réglementaires, temps de conduite, pauses et périodes de repos selon les règles de l’UE, AETR et temps de travail au titre de la directive 2002/15/CE et des règles nationales.",
+  "primaryImageOfPage": "https://tagra.app/assets/img/tagra3/tagra3-evaluation.webp",
   "isPartOf": {
     "@id": "https://tagra.app/#website"
   },
@@ -546,20 +579,21 @@
 <!-- ═══ HERO ══════════════════════════════════════════════════════ -->
 <section id="main-content" aria-label="Présentation de TAGRA" class="band band--hero band--hero--blue">
 <div class="container">
-<div class="eyebrow anim-up">TAGRA · Pour les gestionnaires de flotte</div>
+<div class="eyebrow anim-up"><span class="t3-badge">Nouveau</span>TAGRA III · Pour les exploitants de flottes</div>
 <h1 class="anim-up" style="transition-delay:.05s">L'analyse des tachygraphes qui détecte<br/>les infractions en premier</h1>
 <p class="lead anim-up" style="transition-delay:.1s">
-<strong>Conformité de la flotte. Sans casse-tête.</strong> Le téléchargement ne suffit pas — la loi exige <strong>évaluation et archivage</strong>. TAGRA est la solution complète <strong>logiciel d'analyse du tachygraphe</strong> pour les flottes — évolutive de 1 à un nombre illimité de véhicules.
+<strong>TAGRA III est la nouvelle génération de notre logiciel pour tachygraphes numériques destiné aux flottes.</strong> Une vue d’ensemble vous indique les points qui nécessitent votre attention — infractions, téléchargements des cartes et des véhicules, cartes et étalonnages arrivant à échéance — avant qu’un contrôle ne les relève. Chaque infraction est accompagnée de la référence au règlement et d’une recommandation. S’adapte à votre flotte, d’un véhicule à un nombre illimité.
     </p>
 <div class="anim-up" style="margin-bottom:16px;transition-delay:.15s">
 <a class="btn-cta" href="/fr/essai-gratuit/?audience=fleet" rel="noopener" target="_blank">Essayer gratuitement pendant 30 jours</a>
 </div>
 <p class="anim-up" style="font-size:15px;color:var(--text2);transition-delay:.2s">Windows · Essai gratuit de 30 jours · Prêt pour les véhicules utilitaires à partir de juillet 2026</p>
-<!-- Hero video -->
-<div class="media-frame anim-up" style="margin:44px auto 0;box-shadow:0 20px 40px rgba(0,0,0,.08);transition-delay:.25s;border-radius:20px;overflow:hidden">
-<video id="hero-vid" loop="" muted="" playsinline="" poster="https://cdn.truckmall.cz/data/user-content/TAGRA-monitory-2.webp" preload="metadata" style="width:100%;display:block">
-<source src="https://cdn.truckmall.cz/data/user-content/Comp_2.webm" type="video/webm">
-</source></video>
+<!-- Hero: TAGRA III screenshot -->
+<div class="t3-window anim-up" style="transition-delay:.25s">
+<picture>
+<source media="(max-width: 620px)" srcset="/assets/img/tagra3/tagra3-overview-960.webp" type="image/webp" width="960" height="643"/>
+<img alt="TAGRA III – évaluation du conducteur : graphique des activités avec bandeau Pays et services, détail d’une infraction citant le règlement (CE) n° 561/2006 et totaux des activités" decoding="async" fetchpriority="high" height="1140" sizes="(max-width: 1000px) 100vw, 1100px" src="/assets/img/tagra3/tagra3-evaluation.webp" srcset="/assets/img/tagra3/tagra3-evaluation-960.webp 960w, /assets/img/tagra3/tagra3-evaluation.webp 1920w" width="1920"/>
+</picture>
 </div>
 </div>
 </section>
@@ -593,7 +627,7 @@
 <div class="bc s4 bluefill fly-right" style="transition-delay:.35s">
 <div class="eyebrow" style="color:var(--blue-mid)">Législation</div>
 <div class="bc-title" style="color:var(--blue-mid)">Évaluation des<br/>&amp; Temps de travail</div>
-<div class="bc-text">L’une des rares solutions qui évalue à la fois le <strong>Évaluation des</strong> (règlement 561/2006) et l’intégralité du <strong>directive sur le temps de travail dans le transport routier</strong> au titre du droit du travail.</div>
+<div class="bc-text">Évalue les <strong>temps de conduite, de pause et de repos dans l’UE</strong> (règlement (CE) n° 561/2006, AETR) et le <strong>temps de travail</strong> au titre de la directive 2002/15/CE — ainsi que les règles nationales de la République tchèque, de la Slovaquie et de la Hongrie.</div>
 </div>
 </div>
 </div>
@@ -612,6 +646,108 @@
 </div>
 </div>
 </section>
+<!-- ═══ WHAT TAGRA III DOES ════════════════════════════════════════ -->
+<section aria-label="Fonctionnalités de TAGRA III" class="band" id="tagra-iii">
+<div class="container">
+<div class="anim-up">
+<div class="eyebrow">Ce que fait TAGRA III</div>
+<h2>Bien plus que le simple<br/>téléchargement des données</h2>
+<p style="max-width:760px">Le simple <strong>téléchargement de la carte de conducteur</strong> ne suffit pas — la loi impose une <strong>analyse des données du tachygraphe numérique</strong> et un archivage réguliers. TAGRA III évalue les données des cartes de conducteur et des unités embarquées au regard des règles européennes et nationales et vous indique les points à traiter en priorité.</p>
+</div>
+<div class="t3-grid anim-up" style="transition-delay:.05s">
+<div class="t3-card"><span class="t3-card__n">01</span><h3>Données des cartes de conducteur et des tachygraphes</h3><p>Lisez la carte de conducteur à l’aide d’un lecteur de cartes à puce et traitez les données téléchargées depuis les cartes de conducteur et les unités embarquées.</p></div>
+<div class="t3-card t3-card--key"><span class="t3-card__n">02</span><h3>Contrôle de conformité réglementaire</h3><p>Évaluation selon le règlement (CE) n° 561/2006, l’accord AETR, la directive 2002/15/CE et les règles nationales de la République tchèque, de la Slovaquie et de la Hongrie. Chaque infraction renvoie au texte applicable et s’accompagne d’une recommandation.</p></div>
+<div class="t3-card"><span class="t3-card__n">03</span><h3>Temps de travail des conducteurs</h3><p>Le temps de travail est évalué selon les règles nationales du pays de l’entreprise ou, à défaut, selon la directive 2002/15/CE. Un conducteur peut appliquer les règles de l’entreprise ou disposer de ses propres règles.</p></div>
+<div class="t3-card"><span class="t3-card__n">04</span><h3>Graphique des activités du conducteur</h3><p>Les activités, les enregistrements et les infractions sur un même graphique, avec un bandeau « Pays et services » indiquant les débuts et fins de service, les franchissements de frontières, les chargements et les déchargements.</p></div>
+<div class="t3-card t3-card--key"><span class="t3-card__n">05</span><h3>Clôturez les infractions avec une déclaration</h3><p>Consignez les points abordés avec le conducteur directement sur la fiche de l’infraction, puis clôturez-la, individuellement ou en groupe. L’onglet « Détails » affiche les totaux des activités pour la période de l’infraction.</p></div>
+<div class="t3-card"><span class="t3-card__n">06</span><h3>Temps non justifié</h3><p>Les périodes sans données de carte de conducteur sont affichées séparément des infractions et peuvent être justifiées par une attestation d’activités.</p></div>
+<div class="t3-card"><span class="t3-card__n">07</span><h3>Attestation d’activités</h3><p>Imprimez le formulaire officiel de l’UE pour les conducteurs et les périodes sélectionnés, en groupe ou dans un PDF par conducteur. La langue du formulaire peut être modifiée dans l’aperçu.</p></div>
+<div class="t3-card"><span class="t3-card__n">08</span><h3>Rapport de travail du conducteur</h3><p>Par jour ou par service, avec le travail de nuit, les week-ends et les jours fériés, et le choix des activités comptabilisées comme temps de travail.</p></div>
+<div class="t3-card"><span class="t3-card__n">09</span><h3>Imprimez les rapports</h3><p>Évaluation du conducteur, Temps inconnu, Conduite sans carte, Vue d’ensemble des tâches et Rapport complet de l’entreprise. Imprimez plusieurs documents dans un seul PDF.</p></div>
+<div class="t3-card t3-card--key"><span class="t3-card__n">10</span><h3>Tâches et échéances</h3><p>La vue d’ensemble indique les points à traiter : infractions, temps non justifié, téléchargements des cartes et des unités embarquées, validité des cartes et des documents et étalonnage des tachygraphes.</p></div>
+<div class="t3-card"><span class="t3-card__n">11</span><h3>Vos données restent chez vous</h3><p>Une application Windows qui fonctionne sur votre propre ordinateur et stocke localement les données des conducteurs et des véhicules.</p></div>
+<div class="t3-card"><span class="t3-card__n">12</span><h3>Multilingue</h3><p>Le logiciel et ses rapports sont disponibles en anglais, allemand, italien, français, tchèque et slovaque.</p></div>
+</div>
+</div>
+</section>
+<!-- ═══ TAGRA III SCREENSHOTS ═════════════════════════════════════ -->
+<section aria-label="Captures d’écran de TAGRA III" class="band band--machero">
+<div class="container">
+<div class="anim-up">
+<div class="eyebrow">Découvrez le logiciel en action</div>
+<h2>TAGRA III, écran par écran</h2>
+<p style="max-width:760px">De la vue d’ensemble des tâches du jour au rapport remis au conducteur : découvrez les écrans réels de TAGRA III. Les données personnelles des captures d’écran ont été remplacées par des exemples.</p>
+<p style="max-width:760px;margin-top:10px;font-size:15px;color:var(--text2)">Les captures d’écran présentent la version anglaise du logiciel.</p>
+</div>
+<div class="anim-up" style="transition-delay:.05s">
+<div aria-label="Écrans de TAGRA III" class="t3-tabs" role="tablist">
+<button aria-controls="t3p-overview" aria-selected="true" class="t3-tab" id="t3t-overview" role="tab" tabindex="0" type="button">Vue d’ensemble</button>
+<button aria-controls="t3p-driver" aria-selected="false" class="t3-tab" id="t3t-driver" role="tab" tabindex="-1" type="button">Conducteur</button>
+<button aria-controls="t3p-infringements" aria-selected="false" class="t3-tab" id="t3t-infringements" role="tab" tabindex="-1" type="button">Infractions</button>
+<button aria-controls="t3p-evaluation" aria-selected="false" class="t3-tab" id="t3t-evaluation" role="tab" tabindex="-1" type="button">Évaluation</button>
+<button aria-controls="t3p-driver-evaluation" aria-selected="false" class="t3-tab" id="t3t-driver-evaluation" role="tab" tabindex="-1" type="button">Évaluation conducteur</button>
+<button aria-controls="t3p-work-report" aria-selected="false" class="t3-tab" id="t3t-work-report" role="tab" tabindex="-1" type="button">Rapport de travail</button>
+<button aria-controls="t3p-company-report" aria-selected="false" class="t3-tab" id="t3t-company-report" role="tab" tabindex="-1" type="button">Rapport d’entreprise</button>
+</div>
+<div aria-labelledby="t3t-overview" class="t3-panel" id="t3p-overview" role="tabpanel">
+<figure>
+<div class="t3-window" style="margin-top:0">
+<img alt="TAGRA III – vue d’ensemble : chargement des données, conducteurs et véhicules avec tâches, exportation des données pour un contrôle" decoding="async" height="939" sizes="(max-width: 1000px) 100vw, 1100px" src="/assets/img/tagra3/tagra3-overview.webp" srcset="/assets/img/tagra3/tagra3-overview-960.webp 960w, /assets/img/tagra3/tagra3-overview.webp 1402w" width="1402"/>
+</div>
+<figcaption><strong>Vue d’ensemble.</strong> Les points à surveiller dès maintenant : conducteurs dont les cartes doivent être téléchargées, infractions en cours, cartes expirant prochainement, téléchargements des unités embarquées et étalonnages à venir.</figcaption>
+</figure>
+</div>
+<div aria-labelledby="t3t-driver" class="t3-panel" id="t3p-driver" role="tabpanel" hidden>
+<figure>
+<div class="t3-window" style="margin-top:0">
+<img alt="TAGRA III – fiche du conducteur : règles appliquées, infractions non clôturées, temps non justifié et tâches" decoding="async" height="939" loading="lazy" sizes="(max-width: 1000px) 100vw, 1100px" src="/assets/img/tagra3/tagra3-driver.webp" srcset="/assets/img/tagra3/tagra3-driver-960.webp 960w, /assets/img/tagra3/tagra3-driver.webp 1402w" width="1402"/>
+</div>
+<figcaption><strong>Fiche du conducteur.</strong> Les règles appliquées au conducteur (règlement (CE) n° 561/2006, règles nationales relatives au temps de travail — héritées de l’entreprise ou définies individuellement), les infractions non clôturées, le temps non justifié et les tâches du conducteur.</figcaption>
+</figure>
+</div>
+<div aria-labelledby="t3t-infringements" class="t3-panel" id="t3p-infringements" role="tabpanel" hidden>
+<figure>
+<div class="t3-window" style="margin-top:0">
+<img alt="TAGRA III – liste des infractions avec filtres par règlement, groupe et gravité, champ d’observations et bouton de clôture" decoding="async" height="939" loading="lazy" sizes="(max-width: 1000px) 100vw, 1100px" src="/assets/img/tagra3/tagra3-infringements.webp" srcset="/assets/img/tagra3/tagra3-infringements-960.webp 960w, /assets/img/tagra3/tagra3-infringements.webp 1402w" width="1402"/>
+</div>
+<figcaption><strong>Infractions.</strong> Filtrez par règlement, catégorie d’infraction et gravité. Chaque infraction indique l’article cité, les faits et les mesures à prendre par le conducteur — ajoutez une déclaration et clôturez l’infraction.</figcaption>
+</figure>
+</div>
+<div aria-labelledby="t3t-evaluation" class="t3-panel" id="t3p-evaluation" role="tabpanel" hidden>
+<figure>
+<div class="t3-window" style="margin-top:0">
+<img alt="TAGRA III – évaluation : graphique des activités, détail d’une infraction, totaux des activités et texte du règlement" decoding="async" height="1140" loading="lazy" sizes="(max-width: 1000px) 100vw, 1100px" src="/assets/img/tagra3/tagra3-evaluation.webp" srcset="/assets/img/tagra3/tagra3-evaluation-960.webp 960w, /assets/img/tagra3/tagra3-evaluation.webp 1920w" width="1920"/>
+</div>
+<figcaption><strong>Évaluation.</strong> Graphique des activités avec le bandeau « Pays et services », détail de l’infraction avec le libellé du règlement et un lien vers le texte intégral sur EUR-Lex, et totaux des activités pour la période de l’infraction.</figcaption>
+</figure>
+</div>
+<div aria-labelledby="t3t-driver-evaluation" class="t3-panel" id="t3p-driver-evaluation" role="tabpanel" hidden>
+<figure>
+<div class="t3-window" style="margin-top:0">
+<img alt="TAGRA III – rapport d’évaluation du conducteur : infractions par groupe et par article avec leur gravité" decoding="async" height="1140" loading="lazy" sizes="(max-width: 1000px) 100vw, 1100px" src="/assets/img/tagra3/tagra3-driver-evaluation.webp" srcset="/assets/img/tagra3/tagra3-driver-evaluation-960.webp 960w, /assets/img/tagra3/tagra3-driver-evaluation.webp 1920w" width="1920"/>
+</div>
+<figcaption><strong>Rapport d’évaluation du conducteur.</strong> Les infractions sont récapitulées par catégorie et répertoriées par article, chacune avec son degré de gravité — de l’infraction mineure à l’infraction la plus grave.</figcaption>
+</figure>
+</div>
+<div aria-labelledby="t3t-work-report" class="t3-panel" id="t3p-work-report" role="tabpanel" hidden>
+<figure>
+<div class="t3-window" style="margin-top:0">
+<img alt="TAGRA III – rapport de travail du conducteur par service : conduite, autres tâches, pauses, travail de nuit et temps travaillé" decoding="async" height="1140" loading="lazy" sizes="(max-width: 1000px) 100vw, 1100px" src="/assets/img/tagra3/tagra3-work-report.webp" srcset="/assets/img/tagra3/tagra3-work-report-960.webp 960w, /assets/img/tagra3/tagra3-work-report.webp 1920w" width="1920"/>
+</div>
+<figcaption><strong>Rapport de travail du conducteur.</strong> Par service ou par jour — conduite, autres tâches, pauses, travail de nuit et temps de travail effectué. Changez la langue du rapport directement dans l’aperçu.</figcaption>
+</figure>
+</div>
+<div aria-labelledby="t3t-company-report" class="t3-panel" id="t3p-company-report" role="tabpanel" hidden>
+<figure>
+<div class="t3-window" style="margin-top:0">
+<img alt="TAGRA III – rapport complet de l’entreprise avec infractions et lignes de signature pour le conducteur et l’employeur" decoding="async" height="1140" loading="lazy" sizes="(max-width: 1000px) 100vw, 1100px" src="/assets/img/tagra3/tagra3-company-report.webp" srcset="/assets/img/tagra3/tagra3-company-report-960.webp 960w, /assets/img/tagra3/tagra3-company-report.webp 1920w" width="1920"/>
+</div>
+<figcaption><strong>Rapport complet de l’entreprise.</strong> Toutes les infractions dans un seul document, avec des espaces pour les déclarations et signatures du conducteur et de l’employeur — le document à conserver dans vos dossiers.</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
 <!-- ═══ REVIEWS ═══════════════════════════════════════════════════ -->
 <section aria-label="Avis clients" class="band band--gray">
 <div class="container">
@@ -625,31 +761,6 @@
 <div class="rev-card"><div aria-label="5 out of 5" class="rev-stars">★★★★★</div><p class="rev-txt">« Le logiciel est intuitif et facile à utiliser. Lorsque j'ai eu besoin d'aide, l'équipe était là. »</p><p class="rev-meta">Milan K. · Client vérifié</p></div>
 <div class="rev-card"><div aria-label="5 out of 5" class="rev-stars">★★★★★</div><p class="rev-txt">"Simple et clair. Le téléchargement, l'évaluation et l'archivage des données ne prennent que quelques minutes."</p><p class="rev-meta">Josef Z. · Client vérifié</p></div>
 <div class="rev-card"><div aria-label="5 out of 5" class="rev-stars">★★★★★</div><p class="rev-txt">« TAGRA nous aide à garder le contrôle des infractions et de l'archivage. Vraiment facile à utiliser. »</p><p class="rev-meta">Client TRUCKMALL vérifié</p></div>
-</div>
-</div>
-</section>
-<!-- ═══ WHAT TAGRA DOES ════════════════════════════════════════════ -->
-<section aria-label="Fonctionnalités du logiciel" class="band">
-<div class="container">
-<div class="g2 top">
-<div class="anim-up">
-<div class="eyebrow">Bien plus que le</div>
-<h2>téléchargement des données<br/>Le simple</h2>
-<p style="margin-bottom:24px">ne suffit pas — la loi exige une <strong>TAGRA effectue automatiquement le</strong> régulière du tachygraphe numérique <strong>ainsi que leur archivage. TAGRA est un logiciel d’analyse de tachygraphes de bout en bout, avec une charge administrative minimale, pour 1 à un nombre illimité de véhicules.</strong> Évaluation du</p>
-<div class="feats">
-<div class="fi"><div class="fck"><svg fill="none" height="8" viewbox="0 0 10 8" width="10"><path d="M1 4l2.5 2.5L9 1" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></div><span>, des pauses et des temps de repos (règlement 561/2006 et AETR) <strong>Évaluation des</strong>Évaluation du temps de travail conformément au</span></div>
-<div class="fi"><div class="fck"><svg fill="none" height="8" viewbox="0 0 10 8" width="10"><path d="M1 4l2.5 2.5L9 1" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></div><span>Téléchargement des données de la carte de conducteur et téléchargement à distance des données du tachygraphe via DKV LIVE® ou Download Box <strong>directive sur le temps de travail dans le transport routier</strong></span></div>
-<div class="fi"><div class="fck"><svg fill="none" height="8" viewbox="0 0 10 8" width="10"><path d="M1 4l2.5 2.5L9 1" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></div><span>Archivage des données de la carte de conducteur et du tachygraphe numérique</span></div>
-<div class="fi"><div class="fck"><svg fill="none" height="8" viewbox="0 0 10 8" width="10"><path d="M1 4l2.5 2.5L9 1" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></div><span>Entièrement prêt pour les véhicules utilitaires à partir de juillet 2026</span></div>
-<div class="fi"><div class="fck"><svg fill="none" height="8" viewbox="0 0 10 8" width="10"><path d="M1 4l2.5 2.5L9 1" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></div><span><strong>Résultats clairs pour les autorités et l’usage interne</strong></span></div>
-<div class="fi"><div class="fck"><svg fill="none" height="8" viewbox="0 0 10 8" width="10"><path d="M1 4l2.5 2.5L9 1" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></div><span>TAGRA MAX – logiciel d’analyse de tachygraphes pour les gestionnaires de flotte</span></div>
-</div>
-</div>
-<div class="anim-up" style="transition-delay:.1s">
-<div class="media-frame" style="background:var(--bg-gray);border-radius:var(--radius);overflow:hidden">
-<img alt="Obligations légales" height="800" loading="lazy" src="https://cdn.truckmall.cz/data/user-content/TDT_TAGRA_MAX_wh.jpg" style="object-fit:contain;width:100%;height:auto;" width="800"/>
-</div>
-</div>
 </div>
 </div>
 </section>
@@ -688,14 +799,6 @@
 </div>
 </div>
 </section>
-<!-- ═══ MAC STAGE ══════════════════════════════════════════════════ -->
-<section aria-label="TAGRA Trucker – logiciel de tachygraphe avec lecteur USB pour le téléchargement des données de la carte de conducteur" class="band band--machero">
-<div class="container">
-<div class="mac-stage">
-<img alt="Comparaison des solutions" height="2076" id="mac-img" loading="lazy" src="https://cdn.truckmall.cz/data/user-content/tagra/Tagra_screen_2xb.webp" width="3116"/>
-</div>
-</div>
-</section>
 <!-- ═══ COMPARISON TABLE ══════════════════════════════════════════ -->
 <section aria-label="Comparaison" class="band">
 <div class="container anim-up">
@@ -709,7 +812,7 @@
 <th style="width:33%">Meilleur rapport qualité-prix</th>
 <th class="col-blue" style="width:33%">
 <span class="winner-badge">Coût annuel</span>
-<span style="font-size:20px;font-weight:900;display:block;margin-top:4px">TAGRA</span>
+<span style="font-size:20px;font-weight:900;display:block;margin-top:4px">TAGRA III</span>
 </th>
 </tr>
 </thead>
@@ -733,6 +836,16 @@
 <td style="font-weight:700;color:var(--text-strong)">Oui, avec des rapports clairs</td>
 <td><div class="tc-val"><span class="tb-icon tb-icon--gray"><svg fill="none" stroke="#8e8e93" stroke-width="3" viewbox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></span>Oui</div></td>
 <td class="col-blue"><div class="tc-val"><span class="tb-icon tb-icon--blue"><svg fill="none" stroke="white" stroke-width="3" viewbox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></span>Intervention manuelle nécessaire</div></td>
+</tr>
+<tr>
+<td style="font-weight:700;color:var(--text-strong)">Règlement cité et recommandation pour chaque infraction</td>
+<td><div class="tc-val no-icon">Rarement</div></td>
+<td class="col-blue"><div class="tc-val"><span class="tb-icon tb-icon--blue"><svg fill="none" stroke="white" stroke-width="3" viewbox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></span>Oui — article, libellé et mesures à prendre</div></td>
+</tr>
+<tr>
+<td style="font-weight:700;color:var(--text-strong)">Vue d’ensemble des tâches (téléchargements, expiration des cartes, étalonnage)</td>
+<td><div class="tc-val no-icon">Selon la solution</div></td>
+<td class="col-blue"><div class="tc-val"><span class="tb-icon tb-icon--blue"><svg fill="none" stroke="white" stroke-width="3" viewbox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></span>Oui — sur l’écran d’accueil</div></td>
 </tr>
 <tr>
 <td style="font-weight:700;color:var(--text-strong)">Souvent de nombreuses étapes manuelles</td>
@@ -800,7 +913,7 @@
 <div class="note-box">
 <span class="note-badge">Fonctionnement</span>
 <span class="note-title">La fonctionnalité</span>
-<p>Importation des données <strong>de TAGRA se connecte à</strong> <code>sftp.styletronic.eu</code> avec vos identifiants DKV LIVE® et télécharge les derniers <code>.DDD</code> / <code>.C1B</code> / <code>.V1B</code> fichiers selon la fréquence que vous avez définie. À partir de la version 345, inclus dans chaque licence TAGRA.</p>
+<p>Importation des données <strong>de TAGRA se connecte à</strong> <code>sftp.styletronic.eu</code> avec vos identifiants DKV LIVE® et télécharge les derniers <code>.DDD</code> / <code>.C1B</code> / <code>.V1B</code> fichiers selon la fréquence que vous avez définie. Inclus dans chaque licence TAGRA.</p>
 <p style="font-size:14px;color:var(--text-muted);margin-top:12px;font-style:italic">DKV LIVE® est une marque de DKV Mobility. L'intégration de TAGRA est une fonctionnalité d'interopérabilité technique.</p>
 </div><div class="warning-box" style="margin-top:28px"><p class="warning-box__title">Pourquoi l'enregistrement lui-même constitue votre défense</p><p>L'article 10, paragraphe 3, rend le gestionnaire responsable des infractions commises par ses conducteurs — même lorsqu'elles surviennent dans un autre pays. Mais ce même article permet aux États membres de prendre en considération <strong>les éléments prouvant que le gestionnaire ne peut raisonnablement être tenu pour responsable</strong>. C'est précisément ce que l'article 10, paragraphe 2, vous demande de produire : la preuve que les conducteurs ont reçu les instructions appropriées et que vous effectuez des contrôles réguliers.</p><p>En pratique, un inspecteur ne cherche pas un dossier vierge. Il cherche à savoir si les infractions ont été <strong>détectées, examinées et suivies de mesures</strong>. TAGRA produit le rapport d'infraction que vous remettez au conducteur et conservez dans vos dossiers — le document qui transforme « notre conducteur a enfreint les règles » en « nous l'avons constaté et nous avons pris les mesures nécessaires ».</p><p style="margin-top:10px"><a href="/fr/articles/responsabilite-transporteur-infractions-conducteurs/">Ce que la responsabilité du gestionnaire implique en pratique →</a></p></div>
 </div>
@@ -913,12 +1026,6 @@
 </div>
 </div>
 </div>
-<!-- Wide image: TAGRA on monitors at dispatch -->
-<div class="anim-up" style="margin-top:60px">
-<div class="media-frame" style="border-radius:var(--radius);overflow:hidden">
-<img alt="Logiciel d'analyse de tachygraphe TAGRA utilisé dans un bureau d'exploitation de transport" height="840" loading="lazy" src="https://cdn.truckmall.cz/data/user-content/TAGRA-monitory-2.webp" style="width:100%;height:auto;display:block;object-fit:cover;max-height:480px" width="1920"/>
-</div>
-</div>
 </div>
 </section>
 <!-- ═══ FAQ ════════════════════════════════════════════════════════ -->
@@ -927,6 +1034,22 @@
 <div class="eyebrow anim-up">Questions fréquemment posées</div>
 <h2 class="anim-up">FAQ</h2>
 <div class="faq anim-up" style="transition-delay:.05s">
+<details>
+<summary>Qu’est-ce que TAGRA III ?</summary>
+<div class="faq-a">TAGRA III est la nouvelle génération du logiciel TAGRA d’analyse des données tachygraphiques pour les flottes. Il charge les données des cartes de conducteur et des unités embarquées, les évalue conformément au règlement (CE) n° 561/2006, à l’accord AETR, à la directive 2002/15/CE et aux règles nationales, et présente dans une vue d’ensemble les points nécessitant votre attention : infractions, temps non justifié, téléchargements des cartes et des véhicules, validité des cartes et étalonnage des tachygraphes.</div>
+</details>
+<details>
+<summary>Quelles règles TAGRA III prend-il en compte ?</summary>
+<div class="faq-a">Temps de conduite, pauses et périodes de repos au titre du <strong>règlement (CE) n° 561/2006</strong> et de l’accord <strong>AETR</strong>, enregistrements au titre du règlement (UE) n° 165/2014 et temps de travail au titre de la <strong>directive 2002/15/CE</strong>. Les règles nationales relatives au temps de travail sont intégrées pour la République tchèque, la Slovaquie et la Hongrie ; ailleurs, le temps de travail est évalué conformément à la directive. Chaque infraction est accompagnée de la référence à l’article concerné, du texte de la réglementation et d’une recommandation.</div>
+</details>
+<details>
+<summary>Où mes données sont-elles stockées ?</summary>
+<div class="faq-a">TAGRA III est une application Windows qui fonctionne sur votre propre ordinateur. Les données des conducteurs et des véhicules sont stockées localement, et non dans un cloud exploité par nos soins.</div>
+</details>
+<details>
+<summary>Quelles langues sont disponibles ?</summary>
+<div class="faq-a">Le logiciel et ses rapports sont disponibles en anglais, allemand, italien, français, tchèque et slovaque. La langue du rapport peut être modifiée directement dans l’aperçu avant impression, ce qui est utile lorsqu’un rapport est destiné à un conducteur parlant une autre langue.</div>
+</details>
 <details>
 <summary>Comment acheter TAGRA après l'essai ?</summary>
 <div class="faq-a">Tout se passe directement dans le logiciel. À la fin de l'essai — ou dès que vous êtes prêt — ouvrez le menu des licences, sélectionnez la version correspondant à votre nombre de véhicules (TAGRA 1, 2, 4, 6 ou MAX), puis payez en ligne. Le paiement s'effectue par code QR ou par virement en ligne. Votre licence est délivrée et activée immédiatement — vous continuez à travailler dans le même environnement, avec toutes vos données intactes.</div>
@@ -1159,6 +1282,34 @@
 
 
 
+  /* 7. TAGRA III SCREENSHOT TABS */
+  (function(){
+    var list = document.querySelector('.t3-tabs');
+    if (!list) return;
+    var tabs = Array.prototype.slice.call(list.querySelectorAll('[role="tab"]'));
+    function select(tab, focus){
+      tabs.forEach(function(t){
+        var on = t === tab;
+        t.setAttribute('aria-selected', on ? 'true' : 'false');
+        t.setAttribute('tabindex', on ? '0' : '-1');
+        var p = document.getElementById(t.getAttribute('aria-controls'));
+        if (p) { if (on) p.removeAttribute('hidden'); else p.setAttribute('hidden', ''); }
+      });
+      if (focus) tab.focus();
+    }
+    tabs.forEach(function(t, i){
+      t.addEventListener('click', function(){ select(t, false); });
+      t.addEventListener('keydown', function(e){
+        var n = null;
+        if (e.key === 'ArrowRight') n = tabs[(i + 1) % tabs.length];
+        else if (e.key === 'ArrowLeft') n = tabs[(i - 1 + tabs.length) % tabs.length];
+        else if (e.key === 'Home') n = tabs[0];
+        else if (e.key === 'End') n = tabs[tabs.length - 1];
+        if (n) { e.preventDefault(); select(n, true); }
+      });
+    });
+  })();
+
   /* STICKY CTA BAR */
   (function(){
     var bar = document.getElementById('stickyCta');
@@ -1189,10 +1340,13 @@
 {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
-  "name": "TAGRA – logiciel d'analyse de tachygraphe pour les gestionnaires de flotte",
+  "name": "TAGRA III – Logiciel de tachygraphe pour flottes",
+  "alternateName": "TAGRA III",
   "applicationCategory": "BusinessApplication",
   "operatingSystem": "Windows",
-  "description": "Logiciel d'analyse de tachygraphe pour les gestionnaires de flotte. Téléchargement des cartes de conducteur, analyse des tachygraphes numériques, archivage et téléchargement à distance des données du tachygraphe pour 1 à un nombre illimité de véhicules. Évalue les temps de conduite des conducteurs de l'UE (règlement 561/2006), l'AETR et la directive sur le temps de travail dans le transport routier de marchandises. Essai gratuit de 30 jours. Prêt pour les véhicules utilitaires à partir de juillet 2026.",
+  "description": "TAGRA III — logiciel d’analyse des données des tachygraphes numériques pour les gestionnaires de flotte, de 1 à un nombre illimité de véhicules. Il charge les données des cartes de conducteur et des unités embarquées, les évalue conformément au règlement (CE) n° 561/2006, à l’AETR, à la directive 2002/15/CE et aux règles nationales (CZ, SK, HU), cite la réglementation pour chaque infraction et présente une vue d’ensemble des tâches liées aux téléchargements, à l’expiration des cartes et à l’étalonnage. Données stockées localement. Essai gratuit de 30 jours. Prêt pour les véhicules utilitaires légers à partir de juillet 2026.",
+  "screenshot": ["https://tagra.app/assets/img/tagra3/tagra3-overview.webp", "https://tagra.app/assets/img/tagra3/tagra3-driver.webp", "https://tagra.app/assets/img/tagra3/tagra3-infringements.webp", "https://tagra.app/assets/img/tagra3/tagra3-evaluation.webp", "https://tagra.app/assets/img/tagra3/tagra3-driver-evaluation.webp", "https://tagra.app/assets/img/tagra3/tagra3-work-report.webp", "https://tagra.app/assets/img/tagra3/tagra3-company-report.webp"],
+  "availableLanguage": ["en", "de", "it", "fr", "cs", "sk"],
   "url": "https://tagra.app/fr/entreprises/",
   "inLanguage": "fr",
   "author": { "@type": "Organization", "@id": "https://tagra.app/#organization", "name": "Truck Data Technology, s.r.o.", "url": "https://www.tdt.cz" },
@@ -1205,6 +1359,38 @@
   "@type": "FAQPage",
   "inLanguage": "fr",
   "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Qu’est-ce que TAGRA III ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "TAGRA III est la nouvelle génération du logiciel TAGRA d’analyse des données tachygraphiques pour les flottes. Il charge les données des cartes de conducteur et des unités embarquées, les évalue conformément au règlement (CE) n° 561/2006, à l’accord AETR, à la directive 2002/15/CE et aux règles nationales, et présente dans une vue d’ensemble les points nécessitant votre attention : infractions, temps non justifié, téléchargements des cartes et des véhicules, validité des cartes et étalonnage des tachygraphes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quelles règles TAGRA III prend-il en compte ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Temps de conduite, pauses et périodes de repos au titre du règlement (CE) n° 561/2006 et de l’accord AETR, enregistrements au titre du règlement (UE) n° 165/2014 et temps de travail au titre de la directive 2002/15/CE. Les règles nationales relatives au temps de travail sont intégrées pour la République tchèque, la Slovaquie et la Hongrie ; ailleurs, le temps de travail est évalué conformément à la directive. Chaque infraction est accompagnée de la référence à l’article concerné, du texte de la réglementation et d’une recommandation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Où mes données sont-elles stockées ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "TAGRA III est une application Windows qui fonctionne sur votre propre ordinateur. Les données des conducteurs et des véhicules sont stockées localement, et non dans un cloud exploité par nos soins."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quelles langues sont disponibles ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Le logiciel et ses rapports sont disponibles en anglais, allemand, italien, français, tchèque et slovaque. La langue du rapport peut être modifiée directement dans l’aperçu avant impression, ce qui est utile lorsqu’un rapport est destiné à un conducteur parlant une autre langue."
+      }
+    },
     {
       "@type": "Question",
       "name": "Comment acheter TAGRA après l'essai ?",
