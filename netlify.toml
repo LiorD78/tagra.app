@@ -7,6 +7,31 @@
   # Trial-email function runs after form submission webhook.
   # Bumped runtime to nodejs20 for native fetch() support.
 
+# Favicons (TRUCKMALL green #6E9B12) - binary served from netlify/functions/favicon.js
+[[redirects]]
+  from = "/favicon.ico"
+  to = "/.netlify/functions/favicon?f=ico"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/apple-touch-icon.png"
+  to = "/.netlify/functions/favicon?f=apple"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/apple-touch-icon-precomposed.png"
+  to = "/.netlify/functions/favicon?f=apple"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/icon-192.png"
+  to = "/.netlify/functions/favicon?f=i192"
+  status = 200
+  force = true
+
 [[headers]]
   for = "/*"
   [headers.values]
