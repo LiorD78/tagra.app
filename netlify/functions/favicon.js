@@ -117,7 +117,9 @@ function build(f) {
 }
 
 exports.handler = async (event) => {
-  const f = (event.queryStringParameters || {}).f || "ico";
+  // Rewrites may drop the query string, so detect the icon from the URL/path as well.
+  const src = [event.rawUrl, event.path, JSON.stringify(event.queryStringParameters || {})].join(" ");
+  const f = /apple/.test(src) ? "apple" : /192/.test(src) ? "i192" : "ico";
   const icon = build(f);
   return {
     statusCode: 200,
