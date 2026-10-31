@@ -79,7 +79,7 @@
 <!-- TMX-ANALYTICS END -->
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>GPS nyomkövetés és flottakövetés – EUTracker</title>
+<title>GPS-nyomkövetés és flottakövetés – EUTracker</title>
 <meta content="Valós idejű járműkövetés, útnyilvántartás és mobilalkalmazás fuvarozóknak. HU-GO támogatás, országos beszerelés, tachográfadatokkal együtt. Kérjen ajánlatot." name="description"/>
 <meta content="#0b2c4a" name="theme-color"/>
 <link href="/manifest.json" rel="manifest"/>
@@ -88,7 +88,7 @@
 <meta content="website" property="og:type"/>
 <meta content="hu_HU" property="og:locale"/>
 <meta content="TAGRA" property="og:site_name"/>
-<meta content="GPS nyomkövetés és flottakövetés – EUTracker" property="og:title"/><meta content="Valós idejű járműkövetés, útnyilvántartás és mobilalkalmazás fuvarozóknak. HU-GO támogatás, országos beszerelés, tachográfadatokkal együtt. Kérjen ajánlatot." property="og:description"/>
+<meta content="GPS-nyomkövetés és flottakövetés – EUTracker" property="og:title"/><meta content="Valós idejű járműkövetés, útnyilvántartás és mobilalkalmazás fuvarozóknak. HU-GO támogatás, országos beszerelés, tachográfadatokkal együtt. Kérjen ajánlatot." property="og:description"/>
 <meta content="https://cdn.truckmall.cz/data/user-content/TDT_TAGRA_MAX_wh.jpg" property="og:image"/>
 <meta content="https://tagra.app/hu/gps-nyomkovetes/" property="og:url"/>
 <meta content="summary_large_image" name="twitter:card"/>
@@ -171,6 +171,28 @@
     .anim-up{opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.16,1,.3,1),transform .8s cubic-bezier(.16,1,.3,1);}
     .anim-up.on{opacity:1;transform:none;}
     @media(prefers-reduced-motion:reduce){.anim-up{transition:none!important;opacity:1!important;transform:none!important;}}
+
+    /* Ajánlatkérő űrlap – stílus átvéve az ingyenes-probaverzio oldal űrlapjából (main.css), az #ajanlatkeres alá szűkítve */
+    #ajanlatkeres .try-form-wrap{background:#fff;border:1px solid rgba(11,44,74,0.12);border-radius:20px;padding:36px;box-shadow:0 1px 3px rgba(0,0,0,0.04),0 8px 24px rgba(11,44,74,0.06);}
+    @media(max-width:600px){#ajanlatkeres .try-form-wrap{padding:24px;}}
+    #ajanlatkeres form>*+*{margin-top:20px;}
+    #ajanlatkeres .form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+    @media(max-width:600px){#ajanlatkeres .form-row{grid-template-columns:1fr;}}
+    #ajanlatkeres .form-field{display:block;width:100%;}
+    #ajanlatkeres .form-label{display:block;font-size:13px;font-weight:600;color:var(--blue-dark);margin-bottom:6px;letter-spacing:0.02em;}
+    #ajanlatkeres .form-label em{color:var(--green-cta);font-style:normal;font-weight:700;}
+    #ajanlatkeres .form-field input,#ajanlatkeres .form-field textarea{width:100%;padding:12px 14px;font-size:15.5px;font-family:inherit;color:var(--text);background:#fff;border:1.5px solid rgba(11,44,74,0.12);border-radius:12px;transition:border-color .15s ease,box-shadow .15s ease;-webkit-appearance:none;}
+    #ajanlatkeres .form-field input:focus,#ajanlatkeres .form-field textarea:focus{outline:none;border-color:var(--blue-mid);box-shadow:0 0 0 3px rgba(19,74,142,0.12);}
+    #ajanlatkeres .form-field textarea{resize:vertical;min-height:80px;}
+    #ajanlatkeres .gdpr-check{display:flex;align-items:flex-start;gap:10px;padding:12px 14px;background:#fbfcfd;border:1px solid rgba(11,44,74,0.12);border-radius:12px;font-size:13.5px;line-height:1.5;color:var(--text2);cursor:pointer;}
+    #ajanlatkeres .gdpr-check input[type=checkbox]{margin-top:2px;accent-color:var(--green-cta);width:17px;height:17px;flex-shrink:0;}
+    #ajanlatkeres .gdpr-check a{color:var(--blue-mid);text-decoration:underline;}
+    #ajanlatkeres .gdpr-check em{color:var(--green-cta);font-style:normal;font-weight:700;}
+    #ajanlatkeres .btn-submit{width:100%;padding:16px 32px;font-size:16.5px;font-weight:600;background:var(--green-cta);color:#fff;border:none;border-radius:99px;cursor:pointer;transition:background .15s ease,transform .1s ease;}
+    #ajanlatkeres .btn-submit:hover{background:var(--green-brand);transform:translateY(-1px);}
+    #ajanlatkeres .form-footnote{text-align:center;font-size:12.5px;color:var(--text2);margin-top:8px;}
+    #ajanlatkeres .ak-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:32px;margin-top:32px;align-items:start;}
+    @media(max-width:900px){#ajanlatkeres .ak-grid{grid-template-columns:1fr;}}
   </style>
 <script type="application/ld+json">{
   "@context": "https://schema.org",
@@ -242,9 +264,9 @@
 </div>
 </nav>
 <main id="main-content">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Service", "name": "EUTracker – GPS nyomkövetés és flottakövetés", "serviceType": "GPS járműkövetés és flottamenedzsment", "url": "https://tagra.app/hu/gps-nyomkovetes/", "description": "Valós idejű GPS járműkövetés, automatikus útnyilvántartás, üzemanyagszint-figyelés és vezetési stílus kiértékelése fuvarozóknak. Teltonika Telematics hardver, EUTracker platform, országos beszerelési hálózat Magyarországon.", "provider": {"@type": "Organization", "@id": "https://tagra.app/#organization", "name": "Truck Data Technology Zrt.", "url": "https://tdt.co.hu/", "address": {"@type": "PostalAddress", "streetAddress": "Nagymező utca 45", "addressLocality": "Budapest", "postalCode": "1065", "addressCountry": "HU"}, "contactPoint": {"@type": "ContactPoint", "telephone": "+36-50-136-14-90", "email": "info@tdt.hu", "contactType": "sales", "areaServed": ["HU"], "availableLanguage": ["Hungarian"]}}, "areaServed": {"@type": "Country", "name": "Magyarország"}, "audience": {"@type": "BusinessAudience", "audienceType": "Fuvarozó vállalkozások és flottakezelők"}, "hasOfferCatalog": {"@type": "OfferCatalog", "name": "EUTracker szolgáltatások", "itemListElement": [{"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Valós idejű járműkövetés és útvonalak"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Automatikus útnyilvántartás"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Üzemanyagszint-figyelés és fogyasztáselemzés"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Vezetési stílus kiértékelése"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Indításgátló és ütközésérzékelés"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "24/7 távfelügyeleti bekötés"}}]}, "offers": {"@type": "Offer", "priceCurrency": "EUR", "availability": "https://schema.org/InStock", "priceSpecification": {"@type": "PriceSpecification", "description": "Egyedi árajánlat a flotta mérete és a választott funkciók alapján."}}}</script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Mit tud az EUTracker GPS flottakövetés?", "acceptedAnswer": {"@type": "Answer", "text": "Valós idejű járműpozíció és megtett útvonalak, elektronikus útnyilvántartás automatikus vezetése, hozzáférés webböngészőből és ingyenes mobilalkalmazásból (iOS, Android), valamint a követés megosztása üzleti partnerekkel. Személyautókhoz, kisteherautókhoz és tehergépjárművekhez egyaránt."}}, {"@type": "Question", "name": "Hol szerelik be a nyomkövető egységet?", "acceptedAnswer": {"@type": "Answer", "text": "A beszerelést országos partnerhálózatunk végzi Magyarországon – a telephelyéhez legközelebbi szervizpontot ajánljuk."}}, {"@type": "Question", "name": "Kombinálható a tachográf távoli letöltésével?", "acceptedAnswer": {"@type": "Answer", "text": "Igen – a GPS flottakövetés mellé ajánljuk a DOWNLOAD BOX REMOTE távoli tachográf letöltést: így nemcsak a járművek helyzetét látja, hanem a tachográfadatok is automatikusan beérkeznek, fizikai kiolvasás nélkül."}}, {"@type": "Question", "name": "Mennyibe kerül az EUTracker?", "acceptedAnswer": {"@type": "Answer", "text": "Az ár a flotta méretétől, a jármű típusától és a választott funkcióktól függ – például az üzemanyagszint-figyelés vagy a távfelügyeleti bekötés külön hardvert igényel. Mondja el, hány járműről van szó, és személyre szabott ajánlatot készítünk a hardverre, a beszerelésre és a havi szolgáltatási díjra."}}, {"@type": "Question", "name": "Milyen hardvert használ a rendszer?", "acceptedAnswer": {"@type": "Answer", "text": "A járművekbe Teltonika Telematics egységek kerülnek, amelyek az EUTracker platformmal működnek együtt. A típust a jármű és a kívánt funkciók alapján választjuk ki – a vontatmány-CAN adatok kiolvasásához vagy az üzemanyagszint méréséhez például eltérő kiépítés szükséges."}}, {"@type": "Question", "name": "Helyettesíti a GPS nyomkövetés a tachográfot?", "acceptedAnswer": {"@type": "Answer", "text": "Nem. A tachográf használata jogszabályi kötelezettség, és 2026. július 1-je óta a nemzetközi fuvarozásban részt vevő 2,5–3,5 tonnás kisteherautókra is vonatkozik. A GPS flottakövetés ezt nem váltja ki, hanem kiegészíti: a tachográfadatokat a DOWNLOAD BOX REMOTE tölti le, a TAGRA program pedig kiértékeli őket."}}, {"@type": "Question", "name": "Kiváltja a rendszer a papíralapú útnyilvántartást?", "acceptedAnswer": {"@type": "Answer", "text": "A rendszer automatikusan rögzíti a megtett utakat, és ezzel támogatja az útnyilvántartás vezetését. Azt, hogy az adott nyilvántartás milyen formában felel meg az Ön adózási és számviteli kötelezettségeinek, minden esetben érdemes a könyvelőjével egyeztetni."}}, {"@type": "Question", "name": "Segít az útdíj (HU-GO) kezelésében?", "acceptedAnswer": {"@type": "Answer", "text": "Igen, a rendszer támogatja a magyar HU-GO útdíjjal kapcsolatos flottakezelést – a részletekről magyar nyelvű csapatunk ad tájékoztatást."}}]}</script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "TAGRA", "item": "https://tagra.app/hu/"}, {"@type": "ListItem", "position": 2, "name": "GPS nyomkövetés", "item": "https://tagra.app/hu/gps-nyomkovetes/"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Service", "name": "EUTracker – GPS-nyomkövetés és flottakövetés", "serviceType": "GPS járműkövetés és flottamenedzsment", "url": "https://tagra.app/hu/gps-nyomkovetes/", "description": "Valós idejű GPS járműkövetés, automatikus útnyilvántartás, üzemanyagszint-figyelés és vezetési stílus kiértékelése fuvarozóknak. GPS-egység, EUTracker platform, országos beszerelési hálózat Magyarországon.", "provider": {"@type": "Organization", "name": "Rukon Kft.", "address": {"@type": "PostalAddress", "streetAddress": "Albertirsai út 2–4.", "addressLocality": "Budapest", "postalCode": "1101", "addressCountry": "HU"}, "contactPoint": {"@type": "ContactPoint", "name": "Varga Katalin", "telephone": "+36-30-474-2540", "email": "rukon@rukon.hu", "contactType": "sales", "areaServed": ["HU"], "availableLanguage": ["Hungarian"]}}, "areaServed": {"@type": "Country", "name": "Magyarország"}, "audience": {"@type": "BusinessAudience", "audienceType": "Fuvarozó vállalkozások és flottakezelők"}, "hasOfferCatalog": {"@type": "OfferCatalog", "name": "EUTracker szolgáltatások", "itemListElement": [{"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Valós idejű járműkövetés és útvonalak"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Automatikus útnyilvántartás"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Üzemanyagszint-figyelés és fogyasztáselemzés"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Vezetési stílus kiértékelése"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Indításgátló és ütközésérzékelés"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "24/7 távfelügyeleti bekötés"}}]}, "offers": {"@type": "Offer", "priceCurrency": "EUR", "availability": "https://schema.org/InStock", "priceSpecification": {"@type": "PriceSpecification", "description": "Egyedi árajánlat a flotta mérete és a választott funkciók alapján."}}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Mit tud az EUTracker GPS flottakövetés?", "acceptedAnswer": {"@type": "Answer", "text": "Valós idejű járműpozíció és megtett útvonalak, elektronikus útnyilvántartás automatikus vezetése, hozzáférés webböngészőből és ingyenes mobilalkalmazásból (iOS, Android), valamint a követés megosztása üzleti partnerekkel. Személyautókhoz, kisteherautókhoz és tehergépjárművekhez egyaránt."}}, {"@type": "Question", "name": "Hol szerelik be a nyomkövető egységet?", "acceptedAnswer": {"@type": "Answer", "text": "A beszerelést országos partnerhálózatunk végzi Magyarországon – a telephelyéhez legközelebbi szervizpontot ajánljuk."}}, {"@type": "Question", "name": "Kombinálható a tachográf távoli letöltésével?", "acceptedAnswer": {"@type": "Answer", "text": "Igen – a GPS flottakövetés mellé ajánljuk a DOWNLOAD BOX REMOTE távoli tachográf letöltést: így nemcsak a járművek helyzetét látja, hanem a tachográfadatok is automatikusan beérkeznek, fizikai kiolvasás nélkül."}}, {"@type": "Question", "name": "Mennyibe kerül az EUTracker?", "acceptedAnswer": {"@type": "Answer", "text": "Az ár a flotta méretétől, a jármű típusától és a választott funkcióktól függ – például az üzemanyagszint-figyelés vagy a távfelügyeleti bekötés külön hardvert igényel. Mondja el, hány járműről van szó, és személyre szabott ajánlatot készítünk a hardverre, a beszerelésre és a havi szolgáltatási díjra."}}, {"@type": "Question", "name": "Milyen hardvert használ a rendszer?", "acceptedAnswer": {"@type": "Answer", "text": "A járművekbe GPS-egységek kerülnek, amelyek az EUTracker platformmal működnek együtt. A típust a jármű és a kívánt funkciók alapján választjuk ki – a vontatmány-CAN adatok kiolvasásához vagy az üzemanyagszint méréséhez például eltérő kiépítés szükséges."}}, {"@type": "Question", "name": "Helyettesíti a GPS-nyomkövetés a tachográfot?", "acceptedAnswer": {"@type": "Answer", "text": "Nem. A tachográf használata jogszabályi kötelezettség, és 2026. július 1-je óta a nemzetközi fuvarozásban részt vevő 2,5–3,5 tonnás kisteherautókra is vonatkozik. A GPS flottakövetés ezt nem váltja ki, hanem kiegészíti: a tachográfadatokat a DOWNLOAD BOX REMOTE tölti le, a TAGRA program pedig kiértékeli őket."}}, {"@type": "Question", "name": "Kiváltja a rendszer a papíralapú útnyilvántartást?", "acceptedAnswer": {"@type": "Answer", "text": "A rendszer automatikusan rögzíti a megtett utakat, és ezzel támogatja az útnyilvántartás vezetését. Azt, hogy az adott nyilvántartás milyen formában felel meg az Ön adózási és számviteli kötelezettségeinek, minden esetben érdemes a könyvelőjével egyeztetni."}}, {"@type": "Question", "name": "Segít az útdíj (HU-GO) kezelésében?", "acceptedAnswer": {"@type": "Answer", "text": "Igen, a rendszer támogatja a magyar HU-GO útdíjjal kapcsolatos flottakezelést – a részletekről magyar nyelvű csapatunk ad tájékoztatást."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "TAGRA", "item": "https://tagra.app/hu/"}, {"@type": "ListItem", "position": 2, "name": "GPS-nyomkövetés", "item": "https://tagra.app/hu/gps-nyomkovetes/"}]}</script>
 
 <style>
 .px-hero{padding:70px 0 40px;}
@@ -282,7 +304,7 @@
 </style>
 <section class="band px-hero"><div class="container">
 <div class="eyebrow">EUTracker</div>
-<h1 class="hero-h hero-h2" style="font-size:44px;line-height:1.12;color:var(--blue-dark,#0b2c4a);">GPS nyomkövetés és flottakövetés fuvarozóknak</h1>
+<h1 class="hero-h hero-h2" style="font-size:44px;line-height:1.12;color:var(--blue-dark,#0b2c4a);">GPS-nyomkövetés és flottakövetés fuvarozóknak</h1>
 <p style="max-width:720px;font-size:18px;margin-top:14px;">Lássa <b>valós időben</b>, hol járnak a járművei. Megtett útvonalak, elektronikus útnyilvántartás és mobilalkalmazás – egy megfizethető rendszerben, országos beszerelési hálózattal.</p>
 </div></section>
 <section class="band" style="background:var(--bg-apple-solid,#f5f7fa);"><div class="container">
@@ -330,7 +352,7 @@
 <li>Követés megosztása üzleti partnerekkel</li>
 </ul></div>
 </div>
-<p class="px-note" style="margin-top:18px;">A hardveroldalt <b>Teltonika Telematics</b> egységek adják, a szoftver az <b>EUTracker</b> platform. Az egyedi igényeket – például speciális szenzorokat vagy egyedi integrációt – külön egyeztetjük.</p>
+<p class="px-note" style="margin-top:18px;">A hardveroldalt <b>GPS-egységek</b> adják, a szoftver az <b>EUTracker</b> platform. Az egyedi igényeket – például speciális szenzorokat vagy egyedi integrációt – külön egyeztetjük.</p>
 </div></section>
 
 <section class="band"><div class="container">
@@ -345,7 +367,8 @@
 
 <section class="band"><div class="container">
 <h2>GPS + tachográf: teljes kép a flottáról</h2>
-<p style="max-width:760px;">A flottakövetés megmutatja, <b>hol</b> vannak a járművei – a tachográfadatok pedig azt, <b>hogyan</b> közlekednek. A GPS nyomkövetés mellé ajánljuk a <a href="/hu/tavoli-letoltes/">DOWNLOAD BOX REMOTE távoli tachográf letöltést</a>: a tachográf- és sofőrkártyaadatok automatikusan beérkeznek, a <a href="/hu/">TAGRA szoftver</a> pedig kiértékeli őket. Egy beszállító, egy rendszer – teljes megfelelés.</p>
+<p style="max-width:760px;">A flottakövetés megmutatja, <b>hol</b> vannak a járművei – a tachográfadatok pedig azt, <b>hogyan</b> közlekednek. A GPS-nyomkövetés mellé ajánljuk a <a href="/hu/tavoli-letoltes/">DOWNLOAD BOX REMOTE távoli tachográf letöltést</a>: a tachográf- és sofőrkártyaadatok automatikusan beérkeznek, a <a href="/hu/">TAGRA szoftver</a> pedig kiértékeli őket. Egy beszállító, egy rendszer – teljes megfelelés.</p>
+<p style="max-width:760px;"><a href="/hu/eutracker-plus/" style="font-weight:600;">EUTracker PLUS – GPS-nyomkövetés tachográf-integrációval →</a></p>
 </div></section>
 <section class="band" style="background:var(--bg-apple-solid,#f5f7fa);"><div class="container">
 <h2>Gyakori kérdések</h2>
@@ -354,20 +377,74 @@
 <details><summary>Hol szerelik be a nyomkövető egységet?</summary><div class="px-a">A beszerelést országos partnerhálózatunk végzi Magyarországon – a telephelyéhez legközelebbi szervizpontot ajánljuk.</div></details>
 <details><summary>Kombinálható a tachográf távoli letöltésével?</summary><div class="px-a">Igen – a GPS flottakövetés mellé ajánljuk a <a href="/hu/tavoli-letoltes/">DOWNLOAD BOX REMOTE</a> távoli tachográf letöltést: így nemcsak a járművek helyzetét látja, hanem a tachográfadatok is automatikusan beérkeznek, fizikai kiolvasás nélkül.</div></details>
 <details><summary>Mennyibe kerül az EUTracker?</summary><div class="px-a">Az ár a flotta méretétől, a jármű típusától és a választott funkcióktól függ – például az üzemanyagszint-figyelés vagy a távfelügyeleti bekötés külön hardvert igényel. Mondja el, hány járműről van szó, és személyre szabott ajánlatot készítünk a hardverre, a beszerelésre és a havi szolgáltatási díjra.</div></details>
-<details><summary>Milyen hardvert használ a rendszer?</summary><div class="px-a">A járművekbe <b>Teltonika Telematics</b> egységek kerülnek, amelyek az EUTracker platformmal működnek együtt. A típust a jármű és a kívánt funkciók alapján választjuk ki – a vontatmány-CAN adatok kiolvasásához vagy az üzemanyagszint méréséhez például eltérő kiépítés szükséges.</div></details>
-<details><summary>Helyettesíti a GPS nyomkövetés a tachográfot?</summary><div class="px-a">Nem. A tachográf használata jogszabályi kötelezettség, és 2026. július 1-je óta a nemzetközi fuvarozásban részt vevő 2,5–3,5 tonnás kisteherautókra is vonatkozik. A GPS flottakövetés ezt nem váltja ki, hanem kiegészíti: a tachográfadatokat a <a href="/hu/tavoli-letoltes/">DOWNLOAD BOX REMOTE</a> tölti le, a <a href="/hu/">TAGRA program</a> pedig kiértékeli őket.</div></details>
+<details><summary>Milyen hardvert használ a rendszer?</summary><div class="px-a">A járművekbe <b>GPS-egységek</b> kerülnek, amelyek az EUTracker platformmal működnek együtt. A típust a jármű és a kívánt funkciók alapján választjuk ki – a vontatmány-CAN adatok kiolvasásához vagy az üzemanyagszint méréséhez például eltérő kiépítés szükséges.</div></details>
+<details><summary>Helyettesíti a GPS-nyomkövetés a tachográfot?</summary><div class="px-a">Nem. A tachográf használata jogszabályi kötelezettség, és 2026. július 1-je óta a nemzetközi fuvarozásban részt vevő 2,5–3,5 tonnás kisteherautókra is vonatkozik. A GPS flottakövetés ezt nem váltja ki, hanem kiegészíti: a tachográfadatokat a <a href="/hu/tavoli-letoltes/">DOWNLOAD BOX REMOTE</a> tölti le, a <a href="/hu/">TAGRA program</a> pedig kiértékeli őket.</div></details>
 <details><summary>Kiváltja a rendszer a papíralapú útnyilvántartást?</summary><div class="px-a">A rendszer automatikusan rögzíti a megtett utakat, és ezzel támogatja az útnyilvántartás vezetését. Azt, hogy az adott nyilvántartás milyen formában felel meg az Ön adózási és számviteli kötelezettségeinek, minden esetben érdemes a könyvelőjével egyeztetni.</div></details>
 <details><summary>Segít az útdíj (HU-GO) kezelésében?</summary><div class="px-a">Igen, a rendszer támogatja a magyar HU-GO útdíjjal kapcsolatos flottakezelést – a részletekről magyar nyelvű csapatunk ad tájékoztatást.</div></details>
 </div>
 </div></section>
-<section class="band"><div class="container">
-<div class="px-cta-band">
-<h2 style="font-size:32px;">Kérjen személyre szabott ajánlatot</h2>
-<p>Mondja el, hány járműből áll a flottája – magyar nyelvű csapatunk összeállítja az Önnek megfelelő megoldást.</p>
-<a class="btn-cta" href="mailto:info@tdt.hu">Kérjen árajánlatot</a>
-<p class="px-contact"><a href="mailto:info@tdt.hu">info@tdt.hu</a> · <a href="tel:+36501361490">+36 50 136 14 90</a></p>
+<section class="band" id="ajanlatkeres" aria-label="Ajánlatkérés" style="background:var(--bg-blue,#eef4fb);"><div class="container">
+<div class="eyebrow">Ajánlatkérés</div>
+<h2>Kérjen személyre szabott ajánlatot a Rukon Kft.-től</h2>
+<p style="max-width:760px;">Mondja el, hány járműből áll a flottája – a Rukon Kft. felveszi Önnel a kapcsolatot, és összeállítja az Önnek megfelelő megoldást.</p>
+<div class="ak-grid">
+<div class="contact-card">
+<h3 class="card-title">Magyarországi értékesítés</h3>
+<div class="contact-card-sub">Hivatalos magyarországi forgalmazónk, a <strong>Rukon Kft.</strong> segít a TAGRA programmal, az árakkal és a rendelésekkel kapcsolatban.</div>
+<div class="contact-people">
+<div class="contact-person">
+<div>
+<div class="contact-item-label">Varga Katalin — Rukon Kft.</div>
+<a class="contact-person-phone" href="tel:+36304742540">+36 30 474 2540</a>
+</div>
+</div>
+</div>
+<div class="contact-item">
+<div class="contact-item-icon">
+<svg fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+</div>
+<div>
+<div class="contact-item-label">E-mail</div>
+<div class="contact-item-value"><a href="mailto:rukon@rukon.hu">rukon@rukon.hu</a></div>
+</div>
+</div>
+<div class="contact-item">
+<div class="contact-item-icon">
+<svg fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+</div>
+<div>
+<div class="contact-item-label">Iroda</div>
+<div class="contact-item-value" style="font-weight:400;font-size:16px">1101 Budapest, Albertirsai út 2–4.</div>
+</div>
+</div>
+</div>
+<div class="try-form-wrap">
+<form name="ajanlatkeres-hu" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/hu/koszonjuk/">
+<input name="form-name" type="hidden" value="ajanlatkeres-hu"/>
+<input name="termek" type="hidden" value="EUTracker"/>
+<input id="source_url" name="source_url" type="hidden" value="https://tagra.app/hu/gps-nyomkovetes/"/>
+<p aria-hidden="true" hidden=""><label>Ezt ne töltse ki:<input autocomplete="off" name="bot-field" tabindex="-1"/></label></p>
+<div class="form-row">
+<label class="form-field"><span class="form-label">Név<em>*</em></span><input autocomplete="name" name="name" required="" type="text"/></label>
+<label class="form-field"><span class="form-label">Cégnév</span><input autocomplete="organization" name="company" type="text"/></label>
+</div>
+<div class="form-row">
+<label class="form-field"><span class="form-label">E-mail<em>*</em></span><input autocomplete="email" name="email" required="" type="email"/></label>
+<label class="form-field"><span class="form-label">Telefon</span><input autocomplete="tel" name="phone" type="tel"/></label>
+</div>
+<label class="form-field"><span class="form-label">Járművek száma</span><input inputmode="numeric" min="1" name="vehicles" type="number"/></label>
+<label class="form-field"><span class="form-label">Üzenet</span><textarea name="message" rows="4"></textarea></label>
+<label class="gdpr-check">
+<input name="gdpr_consent" required="" type="checkbox" value="yes"/>
+<span>Hozzájárulok személyes adataim kezeléséhez abból a célból, hogy az ajánlatkéréssel kapcsolatban felvegyék velem a kapcsolatot. Részletek az <a href="/hu/adatvedelmi-tajekoztato/" rel="noopener noreferrer" target="_blank">adatvédelmi tájékoztatóban</a>. <em>*</em></span>
+</label>
+<button class="btn btn-primary btn-submit" type="submit"><span class="btn-text">Ajánlatot kérek</span></button>
+<p class="form-footnote">Az árakról egyedi ajánlatot ad a Rukon Kft.</p>
+</form>
+</div>
 </div>
 </div></section>
+<script>(function(){var su=document.getElementById('source_url');if(su)su.value=location.href;})();</script>
 </main>
 <footer class="site-footer" role="contentinfo">
 <div class="footer-inner">
@@ -385,7 +462,11 @@
 <li><a href="/hu/kinek-szol/">Kinek szól</a></li>
 <li><a href="/hu/gyakori-kerdesek/">GYIK</a></li>
 <li><a href="/hu/letolto-eszkozok/">Letöltő eszközök</a></li>
-<li><a href="/hu/gps-nyomkovetes/">GPS nyomkövetés</a></li>
+<li><a href="/hu/gps-nyomkovetes/">GPS-nyomkövetés</a></li>
+<li><a href="/hu/tachograf-adatkiertekeles/">Tachográfadatok kiértékelése</a></li>
+<li><a href="/hu/eutracker-plus/">EUTracker PLUS</a></li>
+<li><a href="/hu/tagra-oktatas-cegeknek/">TAGRA oktatás</a></li>
+<li><a href="/hu/tachograf-tanacsadas/">Tachográf-tanácsadás</a></li>
 </ul>
 </div>
 <div class="footer-col">
