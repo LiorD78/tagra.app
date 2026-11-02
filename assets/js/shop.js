@@ -1,4 +1,4 @@
-/* TAGRA Shop v4.0 – TRUCKMALL look, crew review (2. 11. 2026) */
+/* TAGRA Shop v6.0 – tagra.app look, crew + competitor review (2. 11. 2026) */
 (function(){
   var TM='https://cdn.truckmall.cz/data/user-content/';
   var TA='https://tagra.app/assets/';
@@ -68,33 +68,117 @@
       var h='';if(b)h+='<span class="tgs-badge">'+b+'</span>';if(s)h+='<span class="tgs-badge tgs-badge--save">Save €49</span>';
       if(h){var w=document.createElement('span');w.className='tgs-badges';w.innerHTML=h;img.appendChild(w);}
     });
-    var t=document.querySelector('.type-index .homepage-group-title');
-    if(t&&!document.querySelector('.tgs-lead')){var l=document.createElement('p');l.className='tgs-lead';l.textContent='TAGRA licences for 1 to unlimited vehicles, the DOWNLOAD BOX II S download key and bundles that save €49.';t.parentNode.insertBefore(l,t.nextSibling);}
+  }
+
+  var IC=TM+'cfg-ico-';
+  function head(label,h2,intro){return '<div class="tgs-head"><span class="tgs-label">'+label+'</span><h2 class="tgs-h2">'+h2+'</h2>'+(intro?'<p class="tgs-intro">'+intro+'</p>':'')+'</div>';}
+  function anchor(){return document.querySelector('.homepage-group-title.homepage-products-heading-1');}
+  function wel(){return document.querySelector('.welcome-wrapper.homepage-box')||document.querySelector('.welcome-wrapper');}
+
+  function trustbar(){
+    var u=document.querySelector('.tgs-usp');if(!u||document.querySelector('.tgs-trustbar'))return;
+    var d=document.createElement('p');d.className='tgs-trustbar';
+    d.innerHTML='<strong>Built for the realities of European road transport.</strong> The same evaluation logic used by Police forces, Customs Administrations and Labour Inspectorates.';
+    u.parentNode.insertBefore(d,u.nextSibling);
+  }
+
+  function steps(){
+    if(!isHP()||document.querySelector('.tgs-steps'))return;
+    var t=anchor();if(!t)return;
+    var S=[['klic','01','Download','90 / 28 days','Download vehicle-unit data at least every 90 days and driver-card data at least every 28 days.','DOWNLOAD BOX II S reads the tachograph and the driver card.','Explore download hardware','/download-devices/'],
+           ['sami','02','Evaluate','EU 561/2006','Evaluate driving and rest times under Regulation (EC) No 561/2006 and working time under Directive 2002/15/EC.','Find infringements and prepare reports before an inspection does.','Choose your TAGRA licence','#tgs-pricing'],
+           ['cmr-archiv-v3','03','Archive','12 months','Keep downloaded tachograph and driver-card data for at least 12 months, ready to show on request.','TAGRA archives .DDD, .C1B, .V1B and ESM files on your own PC.','Choose your TAGRA licence','#tgs-pricing']];
+    var s=document.createElement('section');s.className='tgs-sec tgs-steps';
+    s.innerHTML=head('What the law requires','Download. Evaluate. Archive.','Downloading isn\'t enough – the law requires evaluation and archiving. Here is what your workflow needs to cover, and what covers it.')+
+      '<div class="tgs-steps__grid">'+S.map(function(x){return '<div class="tgs-step"><div class="tgs-step__top"><img class="tgs-ico" src="'+IC+x[0]+'.webp" alt="" width="64" height="64" loading="lazy"><span class="tgs-step__n">'+x[1]+'</span></div><p class="tgs-step__t">'+x[2]+'</p><p class="tgs-step__big">'+x[3]+'</p><p class="tgs-step__d">'+x[4]+'</p><p class="tgs-step__x">'+x[5]+'</p><a class="tgs-step__a" href="'+x[7]+'">'+x[6]+'</a></div>';}).join('')+'</div>'+
+      '<p class="tgs-note">Supports all digital tachographs, including Smart G2V2.</p>';
+    t.parentNode.insertBefore(s,t);
+  }
+
+  function vans(){
+    if(!isHP()||document.querySelector('.tgs-vans'))return;
+    var t=anchor();if(!t)return;
+    var s=document.createElement('div');s.className='tgs-vans';
+    s.innerHTML='<img class="tgs-ico" src="'+IC+'firma.webp" alt="" width="56" height="56" loading="lazy"><div class="tgs-vans__txt"><span class="tgs-label">International van transport</span><p class="tgs-vans__h">Tachographs for 2.5–3.5 t vans from 1 July 2026</p><p class="tgs-vans__p">Vans of 2.5–3.5 tonnes used in international transport must have a tachograph – and their data must be downloaded, evaluated and archived like any truck.</p></div><a class="tgs-vans__a" href="#tgs-help">Ask which licence you need</a>';
+    t.parentNode.insertBefore(s,t);
+  }
+
+  function pricing(){
+    if(!isHP()||document.querySelector('.tgs-pricing'))return;
+    var t=anchor();if(!t)return;
+    var L=[['/tagra-1/','TAGRA 1','1 vehicle','For a one-vehicle fleet','€149','€79',149,79,1],
+           ['/tagra-2/','TAGRA 2','2 vehicles','For a two-vehicle fleet','€299','€79',299,79,2],
+           ['/tagra-4/','TAGRA 4','3–4 vehicles','For fleets of 3–4 vehicles','€399','€99',399,99,4],
+           ['/tagra-6/','TAGRA 6','5–6 vehicles','For fleets of 5–6 vehicles','€549','€99',549,99,6],
+           ['/tagra-max/','TAGRA MAX','Unlimited','No vehicle limit','€749','€149',749,149,1e9]];
+    function eur(n){return '€'+n.toLocaleString('en-US');}
+    var s=document.createElement('section');s.className='tgs-sec tgs-pricing';s.id='tgs-pricing';
+    s.innerHTML=head('Transparent licence pricing','Choose TAGRA by fleet size','Choose by the number of vehicles in your fleet. Every licence includes the first year; an annual licence fee applies from year two. Prices excl. VAT.')+
+      '<form class="tgs-finder" onsubmit="return false"><label for="tgs-veh">How many vehicles do you manage?</label><input id="tgs-veh" type="number" min="1" max="9999" inputmode="numeric" placeholder="Number of vehicles"><button type="submit" class="tgs-pill">Find my licence</button><span class="tgs-finder__out" aria-live="polite"></span></form>'+
+      '<div class="tgs-tiers">'+L.map(function(x){return '<a class="tgs-tier" href="'+x[0]+'" data-max="'+x[8]+'"><span class="tgs-tier__match">Matches your fleet size</span><span class="tgs-tier__cap">'+x[2]+'</span><span class="tgs-tier__name">'+x[1]+'</span><span class="tgs-tier__desc">'+x[3]+'</span><span class="tgs-tier__price">'+x[4]+'<small>excl. VAT</small></span><span class="tgs-tier__inc">First year included</span><span class="tgs-tier__fee">'+x[5]+' / year from year 2</span><span class="tgs-pill">Choose '+x[1]+'</span></a>';}).join('')+'</div>'+
+      '<div class="tgs-trucker"><img class="tgs-ico" src="'+IC+'ridic.webp" alt="" width="64" height="64" loading="lazy"><div class="tgs-trucker__txt"><span class="tgs-label">For employed drivers</span><p class="tgs-trucker__h">TAGRA TRUCKER</p><p class="tgs-trucker__p">For an employed driver analysing their own driver card. USB card reader included.</p></div><div class="tgs-trucker__price"><b>€49</b><small>excl. VAT · first year included</small><small>€19 / year from year 2</small></div><a class="tgs-pill" href="/tagra-trucker/">Choose TAGRA TRUCKER</a></div>'+
+      '<details class="tgs-3y"><summary>Compare licence costs over 3 years</summary><div class="tgs-3y__wrap"><table><thead><tr><th>Licence</th><th>Purchase</th><th>Year 2</th><th>Year 3</th><th>3-year total</th></tr></thead><tbody>'+
+      [['TAGRA TRUCKER',49,19]].concat(L.map(function(x){return [x[1],x[6],x[7]];})).map(function(r){return '<tr><td>'+r[0]+'</td><td>'+eur(r[1])+'</td><td>'+eur(r[2])+'</td><td>'+eur(r[2])+'</td><td><b>'+eur(r[1]+2*r[2])+'</b></td></tr>';}).join('')+
+      '</tbody></table><p>Current prices, excl. VAT and hardware. The purchase includes the first year; years 2 and 3 are annual licence fees.</p></div></details>'+
+      '<div class="tgs-trial"><div><p class="tgs-trial__h">Prefer to try TAGRA first?</p><p class="tgs-trial__p">Try TAGRA free for 30 days with the full functionality of TAGRA MAX. No credit card required.</p></div><div class="tgs-trial__cta"><a class="tgs-pill" href="https://tagra.app/try/?audience=fleet&src=shop" target="_blank" rel="noopener">Try 30 days free</a><span>No credit card. Windows installer.</span></div></div>';
+    t.parentNode.insertBefore(s,t);
+    var inp=s.querySelector('#tgs-veh'),out=s.querySelector('.tgs-finder__out'),tiers=[].slice.call(s.querySelectorAll('.tgs-tier'));
+    function find(){var n=parseInt(inp.value,10);tiers.forEach(function(x){x.classList.remove('is-match');});if(!(n>0)){out.textContent='';return;}
+      var m=null;for(var i=0;i<tiers.length;i++){if(n<=+tiers[i].getAttribute('data-max')){m=tiers[i];break;}}
+      if(m){m.classList.add('is-match');out.textContent=m.querySelector('.tgs-tier__name').textContent+' fits '+n+(n===1?' vehicle':' vehicles')+'.';}}
+    s.querySelector('.tgs-finder').addEventListener('submit',find);inp.addEventListener('input',find);
+  }
+
+  function groups(){
+    if(!isHP()||document.querySelector('.tgs-grp'))return;
+    var t=anchor(),blk=document.getElementById('products-1');if(!t||!blk)return;
+    var items=[].slice.call(blk.querySelectorAll(':scope > .product'));
+    function nm(it){return ((it.querySelector('.name')||{}).textContent||'').replace(/\s+/g,' ').trim().toUpperCase();}
+    function pr(it){var e=it.querySelector('[data-micro-price]');return e?parseFloat(e.getAttribute('data-micro-price'))||0:0;}
+    var dev=[];
+    items.forEach(function(it){var n=nm(it);if(/TAGRA/.test(n)&&!/DOWNLOAD/.test(n)){it.parentNode.removeChild(it);}else{dev.push(it);}});
+    dev.sort(function(a,b){return pr(a)-pr(b);}).forEach(function(it){blk.appendChild(it);});
+    blk.classList.add('tgs-grp');
+    var h=document.createElement('div');h.className='tgs-sec tgs-hw';h.innerHTML=head('Software + hardware','Complete your tachograph setup','DOWNLOAD BOX II S downloads data from the tachograph and the driver card – no annual fees, 24-month warranty. Buy it together with TAGRA and save €49.');
+    t.parentNode.insertBefore(h,t);t.classList.add('tgs-hide');
+    var more=document.createElement('p');more.className='tgs-note';more.innerHTML='Also available: <a href="/download-devices/">DOWNLOAD STATION and Wi-Fi versions</a> · <a href="/accessories/">smart card reader</a>';
+    blk.parentNode.insertBefore(more,blk.nextSibling);
+  }
+
+  function enforce(){
+    if(!isHP()||document.querySelector('.tgs-enf'))return;
+    var w=wel();if(!w)return;
+    var N=['FCC Group','CS Cargo a.s.','ČEDOK a.s.','AGRO SERVIS CZ','ČSAD Jihotrans','ČSAD Karviná','Pivovar Holba','PORR a.s.','Klaus Timber a.s.','Mátra Transport a.s.','KAFKA Transport a.s.','DKC s.r.o.','TQM Holding','Synergies Logistiques','ČSAD Autobusy České Budějovice','ČSAD POLKOST','Cargospol','Energie stavební a báňská a.s.','SAP Mimoň'];
+    var s=document.createElement('section');s.className='tgs-enf';
+    s.innerHTML='<div class="container">'+head('Verified in practice','Used in enforcement. Built for fleets.','The same evaluation logic used by Police, Customs and Labour Inspectorates across the Czech Republic, Slovakia and Hungary.')+
+      '<div class="tgs-ref"><div class="tgs-ref__c tgs-ref__c--cz"><span>Czech Republic</span><b>Police &amp; Customs</b><p>Roadside checks and checks at operators\' premises nationwide.</p></div><div class="tgs-ref__c tgs-ref__c--sk"><span>Slovakia</span><b>Labour Inspectorate</b><p>Driver hours and working time enforcement.</p></div><div class="tgs-ref__c tgs-ref__c--hu"><span>Hungary</span><b>Enforcement &amp; ministries</b><p>Cross-border transport compliance.</p></div><div class="tgs-ref__c"><span>Across Central Europe</span><b>20+ years · 6,000+ fleets</b><p>Haulage, bus &amp; coach, rental, municipal fleets, workshops.</p></div></div></div>'+
+      '<div class="tgs-mq"><p>Among the fleets and operators already running TAGRA</p><div class="tgs-mq__t">'+N.concat(N).map(function(n){return '<span>'+n+'</span>';}).join('')+'</div></div>';
+    w.parentNode.insertBefore(s,w);
   }
 
   function help(){
     if(!isHP()||document.querySelector('.tgs-help'))return;
-    var w=document.querySelector('.welcome-wrapper.homepage-box')||document.querySelector('.welcome-wrapper');if(!w)return;
-    var s=document.createElement('section');s.className='tgs-help';
-    s.innerHTML='<div class="container"><div class="tgs-help__box"><div class="tgs-help__txt"><h2>Not sure which TAGRA to choose?</h2><p>Tell us how many vehicles and drivers you have. We will recommend the right licence and device.</p></div>'+
-      '<div class="tgs-help__btns"><a class="tgs-help__btn tgs-help__btn--w" href="tel:'+PHONE.replace(/\s/g,'')+'">'+PHONE+'</a><a class="tgs-help__btn tgs-help__btn--o" href="mailto:'+SALES+'">'+SALES+'</a></div></div></div>';
+    var w=wel();if(!w)return;
+    var s=document.createElement('section');s.className='tgs-help';s.id='tgs-help';
+    s.innerHTML='<div class="container"><div class="tgs-help__box"><div class="tgs-help__txt"><h2>Not sure which TAGRA to choose?</h2><p>Tell us how many vehicles you manage and what download hardware you already have. We will recommend the right licence.</p><p class="tgs-help__sup">Already using TAGRA? Technical support: <a href="mailto:'+SUPPORT+'">'+SUPPORT+'</a></p></div>'+
+      '<div class="tgs-help__card"><img src="'+TA+'img/team/ivan-szabo.webp" alt="Ivan Szabó" width="72" height="72" loading="lazy"><div><b>Ivan Szabó</b><span>Tachograph data specialist</span><a href="tel:'+PHONE.replace(/\s/g,'')+'">'+PHONE+'</a><a href="mailto:'+SALES+'">'+SALES+'</a></div></div></div></div>';
     w.parentNode.insertBefore(s,w);
   }
 
-  function why(){
-    if(!isHP()||document.querySelector('.tgs-why'))return;
-    var w=document.querySelector('.tgs-help')||document.querySelector('.welcome-wrapper.homepage-box')||document.querySelector('.welcome-wrapper');if(!w)return;
-    var U=[['EU drivers\' hours + WTD','Automatic evaluation of Regulation (EC) 561/2006 and the Working Time Directive, every infringement flagged by time, type and duration.'],
-           ['All tachographs','From first-generation digital to Smart Tachograph G2V2. Reads .DDD, .C1B, .V1B and ESM files.'],
-           ['Audit-grade outputs','Inspector-ready reports for audits, internal reviews and roadside checks.'],
-           ['1 to unlimited vehicles','TRUCKER, 1, 2, 4, 6 and MAX – start with one truck, grow to an enterprise fleet.'],
-           ['Desktop. Offline. Yours.','Windows program on your PC – no cloud lock-in, no monthly subscription.'],
-           ['Vans 2026 ready','Covers the tachograph obligation for light commercial vehicles (2.5–3.5 t) in international transport from 1 July 2026.']];
-    var s=document.createElement('section');s.className='tgs-why';
-    s.innerHTML='<div class="container"><h2 class="tgs-h">Why TAGRA</h2><div class="tgs-why__grid">'+
-      U.map(function(u,i){return '<div class="tgs-why__card"><span class="tgs-why__n">0'+(i+1)+'</span><p class="tgs-why__t">'+u[0]+'</p><p class="tgs-why__d">'+u[1]+'</p></div>';}).join('')+
-      '</div><p class="tgs-why__more">Used by Police, Customs and Labour Inspectorates in the Czech Republic, Slovakia and Hungary. <a href="https://tagra.app/" target="_blank" rel="noopener">More on tagra.app →</a></p></div>';
+  function faq(){
+    if(!isHP()||document.querySelector('.tgs-faq'))return;
+    var w=wel();if(!w)return;
+    var Q=[['Is TAGRA cloud-based or installed locally?','TAGRA is Windows desktop software that runs on your own computer. Driver and vehicle data stay on your PC.'],
+           ['What will I pay after the first year?','The purchase price includes the first year. From year two, the annual licence fee is €19 (TRUCKER), €79 (TAGRA 1–2), €99 (TAGRA 4–6) or €149 (TAGRA MAX), excl. VAT.'],
+           ['Is download hardware included in the licence?','No. TAGRA is a software licence. DOWNLOAD BOX II S is sold separately, or together with TAGRA in a bundle that costs €49 less than buying both separately.'],
+           ['Can my company buy with 0% VAT?','Yes. Businesses with a valid EU VAT ID buy with 0% VAT under the reverse-charge mechanism. Enter your VAT ID at checkout.'],
+           ['Can I try TAGRA before buying?','Yes. The free 30-day trial has the full functionality of TAGRA MAX and needs no credit card.'],
+           ['Which tachographs does TAGRA support?','All digital tachographs, including Smart Tachograph G2V2. TAGRA reads .DDD, .C1B, .V1B and ESM files.']];
+    var s=document.createElement('section');s.className='tgs-sec tgs-faq';
+    s.innerHTML='<div class="container">'+head('Questions','Questions before you buy','')+'<div class="tgs-faq__b">'+Q.map(function(q){return '<details><summary>'+q[0]+'</summary><div class="tgs-faq__a">'+q[1]+'</div></details>';}).join('')+'</div></div>';
     w.parentNode.insertBefore(s,w);
+    var ld={'@context':'https://schema.org','@type':'FAQPage','mainEntity':Q.map(function(q){return {'@type':'Question','name':q[0],'acceptedAnswer':{'@type':'Answer','text':q[1]}};})};
+    var sc=document.createElement('script');sc.type='application/ld+json';sc.text=JSON.stringify(ld);document.head.appendChild(sc);
   }
 
   function seo(){
@@ -108,10 +192,15 @@
 
   function mails(){
     [].forEach.call(document.querySelectorAll('a[href^="mailto:"]'),function(a){
-      if(!/tdt\.cz/i.test(a.getAttribute('href')))return;
+      if(!/tdt\.(cz|sk)/i.test(a.getAttribute('href')))return;
       var addr=a.closest('.checkout-box-wrapper,.sidebar-in-cart,.cart-content')?SUPPORT:SALES;
       a.setAttribute('href','mailto:'+addr);a.textContent=addr;
     });
+    [].forEach.call(document.querySelectorAll('.tgs-mail'),function(m){
+      var a=document.createElement('a');a.href='mailto:'+SALES;a.textContent=SALES;a.className='tgs-mail-a';m.parentNode.replaceChild(a,m);
+    });
+    var w=document.createTreeWalker(document.body,4),n,re=/(obchod|info|libor\.dospel)​?@tdt\.(cz|sk)/g;
+    while(n=w.nextNode()){if(re.test(n.nodeValue)){re.lastIndex=0;n.nodeValue=n.nodeValue.replace(re,SALES);}}
   }
 
   function trust(){
@@ -129,8 +218,8 @@
 
   function reg(){var w=document.createTreeWalker(document.body,4),n;while(n=w.nextNode()){if(n.nodeValue.indexOf('Registrace bude')>-1)n.nodeValue='(Your registration will be approved shortly)';}}
   function run(){
-    [carousel,usp,badges,help,why,seo,mails,trust,reg].forEach(function(fn){try{fn();}catch(e){if(window.console)console.warn('tgs',e);}});
-    document.body.classList.add('tgs-v4');
+    [carousel,usp,trustbar,steps,vans,pricing,badges,groups,enforce,help,faq,seo,mails,trust,reg].forEach(function(fn){try{fn();}catch(e){if(window.console)console.warn('tgs',e);}});
+    document.body.classList.add('tgs-v6');
   }
   if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',run);}else{run();}
 })();

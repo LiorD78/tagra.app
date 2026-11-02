@@ -1,4 +1,4 @@
-/* ===== TAGRA Shop v4.0 – TRUCKMALL look + crew review (2. 11. 2026) ===== */
+/* ===== TAGRA Shop v6.0 – tagra.app look, crew + competitor review (2. 11. 2026) ===== */
 /* --- product detail: hide Shoptet noise --- */
 body .p-detail-inner-header .p-code,body .p-detail .stars-wrapper,body .p-detail .link-icons,body .p-detail .social-buttons-wrapper{display:none!important}
 body .p-detail-inner-header{margin-bottom:18px}
@@ -22,17 +22,6 @@ body .p-detail .p-thumbnail{border-radius:12px;overflow:hidden;border:1px solid 
 /* --- misc --- */
 body .top-navigation-contacts .project-email{visibility:visible}
 body .p-detail-tabs-wrapper,body .shp-tabs-wrapper{margin-top:36px}
-.tgs-why{background:var(--tmx-bg-apple-light);padding:56px 0;margin-top:24px}
-.tgs-why h2.tgs-h-old{font-family:var(--font-display);font-weight:800;text-transform:uppercase;font-size:32px;line-height:1.15;margin:0 0 26px;background:var(--heading-gradient);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;display:inline-block}
-.tgs-why__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.tgs-why__card{background:#fff;border:1px solid var(--border);border-radius:var(--radius-lg);padding:22px 22px 20px;box-shadow:var(--shadow-card)}
-.tgs-why__n{display:inline-block;font-size:13px;font-weight:800;color:var(--green-brand);letter-spacing:.08em;margin-bottom:8px}
-.tgs-why__t{font-size:19px;font-weight:800;color:var(--blue-dark);margin:0 0 8px}
-.tgs-why__d{font-size:15px;line-height:1.55;color:var(--text2);margin:0}
-.tgs-why__more{margin:22px 0 0;font-size:15px;color:var(--text2)}
-@media (max-width:991px){.tgs-why__grid{grid-template-columns:1fr 1fr}}
-@media (max-width:575px){.tgs-why__grid{grid-template-columns:1fr}.tgs-why h2.tgs-h-old{font-size:24px}}
-
 /* --- v3: homepage video carousel (formoline-style cards) --- */
 body.type-index .benefitBanner.position--benefitHomepage{display:none!important}
 .banners-row.tgs-has-car{display:block!important;margin:0}
@@ -84,17 +73,7 @@ body.type-index .benefitBanner.position--benefitHomepage{display:none!important}
 @media (hover:hover){.tgs-usp .usp-item:hover .usp-ico{transform:translateY(-1px) scale(1.12);filter:drop-shadow(0 2px 4px rgba(0,0,0,.15))}.tgs-usp .usp-item:hover .usp-text strong{color:transparent}.tgs-usp .usp-item:hover .usp-text{transform:translateX(6px)}}
 @media (prefers-reduced-motion:reduce){.tgs-usp .usp-ico .usp-odlesk{animation:none}.tgs-car__item,.tgs-usp .usp-ico,.tgs-usp .usp-text{transition:none}}
 @media (max-width:767px){.tgs-usp{display:grid;grid-template-columns:1fr 1fr;gap:14px}.tgs-usp .usp-img{flex-basis:46px;width:46px;height:46px}.tgs-usp .usp-text{font-size:12.5px}.tgs-usp .usp-text strong{font-size:14px}}
-/* --- v3: section headings + photo tiles (TRUCKMALL dc45) --- */
 body .tgs-h,body.type-index .homepage-group-title{display:block!important;width:100%;text-align:center!important;font-family:var(--font-display);font-weight:800;text-transform:uppercase;font-size:30px;line-height:1.15;letter-spacing:-.005em;color:var(--blue-mid)!important;margin:8px 0 22px;background:none!important;-webkit-text-fill-color:var(--blue-mid)!important}
-.tgs-tiles{margin:0 0 36px}
-.tgs-tiles__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.tgs-tile{position:relative;display:block;aspect-ratio:5/4;overflow:hidden;border-radius:6px;text-decoration:none!important;background:#ddd}
-.tgs-tile img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease}
-.tgs-tile:hover img{transform:scale(1.05)}
-.tgs-tile::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 50%,rgba(0,0,0,.55) 100%)}
-.tgs-tile span{position:absolute;left:18px;right:18px;bottom:16px;z-index:1;color:#fff;font-weight:700;font-size:22px;line-height:1.2;text-shadow:0 2px 8px rgba(0,0,0,.5)}
-@media (max-width:991px){.tgs-tiles__grid{grid-template-columns:1fr 1fr}}
-@media (max-width:575px){.tgs-tiles__grid{grid-template-columns:1fr}body .tgs-h,body.type-index .homepage-group-title{font-size:23px!important}}
 /* --- v3: product cards like TRUCKMALL --- */
 body .products-block .p .name{text-transform:uppercase;font-weight:700;letter-spacing:.01em;font-size:15px;line-height:1.3}
 body .products-block .p .price-final strong{font-size:22px;font-weight:800;color:var(--text)}
@@ -127,22 +106,6 @@ body .products-block .p .p-desc{font-size:14px;line-height:1.5;display:-webkit-b
  body .products-block .p .p-tools{margin-top:12px;width:100%}
  body .products-block .p .p-tools form,body .products-block .p .p-tools .btn{width:100%!important;min-height:48px;justify-content:center;box-sizing:border-box}
 }
-/* --- v4: help bar --- */
-.tgs-help{padding:8px 0 56px;background:var(--tmx-bg-apple-light-end)}
-.tgs-help__box{display:flex;align-items:center;justify-content:space-between;gap:24px;background:linear-gradient(135deg,var(--blue-mid),var(--blue-dark));color:#fff;border-radius:var(--radius-lg);padding:30px 36px;box-shadow:0 14px 36px rgba(11,44,74,.22)}
-.tgs-help__txt h2{font-family:var(--font-display);font-size:24px;font-weight:800;line-height:1.2;margin:0 0 6px;color:#fff!important;-webkit-text-fill-color:#fff!important;background:none!important;text-transform:none;display:block}
-.tgs-help__txt p{margin:0;font-size:15px;line-height:1.5;color:rgba(255,255,255,.82)}
-.tgs-help__btns{display:flex;gap:12px;flex-wrap:wrap;flex:0 0 auto}
-.tgs-help__btn{display:inline-flex;align-items:center;min-height:46px;padding:0 24px;border-radius:99px;font-weight:700;font-size:16px;text-decoration:none!important;white-space:nowrap;transition:transform .2s}
-.tgs-help__btn:hover{transform:scale(1.03)}
-.tgs-help__btn--w{background:#fff;color:var(--blue-mid)!important}
-.tgs-help__btn--o{border:1.5px solid rgba(255,255,255,.7);color:#fff!important}
-@media (max-width:767px){.tgs-help__box{flex-direction:column;align-items:flex-start;padding:24px}.tgs-help__btns{width:100%}.tgs-help__btn{flex:1 1 100%;justify-content:center}}
-/* --- v4: why tweaks --- */
-.tgs-why{padding:56px 0 32px;background:var(--tmx-bg-apple-light-top)}
-.tgs-why__n{font-size:30px;font-weight:900;color:#cfe0ef;line-height:1;margin-bottom:10px;letter-spacing:0}
-.tgs-why__t{font-size:17px}
-.tgs-why__d{font-size:14px}
 /* --- v4: SEO welcome block, calmer --- */
 body.type-index .welcome-wrapper.homepage-box{background:#fff!important;padding:40px 0 48px}
 body.type-index .welcome .h1{font-size:22px!important;margin-bottom:12px}
@@ -155,3 +118,140 @@ body .products-block .p .stars-placeholder{display:none!important}
 body .products-block .p .name span{display:inline;line-height:1.3}
 body .products-block .p .ratings-wrapper{padding-bottom:6px}
 @media (max-width:599px){body .products-block .p .name{min-height:0!important;height:auto!important;margin-bottom:6px;line-height:1.3}body .products-block .p .p-in-in{min-height:0!important;height:auto!important}body .products-block .p .p-in{padding:14px 18px 18px}body .products-block .p .image{margin-bottom:8px}}
+/* --- v5: no arrow icons in CTA buttons (not used on TRUCKMALL) --- */
+body .btn-cart::before,body .add-to-cart-button::before,body .btn-conversion::after,body .next-step-forward::after,body #continue-order-button::after,body #orderFormButton::after{content:none!important;display:none!important}
+body .btn-cart,body .add-to-cart-button,body .btn-conversion{padding-left:22px;padding-right:22px}
+/* --- v6: typography + section system (same tokens as tagra.app) --- */
+body,body .products-block .p,body .products-block .p *,body .p-detail,body .p-detail *{font-family:var(--font)}
+.tgs-sec{margin:0 0 64px}
+.tgs-head{text-align:center;max-width:760px;margin:0 auto 32px}
+.tgs-label{display:block;font-size:15px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--green-brand);margin:0 0 10px}
+body .tgs-h2{display:inline-block;max-width:100%;font-family:var(--font-display);font-size:34px;font-weight:800;line-height:1.1;text-transform:uppercase;margin:0 0 14px;padding:.12em .15em .08em 0;background:var(--heading-gradient);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
+.tgs-intro{font-size:18px;line-height:1.6;color:var(--text2);max-width:680px;margin:0 auto}
+.tgs-note{text-align:center;font-size:15px;color:var(--text2);margin:18px 0 0}
+.tgs-note a{color:var(--blue-mid);font-weight:600}
+.tgs-ico{display:block;width:64px;height:64px;border-radius:16px;mix-blend-mode:multiply}
+.tgs-pill{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 24px;border-radius:99px;border:0;font-family:inherit;font-size:16px;font-weight:600;color:#fff!important;text-decoration:none!important;cursor:pointer;background:linear-gradient(135deg,var(--green-brand) 0%,var(--green-cta) 100%);box-shadow:0 6px 18px rgba(110,155,18,.30),0 1px 0 rgba(255,255,255,.25) inset;transition:transform .15s,box-shadow .2s}
+.tgs-pill:hover{transform:scale(1.02);box-shadow:0 10px 26px rgba(110,155,18,.45),0 0 0 4px rgba(110,155,18,.12)}
+.tgs-trustbar{text-align:center;font-size:15px;color:var(--text2);background:var(--bg-gray);border-radius:14px;padding:14px 20px;margin:-10px 0 56px}
+.tgs-trustbar strong{color:var(--text)}
+@media (max-width:767px){body .tgs-h2{font-size:26px}.tgs-intro{font-size:16px}.tgs-sec{margin-bottom:44px}.tgs-trustbar{margin:0 0 40px;font-size:14px}}
+/* --- v6: download / evaluate / archive --- */
+.tgs-steps__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.tgs-step{background:#fff;border:1.5px solid rgba(0,0,0,.08);border-radius:20px;padding:26px 26px 24px;display:flex;flex-direction:column;transition:transform .18s,box-shadow .18s,border-color .18s}
+.tgs-step:hover{transform:translateY(-3px);border-color:rgba(19,74,142,.3);box-shadow:0 14px 28px rgba(19,74,142,.10)}
+.tgs-step__top{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
+.tgs-step__n{font-size:44px;font-weight:900;line-height:1;color:#dbe8f3}
+.tgs-step__t{font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--blue-mid);margin:0 0 6px}
+.tgs-step__big{font-size:28px;font-weight:800;line-height:1.15;letter-spacing:-.02em;color:var(--strong);margin:0 0 10px}
+.tgs-step__d{font-size:16px;line-height:1.5;color:var(--text2);margin:0 0 12px}
+.tgs-step__x{font-size:14px;line-height:1.5;color:var(--text);background:var(--tmx-bg-apple-light-solid);border-radius:12px;padding:10px 12px;margin:0 0 16px;flex:1 1 auto}
+.tgs-step__a{margin-top:auto;font-weight:700;color:var(--green-cta)!important;text-decoration:none!important}
+.tgs-step__a:hover{text-decoration:underline!important}
+@media (max-width:991px){.tgs-steps__grid{grid-template-columns:1fr}}
+/* --- v6: vans callout --- */
+.tgs-vans{display:flex;align-items:center;gap:20px;background:var(--tmx-bg-apple-light);border:1px solid rgba(19,74,142,.1);border-radius:18px;padding:22px 28px;margin:-24px 0 64px}
+.tgs-vans .tgs-ico{width:56px;height:56px;flex:0 0 56px}
+.tgs-vans__txt{flex:1 1 auto}.tgs-vans .tgs-label{font-size:12px;margin-bottom:4px}
+.tgs-vans__h{font-size:20px;font-weight:800;color:var(--blue-dark);margin:0 0 4px}
+.tgs-vans__p{font-size:15px;line-height:1.5;color:var(--text2);margin:0}
+.tgs-vans__a{flex:0 0 auto;font-weight:700;color:var(--blue-mid)!important;border:1.5px solid rgba(19,74,142,.25);border-radius:99px;padding:10px 18px;text-decoration:none!important;white-space:nowrap}
+@media (max-width:767px){.tgs-vans{flex-wrap:wrap;padding:20px;margin:-8px 0 44px}.tgs-vans__a{width:100%;text-align:center}}
+/* --- v6: pricing --- */
+.tgs-finder{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:12px;margin:0 auto 26px;max-width:860px}
+.tgs-finder label{font-weight:700;color:var(--blue-dark);font-size:16px}
+.tgs-finder input{width:190px;height:46px;border:1.5px solid rgba(19,74,142,.25);border-radius:99px;padding:0 18px;font-size:16px;font-family:inherit}
+.tgs-finder input:focus{outline:none;border-color:var(--blue-mid);box-shadow:0 0 0 4px rgba(19,74,142,.12)}
+.tgs-finder__out{flex:0 0 100%;text-align:center;font-weight:700;color:var(--green-cta);min-height:20px;font-size:15px}
+.tgs-tiers{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.tgs-tier{position:relative;display:flex;flex-direction:column;background:#fff;border:1.5px solid rgba(0,0,0,.08);border-radius:20px;padding:24px 18px 20px;text-decoration:none!important;transition:transform .18s,box-shadow .18s,border-color .18s}
+.tgs-tier:hover{transform:translateY(-3px);border-color:rgba(19,74,142,.3);box-shadow:0 14px 28px rgba(19,74,142,.10)}
+.tgs-tier.is-match{border:2px solid var(--blue-mid);box-shadow:0 14px 34px rgba(19,74,142,.18)}
+.tgs-tier__match{display:none;position:absolute;top:-12px;left:50%;transform:translateX(-50%);white-space:nowrap;background:var(--blue-mid);color:#fff;font-size:12px;font-weight:700;border-radius:99px;padding:5px 12px}
+.tgs-tier.is-match .tgs-tier__match{display:block}
+.tgs-tier__cap{font-size:24px;font-weight:800;line-height:1.15;letter-spacing:-.02em;color:var(--blue-mid)}
+.tgs-tier__name{font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--text2);margin:6px 0 2px}
+.tgs-tier__desc{font-size:14px;color:var(--text2);line-height:1.4;min-height:2.8em}
+.tgs-tier__price{font-size:32px;font-weight:800;color:var(--strong);margin:14px 0 2px;letter-spacing:-.02em}
+.tgs-tier__price small{font-size:12px;font-weight:500;color:var(--text2);margin-left:6px;letter-spacing:0}
+.tgs-tier__inc{font-size:13px;font-weight:700;color:var(--green-cta)}
+.tgs-tier__fee{font-size:14px;color:var(--text);margin:2px 0 18px}
+.tgs-tier .tgs-pill{margin-top:auto;width:100%;font-size:15px;padding:0 10px}
+.tgs-trucker{display:flex;align-items:center;gap:22px;background:#fff;border:1.5px solid rgba(0,0,0,.08);border-radius:20px;padding:20px 26px;margin-top:16px}
+.tgs-trucker__txt{flex:1 1 auto}.tgs-trucker .tgs-label{font-size:12px;margin-bottom:2px}
+.tgs-trucker__h{font-size:20px;font-weight:800;color:var(--blue-dark);margin:0 0 2px}
+.tgs-trucker__p{font-size:15px;color:var(--text2);margin:0}
+.tgs-trucker__price{display:flex;flex-direction:column;text-align:right;flex:0 0 auto}
+.tgs-trucker__price b{font-size:28px;font-weight:800;color:var(--strong);line-height:1.1}
+.tgs-trucker__price small{font-size:13px;color:var(--text2)}
+.tgs-3y{margin:18px 0 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.tgs-3y summary{list-style:none;cursor:pointer;padding:16px 40px 16px 0;font-weight:700;font-size:16px;color:var(--blue-mid);position:relative}
+.tgs-3y summary::-webkit-details-marker{display:none}
+.tgs-3y summary::after{content:"+";position:absolute;right:4px;top:50%;transform:translateY(-50%);font-size:24px;font-weight:300;color:var(--green-brand)}
+.tgs-3y[open] summary::after{content:"−"}
+.tgs-3y__wrap{overflow-x:auto;padding-bottom:16px}
+.tgs-3y table{width:100%;border-collapse:collapse;font-size:15px}
+.tgs-3y th{text-align:right;padding:10px 12px;color:var(--text2);font-weight:600;font-size:13px;border-bottom:2px solid var(--border)}
+.tgs-3y td{text-align:right;padding:10px 12px;border-bottom:1px solid var(--border)}
+.tgs-3y th:first-child,.tgs-3y td:first-child{text-align:left;font-weight:700;color:var(--text)}
+.tgs-3y p{font-size:13px;color:var(--text2);margin:10px 0 0}
+.tgs-trial{display:grid;grid-template-columns:1.4fr 1fr;gap:32px;align-items:center;background:linear-gradient(135deg,#eef6e0 0%,#fff 100%);border:1px solid rgba(110,155,18,.2);border-radius:var(--radius);padding:36px 40px;margin-top:22px}
+.tgs-trial__h{font-size:28px;font-weight:800;line-height:1.15;letter-spacing:-.02em;color:var(--strong);margin:0 0 8px}
+.tgs-trial__p{font-size:17px;line-height:1.55;color:var(--text2);margin:0}
+.tgs-trial__cta{display:flex;flex-direction:column;align-items:flex-start;gap:8px}
+.tgs-trial__cta span{font-size:13px;color:var(--text2)}
+@media (max-width:1099px){.tgs-tiers{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:767px){.tgs-tiers{grid-template-columns:1fr 1fr;gap:12px}.tgs-tier{padding:20px 14px 16px}.tgs-tier__price{font-size:26px}.tgs-trucker{flex-wrap:wrap;padding:20px}.tgs-trucker__price{text-align:left}.tgs-trucker .tgs-pill{width:100%}.tgs-trial{grid-template-columns:1fr;padding:26px 22px;gap:16px}.tgs-finder input{width:100%}.tgs-finder .tgs-pill{width:100%}}
+@media (max-width:420px){.tgs-tiers{grid-template-columns:1fr}}
+/* --- v6: hardware --- */
+.tgs-hw{margin-bottom:8px}
+/* --- v6: enforcement band (as tagra.app) --- */
+.tgs-enf{background:var(--tmx-bg-apple-light-solid);padding:72px 0 56px;overflow:hidden}
+.tgs-ref{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.tgs-ref__c{position:relative;overflow:hidden;background:#fff;border:1.5px solid rgba(0,0,0,.08);border-radius:20px;padding:26px 22px;display:flex;flex-direction:column;gap:6px;transition:transform .18s,box-shadow .18s,border-color .18s}
+.tgs-ref__c::before{content:"";position:absolute;inset:0;background-size:cover;background-position:center;opacity:.05;pointer-events:none}
+.tgs-ref__c--cz::before{background-image:url(https://flagcdn.com/w320/cz.png)}
+.tgs-ref__c--sk::before{background-image:url(https://flagcdn.com/w320/sk.png)}
+.tgs-ref__c--hu::before{background-image:url(https://flagcdn.com/w320/hu.png)}
+.tgs-ref__c>*{position:relative}
+.tgs-ref__c:hover{transform:translateY(-3px);border-color:rgba(19,74,142,.3);box-shadow:0 14px 28px rgba(19,74,142,.10)}
+.tgs-ref__c span{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--blue-mid)}
+.tgs-ref__c b{font-size:18px;font-weight:800;color:var(--strong);line-height:1.25}
+.tgs-ref__c p{font-size:14px;color:var(--text2);line-height:1.5;margin:4px 0 0}
+.tgs-mq{margin-top:30px;overflow:hidden;-webkit-mask-image:linear-gradient(to right,transparent 0,#000 6%,#000 94%,transparent 100%);mask-image:linear-gradient(to right,transparent 0,#000 6%,#000 94%,transparent 100%)}
+.tgs-mq p{text-align:center;font-size:13px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--blue-mid);margin:0 0 14px}
+.tgs-mq__t{display:flex;width:max-content;animation:tgs-mq 38s linear infinite}
+.tgs-mq__t:hover{animation-play-state:paused}
+.tgs-mq__t span{flex:0 0 auto;padding:0 28px;font-size:16px;font-weight:600;color:var(--blue-dark);white-space:nowrap;border-right:1px solid rgba(19,74,142,.22)}
+@keyframes tgs-mq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.tgs-mq__t{animation:none}}
+@media (max-width:991px){.tgs-ref{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.tgs-ref{grid-template-columns:1fr}.tgs-enf{padding:48px 0 40px}}
+/* --- v6: help with Ivan --- */
+.tgs-help{padding:56px 0}
+.tgs-help__box{display:flex;align-items:center;justify-content:space-between;gap:32px;background:linear-gradient(135deg,var(--blue-mid),var(--blue-dark));color:#fff;border-radius:var(--radius-lg);padding:34px 40px;box-shadow:0 14px 36px rgba(11,44,74,.22)}
+.tgs-help__txt{flex:1 1 60%}
+.tgs-help__txt h2{font-family:var(--font-display);font-size:26px;font-weight:800;line-height:1.2;margin:0 0 8px;color:#fff!important;-webkit-text-fill-color:#fff!important;background:none!important;text-transform:uppercase;display:block}
+.tgs-help__txt p{margin:0 0 6px;font-size:16px;line-height:1.5;color:rgba(255,255,255,.85)}
+.tgs-help__sup{font-size:14px!important}.tgs-help__sup a{color:#fff!important;font-weight:600}
+.tgs-help__card{flex:0 0 auto;display:flex;align-items:center;gap:16px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:18px;padding:18px 22px}
+.tgs-help__card img{width:72px;height:72px;border-radius:50%;object-fit:cover;background:#fff}
+.tgs-help__card div{display:flex;flex-direction:column;gap:2px}
+.tgs-help__card b{font-size:18px}
+.tgs-help__card span{font-size:13px;color:rgba(255,255,255,.75);margin-bottom:4px}
+.tgs-help__card a{color:#fff!important;font-weight:700;font-size:16px;text-decoration:none!important}
+@media (max-width:767px){.tgs-help{padding:40px 0}.tgs-help__box{flex-direction:column;align-items:flex-start;padding:26px 22px}.tgs-help__card{width:100%}}
+/* --- v6: FAQ --- */
+.tgs-faq{margin:0;padding:24px 0 56px}
+.tgs-faq__b{max-width:820px;margin:0 auto}
+.tgs-faq__b details{border-bottom:1px solid var(--border);padding:4px 0}
+.tgs-faq__b details:first-child{border-top:1px solid var(--border)}
+.tgs-faq__b summary{list-style:none;cursor:pointer;padding:18px 40px 18px 0;font-weight:800;font-size:17px;line-height:1.4;position:relative;color:var(--text)}
+.tgs-faq__b summary::-webkit-details-marker{display:none}
+.tgs-faq__b summary::after{content:"+";position:absolute;right:4px;top:50%;transform:translateY(-50%);font-size:24px;color:var(--green-brand);font-weight:300}
+.tgs-faq__b details[open] summary::after{content:"−"}
+.tgs-faq__a{padding:0 0 18px;font-size:16px;line-height:1.6;color:var(--text2)}
+.tgs-mail-a{display:inline-block;background:#fff;color:var(--blue-dark)!important;font-weight:700;border-radius:99px;padding:12px 24px;text-decoration:none!important}
+body.type-index .homepage-group-title.tgs-hide{display:none!important}
+.tgs-step .tgs-ico{width:76px;height:76px}
+.tgs-trucker .tgs-pill{white-space:nowrap;flex:0 0 auto}
