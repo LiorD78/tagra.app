@@ -1,0 +1,77 @@
+/* ===== TAGRA Shop layer 2 v1.0 – formoline header + carousel, tagra.app buttons (2. 11. 2026) ===== */
+/* --- v7: CTA buttons identical to tagra.app .btn-cta --- */
+.tgs-pill,.tgs-car__cta,body .btn-cart,body .add-to-cart-button,body .btn-conversion,body #continue-order-button,body #orderFormButton,body .next-step-forward{position:relative;overflow:hidden;border:0!important;border-radius:99px!important;font-family:inherit;font-weight:600!important;text-transform:none!important;letter-spacing:0!important;color:#fff!important;text-decoration:none!important;background:linear-gradient(135deg,var(--green-brand) 0%,var(--green-cta) 100%)!important;box-shadow:0 6px 18px rgba(110,155,18,.30),0 1px 0 rgba(255,255,255,.25) inset!important;transition:background .2s,transform .15s,box-shadow .2s}
+.tgs-pill::before,.tgs-car__cta::before{content:""!important;display:block!important;position:absolute;inset:0;background:radial-gradient(circle at 30% 0%,rgba(255,255,255,.20),transparent 60%);pointer-events:none}
+.tgs-pill:hover,.tgs-car__item:hover .tgs-car__cta,body .btn-cart:hover,body .add-to-cart-button:hover,body .btn-conversion:hover,body #continue-order-button:hover,body #orderFormButton:hover{background:linear-gradient(140deg,#79a517 0%,#527311 100%)!important;box-shadow:0 10px 26px rgba(110,155,18,.45),0 0 0 4px rgba(110,155,18,.12),0 1px 0 rgba(255,255,255,.3) inset!important}
+.tgs-pill{min-height:0;padding:14px 30px;font-size:17px}
+.tgs-car__cta{padding:14px 30px;font-size:17px;min-height:0}
+body .products-block .p .btn-cart,body .products-block .p .add-to-cart-button{font-size:15px!important;padding:10px 22px!important}
+body .p-detail .add-to-cart-button{font-size:17px!important;padding:14px 30px!important}
+.tgs-tier .tgs-pill{font-size:15px;padding:12px 10px}
+/* --- v7: header like formoline112.cz (photo + phone, full-width navy menu bar) --- */
+html.tgs-hd body .top-navigation-bar{display:none!important}
+html.tgs-hd body #header{background:#fff;border-bottom:0;box-shadow:none}
+html.tgs-hd body #header .header-top{height:78px!important;min-height:78px!important;padding:0!important;display:flex!important;align-items:center!important;flex-wrap:nowrap!important;justify-content:flex-start!important;position:relative!important;z-index:6!important;overflow:visible!important}
+html.tgs-hd body #header .header-top>.site-name-wrapper{width:auto!important;flex:0 0 auto!important;max-width:none!important;height:78px;display:flex;align-items:center}
+html.tgs-hd body #header .site-name img{max-height:44px;width:auto}
+html.tgs-hd body #header .header-top .search{display:none!important}
+html.tgs-hd body #header .tgs-hdr{position:relative;z-index:7;display:grid;grid-template-columns:84px auto;grid-template-rows:auto auto;column-gap:10px;align-items:center;margin-left:auto;margin-right:18px;flex:0 0 auto}
+html.tgs-hd body #header .tgs-hdr__ph{grid-row:1/3;position:absolute;left:0;bottom:-16px;width:84px;height:84px;background:url(https://tagra.app/assets/img/team/ivan-szabo.webp) center bottom/contain no-repeat;filter:drop-shadow(0 6px 10px rgba(11,44,74,.25))}
+html.tgs-hd body #header .tgs-hdr strong{grid-column:2;display:block;font-size:12px;font-weight:600;color:#5b6773;line-height:1.2;align-self:end;padding-left:28px}
+html.tgs-hd body #header .tgs-hdr__tel{grid-column:2;display:inline-flex;align-items:center;gap:8px;font-size:17px;font-weight:800;color:#134a8e!important;line-height:1.3;align-self:start;text-decoration:none!important}
+html.tgs-hd body #header .tgs-hdr__tel::before{content:"";width:20px;height:20px;background:#134a8e;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z'/%3E%3C/svg%3E") center/contain no-repeat;margin-left:-28px}
+html.tgs-hd body #header .tgs-hdr__tel:hover{color:#0b2c4a!important}
+html.tgs-hd body #header .header-top>.navigation-buttons{width:auto!important;flex:0 0 auto!important;max-width:none!important;margin-left:0!important;height:78px;display:flex!important;align-items:center!important}
+html.tgs-hd body #header .navigation-buttons>*{height:48px!important;min-height:48px!important;width:48px!important;min-width:48px!important;padding:0!important;border-radius:50%!important;display:inline-flex!important;align-items:center!important;justify-content:center!important;margin-left:8px!important;position:relative!important;border:1px solid #e3e9f0!important;background:#fff!important;transition:background .2s,border-color .2s}
+html.tgs-hd body #header .navigation-buttons>*:hover{background:#f2f6fa!important;border-color:#c9d7e3!important}
+html.tgs-hd body #header .navigation-buttons>* span:not(.sr-only):not(.cart-count-num){display:none!important}
+html.tgs-hd body #header .navigation-buttons>*::before{content:""!important;font-size:0!important;width:22px!important;height:22px!important;margin:0!important;position:static!important;background:#0b2c4a!important;-webkit-mask:var(--fhi) center/contain no-repeat;mask:var(--fhi) center/contain no-repeat}
+html.tgs-hd body #header .navigation-buttons>*::after{display:none!important}
+html.tgs-hd body #header .navigation-buttons>.tgs-hdr__login{--fhi:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='8' r='4'/%3E%3Cpath d='M4 21a8 8 0 0 1 16 0'/%3E%3C/svg%3E")}
+html.tgs-hd body #header .navigation-buttons>a.cart-count{--fhi:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='8' cy='21' r='1'/%3E%3Ccircle cx='19' cy='21' r='1'/%3E%3Cpath d='M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12'/%3E%3C/svg%3E")}
+html.tgs-hd body #header .navigation-buttons>a.cart-count i,html.tgs-hd body #header .navigation-buttons>a.cart-count strong{position:absolute;top:-4px;right:-4px;min-width:20px;height:20px;border-radius:99px;background:var(--green-brand);color:#fff;font-size:11px;font-style:normal;font-weight:700;display:flex;align-items:center;justify-content:center;padding:0 5px}
+html.tgs-hd body #header #navigation{position:relative;z-index:1;background:transparent!important;border:0!important}
+html.tgs-hd body #header .navigation-wrapper{position:relative}
+html.tgs-hd body #header{background:linear-gradient(90deg,#0b2c4a 0%,#134a8e 50%,#1f5fa6 100%) bottom/100% 62px no-repeat,#fff}
+html.tgs-hd body #navigation .navigation-in,html.tgs-hd body #navigation .menu{background:transparent!important}
+@media (min-width:768px){
+ html.tgs-hd body #navigation{height:62px}
+ html.tgs-hd body #navigation .navigation-in{top:0!important;bottom:0!important;height:62px!important}
+ html.tgs-hd body #navigation .menu-level-1{display:flex!important;width:auto!important;height:62px!important;justify-content:flex-start;align-items:stretch!important}
+ html.tgs-hd body #navigation .menu-level-1>li{display:flex!important;flex:0 0 auto;text-align:center;border-left:1px solid rgba(255,255,255,.14)}
+ html.tgs-hd body #navigation .menu-level-1>li:first-child{border-left:0}
+ html.tgs-hd body #navigation .menu-level-1>li>a{display:flex!important;align-items:center;padding:0 22px!important;color:#fff!important;text-transform:uppercase;font-weight:700!important;letter-spacing:.05em;font-size:14px!important;text-decoration:none!important}
+ html.tgs-hd body #navigation .menu-level-1>li>a b{font-weight:700}
+ html.tgs-hd body #navigation .menu-level-1>li>a:hover{background:rgba(255,255,255,.08)}
+ html.tgs-hd body #navigation .menu-level-1>li:first-child>a{background:var(--green-brand);color:#fff!important}
+ html.tgs-hd body #navigation .menu-level-1>li:first-child>a:hover{background:#79a517}
+ html.tgs-hd body #navigation .navigationActions{display:none!important}
+}
+@media (max-width:767px){
+ html.tgs-hd body #header{background:#fff}
+ html.tgs-hd body #header .header-top{height:64px!important;min-height:64px!important}
+ html.tgs-hd body #header .site-name img{max-height:34px}
+ html.tgs-hd body #header .tgs-hdr{grid-template-columns:52px;margin-right:6px}
+ html.tgs-hd body #header .tgs-hdr__ph{position:relative;bottom:auto;width:52px;height:52px}
+ html.tgs-hd body #header .tgs-hdr strong,html.tgs-hd body #header .tgs-hdr__tel{display:none}
+ html.tgs-hd body #header .tgs-hdr{cursor:pointer}
+}
+/* --- v7: carousel like formoline112.cz (4 cards, ~3.3 visible, scroll) --- */
+.tgs-car__track{display:flex!important;gap:16px;scroll-snap-type:x mandatory;cursor:grab}
+.tgs-car__item{flex:0 0 calc(30% - 8px)!important;max-width:calc(30% - 8px);aspect-ratio:2/3;border-radius:24px;scroll-snap-align:start}
+.tgs-car__nav{display:flex!important;align-items:center;justify-content:center;top:calc(50% - 40px);width:52px;height:52px;font-size:0;background:rgba(255,255,255,.85);border:1px solid rgba(255,255,255,.9);-webkit-backdrop-filter:blur(12px) saturate(160%);backdrop-filter:blur(12px) saturate(160%);box-shadow:0 10px 26px rgba(11,42,74,.18);transition:transform .15s,background .2s}
+.tgs-car__nav::before{content:"";width:22px;height:22px;background:#0b2a4a;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 5l7 7-7 7'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 5l7 7-7 7'/%3E%3C/svg%3E") center/contain no-repeat}
+.tgs-car__nav--prev::before{transform:scaleX(-1)}
+.tgs-car__nav:hover{background:#0b2a4a;transform:scale(1.07)}
+.tgs-car__nav:hover::before{background:#fff}
+.tgs-car__nav--prev{left:12px}.tgs-car__nav--next{right:12px}
+.tgs-car__dots{display:flex!important;margin-top:18px}
+.tgs-car__t{font-size:28px;line-height:1.12}
+.tgs-car__txt{left:26px;right:26px;top:30px}
+.tgs-car__cta{bottom:30px;font-size:18px}
+@media (max-width:991px){.tgs-car__item{flex:0 0 calc(46% - 8px)!important;max-width:calc(46% - 8px)}}
+@media (max-width:767px){.tgs-car__item{flex:0 0 82%!important;max-width:82%}.tgs-car__nav{width:42px;height:42px}.tgs-car__nav::before{width:18px;height:18px}.tgs-car__t{font-size:24px}}
+.tgs-car__cta{position:absolute!important;padding:14px 30px!important}
+html.tgs-hd body #navigation .menu-level-1>li.menu-item-39{display:none!important}
+html.tgs-hd body #navigation .menu-level-1>li.menu-item-705>a,html.tgs-hd body #navigation .menu-level-1>li:first-child>a{background:linear-gradient(135deg,var(--green-brand) 0%,var(--green-cta) 100%)!important;color:#fff!important}
+@media (max-width:767px){.tgs-car__cta{font-size:16px!important;padding:12px 22px!important;bottom:22px}}
