@@ -1,7 +1,8 @@
-/* TAGRA Shop layer 2 v2.0 – formoline-style header with expert photo + phone (2. 11. 2026) */
+/* TAGRA Shop layer 2 v3.0 – formoline header, star reviews (TRUCKMALL loop), 3D USP, compact detail (2. 11. 2026) */
 (function(){
   var PHONE='+420 739 005 345';
   var l=document.createElement('link');l.rel='stylesheet';l.href='https://tagra.app/assets/css/shop2.css?v=2';document.head.appendChild(l);
+  var l2=document.createElement('link');l2.rel='stylesheet';l2.href='https://tagra.app/assets/css/shop2b.css?v=1';document.head.appendChild(l2);
   function header(){
     var top=document.querySelector('#header .header-top');
     if(!top||top.querySelector('.tgs-hdr')||!(window.matchMedia&&matchMedia('(min-width:768px)').matches))return;
@@ -27,9 +28,33 @@
           ['The reader works as it should.','']];
   function revSection(list,title){
     var s=document.createElement('section');s.className='tgs-rev';
+    var cards=list.map(function(r){return '<article class="tgs-rev__c"><div class="tgs-rev__s" aria-hidden="true">★★★★★</div><p class="tgs-rev__t">“'+r[0]+'”</p><p class="tgs-rev__m">'+(r[1]?r[1]+' · ':'')+'Verified customer</p></article>';}).join('');
     s.innerHTML='<div class="tgs-head"><span class="tgs-label">What customers say</span><h2 class="tgs-h2">'+title+'</h2><p class="tgs-intro">Five-star feedback from verified customers across Central Europe.</p></div>'+
-      '<div class="tgs-rev__rail">'+list.map(function(r){return '<div class="tgs-rev__c"><div class="tgs-rev__s" aria-label="5 out of 5">★★★★★</div><p class="tgs-rev__t">“'+r[0]+'”</p><p class="tgs-rev__m">'+(r[1]?r[1]+' · ':'')+'Verified customer</p></div>';}).join('')+'</div>';
+      '<div class="tgs-rev__wrap"><div class="tgs-rev__rail" tabindex="0" role="region" aria-label="Customer reviews, 5 out of 5 stars">'+cards+'</div></div>';
+    loop(s.querySelector('.tgs-rev__rail'));
     return s;
+  }
+  function loop(rail){
+    if(!rail||(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches))return;
+    var one=rail.innerHTML;rail.innerHTML=one+one+one;
+    [].forEach.call(rail.children,function(c,i){if(i>=rail.children.length/3)c.setAttribute('aria-hidden','true');});
+    var hold=false,vis=true,acc=0,t,down=false,sx=0,sl=0,last=0;
+    function step(ts){
+      var dt=last?Math.min(ts-last,50):16;last=ts;
+      if(!hold&&vis&&!down){acc+=dt*0.06;var n=Math.floor(acc);if(n){rail.scrollLeft+=n;acc-=n;}
+        var third=rail.scrollWidth/3;if(rail.scrollLeft>=third)rail.scrollLeft-=third;}
+      requestAnimationFrame(step);
+    }
+    function stop(){hold=true;clearTimeout(t);}
+    function go(){clearTimeout(t);t=setTimeout(function(){hold=false;},2000);}
+    rail.addEventListener('mouseenter',stop);rail.addEventListener('mouseleave',function(){down=false;go();});
+    rail.addEventListener('mousedown',function(e){down=true;stop();sx=e.pageX;sl=rail.scrollLeft;});
+    rail.addEventListener('mouseup',function(){down=false;});
+    rail.addEventListener('mousemove',function(e){if(!down)return;e.preventDefault();rail.scrollLeft=sl-(e.pageX-sx)*1.5;});
+    rail.addEventListener('touchstart',stop,{passive:true});rail.addEventListener('touchend',go,{passive:true});
+    rail.addEventListener('focusin',stop);rail.addEventListener('focusout',go);
+    if('IntersectionObserver' in window){new IntersectionObserver(function(en){vis=en[en.length-1].isIntersecting;}).observe(rail);}
+    requestAnimationFrame(step);
   }
   function reviews(){
     if(document.querySelector('.tgs-rev'))return;
@@ -68,6 +93,21 @@
       bb.parentNode.insertBefore(d,bb);
     });
   }
-  function run(){header();titles();reviews();benefits();}
+  function compact(){
+    if(!document.body.classList.contains('type-detail'))return;
+    var d=document.querySelector('#description .description-inner');if(!d||d.querySelector('.tgs-more'))return;
+    var box=d.querySelector('.tgs-p')||d,secs=box.querySelectorAll(':scope > section'),cut;
+    if(secs.length>3){cut=secs[1].offsetTop-box.offsetTop+260;}else{cut=900;}
+    if(box.scrollHeight<cut+500)return;
+    box.classList.add('tgs-clamp');box.style.maxHeight=cut+'px';
+    var w=document.createElement('div');w.className='tgs-more';
+    w.innerHTML='<button type="button" class="tgs-more__btn" aria-expanded="false">Show all details</button>';
+    box.parentNode.insertBefore(w,box.nextSibling);
+    function open(){box.style.maxHeight='none';box.classList.remove('tgs-clamp');w.parentNode&&w.parentNode.removeChild(w);}
+    w.querySelector('button').addEventListener('click',open);
+    [].forEach.call(document.querySelectorAll('a[href="#description"]'),function(a){a.addEventListener('click',open);});
+    if(location.hash&&location.hash.length>1){var tg=document.getElementById(location.hash.slice(1));if(tg&&box.contains(tg))open();}
+  }
+  function run(){header();reviews();benefits();compact();}
   if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',run);}else{run();}
 })();
