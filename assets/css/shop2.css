@@ -1,4 +1,4 @@
-/* ===== TAGRA Shop layer 2 v1.0 – formoline header + carousel, tagra.app buttons (2. 11. 2026) ===== */
+/* ===== TAGRA Shop layer 2 v2.0 – formoline header + carousel, tagra.app buttons (2. 11. 2026) ===== */
 /* --- v7: CTA buttons identical to tagra.app .btn-cta --- */
 .tgs-pill,.tgs-car__cta,body .btn-cart,body .add-to-cart-button,body .btn-conversion,body #continue-order-button,body #orderFormButton,body .next-step-forward{position:relative;overflow:hidden;border:0!important;border-radius:99px!important;font-family:inherit;font-weight:600!important;text-transform:none!important;letter-spacing:0!important;color:#fff!important;text-decoration:none!important;background:linear-gradient(135deg,var(--green-brand) 0%,var(--green-cta) 100%)!important;box-shadow:0 6px 18px rgba(110,155,18,.30),0 1px 0 rgba(255,255,255,.25) inset!important;transition:background .2s,transform .15s,box-shadow .2s}
 .tgs-pill::before,.tgs-car__cta::before{content:""!important;display:block!important;position:absolute;inset:0;background:radial-gradient(circle at 30% 0%,rgba(255,255,255,.20),transparent 60%);pointer-events:none}
@@ -75,3 +75,34 @@ html.tgs-hd body #navigation .navigation-in,html.tgs-hd body #navigation .menu{b
 html.tgs-hd body #navigation .menu-level-1>li.menu-item-39{display:none!important}
 html.tgs-hd body #navigation .menu-level-1>li.menu-item-705>a,html.tgs-hd body #navigation .menu-level-1>li:first-child>a{background:linear-gradient(135deg,var(--green-brand) 0%,var(--green-cta) 100%)!important;color:#fff!important}
 @media (max-width:767px){.tgs-car__cta{font-size:16px!important;padding:12px 22px!important;bottom:22px}}
+/* --- v2: carousel cards closer to formoline112.cz (clean photo, centered headline, compact pill CTA) --- */
+.tgs-car{margin:44px 0 40px}
+.tgs-car__eye{display:none!important}
+.tgs-car__item::after{background:linear-gradient(180deg,rgba(6,22,40,.62) 0%,rgba(6,22,40,.28) 30%,rgba(6,22,40,0) 48%,rgba(6,22,40,0) 78%,rgba(6,22,40,.25) 100%)!important}
+.tgs-car__item{box-shadow:none!important;border-radius:22px!important}
+.tgs-car__item:hover{transform:none!important;box-shadow:0 14px 34px rgba(11,44,74,.18)!important}
+.tgs-car__txt{left:20px!important;right:20px!important;top:30px!important;text-align:center}
+.tgs-car__t{font-size:30px!important;line-height:1.08!important;font-weight:900!important;letter-spacing:-.02em!important;text-shadow:0 2px 14px rgba(0,0,0,.45)!important}
+.tgs-car__cta{bottom:24px!important;padding:8px 24px!important;font-size:18px!important;font-weight:800!important;box-shadow:0 4px 12px rgba(0,0,0,.18)!important;white-space:nowrap}
+.tgs-car__nav{opacity:0;transition:opacity .2s,transform .15s,background .2s}
+.tgs-car:hover .tgs-car__nav{opacity:1}
+@media (max-width:991px){.tgs-car__t{font-size:26px!important}}
+@media (max-width:767px){.tgs-car{margin:16px 0 24px}.tgs-car__nav{opacity:1}.tgs-car__t{font-size:26px!important}.tgs-car__cta{font-size:16px!important;padding:8px 20px!important}}
+/* --- v2: Ivan cutout photo without cropping the head --- */
+.tgs-help__card img{width:80px!important;height:87px!important;border-radius:0!important;object-fit:contain!important;background:none!important;filter:drop-shadow(0 6px 12px rgba(0,0,0,.25))}
+.tgs-car__t{font-size:28px!important}
+/* --- v2: customer reviews with stars (texts from tagra.app) --- */
+.tgs-rev{margin:56px 0 24px}
+.tgs-rev__rail{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(260px,1fr);gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 2px 14px;scrollbar-width:thin}
+.tgs-rev__c{scroll-snap-align:start;background:#fff;border:1.5px solid rgba(0,0,0,.08);border-radius:20px;padding:22px 22px 18px;display:flex;flex-direction:column}
+.tgs-rev__s{color:#f5b301;font-size:20px;letter-spacing:2px;margin-bottom:10px}
+.tgs-rev__t{font-size:16px;line-height:1.55;color:var(--text);margin:0 0 14px;flex:1 1 auto}
+.tgs-rev__m{font-size:13px;font-weight:600;color:var(--text2);margin:0}
+.tgs-stars{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:600;color:var(--blue-mid)!important;text-decoration:none!important;margin:-6px 0 14px}
+.tgs-stars span{color:#f5b301;font-size:18px;letter-spacing:1px}
+body.type-detail .tgs-rev,body.type-category .tgs-rev{margin:40px 0}
+/* --- v2: old Shoptet benefit banners -> 3D USP strip everywhere --- */
+.benefitBanner.tgs-off{display:none!important}
+.tgs-usp.tgs-usp--page{margin:40px 0 32px;padding:24px 28px;border-radius:20px;background:linear-gradient(180deg,#f5f9fc 0%,#eaf3f8 55%,#e2eff7 100%);border:1px solid rgba(19,74,142,.08)}
+@media (max-width:767px){.tgs-usp.tgs-usp--page{padding:18px 16px;margin:28px 0 24px}}
+.tgs-stars{display:flex!important;width:fit-content}
