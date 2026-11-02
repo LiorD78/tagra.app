@@ -348,4 +348,63 @@
   } else {
     init();
   }
+
+  /* 2. 11. 2026: kontakt s fotkou specialisty v hlavičce (jako formoline112.cz / shop.tagra.app).
+     Desktop > 1280 px: hlavička ve dvou řádcích – nahoře logo, fotka + telefon, jazyk, CTA;
+     pod tím tmavě modrý pruh s menu. Do 1280 px jen kulatá fotka (tel:) vedle hamburgeru.
+     CSS se vkládá odsud, aby nebylo nutné sahat do 100+ HTML stránek. */
+  (function navContact() {
+    var inner = document.querySelector('.site-nav .nav-inner');
+    if (!inner || inner.querySelector('.nav-contact')) return;
+    var L = { en: 'Happy to help', de: 'Wir helfen Ihnen gerne', pl: 'Chętnie pomożemy', nl: 'We helpen u graag',
+              fr: 'À votre écoute', it: 'Felici di aiutarti', el: 'Στη διάθεσή σας', ro: 'Vă stăm la dispoziție', hu: 'Szívesen segítünk' };
+    var lang = (document.documentElement.lang || 'en').slice(0, 2).toLowerCase();
+    var label = L[lang] || L.en;
+    var tel = '+420739005345', telTxt = '+420 739 005 345';
+    var css = ''
+      + '.nav-contact{display:flex;align-items:center;gap:10px;text-decoration:none!important;flex-shrink:0;margin-left:auto}'
+      + '.nav-contact__ph{width:52px;height:52px;flex:0 0 52px;border-radius:50%;background:#fff url(/assets/img/team/ivan-szabo.webp) center bottom/cover no-repeat;box-shadow:0 4px 12px rgba(11,44,74,.18);border:2px solid #fff}'
+      + '.nav-contact__t{display:flex;flex-direction:column;line-height:1.2}'
+      + '.nav-contact__t small{font-size:12px;font-weight:600;color:#5b6773}'
+      + '.nav-contact__t b{font-size:17px;font-weight:800;color:#134a8e;white-space:nowrap}'
+      + '.nav-contact:hover .nav-contact__t b{color:#0b2c4a}'
+      + '@media (min-width:1281px){'
+      + ':root{--nav-h:120px}'
+      + '.site-nav .nav-inner{flex-wrap:wrap;align-content:flex-start;row-gap:0}'
+      + '.site-nav .nav-inner>.nav-logo{align-self:center;margin:18px 0}'
+      + '.site-nav .nav-inner>.nav-contact,.site-nav .nav-inner>details.nav-lang{height:68px;align-items:center}'
+      + '.site-nav .nav-inner>.nav-links{order:10;flex:0 0 100%;height:52px;margin:0;justify-content:flex-start;position:relative;background:linear-gradient(90deg,#0b2c4a 0%,#134a8e 50%,#1f5fa6 100%);box-shadow:0 0 0 100vmax #134a8e;clip-path:inset(0 -100vmax)}'
+      + '.site-nav .nav-links>li>a:not(.nav-cta){color:#fff!important;text-transform:uppercase;font-weight:700!important;letter-spacing:.05em;font-size:14px!important}'
+      + '.site-nav .nav-links>li>a:not(.nav-cta):hover{background:rgba(255,255,255,.1)!important;color:#fff!important}'
+      + '.site-nav .nav-links>li.nav-cta-li{margin-left:auto}'
+      + '}'
+      + '@media (max-width:1280px){.nav-contact{margin-left:auto}.nav-contact__t{display:none}.nav-contact__ph{width:42px;height:42px;flex-basis:42px}}';
+    var st = document.createElement('style'); st.id = 'nav-contact-css'; st.textContent = css; document.head.appendChild(st);
+    var a = document.createElement('a'); a.className = 'nav-contact'; a.href = 'tel:' + tel; a.setAttribute('aria-label', label + ' ' + telTxt);
+    a.innerHTML = '<span class="nav-contact__ph" aria-hidden="true"></span><span class="nav-contact__t"><small>' + label + '</small><b>' + telTxt + '</b></span>';
+    var lg = inner.querySelector('details.nav-lang');
+    inner.insertBefore(a, lg || null);
+  })();
+
+  /* 2. 11. 2026: Maďarsko – stávající zákazníci používají současnou TAGRU, proto jim na děkovací
+     stránce trialu dáváme vybrat: TAGRA III (tagra.app) nebo současná TAGRA (instalačka na tdt.cz). */
+  (function huVersions() {
+    if (!/^\/hu\/koszonjuk\/?$/.test(location.pathname)) return;
+    function go() {
+      var btn = document.getElementById('downloadBtn');
+      if (!btn || !/TAGRA_III/.test(btn.href) || document.getElementById('thanksAlt')) return;
+      var lab = document.getElementById('downloadLabel');
+      if (lab) lab.textContent = 'TAGRA III letöltése – új verzió (Windows, 47 MB)';
+      var box = document.createElement('div');
+      box.id = 'thanksAlt';
+      box.style.cssText = 'max-width:560px;margin:28px auto 0;padding:22px 24px;border:1px solid rgba(19,74,142,.15);border-radius:16px;background:#f5f9fc;text-align:center';
+      box.innerHTML = '<p style="margin:0 0 14px;font-size:16px;line-height:1.55"><strong>Az Ön cégénél már használják a TAGRA szoftvert?</strong><br>Meglévő ügyfeleink továbbra is dolgozhatnak a TAGRA már megszokott, jelenlegi verziójával. Új ügyfeleinknek a TAGRA III verziót ajánljuk.</p>'
+        + '<a class="thanks-download" download href="https://www.tdt.cz/download/TAGRA_eu.zip" style="background:#fff;color:#134a8e;border:1.5px solid rgba(19,74,142,.35);box-shadow:none"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 4v12m0 0l-5-5m5 5l5-5M5 20h14"></path></svg><span>A jelenlegi TAGRA letöltése (Windows, 156 MB)</span></a>'
+        + '<p class="thanks-meta" style="margin-top:12px">Nem biztos benne, melyik verzióra van szüksége? Írjon nekünk a <a href="mailto:sales@tagra.app">sales@tagra.app</a> címre.</p>';
+      var meta = document.getElementById('thanksMeta');
+      (meta || btn).insertAdjacentElement('afterend', box);
+    }
+    if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', go); } else { go(); }
+  })();
+
 })();
