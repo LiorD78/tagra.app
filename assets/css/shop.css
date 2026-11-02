@@ -1,0 +1,74 @@
+/* ===== TAGRA Shop v2.0 – TRUCKMALL-like layer (2. 11. 2026) ===== */
+/* --- product detail: hide Shoptet noise --- */
+body .p-detail-inner-header .p-code,body .p-detail .stars-wrapper,body .p-detail .link-icons,body .p-detail .social-buttons-wrapper{display:none!important}
+body .p-detail-inner-header{margin-bottom:18px}
+body .p-detail .p-info-wrapper{background:#fff;border:1px solid var(--border);border-radius:var(--radius-lg);box-shadow:var(--shadow-card);padding:28px 28px 22px!important}
+@media (min-width:992px){body .p-detail .p-info-wrapper{margin-top:0}}
+body .p-detail .p-final-price-wrapper{margin-bottom:6px}
+body .p-detail .price-additional{display:block;margin-top:2px}
+body .p-detail .oss-price-notification__wrapper{font-size:13px;color:var(--text2)}
+body .p-detail .availability-value{display:inline-flex;align-items:center;gap:6px;background:#eef6e0;border-radius:99px;padding:5px 14px;margin:10px 0 4px}
+body .p-detail .availability-label{color:#4a6a0c!important}
+body .p-detail .add-to-cart{display:flex;gap:10px;align-items:center;margin:14px 0 6px}
+body .p-detail .add-to-cart .quantity{border-radius:12px}
+body .p-detail .add-to-cart-button{flex:1 1 auto;justify-content:center}
+body .p-detail .p-short-description{font-size:16px;line-height:1.6;color:var(--text2);margin-top:12px}
+body .p-detail .p-image{box-shadow:var(--shadow-card)}
+body .p-detail .p-thumbnail{border-radius:12px;overflow:hidden;border:1px solid var(--border)!important}
+.tgs-buytrust{list-style:none;margin:16px 0 0;padding:14px 0 0;border-top:1px solid var(--border);display:grid;gap:8px}
+.tgs-buytrust li{display:flex;gap:10px;align-items:flex-start;font-size:14px;line-height:1.45;color:var(--text)}
+.tgs-buytrust li::before{content:"";flex:0 0 20px;height:20px;border-radius:50%;background:var(--blue-mid) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E") center/12px no-repeat}
+.tgs-buytrust b{color:var(--blue-dark)}
+/* --- benefit banners: own line icons instead of Shoptet pictures --- */
+body .benefitBanner__picture{flex:0 0 56px;width:56px!important;height:56px;border-radius:16px;background:linear-gradient(135deg,var(--blue-light),var(--blue-mid));display:flex;align-items:center;justify-content:center;position:relative;margin-right:4px}
+body .benefitBanner__picture img{display:none!important}
+body .benefitBanner__picture::after{content:"";width:28px;height:28px;background:#fff;-webkit-mask:var(--ic) center/contain no-repeat;mask:var(--ic) center/contain no-repeat}
+body .benefitBanner__item:nth-child(1){--ic:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M19 5 5 19'/%3E%3Ccircle cx='6.5' cy='6.5' r='2.5'/%3E%3Ccircle cx='17.5' cy='17.5' r='2.5'/%3E%3C/svg%3E")}
+body .benefitBanner__item:nth-child(2){--ic:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5z'/%3E%3Cpath d='m9 12 2 2 4-4'/%3E%3C/svg%3E")}
+body .benefitBanner__item:nth-child(3){--ic:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='4' width='18' height='18' rx='2'/%3E%3Cpath d='M16 2v4M8 2v4M3 10h18'/%3E%3Cpath d='m9 16 2 2 4-4'/%3E%3C/svg%3E")}
+body .benefitBanner__item:nth-child(4){--ic:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='7.5' cy='15.5' r='5.5'/%3E%3Cpath d='m21 2-9.6 9.6M15.5 7.5l3 3L22 7l-3-3'/%3E%3C/svg%3E")}
+body .benefitBanner__link{display:flex!important;align-items:center;gap:14px}
+body .benefitBanner__item{padding:18px!important;transition:transform .2s,box-shadow .2s}
+body .benefitBanner__item:hover{transform:translateY(-2px);box-shadow:var(--shadow-card-hover)}
+/* --- homepage hero + category tiles (built by shop.js) --- */
+body.type-index #content > h1.sr-only + .row.banners-row{display:none}
+.tgs-hero{background:var(--tmx-bg-apple-light);border-radius:var(--radius-lg);padding:56px 48px;margin:8px 0 28px;display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center;overflow:hidden}
+.tgs-eyebrow{font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--green-brand);margin:0 0 12px}
+.tgs-hero h2{font-family:var(--font-display);font-weight:800;text-transform:uppercase;font-size:44px;line-height:1.08;letter-spacing:-.01em;margin:0 0 18px;background:var(--heading-gradient);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.tgs-hero p{font-size:18px;line-height:1.6;color:var(--text2);margin:0 0 24px}
+.tgs-hero p strong{color:var(--strong)}
+.tgs-cta{display:flex;flex-wrap:wrap;gap:12px}
+.tgs-btn{display:inline-flex;align-items:center;gap:8px;border-radius:99px;padding:14px 28px;font-weight:600;font-size:17px;text-decoration:none!important;transition:transform .15s,box-shadow .2s}
+.tgs-btn--green{background:linear-gradient(135deg,var(--green-brand),var(--green-cta));color:#fff!important;box-shadow:0 6px 18px rgba(110,155,18,.3)}
+.tgs-btn--blue{background:#fff;color:var(--blue-mid)!important;border:1.5px solid rgba(19,74,142,.25)}
+.tgs-btn:hover{transform:scale(1.02)}
+.tgs-hero__img{border-radius:var(--radius-lg);overflow:hidden;box-shadow:0 24px 60px rgba(11,44,74,.18);aspect-ratio:4/3}
+.tgs-hero__img img{width:100%;height:100%;object-fit:cover;display:block}
+.tgs-stats{display:flex;gap:28px;margin-top:26px;flex-wrap:wrap}
+.tgs-stats div{font-size:14px;color:var(--text2)}
+.tgs-stats b{display:block;font-size:26px;font-weight:800;color:var(--blue-dark)}
+.tgs-cats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin:0 0 32px}
+.tgs-cat{display:flex;flex-direction:column;background:#fff;border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-card);text-decoration:none!important;transition:transform .2s,box-shadow .2s}
+.tgs-cat:hover{transform:translateY(-3px);box-shadow:var(--shadow-card-hover)}
+.tgs-cat__img{background:var(--tmx-bg-apple-light);height:190px;display:flex;align-items:center;justify-content:center;padding:18px}
+.tgs-cat__img img{max-width:100%;max-height:100%;object-fit:contain;mix-blend-mode:multiply}
+.tgs-cat__body{padding:16px 18px 18px}
+.tgs-cat__title{font-size:18px;font-weight:800;color:var(--blue-dark);margin:0 0 6px}
+.tgs-cat__text{font-size:14px;line-height:1.5;color:var(--text2);margin:0 0 10px}
+.tgs-cat__go{font-size:15px;font-weight:600;color:var(--green-brand)}
+body .homepage-group-title{font-family:var(--font-display);font-weight:800;text-transform:uppercase;font-size:30px!important;text-align:left!important;background:var(--heading-gradient);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;display:inline-block;margin:24px 0 8px!important}
+@media (max-width:991px){.tgs-hero{grid-template-columns:1fr;padding:32px 22px}.tgs-hero h2{font-size:30px}.tgs-cats{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:575px){.tgs-cats{grid-template-columns:1fr}.tgs-btn{width:100%;justify-content:center}}
+/* --- misc --- */
+body .top-navigation-contacts .project-email{visibility:visible}
+body .p-detail-tabs-wrapper,body .shp-tabs-wrapper{margin-top:36px}
+.tgs-why{background:var(--tmx-bg-apple-light);padding:56px 0;margin-top:24px}
+.tgs-why h2{font-family:var(--font-display);font-weight:800;text-transform:uppercase;font-size:32px;line-height:1.15;margin:0 0 26px;background:var(--heading-gradient);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;display:inline-block}
+.tgs-why__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.tgs-why__card{background:#fff;border:1px solid var(--border);border-radius:var(--radius-lg);padding:22px 22px 20px;box-shadow:var(--shadow-card)}
+.tgs-why__n{display:inline-block;font-size:13px;font-weight:800;color:var(--green-brand);letter-spacing:.08em;margin-bottom:8px}
+.tgs-why__t{font-size:19px;font-weight:800;color:var(--blue-dark);margin:0 0 8px}
+.tgs-why__d{font-size:15px;line-height:1.55;color:var(--text2);margin:0}
+.tgs-why__more{margin:22px 0 0;font-size:15px;color:var(--text2)}
+@media (max-width:991px){.tgs-why__grid{grid-template-columns:1fr 1fr}}
+@media (max-width:575px){.tgs-why__grid{grid-template-columns:1fr}.tgs-why h2{font-size:24px}}
