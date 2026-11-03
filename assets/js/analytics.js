@@ -125,6 +125,42 @@
     } catch (x) {}
   }, true);
 
+  /* shop_click (funnel dávka 1/6): klik na odkaz do shopu. Jen gtag, pokud existuje (Consent Mode v2 se respektuje),
+     žádné cookies, žádné UTM; navigaci neblokuje. page_type zde záměrně vychází z URL (ne z nav.js). */
+  var SHOP_ORIGIN = 'https://shop.tagra.app';
+  var ARTICLE_PATH_RE = /\/(articles|ratgeber|poradnik|artikelen|articoli|arthra|articole)\//;
+  function shopPageType(p) {
+    if (ARTICLE_PATH_RE.test(p)) return 'article';
+    if (isTrial(p)) return 'try';
+    if (p.indexOf('/manuals/') !== -1) return 'manual';
+    return 'core';
+  }
+  function shopCtaPosition(a) {
+    var c = a.closest('[data-cta]');
+    var v = c && c.getAttribute('data-cta');
+    if (v) return v;
+    if (a.closest('header, nav')) return 'nav';
+    if (a.closest('footer')) return 'footer';
+    return 'content';
+  }
+  doc.addEventListener('click', function (e) {
+    var a = e.target && e.target.closest ? e.target.closest('a[href^="' + SHOP_ORIGIN + '"]') : null;
+    if (!a || typeof W.gtag !== 'function') return;
+    try {
+      var u = new URL(a.href, loc.href);
+      if (u.origin !== SHOP_ORIGIN) return;
+      var params = {
+        link_url: u.origin + u.pathname,
+        product_slug: u.pathname.replace(/^\/+|\/+$/g, '') || 'home',
+        page_lang: doc.documentElement.lang,
+        page_type: shopPageType(loc.pathname),
+        cta_position: shopCtaPosition(a)
+      };
+      if (a.target !== '_blank') params.transport_type = 'beacon';
+      W.gtag('event', 'shop_click', params);
+    } catch (x) {}
+  }, true);
+
   W.addEventListener('blur', function () {
     setTimeout(function () {
       var f = doc.activeElement;
