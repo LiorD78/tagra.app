@@ -348,6 +348,94 @@ async function notifyLead(apiKey, { data, name, aud, lang, prev, count, situatio
   }
 }
 
+// ── POPTÁVKY ajanlatkeres-hu → Rukon ──────────────────────────────────
+// Netlify u notifikací povoluje jen e-maily členů týmu, proto přeposíláme
+// přes webhook. Nic se nepřidává do trial sekvence ani do Resend audience.
+
+const RUKON_TO_DEFAULT = "rukon@rukon.hu";
+
+function formatBudapest(iso) {
+  const d = iso ? new Date(iso) : new Date();
+  const date = isNaN(d.getTime()) ? new Date() : d;
+  return new Intl.DateTimeFormat("hu-HU", {
+    timeZone: "Europe/Budapest", dateStyle: "medium", timeStyle: "short",
+  }).format(date);
+}
+
+/** Sestaví předmět, HTML a text e-mailu pro Rukon. Čistá funkce (testovatelná). */
+function buildAjanlatEmail(data, createdAt) {
+  const v = (k) => String(data[k] == null ? "" : data[k]).replace(/[\r\n]+/g, " ").trim();
+  const name = v("name"), company = v("company"), termek = v("termek");
+  const message = String(data.message || "").trim();
+
+  const subject = ["Új ajánlatkérés", termek, company || name].filter(Boolean).join(" – ");
+
+  const rows = [
+    ["Név", name],
+    ["Cégnév", company],
+    ["E-mail", v("email")],
+    ["Telefon", v("phone")],
+    ["Járművek száma", v("vehicles")],
+    ["Termék", termek],
+    ["Üzenet", message],
+    ["Oldal", v("source_url")],
+    ["Időpont", formatBudapest(createdAt)],
+  ].filter(([, val]) => val !== "");
+
+  const footer = "Az ajánlatkérés a tagra.app oldalról érkezett. Válaszoljon közvetlenül erre az e-mailre.";
+  const html =
+    `<table style="font:14px sans-serif;border-collapse:collapse">` +
+    rows.map(([k, val]) =>
+      `<tr><td style="padding:4px 14px 4px 0;color:#666;vertical-align:top">${escapeHtml(k)}</td>` +
+      `<td style="padding:4px 0;white-space:pre-wrap">${escapeHtml(val)}</td></tr>`).join("") +
+    `</table><p style="font:12px sans-serif;color:#888">${escapeHtml(footer)}</p>`;
+  const text = rows.map(([k, val]) => `${k}: ${val}`).join("\n") + `\n\n${footer}\n`;
+
+  return { subject, html, text };
+}
+
+async function handleAjanlatkeres(payload, data) {
+  const rawId = payload.id || data.id;
+  const hasId = !!rawId;
+  const id = rawId || "(no-id)";
+
+  // Honeypot / spam
+  if (String(data["bot-field"] || "").trim() || payload.spam === true || data.spam === true) {
+    logInfo(`ajanlatkeres-hu ignored (spam/honeypot), submission ${id}`);
+    return { statusCode: 200, body: "Ignored: spam" };
+  }
+
+  const apiKey = process.env.RESEND_API_KEY;
+  if (!apiKey) {
+    logError(`RESEND_API_KEY not configured — ajanlatkeres-hu ${id} not forwarded`);
+    return { statusCode: 200, body: "Not configured: no API key" };
+  }
+
+  const { subject, html, text } = buildAjanlatEmail(data, payload.created_at);
+  const email = String(data.email || "").trim();
+  const msg = {
+    from: process.env.RESEND_FROM || "TAGRA <sales@tagra.app>",
+    to: [process.env.RUKON_NOTIFY_TO || RUKON_TO_DEFAULT],
+    subject, html, text,
+    tags: [{ name: "campaign", value: "ajanlatkeres-hu" }],
+  };
+  if (EMAIL_RE.test(email)) msg.reply_to = email;
+
+  try {
+    // Idempotency-Key podle submission id: opakovaný webhook neodešle druhý mail.
+    // Bez id klíč nepoužijeme, jinak by Resend 24 h dedupoval všechny poptávky.
+    const sent = await sendViaResend(apiKey, msg, hasId ? `ajanlat-${id}` : undefined);
+    logInfo(`ajanlatkeres-hu forwarded, submission ${id}, resend ${sent.id}`);
+    return { statusCode: 200, body: "Forwarded" };
+  } catch (e) {
+    // Chybu logujeme bez osobních údajů (zpráva Resendu je jen status + chyba API).
+    logError(`ajanlatkeres-hu forward failed, submission ${id}: ${String(e.message).slice(0, 200)}`);
+    return { statusCode: 200, body: "Forward failed" };
+  }
+}
+
+exports.buildAjanlatEmail = buildAjanlatEmail;
+
 exports.handler = async (event) => {
   if (event.httpMethod !== "POST") {
     return { statusCode: 405, body: "Method Not Allowed" };
@@ -363,6 +451,10 @@ exports.handler = async (event) => {
 
   const data     = payload.data || payload.payload || payload || {};
   const formName = payload.form_name || data.form_name || "(unknown)";
+
+  if (formName === "ajanlatkeres-hu") {
+    return handleAjanlatkeres(payload, data);
+  }
 
   if (formName !== "tagra-trial") {
     logInfo(`Ignored form: ${formName}`);
