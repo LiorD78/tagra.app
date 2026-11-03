@@ -1,0 +1,45 @@
+/* TAGRA III + TAGRA Shop promo blocks (home, fleet, how it works, for whom, FAQ).
+   Uses tokens.css variables only; headings inherit the site-wide H2 gradient style. */
+.t3-badge{display:inline-flex;align-items:center;gap:8px;background:var(--green-brand);color:#fff;-webkit-text-fill-color:#fff;font-size:13px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:5px 12px;border-radius:999px;margin-right:10px;vertical-align:middle;box-shadow:0 6px 14px rgba(110,155,18,.22);text-shadow:none}
+.t3p-wrap{width:100%;max-width:var(--maxw,1180px);margin:0 auto;padding:0 24px}
+.t3p-eyebrow{display:flex;align-items:center;flex-wrap:wrap;gap:6px 0;margin-bottom:10px}
+.t3p-h2{text-wrap:balance}
+.t3p-lead{font-size:18px;line-height:1.6;color:var(--text2,#515154);max-width:760px;margin:6px 0 0}
+.t3p-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.t3p-note{font-size:14.5px;color:var(--text2,#515154);margin-top:14px}
+.t3p-note a{font-weight:600}
+
+/* TAGRA III intro (homepage) */
+.t3p-intro{padding:84px 0;background:var(--bg-apple,linear-gradient(180deg,#f5f9fc 0%,#eaf3f8 35%,#dcecf6 70%,#eef5f9 100%))}
+.t3p-intro__grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:48px;align-items:center}
+.t3p-list{list-style:none;margin:22px 0 0;padding:0;display:grid;gap:10px}
+.t3p-list li{position:relative;padding-left:32px;font-size:16.5px;line-height:1.5;color:var(--text,#1d1d1f)}
+.t3p-list li::before{content:"";position:absolute;left:0;top:2px;width:21px;height:21px;border-radius:50%;background:var(--green-brand,#6E9B12) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 8'%3E%3Cpath d='M1 4l2.5 2.5L9 1' fill='none' stroke='%23fff' stroke-width='1.7' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/10px 8px no-repeat}
+.t3p-shot{display:block;border-radius:14px;overflow:hidden;background:#fff;border:1px solid var(--border,rgba(0,0,0,.08));box-shadow:0 30px 70px rgba(11,44,74,.16),0 6px 18px rgba(11,44,74,.08);transition:transform .2s}
+.t3p-shot:hover{transform:translateY(-3px)}
+.t3p-shot img{width:100%;height:auto;display:block}
+@media (max-width:980px){.t3p-intro{padding:64px 0}.t3p-intro__grid{grid-template-columns:1fr;gap:32px}}
+
+/* TAGRA Shop band */
+.t3p-shop{padding:80px 0;background:linear-gradient(180deg,var(--bg-apple-solid,#eaf3f8) 0%,#fff 82%);border-top:1px solid var(--border,rgba(0,0,0,.08))}
+.t3p-head{max-width:860px}
+.t3p-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:34px}
+.t3p-tile{position:relative;display:flex;flex-direction:column;gap:8px;background:#fff;border:1px solid var(--border,rgba(0,0,0,.08));border-radius:var(--radius,16px);padding:24px 22px;color:inherit;text-decoration:none;transition:transform .18s,box-shadow .18s,border-color .18s}
+.t3p-tile:hover,.t3p-tile:focus-visible{transform:translateY(-3px);box-shadow:0 14px 28px rgba(11,44,74,.10);border-color:rgba(19,74,142,.35);text-decoration:none;color:inherit}
+.t3p-tile--key{border:2px solid var(--blue-mid,#134a8e);background:linear-gradient(180deg,var(--bg-apple-solid,#eaf3f8) 0%,#fff 100%)}
+.t3p-tile__t{font-size:19px;line-height:1.3;font-weight:800;color:var(--text-strong,var(--strong,#0b0b0c));padding-right:84px}
+.t3p-tile__d{font-size:15.5px;line-height:1.55;color:var(--text2,#515154);flex:1}
+.t3p-tile__p{font-size:16px;font-weight:800;color:var(--green-brand,#6E9B12);margin-top:4px}
+.t3p-tile__badge{position:absolute;top:16px;right:16px;background:var(--green-brand,#6E9B12);color:#fff;font-size:12px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;padding:4px 10px;border-radius:999px;white-space:nowrap}
+.t3p-tile:not(:has(.t3p-tile__badge)) .t3p-tile__t{padding-right:0}
+@media (max-width:980px){.t3p-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:620px){
+  .t3p-wrap{padding:0 16px}
+  .t3p-shop{padding:60px 0}
+  .t3p-grid{grid-template-columns:1fr}
+  .t3p-cta .btn-cta,.t3p-cta .btn-outline{width:100%;justify-content:center;text-align:center}
+}
+
+/* small helpers */
+.t3p-rownote{display:block;font-size:13px;font-weight:600;color:var(--green-brand,#6E9B12);margin-top:2px}
+.t3p-sub{display:block;font-size:17px;font-weight:700;color:var(--text2,#515154);margin-top:4px}
