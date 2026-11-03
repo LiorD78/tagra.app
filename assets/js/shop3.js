@@ -1,4 +1,4 @@
-/* TAGRA Shop layer 3 v1.1 – program screenshots in a MacBook frame (like TRUCKMALL mac-stage) (3. 11. 2026) */
+/* TAGRA Shop layer 3 v1.2 – program screenshots in a MacBook frame (like TRUCKMALL mac-stage) (3. 11. 2026) */
 (function(){
   var l=document.createElement('link');l.rel='stylesheet';l.href='https://tagra.app/assets/css/shop3.css?v=2';document.head.appendChild(l);
   var MB='https://wuswoaicjtuodzmrjwgf.supabase.co/storage/v1/object/public/site/tagra-shop/mac/tagra3-mac-';
@@ -29,6 +29,14 @@
     addEventListener('scroll',function(){if(!tick){tick=true;requestAnimationFrame(upd);}},{passive:true});
     addEventListener('resize',upd,{passive:true});setTimeout(upd,150);
   }
-  function run(){imgs();gallery();zoom();}
+  function topsellers(){
+    var t=document.getElementById('productsTop');if(!t||!/download-devices/.test(location.pathname))return;
+    function nm(c){return ((c.querySelector('.name')||{}).textContent||'').replace(/\s+/g,' ').trim().toUpperCase();}
+    function rank(c){var n=nm(c);if(n==='DOWNLOAD BOX II S')return 0;if(/DOWNLOAD BOX II S/.test(n))return 1;if(/STATION/.test(n))return 9;return 5;}
+    var it=[].slice.call(t.children).filter(function(c){return c.classList.contains('product');});
+    it.sort(function(a,b){return rank(a)-rank(b);});
+    it.forEach(function(c){t.appendChild(c);var on=rank(c)<9;c.classList.toggle('active',on);c.classList.toggle('inactive',!on);c.setAttribute('aria-hidden',on?'false':'true');});
+  }
+  function run(){imgs();gallery();zoom();topsellers();}
   if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',run);}else{run();}
 })();
