@@ -167,6 +167,25 @@
 </div>
 </div>
 </section>
+<!-- Nabídka čtečky / DOWNLOAD BOX II S (funnel dávka 6) -->
+<section class="thanks-next" id="thanksShop">
+<div class="container">
+<h2>Benötigen Sie ein Lesegerät?</h2>
+<p>Um TAGRA zu testen, benötigen Sie Daten von einem Fahrtenschreiber oder einer Fahrerkarte.</p>
+<p>
+<a class="btn btn-secondary" data-cta="thanks" href="https://shop.tagra.app/smart-card-reader/" id="thanksShopFirst" data-driver-href="https://shop.tagra.app/tagra-trucker/" data-driver-text="TAGRA Trucker bestellen">USB-Kartenleser</a>
+<a class="btn btn-secondary" data-cta="thanks" href="https://shop.tagra.app/download-box-ii-s/">Download-Schlüssel DOWNLOAD BOX II S</a>
+</p>
+</div>
+</section>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var s = document.getElementById('thanksShop'), e = document.getElementById('thanksEnforcement'), d = document.getElementById('downloadBtn'), a = document.getElementById('thanksShopFirst');
+  if (!s || !a) return;
+  if (e && !e.hidden) { s.hidden = true; return; }
+  if (d && /Trucker/i.test(d.href)) { a.href = a.getAttribute('data-driver-href'); a.textContent = a.getAttribute('data-driver-text'); }
+});
+</script>
 <footer class="site-footer" role="contentinfo">
 <div class="footer-inner">
 <div>
