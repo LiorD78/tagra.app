@@ -1,6 +1,6 @@
 /* TAGRA Shop layer 3 v1.1 – program screenshots in a MacBook frame (like TRUCKMALL mac-stage) (3. 11. 2026) */
 (function(){
-  var l=document.createElement('link');l.rel='stylesheet';l.href='https://tagra.app/assets/css/shop3.css?v=1';document.head.appendChild(l);
+  var l=document.createElement('link');l.rel='stylesheet';l.href='https://tagra.app/assets/css/shop3.css?v=2';document.head.appendChild(l);
   var MB='https://wuswoaicjtuodzmrjwgf.supabase.co/storage/v1/object/public/site/tagra-shop/mac/tagra3-mac-';
   var RX=/tagra3-(driver-evaluation|company-report|work-report|infringements|evaluation|overview|driver)\b/;
   function name(u){u=u||'';if(/tagra-mac4-vyhodnoceni/.test(u))return 'evaluation';var m=u.match(RX);return m?m[1]:null;}
