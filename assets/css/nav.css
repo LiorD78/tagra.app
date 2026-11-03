@@ -339,3 +339,27 @@ html, body { overflow-x: hidden; max-width: 100vw; }
   .nav-inner { gap: 8px; padding: 0 12px 0 14px; }
   .nav-logo img { height: 26px !important; }
 }
+
+/* === Sekundární odkaz „Shop" (shop.tagra.app) ===
+   Obrysové tlačítko vedle primárního zeleného CTA. Na desktopu (>1280 px) je
+   v řadě, v rozbalovacím menu (≤1280 px) je to běžná položka bez obrysu.
+   V liště na mobilu se nic nepřidává, takže 360 px se nemůže zalomit. */
+.nav-links .nav-shop-li a {
+  border: 1.5px solid var(--blue-mid, #134a8e);
+  color: var(--blue-mid, #134a8e);
+  border-radius: 99px;
+  padding: 6.5px 14px;
+  font-weight: 600;
+  background: transparent;
+}
+.nav-links .nav-shop-li a:hover {
+  background: var(--bg-apple-solid, #eaf3f8);
+  color: var(--blue-dark, #0b2c4a);
+}
+@media (max-width: 1280px) {
+  .nav-links .nav-shop-li a {
+    border: 0; border-radius: 8px; padding: 8px 10px;
+    font-weight: 500; color: var(--text, #1d1d1f);
+  }
+  .nav-links .nav-shop-li a:hover { color: var(--blue-mid, #134a8e); }
+}
