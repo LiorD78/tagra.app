@@ -266,8 +266,9 @@ def hu_extras(doc, page_id=None):
     if page_id == 'products-hub' and 'Download Station' not in str(doc):
         for li in doc.find_all('li'):
             if 'Wi-Fi változat' in li.get_text():
+                # 3. 11. 2026: DOWNLOAD BOX II S Wi-Fi se samostatně neprodává (jen v DOWNLOAD STATION Wi-Fi) -> nahradit
                 nl = BeautifulSoup('<li>Telephelyi változat: Download Station – zárható fali doboz, alap és Wi-Fi-változat</li>', 'html.parser').li
-                li.insert_after(nl)
+                li.replace_with(nl)
                 break
         for h3 in doc.find_all('h3'):
             if 'EUTracker' in h3.get_text():

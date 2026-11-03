@@ -1,0 +1,211 @@
+/* =====================================================================
+   tagra.app/hu/ – bloky převzaté z nového webu tdt.cz (3. 11. 2026)
+   Načítá se JEN na maďarských stránkách (hu/**). Ostatní jazyky ho
+   nepoužívají. Barvy a rozměry z tokens.css (fallbacky pro stránky bez
+   tokens.css).
+   Obsah: podnabídka v menu · USP lišta · „Meglévő ügyfeleinknek“
+   (rychlé odkazy pro zákazníky) · dlaždice produktů · TAGRA III pruh ·
+   nákup u Rukon Kft. · stránka Letöltések.
+   ===================================================================== */
+
+/* ---------- Menu: podnabídka (TAGRA program, Ügyfeleinknek) ---------- */
+.nav-links .has-sub { position: relative; }
+.nav-links .has-sub > a::after {
+  content: ""; display: inline-block; width: 6px; height: 6px; margin: 0 0 3px 7px;
+  border-right: 1.6px solid currentColor; border-bottom: 1.6px solid currentColor;
+  transform: rotate(45deg); opacity: .75;
+}
+.nav-links .sub { list-style: none; margin: 0; padding: 0; }
+.nav-links .sub a { display: block; white-space: normal; text-transform: none; letter-spacing: 0; }
+.nav-links .sub a strong { display: block; font-size: 15px; font-weight: 700; color: var(--blue-dark, #0b2c4a); }
+.nav-links .sub a span { display: block; font-size: 13px; font-weight: 400; line-height: 1.35; color: var(--text2, #515154); margin-top: 2px; }
+.nav-links .sub a:hover strong, .nav-links .sub a[aria-current="page"] strong { color: var(--blue-mid, #134a8e); }
+
+@media (min-width: 1281px) {
+  .nav-links .sub {
+    position: absolute; top: 100%; left: 0; z-index: 950; min-width: 330px;
+    padding: 8px; margin-top: 0; border-radius: 14px; background: #fff;
+    border: 1px solid rgba(11,44,74,.08); box-shadow: 0 18px 40px rgba(11,44,74,.16), 0 2px 8px rgba(11,44,74,.06);
+    opacity: 0; visibility: hidden; transform: translateY(6px); transition: opacity .15s, transform .15s, visibility .15s;
+  }
+  .nav-links .has-sub:hover > .sub, .nav-links .has-sub:focus-within > .sub { opacity: 1; visibility: visible; transform: none; }
+  .nav-links .sub li + li { margin-top: 2px; }
+  .nav-links .sub a { padding: 10px 12px !important; border-radius: 10px; background: none !important; }
+  .nav-links .sub a:hover { background: var(--bg-apple-solid, #eaf3f8) !important; text-decoration: none; }
+  /* Dvouřádková hlavička z nav.js ořezává modrý pruh přes clip-path – to by
+     uřízlo i rozbalovací podnabídku. Na HU proto pruh kreslíme pseudo-prvkem. */
+  html[lang="hu"] .site-nav .nav-inner > .nav-links { clip-path: none !important; box-shadow: none !important; isolation: isolate; }
+  html[lang="hu"] .site-nav .nav-inner > .nav-links::before {
+    content: ""; position: absolute; z-index: -1; top: 0; bottom: 0; left: -100vmax; right: -100vmax;
+    background: linear-gradient(90deg, #0b2c4a 0%, #134a8e 50%, #1f5fa6 100%);
+  }
+  html[lang="hu"] .site-nav .nav-inner > .nav-links > li { height: 100%; display: flex; align-items: center; }
+}
+@media (max-width: 1280px) {
+  .nav-links.open { max-height: calc(100vh - var(--nav-h, 64px)); overflow-y: auto; }
+  .nav-links.open .has-sub { width: 100%; }
+  .nav-links.open .has-sub > a::after { display: none; }
+  .nav-links.open .sub { margin: 2px 0 8px 12px; padding-left: 10px; border-left: 2px solid var(--bg-apple-solid, #eaf3f8); }
+  .nav-links.open .sub a { padding: 6px 8px; }
+  .nav-links.open .sub a strong { font-size: 14px; font-weight: 600; }
+  .nav-links.open .sub a span { display: none; }
+}
+
+/* ---------- Hero: tlačítka pod nadpisem (jako tdt.cz) ---------- */
+.hu-hero-cta { justify-content: center; margin-top: 22px; }
+.hu-hero-cta .btn-cta, .hu-hero-cta .btn-glass { font-size: 17px; font-weight: 700; padding: 14px 30px; }
+.hu-hero-cta .btn-glass {
+  display: inline-flex; align-items: center; gap: 8px; border-radius: 99px; text-decoration: none !important;
+  color: #0b2c4a !important; background: linear-gradient(180deg, rgba(255,255,255,.62) 0%, rgba(255,255,255,.38) 100%);
+  border: 1px solid rgba(255,255,255,.7); backdrop-filter: blur(16px) saturate(140%); -webkit-backdrop-filter: blur(16px) saturate(140%);
+  box-shadow: 0 8px 24px rgba(11,44,74,.18); transition: transform .15s, background .15s;
+}
+.hu-hero-cta .btn-glass:hover { transform: scale(1.02); background: rgba(255,255,255,.75); }
+.hu-hero-cta .btn-glass b { color: var(--green-cta, #5C820F); }
+@media (max-width: 600px) { .hu-hero-cta .btn-cta, .hu-hero-cta .btn-glass { font-size: 15.5px; padding: 12px 22px; } }
+
+/* ---------- Hero nadpis na mobilu: dlouhá maďarská slova nesmí přetéct ---------- */
+@media (max-width: 600px) { html[lang="hu"] .hero h1 { font-size: clamp(26px, 8.2vw, 42px); overflow-wrap: break-word; } }
+
+/* ---------- USP lišta (tdt.cz, vzor TRUCKMALL) ---------- */
+.band--usp { background: #fff; padding: 14px 0 10px; border-bottom: 1px solid rgba(20,60,110,.06); }
+.usp-bar { --tmx-blue-l: #0b2c4a; --tmx-blue-m: #134a8e; position: relative; z-index: 10; isolation: isolate; width: 100%; max-width: 1400px;
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; margin: 0 auto; padding: 0 16px; }
+@media (max-width: 1023px) { .usp-bar { grid-template-columns: repeat(2, 1fr); row-gap: 6px; } }
+.usp-bar > * { min-width: 0; }
+.usp-bar .usp-item { display: flex; align-items: center; gap: 10px; padding: 6px 8px; text-decoration: none !important; color: #141414; transition: transform .25s ease, color .25s ease; }
+.usp-bar .usp-img { flex: 0 0 60px; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; }
+.usp-bar .usp-img img { width: 100% !important; height: auto !important; display: block; border-radius: 50%; transform-origin: left center; transition: transform .25s ease, filter .25s ease; }
+.usp-bar .usp-text { flex: 1; min-width: 0; line-height: 1.25; font-size: 14px; color: #515154; transition: transform .25s ease; }
+.usp-bar .usp-text strong { display: block; font-weight: 700; font-size: 16px; color: #141414;
+  background: linear-gradient(90deg, var(--tmx-blue-l) 0%, var(--tmx-blue-m) 100%); -webkit-background-clip: text; background-clip: text; transition: color .25s ease; }
+@media (hover: hover) {
+  .usp-bar .usp-item:hover .usp-img > img { transform: translateY(-1px) scale(1.12); filter: drop-shadow(0 2px 4px rgba(0,0,0,.15)); }
+  .usp-bar .usp-item:hover .usp-text strong { color: transparent; }
+  .usp-bar .usp-item:hover .usp-text { transform: translateX(6px); }
+}
+.usp-bar .usp-item:focus-visible { outline: 2px solid var(--tmx-blue-m); outline-offset: 3px; border-radius: 6px; }
+@media (max-width: 600px) { .usp-bar { padding: 0 6px; } .usp-bar .usp-item { gap: 6px; padding: 6px 4px; } .usp-bar .usp-img { flex: 0 0 46px; width: 46px; height: 46px; } .usp-bar .usp-text { font-size: 12.5px; } .usp-bar .usp-text strong { font-size: 14px; } }
+@media (prefers-reduced-motion: reduce) { .usp-bar .usp-img > img, .usp-bar .usp-text { transition: none; transform: none !important; } }
+
+/* ---------- Meglévő ügyfeleinknek (rychlé odkazy, tdt.cz .band--qz) ---------- */
+.band--qz { padding: 40px 0 8px; background: #fff; }
+.band--qz h2.qz-t { display: block; font-size: 15px !important; line-height: 1.3; background: none; -webkit-text-fill-color: currentColor; font-weight: 700; letter-spacing: .06em;
+  text-transform: uppercase; color: #52760c; margin: 0 0 14px; padding: 0; text-align: center; }
+.qz-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; }
+.qz-grid > * { min-width: 0; }
+.qz-item span { overflow-wrap: break-word; }
+.qz-item { display: flex; gap: 12px; align-items: center; padding: 14px 16px; border: 1px solid var(--border, rgba(0,0,0,.08)); border-radius: var(--radius, 16px); background: #fff;
+  color: var(--text, #1d1d1f); text-decoration: none !important; transition: border-color .2s, box-shadow .2s, transform .2s; }
+.qz-item:hover, .qz-item:focus-visible { border-color: rgba(19,74,142,.35); box-shadow: 0 6px 18px rgba(11,44,74,.08); transform: translateY(-1px); }
+.qz-item .qz-ico { flex: 0 0 52px; width: 52px; height: 52px; display: block; }
+.qz-item strong { display: block; font-size: 16px; color: var(--blue-dark, #0b2c4a); }
+.qz-item span { font-size: 14px; line-height: 1.4; color: var(--text2, #515154); }
+@media (max-width: 1000px) { .qz-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 640px) { .qz-grid { grid-template-columns: 1fr 1fr; } .qz-item { padding: 12px; gap: 8px; flex-direction: column; align-items: flex-start; } .qz-item .qz-ico { flex: 0 0 auto; width: 44px; height: 44px; } .qz-item span { font-size: 13px; } }
+
+/* ---------- Dlaždice produktů a služeb (tdt.cz .tile) ---------- */
+.hu-tiles { padding: 64px 0; background: #fff; }
+.hu-tiles .hu-tiles-h { text-align: center; }
+.tile-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-top: 28px; }
+.tile-grid > * { min-width: 0; }
+@media (max-width: 1024px) { .tile-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 640px) { .tile-grid { grid-template-columns: 1fr; } }
+.tile { position: relative; display: flex; flex-direction: column; gap: 10px; background: #fff; border: 1px solid var(--border, rgba(0,0,0,.08)); border-radius: var(--radius, 16px);
+  padding: 26px; color: var(--text, #1d1d1f); text-decoration: none !important; transition: transform .15s, box-shadow .15s; overflow-wrap: break-word; }
+.tile:hover { transform: translateY(-3px); box-shadow: 0 14px 34px rgba(11,44,74,.10); color: var(--text, #1d1d1f); }
+.tile h3 { font-size: 20px; color: var(--blue-dark, #0b2c4a); text-transform: none; margin: 0; }
+.tile p { color: var(--text2, #515154); margin: 0; font-size: 16px; }
+.tile-more { margin-top: auto; color: #52760c; font-weight: 600; font-size: 15px; }
+.tile h3.tile-h-logo { display: flex; align-items: center; height: 70px; margin: 0 0 30px; }
+.tile h3.tile-h-logo img { height: 36px !important; width: auto !important; max-width: 100%; }
+@media (max-width: 640px) { .tile h3.tile-h-logo { height: auto; margin-bottom: 4px; } }
+.tile .tile-ico { display: block; width: 68px; height: 68px; object-fit: contain; margin: 0 0 2px; }
+.callout-cta { background: var(--bg-apple-solid, #eaf3f8); border-radius: var(--radius, 16px); padding: 24px 28px; margin: 32px 0 0; }
+.callout-cta p { margin: 0; }
+
+/* ---------- TAGRA III pruh ---------- */
+.hu-t3 { padding: 72px 0; background: linear-gradient(180deg, #f5f9fc 0%, #eaf3f8 35%, #dcecf6 70%, #eef5f9 100%); }
+.hu-t3-grid { display: grid; grid-template-columns: 1fr 1.05fr; gap: 48px; align-items: center; }
+.hu-t3-grid > * { min-width: 0; }
+.hu-t3 .eyebrow { display: inline-flex; align-items: center; gap: 8px; }
+.hu-t3 .t3-new { display: inline-block; padding: 3px 10px; border-radius: 99px; background: linear-gradient(135deg, #6E9B12 0%, #5C820F 100%); color: #fff; font-size: 13px; letter-spacing: .06em; }
+.hu-t3 h2 { font-size: 34px; }
+.hu-t3 .t3-lead { font-size: 18px; color: var(--text2, #515154); margin: 0 0 18px; }
+.hu-t3 ul.t3-list { list-style: none; margin: 0 0 24px; padding: 0; display: grid; gap: 10px; }
+.hu-t3 ul.t3-list li { position: relative; padding-left: 32px; font-size: 16.5px; color: var(--text, #1d1d1f); }
+.hu-t3 ul.t3-list li::before { content: ""; position: absolute; left: 0; top: 2px; width: 22px; height: 22px; border-radius: 50%;
+  background: #6E9B12 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 8'%3E%3Cpath d='M1 4l2.5 2.5L9 1' fill='none' stroke='%23fff' stroke-width='1.7' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/11px no-repeat; }
+.hu-t3 .cta-row { margin-top: 0; }
+.hu-t3 .cta-row .btn-cta, .hu-t3 .cta-row .btn-outline { padding: 13px 22px; font-size: 16px; }
+.hu-t3-shot { margin: 0; border-radius: 18px; overflow: hidden; background: #fff; box-shadow: 0 30px 60px -28px rgba(11,44,74,.45), 0 2px 8px rgba(11,44,74,.08); border: 1px solid rgba(11,44,74,.08); }
+.hu-t3-shot img { display: block; width: 100%; height: auto; }
+.hu-t3-note { margin-top: 26px; padding: 18px 20px; border-radius: 14px; background: rgba(255,255,255,.75); border: 1px solid rgba(19,74,142,.14); border-left: 4px solid #134a8e; }
+.hu-t3-note strong { display: block; color: var(--blue-dark, #0b2c4a); margin-bottom: 4px; font-size: 16px; }
+.hu-t3-note p { margin: 0; font-size: 15px; color: var(--text2, #515154); }
+@media (max-width: 900px) { .hu-t3 { padding: 52px 0; } .hu-t3-grid { grid-template-columns: 1fr; gap: 28px; } .hu-t3 h2 { font-size: 28px; } }
+
+/* ---------- Nákup u Rukon Kft. ---------- */
+.hu-buy { padding: 64px 0; background: #fff; }
+.hu-buy-card { display: grid; grid-template-columns: 1.3fr 1fr; gap: 36px; align-items: center; padding: 40px; border-radius: 24px; color: #fff;
+  background: linear-gradient(120deg, #0b2c4a 0%, #134a8e 62%, #1f5fa6 100%); box-shadow: 0 24px 50px -28px rgba(11,44,74,.6); }
+.hu-buy-card > * { min-width: 0; }
+.hu-buy-card .eyebrow { color: #b9de6a; }
+.hu-buy-card h2 { background: none; -webkit-text-fill-color: #fff; color: #fff; font-size: 32px; }
+.hu-buy-card p { color: rgba(255,255,255,.88); font-size: 17px; margin: 0; }
+.hu-buy-card p strong { color: #fff; }
+.hu-buy-contact { background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.2); border-radius: 18px; padding: 22px 24px; }
+.hu-buy-contact .who { font-weight: 700; font-size: 17px; color: #fff; }
+.hu-buy-contact .addr { font-size: 14.5px; color: rgba(255,255,255,.75); margin: 2px 0 14px; }
+.hu-buy-contact a.tel { display: block; font-size: 24px; font-weight: 800; color: #fff; text-decoration: none; }
+.hu-buy-contact a.mail { display: block; color: #cfe7ff; margin-top: 2px; }
+.hu-buy-contact .cta-row { margin-top: 16px; }
+.hu-buy-contact .btn-glass-w { display: inline-flex; align-items: center; padding: 14px 26px; border-radius: 99px; color: #fff !important; text-decoration: none !important;
+  border: 1.5px solid rgba(255,255,255,.55); font-weight: 600; }
+.hu-buy-contact .btn-glass-w:hover { background: rgba(255,255,255,.12); }
+@media (max-width: 900px) { .hu-buy-card { grid-template-columns: 1fr; padding: 28px 22px; gap: 22px; } .hu-buy-card h2 { font-size: 26px; } }
+
+/* ---------- Stránka Letöltések ---------- */
+.hu-dl-hero { padding: calc(var(--nav-h, 64px) + 56px) 0 40px; text-align: center; background: linear-gradient(180deg, #f5f9fc 0%, #eaf3f8 60%, #ffffff 100%); }
+.hu-dl-hero .lead { max-width: 760px; margin: 0 auto; font-size: 18.5px; color: var(--text2, #515154); }
+.hu-subnav { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-top: 24px; }
+.hu-subnav a { padding: 8px 16px; border-radius: 99px; background: #fff; border: 1px solid rgba(19,74,142,.15); color: var(--blue-mid, #134a8e); font-weight: 600; font-size: 15px; text-decoration: none !important; }
+.hu-subnav a:hover { border-color: rgba(19,74,142,.4); }
+.hu-subnav a[aria-current="page"] { background: var(--blue-mid, #134a8e); border-color: var(--blue-mid, #134a8e); color: #fff; }
+.hu-dl-sec { padding: 56px 0; }
+.hu-dl-sec--gray { background: var(--bg-gray, #f5f5f7); }
+.hu-dl-sec h2 { font-size: 30px; }
+.dlv-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin-top: 18px; }
+.dlv-grid > * { min-width: 0; }
+.dlv-card { position: relative; display: flex; flex-direction: column; gap: 12px; padding: 30px; border-radius: 22px; background: #fff; border: 1px solid rgba(11,44,74,.1); box-shadow: 0 10px 30px -18px rgba(11,44,74,.3); }
+.dlv-card--main { border: 2px solid #134a8e; background: linear-gradient(180deg, #f5f9fc 0%, #ffffff 70%); }
+.dlv-badge { align-self: flex-start; padding: 4px 12px; border-radius: 99px; font-size: 13px; font-weight: 700; letter-spacing: .03em; color: #fff; background: #134a8e; }
+.dlv-card--new .dlv-badge { background: linear-gradient(135deg, #6E9B12 0%, #5C820F 100%); }
+.dlv-head { display: flex; align-items: center; gap: 14px; }
+.dlv-head img { width: 64px; height: 64px; flex: 0 0 64px; }
+.dlv-head h3 { margin: 0; font-size: 24px; }
+.dlv-head img.dlv-thumb { width: 96px; height: 64px; flex: 0 0 96px; object-fit: cover; object-position: left top; border-radius: 10px; border: 1px solid rgba(11,44,74,.12); box-shadow: 0 4px 12px rgba(11,44,74,.12); }
+.dlv-card p { margin: 0; color: var(--text2, #515154); }
+.dlv-card ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.dlv-card ul li { position: relative; padding-left: 28px; }
+.dlv-card ul li::before { content: "✓"; position: absolute; left: 0; top: 0; width: 20px; height: 20px; border-radius: 50%; background: #6E9B12; color: #fff; font-size: 12px; font-weight: 800; line-height: 20px; text-align: center; }
+.dlv-actions { margin-top: auto; padding-top: 6px; display: flex; flex-wrap: wrap; align-items: center; gap: 12px 18px; }
+.dlv-actions .btn-cta, .dlv-actions .btn-outline { font-weight: 700; }
+.dlv-meta { font-size: 14px; color: var(--text2, #515154); }
+.dlv-more { font-weight: 600; color: var(--blue-mid, #134a8e); }
+.dl-warn { margin-top: 22px; padding: 20px 22px; border-radius: 16px; background: #fff8e6; border: 1px solid #f1d28a; border-left: 5px solid #e0a100; }
+.dl-warn strong { display: block; color: #6b4a00; font-size: 17px; margin-bottom: 4px; }
+.dl-warn p { margin: 0; color: #4a3b12; }
+.dl-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 12px; margin-top: 16px; }
+.dl { display: flex; gap: 14px; align-items: flex-start; background: #fff; border: 1px solid var(--border, rgba(0,0,0,.08)); border-radius: 14px; padding: 16px 18px; text-decoration: none !important; color: var(--text, #1d1d1f); }
+.dl:hover { border-color: var(--blue-light, #1f5fa6); box-shadow: 0 8px 22px rgba(11,44,74,.08); color: var(--text, #1d1d1f); }
+.dl-ico { flex: 0 0 auto; width: 40px; height: 40px; border-radius: 10px; background: var(--bg-apple-solid, #eaf3f8); color: var(--blue-mid, #134a8e); display: grid; place-items: center; font-size: 11px; font-weight: 800; }
+.dl-ico--3d { width: 48px; height: 48px; background: none; }
+.dl-ico--3d img { width: 48px; height: 48px; display: block; }
+.dl-t { font-weight: 700; color: var(--blue-dark, #0b2c4a); display: block; }
+.dl-d { font-size: 14px; color: var(--text2, #515154); display: block; margin-top: 2px; }
+.hu-lic { display: grid; grid-template-columns: auto 1fr auto; gap: 22px; align-items: center; padding: 26px 28px; border-radius: 20px; background: var(--bg-apple-solid, #eaf3f8); }
+.hu-lic img { width: 72px; height: 72px; }
+.hu-lic p { margin: 0; }
+.hu-lic .lic-c { font-size: 15px; color: var(--text2, #515154); margin-top: 6px; }
+@media (max-width: 860px) { .dlv-grid { grid-template-columns: 1fr; } .hu-lic { grid-template-columns: 1fr; text-align: left; } .dlv-card { padding: 24px 20px; } }
