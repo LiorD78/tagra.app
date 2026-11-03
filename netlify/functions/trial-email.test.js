@@ -51,6 +51,11 @@ const resendCalls = () => calls.filter((c) => c.url.includes("api.resend.com"));
   assert.ok(!("reply_to" in b4));
   assert.strictEqual(b4.subject, "Új ajánlatkérés – Nagy Éva");
 
+  // 4b) bez submission id → žádný Idempotency-Key
+  calls.length = 0;
+  await post({ form_name: "ajanlatkeres-hu", data: { name: "Bez Id", email: "x@y.hu" } });
+  assert.ok(!("Idempotency-Key" in resendCalls()[0].opts.headers));
+
   // 5) tagra-trial se chová jako dřív: uvítací mail zákazníkovi, reply_to sales@tagra.app
   calls.length = 0;
   r = await post({ form_name: "tagra-trial", data: { name: "John Smith", email: "john@acme.com", audience: "fleet", language: "en" } });

@@ -395,7 +395,9 @@ function buildAjanlatEmail(data, createdAt) {
 }
 
 async function handleAjanlatkeres(payload, data) {
-  const id = payload.id || data.id || "(no-id)";
+  const rawId = payload.id || data.id;
+  const hasId = !!rawId;
+  const id = rawId || "(no-id)";
 
   // Honeypot / spam
   if (String(data["bot-field"] || "").trim() || payload.spam === true || data.spam === true) {
@@ -421,7 +423,8 @@ async function handleAjanlatkeres(payload, data) {
 
   try {
     // Idempotency-Key podle submission id: opakovaný webhook neodešle druhý mail.
-    const sent = await sendViaResend(apiKey, msg, `ajanlat-${id}`);
+    // Bez id klíč nepoužijeme, jinak by Resend 24 h dedupoval všechny poptávky.
+    const sent = await sendViaResend(apiKey, msg, hasId ? `ajanlat-${id}` : undefined);
     logInfo(`ajanlatkeres-hu forwarded, submission ${id}, resend ${sent.id}`);
     return { statusCode: 200, body: "Forwarded" };
   } catch (e) {
