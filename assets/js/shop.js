@@ -141,7 +141,7 @@
     blk.classList.add('tgs-grp');
     var h=document.createElement('div');h.className='tgs-sec tgs-hw';h.innerHTML=head('Software + hardware','Complete your tachograph setup','DOWNLOAD BOX II S downloads data from the tachograph and the driver card – no annual fees, 24-month warranty. Buy it together with TAGRA and save €49.');
     t.parentNode.insertBefore(h,t);t.classList.add('tgs-hide');
-    var more=document.createElement('p');more.className='tgs-note';more.innerHTML='Also available: <a href="/download-devices/">DOWNLOAD STATION and Wi-Fi versions</a> · <a href="/accessories/">smart card reader</a>';
+    var more=document.createElement('p');more.className='tgs-note';more.innerHTML='Also available: <a href="/download-devices/">DOWNLOAD STATION and DOWNLOAD STATION Wi-Fi</a> · <a href="/accessories/">smart card reader</a>';
     blk.parentNode.insertBefore(more,blk.nextSibling);
   }
 
