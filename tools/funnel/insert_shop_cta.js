@@ -85,7 +85,8 @@ function process_(file, type) {
   }
   // trial URL z první /try/ odkazu uvnitř prvního boxu (fallback: první v <main>)
   let trial = null;
-  const hrefRe = /href="(\/try\/(?:\?[^"]*)?)"/;
+  // trial stránka podle jazyka (EN /try/, ostatní lokalizované slugy)
+  const hrefRe = /href="(\/(?:try|de\/testen|pl\/wyprobuj|nl\/gratis-proefversie|fr\/essai-gratuit|it\/prova-gratuita|el\/dokimi|ro\/incercare-gratuita)\/(?:\?[^"]*)?)"/;
   for (const b of boxes) {
     const seg = html.slice(b.idx, boxClose(html, b.idx));
     const hm = hrefRe.exec(seg);
