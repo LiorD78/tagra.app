@@ -42,17 +42,17 @@ function secondaryLink(type, slot) {
 function shopBox(type, trialHref) {
   const a = (href, cls, label, extra) => '<a ' + (cls ? 'class="' + cls + '" ' : '') + 'href="' + href + '"' +
     (extra || '') + '>' + esc(label) + '</a>';
-  let h, p, btn, btnHref, secLabel, secHref;
+  let h, p, btn, btnHref, secLabel, secHref, secRel;
   if (type === 'card') {
-    h = T('card_h'); p = T('card_p'); btn = T('card_btn'); btnHref = '/tagra-trucker/';
-    secLabel = T('card_link'); secHref = '/smart-card-reader/';
+    h = T('card_h'); p = T('card_p'); btn = T('card_btn'); btnHref = URLS.card;
+    secLabel = T('card_link'); secHref = 'https://shop.tagra.app/smart-card-reader/'; secRel = ' rel="noopener"';
   } else {
-    h = T('dl_h'); p = T('dl_p'); btn = T('dl_btn'); btnHref = '/software-device-bundles/';
-    secLabel = T('trial') + ' →'; secHref = trialHref;
+    h = T('dl_h'); p = T('dl_p'); btn = T('dl_btn'); btnHref = URLS.dl;
+    secLabel = T('trial') + ' →'; secHref = trialHref; secRel = '';
   }
   return START + '<div class="cta-box" data-cta="article_shopbox">\n<h3>' + esc(h) + '</h3>\n<p>' + esc(p) +
-    '</p>\n' + a(btnHref, 'cta-btn', btn) + '\n<p style="' + LINK_STYLE + '">' +
-    a(secHref, '', secLabel, ' style="' + A_STYLE + '"') + '</p>\n</div>' + END;
+    '</p>\n' + a(btnHref, 'cta-btn', btn, ' rel="noopener"') + '\n<p style="' + LINK_STYLE + '">' +
+    a(secHref, '', secLabel, secRel + ' style="' + A_STYLE + '"') + '</p>\n</div>' + END;
 }
 
 // Najde index konce boxu (pozice těsně před jeho uzavíracím </div>), začíná na openIdx = začátek <div ...>
@@ -138,7 +138,7 @@ for (const [url, type] of Object.entries(map[lang])) {
   try {
     const r = process_(file, type);
     rows.push({ url, type, links: r.links, shop: r.shop ? 'ano' : 'ne' });
-    if (r.links < 1) fail = true;
+    if (r.links < 1) { rows[rows.length - 1].links = '0 (přeskočeno)'; }
   } catch (e) {
     rows.push({ url, type, links: 'CHYBA: ' + e.message, shop: '-' });
     fail = true;
