@@ -386,6 +386,22 @@
     inner.insertBefore(a, lg || null);
   })();
 
+  /* 4. 11. 2026: Shop viditelně v mobilní liště (do 1280 px je položka menu schovaná v hamburgeru).
+     Kopie vzniká jen tam, kde je Shop v menu – HU a stránky zkušební verze ho nemají. Vzhled: nav.css. */
+  (function navShopMobile() {
+    var inner = document.querySelector('.site-nav .nav-inner');
+    var src = document.querySelector('.site-nav .nav-shop-li a');
+    if (!inner || !src || inner.querySelector('.nav-shop-mobile')) return;
+    var a = document.createElement('a');
+    a.className = 'nav-shop-mobile';
+    a.href = src.href;
+    a.setAttribute('data-cta', 'nav-mobile');
+    if (src.getAttribute('aria-label')) a.setAttribute('aria-label', src.getAttribute('aria-label'));
+    a.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="20" r="1.5"></circle><circle cx="18" cy="20" r="1.5"></circle><path d="M2.5 3.5h3l2.6 12.2h10.6l2-8.7H6.3"></path></svg>';
+    a.appendChild(document.createTextNode(src.textContent.trim()));
+    inner.insertBefore(a, inner.querySelector('.nav-cta-mobile') || inner.querySelector('.nav-mobile-toggle'));
+  })();
+
   /* 2. 11. 2026: Maďarsko – stávající zákazníci používají současnou TAGRU, proto jim na děkovací
      stránce trialu dáváme vybrat: TAGRA III (tagra.app) nebo současná TAGRA (instalačka na tdt.cz). */
   (function huVersions() {
