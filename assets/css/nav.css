@@ -339,3 +339,28 @@ html, body { overflow-x: hidden; max-width: 100vw; }
   .nav-inner { gap: 8px; padding: 0 12px 0 14px; }
   .nav-logo img { height: 26px !important; }
 }
+
+/* === Sekundarni odkaz "Shop" (shop.tagra.app) ===
+   Desktop (>1280 px): obrysove tlacitko na tmave modre liste (bily obrys).
+   Rozbalovaci menu (<=1280 px): bezna polozka, stejne odsazeni jako ostatni. */
+.nav-links .nav-shop-li a {
+  border: 1.5px solid rgba(255, 255, 255, 0.6);
+  color: #fff;
+  border-radius: 99px;
+  padding: 6.5px 14px;
+  font-weight: 600;
+  background: transparent;
+  margin-left: 6px;
+}
+.nav-links .nav-shop-li a:hover {
+  background: rgba(255, 255, 255, 0.14);
+  border-color: #fff;
+  color: #fff;
+}
+@media (max-width: 1280px) {
+  .nav-links .nav-shop-li a {
+    border: 0; border-radius: 0; padding: 8px 7px; margin-left: 0;
+    font-weight: 500; color: var(--text, #1d1d1f); background: transparent;
+  }
+  .nav-links .nav-shop-li a:hover { color: var(--blue-mid, #134a8e); background: transparent; }
+}
