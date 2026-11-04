@@ -2,8 +2,10 @@
    Vkládá se v Shoptetu: Vzhled a obsah → Editor → HTML kód → Patička:
    <script src="https://tagra.app/assets/js/shop-tracking.js?v=1" defer></script>
    (HTML kódy v Shoptetu mají limit 8 192 znaků, proto externí soubor.)
-   GA4 se NEvkládá sem – běží přes nativní propojení Shoptetu (G-C2BNS7RZVV, cross-domain tagra.app).
+   GA4 se NEvkládá sem – běží přes nativní propojení Shoptetu (G-92253QFBNX, cross-domain tagra.app).
    1) Microsoft Clarity – projekt „TAGRA Shop“ z89q96s7bd, jen po souhlasu s analytickými cookies.
+      Po načtení se posílá consentv2: bez něj Clarity v EHP nepoužívá cookies
+      a každé zobrazení stránky počítá jako nového uživatele.
    2) Jarabot – schránka „TAGRA Shop“ (#938), jazyk podle <html lang>. */
 (function (w, d) {
   'use strict';
@@ -18,6 +20,8 @@
       t = l.createElement(r); t.async = 1; t.src = 'https://www.clarity.ms/tag/' + i;
       y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
     })(w, d, 'clarity', 'script', CLARITY_ID);
+    /* Volá se jen po souhlasu s analytikou; reklamní úložiště zůstává zakázané. */
+    w.clarity('consentv2', { ad_Storage: 'denied', analytics_Storage: 'granted' });
   }
   function analyticsAllowed() {
     try {
