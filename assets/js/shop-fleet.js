@@ -1,4 +1,4 @@
-/* TAGRA Shop – fleet calculator v1.0 (6. 11. 2026)
+/* TAGRA Shop – fleet calculator v1.1 (6. 11. 2026)
    Progressive enhancement of the "Choose TAGRA by fleet size" section built by shop.js.
    Inputs: who (company / employed driver), vehicles, download device. Driver count is intentionally not asked.
    Cart: always ONE item – licence, licence + DOWNLOAD BOX II S bundle, or TRUCKER – via shoptet.cartShared.addToCart.
@@ -39,7 +39,7 @@
       '<span class="tgs-fc__opt-t"><b>'+title+'</b><small>'+sub+'</small></span></button>';
   }
   function build(){
-    var scale=RULES.tiers.map(function(t){return '<span data-t="'+t.id+'"><b>'+t.name.replace('TAGRA ','')+'</b><small>'+(t.max===Infinity?'7+':t.cap.replace(/ vehicles?/,''))+'</small></span>';}).join('');
+    var scale=RULES.tiers.map(function(t){return '<span data-t="'+t.id+'"><b>'+t.name.replace('TAGRA ','')+'</b><small>'+(t.max===Infinity?'7+':t.max<=2?t.cap:t.cap.replace(/ vehicles?/,''))+'</small></span>';}).join('');
     var h=''+
     '<div class="tgs-fc" role="group" aria-label="TAGRA fleet calculator">'+
      '<div class="tgs-fc__in">'+
@@ -160,6 +160,6 @@
     if(!document.body||!document.body.classList.contains('type-index'))return;
     var tries=0;(function go(){if(init())return;if(++tries<40)setTimeout(go,150);})();
   }
-  var l=document.createElement('link');l.rel='stylesheet';l.href='https://tagra.app/assets/css/shop-fleet.css?v=1';document.head.appendChild(l);
+  var l=document.createElement('link');l.rel='stylesheet';l.href='https://tagra.app/assets/css/shop-fleet.css?v=2';document.head.appendChild(l);
   if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',boot);}else{boot();}
 })();
