@@ -1,4 +1,4 @@
-/* ===== TAGRA Shop – fleet calculator v1.1 (6. 11. 2026) – TRUCKMALL / tagra.app look ===== */
+/* ===== TAGRA Shop – fleet calculator v1.2 (6. 11. 2026) – bigger 3D icons – TRUCKMALL / tagra.app look ===== */
 .tgs-fc{--fc-navy:var(--blue-dark,#0b2c4a);--fc-blue:var(--blue-mid,#134a8e);--fc-blue-l:var(--blue-light,#1f5fa6);--fc-green:var(--green-brand,#6E9B12);--fc-green-d:var(--green-cta,#5C820F);--fc-text:var(--text,#1d1d1f);--fc-text2:var(--text2,#515154);
   display:grid;grid-template-columns:minmax(0,1.45fr) minmax(0,1fr);gap:18px;align-items:start;margin:0 0 28px;text-align:left;font-variant-numeric:tabular-nums}
 .tgs-fc *,.tgs-fc *::before,.tgs-fc *::after{box-sizing:border-box}
@@ -10,12 +10,12 @@
 .tgs-fc__q label{font:inherit;color:inherit;margin:0;cursor:pointer}
 .tgs-fc__n{flex:0 0 26px;width:26px;height:26px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;color:#fff;background:var(--fc-blue)}
 .tgs-fc__opts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
-.tgs-fc__opt{display:flex;align-items:center;gap:12px;min-width:0;padding:12px 14px;border-radius:16px;border:1.5px solid rgba(19,74,142,.16);background:#fff;
+.tgs-fc__opt{display:flex;align-items:center;gap:14px;min-width:0;padding:12px 14px;border-radius:16px;border:1.5px solid rgba(19,74,142,.16);background:#fff;
   font-family:inherit;text-align:left;cursor:pointer;color:var(--fc-text);transition:border-color .15s,box-shadow .15s,transform .15s}
 .tgs-fc__opt:hover{border-color:rgba(19,74,142,.4);transform:translateY(-1px)}
 .tgs-fc__opt:focus-visible,.tgs-fc__pm:focus-visible,.tgs-fc input:focus-visible{outline:3px solid rgba(19,74,142,.35);outline-offset:2px}
 .tgs-fc__opt.is-on{border:2px solid var(--fc-blue);box-shadow:0 10px 24px rgba(19,74,142,.14);padding:11.5px 13.5px}
-.tgs-fc__ico{flex:0 0 52px;width:52px;height:52px;border-radius:14px;mix-blend-mode:multiply}
+.tgs-fc__ico{flex:0 0 84px;width:84px;height:84px;border-radius:18px;mix-blend-mode:multiply}
 .tgs-fc__opt-t{display:flex;flex-direction:column;gap:2px;min-width:0}
 .tgs-fc__opt-t b{font-size:15px;font-weight:700;color:var(--fc-navy);line-height:1.25}
 .tgs-fc__opt-t small{font-size:13px;color:var(--fc-text2);line-height:1.35}
@@ -67,6 +67,7 @@
 @media (max-width:560px){
   .tgs-fc__in,.tgs-fc__sum{padding:18px 16px;border-radius:18px}
   .tgs-fc__opts{grid-template-columns:minmax(0,1fr)}
+  .tgs-fc__ico{flex-basis:72px;width:72px;height:72px;border-radius:16px}
   .tgs-fc__veh{gap:12px}
   .tgs-fc__scale{flex-basis:100%}
   .tgs-fc__tot-v{font-size:32px}
