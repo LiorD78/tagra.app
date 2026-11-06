@@ -1,4 +1,4 @@
-/* TAGRA Shop – fleet calculator v1.1 (6. 11. 2026)
+/* TAGRA Shop – fleet calculator v1.2 (6. 11. 2026)
    Progressive enhancement of the "Choose TAGRA by fleet size" section built by shop.js.
    Inputs: who (company / employed driver), vehicles, download device. Driver count is intentionally not asked.
    Cart: always ONE item – licence, licence + DOWNLOAD BOX II S bundle, or TRUCKER – via shoptet.cartShared.addToCart.
@@ -45,19 +45,19 @@
      '<div class="tgs-fc__in">'+
       '<div class="tgs-fc__step"><p class="tgs-fc__q"><span class="tgs-fc__n">1</span>Who is TAGRA for?</p>'+
        '<div class="tgs-fc__opts">'+
-        choice('who','company','firma','Transport company','Fleet with tachograph vehicles',true)+
+        choice('who','company','firma','Transport company','Vehicles fitted with tachographs',true)+
         choice('who','driver','ridic','Employed driver','Only your own driver card',false)+
        '</div></div>'+
-      '<div class="tgs-fc__step" data-for="company"><p class="tgs-fc__q"><span class="tgs-fc__n">2</span><label for="tgs-fc-veh">How many vehicles with a tachograph?</label></p>'+
+      '<div class="tgs-fc__step" data-for="company"><p class="tgs-fc__q"><span class="tgs-fc__n">2</span><label for="tgs-fc-veh">How many vehicles have a tachograph?</label></p>'+
        '<div class="tgs-fc__veh">'+
         '<div class="tgs-fc__stepper"><button type="button" class="tgs-fc__pm" data-d="-1" aria-label="One vehicle less">−</button>'+
         '<input id="tgs-fc-veh" type="number" inputmode="numeric" min="1" max="9999" value="1" aria-describedby="tgs-fc-veh-note">'+
         '<button type="button" class="tgs-fc__pm" data-d="1" aria-label="One vehicle more">+</button></div>'+
         '<div class="tgs-fc__scale" aria-hidden="true">'+scale+'</div>'+
-       '</div><p class="tgs-fc__note" id="tgs-fc-veh-note">Licences are sold by the number of vehicles. Driver cards are not counted.</p></div>'+
+       '</div><p class="tgs-fc__note" id="tgs-fc-veh-note">Licences are based on the number of vehicles. Driver cards are not counted.</p></div>'+
       '<div class="tgs-fc__step" data-for="company"><p class="tgs-fc__q"><span class="tgs-fc__n">3</span>Do you need a download device?</p>'+
        '<div class="tgs-fc__opts">'+
-        choice('dev','box','klic','Yes, add DOWNLOAD BOX II S','Reads the tachograph and driver card · save €49 in a bundle',false)+
+        choice('dev','box','klic','Yes, add DOWNLOAD BOX II S','Downloads tachograph and driver card data · save €49 in a bundle',false)+
         choice('dev','own','mam','No, we already have one','Licence only',false)+
        '</div><p class="tgs-fc__note">Not sure which device you need? <a href="#tgs-help">Ask us</a>.</p></div>'+
       '<div class="tgs-fc__step tgs-fc__drv" data-for="driver" hidden><p class="tgs-fc__q"><span class="tgs-fc__n">2</span>TAGRA TRUCKER for your own card</p>'+
@@ -73,14 +73,14 @@
     if(S.who==='driver'){
       var tr=RULES.trucker;
       return {kind:'driver',title:tr.name,cap:'For one employed driver',lines:[[tr.name+' licence',eur(tr.price)]],total:tr.price,fee:tr.fee,
-        y3:tr.price+2*tr.fee,priceId:tr.priceId,url:tr.url,ship:'Card reader shipped · postage '+RULES.shipping,cta:'Add TAGRA TRUCKER to cart'};
+        y3:tr.price+2*tr.fee,priceId:tr.priceId,url:tr.url,ship:'USB card reader shipped · shipping '+RULES.shipping,cta:'Add TAGRA TRUCKER to cart'};
     }
     var t=tierFor(S.veh),box=S.dev==='box',lines=[[t.name+' licence',eur(t.price)]];
     if(box){lines.push([RULES.box.name,eur(RULES.box.price)]);lines.push(['Bundle saving','−'+eur(t.price+RULES.box.price-t.bundle.price),'save']);}
     var total=box?t.bundle.price:t.price,nt=nextTier(t),hint='';
     if(nt&&S.veh===t.max)hint=t.name+' covers up to '+t.max+(t.max===1?' vehicle':' vehicles')+'. Adding vehicles? '+nt.name+' covers '+nt.cap+'.';
     return {kind:'company',tier:t,title:t.name,cap:'Covers '+t.cap,fit:'Recommended for '+S.veh+(S.veh===1?' vehicle':' vehicles'),lines:lines,total:total,fee:t.fee,
-      y3:total+2*t.fee,priceId:box?t.bundle.priceId:t.priceId,url:box?t.bundle.url:t.url,ship:box?'Device shipping '+RULES.shipping+' across Europe':'',hint:hint,
+      y3:total+2*t.fee,priceId:box?t.bundle.priceId:t.priceId,url:box?t.bundle.url:t.url,ship:box?'Device shipping '+RULES.shipping+' across Europe':'',hw:box,hint:hint,
       cta:box?'Add bundle to cart':'Add '+t.name+' to cart',ask:S.dev===null};
   }
   function render(){
@@ -89,8 +89,8 @@
       '<p class="tgs-fc__tier">'+esc(m.title)+'</p><p class="tgs-fc__cap">'+esc(m.cap)+(m.fit?' · <b>'+esc(m.fit)+'</b>':'')+'</p>'+
       '<ul class="tgs-fc__lines">'+m.lines.map(function(l){return '<li'+(l[2]?' class="is-'+l[2]+'"':'')+'><span>'+esc(l[0])+'</span><span>'+esc(l[1])+'</span></li>';}).join('')+'</ul>'+
       (m.ask?'<p class="tgs-fc__ask">Need a download device? Choose in step 3 and save €49 with a bundle.</p>':'')+
-      '<div class="tgs-fc__tot"><span class="tgs-fc__tot-l">Today</span><span class="tgs-fc__tot-v">'+eur(m.total)+'<small>excl. VAT</small></span>'+
-      '<span class="tgs-fc__vat">'+incl(m.total)+' incl. VAT · 0 % VAT for EU companies with a valid VAT ID</span></div>'+
+      '<div class="tgs-fc__tot"><span class="tgs-fc__tot-l">Today'+(m.hw?', plus shipping':'')+'</span><span class="tgs-fc__tot-v">'+eur(m.total)+'<small>excl. VAT</small></span>'+
+      '<span class="tgs-fc__vat">'+incl(m.total)+' incl. Czech VAT · 0% VAT (reverse charge) for EU companies outside Czechia with a valid VAT ID</span></div>'+
       '<ul class="tgs-fc__facts"><li>First year included</li><li>From year 2: '+eur(m.fee)+' / year</li><li>3-year cost: '+eur(m.y3)+' excl. VAT</li>'+(m.ship?'<li>'+esc(m.ship)+'</li>':'')+'</ul>'+
       (m.hint?'<p class="tgs-fc__hint">'+esc(m.hint)+'</p>':'')+
       '<a class="tgs-pill tgs-fc__cta" href="'+m.url+'" data-price-id="'+m.priceId+'">'+esc(m.cta)+'</a>'+
@@ -121,7 +121,7 @@
     try{shoptet.cartShared.addToCart({priceId:pid,amount:1});}
     catch(err){done=true;document.removeEventListener('ShoptetCartUpdated',ok);track('fleet_calc_error',{fc_error:'add_exception'});location.href=a.getAttribute('href');return;}
     setTimeout(function(){if(!done){done=true;document.removeEventListener('ShoptetCartUpdated',ok);S.busy=false;a.classList.remove('is-busy');a.removeAttribute('aria-disabled');
-      track('fleet_calc_error',{fc_error:'add_timeout'});msg.innerHTML='The cart did not respond. <a href="'+a.getAttribute('href')+'">Open the product</a> to buy it.';}},8000);
+      track('fleet_calc_error',{fc_error:'add_timeout'});msg.innerHTML='Could not add to cart. Please <a href="'+a.getAttribute('href')+'">open the product page</a> to buy it.';}},8000);
   }
 
   /* ---------- events ---------- */
@@ -160,6 +160,6 @@
     if(!document.body||!document.body.classList.contains('type-index'))return;
     var tries=0;(function go(){if(init())return;if(++tries<40)setTimeout(go,150);})();
   }
-  var l=document.createElement('link');l.rel='stylesheet';l.href='https://tagra.app/assets/css/shop-fleet.css?v=2';document.head.appendChild(l);
+  var l=document.createElement('link');l.rel='stylesheet';l.href='https://tagra.app/assets/css/shop-fleet.css?v=3';document.head.appendChild(l);
   if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',boot);}else{boot();}
 })();

@@ -39,7 +39,7 @@
   }
   function fleet(){
     if(!document.body||!document.body.classList.contains('type-index')||window.tgsFleetCalc||document.getElementById('tgs-fleet-js'))return;
-    var s=document.createElement('script');s.id='tgs-fleet-js';s.src='https://tagra.app/assets/js/shop-fleet.js?v=2';s.async=true;document.head.appendChild(s);
+    var s=document.createElement('script');s.id='tgs-fleet-js';s.src='https://tagra.app/assets/js/shop-fleet.js?v=3';s.async=true;document.head.appendChild(s);
   }
   function run(){imgs();gallery();zoom();topsellers();fleet();}
   if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',run);}else{run();}
