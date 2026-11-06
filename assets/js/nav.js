@@ -425,3 +425,27 @@
   })();
 
 })();
+
+/* 6. 11. 2026: hlídač hero videa. Když se přehrávání na viditelné stránce zastaví,
+   zkusí ho spustit znovu; pokud to nepomůže, video jednou až dvakrát znovu načte.
+   Limit brání opakovanému stahování tam, kde prohlížeč přehrávání blokuje (úsporný režim). */
+(function heroVideoWatchdog() {
+  'use strict';
+  var v = document.getElementById('heroVideo');
+  var hero = document.querySelector('.hero');
+  if (!v || !hero) return;
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var last = -1, stuck = 0, reloads = 0;
+  function play() { try { var p = v.play(); if (p && p.catch) p.catch(function () {}); } catch (e) {} }
+  setInterval(function () {
+    var r = hero.getBoundingClientRect();
+    if (document.hidden || r.bottom <= 0 || r.top >= window.innerHeight) { stuck = 0; last = -1; return; }
+    var t = v.currentTime;
+    if (!v.paused && t !== last) { last = t; stuck = 0; return; }
+    last = t;
+    stuck++;
+    if (stuck < 3) { play(); return; }
+    stuck = 0;
+    if (reloads < 2) { reloads++; try { v.load(); } catch (e) {} play(); }
+  }, 2000);
+})();
