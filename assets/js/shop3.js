@@ -1,4 +1,4 @@
-/* TAGRA Shop layer 3 v1.3 – program screenshots in a MacBook frame (like TRUCKMALL mac-stage) (3. 11. 2026); v1.3 loads the fleet calculator on the homepage (6. 11. 2026) */
+/* TAGRA Shop layer 3 v1.4 – program screenshots in a MacBook frame (like TRUCKMALL mac-stage) (3. 11. 2026); v1.3 loads the fleet calculator on the homepage; v1.4 loads the version switcher on TAGRA product pages (6. 11. 2026) */
 (function(){
   var l=document.createElement('link');l.rel='stylesheet';l.href='https://tagra.app/assets/css/shop3.css?v=2';document.head.appendChild(l);
   var MB='https://wuswoaicjtuodzmrjwgf.supabase.co/storage/v1/object/public/site/tagra-shop/mac/tagra3-mac-';
@@ -41,6 +41,12 @@
     if(!document.body||!document.body.classList.contains('type-index')||window.tgsFleetCalc||document.getElementById('tgs-fleet-js'))return;
     var s=document.createElement('script');s.id='tgs-fleet-js';s.src='https://tagra.app/assets/js/shop-fleet.js?v=4';s.async=true;document.head.appendChild(s);
   }
-  function run(){imgs();gallery();zoom();topsellers();fleet();}
+  function variant(){
+    if(!document.body||!document.body.classList.contains('type-detail')||window.tgsVariant||document.getElementById('tgs-variant-js'))return;
+    var m=document.querySelector('.p-detail meta[itemprop="url"]'),u=m?m.getAttribute('content')||'':'';
+    if(!/\/tagra-(1|2|4|6|max)(-download-box-ii-s)?\/$/.test(u))return;
+    var s=document.createElement('script');s.id='tgs-variant-js';s.src='https://tagra.app/assets/js/shop-variant.js?v=1';document.head.appendChild(s);
+  }
+  function run(){imgs();gallery();zoom();topsellers();fleet();variant();}
   if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',run);}else{run();}
 })();
