@@ -11,9 +11,9 @@
     if(!isHP()||document.querySelector('.tgs-car'))return;
     var S=[
       {v:[TM+'DBIIS-kancelar.webm',TM+'DBIIS-office2.mp4'],p:TM+'Download_Box_II_S_kafe.webp',e:'DOWNLOAD BOX II S',t:'Daten in Sekunden herunterladen. Bei einem Kaffee auswerten.',c:'Download-Geräte im Shop ansehen',h:'/download-devices/'},
-      {v:[TM+'Comp_2.webm',TM+'Comp_2.mp4'],p:TM+'bannery%20HP/01b-vyhodnoceni-dat.webp',e:'TAGRA Programm',t:'Finden Sie Verstöße, bevor es die Kontrolle tut.',c:'Wählen Sie Ihr TAGRA',h:'/tagra-software/'},
-      {v:[TM+'terminy-hero.webm',TM+'terminy-hero.mp4'],p:TM+'DBII_kabina.webp',e:'Transporter 2,5–3,5 t',t:'Internationaler Transport mit Transportern: Fahrtenschreiber ab Juli 2026.',c:'Bundles – 49 € sparen',h:'/software-device-bundles/'},
-      {v:[TA+'video/hero-720.mp4'],p:TA+'img/hero-poster.jpg',e:'30 Tage kostenlos testen',t:'TAGRA kostenlos testen. Ohne Karte, ohne Verpflichtung.',c:'Kostenlose Testversion starten',h:'https://tagra.app/try/'}
+      {v:[TM+'Comp_2.webm',TM+'Comp_2.mp4'],p:TM+'bannery%20HP/01b-vyhodnoceni-dat.webp',e:'TAGRA Programm',t:'Finden Sie Verstöße, bevor die Behörden es tun.',c:'Wählen Sie Ihr TAGRA',h:'/tagra-software/'},
+      {v:[TM+'terminy-hero.webm',TM+'terminy-hero.mp4'],p:TM+'DBII_kabina.webp',e:'Transporter über 2,5–3,5 t',t:'Grenzüberschreitender Verkehr mit Transportern: Fahrtenschreiberpflicht ab Juli 2026.',c:'Bundles – 49 € sparen',h:'/software-device-bundles/'},
+      {v:[TA+'video/hero-720.mp4'],p:TA+'img/hero-poster.jpg',e:'30 Tage kostenlos testen',t:'TAGRA kostenlos testen. Ohne Kreditkarte, ohne Verpflichtung.',c:'Kostenlose Testversion starten',h:'https://tagra.app/try/'}
     ];
     var sec=document.createElement('section');sec.className='tgs-car';sec.setAttribute('aria-label','Highlights im TAGRA Shop');
     sec.innerHTML='<div class="tgs-car__track">'+S.map(function(s,i){
@@ -47,7 +47,7 @@
   function usp(){
     if(!isHP()||document.querySelector('.tgs-usp'))return;
     var U=[['usp-truck-eshop-3d','Offizieller TAGRA Shop','Direkt vom Hersteller.','https://tagra.app/'],
-           ['usp-21-let-3d','21 Jahre Erfahrung','Wir kennen uns aus. Wir beraten. Wir lösen.','https://tagra.app/'],
+           ['usp-21-let-3d','21 Jahre Erfahrung','Wir kennen uns aus. Wir beraten. Wir finden Lösungen.','https://tagra.app/'],
            ['usp-jednicka-palec-3d','Nr. 1 in Tschechien','Im Einsatz bei Polizei und Zoll.','https://tagra.app/'],
            ['','0 % MwSt. für EU-Unternehmen','Reverse-Charge mit gültiger USt-IdNr.','/how-to-buy/']];
     var d=document.createElement('div');d.className='tgs-usp';d.setAttribute('aria-label','Warum im TAGRA Shop kaufen');
@@ -65,7 +65,7 @@
       var n=((p.querySelector('.name')||{}).textContent||'').replace(/\s+/g,' ').trim().toUpperCase(),b='',s=/\+\s*DOWNLOAD BOX/.test(n);
       if(/TRUCKER/.test(n))b='Für Fahrer';else if(/TAGRA MAX/.test(n))b='Unbegrenzt viele Fahrzeuge';else if(/TAGRA 6/.test(n))b='5–6 Fahrzeuge';else if(/TAGRA 4/.test(n))b='3–4 Fahrzeuge';else if(/TAGRA 2/.test(n))b='2 Fahrzeuge';else if(/TAGRA 1/.test(n))b='1 Fahrzeug';
       var img=p.querySelector('.image');if(!img)return;
-      var h='';if(b)h+='<span class="tgs-badge">'+b+'</span>';if(s)h+='<span class="tgs-badge tgs-badge--save">Spare 49 €</span>';
+      var h='';if(b)h+='<span class="tgs-badge">'+b+'</span>';if(s)h+='<span class="tgs-badge tgs-badge--save">Sparen Sie 49 €</span>';
       if(h){var w=document.createElement('span');w.className='tgs-badges';w.innerHTML=h;img.appendChild(w);}
     });
   }
@@ -85,8 +85,8 @@
   function steps(){
     if(!isHP()||document.querySelector('.tgs-steps'))return;
     var t=anchor();if(!t)return;
-    var S=[['klic','01','Herunterladen','90 / 28 Tage','Laden Sie die Daten der Fahrzeugeinheit mindestens alle 90 Tage und die Daten der Fahrerkarte mindestens alle 28 Tage herunter.','DOWNLOAD BOX II S liest den Fahrtenschreiber und die Fahrerkarte aus.','Download-Hardware ansehen','/download-devices/'],
-           ['sami','02','Auswerten','EU 561/2006','Werten Sie Lenk- und Ruhezeiten nach der Verordnung (EG) Nr. 561/2006 und die Arbeitszeit nach der Richtlinie 2002/15/EG aus.','Finden Sie Verstöße und erstellen Sie Berichte, bevor es eine Kontrolle tut.','Wählen Sie Ihre TAGRA Lizenz','#tgs-pricing'],
+    var S=[['klic','01','Herunterladen','90 / 28 Tage','Laden Sie die Daten des Massenspeichers mindestens alle 90 Tage und die Daten der Fahrerkarte mindestens alle 28 Tage herunter.','DOWNLOAD BOX II S liest den Fahrtenschreiber und die Fahrerkarte aus.','Download-Hardware ansehen','/download-devices/'],
+           ['sami','02','Auswerten','EU 561/2006','Werten Sie Lenk- und Ruhezeiten nach der Verordnung (EG) Nr. 561/2006 und die Arbeitszeit nach der Richtlinie 2002/15/EG aus.','Finden Sie Verstöße und erstellen Sie Berichte, bevor es die Kontrollbehörden tun.','Wählen Sie Ihre TAGRA Lizenz','#tgs-pricing'],
            ['cmr-archiv-v3','03','Archivieren','12 Monate','Bewahren Sie heruntergeladene Fahrtenschreiber- und Fahrerkartendaten mindestens 12 Monate auf, damit Sie sie auf Verlangen vorlegen können.','TAGRA archiviert .DDD-, .C1B-, .V1B- und ESM-Dateien auf Ihrem eigenen PC.','Wählen Sie Ihre TAGRA Lizenz','#tgs-pricing']];
     var s=document.createElement('section');s.className='tgs-sec tgs-steps';
     s.innerHTML=head('Das verlangt das Gesetz','Herunterladen. Auswerten. Archivieren.','Herunterladen genügt nicht – das Gesetz verlangt Auswertung und Archivierung. Das muss Ihr Arbeitsablauf abdecken, und so wird es abgedeckt.')+
@@ -99,7 +99,7 @@
     if(!isHP()||document.querySelector('.tgs-vans'))return;
     var t=anchor();if(!t)return;
     var s=document.createElement('div');s.className='tgs-vans';
-    s.innerHTML='<img class="tgs-ico" src="'+IC+'firma.webp" alt="" width="56" height="56" loading="lazy"><div class="tgs-vans__txt"><span class="tgs-label">Internationaler Transporterverkehr</span><p class="tgs-vans__h">Fahrtenschreiber für Transporter von 2,5–3,5 t ab 1. Juli 2026</p><p class="tgs-vans__p">Transporter von 2,5–3,5 Tonnen im internationalen Verkehr müssen mit einem Fahrtenschreiber ausgerüstet sein – und ihre Daten müssen wie bei jedem Lkw heruntergeladen, ausgewertet und archiviert werden.</p></div><a class="tgs-vans__a" href="#tgs-help">Fragen Sie nach der passenden Lizenz</a>';
+    s.innerHTML='<img class="tgs-ico" src="'+IC+'firma.webp" alt="" width="56" height="56" loading="lazy"><div class="tgs-vans__txt"><span class="tgs-label">Internationaler Transporterverkehr</span><p class="tgs-vans__h">Fahrtenschreiber für Transporter über 2,5 bis 3,5 t ab 1. Juli 2026</p><p class="tgs-vans__p">Transporter über 2,5 bis 3,5 Tonnen im grenzüberschreitenden Güterverkehr müssen mit einem Fahrtenschreiber ausgerüstet sein – und ihre Daten müssen wie bei jedem Lkw heruntergeladen, ausgewertet und archiviert werden.</p></div><a class="tgs-vans__a" href="#tgs-help">Fragen Sie nach der passenden Lizenz</a>';
     t.parentNode.insertBefore(s,t);
   }
 
@@ -125,7 +125,7 @@
     var inp=s.querySelector('#tgs-veh'),out=s.querySelector('.tgs-finder__out'),tiers=[].slice.call(s.querySelectorAll('.tgs-tier'));
     function find(){var n=parseInt(inp.value,10);tiers.forEach(function(x){x.classList.remove('is-match');});if(!(n>0)){out.textContent='';return;}
       var m=null;for(var i=0;i<tiers.length;i++){if(n<=+tiers[i].getAttribute('data-max')){m=tiers[i];break;}}
-      if(m){m.classList.add('is-match');out.textContent=m.querySelector('.tgs-tier__name').textContent+' passt zu '+n+(n===1?' Fahrzeug':' Fahrzeugen')+'.';}}
+      if(m){m.classList.add('is-match');out.textContent=m.querySelector('.tgs-tier__name').textContent+' reicht für '+n+(n===1?' Fahrzeug':' Fahrzeuge')+'.';}}
     s.querySelector('.tgs-finder').addEventListener('submit',find);inp.addEventListener('input',find);
   }
 
@@ -139,9 +139,9 @@
     items.forEach(function(it){var n=nm(it);if(/TAGRA/.test(n)&&!/DOWNLOAD/.test(n)){it.parentNode.removeChild(it);}else{dev.push(it);}});
     dev.sort(function(a,b){return pr(a)-pr(b);}).forEach(function(it){blk.appendChild(it);});
     blk.classList.add('tgs-grp');
-    var h=document.createElement('div');h.className='tgs-sec tgs-hw';h.innerHTML=head('Software + Hardware','Vervollständigen Sie Ihre Fahrtenschreiber-Ausstattung','DOWNLOAD BOX II S lädt Daten vom Fahrtenschreiber und von der Fahrerkarte herunter – keine jährlichen Gebühren, 24 Monate Garantie. Kaufen Sie es zusammen mit TAGRA und sparen Sie 49 €.');
+    var h=document.createElement('div');h.className='tgs-sec tgs-hw';h.innerHTML=head('Software + Hardware','Vervollständigen Sie Ihre Fahrtenschreiber-Ausstattung','DOWNLOAD BOX II S lädt Daten vom Fahrtenschreiber und von der Fahrerkarte herunter – keine jährlichen Gebühren, 24 Monate Garantie. Kaufen Sie sie zusammen mit TAGRA und sparen Sie 49 €.');
     t.parentNode.insertBefore(h,t);t.classList.add('tgs-hide');
-    var more=document.createElement('p');more.className='tgs-note';more.innerHTML='Außerdem erhältlich: <a href="/download-devices/">DOWNLOAD STATION und DOWNLOAD STATION Wi-Fi</a> · <a href="/accessories/">Smartcard-Lesegerät</a>';
+    var more=document.createElement('p');more.className='tgs-note';more.innerHTML='Außerdem erhältlich: <a href="/download-devices/">DOWNLOAD STATION und DOWNLOAD STATION Wi-Fi</a> · <a href="/accessories/">Chipkarten-Lesegerät</a>';
     blk.parentNode.insertBefore(more,blk.nextSibling);
   }
 
@@ -151,7 +151,7 @@
     var N=['FCC Group','CS Cargo a.s.','ČEDOK a.s.','AGRO SERVIS CZ','ČSAD Jihotrans','ČSAD Karviná','Pivovar Holba','PORR a.s.','Klaus Timber a.s.','Mátra Transport a.s.','KAFKA Transport a.s.','DKC s.r.o.','TQM Holding','Synergies Logistiques','ČSAD Autobusy České Budějovice','ČSAD POLKOST','Cargospol','Energie stavební a báňská a.s.','SAP Mimoň'];
     var s=document.createElement('section');s.className='tgs-enf';
     s.innerHTML='<div class="container">'+head('In der Praxis bewährt','Im Einsatz bei Kontrollen. Entwickelt für Fuhrparks.','Dieselbe Auswertungslogik, die Polizei, Zoll und Arbeitsinspektionen in Tschechien, der Slowakei und Ungarn verwenden.')+
-      '<div class="tgs-ref"><div class="tgs-ref__c tgs-ref__c--cz"><span>Tschechien</span><b>Polizei &amp; Zoll</b><p>Straßenkontrollen und Kontrollen in den Betrieben der Unternehmer im ganzen Land.</p></div><div class="tgs-ref__c tgs-ref__c--sk"><span>Slowakei</span><b>Arbeitsinspektorat</b><p>Kontrolle der Lenk- und Arbeitszeiten.</p></div><div class="tgs-ref__c tgs-ref__c--hu"><span>Ungarn</span><b>Kontrollbehörden &amp; Ministerien</b><p>Einhaltung der Vorschriften im grenzüberschreitenden Verkehr.</p></div><div class="tgs-ref__c"><span>In ganz Mitteleuropa</span><b>20+ Jahre · 6.000+ Fuhrparks</b><p>Güterverkehr, Omnibus- &amp; Reiseverkehr, Vermietung, kommunale Fuhrparks, Werkstätten.</p></div></div></div>'+
+      '<div class="tgs-ref"><div class="tgs-ref__c tgs-ref__c--cz"><span>Tschechien</span><b>Polizei &amp; Zoll</b><p>Straßen- und Betriebskontrollen im ganzen Land.</p></div><div class="tgs-ref__c tgs-ref__c--sk"><span>Slowakei</span><b>Arbeitsinspektorat</b><p>Kontrolle der Lenk- und Arbeitszeiten.</p></div><div class="tgs-ref__c tgs-ref__c--hu"><span>Ungarn</span><b>Kontrollbehörden &amp; Ministerien</b><p>Einhaltung der Vorschriften im grenzüberschreitenden Verkehr.</p></div><div class="tgs-ref__c"><span>In ganz Mitteleuropa</span><b>20+ Jahre · 6.000+ Fuhrparks</b><p>Güterverkehr, Omnibus- &amp; Reiseverkehr, Vermietung, kommunale Fuhrparks, Werkstätten.</p></div></div></div>'+
       '<div class="tgs-mq"><p>Zu den Fuhrparks und Unternehmen, die TAGRA bereits einsetzen</p><div class="tgs-mq__t">'+N.concat(N).map(function(n){return '<span>'+n+'</span>';}).join('')+'</div></div>';
     w.parentNode.insertBefore(s,w);
   }
@@ -173,7 +173,7 @@
            ['Ist Download-Hardware in der Lizenz enthalten?','Nein. TAGRA ist eine Softwarelizenz. DOWNLOAD BOX II S wird separat verkauft oder zusammen mit TAGRA in einem Bundle, das 49 € weniger kostet als der Einzelkauf beider Produkte.'],
            ['Kann mein Unternehmen mit 0 % MwSt. kaufen?','Ja. Unternehmen mit gültiger EU-USt-IdNr. kaufen im Reverse-Charge-Verfahren mit 0 % MwSt. Geben Sie Ihre USt-IdNr. im Bestellvorgang an.'],
            ['Kann ich TAGRA vor dem Kauf testen?','Ja. Die kostenlose 30-Tage-Testversion bietet den vollen Funktionsumfang von TAGRA MAX und erfordert keine Kreditkarte.'],
-           ['Welche Fahrtenschreiber unterstützt TAGRA?','Alle digitalen Fahrtenschreiber, einschließlich Smart-Fahrtenschreiber G2V2. TAGRA liest .DDD-, .C1B-, .V1B- und ESM-Dateien.']];
+           ['Welche Fahrtenschreiber unterstützt TAGRA?','Alle digitalen Fahrtenschreiber, einschließlich intelligenter Fahrtenschreiber (G2V2). TAGRA liest .DDD-, .C1B-, .V1B- und .ESM-Dateien.']];
     var s=document.createElement('section');s.className='tgs-sec tgs-faq';
     s.innerHTML='<div class="container">'+head('Fragen','Fragen vor dem Kauf','')+'<div class="tgs-faq__b">'+Q.map(function(q){return '<details><summary>'+q[0]+'</summary><div class="tgs-faq__a">'+q[1]+'</div></details>';}).join('')+'</div></div>';
     w.parentNode.insertBefore(s,w);
