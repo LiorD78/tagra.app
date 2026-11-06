@@ -1,4 +1,4 @@
-/* TAGRA Shop – fleet calculator v1.2 (6. 11. 2026)
+/* TAGRA Shop – fleet calculator v1.3 (6. 11. 2026)
    Progressive enhancement of the "Choose TAGRA by fleet size" section built by shop.js.
    Inputs: who (company / employed driver), vehicles, download device. Driver count is intentionally not asked.
    Cart: always ONE item – licence, licence + DOWNLOAD BOX II S bundle, or TRUCKER – via shoptet.cartShared.addToCart.
@@ -91,7 +91,7 @@
       (m.ask?'<p class="tgs-fc__ask">Need a download device? Choose in step 3 and save €49 with a bundle.</p>':'')+
       '<div class="tgs-fc__tot"><span class="tgs-fc__tot-l">Today'+(m.hw?', plus shipping':'')+'</span><span class="tgs-fc__tot-v">'+eur(m.total)+'<small>excl. VAT</small></span>'+
       '<span class="tgs-fc__vat">'+incl(m.total)+' incl. Czech VAT · 0% VAT (reverse charge) for EU companies outside Czechia with a valid VAT ID</span></div>'+
-      '<ul class="tgs-fc__facts"><li>First year included</li><li>From year 2: '+eur(m.fee)+' / year</li><li>3-year cost: '+eur(m.y3)+' excl. VAT</li>'+(m.ship?'<li>'+esc(m.ship)+'</li>':'')+'</ul>'+
+      '<ul class="tgs-fc__facts"><li>First year included</li><li>From year 2: '+eur(m.fee)+' / year</li>'+(m.ship?'<li>'+esc(m.ship)+'</li>':'')+'</ul>'+
       (m.hint?'<p class="tgs-fc__hint">'+esc(m.hint)+'</p>':'')+
       '<a class="tgs-pill tgs-fc__cta" href="'+m.url+'" data-price-id="'+m.priceId+'">'+esc(m.cta)+'</a>'+
       '<p class="tgs-fc__msg" role="status"></p>'+
