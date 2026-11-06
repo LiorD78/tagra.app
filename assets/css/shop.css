@@ -1,4 +1,4 @@
-/* ===== TAGRA Shop v6.0 – tagra.app look, crew + competitor review (2. 11. 2026) ===== */
+/* ===== TAGRA Shop v6.1 – tagra.app look, crew + competitor review (2. 11. 2026) ===== */
 /* --- product detail: hide Shoptet noise --- */
 body .p-detail-inner-header .p-code,body .p-detail .stars-wrapper,body .p-detail .link-icons,body .p-detail .social-buttons-wrapper{display:none!important}
 body .p-detail-inner-header{margin-bottom:18px}
@@ -255,3 +255,32 @@ body .tgs-h2{display:inline-block;max-width:100%;font-family:var(--font-display)
 body.type-index .homepage-group-title.tgs-hide{display:none!important}
 .tgs-step .tgs-ico{width:76px;height:76px}
 .tgs-trucker .tgs-pill{white-space:nowrap;flex:0 0 auto}
+
+/* ===== v6.1 – TAGRA version switcher (vehicles x download device) on TAGRA 1/2/4/6/MAX + bundles (6. 11. 2026) ===== */
+html.tgs-var-hide body{visibility:hidden!important}
+@view-transition{navigation:auto}
+::view-transition-old(root),::view-transition-new(root){animation-duration:.3s;animation-timing-function:ease}
+@media (prefers-reduced-motion:reduce){::view-transition-old(root),::view-transition-new(root){animation:none}}
+/* reserve the exact space before shop-variant.js renders, so the price and buy button never move */
+.p-detail:is(:has(meta[itemprop="url"][content$="/tagra-1/"]),:has(meta[itemprop="url"][content$="/tagra-2/"]),:has(meta[itemprop="url"][content$="/tagra-4/"]),:has(meta[itemprop="url"][content$="/tagra-6/"]),:has(meta[itemprop="url"][content$="/tagra-max/"]),:has(meta[itemprop="url"][content$="-download-box-ii-s/"])) .p-info-wrapper::before{content:"";display:block;height:190px}
+html.tgs-var-on .p-detail .p-info-wrapper::before{content:none!important;display:none!important}
+#tgsVarSlot{margin:0 0 18px}
+.tgs-var{display:flex;flex-direction:column;gap:8px;height:172px;box-sizing:border-box;padding:14px;border-radius:18px;border:1.5px solid rgba(19,74,142,.14);
+  background:linear-gradient(180deg,#dcecf6 0%,#eaf3f8 45%,#f5f9fc 100%);font-variant-numeric:tabular-nums}
+.tgs-var *{box-sizing:border-box}
+.tgs-var__q{margin:0!important;font-size:14px;line-height:18px;height:18px;font-weight:700;color:var(--blue-dark,#0b2c4a);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tgs-var__veh{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:6px;height:52px}
+.tgs-var__key{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;height:44px}
+.tgs-var__o{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;min-width:0;height:100%;padding:0 4px;border-radius:12px;background:#fff;
+  border:1.5px solid rgba(19,74,142,.16);color:var(--blue-dark,#0b2c4a)!important;text-decoration:none!important;text-align:center;line-height:1.1;transition:border-color .15s,box-shadow .15s,transform .15s}
+a.tgs-var__o:hover{border-color:rgba(19,74,142,.45);transform:translateY(-1px)}
+a.tgs-var__o:focus-visible{outline:3px solid rgba(19,74,142,.35);outline-offset:2px}
+.tgs-var__o b{font-size:17px;font-weight:800;letter-spacing:-.01em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}
+.tgs-var__o small{font-size:11px;font-weight:600;color:var(--text2,#515154);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}
+.tgs-var__key .tgs-var__o b{font-size:13.5px;font-weight:700}
+.tgs-var__o.is-on{background:linear-gradient(135deg,var(--green-brand,#6E9B12) 0%,var(--green-cta,#5C820F) 100%);border-color:transparent;color:#fff!important;box-shadow:0 6px 16px rgba(110,155,18,.28)}
+.tgs-var__o.is-on small{color:rgba(255,255,255,.9)}
+.tgs-var__o.is-going{border-color:var(--blue-mid,#134a8e);box-shadow:0 0 0 3px rgba(19,74,142,.15)}
+html.tgs-var-restoring .tgs-var__o{transition:none!important}
+@media (max-width:420px){.tgs-var{padding:12px 10px}.tgs-var__o b{font-size:15px}.tgs-var__o small{font-size:10px}.tgs-var__key .tgs-var__o b{font-size:12px}}
+@media (prefers-reduced-motion:reduce){.tgs-var__o{transition:none}a.tgs-var__o:hover{transform:none}}
