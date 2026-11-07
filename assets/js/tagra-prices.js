@@ -6,9 +6,8 @@
      TRUCKER 60.27/1.23 = 49 · TRUCKER 2 109/1.23 = 88.62 · TAGRA 1 183/1.23 ≈ 149 · TAGRA 2 368/1.23 ≈ 299
      TAGRA 4 491/1.23 ≈ 399 · TAGRA 6 675/1.23 ≈ 549 · TAGRA MAX 921/1.23 ≈ 749 · DOWNLOAD BOX II S 368/1.23 ≈ 299
    Vehicles -> tier: 1 / 2 / 3–4 / 5–6 / 7+ = TAGRA 1 / 2 / 4 / 6 / MAX. Drivers: 1 = TRUCKER, 2 in a pair = TRUCKER 2.
-   TAGRA TRUCKER 2 is not in shop.tagra.app yet: every link goes to /go/tagra-trucker-2/, a single line in _redirects
-   (now -> https://shop.tagra.app/contact/). When the product exists, change that one line to
-   https://shop.tagra.app/tagra-trucker-2/ (and set priceId here if the shop calculator should add it to the cart).
+   TAGRA TRUCKER 2 is live in shop.tagra.app (product/priceId 93, 7. 11. 2026). Links go to /go/tagra-trucker-2/,
+   a single line in _redirects (-> https://shop.tagra.app/tagra-trucker-2/).
    "href" is relative to tagra.app.
    Keep the JSON between the markers valid (the generator parses it). */
 window.TAGRA_PRICES=/*JSON*/{
@@ -23,7 +22,7 @@ window.TAGRA_PRICES=/*JSON*/{
     {"id": "max", "key": "tagra-max", "name": "TAGRA MAX", "band": "7+",  "max": null, "price": 749, "fee": 149, "priceId": 60, "path": "/tagra-max/", "bundle": {"key": "tagra-max-download-box-ii-s", "price": 999, "priceId": 87, "path": "/tagra-max-download-box-ii-s/"}}
   ],
   "trucker":  {"id": "tr1", "key": "tagra-trucker",   "name": "TAGRA TRUCKER",   "drivers": 1, "price": 49,    "fee": 19, "priceId": 45,   "path": "/tagra-trucker/"},
-  "trucker2": {"id": "tr2", "key": "tagra-trucker-2", "name": "TAGRA TRUCKER 2", "drivers": 2, "price": 88.62, "fee": 29, "priceId": null, "path": "/tagra-trucker-2/", "href": "/go/tagra-trucker-2/"},
+  "trucker2": {"id": "tr2", "key": "tagra-trucker-2", "name": "TAGRA TRUCKER 2", "drivers": 2, "price": 88.62, "fee": 29, "priceId": 93,   "path": "/tagra-trucker-2/", "href": "/go/tagra-trucker-2/"},
   "box": {"name": "DOWNLOAD BOX II S", "price": 299, "path": "/download-box-ii-s/"},
   "shipping": 9.90
 }/*JSON*/;
