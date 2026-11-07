@@ -1,10 +1,12 @@
 #!/usr/bin/env node
-/* TAGRA version selector – static (no-JS) markup generator, v1.0 (7. 11. 2026).
+/* TAGRA version selector – static (no-JS) markup generator, v1.1 (8. 11. 2026; v1.0 7. 11. 2026).
 
    Regenerates the selector blocks between these markers in the /fleet/ and /driver/ pages of all 9 languages:
      <!-- tsel:fleet-hero --> ... <!-- /tsel:fleet-hero -->   fleet hero: vehicles only, price + buy CTA
      <!-- tsel:fleet -->      ... <!-- /tsel:fleet -->        fleet pricing: vehicles + download device
      <!-- tsel:driver -->     ... <!-- /tsel:driver -->       driver pricing: 1 driver / 2 drivers in a pair
+   The homepage of each language (index.html, de/index.html, …) carries the same fleet + driver blocks in its
+   pricing section (v1.1, 8. 11. 2026), wrapped in <div class="tsel-home">.
    Prices come from assets/js/tagra-prices.js (single source, shared with shop-fleet.js), texts from
    tools/i18n/tagra-selector.json. assets/js/tagra-selector.js re-renders the same blocks from the same prices at runtime.
 
@@ -119,6 +121,7 @@ export function main(check = false) {
     const pages = [
       [c.fleet, [['fleet-hero', fleetBlock(P, c, T, true)], ['fleet', fleetBlock(P, c, T, false)]]],
       [c.driver, [['driver', driverBlock(P, c, T)]]],
+      [lang === 'en' ? '' : lang, [['fleet', fleetBlock(P, c, T, false)], ['driver', driverBlock(P, c, T)]]],
     ];
     for (const [page, blocks] of pages) {
       const file = path.join(ROOT, page, 'index.html');
@@ -126,7 +129,7 @@ export function main(check = false) {
       let out = src;
       for (const [name, block] of blocks) out = replaceBlock(out, name, block);
       if (out !== src) {
-        stale.push(page);
+        stale.push(page || '/');
         if (!check) fs.writeFileSync(file, out);
       }
     }
