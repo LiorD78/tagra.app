@@ -1,4 +1,4 @@
-/* TAGRA Shop – fleet calculator v1.5 (7. 11. 2026) – employed driver branch asks 1 driver / 2 drivers sharing one PC:
+/* TAGRA Shop – fleet calculator v1.6 (7. 11. 2026: 2-driver option uses its own icon with exactly two figures, hosted on tagra.app) | v1.5 (7. 11. 2026) – employed driver branch asks 1 driver / 2 drivers sharing one PC:
    2 -> TAGRA TRUCKER 2 (TAGRA_PRICES.trucker2, priceId 93). GA4 events carry fc_drivers (1 / 2 in the driver branch).
    v1.4 (7. 11. 2026) – prices, price IDs and URLs now come only from
    https://tagra.app/assets/js/tagra-prices.js (window.TAGRA_PRICES), the one source shared with the tagra.app version selector.
@@ -43,7 +43,7 @@
   /* ---------- markup ---------- */
   function choice(group,val,ico,title,sub,on){
     return '<button type="button" class="tgs-fc__opt'+(on?' is-on':'')+'" data-g="'+group+'" data-v="'+val+'" aria-pressed="'+(on?'true':'false')+'">'+
-      (ico?'<img class="tgs-fc__ico" src="'+IC+ico+'.webp" alt="" width="52" height="52" loading="lazy">':'')+
+      (ico?'<img class="tgs-fc__ico" src="'+(ico.indexOf('/')>-1?ico:IC+ico+'.webp')+'" alt="" width="52" height="52" loading="lazy">':'')+
       '<span class="tgs-fc__opt-t"><b>'+title+'</b><small>'+sub+'</small></span></button>';
   }
   function build(){
@@ -72,7 +72,7 @@
       '<div class="tgs-fc__step tgs-fc__drv" data-for="driver" hidden><p class="tgs-fc__q"><span class="tgs-fc__n">2</span>How many drivers will use the program?</p>'+
        '<div class="tgs-fc__opts">'+
         choice('drv','1','ridic','1 driver','TAGRA TRUCKER · your own driver card',true)+
-        choice('drv','2','ridici','2 drivers sharing one PC','TAGRA TRUCKER 2 · one licence for both cards',false)+
+        choice('drv','2','https://tagra.app/assets/img/icons/cfg-ico-ridici2.webp','2 drivers sharing one PC','TAGRA TRUCKER 2 · one licence for both cards',false)+
        '</div><p class="tgs-fc__note">For employed drivers who check driving and rest times from their own driver cards. One USB card reader is included and shipped to you.</p></div>'
       :
       '<div class="tgs-fc__step tgs-fc__drv" data-for="driver" hidden><p class="tgs-fc__q"><span class="tgs-fc__n">2</span>TAGRA TRUCKER for your own card</p>'+
