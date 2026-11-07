@@ -1,4 +1,4 @@
-/* TAGRA Shop – fleet calculator v1.6 (7. 11. 2026: 2-driver option uses its own icon with exactly two figures, hosted on tagra.app) | v1.5 (7. 11. 2026) – employed driver branch asks 1 driver / 2 drivers sharing one PC:
+/* TAGRA Shop – fleet calculator v1.7 (8. 11. 2026: tier chips 1 / 2 / 4 / 6 / MAX next to the stepper are clickable – set the vehicle count to that tier; were dead clicks in Clarity) | v1.6 (7. 11. 2026: 2-driver option uses its own icon with exactly two figures, hosted on tagra.app) | v1.5 (7. 11. 2026) – employed driver branch asks 1 driver / 2 drivers sharing one PC:
    2 -> TAGRA TRUCKER 2 (TAGRA_PRICES.trucker2, priceId 93). GA4 events carry fc_drivers (1 / 2 in the driver branch).
    v1.4 (7. 11. 2026) – prices, price IDs and URLs now come only from
    https://tagra.app/assets/js/tagra-prices.js (window.TAGRA_PRICES), the one source shared with the tagra.app version selector.
@@ -150,7 +150,9 @@
         if(g==='who'){[].forEach.call(root.querySelectorAll('[data-for]'),function(s){s.hidden=s.getAttribute('data-for')!==v;});}
         render();return;}
       var pm=e.target.closest('.tgs-fc__pm');
-      if(pm){start();setVeh(S.veh+parseInt(pm.getAttribute('data-d'),10));}
+      if(pm){start();setVeh(S.veh+parseInt(pm.getAttribute('data-d'),10));return;}
+      var ch=e.target.closest('.tgs-fc__scale span[data-t]');
+      if(ch){start();for(var i=0;i<RULES.tiers.length;i++){var t=RULES.tiers[i];if(t.id===ch.getAttribute('data-t')){setVeh(t.max===Infinity?(i>0?RULES.tiers[i-1].max+1:1):t.max);break;}}}
     });
     var inp=root.querySelector('#tgs-fc-veh');
     inp.addEventListener('input',function(){start();var n=parseInt(inp.value,10);if(n>=1){S.veh=Math.min(n,9999);render();}});
