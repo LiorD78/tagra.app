@@ -10,3 +10,17 @@ img.tgs-mac-th{object-fit:contain!important;background:#fff}
 .p-image:has(img.tgs-mac-th){background:linear-gradient(180deg,#f5f9fc 0%,#eaf3f8 55%,#e2eff7 100%)!important}
 /* v2.1 (7. 11. 2026): mobil – zbytkova 1px linka #header .navigation-wrapper (border-top) zustavala nahore pri scrollu */
 @media (max-width:767px){#header .navigation-wrapper{border-top:0!important}}
+/* v2.2 (8. 11. 2026): mrtvé kliky z Clarity na homepage
+   – karty 01/02/03 (.tgs-step) se při hoveru zvedájí, ale klikal jen odkaz dole → klikací celá karta (odkaz roztažený přes kartu)
+   – karty úřadů (.tgs-ref__c) nikam nevedou → bez zvedání při hoveru
+   – tečky karuselu 10×6 px → neviditelná tap-zóna 16×24 px
+   – štítky 1/2/4/6/MAX v kalkulačce flotily jsou klikací (shop-fleet.js v1.7) → kurzor + hover */
+.tgs-step{position:relative;cursor:pointer}
+.tgs-step__a::after{content:"";position:absolute;inset:0;border-radius:20px}
+.tgs-step:hover .tgs-step__a{text-decoration:underline!important}
+.tgs-ref__c{transition:none}
+.tgs-ref__c:hover{transform:none;border-color:rgba(0,0,0,.08);box-shadow:none}
+.tgs-car__dots button{position:relative}
+.tgs-car__dots button::after{content:"";position:absolute;inset:-9px -3px}
+.tgs-fc__scale span{cursor:pointer}
+@media (hover:hover){.tgs-fc__scale span:not(.is-on):hover{background:#dcecf6;border-color:rgba(19,74,142,.3)}}
