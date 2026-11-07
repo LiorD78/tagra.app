@@ -6,6 +6,7 @@
  *
  * ── SEKVENCE ──────────────────────────────────────────────────────────
  *   #1  hned      uvítací mail (odkaz ke stažení / potvrzení poptávky)
+ *               Jméno je od 7. 11. 2026 nepovinné — viz fillName().
  *   #2  +3 dny    quick start — jak naimportovat data a spustit výkaz
  *   #3  +25 dní   "zkušební verze končí za 5 dní" (z 30denního trialu)
  *
@@ -176,6 +177,26 @@ function firstName(fullName) {
   if (!fullName || typeof fullName !== "string") return "there";
   const trimmed = fullName.trim();
   return trimmed ? trimmed.split(/\s+/)[0] : "there";
+}
+
+/**
+ * Dosadí křestní jméno za {NAME}. Bez jména (krátký formulář DE/PL a mobilní
+ * „pošlete mi odkaz na PC", od 7. 11. 2026 jméno nevyžadují) oslovení
+ * vypustí tak, aby věta dávala smysl ve všech 11 jazycích šablon:
+ *   "Welcome to TAGRA, {NAME}"          → "Welcome to TAGRA"
+ *   "Hallo {NAME}, wie läuft …"         → "Hallo, wie läuft …"
+ *   "{NAME}, your trial ends in 5 days" → "Your trial ends in 5 days"
+ *   "Kedves {NAME}, hogy halad …"       → "Tisztelt Ügyfelünk! Hogy halad …"
+ */
+function fillName(html, fullName) {
+  const first = String(fullName || "").trim().split(/\s+/)[0] || "";
+  if (first) return html.replaceAll("{NAME}", first);
+  return html
+    .replace(/Kedves \{NAME\},\s*(\S)/g, (m, c) => "Tisztelt Ügyfelünk! " + c.toUpperCase())
+    .replace(/,\s*\{NAME\}/g, "")
+    .replace(/([^\s>])\s+\{NAME\},/g, "$1,")
+    .replace(/\{NAME\},\s*(\S)/g, (m, c) => c.toUpperCase())
+    .replaceAll("{NAME}", "");
 }
 
 /** Dekóduje entity, které se reálně vyskytují v <title>. */
@@ -473,7 +494,6 @@ exports.handler = async (event) => {
 
   const aud      = VALID_AUDIENCES.includes(audience) ? audience : "fleet";
   const lang     = VALID_LANGS.includes(language) ? language : "en";
-  const greeting = firstName(name);
   const emailKey = normalizeEmailForKey(email);
 
   const apiKey = process.env.RESEND_API_KEY;
@@ -494,10 +514,8 @@ exports.handler = async (event) => {
     return { statusCode: 200, body: "Ignored: invalid email" };
   }
 
-  if (name.length < 2) {
-    logError("Empty name in submission");
-    return { statusCode: 200, body: "Ignored: empty name" };
-  }
+  // Jméno už není povinné (krátký formulář DE/PL, mobilní odeslání odkazu, 7. 11. 2026).
+  // Oslovení bez jména řeší fillName().
 
   const emailDomain = email.split("@")[1]?.toLowerCase() || "";
   if (DISPOSABLE_DOMAINS.includes(emailDomain)) {
@@ -550,7 +568,7 @@ exports.handler = async (event) => {
         to: [email],
         reply_to: replyTo,
         subject,
-        html: html.replaceAll("{NAME}", greeting),
+        html: fillName(html, name),
         tags: [
           { name: "campaign", value: "trial-signup" },
           { name: "audience", value: aud },
@@ -586,7 +604,7 @@ exports.handler = async (event) => {
           to: [email],
           reply_to: replyTo,
           subject,
-          html: html.replaceAll("{NAME}", greeting),
+          html: fillName(html, name),
           scheduled_at: scheduledAt,
           tags: [
             { name: "campaign", value: step.campaign },
