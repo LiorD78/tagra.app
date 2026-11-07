@@ -175,63 +175,18 @@
 </div>
 </label>
 </fieldset>
-<div class="form-row">
-<label class="form-field">
-<span class="form-label">Vollständiger Name <em>*</em></span>
-<input autocomplete="name" name="name" required="" type="text"/>
-</label>
-<label class="form-field" id="field-company">
-<span class="form-label">Firma</span>
-<input autocomplete="organization" name="company" type="text"/>
-</label>
-</div>
+<!-- 7. 11. 2026: krátký formulář (role + e-mail). Jméno, firma, země a zpráva zůstávají jako skrytá pole,
+     aby sada polí formuláře tagra-trial byla na všech stránkách stejná (Netlify Forms). Zemi doplní try.js. -->
+<input name="name" type="hidden" value=""/>
+<input name="company" type="hidden" value=""/>
 <div class="form-row">
 <label class="form-field">
 <span class="form-label">E-Mail <em>*</em></span>
 <input autocomplete="email" name="email" required="" type="email"/><span class="form-hint">Für den Download-Link und Lizenzinformationen — nichts anderes.</span>
 </label>
 </div>
-<label class="form-field">
-<span class="form-label">Land <em>*</em></span>
-<select name="country" required="">
-<option value="">— auswählen —</option>
-<option value="AT">Österreich</option>
-<option value="BE">Belgien</option>
-<option value="BG">Bulgarien</option>
-<option value="HR">Kroatien</option>
-<option value="CY">Zypern</option>
-<option value="CZ">Tschechien</option>
-<option value="DK">Dänemark</option>
-<option value="EE">Estland</option>
-<option value="FI">Finnland</option>
-<option value="FR">Frankreich</option>
-<option value="DE">Deutschland</option>
-<option value="GR">Griechenland</option>
-<option value="HU">Ungarn</option>
-<option value="IE">Irland</option>
-<option value="IT">Italien</option>
-<option value="LV">Lettland</option>
-<option value="LT">Litauen</option>
-<option value="LU">Luxemburg</option>
-<option value="MT">Malta</option>
-<option value="NL">Niederlande</option>
-<option value="NO">Norwegen</option>
-<option value="PL">Polen</option>
-<option value="PT">Portugal</option>
-<option value="RO">Rumänien</option>
-<option value="SK">Slowakei</option>
-<option value="SI">Slowenien</option>
-<option value="ES">Spanien</option>
-<option value="SE">Schweden</option>
-<option value="CH">Schweiz</option>
-<option value="GB">Vereinigtes Königreich</option>
-<option value="OTHER">Anderes</option>
-</select>
-</label>
-<label class="form-field">
-<span class="form-label">Möchten Sie uns noch etwas mitteilen? <span class="form-hint">(optional)</span></span>
-<textarea name="message" placeholder="Flottengröße, spezielle Anforderungen, Fragen…" rows="3"></textarea>
-</label>
+<input data-prefill="lang" name="country" type="hidden" value="DE"/>
+<input name="message" type="hidden" value=""/>
 <input name="language" type="hidden" value="de"/>
 <input id="source_url" name="source_url" type="hidden" value=""/>
 <input id="src" name="src" type="hidden" value=""/>
@@ -287,7 +242,7 @@
 <span><a href="/de/kontakt/">Kontakt</a> · <a href="https://www.tdt.cz" rel="noopener" target="_blank">tdt.cz</a> · <a href="/de/datenschutz/">Datenschutz &amp; Cookies</a> · <a href="/de/impressum/">Impressum</a></span>
 </div>
 </footer>
-<script defer="" src="/try/try.js?v=20261002a"></script>
+<script defer="" src="/try/try.js?v=20261107a"></script>
 <script>
 /* Předá audience + jazyk poděkovací stránce (nativní POST je jinak zahodí). */
 (function () {
