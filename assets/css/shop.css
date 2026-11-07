@@ -284,6 +284,10 @@ a.tgs-var__o:focus-visible{outline:3px solid rgba(19,74,142,.35);outline-offset:
 html.tgs-var-restoring .tgs-var__o{transition:none!important}
 @media (max-width:420px){.tgs-var{padding:12px 10px}.tgs-var__o b{font-size:15px}.tgs-var__o small{font-size:10px}.tgs-var__key .tgs-var__o b{font-size:12px}}
 @media (prefers-reduced-motion:reduce){.tgs-var__o{transition:none}a.tgs-var__o:hover{transform:none}}
+/* v6.1b (7. 11. 2026) – driver row on TAGRA TRUCKER / TAGRA TRUCKER 2: one row, 2 options; reserved space 106 + 18 px */
+.p-detail:is(:has(meta[itemprop="url"][content$="/tagra-trucker/"]),:has(meta[itemprop="url"][content$="/tagra-trucker-2/"])) .p-info-wrapper::before{content:"";display:block;height:124px}
+.tgs-var.is-drv{height:106px}
+.tgs-var__drv{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;height:52px}
 
 /* ===== v6.2 – blue order summary in cart + checkout, same look as the fleet calculator (6. 11. 2026) ===== */
 /* cart (step 1) */

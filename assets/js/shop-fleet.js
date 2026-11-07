@@ -1,9 +1,12 @@
-/* TAGRA Shop – fleet calculator v1.4 (7. 11. 2026) – prices, price IDs and URLs now come only from
+/* TAGRA Shop – fleet calculator v1.5 (7. 11. 2026) – employed driver branch asks 1 driver / 2 drivers sharing one PC:
+   2 -> TAGRA TRUCKER 2 (TAGRA_PRICES.trucker2, priceId 93). GA4 events carry fc_drivers (1 / 2 in the driver branch).
+   v1.4 (7. 11. 2026) – prices, price IDs and URLs now come only from
    https://tagra.app/assets/js/tagra-prices.js (window.TAGRA_PRICES), the one source shared with the tagra.app version selector.
    v1.3 (6. 11. 2026):
    Progressive enhancement of the "Choose TAGRA by fleet size" section built by shop.js.
-   Inputs: who (company / employed driver), vehicles, download device. Driver count is intentionally not asked.
-   Cart: always ONE item – licence, licence + DOWNLOAD BOX II S bundle, or TRUCKER – via shoptet.cartShared.addToCart.
+   Inputs: who (company / employed driver), vehicles, download device; for the employed driver only 1 / 2 drivers
+   (company licences are still based on vehicles, driver cards are not counted).
+   Cart: always ONE item – licence, licence + DOWNLOAD BOX II S bundle, TRUCKER or TRUCKER 2 – via shoptet.cartShared.addToCart.
    Rules (vehicles -> tier) are shared with the TRUCKMALL configurator: 1 / 2 / 3-4 / 5-6 / 7+ = TAGRA 1 / 2 / 4 / 6 / MAX. */
 (function(){
   'use strict';
@@ -20,11 +23,12 @@
       tiers:P.tiers.map(function(t){return {id:t.id,name:t.name,max:t.max==null?Infinity:t.max,cap:CAP[t.id],price:t.price,fee:t.fee,priceId:t.priceId,url:t.path,
         bundle:{price:t.bundle.price,priceId:t.bundle.priceId,url:t.bundle.path}};}),
       trucker:{name:P.trucker.name,price:P.trucker.price,fee:P.trucker.fee,priceId:P.trucker.priceId,url:P.trucker.path},
+      trucker2:P.trucker2?{name:P.trucker2.name,price:P.trucker2.price,fee:P.trucker2.fee,priceId:P.trucker2.priceId,url:P.trucker2.path}:null,
       box:{name:P.box.name,price:P.box.price},
       shipping:eur(P.shipping)};
   }
 
-  var S={who:'company',veh:1,dev:null,busy:false,started:false};
+  var S={who:'company',veh:1,dev:null,drv:'1',busy:false,started:false};
   var root,tiersEl,timer;
 
   function eur(n){var r=Math.round(n*100)/100,s=(r%1===0)?String(r):r.toFixed(2);return '€'+s.replace(/\B(?=(\d{3})+(?!\d))/g,',');}
@@ -50,7 +54,7 @@
       '<div class="tgs-fc__step"><p class="tgs-fc__q"><span class="tgs-fc__n">1</span>Who is TAGRA for?</p>'+
        '<div class="tgs-fc__opts">'+
         choice('who','company','firma','Transport company','Vehicles fitted with tachographs',true)+
-        choice('who','driver','ridic','Employed driver','Only your own driver card',false)+
+        choice('who','driver','ridic','Employed driver','Your own driver card'+(RULES.trucker2?' · 1 or 2 drivers':''),false)+
        '</div></div>'+
       '<div class="tgs-fc__step" data-for="company"><p class="tgs-fc__q"><span class="tgs-fc__n">2</span><label for="tgs-fc-veh">How many vehicles have a tachograph?</label></p>'+
        '<div class="tgs-fc__veh">'+
@@ -64,8 +68,15 @@
         choice('dev','box','klic','Yes, add DOWNLOAD BOX II S','Downloads tachograph and driver card data · save '+SAVE+' in a bundle',false)+
         choice('dev','own','mam','No, we already have one','Licence only',false)+
        '</div><p class="tgs-fc__note">Not sure which device you need? <a href="#tgs-help">Ask us</a>.</p></div>'+
+      (RULES.trucker2?
+      '<div class="tgs-fc__step tgs-fc__drv" data-for="driver" hidden><p class="tgs-fc__q"><span class="tgs-fc__n">2</span>How many drivers will use the program?</p>'+
+       '<div class="tgs-fc__opts">'+
+        choice('drv','1','ridic','1 driver','TAGRA TRUCKER · your own driver card',true)+
+        choice('drv','2','ridici','2 drivers sharing one PC','TAGRA TRUCKER 2 · one licence for both cards',false)+
+       '</div><p class="tgs-fc__note">For employed drivers who check driving and rest times from their own driver cards. One USB card reader is included and shipped to you.</p></div>'
+      :
       '<div class="tgs-fc__step tgs-fc__drv" data-for="driver" hidden><p class="tgs-fc__q"><span class="tgs-fc__n">2</span>TAGRA TRUCKER for your own card</p>'+
-       '<p class="tgs-fc__p">For an employed driver who checks driving and rest times from their own driver card. The USB card reader is included and shipped to you.</p></div>'+
+       '<p class="tgs-fc__p">For an employed driver who checks driving and rest times from their own driver card. The USB card reader is included and shipped to you.</p></div>')+
      '</div>'+
      '<aside class="tgs-fc__sum" aria-live="polite"></aside>'+
     '</div>';
@@ -75,9 +86,9 @@
   /* ---------- state -> summary ---------- */
   function model(){
     if(S.who==='driver'){
-      var tr=RULES.trucker;
-      return {kind:'driver',title:tr.name,cap:'For one employed driver',lines:[[tr.name+' licence',eur(tr.price)]],total:tr.price,fee:tr.fee,
-        y3:tr.price+2*tr.fee,priceId:tr.priceId,url:tr.url,ship:'USB card reader shipped · shipping '+RULES.shipping,cta:'Add TAGRA TRUCKER to cart'};
+      var two=S.drv==='2'&&!!RULES.trucker2,tr=two?RULES.trucker2:RULES.trucker;
+      return {kind:'driver',drivers:two?2:1,title:tr.name,cap:two?'For two drivers sharing one PC':'For one employed driver',lines:[[tr.name+' licence',eur(tr.price)]],total:tr.price,fee:tr.fee,
+        y3:tr.price+2*tr.fee,priceId:tr.priceId,url:tr.url,ship:(two?'One USB card reader for both cards':'USB card reader')+' shipped · shipping '+RULES.shipping,cta:'Add '+tr.name+' to cart'};
     }
     var t=tierFor(S.veh),box=S.dev==='box',lines=[[t.name+' licence',eur(t.price)]];
     if(box){lines.push([RULES.box.name,eur(RULES.box.price)]);lines.push(['Bundle saving','−'+eur(t.price+RULES.box.price-t.bundle.price),'save']);}
@@ -106,13 +117,13 @@
     var sc=root.querySelector('.tgs-fc__scale');
     if(sc&&m.tier){[].forEach.call(sc.children,function(x){x.classList.toggle('is-on',x.getAttribute('data-t')===m.tier.id);});}
     clearTimeout(timer);
-    if(S.started){timer=setTimeout(function(){track('fleet_calc_recommendation',{fc_branch:m.kind,fc_tier:m.title,fc_band:m.kind==='company'?band(S.veh):'driver',fc_device:S.dev||'none',fc_value:m.total});},1000);}
+    if(S.started){timer=setTimeout(function(){track('fleet_calc_recommendation',{fc_branch:m.kind,fc_tier:m.title,fc_band:m.kind==='company'?band(S.veh):'driver',fc_device:S.dev||'none',fc_drivers:m.drivers||'',fc_value:m.total});},1000);}
   }
 
   /* ---------- cart ---------- */
   function add(e){
     var a=e.currentTarget,pid=parseInt(a.getAttribute('data-price-id'),10),msg=root.querySelector('.tgs-fc__msg'),m=model();
-    track('fleet_calc_cta_click',{fc_branch:m.kind,fc_tier:m.title,fc_value:m.total});
+    track('fleet_calc_cta_click',{fc_branch:m.kind,fc_tier:m.title,fc_drivers:m.drivers||'',fc_value:m.total});
     var api=window.shoptet&&shoptet.cartShared&&typeof shoptet.cartShared.addToCart==='function';
     if(!api||!pid)return; /* fallback: normal link to the product */
     e.preventDefault();
@@ -120,7 +131,7 @@
     S.busy=true;a.classList.add('is-busy');a.setAttribute('aria-disabled','true');msg.textContent='Adding to cart…';
     var done=false;
     function ok(){if(done)return;done=true;document.removeEventListener('ShoptetCartUpdated',ok);S.busy=false;a.classList.remove('is-busy');a.removeAttribute('aria-disabled');
-      msg.innerHTML='Added to cart. <a href="/cart/">Go to cart</a>';track('fleet_calc_added',{fc_tier:m.title,fc_value:m.total});}
+      msg.innerHTML='Added to cart. <a href="/cart/">Go to cart</a>';track('fleet_calc_added',{fc_tier:m.title,fc_drivers:m.drivers||'',fc_value:m.total});}
     document.addEventListener('ShoptetCartUpdated',ok);
     try{shoptet.cartShared.addToCart({priceId:pid,amount:1});}
     catch(err){done=true;document.removeEventListener('ShoptetCartUpdated',ok);track('fleet_calc_error',{fc_error:'add_exception'});location.href=a.getAttribute('href');return;}

@@ -1,4 +1,7 @@
-/* TAGRA Shop – version switcher v1.0 (6. 11. 2026)
+/* TAGRA Shop – version switcher v1.1 (7. 11. 2026)
+   v1.1: driver row on TAGRA TRUCKER / TAGRA TRUCKER 2 ("How many drivers will use the program?" 1 / 2 drivers),
+   same look and the same switch behaviour as the vehicle row; the TAGRA rows below are unchanged.
+   v1.0 (6. 11. 2026):
    Product detail of TAGRA 1/2/4/6/MAX and the five "TAGRA X + DOWNLOAD BOX II S" bundles.
    Two rows: number of vehicles (1 / 2 / 3–4 / 5–6 / 7+) and "Program only / Program + DOWNLOAD BOX II S".
    Every option is a real link to the other product URL (separate products, own URLs). On switch the page keeps
@@ -17,10 +20,15 @@
     {k:'6',big:'5–6',name:'TAGRA 6',cap:'5–6 vehicles',p:'/tagra-6/',s:'/tagra-6-download-box-ii-s/'},
     {k:'max',big:'7+',name:'TAGRA MAX',cap:'unlimited vehicles',p:'/tagra-max/',s:'/tagra-max-download-box-ii-s/'}
   ];
+  var D=[
+    {k:'tr1',big:'1 driver',name:'TAGRA TRUCKER',cap:'1 driver',p:'/tagra-trucker/'},
+    {k:'tr2',big:'2 drivers',name:'TAGRA TRUCKER 2',cap:'2 drivers sharing one PC',p:'/tagra-trucker-2/'}
+  ];
   var html=document.documentElement;
   function norm(p){p=String(p||'').split(/[?#]/)[0];return p.charAt(p.length-1)==='/'?p:p+'/';}
-  var here=norm(location.pathname),cur=null,withKey=false;
+  var here=norm(location.pathname),cur=null,withKey=false,drv=false;
   V.forEach(function(x){if(x.p===here){cur=x;withKey=false;}else if(x.s===here){cur=x;withKey=true;}});
+  D.forEach(function(x){if(x.p===here){cur=x;drv=true;}});
   if(!cur){html.classList.remove('tgs-var-hide');return;}
 
   function readRec(){var r=null;try{r=JSON.parse(sessionStorage.getItem(KEY)||'null');}catch(e){r=null;}
@@ -49,6 +57,16 @@
     r2.appendChild(opt(!withKey,cur.p,'Program only',null,cur.name+' without a download device'));
     r2.appendChild(opt(withKey,cur.s,'Program + DOWNLOAD BOX II S','bundle · save €49',cur.name+' with DOWNLOAD BOX II S in a bundle'));
     w.appendChild(r2);
+    return w;
+  }
+  function buildDrv(){
+    var w=el('div','tgs-var is-drv');w.setAttribute('role','group');w.setAttribute('aria-label','Choose your TAGRA TRUCKER version');
+    w.appendChild(el('p','tgs-var__q','How many drivers will use the program?'));
+    var r=el('div','tgs-var__drv');
+    D.forEach(function(x){
+      r.appendChild(opt(x===cur,x.p,x.big,x.name,x.name+' for '+x.cap));
+    });
+    w.appendChild(r);
     return w;
   }
 
@@ -94,7 +112,7 @@
   function init(){
     var info=document.querySelector('.p-detail .p-info-wrapper');if(!info)return false;
     if(document.getElementById('tgsVarSlot'))return true;
-    slot=el('div');slot.id='tgsVarSlot';slot.appendChild(build());
+    slot=el('div');slot.id='tgsVarSlot';slot.appendChild(drv?buildDrv():build());
     info.insertBefore(slot,info.firstChild);
     html.classList.add('tgs-var-on');
     slot.addEventListener('click',function(e){
