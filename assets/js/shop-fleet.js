@@ -1,4 +1,6 @@
-/* TAGRA Shop – fleet calculator v1.3 (6. 11. 2026)
+/* TAGRA Shop – fleet calculator v1.4 (7. 11. 2026) – prices, price IDs and URLs now come only from
+   https://tagra.app/assets/js/tagra-prices.js (window.TAGRA_PRICES), the one source shared with the tagra.app version selector.
+   v1.3 (6. 11. 2026):
    Progressive enhancement of the "Choose TAGRA by fleet size" section built by shop.js.
    Inputs: who (company / employed driver), vehicles, download device. Driver count is intentionally not asked.
    Cart: always ONE item – licence, licence + DOWNLOAD BOX II S bundle, or TRUCKER – via shoptet.cartShared.addToCart.
@@ -10,15 +12,17 @@
 
   var VAT=0.21;
   var IC='https://cdn.truckmall.cz/data/user-content/cfg-ico-';
-  var RULES={version:'2026-11-06',tiers:[
-    {id:'t1',name:'TAGRA 1',max:1,cap:'1 vehicle',price:149,fee:79,priceId:48,url:'/tagra-1/',bundle:{price:399,priceId:75,url:'/tagra-1-download-box-ii-s/'}},
-    {id:'t2',name:'TAGRA 2',max:2,cap:'2 vehicles',price:299,fee:79,priceId:51,url:'/tagra-2/',bundle:{price:549,priceId:78,url:'/tagra-2-download-box-ii-s/'}},
-    {id:'t4',name:'TAGRA 4',max:4,cap:'3–4 vehicles',price:399,fee:99,priceId:54,url:'/tagra-4/',bundle:{price:649,priceId:81,url:'/tagra-4-download-box-ii-s/'}},
-    {id:'t6',name:'TAGRA 6',max:6,cap:'5–6 vehicles',price:549,fee:99,priceId:57,url:'/tagra-6/',bundle:{price:799,priceId:84,url:'/tagra-6-download-box-ii-s/'}},
-    {id:'max',name:'TAGRA MAX',max:Infinity,cap:'unlimited vehicles',price:749,fee:149,priceId:60,url:'/tagra-max/',bundle:{price:999,priceId:87,url:'/tagra-max-download-box-ii-s/'}}],
-    trucker:{name:'TAGRA TRUCKER',price:49,fee:19,priceId:45,url:'/tagra-trucker/'},
-    box:{name:'DOWNLOAD BOX II S',price:299},
-    shipping:'€9.90'};
+  var PRICES_JS='https://tagra.app/assets/js/tagra-prices.js?v=20261107';
+  var CAP={t1:'1 vehicle',t2:'2 vehicles',t4:'3–4 vehicles',t6:'5–6 vehicles',max:'unlimited vehicles'};
+  var RULES=null,SAVE='';
+  function rules(P){
+    return {version:P.version,
+      tiers:P.tiers.map(function(t){return {id:t.id,name:t.name,max:t.max==null?Infinity:t.max,cap:CAP[t.id],price:t.price,fee:t.fee,priceId:t.priceId,url:t.path,
+        bundle:{price:t.bundle.price,priceId:t.bundle.priceId,url:t.bundle.path}};}),
+      trucker:{name:P.trucker.name,price:P.trucker.price,fee:P.trucker.fee,priceId:P.trucker.priceId,url:P.trucker.path},
+      box:{name:P.box.name,price:P.box.price},
+      shipping:eur(P.shipping)};
+  }
 
   var S={who:'company',veh:1,dev:null,busy:false,started:false};
   var root,tiersEl,timer;
@@ -57,7 +61,7 @@
        '</div><p class="tgs-fc__note" id="tgs-fc-veh-note">Licences are based on the number of vehicles. Driver cards are not counted.</p></div>'+
       '<div class="tgs-fc__step" data-for="company"><p class="tgs-fc__q"><span class="tgs-fc__n">3</span>Do you need a download device?</p>'+
        '<div class="tgs-fc__opts">'+
-        choice('dev','box','klic','Yes, add DOWNLOAD BOX II S','Downloads tachograph and driver card data · save €49 in a bundle',false)+
+        choice('dev','box','klic','Yes, add DOWNLOAD BOX II S','Downloads tachograph and driver card data · save '+SAVE+' in a bundle',false)+
         choice('dev','own','mam','No, we already have one','Licence only',false)+
        '</div><p class="tgs-fc__note">Not sure which device you need? <a href="#tgs-help">Ask us</a>.</p></div>'+
       '<div class="tgs-fc__step tgs-fc__drv" data-for="driver" hidden><p class="tgs-fc__q"><span class="tgs-fc__n">2</span>TAGRA TRUCKER for your own card</p>'+
@@ -88,7 +92,7 @@
     var h='<span class="tgs-fc__lbl">Your TAGRA</span>'+
       '<p class="tgs-fc__tier">'+esc(m.title)+'</p><p class="tgs-fc__cap">'+esc(m.cap)+(m.fit?' · <b>'+esc(m.fit)+'</b>':'')+'</p>'+
       '<ul class="tgs-fc__lines">'+m.lines.map(function(l){return '<li'+(l[2]?' class="is-'+l[2]+'"':'')+'><span>'+esc(l[0])+'</span><span>'+esc(l[1])+'</span></li>';}).join('')+'</ul>'+
-      (m.ask?'<p class="tgs-fc__ask">Need a download device? Choose in step 3 and save €49 with a bundle.</p>':'')+
+      (m.ask?'<p class="tgs-fc__ask">Need a download device? Choose in step 3 and save '+SAVE+' with a bundle.</p>':'')+
       '<div class="tgs-fc__tot"><span class="tgs-fc__tot-l">Today'+(m.hw?', plus shipping':'')+'</span><span class="tgs-fc__tot-v">'+eur(m.total)+'<small>excl. VAT</small></span>'+
       '<span class="tgs-fc__vat">'+incl(m.total)+' incl. Czech VAT · 0% VAT (reverse charge) for EU companies outside Czechia with a valid VAT ID</span></div>'+
       '<ul class="tgs-fc__facts"><li>First year included</li><li>From year 2: '+eur(m.fee)+' / year</li>'+(m.ship?'<li>'+esc(m.ship)+'</li>':'')+'</ul>'+
@@ -156,9 +160,18 @@
     track('fleet_calc_view',{fc_rules:RULES.version});
     return true;
   }
+  /* prices: window.TAGRA_PRICES from tagra-prices.js (loaded here once; without it the original finder stays) */
+  function withPrices(cb){
+    function go(){if(RULES||!window.TAGRA_PRICES)return;RULES=rules(window.TAGRA_PRICES);var t=RULES.tiers[0];SAVE=eur(t.price+RULES.box.price-t.bundle.price);cb();}
+    if(window.TAGRA_PRICES){go();return;}
+    var s=document.getElementById('tgs-prices-js');
+    if(!s){s=document.createElement('script');s.id='tgs-prices-js';s.src=PRICES_JS;s.async=true;document.head.appendChild(s);}
+    s.addEventListener('load',go);
+    s.addEventListener('error',function(){track('fleet_calc_error',{fc_error:'prices_load'});});
+  }
   function boot(){
     if(!document.body||!document.body.classList.contains('type-index'))return;
-    var tries=0;(function go(){if(init())return;if(++tries<40)setTimeout(go,150);})();
+    withPrices(function(){var tries=0;(function go(){if(init())return;if(++tries<40)setTimeout(go,150);})();});
   }
   var l=document.createElement('link');l.rel='stylesheet';l.href='https://tagra.app/assets/css/shop-fleet.css?v=3';document.head.appendChild(l);
   if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',boot);}else{boot();}

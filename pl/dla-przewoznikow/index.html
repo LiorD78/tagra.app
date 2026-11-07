@@ -551,7 +551,7 @@
 <script defer="" src="/assets/js/nav.js?v=20261008a"></script><script defer="" src="/assets/js/analytics.js?v=20261103a"></script>
 <link href="/assets/css/footer.css" rel="stylesheet"/>
 <link href="/assets/css/t3-promo.css?v=20261103" rel="stylesheet"/>
-</head>
+<link href="/assets/css/tagra-selector.css?v=20261107" rel="stylesheet"/><script defer="" src="/assets/js/tagra-prices.js?v=20261107"></script><script defer="" src="/assets/js/tagra-selector.js?v=20261107"></script></head>
 <body>
 <a class="skip-link" href="#main-content">Przejdź do treści</a>
 <div aria-hidden="true" id="scroll-progress"></div>
@@ -580,16 +580,18 @@
 </div>
 </nav>
 <!-- ═══ HERO ══════════════════════════════════════════════════════ -->
-<section id="main-content" aria-label="Przegląd TAGRA" class="band band--hero band--hero--blue">
+<section id="main-content" aria-label="Przegląd TAGRA" class="band band--hero band--hero--blue tsel-hero">
 <div class="container">
 <div class="eyebrow anim-up"><span class="t3-badge">Nowość</span>TAGRA III · Dla operatorów flot</div>
 <h1 class="anim-up" style="transition-delay:.05s">Odczyt i analiza danych z tachografu cyfrowego</h1>
 <p class="lead anim-up" style="transition-delay:.1s">
 <strong>TAGRA III to najnowsza generacja sprawdzonego programu TAGRA dla flot.</strong> Jeden przegląd pokazuje, co wymaga Państwa uwagi — naruszenia, pobieranie danych z kart i pojazdów, wygasające karty i kalibracje — zanim wykaże to kontrola. Każdemu naruszeniu towarzyszy wskazanie przepisu i zalecenie. Obsługuje od jednego pojazdu do nieograniczonej liczby pojazdów.
     </p>
-<div class="anim-up" style="margin-bottom:16px;transition-delay:.15s;display:flex;flex-wrap:wrap;justify-content:center;gap:12px">
+<!-- tsel:fleet-hero -->
+<div class="tsel tsel--hero" data-tsel="fleet" data-fmt="{n} €" data-dec="," data-fee="Pierwszy rok w cenie · od 2. roku: {fee} / rok" data-cta="Kup {name} w sklepie TAGRA Shop" role="group" aria-label="Wybierz wersję programu TAGRA według liczby pojazdów"><p class="tsel__q">Ile pojazdów posiada tachograf?</p><div class="tsel__row tsel__row--5"><a class="tsel__o is-on" href="https://shop.tagra.app/tagra-1/" data-k="t1" data-cap="1 pojazd" aria-current="true" hreflang="en"><b>1</b><small>TAGRA 1</small></a><a class="tsel__o" href="https://shop.tagra.app/tagra-2/" data-k="t2" data-cap="2 pojazdy" hreflang="en"><b>2</b><small>TAGRA 2</small></a><a class="tsel__o" href="https://shop.tagra.app/tagra-4/" data-k="t4" data-cap="3–4 pojazdy" hreflang="en"><b>3–4</b><small>TAGRA 4</small></a><a class="tsel__o" href="https://shop.tagra.app/tagra-6/" data-k="t6" data-cap="5–6 pojazdów" hreflang="en"><b>5–6</b><small>TAGRA 6</small></a><a class="tsel__o" href="https://shop.tagra.app/tagra-max/" data-k="max" data-cap="Bez limitu pojazdów" hreflang="en"><b>7+</b><small>TAGRA MAX</small></a></div><div class="tsel__res" aria-live="polite"><div class="tsel__head"><span class="tsel__lbl">Polecana wersja</span><strong class="tsel__name">TAGRA 1</strong><span class="tsel__cap">1 pojazd</span></div><p class="tsel__price"><span class="tsel__amt">149 €</span><span class="tsel__vat">netto</span></p><p class="tsel__fee">Pierwszy rok w cenie · od 2. roku: 79 € / rok</p><div class="tsel__acts"><a class="btn-cta tsel__cta" href="https://shop.tagra.app/tagra-1/" data-product="tagra-1" hreflang="en">Kup TAGRA 1 w sklepie TAGRA Shop</a></div></div></div>
+<!-- /tsel:fleet-hero -->
+<div class="anim-up tsel-hero__cta" style="margin-bottom:16px;transition-delay:.15s;display:flex;flex-wrap:wrap;justify-content:center;gap:12px">
 <a class="btn-cta" href="/pl/wyprobuj/?audience=fleet" rel="noopener" target="_blank">Prosimy wypróbować za darmo przez 30 dni</a>
-<a class="btn-outline" href="https://shop.tagra.app/tagra-software/" hreflang="en">Kup w sklepie</a>
 </div>
 <p class="anim-up" style="font-size:15px;color:var(--text2);transition-delay:.2s">Windows · Bezpłatny 30-dniowy okres próbny · Gotowe dla pojazdów dostawczych od lipca 2026</p>
 <!-- Hero: TAGRA III screenshot -->
@@ -621,7 +623,7 @@
 <div class="bc s4 greenfill fly-left" style="transition-delay:.15s">
 <div class="eyebrow">Od 2. roku</div>
 <div class="bc-title" style="color:var(--green-brand)">od 79 € / rok</div>
-<div class="bc-text">Roczna opłata licencyjna netto — obejmuje wszystkie aktualizacje oprogramowania i dedykowane wsparcie techniczne. 19 € (TAGRA Trucker), 79 € (TAGRA 1–2), 99 € (TAGRA 4–6), 149 € (TAGRA MAX).</div>
+<div class="bc-text">Roczna opłata licencyjna netto — obejmuje wszystkie aktualizacje oprogramowania i dedykowane wsparcie techniczne. 19 € (TAGRA Trucker), 29 € (TAGRA TRUCKER 2), 79 € (TAGRA 1–2), 99 € (TAGRA 4–6), 149 € (TAGRA MAX).</div>
 </div>
 <div class="bc s4 anim-up" style="transition-delay:.25s">
 <div class="eyebrow">Gotowe na</div>
@@ -968,6 +970,11 @@
 <div class="eyebrow">Cena i warunki</div>
 <h2 style="text-transform:none">Przejrzyste ceny.<br/>Bez ukrytych opłat.</h2>
 <p style="margin:16px 0 24px">Prosimy zacząć od bezpłatnej wersji próbnej. Gdy będą Państwo gotowi, prosimy wybrać odpowiednią wersję bezpośrednio w oprogramowaniu i zapłacić online — licencja zostanie wydana natychmiast. Chcą Państwo zacząć? Licencję można już zamówić online w nowym sklepie <a href="https://shop.tagra.app/tagra-software/" hreflang="en">TAGRA Shop</a>.</p>
+<div class="tsel-pricing">
+<!-- tsel:fleet -->
+<div class="tsel tsel--fleet" data-tsel="fleet" id="tagra-selector" data-fmt="{n} €" data-dec="," data-fee="Pierwszy rok w cenie · od 2. roku: {fee} / rok" data-note-box="W zestawie klucz do pobierania danych DOWNLOAD BOX II S. Wysyłka na terenie UE: stała opłata {ship} brutto." data-cta="Kup {name} w sklepie TAGRA Shop" role="group" aria-label="Wybierz wersję programu TAGRA według liczby pojazdów"><p class="tsel__t">Która wersja TAGRA pasuje do Państwa floty?</p><p class="tsel__q">Ile pojazdów posiada tachograf?</p><div class="tsel__row tsel__row--5"><a class="tsel__o is-on" href="https://shop.tagra.app/tagra-1/" data-k="t1" data-cap="1 pojazd" aria-current="true" hreflang="en"><b>1</b><small>TAGRA 1</small></a><a class="tsel__o" href="https://shop.tagra.app/tagra-2/" data-k="t2" data-cap="2 pojazdy" hreflang="en"><b>2</b><small>TAGRA 2</small></a><a class="tsel__o" href="https://shop.tagra.app/tagra-4/" data-k="t4" data-cap="3–4 pojazdy" hreflang="en"><b>3–4</b><small>TAGRA 4</small></a><a class="tsel__o" href="https://shop.tagra.app/tagra-6/" data-k="t6" data-cap="5–6 pojazdów" hreflang="en"><b>5–6</b><small>TAGRA 6</small></a><a class="tsel__o" href="https://shop.tagra.app/tagra-max/" data-k="max" data-cap="Bez limitu pojazdów" hreflang="en"><b>7+</b><small>TAGRA MAX</small></a></div><p class="tsel__q">Urządzenie do pobierania danych</p><div class="tsel__row tsel__row--2"><a class="tsel__o is-on" href="https://shop.tagra.app/tagra-1/" data-dev="none" aria-current="true" hreflang="en"><b>Tylko program</b></a><a class="tsel__o" href="https://shop.tagra.app/tagra-1-download-box-ii-s/" data-dev="box" hreflang="en"><b>Program + DOWNLOAD BOX II S</b><small data-save="zestaw · taniej o {save}">zestaw · taniej o 49 €</small></a></div><div class="tsel__res" aria-live="polite"><div class="tsel__head"><span class="tsel__lbl">Polecana wersja</span><strong class="tsel__name">TAGRA 1</strong><span class="tsel__cap">1 pojazd</span></div><p class="tsel__price"><span class="tsel__amt">149 €</span><span class="tsel__vat">netto</span></p><p class="tsel__fee">Pierwszy rok w cenie · od 2. roku: 79 € / rok</p><p class="tsel__note" hidden></p><div class="tsel__acts"><a class="btn-cta tsel__cta" href="https://shop.tagra.app/tagra-1/" data-product="tagra-1" hreflang="en">Kup TAGRA 1 w sklepie TAGRA Shop</a></div><p class="tsel__more">Tylko własna karta kierowcy? <a href="/pl/dla-kierowcow/">TAGRA TRUCKER dla 1 kierowcy lub podwójnej obsady →</a></p></div></div>
+<!-- /tsel:fleet -->
+</div>
 <!-- Version price table -->
 <div class="price-table-wrap" style="width:100%;overflow-x:auto;margin-bottom:24px">
 <table class="price-table" style="width:100%;border-collapse:collapse;font-size:16px">
@@ -987,6 +994,13 @@
 <td style="padding:12px;text-align:right;font-weight:600" data-label="Cena zakupu">49 € <span style="font-size:13px;color:var(--text2)">netto</span></td>
 <td style="padding:12px;text-align:right;color:var(--green-brand);font-weight:700" data-label="Od 2. roku">19 € / rok</td>
 <td style="padding:12px;text-align:right"><a aria-label="Kup w sklepie: TAGRA Trucker" class="btn-outline btn-cta--sm" href="https://shop.tagra.app/tagra-trucker/" hreflang="en" style="white-space:nowrap">Kup w sklepie</a></td>
+</tr>
+<tr style="border-bottom:1px solid var(--border)">
+<td style="padding:12px;font-weight:700;color:var(--text-strong)">TAGRA TRUCKER 2<span class="t3p-rownote">dla podwójnej obsady · 1 czytnik USB</span></td>
+<td style="padding:12px;color:var(--text2)" data-label="Pojazdy">2 kierowców</td>
+<td style="padding:12px;text-align:right;font-weight:600" data-label="Cena zakupu">88,62 € <span style="font-size:13px;color:var(--text2)">netto</span></td>
+<td style="padding:12px;text-align:right;color:var(--green-brand);font-weight:700" data-label="Od 2. roku">29 € / rok</td>
+<td style="padding:12px;text-align:right"><a aria-label="Kup w sklepie: TAGRA TRUCKER 2" class="btn-outline btn-cta--sm" href="/go/tagra-trucker-2/" style="white-space:nowrap">Kup w sklepie</a></td>
 </tr>
 <tr style="border-bottom:1px solid var(--border)">
 <td style="padding:12px;font-weight:700;color:var(--text-strong)">TAGRA 1</td>
@@ -1105,7 +1119,7 @@
 </details>
 <details>
 <summary>Co obejmuje roczna opłata licencyjna?</summary>
-<div class="faq-a">Roczna opłata obejmuje dalsze licencjonowanie, aktualizacje oprogramowania i wsparcie techniczne. Pierwszy rok jest wliczony w cenę zakupu; od 2. roku opłata wynosi <strong>19 €/rok</strong> (TAGRA Trucker), <strong>79 €/rok</strong> (TAGRA 1–2), <strong>99 €/rok</strong> (TAGRA 4–6) lub <strong>149 €/rok</strong> (TAGRA MAX), wszystkie kwoty netto.</div>
+<div class="faq-a">Roczna opłata obejmuje dalsze licencjonowanie, aktualizacje oprogramowania i wsparcie techniczne. Pierwszy rok jest wliczony w cenę zakupu; od 2. roku opłata wynosi <strong>19 €/rok</strong> (TAGRA Trucker), <strong>29 €/rok</strong> (TAGRA TRUCKER 2), <strong>79 €/rok</strong> (TAGRA 1–2), <strong>99 €/rok</strong> (TAGRA 4–6) lub <strong>149 €/rok</strong> (TAGRA MAX), wszystkie kwoty netto.</div>
 </details>
 <details>
 <summary>Czy TAGRA jest gotowa na obowiązek dla busów od lipca 2026?</summary>
@@ -1384,7 +1398,7 @@
   "url": "https://tagra.app/pl/dla-przewoznikow/",
   "inLanguage": "pl",
   "author": { "@type": "Organization", "@id": "https://tagra.app/#organization", "name": "Truck Data Technology, s.r.o.", "url": "https://www.tdt.cz" },
-  "offers": { "@type": "AggregateOffer", "priceCurrency": "EUR", "lowPrice": "49", "highPrice": "749", "offerCount": "6", "availability": "https://schema.org/InStock", "description": "Cena zakupu obejmuje pierwszy rok aktualizacji i wsparcia. Od 2. roku obowiązuje opłata roczna 19–149 €, aby program pozostał aktywny." }
+  "offers": { "@type": "AggregateOffer", "priceCurrency": "EUR", "lowPrice": "49", "highPrice": "749", "offerCount": "7", "availability": "https://schema.org/InStock", "description": "Cena zakupu obejmuje pierwszy rok aktualizacji i wsparcia. Od 2. roku obowiązuje opłata roczna 19–149 €, aby program pozostał aktywny." }
 }
 </script>
 <script type="application/ld+json">
@@ -1470,7 +1484,7 @@
       "name": "Co obejmuje roczna opłata licencyjna?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Roczna opłata obejmuje dalsze licencjonowanie, aktualizacje oprogramowania i wsparcie techniczne. Pierwszy rok jest wliczony w cenę zakupu; od 2. roku opłata wynosi 19 €/rok (TAGRA Trucker), 79 €/rok (TAGRA 1–2), 99 €/rok (TAGRA 4–6) lub 149 €/rok (TAGRA MAX), wszystkie kwoty netto."
+        "text": "Roczna opłata obejmuje dalsze licencjonowanie, aktualizacje oprogramowania i wsparcie techniczne. Pierwszy rok jest wliczony w cenę zakupu; od 2. roku opłata wynosi 19 €/rok (TAGRA Trucker), 29 €/rok (TAGRA TRUCKER 2), 79 €/rok (TAGRA 1–2), 99 €/rok (TAGRA 4–6) lub 149 €/rok (TAGRA MAX), wszystkie kwoty netto."
       }
     },
     {

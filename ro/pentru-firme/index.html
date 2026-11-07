@@ -550,7 +550,7 @@
 <link href="/assets/css/nav.css" rel="stylesheet"/>
 <script defer="" src="/assets/js/nav.js?v=20261008a"></script><script defer="" src="/assets/js/analytics.js?v=20261103a"></script>
 <link href="/assets/css/footer.css" rel="stylesheet"/><link href="/assets/css/t3-promo.css?v=20261103" rel="stylesheet"/>
-</head>
+<link href="/assets/css/tagra-selector.css?v=20261107" rel="stylesheet"/><script defer="" src="/assets/js/tagra-prices.js?v=20261107"></script><script defer="" src="/assets/js/tagra-selector.js?v=20261107"></script></head>
 <body>
 <a class="skip-link" href="#main-content">Salt la conținut</a>
 <div aria-hidden="true" id="scroll-progress"></div>
@@ -579,16 +579,18 @@
 </div>
 </nav>
 <!-- ═══ HERO ══════════════════════════════════════════════════════ -->
-<section id="main-content" aria-label="Prezentare generală TAGRA" class="band band--hero band--hero--blue">
+<section id="main-content" aria-label="Prezentare generală TAGRA" class="band band--hero band--hero--blue tsel-hero">
 <div class="container">
 <div class="eyebrow anim-up"><span class="t3-badge">Nou</span>TAGRA III · Pentru operatorii de flote</div>
 <h1 class="anim-up" style="transition-delay:.05s">Analiza tahografului care identifică mai întâi<br/>contravențiile</h1>
 <p class="lead anim-up" style="transition-delay:.1s">
 <strong>TAGRA III este cea mai nouă generație a programului consacrat TAGRA pentru flote.</strong> O singură vedere de ansamblu arată ce necesită atenția dumneavoastră — încălcări, descărcări de pe carduri și vehicule, carduri și calibrări care expiră — înainte ca un control să le depisteze. Fiecare încălcare este însoțită de o trimitere la regulament și de o recomandare. Se adaptează de la un vehicul la un număr nelimitat de vehicule.
     </p>
-<div class="anim-up" style="margin-bottom:16px;transition-delay:.15s;display:flex;flex-wrap:wrap;justify-content:center;gap:12px">
+<!-- tsel:fleet-hero -->
+<div class="tsel tsel--hero" data-tsel="fleet" data-fmt="{n} €" data-dec="," data-fee="Primul an inclus · din anul 2: {fee} / an" data-cta="Cumpărați {name} din TAGRA Shop" role="group" aria-label="Alegeți versiunea TAGRA după numărul de vehicule"><p class="tsel__q">Câte vehicule sunt echipate cu tahograf?</p><div class="tsel__row tsel__row--5"><a class="tsel__o is-on" href="https://shop.tagra.app/tagra-1/" data-k="t1" data-cap="1 vehicul" aria-current="true" hreflang="en"><b>1</b><small>TAGRA 1</small></a><a class="tsel__o" href="https://shop.tagra.app/tagra-2/" data-k="t2" data-cap="2 vehicule" hreflang="en"><b>2</b><small>TAGRA 2</small></a><a class="tsel__o" href="https://shop.tagra.app/tagra-4/" data-k="t4" data-cap="3–4 vehicule" hreflang="en"><b>3–4</b><small>TAGRA 4</small></a><a class="tsel__o" href="https://shop.tagra.app/tagra-6/" data-k="t6" data-cap="5–6 vehicule" hreflang="en"><b>5–6</b><small>TAGRA 6</small></a><a class="tsel__o" href="https://shop.tagra.app/tagra-max/" data-k="max" data-cap="Vehicule nelimitate" hreflang="en"><b>7+</b><small>TAGRA MAX</small></a></div><div class="tsel__res" aria-live="polite"><div class="tsel__head"><span class="tsel__lbl">Recomandat pentru dvs.</span><strong class="tsel__name">TAGRA 1</strong><span class="tsel__cap">1 vehicul</span></div><p class="tsel__price"><span class="tsel__amt">149 €</span><span class="tsel__vat">fără TVA</span></p><p class="tsel__fee">Primul an inclus · din anul 2: 79 € / an</p><div class="tsel__acts"><a class="btn-cta tsel__cta" href="https://shop.tagra.app/tagra-1/" data-product="tagra-1" hreflang="en">Cumpărați TAGRA 1 din TAGRA Shop</a></div></div></div>
+<!-- /tsel:fleet-hero -->
+<div class="anim-up tsel-hero__cta" style="margin-bottom:16px;transition-delay:.15s;display:flex;flex-wrap:wrap;justify-content:center;gap:12px">
 <a class="btn-cta" href="/ro/incercare-gratuita/?audience=fleet" rel="noopener" target="_blank">Încercați gratuit timp de 30 de zile</a>
-<a class="btn-outline" href="https://shop.tagra.app/tagra-software/" hreflang="en">Cumpărați în magazin</a>
 </div>
 <p class="anim-up" style="font-size:15px;color:var(--text2);transition-delay:.2s">Windows · Perioadă de probă gratuită de 30 de zile · Pregătit pentru autoutilitare din iulie 2026</p>
 <!-- Hero: TAGRA III screenshot -->
@@ -620,7 +622,7 @@
 <div class="bc s4 greenfill fly-left" style="transition-delay:.15s">
 <div class="eyebrow">Începând din anul 2</div>
 <div class="bc-title" style="color:var(--green-brand)">de la 79 € / an</div>
-<div class="bc-text">Taxă anuală de licență fără TVA — include toate actualizările software și asistență tehnică dedicată. 19 € (TAGRA Trucker), 79 € (TAGRA 1–2), 99 € (TAGRA 4–6), 149 € (TAGRA MAX).</div>
+<div class="bc-text">Taxă anuală de licență fără TVA — include toate actualizările software și asistență tehnică dedicată. 19 € (TAGRA Trucker), 29 € (TAGRA TRUCKER 2), 79 € (TAGRA 1–2), 99 € (TAGRA 4–6), 149 € (TAGRA MAX).</div>
 </div>
 <div class="bc s4 anim-up" style="transition-delay:.25s">
 <div class="eyebrow">Pregătit pentru</div>
@@ -967,6 +969,11 @@
 <div class="eyebrow">Preț &amp; condiții</div>
 <h2 style="text-transform:none">Prețuri transparente.<br/>Fără taxe ascunse.</h2>
 <p style="margin:16px 0 24px">Începeți cu perioada de probă gratuită. Când sunteți gata, selectați versiunea direct din software și plătiți online — licența dumneavoastră este emisă instantaneu. Sunteți gata să începeți? Comandați online acum în noul <a href="https://shop.tagra.app/tagra-software/" hreflang="en">TAGRA Shop</a>.</p>
+<div class="tsel-pricing">
+<!-- tsel:fleet -->
+<div class="tsel tsel--fleet" data-tsel="fleet" id="tagra-selector" data-fmt="{n} €" data-dec="," data-fee="Primul an inclus · din anul 2: {fee} / an" data-note-box="Include cheia de descărcare DOWNLOAD BOX II S. Livrare în UE: tarif fix {ship} cu TVA." data-cta="Cumpărați {name} din TAGRA Shop" role="group" aria-label="Alegeți versiunea TAGRA după numărul de vehicule"><p class="tsel__t">Ce versiune TAGRA se potrivește flotei dvs.?</p><p class="tsel__q">Câte vehicule sunt echipate cu tahograf?</p><div class="tsel__row tsel__row--5"><a class="tsel__o is-on" href="https://shop.tagra.app/tagra-1/" data-k="t1" data-cap="1 vehicul" aria-current="true" hreflang="en"><b>1</b><small>TAGRA 1</small></a><a class="tsel__o" href="https://shop.tagra.app/tagra-2/" data-k="t2" data-cap="2 vehicule" hreflang="en"><b>2</b><small>TAGRA 2</small></a><a class="tsel__o" href="https://shop.tagra.app/tagra-4/" data-k="t4" data-cap="3–4 vehicule" hreflang="en"><b>3–4</b><small>TAGRA 4</small></a><a class="tsel__o" href="https://shop.tagra.app/tagra-6/" data-k="t6" data-cap="5–6 vehicule" hreflang="en"><b>5–6</b><small>TAGRA 6</small></a><a class="tsel__o" href="https://shop.tagra.app/tagra-max/" data-k="max" data-cap="Vehicule nelimitate" hreflang="en"><b>7+</b><small>TAGRA MAX</small></a></div><p class="tsel__q">Dispozitiv de descărcare</p><div class="tsel__row tsel__row--2"><a class="tsel__o is-on" href="https://shop.tagra.app/tagra-1/" data-dev="none" aria-current="true" hreflang="en"><b>Doar programul</b></a><a class="tsel__o" href="https://shop.tagra.app/tagra-1-download-box-ii-s/" data-dev="box" hreflang="en"><b>Program + DOWNLOAD BOX II S</b><small data-save="pachet · economisiți {save}">pachet · economisiți 49 €</small></a></div><div class="tsel__res" aria-live="polite"><div class="tsel__head"><span class="tsel__lbl">Recomandat pentru dvs.</span><strong class="tsel__name">TAGRA 1</strong><span class="tsel__cap">1 vehicul</span></div><p class="tsel__price"><span class="tsel__amt">149 €</span><span class="tsel__vat">fără TVA</span></p><p class="tsel__fee">Primul an inclus · din anul 2: 79 € / an</p><p class="tsel__note" hidden></p><div class="tsel__acts"><a class="btn-cta tsel__cta" href="https://shop.tagra.app/tagra-1/" data-product="tagra-1" hreflang="en">Cumpărați TAGRA 1 din TAGRA Shop</a></div><p class="tsel__more">Doar pentru propriul card de conducător auto? <a href="/ro/pentru-conducatori/">TAGRA TRUCKER pentru 1 conducător auto sau un echipaj de doi →</a></p></div></div>
+<!-- /tsel:fleet -->
+</div>
 <!-- Version price table -->
 <div class="price-table-wrap" style="width:100%;overflow-x:auto;margin-bottom:24px">
 <table class="price-table" style="width:100%;border-collapse:collapse;font-size:16px">
@@ -986,6 +993,13 @@
 <td data-label="Preț de achiziție" style="padding:12px;text-align:right;font-weight:600">€49 <span style="font-size:13px;color:var(--text2)">fără TVA</span></td>
 <td data-label="Începând din anul 2" style="padding:12px;text-align:right;color:var(--green-brand);font-weight:700">19 € / an</td>
 <td style="padding:12px;text-align:right"><a aria-label="Cumpărați în magazin: TAGRA Trucker" class="btn-outline btn-cta--sm" href="https://shop.tagra.app/tagra-trucker/" hreflang="en" style="white-space:nowrap">Cumpărați în magazin</a></td>
+</tr>
+<tr style="border-bottom:1px solid var(--border)">
+<td style="padding:12px;font-weight:700;color:var(--text-strong)">TAGRA TRUCKER 2<span class="t3p-rownote">pentru echipaj de doi · 1 cititor USB</span></td>
+<td data-label="Vehicule" style="padding:12px;color:var(--text2)">2 conducători auto</td>
+<td data-label="Preț de achiziție" style="padding:12px;text-align:right;font-weight:600">€88,62 <span style="font-size:13px;color:var(--text2)">fără TVA</span></td>
+<td data-label="Începând din anul 2" style="padding:12px;text-align:right;color:var(--green-brand);font-weight:700">29 € / an</td>
+<td style="padding:12px;text-align:right"><a aria-label="Cumpărați în magazin: TAGRA TRUCKER 2" class="btn-outline btn-cta--sm" href="/go/tagra-trucker-2/" style="white-space:nowrap">Cumpărați în magazin</a></td>
 </tr>
 <tr style="border-bottom:1px solid var(--border)">
 <td style="padding:12px;font-weight:700;color:var(--text-strong)">TAGRA 1</td>
@@ -1104,7 +1118,7 @@
 </details>
 <details>
 <summary>Ce acoperă taxa anuală de licență?</summary>
-<div class="faq-a">Taxa anuală acoperă menținerea licenței, actualizările software și asistența tehnică. Primul an este inclus în prețul de achiziție; începând cu anul 2, taxa este de <strong>€19/an</strong> (TAGRA Trucker), <strong>€79/an</strong> (TAGRA 1–2), <strong>€99/an</strong> (TAGRA 4–6) sau <strong>€149/an</strong> (TAGRA MAX), toate fără TVA.</div>
+<div class="faq-a">Taxa anuală acoperă menținerea licenței, actualizările software și asistența tehnică. Primul an este inclus în prețul de achiziție; începând cu anul 2, taxa este de <strong>€19/an</strong> (TAGRA Trucker), <strong>€29/an</strong> (TAGRA TRUCKER 2), <strong>€79/an</strong> (TAGRA 1–2), <strong>€99/an</strong> (TAGRA 4–6) sau <strong>€149/an</strong> (TAGRA MAX), toate fără TVA.</div>
 </details>
 <details>
 <summary>Este TAGRA pregătit pentru obligația privind autoutilitarele din iulie 2026?</summary>
@@ -1383,7 +1397,7 @@
   "url": "https://tagra.app/ro/pentru-firme/",
   "inLanguage": "ro",
   "author": { "@type": "Organization", "@id": "https://tagra.app/#organization", "name": "Truck Data Technology, s.r.o.", "url": "https://www.tdt.cz" },
-  "offers": { "@type": "AggregateOffer", "priceCurrency": "EUR", "lowPrice": "49", "highPrice": "749", "offerCount": "6", "availability": "https://schema.org/InStock", "description": "Prețul de achiziție include primul an de actualizări și asistență. Începând cu anul 2, se aplică o taxă anuală de 19–149 EUR pentru menținerea activă a software-ului." }
+  "offers": { "@type": "AggregateOffer", "priceCurrency": "EUR", "lowPrice": "49", "highPrice": "749", "offerCount": "7", "availability": "https://schema.org/InStock", "description": "Prețul de achiziție include primul an de actualizări și asistență. Începând cu anul 2, se aplică o taxă anuală de 19–149 EUR pentru menținerea activă a software-ului." }
 }
 </script>
 <script type="application/ld+json">
@@ -1469,7 +1483,7 @@
       "name": "Ce acoperă taxa anuală de licență?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Taxa anuală acoperă menținerea licenței, actualizările software și asistența tehnică. Primul an este inclus în prețul de achiziție; începând cu anul 2, taxa este de €19/an (TAGRA Trucker), €79/an (TAGRA 1–2), €99/an (TAGRA 4–6) sau €149/an (TAGRA MAX), toate fără TVA."
+        "text": "Taxa anuală acoperă menținerea licenței, actualizările software și asistența tehnică. Primul an este inclus în prețul de achiziție; începând cu anul 2, taxa este de €19/an (TAGRA Trucker), €29/an (TAGRA TRUCKER 2), €79/an (TAGRA 1–2), €99/an (TAGRA 4–6) sau €149/an (TAGRA MAX), toate fără TVA."
       }
     },
     {

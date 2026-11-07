@@ -550,7 +550,7 @@
 <link href="/assets/css/nav.css" rel="stylesheet"/>
 <script defer="" src="/assets/js/nav.js?v=20261008a"></script><script defer="" src="/assets/js/analytics.js?v=20261103a"></script>
 <link href="/assets/css/footer.css" rel="stylesheet"/><link href="/assets/css/t3-promo.css?v=20261103" rel="stylesheet"/>
-</head>
+<link href="/assets/css/tagra-selector.css?v=20261107" rel="stylesheet"/><script defer="" src="/assets/js/tagra-prices.js?v=20261107"></script><script defer="" src="/assets/js/tagra-selector.js?v=20261107"></script></head>
 <body>
 <a class="skip-link" href="#main-content">Passer au contenu</a>
 <div aria-hidden="true" id="scroll-progress"></div>
@@ -579,16 +579,18 @@
 </div>
 </nav>
 <!-- ═══ HERO ══════════════════════════════════════════════════════ -->
-<section id="main-content" aria-label="Présentation de TAGRA" class="band band--hero band--hero--blue">
+<section id="main-content" aria-label="Présentation de TAGRA" class="band band--hero band--hero--blue tsel-hero">
 <div class="container">
 <div class="eyebrow anim-up"><span class="t3-badge">Nouveau</span>TAGRA III · Pour les exploitants de flottes</div>
 <h1 class="anim-up" style="transition-delay:.05s">L'analyse des tachygraphes qui détecte<br/>les infractions en premier</h1>
 <p class="lead anim-up" style="transition-delay:.1s">
 <strong>TAGRA III est la dernière génération du programme éprouvé TAGRA pour les flottes.</strong> Une vue d’ensemble vous indique les points qui nécessitent votre attention — infractions, téléchargements des cartes et des véhicules, cartes et étalonnages arrivant à échéance — avant qu’un contrôle ne les relève. Chaque infraction est accompagnée de la référence au règlement et d’une recommandation. S’adapte à votre flotte, d’un véhicule à un nombre illimité.
     </p>
-<div class="anim-up" style="margin-bottom:16px;transition-delay:.15s;display:flex;flex-wrap:wrap;justify-content:center;gap:12px">
+<!-- tsel:fleet-hero -->
+<div class="tsel tsel--hero" data-tsel="fleet" data-fmt="{n} €" data-dec="," data-fee="1re année incluse · dès la 2e année : {fee} / an" data-cta="Acheter {name} sur TAGRA Shop" role="group" aria-label="Choisissez votre version de TAGRA selon le nombre de véhicules"><p class="tsel__q">Combien de véhicules sont équipés d’un tachygraphe ?</p><div class="tsel__row tsel__row--5"><a class="tsel__o is-on" href="https://shop.tagra.app/tagra-1/" data-k="t1" data-cap="1 véhicule" aria-current="true" hreflang="en"><b>1</b><small>TAGRA 1</small></a><a class="tsel__o" href="https://shop.tagra.app/tagra-2/" data-k="t2" data-cap="2 véhicules" hreflang="en"><b>2</b><small>TAGRA 2</small></a><a class="tsel__o" href="https://shop.tagra.app/tagra-4/" data-k="t4" data-cap="3–4 véhicules" hreflang="en"><b>3–4</b><small>TAGRA 4</small></a><a class="tsel__o" href="https://shop.tagra.app/tagra-6/" data-k="t6" data-cap="5–6 véhicules" hreflang="en"><b>5–6</b><small>TAGRA 6</small></a><a class="tsel__o" href="https://shop.tagra.app/tagra-max/" data-k="max" data-cap="Véhicules illimités" hreflang="en"><b>7+</b><small>TAGRA MAX</small></a></div><div class="tsel__res" aria-live="polite"><div class="tsel__head"><span class="tsel__lbl">Recommandé pour vous</span><strong class="tsel__name">TAGRA 1</strong><span class="tsel__cap">1 véhicule</span></div><p class="tsel__price"><span class="tsel__amt">149 €</span><span class="tsel__vat">hors TVA</span></p><p class="tsel__fee">1re année incluse · dès la 2e année : 79 € / an</p><div class="tsel__acts"><a class="btn-cta tsel__cta" href="https://shop.tagra.app/tagra-1/" data-product="tagra-1" hreflang="en">Acheter TAGRA 1 sur TAGRA Shop</a></div></div></div>
+<!-- /tsel:fleet-hero -->
+<div class="anim-up tsel-hero__cta" style="margin-bottom:16px;transition-delay:.15s;display:flex;flex-wrap:wrap;justify-content:center;gap:12px">
 <a class="btn-cta" href="/fr/essai-gratuit/?audience=fleet" rel="noopener" target="_blank">Essayer gratuitement pendant 30 jours</a>
-<a class="btn-outline" href="https://shop.tagra.app/tagra-software/" hreflang="en">Acheter dans la boutique</a>
 </div>
 <p class="anim-up" style="font-size:15px;color:var(--text2);transition-delay:.2s">Windows · Essai gratuit de 30 jours · Prêt pour les véhicules utilitaires à partir de juillet 2026</p>
 <!-- Hero: TAGRA III screenshot -->
@@ -620,7 +622,7 @@
 <div class="bc s4 greenfill fly-left" style="transition-delay:.15s">
 <div class="eyebrow">Dès la 2e année</div>
 <div class="bc-title" style="color:var(--green-brand)">à partir de 79 € / an</div>
-<div class="bc-text">Frais de licence annuels hors TVA — incluent toutes les mises à jour logicielles et une assistance technique dédiée. 19 € (TAGRA Trucker), 79 € (TAGRA 1–2), 99 € (TAGRA 4–6), 149 € (TAGRA MAX).</div>
+<div class="bc-text">Frais de licence annuels hors TVA — incluent toutes les mises à jour logicielles et une assistance technique dédiée. 19 € (TAGRA Trucker), 29 € (TAGRA TRUCKER 2), 79 € (TAGRA 1–2), 99 € (TAGRA 4–6), 149 € (TAGRA MAX).</div>
 </div>
 <div class="bc s4 anim-up" style="transition-delay:.25s">
 <div class="eyebrow">Prêt pour les</div>
@@ -965,6 +967,11 @@
 <div class="eyebrow">Tarifs et conditions</div>
 <h2 style="text-transform:none">Des tarifs transparents.<br/>Aucuns frais cachés.</h2>
 <p style="margin:16px 0 24px">Commencez par l'essai gratuit. Lorsque vous êtes prêt, sélectionnez votre version directement dans le logiciel et payez en ligne — votre licence est délivrée instantanément. Prêt à vous lancer ? Commandez en ligne dans la nouvelle boutique <a href="https://shop.tagra.app/tagra-software/" hreflang="en">TAGRA Shop</a>.</p>
+<div class="tsel-pricing">
+<!-- tsel:fleet -->
+<div class="tsel tsel--fleet" data-tsel="fleet" id="tagra-selector" data-fmt="{n} €" data-dec="," data-fee="1re année incluse · dès la 2e année : {fee} / an" data-note-box="Clé de téléchargement DOWNLOAD BOX II S incluse. Livraison dans toute l’UE : forfait {ship} TTC." data-cta="Acheter {name} sur TAGRA Shop" role="group" aria-label="Choisissez votre version de TAGRA selon le nombre de véhicules"><p class="tsel__t">Quelle version de TAGRA pour votre flotte ?</p><p class="tsel__q">Combien de véhicules sont équipés d’un tachygraphe ?</p><div class="tsel__row tsel__row--5"><a class="tsel__o is-on" href="https://shop.tagra.app/tagra-1/" data-k="t1" data-cap="1 véhicule" aria-current="true" hreflang="en"><b>1</b><small>TAGRA 1</small></a><a class="tsel__o" href="https://shop.tagra.app/tagra-2/" data-k="t2" data-cap="2 véhicules" hreflang="en"><b>2</b><small>TAGRA 2</small></a><a class="tsel__o" href="https://shop.tagra.app/tagra-4/" data-k="t4" data-cap="3–4 véhicules" hreflang="en"><b>3–4</b><small>TAGRA 4</small></a><a class="tsel__o" href="https://shop.tagra.app/tagra-6/" data-k="t6" data-cap="5–6 véhicules" hreflang="en"><b>5–6</b><small>TAGRA 6</small></a><a class="tsel__o" href="https://shop.tagra.app/tagra-max/" data-k="max" data-cap="Véhicules illimités" hreflang="en"><b>7+</b><small>TAGRA MAX</small></a></div><p class="tsel__q">Appareil de téléchargement</p><div class="tsel__row tsel__row--2"><a class="tsel__o is-on" href="https://shop.tagra.app/tagra-1/" data-dev="none" aria-current="true" hreflang="en"><b>Logiciel seul</b></a><a class="tsel__o" href="https://shop.tagra.app/tagra-1-download-box-ii-s/" data-dev="box" hreflang="en"><b>Logiciel + DOWNLOAD BOX II S</b><small data-save="pack · économisez {save}">pack · économisez 49 €</small></a></div><div class="tsel__res" aria-live="polite"><div class="tsel__head"><span class="tsel__lbl">Recommandé pour vous</span><strong class="tsel__name">TAGRA 1</strong><span class="tsel__cap">1 véhicule</span></div><p class="tsel__price"><span class="tsel__amt">149 €</span><span class="tsel__vat">hors TVA</span></p><p class="tsel__fee">1re année incluse · dès la 2e année : 79 € / an</p><p class="tsel__note" hidden></p><div class="tsel__acts"><a class="btn-cta tsel__cta" href="https://shop.tagra.app/tagra-1/" data-product="tagra-1" hreflang="en">Acheter TAGRA 1 sur TAGRA Shop</a></div><p class="tsel__more">Uniquement votre propre carte conducteur ? <a href="/fr/conducteurs/">TAGRA TRUCKER pour 1 conducteur ou un double équipage →</a></p></div></div>
+<!-- /tsel:fleet -->
+</div>
 <!-- Version price table -->
 <div class="price-table-wrap" style="width:100%;overflow-x:auto;margin-bottom:24px">
 <table class="price-table" style="width:100%;border-collapse:collapse;font-size:16px">
@@ -984,6 +991,13 @@
 <td data-label="Prix d'achat" style="padding:12px;text-align:right;font-weight:600">€49 <span style="font-size:13px;color:var(--text2)">hors TVA</span></td>
 <td data-label="Dès la 2e année" style="padding:12px;text-align:right;color:var(--green-brand);font-weight:700">19 € / an</td>
 <td style="padding:12px;text-align:right"><a aria-label="Acheter dans la boutique: TAGRA Trucker" class="btn-outline btn-cta--sm" href="https://shop.tagra.app/tagra-trucker/" hreflang="en" style="white-space:nowrap">Acheter dans la boutique</a></td>
+</tr>
+<tr style="border-bottom:1px solid var(--border)">
+<td style="padding:12px;font-weight:700;color:var(--text-strong)">TAGRA TRUCKER 2<span class="t3p-rownote">pour un double équipage · 1 lecteur USB</span></td>
+<td data-label="Véhicules" style="padding:12px;color:var(--text2)">2 conducteurs</td>
+<td data-label="Prix d'achat" style="padding:12px;text-align:right;font-weight:600">€88,62 <span style="font-size:13px;color:var(--text2)">hors TVA</span></td>
+<td data-label="Dès la 2e année" style="padding:12px;text-align:right;color:var(--green-brand);font-weight:700">29 € / an</td>
+<td style="padding:12px;text-align:right"><a aria-label="Acheter dans la boutique: TAGRA TRUCKER 2" class="btn-outline btn-cta--sm" href="/go/tagra-trucker-2/" style="white-space:nowrap">Acheter dans la boutique</a></td>
 </tr>
 <tr style="border-bottom:1px solid var(--border)">
 <td style="padding:12px;font-weight:700;color:var(--text-strong)">TAGRA 1</td>
@@ -1102,7 +1116,7 @@
 </details>
 <details>
 <summary>Que couvre la redevance annuelle de licence ?</summary>
-<div class="faq-a">La redevance annuelle couvre le maintien de la licence, les mises à jour du logiciel et l'assistance technique. La première année est incluse dans le prix d'achat ; à partir de la deuxième année, la redevance s'élève à <strong>19 €/an</strong> (TAGRA Trucker), <strong>79 €/an</strong> (TAGRA 1–2), <strong>99 €/an</strong> (TAGRA 4–6) ou <strong>149 €/an</strong> (TAGRA MAX), hors TVA dans tous les cas.</div>
+<div class="faq-a">La redevance annuelle couvre le maintien de la licence, les mises à jour du logiciel et l'assistance technique. La première année est incluse dans le prix d'achat ; à partir de la deuxième année, la redevance s'élève à <strong>19 €/an</strong> (TAGRA Trucker), <strong>29 €/an</strong> (TAGRA TRUCKER 2), <strong>79 €/an</strong> (TAGRA 1–2), <strong>99 €/an</strong> (TAGRA 4–6) ou <strong>149 €/an</strong> (TAGRA MAX), hors TVA dans tous les cas.</div>
 </details>
 <details>
 <summary>TAGRA est-il prêt pour l'obligation applicable aux véhicules utilitaires en juillet 2026 ?</summary>
@@ -1381,7 +1395,7 @@
   "url": "https://tagra.app/fr/entreprises/",
   "inLanguage": "fr",
   "author": { "@type": "Organization", "@id": "https://tagra.app/#organization", "name": "Truck Data Technology, s.r.o.", "url": "https://www.tdt.cz" },
-  "offers": { "@type": "AggregateOffer", "priceCurrency": "EUR", "lowPrice": "49", "highPrice": "749", "offerCount": "6", "availability": "https://schema.org/InStock", "description": "Le prix d'achat comprend la première année de mises à jour et d'assistance. Une redevance annuelle de 19–149 € s'applique à partir de la deuxième année pour maintenir le logiciel actif." }
+  "offers": { "@type": "AggregateOffer", "priceCurrency": "EUR", "lowPrice": "49", "highPrice": "749", "offerCount": "7", "availability": "https://schema.org/InStock", "description": "Le prix d'achat comprend la première année de mises à jour et d'assistance. Une redevance annuelle de 19–149 € s'applique à partir de la deuxième année pour maintenir le logiciel actif." }
 }
 </script>
 <script type="application/ld+json">
@@ -1467,7 +1481,7 @@
       "name": "Que couvre la redevance annuelle de licence ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "La redevance annuelle couvre le maintien de la licence, les mises à jour du logiciel et l'assistance technique. La première année est incluse dans le prix d'achat ; à partir de la deuxième année, la redevance s'élève à 19 €/an (TAGRA Trucker), 79 €/an (TAGRA 1–2), 99 €/an (TAGRA 4–6) ou 149 €/an (TAGRA MAX), hors TVA dans tous les cas."
+        "text": "La redevance annuelle couvre le maintien de la licence, les mises à jour du logiciel et l'assistance technique. La première année est incluse dans le prix d'achat ; à partir de la deuxième année, la redevance s'élève à 19 €/an (TAGRA Trucker), 29 €/an (TAGRA TRUCKER 2), 79 €/an (TAGRA 1–2), 99 €/an (TAGRA 4–6) ou 149 €/an (TAGRA MAX), hors TVA dans tous les cas."
       }
     },
     {

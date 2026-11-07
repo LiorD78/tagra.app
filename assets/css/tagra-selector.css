@@ -1,0 +1,82 @@
+/* TAGRA version selector v1.0 (7. 11. 2026) – tagra.app /fleet/ + /driver/ in all languages.
+   Markup: tools/tagra-selector.mjs · behaviour: assets/js/tagra-selector.js · prices: assets/js/tagra-prices.js
+   Same look as the shop.tagra.app version switcher (shop.css v6.1) and fleet calculator summary. */
+.tsel{--tsel-blue:var(--blue-dark,#0b2c4a);box-sizing:border-box;width:100%;max-width:640px;margin:0 auto;padding:18px;border-radius:22px;text-align:left;
+  border:1.5px solid rgba(19,74,142,.14);background:linear-gradient(180deg,#dcecf6 0%,#eaf3f8 45%,#f5f9fc 100%);font-variant-numeric:tabular-nums}
+.tsel *{box-sizing:border-box}
+.tsel__t{margin:0 0 4px!important;font-size:19px;line-height:1.25;font-weight:800;color:var(--tsel-blue)}
+.tsel__q{margin:0 0 8px!important;font-size:14.5px;line-height:1.3;font-weight:700;color:var(--tsel-blue)}
+.tsel__q+.tsel__row{margin-bottom:14px}
+.tsel__row{display:grid;gap:6px}
+.tsel__row--5{grid-template-columns:repeat(5,minmax(0,1fr))}
+.tsel__row--2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.tsel__o{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;min-width:0;min-height:54px;padding:6px 6px;border-radius:13px;background:#fff;
+  border:1.5px solid rgba(19,74,142,.16);color:var(--tsel-blue)!important;text-decoration:none!important;text-align:center;line-height:1.15;
+  transition:border-color .15s,box-shadow .15s,transform .15s,background .15s}
+a.tsel__o:hover{border-color:rgba(19,74,142,.45);transform:translateY(-1px)}
+a.tsel__o:focus-visible{outline:3px solid rgba(19,74,142,.35);outline-offset:2px}
+.tsel__o b{font-size:18px;font-weight:800;letter-spacing:-.01em;max-width:100%}
+.tsel__o small{font-size:11.5px;font-weight:600;color:var(--text2,#515154);max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tsel__row--2 .tsel__o b{font-size:14.5px;font-weight:700}
+.tsel__o.is-on{background:linear-gradient(135deg,var(--green-brand,#6E9B12) 0%,var(--green-cta,#5C820F) 100%);border-color:transparent;color:#fff!important;box-shadow:0 6px 16px rgba(110,155,18,.28)}
+.tsel__o.is-on small{color:rgba(255,255,255,.92)}
+/* recommendation */
+.tsel__res{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:4px 16px;margin-top:4px;padding:16px 18px;border-radius:18px;color:#e6f0f8;
+  background:linear-gradient(160deg,#0b2c4a 0%,#134a8e 70%,#1f5fa6 100%);box-shadow:0 14px 30px rgba(11,44,74,.18)}
+.tsel__head{grid-column:1;min-width:0}
+.tsel__lbl{display:block;font-size:11.5px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:#a9cbe8}
+.tsel__name{display:block;font-size:20px;line-height:1.2;font-weight:800;color:#fff}
+.tsel__cap{display:block;font-size:13.5px;line-height:1.35;color:#d6e6f4}
+.tsel__price{grid-column:2;grid-row:1;margin:0!important;text-align:right;white-space:nowrap;color:#fff}
+.tsel__amt{display:block;font-size:30px;line-height:1.05;font-weight:800;letter-spacing:-.02em;color:#fff}
+.tsel__vat{display:block;font-size:12.5px;font-weight:600;color:#a9cbe8}
+.tsel__fee,.tsel__note{grid-column:1/-1;margin:2px 0 0!important;font-size:13.5px;line-height:1.4;color:#d6e6f4}
+.tsel__note[hidden]{display:none}
+.tsel__acts{grid-column:1/-1;display:flex;flex-wrap:wrap;align-items:center;gap:8px 16px;margin-top:10px}
+.tsel .tsel__cta{justify-content:center;padding:13px 26px;font-size:16.5px;text-align:center;max-width:100%}
+.tsel__alt{font-size:14.5px;font-weight:600;color:#fff!important;text-decoration:underline;text-underline-offset:3px}
+.tsel__alt:hover{color:#c8e88a!important}
+.tsel__more{grid-column:1/-1;margin:8px 0 0!important;font-size:13.5px;color:#d6e6f4}
+.tsel__more a{color:#fff!important;font-weight:600;text-decoration:underline;text-underline-offset:3px}
+/* placement */
+.tsel--hero{margin:0 auto 22px;padding:14px}
+.tsel--hero .tsel__q{text-align:center}
+.tsel-pricing{margin:0 0 28px}
+@media (max-width:560px){
+  .tsel{padding:12px 10px;border-radius:18px}
+  .tsel__row--5{grid-template-columns:repeat(4,minmax(0,1fr)) minmax(0,1.3fr)}
+  .tsel__o{min-height:50px;padding:5px 1px}
+  .tsel__o b{font-size:16px}
+  .tsel__o small{font-size:9.5px;letter-spacing:-.01em}
+  .tsel__row--2 .tsel__o b{font-size:13px}
+  .tsel__res{padding:14px 14px;gap:2px 10px}
+  .tsel__name{font-size:18px}
+  .tsel__amt{font-size:26px}
+  .tsel__acts{margin-top:8px}
+  .tsel .tsel__cta{width:100%;padding:12px 18px;font-size:16px}
+  .tsel__alt{width:100%;text-align:center}
+}
+/* /fleet/ hero on phones: price + buy button directly under the H1 (avg. scroll there was 5 %) */
+@media (max-width:720px){
+  .tsel-hero .container{display:flex;flex-direction:column;align-items:center}
+  .tsel-hero .container>*{order:5;width:100%}
+  .tsel-hero .container>.eyebrow{order:1}
+  .tsel-hero .container>h1{order:2;width:auto;font-size:34px;margin-bottom:12px}
+  .tsel-hero .container>.tsel{order:3;margin-bottom:14px}
+  .tsel-hero .container>.tsel-hero__cta{order:4;margin-bottom:6px}
+  .tsel-hero .container>p.lead{margin-top:18px}
+}
+@media (max-width:560px){
+  .tsel--hero{padding:10px 10px 12px}
+  .tsel--hero .tsel__q{margin-bottom:6px!important;font-size:13.5px;letter-spacing:-.01em}
+  .tsel--hero .tsel__fee{font-size:12.5px}
+  .tsel--hero .tsel__res{padding:12px 14px}
+  .tsel--hero .tsel__cta{padding:11px 12px;font-size:15px}
+  .tsel--hero .tsel__lbl{display:none}
+  .tsel-hero .container>h1{margin-bottom:8px}
+}
+@media (max-width:420px){.tsel-hero .container>h1{font-size:30px}}
+@media (prefers-reduced-motion:reduce){.tsel__o{transition:none}a.tsel__o:hover{transform:none}}
+/* /driver/ hero: one line about TAGRA TRUCKER 2 */
+.tsel-t2line{max-width:620px;margin:2px auto 14px;font-size:15.5px;line-height:1.45;color:var(--text2,#515154)}
+.tsel-t2line a{font-weight:700;color:var(--blue-mid,#134a8e)}

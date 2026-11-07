@@ -546,7 +546,7 @@
 <link href="/assets/css/nav.css" rel="stylesheet"/>
 <script defer="" src="/assets/js/nav.js?v=20261008a"></script><script defer="" src="/assets/js/analytics.js?v=20261002b"></script>
 <link href="/assets/css/footer.css" rel="stylesheet"/><link href="/assets/css/hu.css?v=20261104" rel="stylesheet"/>
-</head>
+<link href="/assets/css/tagra-selector.css?v=20261107" rel="stylesheet"/><script defer="" src="/assets/js/tagra-prices.js?v=20261107"></script><script defer="" src="/assets/js/tagra-selector.js?v=20261107"></script></head>
 <body>
 <a class="skip-link" href="#main-content">Ugrás a tartalomhoz</a>
 <div aria-hidden="true" id="scroll-progress"></div>
@@ -575,14 +575,17 @@
 </div>
 </nav>
 <!-- ═══ HERO ══════════════════════════════════════════════════════ -->
-<section id="main-content" aria-label="TAGRA áttekintés" class="band band--hero band--hero--blue">
+<section id="main-content" aria-label="TAGRA áttekintés" class="band band--hero band--hero--blue tsel-hero">
 <div class="container">
 <div class="eyebrow anim-up"><span class="t3-badge">Új</span>TAGRA III · Flottaüzemeltetőknek</div>
 <h1 class="anim-up" style="transition-delay:.05s">Tachográfadatok kiértékelése,<br/>amely megelőzi az ellenőrzést</h1>
 <p class="lead anim-up" style="transition-delay:.1s">
 <strong>A TAGRA III a flották számára készült digitális menetíró-szoftverünk új generációja.</strong> Egyetlen áttekintés mutatja meg, mire kell Önnek figyelnie – jogsértések, kártya- és járműadat-letöltések, lejáró kártyák és kalibrálások –, még mielőtt egy ellenőrzés feltárná ezeket. Minden jogsértéshez jogszabályhivatkozás és ajánlás tartozik. Egy járműtől korlátlan számú járműig használható.
     </p>
-<div class="anim-up" style="margin-bottom:16px;transition-delay:.15s">
+<!-- tsel:fleet-hero -->
+<div class="tsel tsel--hero" data-tsel="fleet" data-fmt="{n} €" data-dec="," data-fee="Az 1. évet tartalmazza · 2. évtől: {fee} / év" data-cta="Ajánlatkérés: {name}" data-base="/hu/kapcsolat/?product=" role="group" aria-label="Válasszon TAGRA-verziót a járművek száma alapján"><p class="tsel__q">Hány tachográfos járművel rendelkezik?</p><div class="tsel__row tsel__row--5"><a class="tsel__o is-on" href="/hu/kapcsolat/?product=tagra-1" data-k="t1" data-cap="1 jármű" aria-current="true"><b>1</b><small>TAGRA 1</small></a><a class="tsel__o" href="/hu/kapcsolat/?product=tagra-2" data-k="t2" data-cap="2 jármű"><b>2</b><small>TAGRA 2</small></a><a class="tsel__o" href="/hu/kapcsolat/?product=tagra-4" data-k="t4" data-cap="3–4 jármű"><b>3–4</b><small>TAGRA 4</small></a><a class="tsel__o" href="/hu/kapcsolat/?product=tagra-6" data-k="t6" data-cap="5–6 jármű"><b>5–6</b><small>TAGRA 6</small></a><a class="tsel__o" href="/hu/kapcsolat/?product=tagra-max" data-k="max" data-cap="Korlátlan jármű"><b>7+</b><small>TAGRA MAX</small></a></div><div class="tsel__res" aria-live="polite"><div class="tsel__head"><span class="tsel__lbl">Önnek ajánlott</span><strong class="tsel__name">TAGRA 1</strong><span class="tsel__cap">1 jármű</span></div><p class="tsel__price"><span class="tsel__amt">149 €</span><span class="tsel__vat">ÁFA nélkül</span></p><p class="tsel__fee">Az 1. évet tartalmazza · 2. évtől: 79 € / év</p><div class="tsel__acts"><a class="btn-cta tsel__cta" href="/hu/kapcsolat/?product=tagra-1" data-product="tagra-1">Ajánlatkérés: TAGRA 1</a></div></div></div>
+<!-- /tsel:fleet-hero -->
+<div class="anim-up tsel-hero__cta" style="margin-bottom:16px;transition-delay:.15s">
 <a class="btn-cta" href="/hu/ingyenes-probaverzio/?audience=fleet" rel="noopener" target="_blank">Próbálja ki ingyen 30 napig</a>
 </div>
 <p class="anim-up" style="font-size:15px;color:var(--text2);transition-delay:.2s">Windows · Ingyenes, 30 napos próbaverzió · 2026 júliusától kisteherautókhoz is készen áll</p>
@@ -615,7 +618,7 @@
 <div class="bc s4 greenfill fly-left" style="transition-delay:.15s">
 <div class="eyebrow">2. évtől</div>
 <div class="bc-title" style="color:var(--green-brand)">79&nbsp;€/évtől</div>
-<div class="bc-text">Éves licencdíj ÁFA nélkül — tartalmazza az összes szoftverfrissítést és a dedikált műszaki támogatást. 19&nbsp;€ (TAGRA Trucker), 79&nbsp;€ (TAGRA 1–2), 99&nbsp;€ (TAGRA 4–6), 149&nbsp;€ (TAGRA MAX).</div>
+<div class="bc-text">Éves licencdíj ÁFA nélkül — tartalmazza az összes szoftverfrissítést és a dedikált műszaki támogatást. 19&nbsp;€ (TAGRA Trucker), 29&nbsp;€ (TAGRA TRUCKER 2), 79&nbsp;€ (TAGRA 1–2), 99&nbsp;€ (TAGRA 4–6), 149&nbsp;€ (TAGRA MAX).</div>
 </div>
 <div class="bc s4 anim-up" style="transition-delay:.25s">
 <div class="eyebrow">Készüljön fel a</div>
@@ -960,6 +963,11 @@
 <div class="eyebrow">Ár és feltételek</div>
 <h2 style="text-transform:none">Átlátható árazás.<br/>Nincs rejtett díj.</h2>
 <p style="margin:16px 0 24px">Kezdje az ingyenes próbaverzióval. Ha készen áll, válassza ki a verzióját közvetlenül a szoftveren belül, és fizessen online — a licencét azonnal kiállítjuk.</p>
+<div class="tsel-pricing">
+<!-- tsel:fleet -->
+<div class="tsel tsel--fleet" data-tsel="fleet" id="tagra-selector" data-fmt="{n} €" data-dec="," data-fee="Az 1. évet tartalmazza · 2. évtől: {fee} / év" data-note-box="Tartalmazza a DOWNLOAD BOX II S letöltőkulcsot. Szállítás az EU-ban: egységesen {ship} ÁFA-val." data-cta="Ajánlatkérés: {name}" data-base="/hu/kapcsolat/?product=" role="group" aria-label="Válasszon TAGRA-verziót a járművek száma alapján"><p class="tsel__t">Melyik TAGRA illik a flottájához?</p><p class="tsel__q">Hány tachográfos járművel rendelkezik?</p><div class="tsel__row tsel__row--5"><a class="tsel__o is-on" href="/hu/kapcsolat/?product=tagra-1" data-k="t1" data-cap="1 jármű" aria-current="true"><b>1</b><small>TAGRA 1</small></a><a class="tsel__o" href="/hu/kapcsolat/?product=tagra-2" data-k="t2" data-cap="2 jármű"><b>2</b><small>TAGRA 2</small></a><a class="tsel__o" href="/hu/kapcsolat/?product=tagra-4" data-k="t4" data-cap="3–4 jármű"><b>3–4</b><small>TAGRA 4</small></a><a class="tsel__o" href="/hu/kapcsolat/?product=tagra-6" data-k="t6" data-cap="5–6 jármű"><b>5–6</b><small>TAGRA 6</small></a><a class="tsel__o" href="/hu/kapcsolat/?product=tagra-max" data-k="max" data-cap="Korlátlan jármű"><b>7+</b><small>TAGRA MAX</small></a></div><p class="tsel__q">Adatletöltő eszköz</p><div class="tsel__row tsel__row--2"><a class="tsel__o is-on" href="/hu/kapcsolat/?product=tagra-1" data-dev="none" aria-current="true"><b>Csak a program</b></a><a class="tsel__o" href="/hu/kapcsolat/?product=tagra-1-download-box-ii-s" data-dev="box"><b>Program + DOWNLOAD BOX II S</b><small data-save="csomagban · megtakarítás: {save}">csomagban · megtakarítás: 49 €</small></a></div><div class="tsel__res" aria-live="polite"><div class="tsel__head"><span class="tsel__lbl">Önnek ajánlott</span><strong class="tsel__name">TAGRA 1</strong><span class="tsel__cap">1 jármű</span></div><p class="tsel__price"><span class="tsel__amt">149 €</span><span class="tsel__vat">ÁFA nélkül</span></p><p class="tsel__fee">Az 1. évet tartalmazza · 2. évtől: 79 € / év</p><p class="tsel__note" hidden></p><div class="tsel__acts"><a class="btn-cta tsel__cta" href="/hu/kapcsolat/?product=tagra-1" data-product="tagra-1">Ajánlatkérés: TAGRA 1</a></div><p class="tsel__more">Csak saját sofőrkártyát tölt le? <a href="/hu/soforoknek/">TAGRA TRUCKER 1 sofőrnek vagy négykezes járatra →</a></p></div></div>
+<!-- /tsel:fleet -->
+</div>
 <!-- Version price table -->
 <div class="price-table-wrap" style="width:100%;overflow-x:auto;margin-bottom:24px">
 <table class="price-table" style="width:100%;border-collapse:collapse;font-size:16px">
@@ -977,6 +985,12 @@
 <td style="padding:12px;color:var(--text2)" data-label="Járművek">1 sofőr</td>
 <td style="padding:12px;text-align:right;font-weight:600" data-label="Vételár">49&nbsp;€ <span style="font-size:13px;color:var(--text2)">ÁFA nélkül</span></td>
 <td style="padding:12px;text-align:right;color:var(--green-brand);font-weight:700" data-label="2. évtől">19&nbsp;€/év</td>
+</tr>
+<tr style="border-bottom:1px solid var(--border)">
+<td style="padding:12px;font-weight:700;color:var(--text-strong)">TAGRA TRUCKER 2</td>
+<td style="padding:12px;color:var(--text2)" data-label="Járművek">2 sofőr</td>
+<td style="padding:12px;text-align:right;font-weight:600" data-label="Vételár">88,62&nbsp;€ <span style="font-size:13px;color:var(--text2)">ÁFA nélkül</span></td>
+<td style="padding:12px;text-align:right;color:var(--green-brand);font-weight:700" data-label="2. évtől">29&nbsp;€/év</td>
 </tr>
 <tr style="border-bottom:1px solid var(--border)">
 <td style="padding:12px;font-weight:700;color:var(--text-strong)">TAGRA 1</td>
@@ -1069,7 +1083,7 @@
 </details>
 <details>
 <summary>Mit tartalmaz az éves licencdíj?</summary>
-<div class="faq-a">Az éves díj magában foglalja a folyamatos licencelést, a szoftverfrissítéseket és a technikai támogatást. Az első év benne van a vételárban; a 2. évtől a díj <strong>19&nbsp;€/év</strong> (TAGRA Trucker),<strong>79&nbsp;€/év</strong> (TAGRA 1–2),<strong>99&nbsp;€/év</strong> (TAGRA 4–6), vagy<strong>149&nbsp;€/év</strong> (TAGRA MAX), mind ÁFA nélkül.</div>
+<div class="faq-a">Az éves díj magában foglalja a folyamatos licencelést, a szoftverfrissítéseket és a technikai támogatást. Az első év benne van a vételárban; a 2. évtől a díj <strong>19&nbsp;€/év</strong> (TAGRA Trucker), <strong>29&nbsp;€/év</strong> (TAGRA TRUCKER 2),<strong>79&nbsp;€/év</strong> (TAGRA 1–2),<strong>99&nbsp;€/év</strong> (TAGRA 4–6), vagy<strong>149&nbsp;€/év</strong> (TAGRA MAX), mind ÁFA nélkül.</div>
 </details>
 <details>
 <summary>Felkészült a TAGRA a 2026. júliusi kisteherautó-kötelezettségre?</summary>
@@ -1357,7 +1371,7 @@
     "priceCurrency": "EUR",
     "lowPrice": "49",
     "highPrice": "749",
-    "offerCount": "6",
+    "offerCount": "7",
     "availability": "https://schema.org/InStock",
     "description": "A vételár tartalmazza az első évre szóló frissítéseket és támogatást. A 2. évtől évente 19–149 € díjat kell fizetni a program működéséhez."
   }
@@ -1444,7 +1458,7 @@
       "name": "Mit tartalmaz az éves licencdíj?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Az éves díj magában foglalja a folyamatos licencelést, a szoftverfrissítéseket és a technikai támogatást. Az első év benne van a vételárban; a 2. évtől a díj 19 €/év (TAGRA Trucker),79 €/év (TAGRA 1–2),99 €/év (TAGRA 4–6), vagy149 €/év (TAGRA MAX), mind ÁFA nélkül."
+        "text": "Az éves díj magában foglalja a folyamatos licencelést, a szoftverfrissítéseket és a technikai támogatást. Az első év benne van a vételárban; a 2. évtől a díj 19 €/év (TAGRA Trucker), 29 €/év (TAGRA TRUCKER 2),79 €/év (TAGRA 1–2),99 €/év (TAGRA 4–6), vagy149 €/év (TAGRA MAX), mind ÁFA nélkül."
       }
     },
     {
