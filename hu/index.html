@@ -44,17 +44,17 @@
     function lc(){var l=(document.documentElement.getAttribute('lang')||'en').toLowerCase().split('-')[0];
       var m={cz:'cs',cs:'cs',sk:'sk',de:'de',pl:'pl',gr:'el',el:'el',hu:'hu',fr:'fr',it:'it',nl:'nl',ro:'ro',en:'en'};return m[l]||'en';}
     var T={
-      hu:{t:'Analitikai s\u00fctiket haszn\u00e1lunk (Google Analytics, Microsoft Clarity, Smartsupp), hogy meg\u00e9rts\u00fck a webhely haszn\u00e1lat\u00e1t. Csak az \u00d6n hozz\u00e1j\u00e1rul\u00e1s\u00e1val t\u00f6lt\u0151dnek be.',a:'Elfogadom',r:'Elutas\u00edtom',p:'Adatv\u00e9delem \u00e9s s\u00fctik'},
+      hu:{t:'Analitikai sütiket használunk (Google Analytics, Microsoft Clarity, Smartsupp), hogy megértsük a webhely használatát. Csak az Ön hozzájárulásával töltődnek be.',a:'Elfogadom',r:'Elutasítom',p:'Adatvédelem és sütik'},
       ro:{t:'Utilizăm module cookie de analiză (Google Analytics, Microsoft Clarity, Smartsupp) pentru a înțelege modul de utilizare a site-ului. Se încarcă doar cu consimțământul dumneavoastră.',a:'Accept',r:'Refuz',p:'Confidențialitate și cookie-uri'},
       nl:{t:'We gebruiken analytische cookies (Google Analytics, Microsoft Clarity, Smartsupp) om het gebruik van de site te begrijpen. Ze laden alleen met uw toestemming.',a:'Accepteren',r:'Weigeren',p:'Privacy en cookies'},
       fr:{t:'Nous utilisons des cookies analytiques (Google Analytics, Microsoft Clarity, Smartsupp) pour comprendre l’utilisation du site. Ils ne se chargent qu’avec votre consentement.',a:'Accepter',r:'Refuser',p:'Confidentialité et cookies'},
       it:{t:'Utilizziamo cookie analitici (Google Analytics, Microsoft Clarity, Smartsupp) per capire l’utilizzo del sito. Si caricano solo con il Suo consenso.',a:'Accetta',r:'Rifiuta',p:'Privacy e cookie'},
       en:{t:'We use analytics cookies (Google Analytics, Microsoft Clarity, Smartsupp) to understand site usage. They load only with your consent.',a:'Accept',r:'Reject',p:'Privacy &amp; cookies'},
-      cs:{t:'Pou\u017e\u00edv\u00e1me analytick\u00e9 cookies (Google Analytics, Microsoft Clarity, Smartsupp) k pochopen\u00ed pou\u017e\u00edv\u00e1n\u00ed webu. Na\u010dtou se jen s va\u0161\u00edm souhlasem.',a:'P\u0159ijmout',r:'Odm\u00edtnout',p:'Soukrom\u00ed a cookies'},
-      sk:{t:'Pou\u017e\u00edvame analytick\u00e9 cookies (Google Analytics, Microsoft Clarity, Smartsupp) na pochopenie pou\u017e\u00edvania webu. Na\u010d\u00edtaj\u00fa sa len s va\u0161\u00edm s\u00fahlasom.',a:'Prija\u0165',r:'Odmietnu\u0165',p:'S\u00fakromie a cookies'},
+      cs:{t:'Používáme analytické cookies (Google Analytics, Microsoft Clarity, Smartsupp) k pochopení používání webu. Načtou se jen s vaším souhlasem.',a:'Přijmout',r:'Odmítnout',p:'Soukromí a cookies'},
+      sk:{t:'Používame analytické cookies (Google Analytics, Microsoft Clarity, Smartsupp) na pochopenie používania webu. Načítajú sa len s vaším súhlasom.',a:'Prijať',r:'Odmietnuť',p:'Súkromie a cookies'},
       de:{t:'Wir verwenden Analyse-Cookies (Google Analytics, Microsoft Clarity, Smartsupp), um die Nutzung der Website zu verstehen. Sie werden nur mit Ihrer Einwilligung geladen.',a:'Akzeptieren',r:'Ablehnen',p:'Datenschutz &amp; Cookies'},
-      pl:{t:'U\u017cywamy plik\u00f3w cookie do analityki (Google Analytics, Microsoft Clarity, Smartsupp), aby zrozumie\u0107 korzystanie z witryny. \u0141aduj\u0105 si\u0119 tylko za Twoj\u0105 zgod\u0105.',a:'Akceptuj',r:'Odrzu\u0107',p:'Prywatno\u015b\u0107 i cookies'},
-      el:{t:'\u03a7\u03c1\u03b7\u03c3\u03b9\u03bc\u03bf\u03c0\u03bf\u03b9\u03bf\u03cd\u03bc\u03b5 cookies \u03b1\u03bd\u03ac\u03bb\u03c5\u03c3\u03b7\u03c2 (Google Analytics, Microsoft Clarity, Smartsupp) \u03b3\u03b9\u03b1 \u03bd\u03b1 \u03ba\u03b1\u03c4\u03b1\u03bd\u03bf\u03ae\u03c3\u03bf\u03c5\u03bc\u03b5 \u03c4\u03b7 \u03c7\u03c1\u03ae\u03c3\u03b7. \u03a6\u03bf\u03c1\u03c4\u03ce\u03bd\u03bf\u03bd\u03c4\u03b1\u03b9 \u03bc\u03cc\u03bd\u03bf \u03bc\u03b5 \u03c4\u03b7 \u03c3\u03c5\u03b3\u03ba\u03b1\u03c4\u03ac\u03b8\u03b5\u03c3\u03ae \u03c3\u03b1\u03c2.',a:'\u0391\u03c0\u03bf\u03b4\u03bf\u03c7\u03ae',r:'\u0391\u03c0\u03cc\u03c1\u03c1\u03b9\u03c8\u03b7',p:'\u0391\u03c0\u03cc\u03c1\u03c1\u03b7\u03c4\u03bf &amp; cookies'}
+      pl:{t:'Używamy plików cookie do analityki (Google Analytics, Microsoft Clarity, Smartsupp), aby zrozumieć korzystanie z witryny. Ładują się tylko za Twoją zgodą.',a:'Akceptuj',r:'Odrzuć',p:'Prywatność i cookies'},
+      el:{t:'Χρησιμοποιούμε cookies ανάλυσης (Google Analytics, Microsoft Clarity, Smartsupp) για να κατανοήσουμε τη χρήση. Φορτώνονται μόνο με τη συγκατάθεσή σας.',a:'Αποδοχή',r:'Απόρριψη',p:'Απόρρητο &amp; cookies'}
     };
     function loadClarity(){if(!CL||window.__tmxCl)return;window.__tmxCl=1;
       (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
@@ -652,6 +652,7 @@
   "name": "Truck Data Technology, s.r.o.",
   "alternateName": "TDT",
   "url": "https://www.tdt.cz",
+  "brand": { "@type": "Brand", "name": "TAGRA", "logo": "https://tagra.app/assets/img/logo-light.svg?v=20260513zh" },
   "logo": "https://tagra.app/assets/img/logo-light.svg?v=20260513zh",
   "foundingDate": "2000",
   "sameAs": [
@@ -770,7 +771,7 @@
 <link href="/assets/css/components.css" rel="stylesheet"/>
 <link href="/assets/css/nav.css" rel="stylesheet"/>
 <script defer="" src="/assets/js/nav.js?v=20261008a"></script><script defer="" src="/assets/js/analytics.js?v=20261002b"></script>
-<link href="/assets/css/footer.css" rel="stylesheet"/><link href="/assets/css/hu.css?v=20261104" rel="stylesheet"/>
+<link href="/assets/css/footer.css" rel="stylesheet"/><link href="/assets/css/tagra-selector.css?v=20261108" rel="stylesheet"/><script defer="" src="/assets/js/tagra-prices.js?v=20261107"></script><script defer="" src="/assets/js/tagra-selector.js?v=20261107"></script><link href="/assets/css/hu.css?v=20261104" rel="stylesheet"/>
 </head>
 <body class="home-fullbleed">
 <a class="skip-link" href="#main-content">Ugrás a tartalomhoz</a>
@@ -1061,6 +1062,14 @@
 <span class="pricing-teaser-cta-note">Nincs bankkártya. Windows telepítő.</span>
 </div>
 </div>
+<div class="tsel-home">
+<!-- tsel:fleet -->
+<div class="tsel tsel--fleet" data-tsel="fleet" id="tagra-selector" data-fmt="{n} €" data-dec="," data-fee="Az 1. évet tartalmazza · 2. évtől: {fee} / év" data-note-box="Tartalmazza a DOWNLOAD BOX II S letöltőkulcsot. Szállítás az EU-ban: egységesen {ship} ÁFA-val." data-cta="Ajánlatkérés: {name}" data-base="/hu/kapcsolat/?product=" role="group" aria-label="Válasszon TAGRA-verziót a járművek száma alapján"><p class="tsel__t">Melyik TAGRA illik a flottájához?</p><p class="tsel__q">Hány tachográfos járművel rendelkezik?</p><div class="tsel__row tsel__row--5"><a class="tsel__o is-on" href="/hu/kapcsolat/?product=tagra-1" data-k="t1" data-cap="1 jármű" aria-current="true"><b>1</b><small>TAGRA 1</small></a><a class="tsel__o" href="/hu/kapcsolat/?product=tagra-2" data-k="t2" data-cap="2 jármű"><b>2</b><small>TAGRA 2</small></a><a class="tsel__o" href="/hu/kapcsolat/?product=tagra-4" data-k="t4" data-cap="3–4 jármű"><b>3–4</b><small>TAGRA 4</small></a><a class="tsel__o" href="/hu/kapcsolat/?product=tagra-6" data-k="t6" data-cap="5–6 jármű"><b>5–6</b><small>TAGRA 6</small></a><a class="tsel__o" href="/hu/kapcsolat/?product=tagra-max" data-k="max" data-cap="Korlátlan jármű"><b>7+</b><small>TAGRA MAX</small></a></div><p class="tsel__q">Adatletöltő eszköz</p><div class="tsel__row tsel__row--2"><a class="tsel__o is-on" href="/hu/kapcsolat/?product=tagra-1" data-dev="none" aria-current="true"><b>Csak a program</b></a><a class="tsel__o" href="/hu/kapcsolat/?product=tagra-1-download-box-ii-s" data-dev="box"><b>Program + DOWNLOAD BOX II S</b><small data-save="csomagban · megtakarítás: {save}">csomagban · megtakarítás: 49 €</small></a></div><div class="tsel__res" aria-live="polite"><div class="tsel__head"><span class="tsel__lbl">Önnek ajánlott</span><strong class="tsel__name">TAGRA 1</strong><span class="tsel__cap">1 jármű</span></div><p class="tsel__price"><span class="tsel__amt">149 €</span><span class="tsel__vat">ÁFA nélkül</span></p><p class="tsel__fee">Az 1. évet tartalmazza · 2. évtől: 79 € / év</p><p class="tsel__note" hidden></p><div class="tsel__acts"><a class="btn-cta tsel__cta" href="/hu/kapcsolat/?product=tagra-1" data-product="tagra-1">Ajánlatkérés: TAGRA 1</a></div><p class="tsel__more">Csak saját sofőrkártyát tölt le? <a href="/hu/soforoknek/">TAGRA TRUCKER 1 sofőrnek vagy négykezes járatra →</a></p></div></div>
+<!-- /tsel:fleet -->
+<!-- tsel:driver -->
+<div class="tsel tsel--driver" data-tsel="driver" id="tagra-trucker-selector" data-fmt="{n} €" data-dec="," data-fee="Az 1. évet tartalmazza · 2. évtől: {fee} / év" data-cta="Ajánlatkérés: {name}" data-base="/hu/kapcsolat/?product=" role="group" aria-label="TAGRA TRUCKER kiválasztása egy vagy két sofőr részére"><p class="tsel__t">Egy sofőr vagy négykezes járat?</p><p class="tsel__q">Hány sofőr használja majd a TAGRA TRUCKER programot?</p><div class="tsel__row tsel__row--2"><a class="tsel__o is-on" href="/hu/kapcsolat/?product=tagra-trucker" data-k="tr1" data-cap="Egy licenc egy sofőrnek · ajándék USB kártyaolvasóval" data-note="" aria-current="true"><b>1 sofőr</b><small>TAGRA TRUCKER</small></a><a class="tsel__o" href="/hu/kapcsolat/?product=tagra-trucker-2" data-k="tr2" data-cap="Egy licenc két sofőrnek közös PC-n · 1 db USB kártyaolvasóval" data-note=""><b>2 sofőr (négykezes)</b><small>TAGRA TRUCKER 2</small></a></div><div class="tsel__res" aria-live="polite"><div class="tsel__head"><span class="tsel__lbl">Önnek ajánlott</span><strong class="tsel__name">TAGRA TRUCKER</strong><span class="tsel__cap">Egy licenc egy sofőrnek · ajándék USB kártyaolvasóval</span></div><p class="tsel__price"><span class="tsel__amt">49 €</span><span class="tsel__vat">ÁFA nélkül</span></p><p class="tsel__fee">Az 1. évet tartalmazza · 2. évtől: 19 € / év</p><p class="tsel__note" hidden></p><div class="tsel__acts"><a class="btn-cta tsel__cta" href="/hu/kapcsolat/?product=tagra-trucker" data-product="tagra-trucker">Ajánlatkérés: TAGRA TRUCKER</a></div></div></div>
+<!-- /tsel:driver -->
+</div>
 </div>
 </section>
 <!-- ═══ NÁKUP U RUKON KFT. ═══ -->
@@ -1237,7 +1246,12 @@
 <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
+  "@id": "https://tagra.app/hu/#software",
   "name": "TAGRA – Tachográfadat-kezelő szoftver",
+  "alternateName": ["TAGRA", "TAGRA III", "TAGRA Trucker"],
+  "softwareVersion": "III",
+  "brand": { "@type": "Brand", "name": "TAGRA" },
+  "publisher": { "@id": "https://tagra.app/#organization" },
   "applicationCategory": "BusinessApplication",
   "operatingSystem": "Windows",
   "description": "Szoftver digitális tachográfokból és sofőrkártyákból származó adatok kiértékelésére és archiválására. Elérhető fuvarozók (1-től korlátlan számú járműig) és sofőrök számára. Megfelel az 561/2006/EK rendeletnek, az AETR-nek és a munkaidő-irányelvnek. Ingyenes 30 napos próbaverzió.",
