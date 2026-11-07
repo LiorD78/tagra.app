@@ -449,3 +449,9 @@
     if (reloads < 2) { reloads++; try { v.load(); } catch (e) {} play(); }
   }, 2000);
 })();
+
+/* 7. 11. 2026: animovany robot TRUCKMALL v paticce (sdileny skript tm-robot.js, vrstvy z cdn.truckmall.cz) */
+(function () {
+  if (!document.querySelector('.site-footer')) return;
+  var s = document.createElement('script'); s.src = '/assets/js/tm-robot.js?v=1'; s.defer = true; document.head.appendChild(s);
+})();
