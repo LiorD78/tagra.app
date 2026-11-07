@@ -34,6 +34,15 @@
  *   RESEND_API_KEY   povinné
  *   RESEND_FROM      volitelné (výchozí "TAGRA <sales@tagra.app>")
  *   LEAD_NOTIFY_TO   volitelné, příjemce interní notifikace (výchozí libor.dospel@gmail.com)
+ *   RUKON_NOTIFY_TO  volitelné, příjemce maďarských poptávek ajanlatkeres-hu (výchozí varga@rukon.hu)
+ *   RUKON_LEADS_TO   volitelné, příjemce kopií maďarských trialů (výchozí varga@rukon.hu — Katy)
+ *
+ * ── MAĎARSKÉ TRIALY → Rukon (8. 11. 2026) ────────────────────────────
+ * Lead tagra-trial s lang=hu NEBO country=HU (i mobilní method=mobile_send)
+ * dostane navíc Katy z Rukon Kft. (RUKON_LEADS_TO) — česky psaná kopie
+ * pro helpdesk a kontakt se zákazníkem. Zákaznické maily ani notifikace se nemění.
+ * Testovací adresa test+…@tagra.app jde místo Rukonu na LEAD_NOTIFY_TO
+ * s předmětem „[TEST → Rukon]". Viz notifyRukonTrial().
  *
  * ── OPAKOVANÉ REGISTRACE ─────────────────────────────────────────────
  * Stav leadu je v Netlify Blobs (store "trial-leads", klíč = normalizovaný
@@ -373,7 +382,7 @@ async function notifyLead(apiKey, { data, name, aud, lang, prev, count, situatio
 // Netlify u notifikací povoluje jen e-maily členů týmu, proto přeposíláme
 // přes webhook. Nic se nepřidává do trial sekvence ani do Resend audience.
 
-const RUKON_TO_DEFAULT = "rukon@rukon.hu";
+const RUKON_TO_DEFAULT = "varga@rukon.hu"; // od 8. 11. 2026 vše pro Rukon osobně Katy (dřív rukon@rukon.hu)
 
 function formatBudapest(iso) {
   const d = iso ? new Date(iso) : new Date();
@@ -456,6 +465,106 @@ async function handleAjanlatkeres(payload, data) {
 }
 
 exports.buildAjanlatEmail = buildAjanlatEmail;
+
+// ── MAĎARSKÉ TRIALY tagra-trial → Rukon (8. 11. 2026) ─────────────────
+// Kopie navíc, stejný styl jako ajanlatkeres-hu, ale osobně Katy (Katalin
+// Varga, RUKON_LEADS_TO); poptávky ajanlatkeres-hu dál jdou na RUKON_NOTIFY_TO.
+// Text je ČESKY — Katy mluví česky (rozhodnutí Libora 8. 11. 2026).
+// Testovací adresy nesmí odejít partnerovi.
+
+const RUKON_LEADS_TO_DEFAULT = "varga@rukon.hu";
+const TEST_EMAIL_RE = /^test\+.*@tagra\.app$/i;
+
+const RUKON_ROLE    = { fleet: "Dopravce / správce vozového parku", driver: "Profesionální řidič", enforcement: "Kontrolní orgán" };
+const RUKON_PROGRAM = { fleet: "TAGRA (pro dopravce)", driver: "TAGRA TRUCKER (pro řidiče)", enforcement: "TAGRA Control" };
+const RUKON_LANG    = { hu: "maďarština", en: "angličtina", de: "němčina", pl: "polština", cz: "čeština", sk: "slovenština",
+                        gr: "řečtina", it: "italština", fr: "francouzština", ro: "rumunština", nl: "nizozemština" };
+
+/** Čas v Budapešti česky (kopie pro Rukon je česky). */
+function formatBudapestCs(iso) {
+  const d = iso ? new Date(iso) : new Date();
+  const date = isNaN(d.getTime()) ? new Date() : d;
+  return new Intl.DateTimeFormat("cs-CZ", {
+    timeZone: "Europe/Budapest", dateStyle: "medium", timeStyle: "short",
+  }).format(date);
+}
+
+/** Maďarský zákazník = lang hu NEBO country HU. */
+function isHungarianLead(data, lang) {
+  return lang === "hu" || String(data.country || "").trim().toUpperCase() === "HU";
+}
+
+/** Předmět, HTML a text kopie pro Rukon. Čistá funkce (testovatelná). */
+function buildRukonTrialEmail(data, { aud, lang, createdAt, test }) {
+  const v = (k) => String(data[k] == null ? "" : data[k]).replace(/[\r\n]+/g, " ").trim();
+  const name = v("name"), company = v("company");
+  const message = String(data.message || "").trim();
+  const mobile = /method:\s*mobile_send/.test(v("source_url"));
+
+  const subject = ((test ? "[TEST → Rukon] " : "") +
+    "TAGRA – stažení zkušební verze (HU) · " + (company || name || v("email"))).replace(/[\r\n]+/g, " ");
+
+  const rows = [
+    ["Jméno", name || "(neuvedeno)"],
+    ["Firma", company],
+    ["E-mail", v("email")],
+    ["Role", RUKON_ROLE[aud] || aud],
+    ["Verze programu", RUKON_PROGRAM[aud] || ""],
+    ["Země", v("country").toUpperCase()],
+    ["Jazyk stránky", RUKON_LANG[lang] || lang],
+    ["Způsob registrace", mobile
+      ? "Mobil – odkaz ke stažení poslán e-mailem (zákazník si program nainstaluje na PC)"
+      : "Celý formulář zkušební verze na webu"],
+    ["Zpráva", message],
+    ["Stránka", v("source_url")],
+    ["Čas (Budapešť)", formatBudapestCs(createdAt)],
+  ].filter(([, val]) => val !== "");
+
+  const intro  = "Maďarský zákazník si na tagra.app stáhl zkušební verzi programu TAGRA. Prosíme, spojte se s ním.";
+  const footer = "Stažení přišlo z webu tagra.app. Odpovězte přímo na tento e-mail – odpověď půjde zákazníkovi.";
+  const html =
+    `<p style="font:14px sans-serif">${escapeHtml(intro)}</p>` +
+    `<table style="font:14px sans-serif;border-collapse:collapse">` +
+    rows.map(([k, val]) =>
+      `<tr><td style="padding:4px 14px 4px 0;color:#666;vertical-align:top">${escapeHtml(k)}</td>` +
+      `<td style="padding:4px 0;white-space:pre-wrap">${escapeHtml(val)}</td></tr>`).join("") +
+    `</table><p style="font:12px sans-serif;color:#888">${escapeHtml(footer)}</p>`;
+  const text = `${intro}\n\n` + rows.map(([k, val]) => `${k}: ${val}`).join("\n") + `\n\n${footer}\n`;
+
+  return { subject, html, text };
+}
+
+/**
+ * Pošle Rukonu kopii maďarského trialu. Nikdy nevyhazuje chybu a nikdy
+ * neovlivní zákaznické maily. Test (test+…@tagra.app) jde na LEAD_NOTIFY_TO.
+ */
+async function notifyRukonTrial(apiKey, payload, data, { aud, lang, email }) {
+  const rawId = payload.id || data.id;
+  const id = rawId || "(no-id)";
+  try {
+    const test = TEST_EMAIL_RE.test(email);
+    const to = test
+      ? (process.env.LEAD_NOTIFY_TO || NOTIFY_TO_DEFAULT).split(",").map((s) => s.trim()).filter(Boolean)
+      : (process.env.RUKON_LEADS_TO || RUKON_LEADS_TO_DEFAULT).split(",").map((s) => s.trim()).filter(Boolean);
+    const { subject, html, text } = buildRukonTrialEmail(data, { aud, lang, createdAt: payload.created_at, test });
+    const msg = {
+      from: process.env.RESEND_FROM || "TAGRA <sales@tagra.app>",
+      to, subject, html, text,
+      reply_to: email,
+      tags: [{ name: "campaign", value: "trial-hu" }],
+    };
+    // Idempotency-Key podle submission id: opakovaný webhook neodešle druhou kopii.
+    const sent = await sendViaResend(apiKey, msg, rawId ? `trial-hu-${id}` : undefined);
+    logInfo(`trial-hu copy sent${test ? " (TEST → LEAD_NOTIFY_TO)" : ""}, submission ${id}, resend ${sent.id}`);
+    return sent.id;
+  } catch (e) {
+    logError(`trial-hu copy failed, submission ${id}: ${String(e.message).slice(0, 200)}`);
+    return null;
+  }
+}
+
+exports.buildRukonTrialEmail = buildRukonTrialEmail;
+exports.isHungarianLead = isHungarianLead;
 
 exports.handler = async (event) => {
   if (event.httpMethod !== "POST") {
@@ -553,6 +662,12 @@ exports.handler = async (event) => {
                       && (situation === "new" || situation === "new-audience");
 
   const result = { welcome: null, scheduled: [], failed: [] };
+
+  // ── KOPIE PRO RUKON (maďarský zákazník, 8. 11. 2026) ────────────────
+  // Navíc k zákaznickým mailům; opakování do 60 min se partnerovi nehlásí.
+  if (isHungarianLead(data, lang) && situation !== "repeat-throttled") {
+    await notifyRukonTrial(apiKey, payload, data, { aud, lang, email });
+  }
 
   // ── #1 UVÍTACÍ MAIL (hned) ──────────────────────────────────────────
   if (sendWelcome) {
