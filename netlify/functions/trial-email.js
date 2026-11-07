@@ -40,7 +40,8 @@
  * ── MAĎARSKÉ TRIALY → Rukon (8. 11. 2026) ────────────────────────────
  * Lead tagra-trial s lang=hu NEBO country=HU (i mobilní method=mobile_send)
  * dostane navíc Katy z Rukon Kft. (RUKON_LEADS_TO) — česky psaná kopie
- * pro helpdesk a kontakt se zákazníkem. Zákaznické maily ani notifikace se nemění.
+ * pro helpdesk a kontakt se zákazníkem (vč. nepovinného telefonu z HU formuláře).
+ * Zákaznické maily ani notifikace se nemění; interní notifikace vypisuje všechna pole.
  * Testovací adresa test+…@tagra.app jde místo Rukonu na LEAD_NOTIFY_TO
  * s předmětem „[TEST → Rukon]". Viz notifyRukonTrial().
  *
@@ -508,6 +509,7 @@ function buildRukonTrialEmail(data, { aud, lang, createdAt, test }) {
     ["Jméno", name || "(neuvedeno)"],
     ["Firma", company],
     ["E-mail", v("email")],
+    ["Telefon", v("phone")],
     ["Role", RUKON_ROLE[aud] || aud],
     ["Verze programu", RUKON_PROGRAM[aud] || ""],
     ["Země", v("country").toUpperCase()],
