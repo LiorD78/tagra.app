@@ -6,9 +6,27 @@
    1) Microsoft Clarity – projekt „TAGRA Shop“ z89q96s7bd, jen po souhlasu s analytickými cookies.
       Po načtení se posílá consentv2: bez něj Clarity v EHP nepoužívá cookies
       a každé zobrazení stránky počítá jako nového uživatele.
-   2) Jarabot – schránka „TAGRA Shop“ (#938), jazyk podle <html lang>. */
+   2) Jarabot – schránka „TAGRA Shop“ (#938), jazyk podle <html lang>.
+   0) Meta Pixel 1445469577001824 vkládá Shoptet sám (nativní propojení), ale jako
+      <script type="text/plain" data-cookiecategory="analytics"> – tedy po souhlasu
+      jen s ANALYTICKÝMI cookies, a naopak NE po souhlasu jen s marketingovými.
+      Pixel je reklamní měření → kategorie musí být „personalisation“ (marketing).
+      Tento soubor se načítá s defer, tj. před DOMContentLoaded, kdy Shoptet
+      (initCookieConsent.run) aktivuje skripty podle data-cookiecategory –
+      proto stačí kategorii přepsat tady. Jakmile to Shoptet opraví sám, je to no-op. */
 (function (w, d) {
   'use strict';
+
+  /* ---------- 0) Meta Pixel → marketingový souhlas ---------- */
+  try {
+    var gated = d.querySelectorAll('script[data-cookiecategory="analytics"]');
+    for (var gi = 0; gi < gated.length; gi++) {
+      var gt = gated[gi].text || '';
+      if (gt.indexOf('fbevents.js') !== -1 || gt.indexOf('fbq(') !== -1) {
+        gated[gi].setAttribute('data-cookiecategory', 'personalisation');
+      }
+    }
+  } catch (e) {}
 
   /* ---------- 1) Clarity (consent-gated) ---------- */
   var CLARITY_ID = 'z89q96s7bd';
