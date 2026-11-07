@@ -1,7 +1,7 @@
 /* TAGRA prices – single source of truth (EUR, excl. VAT)
    Used by: tagra.app version selector (assets/js/tagra-selector.js),
             shop.tagra.app fleet calculator (assets/js/shop-fleet.js),
-            generator of the static (no-JS) selector markup (tools/tagra_selector.py).
+            generator of the static (no-JS) selector markup (tools/tagra-selector.mjs).
    Rule: EU prices excl. VAT = truckmall.sk prices excl. VAT (SK VAT 23 %), checked 7. 11. 2026:
      TRUCKER 60.27/1.23 = 49 · TRUCKER 2 109/1.23 = 88.62 · TAGRA 1 183/1.23 ≈ 149 · TAGRA 2 368/1.23 ≈ 299
      TAGRA 4 491/1.23 ≈ 399 · TAGRA 6 675/1.23 ≈ 549 · TAGRA MAX 921/1.23 ≈ 749 · DOWNLOAD BOX II S 368/1.23 ≈ 299

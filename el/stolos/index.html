@@ -551,7 +551,7 @@
 <script defer="" src="/assets/js/nav.js?v=20261008a"></script><script defer="" src="/assets/js/analytics.js?v=20261103a"></script>
 <link href="/assets/css/footer.css" rel="stylesheet"/>
 <link href="/assets/css/t3-promo.css?v=20261103" rel="stylesheet"/>
-</head>
+<link href="/assets/css/tagra-selector.css?v=20261107" rel="stylesheet"/><script defer="" src="/assets/js/tagra-prices.js?v=20261107"></script><script defer="" src="/assets/js/tagra-selector.js?v=20261107"></script></head>
 <body>
 <a class="skip-link" href="#main-content">Μετάβαση στο περιεχόμενο</a>
 <div aria-hidden="true" id="scroll-progress"></div>
@@ -580,16 +580,18 @@
 </div>
 </nav>
 <!-- ═══ HERO ══════════════════════════════════════════════════════ -->
-<section id="main-content" aria-label="Επισκόπηση TAGRA" class="band band--hero band--hero--blue">
+<section id="main-content" aria-label="Επισκόπηση TAGRA" class="band band--hero band--hero--blue tsel-hero">
 <div class="container">
 <div class="eyebrow anim-up"><span class="t3-badge">Νέο</span>TAGRA III · Για διαχειριστές στόλων</div>
 <h1 class="anim-up" style="transition-delay:.05s">Ανάλυση ταχογράφου που εντοπίζει<br/>πρώτα τις παραβάσεις</h1>
 <p class="lead anim-up" style="transition-delay:.1s">
 <strong>Το TAGRA III είναι η νεότερη γενιά του δοκιμασμένου προγράμματος TAGRA για στόλους.</strong> Μία επισκόπηση δείχνει τι χρειάζεται την προσοχή σας — παραβάσεις, τηλεφορτώσεις από κάρτες και οχήματα, κάρτες που λήγουν και βαθμονομήσεις — πριν εντοπιστεί σε έλεγχο. Κάθε παράβαση συνοδεύεται από παραπομπή στον κανονισμό και σύσταση. Καλύπτει από 1 έως απεριόριστα οχήματα.
     </p>
-<div class="anim-up" style="margin-bottom:16px;transition-delay:.15s;display:flex;flex-wrap:wrap;justify-content:center;gap:12px">
+<!-- tsel:fleet-hero -->
+<div class="tsel tsel--hero" data-tsel="fleet" data-fmt="{n} €" data-dec="," data-fee="Περιλαμβάνεται το 1ο έτος · από το 2ο έτος: {fee} / έτος" data-cta="Αγορά {name} στο TAGRA Shop" role="group" aria-label="Επιλέξτε έκδοση TAGRA βάσει του αριθμού οχημάτων"><p class="tsel__q">Πόσα οχήματα διαθέτουν ταχογράφο;</p><div class="tsel__row tsel__row--5"><a class="tsel__o is-on" href="https://shop.tagra.app/tagra-1/" data-k="t1" data-cap="1 όχημα" aria-current="true" hreflang="en"><b>1</b><small>TAGRA 1</small></a><a class="tsel__o" href="https://shop.tagra.app/tagra-2/" data-k="t2" data-cap="2 οχήματα" hreflang="en"><b>2</b><small>TAGRA 2</small></a><a class="tsel__o" href="https://shop.tagra.app/tagra-4/" data-k="t4" data-cap="3–4 οχήματα" hreflang="en"><b>3–4</b><small>TAGRA 4</small></a><a class="tsel__o" href="https://shop.tagra.app/tagra-6/" data-k="t6" data-cap="5–6 οχήματα" hreflang="en"><b>5–6</b><small>TAGRA 6</small></a><a class="tsel__o" href="https://shop.tagra.app/tagra-max/" data-k="max" data-cap="Απεριόριστα οχήματα" hreflang="en"><b>7+</b><small>TAGRA MAX</small></a></div><div class="tsel__res" aria-live="polite"><div class="tsel__head"><span class="tsel__lbl">Προτείνεται για εσάς</span><strong class="tsel__name">TAGRA 1</strong><span class="tsel__cap">1 όχημα</span></div><p class="tsel__price"><span class="tsel__amt">149 €</span><span class="tsel__vat">χωρίς ΦΠΑ</span></p><p class="tsel__fee">Περιλαμβάνεται το 1ο έτος · από το 2ο έτος: 79 € / έτος</p><div class="tsel__acts"><a class="btn-cta tsel__cta" href="https://shop.tagra.app/tagra-1/" data-product="tagra-1" hreflang="en">Αγορά TAGRA 1 στο TAGRA Shop</a></div></div></div>
+<!-- /tsel:fleet-hero -->
+<div class="anim-up tsel-hero__cta" style="margin-bottom:16px;transition-delay:.15s;display:flex;flex-wrap:wrap;justify-content:center;gap:12px">
 <a class="btn-cta" href="/el/dokimi/?audience=fleet" rel="noopener" target="_blank">Δοκιμάστε δωρεάν για 30 ημέρες</a>
-<a class="btn-outline" href="https://shop.tagra.app/tagra-software/" hreflang="en">Αγορά από το e-shop</a>
 </div>
 <p class="anim-up" style="font-size:15px;color:var(--text2);transition-delay:.2s">Windows · Δωρεάν δοκιμή 30 ημερών · Έτοιμο για βαν από τον Ιούλιο του 2026</p>
 <!-- Hero: TAGRA III screenshot -->
@@ -621,7 +623,7 @@
 <div class="bc s4 greenfill fly-left" style="transition-delay:.15s">
 <div class="eyebrow">Από το 2ο έτος</div>
 <div class="bc-title" style="color:var(--green-brand)">από 79 € / έτος</div>
-<div class="bc-text">Ετήσιο τέλος άδειας χρήσης χωρίς ΦΠΑ — περιλαμβάνει όλες τις ενημερώσεις λογισμικού και εξειδικευμένη τεχνική υποστήριξη. 19 € (TAGRA Trucker), 79 € (TAGRA 1–2), 99 € (TAGRA 4–6), 149 € (TAGRA MAX).</div>
+<div class="bc-text">Ετήσιο τέλος άδειας χρήσης χωρίς ΦΠΑ — περιλαμβάνει όλες τις ενημερώσεις λογισμικού και εξειδικευμένη τεχνική υποστήριξη. 19 € (TAGRA Trucker), 29 € (TAGRA TRUCKER 2), 79 € (TAGRA 1–2), 99 € (TAGRA 4–6), 149 € (TAGRA MAX).</div>
 </div>
 <div class="bc s4 anim-up" style="transition-delay:.25s">
 <div class="eyebrow">Έτοιμο για</div>
@@ -968,6 +970,11 @@
 <div class="eyebrow">Τιμή &amp; όροι</div>
 <h2 style="text-transform:none">Διαφανείς τιμές.<br/>Καμία κρυφή χρέωση.</h2>
 <p style="margin:16px 0 24px">Ξεκινήστε με τη δωρεάν δοκιμή. Όταν είστε έτοιμοι, επιλέξτε την έκδοσή σας απευθείας μέσα στο λογισμικό και πληρώστε online — η άδεια χρήσης σας εκδίδεται αμέσως. Έτοιμοι να ξεκινήσετε; Παραγγείλτε online τώρα στο νέο <a href="https://shop.tagra.app/tagra-software/" hreflang="en">TAGRA Shop</a>.</p>
+<div class="tsel-pricing">
+<!-- tsel:fleet -->
+<div class="tsel tsel--fleet" data-tsel="fleet" id="tagra-selector" data-fmt="{n} €" data-dec="," data-fee="Περιλαμβάνεται το 1ο έτος · από το 2ο έτος: {fee} / έτος" data-note-box="Περιλαμβάνει το κλειδί λήψης DOWNLOAD BOX II S. Αποστολή στην ΕΕ: σταθερή χρέωση {ship} με ΦΠΑ." data-cta="Αγορά {name} στο TAGRA Shop" role="group" aria-label="Επιλέξτε έκδοση TAGRA βάσει του αριθμού οχημάτων"><p class="tsel__t">Ποια έκδοση TAGRA ταιριάζει στον στόλο σας;</p><p class="tsel__q">Πόσα οχήματα διαθέτουν ταχογράφο;</p><div class="tsel__row tsel__row--5"><a class="tsel__o is-on" href="https://shop.tagra.app/tagra-1/" data-k="t1" data-cap="1 όχημα" aria-current="true" hreflang="en"><b>1</b><small>TAGRA 1</small></a><a class="tsel__o" href="https://shop.tagra.app/tagra-2/" data-k="t2" data-cap="2 οχήματα" hreflang="en"><b>2</b><small>TAGRA 2</small></a><a class="tsel__o" href="https://shop.tagra.app/tagra-4/" data-k="t4" data-cap="3–4 οχήματα" hreflang="en"><b>3–4</b><small>TAGRA 4</small></a><a class="tsel__o" href="https://shop.tagra.app/tagra-6/" data-k="t6" data-cap="5–6 οχήματα" hreflang="en"><b>5–6</b><small>TAGRA 6</small></a><a class="tsel__o" href="https://shop.tagra.app/tagra-max/" data-k="max" data-cap="Απεριόριστα οχήματα" hreflang="en"><b>7+</b><small>TAGRA MAX</small></a></div><p class="tsel__q">Συσκευή λήψης δεδομένων</p><div class="tsel__row tsel__row--2"><a class="tsel__o is-on" href="https://shop.tagra.app/tagra-1/" data-dev="none" aria-current="true" hreflang="en"><b>Μόνο πρόγραμμα</b></a><a class="tsel__o" href="https://shop.tagra.app/tagra-1-download-box-ii-s/" data-dev="box" hreflang="en"><b>Πρόγραμμα + DOWNLOAD BOX II S</b><small data-save="πακέτο · εξοικονομήστε {save}">πακέτο · εξοικονομήστε 49 €</small></a></div><div class="tsel__res" aria-live="polite"><div class="tsel__head"><span class="tsel__lbl">Προτείνεται για εσάς</span><strong class="tsel__name">TAGRA 1</strong><span class="tsel__cap">1 όχημα</span></div><p class="tsel__price"><span class="tsel__amt">149 €</span><span class="tsel__vat">χωρίς ΦΠΑ</span></p><p class="tsel__fee">Περιλαμβάνεται το 1ο έτος · από το 2ο έτος: 79 € / έτος</p><p class="tsel__note" hidden></p><div class="tsel__acts"><a class="btn-cta tsel__cta" href="https://shop.tagra.app/tagra-1/" data-product="tagra-1" hreflang="en">Αγορά TAGRA 1 στο TAGRA Shop</a></div><p class="tsel__more">Μόνο για τη δική σας κάρτα οδηγού; <a href="/el/odigoi/">TAGRA TRUCKER για 1 οδηγό ή πλήρωμα δύο οδηγών →</a></p></div></div>
+<!-- /tsel:fleet -->
+</div>
 <!-- Version price table -->
 <div class="price-table-wrap" style="width:100%;overflow-x:auto;margin-bottom:24px">
 <table class="price-table" style="width:100%;border-collapse:collapse;font-size:16px">
@@ -987,6 +994,13 @@
 <td style="padding:12px;text-align:right;font-weight:600" data-label="Τιμή αγοράς">49 € <span style="font-size:13px;color:var(--text2)">χωρίς ΦΠΑ</span></td>
 <td style="padding:12px;text-align:right;color:var(--green-brand);font-weight:700" data-label="Από το 2ο έτος">19 € / έτος</td>
 <td style="padding:12px;text-align:right"><a aria-label="Αγορά από το e-shop: TAGRA Trucker" class="btn-outline btn-cta--sm" href="https://shop.tagra.app/tagra-trucker/" hreflang="en" style="white-space:nowrap">Αγορά από το e-shop</a></td>
+</tr>
+<tr style="border-bottom:1px solid var(--border)">
+<td style="padding:12px;font-weight:700;color:var(--text-strong)">TAGRA TRUCKER 2<span class="t3p-rownote">για πλήρωμα δύο οδηγών · 1 αναγνώστης USB</span></td>
+<td style="padding:12px;color:var(--text2)" data-label="Οχήματα">2 οδηγοί</td>
+<td style="padding:12px;text-align:right;font-weight:600" data-label="Τιμή αγοράς">88,62 € <span style="font-size:13px;color:var(--text2)">χωρίς ΦΠΑ</span></td>
+<td style="padding:12px;text-align:right;color:var(--green-brand);font-weight:700" data-label="Από το 2ο έτος">29 € / έτος</td>
+<td style="padding:12px;text-align:right"><a aria-label="Αγορά από το e-shop: TAGRA TRUCKER 2" class="btn-outline btn-cta--sm" href="/go/tagra-trucker-2/" style="white-space:nowrap">Αγορά από το e-shop</a></td>
 </tr>
 <tr style="border-bottom:1px solid var(--border)">
 <td style="padding:12px;font-weight:700;color:var(--text-strong)">TAGRA 1</td>
@@ -1105,7 +1119,7 @@
 </details>
 <details>
 <summary>Τι καλύπτει το ετήσιο τέλος αδείας χρήσης;</summary>
-<div class="faq-a">Το ετήσιο τέλος καλύπτει τη συνέχιση της άδειας χρήσης, τις ενημερώσεις λογισμικού και την τεχνική υποστήριξη. Το πρώτο έτος περιλαμβάνεται στην τιμή αγοράς· από το 2ο έτος το τέλος είναι <strong>19 €/έτος</strong> (TAGRA Trucker), <strong>79 €/έτος</strong> (TAGRA 1–2), <strong>99 €/έτος</strong> (TAGRA 4–6) ή <strong>149 €/έτος</strong> (TAGRA MAX), όλα χωρίς ΦΠΑ.</div>
+<div class="faq-a">Το ετήσιο τέλος καλύπτει τη συνέχιση της άδειας χρήσης, τις ενημερώσεις λογισμικού και την τεχνική υποστήριξη. Το πρώτο έτος περιλαμβάνεται στην τιμή αγοράς· από το 2ο έτος το τέλος είναι <strong>19 €/έτος</strong> (TAGRA Trucker), <strong>29 €/έτος</strong> (TAGRA TRUCKER 2), <strong>79 €/έτος</strong> (TAGRA 1–2), <strong>99 €/έτος</strong> (TAGRA 4–6) ή <strong>149 €/έτος</strong> (TAGRA MAX), όλα χωρίς ΦΠΑ.</div>
 </details>
 <details>
 <summary>Είναι το TAGRA έτοιμο για την υποχρέωση βαν του Ιουλίου 2026;</summary>
@@ -1384,7 +1398,7 @@
   "url": "https://tagra.app/el/stolos/",
   "inLanguage": "el",
   "author": { "@type": "Organization", "@id": "https://tagra.app/#organization", "name": "Truck Data Technology, s.r.o.", "url": "https://www.tdt.cz" },
-  "offers": { "@type": "AggregateOffer", "priceCurrency": "EUR", "lowPrice": "49", "highPrice": "749", "offerCount": "6", "availability": "https://schema.org/InStock", "description": "Η τιμή αγοράς περιλαμβάνει ενημερώσεις και υποστήριξη για το πρώτο έτος. Από το 2ο έτος απαιτείται ετήσια συνδρομή 19–149 € για τη διατήρηση της λειτουργίας του προγράμματος." }
+  "offers": { "@type": "AggregateOffer", "priceCurrency": "EUR", "lowPrice": "49", "highPrice": "749", "offerCount": "7", "availability": "https://schema.org/InStock", "description": "Η τιμή αγοράς περιλαμβάνει ενημερώσεις και υποστήριξη για το πρώτο έτος. Από το 2ο έτος απαιτείται ετήσια συνδρομή 19–149 € για τη διατήρηση της λειτουργίας του προγράμματος." }
 }
 </script>
 <script type="application/ld+json">
@@ -1470,7 +1484,7 @@
       "name": "Τι καλύπτει το ετήσιο τέλος αδείας χρήσης;",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Το ετήσιο τέλος καλύπτει τη συνέχιση της άδειας χρήσης, τις ενημερώσεις λογισμικού και την τεχνική υποστήριξη. Το πρώτο έτος περιλαμβάνεται στην τιμή αγοράς· από το 2ο έτος το τέλος είναι 19 €/έτος (TAGRA Trucker), 79 €/έτος (TAGRA 1–2), 99 €/έτος (TAGRA 4–6) ή 149 €/έτος (TAGRA MAX), όλα χωρίς ΦΠΑ."
+        "text": "Το ετήσιο τέλος καλύπτει τη συνέχιση της άδειας χρήσης, τις ενημερώσεις λογισμικού και την τεχνική υποστήριξη. Το πρώτο έτος περιλαμβάνεται στην τιμή αγοράς· από το 2ο έτος το τέλος είναι 19 €/έτος (TAGRA Trucker), 29 €/έτος (TAGRA TRUCKER 2), 79 €/έτος (TAGRA 1–2), 99 €/έτος (TAGRA 4–6) ή 149 €/έτος (TAGRA MAX), όλα χωρίς ΦΠΑ."
       }
     },
     {

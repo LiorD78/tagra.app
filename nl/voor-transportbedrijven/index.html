@@ -550,7 +550,7 @@
 <link href="/assets/css/nav.css" rel="stylesheet"/>
 <script defer="" src="/assets/js/nav.js?v=20261008a"></script><script defer="" src="/assets/js/analytics.js?v=20261103a"></script>
 <link href="/assets/css/footer.css" rel="stylesheet"/><link href="/assets/css/t3-promo.css?v=20261103" rel="stylesheet"/>
-</head>
+<link href="/assets/css/tagra-selector.css?v=20261107" rel="stylesheet"/><script defer="" src="/assets/js/tagra-prices.js?v=20261107"></script><script defer="" src="/assets/js/tagra-selector.js?v=20261107"></script></head>
 <body>
 <a class="skip-link" href="#main-content">Naar de inhoud</a>
 <div aria-hidden="true" id="scroll-progress"></div>
@@ -579,16 +579,18 @@
 </div>
 </nav>
 <!-- ═══ HERO ══════════════════════════════════════════════════════ -->
-<section id="main-content" aria-label="Overzicht van TAGRA" class="band band--hero band--hero--blue">
+<section id="main-content" aria-label="Overzicht van TAGRA" class="band band--hero band--hero--blue tsel-hero">
 <div class="container">
 <div class="eyebrow anim-up"><span class="t3-badge">Nieuw</span>TAGRA III · Voor wagenparkbeheerders</div>
 <h1 class="anim-up" style="transition-delay:.05s">Tachograafanalyse die<br/>overtredingen als eerste vindt</h1>
 <p class="lead anim-up" style="transition-delay:.1s">
 <strong>TAGRA III is de nieuwste generatie van het beproefde TAGRA-programma voor wagenparken.</strong> Eén overzicht laat zien wat uw aandacht nodig heeft — inbreuken, downloads van kaarten en voertuigen, aflopende kaarten en ijkingen — voordat een controle dit aan het licht brengt. Bij elke inbreuk staan een verwijzing naar de regelgeving en een aanbeveling. Schaalbaar van 1 tot een onbeperkt aantal voertuigen.
     </p>
-<div class="anim-up" style="margin-bottom:16px;transition-delay:.15s;display:flex;flex-wrap:wrap;justify-content:center;gap:12px">
+<!-- tsel:fleet-hero -->
+<div class="tsel tsel--hero" data-tsel="fleet" data-fmt="€{n}" data-dec="," data-fee="Eerste jaar inbegrepen · vanaf jaar 2: {fee} / jaar" data-cta="Koop {name} in TAGRA Shop" role="group" aria-label="Kies uw TAGRA-versie op basis van het aantal voertuigen"><p class="tsel__q">Hoeveel voertuigen hebben een tachograaf?</p><div class="tsel__row tsel__row--5"><a class="tsel__o is-on" href="https://shop.tagra.app/tagra-1/" data-k="t1" data-cap="1 voertuig" aria-current="true" hreflang="en"><b>1</b><small>TAGRA 1</small></a><a class="tsel__o" href="https://shop.tagra.app/tagra-2/" data-k="t2" data-cap="2 voertuigen" hreflang="en"><b>2</b><small>TAGRA 2</small></a><a class="tsel__o" href="https://shop.tagra.app/tagra-4/" data-k="t4" data-cap="3–4 voertuigen" hreflang="en"><b>3–4</b><small>TAGRA 4</small></a><a class="tsel__o" href="https://shop.tagra.app/tagra-6/" data-k="t6" data-cap="5–6 voertuigen" hreflang="en"><b>5–6</b><small>TAGRA 6</small></a><a class="tsel__o" href="https://shop.tagra.app/tagra-max/" data-k="max" data-cap="Onbeperkt aantal voertuigen" hreflang="en"><b>7+</b><small>TAGRA MAX</small></a></div><div class="tsel__res" aria-live="polite"><div class="tsel__head"><span class="tsel__lbl">Aanbevolen voor u</span><strong class="tsel__name">TAGRA 1</strong><span class="tsel__cap">1 voertuig</span></div><p class="tsel__price"><span class="tsel__amt">€149</span><span class="tsel__vat">excl. btw</span></p><p class="tsel__fee">Eerste jaar inbegrepen · vanaf jaar 2: €79 / jaar</p><div class="tsel__acts"><a class="btn-cta tsel__cta" href="https://shop.tagra.app/tagra-1/" data-product="tagra-1" hreflang="en">Koop TAGRA 1 in TAGRA Shop</a></div></div></div>
+<!-- /tsel:fleet-hero -->
+<div class="anim-up tsel-hero__cta" style="margin-bottom:16px;transition-delay:.15s;display:flex;flex-wrap:wrap;justify-content:center;gap:12px">
 <a class="btn-cta" href="/nl/gratis-proefversie/?audience=fleet" rel="noopener" target="_blank">30 dagen gratis proberen</a>
-<a class="btn-outline" href="https://shop.tagra.app/tagra-software/" hreflang="en">Kopen in de webshop</a>
 </div>
 <p class="anim-up" style="font-size:15px;color:var(--text2);transition-delay:.2s">Windows · Gratis proefperiode van 30 dagen · Klaar voor bestelwagens vanaf juli 2026</p>
 <!-- Hero: TAGRA III screenshot -->
@@ -620,7 +622,7 @@
 <div class="bc s4 greenfill fly-left" style="transition-delay:.15s">
 <div class="eyebrow">Vanaf jaar 2</div>
 <div class="bc-title" style="color:var(--green-brand)">vanaf 79 € / jaar</div>
-<div class="bc-text">Jaarlijkse licentievergoeding excl. btw — inclusief alle software-updates en speciale technische ondersteuning. 19 € (TAGRA Trucker), 79 € (TAGRA 1–2), 99 € (TAGRA 4–6), 149 € (TAGRA MAX).</div>
+<div class="bc-text">Jaarlijkse licentievergoeding excl. btw — inclusief alle software-updates en speciale technische ondersteuning. 19 € (TAGRA Trucker), 29 € (TAGRA TRUCKER 2), 79 € (TAGRA 1–2), 99 € (TAGRA 4–6), 149 € (TAGRA MAX).</div>
 </div>
 <div class="bc s4 anim-up" style="transition-delay:.25s">
 <div class="eyebrow">Klaar voor</div>
@@ -967,6 +969,11 @@
 <div class="eyebrow">Prijs &amp; voorwaarden</div>
 <h2 style="text-transform:none">Transparante prijzen.<br/>Geen verborgen kosten.</h2>
 <p style="margin:16px 0 24px">Begin met de gratis proefversie. Wanneer u klaar bent, selecteert u uw versie rechtstreeks in de software en betaalt u online — uw licentie wordt onmiddellijk verstrekt. Klaar om te starten? Bestel nu direct online in de nieuwe <a href="https://shop.tagra.app/tagra-software/" hreflang="en">TAGRA Shop</a>.</p>
+<div class="tsel-pricing">
+<!-- tsel:fleet -->
+<div class="tsel tsel--fleet" data-tsel="fleet" id="tagra-selector" data-fmt="€{n}" data-dec="," data-fee="Eerste jaar inbegrepen · vanaf jaar 2: {fee} / jaar" data-note-box="Inclusief de DOWNLOAD BOX II S-downloadsleutel. Verzending binnen de EU: vast tarief {ship} incl. btw." data-cta="Koop {name} in TAGRA Shop" role="group" aria-label="Kies uw TAGRA-versie op basis van het aantal voertuigen"><p class="tsel__t">Welke TAGRA past bij uw wagenpark?</p><p class="tsel__q">Hoeveel voertuigen hebben een tachograaf?</p><div class="tsel__row tsel__row--5"><a class="tsel__o is-on" href="https://shop.tagra.app/tagra-1/" data-k="t1" data-cap="1 voertuig" aria-current="true" hreflang="en"><b>1</b><small>TAGRA 1</small></a><a class="tsel__o" href="https://shop.tagra.app/tagra-2/" data-k="t2" data-cap="2 voertuigen" hreflang="en"><b>2</b><small>TAGRA 2</small></a><a class="tsel__o" href="https://shop.tagra.app/tagra-4/" data-k="t4" data-cap="3–4 voertuigen" hreflang="en"><b>3–4</b><small>TAGRA 4</small></a><a class="tsel__o" href="https://shop.tagra.app/tagra-6/" data-k="t6" data-cap="5–6 voertuigen" hreflang="en"><b>5–6</b><small>TAGRA 6</small></a><a class="tsel__o" href="https://shop.tagra.app/tagra-max/" data-k="max" data-cap="Onbeperkt aantal voertuigen" hreflang="en"><b>7+</b><small>TAGRA MAX</small></a></div><p class="tsel__q">Downloadapparaat</p><div class="tsel__row tsel__row--2"><a class="tsel__o is-on" href="https://shop.tagra.app/tagra-1/" data-dev="none" aria-current="true" hreflang="en"><b>Alleen software</b></a><a class="tsel__o" href="https://shop.tagra.app/tagra-1-download-box-ii-s/" data-dev="box" hreflang="en"><b>Software + DOWNLOAD BOX II S</b><small data-save="bundel · bespaar {save}">bundel · bespaar €49</small></a></div><div class="tsel__res" aria-live="polite"><div class="tsel__head"><span class="tsel__lbl">Aanbevolen voor u</span><strong class="tsel__name">TAGRA 1</strong><span class="tsel__cap">1 voertuig</span></div><p class="tsel__price"><span class="tsel__amt">€149</span><span class="tsel__vat">excl. btw</span></p><p class="tsel__fee">Eerste jaar inbegrepen · vanaf jaar 2: €79 / jaar</p><p class="tsel__note" hidden></p><div class="tsel__acts"><a class="btn-cta tsel__cta" href="https://shop.tagra.app/tagra-1/" data-product="tagra-1" hreflang="en">Koop TAGRA 1 in TAGRA Shop</a></div><p class="tsel__more">Alleen uw eigen bestuurderskaart? <a href="/nl/voor-chauffeurs/">TAGRA TRUCKER voor 1 chauffeur of dubbele bemanning →</a></p></div></div>
+<!-- /tsel:fleet -->
+</div>
 <!-- Version price table -->
 <div class="price-table-wrap" style="width:100%;overflow-x:auto;margin-bottom:24px">
 <table class="price-table" style="width:100%;border-collapse:collapse;font-size:16px">
@@ -986,6 +993,13 @@
 <td data-label="Aankoopprijs" style="padding:12px;text-align:right;font-weight:600">€49 <span style="font-size:13px;color:var(--text2)">exclusief btw</span></td>
 <td data-label="Vanaf jaar 2" style="padding:12px;text-align:right;color:var(--green-brand);font-weight:700">19 € / jaar</td>
 <td style="padding:12px;text-align:right"><a aria-label="Kopen in de webshop: TAGRA Trucker" class="btn-outline btn-cta--sm" href="https://shop.tagra.app/tagra-trucker/" hreflang="en" style="white-space:nowrap">Kopen in de webshop</a></td>
+</tr>
+<tr style="border-bottom:1px solid var(--border)">
+<td style="padding:12px;font-weight:700;color:var(--text-strong)">TAGRA TRUCKER 2<span class="t3p-rownote">voor dubbele bemanning · 1 USB-kaartlezer</span></td>
+<td data-label="Voertuigen" style="padding:12px;color:var(--text2)">2 chauffeurs</td>
+<td data-label="Aankoopprijs" style="padding:12px;text-align:right;font-weight:600">€88,62 <span style="font-size:13px;color:var(--text2)">exclusief btw</span></td>
+<td data-label="Vanaf jaar 2" style="padding:12px;text-align:right;color:var(--green-brand);font-weight:700">29 € / jaar</td>
+<td style="padding:12px;text-align:right"><a aria-label="Kopen in de webshop: TAGRA TRUCKER 2" class="btn-outline btn-cta--sm" href="/go/tagra-trucker-2/" style="white-space:nowrap">Kopen in de webshop</a></td>
 </tr>
 <tr style="border-bottom:1px solid var(--border)">
 <td style="padding:12px;font-weight:700;color:var(--text-strong)">TAGRA 1</td>
@@ -1383,7 +1397,7 @@
   "url": "https://tagra.app/nl/voor-transportbedrijven/",
   "inLanguage": "nl",
   "author": { "@type": "Organization", "@id": "https://tagra.app/#organization", "name": "Truck Data Technology, s.r.o.", "url": "https://www.tdt.cz" },
-  "offers": { "@type": "AggregateOffer", "priceCurrency": "EUR", "lowPrice": "49", "highPrice": "749", "offerCount": "6", "availability": "https://schema.org/InStock", "description": "De aankoopprijs omvat het eerste jaar met updates en ondersteuning. Vanaf jaar 2 geldt een jaarlijkse vergoeding van 19–149 € om de software actief te houden." }
+  "offers": { "@type": "AggregateOffer", "priceCurrency": "EUR", "lowPrice": "49", "highPrice": "749", "offerCount": "7", "availability": "https://schema.org/InStock", "description": "De aankoopprijs omvat het eerste jaar met updates en ondersteuning. Vanaf jaar 2 geldt een jaarlijkse vergoeding van 19–149 € om de software actief te houden." }
 }
 </script>
 <script type="application/ld+json">
