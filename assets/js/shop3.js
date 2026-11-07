@@ -1,4 +1,4 @@
-/* TAGRA Shop layer 3 v1.5 – program screenshots in a MacBook frame (like TRUCKMALL mac-stage) (3. 11. 2026); v1.3 loads the fleet calculator on the homepage; v1.4 loads the version switcher on TAGRA product pages; v1.5 Safari plays the coffee video in the first carousel card (6. 11. 2026) */
+/* TAGRA Shop layer 3 v1.6 (7. 11. 2026: animovany robot v paticce) | v1.5 – program screenshots in a MacBook frame (like TRUCKMALL mac-stage) (3. 11. 2026); v1.3 loads the fleet calculator on the homepage; v1.4 loads the version switcher on TAGRA product pages; v1.5 Safari plays the coffee video in the first carousel card (6. 11. 2026) */
 (function(){
   var l=document.createElement('link');l.rel='stylesheet';l.href='https://tagra.app/assets/css/shop3.css?v=2';document.head.appendChild(l);
   var MB='https://wuswoaicjtuodzmrjwgf.supabase.co/storage/v1/object/public/site/tagra-shop/mac/tagra3-mac-';
@@ -58,6 +58,7 @@
       if(r.bottom>h*0.25&&r.top<h*0.75){var x=v.play();if(x&&x.catch)x.catch(function(){});}
     })();
   }
-  function run(){imgs();gallery();zoom();topsellers();fleet();variant();if(document.body&&document.body.classList.contains('type-index'))vfix();}
+  function robot(){if(document.getElementById('tm-robot-js'))return;var s=document.createElement('script');s.id='tm-robot-js';s.src='https://tagra.app/assets/js/tm-robot.js?v=1';s.async=true;document.head.appendChild(s);}
+  function run(){imgs();gallery();zoom();topsellers();fleet();variant();robot();if(document.body&&document.body.classList.contains('type-index'))vfix();}
   if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',run);}else{run();}
 })();
