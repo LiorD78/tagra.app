@@ -42,6 +42,9 @@ a.tsel__o:focus-visible{outline:3px solid rgba(19,74,142,.35);outline-offset:2px
 .tsel--hero{margin:0 auto 22px;padding:14px}
 .tsel--hero .tsel__q{text-align:center}
 .tsel-pricing{margin:0 0 28px}
+/* homepage pricing section (v1.1, 8. 11. 2026): fleet + driver selector side by side, stacked on phones */
+.tsel-home{display:grid;gap:24px;margin:32px auto 0;max-width:1240px}
+@media (min-width:1000px){.tsel-home{grid-template-columns:repeat(2,minmax(0,1fr))}.tsel-home .tsel{max-width:none}}
 @media (max-width:560px){
   .tsel{padding:12px 10px;border-radius:18px}
   .tsel__row--5{grid-template-columns:repeat(4,minmax(0,1fr)) minmax(0,1.3fr)}
