@@ -44,17 +44,17 @@
     function lc(){var l=(document.documentElement.getAttribute('lang')||'en').toLowerCase().split('-')[0];
       var m={cz:'cs',cs:'cs',sk:'sk',de:'de',pl:'pl',gr:'el',el:'el',hu:'hu',fr:'fr',it:'it',nl:'nl',ro:'ro',en:'en'};return m[l]||'en';}
     var T={
-      hu:{t:'Analitikai s\u00fctiket haszn\u00e1lunk (Google Analytics, Microsoft Clarity, Smartsupp), hogy meg\u00e9rts\u00fck a webhely haszn\u00e1lat\u00e1t. Csak az \u00d6n hozz\u00e1j\u00e1rul\u00e1s\u00e1val t\u00f6lt\u0151dnek be.',a:'Elfogadom',r:'Elutas\u00edtom',p:'Adatv\u00e9delem \u00e9s s\u00fctik'},
+      hu:{t:'Analitikai sütiket használunk (Google Analytics, Microsoft Clarity, Smartsupp), hogy megértsük a webhely használatát. Csak az Ön hozzájárulásával töltődnek be.',a:'Elfogadom',r:'Elutasítom',p:'Adatvédelem és sütik'},
       ro:{t:'Utilizăm module cookie de analiză (Google Analytics, Microsoft Clarity, Smartsupp) pentru a înțelege modul de utilizare a site-ului. Se încarcă doar cu consimțământul dumneavoastră.',a:'Accept',r:'Refuz',p:'Confidențialitate și cookie-uri'},
       nl:{t:'We gebruiken analytische cookies (Google Analytics, Microsoft Clarity, Smartsupp) om het gebruik van de site te begrijpen. Ze laden alleen met uw toestemming.',a:'Accepteren',r:'Weigeren',p:'Privacy en cookies'},
       fr:{t:'Nous utilisons des cookies analytiques (Google Analytics, Microsoft Clarity, Smartsupp) pour comprendre l’utilisation du site. Ils ne se chargent qu’avec votre consentement.',a:'Accepter',r:'Refuser',p:'Confidentialité et cookies'},
       it:{t:'Utilizziamo cookie analitici (Google Analytics, Microsoft Clarity, Smartsupp) per capire l’utilizzo del sito. Si caricano solo con il Suo consenso.',a:'Accetta',r:'Rifiuta',p:'Privacy e cookie'},
       en:{t:'We use analytics cookies (Google Analytics, Microsoft Clarity, Smartsupp) to understand site usage. They load only with your consent.',a:'Accept',r:'Reject',p:'Privacy &amp; cookies'},
-      cs:{t:'Pou\u017e\u00edv\u00e1me analytick\u00e9 cookies (Google Analytics, Microsoft Clarity, Smartsupp) k pochopen\u00ed pou\u017e\u00edv\u00e1n\u00ed webu. Na\u010dtou se jen s va\u0161\u00edm souhlasem.',a:'P\u0159ijmout',r:'Odm\u00edtnout',p:'Soukrom\u00ed a cookies'},
-      sk:{t:'Pou\u017e\u00edvame analytick\u00e9 cookies (Google Analytics, Microsoft Clarity, Smartsupp) na pochopenie pou\u017e\u00edvania webu. Na\u010d\u00edtaj\u00fa sa len s va\u0161\u00edm s\u00fahlasom.',a:'Prija\u0165',r:'Odmietnu\u0165',p:'S\u00fakromie a cookies'},
+      cs:{t:'Používáme analytické cookies (Google Analytics, Microsoft Clarity, Smartsupp) k pochopení používání webu. Načtou se jen s vaším souhlasem.',a:'Přijmout',r:'Odmítnout',p:'Soukromí a cookies'},
+      sk:{t:'Používame analytické cookies (Google Analytics, Microsoft Clarity, Smartsupp) na pochopenie používania webu. Načítajú sa len s vaším súhlasom.',a:'Prijať',r:'Odmietnuť',p:'Súkromie a cookies'},
       de:{t:'Wir verwenden Analyse-Cookies (Google Analytics, Microsoft Clarity, Smartsupp), um die Nutzung der Website zu verstehen. Sie werden nur mit Ihrer Einwilligung geladen.',a:'Akzeptieren',r:'Ablehnen',p:'Datenschutz &amp; Cookies'},
-      pl:{t:'U\u017cywamy plik\u00f3w cookie do analityki (Google Analytics, Microsoft Clarity, Smartsupp), aby zrozumie\u0107 korzystanie z witryny. \u0141aduj\u0105 si\u0119 tylko za Twoj\u0105 zgod\u0105.',a:'Akceptuj',r:'Odrzu\u0107',p:'Prywatno\u015b\u0107 i cookies'},
-      el:{t:'\u03a7\u03c1\u03b7\u03c3\u03b9\u03bc\u03bf\u03c0\u03bf\u03b9\u03bf\u03cd\u03bc\u03b5 cookies \u03b1\u03bd\u03ac\u03bb\u03c5\u03c3\u03b7\u03c2 (Google Analytics, Microsoft Clarity, Smartsupp) \u03b3\u03b9\u03b1 \u03bd\u03b1 \u03ba\u03b1\u03c4\u03b1\u03bd\u03bf\u03ae\u03c3\u03bf\u03c5\u03bc\u03b5 \u03c4\u03b7 \u03c7\u03c1\u03ae\u03c3\u03b7. \u03a6\u03bf\u03c1\u03c4\u03ce\u03bd\u03bf\u03bd\u03c4\u03b1\u03b9 \u03bc\u03cc\u03bd\u03bf \u03bc\u03b5 \u03c4\u03b7 \u03c3\u03c5\u03b3\u03ba\u03b1\u03c4\u03ac\u03b8\u03b5\u03c3\u03ae \u03c3\u03b1\u03c2.',a:'\u0391\u03c0\u03bf\u03b4\u03bf\u03c7\u03ae',r:'\u0391\u03c0\u03cc\u03c1\u03c1\u03b9\u03c8\u03b7',p:'\u0391\u03c0\u03cc\u03c1\u03c1\u03b7\u03c4\u03bf &amp; cookies'}
+      pl:{t:'Używamy plików cookie do analityki (Google Analytics, Microsoft Clarity, Smartsupp), aby zrozumieć korzystanie z witryny. Ładują się tylko za Twoją zgodą.',a:'Akceptuj',r:'Odrzuć',p:'Prywatność i cookies'},
+      el:{t:'Χρησιμοποιούμε cookies ανάλυσης (Google Analytics, Microsoft Clarity, Smartsupp) για να κατανοήσουμε τη χρήση. Φορτώνονται μόνο με τη συγκατάθεσή σας.',a:'Αποδοχή',r:'Απόρριψη',p:'Απόρρητο &amp; cookies'}
     };
     function loadClarity(){if(!CL||window.__tmxCl)return;window.__tmxCl=1;
       (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
@@ -652,6 +652,7 @@
   "name": "Truck Data Technology, s.r.o.",
   "alternateName": "TDT",
   "url": "https://www.tdt.cz",
+  "brand": { "@type": "Brand", "name": "TAGRA", "logo": "https://tagra.app/assets/img/logo-light.svg?v=20260513zh" },
   "logo": "https://tagra.app/assets/img/logo-light.svg?v=20260513zh",
   "foundingDate": "2000",
   "sameAs": [
@@ -770,7 +771,7 @@
 <link href="/assets/css/components.css" rel="stylesheet"/>
 <link href="/assets/css/nav.css" rel="stylesheet"/>
 <script defer="" src="/assets/js/nav.js?v=20261008a"></script><script defer="" src="/assets/js/analytics.js?v=20261103a"></script>
-<link href="/assets/css/footer.css" rel="stylesheet"/><link href="/assets/css/t3-promo.css?v=20261103" rel="stylesheet"/>
+<link href="/assets/css/footer.css" rel="stylesheet"/><link href="/assets/css/tagra-selector.css?v=20261108" rel="stylesheet"/><script defer="" src="/assets/js/tagra-prices.js?v=20261107"></script><script defer="" src="/assets/js/tagra-selector.js?v=20261107"></script><link href="/assets/css/t3-promo.css?v=20261103" rel="stylesheet"/>
 </head>
 <body class="home-fullbleed">
 <a class="skip-link" href="#main-content">Μετάβαση στο περιεχόμενο</a>
@@ -1063,6 +1064,14 @@
 <span class="pricing-teaser-cta-note">Χωρίς πιστωτική κάρτα. Πρόγραμμα εγκατάστασης Windows.</span>
 </div>
 </div>
+<div class="tsel-home">
+<!-- tsel:fleet -->
+<div class="tsel tsel--fleet" data-tsel="fleet" id="tagra-selector" data-fmt="{n} €" data-dec="," data-fee="Περιλαμβάνεται το 1ο έτος · από το 2ο έτος: {fee} / έτος" data-note-box="Περιλαμβάνει το κλειδί λήψης DOWNLOAD BOX II S. Αποστολή στην ΕΕ: σταθερή χρέωση {ship} με ΦΠΑ." data-cta="Αγορά {name} στο TAGRA Shop" role="group" aria-label="Επιλέξτε έκδοση TAGRA βάσει του αριθμού οχημάτων"><p class="tsel__t">Ποια έκδοση TAGRA ταιριάζει στον στόλο σας;</p><p class="tsel__q">Πόσα οχήματα διαθέτουν ταχογράφο;</p><div class="tsel__row tsel__row--5"><a class="tsel__o is-on" href="https://shop.tagra.app/tagra-1/" data-k="t1" data-cap="1 όχημα" aria-current="true" hreflang="en"><b>1</b><small>TAGRA 1</small></a><a class="tsel__o" href="https://shop.tagra.app/tagra-2/" data-k="t2" data-cap="2 οχήματα" hreflang="en"><b>2</b><small>TAGRA 2</small></a><a class="tsel__o" href="https://shop.tagra.app/tagra-4/" data-k="t4" data-cap="3–4 οχήματα" hreflang="en"><b>3–4</b><small>TAGRA 4</small></a><a class="tsel__o" href="https://shop.tagra.app/tagra-6/" data-k="t6" data-cap="5–6 οχήματα" hreflang="en"><b>5–6</b><small>TAGRA 6</small></a><a class="tsel__o" href="https://shop.tagra.app/tagra-max/" data-k="max" data-cap="Απεριόριστα οχήματα" hreflang="en"><b>7+</b><small>TAGRA MAX</small></a></div><p class="tsel__q">Συσκευή λήψης δεδομένων</p><div class="tsel__row tsel__row--2"><a class="tsel__o is-on" href="https://shop.tagra.app/tagra-1/" data-dev="none" aria-current="true" hreflang="en"><b>Μόνο πρόγραμμα</b></a><a class="tsel__o" href="https://shop.tagra.app/tagra-1-download-box-ii-s/" data-dev="box" hreflang="en"><b>Πρόγραμμα + DOWNLOAD BOX II S</b><small data-save="πακέτο · εξοικονομήστε {save}">πακέτο · εξοικονομήστε 49 €</small></a></div><div class="tsel__res" aria-live="polite"><div class="tsel__head"><span class="tsel__lbl">Προτείνεται για εσάς</span><strong class="tsel__name">TAGRA 1</strong><span class="tsel__cap">1 όχημα</span></div><p class="tsel__price"><span class="tsel__amt">149 €</span><span class="tsel__vat">χωρίς ΦΠΑ</span></p><p class="tsel__fee">Περιλαμβάνεται το 1ο έτος · από το 2ο έτος: 79 € / έτος</p><p class="tsel__note" hidden></p><div class="tsel__acts"><a class="btn-cta tsel__cta" href="https://shop.tagra.app/tagra-1/" data-product="tagra-1" hreflang="en">Αγορά TAGRA 1 στο TAGRA Shop</a></div><p class="tsel__more">Μόνο για τη δική σας κάρτα οδηγού; <a href="/el/odigoi/">TAGRA TRUCKER για 1 οδηγό ή πλήρωμα δύο οδηγών →</a></p></div></div>
+<!-- /tsel:fleet -->
+<!-- tsel:driver -->
+<div class="tsel tsel--driver" data-tsel="driver" id="tagra-trucker-selector" data-fmt="{n} €" data-dec="," data-fee="Περιλαμβάνεται το 1ο έτος · από το 2ο έτος: {fee} / έτος" data-cta="Παραγγελία {name}" role="group" aria-label="Επιλέξτε TAGRA TRUCKER για έναν ή δύο οδηγούς"><p class="tsel__t">Ένας οδηγός ή πλήρωμα δύο οδηγών;</p><p class="tsel__q">Πόσοι οδηγοί θα χρησιμοποιούν το TAGRA TRUCKER;</p><div class="tsel__row tsel__row--2"><a class="tsel__o is-on" href="https://shop.tagra.app/tagra-trucker/" data-k="tr1" data-cap="Μία άδεια για έναν οδηγό · περιλαμβάνεται δωρεάν αναγνώστης καρτών USB" data-note="Αποστολή αναγνώστη καρτών: σταθερή χρέωση {ship} με ΦΠΑ σε όλη την ΕΕ." aria-current="true" hreflang="en"><b>1 οδηγός</b><small>TAGRA TRUCKER</small></a><a class="tsel__o" href="/go/tagra-trucker-2/" data-k="tr2" data-cap="Μία άδεια για δύο οδηγούς στον ίδιο υπολογιστή · περιλαμβάνεται 1 αναγνώστης καρτών USB" data-note="Αποστολή αναγνώστη καρτών: σταθερή χρέωση {ship} με ΦΠΑ σε όλη την ΕΕ."><b>2 οδηγοί σε κοινό πλήρωμα</b><small>TAGRA TRUCKER 2</small></a></div><div class="tsel__res" aria-live="polite"><div class="tsel__head"><span class="tsel__lbl">Προτείνεται για εσάς</span><strong class="tsel__name">TAGRA TRUCKER</strong><span class="tsel__cap">Μία άδεια για έναν οδηγό · περιλαμβάνεται δωρεάν αναγνώστης καρτών USB</span></div><p class="tsel__price"><span class="tsel__amt">49 €</span><span class="tsel__vat">χωρίς ΦΠΑ</span></p><p class="tsel__fee">Περιλαμβάνεται το 1ο έτος · από το 2ο έτος: 19 € / έτος</p><p class="tsel__note">Αποστολή αναγνώστη καρτών: σταθερή χρέωση 9,90 € με ΦΠΑ σε όλη την ΕΕ.</p><div class="tsel__acts"><a class="btn-cta tsel__cta" href="https://shop.tagra.app/tagra-trucker/" data-product="tagra-trucker" hreflang="en">Παραγγελία TAGRA TRUCKER</a></div></div></div>
+<!-- /tsel:driver -->
+</div>
 </div>
 </section>
 <!-- ═══ TAGRA SHOP (order online) ═══ -->
@@ -1204,7 +1213,12 @@
 <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
+  "@id": "https://tagra.app/el/#software",
   "name": "TAGRA – Πρόγραμμα Διαχείρισης Δεδομένων Ταχογράφου",
+  "alternateName": ["TAGRA", "TAGRA III", "TAGRA Trucker"],
+  "softwareVersion": "III",
+  "brand": { "@type": "Brand", "name": "TAGRA" },
+  "publisher": { "@id": "https://tagra.app/#organization" },
   "applicationCategory": "BusinessApplication",
   "operatingSystem": "Windows",
   "description": "Λογισμικό για την αξιολόγηση και αρχειοθέτηση δεδομένων από ψηφιακούς ταχογράφους και κάρτες οδηγού. Διαθέσιμο για διαχειριστές στόλου (από 1 έως απεριόριστα οχήματα) και επαγγελματίες οδηγούς. Συμβατό με τον Κανονισμό (ΕΚ) 561/2006, το AETR και την οδηγία για τον χρόνο εργασίας. Δωρεάν δοκιμή 30 ημερών.",
