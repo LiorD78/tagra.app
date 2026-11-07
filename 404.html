@@ -2,6 +2,84 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
+<!-- 7. 11. 2026: stejný blok souhlasu + gtag jako index.html, aby analytics.js mohl odeslat page_not_found -->
+<!-- TMX-ANALYTICS START -->
+<!-- Consent Mode v2 defaults (deny) + gtag stub — runs BEFORE gtag.js -->
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent','default',{
+      ad_storage:'denied', ad_user_data:'denied', ad_personalization:'denied',
+      analytics_storage:'denied', functionality_storage:'denied',
+      personalization_storage:'denied', security_storage:'granted',
+      wait_for_update:500
+    });
+    gtag('set','ads_data_redaction',true);
+    gtag('set','url_passthrough',false);
+  </script>
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-92253QFBNX"></script>
+<script>
+    gtag('js', new Date());
+    gtag('config','G-92253QFBNX');
+  </script>
+<!-- Cookie consent banner (self-hosted) + Microsoft Clarity gating -->
+<style>
+    .tmx-cc{position:fixed;left:0;right:0;bottom:0;z-index:2147483000;background:linear-gradient(120deg,var(--blue-dark,#0b2c4a),var(--blue-mid,#134a8e) 62%,var(--blue-light,#1f5fa6));color:#fff;
+      font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+      padding:16px 20px;box-shadow:0 -4px 24px rgba(0,0,0,.18);display:flex;flex-wrap:wrap;
+      align-items:center;gap:14px;justify-content:center}
+    .tmx-cc__txt{flex:1 1 360px;max-width:760px}
+    .tmx-cc__txt a{color:#9ed0f5;text-decoration:underline}
+    .tmx-cc__btns{display:flex;gap:10px;flex:0 0 auto}
+    .tmx-cc__b{appearance:none;border:0;cursor:pointer;font:inherit;font-weight:600;
+      padding:10px 22px;border-radius:99px;transition:filter .15s;color:#fff}
+    .tmx-cc__b:hover{filter:brightness(1.08)}
+    .tmx-cc__b--no{background:rgba(255,255,255,.16)}
+    .tmx-cc__b--yes{background:var(--green-cta,#5C820F)}
+    @media(max-width:640px){.tmx-cc{padding:14px}.tmx-cc__btns{width:100%}.tmx-cc__b{flex:1}}
+  </style>
+<script>
+  (function(){
+    var KEY='tmx-consent-v1', CL='wt18054m0r';
+    function lc(){var l=(document.documentElement.getAttribute('lang')||'en').toLowerCase().split('-')[0];
+      var m={cz:'cs',cs:'cs',sk:'sk',de:'de',pl:'pl',gr:'el',el:'el',hu:'hu',fr:'fr',it:'it',nl:'nl',ro:'ro',en:'en'};return m[l]||'en';}
+    /* 404 je jeden soubor pro všechny jazyky: odkaz na ochranu soukromí podle prefixu URL */
+    function pv(){var m={de:'/de/datenschutz/',pl:'/pl/polityka-prywatnosci/',el:'/el/aporrito/',hu:'/hu/adatvedelmi-tajekoztato/',it:'/it/privacy/',fr:'/fr/confidentialite/',ro:'/ro/confidentialitate/',nl:'/nl/privacy/'};return m[location.pathname.split('/')[1]]||'/privacy/';}
+    var T={
+      hu:{t:'Analitikai sütiket használunk (Google Analytics, Microsoft Clarity, Smartsupp), hogy megértsük a webhely használatát. Csak az Ön hozzájárulásával töltődnek be.',a:'Elfogadom',r:'Elutasítom',p:'Adatvédelem és sütik'},
+      ro:{t:'Utilizăm module cookie de analiză (Google Analytics, Microsoft Clarity, Smartsupp) pentru a înțelege modul de utilizare a site-ului. Se încarcă doar cu consimțământul dumneavoastră.',a:'Accept',r:'Refuz',p:'Confidențialitate și cookie-uri'},
+      nl:{t:'We gebruiken analytische cookies (Google Analytics, Microsoft Clarity, Smartsupp) om het gebruik van de site te begrijpen. Ze laden alleen met uw toestemming.',a:'Accepteren',r:'Weigeren',p:'Privacy en cookies'},
+      fr:{t:'Nous utilisons des cookies analytiques (Google Analytics, Microsoft Clarity, Smartsupp) pour comprendre l’utilisation du site. Ils ne se chargent qu’avec votre consentement.',a:'Accepter',r:'Refuser',p:'Confidentialité et cookies'},
+      it:{t:'Utilizziamo cookie analitici (Google Analytics, Microsoft Clarity, Smartsupp) per capire l’utilizzo del sito. Si caricano solo con il Suo consenso.',a:'Accetta',r:'Rifiuta',p:'Privacy e cookie'},
+      en:{t:'We use analytics cookies (Google Analytics, Microsoft Clarity, Smartsupp) to understand site usage. They load only with your consent.',a:'Accept',r:'Reject',p:'Privacy &amp; cookies'},
+      cs:{t:'Používáme analytické cookies (Google Analytics, Microsoft Clarity, Smartsupp) k pochopení používání webu. Načtou se jen s vaším souhlasem.',a:'Přijmout',r:'Odmítnout',p:'Soukromí a cookies'},
+      sk:{t:'Používame analytické cookies (Google Analytics, Microsoft Clarity, Smartsupp) na pochopenie používania webu. Načítajú sa len s vaším súhlasom.',a:'Prijať',r:'Odmietnuť',p:'Súkromie a cookies'},
+      de:{t:'Wir verwenden Analyse-Cookies (Google Analytics, Microsoft Clarity, Smartsupp), um die Nutzung der Website zu verstehen. Sie werden nur mit Ihrer Einwilligung geladen.',a:'Akzeptieren',r:'Ablehnen',p:'Datenschutz &amp; Cookies'},
+      pl:{t:'Używamy plików cookie do analityki (Google Analytics, Microsoft Clarity, Smartsupp), aby zrozumieć korzystanie z witryny. Ładują się tylko za Twoją zgodą.',a:'Akceptuj',r:'Odrzuć',p:'Prywatność i cookies'},
+      el:{t:'Χρησιμοποιούμε cookies ανάλυσης (Google Analytics, Microsoft Clarity, Smartsupp) για να κατανοήσουμε τη χρήση. Φορτώνονται μόνο με τη συγκατάθεσή σας.',a:'Αποδοχή',r:'Απόρριψη',p:'Απόρρητο &amp; cookies'}
+    };
+    function loadClarity(){if(!CL||window.__tmxCl)return;window.__tmxCl=1;
+      (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+       t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+       y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script",CL);}
+    function grant(){try{localStorage.setItem(KEY,'granted')}catch(e){}
+      gtag('consent','update',{analytics_storage:'granted'});loadClarity();}
+    function deny(){try{localStorage.setItem(KEY,'denied')}catch(e){}}
+    var saved=null;try{saved=localStorage.getItem(KEY)}catch(e){}
+    if(saved==='granted'){grant();return;} if(saved==='denied'){return;}
+    function show(){var tx=T[lc()]||T.en;
+      var b=document.createElement('div');b.className='tmx-cc';b.setAttribute('role','dialog');b.setAttribute('aria-live','polite');
+      b.innerHTML='<div class="tmx-cc__txt">'+tx.t+' <a href="'+pv()+'">'+tx.p+'</a></div>'+
+        '<div class="tmx-cc__btns"><button type="button" class="tmx-cc__b tmx-cc__b--no">'+tx.r+'</button>'+
+        '<button type="button" class="tmx-cc__b tmx-cc__b--yes">'+tx.a+'</button></div>';
+      document.body.appendChild(b);
+      b.querySelector('.tmx-cc__b--yes').addEventListener('click',function(){grant();b.remove();});
+      b.querySelector('.tmx-cc__b--no').addEventListener('click',function(){deny();b.remove();});}
+    if(document.body)show();else document.addEventListener('DOMContentLoaded',show);
+  })();
+  </script>
+<!-- TMX-ANALYTICS END -->
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>Page not found | TAGRA</title>
 <meta content="noindex, follow" name="robots"/>
@@ -64,7 +142,7 @@
           body:'Η σελίδα που αναζητάτε δεν υπάρχει ή έχει μετακινηθεί. Δοκιμάστε την αρχική σελίδα ή μία από τις παρακάτω ενότητες.',
           home:'/el/', homeLabel:'Αρχική', articles:'/el/arthra/', articlesLabel:'Άρθρα',
           faq:'/el/faq/', faqLabel:'Συχνές ερωτήσεις', contact:'/el/epikoinonia/', contactLabel:'Επικοινωνία' },
-    hu: { lang:'hu', title:'A oldal nem található',
+    hu: { lang:'hu', title:'Az oldal nem található',
           body:'A keresett oldal nem létezik vagy áthelyezték. Próbálja meg a főoldalt vagy az alábbi szakaszok egyikét.',
           home:'/hu/', homeLabel:'Főoldal', articles:'/hu/cikkek/', articlesLabel:'Cikkek',
           faq:'/hu/gyakori-kerdesek/', faqLabel:'GYIK', contact:'/hu/kapcsolat/', contactLabel:'Kapcsolat' }
