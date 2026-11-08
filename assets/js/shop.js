@@ -7,7 +7,7 @@
   var SALES='sales@tagra.app',SUPPORT='support@tagra.app',PHONE='+420 739 005 345';
   var RM=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
   function isHP(){return document.body.classList.contains('type-index');}
-  var POP='',POPL='Most popular',POPRE=/\+\s*DOWNLOAD BOX II S\s*$/i;  /* Most popular = sada program + DOWNLOAD BOX II S, ne tarif (Libor 8. 11. 2026: tarif závisí na velikosti flotily) */
+  var POP='',POPL='Most popular',POPRE=/\+\s*DOWNLOAD BOX II S\s*$/i;  /* Most popular = TAGRA + DOWNLOAD BOX II S (sada), ne tarif ani samotný HW (Libor 8. 11. 2026); platí pro všechny velikosti TAGRA */
   /* GA4: Shoptet's gtag config uses groups:'GA4' – plain dataLayer objects never reach GA4, so send via gtag (consent mode applies) */
   function ga(ev,p){p=p||{};try{window.dataLayer=window.dataLayer||[];var o={event:ev},k;for(k in p)o[k]=p[k];window.dataLayer.push(o);}catch(e){}
     try{if(typeof window.gtag==='function'){var q={send_to:'GA4',transport_type:'beacon'},k2;for(k2 in p)q[k2]=p[k2];window.gtag('event',ev,q);}}catch(e){}}
@@ -73,7 +73,7 @@
       var n=((p.querySelector('.name')||{}).textContent||'').replace(/\s+/g,' ').trim().toUpperCase(),b='',s=/\+\s*DOWNLOAD BOX/.test(n);
       if(/TRUCKER/.test(n))b='For drivers';else if(/TAGRA MAX/.test(n))b='Unlimited vehicles';else if(/TAGRA 6/.test(n))b='5–6 vehicles';else if(/TAGRA 4/.test(n))b='3–4 vehicles';else if(/TAGRA 2/.test(n))b='2 vehicles';else if(/TAGRA 1/.test(n))b='1 vehicle';
       var img=p.querySelector('.image');if(!img)return;
-      var h='';if(b)h+='<span class="tgs-badge">'+b+'</span>';if(s)h+='<span class="tgs-badge tgs-badge--save">Save €49</span>';
+      var h='';if(s)h+='<span class="tgs-badge tgs-badge--pop">'+POPL+'</span>';if(b)h+='<span class="tgs-badge">'+b+'</span>';if(s)h+='<span class="tgs-badge tgs-badge--save">Save €49</span>';
       if(h){var w=document.createElement('span');w.className='tgs-badges';w.innerHTML=h;img.appendChild(w);}
     });
   }
