@@ -1,12 +1,10 @@
-/* ===== TAGRA Shop v6.2 – tagra.app look, crew + competitor review (2. 11. 2026) ===== */
+/* ===== TAGRA Shop v6.3 – tagra.app look, crew + competitor review (2. 11. 2026); v6.3 (8. 11. 2026): prices excl. VAT everywhere, no Czech-VAT amounts, VAT by country label, cart delivery note ===== */
 /* --- product detail: hide Shoptet noise --- */
 body .p-detail-inner-header .p-code,body .p-detail .stars-wrapper,body .p-detail .link-icons,body .p-detail .social-buttons-wrapper{display:none!important}
 body .p-detail-inner-header{margin-bottom:18px}
 body .p-detail .p-info-wrapper{background:#fff;border:1px solid var(--border);border-radius:var(--radius-lg);box-shadow:var(--shadow-card);padding:28px 28px 22px!important}
 @media (min-width:992px){body .p-detail .p-info-wrapper{margin-top:0}}
 body .p-detail .p-final-price-wrapper{margin-bottom:6px}
-body .p-detail .price-additional{display:block;margin-top:2px}
-body .p-detail .oss-price-notification__wrapper{font-size:13px;color:var(--text2)}
 body .p-detail .availability-value{display:inline-flex;align-items:center;gap:6px;background:#eef6e0;border-radius:99px;padding:5px 14px;margin:10px 0 4px}
 body .p-detail .availability-label{color:#4a6a0c!important}
 body .p-detail .add-to-cart{display:flex;gap:10px;align-items:center;margin:14px 0 6px}
@@ -89,11 +87,10 @@ body .products-block .p .image img{max-height:210px;width:auto;margin:0 auto;obj
 body .products-block .p .name{display:block;min-height:2.6em}
 body .products-block .p .availability-amount{display:none!important}
 body .products-block .p .availability{font-size:13px;white-space:nowrap}
-body .products-block .p .prices{display:flex;flex-direction:column-reverse;align-items:flex-start}
+body .products-block .p .prices{display:flex;flex-direction:column;align-items:flex-start}
 body .products-block .p .price-final{display:flex;align-items:baseline;gap:6px;flex-wrap:wrap}
 body .products-block .p .price-final strong{font-size:26px;color:var(--blue-dark)}
 body .products-block .p .price-final strong::after{content:"excl. VAT";font-size:12px;font-weight:500;color:var(--text2);margin-left:6px;letter-spacing:0}
-body .products-block .p .price-additional{font-size:12px;color:#8a96a3;margin-top:2px}
 body .products-block .p .oss-price-notification{width:16px;height:16px;line-height:16px;font-size:10px;background:#c9d3de!important;color:#fff!important;border:0;border-radius:50%;padding:0;align-self:center}
 body .products-block .p .p-desc{font-size:14px;line-height:1.5;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
 .tgs-lead{text-align:center;max-width:640px;margin:-10px auto 22px;font-size:16px;line-height:1.5;color:var(--text2)}
@@ -339,3 +336,76 @@ body.ordering-process .next-step .btn-conversion span{text-transform:none!import
 body.ordering-process .next-step .btn-conversion .order-button-suffix{font-size:12.5px;font-weight:500;opacity:.9}
 @media (max-width:767px){body.in-cart .sidebar-in-cart .summary-wrapper>.box,body.ordering-process #checkoutSidebar .order-summary-inner{padding-left:18px!important;padding-right:18px!important}
   body.ordering-process #checkoutSidebar .cart-content>.next-step{padding:14px 18px 20px}}
+
+/* ===== v6.3 – prices excl. VAT, VAT of the customer's country (audit 8. 11. 2026, findings #1 #2 #18 #24) =====
+   Main price = net price with "excl. VAT" right at the number. No concrete amount with Czech VAT anywhere:
+   Shoptet's price-additional (incl. 21 % VAT) is hidden; the checkout charges OSS VAT of the delivery country.
+   Everything here is CSS (shop.css is in <head>), so nothing moves when the page renders. */
+/* product detail */
+body .p-detail .p-final-price-wrapper{display:flex;flex-wrap:wrap;align-items:baseline;column-gap:14px;row-gap:2px;position:relative}
+body .p-detail .p-final-price-wrapper .price-final{order:1;margin:0}
+body .p-detail .p-final-price-wrapper .price-final-holder::after{content:"excl. VAT";display:inline-block;margin-left:8px;font-size:15px;font-weight:600;letter-spacing:0;color:var(--text2);vertical-align:.32em;-webkit-text-fill-color:var(--text2)}
+body .p-detail .price-additional,body .p-detail .price-measure{display:none!important}
+body .p-detail .oss-price-notification__wrapper{order:2;display:inline-flex;align-items:center;gap:6px;font-size:0!important;color:var(--text2)}
+body .p-detail .oss-price-notification__wrapper::before{content:"VAT by country";font-size:13px;font-weight:600;line-height:1.3}
+body .p-detail .oss-price-notification__wrapper .oss-price-notification{font-size:11px;width:18px;height:18px;line-height:18px;padding:0}
+body .p-detail .p-final-price-wrapper::after{order:3;flex:0 0 100%;content:"+ VAT of your country · 0 % VAT for EU companies with a valid VAT ID";font-size:13.5px;line-height:1.45;color:var(--text2);white-space:pre-line}
+/* TAGRA TRUCKER / TRUCKER 2 are also bought by private drivers: extra line (wording agreed by crew GPT + Gemini) + reserved slot for the VAT-by-country price (shop.js b2c()) */
+.p-detail:is(:has(meta[itemprop="url"][content$="/tagra-trucker/"]),:has(meta[itemprop="url"][content$="/tagra-trucker-2/"])) .p-final-price-wrapper::after{content:"+ VAT of your country · 0 % VAT for EU companies with a valid VAT ID\APrivate customers: your country\2019s VAT is added at checkout."}
+.p-detail:is(:has(meta[itemprop="url"][content$="/tagra-trucker/"]),:has(meta[itemprop="url"][content$="/tagra-trucker-2/"])) .p-final-price-wrapper{margin-bottom:40px}
+.tgs-b2c{position:absolute;left:0;right:0;top:100%;margin-top:6px;display:flex;flex-wrap:wrap;align-items:center;gap:4px 8px;font-size:13.5px;line-height:1.35;color:var(--text)}
+.tgs-b2c select{height:28px;max-width:170px;padding:0 24px 0 8px;border:1px solid rgba(19,74,142,.25);border-radius:8px;font:inherit;font-size:13.5px;color:var(--blue-dark);background-color:#fff}
+.tgs-b2c b{color:var(--blue-dark);font-weight:700;white-space:nowrap}
+@media (max-width:767px){.p-detail:is(:has(meta[itemprop="url"][content$="/tagra-trucker/"]),:has(meta[itemprop="url"][content$="/tagra-trucker-2/"])) .p-final-price-wrapper{margin-bottom:64px}.tgs-b2c b{flex:0 0 100%}}
+/* category cards and product lists */
+body .products-block .p .price-additional{display:none!important}
+body .products-block .p .prices::after{content:"+ VAT of your country · 0 % VAT for EU companies with a valid VAT ID";display:block;max-width:100%;margin-top:3px;font-size:12px;line-height:1.4;color:var(--text2)}
+/* cart: the incl.-VAT line used the default country before the customer chose one -> replaced by the rule; extras block -> delivery note */
+body.in-cart .sidebar-in-cart .price-wrapper .price-label.price-secondary,body.in-cart .sidebar-in-cart .price-wrapper .price-secondary.price{display:none!important}
+body.in-cart .sidebar-in-cart .price-wrapper .oss-price-notification__wrapper{font-size:0!important;display:flex;align-items:center;gap:6px}
+body.in-cart .sidebar-in-cart .price-wrapper .oss-price-notification__wrapper::before{content:"Excl. VAT · VAT of your delivery country is added in the next step · 0 % VAT for EU companies with a valid VAT ID";font-size:12.5px;line-height:1.45}
+body.in-cart .sidebar-in-cart .price-wrapper .oss-price-notification__wrapper .oss-price-notification{flex:0 0 auto;font-size:11px}
+body.in-cart .sidebar-in-cart .price-wrapper::after{content:"Licence by e-mail · Hardware shipping €8.18 + VAT";order:10;grid-column:1/-1;margin-top:8px;padding:8px 12px;border-radius:10px;background:rgba(255,255,255,.1);font-size:13px;font-weight:600;line-height:1.4;color:#fff}
+body.in-cart .cart-summary>h2,body.in-cart .extras-wrapper .extra.delivery{display:none!important}
+
+/* ===== v6.3 – layout stability (audit #15 #16 #30, 8. 11. 2026) ===== */
+/* homepage: shop.js rebuilds the page (carousel, sections, product groups()). Until it has finished (body.tgs-v6) the content is
+   kept invisible, so nothing visibly jumps (#products-1 lost its licence cards = CLS 0.82). Fallback: shown after 3 s even without JS. */
+body.type-index:not(.tgs-v6) #content{visibility:hidden;animation:tgs-reveal 0s linear 3s forwards}
+@keyframes tgs-reveal{to{visibility:visible}}
+/* LCP: fetch the first carousel poster as early as the stylesheet applies (shop.js inserts the <img> later) */
+body.type-index #content-wrapper::before{content:"";position:absolute;top:0;left:0;width:1px;height:1px;opacity:.01;pointer-events:none;background:url(https://cdn.truckmall.cz/data/user-content/Download_Box_II_S_kafe.webp) no-repeat 0 0/1px 1px}
+@media (max-width:767px){
+ body.type-index #content-wrapper::before{background-image:url(https://cdn.truckmall.cz/data/user-content/bannery%20HP/01b-vyhodnoceni-dat.webp)}
+ /* licence card first, lower carousel */
+ .tgs-car__track>.tgs-car__item:nth-child(2){order:-1}
+ .tgs-car__item{aspect-ratio:1/1}
+ .tgs-car__t{font-size:22px}
+ .tgs-car__txt{top:18px}
+ .tgs-car__cta{bottom:16px}
+ .tgs-car{margin:8px 0 10px}
+ /* fleet-size picker under the carousel */
+ .tgs-pick{margin:0 0 22px;padding:14px 14px 12px;border-radius:18px;border:1.5px solid rgba(19,74,142,.14);background:linear-gradient(180deg,#dcecf6 0%,#eaf3f8 45%,#f5f9fc 100%)}
+ .tgs-pick p{margin:0 0 8px;font-size:15px;font-weight:700;color:var(--blue-dark)}
+ .tgs-pick div{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:6px}
+ .tgs-pick div a{display:flex;align-items:center;justify-content:center;height:44px;border-radius:12px;background:#fff;border:1.5px solid rgba(19,74,142,.16);font-weight:800;font-size:15px;color:var(--blue-dark)!important;text-decoration:none!important;white-space:nowrap}
+ .tgs-pick div a:last-child{font-size:12.5px}
+ .tgs-pick__calc{display:block;margin-top:10px;text-align:center;font-size:14px;font-weight:700;color:var(--green-cta)!important}
+}
+@media (min-width:768px){.tgs-pick{display:none}}
+/* product detail: the main image box has a fixed size from the first paint, so swapping the Shoptet image for the
+   MacBook screenshot (shop3.js) or loading thumbnails no longer moves the price and the buy button (CLS ~0.46) */
+body .p-detail .p-image{display:flex;align-items:center;justify-content:center;overflow:hidden;aspect-ratio:1.17}
+body .p-detail .p-image>#wrap{display:flex;align-items:center;justify-content:center;width:100%;height:100%}
+body .p-detail .p-image a.p-main-image{display:flex!important;align-items:center;justify-content:center;width:100%;height:100%}
+body .p-detail .p-image a.p-main-image img{box-sizing:border-box;max-width:100%;max-height:100%!important;width:auto;height:auto;object-fit:contain}
+body .p-detail .p-thumbnails{height:100px;overflow:hidden}
+@media (max-width:767px){
+ /* smaller gallery on phones: price and Add to cart closer to the top (audit #13) */
+ body .p-detail .p-image{aspect-ratio:auto;height:210px}
+ body .p-detail .p-thumbnails{height:64px;margin-top:8px}
+ body .p-detail .p-thumbnails .p-thumbnail,body .p-detail .p-thumbnails-inner a{width:64px!important;height:64px!important}
+ body .p-detail .p-thumbnails img{width:64px!important;height:64px!important;object-fit:cover}
+ body .p-detail .p-info-wrapper{padding:18px 16px 16px!important}
+ body .p-detail-inner-header{margin-bottom:8px}
+}
