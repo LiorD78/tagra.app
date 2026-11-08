@@ -1,8 +1,10 @@
-/* TAGRA Shop layer 2 v3.0 – formoline header, star reviews (TRUCKMALL loop), 3D USP, compact detail (2. 11. 2026) */
+/* TAGRA Shop layer 2 v3.1 (8. 11. 2026: carousel titles follow the licence-first slide order in shop.js v6.1) | v3.0 – formoline header, star reviews (TRUCKMALL loop), 3D USP, compact detail (2. 11. 2026) */
 (function(){
   var PHONE='+420 739 005 345';
-  var l=document.createElement('link');l.rel='stylesheet';l.href='https://tagra.app/assets/css/shop2.css?v=2';document.head.appendChild(l);
-  var l2=document.createElement('link');l2.rel='stylesheet';l2.href='https://tagra.app/assets/css/shop2b.css?v=1';document.head.appendChild(l2);
+  /* html.tgs-l2 once both stylesheets are in: shop.css keeps the rebuilt homepage hidden until then (no layout shift) */
+  var nl=0;function ld(){if(++nl>=2)document.documentElement.classList.add('tgs-l2');}
+  var l=document.createElement('link');l.rel='stylesheet';l.onload=l.onerror=ld;l.href='https://tagra.app/assets/css/shop2.css?v=2';document.head.appendChild(l);
+  var l2=document.createElement('link');l2.rel='stylesheet';l2.onload=l2.onerror=ld;l2.href='https://tagra.app/assets/css/shop2b.css?v=1';document.head.appendChild(l2);
   function header(){
     var top=document.querySelector('#header .header-top');
     if(!top||top.querySelector('.tgs-hdr')||!(window.matchMedia&&matchMedia('(min-width:768px)').matches))return;
@@ -14,7 +16,7 @@
     if(nb&&!nb.querySelector('.tgs-hdr__login')){var a=document.createElement('a');a.className='tgs-hdr__login';a.href='/login/';a.setAttribute('aria-label','Login');nb.insertBefore(a,nb.firstChild);}
   }
   function titles(){
-    var T=['Download in seconds','Find it before the inspection does','Vans: tachograph from July 2026','Try TAGRA free for 30 days'];
+    var T=['Find it before the inspection does','Try TAGRA free for 30 days','Vans: tachograph from July 2026','Download in seconds'];
     [].forEach.call(document.querySelectorAll('.tgs-car__t'),function(e,i){if(T[i])e.textContent=T[i];});
   }
   var RF=[['TAGRA handles a huge volume of data and significantly simplified our violation checks and archiving.','David C.'],

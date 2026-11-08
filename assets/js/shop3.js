@@ -1,4 +1,4 @@
-/* TAGRA Shop layer 3 v1.7 (7. 11. 2026: version switcher also on TAGRA TRUCKER / TRUCKER 2, fleet calculator v1.5) | v1.6 (7. 11. 2026: animovany robot v paticce) | v1.5 – program screenshots in a MacBook frame (like TRUCKMALL mac-stage) (3. 11. 2026); v1.3 loads the fleet calculator on the homepage; v1.4 loads the version switcher on TAGRA product pages; v1.5 Safari plays the coffee video in the first carousel card (6. 11. 2026) */
+/* TAGRA Shop layer 3 v1.8 (8. 11. 2026: loads shop-cro.js v1 on every page – sticky buy bar, quote, add-to-cart panel, cart note, 404/search; fleet calculator v1.8, switcher v1.2) | v1.7 (7. 11. 2026: version switcher also on TAGRA TRUCKER / TRUCKER 2, fleet calculator v1.5) | v1.6 (7. 11. 2026: animovany robot v paticce) | v1.5 – program screenshots in a MacBook frame (like TRUCKMALL mac-stage) (3. 11. 2026); v1.3 loads the fleet calculator on the homepage; v1.4 loads the version switcher on TAGRA product pages; v1.5 Safari plays the coffee video in the first carousel card (6. 11. 2026) */
 (function(){
   var l=document.createElement('link');l.rel='stylesheet';l.href='https://tagra.app/assets/css/shop3.css?v=2';document.head.appendChild(l);
   var MB='https://wuswoaicjtuodzmrjwgf.supabase.co/storage/v1/object/public/site/tagra-shop/mac/tagra3-mac-';
@@ -39,13 +39,13 @@
   }
   function fleet(){
     if(!document.body||!document.body.classList.contains('type-index')||window.tgsFleetCalc||document.getElementById('tgs-fleet-js'))return;
-    var s=document.createElement('script');s.id='tgs-fleet-js';s.src='https://tagra.app/assets/js/shop-fleet.js?v=5';s.async=true;document.head.appendChild(s);
+    var s=document.createElement('script');s.id='tgs-fleet-js';s.src='https://tagra.app/assets/js/shop-fleet.js?v=6';s.async=true;document.head.appendChild(s);
   }
   function variant(){
     if(!document.body||!document.body.classList.contains('type-detail')||window.tgsVariant||document.getElementById('tgs-variant-js'))return;
     var m=document.querySelector('.p-detail meta[itemprop="url"]'),u=m?m.getAttribute('content')||'':'';
     if(!/\/tagra-((1|2|4|6|max)(-download-box-ii-s)?|trucker(-2)?)\/$/.test(u))return;
-    var s=document.createElement('script');s.id='tgs-variant-js';s.src='https://tagra.app/assets/js/shop-variant.js?v=2';document.head.appendChild(s);
+    var s=document.createElement('script');s.id='tgs-variant-js';s.src='https://tagra.app/assets/js/shop-variant.js?v=3';document.head.appendChild(s);
   }
   function vfix(){
     /* first homepage card: WebM with Vorbis audio does not play in Safari -> drop that source so Safari takes the MP4 */
@@ -58,7 +58,8 @@
       if(r.bottom>h*0.25&&r.top<h*0.75){var x=v.play();if(x&&x.catch)x.catch(function(){});}
     })();
   }
+  function cro(){if(window.tgsCro||document.getElementById('tgs-cro-js'))return;var s=document.createElement('script');s.id='tgs-cro-js';s.src='https://tagra.app/assets/js/shop-cro.js?v=1';s.async=true;document.head.appendChild(s);}
   function robot(){if(document.getElementById('tm-robot-js'))return;var s=document.createElement('script');s.id='tm-robot-js';s.src='https://tagra.app/assets/js/tm-robot.js?v=1';s.async=true;document.head.appendChild(s);}
-  function run(){imgs();gallery();zoom();topsellers();fleet();variant();robot();if(document.body&&document.body.classList.contains('type-index'))vfix();}
+  function run(){imgs();gallery();zoom();topsellers();fleet();variant();cro();robot();if(document.body&&document.body.classList.contains('type-index'))vfix();}
   if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',run);}else{run();}
 })();

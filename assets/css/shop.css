@@ -1,4 +1,4 @@
-/* ===== TAGRA Shop v6.2 – tagra.app look, crew + competitor review (2. 11. 2026) ===== */
+/* ===== TAGRA Shop v6.3 – tagra.app look, crew + competitor review (2. 11. 2026) | v6.3 conversion pass A+B (8. 11. 2026) ===== */
 /* --- product detail: hide Shoptet noise --- */
 body .p-detail-inner-header .p-code,body .p-detail .stars-wrapper,body .p-detail .link-icons,body .p-detail .social-buttons-wrapper{display:none!important}
 body .p-detail-inner-header{margin-bottom:18px}
@@ -339,3 +339,196 @@ body.ordering-process .next-step .btn-conversion span{text-transform:none!import
 body.ordering-process .next-step .btn-conversion .order-button-suffix{font-size:12.5px;font-weight:500;opacity:.9}
 @media (max-width:767px){body.in-cart .sidebar-in-cart .summary-wrapper>.box,body.ordering-process #checkoutSidebar .order-summary-inner{padding-left:18px!important;padding-right:18px!important}
   body.ordering-process #checkoutSidebar .cart-content>.next-step{padding:14px 18px 20px}}
+
+/* ===== v6.3 – conversion pass A+B (8. 11. 2026): price excl. VAT + VAT line, terms at the button, sticky buy bar, entry hub,
+   pricing facts, "Most popular", existing customers, quote, add-to-cart panel, cart notes, search off, 404, chat/cookie bar, CLS ===== */
+/* --- search returns nothing in Shoptet: hide icon + field everywhere --- */
+body #header .search,body .search-window,body #header .search-form{display:none!important}
+body a.toggle-window[data-target="search"]{visibility:hidden!important;pointer-events:none!important}
+/* --- main price: "excl. VAT" at the number + VAT line instead of a Czech-VAT gross price --- */
+body .p-detail .p-final-price-wrapper .price-final-holder::after{content:"excl. VAT";font-size:15px;font-weight:600;color:var(--text2);margin-left:8px;letter-spacing:0;vertical-align:middle}
+body .p-detail .p-final-price-wrapper .price-additional,body .products-block .p .price-additional{font-size:0!important;line-height:0}
+body .p-detail .p-final-price-wrapper .price-additional::after{content:"+ VAT of your country · 0 % for EU companies with a valid VAT ID";display:block;font-size:14px;line-height:1.45;color:var(--text2);margin-top:4px}
+body .products-block .p .price-additional::after{content:"+ VAT of your country";display:block;font-size:12px;line-height:1.4;color:#8a96a3}
+body .p-detail .p-final-price-wrapper .oss-price-notification__wrapper,body .products-block .p .oss-price-notification{display:none!important}
+/* per-product one-line terms right under Add to cart (CSS content = no layout shift, works before JS) */
+body.type-detail .p-detail .add-to-cart{flex-wrap:wrap}
+body.type-detail .p-detail .add-to-cart::after{flex:0 0 100%;order:9;display:block;margin:2px 0 0;font-size:13px;line-height:1.45;color:var(--text2);content:"Dispatched within 3 business days · delivery in 2–5 days · shipping €8.18 excl. VAT"}
+body.type-detail .p-detail:has(meta[itemprop="url"][content$="/tagra-1/"]) .add-to-cart::after{content:"First year included · then €79/year · no contract · 30-day free trial available"}
+body.type-detail .p-detail:has(meta[itemprop="url"][content$="/tagra-1-download-box-ii-s/"]) .add-to-cart::after{content:"First year of TAGRA included · then €79/year · no contract · device dispatched within 3 business days"}
+body.type-detail .p-detail:has(meta[itemprop="url"][content$="/tagra-2/"]) .add-to-cart::after{content:"First year included · then €79/year · no contract · 30-day free trial available"}
+body.type-detail .p-detail:has(meta[itemprop="url"][content$="/tagra-2-download-box-ii-s/"]) .add-to-cart::after{content:"First year of TAGRA included · then €79/year · no contract · device dispatched within 3 business days"}
+body.type-detail .p-detail:has(meta[itemprop="url"][content$="/tagra-4/"]) .add-to-cart::after{content:"First year included · then €99/year · no contract · 30-day free trial available"}
+body.type-detail .p-detail:has(meta[itemprop="url"][content$="/tagra-4-download-box-ii-s/"]) .add-to-cart::after{content:"First year of TAGRA included · then €99/year · no contract · device dispatched within 3 business days"}
+body.type-detail .p-detail:has(meta[itemprop="url"][content$="/tagra-6/"]) .add-to-cart::after{content:"First year included · then €99/year · no contract · 30-day free trial available"}
+body.type-detail .p-detail:has(meta[itemprop="url"][content$="/tagra-6-download-box-ii-s/"]) .add-to-cart::after{content:"First year of TAGRA included · then €99/year · no contract · device dispatched within 3 business days"}
+body.type-detail .p-detail:has(meta[itemprop="url"][content$="/tagra-max/"]) .add-to-cart::after{content:"First year included · then €149/year · no contract · large fleet? Call +420 739 005 345"}
+body.type-detail .p-detail:has(meta[itemprop="url"][content$="/tagra-max-download-box-ii-s/"]) .add-to-cart::after{content:"First year of TAGRA included · then €149/year · no contract · device dispatched within 3 business days"}
+body.type-detail .p-detail:has(meta[itemprop="url"][content$="/tagra-trucker/"]) .add-to-cart::after{content:"First year included · then €19/year · no contract · USB card reader included"}
+body.type-detail .p-detail:has(meta[itemprop="url"][content$="/tagra-trucker-2/"]) .add-to-cart::after{content:"First year included · then €29/year · no contract · one USB card reader included"}
+body.type-detail .p-detail:has(meta[itemprop="url"][content$="/download-box-ii-s/"]) .add-to-cart::after{content:"No annual fees · 24-month warranty · dispatched within 3 business days"}
+/* same terms in the cart, under each item name */
+body.in-cart .cart-table td.p-name::after{display:block;margin-top:4px;font-size:12.5px;line-height:1.4;font-weight:500;color:var(--text2);content:"Dispatched within 3 business days · delivery in 2–5 days"}
+body.in-cart .cart-table td.p-name:has(a[href$="/tagra-1/"])::after{content:"Licence by e-mail · first year included · then €79/year · no contract"}
+body.in-cart .cart-table td.p-name:has(a[href$="/tagra-1-download-box-ii-s/"])::after{content:"First year of TAGRA included · then €79/year · device dispatched within 3 business days"}
+body.in-cart .cart-table td.p-name:has(a[href$="/tagra-2/"])::after{content:"Licence by e-mail · first year included · then €79/year · no contract"}
+body.in-cart .cart-table td.p-name:has(a[href$="/tagra-2-download-box-ii-s/"])::after{content:"First year of TAGRA included · then €79/year · device dispatched within 3 business days"}
+body.in-cart .cart-table td.p-name:has(a[href$="/tagra-4/"])::after{content:"Licence by e-mail · first year included · then €99/year · no contract"}
+body.in-cart .cart-table td.p-name:has(a[href$="/tagra-4-download-box-ii-s/"])::after{content:"First year of TAGRA included · then €99/year · device dispatched within 3 business days"}
+body.in-cart .cart-table td.p-name:has(a[href$="/tagra-6/"])::after{content:"Licence by e-mail · first year included · then €99/year · no contract"}
+body.in-cart .cart-table td.p-name:has(a[href$="/tagra-6-download-box-ii-s/"])::after{content:"First year of TAGRA included · then €99/year · device dispatched within 3 business days"}
+body.in-cart .cart-table td.p-name:has(a[href$="/tagra-max/"])::after{content:"Licence by e-mail · first year included · then €149/year · no contract"}
+body.in-cart .cart-table td.p-name:has(a[href$="/tagra-max-download-box-ii-s/"])::after{content:"First year of TAGRA included · then €149/year · device dispatched within 3 business days"}
+body.in-cart .cart-table td.p-name:has(a[href$="/tagra-trucker/"])::after{content:"First year included · then €19/year · no contract · USB card reader included"}
+body.in-cart .cart-table td.p-name:has(a[href$="/tagra-trucker-2/"])::after{content:"First year included · then €29/year · no contract · one USB card reader included"}
+body.in-cart .cart-table td.p-name:has(a[href$="/download-box-ii-s/"])::after{content:"No annual fees · dispatched within 3 business days · delivery in 2–5 days"}
+/* --- cart: Shoptet "Extras and discounts / You have free delivery!" leftover (no coupon form) -> hidden, replaced by .tgs-cartnote --- */
+body.in-cart .cart-summary:not(:has(input,select,textarea)){display:none!important}
+.tgs-cartnote{display:flex;gap:12px;align-items:flex-start;margin:18px 0 0;padding:14px 16px;border-radius:14px;background:var(--tmx-bg-apple-light-solid);border:1px solid rgba(19,74,142,.1);font-size:14px;line-height:1.5;color:var(--text)}
+.tgs-cartnote::before{content:"";flex:0 0 22px;height:22px;border-radius:50%;background:var(--green-brand) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E") center/12px no-repeat}
+.tgs-cartnote b{color:var(--blue-dark)}
+.tgs-cartnote p{margin:0}.tgs-cartnote p+p{margin-top:4px}
+/* --- CLS: product page – stable gallery box (shop3.js swaps the main image for the MacBook render) + reserved line for the review stars --- */
+body.type-detail .p-detail .p-image{aspect-ratio:4/3}
+body.type-detail .p-detail:is(:has(meta[itemprop="url"][content$="/tagra-1/"]),:has(meta[itemprop="url"][content$="/tagra-2/"]),:has(meta[itemprop="url"][content$="/tagra-4/"]),:has(meta[itemprop="url"][content$="/tagra-6/"]),:has(meta[itemprop="url"][content$="/tagra-max/"]),:has(meta[itemprop="url"][content$="-download-box-ii-s/"])) .p-image{aspect-ratio:370/315}
+body.type-detail .p-detail .p-image>a,body.type-detail .p-detail .p-image>a>img{max-height:100%}
+body.type-detail .p-detail .p-image{display:flex;align-items:center;justify-content:center;overflow:hidden}
+body.type-detail .p-detail .p-image>a{display:flex;align-items:center;justify-content:center;width:100%;height:100%}
+body.type-detail .p-detail-inner-header{position:relative;padding-bottom:23px}
+body.type-detail .p-detail-inner-header .tgs-stars{position:absolute;left:0;bottom:0;margin:0!important}
+/* --- CLS: desktop header – the layout part of shop2.css (formoline header, loaded later by JS) applied from the head, so the page does not jump ~90 px when it arrives --- */
+@media (min-width:768px){
+html body .top-navigation-bar{display:none!important}
+html body #header{background:#fff;border-bottom:0;box-shadow:none}
+html body #header .header-top{height:78px!important;min-height:78px!important;padding:0!important;display:flex!important;align-items:center!important;flex-wrap:nowrap!important;justify-content:flex-start!important;position:relative!important;z-index:6!important;overflow:visible!important}
+html body #header .header-top>.site-name-wrapper{width:auto!important;flex:0 0 auto!important;max-width:none!important;height:78px;display:flex;align-items:center}
+html body #header .site-name img{max-height:44px;width:auto}
+html body #header .header-top .search{display:none!important}
+html body #header .header-top>.navigation-buttons{width:auto!important;flex:0 0 auto!important;max-width:none!important;margin-left:0!important;height:78px;display:flex!important;align-items:center!important}
+html body #header #navigation{position:relative;z-index:1;background:transparent!important;border:0!important}
+html body #header .navigation-wrapper{position:relative}
+html body #header{background:linear-gradient(90deg,#0b2c4a 0%,#134a8e 50%,#1f5fa6 100%) bottom/100% 62px no-repeat,#fff}
+html body #navigation .navigation-in,html body #navigation .menu{background:transparent!important}
+html body #navigation{height:62px}
+html body #navigation .navigation-in{top:0!important;bottom:0!important;height:62px!important}
+html body #navigation .menu-level-1{display:flex!important;width:auto!important;height:62px!important;justify-content:flex-start;align-items:stretch!important}
+html body #navigation .menu-level-1>li{display:flex!important;flex:0 0 auto;text-align:center;border-left:1px solid rgba(255,255,255,.14)}
+html body #navigation .menu-level-1>li:first-child{border-left:0}
+html body #navigation .menu-level-1>li>a{display:flex!important;align-items:center;padding:0 22px!important;color:#fff!important;text-transform:uppercase;font-weight:700!important;letter-spacing:.05em;font-size:14px!important;text-decoration:none!important}
+html body #navigation .menu-level-1>li>a b{font-weight:700}
+html body #navigation .menu-level-1>li>a:hover{background:rgba(255,255,255,.08)}
+html body #navigation .menu-level-1>li:first-child>a{background:var(--green-brand);color:#fff!important}
+html body #navigation .menu-level-1>li:first-child>a:hover{background:#79a517}
+html body #navigation .navigationActions{display:none!important}
+html body #navigation .menu-level-1>li.menu-item-39{display:none!important}
+html body #navigation .menu-level-1>li.menu-item-705>a,html body #navigation .menu-level-1>li:first-child>a{background:linear-gradient(135deg,var(--green-brand) 0%,var(--green-cta) 100%)!important;color:#fff!important}
+html:not(.tgs-hd) body #header .header-top>.navigation-buttons{margin-left:auto!important}
+}
+/* --- CLS: homepage – JS rebuilds the page under the carousel; keep it invisible (layout kept) until shop.js is done; failsafe 8 s --- */
+@keyframes tgs-show{to{visibility:visible}}
+body.type-index:not(.tgs-v6) #content>:not(.banners-row),body.type-index:not(.tgs-v6) #content-wrapper~*,html:not(.tgs-l2) body.type-index #content>:not(.banners-row),html:not(.tgs-l2) body.type-index #content-wrapper~*{visibility:hidden;animation:tgs-show 0s 8s forwards}
+body.type-index:not(.tgs-v6) #products-1>.product:has(a.image[href^="/tagra-"]):not(:has(a.image[href*="download-box"])){display:none}
+body.type-index .tgs-car{margin:44px 0 40px} /* same as shop2.css (loaded later) – no jump when it arrives */
+@media (max-width:767px){body.type-index .tgs-car{margin:16px 0 24px}body.type-index .tgs-car__item{aspect-ratio:4/5}}
+/* --- "Most popular" (TAGRA 4) --- */
+.tgs-tier__pop{position:absolute;top:-12px;left:50%;transform:translateX(-50%);white-space:nowrap;background:var(--green-brand);color:#fff;font-size:12px;font-weight:700;border-radius:99px;padding:5px 12px;box-shadow:0 4px 10px rgba(110,155,18,.3)}
+.tgs-tier.is-pop{border-color:rgba(110,155,18,.55)}
+.tgs-tier.is-match .tgs-tier__pop{display:none}
+.tgs-badge--pop{background:var(--blue-mid);color:#fff}
+.tgs-var__o{position:relative}
+.tgs-var__pop{position:absolute;top:-7px;left:50%;transform:translateX(-50%);white-space:nowrap;background:var(--blue-mid);color:#fff;font-size:9px;font-weight:700;line-height:1;letter-spacing:.02em;border-radius:99px;padding:3px 6px;pointer-events:none}
+.tgs-var__o.is-on .tgs-var__pop{background:#fff;color:var(--green-cta)}
+.tgs-var__veh{padding-top:2px}
+/* switcher labels on phones: short "+ DOWNLOAD BOX II S" and "MAX" */
+@media (max-width:480px){.tgs-var__long{display:none}}
+/* --- pricing facts above the tier cards --- */
+.tgs-facts{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;max-width:1040px;margin:-6px auto 26px;padding:0;list-style:none}
+.tgs-facts li{display:flex;gap:10px;align-items:flex-start;background:var(--tmx-bg-apple-light);border:1px solid rgba(19,74,142,.1);border-radius:16px;padding:14px 14px 13px;font-size:13.5px;line-height:1.4;color:var(--text2)}
+.tgs-facts li::before{content:"";flex:0 0 22px;height:22px;margin-top:1px;border-radius:50%;background:var(--green-brand) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E") center/12px no-repeat}
+.tgs-facts b{display:block;font-size:15px;color:var(--blue-dark);margin-bottom:1px}
+@media (max-width:991px){.tgs-facts{grid-template-columns:1fr 1fr}}
+@media (max-width:420px){.tgs-facts{gap:8px}.tgs-facts li{padding:12px 10px;font-size:12.5px;gap:8px}.tgs-facts li::before{flex-basis:18px;height:18px;background-size:10px}.tgs-facts b{font-size:14px}}
+/* --- entry hub (homepage) --- */
+.tgs-hub{margin:-30px 0 56px}
+.tgs-hub__h{text-align:center;font-family:var(--font-display);font-size:22px;font-weight:800;color:var(--blue-dark);margin:0 0 16px}
+.tgs-hub__g{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.tgs-hub__t{position:relative;display:flex;gap:12px;align-items:center;background:#fff;border:1.5px solid rgba(0,0,0,.08);border-radius:18px;padding:14px 16px;color:var(--text)!important;text-decoration:none!important;transition:transform .18s,box-shadow .18s,border-color .18s}
+a.tgs-hub__t:hover,.tgs-hub__t:has(.tgs-hub__main:hover){transform:translateY(-2px);border-color:rgba(19,74,142,.3);box-shadow:0 12px 26px rgba(19,74,142,.10)}
+.tgs-hub__t img{flex:0 0 52px;width:52px;height:52px;border-radius:14px;mix-blend-mode:multiply}
+.tgs-hub__t b{display:block;font-size:16px;line-height:1.25;color:var(--blue-dark)}
+.tgs-hub__t small{display:block;font-size:13px;line-height:1.4;color:var(--text2);margin-top:2px}
+.tgs-hub__main{color:inherit!important;text-decoration:none!important}
+.tgs-hub__main::after{content:"";position:absolute;inset:0;border-radius:18px}
+.tgs-hub__q{position:relative;z-index:1;font-weight:700;color:var(--green-cta)!important;white-space:nowrap}
+@media (max-width:991px){.tgs-hub__g{grid-template-columns:1fr 1fr}}
+@media (max-width:767px){.tgs-hub{margin:-14px 0 40px}.tgs-hub__h{font-size:19px;margin-bottom:12px}.tgs-hub__g{gap:10px}.tgs-hub__t{flex-direction:column;align-items:flex-start;gap:8px;padding:12px}.tgs-hub__t img{width:44px;height:44px;flex-basis:44px}.tgs-hub__t b{font-size:15px}.tgs-hub__t small{font-size:12.5px}}
+/* --- already using TAGRA --- */
+.tgs-exist{scroll-margin-top:90px;background:var(--tmx-bg-apple-light);border:1px solid rgba(19,74,142,.1);border-radius:var(--radius-lg);padding:30px 32px;margin:24px 0 0}
+.tgs-exist__h{font-family:var(--font-display);font-size:24px;font-weight:800;color:var(--blue-dark);margin:0 0 16px}
+.tgs-exist__g{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.tgs-exist__c{background:#fff;border:1px solid rgba(0,0,0,.06);border-radius:16px;padding:18px 18px 16px;font-size:14.5px;line-height:1.55;color:var(--text2)}
+.tgs-exist__c b{display:block;font-size:16px;color:var(--blue-dark);margin-bottom:4px}
+.tgs-exist__c p{margin:0 0 8px}
+.tgs-exist__c ul{list-style:none;margin:6px 0 0;padding:0;display:grid;gap:2px;font-size:14px}
+.tgs-exist__c li{display:flex;justify-content:space-between;gap:10px;border-bottom:1px dashed rgba(19,74,142,.15);padding:3px 0}
+.tgs-exist__c li span:last-child{font-weight:700;color:var(--text);white-space:nowrap}
+.tgs-exist__c a{font-weight:700;color:var(--green-cta)!important}
+.tgs-exist__sup{margin:14px 0 0;font-size:14px;color:var(--text2)}
+@media (max-width:991px){.tgs-exist__g{grid-template-columns:1fr}.tgs-exist{padding:24px 18px}}
+/* --- "Get a quote" next to Add to cart (TAGRA MAX + bundle) --- */
+.tgs-quote{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 20px;border-radius:99px;border:1.5px solid rgba(19,74,142,.3);background:#fff;color:var(--blue-mid)!important;font-weight:700;font-size:16px;text-decoration:none!important;white-space:nowrap}
+.tgs-quote:hover{border-color:var(--blue-mid);background:var(--tmx-bg-apple-light-solid)}
+@media (max-width:767px){.tgs-quote{flex:1 1 100%;min-height:48px}}
+.tgs-quote-ph{display:block;width:100%;order:10;font-size:13px;color:var(--text2);margin:2px 0 0}
+.tgs-quote-ph a{color:var(--blue-mid)!important;font-weight:700;text-decoration:none!important;white-space:nowrap}
+/* --- sticky buy bar (product pages) --- */
+.tgs-sb{position:fixed;left:0;right:0;bottom:0;z-index:990;background:rgba(255,255,255,.96);-webkit-backdrop-filter:blur(18px) saturate(180%);backdrop-filter:blur(18px) saturate(180%);
+  border-top:1px solid var(--border);box-shadow:0 -8px 24px rgba(16,42,74,.10);padding:10px 16px calc(10px + env(safe-area-inset-bottom));transform:translateY(110%);transition:transform .25s ease;visibility:hidden}
+.tgs-sb.is-on{transform:none;visibility:visible}
+.tgs-sb__in{display:flex;align-items:center;gap:12px;max-width:1160px;margin:0 auto}
+.tgs-sb__info{flex:1 1 auto;min-width:0;display:flex;flex-direction:column;line-height:1.25}
+.tgs-sb__name{font-weight:800;font-size:15px;color:var(--blue-dark);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tgs-sb__price{font-size:13px;color:var(--text2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tgs-sb__note{display:block;font-size:12px;color:var(--green-cta);font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tgs-sb__price b{font-size:17px;color:var(--strong);margin-right:4px}
+.tgs-sb__atc{flex:0 0 auto;min-height:46px!important;padding:0 22px!important;font-size:16px!important}
+.tgs-sb__chat{display:none;flex:0 0 44px;width:44px;height:44px;border-radius:50%;border:1.5px solid rgba(19,74,142,.25);background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23134a8e' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z'/%3E%3C/svg%3E") center/22px no-repeat;cursor:pointer;padding:0}
+.tgs-sb.has-chat .tgs-sb__chat{display:block}
+@media (min-width:768px){.tgs-sb{padding:12px 24px}.tgs-sb__name{font-size:17px}.tgs-sb__atc{min-width:200px}.tgs-sb.has-chat .tgs-sb__chat{display:none}}
+html.tgs-sb-on body{padding-bottom:var(--tgs-sb-h,72px)}
+@media (max-width:767px){html.tgs-sb-on .woot-widget-bubble:not(.woot--close){opacity:0!important;pointer-events:none!important}}
+@media (min-width:768px){html.tgs-sb-on .woot-widget-bubble{bottom:calc(var(--tgs-sb-h,72px) + 14px)!important;transition:bottom .25s}}
+/* --- after add to cart: panel with a clear next step (Shoptet only shows a thin bar over the header) --- */
+.tgs-toast{position:fixed;left:50%;bottom:calc(16px + env(safe-area-inset-bottom));z-index:995;width:min(440px,calc(100% - 24px));transform:translate(-50%,20px);opacity:0;visibility:hidden;transition:transform .25s,opacity .25s;
+  background:#fff;border:1px solid var(--border);border-radius:18px;box-shadow:0 18px 48px rgba(16,42,74,.22);padding:16px 16px 14px}
+.tgs-toast.is-on{transform:translate(-50%,0);opacity:1;visibility:visible}
+html.tgs-sb-on .tgs-toast{bottom:calc(var(--tgs-sb-h,72px) + 10px)}
+html.tgs-cb-on .tgs-toast{bottom:calc(var(--tgs-cb,0px) + 10px)}
+.tgs-toast__t{display:flex;gap:10px;align-items:center;margin:0 28px 12px 0;font-size:15px;line-height:1.35;color:var(--text)}
+.tgs-toast__t::before{content:"";flex:0 0 26px;height:26px;border-radius:50%;background:var(--green-brand) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E") center/14px no-repeat}
+.tgs-toast__t b{display:block;color:var(--blue-dark)}
+.tgs-toast__a{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.tgs-toast__a .tgs-pill{min-height:46px;font-size:15px;padding:0 12px}
+.tgs-toast__c{min-height:46px;border-radius:99px;border:1.5px solid rgba(19,74,142,.25);background:#fff;color:var(--blue-mid);font-weight:700;font-size:15px;cursor:pointer;font-family:inherit}
+.tgs-toast__x{position:absolute;top:8px;right:8px;width:32px;height:32px;border:0;background:none;font-size:22px;line-height:1;color:var(--text2);cursor:pointer}
+html.tgs-toast-on .messages .msg-success{display:none!important}
+/* --- cookie bar / chat on phones (audit #5, #14) --- */
+html.tgs-cb-on body.ordering-process{padding-bottom:calc(var(--tgs-cb,0px) + 16px)}
+@media (min-width:768px){html.tgs-cb-on .tgs-sb{bottom:var(--tgs-cb,0px)}}
+@media (max-width:767px){html.tgs-cb-on .tgs-sb{display:none}body.ordering-process .woot-widget-bubble:not(.woot--close){display:none!important}body.ordering-process{padding-bottom:16px}}
+/* --- 404 + search: categories instead of a dead end --- */
+body.in-404 .empty-content-404:not(.tgs-404)>*{visibility:hidden;animation:tgs-show 0s 4s forwards}
+.tgs-404{max-width:820px;margin:0 auto;padding:24px 0 40px;text-align:center}
+.tgs-404 h1{font-family:var(--font-display);font-size:34px;font-weight:800;color:var(--blue-dark);text-transform:none;margin:0 0 10px;background:none;-webkit-text-fill-color:currentColor}
+.tgs-404>p{font-size:17px;line-height:1.55;color:var(--text2);margin:0 auto 24px;max-width:560px}
+.tgs-cats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:0 0 24px;text-align:left}
+.tgs-cats a{display:flex;flex-direction:column;gap:2px;background:#fff;border:1.5px solid rgba(0,0,0,.08);border-radius:16px;padding:16px;text-decoration:none!important;transition:transform .18s,border-color .18s,box-shadow .18s}
+.tgs-cats a:hover{transform:translateY(-2px);border-color:rgba(19,74,142,.3);box-shadow:0 12px 26px rgba(19,74,142,.10)}
+.tgs-cats b{font-size:16px;color:var(--blue-dark)}
+.tgs-cats small{font-size:13px;color:var(--text2);line-height:1.4}
+.tgs-srch{padding:8px 0 40px}
+.tgs-srch h2{font-family:var(--font-display);font-size:26px;font-weight:800;color:var(--blue-dark);text-transform:none;margin:0 0 6px;background:none;-webkit-text-fill-color:currentColor}
+.tgs-srch>p{color:var(--text2);margin:0 0 18px}
+body.type-search #content:has(.tgs-srch) .search-results-groups,body.type-search #content:has(.tgs-srch) #products-found,body.type-search #content:has(.tgs-srch)>h2{display:none}
+@media (max-width:767px){.tgs-cats{grid-template-columns:1fr 1fr}.tgs-404 h1{font-size:28px}}
+@media (max-width:480px){.tgs-var__pop{font-size:8px;padding:2px 5px}}

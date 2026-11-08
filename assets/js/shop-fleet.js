@@ -1,4 +1,4 @@
-/* TAGRA Shop – fleet calculator v1.7 (8. 11. 2026: tier chips 1 / 2 / 4 / 6 / MAX next to the stepper are clickable – set the vehicle count to that tier; were dead clicks in Clarity) | v1.6 (7. 11. 2026: 2-driver option uses its own icon with exactly two figures, hosted on tagra.app) | v1.5 (7. 11. 2026) – employed driver branch asks 1 driver / 2 drivers sharing one PC:
+/* TAGRA Shop – fleet calculator v1.8 (8. 11. 2026: no Czech-VAT gross price – "+ VAT of your country · 0 % for EU companies with a valid VAT ID"; shipping €8.18 excl. VAT; events also via gtag send_to GA4 (plain dataLayer objects never reached GA4); entry hub preselects the branch via the tgs:fc event) | v1.7 (8. 11. 2026: tier chips 1 / 2 / 4 / 6 / MAX next to the stepper are clickable – set the vehicle count to that tier; were dead clicks in Clarity) | v1.6 (7. 11. 2026: 2-driver option uses its own icon with exactly two figures, hosted on tagra.app) | v1.5 (7. 11. 2026) – employed driver branch asks 1 driver / 2 drivers sharing one PC:
    2 -> TAGRA TRUCKER 2 (TAGRA_PRICES.trucker2, priceId 93). GA4 events carry fc_drivers (1 / 2 in the driver branch).
    v1.4 (7. 11. 2026) – prices, price IDs and URLs now come only from
    https://tagra.app/assets/js/tagra-prices.js (window.TAGRA_PRICES), the one source shared with the tagra.app version selector.
@@ -13,7 +13,7 @@
   if(window.tgsFleetCalc)return;
   window.tgsFleetCalc=true;
 
-  var VAT=0.21;
+  var SHIP='€8.18 excl. VAT';
   var IC='https://cdn.truckmall.cz/data/user-content/cfg-ico-';
   var PRICES_JS='https://tagra.app/assets/js/tagra-prices.js?v=20261107';
   var CAP={t1:'1 vehicle',t2:'2 vehicles',t4:'3–4 vehicles',t6:'5–6 vehicles',max:'unlimited vehicles'};
@@ -25,17 +25,17 @@
       trucker:{name:P.trucker.name,price:P.trucker.price,fee:P.trucker.fee,priceId:P.trucker.priceId,url:P.trucker.path},
       trucker2:P.trucker2?{name:P.trucker2.name,price:P.trucker2.price,fee:P.trucker2.fee,priceId:P.trucker2.priceId,url:P.trucker2.path}:null,
       box:{name:P.box.name,price:P.box.price},
-      shipping:eur(P.shipping)};
+      shipping:SHIP};
   }
 
   var S={who:'company',veh:1,dev:null,drv:'1',busy:false,started:false};
   var root,tiersEl,timer;
 
   function eur(n){var r=Math.round(n*100)/100,s=(r%1===0)?String(r):r.toFixed(2);return '€'+s.replace(/\B(?=(\d{3})+(?!\d))/g,',');}
-  function incl(n){return eur(Math.round(n*(1+VAT)*100)/100);}
   function tierFor(n){for(var i=0;i<RULES.tiers.length;i++){if(n<=RULES.tiers[i].max)return RULES.tiers[i];}return RULES.tiers[RULES.tiers.length-1];}
   function nextTier(t){var i=RULES.tiers.indexOf(t);return i>-1&&i<RULES.tiers.length-1?RULES.tiers[i+1]:null;}
-  function track(ev,p){try{window.dataLayer=window.dataLayer||[];var o={event:ev};for(var k in p){if(p.hasOwnProperty(k))o[k]=p[k];}window.dataLayer.push(o);}catch(e){}}
+  function track(ev,p){try{window.dataLayer=window.dataLayer||[];var o={event:ev};for(var k in p){if(p.hasOwnProperty(k))o[k]=p[k];}window.dataLayer.push(o);}catch(e){}
+    try{if(typeof window.gtag==='function'){var q={send_to:'GA4'};for(var k2 in p){if(p.hasOwnProperty(k2))q[k2]=p[k2];}window.gtag('event',ev,q);}}catch(e){}}
   function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
 
   function band(n){return n<=1?'1':n<=2?'2':n<=4?'3-4':n<=6?'5-6':n<=20?'7-20':'21+';}
@@ -105,7 +105,7 @@
       '<ul class="tgs-fc__lines">'+m.lines.map(function(l){return '<li'+(l[2]?' class="is-'+l[2]+'"':'')+'><span>'+esc(l[0])+'</span><span>'+esc(l[1])+'</span></li>';}).join('')+'</ul>'+
       (m.ask?'<p class="tgs-fc__ask">Need a download device? Choose in step 3 and save '+SAVE+' with a bundle.</p>':'')+
       '<div class="tgs-fc__tot"><span class="tgs-fc__tot-l">Today'+(m.hw?', plus shipping':'')+'</span><span class="tgs-fc__tot-v">'+eur(m.total)+'<small>excl. VAT</small></span>'+
-      '<span class="tgs-fc__vat">'+incl(m.total)+' incl. Czech VAT · 0% VAT (reverse charge) for EU companies outside Czechia with a valid VAT ID</span></div>'+
+      '<span class="tgs-fc__vat">+ VAT of your country · 0 % for EU companies with a valid VAT ID (reverse charge)</span></div>'+
       '<ul class="tgs-fc__facts"><li>First year included</li><li>From year 2: '+eur(m.fee)+' / year</li>'+(m.ship?'<li>'+esc(m.ship)+'</li>':'')+'</ul>'+
       (m.hint?'<p class="tgs-fc__hint">'+esc(m.hint)+'</p>':'')+
       '<a class="tgs-pill tgs-fc__cta" href="'+m.url+'" data-price-id="'+m.priceId+'">'+esc(m.cta)+'</a>'+
@@ -128,6 +128,7 @@
     if(!api||!pid)return; /* fallback: normal link to the product */
     e.preventDefault();
     if(S.busy)return;
+    window.tgsFcAddTs=Date.now();
     S.busy=true;a.classList.add('is-busy');a.setAttribute('aria-disabled','true');msg.textContent='Adding to cart…';
     var done=false;
     function ok(){if(done)return;done=true;document.removeEventListener('ShoptetCartUpdated',ok);S.busy=false;a.classList.remove('is-busy');a.removeAttribute('aria-disabled');
@@ -159,6 +160,11 @@
     inp.addEventListener('blur',function(){setVeh(inp.value);});
   }
 
+  /* ---------- entry hub (shop.js) -> preselect "Transport company" / "Employed driver" ---------- */
+  var PEND=null;
+  function pick(who){var o=root&&root.querySelector('.tgs-fc__opt[data-g="who"][data-v="'+who+'"]');if(o&&!o.classList.contains('is-on'))o.click();}
+  document.addEventListener('tgs:fc',function(e){var w=e&&e.detail&&e.detail.who;if(w!=='driver'&&w!=='company')return;if(root)pick(w);else PEND=w;});
+
   /* ---------- init ---------- */
   function init(){
     var sec=document.querySelector('.tgs-pricing');if(!sec)return false;
@@ -170,6 +176,7 @@
     else return false;
     sec.classList.add('tgs-fc-on');
     bind();render();
+    if(PEND){pick(PEND);PEND=null;}
     track('fleet_calc_view',{fc_rules:RULES.version});
     return true;
   }
