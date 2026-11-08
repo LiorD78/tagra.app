@@ -84,6 +84,7 @@
 <meta content="#0b2c4a" name="theme-color"/>
 <link href="/manifest.json" rel="manifest"/>
 <link href="https://tagra.app/de/" rel="canonical"/>
+<link rel="preload" as="image" fetchpriority="high" type="image/webp" imagesizes="100vw" imagesrcset="/.netlify/images?url=/assets/img/hero-poster.jpg&amp;w=480&amp;fm=webp 480w, /.netlify/images?url=/assets/img/hero-poster.jpg&amp;w=960&amp;fm=webp 960w, /.netlify/images?url=/assets/img/hero-poster.jpg&amp;w=1440&amp;fm=webp 1440w, /.netlify/images?url=/assets/img/hero-poster.jpg&amp;w=1920&amp;fm=webp 1920w"/>
 <link href="https://tagra.app/de/" hreflang="de" rel="alternate"/><link href="https://tagra.app/el/" hreflang="el" rel="alternate"/><link href="https://tagra.app/" hreflang="en" rel="alternate"/><link href="https://tagra.app/fr/" hreflang="fr" rel="alternate"/><link href="https://tagra.app/hu/" hreflang="hu" rel="alternate"/><link href="https://tagra.app/it/" hreflang="it" rel="alternate"/><link href="https://tagra.app/nl/" hreflang="nl" rel="alternate"/><link href="https://tagra.app/pl/" hreflang="pl" rel="alternate"/>
 <link href="https://tagra.app/ro/" hreflang="ro" rel="alternate"/><link href="https://tagra.app/" hreflang="x-default" rel="alternate"/>
 <meta content="Fahrerkarte auslesen &amp; Tachographen-Software | TAGRA III" property="og:title"/>
@@ -781,10 +782,10 @@
 <source type="image/webp" sizes="100vw" srcset="/.netlify/images?url=/assets/img/hero-poster.jpg&amp;w=480&amp;fm=webp 480w, /.netlify/images?url=/assets/img/hero-poster.jpg&amp;w=960&amp;fm=webp 960w, /.netlify/images?url=/assets/img/hero-poster.jpg&amp;w=1440&amp;fm=webp 1440w, /.netlify/images?url=/assets/img/hero-poster.jpg&amp;w=1920&amp;fm=webp 1920w"/>
 <img alt="" aria-hidden="true" class="hero-video-poster" fetchpriority="high" loading="eager" src="/assets/img/hero-poster.jpg?v=2026-10-20" width="1920" height="1080"/>
 </picture>
-<video aria-hidden="true" autoplay="" class="hero-video" id="heroVideo" loop="" muted="" playsinline="" preload="auto">
-<source media="(max-width: 1024px)" src="/assets/video/hero-720.mp4?v=2026-10-20" type="video/mp4"/>
-<source src="/assets/video/hero-1080.mp4?v=2026-10-20" type="video/mp4"/>
-<source src="/assets/video/hero-1080.webm?v=2026-10-20" type="video/webm"/>
+<video aria-hidden="true" autoplay="" class="hero-video" id="heroVideo" loop="" muted="" playsinline="" preload="none">
+<source media="(max-width: 1024px)" data-src="/assets/video/hero-720.mp4?v=2026-10-20" type="video/mp4"/>
+<source data-src="/assets/video/hero-1080.mp4?v=2026-10-20" type="video/mp4"/>
+<source data-src="/assets/video/hero-1080.webm?v=2026-10-20" type="video/webm"/>
 </video>
 <div class="container">
 <div class="hero-glass anim-up">
@@ -797,10 +798,12 @@
         TAGRA deckt alles ab. 30 Tage kostenlos, ohne Kreditkarte.
       </p>
 </div>
+<div class="cta-row hero-cta anim-up" style="transition-delay:.15s"><a class="btn-cta" href="/de/testen/?src=home-hero">30 Tage kostenlos testen</a></div>
+<p class="hero-cta-note anim-up" style="transition-delay:.15s">Windows 10/11 · Keine Kreditkarte erforderlich</p>
 </div>
 </section>
 <!-- ═══ PICKER (3 audience cards) ═══════════════════════════════════ -->
-<section aria-label="Choose your TAGRA solution" class="picker">
+<section aria-label="Wählen Sie Ihre TAGRA-Lösung" class="picker">
 <div class="container">
 <div class="picker-head anim-up">
 <span class="section-label">Wählen Sie Ihre Rolle</span>
@@ -809,13 +812,13 @@
 <!-- Fleet -->
 <a aria-label="TAGRA for fleet operators" class="split-card split-card--fleet" href="/de/fuhrpark/">
 <div class="card-label">Fuhrparkbetreiber</div>
-<h2 class="sr-only">TAGRA · Software für die Verwaltung von Tachographendaten</h2><h3 class="card-title">TAGRA III<br/>Company</h3>
+<h2 class="sr-only">TAGRA · Software für die Verwaltung von Tachographendaten</h2><h3 class="card-title">TAGRA III<br/>Unternehmen</h3>
 <p class="card-desc">Sie verwalten Fahrzeuge für ein Unternehmen. Sie müssen Daten aus <strong>Fahrtenschreibern und Fahrerkarten</strong> auslesen, auswerten — und alles für Kontrollen archivieren.</p>
 <ul class="card-list">
 <li>1 bis unbegrenzt viele Fahrzeuge</li>
 <li>Vollständige Arbeitszeitauswertung (VO (EG) Nr. 561/2006 + RL 2002/15/EG)</li>
-<li>Von Kontrollbehörden anerkannte Auswertungen</li>
-<li>Bereit für Transporter ab Juli 2026</li>
+<li>Übersichtliche Auswertungen für Kontrollen</li>
+<li>Unterstützt Lkw und Transporter mit 2,5–3,5 t</li>
 </ul>
 <span class="card-cta">Lösung für Unternehmen →</span>
 <span class="card-note">30 Tage kostenlos · ohne Kreditkarte</span>
@@ -870,7 +873,7 @@
 <li>Downloads, Kartengültigkeit und Kalibrierungen: alle Fristen auf einen Blick</li>
 <li>Läuft auf Ihrem eigenen Windows-PC — Ihre Daten bleiben bei Ihnen</li>
 </ul>
-<div class="t3p-cta"><a class="btn-cta" href="/de/testen/?audience=fleet" rel="noopener" target="_blank">TAGRA III 30 Tage kostenlos testen</a><a class="btn-outline" href="/de/fuhrpark/#tagra-iii">TAGRA III entdecken</a><a class="btn-outline" href="https://shop.tagra.app/tagra-software/" hreflang="en">Im Shop kaufen</a></div>
+<div class="t3p-cta"><a class="btn-cta" href="/de/testen/?audience=fleet" rel="noopener" target="_blank">TAGRA III 30 Tage kostenlos testen</a><a class="btn-outline" href="/de/fuhrpark/#tagra-iii">TAGRA III entdecken</a><a class="btn-outline" href="https://shop.tagra.app/tagra-software/" hreflang="en">Im Shop kaufen (EN)</a></div>
 <p class="t3p-note">TAGRA 1 ab 149 € zzgl. MwSt., inkl. 1. Jahr. Ab dem 2. Jahr ab 79 € pro Jahr.</p>
 </div>
 <a class="t3p-shot" href="/de/fuhrpark/#tagra-iii"><img alt="TAGRA III Übersicht – Daten einlesen, Fahrer und Fahrzeuge mit Aufgaben, Datenexport für Kontrollen" decoding="async" height="939" loading="lazy" sizes="(max-width: 980px) 100vw, 560px" src="/assets/img/tagra3/tagra3-overview-960.webp" srcset="/assets/img/tagra3/tagra3-overview-960.webp 960w, /assets/img/tagra3/tagra3-overview.webp 1402w" width="1402"/></a>
@@ -962,7 +965,7 @@
 </div>
 </section>
 <!-- ═══ SOCIAL PROOF ══════════════════════════════════════════════════ -->
-<section aria-label="Trusted by authorities and fleets across Central Europe" class="section section--blue">
+<section aria-label="Behörden und Flotten in ganz Mitteleuropa vertrauen uns" class="section section--blue">
 <div class="section-inner">
 <div class="section-head anim-up">
 <span class="section-label">In der Praxis bewährt</span>
@@ -1037,7 +1040,7 @@
 </div>
 <div class="pricing-teaser-cta">
 <a class="btn-outline" href="/de/fuhrpark/#tagra-pricing">Alle Varianten und Preise ansehen →</a>
-<a class="btn-outline" href="https://shop.tagra.app/tagra-software/" hreflang="en">Im Shop kaufen</a>
+<a class="btn-outline" href="https://shop.tagra.app/tagra-software/" hreflang="en">Im Shop kaufen (EN)</a>
 <a class="btn-cta" href="/de/testen/">30 Tage kostenlos testen</a>
 <span class="pricing-teaser-cta-note">Ohne Kreditkarte. Windows-Installer.</span>
 </div>
@@ -1066,15 +1069,15 @@
 <a class="t3p-tile" href="https://shop.tagra.app/download-box-ii-s/" hreflang="en"><strong class="t3p-tile__t">DOWNLOAD BOX II S</strong><span class="t3p-tile__d">Download-Key für alle digitalen Tachographen inkl. G2V2. Integrierter Fahrerkartenleser, keine Jahresgebühren, 24 Monate Garantie.</span><span class="t3p-tile__p">299 € zzgl. MwSt.</span></a>
 <a class="t3p-tile" href="https://shop.tagra.app/download-station/" hreflang="en"><strong class="t3p-tile__t">DOWNLOAD STATION</strong><span class="t3p-tile__d">Abschließbare Wandstation zum selbstständigen Auslesen von Fahrerkarten am Betriebshof. Auch als DOWNLOAD STATION Wi-Fi erhältlich.</span><span class="t3p-tile__p">ab 366 € zzgl. MwSt.</span></a>
 <a class="t3p-tile" href="https://shop.tagra.app/smart-card-reader/" hreflang="en"><strong class="t3p-tile__t">Chipkartenleser</strong><span class="t3p-tile__d">USB-Lesegerät für Fahrer- und Unternehmenskarten.</span><span class="t3p-tile__p">33 € zzgl. MwSt.</span></a>
-<a class="t3p-tile" href="https://shop.tagra.app/tagra-trucker/" hreflang="en"><strong class="t3p-tile__t">TAGRA Trucker</strong><span class="t3p-tile__d">Für Berufskraftfahrer. Kostenloser USB-Fahrerkartenleser inklusive, Lieferung direkt zu Ihnen.</span><span class="t3p-tile__p">49 € zzgl. MwSt.</span></a>
+<div class="t3p-tile t3p-tile--duo"><strong class="t3p-tile__t">TAGRA Trucker</strong><span class="t3p-tile__d">Für Berufskraftfahrer. Kostenloser USB-Fahrerkartenleser inklusive, Lieferung direkt zu Ihnen.</span><span class="t3p-duo"><a class="t3p-duo__o" href="https://shop.tagra.app/tagra-trucker/" hreflang="en"><span><b>1 Fahrer</b> TAGRA TRUCKER</span><strong>49 €</strong></a><a class="t3p-duo__o" href="/go/tagra-trucker-2/"><span><b>2 Fahrer als Doppelbesatzung</b> TAGRA TRUCKER 2</span><strong>88,62 €</strong></a></span><span class="t3p-duo__vat">zzgl. MwSt.</span></div>
 </div>
-<div class="t3p-cta"><a class="btn-cta" href="https://shop.tagra.app/" hreflang="en">Online im TAGRA Shop bestellen</a><a class="btn-outline" href="https://shop.tagra.app/download-devices/" hreflang="en">Download-Geräte ansehen</a></div>
+<div class="t3p-cta"><a class="btn-cta" href="https://shop.tagra.app/" hreflang="en">Online im TAGRA Shop bestellen (EN)</a><a class="btn-outline" href="https://shop.tagra.app/download-devices/" hreflang="en">Download-Geräte ansehen (EN)</a></div>
 <p class="t3p-note">Der TAGRA Shop ist derzeit auf Englisch verfügbar. Fragen? Schreiben Sie an <a href="mailto:sales@tagra.app">sales@tagra.app</a>.</p>
 </div>
 </section>
 
 <!-- ═══ FAQ TEASER ════════════════════════════════════════════════════ -->
-<section aria-label="Frequently asked questions" class="section section--white">
+<section aria-label="Häufig gestellte Fragen" class="section section--white">
 <div class="section-inner">
 <div class="section-head anim-up">
 <span class="section-label">Fragen</span>
@@ -1273,7 +1276,22 @@
   var inView = true;
   function play() { if (!inView || document.hidden) return; try { var p = v.play(); if (p && p.catch) p.catch(function() {}); } catch (e) {} }
   function ready() { v.classList.add('is-active'); hero.classList.add('has-video-ready'); play(); }
-  if (v.readyState >= 3) ready(); else v.addEventListener('canplay', ready, { once: true });
+  /* F15 (8. 11. 2026): LCP = poster / H1. Desktop: video as before (attached right away). Mobile: video sources are attached only after the
+     first interaction (Chrome stops LCP at the first input; the video frame would otherwise be the late LCP). Data saver / 2G–3G: poster only. */
+  var c = navigator.connection, mob = window.matchMedia && window.matchMedia('(max-width: 1024px)').matches, done = false;
+  if (mob && c && (c.saveData || /(^|-)(2g|3g)$/.test(c.effectiveType || ''))) return;
+  function attach() {
+    if (done) return; done = true;
+    var ss = v.querySelectorAll('source[data-src]');
+    for (var i = 0; i < ss.length; i++) { ss[i].src = ss[i].getAttribute('data-src'); ss[i].removeAttribute('data-src'); }
+    v.preload = 'auto'; v.addEventListener('canplay', ready, { once: true });
+    try { v.load(); } catch (e) {}
+  }
+  if (mob) {
+    var evs = ['scroll', 'touchstart', 'pointerdown', 'keydown'];
+    var go = function () { for (var i = 0; i < evs.length; i++) window.removeEventListener(evs[i], go); attach(); };
+    for (var i = 0; i < evs.length; i++) window.addEventListener(evs[i], go, { passive: true }); /* bubble phase: page scroll only, not carousels */
+  } else attach();
   if ('IntersectionObserver' in window) {
     new IntersectionObserver(function(es) { inView = es[0].isIntersecting; if (inView) play(); else { try { v.pause(); } catch (e) {} } }, { threshold: 0.05 }).observe(hero);
   }
