@@ -1,6 +1,6 @@
 /* TAGRA Shop (shop.tagra.app) – externí měřicí a chatové skripty.
    Vkládá se v Shoptetu: Vzhled a obsah → Editor → HTML kód → Patička:
-   <script src="https://tagra.app/assets/js/shop-tracking.js?v=1" defer></script>
+   <script src="https://tagra.app/assets/js/shop-tracking.js?v=1" defer></script>  (v1.1 8. 11. 2026: chat až po volbě cookies)
    (HTML kódy v Shoptetu mají limit 8 192 znaků, proto externí soubor.)
    GA4 se NEvkládá sem – běží přes nativní propojení Shoptetu (G-92253QFBNX, cross-domain tagra.app).
    1) Microsoft Clarity – projekt „TAGRA Shop“ z89q96s7bd, jen po souhlasu s analytickými cookies.
@@ -76,7 +76,26 @@
     };
     s.parentNode.insertBefore(g, s);
   }
-  /* Chat až po načtení stránky – nebrzdí LCP. */
-  if (d.readyState === 'complete') loadChat();
-  else w.addEventListener('load', loadChat);
+  /* Chat až po načtení stránky – nebrzdí LCP.
+     8. 11. 2026: a až po rozhodnutí o cookies (cookie CookiesConsent existuje) – bublina na mobilu
+     překrývala tlačítko Accept v cookie liště (audit #5/#14). Když lišta na stránce není, chat se načte hned. */
+  function consentDecided() { return /(?:^|;\s*)CookiesConsent=/.test(d.cookie); }
+  function cookieBarShown() {
+    var c = d.querySelector('.js-siteCookies, .siteCookies');
+    if (!c) return false;
+    var cs = w.getComputedStyle(c);
+    return cs.display !== 'none' && cs.visibility !== 'hidden' && c.getBoundingClientRect().height > 0;
+  }
+  function chatWhenDecided() {
+    if (consentDecided() || !cookieBarShown()) { loadChat(); return; }
+    var n = 0, iv = setInterval(function () {
+      if (consentDecided() || !cookieBarShown()) { clearInterval(iv); loadChat(); }
+      else if (++n > 300) clearInterval(iv); /* 10 min */
+    }, 2000);
+    d.addEventListener('click', function () {
+      setTimeout(function () { if (consentDecided() || !cookieBarShown()) loadChat(); }, 600);
+    }, true);
+  }
+  if (d.readyState === 'complete') chatWhenDecided();
+  else w.addEventListener('load', chatWhenDecided);
 })(window, document);

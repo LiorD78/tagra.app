@@ -1,4 +1,6 @@
-/* TAGRA Shop – version switcher v1.1 (7. 11. 2026)
+/* TAGRA Shop – version switcher v1.2 (8. 11. 2026)
+   v1.2: "Most popular" pill on TAGRA 4; phone labels "+ DOWNLOAD BOX II S" and "MAX" (were cut off at 390 px);
+         events also via gtag send_to GA4 (plain dataLayer objects never reached GA4).
    v1.1: driver row on TAGRA TRUCKER / TAGRA TRUCKER 2 ("How many drivers will use the program?" 1 / 2 drivers),
    same look and the same switch behaviour as the vehicle row; the TAGRA rows below are unchanged.
    v1.0 (6. 11. 2026):
@@ -33,15 +35,20 @@
 
   function readRec(){var r=null;try{r=JSON.parse(sessionStorage.getItem(KEY)||'null');}catch(e){r=null;}
     return (r&&norm(r.to)===here&&Date.now()-r.t<20000)?r:null;}
-  function track(ev,o){try{window.dataLayer=window.dataLayer||[];o=o||{};o.event=ev;window.dataLayer.push(o);}catch(e){}}
+  function track(ev,o){o=o||{};try{window.dataLayer=window.dataLayer||[];var d={event:ev};for(var k in o)d[k]=o[k];window.dataLayer.push(d);}catch(e){}
+    try{if(typeof window.gtag==='function'){var q={send_to:'GA4'};for(var k2 in o)q[k2]=o[k2];window.gtag('event',ev,q);}}catch(e){}}
 
   /* ---------- markup ---------- */
   function el(tag,cls,txt){var e=document.createElement(tag);if(cls)e.className=cls;if(txt!=null)e.textContent=txt;return e;}
-  function opt(isOn,href,big,small,label){
+  /* text with an optional part hidden on phones: "TAGRA |MAX" -> "MAX", "Program |+ DOWNLOAD BOX II S" -> "+ DOWNLOAD BOX II S" */
+  function txt(tag,t){var e=el(tag);var i=t.indexOf('|');if(i<0){e.textContent=t;return e;}
+    e.appendChild(el('span','tgs-var__long',t.slice(0,i)));e.appendChild(document.createTextNode(t.slice(i+1)));return e;}
+  function opt(isOn,href,big,small,label,pop){
     var o=el(isOn?'span':'a','tgs-var__o'+(isOn?' is-on':''));
     if(isOn)o.setAttribute('aria-current','page');else o.href=href;
-    if(label)o.setAttribute('aria-label',label);
-    o.appendChild(el('b',null,big));if(small)o.appendChild(el('small',null,small));
+    if(label)o.setAttribute('aria-label',label+(pop?' (recommended)':''));
+    if(pop){var p=el('span','tgs-var__pop','Recommended');p.setAttribute('aria-hidden','true');o.appendChild(p);}
+    o.appendChild(txt('b',big));if(small)o.appendChild(txt('small',small));
     return o;
   }
   function build(){
@@ -49,13 +56,13 @@
     w.appendChild(el('p','tgs-var__q','How many vehicles have a tachograph?'));
     var r1=el('div','tgs-var__veh');
     V.forEach(function(x){
-      r1.appendChild(opt(x===cur,withKey?x.s:x.p,x.big,x.name,x.name+' for '+x.cap+(withKey?' with DOWNLOAD BOX II S':'')));
+      r1.appendChild(opt(x===cur,withKey?x.s:x.p,x.big,x.k==='max'?'TAGRA |MAX':x.name,x.name+' for '+x.cap+(withKey?' with DOWNLOAD BOX II S':''),x.k==='4'));
     });
     w.appendChild(r1);
     w.appendChild(el('p','tgs-var__q','Download device'));
     var r2=el('div','tgs-var__key');
     r2.appendChild(opt(!withKey,cur.p,'Program only',null,cur.name+' without a download device'));
-    r2.appendChild(opt(withKey,cur.s,'Program + DOWNLOAD BOX II S','bundle · save €49',cur.name+' with DOWNLOAD BOX II S in a bundle'));
+    r2.appendChild(opt(withKey,cur.s,'Program |+ DOWNLOAD BOX II S','bundle · save €49',cur.name+' with DOWNLOAD BOX II S in a bundle'));
     w.appendChild(r2);
     return w;
   }
