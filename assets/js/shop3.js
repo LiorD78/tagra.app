@@ -39,13 +39,13 @@
   }
   function fleet(){
     if(!document.body||!document.body.classList.contains('type-index')||window.tgsFleetCalc||document.getElementById('tgs-fleet-js'))return;
-    var s=document.createElement('script');s.id='tgs-fleet-js';s.src='https://tagra.app/assets/js/shop-fleet.js?v=6';s.async=true;document.head.appendChild(s);
+    var s=document.createElement('script');s.id='tgs-fleet-js';s.src='https://tagra.app/assets/js/shop-fleet.js?v=7';s.async=true;document.head.appendChild(s);
   }
   function variant(){
     if(!document.body||!document.body.classList.contains('type-detail')||window.tgsVariant||document.getElementById('tgs-variant-js'))return;
     var m=document.querySelector('.p-detail meta[itemprop="url"]'),u=m?m.getAttribute('content')||'':'';
     if(!/\/tagra-((1|2|4|6|max)(-download-box-ii-s)?|trucker(-2)?)\/$/.test(u))return;
-    var s=document.createElement('script');s.id='tgs-variant-js';s.src='https://tagra.app/assets/js/shop-variant.js?v=3';document.head.appendChild(s);
+    var s=document.createElement('script');s.id='tgs-variant-js';s.src='https://tagra.app/assets/js/shop-variant.js?v=4';document.head.appendChild(s);
   }
   function vfix(){
     /* first homepage card: WebM with Vorbis audio does not play in Safari -> drop that source so Safari takes the MP4 */

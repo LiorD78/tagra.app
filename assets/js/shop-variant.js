@@ -46,8 +46,8 @@
   function opt(isOn,href,big,small,label,pop){
     var o=el(isOn?'span':'a','tgs-var__o'+(isOn?' is-on':''));
     if(isOn)o.setAttribute('aria-current','page');else o.href=href;
-    if(label)o.setAttribute('aria-label',label+(pop?' (recommended)':''));
-    if(pop){var p=el('span','tgs-var__pop','Recommended');p.setAttribute('aria-hidden','true');o.appendChild(p);}
+    if(label)o.setAttribute('aria-label',label+(pop?' (most popular)':''));
+    if(pop){var p=el('span','tgs-var__pop','Most popular');p.setAttribute('aria-hidden','true');o.appendChild(p);}
     o.appendChild(txt('b',big));if(small)o.appendChild(txt('small',small));
     return o;
   }
@@ -56,13 +56,13 @@
     w.appendChild(el('p','tgs-var__q','How many vehicles have a tachograph?'));
     var r1=el('div','tgs-var__veh');
     V.forEach(function(x){
-      r1.appendChild(opt(x===cur,withKey?x.s:x.p,x.big,x.k==='max'?'TAGRA |MAX':x.name,x.name+' for '+x.cap+(withKey?' with DOWNLOAD BOX II S':''),x.k==='4'));
+      r1.appendChild(opt(x===cur,withKey?x.s:x.p,x.big,x.k==='max'?'TAGRA |MAX':x.name,x.name+' for '+x.cap+(withKey?' with DOWNLOAD BOX II S':''),false));
     });
     w.appendChild(r1);
     w.appendChild(el('p','tgs-var__q','Download device'));
     var r2=el('div','tgs-var__key');
     r2.appendChild(opt(!withKey,cur.p,'Program only',null,cur.name+' without a download device'));
-    r2.appendChild(opt(withKey,cur.s,'Program |+ DOWNLOAD BOX II S','bundle · save €49',cur.name+' with DOWNLOAD BOX II S in a bundle'));
+    r2.appendChild(opt(withKey,cur.s,'Program |+ DOWNLOAD BOX II S','bundle · save €49',cur.name+' with DOWNLOAD BOX II S in a bundle',true));
     w.appendChild(r2);
     return w;
   }

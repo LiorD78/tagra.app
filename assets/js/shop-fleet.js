@@ -65,7 +65,7 @@
        '</div><p class="tgs-fc__note" id="tgs-fc-veh-note">Licences are based on the number of vehicles. Driver cards are not counted.</p></div>'+
       '<div class="tgs-fc__step" data-for="company"><p class="tgs-fc__q"><span class="tgs-fc__n">3</span>Do you need a download device?</p>'+
        '<div class="tgs-fc__opts">'+
-        choice('dev','box','klic','Yes, add DOWNLOAD BOX II S','Downloads tachograph and driver card data · save '+SAVE+' in a bundle',false)+
+        choice('dev','box','klic','Yes, add DOWNLOAD BOX II S <em class="tgs-fc__pop">Most popular</em>','Downloads tachograph and driver card data · save '+SAVE+' in a bundle',false)+
         choice('dev','own','mam','No, we already have one','Licence only',false)+
        '</div><p class="tgs-fc__note">Not sure which device you need? <a href="#tgs-help">Ask us</a>.</p></div>'+
       (RULES.trucker2?
