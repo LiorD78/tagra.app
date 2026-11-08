@@ -1,4 +1,5 @@
-/* TAGRA Shop – version switcher v1.2 (8. 11. 2026)
+/* TAGRA Shop – version switcher v1.3 (8. 11. 2026)
+   v1.3: texts by <html lang> – EN default with unchanged output, DE dictionary from the crew (GPT + Gemini).
    v1.2: "Most popular" pill on TAGRA 4; phone labels "+ DOWNLOAD BOX II S" and "MAX" (were cut off at 390 px);
          events also via gtag send_to GA4 (plain dataLayer objects never reached GA4).
    v1.1: driver row on TAGRA TRUCKER / TAGRA TRUCKER 2 ("How many drivers will use the program?" 1 / 2 drivers),
@@ -15,16 +16,22 @@
   if(window.tgsVariant)return;
   window.tgsVariant=true;
   var KEY='tgs-var-nav';
+  /* i18n: EN strings stay inline (EN = default, byte-identical output); other shop languages override by key */
+  var LG=(document.documentElement.getAttribute('lang')||'en').slice(0,2).toLowerCase(),DE=LG==='de';
+  var I18N={de:{cap1:'1 Fahrzeug',cap2:'2 Fahrzeuge',cap4:'3–4 Fahrzeuge',cap6:'5–6 Fahrzeuge',capmax:'unbegrenzt viele Fahrzeuge',v_d1:'1 Fahrer',v_d2:'2 Fahrer',d1:'1 Fahrer',d2:'2 Fahrer an einem PC',pop:'Am beliebtesten',pop_aria:'(am beliebtesten)',v_aria:'Wählen Sie Ihre TAGRA Version',v_for:'{name} für {cap}',v_withbox:' mit DOWNLOAD BOX II S',v_dev:'Download-Gerät',v_only:'Nur Programm',v_only_aria:'{name} ohne Download-Gerät',v_prog_box:'Programm |+ DOWNLOAD BOX II S',v_bundle:'Bundle · 49 € sparen',v_bundle_aria:'{name} mit DOWNLOAD BOX II S im Bundle',v_aria_tr:'Wählen Sie Ihre TAGRA TRUCKER Version',v_q:'Fahrzeuge mit Fahrtenschreiber?',v_qd:'Wie viele Fahrer nutzen das Programm?'}};
+  var I=I18N[LG]||{};
+  function tx(k,en){return I.hasOwnProperty(k)?I[k]:en;}
+  function tf(k,o){var r=I[k]||'',x;for(x in o)r=r.split('{'+x+'}').join(o[x]);return r;}
   var V=[
-    {k:'1',big:'1',name:'TAGRA 1',cap:'1 vehicle',p:'/tagra-1/',s:'/tagra-1-download-box-ii-s/'},
-    {k:'2',big:'2',name:'TAGRA 2',cap:'2 vehicles',p:'/tagra-2/',s:'/tagra-2-download-box-ii-s/'},
-    {k:'4',big:'3–4',name:'TAGRA 4',cap:'3–4 vehicles',p:'/tagra-4/',s:'/tagra-4-download-box-ii-s/'},
-    {k:'6',big:'5–6',name:'TAGRA 6',cap:'5–6 vehicles',p:'/tagra-6/',s:'/tagra-6-download-box-ii-s/'},
-    {k:'max',big:'7+',name:'TAGRA MAX',cap:'unlimited vehicles',p:'/tagra-max/',s:'/tagra-max-download-box-ii-s/'}
+    {k:'1',big:'1',name:'TAGRA 1',cap:tx('cap1','1 vehicle'),p:'/tagra-1/',s:'/tagra-1-download-box-ii-s/'},
+    {k:'2',big:'2',name:'TAGRA 2',cap:tx('cap2','2 vehicles'),p:'/tagra-2/',s:'/tagra-2-download-box-ii-s/'},
+    {k:'4',big:'3–4',name:'TAGRA 4',cap:tx('cap4','3–4 vehicles'),p:'/tagra-4/',s:'/tagra-4-download-box-ii-s/'},
+    {k:'6',big:'5–6',name:'TAGRA 6',cap:tx('cap6','5–6 vehicles'),p:'/tagra-6/',s:'/tagra-6-download-box-ii-s/'},
+    {k:'max',big:'7+',name:'TAGRA MAX',cap:tx('capmax','unlimited vehicles'),p:'/tagra-max/',s:'/tagra-max-download-box-ii-s/'}
   ];
   var D=[
-    {k:'tr1',big:'1 driver',name:'TAGRA TRUCKER',cap:'1 driver',p:'/tagra-trucker/'},
-    {k:'tr2',big:'2 drivers',name:'TAGRA TRUCKER 2',cap:'2 drivers sharing one PC',p:'/tagra-trucker-2/'}
+    {k:'tr1',big:tx('v_d1','1 driver'),name:'TAGRA TRUCKER',cap:tx('d1','1 driver'),p:'/tagra-trucker/'},
+    {k:'tr2',big:tx('v_d2','2 drivers'),name:'TAGRA TRUCKER 2',cap:tx('d2','2 drivers sharing one PC'),p:'/tagra-trucker-2/'}
   ];
   var html=document.documentElement;
   function norm(p){p=String(p||'').split(/[?#]/)[0];return p.charAt(p.length-1)==='/'?p:p+'/';}
@@ -46,32 +53,32 @@
   function opt(isOn,href,big,small,label,pop){
     var o=el(isOn?'span':'a','tgs-var__o'+(isOn?' is-on':''));
     if(isOn)o.setAttribute('aria-current','page');else o.href=href;
-    if(label)o.setAttribute('aria-label',label+(pop?' (most popular)':''));
-    if(pop){var p=el('span','tgs-var__pop','Most popular');p.setAttribute('aria-hidden','true');o.appendChild(p);}
+    if(label)o.setAttribute('aria-label',label+(pop?(DE?' '+I.pop_aria:' (most popular)'):''));
+    if(pop){var p=el('span','tgs-var__pop',tx('pop','Most popular'));p.setAttribute('aria-hidden','true');o.appendChild(p);}
     o.appendChild(txt('b',big));if(small)o.appendChild(txt('small',small));
     return o;
   }
   function build(){
-    var w=el('div','tgs-var');w.setAttribute('role','group');w.setAttribute('aria-label','Choose your TAGRA version');
-    w.appendChild(el('p','tgs-var__q','How many vehicles have a tachograph?'));
+    var w=el('div','tgs-var');w.setAttribute('role','group');w.setAttribute('aria-label',tx('v_aria','Choose your TAGRA version'));
+    w.appendChild(el('p','tgs-var__q',tx('v_q','How many vehicles have a tachograph?')));
     var r1=el('div','tgs-var__veh');
     V.forEach(function(x){
-      r1.appendChild(opt(x===cur,withKey?x.s:x.p,x.big,x.k==='max'?'TAGRA |MAX':x.name,x.name+' for '+x.cap+(withKey?' with DOWNLOAD BOX II S':''),false));
+      r1.appendChild(opt(x===cur,withKey?x.s:x.p,x.big,x.k==='max'?'TAGRA |MAX':x.name,(DE?tf('v_for',{name:x.name,cap:x.cap})+(withKey?I.v_withbox:''):x.name+' for '+x.cap+(withKey?' with DOWNLOAD BOX II S':'')),false));
     });
     w.appendChild(r1);
-    w.appendChild(el('p','tgs-var__q','Download device'));
+    w.appendChild(el('p','tgs-var__q',tx('v_dev','Download device')));
     var r2=el('div','tgs-var__key');
-    r2.appendChild(opt(!withKey,cur.p,'Program only',null,cur.name+' without a download device'));
-    r2.appendChild(opt(withKey,cur.s,'Program |+ DOWNLOAD BOX II S','bundle · save €49',cur.name+' with DOWNLOAD BOX II S in a bundle',true));
+    r2.appendChild(opt(!withKey,cur.p,tx('v_only','Program only'),null,DE?tf('v_only_aria',{name:cur.name}):cur.name+' without a download device'));
+    r2.appendChild(opt(withKey,cur.s,tx('v_prog_box','Program |+ DOWNLOAD BOX II S'),tx('v_bundle','bundle · save €49'),DE?tf('v_bundle_aria',{name:cur.name}):cur.name+' with DOWNLOAD BOX II S in a bundle',true));
     w.appendChild(r2);
     return w;
   }
   function buildDrv(){
-    var w=el('div','tgs-var is-drv');w.setAttribute('role','group');w.setAttribute('aria-label','Choose your TAGRA TRUCKER version');
-    w.appendChild(el('p','tgs-var__q','How many drivers will use the program?'));
+    var w=el('div','tgs-var is-drv');w.setAttribute('role','group');w.setAttribute('aria-label',tx('v_aria_tr','Choose your TAGRA TRUCKER version'));
+    w.appendChild(el('p','tgs-var__q',tx('v_qd','How many drivers will use the program?')));
     var r=el('div','tgs-var__drv');
     D.forEach(function(x){
-      r.appendChild(opt(x===cur,x.p,x.big,x.name,x.name+' for '+x.cap));
+      r.appendChild(opt(x===cur,x.p,x.big,x.name,DE?tf('v_for',{name:x.name,cap:x.cap}):x.name+' for '+x.cap));
     });
     w.appendChild(r);
     return w;

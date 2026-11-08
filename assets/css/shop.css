@@ -536,3 +536,40 @@ body.type-search #content:has(.tgs-srch) .search-results-groups,body.type-search
 /* Most popular = volba s DOWNLOAD BOX II S v kalkulačce (Libor 8. 11. 2026) */
 .tgs-fc__pop{display:inline-block;margin-left:6px;background:var(--blue-mid,#134a8e);color:#fff;font-size:10px;font-style:normal;font-weight:700;line-height:1.4;letter-spacing:.02em;border-radius:99px;padding:1px 7px;vertical-align:middle;white-space:nowrap}
 .tgs-fc__opt.is-on .tgs-fc__pop{background:#fff;color:var(--green-cta,#5C820F)}
+
+/* DE shop (<html lang="de">, 8. 11. 2026): same CSS-content texts in German – texts from the crew (GPT + Gemini); EN rules above stay untouched */
+html[lang|="de"] body .products-block .p .price-final strong::after{content:"zzgl. MwSt."}
+html[lang|="de"] body.in-cart .sidebar-in-cart .summary-wrapper>.box::before{content:"Ihre Bestellung"}
+html[lang|="de"] body .p-detail .p-final-price-wrapper .price-final-holder::after{content:"zzgl. MwSt."}
+html[lang|="de"] body .p-detail .p-final-price-wrapper .price-additional::after{content:"+ MwSt. Ihres Landes · 0 % für EU-Unternehmen mit gültiger USt-IdNr."}
+html[lang|="de"] body .products-block .p .price-additional::after{content:"+ MwSt. Ihres Landes"}
+html[lang|="de"] body.type-detail .p-detail .add-to-cart::after{content:"Versand innerhalb von 3 Werktagen · Lieferung in 2–5 Tagen · Versand 8,18 € zzgl. MwSt."}
+html[lang|="de"] body.type-detail .p-detail:has(meta[itemprop="url"][content$="/tagra-1/"]) .add-to-cart::after{content:"Erstes Jahr inklusive · danach 79 €/Jahr · keine Vertragsbindung · 30 Tage kostenlos testen"}
+html[lang|="de"] body.type-detail .p-detail:has(meta[itemprop="url"][content$="/tagra-1-download-box-ii-s/"]) .add-to-cart::after{content:"Erstes Jahr TAGRA inklusive · danach 79 €/Jahr · keine Vertragsbindung · Geräteversand innerhalb von 3 Werktagen"}
+html[lang|="de"] body.type-detail .p-detail:has(meta[itemprop="url"][content$="/tagra-2/"]) .add-to-cart::after{content:"Erstes Jahr inklusive · danach 79 €/Jahr · keine Vertragsbindung · 30 Tage kostenlos testen"}
+html[lang|="de"] body.type-detail .p-detail:has(meta[itemprop="url"][content$="/tagra-2-download-box-ii-s/"]) .add-to-cart::after{content:"Erstes Jahr TAGRA inklusive · danach 79 €/Jahr · keine Vertragsbindung · Geräteversand innerhalb von 3 Werktagen"}
+html[lang|="de"] body.type-detail .p-detail:has(meta[itemprop="url"][content$="/tagra-4/"]) .add-to-cart::after{content:"Erstes Jahr inklusive · danach 99 €/Jahr · keine Vertragsbindung · 30 Tage kostenlos testen"}
+html[lang|="de"] body.type-detail .p-detail:has(meta[itemprop="url"][content$="/tagra-4-download-box-ii-s/"]) .add-to-cart::after{content:"Erstes Jahr TAGRA inklusive · danach 99 €/Jahr · keine Vertragsbindung · Geräteversand innerhalb von 3 Werktagen"}
+html[lang|="de"] body.type-detail .p-detail:has(meta[itemprop="url"][content$="/tagra-6/"]) .add-to-cart::after{content:"Erstes Jahr inklusive · danach 99 €/Jahr · keine Vertragsbindung · 30 Tage kostenlos testen"}
+html[lang|="de"] body.type-detail .p-detail:has(meta[itemprop="url"][content$="/tagra-6-download-box-ii-s/"]) .add-to-cart::after{content:"Erstes Jahr TAGRA inklusive · danach 99 €/Jahr · keine Vertragsbindung · Geräteversand innerhalb von 3 Werktagen"}
+html[lang|="de"] body.type-detail .p-detail:has(meta[itemprop="url"][content$="/tagra-max/"]) .add-to-cart::after{content:"Erstes Jahr inklusive · danach 149 €/Jahr · keine Vertragsbindung · Großer Fuhrpark? Rufen Sie uns an: +420 739 005 345"}
+html[lang|="de"] body.type-detail .p-detail:has(meta[itemprop="url"][content$="/tagra-max-download-box-ii-s/"]) .add-to-cart::after{content:"Erstes Jahr TAGRA inklusive · danach 149 €/Jahr · keine Vertragsbindung · Geräteversand innerhalb von 3 Werktagen"}
+html[lang|="de"] body.type-detail .p-detail:has(meta[itemprop="url"][content$="/tagra-trucker/"]) .add-to-cart::after{content:"Erstes Jahr inklusive · danach 19 €/Jahr · keine Vertragsbindung · USB-Kartenleser inklusive"}
+html[lang|="de"] body.type-detail .p-detail:has(meta[itemprop="url"][content$="/tagra-trucker-2/"]) .add-to-cart::after{content:"Erstes Jahr inklusive · danach 29 €/Jahr · keine Vertragsbindung · ein USB-Kartenleser inklusive"}
+html[lang|="de"] body.type-detail .p-detail:has(meta[itemprop="url"][content$="/download-box-ii-s/"]) .add-to-cart::after{content:"Keine jährlichen Gebühren · 24 Monate Garantie · Versand innerhalb von 3 Werktagen"}
+html[lang|="de"] body.in-cart .cart-table td.p-name::after{content:"Versand innerhalb von 3 Werktagen · Lieferung in 2–5 Tagen"}
+html[lang|="de"] body.in-cart .cart-table td.p-name:has(a[href$="/tagra-1/"])::after{content:"Lizenz per E-Mail · erstes Jahr inklusive · danach 79 €/Jahr · keine Vertragsbindung"}
+html[lang|="de"] body.in-cart .cart-table td.p-name:has(a[href$="/tagra-1-download-box-ii-s/"])::after{content:"Erstes Jahr TAGRA inklusive · danach 79 €/Jahr · Geräteversand innerhalb von 3 Werktagen"}
+html[lang|="de"] body.in-cart .cart-table td.p-name:has(a[href$="/tagra-2/"])::after{content:"Lizenz per E-Mail · erstes Jahr inklusive · danach 79 €/Jahr · keine Vertragsbindung"}
+html[lang|="de"] body.in-cart .cart-table td.p-name:has(a[href$="/tagra-2-download-box-ii-s/"])::after{content:"Erstes Jahr TAGRA inklusive · danach 79 €/Jahr · Geräteversand innerhalb von 3 Werktagen"}
+html[lang|="de"] body.in-cart .cart-table td.p-name:has(a[href$="/tagra-4/"])::after{content:"Lizenz per E-Mail · erstes Jahr inklusive · danach 99 €/Jahr · keine Vertragsbindung"}
+html[lang|="de"] body.in-cart .cart-table td.p-name:has(a[href$="/tagra-4-download-box-ii-s/"])::after{content:"Erstes Jahr TAGRA inklusive · danach 99 €/Jahr · Geräteversand innerhalb von 3 Werktagen"}
+html[lang|="de"] body.in-cart .cart-table td.p-name:has(a[href$="/tagra-6/"])::after{content:"Lizenz per E-Mail · erstes Jahr inklusive · danach 99 €/Jahr · keine Vertragsbindung"}
+html[lang|="de"] body.in-cart .cart-table td.p-name:has(a[href$="/tagra-6-download-box-ii-s/"])::after{content:"Erstes Jahr TAGRA inklusive · danach 99 €/Jahr · Geräteversand innerhalb von 3 Werktagen"}
+html[lang|="de"] body.in-cart .cart-table td.p-name:has(a[href$="/tagra-max/"])::after{content:"Lizenz per E-Mail · erstes Jahr inklusive · danach 149 €/Jahr · keine Vertragsbindung"}
+html[lang|="de"] body.in-cart .cart-table td.p-name:has(a[href$="/tagra-max-download-box-ii-s/"])::after{content:"Erstes Jahr TAGRA inklusive · danach 149 €/Jahr · Geräteversand innerhalb von 3 Werktagen"}
+html[lang|="de"] body.in-cart .cart-table td.p-name:has(a[href$="/tagra-trucker/"])::after{content:"Erstes Jahr inklusive · danach 19 €/Jahr · keine Vertragsbindung · USB-Kartenleser inklusive"}
+html[lang|="de"] body.in-cart .cart-table td.p-name:has(a[href$="/tagra-trucker-2/"])::after{content:"Erstes Jahr inklusive · danach 29 €/Jahr · keine Vertragsbindung · ein USB-Kartenleser inklusive"}
+html[lang|="de"] body.in-cart .cart-table td.p-name:has(a[href$="/download-box-ii-s/"])::after{content:"Keine jährlichen Gebühren · Versand innerhalb von 3 Werktagen · Lieferung in 2–5 Tagen"}
+/* DE: longer "In den Warenkorb" label – keep room for name/price in the sticky buy bar on phones */
+@media (max-width:767px){html[lang|="de"] .tgs-sb__atc{padding:0 16px!important;font-size:15px!important}}
