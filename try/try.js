@@ -336,7 +336,7 @@ var tagraGuessCountry = (function () {
           ok: 'Gotowe! Proszę sprawdzić skrzynkę i otworzyć e-mail na komputerze, aby pobrać TAGRA.', err: 'Coś poszło nie tak. Proszę spróbować ponownie lub skorzystać z', errlink: 'pełnego formularza' },
     hu: { lead: 'Telefonról böngészik? Elküldjük e-mailben a letöltési linket a számítógépéhez.', btn: 'Kérem a linket e-mailben', ph: 'E-mail', sending: 'Küldés…',
           ok: 'Kész! Ellenőrizze postafiókját, és nyissa meg az e-mailt a PC-jén a TAGRA letöltéséhez.', err: 'Valami hiba történt. Próbálja újra, vagy használja a', errlink: 'teljes űrlapot' },
-    it: { lead: 'È al telefono? Le invieremo via e-mail il link per il download sul Suo PC.', btn: 'Invia il link via e-mail', ph: 'E-mail', sending: 'Invio in corso…',
+    it: { lead: 'Sta usando uno smartphone? Le invieremo via e-mail il link per il download sul Suo PC.', btn: 'Invia il link via e-mail', ph: 'E-mail', sending: 'Invio in corso…',
           ok: 'Fatto! Controlli la posta in arrivo e apra l’e-mail sul PC per scaricare TAGRA.', err: 'Qualcosa è andato storto. Riprovi o utilizzi il', errlink: 'modulo completo' },
     fr: { lead: 'Sur votre téléphone ? Nous vous enverrons le lien de téléchargement pour votre PC par e-mail.', btn: 'M’envoyer le lien par e-mail', ph: 'E-mail', sending: 'Envoi en cours…',
           ok: 'C’est fait ! Consultez votre boîte de réception et ouvrez l’e-mail sur votre PC pour télécharger TAGRA.', err: 'Un problème est survenu. Réessayez ou utilisez le', errlink: 'formulaire complet' },
@@ -444,6 +444,16 @@ var tagraGuessCountry = (function () {
   var slot = document.getElementById('mobileSendSlot');
   if (slot) slot.appendChild(wrap);
   else section.parentNode.insertBefore(wrap, section);
+  // CRO #4 (8. 11. 2026): one form on mobile – the full form stays hidden while the short box is shown;
+  // the static link .tms-full (9 TAGRA trial pages, not /try/cz|sk) or a send error brings it back.
+  var fullLink = document.querySelector('.tms-full');
+  if (fullLink) {
+    section.classList.add('tms-on');
+    fullLink.addEventListener('click', function () {
+      section.classList.remove('tms-on'); fullLink.style.display = 'none';
+      try { form.scrollIntoView({ behavior: 'smooth', block: 'start' }); } catch (e) { form.scrollIntoView(); }
+    });
+  }
 
   f.addEventListener('change', function (e) {
     var x = e.target && e.target.closest ? e.target.closest('.is-err') : null;
@@ -502,6 +512,7 @@ var tagraGuessCountry = (function () {
         }
       } catch (x) { /* tracking must not break the form */ }
     }).catch(function () {
+      section.classList.remove('tms-on');
       btn.disabled = false;
       btn.textContent = t.btn;
       msg.textContent = t.err + ' ';
