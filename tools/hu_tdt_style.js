@@ -177,7 +177,7 @@ const HOME_TILES = `<!-- ═══ PRODUKTY A SLUŽBY (jako tdt.cz) ═══ --
 const BUY_BAND = `<!-- ═══ NÁKUP U RUKON KFT. ═══ -->
 <section aria-labelledby="hu-buy-title" class="hu-buy"><div class="container"><div class="hu-buy-card anim-up">
 <div><span class="eyebrow">Vásárlás Magyarországon</span><h2 id="hu-buy-title">Mindent beszerezhet partnerünknél, a&nbsp;Rukon&nbsp;Kft.&#8209;nél</h2><p>A TAGRA programot és a licenceket, a letöltőkulcsokat, a távoli letöltési megoldásokat és a GPS nyomkövetést Magyarországon hivatalos partnerünk, a <strong>Rukon Kft.</strong> kínálja – magyar nyelvű tanácsadással és támogatással.</p></div>
-<div class="hu-buy-contact"><div class="who">Varga Katalin — Rukon Kft.</div><div class="addr">1101 Budapest, Albertirsai út 2–4.</div><a class="tel" href="tel:+36304742540">+36 30 474 2540</a><a class="mail" href="mailto:rukon@rukon.hu">rukon@rukon.hu</a><div class="cta-row"><a class="btn-cta" href="/hu/kapcsolat/">Kérjen ajánlatot</a><a class="btn-glass-w" href="tel:+36304742540">Telefonáljon</a></div></div>
+<div class="hu-buy-contact"><div class="who">Varga Katalin — Rukon Kft.</div><div class="addr">1101 Budapest, Albertirsai út 2–4.</div><a class="tel" href="tel:+36304742540">+36 30 474 2540</a><a class="mail" href="mailto:varga@rukon.hu">varga@rukon.hu</a><div class="cta-row"><a class="btn-cta" href="/hu/kapcsolat/">Kérjen ajánlatot</a><a class="btn-glass-w" href="tel:+36304742540">Telefonáljon</a></div></div>
 </div></div></section>
 `;
 
@@ -276,8 +276,8 @@ function gyik(s) {
 
 function telepitese(s) {
   const W = 'hu/kezikonyvek/tagra-telepitese/index.html';
-  return rep(s, '<div class="tmx-keys"><p>Nincs még tachográf <b>letöltőkulcsa</b> még? Közvetlenül megvásárolhatja webáruházunkból (cseh/szlovák piac). Magyarországon a készüléket a Rukon Kft. forgalmazza — <a href="mailto:rukon@rukon.hu">rukon@rukon.hu</a>, +36 30 474 2540.</p><a class="tmx-btn" href="https://www.truckmall.cz" rel="noopener" target="_blank">Letöltőkulcsok a TRUCKMALL.cz oldalon</a></div>',
-    '<div class="tmx-keys"><p>Még nincs <b>letöltőkulcsa</b> a tachográfhoz? Magyarországon partnerünknél, a Rukon Kft.-nél szerezheti be — <a href="mailto:rukon@rukon.hu">rukon@rukon.hu</a>, +36 30 474 2540.</p><a class="tmx-btn" href="/hu/letoltokulcs/">DOWNLOAD BOX letöltőkulcsok</a></div>', 1, W);
+  return rep(s, '<div class="tmx-keys"><p>Nincs még tachográf <b>letöltőkulcsa</b> még? Közvetlenül megvásárolhatja webáruházunkból (cseh/szlovák piac). Magyarországon a készüléket a Rukon Kft. forgalmazza — <a href="mailto:varga@rukon.hu">varga@rukon.hu</a>, +36 30 474 2540.</p><a class="tmx-btn" href="https://www.truckmall.cz" rel="noopener" target="_blank">Letöltőkulcsok a TRUCKMALL.cz oldalon</a></div>',
+    '<div class="tmx-keys"><p>Még nincs <b>letöltőkulcsa</b> a tachográfhoz? Magyarországon partnerünknél, a Rukon Kft.-nél szerezheti be — <a href="mailto:varga@rukon.hu">varga@rukon.hu</a>, +36 30 474 2540.</p><a class="tmx-btn" href="/hu/letoltokulcs/">DOWNLOAD BOX letöltőkulcsok</a></div>', 1, W);
 }
 
 function cikkTip(s) {
@@ -307,7 +307,7 @@ const DL_MAIN = `<main id="main-content">
 <div class="dl-list"><a class="dl" data-track="dl-trucker" download="" href="${DL.trucker}"><span class="dl-ico dl-ico--3d"><img alt="" decoding="async" height="256" loading="lazy" src="/assets/img/hu/ico-ridic.webp" width="256"/></span><span><span class="dl-t">TAGRA TRUCKER</span><span class="dl-d">Sofőröknek, akik saját sofőrkártyájuk adatait értékelik ki – USB-kártyaolvasóval a csomagban. Windows · ZIP</span></span></a></div>
 </div></section>
 <section aria-labelledby="licenc-t" class="hu-dl-sec hu-dl-sec--gray" id="licenc"><div class="container"><h2 id="licenc-t">Licencek</h2>
-<div class="hu-lic"><img alt="" decoding="async" height="256" loading="lazy" src="/assets/img/hu/qz-aktivace-licence.webp" width="256"/><div><p>A licenckulcs aktiválásában, az éves megújításban és a licenc több járműre történő bővítésében magyarországi partnerünk, a Rukon Kft. segít Önnek.</p><p class="lic-c">Varga Katalin — Rukon Kft. · <a href="tel:+36304742540">+36 30 474 2540</a> · <a href="mailto:rukon@rukon.hu">rukon@rukon.hu</a></p></div><a class="btn-cta" href="/hu/kapcsolat/">Kapcsolat a Rukon Kft.-vel</a></div>
+<div class="hu-lic"><img alt="" decoding="async" height="256" loading="lazy" src="/assets/img/hu/qz-aktivace-licence.webp" width="256"/><div><p>A licenckulcs aktiválásában, az éves megújításban és a licenc több járműre történő bővítésében magyarországi partnerünk, a Rukon Kft. segít Önnek.</p><p class="lic-c">Varga Katalin — Rukon Kft. · <a href="tel:+36304742540">+36 30 474 2540</a> · <a href="mailto:varga@rukon.hu">varga@rukon.hu</a></p></div><a class="btn-cta" href="/hu/kapcsolat/">Kapcsolat a Rukon Kft.-vel</a></div>
 </div></section>
 <section aria-labelledby="drv-t" class="hu-dl-sec"><div class="container"><h2 id="drv-t">Illesztőprogramok a tartozékokhoz</h2>
 <div class="dl-list">${zipItem(DL.f + 'ovladac-pro-tdt-usb-kabel1.zip', 'Illesztőprogram a TDT USB-kábelhez', 'A TDT USB-kábel illesztőprogramja Windows rendszerhez.', 'dl-usb')}${zipItem(DL.f + 'ovladac-ctecky-karet-gempc-win-64.zip', 'GemPC kártyaolvasó-illesztőprogram (64 bites)', 'Windows 64 bit', 'dl-gempc64')}${zipItem(DL.f + 'ovladac-ctecky-karet-gempc-win-321.zip', 'GemPC kártyaolvasó-illesztőprogram (32 bites)', 'Windows 32 bit', 'dl-gempc32')}${zipItem(DL.f + 'client-db-ii-hu.zip', 'Kliens a DOWNLOAD STATION Wi-Fi eszközhöz', 'A kliens magyar nyelvű változata.', 'dl-station-hu')}</div>
