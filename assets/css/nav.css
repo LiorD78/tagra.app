@@ -420,3 +420,36 @@ html, body { overflow-x: hidden; max-width: 100vw; }
     background: linear-gradient(135deg, var(--green-brand, #6E9B12) 0%, var(--green-cta, #5C820F) 100%);
   }
 }
+
+/* === Kontakt s fotkou + dvouřádková hlavička nad 1280 px (F03, 8. 11. 2026) ===
+   Dřív tohle CSS vkládal až nav.js (navContact) po načtení stránky. Hlavička tak
+   první vykreslení dostala jednořádková (64 px) a teprve potom se přepnula na
+   dva řádky (120 px) — celý obsah poskočil o 56 px (CLS 0,12–0,30, HU až 0,99).
+   Teď je výška i rozvržení dané od prvního vykreslení; nav.js už jen vloží
+   odkaz .nav-contact do připraveného místa (řádek 1, vpravo před jazykem).
+   html:root kvůli specificitě — tokens.css / main.css definují --nav-h v :root
+   a mohou se načíst až za nav.css.
+   --nav-contact-css je značka pro nav.js: když chybí (stará kopie nav.css
+   v cache), nav.js si CSS vloží sám jako dřív. */
+:root { --nav-contact-css: 1; }
+.nav-contact{display:flex;align-items:center;gap:10px;text-decoration:none!important;flex-shrink:0;margin-left:auto}
+.nav-contact__ph{width:52px;height:52px;flex:0 0 52px;border-radius:50%;background:#fff url(/assets/img/team/ivan-szabo.webp) center bottom/cover no-repeat;box-shadow:0 4px 12px rgba(11,44,74,.18);border:2px solid #fff}
+.nav-contact__t{display:flex;flex-direction:column;line-height:1.2}
+.nav-contact__t small{font-size:12px;font-weight:600;color:#5b6773}
+.nav-contact__t b{font-size:17px;font-weight:800;color:#134a8e;white-space:nowrap}
+.nav-contact:hover .nav-contact__t b{color:#0b2c4a}
+@media (min-width:1281px){
+  html:root{--nav-h:120px}
+  .site-nav .nav-inner{flex-wrap:wrap;align-content:flex-start;row-gap:0}
+  .site-nav .nav-inner>.nav-logo{align-self:center;margin:18px 0}
+  .site-nav .nav-inner>.nav-contact,.site-nav .nav-inner>details.nav-lang{height:68px;align-items:center}
+  /* jazyk drží pravý okraj řádku 1 už před vložením .nav-contact (jinak by poskočil) */
+  .site-nav .nav-inner>details.nav-lang{margin-left:auto}
+  .site-nav .nav-inner>.nav-contact+details.nav-lang{margin-left:0}
+  .site-nav .nav-inner>.nav-links{order:10;flex:0 0 100%;height:52px;margin:0;justify-content:flex-start;position:relative;isolation:isolate}
+  .site-nav .nav-inner>.nav-links::before{content:"";position:absolute;z-index:-1;top:0;bottom:0;left:50%!important;right:auto!important;width:100vw;margin-left:-50vw;background:linear-gradient(90deg,#0b2c4a 0%,#134a8e 50%,#1f5fa6 100%);pointer-events:none}
+  .site-nav .nav-links>li>a:not(.nav-cta){color:#fff!important;text-transform:uppercase;font-weight:700!important;letter-spacing:.05em;font-size:14px!important}
+  .site-nav .nav-links>li>a:not(.nav-cta):hover{background:rgba(255,255,255,.1)!important;color:#fff!important}
+  .site-nav .nav-links>li.nav-cta-li{margin-left:auto}
+}
+@media (max-width:1280px){.nav-contact{margin-left:auto}.nav-contact__t{display:none}.nav-contact__ph{width:42px;height:42px;flex-basis:42px}}

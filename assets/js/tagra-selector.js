@@ -6,7 +6,10 @@
    Types: data-tsel="fleet" (vehicles 1 / 2 / 3–4 / 5–6 / 7+, optional download device row)
           data-tsel="driver" (1 driver = TAGRA TRUCKER, 2 drivers in a pair = TAGRA TRUCKER 2).
    All texts live in data-* attributes of the markup, so this file is language independent.
-   dataLayer: fleet_selector_change {from,to,page} · fleet_selector_cta {product,page} */
+   GA4 (gtag, 8. 11. 2026 – F10; dřív dataLayer.push, který gtag.js bez GTM ignoroval):
+     fleet_selector_change {from,to,selector,page_path} · fleet_selector_cta {product,selector,page_path}
+     HU (data-base = poptávka u Rukon Kft., /hu/kapcsolat/ nemá formulář): navíc contact_click
+     {channel:'rukon_inquiry', product} — stejný event jako e-mail/telefon, ne generate_lead. */
 (function(){
   'use strict';
   if(window.tgSelector)return;
@@ -18,7 +21,13 @@
   P.tiers.forEach(function(t){tiers[t.id]=t;});
   tiers.tr1=P.trucker;tiers.tr2=P.trucker2;
 
-  function track(o){try{window.dataLayer=window.dataLayer||[];window.dataLayer.push(o);}catch(e){}}
+  function track(name,o,beacon){
+    if(typeof window.gtag!=='function')return;   /* Consent Mode v2 – gtag si souhlas hlídá sám */
+    o.page_path=location.pathname;
+    o.page_language=(document.documentElement.getAttribute('lang')||'').slice(0,2).toLowerCase();
+    if(beacon)o.transport_type='beacon';
+    try{window.gtag('event',name,o);}catch(e){}
+  }
   function fmt(el,n){
     var s=(Math.round(n*100)%100===0)?String(Math.round(n)):n.toFixed(2);
     s=s.replace('.',el.getAttribute('data-dec')||'.');
@@ -76,7 +85,11 @@
       el.classList.add('tsel--js');
       el.addEventListener('click',function(e){
         var a=e.target.closest&&e.target.closest('a');if(!a||!el.contains(a))return;
-        if(a.classList.contains('tsel__cta')){track({event:'fleet_selector_cta',product:a.getAttribute('data-product')||'',page:location.pathname});return;}
+        if(a.classList.contains('tsel__cta')){
+          var pr=a.getAttribute('data-product')||'';
+          track('fleet_selector_cta',{product:pr,selector:type},true);
+          if(el.getAttribute('data-base'))track('contact_click',{channel:'rukon_inquiry',product:pr,selector:type},true);
+          return;}
         if(!a.classList.contains('tsel__o')||e.ctrlKey||e.metaKey||e.shiftKey||e.button)return;
         e.preventDefault();
         var s=state[type],from=key(type,s.k,dev(el));
@@ -84,7 +97,7 @@
         if(a.hasAttribute('data-dev'))s.dev=a.getAttribute('data-dev');
         var to=key(type,s.k,dev(el));
         renderAll(type);
-        if(from!==to)track({event:'fleet_selector_change',from:from,to:to,page:location.pathname});
+        if(from!==to)track('fleet_selector_change',{from:from,to:to,selector:type});
       });
     });
     renderAll('fleet');renderAll('driver');

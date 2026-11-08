@@ -1446,3 +1446,26 @@
   .band--demo .demo-h-logo img, .band--demo .demo-h-logo img[width][height] { height: 46px; margin: 0 auto; }
   .band--demo .demo-text h2 { font-size: 28px; }
 }
+
+/* ─── F14 (8. 11. 2026): ořezy obsahu na mobilu (390 px) ─────────────────────
+   1) Karty v hlavičce článků o chybách: mřížka 1fr = minmax(auto,1fr) se roztáhla
+      podle nejdelšího slova („Geschwindigkeitsgeber“ ve 44 px) a karta přetekla.
+   2) Kroky na stránkách „Jak to funguje“ (9 jazyků) mají mřížku jen v inline
+      stylu bez mobilní varianty — 3 a 4 sloupce na 390 px. Selektor podle
+      inline stylu, aby nebylo nutné sahat do 9 HTML.
+   3) Tlačítka s inline flex-shrink:0 (PL „Dowiedzcie się Państwo więcej…“). */
+.hero-card { min-width: 0; overflow-wrap: anywhere; }
+@media (max-width: 900px) {
+  .bento--hero { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 420px) {
+  .hero-card { padding: 20px; }
+  .hero-card .big { font-size: clamp(28px, 8.5vw, 44px); -webkit-hyphens: auto; hyphens: auto; }
+  .btn-cta { max-width: 100%; min-width: 0; flex-shrink: 1 !important; white-space: normal; }
+}
+@media (max-width: 720px) {
+  .band div[style*="display:grid;grid-template-columns:1fr 1fr 1fr"] { grid-template-columns: minmax(0, 1fr) !important; gap: 16px !important; }
+}
+@media (min-width: 721px) and (max-width: 1024px) {
+  .band div[style*="display:grid;grid-template-columns:1fr 1fr 1fr 1fr"] { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+}

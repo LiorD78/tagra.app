@@ -37,7 +37,9 @@
     try { W.clarity.apply(null, arguments); } catch (e) {}
   }
   function track(name, p, beacon) {
-    var o = { page_type: type, language: lang, ai_source: aiSource };
+    // page_language (ne "language"): gtag bere "language" jako vestavěné pole a přepsal by jím
+    // jazyk prohlížeče (ul) — F11, 8. 11. 2026
+    var o = { page_type: type, page_language: lang, ai_source: aiSource };
     if (errorCode) o.error_code = errorCode;
     for (var k in p) o[k] = p[k];
     if (beacon) o.transport_type = 'beacon';
@@ -126,8 +128,11 @@
   }, true);
 
   /* shop_click (funnel dávka 1/6): klik na odkaz do shopu. Jen gtag, pokud existuje (Consent Mode v2 se respektuje),
-     žádné cookies, žádné UTM; navigaci neblokuje. page_type zde záměrně vychází z URL (ne z nav.js). */
+     žádné cookies, žádné UTM; navigaci neblokuje. page_type zde záměrně vychází z URL (ne z nav.js).
+     8. 11. 2026 (F09): počítá se i interní přesměrování /go/<slug>/ (_redirects → shop.tagra.app/<slug>/),
+     např. TAGRA TRUCKER 2; product_slug = <slug>, link_url = cíl v shopu. */
   var SHOP_ORIGIN = 'https://shop.tagra.app';
+  var GO_RE = /^\/go\/([^\/]+)\/?$/;
   var ARTICLE_PATH_RE = /\/(articles|ratgeber|poradnik|artikelen|articoli|arthra|articole)\//;
   function shopPageType(p) {
     if (ARTICLE_PATH_RE.test(p)) return 'article';
@@ -144,14 +149,17 @@
     return 'content';
   }
   doc.addEventListener('click', function (e) {
-    var a = e.target && e.target.closest ? e.target.closest('a[href^="' + SHOP_ORIGIN + '"]') : null;
+    var a = e.target && e.target.closest ? e.target.closest('a[href]') : null;
     if (!a || typeof W.gtag !== 'function') return;
     try {
-      var u = new URL(a.href, loc.href);
-      if (u.origin !== SHOP_ORIGIN) return;
+      var u = new URL(a.href, loc.href), slug;
+      var go = u.origin === loc.origin ? GO_RE.exec(u.pathname) : null;
+      if (go) slug = go[1];
+      else if (u.origin === SHOP_ORIGIN) slug = u.pathname.replace(/^\/+|\/+$/g, '') || 'home';
+      else return;
       var params = {
-        link_url: u.origin + u.pathname,
-        product_slug: u.pathname.replace(/^\/+|\/+$/g, '') || 'home',
+        link_url: go ? SHOP_ORIGIN + '/' + slug + '/' : u.origin + u.pathname,
+        product_slug: slug,
         page_lang: doc.documentElement.lang,
         page_type: shopPageType(loc.pathname),
         cta_position: shopCtaPosition(a)

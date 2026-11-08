@@ -300,7 +300,7 @@
     var ai = 'none';
     try { ai = sessionStorage.getItem('tagra_ai_source') || 'none'; } catch (e) { /* bez ai_source */ }
     track('generate_lead', {
-      audience: audience || '', language: lang || '', src: src || '', ai_source: ai,
+      audience: audience || '', page_language: lang || '', src: src || '', ai_source: ai,
       landing_page: l.p || '', landing_referrer: l.r || '', form_variant: variant
     });
     clar('event', 'trial_lead');
@@ -325,18 +325,19 @@
     document.addEventListener('click', function (e) {
       var t = trialLink(e.target);
       if (t) track('trial_cta_click', { page_path: location.pathname, cta_target: t.u.pathname, page_type: type });
-      var dl = e.target.closest ? e.target.closest('#downloadBtn') : null;
+      var dl = e.target.closest ? e.target.closest('#downloadBtn, [data-track="trial_download"]') : null;
       if (dl) {
-        track('trial_download', { product: /Trucker/i.test(dl.href) ? 'trucker' : 'tagra' });
+        track('trial_download', { product: /Trucker/i.test(dl.href) ? 'trucker' : (/TAGRA_eu\.zip/i.test(dl.href) ? 'tagra_current' : 'tagra') });
         clar('event', 'trial_download');
       }
     });
 
     // 3. thanks stránka hlavního formuláře (inline skript stránky už proběhl)
     var dlBtn = document.getElementById('downloadBtn');
-    if (dlBtn) {
+    if (dlBtn && !window.tagraThanksRedirect) {  /* tagraThanksRedirect: /try/thanks/ právě přesměrovává na lokální poděkování */
       var enf = document.getElementById('thanksEnforcement');
-      var aud = new URLSearchParams(location.search).get('audience');
+      var qs = new URLSearchParams(location.search);
+      var aud = qs.get('audience') || qs.get('a');
       if (!aud) aud = (enf && !enf.hidden) ? 'enforcement' : (/Trucker/i.test(dlBtn.href) ? 'driver' : 'fleet');
       var src = '';
       try { src = sessionStorage.getItem('tagra_src') || ''; } catch (e) { /* bez src */ }
@@ -352,7 +353,9 @@
   /* 2. 11. 2026: kontakt s fotkou specialisty v hlavičce (jako formoline112.cz / shop.tagra.app).
      Desktop > 1280 px: hlavička ve dvou řádcích – nahoře logo, fotka + telefon, jazyk, CTA;
      pod tím tmavě modrý pruh s menu. Do 1280 px jen kulatá fotka (tel:) vedle hamburgeru.
-     CSS se vkládá odsud, aby nebylo nutné sahat do 100+ HTML stránek. */
+     8. 11. 2026 (F03): CSS je staticky v nav.css, aby výška hlavičky (120 px) platila od prvního
+     vykreslení (dřív obsah po načtení poskočil o 56 px = CLS). Odsud se vkládá jen jako záloha,
+     když prohlížeč má v cache starou nav.css bez značky --nav-contact-css. */
   (function navContact() {
     var inner = document.querySelector('.site-nav .nav-inner');
     if (!inner || inner.querySelector('.nav-contact')) return;
@@ -380,7 +383,9 @@
       + '.site-nav .nav-links>li.nav-cta-li{margin-left:auto}'
       + '}'
       + '@media (max-width:1280px){.nav-contact{margin-left:auto}.nav-contact__t{display:none}.nav-contact__ph{width:42px;height:42px;flex-basis:42px}}';
-    var st = document.createElement('style'); st.id = 'nav-contact-css'; st.textContent = css; document.head.appendChild(st);
+    var hasCss = false;
+    try { hasCss = !!getComputedStyle(document.documentElement).getPropertyValue('--nav-contact-css').trim(); } catch (e) { /* bez getComputedStyle */ }
+    if (!hasCss) { var st = document.createElement('style'); st.id = 'nav-contact-css'; st.textContent = css; document.head.appendChild(st); }
     var a = document.createElement('a'); a.className = 'nav-contact'; a.href = 'tel:' + tel; a.setAttribute('aria-label', label + ' ' + telTxt);
     a.innerHTML = '<span class="nav-contact__ph" aria-hidden="true"></span><span class="nav-contact__t"><small>' + label + '</small><b>' + telTxt + '</b></span>';
     var lg = inner.querySelector('details.nav-lang');
@@ -416,7 +421,7 @@
       box.id = 'thanksAlt';
       box.style.cssText = 'max-width:560px;margin:28px auto 0;padding:22px 24px;border:1px solid rgba(19,74,142,.15);border-radius:16px;background:#f5f9fc;text-align:center';
       box.innerHTML = '<p style="margin:0 0 14px;font-size:16px;line-height:1.55"><strong>Az Ön cégénél már használják a TAGRA szoftvert?</strong><br>Meglévő ügyfeleink továbbra is dolgozhatnak a TAGRA már megszokott, jelenlegi verziójával. Új ügyfeleinknek a TAGRA III verziót ajánljuk.</p>'
-        + '<a class="thanks-download" download href="https://www.tdt.cz/download/TAGRA_eu.zip" style="background:#fff;color:#134a8e;border:1.5px solid rgba(19,74,142,.35);box-shadow:none"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 4v12m0 0l-5-5m5 5l5-5M5 20h14"></path></svg><span>A jelenlegi TAGRA letöltése (Windows, 156 MB)</span></a>'
+        + '<a class="thanks-download" data-track="trial_download" download href="https://www.tdt.cz/download/TAGRA_eu.zip" style="background:#fff;color:#134a8e;border:1.5px solid rgba(19,74,142,.35);box-shadow:none"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 4v12m0 0l-5-5m5 5l5-5M5 20h14"></path></svg><span>A jelenlegi TAGRA letöltése (Windows, 156 MB)</span></a>'
         + '<p class="thanks-meta" style="margin-top:12px">Nem biztos benne, melyik verzióra van szüksége? Írjon nekünk a <a href="mailto:sales@tagra.app">sales@tagra.app</a> címre.</p>';
       var meta = document.getElementById('thanksMeta');
       (meta || btn).insertAdjacentElement('afterend', box);

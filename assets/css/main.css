@@ -306,6 +306,37 @@ p.lead { font-size: 19px; color: var(--text-muted); margin-bottom: 48px; }
 .form-field.has-error input,
 .form-field.has-error select,
 .form-field.has-error textarea { border-color: #c33; }
+/* F02 (8. 11. 2026): viditelné chyby i u výběru role a souhlasu — try.js vkládá
+   lokalizovaný text .form-error pod pole / skupinu / box souhlasu. */
+.form-error { font-weight: 600; line-height: 1.4; }
+#trialForm > .form-error { margin-top: 6px; }
+.audience-picker .form-error { margin: 2px 0 0; }
+.audience-picker.has-error .audience-opt { border-color: #c33; }
+.gdpr-check.has-error { border-color: #c33; background: #fff6f6; box-shadow: inset 0 0 0 1px #c33; }
+.form-field.has-error input:focus,
+.form-field.has-error select:focus,
+.form-field.has-error textarea:focus { border-color: #c33; box-shadow: 0 0 0 3px rgba(204, 51, 51, 0.15); }
+#trialForm .audience-picker,
+#trialForm .form-field,
+#trialForm .gdpr-check { scroll-margin-top: calc(var(--nav-h, 64px) + 24px); }
+
+/* F08 (8. 11. 2026): místo pro mobilní box „pošlete mi odkaz“ (#mobileSend, try.js)
+   je vyhrazené už v HTML, takže formulář po načtení skriptu neposkočí (CLS 0,18–0,25).
+   Výška = naměřená výška boxu na 390 px + 8 px okraj (8. 11. 2026); box se roztáhne
+   na celou výšku slotu. Na 360 px je box o 20–45 px vyšší (posun < 0,05 CLS). */
+.tms-slot { display: none; }
+@media (max-width: 720px) {
+  .tms-slot { display: flex; flex-direction: column; min-height: var(--tms-slot-h, 390px); }
+  html[lang="de"] .tms-slot, html[lang="ro"] .tms-slot { --tms-slot-h: 450px; }
+  html[lang="pl"] .tms-slot, html[lang="hu"] .tms-slot,
+  html[lang="fr"] .tms-slot, html[lang="nl"] .tms-slot { --tms-slot-h: 430px; }
+  html[lang="el"] .tms-slot { --tms-slot-h: 456px; }
+  html[lang="it"] .tms-slot { --tms-slot-h: 406px; }
+  .tms-slot > .tms { flex: 1 1 auto; display: flex; flex-direction: column; }
+  .tms-slot .tms__box { flex: 1 1 auto; width: 100%; }
+  .tms-slot.is-done { min-height: 0; }
+}
+@media (scripting: none) { .tms-slot { display: none !important; } }
 
 /* ─── /try/thanks/ ─── */
 .thanks-hero {

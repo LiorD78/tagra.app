@@ -183,6 +183,8 @@ document.addEventListener('DOMContentLoaded', function () {
   var s = document.getElementById('thanksShop'), e = document.getElementById('thanksEnforcement'), d = document.getElementById('downloadBtn'), a = document.getElementById('thanksShopFirst');
   if (!s || !a) return;
   if (e && !e.hidden) { s.hidden = true; return; }
+  /* HU: žádné odkazy do shopu (prodej přes Rukon Kft.) — pojistka, kdyby se HU návštěvník ocitl tady */
+  if (window.tagraThanksRedirect || /^hu/i.test(document.documentElement.lang) || /(^|[?&])lang=hu(&|$)/i.test(location.search)) { s.hidden = true; return; }
   if (d && /Trucker/i.test(d.href)) { a.href = a.getAttribute('data-driver-href'); a.textContent = a.getAttribute('data-driver-text'); }
 });
 </script>
@@ -228,6 +230,28 @@ document.addEventListener('DOMContentLoaded', function () {
 <script>
 (function () {
   'use strict';
+
+  // F01 (8. 11. 2026): pojistka pro nativní POST (formulář bez fetch nebo po jeho chybě).
+  // Netlify na POST vrací obsah /try/thanks/ i pro lokalizovanou URL (/fr/merci/…),
+  // protože všechny formuláře se jmenují tagra-trial. GET téže URL už vrátí správnou
+  // stránku; z /try/thanks/ se jazyk s vlastní děkovnou stránkou přesměruje tam.
+  // Před přesměrováním se nic nemaže ze sessionStorage a nav.js neposílá generate_lead.
+  const LOCAL_THANKS = { de: '/de/danke/', pl: '/pl/dziekujemy/', gr: '/el/efharisto/', el: '/el/efharisto/', hu: '/hu/koszonjuk/',
+    it: '/it/grazie/', fr: '/fr/merci/', nl: '/nl/bedankt/', ro: '/ro/multumim/' };
+  let langHint = new URLSearchParams(window.location.search).get('lang') || '';
+  try { langHint = langHint || sessionStorage.getItem('tagra_language') || ''; } catch (e) { /* private mode */ }
+  langHint = langHint.toLowerCase();
+  let redirectTo = '';
+  if (!/^\/try\/thanks(\/(index\.html)?)?$/.test(window.location.pathname)) {
+    redirectTo = window.location.pathname + window.location.search;
+  } else if (LOCAL_THANKS[langHint]) {
+    redirectTo = LOCAL_THANKS[langHint] + window.location.search;
+  }
+  if (redirectTo) {
+    window.tagraThanksRedirect = true;
+    window.location.replace(redirectTo);
+    return;
+  }
 
   const I18N = {
   "en": {
@@ -360,7 +384,7 @@ document.addEventListener('DOMContentLoaded', function () {
     storedLang = sessionStorage.getItem('tagra_language') || '';
   } catch (e) { /* private mode */ }
 
-  const audience = (params.get('audience') || storedAudience || 'fleet').toLowerCase();
+  const audience = (params.get('audience') || params.get('a') || storedAudience || 'fleet').toLowerCase();
   let lang = (params.get('lang') || storedLang || 'en').toLowerCase();
   if (!I18N[lang]) lang = 'en';
   const t = I18N[lang];

@@ -95,7 +95,7 @@
 <a class="skip-link" href="#main-content">Passer au contenu</a>
 <nav aria-label="Navigation principale" class="site-nav" role="navigation">
 <div class="nav-inner">
-<a aria-label="TAGRA – Accueil" class="nav-logo" href="/nl/"><img alt="TAGRA" height="32" src="/assets/img/logo-light.svg" style="display:block;height:32px;width:auto;" width="140"/></a>
+<a aria-label="TAGRA – Accueil" class="nav-logo" href="/fr/"><img alt="TAGRA" height="32" src="/assets/img/logo-light.svg" style="display:block;height:32px;width:auto;" width="140"/></a>
 <ul class="nav-links" id="nav-links">
 <li><a href="/fr/entreprises/">Pour les entreprises</a></li>
 <li><a href="/fr/conducteurs/">Pour les conducteurs</a></li>
@@ -141,7 +141,7 @@
 <p id="thanksEnfBody">Merci de l’intérêt que vous portez à TAGRA Control. Notre équipe vous contactera dans un délai d’un jour ouvré pour vous communiquer les modalités d’accès à la démonstration.</p>
 <p class="thanks-meta" id="thanksEnfMeta">En attendant, n’hésitez pas à consulter notre documentation ou à contacter sales@tagra.app.</p>
 <p style="margin-top: 24px;">
-<a class="btn btn-secondary" href="/nl/" id="backHomeBtn">Retour à TAGRA</a>
+<a class="btn btn-secondary" href="/fr/" id="backHomeBtn">Retour à TAGRA</a>
 </p>
 </div>
 </section>
@@ -381,7 +381,7 @@ document.addEventListener('DOMContentLoaded', function () {
     storedLang = sessionStorage.getItem('tagra_language') || '';
   } catch (e) { /* private mode */ }
 
-  const audience = (params.get('audience') || storedAudience || 'fleet').toLowerCase();
+  const audience = (params.get('audience') || params.get('a') || storedAudience || 'fleet').toLowerCase();
   let lang = (params.get('lang') || storedLang || 'fr').toLowerCase();
   if (!I18N[lang]) lang = 'en';
   const t = I18N[lang];
