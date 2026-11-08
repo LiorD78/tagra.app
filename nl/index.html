@@ -84,6 +84,7 @@
 <meta content="#0b2c4a" name="theme-color"/>
 <link href="/manifest.json" rel="manifest"/>
 <link href="https://tagra.app/nl/" rel="canonical"/>
+<link rel="preload" as="image" fetchpriority="high" type="image/webp" imagesizes="100vw" imagesrcset="/.netlify/images?url=/assets/img/hero-poster.jpg&amp;w=480&amp;fm=webp 480w, /.netlify/images?url=/assets/img/hero-poster.jpg&amp;w=960&amp;fm=webp 960w, /.netlify/images?url=/assets/img/hero-poster.jpg&amp;w=1440&amp;fm=webp 1440w, /.netlify/images?url=/assets/img/hero-poster.jpg&amp;w=1920&amp;fm=webp 1920w"/>
 <link href="https://tagra.app/de/" hreflang="de" rel="alternate"/><link href="https://tagra.app/el/" hreflang="el" rel="alternate"/><link href="https://tagra.app/" hreflang="en" rel="alternate"/><link href="https://tagra.app/fr/" hreflang="fr" rel="alternate"/><link href="https://tagra.app/hu/" hreflang="hu" rel="alternate"/><link href="https://tagra.app/it/" hreflang="it" rel="alternate"/><link href="https://tagra.app/nl/" hreflang="nl" rel="alternate"/><link href="https://tagra.app/pl/" hreflang="pl" rel="alternate"/>
 <link href="https://tagra.app/ro/" hreflang="ro" rel="alternate"/><link href="https://tagra.app/" hreflang="x-default" rel="alternate"/>
 <meta content="TAGRA III – software voor tachograafgegevensbeheer" property="og:title"/>
@@ -781,10 +782,10 @@
 <source type="image/webp" sizes="100vw" srcset="/.netlify/images?url=/assets/img/hero-poster.jpg&amp;w=480&amp;fm=webp 480w, /.netlify/images?url=/assets/img/hero-poster.jpg&amp;w=960&amp;fm=webp 960w, /.netlify/images?url=/assets/img/hero-poster.jpg&amp;w=1440&amp;fm=webp 1440w, /.netlify/images?url=/assets/img/hero-poster.jpg&amp;w=1920&amp;fm=webp 1920w"/>
 <img alt="" aria-hidden="true" class="hero-video-poster" fetchpriority="high" loading="eager" src="/assets/img/hero-poster.jpg?v=2026-10-20" width="1920" height="1080"/>
 </picture>
-<video aria-hidden="true" autoplay="" class="hero-video" id="heroVideo" loop="" muted="" playsinline="" preload="auto">
-<source media="(max-width: 1024px)" src="/assets/video/hero-720.mp4?v=2026-10-20" type="video/mp4"/>
-<source src="/assets/video/hero-1080.mp4?v=2026-10-20" type="video/mp4"/>
-<source src="/assets/video/hero-1080.webm?v=2026-10-20" type="video/webm"/>
+<video aria-hidden="true" autoplay="" class="hero-video" id="heroVideo" loop="" muted="" playsinline="" preload="none">
+<source media="(max-width: 1024px)" data-src="/assets/video/hero-720.mp4?v=2026-10-20" type="video/mp4"/>
+<source data-src="/assets/video/hero-1080.mp4?v=2026-10-20" type="video/mp4"/>
+<source data-src="/assets/video/hero-1080.webm?v=2026-10-20" type="video/webm"/>
 </video>
 <div class="container">
 <div class="hero-glass anim-up">
@@ -797,6 +798,8 @@
         TAGRA dekt alles. Gratis proefperiode van 30 dagen, zonder creditcard.
       </p>
 </div>
+<div class="cta-row hero-cta anim-up" style="transition-delay:.15s"><a class="btn-cta" href="/nl/gratis-proefversie/?src=home-hero">Probeer TAGRA 30 dagen gratis</a></div>
+<p class="hero-cta-note anim-up" style="transition-delay:.15s">Windows 10/11 · Geen creditcard nodig</p>
 </div>
 </section>
 <!-- ═══ PICKER (3 audience cards) ═══════════════════════════════════ -->
@@ -815,7 +818,7 @@
 <li>1 tot onbeperkt aantal voertuigen</li>
 <li>Volledige evaluatie van de arbeidstijd (Verordening (EG) nr. 561/2006 + arbeidstijdenrichtlijn)</li>
 <li>Uitvoer die door handhavingsinstanties wordt aanvaard</li>
-<li>Klaar voor bestelwagens vanaf juli 2026</li>
+<li>Ondersteunt vrachtwagens en bestelwagens van 2,5–3,5 t</li>
 </ul>
 <span class="card-cta">Wagenparkoplossing →</span>
 <span class="card-note">30 dagen gratis proberen · zonder creditcard</span>
@@ -870,8 +873,8 @@
 <li>Downloads, kaartgeldigheid en ijkingen: elke deadline in één oogopslag</li>
 <li>Draait op uw eigen Windows-pc — uw gegevens blijven in eigen huis</li>
 </ul>
-<div class="t3p-cta"><a class="btn-cta" href="/nl/gratis-proefversie/?audience=fleet" rel="noopener" target="_blank">TAGRA III 30 dagen gratis testen</a><a class="btn-outline" href="/nl/voor-transportbedrijven/#tagra-iii">Ontdek TAGRA III</a><a class="btn-outline" href="https://shop.tagra.app/tagra-software/" hreflang="en">Kopen in de webshop</a></div>
-<p class="t3p-note">TAGRA 1 vanaf 149 € excl. btw, inclusief eerste jaar. Vanaf jaar 2 vanaf 79 € per jaar.</p>
+<div class="t3p-cta"><a class="btn-cta" href="/nl/gratis-proefversie/?audience=fleet" rel="noopener" target="_blank">TAGRA III 30 dagen gratis testen</a><a class="btn-outline" href="/nl/voor-transportbedrijven/#tagra-iii">Ontdek TAGRA III</a><a class="btn-outline" href="https://shop.tagra.app/tagra-software/" hreflang="en">Kopen in de webshop (EN)</a></div>
+<p class="t3p-note">TAGRA 1 vanaf € 149 excl. btw, inclusief eerste jaar. Vanaf jaar 2 vanaf 79 € per jaar.</p>
 </div>
 <a class="t3p-shot" href="/nl/voor-transportbedrijven/#tagra-iii"><img alt="TAGRA III-overzicht – gegevens inladen, bestuurders en voertuigen met taken, gegevensexport voor controle" decoding="async" height="939" loading="lazy" sizes="(max-width: 980px) 100vw, 560px" src="/assets/img/tagra3/tagra3-overview-960.webp" srcset="/assets/img/tagra3/tagra3-overview-960.webp 960w, /assets/img/tagra3/tagra3-overview.webp 1402w" width="1402"/></a>
 </div>
@@ -1037,7 +1040,7 @@
 </div>
 <div class="pricing-teaser-cta">
 <a class="btn-outline" href="/nl/voor-transportbedrijven/#tagra-pricing">Bekijk alle pakketten en prijzen →</a>
-<a class="btn-outline" href="https://shop.tagra.app/tagra-software/" hreflang="en">Kopen in de webshop</a>
+<a class="btn-outline" href="https://shop.tagra.app/tagra-software/" hreflang="en">Kopen in de webshop (EN)</a>
 <a class="btn-cta" href="/nl/gratis-proefversie/">30 dagen gratis proberen</a>
 <span class="pricing-teaser-cta-note">Geen creditcard. Windows-installatieprogramma.</span>
 </div>
@@ -1061,14 +1064,14 @@
 <p class="t3p-lead">Bestel TAGRA III-licenties, voordelige bundels en uitleesapparatuur in de gloednieuwe TAGRA Shop. Prijzen in EUR excl. btw; btw verlegd voor bedrijven met een geldig btw-nummer. Licenties ontvangt u per e-mail. Hardware wordt binnen de hele EU verzonden voor een vast tarief van 9,90 € incl. btw.</p>
 </div>
 <div class="t3p-grid">
-<a class="t3p-tile t3p-tile--key" href="https://shop.tagra.app/tagra-software/" hreflang="en"><strong class="t3p-tile__t">TAGRA III-licenties</strong><span class="t3p-tile__d">TAGRA 1, 2, 4, 6 en MAX: van 1 tot een onbeperkt aantal voertuigen. Eerste jaar inbegrepen.</span><span class="t3p-tile__p">vanaf 149 € excl. btw</span></a>
+<a class="t3p-tile t3p-tile--key" href="https://shop.tagra.app/tagra-software/" hreflang="en"><strong class="t3p-tile__t">TAGRA III-licenties</strong><span class="t3p-tile__d">TAGRA 1, 2, 4, 6 en MAX: van 1 tot een onbeperkt aantal voertuigen. Eerste jaar inbegrepen.</span><span class="t3p-tile__p">vanaf € 149 excl. btw</span></a>
 <a class="t3p-tile t3p-tile--key" href="https://shop.tagra.app/software-device-bundles/" hreflang="en"><span class="t3p-tile__badge">Bespaar 49 €</span><strong class="t3p-tile__t">TAGRA III + DOWNLOAD BOX II S</strong><span class="t3p-tile__d">Het programma en de uitleessleutel samen in één pakket. Bespaar 49 € ten opzichte van losse aanschaf.</span></a>
-<a class="t3p-tile" href="https://shop.tagra.app/download-box-ii-s/" hreflang="en"><strong class="t3p-tile__t">DOWNLOAD BOX II S</strong><span class="t3p-tile__d">Uitleessleutel voor alle digitale tachografen, inclusief G2V2. Ingebouwde bestuurderskaartlezer, geen jaarlijkse kosten, 24 maanden garantie.</span><span class="t3p-tile__p">299 € excl. btw</span></a>
-<a class="t3p-tile" href="https://shop.tagra.app/download-station/" hreflang="en"><strong class="t3p-tile__t">DOWNLOAD STATION</strong><span class="t3p-tile__d">Afsluitbaar wandstation waarmee chauffeurs op uw vestiging zelf hun bestuurderskaart uitlezen. Ook verkrijgbaar als DOWNLOAD STATION Wi-Fi.</span><span class="t3p-tile__p">vanaf 366 € excl. btw</span></a>
-<a class="t3p-tile" href="https://shop.tagra.app/smart-card-reader/" hreflang="en"><strong class="t3p-tile__t">Smartcardlezer</strong><span class="t3p-tile__d">USB-kaartlezer voor bestuurders- en bedrijfskaarten.</span><span class="t3p-tile__p">33 € excl. btw</span></a>
-<a class="t3p-tile" href="https://shop.tagra.app/tagra-trucker/" hreflang="en"><strong class="t3p-tile__t">TAGRA Trucker</strong><span class="t3p-tile__d">Voor beroepschauffeurs. Gratis USB-bestuurderskaartlezer inbegrepen, bij u thuisbezorgd.</span><span class="t3p-tile__p">49 € excl. btw</span></a>
+<a class="t3p-tile" href="https://shop.tagra.app/download-box-ii-s/" hreflang="en"><strong class="t3p-tile__t">DOWNLOAD BOX II S</strong><span class="t3p-tile__d">Uitleessleutel voor alle digitale tachografen, inclusief G2V2. Ingebouwde bestuurderskaartlezer, geen jaarlijkse kosten, 24 maanden garantie.</span><span class="t3p-tile__p">€ 299 excl. btw</span></a>
+<a class="t3p-tile" href="https://shop.tagra.app/download-station/" hreflang="en"><strong class="t3p-tile__t">DOWNLOAD STATION</strong><span class="t3p-tile__d">Afsluitbaar wandstation waarmee chauffeurs op uw vestiging zelf hun bestuurderskaart uitlezen. Ook verkrijgbaar als DOWNLOAD STATION Wi-Fi.</span><span class="t3p-tile__p">vanaf € 366 excl. btw</span></a>
+<a class="t3p-tile" href="https://shop.tagra.app/smart-card-reader/" hreflang="en"><strong class="t3p-tile__t">Smartcardlezer</strong><span class="t3p-tile__d">USB-kaartlezer voor bestuurders- en bedrijfskaarten.</span><span class="t3p-tile__p">€ 33 excl. btw</span></a>
+<div class="t3p-tile t3p-tile--duo"><strong class="t3p-tile__t">TAGRA Trucker</strong><span class="t3p-tile__d">Voor beroepschauffeurs. Gratis USB-bestuurderskaartlezer inbegrepen, bij u thuisbezorgd.</span><span class="t3p-duo"><a class="t3p-duo__o" href="https://shop.tagra.app/tagra-trucker/" hreflang="en"><span><b>1 chauffeur</b> TAGRA TRUCKER</span><strong>€49</strong></a><a class="t3p-duo__o" href="/go/tagra-trucker-2/"><span><b>2 chauffeurs in dubbele bemanning</b> TAGRA TRUCKER 2</span><strong>€88,62</strong></a></span><span class="t3p-duo__vat">excl. btw</span></div>
 </div>
-<div class="t3p-cta"><a class="btn-cta" href="https://shop.tagra.app/" hreflang="en">Bestel online in de TAGRA Shop</a><a class="btn-outline" href="https://shop.tagra.app/download-devices/" hreflang="en">Bekijk uitleesapparatuur</a></div>
+<div class="t3p-cta"><a class="btn-cta" href="https://shop.tagra.app/" hreflang="en">Bestel online in de TAGRA Shop (EN)</a><a class="btn-outline" href="https://shop.tagra.app/download-devices/" hreflang="en">Bekijk uitleesapparatuur (EN)</a></div>
 <p class="t3p-note">De TAGRA Shop is momenteel Engelstalig. Vragen? Mail naar <a href="mailto:sales@tagra.app">sales@tagra.app</a>.</p>
 </div>
 </section>
@@ -1273,7 +1276,22 @@
   var inView = true;
   function play() { if (!inView || document.hidden) return; try { var p = v.play(); if (p && p.catch) p.catch(function() {}); } catch (e) {} }
   function ready() { v.classList.add('is-active'); hero.classList.add('has-video-ready'); play(); }
-  if (v.readyState >= 3) ready(); else v.addEventListener('canplay', ready, { once: true });
+  /* F15 (8. 11. 2026): LCP = poster / H1. Desktop: video as before (attached right away). Mobile: video sources are attached only after the
+     first interaction (Chrome stops LCP at the first input; the video frame would otherwise be the late LCP). Data saver / 2G–3G: poster only. */
+  var c = navigator.connection, mob = window.matchMedia && window.matchMedia('(max-width: 1024px)').matches, done = false;
+  if (mob && c && (c.saveData || /(^|-)(2g|3g)$/.test(c.effectiveType || ''))) return;
+  function attach() {
+    if (done) return; done = true;
+    var ss = v.querySelectorAll('source[data-src]');
+    for (var i = 0; i < ss.length; i++) { ss[i].src = ss[i].getAttribute('data-src'); ss[i].removeAttribute('data-src'); }
+    v.preload = 'auto'; v.addEventListener('canplay', ready, { once: true });
+    try { v.load(); } catch (e) {}
+  }
+  if (mob) {
+    var evs = ['scroll', 'touchstart', 'pointerdown', 'keydown'];
+    var go = function () { for (var i = 0; i < evs.length; i++) window.removeEventListener(evs[i], go); attach(); };
+    for (var i = 0; i < evs.length; i++) window.addEventListener(evs[i], go, { passive: true }); /* bubble phase: page scroll only, not carousels */
+  } else attach();
   if ('IntersectionObserver' in window) {
     new IntersectionObserver(function(es) { inView = es[0].isIntersecting; if (inView) play(); else { try { v.pause(); } catch (e) {} } }, { threshold: 0.05 }).observe(hero);
   }
