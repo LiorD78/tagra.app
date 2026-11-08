@@ -445,6 +445,7 @@
   setInterval(function () {
     var r = hero.getBoundingClientRect();
     if (document.hidden || r.bottom <= 0 || r.top >= window.innerHeight) { stuck = 0; last = -1; return; }
+    if (v.querySelector('source[data-src]')) { stuck = 0; return; } /* F15: zdroje se připojí až po load */
     var t = v.currentTime;
     if (!v.paused && t !== last) { last = t; stuck = 0; return; }
     last = t;

@@ -452,3 +452,19 @@ p.lead { font-size: 19px; color: var(--text-muted); margin-bottom: 48px; }
 #thanksShop h2 { margin-bottom: 12px; }
 #thanksShop p { margin: 0 0 18px; color: var(--text2, #515154); }
 #thanksShop p:last-child { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin: 0; }
+
+/* CRO #3 (8. 11. 2026): Windows / Mac note under the trial H1 + "what happens next" steps under the form */
+.try-hero .try-os { max-width: 620px; margin: 14px auto 0; padding: 10px 16px; border-radius: 12px; background: var(--bg-apple-solid, #eaf3f8); border: 1px solid rgba(19,74,142,.14); font-size: 15px; line-height: 1.5; color: var(--text, #1d1d1f); }
+.try-next { margin-top: 22px; padding-top: 18px; border-top: 1px solid rgba(11,44,74,.1); }
+.try-next-h { margin: 0 0 8px; font-size: 13px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--blue-mid, #134a8e); }
+.try-steps { margin: 0; padding-left: 22px; font-size: 15px; line-height: 1.55; color: var(--text, #1d1d1f); }
+.try-steps li + li { margin-top: 4px; }
+.try-steps li::marker { color: var(--blue-mid, #134a8e); font-weight: 700; }
+/* mobile copy of the steps right under the "email me the link" box + link to the full form */
+.try-next--m { box-sizing: border-box; max-width: 600px; margin: 10px auto 0; padding: 14px 20px 0; border-top: 0; }
+.tms-full { display: block; width: 100%; margin: 10px auto 0; padding: 4px 20px; background: none; border: 0; cursor: pointer; font-family: inherit; line-height: 1.4; text-align: center; font-size: 14px; font-weight: 600; color: var(--blue-mid, #134a8e); text-decoration: underline; }
+@media (min-width: 721px) { .try-next--m, .tms-full { display: none; } }
+@media (scripting: none) { .try-next--m, .tms-full { display: none !important; } }
+/* CRO #4: one form on mobile – the short "email me the link" box replaces the full form (try.js adds .tms-on) */
+@media (max-width: 720px) { .try-form-section.tms-on .try-form-wrap { display: none; } }
+#trialForm { scroll-margin-top: calc(var(--nav-h, 64px) + 16px); }

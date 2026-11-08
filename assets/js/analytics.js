@@ -116,6 +116,8 @@
     var a = e.target && e.target.closest ? e.target.closest('a[href]') : null;
     if (!a) return;
     var href = a.getAttribute('href') || '';
+    /* CRO #10/#20 (8. 11. 2026): "send to dispatcher / workshop" in error articles is not a contact with us */
+    if (a.closest('.share-box')) { track('share_dispatch', { method: /^mailto:/i.test(href) ? 'email' : 'whatsapp' }, true); return; }
     if (/^mailto:/i.test(href)) track('contact_click', { channel: 'email' });
     else if (/^tel:/i.test(href)) track('contact_click', { channel: 'phone' });
     var to = a.getAttribute('hreflang');
