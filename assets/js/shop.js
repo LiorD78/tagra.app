@@ -1,4 +1,4 @@
-/* TAGRA Shop v6.0 – tagra.app look, crew + competitor review (2. 11. 2026) */
+/* TAGRA Shop v6.1 – tagra.app look, crew + competitor review (2. 11. 2026); v6.1 (8. 11. 2026): homepage CLS/LCP (content revealed after the layer is built, videos after load, licence card first on mobile + fleet-size picker), prices excl. VAT + VAT of the customer's country (no Czech VAT amounts), VAT-by-country price for private TRUCKER buyers, shipping €8.18 + VAT in the trust list */
 (function(){
   if(/^de/i.test(document.documentElement.lang||'')){var ds=document.createElement('script'),cs=document.currentScript;ds.src=cs&&cs.src?cs.src.replace(/shop\.js(?=[?#]|$)/,'shop.de.js'):'https://tagra.app/assets/js/shop.de.js';document.head.appendChild(ds);return;}
   var TM='https://cdn.truckmall.cz/data/user-content/';
@@ -16,12 +16,15 @@
       {v:[TM+'terminy-hero.webm',TM+'terminy-hero.mp4'],p:TM+'DBII_kabina.webp',e:'Vans 2.5–3.5 t',t:'International transport with vans: tachograph from July 2026.',c:'Bundles – save €49',h:'/software-device-bundles/'},
       {v:[TA+'video/hero-720.mp4'],p:TA+'img/hero-poster.jpg',e:'Free 30-day trial',t:'Try TAGRA free. No card, no commitment.',c:'Start free trial',h:'https://tagra.app/try/'}
     ];
+    /* mobile (8. 11. 2026, audit #30): the licence card is shown first (CSS order) and leads to the fleet calculator; carousel stays */
+    var MOB=!!(window.matchMedia&&matchMedia('(max-width:767px)').matches),LCP=MOB?1:0;
+    if(MOB)S[1].h='#tgs-pricing';
     var sec=document.createElement('section');sec.className='tgs-car';sec.setAttribute('aria-label','TAGRA Shop highlights');
     sec.innerHTML='<div class="tgs-car__track">'+S.map(function(s,i){
       var ext=/^https?:/.test(s.h);
       return '<a class="tgs-car__item" href="'+s.h+'"'+(ext?' target="_blank" rel="noopener"':'')+'>'+
-        '<img class="tgs-car__poster" src="'+s.p+'" alt="" width="600" height="800" '+(i===0?'fetchpriority="high"':'loading="lazy"')+'>'+
-        (RM?'':'<video muted loop playsinline webkit-playsinline preload="'+(i===0?'auto':'metadata')+'" aria-hidden="true">'+s.v.map(function(u){return '<source src="'+u+'" type="video/'+(/\.webm$/.test(u)?'webm':'mp4')+'">';}).join('')+'</video>')+
+        '<img class="tgs-car__poster" src="'+s.p+'" alt="" width="600" height="800" '+(i===LCP?'fetchpriority="high" loading="eager" decoding="async"':i<2?'loading="eager"':'loading="lazy"')+'>'+
+        (RM?'':'<video muted loop playsinline webkit-playsinline preload="none" aria-hidden="true">'+s.v.map(function(u){return '<source src="'+u+'" type="video/'+(/\.webm$/.test(u)?'webm':'mp4')+'">';}).join('')+'</video>')+
         '<span class="tgs-car__txt"><span class="tgs-car__eye">'+s.e+'</span><span class="tgs-car__t">'+s.t+'</span></span>'+
         '<span class="tgs-car__cta">'+s.c+'</span></a>';
     }).join('')+'</div>'+
@@ -30,19 +33,26 @@
     var slot=document.querySelector('.banners-row .wide-carousel');
     if(slot){slot.appendChild(sec);slot.closest('.banners-row').classList.add('tgs-has-car');}
     else{var c=document.getElementById('content');if(!c)return;c.insertBefore(sec,c.firstElementChild);}
-    var track=sec.querySelector('.tgs-car__track'),items=[].slice.call(track.children),dots=[].slice.call(sec.querySelectorAll('.tgs-car__dots button'));
+    if(MOB){var pk=document.createElement('nav');pk.className='tgs-pick';pk.setAttribute('aria-label','Choose TAGRA by fleet size');
+      pk.innerHTML='<p>How many vehicles?</p><div>'+[['1','/tagra-1/'],['2','/tagra-2/'],['3–4','/tagra-4/'],['5–6','/tagra-6/'],['7+','/tagra-max/'],['Driver','/tagra-trucker/']].map(function(x){return '<a href="'+x[1]+'">'+x[0]+'</a>';}).join('')+'</div><a class="tgs-pick__calc" href="#tgs-pricing">Not sure? Use the fleet calculator</a>';
+      sec.parentNode.insertBefore(pk,sec.nextSibling);}
+    var track=sec.querySelector('.tgs-car__track'),items=[].slice.call(track.children).sort(function(a,b){return a.offsetLeft-b.offsetLeft;}),dots=[].slice.call(sec.querySelectorAll('.tgs-car__dots button'));
     function go(i){i=(i+items.length)%items.length;track.scrollTo({left:items[i].offsetLeft-track.offsetLeft,behavior:RM?'auto':'smooth'});}
     function cur(){var x=track.scrollLeft,b=0,d=1e9;items.forEach(function(it,i){var dd=Math.abs(it.offsetLeft-track.offsetLeft-x);if(dd<d){d=dd;b=i;}});return b;}
     sec.querySelector('.tgs-car__nav--prev').onclick=function(){go(cur()-1);};
     sec.querySelector('.tgs-car__nav--next').onclick=function(){go(cur()+1);};
     dots.forEach(function(d,i){d.onclick=function(){go(i);};});
     var t;track.addEventListener('scroll',function(){clearTimeout(t);t=setTimeout(function(){var k=cur();dots.forEach(function(d,i){d.classList.toggle('on',i===k);});},80);},{passive:true});
-    items.forEach(function(it){
+    /* videos start only after the page has loaded, so they do not compete with the poster (LCP) for bandwidth */
+    function vids(){items.forEach(function(it){
       var v=it.querySelector('video');if(!v)return;v.muted=true;
       v.addEventListener('playing',function(){it.classList.add('playing');});
-      var p=function(){var r=v.play();if(r&&r.catch)r.catch(function(){});};
+      var p=function(){if(v.preload==='none'){v.preload='auto';}var r=v.play();if(r&&r.catch)r.catch(function(){});};
       if('IntersectionObserver' in window){new IntersectionObserver(function(e){e[0].isIntersecting?p():v.pause();},{threshold:.5}).observe(it);}else p();
-    });
+    });}
+    /* phones: the first poster is small, so a playing video would become the LCP – videos start with the first interaction */
+    function later(){if(!MOB){setTimeout(vids,1200);return;}var on=false,ev=['scroll','touchstart','pointerdown','keydown'];function go(){if(on)return;on=true;ev.forEach(function(t){window.removeEventListener(t,go,true);});vids();}ev.forEach(function(t){window.addEventListener(t,go,{capture:true,passive:true});});}
+    if(document.readyState==='complete')later();else window.addEventListener('load',later);
   }
 
   function usp(){
@@ -114,10 +124,10 @@
            ['/tagra-max/','TAGRA MAX','Unlimited','No vehicle limit','€749','€149',749,149,1e9]];
     function eur(n){return '€'+n.toLocaleString('en-US');}
     var s=document.createElement('section');s.className='tgs-sec tgs-pricing';s.id='tgs-pricing';
-    s.innerHTML=head('Transparent licence pricing','Choose TAGRA by fleet size','Choose by the number of vehicles in your fleet. Every licence includes the first year; an annual licence fee applies from year two. Prices excl. VAT.')+
+    s.innerHTML=head('Transparent licence pricing','Choose TAGRA by fleet size','Choose by the number of vehicles in your fleet. Every licence includes the first year; an annual licence fee applies from year two. Prices excl. VAT – plus VAT of your country; 0 % VAT for EU companies with a valid VAT ID.')+
       '<form class="tgs-finder" onsubmit="return false"><label for="tgs-veh">How many vehicles do you manage?</label><input id="tgs-veh" type="number" min="1" max="9999" inputmode="numeric" placeholder="Number of vehicles"><button type="submit" class="tgs-pill">Find my licence</button><span class="tgs-finder__out" aria-live="polite"></span></form>'+
       '<div class="tgs-tiers">'+L.map(function(x){return '<a class="tgs-tier" href="'+x[0]+'" data-max="'+x[8]+'"><span class="tgs-tier__match">Matches your fleet size</span><span class="tgs-tier__cap">'+x[2]+'</span><span class="tgs-tier__name">'+x[1]+'</span><span class="tgs-tier__desc">'+x[3]+'</span><span class="tgs-tier__price">'+x[4]+'<small>excl. VAT</small></span><span class="tgs-tier__inc">First year included</span><span class="tgs-tier__fee">'+x[5]+' / year from year 2</span><span class="tgs-pill">Choose '+x[1]+'</span></a>';}).join('')+'</div>'+
-      '<div class="tgs-trucker"><img class="tgs-ico" src="'+IC+'ridic.webp" alt="" width="64" height="64" loading="lazy"><div class="tgs-trucker__txt"><span class="tgs-label">For employed drivers</span><p class="tgs-trucker__h">TAGRA TRUCKER</p><p class="tgs-trucker__p">For an employed driver analysing their own driver card. USB card reader included.</p></div><div class="tgs-trucker__price"><b>€49</b><small>excl. VAT · first year included</small><small>€19 / year from year 2</small></div><a class="tgs-pill" href="/tagra-trucker/">Choose TAGRA TRUCKER</a></div>'+
+      '<div class="tgs-trucker"><img class="tgs-ico" src="'+IC+'ridic.webp" alt="" width="64" height="64" loading="lazy"><div class="tgs-trucker__txt"><span class="tgs-label">For employed drivers</span><p class="tgs-trucker__h">TAGRA TRUCKER</p><p class="tgs-trucker__p">For an employed driver analysing their own driver card. USB card reader included.</p></div><div class="tgs-trucker__price"><b>€49</b><small>excl. VAT · first year included</small><small>€19 / year from year 2</small><small>Private customers: your country’s VAT is added at checkout.</small></div><a class="tgs-pill" href="/tagra-trucker/">Choose TAGRA TRUCKER</a></div>'+
       '<details class="tgs-3y"><summary>Compare licence costs over 3 years</summary><div class="tgs-3y__wrap"><table><thead><tr><th>Licence</th><th>Purchase</th><th>Year 2</th><th>Year 3</th><th>3-year total</th></tr></thead><tbody>'+
       [['TAGRA TRUCKER',49,19]].concat(L.map(function(x){return [x[1],x[6],x[7]];})).map(function(r){return '<tr><td>'+r[0]+'</td><td>'+eur(r[1])+'</td><td>'+eur(r[2])+'</td><td>'+eur(r[2])+'</td><td><b>'+eur(r[1]+2*r[2])+'</b></td></tr>';}).join('')+
       '</tbody></table><p>Current prices, excl. VAT and hardware. The purchase includes the first year; years 2 and 3 are annual licence fees.</p></div></details>'+
@@ -204,23 +214,57 @@
     while(n=w.nextNode()){if(re.test(n.nodeValue)){re.lastIndex=0;n.nodeValue=n.nodeValue.replace(re,SALES);}}
   }
 
+  var SHIP='€8.18 excl. VAT (about €10 incl. VAT) anywhere in the EU';
   function trust(){
     if(!document.body.classList.contains('type-detail')||document.querySelector('.tgs-buytrust'))return;
     var w=document.querySelector('.p-detail .p-info-wrapper');if(!w)return;
-    var soft=/tagra/i.test((document.querySelector('.p-detail-inner-header h1')||{}).textContent||'');
+    var h=(document.querySelector('.p-detail-inner-header h1')||{}).textContent||'';
+    var soft=/tagra/i.test(h),hw=/download|station|reader|box/i.test(h)||/trucker/i.test(h);
     var ul=document.createElement('ul');ul.className='tgs-buytrust';
     ul.innerHTML='<li><span><b>0 % VAT</b> for EU companies with a valid VAT ID (reverse charge)</span></li>'+
-      (soft?'<li><span><b>Licence delivered by e-mail</b> – first year of the licence included</span></li>':'<li><span><b>Shipped across the EU</b> – 24-month warranty</span></li>')+
+      (soft?'<li><span><b>Licence delivered by e-mail</b> – first year of the licence included</span></li>':'')+
+      (hw?(soft?'<li><span><b>Hardware shipping</b> '+SHIP+'</span></li>':'<li><span><b>Hardware shipping</b> '+SHIP+' – 24-month warranty</span></li>'):'')+
       '<li><span><b>Direct from the manufacturer</b> – Truck Data Technology, on the market since 2005</span></li>'+
       '<li><span>Questions? <a href="mailto:'+SALES+'">'+SALES+'</a> · support in English</span></li>';
     var ref=w.querySelector('.p-short-description');
     if(ref&&ref.parentNode===w){w.insertBefore(ul,ref.nextSibling);}else{w.appendChild(ul);}
   }
 
+  /* Shoptet tooltip "International delivery: The final price will be calculated in the basket ..." -> VAT by country */
+  var VATTIP='VAT by country: VAT is calculated at checkout from your delivery country. EU companies with a valid VAT ID pay 0 % (reverse charge).';
+  function vattips(){
+    [].forEach.call(document.querySelectorAll('.oss-price-notification'),function(b){
+      if(b.getAttribute('data-tgs'))return;b.setAttribute('data-tgs','1');
+      b.setAttribute('title',VATTIP);if(b.hasAttribute('data-original-title'))b.setAttribute('data-original-title',VATTIP);b.setAttribute('aria-label','VAT by country – more info');
+    });
+  }
+  /* TAGRA TRUCKER / TRUCKER 2: private drivers buy them too -> price incl. VAT of the chosen EU country (crew GPT + Gemini 8. 11. 2026).
+     Countries = the 24 delivery countries of the shop (EU without CZ, SK, HU), standard VAT rates as of 11/2026 (DE 19, AT 20, FR 20, PL 23,
+     IT 22, NL 21, RO 21, GR 24 checked against the checkout 8. 11. 2026). The checkout stays the authority – update a rate here when a country changes it. */
+  var VAT={AT:['Austria',20],BE:['Belgium',21],BG:['Bulgaria',20],HR:['Croatia',25],CY:['Cyprus',19],DK:['Denmark',25],EE:['Estonia',24],FI:['Finland',25.5],FR:['France',20],DE:['Germany',19],GR:['Greece',24],IE:['Ireland',23],IT:['Italy',22],LV:['Latvia',21],LT:['Lithuania',21],LU:['Luxembourg',17],MT:['Malta',18],NL:['Netherlands',21],PL:['Poland',23],PT:['Portugal',23],RO:['Romania',21],SI:['Slovenia',22],ES:['Spain',21],SE:['Sweden',25]};
+  var LANG2C={de:'DE',fr:'FR',it:'IT',pl:'PL',nl:'NL',ro:'RO',el:'GR',es:'ES',pt:'PT',sv:'SE',da:'DK',fi:'FI',hr:'HR',sl:'SI',bg:'BG',et:'EE',lv:'LV',lt:'LT',mt:'MT',ga:'IE',lb:'LU'};
+  function money(n){return '€'+(Math.round(n*100)/100).toFixed(2);}
+  function b2c(){
+    if(!document.body.classList.contains('type-detail')||document.querySelector('.tgs-b2c'))return;
+    var m=document.querySelector('.p-detail meta[itemprop="url"]'),u=m?m.getAttribute('content')||'':'';
+    if(!/\/tagra-trucker(-2)?\/$/.test(u))return;
+    var wr=document.querySelector('.p-detail .p-final-price-wrapper'),ph=wr&&wr.querySelector('.price-final-holder');if(!ph)return;
+    var net=parseFloat((ph.textContent||'').replace(/[^0-9.,]/g,'').replace(/,(?=\d{3}\b)/g,'').replace(',','.'));if(!(net>0))return;
+    var ks=Object.keys(VAT).sort(function(a,b){return VAT[a][0]<VAT[b][0]?-1:1;}),lo=1e9,hi=0;
+    ks.forEach(function(k){var r=VAT[k][1];if(r<lo)lo=r;if(r>hi)hi=r;});
+    var guess='';try{(navigator.languages||[navigator.language||'']).some(function(l){l=String(l||'');var p=l.split('-'),c=(p[1]||'').toUpperCase();if(c&&VAT[c]){guess=c;return true;}c=LANG2C[p[0].toLowerCase()];if(c){guess=c;return true;}return false;});}catch(e){}
+    var d=document.createElement('div');d.className='tgs-b2c';
+    d.innerHTML='<label for="tgs-b2c-c">Price incl. VAT in</label><select id="tgs-b2c-c"><option value="">your country</option>'+ks.map(function(k){return '<option value="'+k+'"'+(k===guess?' selected':'')+'>'+VAT[k][0]+'</option>';}).join('')+'</select><b aria-live="polite"></b>';
+    var sel=d.querySelector('select'),out=d.querySelector('b');
+    function upd(){var k=sel.value;out.textContent=k?money(net*(1+VAT[k][1]/100))+' incl. '+VAT[k][1]+' % VAT':money(net*(1+lo/100))+' – '+money(net*(1+hi/100))+' incl. VAT';}
+    sel.addEventListener('change',upd);upd();
+    wr.appendChild(d);
+  }
   function reg(){var w=document.createTreeWalker(document.body,4),n;while(n=w.nextNode()){if(n.nodeValue.indexOf('Registrace bude')>-1)n.nodeValue='(Your registration will be approved shortly)';}}
   function run(){
-    [carousel,usp,trustbar,steps,vans,pricing,badges,groups,enforce,help,faq,seo,mails,trust,reg].forEach(function(fn){try{fn();}catch(e){if(window.console)console.warn('tgs',e);}});
+    [carousel,usp,trustbar,steps,vans,pricing,badges,groups,enforce,help,faq,seo,mails,trust,b2c,vattips,reg].forEach(function(fn){try{fn();}catch(e){if(window.console)console.warn('tgs',e);}});
     document.body.classList.add('tgs-v6');
+    setTimeout(vattips,1500);
   }
   if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',run);}else{run();}
 })();
