@@ -15,6 +15,14 @@
  *    PC" box above the full form. Same Netlify form `tagra-trial` and the
  *    same trial-email.js welcome mail as the full form; GA4 generate_lead
  *    with method=mobile_send, form_variant=mobile-send.
+ * 8. (8. 11. 2026, F01) The main form is sent by fetch('/') like the mobile
+ *    box, then the browser goes to the thank-you page of the PAGE LANGUAGE
+ *    (form action, ?a=…&lang=…). Native POST made Netlify answer every
+ *    language with /try/thanks/ (all forms share the name tagra-trial).
+ *    Without fetch, or when it fails, the form is submitted natively.
+ * 9. (8. 11. 2026, F02) Visible localized error messages under the fields,
+ *    the role picker and the consent box; the first error is scrolled to the
+ *    middle of the screen (not under the fixed header).
  */
 
 (function () {
@@ -111,19 +119,98 @@
   const form = document.getElementById('trialForm');
   if (!form) return;
 
+  // ─── 9. Localized validation messages (texts: GPT + Gemini, 8. 11. 2026) ───
+  // Form language values: en de pl gr hu it fr nl ro cz sk (gr = el, cz = cs).
+  const MSG = {
+    en: { audience: 'Please choose who you are.', required: 'Please fill in this field.', email_missing: 'Please enter your email address.', email_invalid: 'Please enter a valid email address.', consent: 'Please agree to the processing of your data.' },
+    de: { audience: 'Bitte wählen Sie Ihre Rolle aus.', required: 'Bitte füllen Sie dieses Feld aus.', email_missing: 'Bitte geben Sie Ihre E-Mail-Adresse ein.', email_invalid: 'Bitte geben Sie eine gültige E-Mail-Adresse ein.', consent: 'Bitte willigen Sie in die Datenverarbeitung ein.' },
+    pl: { audience: 'Proszę wybrać swoją rolę.', required: 'Proszę wypełnić to pole.', email_missing: 'Proszę podać adres e-mail.', email_invalid: 'Proszę podać prawidłowy adres e-mail.', consent: 'Proszę wyrazić zgodę na przetwarzanie danych osobowych.' },
+    el: { audience: 'Παρακαλούμε επιλέξτε την ιδιότητά σας.', required: 'Παρακαλούμε συμπληρώστε αυτό το πεδίο.', email_missing: 'Παρακαλούμε εισαγάγετε τη διεύθυνση e-mail σας.', email_invalid: 'Παρακαλούμε εισαγάγετε μια έγκυρη διεύθυνση e-mail.', consent: 'Παρακαλούμε συναινέστε στην επεξεργασία των δεδομένων σας.' },
+    hu: { audience: 'Kérjük, válassza ki a szerepkörét.', required: 'Kérjük, töltse ki ezt a mezőt.', email_missing: 'Kérjük, adja meg az e-mail-címét.', email_invalid: 'Kérjük, adjon meg egy érvényes e-mail-címet.', consent: 'Kérjük, járuljon hozzá személyes adatai kezeléséhez.' },
+    it: { audience: 'Selezioni il Suo profilo.', required: 'Compili questo campo.', email_missing: 'Inserisca il Suo indirizzo e-mail.', email_invalid: 'Inserisca un indirizzo e-mail valido.', consent: 'Acconsenta al trattamento dei Suoi dati.' },
+    fr: { audience: 'Veuillez sélectionner votre profil.', required: 'Veuillez remplir ce champ.', email_missing: 'Veuillez saisir votre adresse e-mail.', email_invalid: 'Veuillez saisir une adresse e-mail valide.', consent: 'Veuillez accepter le traitement de vos données.' },
+    nl: { audience: 'Selecteer uw rol.', required: 'Vul dit veld in.', email_missing: 'Vul uw e-mailadres in.', email_invalid: 'Vul een geldig e-mailadres in.', consent: 'Geef toestemming voor de verwerking van uw gegevens.' },
+    ro: { audience: 'Vă rugăm să selectați rolul dumneavoastră.', required: 'Vă rugăm să completați acest câmp.', email_missing: 'Vă rugăm să introduceți adresa de e-mail.', email_invalid: 'Vă rugăm să introduceți o adresă de e-mail validă.', consent: 'Vă rugăm să acceptați prelucrarea datelor dumneavoastră.' },
+    cs: { audience: 'Vyberte prosím svou roli.', required: 'Vyplňte prosím toto pole.', email_missing: 'Zadejte prosím svou e-mailovou adresu.', email_invalid: 'Zadejte prosím platnou e-mailovou adresu.', consent: 'Udělte prosím souhlas se zpracováním osobních údajů.' },
+    sk: { audience: 'Vyberte si, prosím, svoju rolu.', required: 'Vyplňte, prosím, toto pole.', email_missing: 'Zadajte, prosím, svoju e-mailovú adresu.', email_invalid: 'Zadajte, prosím, platnú e-mailovú adresu.', consent: 'Udeľte, prosím, súhlas so spracovaním osobných údajov.' }
+  };
+  const formLang = (form.querySelector('input[name="language"]')?.value || 'en').toLowerCase();
+  const M = MSG[{ gr: 'el', cz: 'cs' }[formLang] || formLang] || MSG.en;
+  const BOX = '.form-field, .audience-picker, .gdpr-check';
+  let errSeq = 0;
+
+  function messageFor(el) {
+    if (el.type === 'radio') return M.audience;
+    if (el.type === 'checkbox') return M.consent;
+    if (el.type === 'email') return el.validity.valueMissing ? M.email_missing : M.email_invalid;
+    return M.required;
+  }
+  function controls(box) { return box.querySelectorAll('input:not([type="hidden"]), select, textarea'); }
+  function setError(box, text) {
+    box.classList.add('has-error');
+    let id = box.getAttribute('data-err');
+    let msg = id ? document.getElementById(id) : null;
+    if (!msg) {
+      id = 'trialErr' + (++errSeq);
+      msg = document.createElement(box.matches('.audience-picker') ? 'p' : 'span');
+      msg.className = 'form-error';
+      msg.id = id;
+      msg.setAttribute('role', 'alert');
+      box.setAttribute('data-err', id);
+      // .gdpr-check is a flex row (checkbox + text) — the message goes below it
+      if (box.matches('.gdpr-check')) box.insertAdjacentElement('afterend', msg);
+      else box.appendChild(msg);
+    }
+    msg.textContent = text;
+    controls(box).forEach((c) => {
+      c.setAttribute('aria-invalid', 'true');
+      c.setAttribute('aria-describedby', id);
+    });
+  }
+  function clearError(box) {
+    if (!box || !box.classList.contains('has-error')) return;
+    box.classList.remove('has-error');
+    const id = box.getAttribute('data-err');
+    const msg = id ? document.getElementById(id) : null;
+    if (msg) msg.remove();
+    box.removeAttribute('data-err');
+    controls(box).forEach((c) => {
+      c.removeAttribute('aria-invalid');
+      if (c.getAttribute('aria-describedby') === id) c.removeAttribute('aria-describedby');
+    });
+  }
+  // Returns the first invalid control (or null); marks every invalid box.
+  function validate() {
+    let first = null;
+    const bad = [];
+    form.querySelectorAll('input, select, textarea').forEach((el) => {
+      if (el.type === 'hidden' || el.disabled || el.closest('[hidden]')) return;
+      const box = el.closest(BOX);
+      if (!box || bad.indexOf(box) !== -1 || el.checkValidity()) return;
+      bad.push(box);
+      setError(box, messageFor(el));
+      if (!first) first = el;
+    });
+    form.querySelectorAll(BOX).forEach((box) => { if (bad.indexOf(box) === -1) clearError(box); });
+    return first;
+  }
+  function showFirst(el) {
+    const box = el.closest(BOX) || el;
+    try { el.focus({ preventScroll: true }); } catch (x) { el.focus(); }
+    const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    try { box.scrollIntoView({ block: 'center', behavior: reduce ? 'auto' : 'smooth' }); } catch (x) { box.scrollIntoView(); }
+  }
+
   // Nativní validace je v HTML záměrně zapnutá — když se tenhle skript
   // nenačte, prohlížeč nepustí odeslání s prázdným e-mailem. Až tady ji
   // vypínáme, protože dál si chyby zvýrazňujeme sami (.has-error).
   form.setAttribute('novalidate', '');
 
   form.addEventListener('submit', function (e) {
-    if (!form.checkValidity()) {
+    const firstInvalid = validate();
+    if (firstInvalid) {
       e.preventDefault();
-      const firstInvalid = form.querySelector(':invalid');
-      if (firstInvalid) {
-        firstInvalid.closest('.form-field, .audience-picker, .gdpr-check')?.classList.add('has-error');
-        firstInvalid.focus({ preventScroll: false });
-      }
+      showFirst(firstInvalid);
       return;
     }
 
@@ -157,13 +244,44 @@
       btnText.hidden = true;
       btnLoading.hidden = false;
     }
+
+    // 8. AJAX submit + redirect to the thank-you page of the page language (F01).
+    if (!window.fetch || !window.FormData || !window.URLSearchParams) return; // native POST
+    e.preventDefault();
+    const target = form.getAttribute('action') || '/try/thanks/';
+    let finished = false;
+    function nativeSubmit() {
+      if (finished) return;
+      finished = true;
+      HTMLFormElement.prototype.submit.call(form);   // no submit event, no loop
+    }
+    const ctrl = window.AbortController ? new AbortController() : null;
+    const timer = setTimeout(() => { if (ctrl) ctrl.abort(); nativeSubmit(); }, 15000);
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(new FormData(form)).toString(),
+      signal: ctrl ? ctrl.signal : undefined
+    }).then((r) => {
+      if (!r.ok) throw new Error('HTTP ' + r.status);
+      if (finished) return;
+      finished = true;
+      clearTimeout(timer);
+      window.location.href = target;
+    }).catch(() => {
+      clearTimeout(timer);
+      nativeSubmit();
+    });
   });
 
-  // Clear has-error on input
+  // Clear the error of a box as soon as its control becomes valid
   form.querySelectorAll('input, select, textarea').forEach((el) => {
-    const clearError = () => el.closest('.form-field, .audience-picker, .gdpr-check')?.classList.remove('has-error');
-    el.addEventListener('input', clearError);
-    el.addEventListener('change', clearError);
+    const recheck = () => {
+      const box = el.closest(BOX);
+      if (box && box.classList.contains('has-error') && el.checkValidity()) clearError(box);
+    };
+    el.addEventListener('input', recheck);
+    el.addEventListener('change', recheck);
   });
 })();
 
@@ -322,7 +440,10 @@ var tagraGuessCountry = (function () {
   box.appendChild(f);
   wrap.appendChild(css);
   wrap.appendChild(box);
-  section.parentNode.insertBefore(wrap, section);
+  // F08: place reserved by #mobileSendSlot in the HTML (main.css, ≤ 720 px) — no layout shift
+  var slot = document.getElementById('mobileSendSlot');
+  if (slot) slot.appendChild(wrap);
+  else section.parentNode.insertBefore(wrap, section);
 
   f.addEventListener('change', function (e) {
     var x = e.target && e.target.closest ? e.target.closest('.is-err') : null;
@@ -360,6 +481,7 @@ var tagraGuessCountry = (function () {
     }).then(function (r) {
       if (!r.ok) throw new Error('HTTP ' + r.status);
       wrap.classList.add('is-done');
+      if (slot) slot.classList.add('is-done');
       msg.textContent = t.ok;
       try {
         var KEY = 'tagra_lead_tracked_mobile-send';
@@ -368,7 +490,7 @@ var tagraGuessCountry = (function () {
           var ai = sessionStorage.getItem('tagra_ai_source') || 'none';
           if (typeof window.gtag === 'function') {
             window.gtag('event', 'generate_lead', {
-              audience: aud, language: lang, src: srcVal, ai_source: ai,
+              audience: aud, page_language: lang, src: srcVal, ai_source: ai,
               landing_page: l.p || '', landing_referrer: l.r || '',
               form_variant: 'mobile-send', method: 'mobile_send'
             });

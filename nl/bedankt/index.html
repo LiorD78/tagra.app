@@ -381,7 +381,7 @@ document.addEventListener('DOMContentLoaded', function () {
     storedLang = sessionStorage.getItem('tagra_language') || '';
   } catch (e) { /* private mode */ }
 
-  const audience = (params.get('audience') || storedAudience || 'fleet').toLowerCase();
+  const audience = (params.get('audience') || params.get('a') || storedAudience || 'fleet').toLowerCase();
   let lang = (params.get('lang') || storedLang || 'nl').toLowerCase();
   if (!I18N[lang]) lang = 'en';
   const t = I18N[lang];

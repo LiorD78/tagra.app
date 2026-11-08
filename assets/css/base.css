@@ -99,6 +99,14 @@ h1, h2.hero-h2, .hero-h2 {
 @media (max-width: 768px) {
   h1, h2.hero-h2, .hero-h2 { font-size: 42px; }
 }
+/* F06 (8. 11. 2026): dlouhá slova ve verzálkách („TACHOGRAPHENAUSWERTUNG“,
+   „CRONOTACHIGRAFO“, „TACHOGRAAFANALYSE“) se na telefonu do 342 px nevešla
+   a html/body{overflow-x:hidden} je usekl. Menší písmo na ≤ 420 px + dělení
+   slov (lang je na každé stránce správně) + nouzové zalomení kdekoli. */
+@media (max-width: 420px) {
+  h1, h2.hero-h2, .hero-h2 { font-size: clamp(28px, 8.5vw, 42px); }
+  h1, h2 { overflow-wrap: anywhere; -webkit-hyphens: auto; hyphens: auto; }
+}
 /* Safety: never apply section-heading styling to h1/h2 in the nav or footer.
    Bez tohoto dědí patičkové nadpisy modrý přechodový text určený pro obsahové
    H2, který je na tmavém pozadí patičky neviditelný. */

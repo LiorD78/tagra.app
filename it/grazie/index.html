@@ -85,7 +85,11 @@
 <link href="/manifest.json" rel="manifest"/>
 <link href="https://tagra.app/it/grazie/" rel="canonical"/>
 <link href="https://tagra.app/de/danke/" hreflang="de" rel="alternate"/><link href="https://tagra.app/el/efharisto/" hreflang="el" rel="alternate"/><link href="https://tagra.app/try/thanks/" hreflang="en" rel="alternate"/><link href="https://tagra.app/fr/merci/" hreflang="fr" rel="alternate"/><link href="https://tagra.app/hu/koszonjuk/" hreflang="hu" rel="alternate"/><link href="https://tagra.app/it/grazie/" hreflang="it" rel="alternate"/><link href="https://tagra.app/nl/bedankt/" hreflang="nl" rel="alternate"/><link href="https://tagra.app/pl/dziekujemy/" hreflang="pl" rel="alternate"/>
-<link href="https://tagra.app/ro/multumim/" hreflang="ro" rel="alternate"/><link href="https://tagra.app/try/thanks/" hreflang="x-default" rel="alternate"/><meta content="La Sua prova di TAGRA è pronta | TAGRA" property="og:title"/><meta content="Grazie — il link per il download della Sua prova di TAGRA è pronto." property="og:description"/><meta content="https://cdn.truckmall.cz/images/0/ff1952bcc480ca3d/1/tagra-1-vyhodnoceni-dat-z-tachografu.webp" property="og:image"/><meta content="https://tagra.app/it/grazie/" property="og:url"/><meta content="it_IT" property="og:locale"/><meta content="Grazie — il link per il download della Sua prova di TAGRA è pronto." name="description"/></head>
+<link href="https://tagra.app/ro/multumim/" hreflang="ro" rel="alternate"/><link href="https://tagra.app/try/thanks/" hreflang="x-default" rel="alternate"/>
+<link href="/assets/css/main.css" rel="stylesheet"/>
+<link href="/assets/css/nav.css" rel="stylesheet"/>
+<script defer="" src="/assets/js/nav.js?v=20261008a"></script><script defer="" src="/assets/js/analytics.js?v=20261103a"></script>
+<link href="/assets/css/footer.css" rel="stylesheet"/><meta content="La Sua prova di TAGRA è pronta | TAGRA" property="og:title"/><meta content="Grazie — il link per il download della Sua prova di TAGRA è pronto." property="og:description"/><meta content="https://cdn.truckmall.cz/images/0/ff1952bcc480ca3d/1/tagra-1-vyhodnoceni-dat-z-tachografu.webp" property="og:image"/><meta content="https://tagra.app/it/grazie/" property="og:url"/><meta content="it_IT" property="og:locale"/><meta content="Grazie — il link per il download della Sua prova di TAGRA è pronto." name="description"/></head>
 <body>
 <a class="skip-link" href="#main-content">Vai al contenuto</a>
 <nav aria-label="Navigazione principale" class="site-nav" role="navigation">
@@ -376,7 +380,7 @@ document.addEventListener('DOMContentLoaded', function () {
     storedLang = sessionStorage.getItem('tagra_language') || '';
   } catch (e) { /* private mode */ }
 
-  const audience = (params.get('audience') || storedAudience || 'fleet').toLowerCase();
+  const audience = (params.get('audience') || params.get('a') || storedAudience || 'fleet').toLowerCase();
   let lang = (params.get('lang') || storedLang || 'it').toLowerCase();
   if (!I18N[lang]) lang = 'it';
   const t = I18N[lang];

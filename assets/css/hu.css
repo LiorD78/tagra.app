@@ -214,3 +214,10 @@
 @media (max-width: 600px) {
   html[lang="hu"] h1 { font-size: clamp(24px, 7.8vw, 42px) !important; overflow-wrap: break-word; }
 }
+
+/* F14 (8. 11. 2026): srovnávací tabulky (gps-nyomkovetes, letolto-eszkozok) se na telefonu
+   nevešly a pravý sloupec byl useknutý — na ≤ 600 px se tabulka posouvá do strany. */
+@media (max-width: 600px) {
+  html[lang="hu"] .px-tbl { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  html[lang="hu"] .px-tbl th, html[lang="hu"] .px-tbl td { padding: 10px 10px; min-width: 120px; }
+}

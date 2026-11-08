@@ -114,7 +114,8 @@
 <h1 id="nfTitle">Page not found</h1>
 <p id="nfBody">The page you are looking for does not exist or has moved. Try the homepage or one of the sections below.</p>
 <div class="nf-links">
-<a class="primary" href="/" id="nfHome">Homepage</a>
+<a class="primary" data-cta="404" href="/try/?audience=fleet" id="nfTry">Try 30 days free</a>
+<a href="/" id="nfHome">Homepage</a>
 <a href="/articles/" id="nfArticles">Articles</a>
 <a href="/faq/" id="nfFaq">FAQ</a>
 <a href="/contact/" id="nfContact">Contact</a>
@@ -145,7 +146,32 @@
     hu: { lang:'hu', title:'Az oldal nem található',
           body:'A keresett oldal nem létezik vagy áthelyezték. Próbálja meg a főoldalt vagy az alábbi szakaszok egyikét.',
           home:'/hu/', homeLabel:'Főoldal', articles:'/hu/cikkek/', articlesLabel:'Cikkek',
-          faq:'/hu/gyakori-kerdesek/', faqLabel:'GYIK', contact:'/hu/kapcsolat/', contactLabel:'Kapcsolat' }
+          faq:'/hu/gyakori-kerdesek/', faqLabel:'GYIK', contact:'/hu/kapcsolat/', contactLabel:'Kapcsolat' },
+    /* 8. 11. 2026 (F17): FR/IT/NL/RO (texty GPT + Gemini), odkazy podle menu daného jazyka */
+    fr: { lang:'fr', title:'Page introuvable',
+          body:'La page que vous recherchez n’existe pas ou a été déplacée. Consultez la page d’accueil ou l’une des rubriques ci-dessous.',
+          home:'/fr/', homeLabel:'Accueil', articles:'/fr/articles/', articlesLabel:'Articles',
+          faq:'/fr/faq/', faqLabel:'FAQ', contact:'/fr/contact/', contactLabel:'Contact' },
+    it: { lang:'it', title:'Pagina non trovata',
+          body:'La pagina che sta cercando non esiste o è stata spostata. Visiti la pagina iniziale o una delle sezioni qui sotto.',
+          home:'/it/', homeLabel:'Pagina iniziale', articles:'/it/articoli/', articlesLabel:'Articoli',
+          faq:'/it/faq/', faqLabel:'FAQ', contact:'/it/contatti/', contactLabel:'Contatti' },
+    nl: { lang:'nl', title:'Pagina niet gevonden',
+          body:'De pagina die u zoekt, bestaat niet of is verplaatst. Ga naar de startpagina of een van de onderstaande secties.',
+          home:'/nl/', homeLabel:'Startpagina', articles:'/nl/artikelen/', articlesLabel:'Artikelen',
+          faq:'/nl/veelgestelde-vragen/', faqLabel:'Veelgestelde vragen', contact:'/nl/contact/', contactLabel:'Contact' },
+    ro: { lang:'ro', title:'Pagina nu a fost găsită',
+          body:'Pagina pe care o căutați nu există sau a fost mutată. Accesați pagina principală sau una dintre secțiunile de mai jos.',
+          home:'/ro/', homeLabel:'Pagina principală', articles:'/ro/articole/', articlesLabel:'Articole',
+          faq:'/ro/intrebari-frecvente/', faqLabel:'Întrebări frecvente', contact:'/ro/contact/', contactLabel:'Contact' }
+  };
+  /* Zkušební verze v jazyce stránky (texty = tlačítko v hlavičce daného jazyka) */
+  var TRY = {
+    en: ['/try/', 'Try 30 days free'], de: ['/de/testen/', '30 Tage kostenlos testen'],
+    pl: ['/pl/wyprobuj/', 'Prosimy wypróbować przez 30 dni za darmo'], el: ['/el/dokimi/', '30 ημέρες δωρεάν'],
+    hu: ['/hu/ingyenes-probaverzio/', 'Próbálja ki 30 napig ingyen'], fr: ['/fr/essai-gratuit/', 'Essayez gratuitement pendant 30 jours'],
+    it: ['/it/prova-gratuita/', 'Prova gratuita 30 giorni'], nl: ['/nl/gratis-proefversie/', '30 dagen gratis proberen'],
+    ro: ['/ro/incercare-gratuita/', 'Încercați gratuit timp de 30 de zile']
   };
   var seg = location.pathname.split('/')[1];
   var t = T[seg] || T.en;
@@ -161,6 +187,11 @@
     el.textContent = t[m[2]];
   });
   document.getElementById('nfLogo').setAttribute('href', t.home);
+  var tr = TRY[t.lang] || TRY.en, nfTry = document.getElementById('nfTry');
+  if (nfTry) {
+    nfTry.setAttribute('href', tr[0] + '?audience=fleet&src=' + encodeURIComponent('404:' + location.pathname));
+    nfTry.textContent = tr[1];
+  }
 })();
 </script>
 </body>
