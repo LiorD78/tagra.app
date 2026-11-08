@@ -84,6 +84,7 @@
 <meta content="#0b2c4a" name="theme-color"/>
 <link href="/manifest.json" rel="manifest"/>
 <link href="https://tagra.app/el/" rel="canonical"/>
+<link rel="preload" as="image" fetchpriority="high" type="image/webp" imagesizes="100vw" imagesrcset="/.netlify/images?url=/assets/img/hero-poster.jpg&amp;w=480&amp;fm=webp 480w, /.netlify/images?url=/assets/img/hero-poster.jpg&amp;w=960&amp;fm=webp 960w, /.netlify/images?url=/assets/img/hero-poster.jpg&amp;w=1440&amp;fm=webp 1440w, /.netlify/images?url=/assets/img/hero-poster.jpg&amp;w=1920&amp;fm=webp 1920w"/>
 <link href="https://tagra.app/de/" hreflang="de" rel="alternate"/><link href="https://tagra.app/el/" hreflang="el" rel="alternate"/><link href="https://tagra.app/" hreflang="en" rel="alternate"/><link href="https://tagra.app/fr/" hreflang="fr" rel="alternate"/><link href="https://tagra.app/hu/" hreflang="hu" rel="alternate"/><link href="https://tagra.app/it/" hreflang="it" rel="alternate"/><link href="https://tagra.app/nl/" hreflang="nl" rel="alternate"/><link href="https://tagra.app/pl/" hreflang="pl" rel="alternate"/>
 <link href="https://tagra.app/ro/" hreflang="ro" rel="alternate"/><link href="https://tagra.app/" hreflang="x-default" rel="alternate"/>
 <meta content="TAGRA III – Πρόγραμμα Διαχείρισης Δεδομένων Ταχογράφου" property="og:title"/>
@@ -806,10 +807,10 @@
 <source type="image/webp" sizes="100vw" srcset="/.netlify/images?url=/assets/img/hero-poster.jpg&amp;w=480&amp;fm=webp 480w, /.netlify/images?url=/assets/img/hero-poster.jpg&amp;w=960&amp;fm=webp 960w, /.netlify/images?url=/assets/img/hero-poster.jpg&amp;w=1440&amp;fm=webp 1440w, /.netlify/images?url=/assets/img/hero-poster.jpg&amp;w=1920&amp;fm=webp 1920w"/>
 <img alt="" aria-hidden="true" class="hero-video-poster" fetchpriority="high" loading="eager" src="/assets/img/hero-poster.jpg?v=2026-10-20" width="1920" height="1080"/>
 </picture>
-<video aria-hidden="true" autoplay="" class="hero-video" id="heroVideo" loop="" muted="" playsinline="" preload="auto">
-<source media="(max-width: 1024px)" src="/assets/video/hero-720.mp4?v=2026-10-20" type="video/mp4"/>
-<source src="/assets/video/hero-1080.mp4?v=2026-10-20" type="video/mp4"/>
-<source src="/assets/video/hero-1080.webm?v=2026-10-20" type="video/webm"/>
+<video aria-hidden="true" autoplay="" class="hero-video" id="heroVideo" loop="" muted="" playsinline="" preload="none">
+<source media="(max-width: 1024px)" data-src="/assets/video/hero-720.mp4?v=2026-10-20" type="video/mp4"/>
+<source data-src="/assets/video/hero-1080.mp4?v=2026-10-20" type="video/mp4"/>
+<source data-src="/assets/video/hero-1080.webm?v=2026-10-20" type="video/webm"/>
 </video>
 <div class="container">
 <div class="hero-glass anim-up">
@@ -819,6 +820,8 @@
 <div class="hero-glass anim-up" style="transition-delay:.1s">
 <p class="hero-sub">Η λήψη δεν αρκεί — ο νόμος απαιτεί <strong>αξιολόγηση και αρχειοθέτηση.</strong><br/>Το TAGRA καλύπτει τα πάντα. Δωρεάν δοκιμή 30 ημερών, χωρίς πιστωτική κάρτα.</p>
 </div>
+<div class="cta-row hero-cta anim-up" style="transition-delay:.15s"><a class="btn-cta" href="/el/dokimi/?src=home-hero">Δωρεάν δοκιμή για 30 ημέρες</a></div>
+<p class="hero-cta-note anim-up" style="transition-delay:.15s">Windows 10/11 · Χωρίς πιστωτική κάρτα</p>
 </div>
 </section>
 <!-- ═══ PICKER (3 audience cards) ═══════════════════════════════════ -->
@@ -831,13 +834,13 @@
 <!-- Fleet -->
 <a aria-label="TAGRA για διαχειριστές στόλων" class="split-card split-card--fleet" href="/el/stolos/">
 <div class="card-label">Διαχειριστής στόλου</div>
-<h2 class="sr-only">TAGRA · Πρόγραμμα ανάλυσης ταχογράφου</h2><h3 class="card-title">TAGRA III<br/>Company</h3>
+<h2 class="sr-only">TAGRA · Πρόγραμμα ανάλυσης ταχογράφου</h2><h3 class="card-title">TAGRA III<br/>Επιχείρηση</h3>
 <p class="card-desc">Διαχειρίζεστε οχήματα για μια εταιρεία. Πρέπει να κάνετε λήψη και αξιολόγηση δεδομένων από <strong>μονάδες ταχογράφου και κάρτες οδηγού</strong> — και να αρχειοθετήσετε τα πάντα για ελέγχους.</p>
 <ul class="card-list">
 <li>1 έως απεριόριστα οχήματα</li>
 <li>Πλήρης αξιολόγηση χρόνου εργασίας (Κανονισμός (ΕΚ) 561/2006 + Οδηγία για τον χρόνο εργασίας)</li>
 <li>Εκθέσεις αποδεκτές από τις ελεγκτικές αρχές</li>
-<li>Έτοιμο για ελαφρά φορτηγά από τον Ιούλιο 2026</li>
+<li>Υποστηρίζει φορτηγά και βαν 2,5–3,5 τ</li>
 </ul>
 <span class="card-cta">Λύση για στόλους →</span>
 <span class="card-note">Δωρεάν δοκιμή 30 ημερών · χωρίς πιστωτική κάρτα</span>
@@ -892,7 +895,7 @@
 <li>Λήψεις δεδομένων, ισχύς καρτών και βαθμονομήσεις: όλες οι προθεσμίες με μια ματιά</li>
 <li>Λειτουργεί στον δικό σας υπολογιστή Windows — τα δεδομένα μένουν σε εσάς</li>
 </ul>
-<div class="t3p-cta"><a class="btn-cta" href="/el/dokimi/?audience=fleet" rel="noopener" target="_blank">Δοκιμάστε το TAGRA III δωρεάν για 30 ημέρες</a><a class="btn-outline" href="/el/stolos/#tagra-iii">Ανακαλύψτε το TAGRA III</a><a class="btn-outline" href="https://shop.tagra.app/tagra-software/" hreflang="en">Αγορά από το e-shop</a></div>
+<div class="t3p-cta"><a class="btn-cta" href="/el/dokimi/?audience=fleet" rel="noopener" target="_blank">Δοκιμάστε το TAGRA III δωρεάν για 30 ημέρες</a><a class="btn-outline" href="/el/stolos/#tagra-iii">Ανακαλύψτε το TAGRA III</a><a class="btn-outline" href="https://shop.tagra.app/tagra-software/" hreflang="en">Αγορά από το e-shop (EN)</a></div>
 <p class="t3p-note">TAGRA 1 από 149 € χωρίς ΦΠΑ, με το 1ο έτος να περιλαμβάνεται. Από το 2ο έτος, από 79 € ετησίως.</p>
 </div>
 <a class="t3p-shot" href="/el/stolos/#tagra-iii"><img alt="TAGRA III – επισκόπηση: φόρτωση δεδομένων, οδηγοί και οχήματα με εκκρεμείς εργασίες, εξαγωγή δεδομένων για έλεγχο" decoding="async" height="939" loading="lazy" sizes="(max-width: 980px) 100vw, 560px" src="/assets/img/tagra3/tagra3-overview-960.webp" srcset="/assets/img/tagra3/tagra3-overview-960.webp 960w, /assets/img/tagra3/tagra3-overview.webp 1402w" width="1402"/></a>
@@ -1059,7 +1062,7 @@
 </div>
 <div class="pricing-teaser-cta">
 <a class="btn-outline" href="/el/stolos/#tagra-pricing">Δείτε όλα τα πακέτα και τις τιμές →</a>
-<a class="btn-outline" href="https://shop.tagra.app/tagra-software/" hreflang="en">Αγορά από το e-shop</a>
+<a class="btn-outline" href="https://shop.tagra.app/tagra-software/" hreflang="en">Αγορά από το e-shop (EN)</a>
 <a class="btn-cta" href="/el/dokimi/">Δοκιμάστε δωρεάν για 30 ημέρες</a>
 <span class="pricing-teaser-cta-note">Χωρίς πιστωτική κάρτα. Πρόγραμμα εγκατάστασης Windows.</span>
 </div>
@@ -1088,9 +1091,9 @@
 <a class="t3p-tile" href="https://shop.tagra.app/download-box-ii-s/" hreflang="en"><strong class="t3p-tile__t">DOWNLOAD BOX II S</strong><span class="t3p-tile__d">Κλειδί λήψης για όλους τους ψηφιακούς ταχογράφους, συμπεριλαμβανομένων των G2V2. Ενσωματωμένος αναγνώστης κάρτας οδηγού, χωρίς ετήσιες χρεώσεις, 24 μήνες εγγύηση.</span><span class="t3p-tile__p">299 € χωρίς ΦΠΑ</span></a>
 <a class="t3p-tile" href="https://shop.tagra.app/download-station/" hreflang="en"><strong class="t3p-tile__t">DOWNLOAD STATION</strong><span class="t3p-tile__d">Επίτοιχος σταθμός με κλειδαριά για αυτόνομη λήψη καρτών οδηγού στις εγκαταστάσεις σας. Διατίθεται και ως DOWNLOAD STATION Wi-Fi.</span><span class="t3p-tile__p">από 366 € χωρίς ΦΠΑ</span></a>
 <a class="t3p-tile" href="https://shop.tagra.app/smart-card-reader/" hreflang="en"><strong class="t3p-tile__t">Αναγνώστης έξυπνων καρτών</strong><span class="t3p-tile__d">Αναγνώστης USB για κάρτες οδηγού και επιχείρησης.</span><span class="t3p-tile__p">33 € χωρίς ΦΠΑ</span></a>
-<a class="t3p-tile" href="https://shop.tagra.app/tagra-trucker/" hreflang="en"><strong class="t3p-tile__t">TAGRA Trucker</strong><span class="t3p-tile__d">Για επαγγελματίες οδηγούς. Περιλαμβάνεται δωρεάν αναγνώστης κάρτας οδηγού USB, με αποστολή στην πόρτα σας.</span><span class="t3p-tile__p">49 € χωρίς ΦΠΑ</span></a>
+<div class="t3p-tile t3p-tile--duo"><strong class="t3p-tile__t">TAGRA Trucker</strong><span class="t3p-tile__d">Για επαγγελματίες οδηγούς. Περιλαμβάνεται δωρεάν αναγνώστης κάρτας οδηγού USB, με αποστολή στην πόρτα σας.</span><span class="t3p-duo"><a class="t3p-duo__o" href="https://shop.tagra.app/tagra-trucker/" hreflang="en"><span><b>1 οδηγός</b> TAGRA TRUCKER</span><strong>49 €</strong></a><a class="t3p-duo__o" href="/go/tagra-trucker-2/"><span><b>2 οδηγοί σε κοινό πλήρωμα</b> TAGRA TRUCKER 2</span><strong>88,62 €</strong></a></span><span class="t3p-duo__vat">χωρίς ΦΠΑ</span></div>
 </div>
-<div class="t3p-cta"><a class="btn-cta" href="https://shop.tagra.app/" hreflang="en">Παραγγείλτε στο TAGRA Shop</a><a class="btn-outline" href="https://shop.tagra.app/download-devices/" hreflang="en">Δείτε τις συσκευές λήψης</a></div>
+<div class="t3p-cta"><a class="btn-cta" href="https://shop.tagra.app/" hreflang="en">Παραγγείλτε στο TAGRA Shop (EN)</a><a class="btn-outline" href="https://shop.tagra.app/download-devices/" hreflang="en">Δείτε τις συσκευές λήψης (EN)</a></div>
 <p class="t3p-note">Το TAGRA Shop είναι προς το παρόν στα Αγγλικά. Ερωτήσεις; Στείλτε e-mail στο <a href="mailto:sales@tagra.app">sales@tagra.app</a>.</p>
 </div>
 </section>
@@ -1291,7 +1294,22 @@
   var inView = true;
   function play() { if (!inView || document.hidden) return; try { var p = v.play(); if (p && p.catch) p.catch(function() {}); } catch (e) {} }
   function ready() { v.classList.add('is-active'); hero.classList.add('has-video-ready'); play(); }
-  if (v.readyState >= 3) ready(); else v.addEventListener('canplay', ready, { once: true });
+  /* F15 (8. 11. 2026): LCP = poster / H1. Desktop: video as before (attached right away). Mobile: video sources are attached only after the
+     first interaction (Chrome stops LCP at the first input; the video frame would otherwise be the late LCP). Data saver / 2G–3G: poster only. */
+  var c = navigator.connection, mob = window.matchMedia && window.matchMedia('(max-width: 1024px)').matches, done = false;
+  if (mob && c && (c.saveData || /(^|-)(2g|3g)$/.test(c.effectiveType || ''))) return;
+  function attach() {
+    if (done) return; done = true;
+    var ss = v.querySelectorAll('source[data-src]');
+    for (var i = 0; i < ss.length; i++) { ss[i].src = ss[i].getAttribute('data-src'); ss[i].removeAttribute('data-src'); }
+    v.preload = 'auto'; v.addEventListener('canplay', ready, { once: true });
+    try { v.load(); } catch (e) {}
+  }
+  if (mob) {
+    var evs = ['scroll', 'touchstart', 'pointerdown', 'keydown'];
+    var go = function () { for (var i = 0; i < evs.length; i++) window.removeEventListener(evs[i], go); attach(); };
+    for (var i = 0; i < evs.length; i++) window.addEventListener(evs[i], go, { passive: true }); /* bubble phase: page scroll only, not carousels */
+  } else attach();
   if ('IntersectionObserver' in window) {
     new IntersectionObserver(function(es) { inView = es[0].isIntersecting; if (inView) play(); else { try { v.pause(); } catch (e) {} } }, { threshold: 0.05 }).observe(hero);
   }

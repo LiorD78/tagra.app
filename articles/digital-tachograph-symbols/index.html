@@ -257,6 +257,35 @@
 <div class="eyebrow anim-up">Driver knowledge base</div>
 <h1 class="art-title"><span class="grad">Tachograph symbols &amp; error codes: a driver's guide</span></h1>
 <div class="art-meta"><span>Truck Data Technology</span><span>Updated June 2026</span><span>22 min read</span></div>
+<style>
+.art-toc{margin:22px 0 26px;padding:20px 22px;border-radius:var(--radius,16px);background:linear-gradient(180deg,#f5f9fc 0%,#eaf3f8 35%,#dcecf6 70%,#eef5f9 100%);border:1px solid rgba(19,74,142,.10)}
+.art-toc__h{margin:0 0 10px;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--blue-mid,#134a8e)}
+.art-toc ol{margin:0;padding:0 0 0 20px;columns:2;column-gap:28px;font-size:15px;line-height:1.5}
+.art-toc li{break-inside:avoid;margin:0 0 6px}
+.art-toc li::marker{color:var(--blue-mid,#134a8e)}
+.art-toc a{color:var(--blue-dark,#0b2c4a);text-decoration:none;border-bottom:1px solid rgba(19,74,142,.25)}
+.art-toc a:hover{color:var(--blue-mid,#134a8e);border-bottom-color:currentColor}
+.art-toc__vendors{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:14px 0 0;font-size:14px;color:var(--text2,#515154)}
+.art-toc__vendors a{border:1px solid rgba(19,74,142,.25);border-radius:99px;padding:5px 12px;background:#fff;font-weight:600;font-size:14px}
+.art-toc__cta{display:inline-flex;align-items:center;justify-content:center;gap:8px;margin-top:16px;padding:12px 26px;border-radius:99px;color:#fff!important;font-weight:600;font-size:16px;text-decoration:none!important;border:0!important;background:linear-gradient(135deg,var(--green-brand,#6E9B12) 0%,var(--green-cta,#5C820F) 100%);box-shadow:0 6px 18px rgba(110,155,18,.30),0 1px 0 rgba(255,255,255,.25) inset}
+#what-to-do-now,#activity-symbols,#universal-warnings,#dec-search,#vdo,#stoneridge,#actia,#efas,#common-mistakes,#crisis-workflow,#sources,#faq{scroll-margin-top:84px}
+@media(max-width:720px){.art-toc{padding:16px}.art-toc ol{columns:1}.art-toc__cta{width:100%;box-sizing:border-box}}
+</style>
+<nav aria-label="Contents" class="art-toc" id="toc">
+<p class="art-toc__h">Contents</p>
+<ol>
+<li><a href="#what-to-do-now">Display fault: what to do?</a></li>
+<li><a href="#activity-symbols">The 4 activity symbols</a></li>
+<li><a href="#universal-warnings">Warning categories</a></li>
+<li><a href="#dec-search">Fault code search (200+ codes)</a></li>
+<li><a href="#common-mistakes">The 10 most common messages</a></li>
+<li><a href="#crisis-workflow">Critical-fault procedure</a></li>
+<li><a href="#sources">Sources</a></li>
+<li><a href="#faq">FAQ</a></li>
+</ol>
+<p class="art-toc__vendors"><span>Jump to manufacturer:</span> <a href="#vdo">VDO DTCO</a> <a href="#stoneridge">Stoneridge</a> <a href="#actia">Actia</a> <a href="#efas">EFAS</a></p>
+<a class="art-toc__cta" href="/try/?audience=driver&amp;src=symbols-toc">Try 30 days free →</a>
+</nav>
 <div aria-label="Driver operating a digital tachograph" class="art-hero-video">
 <video aria-label="Driver operating a digital tachograph" autoplay="" loop="" muted="" playsinline="" poster="symboly-chybove-kody-hero-poster.webp" preload="metadata" webkit-playsinline="">
 <source src="symboly-chybove-kody-hero.webm" type="video/webm">
@@ -1504,6 +1533,22 @@ if ('IntersectionObserver' in window) {
 }
 </script>
 <script>
+/* 7. 11. 2026: na mobilu je VDO tabulka (43 000 px) zavřená, ať se dá stránkou projít;
+   odkaz z obsahu nebo #hash na zavřenou sekci výrobce ji otevře. */
+(function(){
+  try{if(window.matchMedia&&matchMedia('(max-width: 720px)').matches){var v=document.getElementById('vdo');if(v)v.removeAttribute('open');}}catch(e){}
+  function openTarget(id){
+    var t=id&&document.getElementById(id);if(!t)return;
+    var d=t.tagName==='DETAILS'?t:(t.closest?t.closest('details'):null);
+    if(d&&!d.open)d.open=true;
+  }
+  document.addEventListener('click',function(e){
+    var a=e.target&&e.target.closest?e.target.closest('a[href^="#"]'):null;
+    if(a)openTarget(a.getAttribute('href').slice(1));
+  });
+  window.addEventListener('hashchange',function(){openTarget(location.hash.slice(1));});
+  if(location.hash)openTarget(location.hash.slice(1));
+})();
 (function(){
   var input=document.getElementById('dec-search-input');
   var clearBtn=document.getElementById('dec-search-clear');
