@@ -52,10 +52,19 @@
  * pro něj, #2/#3 jen pokud pro ně ještě neběžely. Chyba Blobs = fail-open.
  *
  * ── INTERNÍ NOTIFIKACE ───────────────────────────────────────────────
- * Liborovi chodí JEN při chybě (uvítací mail selhal, nebo se nepodařilo
- * naplánovat #2/#3). Úspěšné odeslání ani ignorované odeslání (test,
- * disposable) se nehlásí — o každém leadu informuje notifikace formuláře
- * z Netlify ("TAGRA demo lead — tagra.app"). Rozhodnuto 13. 10. 2026.
+ * Od 9. 11. 2026 posílá notifikaci o leadu Liborovi tahle funkce, ne
+ * vestavěná e-mailová notifikace Netlify Forms ("TAGRA demo lead —
+ * tagra.app"), která chodila za KAŽDÉ odeslání formuláře — lidé formulář
+ * často odešlou 2× během pár minut (mobil → PC, druhá stránka, netrpělivost)
+ * a Liborovi pak chodily dvě stejné zprávy. Proto:
+ *   - nový lead / nové publikum / návrat ≥ 60 min → 1 notifikace
+ *     (návrat označený „↻ N×" s časem první registrace),
+ *   - opakování < 60 min (repeat-throttled) → žádná notifikace,
+ *   - testovací (test=1) a disposable odeslání → žádná notifikace,
+ *   - chyba (uvítací mail selhal / #2–#3 se nenaplánovaly) → notifikace
+ *     s prefixem [chyba] místo běžné (nikdy obě).
+ * Vestavěná notifikace Netlify Forms pro tagra-trial je vypnutá.
+ * (Dřív, od 13. 10. 2026, tu chodily jen chyby.)
  */
 
 const RESEND_API    = "https://api.resend.com/emails";
@@ -322,7 +331,7 @@ async function writeLead(store, key, value) {
   }
 }
 
-// ── INTERNÍ NOTIFIKACE (jen při chybě) ────────────────────────────────
+// ── INTERNÍ NOTIFIKACE (každý unikátní lead + chyby) ──────────────────
 
 const escapeHtml = (s) => String(s ?? "")
   .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
@@ -338,24 +347,38 @@ function describeSent(situation, aud, result) {
 }
 
 /**
- * Pošle Liborovi notifikaci, když se něco pokazilo (uvítací mail
- * neodešel, nebo se nepodařilo naplánovat #2/#3). Při úspěchu se nevolá.
+ * Předmět interní notifikace. Čistá funkce (testovatelná).
+ *   ok=true  → "TAGRA lead · fleet · PL · Jméno (Firma)", návrat "↻ 2× TAGRA lead · …"
+ *   ok=false → "[chyba] …" / "[chyba: důvod] …"
+ */
+function buildLeadSubject({ data, name, aud, lang, prev, count, ignored, ok }) {
+  const company = String(data.company || "").trim();
+  const email   = String(data.email || "").trim();
+  let country = String(data.country || "").trim();
+  if (!country) country = lang;
+  if (country.length <= 3) country = country.toUpperCase();
+
+  const isRepeat = !!prev;
+  const prefix =
+    (ok ? "" : (ignored ? `[chyba: ${ignored}] ` : "[chyba] ")) +
+    (isRepeat && !ignored ? `↻ ${count}× ` : "");
+  return `${prefix}TAGRA lead · ${aud} · ${country} · ${name || email || "(bez jména)"}${company ? ` (${company})` : ""}`
+    .replace(/[\r\n]+/g, " ");
+}
+
+/**
+ * Pošle Liborovi notifikaci o leadu.
+ *   ok=true  → běžná notifikace o novém / vráceném leadu (volá se jen
+ *              mimo repeat-throttled, tj. max. 1× za 60 min na e-mail),
+ *   ok=false → chyba (uvítací mail neodešel, nebo se nepodařilo
+ *              naplánovat #2/#3).
  * Nikdy nevyhazuje chybu.
  */
-async function notifyLead(apiKey, { data, name, aud, lang, prev, count, situation, result, ignored }) {
+async function notifyLead(apiKey, { data, name, aud, lang, prev, count, situation, result, ignored, ok = false }) {
   if (!apiKey) return;
   try {
-    const company = String(data.company || "").trim();
-    let country = String(data.country || "").trim();
-    if (!country) country = lang;
-    if (country.length <= 3) country = country.toUpperCase();
-
     const isRepeat = !!prev;
-    const prefix =
-      (ignored ? `[chyba: ${ignored}] ` : "[chyba] ") +
-      (isRepeat && !ignored ? `↻ ${count}× ` : "");
-    const subject = `${prefix}TAGRA lead · ${aud} · ${country} · ${name || "(bez jména)"}${company ? ` (${company})` : ""}`
-      .replace(/[\r\n]+/g, " ");
+    const subject = buildLeadSubject({ data, name, aud, lang, prev, count, ignored, ok });
 
     const rows = Object.entries(data)
       .filter(([k]) => k !== "bot-field" && k !== "form_name")
@@ -367,12 +390,13 @@ async function notifyLead(apiKey, { data, name, aud, lang, prev, count, situatio
     if (!ignored) extra.push(`<p>Zákazník dostal: <b>${escapeHtml(describeSent(situation, aud, result))}</b></p>`);
     else extra.push(`<p>Zákazníkovi nebylo nic odesláno — ${escapeHtml(ignored)}.</p>`);
 
+    // Záměrně bez reply_to na zákazníka: zákaznická komunikace nemá jít od Libora.
     await sendViaResend(apiKey, {
       from: NOTIFY_FROM,
       to: (process.env.LEAD_NOTIFY_TO || NOTIFY_TO_DEFAULT).split(",").map((s) => s.trim()).filter(Boolean),
       subject,
       html: `${extra.join("")}<table style="font:14px sans-serif">${rows}</table>`,
-      tags: [{ name: "campaign", value: "lead-notify" }],
+      tags: [{ name: "campaign", value: ok ? "lead-notify" : "lead-notify-error" }],
     });
   } catch (e) {
     logError(`Lead notification failed: ${e.message}`);
@@ -566,6 +590,7 @@ async function notifyRukonTrial(apiKey, payload, data, { aud, lang, email }) {
 }
 
 exports.buildRukonTrialEmail = buildRukonTrialEmail;
+exports.buildLeadSubject = buildLeadSubject;
 exports.isHungarianLead = isHungarianLead;
 
 exports.handler = async (event) => {
@@ -755,9 +780,15 @@ exports.handler = async (event) => {
     sequenced: [...new Set([...prevSequenced, ...(scheduleSeq ? [aud] : [])])],
   });
 
-  // ── INTERNÍ NOTIFIKACE — jen když se nepodařilo naplánovat #2/#3 ────
+  // ── INTERNÍ NOTIFIKACE — max. 1 na lead, nikdy obě varianty ──────────
+  // Chyba #2/#3 → [chyba]; jinak běžná notifikace, ale ne pro opakování
+  // do 60 min (repeat-throttled) — to byly ty zdvojené zprávy.
   if (result.failed.length) {
     await notifyLead(apiKey, { ...lead, prev, count, situation, result });
+  } else if (situation !== "repeat-throttled") {
+    await notifyLead(apiKey, { ...lead, prev, count, situation, result, ok: true });
+  } else {
+    logInfo(`Lead notify skipped for ${email}: repeat ${Math.round(sinceLastMin)} min after last`);
   }
 
   return {
