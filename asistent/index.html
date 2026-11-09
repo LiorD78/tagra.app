@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<title>Asistent TAGRA</title>
+<link rel="icon" href="/favicon.ico">
+<style>
+  :root{
+    --tg-blue:#0b3a6e;
+    --tg-blue-m:#1565c0;
+    --tg-bg:#f4f7fb;
+    --tg-text:#1b2430;
+    --tg-muted:#5b6778;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --tg-bg:#0f1720; --tg-text:#e6edf5; --tg-muted:#9aa8b8; }
+  }
+  html,body{margin:0;padding:0;width:100%;height:100%;overflow:hidden;background:var(--tg-bg);color:var(--tg-text);
+    font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;}
+  /* Stav načítání / chyba */
+  #tg-state{position:fixed;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;
+    gap:14px;padding:24px;box-sizing:border-box;text-align:center;}
+  #tg-state .spin{width:34px;height:34px;border:3px solid rgba(21,101,192,.2);border-top-color:var(--tg-blue-m);
+    border-radius:50%;animation:tgspin .8s linear infinite;}
+  @keyframes tgspin{to{transform:rotate(360deg)}}
+  #tg-state p{margin:0;font-size:15px;line-height:1.45;color:var(--tg-muted);max-width:320px;}
+  #tg-state button{font:inherit;font-size:15px;padding:9px 18px;border:0;border-radius:8px;cursor:pointer;
+    background:var(--tg-blue-m);color:#fff;}
+  #tg-state button[hidden]{display:none;}
+
+  /* Chatwoot/Jarabot widget přes celou plochu okna */
+  .woot-widget-holder,
+  .woot-widget-holder.woot-elements--left,
+  .woot-widget-holder.woot-elements--right{
+    position:fixed!important;inset:0!important;top:0!important;left:0!important;right:0!important;bottom:0!important;
+    width:100%!important;height:100%!important;min-height:0!important;max-height:none!important;
+    border-radius:0!important;box-shadow:none!important;opacity:1!important;transform:none!important;
+    visibility:visible!important;z-index:2147483000!important;
+  }
+  .woot-widget-holder iframe{width:100%!important;height:100%!important;border-radius:0!important;}
+  .woot-widget-bubble,.woot--bubble-holder{display:none!important;}
+</style>
+</head>
+<body>
+<div id="tg-state" role="status" aria-live="polite">
+  <div class="spin" id="tg-spin"></div>
+  <p id="tg-msg">Načítám asistenta…</p>
+  <button type="button" id="tg-retry" hidden onclick="location.reload()">Zkusit znovu</button>
+</div>
+
+<script>
+(function () {
+  'use strict';
+
+  /* ===== KONFIGURACE – Jarabot účet 118 =====
+     Test: schránka 775 „TDT podpora“ (AI robot Tom). Po založení vlastní schránky
+     pro program TAGRA stačí vyměnit jen JARABOT_WEBSITE_TOKEN. */
+  var JARABOT_BASE_URL = 'https://chat.jarabot.com';
+  var JARABOT_WEBSITE_TOKEN = 'UXiWdusMM9bQvtztaQ6t9qYW';
+  var LOAD_TIMEOUT_MS = 15000;
+  /* ============================================================================== */
+
+  /* --- Parametry z TAGRA: app / ver / lang / lic (whitelist + validace) --- */
+  var q = new URLSearchParams(window.location.search);
+  function pick(name, re, max) {
+    var v = (q.get(name) || '').trim().slice(0, max);
+    return re.test(v) ? v : '';
+  }
+  var APPS = ['company', 'control', 'driver'];
+  var LANGS = ['cs', 'sk', 'en', 'pl', 'de', 'fr', 'hu', 'es', 'it', 'nl', 'ro'];
+
+  var appRaw = (q.get('app') || '').toLowerCase();
+  var langRaw = (q.get('lang') || '').toLowerCase().slice(0, 2);
+
+  var p = {
+    app: APPS.indexOf(appRaw) > -1 ? appRaw : '',
+    ver: pick('ver', /^[0-9A-Za-z._\-]{1,20}$/, 20),
+    lang: LANGS.indexOf(langRaw) > -1 ? langRaw : 'en',
+    lic: pick('lic', /^[0-9A-Za-z\-\/]{1,32}$/, 32)
+  };
+
+  /* --- Texty náhradního stavu (CZ/SK/EN, ostatní jazyky → EN) --- */
+  var T = {
+    cs: { load: 'Načítám asistenta…', err: 'Asistenta se nepodařilo načíst. Zkontrolujte připojení k internetu a zkuste to znovu.', retry: 'Zkusit znovu', title: 'Asistent TAGRA' },
+    sk: { load: 'Načítavam asistenta…', err: 'Asistenta sa nepodarilo načítať. Skontrolujte pripojenie k internetu a skúste to znova.', retry: 'Skúsiť znova', title: 'Asistent TAGRA' },
+    en: { load: 'Loading the assistant…', err: 'The assistant could not be loaded. Please check your internet connection and try again.', retry: 'Try again', title: 'TAGRA Assistant' }
+  };
+  var t = T[p.lang] || T.en;
+  document.documentElement.lang = p.lang;
+  document.title = t.title;
+  document.getElementById('tg-msg').textContent = t.load;
+  document.getElementById('tg-retry').textContent = t.retry;
+
+  function showError() {
+    document.getElementById('tg-spin').style.display = 'none';
+    document.getElementById('tg-msg').textContent = t.err;
+    document.getElementById('tg-retry').hidden = false;
+  }
+
+  /* --- Chatwoot/Jarabot nastavení: bez bubliny, bez pop-outu, jazyk z TAGRA --- */
+  window.chatwootSettings = {
+    hideMessageBubble: true,
+    showPopoutButton: false,
+    position: 'right',
+    type: 'standard',
+    locale: p.lang,
+    useBrowserLanguage: false
+  };
+
+  var ready = false;
+  var timer = setTimeout(function () { if (!ready) { showError(); } }, LOAD_TIMEOUT_MS);
+
+  /* Udržet chat otevřený – v malém okně widget přepne do mobilního režimu s tlačítkem zavřít */
+  function keepOpen() {
+    var holder = document.querySelector('.woot-widget-holder');
+    if (!holder || !window.MutationObserver) { return; }
+    new MutationObserver(function () {
+      if (holder.classList.contains('woot--hide') && window.$chatwoot) {
+        window.$chatwoot.toggle('open');
+      }
+    }).observe(holder, { attributes: true, attributeFilter: ['class'] });
+  }
+
+  function sendAttributes() {
+    var cw = window.$chatwoot;
+    if (!cw) { return; }
+    var attrs = {
+      tagra_zdroj: 'tagra-app',
+      tagra_app: p.app || 'nezadano',
+      tagra_ver: p.ver || 'nezadano',
+      tagra_lang: p.lang,
+      tagra_lic: p.lic || 'nezadano'
+    };
+    try { if (cw.setLocale) { cw.setLocale(p.lang); } } catch (e) {}
+    /* Atributy konverzace (vidí operátor u konkrétního dotazu) */
+    try { if (cw.setConversationCustomAttributes) { cw.setConversationCustomAttributes(attrs); } } catch (e) {}
+    /* Atributy kontaktu (zůstanou u kontaktu pro další dotazy) */
+    try { if (cw.setCustomAttributes) { cw.setCustomAttributes(attrs); } } catch (e) {}
+    /* Jarabot wrapper, pokud ho jejich SDK vystavuje */
+    try {
+      if (window.jarabotSDK && typeof window.jarabotSDK.setCustomAttributes === 'function') {
+        window.jarabotSDK.setCustomAttributes(attrs);
+      }
+    } catch (e) {}
+  }
+
+  window.addEventListener('chatwoot:ready', function () {
+    ready = true;
+    clearTimeout(timer);
+    document.getElementById('tg-state').style.display = 'none';
+    sendAttributes();
+    try { window.$chatwoot.toggle('open'); } catch (e) {}
+    keepOpen();
+  });
+
+  /* Po založení nové konverzace atributy zopakovat (setConversationCustomAttributes
+     bez existující konverzace nemusí být uložen) */
+  window.addEventListener('chatwoot:on-message', function () {
+    if (!window.__tgAttrsResent) { window.__tgAttrsResent = true; sendAttributes(); }
+  });
+
+  window.addEventListener('chatwoot:error', function () { if (!ready) { clearTimeout(timer); showError(); } });
+
+  /* --- Načtení SDK --- */
+  var s = document.createElement('script');
+  s.src = JARABOT_BASE_URL.replace(/\/+$/, '') + '/packs/js/sdk.js';
+  s.async = true;
+  s.defer = true;
+  s.onload = function () {
+    var sdk = window.jarabotSDK && typeof window.jarabotSDK.run === 'function' ? window.jarabotSDK : window.chatwootSDK;
+    if (!sdk || typeof sdk.run !== 'function') { clearTimeout(timer); showError(); return; }
+    sdk.run({ websiteToken: JARABOT_WEBSITE_TOKEN, baseUrl: JARABOT_BASE_URL });
+  };
+  s.onerror = function () { clearTimeout(timer); showError(); };
+  document.head.appendChild(s);
+})();
+</script>
+</body>
+</html>
