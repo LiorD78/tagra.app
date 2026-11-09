@@ -1,4 +1,4 @@
-/* TAGRA Shop – fleet calculator v1.9 (8. 11. 2026: texts by <html lang> – EN default with unchanged output, DE dictionary from the crew (GPT + Gemini), DE number format "1.234,56 €") | v1.8 (8. 11. 2026: no Czech-VAT gross price – "+ VAT of your country · 0 % for EU companies with a valid VAT ID"; shipping €8.18 excl. VAT; events also via gtag send_to GA4 (plain dataLayer objects never reached GA4); entry hub preselects the branch via the tgs:fc event) | v1.7 (8. 11. 2026: tier chips 1 / 2 / 4 / 6 / MAX next to the stepper are clickable – set the vehicle count to that tier; were dead clicks in Clarity) | v1.6 (7. 11. 2026: 2-driver option uses its own icon with exactly two figures, hosted on tagra.app) | v1.5 (7. 11. 2026) – employed driver branch asks 1 driver / 2 drivers sharing one PC:
+/* v1.9 (9. 11. 2026): bundle TAGRA + DOWNLOAD BOX II S preselected (most popular) | TAGRA Shop – fleet calculator v1.9 (8. 11. 2026: texts by <html lang> – EN default with unchanged output, DE dictionary from the crew (GPT + Gemini), DE number format "1.234,56 €") | v1.8 (8. 11. 2026: no Czech-VAT gross price – "+ VAT of your country · 0 % for EU companies with a valid VAT ID"; shipping €8.18 excl. VAT; events also via gtag send_to GA4 (plain dataLayer objects never reached GA4); entry hub preselects the branch via the tgs:fc event) | v1.7 (8. 11. 2026: tier chips 1 / 2 / 4 / 6 / MAX next to the stepper are clickable – set the vehicle count to that tier; were dead clicks in Clarity) | v1.6 (7. 11. 2026: 2-driver option uses its own icon with exactly two figures, hosted on tagra.app) | v1.5 (7. 11. 2026) – employed driver branch asks 1 driver / 2 drivers sharing one PC:
    2 -> TAGRA TRUCKER 2 (TAGRA_PRICES.trucker2, priceId 93). GA4 events carry fc_drivers (1 / 2 in the driver branch).
    v1.4 (7. 11. 2026) – prices, price IDs and URLs now come only from
    https://tagra.app/assets/js/tagra-prices.js (window.TAGRA_PRICES), the one source shared with the tagra.app version selector.
@@ -34,7 +34,7 @@
       shipping:SHIP};
   }
 
-  var S={who:'company',veh:1,dev:null,drv:'1',busy:false,started:false};
+  var S={who:'company',veh:1,dev:'box',drv:'1',busy:false,started:false};
   var root,tiersEl,timer;
 
   function eur(n){var r=Math.round(n*100)/100,s=(r%1===0)?String(r):r.toFixed(2);
@@ -73,7 +73,7 @@
        '</div><p class="tgs-fc__note" id="tgs-fc-veh-note">'+tx('fc_note2','Licences are based on the number of vehicles. Driver cards are not counted.')+'</p></div>'+
       '<div class="tgs-fc__step" data-for="company"><p class="tgs-fc__q"><span class="tgs-fc__n">3</span>'+tx('fc_q3','Do you need a download device?')+'</p>'+
        '<div class="tgs-fc__opts">'+
-        choice('dev','box','klic','TAGRA + DOWNLOAD BOX II S <em class="tgs-fc__pop">'+tx('pop','Most popular')+'</em>',DE?tf('fc_box_s',{save:SAVE}):'Program and download key in one bundle · save '+SAVE,false)+
+        choice('dev','box','klic','TAGRA + DOWNLOAD BOX II S <em class="tgs-fc__pop">'+tx('pop','Most popular')+'</em>',DE?tf('fc_box_s',{save:SAVE}):'Program and download key in one bundle · save '+SAVE,true)+
         choice('dev','own','mam',tx('fc_own','TAGRA only'),tx('fc_own_s','We already have a download device'),false)+
        '</div><p class="tgs-fc__note">'+tx('fc_ask','Not sure which device you need? <a href="#tgs-help">Ask us</a>.')+'</p></div>'+
       (RULES.trucker2?

@@ -1,4 +1,4 @@
-/* TAGRA Shop v6.1 (8. 11. 2026: entry hub, pricing facts, "Most popular" TAGRA 4, already-using-TAGRA section, licence-first carousel, GA4 events via gtag) | v6.0 – tagra.app look, crew + competitor review (2. 11. 2026) */
+/* TAGRA Shop v7.0 (9. 11. 2026: one-page buying flow on the homepage – hero + fleet calculator first; carousel, hub, steps, tier cards and product grid off) | v6.1 (8. 11. 2026: entry hub, pricing facts, "Most popular" TAGRA 4, already-using-TAGRA section, licence-first carousel, GA4 events via gtag) | v6.0 – tagra.app look, crew + competitor review (2. 11. 2026) */
 (function(){
   if(/^de/i.test(document.documentElement.lang||'')){var ds=document.createElement('script'),cs=document.currentScript;ds.src=cs&&cs.src?cs.src.replace(/shop\.js(?=[?#]|$)/,'shop.de.js'):'https://tagra.app/assets/js/shop.de.js';document.head.appendChild(ds);return;}
   var TM='https://cdn.truckmall.cz/data/user-content/';
@@ -50,6 +50,29 @@
       var p=function(){var r=v.play();if(r&&r.catch)r.catch(function(){});};
       if('IntersectionObserver' in window){new IntersectionObserver(function(e){e[0].isIntersecting?p():v.pause();},{threshold:.5}).observe(it);}else p();
     });
+  }
+
+  /* v7 (9. 11. 2026): one-page buying flow – hero + fleet calculator first (no carousel, hub, steps, tier cards, product grid) */
+  var HOME2=true;
+  function hero(){
+    if(!isHP()||document.querySelector('.tgs-hero2'))return;
+    var MB='https://wuswoaicjtuodzmrjwgf.supabase.co/storage/v1/object/public/site/tagra-shop/mac/tagra3-mac-overview-';
+    var F=['From €149 excl. VAT','Licence by e-mail, usually the same day','0 % VAT for EU companies','On the market since 2005'];
+    var s=document.createElement('section');s.className='tgs-hero2';
+    s.innerHTML='<div class="tgs-hero2__txt"><span class="tgs-label">TAGRA · tachograph analysis program</span><p class="tgs-hero2__h">Find infringements before the inspection does.</p><p class="tgs-hero2__p">Windows program for transport companies and drivers. Your data stay on your own PC. The first year of the licence is included.</p>'+
+      '<div class="tgs-hero2__cta"><a class="tgs-pill" href="#tgs-pricing" data-hero="choose">Choose your TAGRA</a><a class="tgs-pill tgs-pill--ghost" href="https://tagra.app/try/?audience=fleet&src=shop_hero" target="_blank" rel="noopener" data-hero="trial">Try 30 days free</a></div>'+
+      '<small class="tgs-hero2__small">No credit card · Windows 10/11</small><ul class="tgs-hero2__f">'+F.map(function(f){return '<li>'+f+'</li>';}).join('')+'</ul></div>'+
+      '<div class="tgs-hero2__img"><img src="'+MB+'1600.webp" srcset="'+MB+'800.webp 800w, '+MB+'1600.webp 1600w" sizes="(max-width: 767px) 92vw, 620px" width="1600" height="1407" alt="TAGRA program – fleet overview" fetchpriority="high" decoding="async"></div>';
+    var slot=document.querySelector('.banners-row .wide-carousel');
+    if(slot){slot.appendChild(s);slot.closest('.banners-row').classList.add('tgs-has-car');}
+    else{var c=document.getElementById('content');if(!c)return;c.insertBefore(s,c.firstElementChild);}
+    s.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[data-hero]');if(!a)return;ga('hero_click',{hero_cta:a.getAttribute('data-hero')});if(a.getAttribute('data-hero')==='choose'){var p=document.getElementById('tgs-pricing');if(p){e.preventDefault();p.scrollIntoView({behavior:RM?'auto':'smooth',block:'start'});}}});
+  }
+  function hwnote(){
+    var p=document.getElementById('tgs-pricing');if(!p||p.querySelector('.tgs-hwnote'))return;
+    var d=document.createElement('p');d.className='tgs-hwnote';
+    d.innerHTML='<b>Only need a download device?</b> <a href="/download-box-ii-s/">DOWNLOAD BOX II S – €299 excl. VAT</a> · <a href="/download-devices/">Download stations and smart card reader</a>';
+    var ex=p.querySelector('.tgs-exist');if(ex)p.insertBefore(d,ex);else p.appendChild(d);
   }
 
   function usp(){
@@ -121,7 +144,7 @@
            ['/tagra-max/','TAGRA MAX','Unlimited','No vehicle limit','€749','€149',749,149,1e9]];
     function eur(n){return '€'+n.toLocaleString('en-US');}
     var s=document.createElement('section');s.className='tgs-sec tgs-pricing';s.id='tgs-pricing';
-    s.innerHTML=head('Transparent licence pricing','Choose TAGRA by fleet size','Choose by the number of vehicles in your fleet. Every licence includes the first year; an annual licence fee applies from year two. Prices excl. VAT.')+
+    s.innerHTML=head('Your TAGRA in 3 steps','Choose TAGRA by fleet size','Choose by the number of vehicles in your fleet. Every licence includes the first year; an annual licence fee applies from year two. Prices excl. VAT.')+
       '<ul class="tgs-facts" aria-label="Licence terms"><li><span><b>First year included</b>Annual fee from year 2</span></li><li><span><b>No contract</b>Cancel anytime: just don\'t renew</span></li><li><span><b>Licence by e-mail</b>Usually the same day with card payment</span></li><li><span><b>30-day free trial</b>Full TAGRA MAX, no card needed</span></li></ul>'+
       '<form class="tgs-finder" onsubmit="return false"><label for="tgs-veh">How many vehicles do you manage?</label><input id="tgs-veh" type="number" min="1" max="9999" inputmode="numeric" placeholder="Number of vehicles"><button type="submit" class="tgs-pill">Find my licence</button><span class="tgs-finder__out" aria-live="polite"></span></form>'+
       '<div class="tgs-tiers">'+L.map(function(x){var pop=x[1]===POP;return '<a class="tgs-tier'+(pop?' is-pop':'')+'" href="'+x[0]+'" data-max="'+x[8]+'">'+(pop?'<span class="tgs-tier__pop">'+POPL+'</span>':'')+'<span class="tgs-tier__match">Matches your fleet size</span><span class="tgs-tier__cap">'+x[2]+'</span><span class="tgs-tier__name">'+x[1]+'</span><span class="tgs-tier__desc">'+x[3]+'</span><span class="tgs-tier__price">'+x[4]+'<small>excl. VAT</small></span><span class="tgs-tier__inc">First year included</span><span class="tgs-tier__fee">'+x[5]+' / year from year 2</span><span class="tgs-pill">Choose '+x[1]+'</span></a>';}).join('')+'</div>'+
@@ -258,8 +281,8 @@
 
   function reg(){var w=document.createTreeWalker(document.body,4),n;while(n=w.nextNode()){if(n.nodeValue.indexOf('Registrace bude')>-1)n.nodeValue='(Your registration will be approved shortly)';}}
   function run(){
-    [carousel,usp,trustbar,hub,steps,vans,pricing,badges,groups,enforce,help,faq,seo,mails,trust,reg].forEach(function(fn){try{fn();}catch(e){if(window.console)console.warn('tgs',e);}});
-    document.body.classList.add('tgs-v6');
+    (HOME2?[hero,pricing,hwnote,badges,groups,enforce,help,faq,seo,mails,trust,reg]:[carousel,usp,trustbar,hub,steps,vans,pricing,badges,groups,enforce,help,faq,seo,mails,trust,reg]).forEach(function(fn){try{fn();}catch(e){if(window.console)console.warn('tgs',e);}});
+    document.body.classList.add('tgs-v6');if(HOME2&&isHP())document.body.classList.add('tgs-home2');
   }
   if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',run);}else{run();}
 })();
