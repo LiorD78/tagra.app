@@ -19,8 +19,8 @@
     var S=[
       {v:[TM+'Comp_2.webm',TM+'Comp_2.mp4'],p:TM+'bannery%20HP/01b-vyhodnoceni-dat.webp',e:'TAGRA Programm',t:'Finden Sie Verstöße, bevor die Behörden es tun.',c:'Nach Fuhrparkgröße wählen',h:'#tgs-pricing'},
       {v:[TA+'video/hero-720.mp4'],p:TA+'img/hero-poster.jpg',e:'30 Tage kostenlos testen',t:'TAGRA kostenlos testen. Ohne Kreditkarte, ohne Verpflichtung.',c:'Kostenlose Testversion starten',h:'https://tagra.app/try/'},
-      {v:[TM+'terminy-hero.webm',TM+'terminy-hero.mp4'],p:TM+'DBII_kabina.webp',e:'Transporter über 2,5–3,5 t',t:'Grenzüberschreitender Verkehr mit Transportern: Fahrtenschreiberpflicht ab Juli 2026.',c:'Bundles – 49 € sparen',h:'/software-device-bundles/'},
-      {v:[TM+'DBIIS-kancelar.webm',TM+'DBIIS-office2.mp4'],p:TM+'Download_Box_II_S_kafe.webp',e:'DOWNLOAD BOX II S',t:'Daten in Sekunden herunterladen. Bei einem Kaffee auswerten.',c:'Download-Geräte im Shop ansehen',h:'/download-devices/'}
+      {v:[TM+'terminy-hero.webm',TM+'terminy-hero.mp4'],p:TM+'DBII_kabina.webp',e:'Transporter über 2,5–3,5 t',t:'Grenzüberschreitender Verkehr mit Transportern: Fahrtenschreiberpflicht ab Juli 2026.',c:'Bundles – 49 € sparen',h:'/de/software-device-bundles/'},
+      {v:[TM+'DBIIS-kancelar.webm',TM+'DBIIS-office2.mp4'],p:TM+'Download_Box_II_S_kafe.webp',e:'DOWNLOAD BOX II S',t:'Daten in Sekunden herunterladen. Bei einem Kaffee auswerten.',c:'Download-Geräte im Shop ansehen',h:'/de/download-devices/'}
     ];
     var sec=document.createElement('section');sec.className='tgs-car';sec.setAttribute('aria-label','Highlights im TAGRA Shop');
     sec.innerHTML='<div class="tgs-car__track">'+S.map(function(s,i){
@@ -79,7 +79,7 @@
     var U=[['usp-truck-eshop-3d','Offizieller TAGRA Shop','Direkt vom Hersteller.','https://tagra.app/'],
            ['usp-21-let-3d','21 Jahre Erfahrung','Wir kennen uns aus. Wir beraten. Wir finden Lösungen.','https://tagra.app/'],
            ['usp-jednicka-palec-3d','Nr. 1 in Tschechien','Im Einsatz bei Polizei und Zoll.','https://tagra.app/'],
-           ['','0 % MwSt. für EU-Unternehmen','Reverse-Charge mit gültiger USt-IdNr.','/how-to-buy/']];
+           ['','0 % MwSt. für EU-Unternehmen','Reverse-Charge mit gültiger USt-IdNr.','/de/how-to-buy/']];
     var d=document.createElement('div');d.className='tgs-usp';d.setAttribute('aria-label','Warum im TAGRA Shop kaufen');
     d.innerHTML=U.map(function(u){
       var ext=u[3].indexOf('http')===0,base=u[0]?TM+u[0]+'-zaklad.webp':U0,gl=TM+(u[0]||'usp-21-let-3d')+'-odlesk.webp';
@@ -115,7 +115,7 @@
   function steps(){
     if(!isHP()||document.querySelector('.tgs-steps'))return;
     var t=anchor();if(!t)return;
-    var S=[['klic','01','Herunterladen','90 / 28 Tage','Laden Sie die Daten des Massenspeichers mindestens alle 90 Tage und die Daten der Fahrerkarte mindestens alle 28 Tage herunter.','DOWNLOAD BOX II S liest den Fahrtenschreiber und die Fahrerkarte aus.','Download-Hardware ansehen','/download-devices/'],
+    var S=[['klic','01','Herunterladen','90 / 28 Tage','Laden Sie die Daten des Massenspeichers mindestens alle 90 Tage und die Daten der Fahrerkarte mindestens alle 28 Tage herunter.','DOWNLOAD BOX II S liest den Fahrtenschreiber und die Fahrerkarte aus.','Download-Hardware ansehen','/de/download-devices/'],
            ['sami','02','Auswerten','EU 561/2006','Werten Sie Lenk- und Ruhezeiten nach der Verordnung (EG) Nr. 561/2006 und die Arbeitszeit nach der Richtlinie 2002/15/EG aus.','Finden Sie Verstöße und erstellen Sie Berichte, bevor es die Kontrollbehörden tun.','Wählen Sie Ihre TAGRA Lizenz','#tgs-pricing'],
            ['cmr-archiv-v3','03','Archivieren','12 Monate','Bewahren Sie heruntergeladene Fahrtenschreiber- und Fahrerkartendaten mindestens 12 Monate auf, damit Sie sie auf Verlangen vorlegen können.','TAGRA archiviert .DDD-, .C1B-, .V1B- und ESM-Dateien auf Ihrem eigenen PC.','Wählen Sie Ihre TAGRA Lizenz','#tgs-pricing']];
     var s=document.createElement('section');s.className='tgs-sec tgs-steps';
@@ -136,18 +136,18 @@
   function pricing(){
     if(!isHP()||document.querySelector('.tgs-pricing'))return;
     var t=anchor();if(!t)return;
-    var L=[['/tagra-1/','TAGRA 1','1 Fahrzeug','Für einen Fuhrpark mit einem Fahrzeug','149 €','79 €',149,79,1],
-           ['/tagra-2/','TAGRA 2','2 Fahrzeuge','Für einen Fuhrpark mit zwei Fahrzeugen','299 €','79 €',299,79,2],
-           ['/tagra-4/','TAGRA 4','3–4 Fahrzeuge','Für Fuhrparks mit 3–4 Fahrzeugen','399 €','99 €',399,99,4],
-           ['/tagra-6/','TAGRA 6','5–6 Fahrzeuge','Für Fuhrparks mit 5–6 Fahrzeugen','549 €','99 €',549,99,6],
-           ['/tagra-max/','TAGRA MAX','Unbegrenzt','Keine Fahrzeugbegrenzung','749 €','149 €',749,149,1e9]];
+    var L=[['/de/tagra-1/','TAGRA 1','1 Fahrzeug','Für einen Fuhrpark mit einem Fahrzeug','149 €','79 €',149,79,1],
+           ['/de/tagra-2/','TAGRA 2','2 Fahrzeuge','Für einen Fuhrpark mit zwei Fahrzeugen','299 €','79 €',299,79,2],
+           ['/de/tagra-4/','TAGRA 4','3–4 Fahrzeuge','Für Fuhrparks mit 3–4 Fahrzeugen','399 €','99 €',399,99,4],
+           ['/de/tagra-6/','TAGRA 6','5–6 Fahrzeuge','Für Fuhrparks mit 5–6 Fahrzeugen','549 €','99 €',549,99,6],
+           ['/de/tagra-max/','TAGRA MAX','Unbegrenzt','Keine Fahrzeugbegrenzung','749 €','149 €',749,149,1e9]];
     function eur(n){return n.toLocaleString('de-DE')+' €';}
     var s=document.createElement('section');s.className='tgs-sec tgs-pricing';s.id='tgs-pricing';
     s.innerHTML=head('Ihr TAGRA in 3 Schritten','TAGRA nach Fuhrparkgröße wählen','Wählen Sie nach der Anzahl der Fahrzeuge in Ihrem Fuhrpark. Jede Lizenz enthält das erste Jahr; ab dem zweiten Jahr fällt eine jährliche Lizenzgebühr an. Preise zzgl. MwSt.')+
       '<ul class="tgs-facts" aria-label="Lizenzbedingungen"><li><span><b>Erstes Jahr inklusive</b>Jährliche Lizenzgebühr ab Jahr 2</span></li><li><span><b>Keine Vertragsbindung</b>Jederzeit beenden: einfach nicht verlängern</span></li><li><span><b>Lizenz per E-Mail</b>Bei Kartenzahlung meist noch am selben Tag</span></li><li><span><b>30 Tage kostenlos testen</b>TAGRA MAX mit vollem Funktionsumfang, ohne Kreditkarte</span></li></ul>'+
       '<form class="tgs-finder" onsubmit="return false"><label for="tgs-veh">Wie viele Fahrzeuge verwalten Sie?</label><input id="tgs-veh" type="number" min="1" max="9999" inputmode="numeric" placeholder="Anzahl der Fahrzeuge"><button type="submit" class="tgs-pill">Passende Lizenz finden</button><span class="tgs-finder__out" aria-live="polite"></span></form>'+
       '<div class="tgs-tiers">'+L.map(function(x){var pop=x[1]===POP;return '<a class="tgs-tier'+(pop?' is-pop':'')+'" href="'+x[0]+'" data-max="'+x[8]+'">'+(pop?'<span class="tgs-tier__pop">'+POPL+'</span>':'')+'<span class="tgs-tier__match">Passt zu Ihrer Fuhrparkgröße</span><span class="tgs-tier__cap">'+x[2]+'</span><span class="tgs-tier__name">'+x[1]+'</span><span class="tgs-tier__desc">'+x[3]+'</span><span class="tgs-tier__price">'+x[4]+'<small>zzgl. MwSt.</small></span><span class="tgs-tier__inc">Erstes Jahr inklusive</span><span class="tgs-tier__fee">'+x[5]+' / Jahr ab dem 2. Jahr</span><span class="tgs-pill">'+x[1]+' wählen</span></a>';}).join('')+'</div>'+
-      '<div class="tgs-trucker"><img class="tgs-ico" src="'+IC+'ridic.webp" alt="" width="64" height="64" loading="lazy"><div class="tgs-trucker__txt"><span class="tgs-label">Für angestellte Fahrer</span><p class="tgs-trucker__h">TAGRA TRUCKER</p><p class="tgs-trucker__p">Für angestellte Fahrer, die ihre eigene Fahrerkarte auswerten. USB-Kartenleser inklusive.</p></div><div class="tgs-trucker__price"><b>49 €</b><small>zzgl. MwSt. · erstes Jahr inklusive</small><small>19 € / Jahr ab dem 2. Jahr</small></div><a class="tgs-pill" href="/tagra-trucker/">TAGRA TRUCKER wählen</a></div>'+
+      '<div class="tgs-trucker"><img class="tgs-ico" src="'+IC+'ridic.webp" alt="" width="64" height="64" loading="lazy"><div class="tgs-trucker__txt"><span class="tgs-label">Für angestellte Fahrer</span><p class="tgs-trucker__h">TAGRA TRUCKER</p><p class="tgs-trucker__p">Für angestellte Fahrer, die ihre eigene Fahrerkarte auswerten. USB-Kartenleser inklusive.</p></div><div class="tgs-trucker__price"><b>49 €</b><small>zzgl. MwSt. · erstes Jahr inklusive</small><small>19 € / Jahr ab dem 2. Jahr</small></div><a class="tgs-pill" href="/de/tagra-trucker/">TAGRA TRUCKER wählen</a></div>'+
       '<details class="tgs-3y"><summary>Lizenzkosten über 3 Jahre vergleichen</summary><div class="tgs-3y__wrap"><table><thead><tr><th>Lizenz</th><th>Kauf</th><th>Jahr 2</th><th>Jahr 3</th><th>Gesamt über 3 Jahre</th></tr></thead><tbody>'+
       [['TAGRA TRUCKER',49,19]].concat(L.map(function(x){return [x[1],x[6],x[7]];})).map(function(r){return '<tr><td>'+r[0]+'</td><td>'+eur(r[1])+'</td><td>'+eur(r[2])+'</td><td>'+eur(r[2])+'</td><td><b>'+eur(r[1]+2*r[2])+'</b></td></tr>';}).join('')+
       '</tbody></table><p>Aktuelle Preise, zzgl. MwSt. und Hardware. Der Kaufpreis enthält das erste Jahr; im 2. und 3. Jahr fallen jährliche Lizenzgebühren an.</p></div></details>'+
@@ -166,7 +166,7 @@
     return '<div class="tgs-exist" id="tgs-existing"><p class="tgs-exist__h">Sie nutzen bereits TAGRA?</p><div class="tgs-exist__g">'+
       '<div class="tgs-exist__c"><b>In TAGRA verlängern</b><p>Bezahlen Sie Ihre jährliche Lizenzgebühr direkt im Programm – hier müssen Sie nichts bestellen.</p><ul aria-label="Jährliche Lizenzgebühr, zzgl. MwSt.">'+F.map(function(f){return '<li><span>'+f[0]+'</span><span>'+f[1]+' / Jahr</span></li>';}).join('')+'</ul></div>'+
       '<div class="tgs-exist__c"><b>Mehr Fahrzeuge?</b><p>Kontaktieren Sie unseren Vertrieb, um Ihre bestehende Lizenz zu erweitern.</p><p><a href="'+quoteHref('Upgrade meiner TAGRA Lizenz')+'" data-tgs-ev="quote_click" data-tgs-t="upgrade">'+SALES+'</a><br><a href="tel:'+PHONE.replace(/\s/g,'')+'" data-tgs-ev="phone_click" data-tgs-t="upgrade">'+PHONE+'</a></p></div>'+
-      '<div class="tgs-exist__c"><b>Ein weiteres Download-Gerät?</b><p>DOWNLOAD BOX II S liest Fahrtenschreiber und Fahrerkarten aus. 299 € zzgl. MwSt., keine jährlichen Gebühren.</p><p><a href="/download-box-ii-s/" data-tgs-ev="existing_click" data-tgs-t="dbiis">DOWNLOAD BOX II S ansehen</a></p></div>'+
+      '<div class="tgs-exist__c"><b>Ein weiteres Download-Gerät?</b><p>DOWNLOAD BOX II S liest Fahrtenschreiber und Fahrerkarten aus. 299 € zzgl. MwSt., keine jährlichen Gebühren.</p><p><a href="/de/download-box-ii-s/" data-tgs-ev="existing_click" data-tgs-t="dbiis">DOWNLOAD BOX II S ansehen</a></p></div>'+
       '</div><p class="tgs-exist__sup">Technischer Support: <a href="mailto:'+SUPPORT+'">'+SUPPORT+'</a></p></div>';
   }
 
@@ -177,7 +177,7 @@
     s.innerHTML='<p class="tgs-hub__h" id="tgs-hub-h">Womit möchten Sie beginnen?</p><div class="tgs-hub__g">'+
       '<a class="tgs-hub__t" href="#tgs-pricing" data-path="driver" data-fc="driver"><img src="'+IC+'ridic.webp" alt="" width="52" height="52" loading="lazy"><span><b>Ich bin Fahrer</b><small>Eigene Fahrerkarte prüfen · TRUCKER ab 49 €</small></span></a>'+
       '<a class="tgs-hub__t" href="#tgs-pricing" data-path="small" data-fc="company"><img src="'+IC+'firma.webp" alt="" width="52" height="52" loading="lazy"><span><b>1–6 Fahrzeuge</b><small>In 3 Klicks zur passenden Lizenz</small></span></a>'+
-      '<div class="tgs-hub__t"><img src="'+IC+'sami.webp" alt="" width="52" height="52" loading="lazy"><span><a class="tgs-hub__main" href="/tagra-max/" data-path="large"><b>7+ Fahrzeuge</b><small>TAGRA MAX, unbegrenzt viele Fahrzeuge</small></a><small><a class="tgs-hub__q" href="'+quoteHref('TAGRA MAX')+'" data-path="large_quote">Angebot anfordern</a> · '+PHONE+'</small></span></div>'+
+      '<div class="tgs-hub__t"><img src="'+IC+'sami.webp" alt="" width="52" height="52" loading="lazy"><span><a class="tgs-hub__main" href="/de/tagra-max/" data-path="large"><b>7+ Fahrzeuge</b><small>TAGRA MAX, unbegrenzt viele Fahrzeuge</small></a><small><a class="tgs-hub__q" href="'+quoteHref('TAGRA MAX')+'" data-path="large_quote">Angebot anfordern</a> · '+PHONE+'</small></span></div>'+
       '<a class="tgs-hub__t" href="#tgs-existing" data-path="existing"><img src="'+IC+'mam.webp" alt="" width="52" height="52" loading="lazy"><span><b>Sie nutzen bereits TAGRA?</b><small>Verlängerung, Upgrade, weitere Hardware</small></span></a>'+
       '</div>';
     ref.parentNode.insertBefore(s,ref.nextSibling);
@@ -203,7 +203,7 @@
     blk.classList.add('tgs-grp');
     var h=document.createElement('div');h.className='tgs-sec tgs-hw';h.innerHTML=head('Software + Hardware','Vervollständigen Sie Ihre Fahrtenschreiber-Ausstattung','DOWNLOAD BOX II S lädt Daten vom Fahrtenschreiber und von der Fahrerkarte herunter – keine jährlichen Gebühren, 24 Monate Garantie. Kaufen Sie sie zusammen mit TAGRA und sparen Sie 49 €.');
     t.parentNode.insertBefore(h,t);t.classList.add('tgs-hide');
-    var more=document.createElement('p');more.className='tgs-note';more.innerHTML='Außerdem erhältlich: <a href="/download-devices/">DOWNLOAD STATION und DOWNLOAD STATION Wi-Fi</a> · <a href="/accessories/">Chipkarten-Lesegerät</a>';
+    var more=document.createElement('p');more.className='tgs-note';more.innerHTML='Außerdem erhältlich: <a href="/de/download-devices/">DOWNLOAD STATION und DOWNLOAD STATION Wi-Fi</a> · <a href="/de/accessories/">Chipkarten-Lesegerät</a>';
     blk.parentNode.insertBefore(more,blk.nextSibling);
   }
 

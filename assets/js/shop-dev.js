@@ -1,4 +1,4 @@
-/* TAGRA Shop – shop-dev.js v1.0 (9. 11. 2026)
+/* TAGRA Shop – shop-dev.js v1.1 (9. 11. 2026: footer links keep the /de/ or /hu/ prefix) | v1.0 (9. 11. 2026)
    Libor 9. 11.: DOWNLOAD BOX II S is THE product (featured full-width card, Bestseller); wall stations stay as a smaller depot option;
    DKV LIVE® callout on Download devices + TAGRA software categories; current menu item = full green field.
    1) Navigation: no permanently green "TAGRA software" item – the green field moves to the page you are on (all pages).
@@ -167,7 +167,12 @@
     var list=d.getElementById('products');if(!list)return;list.parentNode.insertBefore(dkvBox(),list.nextSibling);
   }
   function killSoftwareReviews(){if(!d.querySelector('.tgs-dev-rev'))return;[].forEach.call(d.querySelectorAll('.tgs-rev:not(.tgs-dev-rev)'),function(x){x.parentNode.removeChild(x);});}
-  function run(){cat();softCat();killSoftwareReviews();}
+  /* footer (Shoptet HTML code, same for all languages): internal links get the /de/ or /hu/ prefix so DE/HU customers stay in their language */
+  function footLinks(){
+    var P=L==='de'?'/de':L==='hu'?'/hu':'';if(!P)return;
+    [].forEach.call(d.querySelectorAll('.tgs-footer a[href^="/"]'),function(a){var h=a.getAttribute('href');if(/^\/\//.test(h)||/^\/(de|hu|admin|user)(\/|$)/.test(h))return;a.setAttribute('href',P+h);});
+  }
+  function run(){cat();softCat();footLinks();killSoftwareReviews();}
   if(d.readyState==='loading')d.addEventListener('DOMContentLoaded',run);else run();
   setTimeout(killSoftwareReviews,1200);setTimeout(killSoftwareReviews,3000);
 })();

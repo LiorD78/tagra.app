@@ -1,4 +1,4 @@
-/* TAGRA Shop – conversion layer v1.1 (8. 11. 2026; v1.1 = DE texts, see below), loaded by shop3.js on every page. v1.2: phone required on checkout step 2 only for parcel orders (Shoptet field is optional since 8. 11.). Styles: shop.css v6.3 (head, so nothing jumps).
+/* TAGRA Shop – conversion layer v1.1 (8. 11. 2026; v1.1 = DE texts, see below), loaded by shop3.js on every page. v1.2: phone required on checkout step 2 only for parcel orders (Shoptet field is optional since 8. 11.). v1.3 (9. 11. 2026): HU dictionary (crew GPT + Gemini), HU price parsing, /hu/ category paths, HU cart link from the Shoptet header, HU trial page, HU licence delivery name in the phone check. Styles: shop.css v6.3 (head, so nothing jumps).
    1) sticky buy bar on product pages (name, price excl. VAT, Add to cart = the native Shoptet button, so GA4 add_to_cart stays single)
    2) "Get a quote" next to Add to cart on TAGRA MAX and TAGRA MAX + DOWNLOAD BOX II S
    3) after add to cart: panel "Go to cart / Continue shopping" (Shoptet only showed a thin bar over the header)
@@ -15,13 +15,14 @@
   var SALES='sales@tagra.app',PHONE='+420 739 005 345';
   var d=document,html=d.documentElement,body=d.body;
   /* i18n: EN strings stay inline (EN = default, byte-identical output); other shop languages override by key */
-  var LG=(html.getAttribute('lang')||'en').slice(0,2).toLowerCase(),DE=LG==='de';
-  var I18N={de:{cat1:'TAGRA Programm',cat1s:'Lizenzen nach Fuhrparkgröße',cat2:'Download-Geräte',cat2s:'DOWNLOAD BOX II S und Stationen',cat3:'Programm + Gerät als Bundle',cat3s:'Programm und Gerät · 49 € sparen',cat4:'Zubehör',cat4s:'Chipkartenleser',cats_aria:'Shop-Kategorien',quote:'Angebot anfordern',buy_aria:'{name} kaufen',excl:'zzgl. MwSt.',chat_aria:'Chatten Sie mit uns',atc:'In den Warenkorb',note_lic:'Lizenz per E-Mail',note_hw:'Versand innerhalb von 3 Werktagen',go_cart:'Zum Warenkorb',toast_t:'Zum Warenkorb hinzugefügt',toast_c:'Weiter einkaufen',close:'Schließen',cart_lic:'<b>Lizenz per E-Mail – keine Versandkosten.</b> Versand innerhalb von 2 Werktagen, bei Kartenzahlung meist noch am selben Tag.',cart_ship:'<b>Versand 8,18 € zzgl. MwSt.</b> (ca. 10 € inkl. MwSt.) · Versand innerhalb von 3 Werktagen · Lieferung in 2–5 Tagen.',cart_lic2:'Lizenzen werden innerhalb von 2 Werktagen per E-Mail versendet, bei Kartenzahlung meist noch am selben Tag.',cart_vat:'Preis zzgl. MwSt. Die MwSt. Ihres Lieferlandes wird im Bestellvorgang berechnet; EU-Unternehmen mit gültiger USt-IdNr. zahlen 0 % (Reverse-Charge).',nf_h:'Seite nicht gefunden',nf_p:'Die Seite wurde möglicherweise verschoben oder existiert nicht mehr. Wählen Sie unten eine Kategorie oder testen Sie TAGRA kostenlos.',try30:'TAGRA 30 Tage kostenlos testen',sr_h:'Kategorien durchsuchen',q_subj:'Angebotsanfrage – {prod}',ph_msg:'Bitte geben Sie eine Telefonnummer an – der Paketdienst benötigt sie für die Zustellung.',sr_p:'Wählen Sie unten eine Kategorie, um das passende Produkt zu finden.'}};
+  var LG=(html.getAttribute('lang')||'en').slice(0,2).toLowerCase(),DE=LG==='de',HU=LG==='hu',NL=DE||HU,PFX=HU?'/hu':(DE?'/de':'');
+  var I18N={de:{cat1:'TAGRA Programm',cat1s:'Lizenzen nach Fuhrparkgröße',cat2:'Download-Geräte',cat2s:'DOWNLOAD BOX II S und Stationen',cat3:'Programm + Gerät als Bundle',cat3s:'Programm und Gerät · 49 € sparen',cat4:'Zubehör',cat4s:'Chipkartenleser',cats_aria:'Shop-Kategorien',quote:'Angebot anfordern',buy_aria:'{name} kaufen',excl:'zzgl. MwSt.',chat_aria:'Chatten Sie mit uns',atc:'In den Warenkorb',note_lic:'Lizenz per E-Mail',note_hw:'Versand innerhalb von 3 Werktagen',go_cart:'Zum Warenkorb',toast_t:'Zum Warenkorb hinzugefügt',toast_c:'Weiter einkaufen',close:'Schließen',cart_lic:'<b>Lizenz per E-Mail – keine Versandkosten.</b> Versand innerhalb von 2 Werktagen, bei Kartenzahlung meist noch am selben Tag.',cart_ship:'<b>Versand 8,18 € zzgl. MwSt.</b> (ca. 10 € inkl. MwSt.) · Versand innerhalb von 3 Werktagen · Lieferung in 2–5 Tagen.',cart_lic2:'Lizenzen werden innerhalb von 2 Werktagen per E-Mail versendet, bei Kartenzahlung meist noch am selben Tag.',cart_vat:'Preis zzgl. MwSt. Die MwSt. Ihres Lieferlandes wird im Bestellvorgang berechnet; EU-Unternehmen mit gültiger USt-IdNr. zahlen 0 % (Reverse-Charge).',nf_h:'Seite nicht gefunden',nf_p:'Die Seite wurde möglicherweise verschoben oder existiert nicht mehr. Wählen Sie unten eine Kategorie oder testen Sie TAGRA kostenlos.',try30:'TAGRA 30 Tage kostenlos testen',sr_h:'Kategorien durchsuchen',q_subj:'Angebotsanfrage – {prod}',ph_msg:'Bitte geben Sie eine Telefonnummer an – der Paketdienst benötigt sie für die Zustellung.',sr_p:'Wählen Sie unten eine Kategorie, um das passende Produkt zu finden.'},hu:{cat1:'TAGRA program',cat1s:'Licencek flottaméret szerint',cat2:'Letöltő eszközök',cat2s:'DOWNLOAD BOX II S és állomások',cat3:'Program + eszköz csomagok',cat3s:'Program és eszköz · 49 € megtakarítás',cat4:'Tartozékok',cat4s:'Kártyaolvasó',cats_aria:'Webáruházi kategóriák',quote:'Árajánlatot kérek',buy_aria:'Vásárlás: {name}',excl:'+ ÁFA',chat_aria:'Csevegjen velünk',atc:'Kosárba',note_lic:'Licenc e-mailben',note_hw:'Feladás 3 munkanapon belül',go_cart:'A kosárhoz',toast_t:'A termék a kosárba került',toast_c:'Vásárlás folytatása',close:'Bezárás',cart_lic:'<b>Licenc e-mailben – szállítási költség nélkül.</b> Elküldés 2 munkanapon belül, kártyás fizetés esetén általában még aznap.',cart_ship:'<b>Szállítás: 8,18 € + ÁFA</b> (kb. 10 € ÁFÁ-val) · feladás 3 munkanapon belül · kézbesítés 2–5 nap alatt.',cart_lic2:'A licenceket 2 munkanapon belül küldjük el e-mailben, kártyás fizetés esetén általában még aznap.',cart_vat:'Ár + ÁFA. A pénztárnál a szállítási ország ÁFÁ-ja kerül felszámításra; érvényes közösségi adószámmal rendelkező uniós cégek esetén 0% ÁFA (fordított adózás).',nf_h:'Az oldal nem található',nf_p:'Az oldal elköltözhetett vagy már nem létezik. Válasszon az alábbi kategóriák közül, vagy próbálja ki a TAGRA programot ingyen.',try30:'Próbálja ki 30 napig ingyen',sr_h:'Böngészés kategóriák szerint',q_subj:'Árajánlatkérés – {prod}',ph_msg:'Kérjük, adja meg telefonszámát – a futárnak szüksége van rá a csomag kézbesítéséhez.',sr_p:'Válasszon az alábbi kategóriák közül a megfelelő termék megtalálásához.'}};
   var I=I18N[LG]||{};
   function t(k,en){return I.hasOwnProperty(k)?I[k]:en;}
   var tr=t; /* alias for toast(), where the local var t is the panel element */
-  var CATS=[['/tagra-software/',t('cat1','TAGRA software'),t('cat1s','Licences by fleet size')],['/download-devices/',t('cat2','Download devices'),t('cat2s','DOWNLOAD BOX II S and stations')],
-            ['/software-device-bundles/',t('cat3','Software + device bundles'),t('cat3s','Program and device · save €49')],['/accessories/',t('cat4','Accessories'),t('cat4s','Smart card reader')]];
+  function cartUrl(){if(!NL)return '/cart/';var a=d.querySelector('a[data-testid="headerCart"]');return (a&&a.getAttribute('href'))||(HU?'/hu/kosar/':'/de/warenkorb/');}
+  var CATS=[[PFX+'/tagra-software/',t('cat1','TAGRA software'),t('cat1s','Licences by fleet size')],[PFX+'/download-devices/',t('cat2','Download devices'),t('cat2s','DOWNLOAD BOX II S and stations')],
+            [PFX+'/software-device-bundles/',t('cat3','Software + device bundles'),t('cat3s','Program and device · save €49')],[PFX+'/accessories/',t('cat4','Accessories'),t('cat4s','Smart card reader')]];
   var LIC=/\/tagra-(1|2|4|6|max)\/$/;
 
   function ga(ev,p){
@@ -31,7 +32,7 @@
   }
   function quoteHref(prod){
     if(typeof window.tgsQuoteHref==='function')return window.tgsQuoteHref(prod);
-    return 'mailto:'+SALES+'?subject='+encodeURIComponent(DE?t('q_subj','').split('{prod}').join(prod):'Quote request – '+prod);
+    return 'mailto:'+SALES+'?subject='+encodeURIComponent(NL?t('q_subj','').split('{prod}').join(prod):'Quote request – '+prod);
   }
   function el(tag,cls,txt){var e=d.createElement(tag);if(cls)e.className=cls;if(txt!=null)e.textContent=txt;return e;}
   function txt(e){return ((e&&e.textContent)||'').replace(/\s+/g,' ').trim();}
@@ -62,7 +63,7 @@
     var name=txt(d.querySelector('.p-detail-inner-header h1'))||'TAGRA';
     var lic=LIC.test(url),max=/\/tagra-max(-download-box-ii-s)?\/$/.test(url);
     function price(){var p=detail.querySelector('.p-final-price-wrapper .price-final-holder')||detail.querySelector('.p-final-price-wrapper .price-final');return txt(p);}
-    function num(){var v=parseFloat(DE?price().replace(/[^0-9,]/g,'').replace(',','.'):price().replace(/[^0-9.]/g,''));return isNaN(v)?undefined:v;}
+    function num(){var v=parseFloat(NL?price().replace(/[^0-9,]/g,'').replace(',','.'):price().replace(/[^0-9.]/g,''));return isNaN(v)?undefined:v;}
 
     /* 2) quote */
     if(max&&!row.querySelector('.tgs-quote')){
@@ -72,7 +73,7 @@
     }
 
     /* 1) sticky bar */
-    var sb=el('div','tgs-sb');sb.setAttribute('role','region');sb.setAttribute('aria-label',DE?t('buy_aria','').replace('{name}',name):'Buy '+name);
+    var sb=el('div','tgs-sb');sb.setAttribute('role','region');sb.setAttribute('aria-label',NL?t('buy_aria','').replace('{name}',name):'Buy '+name);
     sb.innerHTML='<div class="tgs-sb__in"><div class="tgs-sb__info"><span class="tgs-sb__name"></span><span class="tgs-sb__price"><b></b>'+t('excl','excl. VAT')+'</span><span class="tgs-sb__note"></span></div>'+
       '<button type="button" class="tgs-sb__chat" aria-label="'+t('chat_aria','Chat with us')+'"></button><button type="button" class="tgs-pill tgs-sb__atc">'+t('atc','Add to cart')+'</button></div>';
     sb.querySelector('.tgs-sb__name').textContent=name;
@@ -82,7 +83,7 @@
     upd();body.appendChild(sb);
     function setH(){html.style.setProperty('--tgs-sb-h',sb.offsetHeight+'px');}
     atc.addEventListener('click',function(){
-      if(added){ga('sticky_atc_click',{item_name:name,tgs_action:'go_to_cart'});location.href='/cart/';return;}
+      if(added){ga('sticky_atc_click',{item_name:name,tgs_action:'go_to_cart'});location.href=cartUrl();return;}
       ga('sticky_atc_click',{item_name:name,value:num(),currency:'EUR',tgs_device:isMob()?'mobile':'desktop'});
       window.tgsStickyAddTs=Date.now();
       btn.click(); /* native Shoptet add to cart of the product on this page (its own GA4/Meta add_to_cart) */
@@ -106,10 +107,10 @@
     var last='',tm;
     d.addEventListener('click',function(e){
       var b=e.target.closest&&e.target.closest('.add-to-cart-button,.btn-cart');if(!b)return;
-      var l=b.getAttribute('aria-label')||'';last=l.replace(DE?/^(Add to cart|In den Warenkorb( legen)?)\s*/i:/^Add to cart\s*/i,'')||txt(d.querySelector('.p-detail-inner-header h1'));
+      var l=b.getAttribute('aria-label')||'';last=l.replace(DE?/^(Add to cart|In den Warenkorb( legen)?)\s*/i:HU?/^(Add to cart|Kosárba( teszem| tesz| helyez)?)\s*:?\s*/i:/^Add to cart\s*/i,'')||txt(d.querySelector('.p-detail-inner-header h1'));
     },true);
     var t=el('div','tgs-toast');t.setAttribute('role','status');t.setAttribute('aria-live','polite');
-    t.innerHTML='<p class="tgs-toast__t"><span><b>'+tr('toast_t','Added to your cart')+'</b><span class="tgs-toast__n"></span></span></p><div class="tgs-toast__a"><a class="tgs-pill" href="/cart/">'+tr('go_cart','Go to cart')+'</a><button type="button" class="tgs-toast__c">'+tr('toast_c','Continue shopping')+'</button></div><button type="button" class="tgs-toast__x" aria-label="'+tr('close','Close')+'">×</button>';
+    t.innerHTML='<p class="tgs-toast__t"><span><b>'+tr('toast_t','Added to your cart')+'</b><span class="tgs-toast__n"></span></span></p><div class="tgs-toast__a"><a class="tgs-pill" href="'+cartUrl()+'">'+tr('go_cart','Go to cart')+'</a><button type="button" class="tgs-toast__c">'+tr('toast_c','Continue shopping')+'</button></div><button type="button" class="tgs-toast__x" aria-label="'+tr('close','Close')+'">×</button>';
     body.appendChild(t);
     function hide(){t.classList.remove('is-on');html.classList.remove('tgs-toast-on');}
     t.querySelector('.tgs-pill').addEventListener('click',function(){ga('atc_panel_click',{tgs_action:'go_to_cart'});});
@@ -143,7 +144,7 @@
     if(!body.classList.contains('in-404'))return;
     var c=d.querySelector('.empty-content-404');if(!c||c.classList.contains('tgs-404'))return;
     c.innerHTML='<h1 data-testid="pageHeader">'+t('nf_h','Page not found')+'</h1><p>'+t('nf_p','The page may have moved or no longer exists. Choose a category below or try TAGRA free.')+'</p>'+cats()+
-      '<a class="tgs-pill" href="https://tagra.app/try/?src=shop404" target="_blank" rel="noopener">'+t('try30','Try TAGRA free for 30 days')+'</a>';
+      '<a class="tgs-pill" href="'+(HU?'https://tagra.app/hu/ingyenes-probaverzio/':DE?'https://tagra.app/de/testen/':'https://tagra.app/try/')+'?src=shop404" target="_blank" rel="noopener">'+t('try30','Try TAGRA free for 30 days')+'</a>';
     c.classList.add('tgs-404');
   }
   function search(){
@@ -162,7 +163,7 @@
   function phoneCourier(){
     var ph=d.getElementById('phone');if(!ph||!ph.form||!/orderingProcess/i.test(ph.form.getAttribute('action')||''))return;
     var box=d.querySelector('[class*=summary]');if(!box)return;
-    var s=txt(box);if(!/\d/.test(s)||/Electronic delivery|Elektronische Lieferung|Elektronischer Versand/i.test(s))return;
+    var s=txt(box);if(!/\d/.test(s)||/Electronic delivery|Elektronische Lieferung|Elektronischer Versand|Elektronikus kézbesítés|Elektronikus szállítás/i.test(s))return;
     ph.setAttribute('required','required');ph.setAttribute('aria-required','true');
     var lab=d.querySelector('label[for="phone"]');if(lab&&lab.textContent.indexOf('*')<0)lab.insertAdjacentHTML('beforeend',' <span class="required-asterisk">*</span>');
     ph.form.addEventListener('submit',function(e){
