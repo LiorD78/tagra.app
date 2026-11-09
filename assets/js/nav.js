@@ -329,14 +329,16 @@
       if (dl) {
         track('trial_download', { product: /Trucker/i.test(dl.href) ? 'trucker' : (/TAGRA_eu\.zip/i.test(dl.href) ? 'tagra_current' : 'tagra') });
         clar('event', 'trial_download');
+        if (window.tagraDownloadNote) window.tagraDownloadNote(dl);
       }
     });
 
     // 3. thanks stránka hlavního formuláře (inline skript stránky už proběhl)
     var dlBtn = document.getElementById('downloadBtn');
-    if (dlBtn && !window.tagraThanksRedirect) {  /* tagraThanksRedirect: /try/thanks/ právě přesměrovává na lokální poděkování */
+    var qs = new URLSearchParams(location.search);
+    /* again=1: návrat přes box „Už máte zkušební verzi“ (trialMemory) — není to nový lead (9. 11. 2026) */
+    if (dlBtn && !window.tagraThanksRedirect && qs.get('again') !== '1') {  /* tagraThanksRedirect: /try/thanks/ právě přesměrovává na lokální poděkování */
       var enf = document.getElementById('thanksEnforcement');
-      var qs = new URLSearchParams(location.search);
       var aud = qs.get('audience') || qs.get('a');
       if (!aud) aud = (enf && !enf.hidden) ? 'enforcement' : (/Trucker/i.test(dlBtn.href) ? 'driver' : 'fleet');
       var src = '';
@@ -460,4 +462,115 @@
 (function () {
   if (!document.querySelector('.site-footer')) return;
   var s = document.createElement('script'); s.src = '/assets/js/tm-robot.js?v=1'; s.defer = true; document.head.appendChild(s);
+})();
+
+/* 9. 11. 2026: trial — paměť registrace + poznámka po kliknutí na Stáhnout.
+   Příčina: lidé posílali formulář zkušební verze 2× (návrat z jiné stránky, mobil → PC,
+   po kliknutí na Stáhnout 150 MB „nic nedělo“).
+   A) try.js po platném odeslání uloží do localStorage tagra_trial_v1 {t, u = děkovací URL, a}
+      (žádný e-mail ani jméno). Na stránce zkušební verze se pak 30 dní místo formuláře
+      ukáže box „Zkušební verzi už máte — Stáhnout znovu“ (→ děkovací stránka s again=1,
+      která neposílá generate_lead) a odkaz na formulář pro jiný e-mail.
+   B) Po kliknutí na tlačítko stažení (#downloadBtn / [data-track="trial_download"]) se pod
+      ním ukáže poznámka, kde soubor najde; mimo Windows upozornění, že TAGRA běží na Windows.
+   Texty: crew GPT + Gemini, vykání ve všech jazycích. */
+(function trialMemory() {
+  'use strict';
+  var KEY = 'tagra_trial_v1';
+  var MAX_AGE = 30 * 24 * 60 * 60 * 1000;
+  var T = {
+    en: { a_title: 'You already have the TAGRA trial', a_body: 'You requested it on {date}. The download link is also in your e-mail.', a_btn: 'Download again', a_other: 'Request the trial for a different e-mail', b_ok: 'Download started — the file will appear in your Downloads folder. It is large, so it may take a few minutes. Nothing happening? Click the button again.', b_nowin: 'TAGRA runs on Windows computers. Open the link from our e-mail on your Windows PC.' },
+    de: { a_title: 'Sie haben bereits die TAGRA-Testversion', a_body: 'Sie haben sie am {date} angefordert. Den Download-Link finden Sie auch in Ihrer E-Mail.', a_btn: 'Erneut herunterladen', a_other: 'Testversion für eine andere E-Mail-Adresse anfordern', b_ok: 'Download gestartet — die Datei wird in Ihrem Ordner „Downloads“ gespeichert. Da sie groß ist, kann dies einige Minuten dauern. Passiert nichts? Klicken Sie erneut auf die Schaltfläche.', b_nowin: 'TAGRA läuft auf Windows-Computern. Öffnen Sie den Link aus unserer E-Mail auf Ihrem Windows-PC.' },
+    pl: { a_title: 'Mają już Państwo wersję próbną TAGRA', a_body: 'Zamówili ją Państwo {date}. Link do pobrania znajdą Państwo również w wiadomości e-mail.', a_btn: 'Pobierz ponownie', a_other: 'Zamów wersję próbną na inny adres e-mail', b_ok: 'Pobieranie rozpoczęte — plik pojawi się w folderze „Pobrane”. Jest duży, więc może to potrwać kilka minut. Nic się nie dzieje? Prosimy ponownie kliknąć przycisk.', b_nowin: 'TAGRA działa na komputerach z systemem Windows. Prosimy otworzyć link z naszej wiadomości e-mail na komputerze z systemem Windows.' },
+    nl: { a_title: 'U heeft de TAGRA-proefversie al', a_body: 'U heeft deze op {date} aangevraagd. De downloadlink staat ook in uw e-mail.', a_btn: 'Opnieuw downloaden', a_other: 'Proefversie aanvragen voor een ander e-mailadres', b_ok: 'Download gestart — het bestand verschijnt in uw map Downloads. Het is groot, dus dit kan enkele minuten duren. Gebeurt er niets? Klik dan nogmaals op de knop.', b_nowin: 'TAGRA werkt op Windows-computers. Open de link uit onze e-mail op uw Windows-pc.' },
+    fr: { a_title: 'Vous avez déjà la version d’essai de TAGRA', a_body: 'Vous l’avez demandée le {date}. Le lien de téléchargement figure aussi dans votre e-mail.', a_btn: 'Télécharger à nouveau', a_other: 'Demander l’essai avec une autre adresse e-mail', b_ok: 'Téléchargement lancé — le fichier apparaîtra dans votre dossier Téléchargements. Il est volumineux, cela peut donc prendre quelques minutes. Rien ne se passe ? Cliquez à nouveau sur le bouton.', b_nowin: 'TAGRA fonctionne sur les ordinateurs Windows. Ouvrez le lien de notre e-mail sur votre PC Windows.' },
+    it: { a_title: 'Ha già la versione di prova di TAGRA', a_body: 'L’ha richiesta il {date}. Il link per il download è anche nella Sua email.', a_btn: 'Scarica di nuovo', a_other: 'Richiedere la prova con un altro indirizzo email', b_ok: 'Download avviato — il file apparirà nella cartella Download. È di grandi dimensioni, quindi potrebbero volerci alcuni minuti. Non succede nulla? Faccia di nuovo clic sul pulsante.', b_nowin: 'TAGRA funziona sui computer Windows. Apra il link della nostra email sul Suo PC Windows.' },
+    el: { a_title: 'Έχετε ήδη τη δοκιμαστική έκδοση του TAGRA', a_body: 'Τη ζητήσατε στις {date}. Ο σύνδεσμος λήψης βρίσκεται και στο email σας.', a_btn: 'Λήψη ξανά', a_other: 'Αίτημα δοκιμής με άλλο email', b_ok: 'Η λήψη ξεκίνησε — το αρχείο θα εμφανιστεί στον φάκελο «Λήψεις». Είναι μεγάλο, οπότε μπορεί να χρειαστούν λίγα λεπτά. Δεν συμβαίνει τίποτα; Πατήστε ξανά το κουμπί.', b_nowin: 'Το TAGRA λειτουργεί σε υπολογιστές Windows. Ανοίξτε τον σύνδεσμο από το email μας στον υπολογιστή σας με Windows.' },
+    hu: { a_title: 'Önnek már megvan a TAGRA próbaverziója', a_body: 'Az igénylés dátuma: {date}. A letöltési linket az e-mailben is megtalálja.', a_btn: 'Letöltés újra', a_other: 'Próbaverzió igénylése másik e-mail-címmel', b_ok: 'A letöltés elindult — a fájl a Letöltések mappába kerül. A fájl nagy, ezért ez néhány percig is eltarthat. Nem történik semmi? Kattintson újra a gombra.', b_nowin: 'A TAGRA Windows rendszerű számítógépeken fut. Nyissa meg az e-mailünkben található linket a Windows rendszerű számítógépén.' },
+    ro: { a_title: 'Aveți deja versiunea de probă TAGRA', a_body: 'Ați solicitat-o pe {date}. Linkul de descărcare se află și în e-mailul dumneavoastră.', a_btn: 'Descărcați din nou', a_other: 'Solicitați versiunea de probă cu altă adresă de e-mail', b_ok: 'Descărcarea a început — fișierul va apărea în folderul Descărcări. Este mare, așa că poate dura câteva minute. Nu se întâmplă nimic? Apăsați din nou butonul.', b_nowin: 'TAGRA funcționează pe calculatoare cu Windows. Deschideți linkul din e-mailul nostru pe calculatorul dumneavoastră cu Windows.' },
+    cs: { a_title: 'Zkušební verzi TAGRA už máte', a_body: 'Požádali jste o ni {date}. Odkaz ke stažení najdete také ve svém e-mailu.', a_btn: 'Stáhnout znovu', a_other: 'Požádat o zkušební verzi na jiný e-mail', b_ok: 'Stahování zahájeno — soubor se objeví ve složce Stažené soubory. Je velký, takže to může trvat několik minut. Nic se neděje? Klikněte na tlačítko znovu.', b_nowin: 'TAGRA funguje na počítačích s Windows. Otevřete odkaz z našeho e-mailu na svém počítači s Windows.' },
+    sk: { a_title: 'Skúšobnú verziu TAGRA už máte', a_body: 'Požiadali ste o ňu {date}. Odkaz na stiahnutie nájdete aj vo svojom e-maile.', a_btn: 'Stiahnuť znova', a_other: 'Požiadať o skúšobnú verziu na iný e-mail', b_ok: 'Sťahovanie sa začalo — súbor sa objaví v priečinku Stiahnuté súbory. Je veľký, takže to môže trvať niekoľko minút. Nič sa nedeje? Kliknite na tlačidlo znova.', b_nowin: 'TAGRA funguje na počítačoch s Windows. Otvorte odkaz z nášho e-mailu na svojom počítači s Windows.' }
+  };
+  var ALIAS = { cz: 'cs', gr: 'el' };
+
+  function lang() {
+    var l = (document.documentElement.getAttribute('lang') || 'en').slice(0, 2).toLowerCase();
+    l = ALIAS[l] || l;
+    return T[l] ? l : 'en';
+  }
+  function txt(k) { return T[lang()][k]; }
+
+  /* B) poznámka pod tlačítkem stažení — volá ji click handler v init() výše */
+  window.tagraDownloadNote = function (btn) {
+    try {
+      if (!btn || btn.getAttribute('data-dl-noted')) return;
+      btn.setAttribute('data-dl-noted', '1');
+      var win = /Windows/i.test(navigator.userAgent || '');
+      var p = document.createElement('p');
+      p.className = 'thanks-meta thanks-dl-note';
+      p.setAttribute('role', 'status');
+      p.style.cssText = 'max-width:560px;margin:14px auto 0;padding:12px 16px;border-radius:12px;font-size:15px;line-height:1.5;text-align:center;' +
+        (win ? 'background:#eef7e3;color:#2f4a0a;border:1px solid rgba(110,155,18,.35)'
+             : 'background:#fff7e6;color:#5c3d00;border:1px solid rgba(214,150,0,.4)');
+      p.textContent = win ? txt('b_ok') : txt('b_nowin');
+      btn.insertAdjacentElement('afterend', p);
+    } catch (e) { /* poznámka nesmí rozbít stažení */ }
+  };
+
+  /* A) box „Už máte zkušební verzi“ místo formuláře */
+  function showRemembered() {
+    var form = document.getElementById('trialForm');
+    if (!form || form.getAttribute('name') !== 'tagra-trial' || document.getElementById('trialRemembered')) return;
+    var rec = null;
+    try { rec = JSON.parse(localStorage.getItem(KEY) || 'null'); } catch (e) { return; }
+    if (!rec || typeof rec.u !== 'string' || rec.u.charAt(0) !== '/' || rec.u.charAt(1) === '/') return;
+    if (!rec.t || Date.now() - rec.t > MAX_AGE) {
+      try { localStorage.removeItem(KEY); } catch (e) { /* nic */ }
+      return;
+    }
+    var l = lang();
+    var date = '';
+    try { date = new Date(rec.t).toLocaleDateString(l, { day: 'numeric', month: 'numeric', year: 'numeric' }); }
+    catch (e) { date = new Date(rec.t).toISOString().slice(0, 10); }
+    var href = rec.u + (rec.u.indexOf('?') === -1 ? '?' : '&') + 'again=1';
+
+    var box = document.createElement('div');
+    box.id = 'trialRemembered';
+    box.style.cssText = 'margin:0 0 24px;padding:24px;border:1px solid rgba(19,74,142,.15);border-radius:16px;background:#f5f9fc;text-align:center';
+    var h = document.createElement('h2');
+    h.style.cssText = 'margin:0 0 8px;font-size:22px;line-height:1.3';
+    h.textContent = txt('a_title');
+    var p = document.createElement('p');
+    p.style.cssText = 'margin:0 0 18px;font-size:16px;line-height:1.55';
+    p.textContent = txt('a_body').replace('{date}', date);
+    var a = document.createElement('a');
+    a.className = 'btn btn-primary';
+    a.href = href;
+    a.setAttribute('data-cta', 'trial-again');
+    a.textContent = txt('a_btn');
+    var o = document.createElement('p');
+    o.style.cssText = 'margin:16px 0 0;font-size:14px';
+    var ob = document.createElement('a');
+    ob.href = '#trialForm';
+    ob.textContent = txt('a_other');
+    ob.addEventListener('click', function (e) {
+      e.preventDefault();
+      box.parentNode && box.parentNode.removeChild(box);
+      form.style.display = '';
+      var em = form.querySelector('input[type="email"]');
+      try { (em || form).focus(); } catch (x) { /* nic */ }
+    });
+    o.appendChild(ob);
+    box.appendChild(h); box.appendChild(p); box.appendChild(a); box.appendChild(o);
+    form.parentNode.insertBefore(box, form);
+    form.style.display = 'none';
+    if (typeof window.gtag === 'function') {
+      try { window.gtag('event', 'trial_remembered', { page_language: l }); } catch (e) { /* měření nesmí rozbít stránku */ }
+    }
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', showRemembered);
+  } else {
+    showRemembered();
+  }
 })();
