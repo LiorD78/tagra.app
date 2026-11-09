@@ -23,6 +23,9 @@
  * 9. (8. 11. 2026, F02) Visible localized error messages under the fields,
  *    the role picker and the consent box; the first error is scrolled to the
  *    middle of the screen (not under the fixed header).
+ * 10. (9. 11. 2026) After a valid submit the thank-you URL + audience are
+ *    stored in localStorage (tagra_trial_v1, no personal data); nav.js shows
+ *    returning visitors a "Download again" box instead of the form.
  */
 
 (function () {
@@ -244,6 +247,18 @@
       btnText.hidden = true;
       btnLoading.hidden = false;
     }
+
+    // 10. (9. 11. 2026) Remember on this device that the trial was requested.
+    //     nav.js (trialMemory) then shows "You already have the trial —
+    //     Download again" instead of the form, so returning visitors do not
+    //     submit the form a second time. No e-mail or name is stored.
+    try {
+      localStorage.setItem('tagra_trial_v1', JSON.stringify({
+        t: Date.now(),
+        u: form.getAttribute('action') || '/try/thanks/',
+        a: chosenAudience
+      }));
+    } catch (x) { /* private mode / storage blocked — no memory, form works */ }
 
     // 8. AJAX submit + redirect to the thank-you page of the page language (F01).
     if (!window.fetch || !window.FormData || !window.URLSearchParams) return; // native POST
