@@ -1,4 +1,4 @@
-/* ===== TAGRA Shop v6.3 – tagra.app look, crew + competitor review (2. 11. 2026) | v6.3 conversion pass A+B (8. 11. 2026) ===== */
+/* ===== TAGRA Shop v7.0 (9. 11. 2026: homepage one-page buying flow) | v6.3 – tagra.app look, crew + competitor review (2. 11. 2026) | v6.3 conversion pass A+B (8. 11. 2026) ===== */
 /* --- product detail: hide Shoptet noise --- */
 body .p-detail-inner-header .p-code,body .p-detail .stars-wrapper,body .p-detail .link-icons,body .p-detail .social-buttons-wrapper{display:none!important}
 body .p-detail-inner-header{margin-bottom:18px}
@@ -573,3 +573,23 @@ html[lang|="de"] body.in-cart .cart-table td.p-name:has(a[href$="/tagra-trucker-
 html[lang|="de"] body.in-cart .cart-table td.p-name:has(a[href$="/download-box-ii-s/"])::after{content:"Keine jährlichen Gebühren · Versand innerhalb von 3 Werktagen · Lieferung in 2–5 Tagen"}
 /* DE: longer "In den Warenkorb" label – keep room for name/price in the sticky buy bar on phones */
 @media (max-width:767px){html[lang|="de"] .tgs-sb__atc{padding:0 16px!important;font-size:15px!important}}
+/* ===== v7.0 (9. 11. 2026): homepage = one-page buying flow (hero + fleet calculator first) ===== */
+.tgs-hero2{display:grid;grid-template-columns:1.05fr 1fr;gap:40px;align-items:center;margin:28px 0 36px;padding:44px 48px;border-radius:28px;background:linear-gradient(180deg,#f5f9fc 0%,#eaf3f8 35%,#dcecf6 70%,#eef5f9 100%);border:1px solid rgba(19,74,142,.08)}
+.tgs-hero2 .tgs-label{font-size:13px;margin-bottom:12px}
+.tgs-hero2__h{font-family:var(--font-display);font-weight:800;font-size:44px;line-height:1.08;letter-spacing:-.015em;color:var(--blue-dark);margin:0 0 16px}
+.tgs-hero2__p{font-size:18px;line-height:1.55;color:var(--text2);margin:0 0 24px;max-width:34em}
+.tgs-hero2__cta{display:flex;flex-wrap:wrap;gap:12px;margin:0 0 10px}
+body .tgs-pill.tgs-pill--ghost{background:#fff!important;background-image:none!important;text-shadow:none!important;color:var(--blue-dark)!important;border:1.5px solid rgba(19,74,142,.25)!important;box-shadow:none!important}
+body .tgs-pill.tgs-pill--ghost:hover{border-color:var(--blue-mid)!important}
+.tgs-hero2__small{display:block;font-size:13px;color:var(--text2);margin:0 0 22px}
+.tgs-hero2__f{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:10px 18px}
+.tgs-hero2__f li{position:relative;padding-left:26px;font-size:14px;line-height:1.4;color:var(--text)}
+.tgs-hero2__f li::before{content:"";position:absolute;left:0;top:1px;width:18px;height:18px;border-radius:50%;background:var(--green-brand) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E") center/11px no-repeat}
+.tgs-hero2__img img{display:block;width:100%;height:auto;aspect-ratio:1600/1407}
+body.tgs-home2 #tgs-pricing{scroll-margin-top:80px}
+body.tgs-home2 .tgs-pricing .tgs-tiers,body.tgs-home2 .tgs-pricing .tgs-trucker,body.tgs-home2 .tgs-pricing .tgs-3y,body.tgs-home2 .tgs-pricing.tgs-fc-on .tgs-finder{display:none!important}
+body.tgs-home2 .homepage-group-title,body.tgs-home2 [id^="products-"],body.tgs-home2 .tgs-hw,body.tgs-home2 .tgs-grp+.tgs-note{display:none!important}
+.tgs-hwnote{max-width:1040px;margin:18px auto 0;padding:14px 18px;border:1px dashed rgba(19,74,142,.25);border-radius:14px;font-size:14.5px;color:var(--text2);text-align:center}
+.tgs-hwnote b{color:var(--blue-dark);margin-right:4px}
+@media (max-width:991px){.tgs-hero2{grid-template-columns:1fr;gap:22px;padding:30px 26px}.tgs-hero2__img{order:-1;max-width:520px;margin:0 auto}}
+@media (max-width:767px){.tgs-hero2{margin:12px 0 26px;padding:22px 16px 24px;border-radius:20px}.tgs-hero2__h{font-size:30px}.tgs-hero2__p{font-size:16px;margin-bottom:18px}.tgs-hero2__cta .tgs-pill{flex:1 1 100%}.tgs-hero2__f{grid-template-columns:1fr}.tgs-hero2__img{order:1;max-width:340px}}
