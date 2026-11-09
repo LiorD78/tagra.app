@@ -179,10 +179,12 @@
     try { if (cw.setCustomAttributes) { cw.setCustomAttributes(contactAttrs()); } } catch (e) {}
   }
 
+  /* Jarabot atributy konverzace při každém volání PŘEPÍŠE (nesloučí) –
+     proto se při změně okna posílá vždy celá sada, ne jen tagra_okno. */
   function sendOkno() {
     var cw = window.$chatwoot;
     if (!ready || !cw || !cw.setConversationCustomAttributes) { return; }
-    try { cw.setConversationCustomAttributes({ tagra_okno: p.okno || 'nezadano' }); } catch (e) {}
+    try { cw.setConversationCustomAttributes(conversationAttrs()); } catch (e) {}
   }
 
   /* --- Změna okna v programu ---
