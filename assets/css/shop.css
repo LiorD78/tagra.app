@@ -573,6 +573,42 @@ html[lang|="de"] body.in-cart .cart-table td.p-name:has(a[href$="/tagra-trucker-
 html[lang|="de"] body.in-cart .cart-table td.p-name:has(a[href$="/download-box-ii-s/"])::after{content:"Keine jährlichen Gebühren · Versand innerhalb von 3 Werktagen · Lieferung in 2–5 Tagen"}
 /* DE: longer "In den Warenkorb" label – keep room for name/price in the sticky buy bar on phones */
 @media (max-width:767px){html[lang|="de"] .tgs-sb__atc{padding:0 16px!important;font-size:15px!important}}
+/* ===== HU (9. 11. 2026): the same 33 CSS texts in Hungarian (crew GPT + Gemini); prices "79 €/év", "+ ÁFA" ===== */
+html[lang|="hu"] body .products-block .p .price-final strong::after{content:"+ ÁFA"}
+html[lang|="hu"] body.in-cart .sidebar-in-cart .summary-wrapper>.box::before{content:"Az Ön rendelése"}
+html[lang|="hu"] body .p-detail .p-final-price-wrapper .price-final-holder::after{content:"+ ÁFA"}
+html[lang|="hu"] body .p-detail .p-final-price-wrapper .price-additional::after{content:"+ az Ön országának ÁFÁ-ja · 0% érvényes közösségi adószámmal rendelkező uniós cégeknek (fordított adózás)"}
+html[lang|="hu"] body .products-block .p .price-additional::after{content:"+ az Ön országának ÁFÁ-ja"}
+html[lang|="hu"] body.type-detail .p-detail .add-to-cart::after{content:"Feladás 3 munkanapon belül · kézbesítés 2–5 nap alatt · szállítás 8,18 € + ÁFA"}
+html[lang|="hu"] body.type-detail .p-detail:has(meta[itemprop="url"][content$="/tagra-1/"]) .add-to-cart::after{content:"Az első év az árban · utána 79 €/év · szerződés nélkül · 30 napos ingyenes próbaverzió elérhető"}
+html[lang|="hu"] body.type-detail .p-detail:has(meta[itemprop="url"][content$="/tagra-1-download-box-ii-s/"]) .add-to-cart::after{content:"Az első év az árban · utána 79 €/év · szerződés nélkül · az eszköz feladása 3 munkanapon belül"}
+html[lang|="hu"] body.type-detail .p-detail:has(meta[itemprop="url"][content$="/tagra-2/"]) .add-to-cart::after{content:"Az első év az árban · utána 79 €/év · szerződés nélkül · 30 napos ingyenes próbaverzió elérhető"}
+html[lang|="hu"] body.type-detail .p-detail:has(meta[itemprop="url"][content$="/tagra-2-download-box-ii-s/"]) .add-to-cart::after{content:"Az első év az árban · utána 79 €/év · szerződés nélkül · az eszköz feladása 3 munkanapon belül"}
+html[lang|="hu"] body.type-detail .p-detail:has(meta[itemprop="url"][content$="/tagra-4/"]) .add-to-cart::after{content:"Az első év az árban · utána 99 €/év · szerződés nélkül · 30 napos ingyenes próbaverzió elérhető"}
+html[lang|="hu"] body.type-detail .p-detail:has(meta[itemprop="url"][content$="/tagra-4-download-box-ii-s/"]) .add-to-cart::after{content:"Az első év az árban · utána 99 €/év · szerződés nélkül · az eszköz feladása 3 munkanapon belül"}
+html[lang|="hu"] body.type-detail .p-detail:has(meta[itemprop="url"][content$="/tagra-6/"]) .add-to-cart::after{content:"Az első év az árban · utána 99 €/év · szerződés nélkül · 30 napos ingyenes próbaverzió elérhető"}
+html[lang|="hu"] body.type-detail .p-detail:has(meta[itemprop="url"][content$="/tagra-6-download-box-ii-s/"]) .add-to-cart::after{content:"Az első év az árban · utána 99 €/év · szerződés nélkül · az eszköz feladása 3 munkanapon belül"}
+html[lang|="hu"] body.type-detail .p-detail:has(meta[itemprop="url"][content$="/tagra-max/"]) .add-to-cart::after{content:"Az első év az árban · utána 149 €/év · szerződés nélkül · nagy flottája van? Hívjon: +420 739 005 345"}
+html[lang|="hu"] body.type-detail .p-detail:has(meta[itemprop="url"][content$="/tagra-max-download-box-ii-s/"]) .add-to-cart::after{content:"Az első év az árban · utána 149 €/év · szerződés nélkül · az eszköz feladása 3 munkanapon belül"}
+html[lang|="hu"] body.type-detail .p-detail:has(meta[itemprop="url"][content$="/tagra-trucker/"]) .add-to-cart::after{content:"Az első év az árban · utána 19 €/év · szerződés nélkül · USB-kártyaolvasóval"}
+html[lang|="hu"] body.type-detail .p-detail:has(meta[itemprop="url"][content$="/tagra-trucker-2/"]) .add-to-cart::after{content:"Az első év az árban · utána 29 €/év · szerződés nélkül · 1 db USB-kártyaolvasóval"}
+html[lang|="hu"] body.type-detail .p-detail:has(meta[itemprop="url"][content$="/download-box-ii-s/"]) .add-to-cart::after{content:"Éves díj nélkül · 24 hónap garancia · feladás 3 munkanapon belül"}
+html[lang|="hu"] body.in-cart .cart-table td.p-name::after{content:"Feladás 3 munkanapon belül · kézbesítés 2–5 nap alatt"}
+html[lang|="hu"] body.in-cart .cart-table td.p-name:has(a[href$="/tagra-1/"])::after{content:"Licenc e-mailben · az első év az árban · utána 79 €/év · szerződés nélkül"}
+html[lang|="hu"] body.in-cart .cart-table td.p-name:has(a[href$="/tagra-1-download-box-ii-s/"])::after{content:"Az első év az árban · utána 79 €/év · az eszköz feladása 3 munkanapon belül"}
+html[lang|="hu"] body.in-cart .cart-table td.p-name:has(a[href$="/tagra-2/"])::after{content:"Licenc e-mailben · az első év az árban · utána 79 €/év · szerződés nélkül"}
+html[lang|="hu"] body.in-cart .cart-table td.p-name:has(a[href$="/tagra-2-download-box-ii-s/"])::after{content:"Az első év az árban · utána 79 €/év · az eszköz feladása 3 munkanapon belül"}
+html[lang|="hu"] body.in-cart .cart-table td.p-name:has(a[href$="/tagra-4/"])::after{content:"Licenc e-mailben · az első év az árban · utána 99 €/év · szerződés nélkül"}
+html[lang|="hu"] body.in-cart .cart-table td.p-name:has(a[href$="/tagra-4-download-box-ii-s/"])::after{content:"Az első év az árban · utána 99 €/év · az eszköz feladása 3 munkanapon belül"}
+html[lang|="hu"] body.in-cart .cart-table td.p-name:has(a[href$="/tagra-6/"])::after{content:"Licenc e-mailben · az első év az árban · utána 99 €/év · szerződés nélkül"}
+html[lang|="hu"] body.in-cart .cart-table td.p-name:has(a[href$="/tagra-6-download-box-ii-s/"])::after{content:"Az első év az árban · utána 99 €/év · az eszköz feladása 3 munkanapon belül"}
+html[lang|="hu"] body.in-cart .cart-table td.p-name:has(a[href$="/tagra-max/"])::after{content:"Licenc e-mailben · az első év az árban · utána 149 €/év · szerződés nélkül"}
+html[lang|="hu"] body.in-cart .cart-table td.p-name:has(a[href$="/tagra-max-download-box-ii-s/"])::after{content:"Az első év az árban · utána 149 €/év · az eszköz feladása 3 munkanapon belül"}
+html[lang|="hu"] body.in-cart .cart-table td.p-name:has(a[href$="/tagra-trucker/"])::after{content:"Az első év az árban · utána 19 €/év · szerződés nélkül · USB-kártyaolvasóval"}
+html[lang|="hu"] body.in-cart .cart-table td.p-name:has(a[href$="/tagra-trucker-2/"])::after{content:"Az első év az árban · utána 29 €/év · szerződés nélkül · 1 db USB-kártyaolvasóval"}
+html[lang|="hu"] body.in-cart .cart-table td.p-name:has(a[href$="/download-box-ii-s/"])::after{content:"Éves díj nélkül · feladás 3 munkanapon belül · kézbesítés 2–5 nap alatt"}
+/* HU: keep the sticky "Kosárba" button compact on phones, like DE */
+@media (max-width:767px){html[lang|="hu"] .tgs-sb__atc{padding:0 16px!important;font-size:15px!important}}
 /* ===== v7.0 (9. 11. 2026): homepage = one-page buying flow (hero + fleet calculator first) ===== */
 .tgs-hero2{display:grid;grid-template-columns:1.05fr 1fr;gap:40px;align-items:center;margin:28px 0 36px;padding:44px 48px;border-radius:28px;background:linear-gradient(180deg,#f5f9fc 0%,#eaf3f8 35%,#dcecf6 70%,#eef5f9 100%);border:1px solid rgba(19,74,142,.08)}
 .tgs-hero2 .tgs-label{font-size:13px;margin-bottom:12px}
@@ -593,3 +629,5 @@ body.tgs-home2 .homepage-group-title,body.tgs-home2 [id^="products-"],body.tgs-h
 .tgs-hwnote b{color:var(--blue-dark);margin-right:4px}
 @media (max-width:991px){.tgs-hero2{grid-template-columns:1fr;gap:22px;padding:30px 26px}.tgs-hero2__img{order:-1;max-width:520px;margin:0 auto}}
 @media (max-width:767px){.tgs-hero2{margin:12px 0 26px;padding:22px 16px 24px;border-radius:20px}.tgs-hero2__h{font-size:30px}.tgs-hero2__p{font-size:16px;margin-bottom:18px}.tgs-hero2__cta .tgs-pill{flex:1 1 100%}.tgs-hero2__f{grid-template-columns:1fr}.tgs-hero2__img{order:1;max-width:340px}}
+/* --- 9. 11. 2026: Download devices (id-708) – hide catalogue chrome before shop-dev.js runs (no flash / layout shift) --- */
+body.id-708.type-category .products-top-wrapper,body.id-708.type-category #category-header,body.id-708.type-category #filters-wrapper,body.id-708.type-category .filters-wrapper,body.id-708.type-category .listingControls{display:none!important}

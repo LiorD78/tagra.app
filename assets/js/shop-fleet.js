@@ -1,4 +1,4 @@
-/* v1.9 (9. 11. 2026): bundle TAGRA + DOWNLOAD BOX II S preselected (most popular) | TAGRA Shop – fleet calculator v1.9 (8. 11. 2026: texts by <html lang> – EN default with unchanged output, DE dictionary from the crew (GPT + Gemini), DE number format "1.234,56 €") | v1.8 (8. 11. 2026: no Czech-VAT gross price – "+ VAT of your country · 0 % for EU companies with a valid VAT ID"; shipping €8.18 excl. VAT; events also via gtag send_to GA4 (plain dataLayer objects never reached GA4); entry hub preselects the branch via the tgs:fc event) | v1.7 (8. 11. 2026: tier chips 1 / 2 / 4 / 6 / MAX next to the stepper are clickable – set the vehicle count to that tier; were dead clicks in Clarity) | v1.6 (7. 11. 2026: 2-driver option uses its own icon with exactly two figures, hosted on tagra.app) | v1.5 (7. 11. 2026) – employed driver branch asks 1 driver / 2 drivers sharing one PC:
+/* v1.10 (9. 11. 2026): HU dictionary (crew GPT + Gemini), HU number format "1 234 €" / "88,62 €", product links with /hu/ prefix, HU cart link from the Shoptet header | v1.9 (9. 11. 2026): bundle TAGRA + DOWNLOAD BOX II S preselected (most popular) | TAGRA Shop – fleet calculator v1.9 (8. 11. 2026: texts by <html lang> – EN default with unchanged output, DE dictionary from the crew (GPT + Gemini), DE number format "1.234,56 €") | v1.8 (8. 11. 2026: no Czech-VAT gross price – "+ VAT of your country · 0 % for EU companies with a valid VAT ID"; shipping €8.18 excl. VAT; events also via gtag send_to GA4 (plain dataLayer objects never reached GA4); entry hub preselects the branch via the tgs:fc event) | v1.7 (8. 11. 2026: tier chips 1 / 2 / 4 / 6 / MAX next to the stepper are clickable – set the vehicle count to that tier; were dead clicks in Clarity) | v1.6 (7. 11. 2026: 2-driver option uses its own icon with exactly two figures, hosted on tagra.app) | v1.5 (7. 11. 2026) – employed driver branch asks 1 driver / 2 drivers sharing one PC:
    2 -> TAGRA TRUCKER 2 (TAGRA_PRICES.trucker2, priceId 93). GA4 events carry fc_drivers (1 / 2 in the driver branch).
    v1.4 (7. 11. 2026) – prices, price IDs and URLs now come only from
    https://tagra.app/assets/js/tagra-prices.js (window.TAGRA_PRICES), the one source shared with the tagra.app version selector.
@@ -14,9 +14,10 @@
   window.tgsFleetCalc=true;
 
   /* i18n: EN strings stay inline (EN = default, byte-identical output); other shop languages override by key */
-  var LG=(document.documentElement.getAttribute('lang')||'en').slice(0,2).toLowerCase(),DE=LG==='de';
-  var I18N={de:{cap1:'1 Fahrzeug',cap2:'2 Fahrzeuge',cap4:'3–4 Fahrzeuge',cap6:'5–6 Fahrzeuge',capmax:'unbegrenzt viele Fahrzeuge',fc_aria:'TAGRA Fuhrparkrechner',fc_q1:'Für wen ist TAGRA gedacht?',fc_co:'Transportunternehmen',fc_co_s:'Fahrzeuge mit Fahrtenschreiber',fc_dr:'Angestellter Fahrer',fc_dr_s:'Ihre eigene Fahrerkarte',fc_dr_s2:' · 1 oder 2 Fahrer',fc_q2:'Wie viele Fahrzeuge haben einen Fahrtenschreiber?',fc_less:'Ein Fahrzeug weniger',fc_more:'Ein Fahrzeug mehr',fc_note2:'Die Lizenz richtet sich nach der Anzahl der Fahrzeuge. Fahrerkarten werden nicht mitgezählt.',fc_q3:'Benötigen Sie ein Download-Gerät?',pop:'Am beliebtesten',fc_box_s:'Programm und Download-Gerät in einem Bundle · {save} sparen',fc_own:'Nur TAGRA',fc_own_s:'Wir haben bereits ein Download-Gerät',fc_ask:'Unsicher, welches Gerät Sie benötigen? <a href="#tgs-help">Fragen Sie uns</a>.',fc_qd:'Wie viele Fahrer werden das Programm nutzen?',d1:'1 Fahrer',d1s:'TAGRA TRUCKER · Ihre eigene Fahrerkarte',d2:'2 Fahrer an einem PC',d2s:'TAGRA TRUCKER 2 · eine Lizenz für beide Karten',fc_drv_note:'Für angestellte Fahrer, die Lenk- und Ruhezeiten anhand ihrer eigenen Fahrerkarten prüfen. Ein USB-Kartenleser ist enthalten und wird Ihnen zugeschickt.',fc_tr_h:'TAGRA TRUCKER für Ihre eigene Fahrerkarte',fc_tr_p:'Für einen angestellten Fahrer, der Lenk- und Ruhezeiten anhand seiner eigenen Fahrerkarte prüft. Der USB-Kartenleser ist enthalten und wird Ihnen zugeschickt.',fc_cap2:'Für zwei Fahrer an einem PC',fc_cap1:'Für einen angestellten Fahrer',fc_lic:'{name} Lizenz',fc_rdr2:'Ein USB-Kartenleser für beide Karten',fc_rdr:'USB-Kartenleser',fc_shipped:'{reader} wird zugeschickt · Versand {ship}',fc_add:'{name} in den Warenkorb',fc_save:'Ersparnis im Bundle',fc_hint:'{name} deckt bis zu {max} {veh} ab. Kommen Fahrzeuge hinzu? {next} deckt {cap} ab.',veh1:'Fahrzeug',vehN:'Fahrzeuge',fc_covers:'Deckt {cap} ab',fc_rec:'Empfohlen für {n} {veh}',fc_devship:'Geräteversand europaweit für {ship}',fc_addb:'Bundle in den Warenkorb',fc_your:'Ihr TAGRA',fc_ask3:'Benötigen Sie ein Download-Gerät? Wählen Sie es in Schritt 3 und sparen Sie {save} mit einem Bundle.',fc_today:'Heute',fc_plus:', zzgl. Versand',excl:'zzgl. MwSt.',fc_vat:'+ MwSt. Ihres Landes · 0 % für EU-Unternehmen mit gültiger USt-IdNr. (Reverse-Charge)',fc_y1:'Erstes Jahr inklusive',fc_y2:'Ab Jahr 2: {fee} / Jahr',fc_details:'Produktdetails ansehen',fc_adding:'Wird zum Warenkorb hinzugefügt…',fc_added:'Zum Warenkorb hinzugefügt. <a href="/cart/">Zum Warenkorb</a>',fc_err:'Der Artikel konnte nicht zum Warenkorb hinzugefügt werden. Bitte <a href="{href}">öffnen Sie die Produktseite</a>, um ihn zu kaufen.',ship:'8,18 € zzgl. MwSt.'}};
+  var LG=(document.documentElement.getAttribute('lang')||'en').slice(0,2).toLowerCase(),DE=LG==='de',HU=LG==='hu',NL=DE||HU,PFX=HU?'/hu':(DE?'/de':'');
+  var I18N={de:{cap1:'1 Fahrzeug',cap2:'2 Fahrzeuge',cap4:'3–4 Fahrzeuge',cap6:'5–6 Fahrzeuge',capmax:'unbegrenzt viele Fahrzeuge',fc_aria:'TAGRA Fuhrparkrechner',fc_q1:'Für wen ist TAGRA gedacht?',fc_co:'Transportunternehmen',fc_co_s:'Fahrzeuge mit Fahrtenschreiber',fc_dr:'Angestellter Fahrer',fc_dr_s:'Ihre eigene Fahrerkarte',fc_dr_s2:' · 1 oder 2 Fahrer',fc_q2:'Wie viele Fahrzeuge haben einen Fahrtenschreiber?',fc_less:'Ein Fahrzeug weniger',fc_more:'Ein Fahrzeug mehr',fc_note2:'Die Lizenz richtet sich nach der Anzahl der Fahrzeuge. Fahrerkarten werden nicht mitgezählt.',fc_q3:'Benötigen Sie ein Download-Gerät?',pop:'Am beliebtesten',fc_box_s:'Programm und Download-Gerät in einem Bundle · {save} sparen',fc_own:'Nur TAGRA',fc_own_s:'Wir haben bereits ein Download-Gerät',fc_ask:'Unsicher, welches Gerät Sie benötigen? <a href="#tgs-help">Fragen Sie uns</a>.',fc_qd:'Wie viele Fahrer werden das Programm nutzen?',d1:'1 Fahrer',d1s:'TAGRA TRUCKER · Ihre eigene Fahrerkarte',d2:'2 Fahrer an einem PC',d2s:'TAGRA TRUCKER 2 · eine Lizenz für beide Karten',fc_drv_note:'Für angestellte Fahrer, die Lenk- und Ruhezeiten anhand ihrer eigenen Fahrerkarten prüfen. Ein USB-Kartenleser ist enthalten und wird Ihnen zugeschickt.',fc_tr_h:'TAGRA TRUCKER für Ihre eigene Fahrerkarte',fc_tr_p:'Für einen angestellten Fahrer, der Lenk- und Ruhezeiten anhand seiner eigenen Fahrerkarte prüft. Der USB-Kartenleser ist enthalten und wird Ihnen zugeschickt.',fc_cap2:'Für zwei Fahrer an einem PC',fc_cap1:'Für einen angestellten Fahrer',fc_lic:'{name} Lizenz',fc_rdr2:'Ein USB-Kartenleser für beide Karten',fc_rdr:'USB-Kartenleser',fc_shipped:'{reader} wird zugeschickt · Versand {ship}',fc_add:'{name} in den Warenkorb',fc_save:'Ersparnis im Bundle',fc_hint:'{name} deckt bis zu {max} {veh} ab. Kommen Fahrzeuge hinzu? {next} deckt {cap} ab.',veh1:'Fahrzeug',vehN:'Fahrzeuge',fc_covers:'Deckt {cap} ab',fc_rec:'Empfohlen für {n} {veh}',fc_devship:'Geräteversand europaweit für {ship}',fc_addb:'Bundle in den Warenkorb',fc_your:'Ihr TAGRA',fc_ask3:'Benötigen Sie ein Download-Gerät? Wählen Sie es in Schritt 3 und sparen Sie {save} mit einem Bundle.',fc_today:'Heute',fc_plus:', zzgl. Versand',excl:'zzgl. MwSt.',fc_vat:'+ MwSt. Ihres Landes · 0 % für EU-Unternehmen mit gültiger USt-IdNr. (Reverse-Charge)',fc_y1:'Erstes Jahr inklusive',fc_y2:'Ab Jahr 2: {fee} / Jahr',fc_details:'Produktdetails ansehen',fc_adding:'Wird zum Warenkorb hinzugefügt…',fc_added:'Zum Warenkorb hinzugefügt. <a href="/cart/">Zum Warenkorb</a>',fc_err:'Der Artikel konnte nicht zum Warenkorb hinzugefügt werden. Bitte <a href="{href}">öffnen Sie die Produktseite</a>, um ihn zu kaufen.',ship:'8,18 € zzgl. MwSt.'},hu:{cap1:'1 jármű',cap2:'2 jármű',cap4:'3–4 jármű',cap6:'5–6 jármű',capmax:'korlátlan számú jármű',fc_aria:'TAGRA flottakalkulátor',fc_q1:'Ki fogja használni a TAGRA programot?',fc_co:'Fuvarozó cég',fc_co_s:'Tachográffal felszerelt járművek',fc_dr:'Alkalmazott sofőr',fc_dr_s:'Saját járművezetői kártya',fc_dr_s2:' · 1 vagy 2 sofőr',fc_q2:'Hány járműben van tachográf?',fc_less:'Eggyel kevesebb jármű',fc_more:'Eggyel több jármű',fc_note2:'A licencek a járművek számán alapulnak. A járművezetői kártyák száma nem számít.',fc_q3:'Szüksége van letöltő eszközre?',pop:'Legnépszerűbb',fc_box_s:'Program és letöltőkulcs egy csomagban · megtakarítás: {save}',fc_own:'Csak TAGRA',fc_own_s:'Már van letöltő eszközünk',fc_ask:'Nem biztos benne, melyik eszközre van szüksége? <a href="#tgs-help">Kérdezzen minket</a>.',fc_qd:'Hány sofőr használja majd a programot?',d1:'1 sofőr',d1s:'TAGRA TRUCKER · saját járművezetői kártyához',d2:'2 sofőr, közös számítógép',d2s:'TAGRA TRUCKER 2 · egy licenc mindkét kártyához',fc_drv_note:'Alkalmazott sofőröknek, akik saját járművezetői kártyájukról ellenőrzik a vezetési és pihenőidőket. Egy USB-kártyaolvasót is küldünk a csomagban.',fc_tr_h:'TAGRA TRUCKER a saját kártyájához',fc_tr_p:'Alkalmazott sofőrnek, aki saját járművezetői kártyájáról ellenőrzi a vezetési és pihenőidőket. Az USB-kártyaolvasót is elküldjük a csomagban.',fc_cap2:'Két sofőrnek, közös számítógéphez',fc_cap1:'Egy alkalmazott sofőrnek',fc_lic:'{name} – licenc',fc_rdr2:'Egy USB-kártyaolvasó mindkét kártyához',fc_rdr:'USB-kártyaolvasó',fc_shipped:'{reader} kiszállítással · szállítás: {ship}',fc_add:'Kosárba: {name}',fc_save:'Csomagkedvezmény',fc_hint:'{name}: legfeljebb {max} {veh}. Bővül a flottája? {next}: {cap}.',veh1:'jármű',vehN:'jármű',fc_covers:'Kapacitás: {cap}',fc_rec:'{n} járműhöz ajánlott',fc_devship:'Eszközszállítás Európa-szerte: {ship}',fc_addb:'Csomag a kosárba',fc_your:'Az Ön TAGRA programja',fc_ask3:'Letöltő eszközre is szüksége van? Válasszon a 3. lépésben! Csomagban a megtakarítás: {save}.',fc_today:'Most fizetendő',fc_plus:', plusz szállítás',excl:'+ ÁFA',fc_vat:'+ az Ön országának ÁFÁ-ja · 0% érvényes közösségi adószámmal rendelkező uniós cégeknek (fordított adózás)',fc_y1:'Az első év az árban',fc_y2:'A 2. évtől: {fee} / év',fc_details:'Termék részletei',fc_adding:'Kosárba helyezés…',fc_added:'Kosárba helyezve. <a href="{cart}">Tovább a kosárhoz</a>',fc_err:'Nem sikerült a kosárba helyezni. A vásárláshoz kérjük, <a href="{href}">nyissa meg a termékoldalt</a>.',ship:'8,18 € + ÁFA'}};
   var I=I18N[LG]||{};
+  function cartUrl(){if(!NL)return '/cart/';var a=document.querySelector('a[data-testid="headerCart"]');return (a&&a.getAttribute('href'))||(HU?'/hu/kosar/':'/de/warenkorb/');}
   function tx(k,en){return I.hasOwnProperty(k)?I[k]:en;}
   function tf(k,o){var r=I[k]||'',x;for(x in o)r=r.split('{'+x+'}').join(o[x]);return r;}
   var SHIP=tx('ship','€8.18 excl. VAT');
@@ -26,10 +27,10 @@
   var RULES=null,SAVE='';
   function rules(P){
     return {version:P.version,
-      tiers:P.tiers.map(function(t){return {id:t.id,name:t.name,max:t.max==null?Infinity:t.max,cap:CAP[t.id],price:t.price,fee:t.fee,priceId:t.priceId,url:t.path,
-        bundle:{price:t.bundle.price,priceId:t.bundle.priceId,url:t.bundle.path}};}),
-      trucker:{name:P.trucker.name,price:P.trucker.price,fee:P.trucker.fee,priceId:P.trucker.priceId,url:P.trucker.path},
-      trucker2:P.trucker2?{name:P.trucker2.name,price:P.trucker2.price,fee:P.trucker2.fee,priceId:P.trucker2.priceId,url:P.trucker2.path}:null,
+      tiers:P.tiers.map(function(t){return {id:t.id,name:t.name,max:t.max==null?Infinity:t.max,cap:CAP[t.id],price:t.price,fee:t.fee,priceId:t.priceId,url:PFX+t.path,
+        bundle:{price:t.bundle.price,priceId:t.bundle.priceId,url:PFX+t.bundle.path}};}),
+      trucker:{name:P.trucker.name,price:P.trucker.price,fee:P.trucker.fee,priceId:P.trucker.priceId,url:PFX+P.trucker.path},
+      trucker2:P.trucker2?{name:P.trucker2.name,price:P.trucker2.price,fee:P.trucker2.fee,priceId:P.trucker2.priceId,url:PFX+P.trucker2.path}:null,
       box:{name:P.box.name,price:P.box.price},
       shipping:SHIP};
   }
@@ -38,7 +39,7 @@
   var root,tiersEl,timer;
 
   function eur(n){var r=Math.round(n*100)/100,s=(r%1===0)?String(r):r.toFixed(2);
-    if(DE){var pp=s.split('.');return pp[0].replace(/\B(?=(\d{3})+(?!\d))/g,'.')+(pp[1]?','+pp[1]:'')+'\u00a0€';}
+    if(NL){var pp=s.split('.');return pp[0].replace(/\B(?=(\d{3})+(?!\d))/g,HU?'\u00a0':'.')+(pp[1]?','+pp[1]:'')+'\u00a0€';}
     return '€'+s.replace(/\B(?=(\d{3})+(?!\d))/g,',');}
   function tierFor(n){for(var i=0;i<RULES.tiers.length;i++){if(n<=RULES.tiers[i].max)return RULES.tiers[i];}return RULES.tiers[RULES.tiers.length-1];}
   function nextTier(t){var i=RULES.tiers.indexOf(t);return i>-1&&i<RULES.tiers.length-1?RULES.tiers[i+1]:null;}
@@ -55,7 +56,7 @@
       '<span class="tgs-fc__opt-t"><b>'+title+'</b><small>'+sub+'</small></span></button>';
   }
   function build(){
-    var scale=RULES.tiers.map(function(t){return '<span data-t="'+t.id+'"><b>'+t.name.replace('TAGRA ','')+'</b><small>'+(t.max===Infinity?'7+':t.max<=2?t.cap:t.cap.replace(DE?/ Fahrzeuge?/:/ vehicles?/,''))+'</small></span>';}).join('');
+    var scale=RULES.tiers.map(function(t){return '<span data-t="'+t.id+'"><b>'+t.name.replace('TAGRA ','')+'</b><small>'+(t.max===Infinity?'7+':t.max<=2?t.cap:t.cap.replace(DE?/ Fahrzeuge?/:HU?/ jármű/:/ vehicles?/,''))+'</small></span>';}).join('');
     var h=''+
     '<div class="tgs-fc" role="group" aria-label="'+tx('fc_aria','TAGRA fleet calculator')+'">'+
      '<div class="tgs-fc__in">'+
@@ -73,7 +74,7 @@
        '</div><p class="tgs-fc__note" id="tgs-fc-veh-note">'+tx('fc_note2','Licences are based on the number of vehicles. Driver cards are not counted.')+'</p></div>'+
       '<div class="tgs-fc__step" data-for="company"><p class="tgs-fc__q"><span class="tgs-fc__n">3</span>'+tx('fc_q3','Do you need a download device?')+'</p>'+
        '<div class="tgs-fc__opts">'+
-        choice('dev','box','klic','TAGRA + DOWNLOAD BOX II S <em class="tgs-fc__pop">'+tx('pop','Most popular')+'</em>',DE?tf('fc_box_s',{save:SAVE}):'Program and download key in one bundle · save '+SAVE,true)+
+        choice('dev','box','klic','TAGRA + DOWNLOAD BOX II S <em class="tgs-fc__pop">'+tx('pop','Most popular')+'</em>',NL?tf('fc_box_s',{save:SAVE}):'Program and download key in one bundle · save '+SAVE,true)+
         choice('dev','own','mam',tx('fc_own','TAGRA only'),tx('fc_own_s','We already have a download device'),false)+
        '</div><p class="tgs-fc__note">'+tx('fc_ask','Not sure which device you need? <a href="#tgs-help">Ask us</a>.')+'</p></div>'+
       (RULES.trucker2?
@@ -95,26 +96,26 @@
   function model(){
     if(S.who==='driver'){
       var two=S.drv==='2'&&!!RULES.trucker2,tr=two?RULES.trucker2:RULES.trucker;
-      return {kind:'driver',drivers:two?2:1,title:tr.name,cap:two?tx('fc_cap2','For two drivers sharing one PC'):tx('fc_cap1','For one employed driver'),lines:[[DE?tf('fc_lic',{name:tr.name}):tr.name+' licence',eur(tr.price)]],total:tr.price,fee:tr.fee,
-        y3:tr.price+2*tr.fee,priceId:tr.priceId,url:tr.url,ship:DE?tf('fc_shipped',{reader:two?I.fc_rdr2:I.fc_rdr,ship:RULES.shipping}):(two?'One USB card reader for both cards':'USB card reader')+' shipped · shipping '+RULES.shipping,cta:DE?tf('fc_add',{name:tr.name}):'Add '+tr.name+' to cart'};
+      return {kind:'driver',drivers:two?2:1,title:tr.name,cap:two?tx('fc_cap2','For two drivers sharing one PC'):tx('fc_cap1','For one employed driver'),lines:[[NL?tf('fc_lic',{name:tr.name}):tr.name+' licence',eur(tr.price)]],total:tr.price,fee:tr.fee,
+        y3:tr.price+2*tr.fee,priceId:tr.priceId,url:tr.url,ship:NL?tf('fc_shipped',{reader:two?I.fc_rdr2:I.fc_rdr,ship:RULES.shipping}):(two?'One USB card reader for both cards':'USB card reader')+' shipped · shipping '+RULES.shipping,cta:NL?tf('fc_add',{name:tr.name}):'Add '+tr.name+' to cart'};
     }
-    var t=tierFor(S.veh),box=S.dev==='box',lines=[[DE?tf('fc_lic',{name:t.name}):t.name+' licence',eur(t.price)]];
+    var t=tierFor(S.veh),box=S.dev==='box',lines=[[NL?tf('fc_lic',{name:t.name}):t.name+' licence',eur(t.price)]];
     if(box){lines.push([RULES.box.name,eur(RULES.box.price)]);lines.push([tx('fc_save','Bundle saving'),'−'+eur(t.price+RULES.box.price-t.bundle.price),'save']);}
     var total=box?t.bundle.price:t.price,nt=nextTier(t),hint='';
-    if(nt&&S.veh===t.max)hint=DE?tf('fc_hint',{name:t.name,max:t.max,veh:t.max===1?I.veh1:I.vehN,next:nt.name,cap:nt.cap}):t.name+' covers up to '+t.max+(t.max===1?' vehicle':' vehicles')+'. Adding vehicles? '+nt.name+' covers '+nt.cap+'.';
-    return {kind:'company',tier:t,title:t.name,cap:DE?tf('fc_covers',{cap:t.cap}):'Covers '+t.cap,fit:DE?tf('fc_rec',{n:S.veh,veh:S.veh===1?I.veh1:I.vehN}):'Recommended for '+S.veh+(S.veh===1?' vehicle':' vehicles'),lines:lines,total:total,fee:t.fee,
-      y3:total+2*t.fee,priceId:box?t.bundle.priceId:t.priceId,url:box?t.bundle.url:t.url,ship:box?(DE?tf('fc_devship',{ship:RULES.shipping}):'Device shipping '+RULES.shipping+' across Europe'):'',hw:box,hint:hint,
-      cta:box?tx('fc_addb','Add bundle to cart'):(DE?tf('fc_add',{name:t.name}):'Add '+t.name+' to cart'),ask:S.dev===null};
+    if(nt&&S.veh===t.max)hint=NL?tf('fc_hint',{name:t.name,max:t.max,veh:t.max===1?I.veh1:I.vehN,next:nt.name,cap:nt.cap}):t.name+' covers up to '+t.max+(t.max===1?' vehicle':' vehicles')+'. Adding vehicles? '+nt.name+' covers '+nt.cap+'.';
+    return {kind:'company',tier:t,title:t.name,cap:NL?tf('fc_covers',{cap:t.cap}):'Covers '+t.cap,fit:NL?tf('fc_rec',{n:S.veh,veh:S.veh===1?I.veh1:I.vehN}):'Recommended for '+S.veh+(S.veh===1?' vehicle':' vehicles'),lines:lines,total:total,fee:t.fee,
+      y3:total+2*t.fee,priceId:box?t.bundle.priceId:t.priceId,url:box?t.bundle.url:t.url,ship:box?(NL?tf('fc_devship',{ship:RULES.shipping}):'Device shipping '+RULES.shipping+' across Europe'):'',hw:box,hint:hint,
+      cta:box?tx('fc_addb','Add bundle to cart'):(NL?tf('fc_add',{name:t.name}):'Add '+t.name+' to cart'),ask:S.dev===null};
   }
   function render(){
     var m=model(),sum=root.querySelector('.tgs-fc__sum');
     var h='<span class="tgs-fc__lbl">'+tx('fc_your','Your TAGRA')+'</span>'+
       '<p class="tgs-fc__tier">'+esc(m.title)+'</p><p class="tgs-fc__cap">'+esc(m.cap)+(m.fit?' · <b>'+esc(m.fit)+'</b>':'')+'</p>'+
       '<ul class="tgs-fc__lines">'+m.lines.map(function(l){return '<li'+(l[2]?' class="is-'+l[2]+'"':'')+'><span>'+esc(l[0])+'</span><span>'+esc(l[1])+'</span></li>';}).join('')+'</ul>'+
-      (m.ask?'<p class="tgs-fc__ask">'+(DE?tf('fc_ask3',{save:SAVE}):'Need a download device? Choose in step 3 and save '+SAVE+' with a bundle.')+'</p>':'')+
+      (m.ask?'<p class="tgs-fc__ask">'+(NL?tf('fc_ask3',{save:SAVE}):'Need a download device? Choose in step 3 and save '+SAVE+' with a bundle.')+'</p>':'')+
       '<div class="tgs-fc__tot"><span class="tgs-fc__tot-l">'+tx('fc_today','Today')+(m.hw?tx('fc_plus',', plus shipping'):'')+'</span><span class="tgs-fc__tot-v">'+eur(m.total)+'<small>'+tx('excl','excl. VAT')+'</small></span>'+
       '<span class="tgs-fc__vat">'+tx('fc_vat','+ VAT of your country · 0 % for EU companies with a valid VAT ID (reverse charge)')+'</span></div>'+
-      '<ul class="tgs-fc__facts"><li>'+tx('fc_y1','First year included')+'</li><li>'+(DE?tf('fc_y2',{fee:eur(m.fee)}):'From year 2: '+eur(m.fee)+' / year')+'</li>'+(m.ship?'<li>'+esc(m.ship)+'</li>':'')+'</ul>'+
+      '<ul class="tgs-fc__facts"><li>'+tx('fc_y1','First year included')+'</li><li>'+(NL?tf('fc_y2',{fee:eur(m.fee)}):'From year 2: '+eur(m.fee)+' / year')+'</li>'+(m.ship?'<li>'+esc(m.ship)+'</li>':'')+'</ul>'+
       (m.hint?'<p class="tgs-fc__hint">'+esc(m.hint)+'</p>':'')+
       '<a class="tgs-pill tgs-fc__cta" href="'+m.url+'" data-price-id="'+m.priceId+'">'+esc(m.cta)+'</a>'+
       '<p class="tgs-fc__msg" role="status"></p>'+
@@ -140,12 +141,12 @@
     S.busy=true;a.classList.add('is-busy');a.setAttribute('aria-disabled','true');msg.textContent=tx('fc_adding','Adding to cart…');
     var done=false;
     function ok(){if(done)return;done=true;document.removeEventListener('ShoptetCartUpdated',ok);S.busy=false;a.classList.remove('is-busy');a.removeAttribute('aria-disabled');
-      msg.innerHTML=tx('fc_added','Added to cart. <a href="/cart/">Go to cart</a>');track('fleet_calc_added',{fc_tier:m.title,fc_drivers:m.drivers||'',fc_value:m.total});}
+      msg.innerHTML=tx('fc_added','Added to cart. <a href="/cart/">Go to cart</a>').split('{cart}').join(cartUrl());track('fleet_calc_added',{fc_tier:m.title,fc_drivers:m.drivers||'',fc_value:m.total});}
     document.addEventListener('ShoptetCartUpdated',ok);
     try{shoptet.cartShared.addToCart({priceId:pid,amount:1});}
     catch(err){done=true;document.removeEventListener('ShoptetCartUpdated',ok);track('fleet_calc_error',{fc_error:'add_exception'});location.href=a.getAttribute('href');return;}
     setTimeout(function(){if(!done){done=true;document.removeEventListener('ShoptetCartUpdated',ok);S.busy=false;a.classList.remove('is-busy');a.removeAttribute('aria-disabled');
-      track('fleet_calc_error',{fc_error:'add_timeout'});msg.innerHTML=DE?tf('fc_err',{href:a.getAttribute('href')}):'Could not add to cart. Please <a href="'+a.getAttribute('href')+'">open the product page</a> to buy it.';}},8000);
+      track('fleet_calc_error',{fc_error:'add_timeout'});msg.innerHTML=NL?tf('fc_err',{href:a.getAttribute('href')}):'Could not add to cart. Please <a href="'+a.getAttribute('href')+'">open the product page</a> to buy it.';}},8000);
   }
 
   /* ---------- events ---------- */
