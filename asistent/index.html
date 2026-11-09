@@ -31,7 +31,7 @@
     background:var(--tg-blue-m);color:#fff;}
   #tg-state button[hidden]{display:none;}
 
-  /* Chatwoot/Jarabot widget přes celou plochu okna */
+  /* Chatwoot/Jarabot widget přes celou plochu okna (okno programu cca 400 × 600) */
   .woot-widget-holder,
   .woot-widget-holder.woot-elements--left,
   .woot-widget-holder.woot-elements--right{
@@ -42,6 +42,16 @@
   }
   .woot-widget-holder iframe{width:100%!important;height:100%!important;border-radius:0!important;}
   .woot-widget-bubble,.woot--bubble-holder{display:none!important;}
+
+  /* Bez WebView2 se stránka otevře v systémovém prohlížeči – na širokém okně chat vycentrovat */
+  @media (min-width:760px){
+    .woot-widget-holder,
+    .woot-widget-holder.woot-elements--left,
+    .woot-widget-holder.woot-elements--right{
+      left:calc(50% - 260px)!important;right:auto!important;width:520px!important;
+      box-shadow:0 0 0 1px rgba(11,58,110,.08),0 12px 40px rgba(11,58,110,.12)!important;
+    }
+  }
 </style>
 </head>
 <body>
@@ -56,30 +66,48 @@
   'use strict';
 
   /* ===== KONFIGURACE – Jarabot účet 118 =====
-     Test: schránka 775 „TDT podpora“ (AI robot Tom). Po založení vlastní schránky
-     pro program TAGRA stačí vyměnit jen JARABOT_WEBSITE_TOKEN. */
+     Schránka 943 „TDT podpora“ = robot TDT pro technickou podporu programu TAGRA
+     (potvrdil Jarabot 9. 11. 2026). Adresu stránky neměnit – je zapsaná v programu. */
   var JARABOT_BASE_URL = 'https://chat.jarabot.com';
-  var JARABOT_WEBSITE_TOKEN = 'UXiWdusMM9bQvtztaQ6t9qYW';
+  var JARABOT_WEBSITE_TOKEN = 'M8ySNZjHxuPCNXbEzvCSCkA7';
   var LOAD_TIMEOUT_MS = 15000;
   /* ============================================================================== */
 
-  /* --- Parametry z TAGRA: app / ver / lang / lic (whitelist + validace) --- */
+  /* --- Parametry z programu TAGRA ---
+     app   company / control / driver
+     ver   číslo verze programu (např. 366)
+     lang  jazyk programu (cs, sk, en, pl, de …)
+     lic   číslo online licence, OFFLINE = bez aktivní online licence
+     edice např. TAGRA 4, TAGRA MAX, TAGRA TRUCKER
+     os    verze Windows, např. Windows 11 (22631)
+     okno  „titulek (název formuláře)“, max. 100 znaků
+     Osobní údaje řidičů ani kontrol program neposílá. */
   var q = new URLSearchParams(window.location.search);
+
+  function cleanText(v, max) {
+    return String(v == null ? '' : v)
+      .replace(/[\u0000-\u001F\u007F<>"`]/g, ' ')
+      .replace(/\s+/g, ' ')
+      .trim()
+      .slice(0, max);
+  }
   function pick(name, re, max) {
-    var v = (q.get(name) || '').trim().slice(0, max);
+    var v = cleanText(q.get(name), max);
     return re.test(v) ? v : '';
   }
-  var APPS = ['company', 'control', 'driver'];
-  var LANGS = ['cs', 'sk', 'en', 'pl', 'de', 'fr', 'hu', 'es', 'it', 'nl', 'ro'];
 
-  var appRaw = (q.get('app') || '').toLowerCase();
-  var langRaw = (q.get('lang') || '').toLowerCase().slice(0, 2);
+  var APPS = ['company', 'control', 'driver'];
+  var appRaw = cleanText(q.get('app'), 10).toLowerCase();
+  var langRaw = cleanText(q.get('lang'), 5).toLowerCase().slice(0, 2);
 
   var p = {
     app: APPS.indexOf(appRaw) > -1 ? appRaw : '',
     ver: pick('ver', /^[0-9A-Za-z._\-]{1,20}$/, 20),
-    lang: LANGS.indexOf(langRaw) > -1 ? langRaw : 'en',
-    lic: pick('lic', /^[0-9A-Za-z\-\/]{1,32}$/, 32)
+    lang: /^[a-z]{2}$/.test(langRaw) ? langRaw : 'en',
+    lic: pick('lic', /^[0-9A-Za-z\-\/]{1,32}$/, 32),
+    edice: cleanText(q.get('edice'), 40),
+    os: cleanText(q.get('os'), 80),
+    okno: cleanText(q.get('okno'), 100)
   };
 
   /* --- Texty náhradního stavu (CZ/SK/EN, ostatní jazyky → EN) --- */
@@ -100,7 +128,7 @@
     document.getElementById('tg-retry').hidden = false;
   }
 
-  /* --- Chatwoot/Jarabot nastavení: bez bubliny, bez pop-outu, jazyk z TAGRA --- */
+  /* --- Chatwoot/Jarabot nastavení: bez bubliny, bez pop-outu, jazyk z programu --- */
   window.chatwootSettings = {
     hideMessageBubble: true,
     showPopoutButton: false,
@@ -124,28 +152,63 @@
     }).observe(holder, { attributes: true, attributeFilter: ['class'] });
   }
 
-  function sendAttributes() {
-    var cw = window.$chatwoot;
-    if (!cw) { return; }
-    var attrs = {
+  /* Atributy kontaktu – zůstávají u kontaktu pro další dotazy (bez okna, to se mění) */
+  function contactAttrs() {
+    return {
       tagra_zdroj: 'tagra-app',
       tagra_app: p.app || 'nezadano',
       tagra_ver: p.ver || 'nezadano',
       tagra_lang: p.lang,
-      tagra_lic: p.lic || 'nezadano'
+      tagra_lic: p.lic || 'nezadano',
+      tagra_edice: p.edice || 'nezadano',
+      tagra_os: p.os || 'nezadano'
     };
-    try { if (cw.setLocale) { cw.setLocale(p.lang); } } catch (e) {}
-    /* Atributy konverzace (vidí operátor u konkrétního dotazu) */
-    try { if (cw.setConversationCustomAttributes) { cw.setConversationCustomAttributes(attrs); } } catch (e) {}
-    /* Atributy kontaktu (zůstanou u kontaktu pro další dotazy) */
-    try { if (cw.setCustomAttributes) { cw.setCustomAttributes(attrs); } } catch (e) {}
-    /* Jarabot wrapper, pokud ho jejich SDK vystavuje */
-    try {
-      if (window.jarabotSDK && typeof window.jarabotSDK.setCustomAttributes === 'function') {
-        window.jarabotSDK.setCustomAttributes(attrs);
-      }
-    } catch (e) {}
   }
+  /* Atributy konverzace – co vidí podpora a robot u konkrétního dotazu */
+  function conversationAttrs() {
+    var a = contactAttrs();
+    a.tagra_okno = p.okno || 'nezadano';
+    return a;
+  }
+
+  function sendAttributes() {
+    var cw = window.$chatwoot;
+    if (!cw) { return; }
+    try { if (cw.setLocale) { cw.setLocale(p.lang); } } catch (e) {}
+    try { if (cw.setConversationCustomAttributes) { cw.setConversationCustomAttributes(conversationAttrs()); } } catch (e) {}
+    try { if (cw.setCustomAttributes) { cw.setCustomAttributes(contactAttrs()); } } catch (e) {}
+  }
+
+  function sendOkno() {
+    var cw = window.$chatwoot;
+    if (!ready || !cw || !cw.setConversationCustomAttributes) { return; }
+    try { cw.setConversationCustomAttributes({ tagra_okno: p.okno || 'nezadano' }); } catch (e) {}
+  }
+
+  /* --- Změna okna v programu ---
+     Program při přechodu do jiného okna pošle:
+     window.postMessage({ type: 'tagra-context', okno: '…' }, '*')
+     Přijímáme jen zprávy z tohoto okna (ne z iframu widgetu) a z WebView2 hostitele. */
+  function onTagraContext(data) {
+    if (typeof data === 'string') {
+      try { data = JSON.parse(data); } catch (e) { return; }
+    }
+    if (!data || data.type !== 'tagra-context') { return; }
+    var o = cleanText(data.okno, 100);
+    if (!o || o === p.okno) { return; }
+    p.okno = o;
+    sendOkno();
+  }
+  window.addEventListener('message', function (e) {
+    if (e.source && e.source !== window) { return; }
+    if (e.origin && e.origin !== window.location.origin) { return; }
+    onTagraContext(e.data);
+  });
+  try {
+    if (window.chrome && window.chrome.webview && window.chrome.webview.addEventListener) {
+      window.chrome.webview.addEventListener('message', function (e) { onTagraContext(e.data); });
+    }
+  } catch (e) {}
 
   window.addEventListener('chatwoot:ready', function () {
     ready = true;
@@ -156,8 +219,8 @@
     keepOpen();
   });
 
-  /* Po založení nové konverzace atributy zopakovat (setConversationCustomAttributes
-     bez existující konverzace nemusí být uložen) */
+  /* Po založení konverzace (první zpráva) atributy zopakovat – bez existující
+     konverzace se atributy konverzace neuloží. Aktuální okno jde s nimi. */
   window.addEventListener('chatwoot:on-message', function () {
     if (!window.__tgAttrsResent) { window.__tgAttrsResent = true; sendAttributes(); }
   });
