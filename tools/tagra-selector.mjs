@@ -21,7 +21,7 @@ export const ROOT = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 /* lang: fleet page, driver page, price format, decimal separator, inquiry base (HU = Rukon Kft., never the e-shop) */
 export const LANGS = {
   en: { fleet: 'fleet', driver: 'driver', fmt: '€{n}', dec: '.' },
-  de: { fleet: 'de/fuhrpark', driver: 'de/fahrer', fmt: '{n} €', dec: ',' },
+  de: { fleet: 'de/fuhrpark', driver: 'de/fahrer', fmt: '{n} €', dec: ',', shop: '/de' },
   fr: { fleet: 'fr/entreprises', driver: 'fr/conducteurs', fmt: '{n} €', dec: ',' },
   it: { fleet: 'it/per-aziende', driver: 'it/per-autisti', fmt: '{n} €', dec: ',' },
   nl: { fleet: 'nl/voor-transportbedrijven', driver: 'nl/voor-chauffeurs', fmt: '€{n}', dec: ',' },
@@ -52,6 +52,7 @@ export function fill(tpl, kw) {
 /* href of a product: HU -> inquiry with Rukon, TRUCKER 2 -> /go/ redirect (one line in _redirects), else the shop product */
 function link(P, c, item, key, p) {
   if (c.base) return c.base + key;
+  if (c.shop) return P.shop + c.shop + p;   /* language version of the shop (DE live 9. 11. 2026) */
   if (item.href) return item.href;
   return P.shop + p;
 }
@@ -60,7 +61,7 @@ function attrs(c, T, ctaKey, aria) {
   if (c.base) a += ` data-base="${esc(c.base)}"`;
   return a + ` role="group" aria-label="${esc(aria)}"`;
 }
-const ext = (c) => (c.base ? '' : ' hreflang="en"');
+const ext = (c) => (c.base || c.shop ? '' : ' hreflang="en"');
 
 export function fleetBlock(P, c, T, hero) {
   const t0 = P.tiers[0];
