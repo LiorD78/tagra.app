@@ -39,7 +39,8 @@
  *   — předmět = <title>. SK texty: překlad crew (GPT + Gemini), SK gate čistý.
  *
  * ── KONFIGURACE (env na webu tagra.app) ──────────────────────────────
- *   RESEND_API_KEY            povinné (sdílené s trial-email)
+ *   TDT_RESEND_API_KEY        povinné — klíč Resend s právem odesílat z mail.tdt.cz
+ *                             (sdílený RESEND_API_KEY smí jen tagra.app → 403)
  *   TDT_WEBHOOK_SECRET        povinné — JWS secret webhooku v Netlify Forms
  *   TDT_SUPABASE_URL          https://<projekt>.supabase.co
  *   TDT_SUPABASE_ANON_KEY     publishable/anon klíč
@@ -250,7 +251,7 @@ async function sweep(event, apiKey) {
 
 // ── HLAVNÍ HANDLER ───────────────────────────────────────────────────
 exports.handler = async (event) => {
-  const apiKey = process.env.RESEND_API_KEY;
+  const apiKey = process.env.TDT_RESEND_API_KEY || process.env.RESEND_API_KEY;
 
   if (event.httpMethod === "GET") {
     const q = event.queryStringParameters || {};
