@@ -1,0 +1,42 @@
+/* TAGRA III – AI asistent (blok „AI assistant built into TAGRA III“), 10. 11. 2026.
+   Sdílený komponent tagra.app + tdt.cz/tdt.sk; jen proměnné z tokens.css. */
+.t3ai{padding:84px 0;background:#fff;border-top:1px solid var(--border,rgba(0,0,0,.08))}
+.t3ai__wrap{width:100%;max-width:var(--maxw,1180px);margin:0 auto;padding:0 24px;display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);gap:56px;align-items:center}
+.t3ai__eyebrow{display:flex;align-items:center;flex-wrap:wrap;gap:6px 10px;margin-bottom:10px;font-size:14px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--green-brand,#6E9B12)}
+.t3ai__badge{display:inline-flex;align-items:center;background:var(--green-brand,#6E9B12);color:#fff;-webkit-text-fill-color:#fff;font-size:13px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:5px 12px;border-radius:999px;box-shadow:0 6px 14px rgba(110,155,18,.22)}
+.t3ai__h2{text-wrap:balance;margin:0}
+.t3ai__lead{font-size:18px;line-height:1.6;color:var(--text2,#515154);max-width:680px;margin:12px 0 0}
+.t3ai__feats{list-style:none;margin:26px 0 0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.t3ai__feats li{display:flex;gap:14px;align-items:flex-start;background:var(--bg-apple-solid,#eaf3f8);border-radius:14px;padding:16px 18px;margin:0}
+.t3ai__feats li::marker{content:none}
+.t3ai__feats .t3ai__ico{flex:0 0 38px;width:38px;height:38px;border-radius:11px;display:grid;place-items:center;background:linear-gradient(135deg,var(--blue-light,#1f5fa6) 0%,var(--blue-mid,#134a8e) 100%);box-shadow:0 6px 14px rgba(19,74,142,.22)}
+.t3ai__feats .t3ai__ico svg{width:20px;height:20px;fill:none;stroke:#fff;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.t3ai__feats li>div strong{display:block;font-size:16px;line-height:1.35;color:var(--strong,#0b0b0c);margin-bottom:3px}
+.t3ai__feats li>div span{display:block;font-size:14.5px;line-height:1.5;color:var(--text2,#515154)}
+.t3ai__keep{margin:22px 0 0;padding:14px 18px;border-left:4px solid var(--green-brand,#6E9B12);background:#f6f9ef;border-radius:0 12px 12px 0;font-size:15.5px;line-height:1.55;color:var(--text,#1d1d1f)}
+.t3ai__cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.t3ai__note{display:flex;gap:8px;align-items:flex-start;font-size:13.5px;line-height:1.5;color:var(--text2,#515154);margin:16px 0 0;max-width:640px}
+.t3ai__note svg{flex:0 0 16px;width:16px;height:16px;margin-top:2px;fill:none;stroke:var(--green-brand,#6E9B12);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.t3ai__chat{justify-self:center;width:100%;max-width:500px;margin:0;background:#fff;border:1px solid var(--border,rgba(0,0,0,.08));border-radius:20px;overflow:hidden;box-shadow:0 30px 70px rgba(11,44,74,.16),0 6px 18px rgba(11,44,74,.08)}
+.t3ai__bar{display:flex;align-items:center;gap:10px;padding:14px 18px;background:linear-gradient(90deg,var(--blue-dark,#0b2c4a) 0%,var(--blue-mid,#134a8e) 60%,var(--blue-light,#1f5fa6) 100%);color:#fff;font-size:15px;font-weight:700}
+.t3ai__dot{flex:0 0 9px;width:9px;height:9px;border-radius:50%;background:#8BD23C;box-shadow:0 0 0 3px rgba(139,210,60,.28)}
+.t3ai__ctx{margin-left:auto;font-size:12px;font-weight:600;white-space:nowrap;background:rgba(255,255,255,.16);border-radius:999px;padding:4px 10px}
+.t3ai__body{display:grid;gap:14px;padding:22px 18px 24px;background:linear-gradient(180deg,var(--bg-apple-top,#f5f9fc) 0%,var(--bg-apple-solid,#eaf3f8) 100%)}
+.t3ai__msg{max-width:88%;margin:0;padding:12px 14px;border-radius:16px;font-size:15px;line-height:1.5}
+.t3ai__msg--u{justify-self:end;background:var(--blue-mid,#134a8e);color:#fff;border-bottom-right-radius:4px}
+.t3ai__msg--b{justify-self:start;background:#fff;color:var(--text,#1d1d1f);border:1px solid var(--border,rgba(0,0,0,.08));border-bottom-left-radius:4px;box-shadow:0 4px 12px rgba(11,44,74,.06);animation:t3aiIn .5s ease .35s both}
+.t3ai__who{display:flex;align-items:center;gap:6px;margin-bottom:4px;font-size:12px;font-weight:800;letter-spacing:.02em;color:var(--green-brand,#6E9B12)}
+.t3ai__who svg{width:14px;height:14px;fill:var(--green-brand,#6E9B12)}
+.t3ai__input{display:flex;align-items:center;gap:10px;padding:12px 14px 12px 18px;border-top:1px solid var(--border,rgba(0,0,0,.08));font-size:14.5px;color:#8a8a8e;background:#fff}
+.t3ai__send{margin-left:auto;flex:0 0 34px;width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,var(--green-brand,#6E9B12) 0%,var(--green-cta,#5C820F) 100%)}
+.t3ai__send svg{width:16px;height:16px;fill:none;stroke:#fff;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+@keyframes t3aiIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.t3ai__msg--b{animation:none}}
+@media (max-width:980px){.t3ai{padding:64px 0}.t3ai__wrap{grid-template-columns:1fr;gap:36px}.t3ai__chat{max-width:560px}}
+@media (max-width:600px){.t3ai{padding:52px 0}.t3ai__wrap{padding:0 16px}.t3ai__feats{grid-template-columns:1fr}.t3ai__lead{font-size:17px}.t3ai__ctx{display:none}}
+/* shop.tagra.app (Shoptet) – blok uvnitř obsahového sloupce */
+.t3ai--shop{padding:8px 0 0;margin:0 0 64px;border-top:0;background:transparent}
+.t3ai--shop .t3ai__wrap{padding:0;gap:40px}
+.t3ai--shop .t3ai__h2{margin:0}
+.t3ai--shop .t3ai__cta a{text-decoration:none}
+@media (max-width:767px){.t3ai--shop{margin-bottom:44px}}
