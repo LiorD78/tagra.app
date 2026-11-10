@@ -7,6 +7,13 @@
   # Trial-email function runs after form submission webhook.
   # Bumped runtime to nodejs20 for native fetch() support.
 
+# Logo pro HTML e-maily tdt.cz/tdt.sk (PNG z funkce email-logo)
+[[redirects]]
+  from = "/assets/img/logo-tdt-email-white.png"
+  to = "/.netlify/functions/email-logo/tdt-white"
+  status = 200
+  force = true
+
 # Favicons (TRUCKMALL green #6E9B12) - rendered by netlify/functions/favicon.js
 [[redirects]]
   from = "/favicon.ico"
@@ -37,3 +44,7 @@
   [headers.values]
     X-Frame-Options = "DENY"
     X-Content-Type-Options = "nosniff"
+
+# Denní úklid e-mailů zkušební verze tdt.cz/tdt.sk (ruší #2/#3 po nákupu licence)
+[functions."tdt-trial-sweep"]
+  schedule = "17 6 * * *"
