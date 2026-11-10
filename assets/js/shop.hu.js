@@ -20,7 +20,7 @@
       {v:[TM+'Comp_2.webm',TM+'Comp_2.mp4'],p:TM+'bannery%20HP/01b-vyhodnoceni-dat.webp',e:'TAGRA program',t:'Tárja fel a szabálysértéseket még az ellenőrzés előtt.',c:'Válasszon flottaméret szerint',h:'#tgs-pricing'},
       {v:[TA+'video/hero-720.mp4'],p:TA+'img/hero-poster.jpg',e:'30 napos ingyenes próbaverzió',t:'Próbálja ki ingyen a TAGRA programot. Bankkártya és kötöttség nélkül.',c:'Próbálja ki 30 napig ingyen',h:'https://tagra.app/hu/ingyenes-probaverzio/'},
       {v:[TM+'terminy-hero.webm',TM+'terminy-hero.mp4'],p:TM+'DBII_kabina.webp',e:'2,5–3,5 tonnás furgonok',t:'Nemzetközi fuvarozás furgonnal: tachográf 2026 júliusától.',c:'Csomagok – 49 € megtakarítás',h:'/hu/software-device-bundles/'},
-      {v:[TM+'DBIIS-kancelar.webm',TM+'DBIIS-office2.mp4'],p:TM+'Download_Box_II_S_kafe.webp',e:'DOWNLOAD BOX II S',t:'Letöltés másodpercek alatt. Kiértékelés egy kávé mellett.',c:'Letöltő eszközök',h:'/hu/download-devices/'}
+      {v:[TM+'DBIIS-kancelar.webm',TM+'DBIIS-office2.mp4'],p:TM+'Download_Box_II_S_kafe.webp',e:'DOWNLOAD BOX II S',t:'Letöltés másodpercek alatt. Kiértékelés egy kávé mellett.',c:'Letöltőeszközök',h:'/hu/download-devices/'}
     ];
     var sec=document.createElement('section');sec.className='tgs-car';sec.setAttribute('aria-label','A TAGRA webáruház kiemelt ajánlatai');
     sec.innerHTML='<div class="tgs-car__track">'+S.map(function(s,i){
@@ -70,7 +70,7 @@
   function hwnote(){
     var p=document.getElementById('tgs-pricing');if(!p||p.querySelector('.tgs-hwnote'))return;
     var d=document.createElement('p');d.className='tgs-hwnote';
-    d.innerHTML='<b>Csak letöltő eszközre van szüksége?</b> <a href="/hu/download-box-ii-s/">DOWNLOAD BOX II S – 299 € + ÁFA</a> · <a href="/hu/download-devices/">Letöltőállomások és kártyaolvasó</a>';
+    d.innerHTML='<b>Csak letöltőeszközre van szüksége?</b> <a href="/hu/download-box-ii-s/">DOWNLOAD BOX II S – 299 € + ÁFA</a> · <a href="/hu/download-devices/">Letöltőállomások és kártyaolvasó</a>';
     var ex=p.querySelector('.tgs-exist');if(ex)p.insertBefore(d,ex);else p.appendChild(d);
   }
 
@@ -115,7 +115,7 @@
   function steps(){
     if(!isHP()||document.querySelector('.tgs-steps'))return;
     var t=anchor();if(!t)return;
-    var S=[['klic','01','Letöltés','90 / 28 nap','Töltse le a járműegység adatait legalább 90 naponta, a járművezetői kártya adatait pedig legalább 28 naponta.','A DOWNLOAD BOX II S kiolvassa a tachográf és a járművezetői kártya adatait.','Letöltő eszközök megtekintése','/hu/download-devices/'],
+    var S=[['klic','01','Letöltés','90 / 28 nap','Töltse le a járműegység adatait legalább 90 naponta, a járművezetői kártya adatait pedig legalább 28 naponta.','A DOWNLOAD BOX II S kiolvassa a tachográf és a járművezetői kártya adatait.','Letöltőeszközök megtekintése','/hu/download-devices/'],
            ['sami','02','Kiértékelés','EU 561/2006','Értékelje ki a vezetési és pihenőidőket az 561/2006/EK rendelet, a munkaidőt pedig a 2002/15/EK irányelv alapján.','Tárja fel a szabálysértéseket, és készítsen kimutatásokat még az ellenőrzés előtt.','Válasszon TAGRA-licencet','#tgs-pricing'],
            ['cmr-archiv-v3','03','Archiválás','12 hónap','Őrizze meg a tachográf és a járművezetői kártya letöltött adatait legalább 12 hónapig, hogy kérésre bemutathassa őket.','A TAGRA program a .DDD, .C1B, .V1B és ESM fájlokat az Ön saját számítógépén archiválja.','Válasszon TAGRA-licencet','#tgs-pricing']];
     var s=document.createElement('section');s.className='tgs-sec tgs-steps';
@@ -143,7 +143,7 @@
            ['/hu/tagra-max/','TAGRA MAX','Korlátlan','Járműszámkorlát nélkül','749 €','149 €',749,149,1e9]];
     function eur(n){return String(n).replace(/\B(?=(\d{3})+(?!\d))/g,'\u00a0')+'\u00a0€';}
     var s=document.createElement('section');s.className='tgs-sec tgs-pricing';s.id='tgs-pricing';
-    s.innerHTML=head('Az Ön TAGRA programja 3 lépésben','Válasszon TAGRA programot flottaméret alapján','Válasszon flottája járműszáma alapján. Minden licenc tartalmazza az első évet; a második évtől éves licencdíj fizetendő. Az árak + ÁFA értendők.')+
+    s.innerHTML=head('Az Ön TAGRA programja 3 lépésben','Válasszon TAGRA programot flottaméret alapján','Válasszon flottája járműszáma alapján. Minden licenc tartalmazza az első évet; a második évtől éves licencdíj fizetendő. Az árak ÁFA nélkül értendők.')+
       '<ul class="tgs-facts" aria-label="Licencfeltételek"><li><span><b>Az első év az árban</b>Éves licencdíj a 2. évtől</span></li><li><span><b>Nincs szerződés</b>Bármikor lemondható: egyszerűen ne újítsa meg</span></li><li><span><b>Licenc e-mailben</b>Kártyás fizetésnél általában még aznap</span></li><li><span><b>30 napos ingyenes próbaverzió</b>Teljes TAGRA MAX, bankkártya nélkül</span></li></ul>'+
       '<form class="tgs-finder" onsubmit="return false"><label for="tgs-veh">Hány járművet kezel?</label><input id="tgs-veh" type="number" min="1" max="9999" inputmode="numeric" placeholder="Járművek száma"><button type="submit" class="tgs-pill">Megfelelő licenc keresése</button><span class="tgs-finder__out" aria-live="polite"></span></form>'+
       '<div class="tgs-tiers">'+L.map(function(x){var pop=x[1]===POP;return '<a class="tgs-tier'+(pop?' is-pop':'')+'" href="'+x[0]+'" data-max="'+x[8]+'">'+(pop?'<span class="tgs-tier__pop">'+POPL+'</span>':'')+'<span class="tgs-tier__match">Az Ön flottaméretéhez</span><span class="tgs-tier__cap">'+x[2]+'</span><span class="tgs-tier__name">'+x[1]+'</span><span class="tgs-tier__desc">'+x[3]+'</span><span class="tgs-tier__price">'+x[4]+'<small>+ ÁFA</small></span><span class="tgs-tier__inc">Az első év az árban</span><span class="tgs-tier__fee">'+x[5]+' / év a 2. évtől</span><span class="tgs-pill">Ezt választom: '+x[1]+'</span></a>';}).join('')+'</div>'+
@@ -166,7 +166,7 @@
     return '<div class="tgs-exist" id="tgs-existing"><p class="tgs-exist__h">Már használja a TAGRA programot?</p><div class="tgs-exist__g">'+
       '<div class="tgs-exist__c"><b>Megújítás a TAGRA programban</b><p>Fizesse be az éves licencdíjat közvetlenül a programban – itt nem kell rendelnie semmit.</p><ul aria-label="Éves licencdíj, + ÁFA">'+F.map(function(f){return '<li><span>'+f[0]+'</span><span>'+f[1]+' / év</span></li>';}).join('')+'</ul></div>'+
       '<div class="tgs-exist__c"><b>Több jármű?</b><p>Meglévő licencének bővítéséhez forduljon értékesítőinkhez.</p><p><a href="'+quoteHref('meglévő TAGRA-licencem bővítése')+'" data-tgs-ev="quote_click" data-tgs-t="upgrade">'+SALES+'</a><br><a href="tel:'+PHONE.replace(/\s/g,'')+'" data-tgs-ev="phone_click" data-tgs-t="upgrade">'+PHONE+'</a></p></div>'+
-      '<div class="tgs-exist__c"><b>Újabb letöltő eszköz?</b><p>A DOWNLOAD BOX II S letölti a tachográf és a járművezetői kártyák adatait. 299 € + ÁFA, éves díj nélkül.</p><p><a href="/hu/download-box-ii-s/" data-tgs-ev="existing_click" data-tgs-t="dbiis">DOWNLOAD BOX II S megtekintése</a></p></div>'+
+      '<div class="tgs-exist__c"><b>Újabb letöltőeszköz?</b><p>A DOWNLOAD BOX II S letölti a tachográf és a járművezetői kártyák adatait. 299 € + ÁFA, éves díj nélkül.</p><p><a href="/hu/download-box-ii-s/" data-tgs-ev="existing_click" data-tgs-t="dbiis">DOWNLOAD BOX II S megtekintése</a></p></div>'+
       '</div><p class="tgs-exist__sup">Technikai támogatás (angolul): <a href="mailto:'+SUPPORT+'">'+SUPPORT+'</a></p></div>';
   }
 
@@ -222,7 +222,7 @@
     if(!isHP()||document.querySelector('.tgs-help'))return;
     var w=wel();if(!w)return;
     var s=document.createElement('section');s.className='tgs-help';s.id='tgs-help';
-    s.innerHTML='<div class="container"><div class="tgs-help__box"><div class="tgs-help__txt"><h2>Nem tudja, melyik TAGRA programot válassza?</h2><p>Írja meg, hány járművet kezel, és milyen letöltő eszköze van már. Ajánlunk Önnek megfelelő licencet.</p><p class="tgs-help__sup">Már használja a TAGRA programot? Technikai támogatás (angolul): <a href="mailto:'+SUPPORT+'">'+SUPPORT+'</a></p></div>'+
+    s.innerHTML='<div class="container"><div class="tgs-help__box"><div class="tgs-help__txt"><h2>Nem tudja, melyik TAGRA programot válassza?</h2><p>Írja meg, hány járművet kezel, és milyen letöltőeszköze van már. Ajánlunk Önnek megfelelő licencet.</p><p class="tgs-help__sup">Már használja a TAGRA programot? Technikai támogatás (angolul): <a href="mailto:'+SUPPORT+'">'+SUPPORT+'</a></p></div>'+
       '<div class="tgs-help__card"><img src="'+TA+'img/team/ivan-szabo.webp" alt="Ivan Szabó" width="72" height="72" loading="lazy"><div><b>Ivan Szabó</b><span>Tachográfadat-szakértő</span><a href="tel:'+PHONE.replace(/\s/g,'')+'">'+PHONE+'</a><a href="mailto:'+SALES+'">'+SALES+'</a></div></div></div></div>';
     w.parentNode.insertBefore(s,w);
   }
@@ -232,7 +232,7 @@
     var w=wel();if(!w)return;
     var Q=[['A TAGRA felhőalapú vagy helyben telepített program?','A TAGRA Windows rendszerre készült asztali program, amely az Ön saját számítógépén fut. A járművezetők és a járművek adatai az Ön számítógépén maradnak.'],
            ['Mennyit kell fizetnem az első év után?','A vételár tartalmazza az első évet. A második évtől az éves licencdíj 19 € + ÁFA (TRUCKER), 79 € + ÁFA (TAGRA 1–2), 99 € + ÁFA (TAGRA 4–6) vagy 149 € + ÁFA (TAGRA MAX).'],
-           ['A licenc tartalmaz letöltő eszközt is?','Nem. A TAGRA programlicenc. A DOWNLOAD BOX II S külön vásárolható meg, vagy a TAGRA programmal együtt, olyan csomagban, amely 49 € megtakarítást jelent a külön vásárláshoz képest.'],
+           ['A licenc tartalmaz letöltőeszközt is?','Nem. A TAGRA programlicenc. A DOWNLOAD BOX II S külön vásárolható meg, vagy a TAGRA programmal együtt, olyan csomagban, amely 49 € megtakarítást jelent a külön vásárláshoz képest.'],
            ['Vásárolhat a cégem 0% ÁFÁ-val?','Igen. Az érvényes közösségi adószámmal rendelkező uniós vállalkozások fordított adózás keretében, 0% ÁFÁ-val vásárolhatnak. Adja meg közösségi adószámát a pénztárnál.'],
            ['Kipróbálhatom a TAGRA programot vásárlás előtt?','Igen. A 30 napos ingyenes próbaverzió a TAGRA MAX teljes funkcionalitását kínálja, és nem szükséges hozzá bankkártya.'],
            ['Milyen tachográfokat támogat a TAGRA?','Minden digitális tachográfot, beleértve a Smart G2V2 tachográfokat is. A TAGRA a .DDD, .C1B, .V1B és ESM fájlokat olvassa.']];
