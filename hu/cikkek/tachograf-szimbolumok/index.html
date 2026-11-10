@@ -468,7 +468,7 @@
 <tr>
 <td>! vezetés kártya nélkül xx</td>
 <td>Járművezetés kezdődött sofőrkártya – vagy érvényes sofőrkártya – nélkül az 1-es kártyafiókban. Akkor is kiváltódik, ha az út előtt vagy után érvénytelen kártyakombinációt helyeznek be.</td>
-<td>Állítsa meg a járművet. Helyezzen be érvényes sofőrkártyát. Szükség esetén először távolítsa el az esetleges vállalkozáskártyát / ellenőrkártyát a DTCO-ból.</td>
+<td>Állítsa meg a járművet. Helyezzen be érvényes sofőrkártyát. Szükség esetén először távolítsa el az esetleges üzembentartói kártyát (más néven vállalkozói kártya vagy cégkártya) / ellenőrkártyát a DTCO-ból.</td>
 <td><span class="sev sev-high">Magas</span></td>
 </tr>
 <tr>
@@ -491,7 +491,7 @@
 </tr>
 <tr>
 <td>! kártya konfliktus xx</td>
-<td>A két tachográfkártyát nem szabad egyszerre behelyezni – például vállalkozáskártyát ellenőrzőkártyával.</td>
+<td>A két tachográfkártyát nem szabad egyszerre behelyezni – például üzembentartói kártyát ellenőrzőkártyával.</td>
 <td>Nyugtázza az üzenetet. Távolítsa el az ütköző kártyát az érintett foglalatból.</td>
 <td><span class="sev sev-med">Közepes</span></td>
 </tr>
@@ -560,7 +560,7 @@
 </tr>
 <tr>
 <td>x óra hiba xx</td>
-<td>A DTCO UTC ideje nem hiteles, vagy a valós idejű óra hibás. Az újonnan behelyezett sofőr- és vállalkozáskártyákat az inkonzisztens adatok elkerülése érdekében elutasítja.</td>
+<td>A DTCO UTC ideje nem hiteles, vagy a valós idejű óra hibás. Az újonnan behelyezett sofőr- és üzembentartói kártyákat az inkonzisztens adatok elkerülése érdekében elutasítja.</td>
 <td>Nyugtázza az üzenetet. A DTCO-t a lehető leghamarabb hivatalos műhelyben kell cserélni vagy alaphelyzetbe állítani.</td>
 <td><span class="sev sev-crit">Kritikus</span></td>
 </tr>
@@ -834,7 +834,7 @@
 <tr><td>Kártya kivétele mentés nélkül</td><td><span class="sev sev-med">Üzenet</span></td><td>Az adatok hiba miatt nem tárolhatók az 1-es foglalatból kivett kártyán.</td><td>Vegye ki, tisztítsa meg, próbálja újra. Végezzen öntesztet, ha a hiba továbbra is fennáll.</td></tr>
 <tr><td>Lejárt kártya</td><td><span class="sev sev-info">Üzenet</span></td><td>Az 1-es foglalatban lévő kártya lejárt. Az üzemeltetőhöz kapcsolódó.</td><td>Vegye ki a kártyát, és helyezzen be egy érvényeset.</td></tr>
 <tr><td>A kártya xx nap múlva lejár.</td><td><span class="sev sev-info">Üzenet</span></td><td>Az 1-es tálcába helyezett kártya xx nap múlva jár le (0–30). Az üzembentartóra vonatkozó.</td><td>Forduljon az illetékes hatósághoz, hogy új kártyát igényeljen.</td></tr>
-<tr><td>Érvénytelen kártya behelyezése</td><td><span class="sev sev-med">Figyelmeztetés</span></td><td>Érvénytelen kártya került egy foglalatba. A vállalkozáskártyára vonatkozó.</td><td>Vegye ki az érvénytelen kártyát.</td></tr>
+<tr><td>Érvénytelen kártya behelyezése</td><td><span class="sev sev-med">Figyelmeztetés</span></td><td>Érvénytelen kártya került egy foglalatba. Az üzembentartói kártyára vonatkozó.</td><td>Vegye ki az érvénytelen kártyát.</td></tr>
 <tr><td>Utolsó munkamenet nincs rendben lezárva.</td><td><span class="sev sev-med">Figyelmeztetés</span></td><td>Az 1-es tálcában lévő sofőrkártyát helytelenül vették ki az utolsó munkamenet során. Az 1-es tálcából történő előző kártyakivételt a járműegység nem fejezte be megfelelően.</td><td>Vegye ki és tisztítsa meg. Ha a hiba továbbra is fennáll, végezzen öntesztet.</td></tr>
 <tr><td>Téves PIN! Kártya zárolva</td><td><span class="sev sev-high">Üzenet</span></td><td>Túl sokszor adtak meg téves PIN-kódot (műhelykártya). A műhelykártyára vonatkozó.</td><td>Vegye ki és cserélje érvényes kártyára.</td></tr>
 </tbody>
@@ -966,7 +966,7 @@
 <table class="code-table">
 <thead><tr><th style="width:24%;">Üzenet</th><th style="width:34%;">Ok</th><th style="width:30%;">Mit kell tenni</th><th style="width:12%;">Súlyosság</th></tr></thead>
 <tbody>
-<tr><td>Kártyaütközés</td><td>Érvénytelen kártyakombinációt észleltek (pl. vállalkozáskártya + ellenőrzőkártya).</td><td>Vegye ki a problémás kártyát.</td><td><span class="sev sev-med">Közepes</span></td></tr>
+<tr><td>Kártyaütközés</td><td>Érvénytelen kártyakombinációt észleltek (pl. üzembentartói kártya + ellenőrzőkártya).</td><td>Vegye ki a problémás kártyát.</td><td><span class="sev sev-med">Közepes</span></td></tr>
 <tr><td>Járművezetés érvényes kártya nélkül</td><td>Vezetés érvényes kártya nélkül vagy érvénytelen kártyakombinációval.</td><td>Állítsa le, helyezzen be egy érvényes kártyát, és távolítsa el a nem megfelelőt.</td><td><span class="sev sev-crit">Kritikus</span></td></tr>
 <tr><td>Gyorshajtás</td><td>A sebességhatárt legalább 60 másodpercig túllépték.</td><td>Tartsa be a jármű megengedett sebességhatárát.</td><td><span class="sev sev-high">Magas</span></td></tr>
 <tr><td>Áramellátás megszakadása (járműegység / mozgásérzékelő)</td><td>A tachográf vagy a mozgásérzékelő tápellátása több mint 200 ms-re megszakadt.</td><td>Ellenőrizze a jármű áramellátását és kábelezését.</td><td><span class="sev sev-med">Közepes</span></td></tr>
