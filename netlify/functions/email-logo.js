@@ -1,0 +1,22 @@
+/**
+ * Netlify Function: email-logo
+ * Servíruje PNG loga pro HTML e-maily (e-mailové klienty neumí SVG).
+ * /assets/img/logo-tdt-email-white.png → bílé logo Truck Data Technology, 341×96 px
+ * (zobrazuje se v e-mailech tdt-trial-email na výšku 34 px).
+ * PNG je vložené jako base64, protože repozitář se plní přes API po textových souborech.
+ * Zdroj: https://www.tdt.cz/assets/img/logo-tdt-white.svg (rsvg-convert -h 96).
+ */
+const LOGOS = {
+  "tdt-white": "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",
+};
+
+exports.handler = async (event) => {
+  const name = (event.path || "").split("/").pop() || "tdt-white";
+  const b64 = LOGOS[name] || LOGOS["tdt-white"];
+  return {
+    statusCode: 200,
+    headers: { "Content-Type": "image/png", "Cache-Control": "public, max-age=31536000, immutable" },
+    body: b64,
+    isBase64Encoded: true,
+  };
+};
