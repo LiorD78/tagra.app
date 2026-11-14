@@ -1,4 +1,6 @@
-/* TAGRA Shop – version switcher v1.4 (9. 11. 2026)
+/* TAGRA Shop – version switcher v1.5 (2026-11-15)
+   v1.5: PL slovník (crew GPT + kontrola GPT/Gemini/Mistral); na <html lang="pl"> odkazy s /pl/.
+   v1.4 (9. 11. 2026)
    v1.4: HU dictionary (crew GPT + Gemini); on <html lang="hu"> / "de" links get the /hu/ or /de/ prefix and the current page is matched without it (DE switcher was hidden on /de/ pages before).
    v1.3: texts by <html lang> – EN default with unchanged output, DE dictionary from the crew (GPT + Gemini).
    v1.2: "Most popular" pill on TAGRA 4; phone labels "+ DOWNLOAD BOX II S" and "MAX" (were cut off at 390 px);
@@ -18,8 +20,8 @@
   window.tgsVariant=true;
   var KEY='tgs-var-nav';
   /* i18n: EN strings stay inline (EN = default, byte-identical output); other shop languages override by key */
-  var LG=(document.documentElement.getAttribute('lang')||'en').slice(0,2).toLowerCase(),DE=LG==='de',HU=LG==='hu',NL=DE||HU,PFX=HU?'/hu':(DE?'/de':'');
-  var I18N={de:{cap1:'1 Fahrzeug',cap2:'2 Fahrzeuge',cap4:'3–4 Fahrzeuge',cap6:'5–6 Fahrzeuge',capmax:'unbegrenzt viele Fahrzeuge',v_d1:'1 Fahrer',v_d2:'2 Fahrer',d1:'1 Fahrer',d2:'2 Fahrer an einem PC',pop:'Am beliebtesten',pop_aria:'(am beliebtesten)',v_aria:'Wählen Sie Ihre TAGRA Version',v_for:'{name} für {cap}',v_withbox:' mit DOWNLOAD BOX II S',v_dev:'Download-Gerät',v_only:'Nur Programm',v_only_aria:'{name} ohne Download-Gerät',v_prog_box:'Programm |+ DOWNLOAD BOX II S',v_bundle:'Bundle · 49 € sparen',v_bundle_aria:'{name} mit DOWNLOAD BOX II S im Bundle',v_aria_tr:'Wählen Sie Ihre TAGRA TRUCKER Version',v_q:'Fahrzeuge mit Fahrtenschreiber?',v_qd:'Wie viele Fahrer nutzen das Programm?'},hu:{cap1:'1 jármű',cap2:'2 jármű',cap4:'3–4 jármű',cap6:'5–6 jármű',capmax:'korlátlan számú jármű',v_d1:'1 sofőr',v_d2:'2 sofőr',d1:'1 sofőr',d2:'2 sofőr, közös számítógép',pop:'Legnépszerűbb',pop_aria:'(legnépszerűbb)',v_aria:'Válassza ki a TAGRA verzióját',v_for:'{name} – {cap}',v_withbox:' + DOWNLOAD BOX II S',v_dev:'Letöltőeszköz',v_only:'Csak program',v_only_aria:'{name} letöltőeszköz nélkül',v_prog_box:'Program |+ DOWNLOAD BOX II S',v_bundle:'csomag · 49 € kedvezmény',v_bundle_aria:'{name} + DOWNLOAD BOX II S csomagban',v_aria_tr:'Válassza ki a TAGRA TRUCKER verzióját',v_q:'Hány tachográfos járműve van?',v_qd:'Hány sofőr használja a programot?'}};
+  var LG=(document.documentElement.getAttribute('lang')||'en').slice(0,2).toLowerCase(),DE=LG==='de',HU=LG==='hu',PL=LG==='pl',NL=DE||HU||PL,PFX=HU?'/hu':PL?'/pl':(DE?'/de':'');
+  var I18N={de:{cap1:'1 Fahrzeug',cap2:'2 Fahrzeuge',cap4:'3–4 Fahrzeuge',cap6:'5–6 Fahrzeuge',capmax:'unbegrenzt viele Fahrzeuge',v_d1:'1 Fahrer',v_d2:'2 Fahrer',d1:'1 Fahrer',d2:'2 Fahrer an einem PC',pop:'Am beliebtesten',pop_aria:'(am beliebtesten)',v_aria:'Wählen Sie Ihre TAGRA Version',v_for:'{name} für {cap}',v_withbox:' mit DOWNLOAD BOX II S',v_dev:'Download-Gerät',v_only:'Nur Programm',v_only_aria:'{name} ohne Download-Gerät',v_prog_box:'Programm |+ DOWNLOAD BOX II S',v_bundle:'Bundle · 49 € sparen',v_bundle_aria:'{name} mit DOWNLOAD BOX II S im Bundle',v_aria_tr:'Wählen Sie Ihre TAGRA TRUCKER Version',v_q:'Fahrzeuge mit Fahrtenschreiber?',v_qd:'Wie viele Fahrer nutzen das Programm?'},hu:{cap1:'1 jármű',cap2:'2 jármű',cap4:'3–4 jármű',cap6:'5–6 jármű',capmax:'korlátlan számú jármű',v_d1:'1 sofőr',v_d2:'2 sofőr',d1:'1 sofőr',d2:'2 sofőr, közös számítógép',pop:'Legnépszerűbb',pop_aria:'(legnépszerűbb)',v_aria:'Válassza ki a TAGRA verzióját',v_for:'{name} – {cap}',v_withbox:' + DOWNLOAD BOX II S',v_dev:'Letöltőeszköz',v_only:'Csak program',v_only_aria:'{name} letöltőeszköz nélkül',v_prog_box:'Program |+ DOWNLOAD BOX II S',v_bundle:'csomag · 49 € kedvezmény',v_bundle_aria:'{name} + DOWNLOAD BOX II S csomagban',v_aria_tr:'Válassza ki a TAGRA TRUCKER verzióját',v_q:'Hány tachográfos járműve van?',v_qd:'Hány sofőr használja a programot?'},pl:{"cap1":"1 pojazd","cap2":"2 pojazdy","cap4":"3–4 pojazdy","cap6":"5–6 pojazdów","capmax":"bez limitu pojazdów","v_d1":"1 kierowca","v_d2":"2 kierowców","d1":"1 kierowca","d2":"2 kierowców na jednym komputerze","pop":"Najpopularniejszy wybór","pop_aria":"(najpopularniejszy wybór)","v_aria":"Wybierz wersję programu TAGRA","v_for":"{name} — zakres: {cap}","v_withbox":" z DOWNLOAD BOX II S","v_dev":"Urządzenie do pobierania danych","v_only":"Tylko program","v_only_aria":"{name} bez urządzenia do pobierania danych","v_prog_box":"Program |+ DOWNLOAD BOX II S","v_bundle":"zestaw · oszczędność 49 €","v_bundle_aria":"{name} z DOWNLOAD BOX II S w zestawie","v_aria_tr":"Wybierz wersję programu TAGRA TRUCKER","v_q":"Ile pojazdów ma tachograf?","v_qd":"Ilu kierowców będzie korzystać z programu?"}};
   var I=I18N[LG]||{};
   function tx(k,en){return I.hasOwnProperty(k)?I[k]:en;}
   function tf(k,o){var r=I[k]||'',x;for(x in o)r=r.split('{'+x+'}').join(o[x]);return r;}
@@ -36,7 +38,7 @@
   ];
   var html=document.documentElement;
   function norm(p){p=String(p||'').split(/[?#]/)[0];return p.charAt(p.length-1)==='/'?p:p+'/';}
-  var here=norm(location.pathname),hk=NL?here.replace(/^\/(hu|de)(?=\/)/,''):here,cur=null,withKey=false,drv=false;
+  var here=norm(location.pathname),hk=NL?here.replace(/^\/(hu|de|pl)(?=\/)/,''):here,cur=null,withKey=false,drv=false;
   V.forEach(function(x){if(x.p===hk){cur=x;withKey=false;}else if(x.s===hk){cur=x;withKey=true;}});
   D.forEach(function(x){if(x.p===hk){cur=x;drv=true;}});
   if(!cur){html.classList.remove('tgs-var-hide');return;}
