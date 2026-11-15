@@ -323,7 +323,7 @@ function buildDownloads() {
   const iTitle = src.indexOf('<title>');
   const iStyle = src.indexOf('<style>\n    *,*::before,*::after');
   const iStyleEnd = src.indexOf('</style>', iStyle) + '</style>'.length;
-  const iLinks = src.indexOf('<link href="/assets/css/tokens.css"');
+  const iLinks = src.indexOf('<link href="/assets/css/core.bundle.css');
   const iMain = src.indexOf('<main id="main-content">');
   const iMainEnd = src.indexOf('</main>') + '</main>'.length;
   if ([iTitle, iStyle, iLinks, iMain].some((i) => i < 0) || iMainEnd < 10) throw new Error('downloads template');

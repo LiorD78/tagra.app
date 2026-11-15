@@ -1,0 +1,2585 @@
+/* TAGRA.EU — Design tokens
+   Single source of truth for colors, spacing, gradients, typography.
+   Every page links tokens.css FIRST so these variables are available
+   to nav.css, base.css, components.css, and any inline overrides.
+   
+   Last refactor: 2026-05-13 (extract from per-page inline styles).
+*/
+:root {
+  /* === Brand colors — aligned with TRUCKMALL.cz === */
+  --blue-dark:   #0b2c4a;   /* darkest stop in heading gradient */
+  --blue-mid:    #134a8e;   /* mid stop, also nav active color */
+  --blue-light:  #1f5fa6;   /* lightest stop in heading gradient */
+  --blue-bright: #3a6ff0;   /* accent only (.info-card border); NOT a heading stop since 2026-09-18 */
+  --green-brand: #6E9B12;   /* logo green, eyebrow color */
+  --green-cta:   #5C820F;   /* darker green for buttons */
+
+  /* === Surfaces === */
+  --bg-page:         #ffffff;
+  --bg-light:        #eef4fa;
+  --bg-gray:         #f5f5f7;
+  --bg-apple-solid:  #eaf3f8;   /* Apple light blue solid */
+  --bg-apple-top:    #f5f9fc;
+  --bg-apple-mid:    #eaf3f8;
+  --bg-apple-bottom: #dcecf6;
+  --bg-apple-end:    #eef5f9;
+  --bg-apple: linear-gradient(180deg,
+    var(--bg-apple-top) 0%,
+    var(--bg-apple-mid) 35%,
+    var(--bg-apple-bottom) 70%,
+    var(--bg-apple-end) 100%);
+
+  /* === Text === */
+  --text:    #1d1d1f;
+  --text2:   #515154;
+  --strong:  #0b0b0c;
+  --border:  rgba(0,0,0,0.08);
+
+  /* === Heading gradient (3-stop) — identical to TRUCKMALL.cz --tmx-grad-blue
+     #0b2c4a → #134a8e → #1f5fa6 (brand decision 2026-09-18). Single source of
+     truth: use `background: var(--heading-gradient)` on every H1/H2 gradient. === */
+  --heading-gradient: linear-gradient(90deg,
+    var(--blue-dark) 0%,
+    var(--blue-mid) 50%,
+    var(--blue-light) 100%);
+
+  /* === Layout === */
+  --maxw:    1180px;
+  --radius:  16px;
+  --radius-lg: 20px;
+  --nav-h:   64px;
+
+  /* === Typography === */
+  --font: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI",
+          Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-display: -apple-system, BlinkMacSystemFont, "SF Pro Display",
+                  "Segoe UI", Roboto, sans-serif;
+}
+/* TAGRA.EU — Base styles
+   Reset, body typography, headings (section + hero), eyebrow,
+   buttons, container, animation primitives.
+   
+   Heading styles match TRUCKMALL.cz: UPPERCASE 36/30px section H2
+   with the 3-stop blue gradient --heading-gradient (TRUCKMALL stops
+   #0b2c4a → #134a8e → #1f5fa6, tokens.css). Hero H2 stays
+   mixed-case + larger (intentional differentiation).
+   
+   Last refactor: 2026-05-13.
+*/
+
+/* === Reset === */
+*, *::before, *::after { box-sizing: border-box; }
+* { margin: 0; padding: 0; }
+
+html, body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+html { scroll-padding-top: calc(var(--nav-h, 64px) + 12px); }
+
+body {
+  font-family: var(--font);
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--text);
+  background: var(--bg-page);
+  /* Body has NO top padding — hero sections extend behind the
+     transparent liquid-glass nav. !important to override any
+     inline rules that might still set padding-top. */
+  padding-top: 0 !important;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* === Container === */
+.container {
+  width: 100%;
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 24px;
+  position: relative;
+}
+
+/* === Section headings (TRUCKMALL style) ===
+   Used on all section H2 / .section-h2 across the site.
+   .hero-h2 below overrides with larger, mixed-case styling. */
+h2, .section-h2 {
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  color: var(--blue-mid);
+  margin: 0 0 14px;
+  padding: 0.12em 0.15em 0.08em 0;
+  display: inline-block;
+  max-width: 100%;
+}
+@supports ((-webkit-background-clip: text) or (background-clip: text)) {
+  h2, .section-h2 {
+    background: var(--heading-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+}
+@media (max-width: 768px) {
+  h2:not(.hero-h2), .section-h2 { font-size: 30px; }
+}
+
+/* === Hero heading — larger, mixed-case ===
+   Applies to <h1> page headings AND any <h2 class="hero-h2"> hero
+   pattern. The TRUCKMALL gradient (--heading-gradient) is shared with
+   section H2, only the size and casing differ. */
+h1, h2.hero-h2, .hero-h2 {
+  font-size: 64px;
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;  /* uniform cap-height for product names */
+  margin: 0 0 16px;
+  padding: 0 0 0.08em 0;
+  display: inline-block;      /* tight box so gradient spans the text */
+  max-width: 100%;
+  color: var(--blue-mid);
+}
+@supports ((-webkit-background-clip: text) or (background-clip: text)) {
+  h1, h2.hero-h2, .hero-h2 {
+    background: var(--heading-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+}
+
+@media (max-width: 768px) {
+  h1, h2.hero-h2, .hero-h2 { font-size: 42px; }
+}
+/* F06 (8. 11. 2026): dlouhá slova ve verzálkách („TACHOGRAPHENAUSWERTUNG“,
+   „CRONOTACHIGRAFO“, „TACHOGRAAFANALYSE“) se na telefonu do 342 px nevešla
+   a html/body{overflow-x:hidden} je usekl. Menší písmo na ≤ 420 px + dělení
+   slov (lang je na každé stránce správně) + nouzové zalomení kdekoli. */
+@media (max-width: 420px) {
+  h1, h2.hero-h2, .hero-h2 { font-size: clamp(28px, 8.5vw, 42px); }
+  h1, h2 { overflow-wrap: anywhere; -webkit-hyphens: auto; hyphens: auto; }
+}
+/* Safety: never apply section-heading styling to h1/h2 in the nav or footer.
+   Bez tohoto dědí patičkové nadpisy modrý přechodový text určený pro obsahové
+   H2, který je na tmavém pozadí patičky neviditelný. */
+nav h1, nav h2,
+footer h1, footer h2, .site-footer h2 {
+  font-size: inherit;
+  font-weight: inherit;
+  text-transform: none;
+  background: none;
+  -webkit-text-fill-color: currentColor;
+  color: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+/* === Smaller headings === */
+h3 {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--blue-dark);
+  margin: 0 0 12px;
+}
+h4 {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: var(--strong);
+  margin: 0 0 10px;
+}
+
+/* === Eyebrow (small green uppercase label above headings) === */
+.eyebrow, .section-label {
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--green-brand);
+  margin: 0 0 12px;
+}
+
+/* === Body text === */
+p { margin: 0 0 16px; line-height: 1.6; }
+p:last-child { margin-bottom: 0; }
+p.lead {
+  font-size: 19px;
+  color: var(--text2);
+  max-width: 640px;
+  margin: 0 auto 32px;
+}
+strong { font-weight: 700; color: var(--strong); }
+
+/* === Links === */
+a {
+  color: var(--green-brand);
+  text-decoration: none;
+  text-underline-offset: 0.18em;
+  transition: color 0.2s, text-decoration-color 0.2s;
+}
+a:hover, a:focus {
+  color: var(--green-cta);
+  text-decoration: underline;
+}
+
+/* === Buttons === */
+.btn,
+.btn-cta,
+.btn-outline,
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 30px;
+  border-radius: 99px;
+  font-size: 17px;
+  font-weight: 600;
+  text-decoration: none !important;
+  cursor: pointer;
+  border: none;
+  transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+  font-family: inherit;
+}
+.btn-cta,
+.btn-primary {
+  background: linear-gradient(135deg, var(--green-brand) 0%, var(--green-cta) 100%);
+  color: #fff !important;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(110, 155, 18, 0.30),
+              0 1px 0 rgba(255, 255, 255, 0.25) inset;
+}
+.btn-cta::before,
+.btn-primary::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 30% 0%, rgba(255, 255, 255, 0.20), transparent 60%);
+  pointer-events: none;
+}
+.btn-cta > *,
+.btn-primary > * { position: relative; z-index: 1; }
+
+.btn-cta:hover,
+.btn-cta:focus-visible,
+.btn-primary:hover,
+.btn-primary:focus-visible {
+  background: linear-gradient(140deg, #79a517 0%, #527311 100%);
+  transform: scale(1.02);
+  box-shadow: 0 10px 26px rgba(110, 155, 18, 0.45),
+              0 0 0 4px rgba(110, 155, 18, 0.12),
+              0 1px 0 rgba(255, 255, 255, 0.3) inset;
+  text-decoration: none !important;
+}
+
+/* Sekundární / outline varianta je na tagra.app plná modrá → modrý gradient
+   (stejný vzor jako .btn-cta.tmx-dec-jump na TRUCKMALL). */
+.btn-outline,
+.btn-secondary {
+  background: linear-gradient(135deg, var(--blue-light) 0%, var(--blue-mid) 100%);
+  color: #fff !important;
+  border: none;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(19, 74, 142, 0.28),
+              0 1px 0 rgba(255, 255, 255, 0.25) inset;
+}
+.btn-outline::before,
+.btn-secondary::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 30% 0%, rgba(255, 255, 255, 0.18), transparent 60%);
+  pointer-events: none;
+}
+.btn-outline > *,
+.btn-secondary > * { position: relative; z-index: 1; }
+
+.btn-outline:hover,
+.btn-outline:focus-visible,
+.btn-secondary:hover,
+.btn-secondary:focus-visible {
+  background: linear-gradient(140deg, #2a6dc4 0%, #134a8e 100%);
+  color: #fff !important;
+  transform: scale(1.02);
+  box-shadow: 0 10px 26px rgba(19, 74, 142, 0.42),
+              0 0 0 4px rgba(19, 74, 142, 0.12),
+              0 1px 0 rgba(255, 255, 255, 0.3) inset;
+  text-decoration: none !important;
+}
+.btn-cta--sm { padding: 10px 22px; font-size: 15px; }
+
+/* === Animation primitives === */
+.anim-up,
+.rev-anim {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.anim-up.on,
+.rev-anim.on { opacity: 1; transform: translateY(0); }
+
+.fly-left, .fly-right {
+  opacity: 0;
+  transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.fly-left  { transform: translateX(-60px); }
+.fly-right { transform: translateX(60px); }
+.fly-left.on, .fly-right.on { opacity: 1; transform: translateX(0); }
+
+@media (prefers-reduced-motion: reduce) {
+  .anim-up, .rev-anim, .fly-left, .fly-right {
+    transition: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* === Scroll progress bar (used on some pages) === */
+#scroll-progress,
+#tmx-scroll-progress {
+  position: fixed;
+  top: 0; left: 0;
+  height: 3px;
+  width: 0%;
+  background: linear-gradient(90deg, var(--green-brand), var(--blue-light));
+  z-index: 999999;
+  transition: width 0.1s ease-out;
+  pointer-events: none;
+}
+
+/* === Bands (full-width section backgrounds) === */
+.band, .tmx-band {
+  position: relative;
+  padding: 80px 0;
+  background: var(--bg-page);
+}
+.band--gray,    .tmx-band--gray    { background: var(--bg-gray); }
+.band--blue,    .tmx-band--blue    { background: var(--bg-apple-solid); }
+.band--hero,    .tmx-band--hero    {
+  background: linear-gradient(180deg, var(--bg-apple-solid) 0%, var(--bg-page) 100%);
+}
+
+/* Hero colour variants per product page.
+   - Company (fleet)     → blue:  apple-solid blue tint
+   - Trucker (driver)    → green: subtle green wash
+   - Control (enforce)   → gray:  neutral light gray (default-ish) */
+.band--hero--blue {
+  background: linear-gradient(180deg, #eef4fb 0%, #ffffff 100%);
+}
+.band--hero--green {
+  background: linear-gradient(180deg, #e9f3d8 0%, #f3f8e8 52%, #ffffff 100%);
+}
+.band--hero--gray {
+  background: linear-gradient(180deg, #ededf2 0%, #ffffff 100%);
+}
+@media (max-width: 768px) {
+  .band, .tmx-band { padding: 50px 0; }
+}
+
+/* === Hero band ===
+   Used on driver/, fleet/ and any "<section class='band band--hero'>"
+   page. Centred content with comfortable top/bottom padding, matching
+   .enf-hero on the enforcement page. */
+.band--hero {
+  text-align: center;
+  /* Top padding accounts for the fixed transparent nav (64px) + breathing room */
+  padding: calc(var(--nav-h, 64px) + 60px) 0 60px;
+}
+@media (max-width: 768px) {
+  /* Odsazení musí být větší než výška pevné navigace (64 px), jinak obsah
+     leze pod lištu. Zjištěno 14. 8. 2026 na mobilu. */
+  .band--hero {
+    padding: calc(var(--nav-h, 64px) + 24px) 0 44px;
+  }
+}
+/* The intro paragraph below an H1 hero on subpages. */
+p.lead {
+  font-size: 21px;
+  line-height: 1.5;
+  max-width: 640px;
+  margin: 16px auto 32px;
+  color: var(--text2, #6e6e73);
+}
+@media (max-width: 768px) {
+  p.lead { font-size: 18px; }
+}
+
+
+/* === Odkaz na přeskočení navigace (WCAG 2.4.1, úroveň A) ===
+   Skrytý mimo obrazovku, zviditelní se až při navigaci klávesnicí. */
+.skip-link {
+  position: absolute; left: -9999px; top: 0; z-index: 10000;
+  background: var(--blue-mid, #134a8e); color: #fff;
+  padding: 12px 20px; border-radius: 0 0 8px 0;
+  font-size: 15px; font-weight: 600; text-decoration: none;
+}
+.skip-link:focus {
+  left: 0; outline: 3px solid var(--green-brand, #6E9B12); outline-offset: 2px;
+}
+
+
+/* === Vizuálně skrytý text pro čtečky obrazovek ===
+   Používá se pro nadpisy, které drží správnou hierarchii úrovní,
+   aniž by měnily vizuální podobu stránky. */
+.sr-only {
+  position: absolute !important; width: 1px; height: 1px;
+  padding: 0; margin: -1px; overflow: hidden;
+  clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+}
+
+
+/* === Poměr stran obrázků ===
+   Atributy width/height na <img> rezervují místo (brání poskakování layoutu),
+   ale jakmile šířku přebije CSS, musí se výška dopočítat — jinak se obrázek
+   roztáhne. Platí pro obrázky, které nemají výšku určenou vlastním pravidlem. */
+img[width][height]:not([style*="height"]) { height: auto; }
+/* TAGRA.EU — Shared components
+   Bento grid, cards, callouts, FAQ, article cards, reviews,
+   warning box, picker cards, partner logos, compare table.
+   
+   Extracted from per-page <style> blocks 2026-05-13.
+*/
+
+/* ============================================================
+   BENTO GRID (.bc cards in a 12-col grid)
+   ============================================================ */
+.bento {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 14px;
+  margin-top: 40px;
+}
+.bc {
+  background: var(--bg-page);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  border: 1px solid var(--border);
+  position: relative;
+  overflow: hidden;
+}
+.bc.s4  { grid-column: span 4;  }
+.bc.s5  { grid-column: span 5;  }
+.bc.s6  { grid-column: span 6;  }
+.bc.s7  { grid-column: span 7;  }
+.bc.s8  { grid-column: span 8;  }
+.bc.s12 { grid-column: span 12; }
+.bc.bluefill  { background: var(--bg-apple-solid); border-color: rgba(31,95,166,.1); }
+.bc.greenfill { background: #f0f6e4; border-color: rgba(110,155,18,.2); }
+.bc.darkfill  { background: var(--blue-dark); color: #fff; border-color: var(--blue-dark); }
+.bc.darkfill .bc-title,
+.bc.darkfill .bc-text,
+.bc.darkfill p, .bc.darkfill li { color: rgba(255,255,255,0.92); }
+.bc-title {
+  font-size: 28px;
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  color: var(--strong);
+  margin: 0 0 8px;
+}
+.bc-text {
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--text2);
+}
+.bc-eyebrow, .bc-label {
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--blue-mid);
+  margin: 0 0 10px;
+}
+.bignum {
+  position: absolute;
+  bottom: -16px;
+  right: 16px;
+  font-size: 110px;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  color: rgba(19,74,142,0.06);
+  pointer-events: none;
+}
+@media (max-width: 900px) {
+  .bento { grid-template-columns: 1fr; gap: 12px; }
+  .bc { grid-column: span 1 !important; }
+}
+
+/* ============================================================
+   TWO-COL / THREE-COL LAYOUTS
+   ============================================================ */
+.g2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+.g2.top { align-items: start; }
+@media (max-width: 900px) {
+  .g2 { grid-template-columns: 1fr; gap: 40px; }
+}
+
+.three-col {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px 24px;
+}
+@media (min-width: 768px) {
+  .three-col { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+/* ============================================================
+   CALLOUTS — feature boxes with optional green theme
+   ============================================================ */
+.callout {
+  border-radius: var(--radius-lg);
+  background: var(--bg-page);
+  padding: 32px;
+  border: 1px solid var(--border);
+  box-shadow: 0 12px 32px rgba(0,0,0,.04);
+  position: relative;
+}
+.callout--plain {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+}
+.callout--green {
+  background: linear-gradient(90deg, #74A81A 0%, var(--green-brand) 55%, #638719 100%);
+  color: #0b0b0c;
+  border: none;
+}
+.callout--green h2 {
+  color: var(--blue-dark);
+  background: var(--heading-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.callout--green p, .callout--green li,
+.callout--green a { color: #0b0b0c !important; }
+.callout--green a { text-decoration: underline; text-decoration-color: rgba(0,0,0,.4); }
+.cg-bg {
+  position: absolute;
+  right: -20px;
+  bottom: -40px;
+  font-size: 200px;
+  font-weight: 900;
+  line-height: 1;
+  color: rgba(255,255,255,0.12);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ============================================================
+   FEAT LIST (checkmarks)
+   ============================================================ */
+.feats {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 24px;
+}
+.fi {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 17px;
+  line-height: 1.5;
+}
+.fck {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--blue-dark) 0%, var(--blue-mid) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* ============================================================
+   FAQ block (details/summary)
+   ============================================================ */
+.faq-block details, .faq details {
+  border-bottom: 1px solid var(--border);
+  padding: 4px 0;
+}
+.faq-block details:first-child,
+.faq details:first-child {
+  border-top: 1px solid var(--border);
+}
+.faq-block summary, .faq summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 18px 40px 18px 0;
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 1.4;
+  position: relative;
+  color: var(--strong);
+}
+.faq-block summary::-webkit-details-marker,
+.faq summary::-webkit-details-marker { display: none; }
+.faq-block summary::after,
+.faq summary::after {
+  content: "+";
+  position: absolute;
+  right: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 26px;
+  font-weight: 300;
+  color: var(--green-brand);
+}
+.faq-block details[open] summary::after,
+.faq details[open] summary::after { content: "−"; }
+.faq-a, .faq-answer {
+  padding: 0 0 18px;
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--text2);
+}
+
+/* ============================================================
+   ARTICLE CARDS (.article-card grid)
+   ============================================================ */
+.article-grid {
+  /* Horizontal scroll carousel: cards have fixed width, page scrolls horizontally.
+     Inside .container so first card left-aligns with H1. */
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 300px;
+  gap: 20px;
+  margin-top: 16px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  padding: 8px 0 24px; /* room for hover lift + visual breathing */
+  /* extra right padding so the user sees the next card peeking through */
+  padding-right: max(24px, 25%);
+  /* hide scrollbar but keep functionality */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.article-grid::-webkit-scrollbar { width: 0; height: 0; }
+.article-grid .article-card {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  width: 300px;
+}
+@media (max-width: 768px) {
+  .article-grid {
+    grid-auto-columns: 85vw;
+    padding-right: 32px;
+  }
+  .article-grid .article-card { width: 85vw; max-width: 320px; }
+}
+
+/* Carousel wrapper for nav arrows */
+.article-carousel { position: relative; }
+.article-carousel-nav {
+  display: flex; gap: 8px;
+  margin-top: 16px;
+  justify-content: flex-start;
+}
+.article-carousel-btn {
+  width: 44px; height: 44px;
+  border-radius: 999px;
+  border: 1.5px solid var(--border);
+  background: var(--bg-page);
+  color: var(--blue-mid);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1;
+  transition: background .15s, border-color .15s, color .15s, transform .1s;
+  user-select: none;
+}
+.article-carousel-btn:hover {
+  background: var(--bg-apple-solid);
+  border-color: var(--blue-mid);
+  color: var(--blue-dark);
+}
+.article-carousel-btn:active { transform: scale(0.95); }
+.article-carousel-btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+.article-card {
+  position: relative;
+  display: flex !important;
+  flex-direction: column;
+  height: 100%;
+  padding: 22px;
+  text-decoration: none !important;
+  color: inherit !important;
+  background: var(--bg-page);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.04);
+  transition: transform 0.18s, box-shadow 0.18s, border-color 0.18s;
+}
+.article-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.08);
+  border-color: rgba(110,155,18,0.45);
+}
+.article-eyebrow {
+  display: block;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--blue-mid) !important;
+  margin: 0 0 10px;
+}
+.article-title {
+  display: block;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.35;
+  color: var(--strong) !important;
+  margin: 0 0 10px;
+}
+.article-meta {
+  display: block;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--text2) !important;
+  margin: 0 0 16px;
+}
+.article-chip {
+  display: inline-flex !important;
+  margin-top: auto;
+  align-self: flex-start;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--blue-dark) !important;
+  background: var(--bg-apple-solid);
+  padding: 8px 14px;
+  border-radius: 999px;
+  transition: background 0.2s;
+}
+.article-card:hover .article-chip {
+  background: var(--green-brand);
+  color: #fff !important;
+}
+
+/* Featured related article (larger, with badge) */
+.related-featured {
+  position: relative;
+  display: flex !important;
+  flex-direction: column;
+  margin-top: 34px;
+  padding: 30px 24px 24px;
+  text-decoration: none !important;
+  color: inherit !important;
+  background: linear-gradient(180deg, var(--bg-apple-solid) 0%, var(--bg-page) 100%);
+  border: 2px solid var(--blue-mid);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 10px 26px rgba(19,74,142,0.08);
+  transition: transform 0.18s, box-shadow 0.18s;
+}
+.related-featured:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 28px rgba(19,74,142,0.15);
+}
+.related-badge {
+  position: absolute;
+  top: -16px; left: 24px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: var(--blue-mid);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  box-shadow: 0 6px 14px rgba(19,74,142,0.22);
+}
+.related-featured-title {
+  display: block;
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 1.2;
+  color: var(--strong) !important;
+  margin: 10px 0 8px;
+}
+.related-featured-text {
+  display: block;
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--text2) !important;
+  margin: 0 0 16px;
+}
+.related-featured:hover .article-chip {
+  background: var(--green-brand);
+  color: #fff !important;
+}
+
+/* ============================================================
+   WARNING / NOTE BOX (green-bordered with badge)
+   ============================================================ */
+.warning-box {
+  position: relative;
+  width: 100%;
+  margin: 40px 0 0;
+  padding: 30px 24px 24px;
+  background: linear-gradient(180deg, #f0f6e4 0%, var(--bg-page) 100%);
+  border: 2px solid var(--green-brand);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 10px 26px rgba(110,155,18,0.08);
+}
+.warning-badge {
+  position: absolute;
+  top: -16px; left: 24px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: var(--green-brand);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  box-shadow: 0 6px 14px rgba(110,155,18,0.22);
+}
+.warning-box .note-main {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 1.2;
+  color: var(--strong);
+  margin: 10px 0 12px;
+}
+
+/* ============================================================
+   REVIEWS RAIL (auto-scrolling testimonials)
+   ============================================================ */
+.rev-rail-wrap, .tmx-rev-rail-wrap {
+  position: relative;
+  width: 100vw;
+  left: 50%; right: 50%;
+  margin-left: -50vw; margin-right: -50vw;
+  overflow: hidden;
+  mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+  margin-top: 20px;
+}
+.rev-rail {
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+  padding: 16px 0 32px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  cursor: grab;
+  -webkit-overflow-scrolling: touch;
+}
+.rev-rail::-webkit-scrollbar { display: none; }
+.rev-rail:active { cursor: grabbing; }
+.rev-card, .tmx-rev-card {
+  flex: 0 0 clamp(280px, 30vw, 400px);
+  background: var(--bg-page);
+  border-radius: 18px;
+  border: 1px solid var(--border);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  min-height: 200px;
+  margin-right: 20px;
+  user-select: none;
+}
+.rev-stars, .tmx-rev-stars {
+  color: #f5b400;
+  font-size: 18px;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+.rev-txt, .tmx-rev-txt { font-size: 17px; flex: 1; }
+.rev-meta, .tmx-rev-meta {
+  font-size: 15px;
+  color: var(--text2);
+  margin-top: 16px;
+}
+
+/* ============================================================
+   MEDIA FRAME (image/video container with rounded corners)
+   ============================================================ */
+.media-frame, .tmx-media-frame {
+  width: 100%;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  -webkit-mask-image: -webkit-radial-gradient(#fff, #000);
+}
+.media-frame img, .media-frame video,
+.tmx-media-frame img, .tmx-media-frame video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* === Card title — used in audience-picker style cards on homepage ===
+   TRUCKMALL section-h2 styling at a smaller size: UPPERCASE, weight 800,
+   3-stop brighter gradient. Tight inline-block so the gradient spans
+   the visible text exactly. Mobile shrinks proportionally. */
+.card-title {
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 1.3;
+  letter-spacing: 0;
+  text-transform: none;
+  margin: 0 0 12px;
+  padding: 0.06em 0 0.06em 0;
+  display: block;
+  max-width: 100%;
+  overflow-wrap: break-word;
+  word-break: normal;
+  hyphens: none;
+  color: var(--blue-mid);
+}
+@supports ((-webkit-background-clip: text) or (background-clip: text)) {
+  .card-title {
+    background: var(--heading-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+}
+@media (max-width: 768px) {
+  .card-title { font-size: 18px; }
+}
+
+
+/* ============= ARTICLE EXTRA STYLES (for symbols & error codes) ============= */
+.lead {
+  font-size: 19px;
+  line-height: 1.65;
+  color: var(--text2);
+  margin-bottom: 14px;
+}
+.lead strong { color: var(--text); }
+
+/* Activity 4-card grid */
+.activity-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin: 28px 0 12px;
+}
+.activity-card {
+  background: #ffffff;
+  border: 1.5px solid var(--border);
+  border-radius: 16px;
+  padding: 22px;
+  display: flex; flex-direction: column; gap: 6px;
+  transition: box-shadow .15s, transform .15s, border-color .15s;
+}
+.activity-card:hover { box-shadow: 0 8px 24px rgba(0,0,0,.06); border-color: rgba(19,74,142,.25); }
+.activity-card .ico {
+  width: 48px; height: 48px;
+  display: inline-flex; align-items: center; justify-content: center;
+  border-radius: 12px;
+  color: #fff;
+}
+.activity-card .ico img {
+  width: 30px; height: 30px;
+  /* SVGs use currentColor for strokes — inherits from parent .ico color */
+  filter: brightness(0) invert(1); /* force pure white regardless of source SVG fill/stroke */
+}
+.activity-card .ico--drive { background: linear-gradient(135deg, #0070F3, #134a8e); }
+.activity-card .ico--work  { background: linear-gradient(135deg, #5C820F, #6E9B12); }
+.activity-card .ico--avail { background: linear-gradient(135deg, #FBC02D, #F57F17); }
+.activity-card .ico--avail img { filter: brightness(0); } /* dark icon on yellow bg */
+.activity-card .ico--rest  { background: linear-gradient(135deg, #6b7280, #374151); }
+.activity-card h3 { font-size: 18px; font-weight: 800; color: var(--text); margin-top: 4px; }
+.activity-card p { font-size: 15px; line-height: 1.55; color: var(--text2); }
+
+/* Universal warning callouts (4 panels) */
+.warn-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 14px;
+  margin: 24px 0;
+}
+.warn-card {
+  border-radius: 16px; padding: 22px; position: relative; border: 1.5px solid;
+}
+.warn-card h3 { font-size: 17px; font-weight: 800; margin-bottom: 8px; }
+.warn-card p  { font-size: 15px; line-height: 1.55; }
+.warn-card--info  { background:#f0f7ff; border-color: rgba(19,74,142,.15);  }
+.warn-card--info  h3 { color: var(--blue-dark); }
+.warn-card--ok    { background:#f4f9ea; border-color: rgba(110,155,18,.2); }
+.warn-card--ok    h3 { color: var(--green-brand); }
+.warn-card--warn  { background:#fff7e6; border-color: rgba(245,158,11,.25); }
+.warn-card--warn  h3 { color:#a85800; }
+.warn-card--crit  { background:#fef2f2; border-color: rgba(220,38,38,.2); }
+.warn-card--crit  h3 { color:#991b1b; }
+
+/* Vendor section (collapsible) — 4 manufacturers */
+.vendor-stack { display: flex; flex-direction: column; gap: 12px; margin: 24px 0; }
+.vendor {
+  border: 1.5px solid var(--border);
+  border-radius: 16px;
+  background: #fff;
+  overflow: hidden;
+}
+.vendor summary {
+  list-style: none; cursor: pointer; padding: 22px 56px 22px 24px;
+  position: relative; font-size: 20px; font-weight: 800;
+  color: var(--text);
+  background: linear-gradient(180deg, var(--bg-apple-solid) 0%, #fff 100%);
+}
+.vendor summary::-webkit-details-marker { display: none; }
+.vendor summary::after {
+  content: "+"; position: absolute; right: 22px; top: 50%;
+  transform: translateY(-50%); font-size: 28px; color: var(--blue-mid); font-weight: 300;
+}
+.vendor[open] summary::after { content: "−"; }
+.vendor-meta {
+  display: block; font-size: 13px; font-weight: 600; letter-spacing: .08em;
+  text-transform: uppercase; color: var(--green-brand);
+  margin-bottom: 6px;
+}
+.vendor-body { padding: 6px 24px 28px; }
+.vendor-body p { font-size: 16px; line-height: 1.6; color: var(--text2); margin-bottom: 14px; }
+.vendor-body h3 { font-size: 18px; font-weight: 800; margin: 26px 0 12px; color: var(--text); }
+
+/* Code table */
+.code-table-wrap {
+  width: 100%; overflow-x: auto; margin: 10px 0 18px;
+  -webkit-overflow-scrolling: touch;
+}
+.code-table {
+  width: 100%; border-collapse: separate; border-spacing: 0;
+  font-size: 15px; min-width: 700px;
+  table-layout: fixed;
+}
+.code-table th, .code-table td {
+  padding: 13px 14px; border-bottom: 1px solid var(--border);
+  vertical-align: top; text-align: left;
+}
+.code-table th {
+  font-size: 13px; font-weight: 700; color: var(--text2);
+  text-transform: uppercase; letter-spacing: .05em;
+  background: var(--bg-apple-solid);
+  border-bottom: 2px solid var(--border);
+}
+.code-table td:first-child { font-weight: 700; color: var(--text); }
+.code-table tr:hover td { background: rgba(19,74,142,.03); }
+
+/* Code table — mobilní kartové zobrazení.
+   Pod 768 px se vodorovný scroll ruší; kazdy radek je karta a popisky
+   sloupcu se doplnuji z ::before podle jazyka dokumentu. */
+@media (max-width: 768px) {
+  .code-table-wrap { overflow-x: visible; }
+  .code-table {
+    min-width: 0;
+    table-layout: auto;
+    font-size: 14px;
+  }
+  .code-table thead { display: none; }
+  .code-table tbody, .code-table tr, .code-table td { display: block; width: 100%; }
+  .code-table tr {
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 12px 14px;
+    margin-bottom: 12px;
+    background: #fff;
+  }
+  .code-table tr:hover td { background: transparent; }
+  .code-table tr.dec-hidden { display: none; }
+  .code-table td {
+    padding: 7px 0 !important;
+    border-bottom: none !important;
+  }
+  .code-table td::before {
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--text2);
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    margin-bottom: 3px;
+  }
+  .code-table td:first-child {
+    font-size: 16px;
+    padding-bottom: 10px !important;
+    margin-bottom: 4px;
+    border-bottom: 1px solid var(--border) !important;
+  }
+  .code-table td:first-child::before { display: none; }
+
+  /* Popisky sloupcu podle jazyka dokumentu */
+  html[lang="en"] .code-table td:nth-child(2)::before { content: "Cause (from manual)"; }
+  html[lang="en"] .code-table td:nth-child(3)::before { content: "What to do"; }
+  html[lang="en"] .code-table td:nth-child(4)::before { content: "Severity"; }
+
+  html[lang="de"] .code-table td:nth-child(2)::before { content: "Ursache (aus Handbuch)"; }
+  html[lang="de"] .code-table td:nth-child(3)::before { content: "Maßnahme"; }
+  html[lang="de"] .code-table td:nth-child(4)::before { content: "Schweregrad"; }
+
+  html[lang="pl"] .code-table td:nth-child(2)::before { content: "Przyczyna (z instrukcji)"; }
+  html[lang="pl"] .code-table td:nth-child(3)::before { content: "Co zrobić"; }
+  html[lang="pl"] .code-table td:nth-child(4)::before { content: "Ważność"; }
+
+  html[lang="hu"] .code-table td:nth-child(2)::before { content: "Ok (kézikönyv alapján)"; }
+  html[lang="hu"] .code-table td:nth-child(3)::before { content: "Mit kell tenni"; }
+  html[lang="hu"] .code-table td:nth-child(4)::before { content: "Súlyosság"; }
+
+  html[lang="el"] .code-table td:nth-child(2)::before { content: "Αιτία (από το εγχειρίδιο)"; }
+  html[lang="el"] .code-table td:nth-child(3)::before { content: "Τι να κάνετε"; }
+  html[lang="el"] .code-table td:nth-child(4)::before { content: "Σοβαρότητα"; }
+}
+
+/* Severity badges */
+.sev {
+  display: inline-block; padding: 3px 10px; border-radius: 99px;
+  font-size: 12px; font-weight: 800; text-transform: uppercase;
+  letter-spacing: .04em; white-space: nowrap;
+}
+.sev-crit { background: #fee2e2; color: #991b1b; }
+.sev-high { background: #ffedd5; color: #9a3412; }
+.sev-med  { background: #fef3c7; color: #92400e; }
+.sev-low  { background: #dcfce7; color: #166534; }
+.sev-info { background: #dbeafe; color: #1e3a8a; }
+
+/* Crisis steps — numbered ordered list with big numbers */
+.crisis-steps {
+  list-style: none; padding: 0; margin: 18px 0 0;
+  display: flex; flex-direction: column; gap: 14px;
+}
+.crisis-steps li {
+  display: flex; gap: 16px; padding: 18px 20px;
+  background: #fff; border: 1.5px solid var(--border); border-radius: 14px;
+  align-items: flex-start;
+}
+.crisis-steps .num {
+  flex-shrink: 0; width: 36px; height: 36px;
+  background: linear-gradient(135deg, var(--blue-dark), var(--blue-mid));
+  color: #fff; border-radius: 50%;
+  display: inline-flex; align-items: center; justify-content: center;
+  font-weight: 800; font-size: 16px;
+}
+.crisis-steps strong { display: block; margin-bottom: 4px; font-size: 16px; color: var(--text); }
+.crisis-steps span.lbl { color: var(--text2); font-size: 15px; line-height: 1.55; }
+
+/* TAGRA inline CTA box */
+.cta-box {
+  margin: 36px 0;
+  border-radius: 18px;
+  padding: 28px 28px;
+  background: linear-gradient(135deg, #052037 0%, var(--blue-dark) 55%, var(--blue-mid) 100%);
+  color: #fff;
+  display: flex; flex-direction: column; gap: 12px; align-items: flex-start;
+}
+.cta-box h3 { font-size: 22px; font-weight: 800; color: #fff; margin: 0; }
+.cta-box p  { font-size: 16px; line-height: 1.55; color: rgba(255,255,255,.88); margin: 0; }
+.cta-box a.cta-btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: linear-gradient(135deg, var(--green-brand) 0%, var(--green-cta) 100%);
+    color: #fff !important;
+    padding: 12px 28px; border-radius: 99px;
+    font-weight: 600; font-size: 16px;
+    text-decoration: none !important;
+    transition: background .15s, transform .15s, box-shadow .2s;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(110,155,18,0.30), 0 1px 0 rgba(255,255,255,0.25) inset;
+}
+.cta-box a.cta-btn::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 30% 0%, rgba(255,255,255,0.20), transparent 60%);
+    pointer-events: none;
+}
+.cta-box a.cta-btn:hover {
+    background: linear-gradient(140deg, #79a517 0%, #527311 100%);
+    transform: scale(1.02);
+    box-shadow: 0 10px 26px rgba(110,155,18,0.45), 0 0 0 4px rgba(110,155,18,0.12), 0 1px 0 rgba(255,255,255,0.3) inset;
+}
+
+/* Two-path chooser (driver: already have data / need the reader) */
+.path-split {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
+}
+.path-card {
+  background: #fff; border: 1.5px solid var(--border); border-radius: var(--radius);
+  padding: 28px 26px; display: flex; flex-direction: column; gap: 12px;
+}
+.path-card h3 { font-size: 19px; font-weight: 800; color: var(--strong); margin: 0; }
+.path-card p { font-size: 15px; line-height: 1.6; color: var(--text2); margin: 0; }
+.path-card p code { background: var(--bg-gray); padding: 2px 6px; border-radius: 5px; font-size: .9em; }
+.path-card .btn-cta { margin-top: 4px; align-self: flex-start; }
+.path-card .path-note { font-size: 13px; color: var(--text2, #6e6e73); margin-top: -4px; }
+.path-card--buy {
+  background: linear-gradient(180deg, #f4f8e9 0%, #fff 100%);
+  border: 2px solid var(--green-brand);
+  box-shadow: 0 10px 26px rgba(110,155,18,.10);
+}
+@media (max-width: 768px) { .path-split { grid-template-columns: 1fr; gap: 18px; } }
+
+/* Sources list */
+.sources-list {
+  list-style: none; padding: 0; margin: 14px 0 0;
+  display: flex; flex-direction: column; gap: 10px;
+}
+.sources-list li {
+  padding: 14px 18px; background: #fff;
+  border: 1.5px solid var(--border); border-radius: 12px;
+  font-size: 15px; line-height: 1.55;
+}
+.sources-list li strong { display: block; margin-bottom: 4px; color: var(--text); }
+.sources-list a { color: var(--blue-mid); font-weight: 600; word-break: break-all; }
+
+/* Related articles small grid */
+.related-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 14px; margin-top: 18px;
+}
+.related-card {
+  display: flex; flex-direction: column; gap: 6px;
+  padding: 18px 20px; background: #fff;
+  border: 1.5px solid var(--border); border-radius: 14px;
+  text-decoration: none !important; color: var(--text) !important;
+  transition: transform .15s, box-shadow .15s, border-color .15s;
+}
+.related-card:hover { transform: translateY(-2px); box-shadow: 0 10px 22px rgba(0,0,0,.06); border-color: rgba(19,74,142,.25); }
+.related-card .r-eyebrow { font-size: 12px; font-weight: 700; color: var(--green-brand); text-transform: uppercase; letter-spacing: .07em; }
+.related-card .r-title { font-size: 16px; font-weight: 800; line-height: 1.35; }
+.related-card .r-text { font-size: 14px; color: var(--text2); line-height: 1.5; }
+.related-card .r-chip { margin-top: 6px; font-size: 13px; font-weight: 700; color: var(--blue-mid); }
+
+/* FAQ accordion */
+.faq-block details {
+  border-bottom: 1px solid var(--border); padding: 4px 0;
+}
+.faq-block details:first-child { border-top: 1px solid var(--border); }
+.faq-block summary {
+  list-style: none; cursor: pointer; padding: 18px 40px 18px 0;
+  font-weight: 800; font-size: 17px; line-height: 1.4; position: relative;
+  color: var(--text);
+}
+.faq-block summary::-webkit-details-marker { display: none; }
+.faq-block summary::after {
+  content: "+"; position: absolute; right: 4px; top: 50%;
+  transform: translateY(-50%); font-size: 24px; color: var(--green-brand); font-weight: 300;
+}
+.faq-block details[open] summary::after { content: "−"; }
+.faq-block .faq-a { padding: 0 0 18px; font-size: 16px; line-height: 1.6; color: var(--text2); }
+
+/* TOC table-of-contents pill list at top */
+.toc {
+  background: var(--bg-apple-solid);
+  border: 1.5px solid var(--border);
+  border-radius: 16px;
+  padding: 18px 22px;
+  margin: 24px 0 36px;
+}
+.toc strong {
+  display: block; font-size: 13px; font-weight: 700; color: var(--text2);
+  text-transform: uppercase; letter-spacing: .08em; margin-bottom: 12px;
+}
+.toc ol { list-style: none; padding: 0; margin: 0; counter-reset: tocnum;
+          display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 6px 18px; }
+.toc ol li { counter-increment: tocnum; margin: 0; padding: 0; }
+.toc ol li::before { content: counter(tocnum, decimal-leading-zero) " "; color: var(--blue-mid); font-weight: 700; font-size: 13px; }
+.toc ol li a { font-size: 14px; color: var(--text); }
+.toc ol li a:hover { color: var(--blue-mid); }
+/* ============ /ARTICLE EXTRA STYLES ============ */
+
+
+/* Article hero video card (used on articles/digital-tachograph-symbols) */
+.art-hero-video {
+  width: 100%;
+  max-width: var(--maxw, 1180px);
+  margin: 28px auto 0;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 18px 42px rgba(11, 44, 74, .12);
+  border: 1px solid var(--border);
+  aspect-ratio: 16 / 9;
+  background: #0b0b0c;
+  -webkit-mask-image: -webkit-radial-gradient(#fff, #000);
+}
+.art-hero-video video {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+@media (max-width: 700px) {
+  .art-hero-video { aspect-ratio: 4 / 3; border-radius: 14px; margin-top: 20px; }
+}
+
+/* === Odsazení mezi obsahovými bloky ===
+   .doc-bento, .twocol a .steps mají horní odsazení, ale ne spodní. Když po nich
+   následuje .callout nebo .warning-box, oba bloky se dotýkají. Sourozenecký
+   selektor to řeší jen tam, kde k tomu dochází — samostatně stojící callout
+   si vlastní odsazení řešit nemá. */
+.doc-bento + .callout, .twocol + .callout, .steps + .callout,
+.doc-bento + .warning-box, .twocol + .warning-box, .steps + .warning-box,
+.callout + .callout, .warning-box + .callout, .callout + .warning-box,
+.doc-bento + p, .twocol + p, .steps + p,
+.doc-bento + h2, .twocol + h2, .steps + h2,
+.doc-bento + h3, .twocol + h3, .steps + h3 {
+  margin-top: 24px;
+}
+
+
+/* ============================================
+   ARTICLE LAYOUT
+   Přesunuto z inline TAGRA-COMPONENTS, sjednoceno 29. 8. 2026
+   ============================================ */
+
+.hero-lede {
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--text);
+  max-width: 920px;
+  margin-top: 16px;
+}
+
+.art-page .band {
+  padding: 60px 0;
+}
+
+.h2-grad {
+  background: var(--heading-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 36px;
+  line-height: 1.06;
+  padding: 0.12em 0.15em 0.08em 0;
+  margin: 0 0 12px;
+}
+
+@media(max-width:700px) {
+  .h2-grad {
+    font-size:28px;
+  }
+}
+
+.bento--hero {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 16px;
+  max-width: 1080px;
+  margin: 32px 0;
+}
+
+@media (max-width: 900px) {
+  .bento--hero {
+    grid-template-columns: 1fr;
+  }
+}
+
+.hero-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg, 20px);
+  padding: 24px;
+}
+
+.hero-card--blue {
+  background: rgba(31,95,166,0.06);
+}
+
+.hero-card .eyebrow {
+  color: var(--blue-mid);
+  margin-bottom: 8px;
+}
+
+.hero-card .big {
+  font-size: 44px;
+  font-weight: 800;
+  color: var(--blue-dark);
+  margin-bottom: 8px;
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+.hero-card p {
+  margin: 0;
+  color: var(--text2);
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.twocol {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 32px;
+}
+
+@media (max-width: 900px) {
+  .twocol {
+    grid-template-columns: 1fr;
+  }
+}
+
+.art-page .card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg, 20px);
+  padding: 28px;
+}
+
+.art-page .card--blue {
+  background: rgba(31,95,166,0.06);
+}
+
+.art-page .card--green {
+  background: rgba(110,155,18,0.07);
+}
+
+.art-page .card h3 {
+  margin: 6px 0 12px;
+  font-size: 22px;
+  color: var(--blue-dark);
+  font-weight: 800;
+}
+
+.art-page .card ul {
+  margin: 8px 0 0 18px;
+  color: var(--text);
+  line-height: 1.65;
+}
+
+.art-page .card ul li {
+  margin: 6px 0;
+}
+
+.info-card {
+  margin-top: 24px;
+  border-left: 4px solid var(--blue-bright);
+  background: #fff;
+  border-radius: var(--radius-lg, 20px);
+  padding: 24px;
+  box-shadow: 0 1px 0 var(--border);
+}
+
+.info-card .badge {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: var(--blue-mid);
+  background: rgba(31,95,166,0.09);
+  padding: 5px 10px;
+  border-radius: 999px;
+  margin-bottom: 10px;
+}
+
+.info-card h3 {
+  margin: 4px 0 8px;
+  font-size: 22px;
+  color: var(--blue-dark);
+}
+
+.info-card p {
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.doc-bento {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 24px;
+}
+
+@media (max-width: 900px) {
+  .doc-bento {
+    grid-template-columns: 1fr;
+  }
+}
+
+.doc-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg, 20px);
+  padding: 24px;
+}
+
+.doc-card h3 {
+  font-size: 20px;
+  margin: 4px 0 10px;
+  color: var(--blue-dark);
+  font-weight: 800;
+}
+
+.doc-card .num {
+  font-weight: 800;
+  color: var(--blue-mid);
+  font-size: 12px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+.doc-card p {
+  color: var(--text2);
+  line-height: 1.6;
+}
+
+.art-page .steps {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  margin-top: 24px;
+}
+
+.art-page .step {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg, 20px);
+  padding: 24px;
+}
+
+.art-page .step .snum {
+  font-weight: 800;
+  color: var(--blue-mid);
+  font-size: 12px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+.art-page .step h3 {
+  margin: 6px 0 8px;
+  font-size: 22px;
+  color: var(--blue-dark);
+  font-weight: 800;
+}
+
+.art-page .step p {
+  color: var(--text2);
+  line-height: 1.6;
+}
+
+.art-page .step--urgent {
+  border-color: var(--blue-mid);
+}
+
+.snum--urgent {
+  color: var(--warn);
+}
+
+.cta-row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 16px;
+}
+
+.art-page .callout--green h3 {
+  font-size: 24px;
+  color: var(--green-cta);
+  margin: 4px 0 12px;
+  font-weight: 800;
+}
+
+.art-page .callout--green ul {
+  margin: 12px 0 12px 18px;
+  color: var(--text);
+  line-height: 1.7;
+}
+
+.rel-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg, 20px);
+  padding: 24px;
+  transition: border-color .15s, box-shadow .15s;
+}
+
+.rel-card:hover {
+  border-color: var(--blue-mid);
+  box-shadow: 0 8px 22px rgba(0,0,0,0.06);
+}
+
+.rel-card .rel-eyebrow {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--blue-mid);
+  margin-bottom: 8px;
+}
+
+.rel-card a {
+  color: var(--blue-dark);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 1.35;
+  display: block;
+}
+
+.rel-card a:hover {
+  color: var(--blue-mid);
+}
+
+.rel-card p {
+  margin-top: 8px;
+  color: var(--text2);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.rel-featured {
+  background: linear-gradient(135deg, var(--blue-dark), var(--blue-mid));
+  color: #fff;
+  border-radius: var(--radius-lg, 20px);
+  padding: 32px;
+  margin-bottom: 16px;
+}
+
+.rel-featured .rel-eyebrow {
+  color: rgba(255,255,255,0.7);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.rel-featured h3 {
+  margin: 0 0 16px;
+  font-size: 24px;
+  color: #fff;
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.rel-featured a {
+  color: #fff;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255,255,255,0.4);
+  padding-bottom: 2px;
+  font-weight: 600;
+}
+
+.rel-featured a:hover {
+  border-bottom-color: #fff;
+}
+
+.art-page .faq {
+  max-width: 980px;
+  margin: 32px auto 0;
+}
+
+.author-block {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg, 20px);
+  padding: 28px;
+  margin-top: 16px;
+}
+
+.author-block p {
+  margin: 6px 0;
+  color: var(--text);
+  line-height: 1.7;
+}
+
+.anim-up { opacity: 0; transform: translateY(28px); transition: opacity .8s cubic-bezier(.16,1,.3,1), transform .8s cubic-bezier(.16,1,.3,1); }
+.anim-up.on, .fly-left.on, .fly-right.on { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  .anim-up, .fly-left, .fly-right { transition: none !important; opacity: 1 !important; transform: none !important; }
+}
+
+.sticky-cta {
+  position:fixed;
+  left:0;
+  right:0;
+  bottom:0;
+  z-index:850;
+  transform:translateY(100%);
+  opacity:0;
+  transition:transform .35s ease,opacity .35s ease;
+  background:linear-gradient(120deg,var(--blue-dark),var(--blue-mid) 70%);
+  box-shadow:0 -4px 24px rgba(0,0,0,.14);
+}
+
+.sticky-cta.is-visible {
+  transform:translateY(0);
+  opacity:1;
+}
+
+.sticky-cta-inner {
+  max-width:var(--maxw);
+  margin:0 auto;
+  padding:14px 24px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+.sticky-cta-text {
+  color:#fff;
+  font-weight:600;
+  font-size:15px;
+}
+
+.sticky-cta-btn {
+  background:linear-gradient(135deg,var(--green-brand) 0%,var(--green-cta) 100%);
+  color:#fff!important;
+  padding:10px 24px;
+  border-radius:99px;
+  font-weight:700;
+  text-decoration:none!important;
+  white-space:nowrap;
+  position:relative;
+  overflow:hidden;
+  box-shadow:0 4px 14px rgba(0,0,0,.22),0 1px 0 rgba(255,255,255,.22) inset;
+  transition:background .15s,transform .15s,box-shadow .2s;
+}
+
+.sticky-cta-btn:hover {
+  background:linear-gradient(140deg,#79a517 0%,#527311 100%);
+  transform:scale(1.03);
+  box-shadow:0 8px 20px rgba(0,0,0,.30),0 1px 0 rgba(255,255,255,.28) inset;
+  text-decoration:none!important;
+}
+
+.sticky-cta-close {
+  background:none;
+  border:none;
+  color:rgba(255,255,255,.65);
+  font-size:22px;
+  line-height:1;
+  cursor:pointer;
+  padding:4px 8px;
+}
+
+.sticky-cta-close:hover {
+  color:#fff;
+}
+
+@media(max-width:700px) {
+  .sticky-cta-text {
+    display:none;
+  }
+  .sticky-cta-inner {
+    padding:12px 16px;
+    gap:14px;
+  }
+}
+
+
+/* Pravidla z inline bloku, která sem NEBYLA přenesena kvůli kolizi
+   s existujícím pravidlem téhož selektoru výše v tomto souboru
+   nebo v base.css (viz popis PR #77):
+   .btn, .btn--primary, .btn--primary:hover, .btn--outline, .btn--outline:hover,
+   .warning-box, .warning-box--urgent, .warning-box .badge, .warning-box__title, .warning-box p,
+   .related-grid */
+
+/* ─── Horní CTA na stránkách chybových kódů (tools/code_cta/sweep.py, 19. 9. 2026)
+   Desktop: tlačítko na zkušební verzi. Mobil (≤720 px): jméno + e-mail,
+   odkaz ke stažení přijde e-mailem na PC (formulář tagra-trial přes nav.js). */
+.cta-box.cc-top { margin: 28px 0 8px; }
+.cc-top .cc-mail { display: none; }
+.cc-top .cc-lead { font-weight: 600; color: #fff; }
+.cc-top .cc-mail input[type="text"],
+.cc-top .cc-mail input[type="email"] {
+  width: 100%; box-sizing: border-box;
+  font: inherit; font-size: 16px; /* 16 px = iOS nezoomuje */
+  padding: 12px 14px; border-radius: 12px;
+  border: 1.5px solid rgba(255,255,255,.35); background: #fff; color: #1d1d1f;
+}
+.cc-top .cc-mail input:focus-visible { outline: 3px solid var(--green-cta); outline-offset: 1px; }
+.cc-top .cc-gdpr { display: flex; gap: 10px; align-items: flex-start; font-size: 13px; line-height: 1.45; color: rgba(255,255,255,.82); }
+.cc-top .cc-gdpr input { margin-top: 2px; width: 18px; height: 18px; flex: 0 0 auto; }
+.cc-top .cc-gdpr a { color: #fff; text-decoration: underline; }
+.cc-top button.cta-btn {
+  display: inline-flex; justify-content: center; align-items: center; gap: 8px;
+  width: 100%; border: 0; cursor: pointer; font: inherit; font-weight: 600; font-size: 16px;
+  padding: 13px 24px; border-radius: 99px; color: #fff;
+  background: linear-gradient(135deg, var(--green-brand) 0%, var(--green-cta) 100%);
+  box-shadow: 0 6px 18px rgba(110,155,18,0.30), 0 1px 0 rgba(255,255,255,0.25) inset;
+}
+.cc-top button.cta-btn[disabled] { opacity: .7; cursor: default; }
+.cc-top .cc-msg:empty { display: none; }
+.cc-top .cc-msg { font-weight: 600; color: #fff; }
+.cc-top .cc-msg a { color: #fff; text-decoration: underline; }
+.cc-top .cc-mail.is-done input, .cc-top .cc-mail.is-done label,
+.cc-top .cc-mail.is-done button, .cc-top .cc-mail.is-done .cc-lead { display: none; }
+@media (max-width: 720px) {
+  .cta-box.cc-top a.cc-desk { display: none; }
+  .cc-top .cc-mail { display: grid; gap: 10px; width: 100%; }
+}
+
+/* ─── HERO S VIDEEM NA ÚVODU: bez skleněných boxů (19. 10. 2026) ─────────────
+   Stejně jako na tdt.cz: bílý text (verzálky H1 beze změny) na tmavém přechodu
+   přes video, kamion zůstává vidět. Platí jen pro hero s videem (všech 11
+   jazykových úvodů); prohlížeče bez :has() dál ukazují původní skleněné boxy. */
+.hero:has(> .hero-video)::after { content: ""; position: absolute; inset: 0; z-index: 1; pointer-events: none;
+  background: linear-gradient(180deg, rgba(6,32,53,.70) 0%, rgba(6,32,53,.50) 42%, rgba(6,32,53,0) 72%); }
+.hero:has(> .hero-video) .hero-glass { background: none; border: 0; box-shadow: none;
+  -webkit-backdrop-filter: none; backdrop-filter: none; padding: 0; margin-bottom: 14px; }
+.hero:has(> .hero-video) .eyebrow { color: #b9e07a; text-shadow: 0 1px 8px rgba(6,32,53,.35); }
+.hero:has(> .hero-video) h1 { background: none; -webkit-text-fill-color: #fff; color: #fff; text-shadow: 0 1px 12px rgba(6,32,53,.35); }
+.hero:has(> .hero-video) .hero-sub, .hero:has(> .hero-video) .hero-sub strong { color: rgba(255,255,255,.94); text-shadow: 0 1px 8px rgba(6,32,53,.35); }
+@media (max-width: 1024px) {
+  .hero:has(> .hero-video)::after { background: linear-gradient(180deg, rgba(6,32,53,.74) 0%, rgba(6,32,53,.62) 60%, rgba(6,32,53,.50) 100%); }
+}
+
+/* ─── VYZKOUŠEJTE TAGRA – modrý pruh s notebookem (převzato z tdt.cz, 19. 10. 2026) ─── */
+.try-band { background: linear-gradient(120deg, var(--blue-dark, #0b2c4a), var(--blue-mid, #134a8e) 62%, var(--blue-light, #2f6fc0)); color: #fff; padding: 80px 0; overflow: hidden; }
+.try-grid { max-width: 1180px; margin: 0 auto; padding: 0 24px; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+.try-media .try-mac { width: 100%; height: auto; display: block; filter: drop-shadow(0 24px 34px rgba(0,0,0,.28)); transform: scale(1.06); transform-origin: center; }
+.try-text h2 { color: #fff; -webkit-text-fill-color: #fff; background: none; font-size: 40px; line-height: 1.1; font-weight: 800; text-transform: uppercase; margin: 0 0 18px; padding: 0; display: block; }
+.try-text h2 .try-logo { display: block; margin-top: 12px; line-height: 0; }
+.try-text h2 .try-logo img { height: 56px; width: auto; max-width: none; margin: 0; }
+.try-text p { color: rgba(255,255,255,.88); font-size: 20px; line-height: 1.5; margin: 0 0 28px; }
+.try-text p strong { color: #fff; }
+@media (max-width: 860px) {
+  .try-band { padding: 56px 0; }
+  .try-grid { grid-template-columns: 1fr; text-align: center; gap: 28px; }
+  .try-media .try-mac { transform: none; }
+  .try-text h2 { font-size: 30px; }
+  .try-text h2 .try-logo img { height: 46px; margin: 0 auto; }
+}
+
+/* ─── BLOK „VYZKOUŠEJTE PROGRAM TAGRA“ (převzato z tdt.cz, 19. 10. 2026) ─────
+   Modrý pás s notebookem a CTA na zkušební verzi; sdílený vzhled tagra.app ↔ tdt.cz. */
+.band--demo { background: linear-gradient(120deg, var(--blue-dark), var(--blue-mid) 62%, var(--blue-light)); color: #fff; padding: 72px 0; overflow: hidden; }
+.band--demo .demo-grid { max-width: 1180px; margin: 0 auto; padding: 0 24px; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+.band--demo .demo-grid > * { min-width: 0; }
+.band--demo .demo-shot { width: 100%; height: auto; display: block; }
+.band--demo .demo-shot.demo-mac { filter: drop-shadow(0 24px 34px rgba(0,0,0,.28)); transform: scale(1.06); transform-origin: center; }
+.band--demo .demo-text h2 { display: block; color: #fff; -webkit-text-fill-color: #fff; background: none; font-size: 34px; font-weight: 800; line-height: 1.12;
+  text-transform: uppercase; letter-spacing: 0; margin: 14px 0; }
+.band--demo .demo-h-logo { display: block; margin-top: 12px; line-height: 0; }
+.band--demo .demo-h-logo img, .band--demo .demo-h-logo img[width][height] { height: 64px; width: auto; max-width: none; margin: 0; }
+.band--demo .demo-text p { color: rgba(255,255,255,.88); font-size: 18px; line-height: 1.5; margin: 0 0 24px; }
+.band--demo .demo-text strong { color: #fff; }
+@media (max-width: 860px) {
+  .band--demo { padding: 56px 0; }
+  .band--demo .demo-grid { grid-template-columns: 1fr; text-align: center; }
+  .band--demo .demo-shot.demo-mac { transform: none; }
+  .band--demo .demo-h-logo img, .band--demo .demo-h-logo img[width][height] { height: 46px; margin: 0 auto; }
+  .band--demo .demo-text h2 { font-size: 28px; }
+}
+
+/* ─── F14 (8. 11. 2026): ořezy obsahu na mobilu (390 px) ─────────────────────
+   1) Karty v hlavičce článků o chybách: mřížka 1fr = minmax(auto,1fr) se roztáhla
+      podle nejdelšího slova („Geschwindigkeitsgeber“ ve 44 px) a karta přetekla.
+   2) Kroky na stránkách „Jak to funguje“ (9 jazyků) mají mřížku jen v inline
+      stylu bez mobilní varianty — 3 a 4 sloupce na 390 px. Selektor podle
+      inline stylu, aby nebylo nutné sahat do 9 HTML.
+   3) Tlačítka s inline flex-shrink:0 (PL „Dowiedzcie się Państwo więcej…“). */
+.hero-card { min-width: 0; overflow-wrap: anywhere; }
+@media (max-width: 900px) {
+  .bento--hero { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 420px) {
+  .hero-card { padding: 20px; }
+  .hero-card .big { font-size: clamp(28px, 8.5vw, 44px); -webkit-hyphens: auto; hyphens: auto; }
+  .btn-cta { max-width: 100%; min-width: 0; flex-shrink: 1 !important; white-space: normal; }
+}
+@media (max-width: 720px) {
+  .band div[style*="display:grid;grid-template-columns:1fr 1fr 1fr"] { grid-template-columns: minmax(0, 1fr) !important; gap: 16px !important; }
+}
+@media (min-width: 721px) and (max-width: 1024px) {
+  .band div[style*="display:grid;grid-template-columns:1fr 1fr 1fr 1fr"] { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+}
+
+/* F15 (8. 11. 2026): first-screen hero text is the LCP element – render it immediately, no entrance animation */
+#main-content.hero .anim-up, #main-content.band--hero .anim-up { opacity: 1; transform: none; transition: none; }
+/* the poster must cover the whole hero like the video (img[width][height]{height:auto} in base CSS shrank it to a 16:9 strip on mobile) */
+#main-content.hero .hero-video-poster { height: 100%; }
+@media (max-width: 1024px) { #main-content.hero .hero-video-poster { object-position: center top; } }
+
+/* CRO #2 (8. 11. 2026): trial CTA in the homepage hero (pattern of /hu/) */
+.hero-cta { justify-content: center; margin-top: 22px; }
+.hero-cta .btn-cta { font-size: 17px; font-weight: 700; padding: 14px 30px; }
+.hero-cta-note { margin: 10px auto 0; font-size: 14px; font-weight: 600; line-height: 1.4; text-align: center; color: rgba(255,255,255,.94); text-shadow: 0 1px 8px rgba(6,32,53,.45); }
+@media (max-width: 600px) { .hero-cta { margin-top: 16px; } .hero-cta .btn-cta { font-size: 15.5px; padding: 12px 22px; } .hero-cta-note { font-size: 13px; } }
+
+/* CRO #10 (8. 11. 2026): "send to dispatcher / workshop" box in error articles (same look as the DE/PL inline style) */
+.share-box { background: #fff; border: 1px solid var(--border); border-radius: var(--radius); padding: 24px 26px; margin: 18px 0; }
+.share-box h4 { font-size: 15px; font-weight: 800; text-transform: uppercase; letter-spacing: .05em; color: var(--text-strong); margin-bottom: 6px; }
+.share-box p { font-size: 14px; color: var(--text2); margin-bottom: 14px; }
+.share-btns { display: flex; gap: 10px; flex-wrap: wrap; }
+.share-btn { display: inline-flex; align-items: center; gap: 8px; padding: 10px 18px; border-radius: 99px; border: 1px solid var(--border); font-weight: 600; font-size: 14px; color: var(--text-strong) !important; text-decoration: none !important; background: var(--bg-apple); transition: border-color .15s; }
+.share-btn:hover { border-color: var(--blue-mid); }
+/* ──────────────────────────────────────────────────────────────────────────
+   TAGRA — Shared navigation styles
+   Used by: all top-level pages and subpages
+   Last refactor: 2026-05-12 (extracted from inline page styles)
+   ──────────────────────────────────────────────────────────────────────────
+   Design tokens this file expects to inherit from the page <style>:
+     --nav-h, --maxw, --border, --text, --text2, --bg-apple-solid,
+     --blue-dark, --blue-mid, --blue-light, --green-cta, --green-brand
+   ────────────────────────────────────────────────────────────────────────── */
+
+/* ─── SKIP LINK ────────────────────────────────────────────
+   První prvek v <body> (WCAG 2.4.1) — umožní klávesnici a čtečkám
+   přeskočit navigaci rovnou na #main-content.
+
+   Pravidlo dosud v žádném CSS nebylo, takže se odkaz vykresloval jako
+   běžný modrý text nad navigací na všech stránkách. Schováváme ho
+   odsunutím mimo viewport, NE přes display:none — ten by ho vyřadil
+   z tab pořadí a odkaz by ztratil smysl. Zviditelní se až při fokusu.
+   z-index nad .site-nav (900) i #scroll-progress (9999). */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 10000;
+  padding: 10px 16px;
+  background: var(--blue-dark, #0b2c4a);
+  color: #fff;
+  font-size: 14px; font-weight: 600; line-height: 1.4;
+  text-decoration: none;
+  border-radius: 0 0 6px 0;
+}
+.skip-link:focus {
+  left: 0;
+  outline: 3px solid var(--blue-light, #1f5fa6);
+  outline-offset: 2px;
+}
+
+/* ─── SCROLL PROGRESS ──────────────────────────────────────── */
+#scroll-progress {
+  position: fixed; top: 0; left: 0; height: 3px;
+  background: linear-gradient(90deg, var(--green-brand, #6E9B12), var(--blue-light, #1f5fa6));
+  width: 0%; z-index: 9999; pointer-events: none;
+  transition: width .1s ease-out;
+}
+
+/* ─── NAVIGATION ───────────────────────────────────────────── */
+.site-nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 900;
+  height: var(--nav-h, 64px);
+  /* Liquid glass (Apple Tahoe-style): layered translucent fill for depth */
+  background: linear-gradient(180deg, rgba(255,255,255,0.72) 0%, rgba(255,255,255,0.52) 100%);
+  backdrop-filter: blur(28px) saturate(200%) brightness(1.04);
+  -webkit-backdrop-filter: blur(28px) saturate(200%) brightness(1.04);
+  border-bottom: 1px solid rgba(255,255,255,0.35);
+  /* Specular top highlight + inner base sheen + soft lift shadow */
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.75),
+    inset 0 -1px 0 rgba(255,255,255,0.20),
+    0 1px 1px rgba(16,42,74,0.04),
+    0 8px 24px rgba(16,42,74,0.06);
+}
+
+/* Reserve room for the fixed nav site-wide; homepage opts out for full-bleed hero. */
+body { padding-top: var(--nav-h, 64px); }
+body.home-fullbleed { padding-top: 0; }
+html { scroll-padding-top: var(--nav-h, 64px); }
+/* Prevent horizontal page scroll caused by inner overflow (review rail, etc). */
+html, body { overflow-x: hidden; max-width: 100vw; }
+.nav-inner {
+  /* nav-inner širší než content (1180px) — logo se odsadí ~110px doleva od krajů
+     contentu, lépe vyniká a Control variant má víc dýchání od nav-links.
+     POZOR: hodnotu nesnižovat — nejdelší menu (HU) potřebuje 1343 px, viz
+     naměřený rozpis výše. Zúžení na 1180 px 29. 8. 2026 rozbíjelo EL/HU/DE menu. */
+  max-width: var(--nav-maxw, 1400px);
+  margin: 0 auto; padding: 0 24px;
+  height: 100%;
+  display: flex; align-items: center; justify-content: space-between; gap: 24px;
+}
+.nav-logo {
+  /* Logo je <img> (SVG) — žádný gradient text-clip. Původní background-clip:text
+     způsoboval v Chrome duplicitní gradientový otisk textu varianty nad logem. */
+  font-size: 22px; font-weight: 900; letter-spacing: -.02em;
+  text-decoration: none; flex-shrink: 0;
+  /* explicit dimensions tak aby výška nav byla identická na všech stránkách
+     bez ohledu na to jestli je uvnitř Control variant nebo ne */
+  display: inline-flex; align-items: flex-end; gap: 0;
+  height: 32px; line-height: 1;
+  position: relative; /* anchor pro případné product variant lockup (např. Control) */
+}
+
+/* Product variant lockup — přidává "CONTROL" / "TRUCKER" / "COMPANY" napravo od loga.
+   V TOKU (ne absolute): dřívější absolutní pozicování drželo šířku logo bloku
+   konstantní, ale variant se vykresloval PŘES nav-links a u delších menu
+   (HU, EL) první položku překrýval. Teď variant šířku zabírá, takže se
+   nav-links samy odsunou doprava a ke kolizi nemůže dojít.
+   Aby menu mezi stránkami s variantem a bez něj neposkakovalo, rezervuje
+   .nav-logo místo přes min-width (viz níže). */
+.nav-logo-variant {
+  margin-left: 12px;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #6b7280;
+  -webkit-text-fill-color: #6b7280;
+  white-space: nowrap;
+  pointer-events: none;
+  line-height: 1;
+  /* Zarovnání na účaří loga: logo je SVG (viewBox 0 0 415.8 94) vykreslené
+     na výšku 32 px, účaří písmen TAGRA leží na y=80.9 → 27.5 px od horní
+     hrany. Varianta se proto zarovná ke spodní hraně a posune o 2 px nahoru,
+     aby obě slova stála na jedné lince. */
+  align-self: flex-end;
+  position: relative;
+  bottom: 2px;
+}
+/* Naměřeno na nejdelším menu (HU): logo 142 + variant 97 + nav-links 951
+   + jazyk 57 + gapy a padding 96 = 1343 px. Pod 1360 px by variant tlačil
+   do menu, proto se skrývá. */
+@media (max-width: 1359px) {
+  .nav-logo-variant { display: none; }
+}
+/* Nad 1440 px je dost místa na rezervaci šířky logo bloku, takže nav-links
+   začínají na stejném X i na stránkách bez variantu (menu mezi stránkami
+   neposkakuje). Pod tím se rezervace ruší, aby menu mělo veškerou šířku. */
+@media (min-width: 1440px) {
+  .nav-logo { min-width: 250px; }
+}
+.nav-links {
+  display: flex; align-items: center; gap: 4px;
+  list-style: none;
+  margin: 0; padding: 0;
+}
+.nav-links li a {
+  font-size: 15px; font-weight: 500; color: var(--text, #1d1d1f);
+  padding: 8px 10px; border-radius: 8px;
+  transition: background .15s, color .15s;
+  text-decoration: none;
+  /* Položka navigace se nikdy nezalamuje. Lišta má pevnou výšku 64 px, takže
+     druhý řádek z ní vyteče ven — u delších jazyků (EL, HU, DE) se to dělo
+     už kolem 1100–1300 px. Přetečení řeší kompaktní rozměry + breakpoint
+     níže, ne zalomení. */
+  white-space: nowrap;
+}
+.nav-links li a:hover { background: var(--bg-apple-solid, #eaf3f8); color: var(--blue-mid, #134a8e); }
+.nav-links a.nav-cta,
+.nav-links .nav-cta-li a {
+  background: linear-gradient(135deg, var(--green-brand, #6E9B12) 0%, var(--green-cta, #5C820F) 100%) !important;
+  color: #fff !important;
+  border-radius: 99px !important;
+  padding: 8px 18px !important;
+  font-weight: 600;
+  text-decoration: none;
+  /* Pill je jedna akce — rozlomený na dva řádky ztrácí tvar i čitelnost. */
+  white-space: nowrap;
+  box-shadow: 0 3px 10px rgba(110, 155, 18, 0.28),
+              0 1px 0 rgba(255, 255, 255, 0.22) inset;
+  transition: background .15s, box-shadow .2s;
+}
+.nav-links a.nav-cta:hover,
+.nav-links .nav-cta-li a:hover {
+  background: linear-gradient(140deg, #79a517 0%, #527311 100%) !important;
+  box-shadow: 0 6px 16px rgba(110, 155, 18, 0.40),
+              0 1px 0 rgba(255, 255, 255, 0.28) inset;
+}
+
+/* === Kompaktní rozměry navigace (platí na všech desktop šířkách) ===
+   .nav-inner je zastropovaný na 1400 px, takže víc místa než 1400 px nav
+   nikdy nedostane — tier omezený na užší okna proto nechytil stránky, které
+   přetékaly i na 1920 px. Nejnáročnější sady menu (potřeba bez komprese):
+     /privacy/sk/ 1445 · /privacy/cz/ 1408 · /el/stolos/ 1368 · /hu/ 1353
+   Po kompresi zbývá i u nejtěsnější stránky (/privacy/sk/) 98 px rezervy,
+   u zbytku 130–280 px — dost i na širší renderování fontů na Windows.
+   Řecké CTA v liště používá kratší text "30 ημέρες δωρεάν" přímo v HTML
+   (plná věta "Δοκιμάστε δωρεάν για 30 ημέρες" zůstává v hero CTA). */
+.nav-inner { gap: 14px; padding: 0 18px; }
+.nav-links { gap: 1px; }
+.nav-links li a { font-size: 14px; padding: 8px 7px; }
+.nav-links a.nav-cta,
+.nav-links .nav-cta-li a { padding: 8px 14px !important; font-size: 14px; }
+.nav-lang {
+  /* Apple-style language dropdown: compact trigger, native names in menu. */
+  position: relative;
+  font-size: 13px; font-weight: 500;
+}
+.nav-lang > summary {
+  list-style: none; cursor: pointer;
+  display: inline-flex; align-items: center; gap: 4px;
+  padding: 6px 10px; border-radius: 8px;
+  color: var(--text2, #515154);
+  user-select: none;
+  transition: background .15s, color .15s;
+}
+.nav-lang > summary::-webkit-details-marker { display: none; }
+.nav-lang > summary::after {
+  content: ''; width: 0; height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 5px solid currentColor;
+  margin-left: 2px;
+  transition: transform .2s;
+}
+.nav-lang[open] > summary::after { transform: rotate(180deg); }
+.nav-lang > summary:hover {
+  background: var(--bg-apple-solid, #eaf3f8);
+  color: var(--blue-mid, #134a8e);
+}
+
+.nav-lang-menu {
+  position: absolute; top: calc(100% + 6px); right: 0;
+  min-width: 180px;
+  background: rgba(255,255,255,0.92);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.10), 0 2px 6px rgba(0,0,0,0.04);
+  padding: 6px;
+  display: flex; flex-direction: column;
+  /* Subtle fade-in. */
+  animation: nav-lang-in .14s cubic-bezier(.16,1,.3,1);
+}
+@keyframes nav-lang-in {
+  from { opacity: 0; transform: translateY(-4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.nav-lang-menu a {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 8px 12px; border-radius: 7px;
+  color: var(--text, #1d1d1f);
+  text-decoration: none;
+  font-size: 14px; font-weight: 500;
+  transition: background .12s;
+}
+.nav-lang-menu a:hover {
+  background: var(--bg-apple-solid, #eaf3f8);
+  color: var(--blue-mid, #134a8e);
+}
+.nav-lang-menu a.active::after {
+  content: '✓'; color: var(--blue-mid, #134a8e);
+  font-size: 14px; font-weight: 600;
+}
+/* Mobile-only CTA pill. Hidden on desktop; shown on mobile via media query. */
+.nav-cta-mobile {
+  display: none; /* default hidden — desktop shows in-list CTA instead */
+  background: var(--green-cta, #5C820F); color: #fff !important;
+  border-radius: 99px; padding: 8px 14px;
+  font-size: 13px; font-weight: 600;
+  text-decoration: none !important; white-space: nowrap;
+  transition: background .15s, transform .15s;
+}
+.nav-cta-mobile:hover, .nav-cta-mobile:active {
+  background: var(--green-brand, #6E9B12);
+  transform: scale(1.03);
+}
+.nav-mobile-toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
+.nav-mobile-toggle span {
+  display: block; width: 22px; height: 2px;
+  background: var(--text, #1d1d1f); margin: 5px 0;
+  border-radius: 2px; transition: .3s;
+}
+
+/* Hamburger breakpoint je 1280 px. Rozhoduje nejtěsnější sada menu na webu —
+   legacy CZ/SK menu na /privacy/{cz,sk}/ ("Zařízení na stahování dat",
+   "Vyhodnocování dat"), které po kompresi potřebuje 1194 px. Na 1281 px mu
+   zbývá 87 px rezervy, řečtině 171 px, maďarštině 192 px. Jednotné číslo pro
+   všechny jazyky, ať lišta vypadá napříč weby stejně a nezávisí na délce
+   překladu. */
+@media (max-width: 1280px) {
+  .nav-inner { padding: 0 16px 0 20px; gap: 12px; }
+  .nav-links { display: none; }
+  .nav-cta-mobile { display: inline-flex; align-items: center; }
+  .nav-mobile-toggle { display: block; padding: 8px 0 8px 8px; }
+  .nav-links.open {
+    display: flex; flex-direction: column; align-items: flex-start; gap: 2px;
+    position: absolute; top: var(--nav-h, 64px); left: 0; right: 0;
+    background: rgba(255,255,255,0.97); backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border, rgba(0,0,0,0.08)); padding: 12px 24px 20px;
+  }
+}
+
+/* === Active page indicator ===
+   The self-link gets aria-current="page" (see HTML). Style it with the
+   brand mid-blue + heavier weight so users can see where they are
+   without disturbing the uniform layout. */
+.nav-links a[aria-current="page"] {
+  color: var(--blue-mid, #134a8e);
+  font-weight: 700;
+}
+.nav-links a[aria-current="page"]:hover {
+  color: var(--blue-dark, #0b2c4a);
+}
+
+/* Logo lockup never gets an underline, even on hover/focus. */
+.nav-logo,
+.nav-logo:hover,
+.nav-logo:focus,
+.nav-logo:active {
+  text-decoration: none;
+}
+
+/* === Mobilní lišta u delších jazyků ===
+   .nav-inner je flex a jediné, co mělo flex-shrink:0, bylo logo. Mobilní CTA
+   má white-space:nowrap, takže se nikdy nezmenšilo — u delších překladů
+   ("Próbálja ki ingyen", "Wypróbuj za darmo", "Kostenlos testen") suma šířek
+   přerostla viewport a hamburger vytlačila za pravý okraj, kde ho
+   html{overflow-x:hidden} uřízlo. Na mobilu je hamburger jediná cesta do
+   navigace, takže má přednost před šířkou CTA: nesmršťuje se on, ale pill. */
+@media (max-width: 1280px) {
+  .nav-inner { min-width: 0; }
+  .nav-logo,
+  .nav-lang,
+  .nav-mobile-toggle { flex-shrink: 0; }
+  .nav-cta-mobile {
+    flex: 0 1 auto; min-width: 0;
+    overflow: hidden; text-overflow: ellipsis;
+  }
+}
+
+/* Pod 700 px se CTA zkracuje — pill je akce, ne věta (nejdelší plný text,
+   PL, potřebuje s položkou Shop v jednom řádku 641 px).
+   Původní text zůstává v DOM kvůli čtečkám a odkaz cílí beze změny;
+   vizuálně ho nahrazuje ::after, takže nedochází k probliknutí jako
+   při výměně textu skriptem. */
+@media (max-width: 700px) {
+  .nav-cta-mobile { font-size: 0; padding: 8px 13px; }
+  .nav-cta-mobile::after {
+    content: "Try free";
+    font-size: 13px; font-weight: 600; line-height: 1;
+  }
+  html[lang="de"] .nav-cta-mobile::after { content: "Testen"; }
+  html[lang="pl"] .nav-cta-mobile::after { content: "Wypróbuj"; }
+  html[lang="el"] .nav-cta-mobile::after { content: "Δοκιμή"; }
+  html[lang="hu"] .nav-cta-mobile::after { content: "Kipróbálom"; }
+  html[lang="nl"] .nav-cta-mobile::after { content: "Gratis proberen"; }
+  html[lang="fr"] .nav-cta-mobile::after { content: "Essai gratuit"; }
+  html[lang="it"] .nav-cta-mobile::after { content: "Prova gratis"; }
+  html[lang="ro"] .nav-cta-mobile::after { content: "Încercați gratuit"; }
+}
+
+/* Nejužší telefony (≤400 px) — utáhnout mezery a logo, ať zbyde místo na
+   hamburger. Výška loga je v HTML inline stylem, proto !important. */
+@media (max-width: 400px) {
+  .nav-inner { gap: 8px; padding: 0 12px 0 14px; }
+  .nav-logo img { height: 26px !important; }
+}
+
+/* === Sekundarni odkaz "Shop" (shop.tagra.app) ===
+   Desktop (>1280 px): obrysove tlacitko na tmave modre liste (bily obrys).
+   Rozbalovaci menu (<=1280 px): bezna polozka, stejne odsazeni jako ostatni. */
+.nav-links .nav-shop-li a {
+  border: 1.5px solid rgba(255, 255, 255, 0.6);
+  color: #fff;
+  border-radius: 99px;
+  padding: 6.5px 14px;
+  font-weight: 600;
+  background: transparent;
+  margin-left: 6px;
+}
+.nav-links .nav-shop-li a:hover {
+  background: rgba(255, 255, 255, 0.14);
+  border-color: #fff;
+  color: #fff;
+}
+@media (max-width: 1280px) {
+  .nav-links .nav-shop-li a {
+    border: 0; border-radius: 0; padding: 8px 7px; margin-left: 0;
+    font-weight: 500; color: var(--text, #1d1d1f); background: transparent;
+  }
+  .nav-links .nav-shop-li a:hover { color: var(--blue-mid, #134a8e); background: transparent; }
+}
+
+/* === Shop a zkušební verze viditelně i na mobilu (4. 11. 2026) ===
+   Do 1280 px je položka Shop schovaná v hamburgeru, proto ji nav.js kopíruje
+   do lišty jako .nav-shop-mobile (HU a stránky bez Shopu ji nemají, odkaz tam
+   nevznikne).
+   Na telefonu (<= 620 px) se logo, fotka, jazyk, Shop, zkušební verze a hamburger
+   do jednoho řádku nevejdou — na šířce 402 px se pill „Try free“ ořezával, na 320 px
+   z něj zbylo 26 px. Proto dvě patra jako na desktopu: nahoře logo, fotka, jazyk,
+   hamburger; pod tím tmavě modrý pruh s oběma tlačítky.
+   Všechna pravidla pruhu stojí na :has() — prohlížeč bez něj je zahodí celá
+   a zůstane mu původní jeden řádek. */
+.nav-shop-mobile { display: none; }
+@media (max-width: 1280px) {
+  .nav-shop-mobile {
+    display: inline-flex; align-items: center; justify-content: center; gap: 6px;
+    flex: 0 0 auto;
+    padding: 6.5px 13px; border-radius: 99px;
+    border: 1.5px solid var(--blue-mid, #134a8e);
+    color: var(--blue-mid, #134a8e) !important;
+    font-size: 13px; font-weight: 600; line-height: 1.2;
+    text-decoration: none !important; white-space: nowrap;
+    transition: background .15s;
+  }
+  .nav-shop-mobile:hover { background: var(--bg-apple-solid, #eaf3f8); }
+  .nav-shop-mobile svg { width: 15px; height: 15px; flex: 0 0 15px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+}
+@media (max-width: 620px) {
+  :root:has(.site-nav .nav-shop-li, .site-nav .nav-cta-mobile) { --nav-h: 108px; }
+  .site-nav:has(.nav-shop-li, .nav-cta-mobile) .nav-inner {
+    flex-wrap: wrap; align-content: flex-start; row-gap: 0; justify-content: flex-start;
+  }
+  .site-nav:has(.nav-shop-li, .nav-cta-mobile) .nav-logo { margin: 16px 0; }
+  .site-nav:has(.nav-shop-li, .nav-cta-mobile)::after {
+    content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 44px; z-index: -1;
+    background: linear-gradient(90deg, #0b2c4a 0%, #134a8e 50%, #1f5fa6 100%);
+  }
+  .site-nav:has(.nav-shop-li, .nav-cta-mobile) .nav-cta-mobile,
+  .site-nav:has(.nav-shop-li, .nav-cta-mobile) .nav-shop-mobile {
+    order: 10; flex: 1 1 100%; height: 32px; margin: 6px 0; padding: 0 10px;
+    justify-content: center; box-sizing: border-box;
+  }
+  .site-nav:has(.nav-shop-li) .nav-cta-mobile,
+  .site-nav:has(.nav-shop-li) .nav-shop-mobile { flex-basis: calc(50% - 7px); }
+  /* Místo pro Shop je držené CSS ještě předtím, než ho nav.js vloží — tlačítko neposkočí. */
+  .site-nav:has(.nav-shop-li) .nav-cta-mobile { order: 11; flex-grow: 0; margin-left: auto; }
+  .site-nav:has(.nav-shop-li, .nav-cta-mobile) .nav-shop-mobile { border-color: rgba(255,255,255,.7); color: #fff !important; }
+  .site-nav:has(.nav-shop-li, .nav-cta-mobile) .nav-shop-mobile:hover { background: rgba(255,255,255,.14); }
+  .site-nav:has(.nav-shop-li, .nav-cta-mobile) .nav-cta-mobile {
+    background: linear-gradient(135deg, var(--green-brand, #6E9B12) 0%, var(--green-cta, #5C820F) 100%);
+  }
+}
+
+/* === Kontakt s fotkou + dvouřádková hlavička nad 1280 px (F03, 8. 11. 2026) ===
+   Dřív tohle CSS vkládal až nav.js (navContact) po načtení stránky. Hlavička tak
+   první vykreslení dostala jednořádková (64 px) a teprve potom se přepnula na
+   dva řádky (120 px) — celý obsah poskočil o 56 px (CLS 0,12–0,30, HU až 0,99).
+   Teď je výška i rozvržení dané od prvního vykreslení; nav.js už jen vloží
+   odkaz .nav-contact do připraveného místa (řádek 1, vpravo před jazykem).
+   html:root kvůli specificitě — tokens.css / main.css definují --nav-h v :root
+   a mohou se načíst až za nav.css.
+   --nav-contact-css je značka pro nav.js: když chybí (stará kopie nav.css
+   v cache), nav.js si CSS vloží sám jako dřív. */
+:root { --nav-contact-css: 1; }
+.nav-contact{display:flex;align-items:center;gap:10px;text-decoration:none!important;flex-shrink:0;margin-left:auto}
+.nav-contact__ph{width:52px;height:52px;flex:0 0 52px;border-radius:50%;background:#fff url(/assets/img/team/ivan-szabo.webp) center bottom/cover no-repeat;box-shadow:0 4px 12px rgba(11,44,74,.18);border:2px solid #fff}
+.nav-contact__t{display:flex;flex-direction:column;line-height:1.2}
+.nav-contact__t small{font-size:12px;font-weight:600;color:#5b6773}
+.nav-contact__t b{font-size:17px;font-weight:800;color:#134a8e;white-space:nowrap}
+.nav-contact:hover .nav-contact__t b{color:#0b2c4a}
+@media (min-width:1281px){
+  html:root{--nav-h:120px}
+  .site-nav .nav-inner{flex-wrap:wrap;align-content:flex-start;row-gap:0}
+  .site-nav .nav-inner>.nav-logo{align-self:center;margin:18px 0}
+  .site-nav .nav-inner>.nav-contact,.site-nav .nav-inner>details.nav-lang{height:68px;align-items:center}
+  /* jazyk drží pravý okraj řádku 1 už před vložením .nav-contact (jinak by poskočil) */
+  .site-nav .nav-inner>details.nav-lang{margin-left:auto}
+  .site-nav .nav-inner>.nav-contact+details.nav-lang{margin-left:0}
+  .site-nav .nav-inner>.nav-links{order:10;flex:0 0 100%;height:52px;margin:0;justify-content:flex-start;position:relative;isolation:isolate}
+  .site-nav .nav-inner>.nav-links::before{content:"";position:absolute;z-index:-1;top:0;bottom:0;left:50%!important;right:auto!important;width:100vw;margin-left:-50vw;background:linear-gradient(90deg,#0b2c4a 0%,#134a8e 50%,#1f5fa6 100%);pointer-events:none}
+  .site-nav .nav-links>li>a:not(.nav-cta){color:#fff!important;text-transform:uppercase;font-weight:700!important;letter-spacing:.05em;font-size:14px!important}
+  .site-nav .nav-links>li>a:not(.nav-cta):hover{background:rgba(255,255,255,.1)!important;color:#fff!important}
+  .site-nav .nav-links>li.nav-cta-li{margin-left:auto}
+}
+@media (max-width:1280px){.nav-contact{margin-left:auto}.nav-contact__t{display:none}.nav-contact__ph{width:42px;height:42px;flex-basis:42px}}
+/* ──────────────────────────────────────────────────────────────────────────
+   TAGRA — Shared site footer
+   Used by: all top-level pages and article subpages
+
+   Footer width = 1180px regardless of content max-width (--maxw),
+   so article pages with --maxw:860px still get full-width footer.
+   ────────────────────────────────────────────────────────────────────────── */
+
+.site-footer {
+  background: linear-gradient(90deg, #062035 0%, var(--blue-dark) 35%, var(--blue-mid) 100%);
+  color: rgba(255,255,255,.7);
+  padding: 48px 0 32px;
+}
+
+.footer-inner {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .footer-inner {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+.footer-logo {
+  margin-bottom: 16px;
+}
+
+/* Logo v patičce stejně velké jako v navigaci (jednotný look s tdt.cz) */
+.footer-logo img,
+.footer-logo img[width][height] {
+  display: block;
+  height: 32px;
+  width: auto;
+  max-height: none;
+  max-width: none;
+}
+
+@media (max-width: 768px) {
+  .footer-logo img, .footer-logo img[width][height] { height: 26px; }
+}
+
+.footer-desc {
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.footer-col h4,
+.site-footer .footer-col .footer-col-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  margin-bottom: 14px;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 8px;
+}
+
+.footer-col ul li a {
+  font-size: 15px;
+  color: rgba(255,255,255,.6);
+  text-decoration: none;
+  transition: color .15s;
+}
+
+.footer-col ul li a:hover {
+  color: #fff;
+}
+
+.footer-bottom {
+  max-width: 1180px;
+  margin: 32px auto 0;
+  padding: 16px 24px 0;
+  border-top: 1px solid rgba(255,255,255,.1);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.footer-bottom a {
+  color: rgba(255,255,255,.5);
+  text-decoration: none;
+}
+
+.footer-bottom a:hover {
+  color: #fff;
+}
+
+/* header contact photo: cutout portrait, head not clipped (2. 11. 2026) */
+a.nav-contact .nav-contact__ph{width:55px;height:60px;flex:0 0 55px;align-self:flex-end;border:0;border-radius:0;box-shadow:none;background:url(/assets/img/team/ivan-szabo.webp) center bottom/contain no-repeat;filter:drop-shadow(0 4px 8px rgba(11,44,74,.22))}
+@media (max-width:1280px){a.nav-contact .nav-contact__ph{width:44px;height:48px;flex-basis:44px}}
+/* TAGRA version selector v1.0 (7. 11. 2026) – tagra.app /fleet/ + /driver/ in all languages.
+   Markup: tools/tagra-selector.mjs · behaviour: assets/js/tagra-selector.js · prices: assets/js/tagra-prices.js
+   Same look as the shop.tagra.app version switcher (shop.css v6.1) and fleet calculator summary. */
+.tsel{--tsel-blue:var(--blue-dark,#0b2c4a);box-sizing:border-box;width:100%;max-width:640px;margin:0 auto;padding:18px;border-radius:22px;text-align:left;
+  border:1.5px solid rgba(19,74,142,.14);background:linear-gradient(180deg,#dcecf6 0%,#eaf3f8 45%,#f5f9fc 100%);font-variant-numeric:tabular-nums}
+.tsel *{box-sizing:border-box}
+.tsel__t{margin:0 0 4px!important;font-size:19px;line-height:1.25;font-weight:800;color:var(--tsel-blue)}
+.tsel__q{margin:0 0 8px!important;font-size:14.5px;line-height:1.3;font-weight:700;color:var(--tsel-blue)}
+.tsel__q+.tsel__row{margin-bottom:14px}
+.tsel__row{display:grid;gap:6px}
+.tsel__row--5{grid-template-columns:repeat(5,minmax(0,1fr))}
+.tsel__row--2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.tsel__o{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;min-width:0;min-height:54px;padding:6px 6px;border-radius:13px;background:#fff;
+  border:1.5px solid rgba(19,74,142,.16);color:var(--tsel-blue)!important;text-decoration:none!important;text-align:center;line-height:1.15;
+  transition:border-color .15s,box-shadow .15s,transform .15s,background .15s}
+a.tsel__o:hover{border-color:rgba(19,74,142,.45);transform:translateY(-1px)}
+a.tsel__o:focus-visible{outline:3px solid rgba(19,74,142,.35);outline-offset:2px}
+.tsel__o b{font-size:18px;font-weight:800;letter-spacing:-.01em;max-width:100%}
+.tsel__o small{font-size:11.5px;font-weight:600;color:var(--text2,#515154);max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tsel__row--2 .tsel__o b{font-size:14.5px;font-weight:700}
+.tsel__o.is-on{background:linear-gradient(135deg,var(--green-brand,#6E9B12) 0%,var(--green-cta,#5C820F) 100%);border-color:transparent;color:#fff!important;box-shadow:0 6px 16px rgba(110,155,18,.28)}
+.tsel__o.is-on small{color:rgba(255,255,255,.92)}
+/* recommendation */
+.tsel__res{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:4px 16px;margin-top:4px;padding:16px 18px;border-radius:18px;color:#e6f0f8;
+  background:linear-gradient(160deg,#0b2c4a 0%,#134a8e 70%,#1f5fa6 100%);box-shadow:0 14px 30px rgba(11,44,74,.18)}
+.tsel__head{grid-column:1;min-width:0}
+.tsel__lbl{display:block;font-size:11.5px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:#a9cbe8}
+.tsel__name{display:block;font-size:20px;line-height:1.2;font-weight:800;color:#fff}
+.tsel__cap{display:block;font-size:13.5px;line-height:1.35;color:#d6e6f4}
+.tsel__price{grid-column:2;grid-row:1;margin:0!important;text-align:right;white-space:nowrap;color:#fff}
+.tsel__amt{display:block;font-size:30px;line-height:1.05;font-weight:800;letter-spacing:-.02em;color:#fff}
+.tsel__vat{display:block;font-size:12.5px;font-weight:600;color:#a9cbe8}
+.tsel__fee,.tsel__note{grid-column:1/-1;margin:2px 0 0!important;font-size:13.5px;line-height:1.4;color:#d6e6f4}
+.tsel__note[hidden]{display:none}
+.tsel__acts{grid-column:1/-1;display:flex;flex-wrap:wrap;align-items:center;gap:8px 16px;margin-top:10px}
+.tsel .tsel__cta{justify-content:center;padding:13px 26px;font-size:16.5px;text-align:center;max-width:100%}
+.tsel__alt{font-size:14.5px;font-weight:600;color:#fff!important;text-decoration:underline;text-underline-offset:3px}
+.tsel__alt:hover{color:#c8e88a!important}
+.tsel__more{grid-column:1/-1;margin:8px 0 0!important;font-size:13.5px;color:#d6e6f4}
+.tsel__more a{color:#fff!important;font-weight:600;text-decoration:underline;text-underline-offset:3px}
+/* placement */
+.tsel--hero{margin:0 auto 22px;padding:14px}
+.tsel--hero .tsel__q{text-align:center}
+.tsel-pricing{margin:0 0 28px}
+/* homepage pricing section (v1.1, 8. 11. 2026): fleet + driver selector side by side, stacked on phones */
+.tsel-home{display:grid;gap:24px;margin:32px auto 0;max-width:1240px}
+@media (min-width:1000px){.tsel-home{grid-template-columns:repeat(2,minmax(0,1fr))}.tsel-home .tsel{max-width:none}}
+@media (max-width:560px){
+  .tsel{padding:12px 10px;border-radius:18px}
+  .tsel__row--5{grid-template-columns:repeat(4,minmax(0,1fr)) minmax(0,1.3fr)}
+  .tsel__o{min-height:50px;padding:5px 1px}
+  .tsel__o b{font-size:16px}
+  .tsel__o small{font-size:9.5px;letter-spacing:-.01em}
+  .tsel__row--2 .tsel__o b{font-size:13px}
+  .tsel__res{padding:14px 14px;gap:2px 10px}
+  .tsel__name{font-size:18px}
+  .tsel__amt{font-size:26px}
+  .tsel__acts{margin-top:8px}
+  .tsel .tsel__cta{width:100%;padding:12px 18px;font-size:16px}
+  .tsel__alt{width:100%;text-align:center}
+}
+/* /fleet/ hero on phones: price + buy button directly under the H1 (avg. scroll there was 5 %) */
+@media (max-width:720px){
+  .tsel-hero .container{display:flex;flex-direction:column;align-items:center}
+  .tsel-hero .container>*{order:5;width:100%}
+  .tsel-hero .container>.eyebrow{order:1}
+  .tsel-hero .container>h1{order:2;width:auto;font-size:34px;margin-bottom:12px}
+  .tsel-hero .container>.tsel{order:3;margin-bottom:14px}
+  .tsel-hero .container>.tsel-hero__cta{order:4;margin-bottom:6px}
+  .tsel-hero .container>p.lead{margin-top:18px}
+}
+@media (max-width:560px){
+  .tsel--hero{padding:10px 10px 12px}
+  .tsel--hero .tsel__q{margin-bottom:6px!important;font-size:13.5px;letter-spacing:-.01em}
+  .tsel--hero .tsel__fee{font-size:12.5px}
+  .tsel--hero .tsel__res{padding:12px 14px}
+  .tsel--hero .tsel__cta{padding:11px 12px;font-size:15px}
+  .tsel--hero .tsel__lbl{display:none}
+  .tsel-hero .container>h1{margin-bottom:8px}
+}
+@media (max-width:420px){.tsel-hero .container>h1{font-size:30px}}
+@media (prefers-reduced-motion:reduce){.tsel__o{transition:none}a.tsel__o:hover{transform:none}}
+/* /driver/ hero: one line about TAGRA TRUCKER 2 */
+.tsel-t2line{max-width:620px;margin:2px auto 14px;font-size:15.5px;line-height:1.45;color:var(--text2,#515154)}
+.tsel-t2line a{font-weight:700;color:var(--blue-mid,#134a8e)}
