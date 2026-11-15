@@ -25,7 +25,7 @@ export const LANGS = {
   fr: { fleet: 'fr/entreprises', driver: 'fr/conducteurs', fmt: '{n} €', dec: ',' },
   it: { fleet: 'it/per-aziende', driver: 'it/per-autisti', fmt: '{n} €', dec: ',' },
   nl: { fleet: 'nl/voor-transportbedrijven', driver: 'nl/voor-chauffeurs', fmt: '€{n}', dec: ',' },
-  pl: { fleet: 'pl/dla-przewoznikow', driver: 'pl/dla-kierowcow', fmt: '{n} €', dec: ',' },
+  pl: { fleet: 'pl/dla-przewoznikow', driver: 'pl/dla-kierowcow', fmt: '{n} €', dec: ',', shop: '/pl' },
   hu: { fleet: 'hu/fuvarozoknak', driver: 'hu/soforoknek', fmt: '{n} €', dec: ',', base: '/hu/kapcsolat/?product=' },
   ro: { fleet: 'ro/pentru-firme', driver: 'ro/pentru-conducatori', fmt: '{n} €', dec: ',' },
   el: { fleet: 'el/stolos', driver: 'el/odigoi', fmt: '{n} €', dec: ',' },
