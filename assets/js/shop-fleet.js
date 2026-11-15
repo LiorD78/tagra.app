@@ -196,11 +196,14 @@
     var s=document.getElementById('tgs-prices-js');
     if(!s){s=document.createElement('script');s.id='tgs-prices-js';s.src=PRICES_JS;s.async=true;document.head.appendChild(s);}
     s.addEventListener('load',go);
-    s.addEventListener('error',function(){track('fleet_calc_error',{fc_error:'prices_load'});});
+    s.addEventListener('error',function(){track('fleet_calc_error',{fc_error:'prices_load'});done();});
   }
+  /* CLS: kalkulačka se do #tgs-pricing vkládá až po načtení cen (async) a sekci výrazně zvětší; stránka zůstává skrytá (visibility, layout se počítá),
+     dokud není vložená – třída tgs-fcd na <html> ji pak odkryje (shop.css). Při chybě/bez cen se odkryje také. Failsafe 8 s je v shop.css. */
+  function done(){document.documentElement.classList.add('tgs-fcd');}
   function boot(){
     if(!document.body||!document.body.classList.contains('type-index'))return;
-    withPrices(function(){var tries=0;(function go(){if(init())return;if(++tries<40)setTimeout(go,150);})();});
+    withPrices(function(){var tries=0;(function go(){if(init()){done();return;}if(++tries<40)setTimeout(go,150);else done();})();});
   }
   var l=document.createElement('link');l.rel='stylesheet';l.href='https://tagra.app/assets/css/shop-fleet.css?v=3';document.head.appendChild(l);
   if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',boot);}else{boot();}

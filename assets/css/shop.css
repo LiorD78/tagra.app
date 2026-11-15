@@ -426,7 +426,7 @@ html:not(.tgs-hd) body #header .header-top>.navigation-buttons{margin-left:auto!
 }
 /* --- CLS: homepage – JS rebuilds the page under the carousel; keep it invisible (layout kept) until shop.js is done; failsafe 8 s --- */
 @keyframes tgs-show{to{visibility:visible}}
-body.type-index:not(.tgs-v6) #content>:not(.banners-row),body.type-index:not(.tgs-v6) #content-wrapper~*,html:not(.tgs-l2) body.type-index #content>:not(.banners-row),html:not(.tgs-l2) body.type-index #content-wrapper~*{visibility:hidden;animation:tgs-show 0s 8s forwards}
+body.type-index:not(.tgs-v6) #content>:not(.banners-row),body.type-index:not(.tgs-v6) #content-wrapper~*,html:not(.tgs-l2) body.type-index #content>:not(.banners-row),html:not(.tgs-l2) body.type-index #content-wrapper~*,html:not(.tgs-fcd) body.type-index #content>:not(.banners-row),html:not(.tgs-fcd) body.type-index #content-wrapper~*{visibility:hidden;animation:tgs-show 0s 8s forwards}
 body.type-index:not(.tgs-v6) #products-1>.product:has(a.image[href^="/tagra-"]):not(:has(a.image[href*="download-box"])){display:none}
 body.type-index .tgs-car{margin:44px 0 40px} /* same as shop2.css (loaded later) – no jump when it arrives */
 @media (max-width:767px){body.type-index .tgs-car{margin:16px 0 24px}body.type-index .tgs-car__item{aspect-ratio:4/5}}
