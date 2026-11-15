@@ -14,14 +14,15 @@ const URLS = {
   dl: 'https://shop.tagra.app/software-device-bundles/',
 };
 
+// HU (#279): shop URL s prefixem /hu/ (DE/PL/… mají prefix doplněn dodatečně)
 const argv = process.argv.slice(2);
 const li = argv.indexOf('--lang');
 const lang = li >= 0 ? argv[li + 1] : null;
 if (!lang) { console.error('Chybí --lang <kód>'); process.exit(1); }
-if (lang === 'hu') { console.error('hu/ se nesmí upravovat'); process.exit(1); }
 
 const texts = JSON.parse(fs.readFileSync(path.join(__dirname, 'cta_texts.json'), 'utf8'));
 const map = JSON.parse(fs.readFileSync(path.join(__dirname, 'article_map.json'), 'utf8'));
+if (lang === 'hu') for (const k in URLS) URLS[k] = URLS[k].replace('shop.tagra.app/', 'shop.tagra.app/hu/');
 if (!map[lang]) { console.error('Jazyk není v article_map.json: ' + lang); process.exit(1); }
 const T = (k) => {
   const v = texts[k] && texts[k][lang];
