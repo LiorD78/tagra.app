@@ -1,5 +1,5 @@
 /* TAGRA rozšířená analytika (2. 10. 2026) — defer po nav.js. Jen gtag / clarity, pokud existují
-   (Consent Mode v2 a banner tmx-consent-v1 se neobcházejí). Žádné osobní údaje, žádný fingerprinting.
+   (Consent Mode v2 a consent.js / tmx-consent-v2 se neobcházejí). Žádné osobní údaje, žádný fingerprinting.
    pageType() a TRIAL_PATHS jsou z nav.js (window.tagraPageType). */
 (function () {
   'use strict';
@@ -223,10 +223,8 @@
     };
     doc.head.appendChild(s);
   }
-  var granted = false;
-  try { granted = localStorage.getItem('tmx-consent-v1') === 'granted'; } catch (e) {}
-  if (granted) onReady(loadVitals);
-  else doc.addEventListener('click', function (e) {
-    if (e.target.closest && e.target.closest('.tmx-cc__b--yes')) loadVitals();
-  });
+  /* Web Vitals jen s analytickým souhlasem (consent.js v2): čte window.tmxConsent() a událost tmx:consent. */
+  function anOk() { try { return !!(W.tmxConsent && W.tmxConsent().an); } catch (e) { return false; } }
+  if (anOk()) onReady(loadVitals);
+  W.addEventListener('tmx:consent', function () { if (anOk()) loadVitals(); });
 })();
