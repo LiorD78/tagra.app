@@ -22,60 +22,8 @@
     gtag('js', new Date());
     gtag('config','G-92253QFBNX');
   </script>
-<!-- Cookie consent banner (self-hosted) + Microsoft Clarity gating -->
-<style>
-    .tmx-cc{position:fixed;left:0;right:0;bottom:0;z-index:2147483000;background:linear-gradient(120deg,var(--blue-dark,#0b2c4a),var(--blue-mid,#134a8e) 62%,var(--blue-light,#1f5fa6));color:#fff;
-      font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
-      padding:16px 20px;box-shadow:0 -4px 24px rgba(0,0,0,.18);display:flex;flex-wrap:wrap;
-      align-items:center;gap:14px;justify-content:center}
-    .tmx-cc__txt{flex:1 1 360px;max-width:760px}
-    .tmx-cc__txt a{color:#9ed0f5;text-decoration:underline}
-    .tmx-cc__btns{display:flex;gap:10px;flex:0 0 auto}
-    .tmx-cc__b{appearance:none;border:0;cursor:pointer;font:inherit;font-weight:600;
-      padding:10px 22px;border-radius:99px;transition:filter .15s;color:#fff}
-    .tmx-cc__b:hover{filter:brightness(1.08)}
-    .tmx-cc__b--no{background:rgba(255,255,255,.16)}
-    .tmx-cc__b--yes{background:var(--green-cta,#5C820F)}
-    @media(max-width:640px){.tmx-cc{padding:14px}.tmx-cc__btns{width:100%}.tmx-cc__b{flex:1}}
-  </style>
-<script>
-  (function(){
-    var KEY='tmx-consent-v1', CL='wt18054m0r';
-    function lc(){var l=(document.documentElement.getAttribute('lang')||'en').toLowerCase().split('-')[0];
-      var m={cz:'cs',cs:'cs',sk:'sk',de:'de',pl:'pl',gr:'el',el:'el',hu:'hu',fr:'fr',it:'it',nl:'nl',ro:'ro',en:'en'};return m[l]||'en';}
-    var T={
-      hu:{t:'Analitikai sütiket használunk (Google Analytics, Microsoft Clarity, Smartsupp), hogy megértsük a webhely használatát. Csak az Ön hozzájárulásával töltődnek be.',a:'Elfogadom',r:'Elutasítom',p:'Adatvédelem és sütik'},
-      ro:{t:'Utilizăm module cookie de analiză (Google Analytics, Microsoft Clarity, Smartsupp) pentru a înțelege modul de utilizare a site-ului. Se încarcă doar cu consimțământul dumneavoastră.',a:'Accept',r:'Refuz',p:'Confidențialitate și cookie-uri'},
-      nl:{t:'We gebruiken analytische cookies (Google Analytics, Microsoft Clarity, Smartsupp) om het gebruik van de site te begrijpen. Ze laden alleen met uw toestemming.',a:'Accepteren',r:'Weigeren',p:'Privacy en cookies'},
-      fr:{t:'Nous utilisons des cookies analytiques (Google Analytics, Microsoft Clarity, Smartsupp) pour comprendre l’utilisation du site. Ils ne se chargent qu’avec votre consentement.',a:'Accepter',r:'Refuser',p:'Confidentialité et cookies'},
-      it:{t:'Utilizziamo cookie analitici (Google Analytics, Microsoft Clarity, Smartsupp) per capire l’utilizzo del sito. Si caricano solo con il Suo consenso.',a:'Accetta',r:'Rifiuta',p:'Privacy e cookie'},
-      en:{t:'We use analytics cookies (Google Analytics, Microsoft Clarity, Smartsupp) to understand site usage. They load only with your consent.',a:'Accept',r:'Reject',p:'Privacy &amp; cookies'},
-      cs:{t:'Používáme analytické cookies (Google Analytics, Microsoft Clarity, Smartsupp) k pochopení používání webu. Načtou se jen s vaším souhlasem.',a:'Přijmout',r:'Odmítnout',p:'Soukromí a cookies'},
-      sk:{t:'Používame analytické cookies (Google Analytics, Microsoft Clarity, Smartsupp) na pochopenie používania webu. Načítajú sa len s vaším súhlasom.',a:'Prijať',r:'Odmietnuť',p:'Súkromie a cookies'},
-      de:{t:'Wir verwenden Analyse-Cookies (Google Analytics, Microsoft Clarity, Smartsupp), um die Nutzung der Website zu verstehen. Sie werden nur mit Ihrer Einwilligung geladen.',a:'Akzeptieren',r:'Ablehnen',p:'Datenschutz &amp; Cookies'},
-      pl:{t:'Używamy plików cookie do analityki (Google Analytics, Microsoft Clarity, Smartsupp), aby zrozumieć korzystanie z witryny. Ładują się tylko za Twoją zgodą.',a:'Akceptuj',r:'Odrzuć',p:'Prywatność i cookies'},
-      el:{t:'Χρησιμοποιούμε cookies ανάλυσης (Google Analytics, Microsoft Clarity, Smartsupp) για να κατανοήσουμε τη χρήση. Φορτώνονται μόνο με τη συγκατάθεσή σας.',a:'Αποδοχή',r:'Απόρριψη',p:'Απόρρητο &amp; cookies'}
-    };
-    function loadClarity(){if(!CL||window.__tmxCl)return;window.__tmxCl=1;
-      (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-       t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-       y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script",CL);}
-    function grant(){try{localStorage.setItem(KEY,'granted')}catch(e){}
-      gtag('consent','update',{analytics_storage:'granted'});loadClarity();}
-    function deny(){try{localStorage.setItem(KEY,'denied')}catch(e){}}
-    var saved=null;try{saved=localStorage.getItem(KEY)}catch(e){}
-    if(saved==='granted'){grant();return;} if(saved==='denied'){return;}
-    function show(){var tx=T[lc()]||T.en;
-      var b=document.createElement('div');b.className='tmx-cc';b.setAttribute('role','dialog');b.setAttribute('aria-live','polite');
-      b.innerHTML='<div class="tmx-cc__txt">'+tx.t+' <a href="/it/privacy/">'+tx.p+'</a></div>'+
-        '<div class="tmx-cc__btns"><button type="button" class="tmx-cc__b tmx-cc__b--no">'+tx.r+'</button>'+
-        '<button type="button" class="tmx-cc__b tmx-cc__b--yes">'+tx.a+'</button></div>';
-      document.body.appendChild(b);
-      b.querySelector('.tmx-cc__b--yes').addEventListener('click',function(){grant();b.remove();});
-      b.querySelector('.tmx-cc__b--no').addEventListener('click',function(){deny();b.remove();});}
-    if(document.body)show();else document.addEventListener('DOMContentLoaded',show);
-  })();
-  </script>
+<!-- Cookie consent v2 (consent.js: lišta, Consent Mode v2, Clarity) -->
+<script src="/assets/js/consent.js?v=20261115a"></script>
 <!-- TMX-ANALYTICS END -->
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
@@ -190,7 +138,8 @@
 
 
 
-<script defer="" src="/assets/js/nav.js?v=20261008a"></script><script defer="" src="/assets/js/analytics.js?v=20261103a"></script>
+<script defer="" src="/assets/js/nav.js?v=20261008a"></script><script defer="" src="/assets/js/analytics.js?v=20261115a"></script>
+<script defer="" src="/assets/js/ads.js?v=20261115a"></script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Carta azienda tachigrafo: richiesta, costi e passi", "description": "Come ottenere la carta azienda: chi la rilascia, i costi, il blocco aziendale, lo scarico dei dati ogni 90/28 giorni e perché è necessario analizzarli.", "image": "https://tagra.app/assets/img/articles/tachograph-company-card-og.jpg", "inLanguage": "it", "datePublished": "2026-10-03", "dateModified": "2026-10-08T23:00:00+02:00", "mainEntityOfPage": "https://tagra.app/it/articoli/carta-azienda-tachigrafo/", "author": {"@type": "Organization", "@id": "https://tagra.app/#organization", "name": "Truck Data Technology, s.r.o.", "url": "https://www.tdt.cz"}, "publisher": {"@type": "Organization", "@id": "https://tagra.app/#organization", "name": "Truck Data Technology, s.r.o.", "logo": {"@type": "ImageObject", "url": "https://tagra.app/assets/img/logo-dark.svg"}}}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "TAGRA", "item": "https://tagra.app/it/"}, {"@type": "ListItem", "position": 2, "name": "Articoli", "item": "https://tagra.app/it/articoli/"}, {"@type": "ListItem", "position": 3, "name": "Carta azienda", "item": "https://tagra.app/it/articoli/carta-azienda-tachigrafo/"}]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Che cos'è la carta dell'azienda per il tachigrafo?", "acceptedAnswer": {"@type": "Answer", "text": "Una carta con microchip per il tachigrafo digitale che identifica l'operatore di trasporto. Permette all'azienda di inserire il blocco aziendale nel tachigrafo e di visualizzare, stampare ed effettuare lo scarico dei dati. Non è legata a un singolo veicolo e non memorizza i dati sulle attività dei conducenti: registra solo il proprio utilizzo, come i blocchi aziendali e gli scarichi."}}, {"@type": "Question", "name": "Chi deve avere la carta dell'azienda?", "acceptedAnswer": {"@type": "Answer", "text": "Ogni operatore i cui veicoli rientrano nella normativa sul tachigrafo. Dal 1° luglio 2026 questo include anche gli operatori di veicoli e complessi veicolari con una massa massima ammissibile superiore a 2,5 t utilizzati per il trasporto internazionale di merci o cabotaggio, a meno che non si applichi un'esenzione."}}, {"@type": "Question", "name": "Serve la carta dell'azienda per un furgone sopra le 2,5 t?", "acceptedAnswer": {"@type": "Answer", "text": "Per un furgone o complesso veicolare superiore a 2,5 t e fino a 3,5 t: sì, dal 1° luglio 2026, se viene utilizzato per il trasporto internazionale di merci o cabotaggio e non si applicano esenzioni (ad esempio per alcuni casi di trasporto in conto proprio). Il veicolo deve quindi essere dotato di un tachigrafo intelligente G2V2 ed è necessaria una carta dell'azienda. I veicoli con massa massima ammissibile superiore a 3,5 t sono, in linea di principio, già soggetti alle regole sul tachigrafo anche nel trasporto nazionale, a meno che non si applichi un'esenzione."}}, {"@type": "Question", "name": "Dove si richiede la carta dell'azienda in Italia?", "acceptedAnswer": {"@type": "Answer", "text": "Presso la Camera di Commercio della provincia in cui l'azienda ha la sede legale, una sede secondaria o un'unità locale, tramite i servizi online o allo sportello. La richiesta viene presentata dal titolare o dal legale rappresentante."}}, {"@type": "Question", "name": "Quanto costa una carta dell'azienda in Italia?", "acceptedAnswer": {"@type": "Answer", "text": "37 € per i diritti di segreteria, più 3,17 € se si desidera la spedizione della carta al proprio indirizzo."}}, {"@type": "Question", "name": "Quanto dura la validità di una carta dell'azienda?", "acceptedAnswer": {"@type": "Answer", "text": "Un massimo di 5 anni. Richieda il rinnovo per tempo: in Italia almeno 15 giorni lavorativi prima della scadenza della carta."}}, {"@type": "Question", "name": "Un'azienda può avere più carte dell'azienda?", "acceptedAnswer": {"@type": "Answer", "text": "Sì. Una sola carta è sufficiente per l'intera flotta, ma un'azienda può possederne diverse: per più sedi, per lo scarico da remoto dove la carta rimane nel lettore in ufficio, o come scorta. Tutte le carte sono rilasciate alla stessa azienda."}}, {"@type": "Question", "name": "Come si inserisce il blocco aziendale nel tachigrafo con la carta dell'azienda?", "acceptedAnswer": {"@type": "Answer", "text": "Inserisca la carta dell'azienda nel tachigrafo e selezioni il blocco aziendale nel menu. I passaggi differiscono leggermente a seconda del produttore, quindi consulti il manuale. Prima di vendere o restituire il veicolo, effettui lo scarico dei dati e rimuova il blocco aziendale dal tachigrafo."}}, {"@type": "Question", "name": "Con quale frequenza è necessario effettuare lo scarico dei dati del tachigrafo e della carta del conducente?", "acceptedAnswer": {"@type": "Answer", "text": "I dati dell'unità di bordo devono essere scaricati almeno ogni 90 giorni e quelli della carta del conducente almeno ogni 28 giorni. Conservi i dati scaricati per almeno 12 mesi."}}, {"@type": "Question", "name": "È sufficiente scaricare e archiviare i dati del tachigrafo?", "acceptedAnswer": {"@type": "Answer", "text": "No. L'archiviazione soddisfa l'obbligo di conservazione dei dati, ma non quello di controllo sui conducenti. Ai sensi dell'articolo 10 del regolamento (CE) n. 561/2006, l'operatore deve organizzare il lavoro dei conducenti, istruirli e controllare regolarmente il rispetto dei tempi di guida, delle pause e dei periodi di riposo, in pratica valutando i dati scaricati. TAGRA semplifica questo processo segnalando automaticamente le infrazioni."}}, {"@type": "Question", "name": "La nostra azienda ha sede in Svizzera: dove dobbiamo richiedere la carta dell'azienda?", "acceptedAnswer": {"@type": "Answer", "text": "Presso l'Ufficio federale delle strade (USTRA): online a CHF 70 o con modulo cartaceo a CHF 85. L'azienda deve avere la propria sede legale in Svizzera."}}]}</script>
