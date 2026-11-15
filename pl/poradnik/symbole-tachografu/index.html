@@ -217,6 +217,9 @@
     .vendor.dec-hidden{display:none;}
     tr.dec-hidden{display:none;}
     .dec-nohit{font-size:14px;color:var(--text2);padding:10px 2px;}
+    /* dead clicks 7. 11. 2026 (Clarity 28,6 %): karty aktivit nejsou odkazy – bez hover efektu, který je jako odkaz zvýrazňuje */
+    .activity-card:hover{box-shadow:none;border-color:var(--border);}
+    .activity-card,.hero-card,.sym-icon{cursor:default;}
   
 </style>
 <link href="/assets/css/core.bundle.css?v=20261115" rel="stylesheet"/>
@@ -224,7 +227,8 @@
 
 
 <script defer="" src="/assets/js/nav.js?v=20261008a"></script><script defer="" src="/assets/js/analytics.js?v=20261103a"></script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "TAGRA", "item": "https://tagra.app/pl/"}, {"@type": "ListItem", "position": 2, "name": "Artykuły", "item": "https://tagra.app/pl/poradnik/"}, {"@type": "ListItem", "position": 3, "name": "Symbole, piktogramy i kody błędów tachografu", "item": "https://tagra.app/pl/poradnik/symbole-tachografu/"}]}</script><noscript><style>.anim-up,.fly-left,.fly-right{opacity:1!important;transform:none!important}</style></noscript></head>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "TAGRA", "item": "https://tagra.app/pl/"}, {"@type": "ListItem", "position": 2, "name": "Artykuły", "item": "https://tagra.app/pl/poradnik/"}, {"@type": "ListItem", "position": 3, "name": "Symbole, piktogramy i kody błędów tachografu", "item": "https://tagra.app/pl/poradnik/symbole-tachografu/"}]}</script><noscript><style>.anim-up,.fly-left,.fly-right{opacity:1!important;transform:none!important}</style></noscript><script defer="" src="/assets/js/mobile-bridge.js?v=20261115a" data-tr="1"></script>
+</head>
 <body class="art-page">
 <a class="skip-link" href="#main-content">Przejdź do treści</a>
 <div aria-hidden="true" id="scroll-progress"></div>
