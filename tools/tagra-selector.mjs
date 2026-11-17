@@ -29,6 +29,7 @@ export const LANGS = {
   hu: { fleet: 'hu/fuvarozoknak', driver: 'hu/soforoknek', fmt: '{n} €', dec: ',', base: '/hu/kapcsolat/?product=' },
   ro: { fleet: 'ro/pentru-firme', driver: 'ro/pentru-conducatori', fmt: '{n} €', dec: ',' },
   el: { fleet: 'el/stolos', driver: 'el/odigoi', fmt: '{n} €', dec: ',' },
+  es: { fleet: 'es/empresas', driver: 'es/conductores', fmt: '{n} €', dec: ',' },
 };
 
 export function loadPrices() {

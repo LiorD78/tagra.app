@@ -123,7 +123,7 @@
   if (!form) return;
 
   // ─── 9. Localized validation messages (texts: GPT + Gemini, 8. 11. 2026) ───
-  // Form language values: en de pl gr hu it fr nl ro cz sk (gr = el, cz = cs).
+  // Form language values: en de pl gr hu it es fr nl ro cz sk (gr = el, cz = cs).
   const MSG = {
     en: { audience: 'Please choose who you are.', required: 'Please fill in this field.', email_missing: 'Please enter your email address.', email_invalid: 'Please enter a valid email address.', consent: 'Please agree to the processing of your data.' },
     de: { audience: 'Bitte wählen Sie Ihre Rolle aus.', required: 'Bitte füllen Sie dieses Feld aus.', email_missing: 'Bitte geben Sie Ihre E-Mail-Adresse ein.', email_invalid: 'Bitte geben Sie eine gültige E-Mail-Adresse ein.', consent: 'Bitte willigen Sie in die Datenverarbeitung ein.' },
@@ -134,6 +134,7 @@
     fr: { audience: 'Veuillez sélectionner votre profil.', required: 'Veuillez remplir ce champ.', email_missing: 'Veuillez saisir votre adresse e-mail.', email_invalid: 'Veuillez saisir une adresse e-mail valide.', consent: 'Veuillez accepter le traitement de vos données.' },
     nl: { audience: 'Selecteer uw rol.', required: 'Vul dit veld in.', email_missing: 'Vul uw e-mailadres in.', email_invalid: 'Vul een geldig e-mailadres in.', consent: 'Geef toestemming voor de verwerking van uw gegevens.' },
     ro: { audience: 'Vă rugăm să selectați rolul dumneavoastră.', required: 'Vă rugăm să completați acest câmp.', email_missing: 'Vă rugăm să introduceți adresa de e-mail.', email_invalid: 'Vă rugăm să introduceți o adresă de e-mail validă.', consent: 'Vă rugăm să acceptați prelucrarea datelor dumneavoastră.' },
+    es: { audience: 'Elige tu perfil.', required: 'Rellena este campo.', email_missing: 'Introduce tu dirección de correo electrónico.', email_invalid: 'Introduce una dirección de correo electrónico válida.', consent: 'Acepta el tratamiento de tus datos personales.' },
     cs: { audience: 'Vyberte prosím svou roli.', required: 'Vyplňte prosím toto pole.', email_missing: 'Zadejte prosím svou e-mailovou adresu.', email_invalid: 'Zadejte prosím platnou e-mailovou adresu.', consent: 'Udělte prosím souhlas se zpracováním osobních údajů.' },
     sk: { audience: 'Vyberte si, prosím, svoju rolu.', required: 'Vyplňte, prosím, toto pole.', email_missing: 'Zadajte, prosím, svoju e-mailovú adresu.', email_invalid: 'Zadajte, prosím, platnú e-mailovú adresu.', consent: 'Udeľte, prosím, súhlas so spracovaním osobných údajov.' }
   };
@@ -304,7 +305,7 @@
 var tagraGuessCountry = (function () {
   'use strict';
   var EU = ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','NO','PL','PT','RO','SK','SI','ES','SE','CH','GB'];
-  var BY_LANG = { de: 'DE', pl: 'PL', cz: 'CZ', sk: 'SK', hu: 'HU', it: 'IT', fr: 'FR', nl: 'NL', ro: 'RO', gr: 'GR', en: 'OTHER' };
+  var BY_LANG = { de: 'DE', pl: 'PL', cz: 'CZ', sk: 'SK', hu: 'HU', it: 'IT', es: 'ES', fr: 'FR', nl: 'NL', ro: 'RO', gr: 'GR', en: 'OTHER' };
   return function (lang) {
     var list = [];
     try { list = (navigator.languages && navigator.languages.length) ? navigator.languages : [navigator.language || '']; } catch (e) { /* no navigator */ }
@@ -353,6 +354,8 @@ var tagraGuessCountry = (function () {
           ok: 'Kész! Ellenőrizze postafiókját, és nyissa meg az e-mailt a PC-jén a TAGRA letöltéséhez.', err: 'Valami hiba történt. Próbálja újra, vagy használja a', errlink: 'teljes űrlapot' },
     it: { lead: 'Sta usando uno smartphone? Le invieremo via e-mail il link per il download sul Suo PC.', btn: 'Invia il link via e-mail', ph: 'E-mail', sending: 'Invio in corso…',
           ok: 'Fatto! Controlli la posta in arrivo e apra l’e-mail sul PC per scaricare TAGRA.', err: 'Qualcosa è andato storto. Riprovi o utilizzi il', errlink: 'modulo completo' },
+    es: { lead: '¿Estás en el móvil? Te enviamos por correo electrónico el enlace de descarga para tu ordenador.', btn: 'Enviarme el enlace', ph: 'Correo electrónico', sending: 'Enviando…',
+          ok: '¡Listo! Revisa tu bandeja de entrada y abre el correo en tu ordenador para descargar TAGRA.', err: 'Algo ha fallado. Inténtalo de nuevo o usa el', errlink: 'formulario completo' },
     fr: { lead: 'Sur votre téléphone ? Nous vous enverrons le lien de téléchargement pour votre PC par e-mail.', btn: 'M’envoyer le lien par e-mail', ph: 'E-mail', sending: 'Envoi en cours…',
           ok: 'C’est fait ! Consultez votre boîte de réception et ouvrez l’e-mail sur votre PC pour télécharger TAGRA.', err: 'Un problème est survenu. Réessayez ou utilisez le', errlink: 'formulaire complet' },
     nl: { lead: 'Gebruikt u een telefoon? We sturen u de downloadlink voor uw pc per e-mail.', btn: 'Stuur mij de link per e-mail', ph: 'E-mail', sending: 'Verzenden…',

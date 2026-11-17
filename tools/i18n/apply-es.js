@@ -1,18 +1,18 @@
 #!/usr/bin/env node
 /**
- * apply-es-home.js — Node ekvivalent `i18n.py apply home es` (bs4 ani zápis
+ * apply-es.js — Node ekvivalent `i18n.py apply <home|fleet|driver|try|thanks> es` (bs4 ani zápis
  * přes python3 nejsou v /run sandboxu k dispozici, viz CLAUDE.md).
  *
  * Vstup:  index.html (EN home) + tools/i18n/es-core.tr.es.json (slovník EN -> ES)
  *         + i18n/slugmap.json (musí obsahovat "es" u home/fleet/driver/try/thanks)
- * Výstup: es/index.html, tools/i18n/home.todo.es.json
+ * Výstup: es/…/index.html (5 stránek), tools/i18n/<page>.todo.es.json
  *
  * Segmenty se berou stejným walkem jako tools/i18n/build-page-tr.js walk()
  * (title, meta[META_KEYS], textové uzly mimo script/style/noscript, atributy
  * alt/aria-label/placeholder), ale se zachováním pozic -> náhrada přímo
  * v původním HTML. Nic se neinterpretuje: co není ve slovníku, zůstává EN.
  *
- * Použití (z kořene tagra.app):  node tools/i18n/apply-es-home.js
+ * Použití (z kořene tagra.app):  node tools/i18n/apply-es.js
  * Skript je idempotentní (výstup je vždy čistá funkce EN zdroje).
  */
 "use strict";
@@ -52,8 +52,8 @@ const NEUTRAL_SKIP = new Set(["TAGRA", "EN", "English", "Deutsch", "Polski", "Ne
 const isNeutral = (v) => NEUTRAL_SKIP.has(v) || /^[\d\s€.,:+/%–\-()×]+$/.test(v) || /^[A-Z0-9 .+\-/]{1,6}$/.test(v)
   || !HAS_LETTER.test(v);
 
-const todo = [];
-const todoSeen = new Set();
+let todo = [];
+let todoSeen = new Set();
 let translated = 0, neutral = 0, missing = 0, total = 0;
 function lookup(v) {
   total++;
@@ -195,14 +195,17 @@ function localizeHrefs(html) {
   });
 }
 
-function setHead(html) {
+function setHead(html, id) {
+  const enP = enPath(id), esP = SLUGMAP[id][LANG].replace(/^\/|\/$/g, "");
+  const enUrl = enP ? `https://tagra.app/${enP}/` : "https://tagra.app/";
+  const esUrl = `https://tagra.app/${esP}/`;
   html = html.replace('<html lang="en">', `<html lang="${LANG}">`);
-  html = html.replace('<link href="https://tagra.app/" rel="canonical"/>', `<link href="https://tagra.app/${SLUGMAP.home[LANG]}/" rel="canonical"/>`);
-  html = html.replace('<meta content="https://tagra.app/" property="og:url"/>',
-    `<meta content="https://tagra.app/${SLUGMAP.home[LANG]}/" property="og:url"/>\n<meta content="${LOCALE}" property="og:locale"/>`);
-  // hreflang: stejná sada jako EN + es (abecedně), reciproční odkazy jinde se NEdělají (dávka D)
+  html = html.replace(`<link href="${enUrl}" rel="canonical"/>`, `<link href="${esUrl}" rel="canonical"/>`);
+  html = html.replace(`<meta content="${enUrl}" property="og:url"/>`,
+    `<meta content="${esUrl}" property="og:url"/>\n<meta content="${LOCALE}" property="og:locale"/>`);
+  // hreflang: stejná sada jako EN + es (abecedně); reciproční odkazy v ostatních jazycích řeší tools/i18n/hreflang-es.js
   const link = (hl, href) => `<link href="${href}" hreflang="${hl}" rel="alternate"/>`;
-  html = html.replace(link("el", "https://tagra.app/el/"), link("el", "https://tagra.app/el/") + link("es", `https://tagra.app/${SLUGMAP.home[LANG]}/`));
+  html = html.replace(/(<link href="[^"]*" hreflang="el" rel="alternate"\/>)/, (m) => m + link("es", esUrl));
   return html;
 }
 
@@ -219,19 +222,36 @@ function setLangMenu(html) {
 }
 
 // ---------- main ----------
-for (const [id, slug] of [["home", "es"], ["fleet", "es/empresas"], ["driver", "es/conductores"], ["try", "es/prueba-gratis"], ["thanks", "es/gracias"]]) {
+const PAGES = [["home", "es"], ["fleet", "es/empresas"], ["driver", "es/conductores"], ["try", "es/prueba-gratis"], ["thanks", "es/gracias"]];
+for (const [id, slug] of PAGES) {
   if (SLUGMAP[id][LANG] !== slug) { console.error(`slugmap ${id}.${LANG} != ${slug}`); process.exit(1); }
 }
-const srcHtml = fs.readFileSync(path.join(ROOT, "index.html"), "utf8");
-let out = translateBody(srcHtml);
-out = translateDataAttrs(out);
-out = translateLd(out);
-out = localizeHrefs(out);
-out = setHead(out);
-out = setLangMenu(out);
-
-fs.mkdirSync(path.join(ROOT, "es"), { recursive: true });
-fs.writeFileSync(path.join(ROOT, "es", "index.html"), out, "utf8");
-fs.writeFileSync(path.join(__dirname, "home.todo.es.json"), JSON.stringify(todo, null, 1) + "\n", "utf8");
-console.log(`es/index.html: ${(Buffer.byteLength(out) / 1024).toFixed(1)} KB`);
-console.log(`segmentů celkem ${total}: přeloženo ${translated}, jazykově neutrální ${neutral}, bez překladu ${missing} (unikátních ${todo.length})`);
+// home se generuje celá z EN zdroje; ostatní 4 stránky (ručně doladěné ve větvích B/C: jazyk, přepínač,
+// JS texty) se jen DOPLŇUJÍ — na stávajícím ES HTML se přeloží segmenty, které tam zůstaly anglicky
+// (lookup jde podle EN klíče, už přeložené španělské texty se nedotknou).
+for (const [id, slug] of PAGES) {
+  todo = []; todoSeen = new Set(); translated = neutral = missing = total = 0;
+  const dstFile = path.join(ROOT, slug, "index.html");
+  let out;
+  if (id === "home") {
+    out = translateBody(fs.readFileSync(path.join(ROOT, "index.html"), "utf8"));
+    out = translateDataAttrs(out);
+    out = translateLd(out);
+    out = localizeHrefs(out);
+    out = setHead(out, id);
+    out = setLangMenu(out);
+  } else {
+    out = fs.readFileSync(dstFile, "utf8");
+    out = translateDataAttrs(translateBody(out));
+    out = translateLd(out);
+  }
+  fs.writeFileSync(dstFile, out, "utf8");
+  const todoFile = path.join(__dirname, `${id}.todo.es.json`);
+  if (id !== "home") {
+    // v patch režimu je „bez překladu“ nepoužitelné (španělské texty nejsou EN klíče) -> zbytek = původní todo bez slovníku
+    const old = fs.existsSync(todoFile) ? JSON.parse(fs.readFileSync(todoFile, "utf8")) : [];
+    todo = old.filter((v) => !Object.prototype.hasOwnProperty.call(DICT, norm(v)));
+  }
+  fs.writeFileSync(todoFile, JSON.stringify(todo, null, 1) + "\n", "utf8");
+  console.log(`${slug}/index.html: ${(Buffer.byteLength(out) / 1024).toFixed(1)} KB; přeloženo ${translated}; zbývá bez překladu ${todo.length}`);
+}
