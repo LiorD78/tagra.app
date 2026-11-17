@@ -32,6 +32,7 @@ LANGS = {
     'pl': {'code': 'pl', 'label': 'PL', 'native': 'Polski',    'locale': 'pl_PL'},
     'el': {'code': 'el', 'label': 'EL', 'native': 'Ελληνικά',  'locale': 'el_GR'},
     'hu': {'code': 'hu', 'label': 'HU', 'native': 'Magyar',    'locale': 'hu_HU'},
+    'es': {'code': 'es', 'label': 'ES', 'native': 'Español', 'locale': 'es_ES'},
 }
 EXTERNAL_LANGS = [('cs', 'Čeština', 'https://www.tdt.cz/'),
                   ('sk', 'Slovenčina', 'https://www.tdt.sk/')]

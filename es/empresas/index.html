@@ -1,0 +1,1535 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!-- TMX-ANALYTICS START -->
+<meta content="7F7894081BE7FBB245FF03AF8810B22F" name="msvalidate.01"/>
+<!-- Consent Mode v2 defaults (deny) + gtag stub — runs BEFORE gtag.js -->
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent','default',{
+      ad_storage:'denied', ad_user_data:'denied', ad_personalization:'denied',
+      analytics_storage:'denied', functionality_storage:'denied',
+      personalization_storage:'denied', security_storage:'granted',
+      wait_for_update:500
+    });
+    gtag('set','ads_data_redaction',true);
+    gtag('set','url_passthrough',false);
+  </script>
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-92253QFBNX"></script>
+<script>
+    gtag('js', new Date());
+    gtag('config','G-92253QFBNX');
+  </script>
+<!-- Cookie consent banner (self-hosted) + Microsoft Clarity gating -->
+<style>
+    .tmx-cc{position:fixed;left:0;right:0;bottom:0;z-index:2147483000;background:linear-gradient(120deg,var(--blue-dark,#0b2c4a),var(--blue-mid,#134a8e) 62%,var(--blue-light,#1f5fa6));color:#fff;
+      font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+      padding:16px 20px;box-shadow:0 -4px 24px rgba(0,0,0,.18);display:flex;flex-wrap:wrap;
+      align-items:center;gap:14px;justify-content:center}
+    .tmx-cc__txt{flex:1 1 360px;max-width:760px}
+    .tmx-cc__txt a{color:#9ed0f5;text-decoration:underline}
+    .tmx-cc__btns{display:flex;gap:10px;flex:0 0 auto}
+    .tmx-cc__b{appearance:none;border:0;cursor:pointer;font:inherit;font-weight:600;
+      padding:10px 22px;border-radius:99px;transition:filter .15s;color:#fff}
+    .tmx-cc__b:hover{filter:brightness(1.08)}
+    .tmx-cc__b--no{background:rgba(255,255,255,.16)}
+    .tmx-cc__b--yes{background:var(--green-cta,#5C820F)}
+    @media(max-width:640px){.tmx-cc{padding:14px}.tmx-cc__btns{width:100%}.tmx-cc__b{flex:1}}
+  </style>
+<script>
+  (function(){
+    var KEY='tmx-consent-v1', CL='wt18054m0r';
+    function lc(){var l=(document.documentElement.getAttribute('lang')||'en').toLowerCase().split('-')[0];
+      var m={cz:'cs',cs:'cs',sk:'sk',de:'de',pl:'pl',gr:'el',el:'el',hu:'hu',fr:'fr',it:'it',nl:'nl',ro:'ro',en:'en'};return m[l]||'en';}
+    var T={
+      hu:{t:'Analitikai s\u00fctiket haszn\u00e1lunk (Google Analytics, Microsoft Clarity, Smartsupp), hogy meg\u00e9rts\u00fck a webhely haszn\u00e1lat\u00e1t. Csak az \u00d6n hozz\u00e1j\u00e1rul\u00e1s\u00e1val t\u00f6lt\u0151dnek be.',a:'Elfogadom',r:'Elutas\u00edtom',p:'Adatv\u00e9delem \u00e9s s\u00fctik'},
+      ro:{t:'Utilizăm module cookie de analiză (Google Analytics, Microsoft Clarity, Smartsupp) pentru a înțelege modul de utilizare a site-ului. Se încarcă doar cu consimțământul dumneavoastră.',a:'Accept',r:'Refuz',p:'Confidențialitate și cookie-uri'},
+      nl:{t:'We gebruiken analytische cookies (Google Analytics, Microsoft Clarity, Smartsupp) om het gebruik van de site te begrijpen. Ze laden alleen met uw toestemming.',a:'Accepteren',r:'Weigeren',p:'Privacy en cookies'},
+      fr:{t:'Nous utilisons des cookies analytiques (Google Analytics, Microsoft Clarity, Smartsupp) pour comprendre l’utilisation du site. Ils ne se chargent qu’avec votre consentement.',a:'Accepter',r:'Refuser',p:'Confidentialité et cookies'},
+      it:{t:'Utilizziamo cookie analitici (Google Analytics, Microsoft Clarity, Smartsupp) per capire l’utilizzo del sito. Si caricano solo con il Suo consenso.',a:'Accetta',r:'Rifiuta',p:'Privacy e cookie'},
+      en:{t:'We use analytics cookies (Google Analytics, Microsoft Clarity, Smartsupp) to understand site usage. They load only with your consent.',a:'Accept',r:'Reject',p:'Privacy &amp; cookies'},
+      cs:{t:'Pou\u017e\u00edv\u00e1me analytick\u00e9 cookies (Google Analytics, Microsoft Clarity, Smartsupp) k pochopen\u00ed pou\u017e\u00edv\u00e1n\u00ed webu. Na\u010dtou se jen s va\u0161\u00edm souhlasem.',a:'P\u0159ijmout',r:'Odm\u00edtnout',p:'Soukrom\u00ed a cookies'},
+      sk:{t:'Pou\u017e\u00edvame analytick\u00e9 cookies (Google Analytics, Microsoft Clarity, Smartsupp) na pochopenie pou\u017e\u00edvania webu. Na\u010d\u00edtaj\u00fa sa len s va\u0161\u00edm s\u00fahlasom.',a:'Prija\u0165',r:'Odmietnu\u0165',p:'S\u00fakromie a cookies'},
+      de:{t:'Wir verwenden Analyse-Cookies (Google Analytics, Microsoft Clarity, Smartsupp), um die Nutzung der Website zu verstehen. Sie werden nur mit Ihrer Einwilligung geladen.',a:'Akzeptieren',r:'Ablehnen',p:'Datenschutz &amp; Cookies'},
+      pl:{t:'U\u017cywamy plik\u00f3w cookie do analityki (Google Analytics, Microsoft Clarity, Smartsupp), aby zrozumie\u0107 korzystanie z witryny. \u0141aduj\u0105 si\u0119 tylko za Twoj\u0105 zgod\u0105.',a:'Akceptuj',r:'Odrzu\u0107',p:'Prywatno\u015b\u0107 i cookies'},
+      el:{t:'\u03a7\u03c1\u03b7\u03c3\u03b9\u03bc\u03bf\u03c0\u03bf\u03b9\u03bf\u03cd\u03bc\u03b5 cookies \u03b1\u03bd\u03ac\u03bb\u03c5\u03c3\u03b7\u03c2 (Google Analytics, Microsoft Clarity, Smartsupp) \u03b3\u03b9\u03b1 \u03bd\u03b1 \u03ba\u03b1\u03c4\u03b1\u03bd\u03bf\u03ae\u03c3\u03bf\u03c5\u03bc\u03b5 \u03c4\u03b7 \u03c7\u03c1\u03ae\u03c3\u03b7. \u03a6\u03bf\u03c1\u03c4\u03ce\u03bd\u03bf\u03bd\u03c4\u03b1\u03b9 \u03bc\u03cc\u03bd\u03bf \u03bc\u03b5 \u03c4\u03b7 \u03c3\u03c5\u03b3\u03ba\u03b1\u03c4\u03ac\u03b8\u03b5\u03c3\u03ae \u03c3\u03b1\u03c2.',a:'\u0391\u03c0\u03bf\u03b4\u03bf\u03c7\u03ae',r:'\u0391\u03c0\u03cc\u03c1\u03c1\u03b9\u03c8\u03b7',p:'\u0391\u03c0\u03cc\u03c1\u03c1\u03b7\u03c4\u03bf &amp; cookies'}
+    };
+    function loadClarity(){if(!CL||window.__tmxCl)return;window.__tmxCl=1;
+      (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+       t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+       y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script",CL);}
+    function grant(){try{localStorage.setItem(KEY,'granted')}catch(e){}
+      gtag('consent','update',{analytics_storage:'granted'});loadClarity();}
+    function deny(){try{localStorage.setItem(KEY,'denied')}catch(e){}}
+    var saved=null;try{saved=localStorage.getItem(KEY)}catch(e){}
+    if(saved==='granted'){grant();return;} if(saved==='denied'){return;}
+    function show(){var tx=T[lc()]||T.en;
+      var b=document.createElement('div');b.className='tmx-cc';b.setAttribute('role','dialog');b.setAttribute('aria-live','polite');
+      b.innerHTML='<div class="tmx-cc__txt">'+tx.t+' <a href="/privacy/">'+tx.p+'</a></div>'+
+        '<div class="tmx-cc__btns"><button type="button" class="tmx-cc__b tmx-cc__b--no">'+tx.r+'</button>'+
+        '<button type="button" class="tmx-cc__b tmx-cc__b--yes">'+tx.a+'</button></div>';
+      document.body.appendChild(b);
+      b.querySelector('.tmx-cc__b--yes').addEventListener('click',function(){grant();b.remove();});
+      b.querySelector('.tmx-cc__b--no').addEventListener('click',function(){deny();b.remove();});}
+    if(document.body)show();else document.addEventListener('DOMContentLoaded',show);
+  })();
+  </script>
+<!-- TMX-ANALYTICS END -->
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Software de tacógrafo digital para flotas – TAGRA III</title>
+<meta content="Software TAGRA III de tacógrafo para flotas: datos de tarjetas de conductor y vehículos, infracciones con referencia a la normativa, tiempos de conducción y descanso de la UE y tiempo de trabajo. Prueba gratuita de 30 días." name="description"/>
+<meta content="#0b2c4a" name="theme-color"/>
+<link href="/manifest.json" rel="manifest"/>
+<link href="https://tagra.app/es/empresas/" rel="canonical"/>
+<link as="image" fetchpriority="high" href="/assets/img/tagra3/tagra3-evaluation.webp" imagesizes="(max-width: 1000px) 100vw, 1100px" imagesrcset="/assets/img/tagra3/tagra3-evaluation-960.webp 960w, /assets/img/tagra3/tagra3-evaluation.webp 1920w" media="(min-width: 621px)" rel="preload" type="image/webp"/>
+
+
+<meta content="website" property="og:type"/>
+<meta content="es_ES" property="og:locale"/>
+<meta content="TAGRA" property="og:site_name"/>
+<meta content="Software de tacógrafo digital para flotas – TAGRA III" property="og:title"/>
+<meta content="TAGRA III: el nuevo software de tacógrafo para flotas. Una vista general de infracciones, descargas de datos, tarjetas próximas a caducar y calibraciones. Prueba gratuita de 30 días." property="og:description"/>
+<meta content="https://tagra.app/assets/img/tagra3/og-fleet-tagra3.jpg" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="TAGRA III: análisis del conductor con gráfico de actividades y detalle de infracciones con referencia a la normativa" property="og:image:alt"/>
+<meta content="https://tagra.app/assets/img/tagra3/og-fleet-tagra3.jpg" name="twitter:image"/>
+<meta content="TAGRA III: análisis del conductor con gráfico de actividades y detalle de infracciones con referencia a la normativa" name="twitter:image:alt"/>
+<meta content="https://tagra.app/es/empresas/" property="og:url"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Software de tacógrafo digital para flotas – TAGRA III" name="twitter:title"/>
+<meta content="TAGRA III: el nuevo software de tacógrafo para flotas. Una vista general de infracciones, descargas de datos, tarjetas próximas a caducar y calibraciones. Prueba gratuita de 30 días." name="twitter:description"/>
+<style>
+    /* ─── DESIGN TOKENS ────────────────────────────────────────── */
+    /* ─── RESET & BASE ─────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    a { color: var(--green-brand); text-decoration: none; }
+    a:hover { color: var(--green-cta); text-decoration: underline; text-underline-offset: .18em; }
+    img { max-width: 100%; height: auto; display: block; }
+    ul { list-style: none; }
+    p + p { margin-top: 12px; }
+    p:empty { display: none; }
+
+    /* ─── SCROLL PROGRESS ──────────────────────────────────────── */
+    #scroll-progress {
+      position: fixed; top: 0; left: 0; height: 3px;
+      background: linear-gradient(90deg, var(--green-brand), var(--blue-light));
+      width: 0%; z-index: 9999; pointer-events: none;
+      transition: width .1s ease-out;
+    }
+
+    /* ─── NAVIGATION ───────────────────────────────────────────── */
+.nav-inner {
+      margin: 0 auto; padding: 0 24px;
+      height: 100%;
+      display: flex; align-items: center; justify-content: space-between; gap: 24px;
+    }
+    .nav-links {
+      display: flex; align-items: center; gap: 4px;
+      list-style: none;
+    }
+    .nav-links li a {
+      font-size: 15px; font-weight: 500; color: var(--text);
+      padding: 8px 12px; border-radius: 8px;
+      transition: background .15s, color .15s;
+      text-decoration: none;
+    }
+    .nav-links li a:hover { background: var(--bg-apple-solid); color: var(--blue-mid); }
+    .nav-links .nav-cta a {
+      background: var(--green-cta); color: #fff !important;
+      border-radius: 99px; padding: 8px 18px; font-weight: 600;
+    }
+    .nav-links .nav-cta a:hover { background: var(--green-brand); }
+    .nav-lang {
+      display: flex; align-items: center; gap: 4px;
+      font-size: 14px; font-weight: 600;
+    }
+    .nav-lang a {
+      padding: 5px 8px; border-radius: 6px; color: var(--text2);
+      text-decoration: none; transition: background .15s;
+    }
+    .nav-lang a:hover, .nav-lang a.active { background: var(--bg-apple-solid); color: var(--blue-mid); }
+    .nav-lang span { color: var(--border); }
+    .nav-mobile-toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
+    .nav-mobile-toggle span { display: block; width: 22px; height: 2px; background: var(--text); margin: 5px 0; border-radius: 2px; transition: .3s; }
+
+    @media (max-width: 900px) {
+      .nav-links { display: none; }
+      .nav-mobile-toggle { display: block; }
+      .nav-links.open {
+        display: flex; flex-direction: column; align-items: flex-start; gap: 2px;
+        position: absolute; top: var(--nav-h); left: 0; right: 0;
+        background: rgba(255,255,255,0.97); backdrop-filter: blur(12px);
+        border-bottom: 1px solid var(--border); padding: 12px 24px 20px;
+      }
+    }
+
+    /* ─── LAYOUT ───────────────────────────────────────────────── */
+    
+    
+    
+    
+    .band--machero { background: linear-gradient(180deg, var(--bg-apple-solid) 0%, #fff 74%); padding: 60px 0; }
+    @media (max-width: 768px) { .band { padding: 50px 0; } }
+    /* ─── TYPOGRAPHY ───────────────────────────────────────────── */
+    h1, h2, h3 { font-weight: 800; }
+    h2 {
+      font-size: 36px; font-weight: 800;
+      line-height: 1.1; letter-spacing: 0;
+      text-transform: uppercase;
+      color: var(--blue-mid, #134a8e);
+      background: var(--heading-gradient);
+      -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block; max-width: 100%; margin-bottom: 14px;
+      padding: 0.12em 0.15em 0.08em 0;
+    }
+    @media (max-width: 768px) { h2 {
+      font-size: 36px; font-weight: 800;
+      line-height: 1.1; letter-spacing: 0;
+      text-transform: uppercase;
+      color: var(--blue-mid, #134a8e);
+      background: var(--heading-gradient);
+      -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block; max-width: 100%; margin-bottom: 14px;
+      padding: 0.12em 0.15em 0.08em 0;
+    } }
+    h2
+    @media (max-width: 768px) { h2 }
+
+    .eyebrow {
+      font-size: 15px; font-weight: 700; letter-spacing: .1em;
+      text-transform: uppercase; color: var(--green-brand); margin-bottom: 12px;
+    }
+
+    /* ─── BUTTONS ──────────────────────────────────────────────── */
+    
+    .btn-cta:hover { background: var(--green-brand); transform: scale(1.02); color: #fff !important; }
+    
+
+    /* ─── BENTO GRID ───────────────────────────────────────────── */
+    
+    .bc {
+      background: var(--bg-white); border-radius: var(--radius);
+      padding: 32px; border: 1px solid var(--border); position: relative; overflow: hidden;
+    }
+    
+    
+    
+    
+    
+    
+    
+    @media (max-width: 900px) {
+      .bento { grid-template-columns: 1fr 1fr; }
+      .bc.s7, .bc.s5, .bc.s8 { grid-column: span 2; }
+      .bc.s4, .bc.s6 { grid-column: span 1; }
+    }
+    @media (max-width: 600px) {
+      .bento { grid-template-columns: 1fr; }
+      .bc { grid-column: span 1 !important; }
+    }
+    
+    
+    .bignum   { font-size: 110px; font-weight: 800; line-height: 1; letter-spacing: -.04em; color: rgba(19,74,142,.06); position: absolute; bottom: -16px; right: 16px; pointer-events: none; }
+
+    /* ─── 2-COL & 3-COL ────────────────────────────────────────── */
+    
+    
+    @media (max-width: 900px) { .g2 { grid-template-columns: 1fr; gap: 40px; } }
+
+    
+    @media (max-width: 860px) { .three-col { grid-template-columns: 1fr; } }
+    @media (min-width: 600px) and (max-width: 860px) { .three-col { grid-template-columns: 1fr 1fr; } }
+
+    .two-col { display: grid; grid-template-columns: 1fr; gap: 24px; align-items: start; }
+    @media (min-width: 992px) { .two-col { grid-template-columns: 1fr 1fr; gap: 38px; } }
+    @media (min-width: 992px) { .two-col.stretch { gap: 64px; align-items: stretch; } }
+
+    /* ─── CALLOUT CARDS ────────────────────────────────────────── */
+    .callout {
+      border-radius: var(--radius); background: var(--bg-white);
+      padding: 32px; box-shadow: 0 12px 32px rgba(0,0,0,.04);
+      border: 1px solid var(--border); position: relative;
+    }
+    
+    @media (min-width: 992px) { .stretch > .callout--plain { padding-top: 40px; } }
+
+    /* GREEN CALLOUT */
+    .callout--green {
+      background: linear-gradient(90deg,#74A81A,var(--green-brand) 55%,#638719);
+      border-radius: var(--radius); padding: 40px; position: relative; overflow: hidden;
+      box-shadow: 0 12px 32px rgba(0,0,0,.06);
+    }
+    .callout--green h2 {
+      background: linear-gradient(90deg,#052037,var(--blue-dark) 55%,#0e3a73);
+      -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent; color: transparent;
+      text-transform: none; margin-bottom: 8px;
+    padding-bottom:0.08em;}
+    .callout--green p, .callout--green li { color: #0b0b0c !important; }
+    .callout--green a { color: #052037 !important; }
+    .callout--green .cg-bg {
+      font-size: 200px; font-weight: 900; position: absolute;
+      right: -20px; bottom: -40px; color: rgba(255,255,255,.12);
+      line-height: 1; pointer-events: none;
+    }
+    ul li { padding: 3px 0; }
+
+    /* ─── FEATURE LIST ─────────────────────────────────────────── */
+    
+    
+    
+    .fck svg { flex-shrink: 0; }
+
+    /* ─── WARNING / NOTE BOXES ─────────────────────────────────── */
+    .note-box {
+      position: relative; background: linear-gradient(180deg,var(--green-bg) 0%,#fff 100%);
+      border: 2px solid var(--green-brand); border-radius: var(--radius);
+      padding: 40px 32px 32px; margin-top: 40px;
+      box-shadow: 0 10px 26px rgba(110,155,18,.08);
+    }
+    .note-badge {
+      position: absolute; top: -16px; left: 24px;
+      background: var(--green-brand); color: #fff;
+      font-size: 14px; font-weight: 800; text-transform: uppercase;
+      padding: 5px 14px; border-radius: 999px;
+      box-shadow: 0 6px 14px rgba(110,155,18,.22);
+    }
+    .note-title { font-size: 24px; font-weight: 800; line-height: 1.2; margin: 10px 0 16px; color: var(--text-strong); }
+    .note-box p  { font-size: 17px; line-height: 1.65; color: var(--text2); margin-bottom: 14px; }
+
+    /* ─── REVIEWS SLIDER ───────────────────────────────────────── */
+    .rev-rail-wrap {
+      overflow: hidden; margin-top: 24px;
+      mask-image: linear-gradient(to right, transparent 0%,black 6%,black 94%,transparent 100%);
+    }
+    
+    .rev-rail::-webkit-scrollbar { display: none; }
+    .rev-rail:active { cursor: grabbing; }
+    
+    
+    
+    
+
+    /* ─── METHOD CARDS ─────────────────────────────────────────── */
+    .method-card { display: flex; flex-direction: column; height: 100%; }
+    .method-frame {
+      background: var(--bg-white); aspect-ratio: 4/3; padding: 20px;
+      border: 1px solid var(--border); border-radius: var(--radius);
+      margin-bottom: 20px; overflow: hidden;
+    }
+    .method-frame img { width: 100%; height: 100%; object-fit: contain; }
+    .snum { font-size: 44px; font-weight: 800; color: rgba(19,74,142,.15); line-height: 1; margin-bottom: 8px; }
+    .stit { font-size: 20px; font-weight: 800; margin-bottom: 8px; color: var(--text-strong); }
+
+    /* ─── SPECS TABLE ──────────────────────────────────────────── */
+    .specs { margin-top: 24px; }
+    .spec { display: flex; justify-content: space-between; padding: 14px 0; border-bottom: 1px solid var(--border); }
+    .spec:last-child { border-bottom: none; }
+    .sk { color: var(--text2); }
+    .sv { font-weight: 600; text-align: right; }
+
+    /* ─── COMPARISON TABLE ─────────────────────────────────────── */
+    .compare-wrap { width: 100%; overflow-x: auto; margin-top: 14px; padding-top: 32px; -webkit-overflow-scrolling: touch; }
+    .compare-table { width: 100%; border-collapse: separate; border-spacing: 0; min-width: 680px; }
+    .compare-table th, .compare-table td { padding: 14px; border-bottom: 1px solid var(--border); vertical-align: middle; text-align: left; }
+    .compare-table th { font-weight: 700; font-size: 15px; color: var(--text2); border-bottom: 2px solid var(--border); vertical-align: top; }
+    .compare-table .col-blue { background: var(--bg-apple-solid); position: relative; }
+    .compare-table th.col-blue { padding-top: 48px !important; color: var(--blue-mid); border-top: 2px solid var(--blue-mid); border-left: 2px solid var(--blue-mid); border-right: 2px solid var(--blue-mid); border-top-left-radius: 16px; border-top-right-radius: 16px; border-bottom: 2px solid var(--border); }
+    .compare-table td.col-blue { border-left: 2px solid var(--blue-mid); border-right: 2px solid var(--blue-mid); border-bottom: 1px solid rgba(19,74,142,.1); }
+    .compare-table tr:last-child td.col-blue { border-bottom: 2px solid var(--blue-mid); border-bottom-left-radius: 16px; border-bottom-right-radius: 16px; }
+    .compare-table .col-green { background: #f4f9ea; position: relative; }
+    .compare-table th.col-green { padding-top: 48px !important; color: var(--green-brand); border-top: 2px solid var(--green-brand); border-left: 2px solid var(--green-brand); border-right: 2px solid var(--green-brand); border-top-left-radius: 16px; border-top-right-radius: 16px; border-bottom: 2px solid var(--border); }
+    .compare-table td.col-green { border-left: 2px solid var(--green-brand); border-right: 2px solid var(--green-brand); border-bottom: 1px solid rgba(110,155,18,.1); }
+    .compare-table tr:last-child td.col-green { border-bottom: 2px solid var(--green-brand); border-bottom-left-radius: 16px; border-bottom-right-radius: 16px; }
+    .winner-badge, .winner-badge-green {
+      position: absolute; top: -18px; left: 16px;
+      display: inline-flex; align-items: center; color: #fff;
+      font-size: 13px; font-weight: 800; text-transform: uppercase;
+      padding: 5px 12px; border-radius: 20px; letter-spacing: .05em;
+      box-shadow: 0 6px 14px rgba(0,0,0,.15); z-index: 2; white-space: nowrap;
+    }
+    .winner-badge       { background: var(--blue-mid); }
+    .winner-badge-green { background: var(--green-brand); }
+    .tc-val { display: flex; align-items: center; gap: 10px; font-size: 15px; font-weight: 500; color: var(--text2); }
+    td.col-blue .tc-val, td.col-green .tc-val { font-weight: 700; color: var(--text-strong); }
+    .tc-val.no-icon { padding-left: 0; }
+    .tb-icon { display: inline-flex; align-items: center; justify-content: center; width: 22px; height: 22px; border-radius: 50%; flex-shrink: 0; }
+    .tb-icon--blue  { background: linear-gradient(135deg,var(--blue-dark),var(--blue-mid)); }
+    .tb-icon--green { background: linear-gradient(135deg,#74A81A,var(--green-brand)); }
+    .tb-icon--gray  { background: #f2f2f7; }
+    .tb-icon--cross { background: #fff0f0; }
+    .tb-icon svg    { width: 12px; height: 12px; }
+
+    /* ─── FAQ ──────────────────────────────────────────────────── */
+    
+    
+    .faq summary {
+      list-style: none; cursor: pointer; padding: 18px 40px 18px 0;
+      font-weight: 800; font-size: 18px; line-height: 1.4;
+      position: relative; color: var(--text-strong);
+    }
+    
+    .faq summary::after { content: "+"; position: absolute; right: 4px; top: 50%; transform: translateY(-50%); font-size: 26px; font-weight: 300; color: var(--green-brand); }
+    
+    
+
+    /* ─── MAC STAGE ────────────────────────────────────────────── */
+    .mac-stage { position: relative; width: 100%; line-height: 0; }
+    .mac-stage img { width: 100%; display: block; object-fit: contain; transform-origin: center center; filter: drop-shadow(0 30px 70px rgba(0,0,0,.16)); }
+    .mac-stage::after { content: ""; position: absolute; left: 50%; bottom: 5%; transform: translateX(-50%); width: 80%; height: 60px; background: radial-gradient(50% 50%,rgba(0,0,0,.16) 0%,transparent 70%); filter: blur(15px); opacity: .6; pointer-events: none; z-index: -1; }
+
+    /* ─── MEDIA FRAME ──────────────────────────────────────────── */
+    .media-frame { width: 100%; border-radius: var(--radius); overflow: hidden; -webkit-mask-image: -webkit-radial-gradient(#fff,#000); }
+    .media-frame img, .media-frame video { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+    /* ─── RELATED / ARTICLE GRID ───────────────────────────────── */
+    .related-featured {
+      display: flex; flex-direction: column; position: relative;
+      margin-top: 34px; padding: 36px 28px 28px;
+      background: linear-gradient(180deg,var(--bg-apple-solid) 0%,#fff 100%);
+      border: 2px solid var(--blue-mid); border-radius: var(--radius);
+      text-decoration: none !important; color: inherit !important;
+      box-shadow: 0 10px 26px rgba(19,74,142,.08);
+      transition: transform .18s, box-shadow .18s;
+    }
+    .related-featured:hover { transform: translateY(-3px); box-shadow: 0 14px 28px rgba(19,74,142,.15); }
+    .related-badge, .article-eyebrow-badge {
+      position: absolute; top: -16px; left: 24px;
+      background: var(--blue-mid); color: #fff; font-size: 13px; font-weight: 800;
+      text-transform: uppercase; padding: 5px 12px; border-radius: 999px;
+      box-shadow: 0 6px 14px rgba(19,74,142,.22);
+    }
+    .related-title { font-size: 24px; font-weight: 800; line-height: 1.25; color: var(--text-strong) !important; margin: 8px 0; }
+    .related-text  { font-size: 17px; line-height: 1.6; color: var(--text2) !important; margin-bottom: 16px; }
+    
+    .article-card  {
+      position: relative; display: flex; flex-direction: column; height: 100%;
+      padding: 22px; background: var(--bg-white); border: 1.5px solid var(--border);
+      border-radius: var(--radius); text-decoration: none !important; color: inherit !important;
+      box-shadow: 0 8px 24px rgba(0,0,0,.04); transition: transform .18s, box-shadow .18s, border-color .18s;
+    }
+    .article-card:hover { transform: translateY(-3px); box-shadow: 0 14px 28px rgba(0,0,0,.08); border-color: rgba(110,155,18,.45); }
+    .article-eyebrow { font-size: 14px; font-weight: 800; text-transform: uppercase; color: var(--blue-mid) !important; margin-bottom: 8px; display: block; }
+    
+    
+    
+    .article-card:hover .article-chip, .related-featured:hover .article-chip { background: var(--green-brand); color: #fff !important; }
+
+    /* ─── ANIMATIONS ───────────────────────────────────────────── */
+    .anim-up   { opacity: 0; transform: translateY(28px); transition: opacity .8s cubic-bezier(.16,1,.3,1), transform .8s cubic-bezier(.16,1,.3,1); }
+    .fly-left  { opacity: 0; transform: translateX(-80px); transition: opacity 2.8s cubic-bezier(.16,1,.3,1), transform 2.8s cubic-bezier(.16,1,.3,1); }
+    .fly-right { opacity: 0; transform: translateX(80px);  transition: opacity 2.8s cubic-bezier(.16,1,.3,1), transform 2.8s cubic-bezier(.16,1,.3,1); }
+    .anim-up.on, .fly-left.on, .fly-right.on { opacity: 1; transform: none; }
+    @media (prefers-reduced-motion: reduce) { .anim-up, .fly-left, .fly-right { transition: none !important; opacity: 1 !important; transform: none !important; } }
+
+    /* ─── FOOTER ───────────────────────────────────────────────── */
+  
+    /* ─── STICKY CTA BAR ───────────────────────────────────────── */
+    .sticky-cta{position:fixed;left:0;right:0;bottom:0;z-index:850;transform:translateY(110%);transition:transform .35s ease;background:linear-gradient(120deg,var(--blue-dark),var(--blue-mid) 70%);box-shadow:0 -4px 24px rgba(0,0,0,.14);}
+    .sticky-cta.is-visible{transform:translateY(0);}
+    .sticky-cta-inner{max-width:var(--maxw);margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:center;gap:20px;flex-wrap:wrap;}
+    .sticky-cta-text{color:#fff;font-weight:600;font-size:15px;}
+    .sticky-cta-btn{background:linear-gradient(135deg,var(--green-brand) 0%,var(--green-cta) 100%);color:#fff!important;padding:10px 24px;border-radius:99px;font-weight:700;text-decoration:none!important;white-space:nowrap;position:relative;overflow:hidden;box-shadow:0 4px 14px rgba(0,0,0,.22),0 1px 0 rgba(255,255,255,.22) inset;transition:background .15s,transform .15s,box-shadow .2s;}
+    .sticky-cta-btn:hover{background:linear-gradient(140deg,#79a517 0%,#527311 100%);transform:scale(1.03);box-shadow:0 8px 20px rgba(0,0,0,.30),0 1px 0 rgba(255,255,255,.28) inset;text-decoration:none!important;}
+    .sticky-cta-close{background:none;border:none;color:rgba(255,255,255,.65);font-size:22px;line-height:1;cursor:pointer;padding:4px 8px;}
+    .sticky-cta-close:hover{color:#fff;}
+    @media(max-width:640px){.sticky-cta-text{display:none;}.sticky-cta-inner{padding:12px 16px;gap:14px;}}
+
+    /* ─── PRICE TABLE (MOBILE CARDS) ───────────────────────────── */
+    @media (max-width: 640px) {
+      .price-table-wrap { overflow-x: visible; }
+      .price-table { min-width: 0 !important; font-size: 15px; }
+      .price-table thead { display: none; }
+      .price-table tbody, .price-table tr, .price-table td { display: block; width: 100%; }
+      .price-table tr {
+        border: 1px solid var(--border) !important;
+        border-radius: 12px;
+        padding: 12px 14px;
+        margin-bottom: 12px;
+      }
+      .price-table td {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        gap: 12px;
+        text-align: right !important;
+        padding: 6px 0 !important;
+      }
+      .price-table td::before {
+        content: attr(data-label);
+        text-align: left;
+        color: var(--text2);
+        font-weight: 600;
+        font-size: 13px;
+        flex: 0 0 auto;
+      }
+      .price-table td:first-child {
+        font-size: 18px;
+        padding-bottom: 10px !important;
+        margin-bottom: 6px;
+        border-bottom: 1px solid var(--border);
+        justify-content: flex-start;
+      }
+      .price-table td:first-child::before { content: none; }
+    }
+    /* ─── TAGRA III: HERO WINDOW ───────────────────────────────── */
+    .t3-window{margin:44px auto 0;border-radius:14px;overflow:hidden;background:#fff;border:1px solid var(--border);box-shadow:0 30px 70px rgba(11,44,74,.16),0 6px 18px rgba(11,44,74,.08)}
+    .t3-window__bar{display:flex;align-items:center;gap:7px;height:30px;padding:0 14px;background:#f3f5f8;border-bottom:1px solid var(--border)}
+    .t3-window__bar i{width:10px;height:10px;border-radius:50%;background:#d5dbe3;display:block}
+    .t3-window__bar span{margin-left:8px;font-size:12px;font-weight:600;color:var(--text2)}
+    .t3-window img{width:100%;height:auto;display:block}
+    .t3-badge{display:inline-flex;align-items:center;gap:8px;background:var(--green-brand);color:#fff;font-size:13px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:5px 12px;border-radius:999px;margin-right:10px;vertical-align:middle;box-shadow:0 6px 14px rgba(110,155,18,.22)}
+    /* ─── TAGRA III: FEATURE GRID ──────────────────────────────── */
+    .t3-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:36px}
+    @media (max-width:980px){.t3-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media (max-width:620px){.t3-grid{grid-template-columns:1fr}}
+    .t3-card{background:var(--bg-white,#fff);border:1px solid var(--border);border-radius:var(--radius);padding:26px 24px;position:relative;overflow:hidden;transition:transform .18s,box-shadow .18s,border-color .18s}
+    .t3-card:hover{transform:translateY(-3px);box-shadow:0 14px 28px rgba(11,44,74,.08);border-color:rgba(19,74,142,.28)}
+    .t3-card__n{font-size:13px;font-weight:800;letter-spacing:.08em;color:var(--green-brand);margin-bottom:10px;display:block}
+    .t3-card h3{font-size:19px;line-height:1.3;font-weight:800;color:var(--text-strong);margin-bottom:8px}
+    .t3-card p{font-size:16px;line-height:1.6;color:var(--text2)}
+    .t3-card--key{background:linear-gradient(180deg,var(--bg-apple-solid,#eaf3f8) 0%,#fff 100%);border:2px solid var(--blue-mid)}
+    /* ─── TAGRA III: SCREENSHOT GALLERY ────────────────────────── */
+    .t3-tabs{display:flex;flex-wrap:wrap;gap:8px;margin:28px 0 22px}
+    .t3-tab{appearance:none;border:1.5px solid var(--border);background:#fff;color:var(--text-strong);font:inherit;font-size:15px;font-weight:600;padding:9px 16px;border-radius:999px;cursor:pointer;transition:background .15s,border-color .15s,color .15s}
+    .t3-tab:hover{border-color:var(--blue-mid);color:var(--blue-mid)}
+    .t3-tab[aria-selected="true"]{background:linear-gradient(135deg,var(--blue-light,#1f5fa6) 0%,var(--blue-mid,#134a8e) 100%);border-color:var(--blue-mid);color:#fff}
+    .t3-panel[hidden]{display:none}
+    .t3-panel figure{margin:0}
+    .t3-panel figcaption{margin-top:16px;font-size:16px;line-height:1.6;color:var(--text2);max-width:860px}
+    .t3-panel figcaption strong{color:var(--text-strong)}
+    @media (max-width:620px){.t3-tabs{flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;padding-bottom:6px;margin-right:-16px}.t3-tab{white-space:nowrap;flex:0 0 auto}}
+</style>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://tagra.app/es/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Para empresas de transporte",
+      "item": "https://tagra.app/es/empresas/"
+    }
+  ]
+}</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "url": "https://tagra.app/es/empresas/",
+  "name": "TAGRA III – Digital Tachograph Software for Fleet Operators",
+  "description": "TAGRA III is digital tachograph software for fleets — driver card and vehicle data, infringements with cited regulations, EU drivers' hours, AETR and working time under Directive 2002/15/EC and national rules.",
+  "primaryImageOfPage": "https://tagra.app/assets/img/tagra3/tagra3-evaluation.webp",
+  "isPartOf": {
+    "@id": "https://tagra.app/#website"
+  },
+  "about": {
+    "@id": "https://tagra.app/#organization"
+  },
+  "inLanguage": "es"
+}</script>
+<link href="/assets/css/tokens.css" rel="stylesheet"/>
+<link href="/assets/css/base.css" rel="stylesheet"/>
+<link href="/assets/css/components.css" rel="stylesheet"/>
+<link href="/assets/css/nav.css" rel="stylesheet"/>
+<script defer="" src="/assets/js/nav.js?v=20261008a"></script><script defer="" src="/assets/js/analytics.js?v=20261103a"></script>
+<link href="/assets/css/footer.css" rel="stylesheet"/><link href="/assets/css/t3-promo.css?v=20261103" rel="stylesheet"/>
+<link href="/assets/css/tagra-selector.css?v=20261107" rel="stylesheet"/><link href="/assets/css/t3-ai.css?v=20261110" rel="stylesheet"/><script defer="" src="/assets/js/tagra-prices.js?v=20261107"></script><script defer="" src="/assets/js/tagra-selector.js?v=20261107"></script><link href="https://tagra.app/fleet/" hreflang="en" rel="alternate"/><link href="https://tagra.app/de/fuhrpark/" hreflang="de" rel="alternate"/><link href="https://tagra.app/pl/dla-przewoznikow/" hreflang="pl" rel="alternate"/><link href="https://tagra.app/el/stolos/" hreflang="el" rel="alternate"/><link href="https://tagra.app/hu/fuvarozoknak/" hreflang="hu" rel="alternate"/><link href="https://tagra.app/es/empresas/" hreflang="es" rel="alternate"/><link href="https://tagra.app/fleet/" hreflang="x-default" rel="alternate"/></head>
+<body>
+<a class="skip-link" href="#main-content">Saltar al contenido</a>
+<div aria-hidden="true" id="scroll-progress"></div>
+<!-- ═══ NAVIGATION ═══════════════════════════════════════════════ -->
+<nav aria-label="Navegación principal" class="site-nav" role="navigation">
+<div class="nav-inner">
+<a aria-label="TAGRA Company – Inicio" class="nav-logo" href="/"><img alt="TAGRA" height="32" src="/assets/img/logo-light.svg?v=20260513zh" style="display:block;height:32px;width:auto;" width="140"/><span class="nav-logo-variant">Empresa</span></a>
+<ul class="nav-links" id="nav-links">
+<li><a aria-current="page" href="/fleet/">Para empresas</a></li>
+<li><a href="/driver/">Para conductores</a></li>
+<li><a href="/enforcement/">Control</a></li>
+<li><a href="/articles/">Artículos</a></li><li><a href="/manuals/">Manuales</a></li>
+<li><a href="/faq/">FAQ</a></li>
+<li><a href="/contact/">Contacto</a></li>
+<li class="nav-shop-li"><a aria-label="TAGRA Shop – compra licencias y dispositivos" class="nav-shop" data-cta="nav" href="https://shop.tagra.app/">Tienda</a></li>
+<li class="nav-cta-li"><a class="nav-cta" href="/try/?audience=fleet">Pruébalo gratis durante 30 días</a></li>
+</ul>
+<details class="nav-lang">
+<summary aria-label="Language: ES">ES</summary>
+<div class="nav-lang-menu" role="menu"><a href="/" hreflang="en">English</a><a href="/de/" hreflang="de">Deutsch</a><a href="/pl/" hreflang="pl">Polski</a><a href="/el/" hreflang="el">Ελληνικά</a><a href="/hu/" hreflang="hu">Magyar</a><a aria-current="page" class="active" href="/es/" hreflang="es">Español</a><a href="https://www.tdt.cz/" hreflang="cs" rel="noopener" target="_blank">Čeština</a><a href="https://www.tdt.sk/" hreflang="sk" rel="noopener" target="_blank">Slovenčina</a></div>
+</details>
+<a class="nav-cta-mobile" href="/try/?audience=fleet">Pruébalo gratis</a>
+<button aria-expanded="false" aria-label="Abrir o cerrar el menú" class="nav-mobile-toggle" id="nav-toggle">
+<span></span><span></span><span></span>
+</button>
+</div>
+</nav>
+<!-- ═══ HERO ══════════════════════════════════════════════════════ -->
+<section aria-label="Descripción general de TAGRA" class="band band--hero band--hero--blue tsel-hero" id="main-content">
+<div class="container">
+<div class="eyebrow anim-up"><span class="t3-badge">Nuevo</span>TAGRA III · Para empresas de transporte</div>
+<h1 class="anim-up" style="transition-delay:.05s">Análisis de datos del tacógrafo que detecta<br/>las infracciones a tiempo</h1>
+<p class="lead anim-up" style="transition-delay:.1s">
+<strong>TAGRA III es la última generación del programa TAGRA de eficacia probada para flotas.</strong> Una sola vista general muestra qué requiere tu atención —infracciones, descargas de datos de tarjetas y vehículos, tarjetas próximas a caducar y calibraciones— antes de que lo detecte una inspección. Cada infracción incluye la referencia a la normativa y una recomendación. Se adapta desde 1 vehículo hasta un número ilimitado.
+    </p>
+<!-- tsel:fleet-hero -->
+<div aria-label="Elige tu versión de TAGRA según el número de vehículos" class="tsel tsel--hero" data-cta="Buy {name} in TAGRA Shop" data-dec="." data-fee="First year included · from year 2: {fee} / year" data-fmt="€{n}" data-tsel="fleet" role="group"><p class="tsel__q">¿Cuántos vehículos tienen tacógrafo?</p><div class="tsel__row tsel__row--5"><a aria-current="true" class="tsel__o is-on" data-cap="1 vehicle" data-k="t1" href="https://shop.tagra.app/tagra-1/" hreflang="en"><b>1</b><small>TAGRA 1</small></a><a class="tsel__o" data-cap="2 vehicles" data-k="t2" href="https://shop.tagra.app/tagra-2/" hreflang="en"><b>2</b><small>TAGRA 2</small></a><a class="tsel__o" data-cap="3–4 vehicles" data-k="t4" href="https://shop.tagra.app/tagra-4/" hreflang="en"><b>3–4</b><small>TAGRA 4</small></a><a class="tsel__o" data-cap="5–6 vehicles" data-k="t6" href="https://shop.tagra.app/tagra-6/" hreflang="en"><b>5–6</b><small>TAGRA 6</small></a><a class="tsel__o" data-cap="Unlimited vehicles" data-k="max" href="https://shop.tagra.app/tagra-max/" hreflang="en"><b>7+</b><small>TAGRA MAX</small></a></div><div aria-live="polite" class="tsel__res"><div class="tsel__head"><span class="tsel__lbl">Recomendado para ti</span><strong class="tsel__name">TAGRA 1</strong><span class="tsel__cap">1 vehículo</span></div><p class="tsel__price"><span class="tsel__amt">€149</span><span class="tsel__vat">sin IVA</span></p><p class="tsel__fee">Primer año incluido · a partir del segundo año: 79 € / año</p><div class="tsel__acts"><a class="btn-cta tsel__cta" data-product="tagra-1" href="https://shop.tagra.app/tagra-1/" hreflang="en">Compra TAGRA 1 en TAGRA Shop</a></div></div></div>
+<!-- /tsel:fleet-hero -->
+<div class="anim-up tsel-hero__cta" style="margin-bottom:16px;transition-delay:.15s;display:flex;flex-wrap:wrap;justify-content:center;gap:12px">
+<a class="btn-cta" href="/try/?audience=fleet" rel="noopener" target="_blank">Pruébalo gratis durante 30 días</a>
+</div>
+<p class="anim-up" style="font-size:15px;color:var(--text2);transition-delay:.2s">Windows · Prueba gratuita de 30 días · Para camiones y furgonetas de 2,5–3,5 t</p>
+<!-- Hero: TAGRA III screenshot -->
+<div class="t3-window anim-up" style="transition-delay:.25s">
+<picture>
+<source height="643" media="(max-width: 620px)" sizes="100vw" srcset="/assets/img/tagra3/tagra3-overview-480.webp 480w, /assets/img/tagra3/tagra3-overview-768.webp 768w, /assets/img/tagra3/tagra3-overview-960.webp 960w" type="image/webp" width="960"/>
+<img alt="TAGRA III – análisis del conductor: gráfico de actividades con la franja de países y turnos, detalle de infracciones con referencia al Reglamento (CE) n.º 561/2006 y totales de actividad" decoding="async" fetchpriority="high" height="1140" sizes="(max-width: 1000px) 100vw, 1100px" src="/assets/img/tagra3/tagra3-evaluation.webp" srcset="/assets/img/tagra3/tagra3-evaluation-960.webp 960w, /assets/img/tagra3/tagra3-evaluation.webp 1920w" width="1920"/>
+</picture>
+</div>
+</div>
+</section>
+<!-- ═══ KEY PARAMETERS (BENTO) ════════════════════════════════════ -->
+<section aria-label="Funciones principales" class="band">
+<div class="container">
+<div class="eyebrow anim-up">Funciones principales</div>
+<h2 class="anim-up">Software de tacógrafo para flotas —<br/>descarga de datos, análisis y archivado</h2>
+<div class="bento">
+<div class="bc s7 fly-left">
+<div class="eyebrow" style="color:var(--blue-mid)">Vehículos</div>
+<div class="bc-title">Desde 1 vehículo hasta un número ilimitado</div>
+<div class="bc-text">Análisis y archivado de datos de tacógrafos digitales y tarjetas de conductor. Elige la versión que se adapte a tu flota: desde autónomos hasta grandes empresas de transporte.</div>
+<div class="bignum">∞</div>
+</div>
+<div class="bc s5 bluefill fly-right" style="transition-delay:.1s">
+<div class="eyebrow" style="color:var(--blue-mid)">Periodo de prueba</div>
+<div class="bc-title">30 días gratis</div>
+<div class="bc-text">Descarga el programa, instálalo y pruébalo. Sin tarjeta de crédito ni compromiso.</div>
+</div>
+<div class="bc s4 greenfill fly-left" style="transition-delay:.15s">
+<div class="eyebrow">A partir del segundo año</div>
+<div class="bc-title" style="color:var(--green-brand)">desde 79 € / año</div>
+<div class="bc-text">Cuota anual de licencia sin IVA: incluye todas las actualizaciones del programa y asistencia técnica especializada. 19 € (TAGRA Trucker), 29 € (TAGRA TRUCKER 2), 79 € (TAGRA 1–2), 99 € (TAGRA 4–6), 149 € (TAGRA MAX).</div>
+</div>
+<div class="bc s4 anim-up" style="transition-delay:.25s">
+<div class="eyebrow">Preparado para</div>
+<div class="bc-title">Furgonetas 2026</div>
+<div class="bc-text">Cumple plenamente con la nueva obligación de uso del tacógrafo para vehículos comerciales ligeros a partir de julio de 2026.</div>
+</div>
+<div class="bc s4 bluefill fly-right" style="transition-delay:.35s">
+<div class="eyebrow" style="color:var(--blue-mid)">Legislación</div>
+<div class="bc-title" style="color:var(--blue-mid)">Tiempos de conducción y descanso de la UE<br/>y tiempo de trabajo</div>
+<div class="bc-text">Analiza <strong>Tiempos de conducción y descanso de la UE</strong> (Reglamento 561/2006, AETR) y <strong>el tiempo de trabajo</strong> conforme a la Directiva 2002/15/CE, además de las normas nacionales de la República Checa, Eslovaquia y Hungría.</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ═══ ALSO FOR DRIVERS ═══════════════════════════════════════════ -->
+<section aria-label="TAGRA Trucker para conductores individuales" class="band band--gray">
+<div class="container">
+<div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:24px;padding:16px 0">
+<div>
+<div class="eyebrow">También disponible</div>
+<p style="font-size:19px;font-weight:700;color:var(--text-strong);margin-top:4px">TAGRA Trucker: para conductores profesionales</p>
+<p style="color:var(--text2);margin-top:6px;max-width:480px">¿Eres conductor profesional asalariado y quieres conservar los registros de tu propia tarjeta? TAGRA Trucker está diseñado para la descarga de datos de la tarjeta de conductor y su archivado individual mediante un lector de tarjetas USB estándar. Incluye un lector de tarjetas USB gratuito, que recibirás en tu domicilio.</p>
+<p style="color:var(--text2);margin-top:6px;max-width:480px;font-size:14.5px"><strong>¿Eres autónomo o transportista con camión propio?</strong> También eres la empresa de transporte: necesitas una versión que permita la descarga de datos <strong>tanto</strong> de la tarjeta de conductor como del tacógrafo (VU). <a href="#tagra-pricing" style="color:var(--blue-mid);font-weight:600">TAGRA 1</a> es la versión mínima necesaria.</p>
+</div>
+<a class="btn-cta btn-cta--sm" href="/driver/" style="flex-shrink:0">Descubre TAGRA Trucker →</a>
+</div>
+</div>
+</section>
+<!-- ═══ WHAT TAGRA III DOES ════════════════════════════════════════ -->
+<section aria-label="Funciones de TAGRA III" class="band" id="tagra-iii">
+<div class="container">
+<div class="anim-up">
+<div class="eyebrow">Qué hace TAGRA III</div>
+<h2>Más que una simple<br/>descarga de datos</h2>
+<p style="max-width:760px">La simple <strong>descarga de datos de la tarjeta de conductor</strong> no basta: la ley exige realizar de forma periódica el <strong>análisis de datos del tacógrafo digital</strong> y su archivado. TAGRA III analiza los datos de la tarjeta de conductor y del tacógrafo (VU) conforme a las normas de la UE y nacionales, y te muestra qué debes atender primero.</p>
+</div>
+<div class="t3-grid anim-up" style="transition-delay:.05s">
+<div class="t3-card"><span class="t3-card__n">01</span><h3>Datos de la tarjeta de conductor y del tacógrafo</h3><p>Lee la tarjeta de conductor con un lector de tarjetas inteligentes y procesa los datos descargados de tarjetas de conductor y tacógrafos (VU).</p></div>
+<div class="t3-card t3-card--key"><span class="t3-card__n">02</span><h3>Comprobación conforme a la normativa</h3><p>Análisis conforme al Reglamento (CE) n.º 561/2006, el Acuerdo AETR, la Directiva 2002/15/CE y las normas nacionales de la República Checa, Eslovaquia y Hungría. Cada infracción incluye la referencia a la normativa y una recomendación.</p></div>
+<div class="t3-card"><span class="t3-card__n">03</span><h3>Tiempo de trabajo de los conductores</h3><p>El tiempo de trabajo se analiza conforme a las normas nacionales del país de la empresa o, en su defecto, conforme a la Directiva 2002/15/CE. Un conductor puede heredar las normas de la empresa o tener las suyas propias.</p></div>
+<div class="t3-card"><span class="t3-card__n">04</span><h3>Gráfico de actividades del conductor</h3><p>Actividades, registros e infracciones en un solo gráfico, incluida una banda de países y turnos con el inicio y el fin de los turnos, los cruces de fronteras y las operaciones de carga y descarga.</p></div>
+<div class="t3-card t3-card--key"><span class="t3-card__n">05</span><h3>Cierra las infracciones con una declaración</h3><p>Registra lo hablado con el conductor directamente en la ficha de la infracción y ciérrala, de una en una o en bloque. La pestaña Detalles muestra los totales de actividad del periodo de la infracción.</p></div>
+<div class="t3-card"><span class="t3-card__n">06</span><h3>Tiempo sin registrar</h3><p>Los periodos sin datos de la tarjeta de conductor se muestran por separado de las infracciones y pueden justificarse con un certificado de actividades.</p></div>
+<div class="t3-card"><span class="t3-card__n">07</span><h3>Certificado de actividades</h3><p>Imprime el formulario oficial de la UE para los conductores y periodos seleccionados: en bloque o en un PDF por conductor. Puedes cambiar el idioma del formulario en la vista previa.</p></div>
+<div class="t3-card"><span class="t3-card__n">08</span><h3>Informe de trabajo del conductor</h3><p>Por día o por turno, con trabajo nocturno, fines de semana y festivos, y con la posibilidad de elegir qué se considera tiempo de trabajo.</p></div>
+<div class="t3-card"><span class="t3-card__n">09</span><h3>Imprime informes</h3><p>Análisis del conductor, Tiempo desconocido, Conducción sin tarjeta, Resumen de tareas e Informe completo de la empresa. Imprime varios documentos en un solo PDF.</p></div>
+<div class="t3-card t3-card--key"><span class="t3-card__n">10</span><h3>Tareas y plazos</h3><p>La vista general muestra las tareas pendientes: infracciones, tiempo sin registrar, descargas de datos de tarjetas y vehículos, validez de tarjetas y documentos y calibración del tacógrafo.</p></div>
+<div class="t3-card"><span class="t3-card__n">11</span><h3>Tus datos se quedan contigo</h3><p>Una aplicación para Windows que se ejecuta en tu propio ordenador y almacena los datos de conductores y vehículos de forma local.</p></div>
+<div class="t3-card"><span class="t3-card__n">12</span><h3>Multilingüe</h3><p>El programa y sus informes están disponibles en inglés, alemán, italiano, francés, checo y eslovaco.</p></div>
+</div>
+</div>
+</section><section aria-label="Asistente de IA en TAGRA III" class="t3ai" id="ai-asistent"><div class="t3ai__wrap"><div class="t3ai__text"><div class="t3ai__eyebrow"><span class="t3ai__badge">Nuevo</span>TAGRA III · AI assistant</div><h2 class="t3p-h2 t3ai__h2">An AI assistant built right into TAGRA III</h2><p class="t3ai__lead">TAGRA III is the first TAGRA with a built-in AI assistant. Open it from any screen and ask in your own words — about using the program, drivers' hours, working time or tachograph rules.</p><ul class="t3ai__feats"><li><span class="t3ai__ico"><svg aria-hidden="true" viewbox="0 0 24 24"><circle cx="12" cy="12" r="7"></circle><circle cx="12" cy="12" r="2.5"></circle><path d="M12 2v3M12 19v3M2 12h3M19 12h3"></path></svg></span><div><strong>Ayuda adaptada a tu pantalla</strong><span>TAGRA III tells the assistant which window you opened it from, so the answer fits what you are doing.</span></div></li><li><span class="t3ai__ico"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M4 19.5V5a2 2 0 0 1 2-2h14v14H6a2 2 0 0 0-2 2.5z"></path><path d="M6 21h14v-4"></path><path d="M9 7h7M9 11h5"></path></svg></span><div><strong>La normativa en palabras sencillas</strong><span>Tiempos de conducción y descanso conforme al Reglamento (CE) n.º 561/2006 y al AETR, tiempo de trabajo de los conductores y normativa sobre tacógrafos conforme al Reglamento (UE) n.º 165/2014.</span></div></li><li><span class="t3ai__ico"><svg aria-hidden="true" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"></path></svg></span><div><strong>En el idioma de tu programa</strong><span>The assistant answers in the language TAGRA III is set to.</span></div></li><li><span class="t3ai__ico"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"></path><path d="M8.5 11h.01M12 11h.01M15.5 11h.01"></path></svg></span><div><strong>Sin necesidad de abrir una solicitud de soporte</strong><span>Pregunta cuando quieras, directamente en el chat. Cuando necesites hablar con una persona, nuestro equipo de soporte seguirá aquí.</span></div></li></ul><div class="t3ai__cta"><a class="btn-cta" href="/try/?audience=fleet" rel="noopener" target="_blank">Pruébalo gratis durante 30 días</a></div><p class="t3ai__note"><svg aria-hidden="true" viewbox="0 0 24 24"><rect height="10" rx="2" width="14" x="5" y="11"></rect><path d="M8 11V8a4 4 0 0 1 8 0v3"></path></svg><span>TAGRA III does not send drivers' personal data to the assistant. AI answers may contain mistakes — check important decisions against the regulation or with our support.</span></p></div><figure aria-label="Ejemplo de conversación con el asistente de IA en TAGRA III" class="t3ai__chat" role="img"><div aria-hidden="true" class="t3ai__bar"><span class="t3ai__dot"></span>Asistente de TAGRA<span class="t3ai__ctx">Abierto desde: Vista general</span></div><div aria-hidden="true" class="t3ai__body"><p class="t3ai__msg t3ai__msg--u">¿Cuándo se puede ampliar el tiempo de conducción diario a 10 horas?</p><div class="t3ai__msg t3ai__msg--b"><span class="t3ai__who"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M12 2l1.9 6.1L20 10l-6.1 1.9L12 18l-1.9-6.1L4 10l6.1-1.9z"></path><path d="M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8z"></path></svg>Asistente de TAGRA</span>Como máximo, dos veces por semana. Según el Reglamento (CE) n.º 561/2006, el tiempo de conducción diario es de 9 horas y puede ampliarse a 10 horas como máximo dos veces por semana. Las pausas y los periodos de descanso siguen siendo obligatorios.</div></div><div aria-hidden="true" class="t3ai__input">Haz una pregunta…<span class="t3ai__send"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></div></figure></div></section>
+<!-- ═══ TAGRA III SCREENSHOTS ═════════════════════════════════════ -->
+<section aria-label="Capturas de pantalla de TAGRA III" class="band band--machero">
+<div class="container">
+<div class="anim-up">
+<div class="eyebrow">Míralo en acción</div>
+<h2>TAGRA III, pantalla a pantalla</h2>
+<p style="max-width:760px">Desde la vista general de las tareas de hoy hasta el informe que entregas al conductor: pantallas reales de TAGRA III. Los datos personales de las capturas de pantalla se han sustituido por valores de ejemplo.</p>
+</div>
+<div class="anim-up" style="transition-delay:.05s">
+<div aria-label="Pantallas de TAGRA III" class="t3-tabs" role="tablist">
+<button aria-controls="t3p-overview" aria-selected="true" class="t3-tab" id="t3t-overview" role="tab" tabindex="0" type="button">Vista general</button>
+<button aria-controls="t3p-driver" aria-selected="false" class="t3-tab" id="t3t-driver" role="tab" tabindex="-1" type="button">Conductor</button>
+<button aria-controls="t3p-infringements" aria-selected="false" class="t3-tab" id="t3t-infringements" role="tab" tabindex="-1" type="button">Infracciones</button>
+<button aria-controls="t3p-evaluation" aria-selected="false" class="t3-tab" id="t3t-evaluation" role="tab" tabindex="-1" type="button">Análisis</button>
+<button aria-controls="t3p-driver-evaluation" aria-selected="false" class="t3-tab" id="t3t-driver-evaluation" role="tab" tabindex="-1" type="button">Análisis del conductor</button>
+<button aria-controls="t3p-work-report" aria-selected="false" class="t3-tab" id="t3t-work-report" role="tab" tabindex="-1" type="button">Informe de trabajo</button>
+<button aria-controls="t3p-company-report" aria-selected="false" class="t3-tab" id="t3t-company-report" role="tab" tabindex="-1" type="button">Informe de empresa</button>
+</div>
+<div aria-labelledby="t3t-overview" class="t3-panel" id="t3p-overview" role="tabpanel">
+<figure>
+<div class="t3-window" style="margin-top:0">
+<img alt="Vista general de TAGRA III: carga de datos, conductores y vehículos con tareas, exportación de datos para inspección" decoding="async" height="939" loading="lazy" sizes="(max-width: 1000px) 100vw, 1100px" src="/assets/img/tagra3/tagra3-overview.webp" srcset="/assets/img/tagra3/tagra3-overview-480.webp 480w, /assets/img/tagra3/tagra3-overview-768.webp 768w, /assets/img/tagra3/tagra3-overview-960.webp 960w, /assets/img/tagra3/tagra3-overview.webp 1402w" width="1402"/>
+</div>
+<figcaption><strong>Vista general.</strong> Lo que requiere atención ahora mismo: conductores cuyas tarjetas necesitan una descarga de datos, infracciones activas, tarjetas próximas a caducar, descargas de datos de vehículos y próximas calibraciones.</figcaption>
+</figure>
+</div>
+<div aria-labelledby="t3t-driver" class="t3-panel" hidden="" id="t3p-driver" role="tabpanel">
+<figure>
+<div class="t3-window" style="margin-top:0">
+<img alt="TAGRA III, detalle del conductor: normas aplicadas, infracciones pendientes, tiempo sin registrar y tareas" decoding="async" height="939" loading="lazy" sizes="(max-width: 1000px) 100vw, 1100px" src="/assets/img/tagra3/tagra3-driver.webp" srcset="/assets/img/tagra3/tagra3-driver-960.webp 960w, /assets/img/tagra3/tagra3-driver.webp 1402w" width="1402"/>
+</div>
+<figcaption><strong>Detalle del conductor.</strong> Las normas aplicadas al conductor (Reglamento 561/2006, normativa nacional sobre tiempo de trabajo — heredadas de la empresa o configuradas individualmente), las infracciones abiertas, el tiempo sin registrar y las tareas del conductor.</figcaption>
+</figure>
+</div>
+<div aria-labelledby="t3t-infringements" class="t3-panel" hidden="" id="t3p-infringements" role="tabpanel">
+<figure>
+<div class="t3-window" style="margin-top:0">
+<img alt="Lista de infracciones de TAGRA III con filtros por normativa, grupo y gravedad, campo de declaración y botón de cierre" decoding="async" height="939" loading="lazy" sizes="(max-width: 1000px) 100vw, 1100px" src="/assets/img/tagra3/tagra3-infringements.webp" srcset="/assets/img/tagra3/tagra3-infringements-960.webp 960w, /assets/img/tagra3/tagra3-infringements.webp 1402w" width="1402"/>
+</div>
+<figcaption><strong>Infracciones.</strong> Filtra por normativa, grupo de infracciones y gravedad. Cada infracción muestra el artículo citado, lo que ha ocurrido y lo que debe hacer el conductor — añade una declaración y ciérrala.</figcaption>
+</figure>
+</div>
+<div aria-labelledby="t3t-evaluation" class="t3-panel" hidden="" id="t3p-evaluation" role="tabpanel">
+<figure>
+<div class="t3-window" style="margin-top:0">
+<img alt="Análisis de TAGRA III: gráfico de actividades, detalle de infracciones, totales de actividad y texto de la normativa" decoding="async" height="1140" loading="lazy" sizes="(max-width: 1000px) 100vw, 1100px" src="/assets/img/tagra3/tagra3-evaluation.webp" srcset="/assets/img/tagra3/tagra3-evaluation-960.webp 960w, /assets/img/tagra3/tagra3-evaluation.webp 1920w" width="1920"/>
+</div>
+<figcaption><strong>Análisis.</strong> Gráfico de actividad con la banda de países y turnos, detalle de la infracción con el texto de la normativa y un enlace al texto completo en EUR-Lex, y totales de actividad del periodo de la infracción.</figcaption>
+</figure>
+</div>
+<div aria-labelledby="t3t-driver-evaluation" class="t3-panel" hidden="" id="t3p-driver-evaluation" role="tabpanel">
+<figure>
+<div class="t3-window" style="margin-top:0">
+<img alt="Informe de análisis del conductor de TAGRA III: infracciones por grupo y artículo con su gravedad" decoding="async" height="1140" loading="lazy" sizes="(max-width: 1000px) 100vw, 1100px" src="/assets/img/tagra3/tagra3-driver-evaluation.webp" srcset="/assets/img/tagra3/tagra3-driver-evaluation-960.webp 960w, /assets/img/tagra3/tagra3-driver-evaluation.webp 1920w" width="1920"/>
+</div>
+<figcaption><strong>Informe de análisis del conductor.</strong> Infracciones resumidas por grupo y enumeradas por artículo, cada una con su gravedad — de infracción leve a muy grave.</figcaption>
+</figure>
+</div>
+<div aria-labelledby="t3t-work-report" class="t3-panel" hidden="" id="t3p-work-report" role="tabpanel">
+<figure>
+<div class="t3-window" style="margin-top:0">
+<img alt="Informe de trabajo del conductor por turnos de TAGRA III: conducción, otros trabajos, pausas, trabajo nocturno y tiempo trabajado" decoding="async" height="1140" loading="lazy" sizes="(max-width: 1000px) 100vw, 1100px" src="/assets/img/tagra3/tagra3-work-report.webp" srcset="/assets/img/tagra3/tagra3-work-report-960.webp 960w, /assets/img/tagra3/tagra3-work-report.webp 1920w" width="1920"/>
+</div>
+<figcaption><strong>Informe de trabajo del conductor.</strong> Por turno o por día — conducción, otros trabajos, pausas, trabajo nocturno y tiempo trabajado. Cambia el idioma del informe directamente en la vista previa.</figcaption>
+</figure>
+</div>
+<div aria-labelledby="t3t-company-report" class="t3-panel" hidden="" id="t3p-company-report" role="tabpanel">
+<figure>
+<div class="t3-window" style="margin-top:0">
+<img alt="Informe completo de empresa de TAGRA III con infracciones y espacios para las firmas del conductor y del empresario" decoding="async" height="1140" loading="lazy" sizes="(max-width: 1000px) 100vw, 1100px" src="/assets/img/tagra3/tagra3-company-report.webp" srcset="/assets/img/tagra3/tagra3-company-report-960.webp 960w, /assets/img/tagra3/tagra3-company-report.webp 1920w" width="1920"/>
+</div>
+<figcaption><strong>Informe completo de empresa.</strong> Todas las infracciones en un único documento, con espacios para la declaración y la firma del conductor y del empresario — el registro que conservas en tus archivos.</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<!-- ═══ REVIEWS ═══════════════════════════════════════════════════ -->
+<section aria-label="Opiniones de clientes" class="band band--gray">
+<div class="container">
+<div class="eyebrow anim-up">Qué dicen los clientes</div>
+<h2 class="anim-up">Análisis profesional de datos de tacógrafos para flotas europeas</h2>
+</div>
+<div class="rev-rail-wrap anim-up" style="transition-delay:.05s">
+<div class="rev-rail" id="rev-rail">
+<div class="rev-card"><div aria-label="5 de 5" class="rev-stars">★★★★★</div><p class="rev-txt">"TAGRA gestiona un enorme volumen de datos y ha simplificado considerablemente nuestras comprobaciones de infracciones y el archivado."</p><p class="rev-meta">David C. · Cliente verificado</p></div>
+<div class="rev-card"><div aria-label="5 de 5" class="rev-stars">★★★★★</div><p class="rev-txt">"Llevamos unos meses usando TAGRA: la descarga de datos y el análisis son fáciles, y los resultados son claros. Por fin, tranquilidad."</p><p class="rev-meta">Patrik S. · Cliente verificado</p></div>
+<div class="rev-card"><div aria-label="5 de 5" class="rev-stars">★★★★★</div><p class="rev-txt">"El programa es intuitivo y fácil de usar. Cuando necesité ayuda, estuvieron ahí."</p><p class="rev-meta">Milan K. · Cliente verificado</p></div>
+<div class="rev-card"><div aria-label="5 de 5" class="rev-stars">★★★★★</div><p class="rev-txt">"Sencillo y claro. La descarga de datos, el análisis y el archivado solo llevan unos minutos."</p><p class="rev-meta">Josef Z. · Cliente verificado</p></div>
+<div class="rev-card"><div aria-label="5 de 5" class="rev-stars">★★★★★</div><p class="rev-txt">"TAGRA nos permite tener controladas las infracciones y el archivado. Es realmente fácil de usar."</p><p class="rev-meta">Cliente verificado de TRUCKMALL</p></div>
+</div>
+</div>
+</section>
+<!-- ═══ WHY (OBLIGATION) ══════════════════════════════════════════ -->
+<section aria-label="Obligaciones legales" class="band band--blue">
+<div class="container">
+<div class="eyebrow">Por qué es importante</div>
+<h2 class="anim-up">La descarga de datos por sí sola<br/>no es suficiente</h2>
+<p class="anim-up" style="max-width:580px;margin-bottom:32px;transition-delay:.05s">La ley exige a las empresas de transporte analizar y archivar periódicamente los datos del tacógrafo. Sin un adecuado <strong>análisis de datos del tacógrafo digital</strong> , te expones a sanciones, aunque ya tengas los datos descargados.</p>
+<div class="bento anim-up" style="margin-top:0;transition-delay:.1s">
+<div class="bc s6">
+<div class="eyebrow">Tarjetas de conductor</div>
+<p>La descarga de datos de las tarjetas debe realizarse al menos cada <strong>28 días.</strong> TAGRA te avisa antes de los plazos.</p>
+</div>
+<div class="bc s6">
+<div class="eyebrow">Tacógrafo (VU)</div>
+<p>La descarga de datos de los tacógrafos (VU) debe realizarse al menos cada <strong>90 días.</strong> Es obligatorio conservar los datos archivados durante un mínimo de 1 año.</p>
+</div>
+<div class="bc s6">
+<div class="eyebrow">Qué comprueban los inspectores</div>
+<p>No solo los datos en sí, sino <strong>todo el proceso de análisis.</strong> TAGRA genera resultados plenamente aceptados por las autoridades de control.</p>
+</div>
+<div class="bc s6">
+<div class="eyebrow">Furgonetas</div>
+<p>A partir de <strong>julio de 2026</strong> esto se aplica a los vehículos de más de 2,5 t y hasta 3,5 t de MMA en el transporte internacional. Estamos preparados.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- ═══ TRUSTED BY AUTHORITIES ════════════════════════════════════ -->
+<section class="band">
+<div class="container">
+<div class="anim-up" style="text-align:center;max-width:780px;margin:0 auto">
+<h2>Determinadas autoridades de control utilizan TAGRA Control</h2>
+<p>TAGRA se utiliza activamente para el análisis de datos por parte de <strong>cuerpos nacionales de policía, administraciones de Aduanas, Inspecciones de Trabajo, ministerios de Transporte y autoridades regionales</strong> de toda Europa. Dispones exactamente de la misma lógica de análisis y del mismo formato de resultados que los inspectores.</p>
+</div>
+</div>
+</section>
+<!-- ═══ COMPARISON TABLE ══════════════════════════════════════════ -->
+<section aria-label="Comparativa de soluciones" class="band">
+<div class="container anim-up">
+<div class="eyebrow">Comparativa</div>
+<h2>Cómo se compara TAGRA</h2>
+<div class="compare-wrap">
+<table class="compare-table">
+<thead>
+<tr>
+<th style="width:34%"></th>
+<th style="width:33%">Software estándar para tacógrafos</th>
+<th class="col-blue" style="width:33%">
+<span class="winner-badge">Mejor relación calidad-precio</span>
+<span style="font-size:20px;font-weight:900;display:block;margin-top:4px">TAGRA III</span>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="font-weight:700;color:var(--text-strong)">Coste anual</td>
+<td><div class="tc-val no-icon">Variable (a menudo con módulos o cargos adicionales)</div></td>
+<td class="col-blue"><div class="tc-val no-icon">desde 79 € / año (a partir del segundo año) · TAGRA MAX: 149 €/año</div></td>
+</tr>
+<tr>
+<td style="font-weight:700;color:var(--text-strong)">Tiempos de conducción y descanso de la UE (Reglamento 561/2006)</td>
+<td><div class="tc-val"><span class="tb-icon tb-icon--gray"><svg fill="none" stroke="#8e8e93" stroke-width="3" viewbox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></span>Sí</div></td>
+<td class="col-blue"><div class="tc-val"><span class="tb-icon tb-icon--blue"><svg fill="none" stroke="white" stroke-width="3" viewbox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></span>Sí</div></td>
+</tr>
+<tr>
+<td style="font-weight:700;color:var(--text-strong)">Directiva sobre el tiempo de trabajo</td>
+<td><div class="tc-val no-icon">Depende de la solución</div></td>
+<td class="col-blue"><div class="tc-val"><span class="tb-icon tb-icon--blue"><svg fill="none" stroke="white" stroke-width="3" viewbox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></span>Sí — incluye turnos, horas extraordinarias y trabajo nocturno</div></td>
+</tr>
+<tr>
+<td style="font-weight:700;color:var(--text-strong)">Detección de infracciones</td>
+<td><div class="tc-val"><span class="tb-icon tb-icon--gray"><svg fill="none" stroke="#8e8e93" stroke-width="3" viewbox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></span>Sí</div></td>
+<td class="col-blue"><div class="tc-val"><span class="tb-icon tb-icon--blue"><svg fill="none" stroke="white" stroke-width="3" viewbox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></span>Sí, con informes claros</div></td>
+</tr>
+<tr>
+<td style="font-weight:700;color:var(--text-strong)">Normativa citada y recomendación en cada infracción</td>
+<td><div class="tc-val no-icon">Rara vez</div></td>
+<td class="col-blue"><div class="tc-val"><span class="tb-icon tb-icon--blue"><svg fill="none" stroke="white" stroke-width="3" viewbox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></span>Sí — artículo, texto y qué hacer</div></td>
+</tr>
+<tr>
+<td style="font-weight:700;color:var(--text-strong)">Resumen de tareas (descargas de datos, caducidad de tarjetas, calibración)</td>
+<td><div class="tc-val no-icon">Depende de la solución</div></td>
+<td class="col-blue"><div class="tc-val"><span class="tb-icon tb-icon--blue"><svg fill="none" stroke="white" stroke-width="3" viewbox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></span>Sí — en la pantalla de inicio</div></td>
+</tr>
+<tr>
+<td style="font-weight:700;color:var(--text-strong)">Trabajo manual necesario</td>
+<td><div class="tc-val no-icon">A menudo, muchos pasos manuales</div></td>
+<td class="col-blue"><div class="tc-val"><span class="tb-icon tb-icon--blue"><svg fill="none" stroke="white" stroke-width="3" viewbox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></span>Considerablemente reducido</div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p style="font-size:13px;color:var(--text2);margin-top:12px;line-height:1.5">* Comparativa basada en las prestaciones habituales de las soluciones más comunes del mercado. Las funciones concretas pueden variar según la versión y la configuración.</p>
+<div aria-label="Aviso sobre la obligación legal" class="note-box anim-up" role="note">
+<span class="note-badge">Obligación legal</span>
+<div class="note-title">El análisis y el archivado de los datos del tacógrafo son obligatorios</div>
+<p>Según el Reglamento (CE) n.º 561/2006 de la UE, capítulo III, artículo 10, apartado 2, el análisis y el archivado de los datos del tacógrafo son una obligación legal de estricto cumplimiento para las empresas de transporte.</p>
+<p style="margin-bottom:0"><strong>Sin una solución especializada, te expones a sanciones de hasta 14.000 €</strong> por parte de la autoridad de transporte — y de hasta <strong>€80,000</strong> por infracciones del tiempo de trabajo de los conductores.</p>
+</div>
+</div>
+</section>
+<!-- ═══ HOW TO GET DATA ═══════════════════════════════════════════ -->
+<!--  DKV LIVE INTEGRATION CALLOUT (added 2026-05-11)  -->
+<section aria-label="Integración con la telemática de DKV LIVE" class="band band--gray" style="padding-bottom:80px">
+<div class="container">
+<div class="g2 top">
+<div class="anim-up">
+<div class="eyebrow">¿Ya utilizas telemática?</div>
+<h2>DKV LIVE®<br/>importa automáticamente</h2>
+<p style="margin-bottom:16px">Si ya utilizas <strong>DKV LIVE®</strong> para la <strong>descarga remota de datos del tacógrafo</strong>, TAGRA obtiene los datos directamente del servidor SFTP seguro de DKV — sin transferencias manuales de archivos ni desplazamientos a los vehículos.</p>
+<p style="margin-bottom:24px">Configura la frecuencia una sola vez (a diario, cada hora o según tus necesidades) y cada archivo de datos de tarjeta de conductor y de vehículo llegará a TAGRA, listo para su análisis y archivado.</p>
+<a class="btn-cta btn-cta--sm" href="/integrations/dkv-live/">Consulta la guía de configuración de DKV LIVE</a>
+</div>
+<div class="anim-up" style="transition-delay:.1s">
+<div class="note-box">
+<span class="note-badge">Cómo funciona</span>
+<span class="note-title">Basado en SFTP, funciona en segundo plano</span>
+<p>La función <strong>Importación de datos</strong> de TAGRA se conecta a <code>sftp.styletronic.eu</code> con tus credenciales de DKV LIVE® y descarga los archivos <code>.DDD</code> / <code>.C1B</code> / <code>.V1B</code> más recientes según la programación que establezcas. Incluido en todas las licencias de TAGRA.</p>
+<p style="font-size:14px;color:var(--text-muted);margin-top:12px;font-style:italic">DKV LIVE® es una marca de DKV Mobility. La integración de TAGRA es una función técnica de interoperabilidad.</p>
+</div><div class="warning-box" style="margin-top:28px"><p class="warning-box__title">Por qué el propio registro es tu defensa</p><p>El artículo 10, apartado 3, responsabiliza a la empresa de transporte de las infracciones cometidas por sus conductores, incluso cuando se producen en otro país. Pero ese mismo artículo permite a los Estados miembros tener en cuenta <strong>pruebas de que no se puede considerar razonablemente responsable a la empresa de transporte</strong>. Esas pruebas son precisamente lo que el artículo 10, apartado 2, te pide que aportes: pruebas de que los conductores han recibido las instrucciones adecuadas y de que realizas controles periódicos.</p><p>En la práctica, un inspector no busca un historial sin infracciones. Busca comprobar si las infracciones se han <strong>detectado, investigado y corregido</strong>. TAGRA genera el informe de infracciones que entregas al conductor y conservas archivado: el documento que transforma «nuestro conductor incumplió las normas» en «lo detectamos y tomamos medidas».</p><p style="margin-top:10px"><a href="/articles/operator-liability-for-driver-infringements/">Qué implica en la práctica la responsabilidad de la empresa de transporte →</a></p></div>
+</div>
+</div>
+</div>
+</section>
+<section aria-label="Métodos de descarga de datos" class="band band--gray" style="padding-top:0">
+<div class="container">
+<div class="anim-up" style="text-align:center;margin-bottom:48px">
+<div class="eyebrow" style="color:var(--blue-mid);letter-spacing:.12em">O extrae los datos manualmente</div>
+</div>
+<div class="g2 top anim-up" style="gap:60px;align-items:center">
+<!-- Left: image -->
+<div>
+<div style="border-radius:var(--radius);overflow:hidden">
+<img alt="Download Box II S – dispositivo portátil para la descarga de datos de la tarjeta de conductor y la lectura del tacógrafo" height="1172" loading="lazy" src="https://cdn.truckmall.cz/data/user-content/Download%20Box%20IIS_produkt2.webp" style="object-fit:contain;width:100%;height:auto;display:block" width="1875"/>
+</div>
+</div>
+<!-- Right: text -->
+<div>
+<div class="eyebrow">Lector portátil</div>
+<h2>DOWNLOAD BOX II S</h2>
+<p style="margin:12px 0 24px">Dispositivo portátil sencillo y fiable para la lectura manual de datos directamente del tacógrafo (VU) y de las tarjetas de conductor.</p>
+<div class="feats">
+<div class="fi"><div class="fck"><svg fill="none" height="8" viewbox="0 0 10 8" width="10"><path d="M1 4l2.5 2.5L9 1" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></div><span>Lee tanto el tacógrafo (VU) como las tarjetas de conductor</span></div>
+<div class="fi"><div class="fck"><svg fill="none" height="8" viewbox="0 0 10 8" width="10"><path d="M1 4l2.5 2.5L9 1" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></div><span>Transfiere los datos a TAGRA por USB</span></div>
+<div class="fi"><div class="fck"><svg fill="none" height="8" viewbox="0 0 10 8" width="10"><path d="M1 4l2.5 2.5L9 1" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></div><span>Compacto y portátil: funciona en el vehículo o en la oficina</span></div>
+<div class="fi"><div class="fck"><svg fill="none" height="8" viewbox="0 0 10 8" width="10"><path d="M1 4l2.5 2.5L9 1" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></div><span>Compatible con todos los tacógrafos digitales, incluidos los G2V2</span></div>
+</div>
+<div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:24px"><a class="btn-cta btn-cta--sm" href="https://shop.tagra.app/download-box-ii-s/" hreflang="en">Comprar en la tienda</a><a class="btn-outline btn-cta--sm" href="https://shop.tagra.app/software-device-bundles/" hreflang="en">Paquetes TAGRA + DOWNLOAD BOX II S</a></div>
+<a href="mailto:sales@tagra.app" style="display:inline-block;margin-top:24px">Consulta la disponibilidad →</a>
+</div>
+</div>
+<div aria-label="Aviso sobre la tarjeta de empresa" class="note-box anim-up" role="note" style="margin-top:72px">
+<span class="note-badge">Aviso importante</span>
+<div class="note-title">Se necesita una tarjeta de empresa para la descarga de datos del vehículo</div>
+<p>Sin una <strong>tarjeta de empresa</strong> insertada, el tacógrafo no permitirá la descarga de datos del vehículo. Actúa como tu llave electrónica y autoriza el acceso a los datos de tu empresa.</p>
+<p>La tarjeta la expide la autoridad de transporte competente y tiene una validez de 5 años. Asegúrate de obtenerla a tiempo.</p>
+</div>
+</div>
+</section>
+<!-- ═══ PRICING ════════════════════════════════════════════════════ -->
+<section aria-label="Precios y servicios" class="band" id="tagra-pricing">
+<div class="container">
+<div class="anim-up">
+<!-- Pricing -->
+<div class="callout callout--plain">
+<div class="eyebrow">Precio y condiciones</div>
+<h2 style="text-transform:none">Precios transparentes.<br/>Sin cargos ocultos.</h2>
+<p style="margin:16px 0 24px">Empieza con la prueba gratuita. Cuando quieras, selecciona tu versión directamente en el programa y paga en línea: tu licencia se emite al instante. ¿Todo listo para empezar? Haz tu pedido en línea ahora en la nueva <a href="https://shop.tagra.app/tagra-software/" hreflang="en">TAGRA Shop</a>.</p>
+<div class="tsel-pricing">
+<!-- tsel:fleet -->
+<div aria-label="Elige tu versión de TAGRA según el número de vehículos" class="tsel tsel--fleet" data-cta="Buy {name} in TAGRA Shop" data-dec="." data-fee="First year included · from year 2: {fee} / year" data-fmt="€{n}" data-note-box="Includes the DOWNLOAD BOX II S download key. Shipping across the EU: flat {ship} incl. VAT." data-tsel="fleet" id="tagra-selector" role="group"><p class="tsel__t">¿Qué TAGRA se adapta a tu flota?</p><p class="tsel__q">¿Cuántos vehículos tienen tacógrafo?</p><div class="tsel__row tsel__row--5"><a aria-current="true" class="tsel__o is-on" data-cap="1 vehicle" data-k="t1" href="https://shop.tagra.app/tagra-1/" hreflang="en"><b>1</b><small>TAGRA 1</small></a><a class="tsel__o" data-cap="2 vehicles" data-k="t2" href="https://shop.tagra.app/tagra-2/" hreflang="en"><b>2</b><small>TAGRA 2</small></a><a class="tsel__o" data-cap="3–4 vehicles" data-k="t4" href="https://shop.tagra.app/tagra-4/" hreflang="en"><b>3–4</b><small>TAGRA 4</small></a><a class="tsel__o" data-cap="5–6 vehicles" data-k="t6" href="https://shop.tagra.app/tagra-6/" hreflang="en"><b>5–6</b><small>TAGRA 6</small></a><a class="tsel__o" data-cap="Unlimited vehicles" data-k="max" href="https://shop.tagra.app/tagra-max/" hreflang="en"><b>7+</b><small>TAGRA MAX</small></a></div><p class="tsel__q">Dispositivo de descarga</p><div class="tsel__row tsel__row--2"><a aria-current="true" class="tsel__o is-on" data-dev="none" href="https://shop.tagra.app/tagra-1/" hreflang="en"><b>Solo el programa</b></a><a class="tsel__o" data-dev="box" href="https://shop.tagra.app/tagra-1-download-box-ii-s/" hreflang="en"><b>Programa + DOWNLOAD BOX II S</b><small data-save="bundle · save {save}">pack · ahorra 49 €</small></a></div><div aria-live="polite" class="tsel__res"><div class="tsel__head"><span class="tsel__lbl">Recomendado para ti</span><strong class="tsel__name">TAGRA 1</strong><span class="tsel__cap">1 vehículo</span></div><p class="tsel__price"><span class="tsel__amt">€149</span><span class="tsel__vat">sin IVA</span></p><p class="tsel__fee">Primer año incluido · a partir del segundo año: 79 € / año</p><p class="tsel__note" hidden=""></p><div class="tsel__acts"><a class="btn-cta tsel__cta" data-product="tagra-1" href="https://shop.tagra.app/tagra-1/" hreflang="en">Compra TAGRA 1 en TAGRA Shop</a></div><p class="tsel__more">¿Solo tu propia tarjeta de conductor? <a href="/driver/">TAGRA TRUCKER para 1 conductor o conducción en equipo (dos conductores) →</a></p></div></div>
+<!-- /tsel:fleet -->
+</div>
+<!-- Version price table -->
+<div class="price-table-wrap" style="width:100%;overflow-x:auto;margin-bottom:24px">
+<table class="price-table" style="width:100%;border-collapse:collapse;font-size:16px">
+<thead>
+<tr style="border-bottom:2px solid var(--border)">
+<th style="text-align:left;padding:10px 12px;color:var(--text2);font-weight:600;font-size:14px">Versión</th>
+<th style="text-align:left;padding:10px 12px;color:var(--text2);font-weight:600;font-size:14px">Vehículos</th>
+<th style="text-align:right;padding:10px 12px;color:var(--text2);font-weight:600;font-size:14px">Precio de compra</th>
+<th style="text-align:right;padding:10px 12px;color:var(--text2);font-weight:600;font-size:14px">A partir del segundo año</th>
+<th style="padding:10px 12px"></th>
+</tr>
+</thead>
+<tbody>
+<tr style="border-bottom:1px solid var(--border)">
+<td style="padding:12px;font-weight:700;color:var(--text-strong)">TAGRA Trucker<span class="t3p-rownote">incluye lector USB gratuito</span></td>
+<td data-label="Vehicles" style="padding:12px;color:var(--text2)">1 conductor</td>
+<td data-label="Purchase price" style="padding:12px;text-align:right;font-weight:600">€49 <span style="font-size:13px;color:var(--text2)">sin IVA</span></td>
+<td data-label="From year 2" style="padding:12px;text-align:right;color:var(--green-brand);font-weight:700">19 € / año</td>
+<td style="padding:12px;text-align:right"><a aria-label="Comprar en la tienda: TAGRA Trucker" class="btn-outline btn-cta--sm" href="https://shop.tagra.app/tagra-trucker/" hreflang="en" style="white-space:nowrap">Comprar en la tienda</a></td>
+</tr>
+<tr style="border-bottom:1px solid var(--border)">
+<td style="padding:12px;font-weight:700;color:var(--text-strong)">TAGRA TRUCKER 2<span class="t3p-rownote">para conducción en equipo · 1 lector USB</span></td>
+<td data-label="Vehicles" style="padding:12px;color:var(--text2)">2 conductores</td>
+<td data-label="Purchase price" style="padding:12px;text-align:right;font-weight:600">€88.62 <span style="font-size:13px;color:var(--text2)">sin IVA</span></td>
+<td data-label="From year 2" style="padding:12px;text-align:right;color:var(--green-brand);font-weight:700">29 € / año</td>
+<td style="padding:12px;text-align:right"><a aria-label="Comprar en la tienda: TAGRA TRUCKER 2" class="btn-outline btn-cta--sm" href="/go/tagra-trucker-2/" style="white-space:nowrap">Comprar en la tienda</a></td>
+</tr>
+<tr style="border-bottom:1px solid var(--border)">
+<td style="padding:12px;font-weight:700;color:var(--text-strong)">TAGRA 1</td>
+<td data-label="Vehicles" style="padding:12px;color:var(--text2)">1</td>
+<td data-label="Purchase price" style="padding:12px;text-align:right;font-weight:600">€149 <span style="font-size:13px;color:var(--text2)">sin IVA</span></td>
+<td data-label="From year 2" style="padding:12px;text-align:right;color:var(--green-brand);font-weight:700">79 € / año</td>
+<td style="padding:12px;text-align:right"><a aria-label="Comprar en la tienda: TAGRA 1" class="btn-outline btn-cta--sm" href="https://shop.tagra.app/tagra-1/" hreflang="en" style="white-space:nowrap">Comprar en la tienda</a></td>
+</tr>
+<tr style="border-bottom:1px solid var(--border)">
+<td style="padding:12px;font-weight:700;color:var(--text-strong)">TAGRA 2</td>
+<td data-label="Vehicles" style="padding:12px;color:var(--text2)">2</td>
+<td data-label="Purchase price" style="padding:12px;text-align:right;font-weight:600">€299 <span style="font-size:13px;color:var(--text2)">sin IVA</span></td>
+<td data-label="From year 2" style="padding:12px;text-align:right;color:var(--green-brand);font-weight:700">79 € / año</td>
+<td style="padding:12px;text-align:right"><a aria-label="Comprar en la tienda: TAGRA 2" class="btn-outline btn-cta--sm" href="https://shop.tagra.app/tagra-2/" hreflang="en" style="white-space:nowrap">Comprar en la tienda</a></td>
+</tr>
+<tr style="border-bottom:1px solid var(--border)">
+<td style="padding:12px;font-weight:700;color:var(--text-strong)">TAGRA 4</td>
+<td data-label="Vehicles" style="padding:12px;color:var(--text2)">4</td>
+<td data-label="Purchase price" style="padding:12px;text-align:right;font-weight:600">€399 <span style="font-size:13px;color:var(--text2)">sin IVA</span></td>
+<td data-label="From year 2" style="padding:12px;text-align:right;color:var(--green-brand);font-weight:700">99 € / año</td>
+<td style="padding:12px;text-align:right"><a aria-label="Comprar en la tienda: TAGRA 4" class="btn-outline btn-cta--sm" href="https://shop.tagra.app/tagra-4/" hreflang="en" style="white-space:nowrap">Comprar en la tienda</a></td>
+</tr>
+<tr style="border-bottom:1px solid var(--border)">
+<td style="padding:12px;font-weight:700;color:var(--text-strong)">TAGRA 6</td>
+<td data-label="Vehicles" style="padding:12px;color:var(--text2)">6</td>
+<td data-label="Purchase price" style="padding:12px;text-align:right;font-weight:600">€549 <span style="font-size:13px;color:var(--text2)">sin IVA</span></td>
+<td data-label="From year 2" style="padding:12px;text-align:right;color:var(--green-brand);font-weight:700">99 € / año</td>
+<td style="padding:12px;text-align:right"><a aria-label="Comprar en la tienda: TAGRA 6" class="btn-outline btn-cta--sm" href="https://shop.tagra.app/tagra-6/" hreflang="en" style="white-space:nowrap">Comprar en la tienda</a></td>
+</tr>
+<tr>
+<td style="padding:12px;font-weight:700;color:var(--text-strong)">TAGRA MAX</td>
+<td data-label="Vehicles" style="padding:12px;color:var(--text2)">Sin límite</td>
+<td data-label="Purchase price" style="padding:12px;text-align:right;font-weight:600">€749 <span style="font-size:13px;color:var(--text2)">sin IVA</span></td>
+<td data-label="From year 2" style="padding:12px;text-align:right;color:var(--green-brand);font-weight:700">149 € / año</td>
+<td style="padding:12px;text-align:right"><a aria-label="Comprar en la tienda: TAGRA MAX" class="btn-outline btn-cta--sm" href="https://shop.tagra.app/tagra-max/" hreflang="en" style="white-space:nowrap">Comprar en la tienda</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="specs" style="margin:0 0 24px">
+<div class="spec"><span class="sk">Periodo de prueba</span><span class="sv" style="color:var(--green-brand)">30 días gratis</span></div>
+<div class="spec"><span class="sk">Cuota de licencia del primer año</span><span class="sv" style="color:var(--green-brand)">Incluida en el precio de compra</span></div>
+<div class="spec"><span class="sk">Incluye</span><span class="sv">Actualizaciones + asistencia</span></div>
+<div class="spec"><span class="sk">Pago</span><span class="sv">En línea · Código QR</span></div>
+</div>
+<p style="margin-top:12px">¿Tienes preguntas? <a href="tel:+420739005345">+420 739 005 345</a> · <a href="mailto:sales@tagra.app">sales@tagra.app</a></p>
+<div style="margin-top:24px">
+<a class="btn-cta btn-cta--sm" href="/try/?audience=fleet" rel="noopener" target="_blank">Descarga la versión de prueba</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ═══ TAGRA SHOP (order online) ═══ -->
+<section aria-label="TAGRA Shop" class="t3p-shop" id="tagra-shop">
+<div class="t3p-wrap">
+<div class="t3p-head">
+<div class="eyebrow t3p-eyebrow"><span class="t3-badge">Nuevo</span>TAGRA Shop</div>
+<h2 class="t3p-h2">Ya disponible online: pide TAGRA en solo unos clics</h2>
+<p class="t3p-lead">Pide licencias de TAGRA III, packs de ahorro y dispositivos de descarga en la nueva TAGRA Shop. Precios en EUR sin IVA; inversión del sujeto pasivo para empresas con NIF-IVA intracomunitario. Las licencias se envían por correo electrónico. Los dispositivos se envían a toda la UE con una tarifa fija de 9,90 €, IVA incluido.</p>
+</div>
+<div class="t3p-grid">
+<a class="t3p-tile t3p-tile--key" href="https://shop.tagra.app/tagra-software/" hreflang="en"><strong class="t3p-tile__t">Licencias de TAGRA III</strong><span class="t3p-tile__d">TAGRA 1, 2, 4, 6 y MAX: desde 1 vehículo hasta vehículos ilimitados. Primer año incluido.</span><span class="t3p-tile__p">desde 149 € sin IVA</span></a>
+<a class="t3p-tile t3p-tile--key" href="https://shop.tagra.app/software-device-bundles/" hreflang="en"><span class="t3p-tile__badge">Ahorra 49 €</span><strong class="t3p-tile__t">TAGRA III + DOWNLOAD BOX II S</strong><span class="t3p-tile__d">Consigue el programa y la llave de descarga juntos. Ahorra 49 € frente a comprarlos por separado.</span></a>
+<a class="t3p-tile" href="https://shop.tagra.app/download-box-ii-s/" hreflang="en"><strong class="t3p-tile__t">DOWNLOAD BOX II S</strong><span class="t3p-tile__d">Llave de descarga para todos los tacógrafos digitales, incluidos los G2V2. Lector de tarjetas de conductor integrado, sin cuotas anuales y con 24 meses de garantía.</span><span class="t3p-tile__p">299 € sin IVA</span></a>
+<a class="t3p-tile" href="https://shop.tagra.app/download-station/" hreflang="en"><strong class="t3p-tile__t">DOWNLOAD STATION</strong><span class="t3p-tile__d">Estación de pared con cerradura para la descarga de datos de tarjetas de conductor en modo autoservicio en tu base. También disponible como DOWNLOAD STATION Wi-Fi.</span><span class="t3p-tile__p">desde 366 € sin IVA</span></a>
+<a class="t3p-tile" href="https://shop.tagra.app/smart-card-reader/" hreflang="en"><strong class="t3p-tile__t">Lector de tarjetas inteligentes</strong><span class="t3p-tile__d">Lector USB para tarjetas de conductor y de empresa.</span><span class="t3p-tile__p">33 € sin IVA</span></a>
+<div class="t3p-tile t3p-tile--duo"><strong class="t3p-tile__t">TAGRA Trucker</strong><span class="t3p-tile__d">Para conductores profesionales. Incluye un lector USB de tarjetas de conductor gratuito, con envío a tu domicilio.</span><span class="t3p-duo"><a class="t3p-duo__o" href="https://shop.tagra.app/tagra-trucker/" hreflang="en"><span><b>1 conductor</b> TAGRA TRUCKER</span><strong>€49</strong></a><a class="t3p-duo__o" href="/go/tagra-trucker-2/"><span><b>2 conductores en equipo</b> TAGRA TRUCKER 2</span><strong>€88.62</strong></a></span><span class="t3p-duo__vat">sin IVA</span></div>
+</div>
+<div class="t3p-cta"><a class="btn-cta" href="https://shop.tagra.app/" hreflang="en">Haz tu pedido en línea en TAGRA Shop</a><a class="btn-outline" href="https://shop.tagra.app/download-devices/" hreflang="en">Ver dispositivos de descarga</a></div>
+<p class="t3p-note">TAGRA Shop está actualmente en inglés. ¿Tienes alguna pregunta? Escribe a <a href="mailto:sales@tagra.app">sales@tagra.app</a>.</p>
+</div>
+</section>
+<!-- ═══ TRY IT ════════════════════════════════════════════════════ -->
+<section class="band band--gray">
+<div class="container">
+<div class="anim-up" style="text-align:center;max-width:680px;margin:0 auto 48px">
+<h2>PRUEBA TAGRA GRATIS DURANTE 30 DÍAS</h2>
+<p style="font-size:19px;color:var(--text2);margin-top:8px">Descarga, instala y utiliza el programa completo, sin tarjeta de crédito ni compromiso.</p>
+</div>
+<!-- How it works: 3-step flow -->
+<div class="three-col anim-up" style="transition-delay:.05s;max-width:900px;margin:0 auto 40px">
+<div style="text-align:center;padding:28px 20px">
+<div style="font-size:52px;font-weight:900;line-height:1;color:rgba(19,74,142,.12);margin-bottom:8px">1</div>
+<div style="font-size:18px;font-weight:800;color:var(--text-strong);margin-bottom:8px">Descarga e instala</div>
+<p style="font-size:16px;color:var(--text2)">Descarga el instalador y ejecuta TAGRA en Windows. La versión de prueba te ofrece el programa completo, sin limitaciones.</p>
+</div>
+<div style="text-align:center;padding:28px 20px;border-left:1px solid var(--border);border-right:1px solid var(--border)">
+<div style="font-size:52px;font-weight:900;line-height:1;color:rgba(19,74,142,.12);margin-bottom:8px">2</div>
+<div style="font-size:18px;font-weight:800;color:var(--text-strong);margin-bottom:8px">Pruébalo durante un máximo de 30 días</div>
+<p style="font-size:16px;color:var(--text2)">Utiliza TAGRA con tus datos reales. Elige cuántos vehículos necesitas: 1, 2, 4, 6 o sin límite. El programa te guía paso a paso.</p>
+</div>
+<div style="text-align:center;padding:28px 20px">
+<div style="font-size:52px;font-weight:900;line-height:1;color:rgba(19,74,142,.12);margin-bottom:8px">3</div>
+<div style="font-size:18px;font-weight:800;color:var(--text-strong);margin-bottom:8px">Activa tu licencia</div>
+<p style="font-size:16px;color:var(--text2)">Cuando quieras, selecciona tu versión en el programa y paga en línea. Tu licencia se emite al instante y sigues trabajando en el mismo entorno.</p>
+</div>
+</div>
+<div class="anim-up" style="text-align:center;transition-delay:.1s">
+<a class="btn-cta" href="/try/?audience=fleet" rel="noopener" target="_blank">
+        Descarga la versión de prueba
+      </a>
+<p style="margin-top:14px;font-size:15px;color:var(--text2)">Windows · Gratis · Sin tarjeta de crédito</p>
+</div>
+</div>
+</section>
+<!-- ═══ FAQ ════════════════════════════════════════════════════════ -->
+<section aria-label="Preguntas frecuentes" class="band band--blue">
+<div class="container">
+<div class="eyebrow anim-up">Preguntas frecuentes</div>
+<h2 class="anim-up">FAQ</h2>
+<div class="faq anim-up" style="transition-delay:.05s">
+<details>
+<summary>¿Qué es TAGRA III?</summary>
+<div class="faq-a">TAGRA III es la nueva generación del programa TAGRA para tacógrafos, destinado a flotas. Carga datos de las tarjetas de conductor y de los tacógrafos (VU), los analiza conforme al Reglamento (CE) n.º 561/2006, el acuerdo AETR, la Directiva 2002/15/CE y la normativa nacional, y muestra en una sola vista lo que requiere atención: infracciones, tiempo sin registrar, descargas de datos de tarjetas y vehículos, validez de las tarjetas y calibración del tacógrafo.</div>
+</details>
+<details>
+<summary>¿Qué normativa analiza TAGRA III?</summary>
+<div class="faq-a">Los tiempos de conducción y descanso conforme a <strong>Reglamento (CE) n.º 561/2006</strong> y de la <strong>AETR</strong> , los registros conforme al Reglamento (UE) n.º 165/2014 y el tiempo de trabajo conforme a la <strong>Directiva 2002/15/CE</strong>. El programa incorpora la normativa nacional sobre tiempo de trabajo de la República Checa, Eslovaquia y Hungría; en los demás países, el tiempo de trabajo se analiza conforme a la directiva. Cada infracción muestra el artículo citado, el texto de la normativa y una recomendación.</div>
+</details>
+<details>
+<summary>¿Dónde se guardan mis datos?</summary>
+<div class="faq-a">TAGRA III es una aplicación de Windows que se ejecuta en tu propio ordenador. Los datos de conductores y vehículos se guardan localmente, no en una nube gestionada por nosotros.</div>
+</details>
+<details>
+<summary>¿En qué idiomas está disponible?</summary>
+<div class="faq-a">El programa y sus informes están disponibles en inglés, alemán, italiano, francés, checo y eslovaco. Puedes cambiar el idioma del informe directamente en la vista previa de impresión, algo útil cuando el informe va dirigido a un conductor que habla otro idioma.</div>
+</details>
+<details>
+<summary>¿Cómo compro TAGRA después de la prueba?</summary>
+<div class="faq-a">Todo se hace directamente en el programa. Al terminar la prueba, o cuando quieras, abre el menú de licencias, selecciona la versión que corresponda a tu número de vehículos (TAGRA 1, 2, 4, 6 o MAX) y paga en línea. El pago se realiza mediante código QR o transferencia en línea. Tu licencia se emite y activa de inmediato: sigues trabajando en el mismo entorno con todos tus datos intactos. Novedad: ahora puedes pedir licencias, dispositivos de descarga de datos y paquetes de ahorro directamente en línea en la <a href="https://shop.tagra.app/" hreflang="en">TAGRA Shop</a>.</div>
+</details>
+<details>
+<summary>¿A quién va dirigido TAGRA?</summary>
+<div class="faq-a">TAGRA es <strong>programa de análisis de datos del tacógrafo</strong> diseñado para cualquier empresa de transporte que deba realizar <strong>descarga de datos de la tarjeta de conductor</strong>, análisis y archivado, desde autónomos con un vehículo hasta grandes flotas con cientos de vehículos. Elige la versión que corresponda a tu número de vehículos: TAGRA 1, 2, 4, 6 o MAX (sin límite).</div>
+</details>
+<details>
+<summary>¿Cómo cargo los datos en el programa?</summary>
+<div class="faq-a">Los datos se cargan desde la <strong>tarjeta de conductor</strong> (mediante un lector de tarjetas o una llave de descarga) y del <strong>tacógrafo (VU)</strong>. TAGRA admite tanto la carga manual mediante DOWNLOAD BOX II S como <strong>descarga remota de datos del tacógrafo</strong> la descarga remota mediante DOWNLOAD BOX REMOTE o la integración con DKV LIVE®.</div>
+</details>
+<details>
+<summary>¿Con qué frecuencia debes descargar los datos?</summary>
+<div class="faq-a">De las tarjetas de conductor, al menos cada <strong>28 días</strong> y del tacógrafo (VU), al menos cada <strong>90 días.</strong> Los datos descargados deben conservarse durante un mínimo de 1 año.</div>
+</details>
+<details>
+<summary>¿Qué formatos de archivo admite TAGRA?</summary>
+<div class="faq-a">Los datos del tacógrafo suelen almacenarse en archivos <strong>.DDD</strong> . En algunos países también se utilizan los formatos <strong>.C1B</strong> (tarjeta de conductor) y <strong>.V1B</strong> o <strong>ESM</strong> (vehículo). Estos archivos <strong>no se pueden abrir con un visor estándar</strong> — necesitas un <strong>programa de análisis de datos del tacógrafo</strong> como TAGRA para realizar un análisis correcto de los datos del tacógrafo digital.</div>
+</details>
+<details>
+<summary>¿Qué incluye la cuota anual de licencia?</summary>
+<div class="faq-a">La cuota anual incluye la renovación de la licencia, las actualizaciones del programa y el soporte técnico. El primer año está incluido en el precio de compra; a partir del segundo año, la cuota es de <strong>19 €/año</strong> (TAGRA Trucker), <strong>29 €/año</strong> (TAGRA TRUCKER 2), <strong>79 €/año</strong> (TAGRA 1–2), <strong>99 €/año</strong> (TAGRA 4–6), o <strong>149 €/año</strong> (TAGRA MAX), todos los precios sin IVA.</div>
+</details>
+<details>
+<summary>¿Está TAGRA preparado para la obligación aplicable a las furgonetas desde julio de 2026?</summary>
+<div class="faq-a">Sí. Todas las versiones de TAGRA están totalmente preparadas para las furgonetas. Desde el 1 de julio de 2026, los requisitos de la UE de instalación de tacógrafos y descarga periódica de datos también se aplican a las furgonetas de más de 2,5 t y hasta 3,5 t de MMA utilizadas en el transporte internacional de mercancías.</div>
+</details>
+<details>
+<summary>¿Es TAGRA compatible con los tacógrafos inteligentes de segunda generación, versión 2?</summary>
+<div class="faq-a">Sí. TAGRA es totalmente compatible con los tacógrafos inteligentes de segunda generación (G2V2), obligatorios en los vehículos nuevos desde 2023. El programa procesa correctamente los datos de estos dispositivos, incluidos los registros de posición ampliados.</div>
+</details>
+<details>
+<summary>¿Puedes instalar TAGRA en varios ordenadores?</summary>
+<div class="faq-a">Cada licencia está vinculada a un ordenador concreto. Si necesitas trasladar el programa a otro equipo, ponte en contacto con el fabricante Truck Data Technology para gestionar el traslado de licencia. Las versiones en red (TAGRA 4, 6, MAX) permiten utilizar varios puestos de trabajo que comparten una base de datos central; contacta con nosotros para obtener más información.</div>
+</details>
+</div>
+</div>
+</section>
+<!-- ═══ FURTHER READING ═══════════════════════════════════════════ -->
+<section aria-label="Guías y artículos relacionados" class="band band--gray">
+<div class="container anim-up">
+<div class="eyebrow">Más información</div>
+<h2>Lecturas recomendadas</h2>
+<a class="related-featured" href="/articles/how-to-download-evaluate-archive-tachograph-data/" rel="noopener" target="_blank">
+<span class="related-badge">Guía completa</span>
+<span class="related-title">Tacógrafo digital: cómo descargar, analizar y archivar los datos correctamente</span>
+<span class="related-text">Lee la guía completa de cumplimiento normativo para empresas de transporte. Descubre exactamente qué debes hacer para superar cualquier inspección de las autoridades sin multas ni estrés.</span>
+<span class="article-chip">Lee la guía →</span>
+</a>
+<div class="article-grid">
+<a class="article-card" href="/articles/tachographs-for-vans-new-obligation-july-2026/" rel="noopener" target="_blank">
+<span class="article-eyebrow">Nueva legislación</span>
+<span class="article-title">Tacógrafos para furgonetas: nueva obligación desde julio de 2026</span>
+<span class="article-meta">A quién afecta exactamente y qué debes preparar a tiempo como empresa de transporte.</span>
+<span class="article-chip">Lee sobre los tacógrafos para furgonetas en 2026 →</span>
+</a>
+<a class="article-card" href="/articles/who-must-evaluate-tachograph-data-2026/" rel="noopener" target="_blank">
+<span class="article-eyebrow">Vista general</span>
+<span class="article-title">Quién debe analizar los datos del tacógrafo a partir de 2026</span>
+<span class="article-meta">Un resumen claro de todos los tipos de transporte sujetos a la obligación de descarga de datos y análisis.</span>
+<span class="article-chip">Lee quién debe analizar los datos →</span>
+</a>
+<a class="article-card" href="/articles/how-to-download-evaluate-archive-tachograph-data/">
+<span class="article-eyebrow">Resumen de la solución</span>
+<span class="article-title">Descarga remota de datos: TAGRA + Download Box Remote</span>
+<span class="article-meta">Descubre cómo funciona en la práctica la descarga de datos totalmente automática sin tener que acudir a los vehículos.</span>
+<span class="article-chip">Lee sobre la descarga remota del tacógrafo →</span>
+</a>
+<a class="article-card" href="/articles/digital-tachograph-symbols/">
+<span class="article-eyebrow">Base de conocimientos para conductores</span>
+<span class="article-title">Símbolos del tacógrafo: explicación de los iconos digitales</span>
+<span class="article-meta">Una guía de consulta para tus conductores: los cuatro símbolos de actividad, los iconos de tarjetas, los símbolos de advertencia y los errores habituales.</span>
+<span class="article-chip">Lee la guía de símbolos →</span>
+</a>
+</div>
+</div>
+</section>
+<!-- ═══ MANUFACTURER ══════════════════════════════════════════════ -->
+<section aria-label="Información del fabricante" class="band">
+<div class="container">
+<div class="eyebrow anim-up">Desarrollador y fabricante</div>
+<h2 class="anim-up">Truck Data Technology, s.r.o.</h2>
+<address class="anim-up" style="font-style:normal;margin-top:10px;line-height:1.8;transition-delay:.05s">
+<strong>Sede y soporte:</strong> República Checa<br/>
+<strong>Teléfono:</strong> <a href="tel:+420739005345">+420 739 005 345</a><br/>
+<strong>Correo electrónico:</strong> <a href="mailto:sales@tagra.app">sales@tagra.app</a><br/>
+<strong>Web:</strong> <a href="https://www.tdt.cz" rel="noopener" target="_blank">www.tdt.cz</a>
+</address>
+</div>
+</section>
+<!-- ═══ FOOTER ════════════════════════════════════════════════════ -->
+<footer class="site-footer" role="contentinfo">
+<div class="footer-inner">
+<div>
+<div class="footer-logo"><img alt="TAGRA" height="20" loading="lazy" src="/assets/img/logo-dark.svg?v=20260513zh" width="88"/></div>
+<p class="footer-desc">Programa profesional de análisis de tacógrafos. Descarga de datos de tarjetas de conductor, análisis de tacógrafos digitales, tiempos de conducción y descanso de la UE y Directiva 2002/15/CE sobre el tiempo de trabajo. Desarrollado por Truck Data Technology, s.r.o.</p>
+</div>
+<div class="footer-col">
+<h2 class="footer-col-title">Producto</h2>
+<ul>
+<li><a href="/fleet/">Para empresas de transporte</a></li>
+<li><a href="/driver/">Para conductores profesionales</a></li>
+<li><a href="/enforcement/">Para autoridades de control</a></li>
+<li><a href="/how-it-works/">Cómo funciona</a></li>
+<li><a href="/for-whom/">Para quién</a></li>
+<li><a href="/faq/">FAQ</a></li>
+<li><a href="https://shop.tagra.app/" hreflang="en">TAGRA Shop</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h2 class="footer-col-title">Recursos</h2>
+<ul>
+<li><a href="/articles/">Artículos</a></li><li><a href="/manuals/">Manuales</a></li>
+<li><a href="/articles/digital-tachograph-symbols/">Símbolos del tacógrafo</a></li>
+<li><a href="/integrations/dkv-live/">DKV LIVE®</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h2 class="footer-col-title">Empresa</h2>
+<ul>
+<li><a href="/contact/">Contacto</a></li>
+<li><a href="https://www.tdt.cz" rel="noopener" target="_blank">Truck Data Technology</a></li>
+<li><a aria-current="page" class="active" href="/" hreflang="en">English</a></li><li><a href="/de/" hreflang="de">Deutsch</a></li><li><a href="/pl/" hreflang="pl">Polski</a></li><li><a href="/nl/" hreflang="nl">Nederlands</a></li><li><a href="/fr/" hreflang="fr">Français</a></li><li><a href="/it/" hreflang="it">Italiano</a></li><li><a href="/el/" hreflang="el">Ελληνικά</a></li><li><a href="/hu/" hreflang="hu">Magyar</a></li><li><a href="/ro/" hreflang="ro">Română</a></li><li><a href="https://www.tdt.cz/" hreflang="cs" rel="noopener" target="_blank">Čeština</a></li><li><a href="https://www.tdt.sk/" hreflang="sk" rel="noopener" target="_blank">Slovenčina</a></li></ul>
+</div>
+</div>
+<div class="footer-bottom">
+<span>© 2026 Truck Data Technology, s.r.o. Todos los derechos reservados.</span>
+<span><a href="/contact/">Contacto</a> · <a href="https://www.tdt.cz" rel="noopener" target="_blank">tdt.cz</a> · <a href="/privacy/">Privacidad y cookies</a></span>
+</div>
+</footer>
+<div aria-label="Registro rápido para la prueba" class="sticky-cta" id="stickyCta" role="complementary">
+<div class="sticky-cta-inner">
+<span class="sticky-cta-text">¿Todo listo para empezar? Prueba TAGRA gratis durante 30 días.</span>
+<a class="sticky-cta-btn" href="/try/?audience=fleet">Prueba gratis →</a>
+<button aria-label="Cerrar" class="sticky-cta-close" id="stickyCtaClose">×</button>
+</div>
+</div>
+<!-- ═══ JAVASCRIPT ════════════════════════════════════════════════ -->
+<script>
+(function() {
+  /* 1. SCROLL PROGRESS */
+  var bar = document.getElementById('scroll-progress');
+  if (bar) {
+    window.addEventListener('scroll', function() {
+      var top = document.documentElement.scrollTop || document.body.scrollTop;
+      var h   = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      bar.style.width = (top / h * 100) + '%';
+    }, { passive: true });
+  }
+
+  /* 2. MOBILE NAV TOGGLE */
+  var toggle = document.getElementById('nav-toggle');
+  var links  = document.getElementById('nav-links');
+  if (toggle && links) {
+    toggle.addEventListener('click', function() {
+      var open = links.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open);
+    });
+  }
+
+  /* 3. INTERSECTION OBSERVER – ANIMATIONS */
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) {
+        if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.anim-up, .fly-left, .fly-right').forEach(function(el) { io.observe(el); });
+  } else {
+    document.querySelectorAll('.anim-up, .fly-left, .fly-right').forEach(function(el) { el.classList.add('on'); });
+  }
+
+  /* 4. REVIEWS SLIDER LOOP */
+  var rail = document.getElementById('rev-rail');
+  if (rail) {
+    rail.innerHTML += rail.innerHTML + rail.innerHTML;
+    var speed = 0.9, busy = false, pos = 0, isDown = false, startX, startScroll, resumeTimer;
+    function tick() {
+      if (!busy) {
+        pos += speed;
+        if (pos >= 1) { rail.scrollLeft += Math.floor(pos); pos -= Math.floor(pos); }
+        if (rail.scrollLeft >= rail.scrollWidth / 3) rail.scrollLeft = 0;
+      }
+      requestAnimationFrame(tick);
+    }
+    function pause()  { busy = true; clearTimeout(resumeTimer); }
+    function resume() { resumeTimer = setTimeout(function() { busy = false; }, 2000); }
+    rail.addEventListener('mousedown',  function(e) { isDown = true; pause(); startX = e.pageX - rail.offsetLeft; startScroll = rail.scrollLeft; });
+    rail.addEventListener('mouseleave', function()   { isDown = false; resume(); });
+    rail.addEventListener('mouseup',    function()   { isDown = false; resume(); });
+    rail.addEventListener('mousemove',  function(e)  { if (!isDown) return; e.preventDefault(); rail.scrollLeft = startScroll - (e.pageX - rail.offsetLeft - startX) * 1.5; });
+    rail.addEventListener('touchstart', pause,  { passive: true });
+    rail.addEventListener('touchend',   resume, { passive: true });
+    tick();
+  }
+
+  /* 5. MAC STAGE ZOOM ON SCROLL */
+  var macImg = document.getElementById('mac-img');
+  if (macImg) {
+    var ticking = false;
+    function zoom() {
+      var r = macImg.getBoundingClientRect();
+      var dist = Math.abs(window.innerHeight / 2 - (r.top + r.height / 2));
+      var prog = Math.max(0, 1 - dist / (window.innerHeight * 0.65));
+      var eased = Math.sin(prog * Math.PI / 2);
+      var s = 1 + eased * (window.innerWidth < 768 ? 0.2 : 0.38);
+      macImg.style.transform = 'scale(' + s.toFixed(3) + ')';
+      ticking = false;
+    }
+    function onScroll() { if (!ticking) { requestAnimationFrame(zoom); ticking = true; } }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll, { passive: true });
+    setTimeout(zoom, 150);
+  }
+  /* 6. HERO VIDEO AUTOPLAY */
+  var heroVid = document.getElementById('hero-vid');
+  if (heroVid && 'IntersectionObserver' in window) {
+    var hvObs = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) {
+        if (e.isIntersecting) { heroVid.play().catch(function(){}); }
+        else { heroVid.pause(); }
+      });
+    }, { threshold: 0.1 });
+    hvObs.observe(heroVid);
+    document.addEventListener('touchstart', function() {
+      if (heroVid.paused) heroVid.play().catch(function(){});
+    }, { once: true, passive: true });
+  }
+
+
+
+
+  /* 7. TAGRA III SCREENSHOT TABS */
+  (function(){
+    var list = document.querySelector('.t3-tabs');
+    if (!list) return;
+    var tabs = Array.prototype.slice.call(list.querySelectorAll('[role="tab"]'));
+    function select(tab, focus){
+      tabs.forEach(function(t){
+        var on = t === tab;
+        t.setAttribute('aria-selected', on ? 'true' : 'false');
+        t.setAttribute('tabindex', on ? '0' : '-1');
+        var p = document.getElementById(t.getAttribute('aria-controls'));
+        if (p) { if (on) p.removeAttribute('hidden'); else p.setAttribute('hidden', ''); }
+      });
+      if (focus) tab.focus();
+    }
+    tabs.forEach(function(t, i){
+      t.addEventListener('click', function(){ select(t, false); });
+      t.addEventListener('keydown', function(e){
+        var n = null;
+        if (e.key === 'ArrowRight') n = tabs[(i + 1) % tabs.length];
+        else if (e.key === 'ArrowLeft') n = tabs[(i - 1 + tabs.length) % tabs.length];
+        else if (e.key === 'Home') n = tabs[0];
+        else if (e.key === 'End') n = tabs[tabs.length - 1];
+        if (n) { e.preventDefault(); select(n, true); }
+      });
+    });
+  })();
+
+  /* STICKY CTA BAR */
+  (function(){
+    var bar = document.getElementById('stickyCta');
+    if(!bar) return;
+    var KEY = 'tmx-sticky-cta-dismissed';
+    var dismissed = false;
+    try { dismissed = localStorage.getItem(KEY) === '1'; } catch(e) {}
+    if (dismissed) return;
+    function check(){
+      var top = document.documentElement.scrollTop || document.body.scrollTop;
+      var nearBottom = (window.innerHeight + top) >= (document.documentElement.scrollHeight - 80);
+      if (top > 700 && !nearBottom) bar.classList.add('is-visible');
+      else bar.classList.remove('is-visible');
+    }
+    window.addEventListener('scroll', check, { passive: true });
+    check();
+    var closeBtn = document.getElementById('stickyCtaClose');
+    if (closeBtn) closeBtn.addEventListener('click', function(){
+      bar.classList.remove('is-visible');
+      try { localStorage.setItem(KEY, '1'); } catch(e) {}
+    });
+  })();
+
+})();
+</script>
+<!-- SCHEMA.ORG -->
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "TAGRA III – Digital Tachograph Software for Fleet Operators",
+  "alternateName": "TAGRA III",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Windows",
+  "description": "TAGRA III — digital tachograph software for fleet operators, 1 to unlimited vehicles. Loads driver card and vehicle unit data, evaluates Regulation (EC) No 561/2006, AETR, Directive 2002/15/EC and national rules (CZ, SK, HU), cites the regulation for every infringement and shows a task overview of downloads, card expiry and calibration. Data stored locally. Free 30-day trial. Ready for vans from July 2026.",
+  "screenshot": [
+    "https://tagra.app/assets/img/tagra3/tagra3-overview.webp",
+    "https://tagra.app/assets/img/tagra3/tagra3-driver.webp",
+    "https://tagra.app/assets/img/tagra3/tagra3-infringements.webp",
+    "https://tagra.app/assets/img/tagra3/tagra3-evaluation.webp",
+    "https://tagra.app/assets/img/tagra3/tagra3-driver-evaluation.webp",
+    "https://tagra.app/assets/img/tagra3/tagra3-work-report.webp",
+    "https://tagra.app/assets/img/tagra3/tagra3-company-report.webp"
+  ],
+  "availableLanguage": [
+    "en",
+    "de",
+    "it",
+    "fr",
+    "cs",
+    "sk"
+  ],
+  "url": "https://tagra.app/es/empresas/",
+  "inLanguage": "es",
+  "author": {
+    "@type": "Organization",
+    "@id": "https://tagra.app/#organization",
+    "name": "Truck Data Technology, s.r.o.",
+    "url": "https://www.tdt.cz"
+  },
+  "offers": {
+    "@type": "AggregateOffer",
+    "priceCurrency": "EUR",
+    "lowPrice": "49",
+    "highPrice": "749",
+    "offerCount": "7",
+    "availability": "https://schema.org/InStock",
+    "description": "Purchase price includes the first year of updates and support. An annual fee of €19–€149 applies from year 2 to keep the software active."
+  }
+}</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "inLanguage": "es",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Qué es TAGRA III?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "TAGRA III es la nueva generación del programa TAGRA para tacógrafos, destinado a flotas. Carga datos de las tarjetas de conductor y de los tacógrafos (VU), los analiza conforme al Reglamento (CE) n.º 561/2006, el acuerdo AETR, la Directiva 2002/15/CE y la normativa nacional, y muestra en una sola vista lo que requiere atención: infracciones, tiempo sin registrar, descargas de datos de tarjetas y vehículos, validez de las tarjetas y calibración del tacógrafo."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué normativa analiza TAGRA III?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Drivers' hours under Regulation (EC) No 561/2006 and the AETR agreement, records under Regulation (EU) No 165/2014, and working time under Directive 2002/15/EC. National working-time rules are built in for the Czech Republic, Slovakia and Hungary; elsewhere working time is evaluated under the directive. Each infringement shows the cited article, the wording of the regulation and a recommendation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Dónde se guardan mis datos?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "TAGRA III es una aplicación de Windows que se ejecuta en tu propio ordenador. Los datos de conductores y vehículos se guardan localmente, no en una nube gestionada por nosotros."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿En qué idiomas está disponible?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El programa y sus informes están disponibles en inglés, alemán, italiano, francés, checo y eslovaco. Puedes cambiar el idioma del informe directamente en la vista previa de impresión, algo útil cuando el informe va dirigido a un conductor que habla otro idioma."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cómo compro TAGRA después de la prueba?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Everything happens directly inside the software. At the end of the trial — or whenever you're ready — open the licence menu, select the version that matches your number of vehicles (TAGRA 1, 2, 4, 6 or MAX), and pay online. Payment is made by QR code or online transfer. Your licence is issued and activated immediately — you continue working in the same environment with all your data intact. New: you can now order licences, download devices and money-saving bundles directly online in the TAGRA Shop."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿A quién va dirigido TAGRA?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "TAGRA is tachograph analysis software designed for any transport operator required to perform driver card download, evaluation and archiving — from sole traders with one vehicle to large fleets with hundreds of vehicles. Choose the version that matches your number of vehicles: TAGRA 1, 2, 4, 6 or MAX (unlimited)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cómo cargo los datos en el programa?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Data is loaded from the driver card (via a card reader or download key) and from the tachograph unit. TAGRA supports both manual loading via DOWNLOAD BOX II S and tachograph remote download through DOWNLOAD BOX REMOTE or DKV LIVE® integration."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Con qué frecuencia debes descargar los datos?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Driver cards at least every 28 days and the tachograph unit at least every 90 days. Downloaded data must be kept for a minimum of 1 year."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué formatos de archivo admite TAGRA?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tachograph data is most commonly stored as .DDD files. Some countries also use .C1B (driver card) and .V1B or ESM (vehicle). These files cannot be opened with a standard viewer — you need dedicated tachograph analysis software like TAGRA for proper digital tachograph analysis."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué incluye la cuota anual de licencia?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The annual fee covers continued licensing, software updates and technical support. The first year is included in the purchase price; from year 2 the fee is €19/year (TAGRA Trucker), €29/year (TAGRA TRUCKER 2), €79/year (TAGRA 1–2), €99/year (TAGRA 4–6), or €149/year (TAGRA MAX), all excl. VAT."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Está TAGRA preparado para la obligación aplicable a las furgonetas desde julio de 2026?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. Todas las versiones de TAGRA están totalmente preparadas para las furgonetas. Desde el 1 de julio de 2026, los requisitos de la UE de instalación de tacógrafos y descarga periódica de datos también se aplican a las furgonetas de más de 2,5 t y hasta 3,5 t de MMA utilizadas en el transporte internacional de mercancías."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Es TAGRA compatible con los tacógrafos inteligentes de segunda generación, versión 2?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. TAGRA es totalmente compatible con los tacógrafos inteligentes de segunda generación (G2V2), obligatorios en los vehículos nuevos desde 2023. El programa procesa correctamente los datos de estos dispositivos, incluidos los registros de posición ampliados."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Puedes instalar TAGRA en varios ordenadores?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Cada licencia está vinculada a un ordenador concreto. Si necesitas trasladar el programa a otro equipo, ponte en contacto con el fabricante Truck Data Technology para gestionar el traslado de licencia. Las versiones en red (TAGRA 4, 6, MAX) permiten utilizar varios puestos de trabajo que comparten una base de datos central; contacta con nosotros para obtener más información."
+      }
+    }
+  ]
+}</script>
+</body>
+</html>
