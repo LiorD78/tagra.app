@@ -19,7 +19,7 @@
  *   Nový zájemce (bez placené licence TAGRA):
  *     #1  hned          odkaz ke stažení + postup instalace
  *     #2  +3 dny        rychlý start (databáze, načtení dat, výkaz)
- *     #3  +REMINDER     zkušební verze brzy končí (výchozí den 16)
+ *     #3  +REMINDER     zkušební verze brzy končí (výchozí den 25)
  *   Stávající zákazník (placená licence na stejný e-mail v atlas.tagra_licenses):
  *     jen #1 „existing" — odkaz ke stažení + „zvolte Aktivovat", odpovědi na helpdesk.
  *   Denní úklid: kdo si mezitím koupil licenci, tomu se zruší naplánované #2/#3.
@@ -28,9 +28,9 @@
  * „trucker" → řidič). Jazyk: podle webu (tdt.sk → sk, jinak cz).
  *
  * ── DÉLKA ZKUŠEBNÍ VERZE ─────────────────────────────────────────────
- * Web slibuje 30 dní, návod 2026 uvádí 28, licenční server reálně dává 21
- * (10. 11. 2026: 289 z 300 zkušebních licencí). #3 proto výchozí den 16
- * a v textu není konkrétní počet dní. Změna = proměnná TDT_TRIAL_REMINDER_DAY.
+ * Rozhodnutí 15. 11. 2026: zkušební verze = 30 dní všude (web, návod, e-maily).
+ * #3 „brzy končí" jde výchozí den 25 (= 30 − 5); v textu není konkrétní počet dní.
+ * Změna = proměnná TDT_TRIAL_REMINDER_DAY. Licenční server (21 dní) řeší Adam.
  *
  * ── ŠABLONY ──────────────────────────────────────────────────────────
  *   netlify/lib/tdt-email/render.js (vzhled) + content-cz.json / content-sk.json
@@ -47,7 +47,7 @@
  *   TDT_LICENSE_TOKEN         token pro RPC public.tdt_trial_license_status
  *   TDT_SWEEP_KEY             klíč pro GET ?sweep=1 (výchozí = TDT_WEBHOOK_SECRET)
  *   TDT_RESEND_FROM           volitelné, výchozí "Truck Data Technology <obchod@mail.tdt.cz>"
- *   TDT_TRIAL_REMINDER_DAY    volitelné, výchozí 16
+ *   TDT_TRIAL_REMINDER_DAY    volitelné, výchozí 25
  *   LEAD_NOTIFY_TO            příjemce hlášení chyb (výchozí libor.dospel@gmail.com)
  *
  * Selhání kontroly licence = fail-open: zájemce dostane běžnou sekvenci.
@@ -82,7 +82,7 @@ const logError = (msg, extra) => console.error(`[tdt-trial-email] ERROR: ${msg}`
 
 function reminderDay() {
   const n = Number(process.env.TDT_TRIAL_REMINDER_DAY);
-  return Number.isFinite(n) && n >= 4 && n <= 30 ? n : 16;
+  return Number.isFinite(n) && n >= 4 && n <= 30 ? n : 25;
 }
 
 function followups() {
