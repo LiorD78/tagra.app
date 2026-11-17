@@ -116,6 +116,14 @@
 /assets/js/*
   Cache-Control: public, max-age=300, must-revalidate
 
+# TRUCKMALL – styly a skripty Horní informační lišty (truckmall.cz / .sk načítá
+# https://tagra.app/assets/truckmall/tmx-lista-{cz,sk}.{css,js}?v=…).
+# Soubory se nikdy nepřepisují pod stejným ?v= – při změně se ve liště v BSADMIN
+# zvedne ?v=, proto může být cache roční a immutable.
+/assets/truckmall/*
+  Cache-Control: public, max-age=31536000, immutable
+  Access-Control-Allow-Origin: *
+
 # ────────────────────────────────────────────────
 # XML / TXT / JSON metadata
 # ────────────────────────────────────────────────
