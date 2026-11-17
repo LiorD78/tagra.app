@@ -14,7 +14,7 @@
  *   - jazykové položky se poznávají inverzně: vše, co není Contact / Privacy /
  *     Truck Data Technology (explicitní seznam níže)
  *   - blok musí být souvislý a musí končit na konci <ul>; jinak soubor přeskočí
- *   - počet nalezených položek musí být 2–11; jinak soubor přeskočí
+ *   - počet nalezených položek musí být 2–12; jinak soubor přeskočí
  *   - kontrola bilance <li> a <ul> po zápisu
  *
  * (1:1 port z tools/fix_footer_lang.py — python3 zápis souboru je v sandboxu
@@ -32,6 +32,7 @@ const LANGS = [
   ['nl', '/nl/',                'Nederlands'],
   ['fr', '/fr/',                'Français'],
   ['it', '/it/',                'Italiano'],
+  ['es', '/es/',                'Español'],
   ['el', '/el/',                'Ελληνικά'],
   ['hu', '/hu/',                'Magyar'],
   ['ro', '/ro/',                'Română'],
@@ -43,7 +44,7 @@ const EXTERNAL = new Set(['cs', 'sk']);
 // Vše ostatní v posledním sloupci patičky je jazyková položka.
 const NONLANG = new Set([
   'truck data technology',
-  'contact', 'kontakt', 'kapcsolat', 'επικοινωνία', 'contatti',
+  'contacto', 'privacidad y cookies', 'contact', 'kontakt', 'kapcsolat', 'επικοινωνία', 'contatti',
   'privacy & cookies', 'privacy e cookie', 'datenschutz & cookies',
   'datenschutz & cookies · impressum', 'απόρρητο & cookies',
   'confidentialité & cookies', 'adatvédelem és sütik',
@@ -119,7 +120,7 @@ function fix(html) {
   if (idx[idx.length - 1] !== items.length - 1) {
     return [html, 'PŘESKOČENO: jazyky nekončí na konci seznamu'];
   }
-  if (!(idx.length >= 2 && idx.length <= 11)) {
+  if (!(idx.length >= 2 && idx.length <= LANGS.length)) {
     return [html, `PŘESKOČENO: podezřelý počet položek (${idx.length})`];
   }
 
@@ -128,7 +129,7 @@ function fix(html) {
   const newBlock = block.slice(0, start) + build(pageLang(html)) + block.slice(end);
   const out = html.slice(0, ui) + newBlock + html.slice(ue);
 
-  const d = 11 - idx.length;
+  const d = LANGS.length - idx.length;
   if (
     countSub(out, '<li') - countSub(html, '<li') !== d ||
     countSub(out, '</li>') - countSub(html, '</li>') !== d ||
@@ -137,7 +138,7 @@ function fix(html) {
   ) {
     return [html, 'PŘESKOČENO: nesouhlasí bilance tagů'];
   }
-  return [out, `opraveno (${idx.length} → 11)`];
+  return [out, `opraveno (${idx.length} → ${LANGS.length})`];
 }
 
 function walk(dir, acc) {

@@ -76,7 +76,7 @@
      tagra.app ceska verze stejne neni, CZ vede na tdt.cz).
      Overeno v prohlizeci pro vsech pet jazyku 16. 8. 2026. */
   /* 8. 10. 2026: doplneny FR/IT/NL/RO (dosud tam widget ukazoval ceske "Podpora"). Overit v prohlizeci. */
-  var PODPOROVANE = { en: 1, de: 1, pl: 1, el: 1, hu: 1, sk: 1, fr: 1, it: 1, nl: 1, ro: 1 };
+  var PODPOROVANE = { en: 1, de: 1, pl: 1, el: 1, hu: 1, sk: 1, fr: 1, it: 1, nl: 1, ro: 1, es: 1 };
   var lg = (document.documentElement.getAttribute('lang') || '').slice(0, 2).toLowerCase();
   if (PODPOROVANE[lg]) window.smartsupp('language', lg);
 
@@ -247,9 +247,9 @@
   // i18n/slugmap.json (klíč "try") neobsahuje ro/fr/nl — doplněno ručně podle živých stránek
   var TRIAL_PATHS = ['/try', '/de/testen', '/pl/wyprobuj', '/el/dokimi',
     '/hu/ingyenes-probaverzio', '/it/prova-gratuita',
-    '/ro/incercare-gratuita', '/fr/essai-gratuit', '/nl/gratis-proefversie'];
-  var ARTICLE_RE = /^\/(articles|de\/ratgeber|pl\/poradnik|hu\/cikkek|ro\/articole|nl\/artikelen|it\/articoli|el\/arthra|fr\/articles)(\/|$)/;
-  var COMMERCIAL_RE = /^\/((de\/|pl\/|el\/|hu\/|it\/|fr\/|ro\/|nl\/)?$|(driver|fleet|enforcement|how-it-works|for-whom|faq|contact)(\/|$)|de\/(fahrer|fuhrpark|kontrollbehoerden|so-funktioniert-es|fuer-wen|faq|kontakt)(\/|$)|pl\/(dla-kierowcow|dla-przewoznikow|organy-kontrolne|jak-to-dziala|dla-kogo|faq|kontakt)(\/|$)|el\/(odigoi|stolos|eleghos|pos-leitourgei|gia-poion|faq|epikoinonia)(\/|$)|hu\/(soforoknek|fuvarozoknak|hatosagoknak|hogyan-mukodik|kinek-szol|gyakori-kerdesek|kapcsolat)(\/|$)|it\/(per-autisti|per-aziende|organi-di-controllo|come-funziona|a-chi-si-rivolge|faq|contatti)(\/|$)|fr\/(conducteurs|entreprises|autorites-de-controle|fonctionnement|pour-qui|faq|contact)(\/|$)|ro\/(pentru-conducatori|pentru-firme|autoritati-de-control|cum-functioneaza|pentru-cine|intrebari-frecvente|contact)(\/|$)|nl\/(voor-chauffeurs|voor-transportbedrijven|handhaving|hoe-het-werkt|voor-wie|veelgestelde-vragen|contact)(\/|$))/;
+    '/ro/incercare-gratuita', '/fr/essai-gratuit', '/nl/gratis-proefversie', '/es/prueba-gratis'];
+  var ARTICLE_RE = /^\/(articles|de\/ratgeber|pl\/poradnik|hu\/cikkek|ro\/articole|nl\/artikelen|it\/articoli|el\/arthra|fr\/articles|es\/articulos)(\/|$)/;
+  var COMMERCIAL_RE = /^\/((de\/|pl\/|el\/|hu\/|it\/|fr\/|ro\/|nl\/|es\/)?$|(driver|fleet|enforcement|how-it-works|for-whom|faq|contact)(\/|$)|de\/(fahrer|fuhrpark|kontrollbehoerden|so-funktioniert-es|fuer-wen|faq|kontakt)(\/|$)|pl\/(dla-kierowcow|dla-przewoznikow|organy-kontrolne|jak-to-dziala|dla-kogo|faq|kontakt)(\/|$)|el\/(odigoi|stolos|eleghos|pos-leitourgei|gia-poion|faq|epikoinonia)(\/|$)|hu\/(soforoknek|fuvarozoknak|hatosagoknak|hogyan-mukodik|kinek-szol|gyakori-kerdesek|kapcsolat)(\/|$)|it\/(per-autisti|per-aziende|organi-di-controllo|come-funziona|a-chi-si-rivolge|faq|contatti)(\/|$)|es\/(empresas|conductores)(\/|$)|fr\/(conducteurs|entreprises|autorites-de-controle|fonctionnement|pour-qui|faq|contact)(\/|$)|ro\/(pentru-conducatori|pentru-firme|autoritati-de-control|cum-functioneaza|pentru-cine|intrebari-frecvente|contact)(\/|$)|nl\/(voor-chauffeurs|voor-transportbedrijven|handhaving|hoe-het-werkt|voor-wie|veelgestelde-vragen|contact)(\/|$))/;
 
   function normPath(p) {
     p = p.replace(/\/index\.html$/, '/');
@@ -362,7 +362,7 @@
     var inner = document.querySelector('.site-nav .nav-inner');
     if (!inner || inner.querySelector('.nav-contact')) return;
     var L = { en: 'Happy to help', de: 'Wir helfen Ihnen gerne', pl: 'Chętnie pomożemy', nl: 'We helpen u graag',
-              fr: 'À votre écoute', it: 'Felici di aiutarti', el: 'Στη διάθεσή σας', ro: 'Vă stăm la dispoziție', hu: 'Szívesen segítünk' };
+              fr: 'À votre écoute', it: 'Felici di aiutarti', el: 'Στη διάθεσή σας', ro: 'Vă stăm la dispoziție', hu: 'Szívesen segítünk', es: 'Encantados de ayudarte' };
     var lang = (document.documentElement.lang || 'en').slice(0, 2).toLowerCase();
     var label = L[lang] || L.en;
     var tel = '+420739005345', telTxt = '+420 739 005 345';
@@ -489,7 +489,8 @@
     hu: { a_title: 'Önnek már megvan a TAGRA próbaverziója', a_body: 'Az igénylés dátuma: {date}. A letöltési linket az e-mailben is megtalálja.', a_btn: 'Letöltés újra', a_other: 'Próbaverzió igénylése másik e-mail-címmel', b_ok: 'A letöltés elindult — a fájl a Letöltések mappába kerül. A fájl nagy, ezért ez néhány percig is eltarthat. Nem történik semmi? Kattintson újra a gombra.', b_nowin: 'A TAGRA Windows rendszerű számítógépeken fut. Nyissa meg az e-mailünkben található linket a Windows rendszerű számítógépén.' },
     ro: { a_title: 'Aveți deja versiunea de probă TAGRA', a_body: 'Ați solicitat-o pe {date}. Linkul de descărcare se află și în e-mailul dumneavoastră.', a_btn: 'Descărcați din nou', a_other: 'Solicitați versiunea de probă cu altă adresă de e-mail', b_ok: 'Descărcarea a început — fișierul va apărea în folderul Descărcări. Este mare, așa că poate dura câteva minute. Nu se întâmplă nimic? Apăsați din nou butonul.', b_nowin: 'TAGRA funcționează pe calculatoare cu Windows. Deschideți linkul din e-mailul nostru pe calculatorul dumneavoastră cu Windows.' },
     cs: { a_title: 'Zkušební verzi TAGRA už máte', a_body: 'Požádali jste o ni {date}. Odkaz ke stažení najdete také ve svém e-mailu.', a_btn: 'Stáhnout znovu', a_other: 'Požádat o zkušební verzi na jiný e-mail', b_ok: 'Stahování zahájeno — soubor se objeví ve složce Stažené soubory. Je velký, takže to může trvat několik minut. Nic se neděje? Klikněte na tlačítko znovu.', b_nowin: 'TAGRA funguje na počítačích s Windows. Otevřete odkaz z našeho e-mailu na svém počítači s Windows.' },
-    sk: { a_title: 'Skúšobnú verziu TAGRA už máte', a_body: 'Požiadali ste o ňu {date}. Odkaz na stiahnutie nájdete aj vo svojom e-maile.', a_btn: 'Stiahnuť znova', a_other: 'Požiadať o skúšobnú verziu na iný e-mail', b_ok: 'Sťahovanie sa začalo — súbor sa objaví v priečinku Stiahnuté súbory. Je veľký, takže to môže trvať niekoľko minút. Nič sa nedeje? Kliknite na tlačidlo znova.', b_nowin: 'TAGRA funguje na počítačoch s Windows. Otvorte odkaz z nášho e-mailu na svojom počítači s Windows.' }
+    sk: { a_title: 'Skúšobnú verziu TAGRA už máte', a_body: 'Požiadali ste o ňu {date}. Odkaz na stiahnutie nájdete aj vo svojom e-maile.', a_btn: 'Stiahnuť znova', a_other: 'Požiadať o skúšobnú verziu na iný e-mail', b_ok: 'Sťahovanie sa začalo — súbor sa objaví v priečinku Stiahnuté súbory. Je veľký, takže to môže trvať niekoľko minút. Nič sa nedeje? Kliknite na tlačidlo znova.', b_nowin: 'TAGRA funguje na počítačoch s Windows. Otvorte odkaz z nášho e-mailu na svojom počítači s Windows.' },
+    es: { a_title: 'Ya tienes la versión de prueba de TAGRA', a_body: 'La solicitaste el {date}. También tienes el enlace de descarga en tu correo electrónico.', a_btn: 'Volver a descargar', a_other: 'Solicitar la versión de prueba con otro correo electrónico', b_ok: 'La descarga ha comenzado. El archivo aparecerá en tu carpeta Descargas. Es grande, así que puede tardar unos minutos. ¿No pasa nada? Vuelve a hacer clic en el botón.', b_nowin: 'TAGRA funciona en ordenadores con Windows. Abre el enlace de nuestro correo en tu ordenador con Windows.' }
   };
   var ALIAS = { cz: 'cs', gr: 'el' };
 
