@@ -4,7 +4,7 @@
      <link rel="stylesheet" href="https://tagra.app/assets/cleanee/cln-lista.css?v=…">
    Soubor se nikdy nepřepisuje pod stejným ?v= – při změně zvednout ?v= v liště.
    Vzor: assets/truckmall/tmx-lista-cz.css (TRUCKMALL), přebarveno na paletu CLEANEE v12.
-   v1 · 19. 11. 2026
+   v2 · 19. 11. 2026
    ===================================================================== */
 
 :root {
@@ -44,26 +44,10 @@
   padding: 0 !important;
   margin: 0 !important;
 }
-#HeaderInfoPanel a.close > span {
-  display: none !important;
-}
+/* Křížek nezobrazovat: po zavření by BSSHOP panel – a s ním odkazy na tento
+   soubor a skript – návštěvníkovi přestal vykreslovat. */
 #HeaderInfoPanel a.close {
-  position: absolute !important;
-  top: 50% !important;
-  right: 14px !important;
-  width: 26px !important;
-  height: 26px !important;
-  margin-top: -13px !important;
-  border-radius: 50% !important;
-  background: transparent
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230c6a9e' stroke-width='2.4' stroke-linecap='round'%3E%3Cpath d='M7 7l10 10M17 7L7 17'/%3E%3C/svg%3E")
-    center/14px no-repeat !important;
-  opacity: 0.6;
-  transition: opacity 0.15s, background-color 0.15s;
-}
-#HeaderInfoPanel a.close:hover {
-  opacity: 1;
-  background-color: rgba(12, 106, 158, 0.08) !important;
+  display: none !important;
 }
 .cln-tb {
   display: flex;
@@ -73,7 +57,7 @@
   gap: 4px 18px;
   width: 100%;
   margin: 0;
-  padding: 8px 48px;
+  padding: 8px 16px;
   box-sizing: border-box;
   color: var(--cln-blue-dark);
   font-size: 13.5px;
@@ -105,7 +89,7 @@
 @media (max-width: 720px) {
   .cln-tb {
     font-size: 12.5px;
-    padding: 7px 40px 7px 12px;
+    padding: 7px 12px;
     gap: 2px 12px;
   }
   .cln-tb__i--d {
@@ -450,7 +434,6 @@ body .bs-dialog-overlay:has(+ #BasketResultDialog) {
   color: var(--cln-ink) !important;
   text-transform: none !important;
 }
-#BasketResultDialog .buttons .button span,
 #BasketResultDialog > .content .mainProductName span {
   font: inherit !important;
   color: inherit !important;
@@ -700,8 +683,8 @@ body .bs-dialog-overlay:has(+ #BasketResultDialog) {
   margin: 0 !important;
   padding: 0 !important;
 }
-#BasketResultDialog .BasketDialogProduct .button.buy::after,
-#BasketResultDialog .BasketDialogProduct .button.buy::before,
+#BasketResultDialog .BasketDialogProduct .button.buy:not(.icon)::after,
+#BasketResultDialog .BasketDialogProduct .button.buy:not(.icon)::before,
 #BasketResultDialog .BasketDialogProducts .separator {
   display: none !important;
 }
@@ -775,9 +758,32 @@ body .bs-dialog-overlay:has(+ #BasketResultDialog) {
   text-align: left !important;
 }
 #BasketResultDialog .BasketDialogProduct .AddToCartView {
+  display: flex !important;
   margin: 0 !important;
+  align-items: center;
+  gap: 4px;
 }
-#BasketResultDialog .BasketDialogProduct .button.buy {
+/* Texty tlačítek: šablona CLEANEE skrývá text <span> a vypisuje ho přes ::after */
+#BasketResultDialog .buttons .button span {
+  display: block !important;
+  font-size: 0 !important;
+  line-height: 0 !important;
+  color: inherit !important;
+}
+#BasketResultDialog .buttons .button span::after {
+  display: block !important;
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  line-height: 1.2 !important;
+  color: inherit !important;
+}
+#BasketResultDialog .buttons .button.continue span::after {
+  content: "Pokračovat v nákupu" !important;
+}
+#BasketResultDialog .buttons .button.goToCart span::after {
+  content: "Přejít do košíku" !important;
+}
+#BasketResultDialog .BasketDialogProduct .button.buy:not(.icon) {
   display: flex !important;
   align-items: center;
   justify-content: center;
