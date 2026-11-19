@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<!-- TMX-ANALYTICS START -->
+<meta content="7F7894081BE7FBB245FF03AF8810B22F" name="msvalidate.01"/>
+<!-- Consent Mode v2 defaults (deny) + gtag stub — runs BEFORE gtag.js -->
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent','default',{
+      ad_storage:'denied', ad_user_data:'denied', ad_personalization:'denied',
+      analytics_storage:'denied', functionality_storage:'denied',
+      personalization_storage:'denied', security_storage:'granted',
+      wait_for_update:500
+    });
+    gtag('set','ads_data_redaction',true);
+    gtag('set','url_passthrough',false);
+  </script>
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-92253QFBNX"></script>
+<script>
+    gtag('js', new Date());
+    gtag('config','G-92253QFBNX');
+  </script>
+<!-- Cookie consent banner (self-hosted) + Microsoft Clarity gating -->
+<style>
+    .tmx-cc{position:fixed;left:0;right:0;bottom:0;z-index:2147483000;background:linear-gradient(120deg,var(--blue-dark,#0b2c4a),var(--blue-mid,#134a8e) 62%,var(--blue-light,#1f5fa6));color:#fff;
+      font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+      padding:16px 20px;box-shadow:0 -4px 24px rgba(0,0,0,.18);display:flex;flex-wrap:wrap;
+      align-items:center;gap:14px;justify-content:center}
+    .tmx-cc__txt{flex:1 1 360px;max-width:760px}
+    .tmx-cc__txt a{color:#9ed0f5;text-decoration:underline}
+    .tmx-cc__btns{display:flex;gap:10px;flex:0 0 auto}
+    .tmx-cc__b{appearance:none;border:0;cursor:pointer;font:inherit;font-weight:600;
+      padding:10px 22px;border-radius:99px;transition:filter .15s;color:#fff}
+    .tmx-cc__b:hover{filter:brightness(1.08)}
+    .tmx-cc__b--no{background:rgba(255,255,255,.16)}
+    .tmx-cc__b--yes{background:var(--green-cta,#5C820F)}
+    @media(max-width:640px){.tmx-cc{padding:14px}.tmx-cc__btns{width:100%}.tmx-cc__b{flex:1}}
+  </style>
+<script>
+  (function(){
+    var KEY='tmx-consent-v1', CL='wt18054m0r';
+    function lc(){var l=(document.documentElement.getAttribute('lang')||'en').toLowerCase().split('-')[0];
+      var m={cz:'cs',cs:'cs',sk:'sk',de:'de',pl:'pl',gr:'el',el:'el',hu:'hu',fr:'fr',it:'it',nl:'nl',ro:'ro',en:'en'};return m[l]||'en';}
+    var T={
+      hu:{t:'Analitikai sütiket használunk (Google Analytics, Microsoft Clarity, Smartsupp), hogy megértsük a webhely használatát. Csak az Ön hozzájárulásával töltődnek be.',a:'Elfogadom',r:'Elutasítom',p:'Adatvédelem és sütik'},
+      ro:{t:'Utilizăm module cookie de analiză (Google Analytics, Microsoft Clarity, Smartsupp) pentru a înțelege modul de utilizare a site-ului. Se încarcă doar cu consimțământul dumneavoastră.',a:'Accept',r:'Refuz',p:'Confidențialitate și cookie-uri'},
+      nl:{t:'We gebruiken analytische cookies (Google Analytics, Microsoft Clarity, Smartsupp) om het gebruik van de site te begrijpen. Ze laden alleen met uw toestemming.',a:'Accepteren',r:'Weigeren',p:'Privacy en cookies'},
+      fr:{t:'Nous utilisons des cookies analytiques (Google Analytics, Microsoft Clarity, Smartsupp) pour comprendre l’utilisation du site. Ils ne se chargent qu’avec votre consentement.',a:'Accepter',r:'Refuser',p:'Confidentialité et cookies'},
+      it:{t:'Utilizziamo cookie analitici (Google Analytics, Microsoft Clarity, Smartsupp) per capire l’utilizzo del sito. Si caricano solo con il Suo consenso.',a:'Accetta',r:'Rifiuta',p:'Privacy e cookie'},
+      en:{t:'Utilizăm module cookie de analiză (Google Analytics, Microsoft Clarity, Smartsupp) pentru a înțelege modul de utilizare a site-ului. Acestea se încarcă numai cu consimțământul dumneavoastră.',a:'Accept',r:'Reject',p:'Privacy &amp; cookies'},
+      cs:{t:'Používáme analytické cookies (Google Analytics, Microsoft Clarity, Smartsupp) k pochopení používání webu. Načtou se jen s vaším souhlasem.',a:'Přijmout',r:'Odmítnout',p:'Soukromí a cookies'},
+      sk:{t:'Používame analytické cookies (Google Analytics, Microsoft Clarity, Smartsupp) na pochopenie používania webu. Načítajú sa len s vaším súhlasom.',a:'Prijať',r:'Odmietnuť',p:'Súkromie a cookies'},
+      de:{t:'Wir verwenden Analyse-Cookies (Google Analytics, Microsoft Clarity, Smartsupp), um die Nutzung der Website zu verstehen. Sie werden nur mit Ihrer Einwilligung geladen.',a:'Akzeptieren',r:'Ablehnen',p:'Datenschutz &amp; Cookies'},
+      pl:{t:'Używamy plików cookie do analityki (Google Analytics, Microsoft Clarity, Smartsupp), aby zrozumieć korzystanie z witryny. Ładują się tylko za Twoją zgodą.',a:'Akceptuj',r:'Odrzuć',p:'Prywatność i cookies'},
+      el:{t:'Χρησιμοποιούμε cookies ανάλυσης (Google Analytics, Microsoft Clarity, Smartsupp) για να κατανοήσουμε τη χρήση. Φορτώνονται μόνο με τη συγκατάθεσή σας.',a:'Αποδοχή',r:'Απόρριψη',p:'Απόρρητο &amp; cookies'}
+    };
+    function loadClarity(){if(!CL||window.__tmxCl)return;window.__tmxCl=1;
+      (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+       t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+       y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script",CL);}
+    function grant(){try{localStorage.setItem(KEY,'granted')}catch(e){}
+      gtag('consent','update',{analytics_storage:'granted'});loadClarity();}
+    function deny(){try{localStorage.setItem(KEY,'denied')}catch(e){}}
+    var saved=null;try{saved=localStorage.getItem(KEY)}catch(e){}
+    if(saved==='granted'){grant();return;} if(saved==='denied'){return;}
+    function show(){var tx=T[lc()]||T.en;
+      var b=document.createElement('div');b.className='tmx-cc';b.setAttribute('role','dialog');b.setAttribute('aria-live','polite');
+      b.innerHTML='<div class="tmx-cc__txt">'+tx.t+' <a href="/ro/confidentialitate/">'+tx.p+'</a></div>'+
+        '<div class="tmx-cc__btns"><button type="button" class="tmx-cc__b tmx-cc__b--no">'+tx.r+'</button>'+
+        '<button type="button" class="tmx-cc__b tmx-cc__b--yes">'+tx.a+'</button></div>';
+      document.body.appendChild(b);
+      b.querySelector('.tmx-cc__b--yes').addEventListener('click',function(){grant();b.remove();});
+      b.querySelector('.tmx-cc__b--no').addEventListener('click',function(){deny();b.remove();});}
+    if(document.body)show();else document.addEventListener('DOMContentLoaded',show);
+  })();
+  </script>
+<!-- TMX-ANALYTICS END -->
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Card neînchis 44 — Eveniment tahograf | TAGRA</title>
+<meta content="Aflați ce înseamnă evenimentul 44 „Card neînchis”, de ce apare la tahograf și ce trebuie să verificați pentru a completa corect activitățile lipsă." name="description"/>
+<link href="https://tagra.app/ro/articole/tahograf-defectiune-44-card-neinchis/" rel="canonical"/>
+<link href="https://tagra.app/de/ratgeber/tachograph-fehler-44-karte-nicht-geschlossen/" hreflang="de" rel="alternate"/><link href="https://tagra.app/articles/tachograph-error-44-card-not-closed/" hreflang="en" rel="alternate"/><link href="https://tagra.app/fr/articles/tachygraphe-erreur-44-carte-non-fermee/" hreflang="fr" rel="alternate"/><link href="https://tagra.app/it/articoli/tachigrafo-errore-44-carta-non-chiusa/" hreflang="it" rel="alternate"/><link href="https://tagra.app/nl/artikelen/tachograaf-storing-44-kaart-niet-afgesloten/" hreflang="nl" rel="alternate"/><link href="https://tagra.app/pl/poradnik/tachograf-blad-44-karta-nie-zamknieta/" hreflang="pl" rel="alternate"/><link href="https://tagra.app/ro/articole/tahograf-defectiune-44-card-neinchis/" hreflang="ro" rel="alternate"/><link href="https://tagra.app/articles/tachograph-error-44-card-not-closed/" hreflang="x-default" rel="alternate"/>
+<meta content="Card neînchis 44 — Eveniment tahograf | TAGRA" property="og:title"/><meta content="Aflați ce înseamnă evenimentul 44 „Card neînchis”, de ce apare la tahograf și ce trebuie să verificați pentru a completa corect activitățile lipsă." property="og:description"/>
+<meta content="https://tagra.app/assets/img/hero-poster.jpg" property="og:image"/>
+<meta content="ro_RO" property="og:locale"/>
+<meta content="https://tagra.app/ro/articole/tahograf-defectiune-44-card-neinchis/" property="og:url"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    a{color:var(--blue-mid);text-decoration:none;}
+    a:hover{color:var(--blue-dark);text-decoration:underline;text-underline-offset:.18em;}
+    p+p{margin-top:14px;}
+    ul,ol{padding-left:22px;}
+    li{margin:6px 0;line-height:1.65;}
+    li::marker{color:var(--blue-mid);}
+    strong{font-weight:700;color:var(--text-strong);}
+    #scroll-progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--green-brand),var(--blue-light));width:0%;z-index:9999;pointer-events:none;}
+.nav-inner{margin:0 auto;padding:0 24px;height:100%;display:flex;align-items:center;justify-content:space-between;gap:24px;}
+    .nav-links{display:flex;align-items:center;gap:4px;list-style:none;}
+    .nav-links a{font-size:15px;font-weight:500;color:var(--text);padding:8px 12px;border-radius:8px;text-decoration:none;transition:background .15s;}
+    .nav-links a:hover{background:var(--bg-apple);color:var(--blue-mid);}
+    .nav-links .nav-cta a{background:var(--green-cta);color:#fff!important;border-radius:99px;padding:8px 18px;font-weight:600;}
+    .nav-links .nav-cta a:hover{background:var(--green-brand);text-decoration:none;}
+    .nav-lang{display:flex;align-items:center;gap:4px;font-size:14px;font-weight:600;}
+    .nav-lang a{padding:5px 8px;border-radius:6px;color:var(--text2);text-decoration:none;transition:background .15s;}
+    .nav-lang a:hover,.nav-lang a.active{background:var(--bg-apple);color:var(--blue-mid);}
+    .nav-lang span{color:var(--border);}
+    .nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:8px;}
+    .nav-toggle span{display:block;width:22px;height:2px;background:var(--text);margin:5px 0;border-radius:2px;}
+    @media(max-width:900px){.nav-links{display:none;}.nav-toggle{display:block;}.nav-links.open{display:flex;flex-direction:column;align-items:flex-start;gap:2px;position:absolute;top:var(--nav-h);left:0;right:0;background:rgba(255,255,255,.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:12px 24px 20px;}}
+    .art-hero{background:linear-gradient(180deg,var(--bg-apple) 0%,#fff 100%);padding:calc(var(--nav-h,64px) + 28px) 0 44px;}
+    .art-wrap{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 24px;}
+    .breadcrumb{font-size:14px;color:var(--text2);margin-bottom:18px;}
+    .breadcrumb a{color:var(--text2);text-decoration:none;}
+    .breadcrumb a:hover{color:var(--blue-mid);}
+    .breadcrumb span{margin:0 5px;color:var(--border);}
+    .eyebrow{font-size:14px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--green-brand);margin-bottom:10px;}
+    .art-title{font-size:38px;line-height:1.15;font-weight:800;margin-bottom:16px;letter-spacing:-.02em;padding-bottom:0.08em;color:var(--blue-dark);}
+    .art-title .grad{background:var(--heading-gradient);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;}
+    @media(max-width:700px){.art-title{font-size:26px;}}
+    .art-meta{font-size:15px;color:var(--text2);padding-bottom:24px;border-bottom:1px solid var(--border);display:flex;gap:20px;flex-wrap:wrap;}
+    .art-body{padding:44px 0 60px;}
+    .art-body h2 {
+      font-size: 36px; font-weight: 800;
+      line-height: 1.1; letter-spacing: 0;
+      text-transform: uppercase;
+      color: var(--blue-mid, #134a8e);
+      background: var(--heading-gradient);
+      -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block; max-width: 100%; margin-bottom: 14px;
+      padding: 0.12em 0.15em 0.08em 0;
+    }
+    .art-body h3{font-size:20px;font-weight:700;color:var(--text-strong);margin:28px 0 10px;}
+    .art-body p{margin-bottom:18px;}
+    .art-body ul,.art-body ol{margin-bottom:20px;}
+    /* CALLOUT */
+    .callout--blue{background:var(--bg-apple);border-left:4px solid var(--blue-mid);}
+    .callout-title{font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.07em;color:var(--blue-mid);margin-bottom:8px;}
+    .callout--green .callout-title{color:var(--green-brand);}
+    /* FAQ */
+    .faq-item{border-top:1px solid var(--border);padding:14px 0;}
+    .faq-item:last-child{border-bottom:1px solid var(--border);}
+    .faq-item summary{list-style:none;cursor:pointer;font-weight:700;font-size:18px;line-height:1.4;padding-right:32px;position:relative;color:var(--text-strong);}
+    .faq-item summary::-webkit-details-marker{display:none;}
+    .faq-item summary::after{content:"+";position:absolute;right:0;top:50%;transform:translateY(-50%);font-size:26px;font-weight:300;color:var(--green-cta);}
+    .faq-item[open] summary::after{content:"−";}
+    .faq-answer p+p{margin-top:10px;}
+    /* RELATED */
+    .related{border-top:1px solid var(--border);padding-top:36px;margin-top:36px;}
+    .related-title{font-size:20px;font-weight:800;color:var(--text-strong);margin-bottom:18px;}
+    .related-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;}
+    @media(max-width:820px){.related-grid{grid-template-columns:1fr;}}
+    .related-card{display:block;padding:20px;border:1px solid var(--border);border-radius:var(--radius);text-decoration:none!important;transition:border-color .15s,transform .15s;}
+    .related-card:hover{border-color:var(--blue-mid);transform:translateY(-2px);}
+    .related-card-eye{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--blue-mid);margin-bottom:6px;}
+    .related-card-title{font-size:16px;font-weight:700;color:var(--text-strong);line-height:1.4;}
+    /* ALSO DISPLAYED AS */
+    .lang-list{list-style:none;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:10px 24px;}
+    @media(max-width:580px){.lang-list{grid-template-columns:1fr;}}
+    .lang-list li{margin:0;padding:10px 14px;background:#fff;border:1px solid var(--border);border-radius:10px;font-size:15px;}
+    .lang-list li span{color:var(--text2);font-size:13px;}
+  </style>
+<link href="/assets/css/core.bundle.css?v=20261115" rel="stylesheet"/>
+
+
+
+<script defer="" src="/assets/js/nav.js?v=20261008a"></script><script defer="" src="/assets/js/analytics.js?v=20261103a"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Card neînchis 44 — Cod de eveniment 44 al tahografului","description":"Aflați ce înseamnă evenimentul 44 „Card neînchis”, de ce apare la tahograf și ce trebuie să verificați pentru a completa corect activitățile lipsă.","image":"https://tagra.app/assets/img/hero-poster.jpg","author":{"@type":"Organization","@id":"https://tagra.app/#organization","name":"Truck Data Technology, s.r.o.","url":"https://www.tdt.cz"},"publisher":{"@type":"Organization","@id":"https://tagra.app/#organization","name":"Truck Data Technology, s.r.o.","logo":{"@type":"ImageObject","url":"https://tagra.app/assets/img/logo-light.svg"}},"datePublished":"2026-11-19T09:00:00+01:00","dateModified":"2026-11-19T09:00:00+01:00","inLanguage":"ro","mainEntityOfPage":"https://tagra.app/ro/articole/tahograf-defectiune-44-card-neinchis/","articleSection":"Bază de cunoștințe pentru conducători auto","wordCount":1364}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"TAGRA","item":"https://tagra.app/"},{"@type":"ListItem","position":2,"name":"Articole","item":"https://tagra.app/ro/articole/"},{"@type":"ListItem","position":3,"name":"Eveniment 44","item":"https://tagra.app/ro/articole/tahograf-defectiune-44-card-neinchis/"}]}</script><noscript><style>.anim-up,.fly-left,.fly-right{opacity:1!important;transform:none!important}</style></noscript><script defer="" src="/assets/js/mobile-bridge.js?v=20261115a" data-tr="1"></script>
+</head>
+<body class="art-page">
+<a class="skip-link" href="#main-content">Salt la conținut</a>
+<div aria-hidden="true" id="scroll-progress"></div>
+<nav aria-label="Navigare principală" class="site-nav" role="navigation">
+<div class="nav-inner">
+<a aria-label="TAGRA – Acasă" class="nav-logo" href="/ro/"><img alt="TAGRA" height="32" src="/assets/img/logo-light.svg?v=20260513zh" style="display:block;height:32px;width:auto;" width="140"/></a>
+<ul class="nav-links" id="nav-links">
+<li><a href="/ro/pentru-firme/">Pentru societăți</a></li>
+<li><a href="/ro/pentru-conducatori/">Pentru conducători auto</a></li>
+<li><a href="/ro/autoritati-de-control/">Control</a></li>
+<li><a aria-current="page" href="/ro/articole/">Articole</a></li><li><a href="/ro/manuale/">Manuale</a></li>
+<li><a href="/ro/intrebari-frecvente/">Întrebări frecvente</a></li>
+<li><a href="/ro/contact/">Contact</a></li>
+<li class="nav-shop-li"><a aria-label="TAGRA Shop – cumpărați licențe și dispozitive" class="nav-shop" data-cta="nav" href="https://shop.tagra.app/">Magazin</a></li>
+<li class="nav-cta-li"><a class="nav-cta" href="/ro/incercare-gratuita/?audience=driver&amp;src=error-44">Încercați gratuit timp de 30 de zile</a></li>
+</ul>
+<details class="nav-lang">
+<summary aria-label="Limbă: RO">RO</summary>
+<div class="nav-lang-menu" role="menu"><a href="/articles/tachograph-error-44-card-not-closed/" hreflang="en">Engleză</a><a href="/de/ratgeber/tachograph-fehler-44-karte-nicht-geschlossen/" hreflang="de">Deutsch</a><a href="/pl/poradnik/tachograf-blad-44-karta-nie-zamknieta/" hreflang="pl">Polski</a><a href="/nl/artikelen/tachograaf-storing-44-kaart-niet-afgesloten/" hreflang="nl">Nederlands</a><a href="/fr/articles/tachygraphe-erreur-44-carte-non-fermee/" hreflang="fr">Français</a><a href="/it/articoli/tachigrafo-errore-44-carta-non-chiusa/" hreflang="it">Italiano</a><a aria-current="page" class="active" href="/ro/articole/tahograf-defectiune-44-card-neinchis/" hreflang="ro">Română</a><a href="https://www.tdt.cz/" hreflang="cs" rel="noopener" target="_blank">Čeština</a><a href="https://www.tdt.sk/" hreflang="sk" rel="noopener" target="_blank">Slovenčina</a></div>
+</details>
+<a class="nav-cta-mobile" href="/ro/incercare-gratuita/?audience=driver&amp;src=error-44">Încercați gratuit</a>
+<button aria-expanded="false" aria-label="Comutați meniul" class="nav-mobile-toggle" id="nav-toggle">
+<span></span><span></span><span></span>
+</button>
+</div>
+</nav>
+<header class="art-hero">
+<div class="art-wrap">
+<nav aria-label="Fir de navigare" class="breadcrumb"><a href="/ro/">TAGRA</a><span>›</span><a href="/ro/articole/">Articole</a><span>›</span><span>Eveniment 44</span></nav>
+<div class="eyebrow anim-up">Cod de eveniment · Stoneridge SE5000 &amp; VDO DTCO 4.1</div>
+<h1 class="art-title"><span class="grad">Card neînchis 44 — Cod de eveniment 44 al tahografului</span></h1>
+<div class="art-meta"><span>Truck Data Technology</span><span>Actualizat în septembrie 2026</span><span>4 min. de lectură</span></div>
+<p class="hero-lede anim-up">Card neînchis 44 înseamnă: sesiunea anterioară de pe cardul de conducător auto nu a fost încheiată corespunzător — este un eveniment înregistrat pe card și în unitatea de bord, nu o defecțiune a aparatului.</p><div class="bento--hero"><div class="hero-card"><div class="eyebrow">Nivel de gravitate</div><div class="big">Scăzut–Mediu</div><p>Confirmați, apoi verificați dacă ultima sesiune a fost într-adevăr încheiată.</p></div><div class="hero-card hero-card--blue"><div class="eyebrow">Ce reprezintă</div><div class="big">Eveniment, nu defecțiune</div><p>Este înregistrat în memoria cardului și a unității de bord; nu este o eroare a aparatului.</p></div><div class="hero-card"><div class="eyebrow">Cod Stoneridge</div><div class="big">044</div><p>Slotul 1, al conducătorului auto. Slotul 2, al celui de-al doilea conducător auto, afișează același eveniment drept 062.</p></div></div>
+</div>
+</header>
+<main id="main-content"><section class="band"><div class="container art-body"><div class="eyebrow anim-up">Ce înseamnă</div><h2 class="h2-grad anim-up">Ce înseamnă acest cod</h2>
+<p>De fiecare dată când se introduce un card de conducător auto, tahograful trebuie să încheie corect sesiunea anterioară înainte de a începe una nouă. <strong>Card neînchis 44</strong> înseamnă că acest lucru nu s-a întâmplat: ultima sesiune înregistrată pe card nu a fost încheiată corespunzător de tahograful utilizat anterior.</p>
+<p>Este un <strong>eveniment</strong>, nu o defecțiune — tahograful utilizat în prezent nu este defect. Evenimentul este înregistrat atât pe cardul de conducător auto, cât și în memoria unității de bord și, prin urmare, apare în datele descărcate din ambele surse. Pe un Stoneridge SE5000, acesta are codul de eveniment <strong>044</strong> atunci când apare în slotul conducătorului auto (slotul 1); același eveniment în slotul celui de-al doilea conducător auto (slotul 2) este înregistrat drept <strong>062</strong>. Pe afișaj apare mesajul „Ultima operațiune nu a fost încheiată corect, slotul 1”.</p>
+<p>Pe un <strong>VDO DTCO 4.1</strong>, mesajul corespunzător este <strong>„!1 Card neînchis xx”</strong>; manualul explică: „Cardul de conducător auto nu a fost scos corespunzător din tahograful anterior. Este posibil ca unele date referitoare la conducătorul auto să nu fi fost salvate.” VDO atribuie acestui eveniment un nivel de gravitate <strong>mediu</strong>, iar Stoneridge unul <strong>scăzut</strong> — de aceea, caseta de mai sus indică <strong>Scăzut–Mediu</strong>, în funcție de producătorul aparatului care a înregistrat evenimentul.</p>
+<div class="callout callout--blue anim-up">
+<div class="callout-title">Nu confundați cu defecțiune card 41</div>
+<p style="margin:0">Card neînchis 44 este un <strong>eveniment</strong> referitor la o sesiune anterioară care nu a fost încheiată corect — cititorul de carduri a funcționat fără probleme. Defecțiune card 41 este un alt mesaj: o defecțiune de comunicare între card și cititor în timp ce cardul este introdus. Dacă pe afișajul dumneavoastră apare „41” în loc de „44”, este vorba despre o defecțiune a cititorului/cardului, nu despre acest eveniment.</p>
+</div><div class="share-box anim-up">
+<h4>Trimiteți codul dispecerului sau atelierului</h4>
+<p>Distribuiți acest cod de eroare și articolul prin e-mail sau WhatsApp.</p>
+<div class="share-btns">
+<a class="share-btn" href="mailto:?subject=Card%20ne%C3%AEnchis%2044%20%E2%80%94%20Cod%20de%20eveniment%2044%20al%20tahografului&amp;body=Bun%C4%83%20ziua%2C%20tahograful%20meu%20afi%C8%99eaz%C4%83%20acest%20mesaj%3A%20Card%20ne%C3%AEnchis%2044%20%E2%80%94%20Cod%20de%20eveniment%2044%20al%20tahografului.%20Aici%20sunt%20detaliile%20%C8%99i%20pa%C8%99ii%20de%20urmat%3A%20https%3A%2F%2Ftagra.app%2Fro%2Farticole%2Ftahograf-defectiune-44-card-neinchis%2F%3Fsrc%3Dshare-44">✉ Trimiteți prin e-mail</a>
+<a class="share-btn" href="https://wa.me/?text=Bun%C4%83%20ziua%2C%20tahograful%20meu%20afi%C8%99eaz%C4%83%20acest%20mesaj%3A%20Card%20ne%C3%AEnchis%2044%20%E2%80%94%20Cod%20de%20eveniment%2044%20al%20tahografului.%20Aici%20sunt%20detaliile%20%C8%99i%20pa%C8%99ii%20de%20urmat%3A%20https%3A%2F%2Ftagra.app%2Fro%2Farticole%2Ftahograf-defectiune-44-card-neinchis%2F%3Fsrc%3Dshare-44" rel="noopener" target="_blank">💬 Trimiteți prin WhatsApp</a>
+</div>
+</div>
+<div class="cta-box cc-top" data-cc="error-44">
+<h3>Ați avut acest avertisment pe tahograf?</h3>
+<p>Verificați ce a înregistrat cardul dumneavoastră de conducător auto: timpii de conducere, odihna și posibilele încălcări. TAGRA TRUCKER citește cardul pe un PC cu Windows — gratuit 30 de zile.</p>
+<a class="cta-btn cc-desk" href="/ro/incercare-gratuita/?audience=driver&amp;src=error-44-top">Descărcați versiunea gratuită de 30 de zile</a>
+<form action="/ro/incercare-gratuita/" class="cc-mail" data-err="Ceva nu a funcționat. Vă rugăm să încercați din nou sau să folosiți" data-errlink="formularul complet" data-ok="Gata! Verificați-vă inboxul și deschideți e-mailul pe PC pentru a descărca TAGRA." data-sending="Se trimite…" data-try="/ro/incercare-gratuita/?audience=driver&amp;src=error-44-mail" method="POST">
+<p class="cc-lead">Sunteți pe telefon? Vă vom trimite pe e-mail linkul de descărcare pentru PC.</p>
+<input name="form-name" type="hidden" value="tagra-trial"/>
+<input name="audience" type="hidden" value="driver"/>
+<input name="language" type="hidden" value="en"/>
+<input class="cc-src" name="source_url" type="hidden" value=""/>
+<input name="src" type="hidden" value=""/>
+<p class="cc-hp" hidden=""><input autocomplete="off" name="bot-field" tabindex="-1"/></p>
+<input aria-label="Prenume" autocomplete="given-name" minlength="2" name="name" placeholder="Prenume" required="" type="text"/>
+<input aria-label="E-mail" autocomplete="email" inputmode="email" name="email" placeholder="E-mail" required="" type="email"/>
+<label class="cc-gdpr"><input name="gdpr_consent" required="" type="checkbox" value="yes"/> <span>Sunt de acord cu prelucrarea datelor mele cu caracter personal în scopul contactării mele cu privire la TAGRA. Detalii în <a href="/ro/confidentialitate/" rel="noopener noreferrer" target="_blank">politica de confidențialitate</a>.</span></label>
+<button class="cta-btn cc-send" type="submit">Trimiteți-mi linkul pe e-mail</button>
+<p aria-live="polite" class="cc-msg" role="status"></p>
+</form>
+<!-- shop-cta:start --><p class="shop-cta-link" style="font-size:14px;margin:2px 0 0;color:rgba(255,255,255,.88);"><a data-cta="article_top" href="https://shop.tagra.app/tagra-software/" rel="noopener" style="color:#fff;text-decoration:underline;">Cumpărați o licență din TAGRA Shop (EN) →</a></p><!-- shop-cta:end --></div>
+</div></section><section class="band band--blue"><div class="container art-body"><div class="info-card anim-up">
+<span class="badge">Ce trebuie să faceți acum</span>
+<h2 class="h2-grad anim-up" style="font-size:28px;">Ce trebuie să faceți acum</h2>
+<p>Nu este nimic de reparat — tahograful pe care îl utilizați acum nu este cauza. Procedați astfel:</p>
+<ol>
+<li><strong>Confirmați mesajul de pe afișaj.</strong></li>
+<li><strong>Verificați dacă ultima sesiune înregistrată a fost într-adevăr încheiată.</strong> Efectuați o „imprimare pentru 24 de ore” sau verificați în software-ul de analiză dacă tura anterioară de pe card are o oră de încheiere.</li>
+<li><strong>Dacă lipsește o activitate,</strong> completați-o printr-o introducere manuală pentru perioada neînregistrată — majoritatea tahografelor solicită automat acest lucru la următoarea introducere a cardului.</li>
+<li><strong>Pe viitor, așteptați întotdeauna</strong> până când tahograful eliberează complet cardul (până la încheierea procedurii de ejectare) înainte de a-l scoate și evitați scoaterea cardului imediat după o întrerupere a alimentării electrice a vehiculului.</li>
+</ol>
+<p style="margin-top:14px;">Dacă apare în mod repetat codul 44 la <strong>același vehicul</strong>, indiferent de conducătorul auto care îl utilizează, cauza reală poate fi mecanismul de blocare al slotului cardului sau alimentarea electrică a tahografului — aceasta este o problemă pentru atelier, nu pentru conducătorul auto.</p>
+<p id="tagra-fleet-note">Dacă același eveniment se repetă la mai multe vehicule sau la mai mulți conducători auto, un <a href="/ro/pentru-firme/">software pentru citirea cardului de conducător auto</a> vi-l afișează într-un singur loc pentru întreaga flotă.</p>
+</div>
+<div class="cta-box">
+<h3>Cardul și unitatea de bord înregistrează acest eveniment — TAGRA îl citește</h3>
+<p>TAGRA nu poate încheia retroactiv o sesiune — doar introducerea manuală lipsă pe card poate face acest lucru. Însă, odată ce evenimentul 44 este înregistrat pe card și în memoria unității de bord, TAGRA îl identifică în datele descărcate de dumneavoastră, cu ora exactă și vehiculul, îl analizează și îl documentează — astfel puteți demonstra că a fost un caz izolat, nu o situație recurentă, iar managerul flotei vede ce conducător auto sau ce vehicul îl declanșează în mod repetat.</p>
+<a class="cta-btn" href="/ro/incercare-gratuita/?audience=driver&amp;src=error-44">Testați gratuit TAGRA TRUCKER timp de 30 de zile →</a>
+<p style="font-size:14px;color:rgba(255,255,255,.7);margin-top:2px;">sau <a href="/ro/pentru-firme/" style="color:#fff;text-decoration:underline;">descoperiți TAGRA pentru flote</a></p>
+<!-- shop-cta:start --><p class="shop-cta-link" style="font-size:14px;margin:2px 0 0;color:rgba(255,255,255,.88);"><a data-cta="article_end" href="https://shop.tagra.app/tagra-software/" rel="noopener" style="color:#fff;text-decoration:underline;">Cumpărați o licență din TAGRA Shop (EN) →</a></p><!-- shop-cta:end --></div>
+</div></section><section class="band"><div class="container art-body"><div class="eyebrow anim-up">De ce se întâmplă</div><h2 class="h2-grad anim-up">De ce se întâmplă</h2>
+<p>Card neînchis 44 apare atunci când un card de conducător auto este scos înainte ca tahograful anterior să fi terminat de înregistrat sfârșitul sesiunii. Cauze frecvente:</p>
+<ul>
+<li>cardul a fost scos <strong>înainte de încheierea procedurii de ejectare</strong>, adesea deoarece contactul era deja oprit când conducătorul auto a coborât;</li>
+<li>o <strong>întrerupere a alimentării electrice</strong> a unității de bord în timp ce cardul era încă introdus — o baterie descărcată, conexiuni slăbite sau o deconectare efectuată în atelier;</li>
+<li>cardul a fost <strong>scos forțat</strong>, de exemplu dintr-un slot al cardului blocat; sau</li>
+<li>o <strong>defecțiune a mecanismului de blocare al slotului cardului</strong>, care împiedică eliberarea corectă chiar și atunci când conducătorul auto așteaptă corespunzător.</li>
+</ul>
+<p>Indiferent de cauză, rezultatul este același: sfârșitul sesiunii anterioare lipsește de pe card. În funcție de ceea ce s-a întâmplat în acel moment, activitatea conducătorului auto din vehiculul anterior poate fi incompletă. Atât cardul, cât și unitatea de bord înregistrează în acest sens un eveniment denumit „Ultima operațiune nu a fost încheiată corect”.</p></div></section><section class="band band--gray"><div class="container art-body"><div class="eyebrow anim-up">Nivel de gravitate</div><h2 class="h2-grad anim-up">Puteți continua deplasarea?</h2>
+<p>Da. Card neînchis 44 nu limitează în niciun fel conducerea — este o înregistrare a ceea ce s-a întâmplat cu sesiunea anterioară, nu o condiție pentru cea actuală.</p>
+<p>La un control în trafic, un inspector vă poate cere explicații despre eveniment dacă îl vede în datele descărcate. Fiți pregătiți să îl explicați și, dacă lipsea o activitate, prezentați introducerea manuală efectuată pentru completarea acesteia. Pentru o flotă, o apariție izolată nu necesită măsuri; dacă același <strong>conducător auto</strong> îl declanșează în mod repetat, de obicei este util să i se reamintească pe scurt să aștepte eliberarea cardului înainte de a-l scoate. Dacă același <strong>vehicul</strong> îl declanșează la conducători auto diferiți, tratați situația ca pe o problemă care necesită intervenția atelierului — verificați slotul cardului și conexiunile electrice.</p></div></section><section class="band"><div class="container art-body"><div class="eyebrow anim-up">Afișat și ca</div><h2 class="h2-grad anim-up">Afișat și ca</h2>
+<p>Conducătorii auto din întreaga Europă văd același eveniment cu texte diferite pe afișaj. Aceștia sunt termenii de căutare efectiv utilizați pentru evenimentul 44:</p>
+<ul class="lang-list">
+<li>Card neînchis 44 <span>— română</span></li>
+<li>Card not closed 44 <span>— engleză</span></li>
+<li>Card not closed 62 <span>— Stoneridge, slotul celui de-al doilea conducător auto</span></li>
+<li>Karta nie zamknięta 44 <span>— polonă</span></li>
+<li>Kártya nincs lezárva 44 <span>— maghiară</span></li>
+<li>Letzter Vorgang nicht korrekt abgeschlossen <span>— denumirea evenimentului în datele descărcate</span></li>
+</ul></div></section><section class="band band--gray"><div class="container art-body"><div class="eyebrow anim-up">Coduri conexe</div><h2 class="h2-grad anim-up">Coduri conexe</h2>
+<div class="related-grid">
+<a class="related-card anim-up" href="/ro/articole/tahograf-defectiune-41-eroare-card/">
+<div class="related-card-eye">Eroare 41</div>
+<h3 class="related-card-title">Defecțiune card 41 — Cod de eroare tahograf 41</h3>
+</a>
+<a class="related-card anim-up" href="/ro/articole/tahograf-defectiune-50-eroare-card/">
+<div class="related-card-eye">Eroare 50</div>
+<h3 class="related-card-title">Eroare card 50 — Cod de eroare tahograf 50</h3>
+</a>
+<a class="related-card anim-up" href="/ro/articole/simboluri-tahograf-digital/">
+<div class="related-card-eye">Prezentare completă</div>
+<h3 class="related-card-title">Simboluri tahograf &amp; coduri de eroare: un ghid pentru conducători auto</h3>
+</a>
+</div></div></section><section class="band"><div class="container art-body"><div class="eyebrow anim-up">Întrebări &amp; răspunsuri</div><h2 class="h2-grad anim-up">Întrebări frecvente</h2>
+<details class="faq-item"><summary>„Card neînchis 44” este o defecțiune pentru care trebuie să solicitați reparații?</summary>
+<div class="faq-answer"><p>Nu. Este un eveniment, nu o defecțiune a aparatului — tahograful pe care îl utilizați nu este defect. Indică faptul că sesiunea anterioară de pe card nu a fost încheiată corect de tahograful utilizat înainte. Confirmați mesajul, verificați dacă ultimei sesiuni îi lipsește ora de încheiere și, dacă este necesar, completați printr-o introducere manuală.</p></div>
+</details>
+<details class="faq-item"><summary>Care este diferența dintre codurile Stoneridge 044 și 062?</summary>
+<div class="faq-answer"><p>Este același eveniment pe un Stoneridge SE5000 — 044 este înregistrat în slotul conducătorului auto (slotul 1), iar 062 în slotul celui de-al doilea conducător auto (slotul 2). Ambele sunt afișate ca „Ultima operațiune nu a fost încheiată corect”, împreună cu numărul slotului respectiv.</p></div>
+</details>
+<details class="faq-item"><summary>Puteți continua deplasarea cu evenimentul „Card neînchis 44”?</summary>
+<div class="faq-answer"><p>Da, fără restricții. Acesta nu afectează sesiunea actuală. Fiți pregătiți să explicați evenimentul la un control și să prezentați eventuala introducere manuală efectuată ulterior pentru activitatea lipsă din sesiunea anterioară.</p></div>
+</details>
+<details class="faq-item"><summary>Cum puteți preveni reapariția?</summary>
+<div class="faq-answer"><p>Așteptați întotdeauna până când tahograful încheie procedura de ejectare și eliberează complet cardul înainte de a-l scoate și evitați scoaterea cardului imediat după o întrerupere a alimentării electrice a vehiculului. Dacă evenimentul apare în mod repetat la un anumit vehicul, indiferent de conducătorul auto, solicitați verificarea slotului cardului și a alimentării electrice într-un atelier. Consultați și <a href="/ro/articole/tahograf-defectiune-34-extragere-imposibila/">Ejectare imposibilă (cod 34)</a>.</p></div>
+</details>
+</div></section></main>
+<footer class="site-footer" role="contentinfo">
+<div class="footer-inner">
+<div>
+<div class="footer-logo"><img alt="TAGRA" height="20" src="/assets/img/logo-dark.svg?v=20260513zh" width="88" loading="lazy"/></div>
+<p class="footer-desc">Software profesional de analiză a tahografelor. Descărcare date de pe cardul de conducător auto, analiză a tahografelor digitale, durată de conducere în UE și Directiva privind timpul de lucru pentru vehicule grele de marfă. Dezvoltat de Truck Data Technology, s.r.o.</p>
+</div>
+<div class="footer-col">
+<h2 class="footer-col-title">Produs</h2>
+<ul>
+<li><a href="/ro/pentru-firme/">Pentru operatorii de transport rutier</a></li>
+<li><a href="/ro/pentru-conducatori/">Pentru conducătorii auto profesioniști</a></li>
+<li><a href="/ro/autoritati-de-control/">Pentru autoritățile de control (ISCTR)</a></li>
+<li><a href="/ro/cum-functioneaza/">Cum funcționează</a></li>
+<li><a href="/ro/pentru-cine/">Pentru cine</a></li>
+<li><a href="/ro/intrebari-frecvente/">Întrebări frecvente</a></li>
+<li><a href="https://shop.tagra.app/" hreflang="en">TAGRA Shop</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h2 class="footer-col-title">Resurse</h2>
+<ul>
+<li><a href="/ro/articole/">Articole</a></li><li><a href="/ro/manuale/">Manuale</a></li>
+<li><a href="/ro/articole/simboluri-tahograf-digital/">Simboluri tahograf</a></li>
+<li><a href="/ro/integrari/dkv-live/">DKV LIVE®</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h2 class="footer-col-title">Societate</h2>
+<ul>
+<li><a href="/ro/contact/">Contact</a></li>
+<li><a href="https://www.tdt.cz" rel="noopener" target="_blank">Truck Data Technology</a></li>
+<li><a href="/" hreflang="en">English</a></li><li><a href="/de/" hreflang="de">Deutsch</a></li><li><a href="/pl/" hreflang="pl">Polski</a></li><li><a href="/nl/" hreflang="nl">Nederlands</a></li><li><a href="/fr/" hreflang="fr">Français</a></li><li><a href="/it/" hreflang="it">Italiano</a></li><li><a href="/es/" hreflang="es">Español</a></li><li><a href="/el/" hreflang="el">Ελληνικά</a></li><li><a href="/hu/" hreflang="hu">Magyar</a></li><li><a aria-current="page" class="active" href="/ro/" hreflang="ro">Română</a></li><li><a href="https://www.tdt.cz/" hreflang="cs" rel="noopener" target="_blank">Čeština</a></li><li><a href="https://www.tdt.sk/" hreflang="sk" rel="noopener" target="_blank">Slovenčina</a></li></ul>
+</div>
+</div>
+<div class="footer-bottom">
+<span>© 2026 Truck Data Technology, s.r.o. Toate drepturile rezervate.</span>
+<span><a href="/ro/contact/">Contact</a> · <a href="https://www.tdt.cz" rel="noopener" target="_blank">tdt.cz</a> · <a href="/ro/confidentialitate/">Confidențialitate &amp; cookie-uri</a></span>
+</div>
+</footer>
+<script>(function(){var bar=document.getElementById('scroll-progress');if(bar)window.addEventListener('scroll',function(){var t=document.documentElement.scrollTop||document.body.scrollTop;var h=document.documentElement.scrollHeight-document.documentElement.clientHeight;bar.style.width=(t/h*100)+'%';},{passive:true});var toggle=document.getElementById('nav-toggle'),links=document.getElementById('nav-links');if(toggle&&links)toggle.addEventListener('click',function(){var o=links.classList.toggle('open');toggle.setAttribute('aria-expanded',o);});})();</script><script>
+/* INTERSECTION OBSERVER – ANIMATIONS */
+if ('IntersectionObserver' in window) {
+  var io = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) {
+      if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.anim-up, .fly-left, .fly-right').forEach(function(el) { io.observe(el); });
+} else {
+  document.querySelectorAll('.anim-up, .fly-left, .fly-right').forEach(function(el) { el.classList.add('on'); });
+}
+</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"„Card neînchis 44” este o defecțiune pentru care trebuie să solicitați reparații?","acceptedAnswer":{"@type":"Answer","text":"Nu. Este un eveniment, nu o defecțiune a aparatului — tahograful pe care îl utilizați nu este defect. Indică faptul că sesiunea anterioară de pe card nu a fost încheiată corect de tahograful utilizat înainte. Confirmați mesajul, verificați dacă ultimei sesiuni îi lipsește ora de încheiere și, dacă este necesar, completați printr-o introducere manuală."}},{"@type":"Question","name":"Care este diferența dintre codurile Stoneridge 044 și 062?","acceptedAnswer":{"@type":"Answer","text":"Este același eveniment pe un Stoneridge SE5000 — 044 este înregistrat în slotul conducătorului auto (slotul 1), iar 062 în slotul celui de-al doilea conducător auto (slotul 2). Ambele sunt afișate ca „Ultima operațiune nu a fost încheiată corect”, împreună cu numărul slotului respectiv."}},{"@type":"Question","name":"Puteți continua deplasarea cu evenimentul „Card neînchis 44”?","acceptedAnswer":{"@type":"Answer","text":"Da, fără restricții. Acesta nu afectează sesiunea actuală. Fiți pregătiți să explicați evenimentul la un control și să prezentați eventuala introducere manuală efectuată ulterior pentru activitatea lipsă din sesiunea anterioară."}},{"@type":"Question","name":"Cum puteți preveni reapariția?","acceptedAnswer":{"@type":"Answer","text":"Așteptați întotdeauna până când tahograful încheie procedura de ejectare și eliberează complet cardul înainte de a-l scoate și evitați scoaterea cardului imediat după o întrerupere a alimentării electrice a vehiculului. Dacă evenimentul apare în mod repetat la un anumit vehicul, indiferent de conducătorul auto, solicitați verificarea slotului cardului și a alimentării electrice într-un atelier. Consultați și Ejectare imposibilă (cod 34) ."}}]}</script>
+</body>
+</html>
