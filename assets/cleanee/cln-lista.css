@@ -1,0 +1,949 @@
+/* =====================================================================
+   CLEANEE – styly hlavičky, menu a náhledu košíku (cleanee.cz, BSSHOP 0780)
+   Načítá se z Horní informační lišty (HeaderInfoPanel) v BSADMIN:
+     <link rel="stylesheet" href="https://tagra.app/assets/cleanee/cln-lista.css?v=…">
+   Soubor se nikdy nepřepisuje pod stejným ?v= – při změně zvednout ?v= v liště.
+   Vzor: assets/truckmall/tmx-lista-cz.css (TRUCKMALL), přebarveno na paletu CLEANEE v12.
+   v1 · 19. 11. 2026
+   ===================================================================== */
+
+:root {
+  --cln-ink: #1c2d36;
+  --cln-ink-soft: #5b6b74;
+  --cln-blue-dark: #0c6a9e;
+  --cln-blue: #0f78b5;
+  --cln-blue-light: #2a93cc;
+  --cln-aqua: #5db6e7;
+  --cln-sky: #eef6fb;
+  --cln-sky-2: #e1eef7;
+  --cln-line: #d7e7f2;
+  --cln-green: #7fae3b;
+  --cln-green-cta: #5f8027;
+  --cln-green-soft: #a9c96b;
+  --cln-stone: #eef2ea;
+  --cln-cream: #f4efe6;
+}
+
+/* ---------------------------------------------------------------------
+   1) Horní informační lišta
+   Panel slouží hlavně jako nosič odkazů na tento soubor a skript.
+   Když v něm není textová lišta .cln-tb, celý panel se skryje.
+   --------------------------------------------------------------------- */
+#HeaderInfoPanel:not(:has(.cln-tb)) {
+  display: none !important;
+}
+#HeaderInfoPanel {
+  height: auto !important;
+  max-height: none !important;
+  overflow: visible !important;
+  padding: 0 !important;
+  background: var(--cln-stone) !important;
+  border-bottom: 1px solid rgba(12, 106, 158, 0.1);
+}
+#HeaderInfoPanel .userContent {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+#HeaderInfoPanel a.close > span {
+  display: none !important;
+}
+#HeaderInfoPanel a.close {
+  position: absolute !important;
+  top: 50% !important;
+  right: 14px !important;
+  width: 26px !important;
+  height: 26px !important;
+  margin-top: -13px !important;
+  border-radius: 50% !important;
+  background: transparent
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230c6a9e' stroke-width='2.4' stroke-linecap='round'%3E%3Cpath d='M7 7l10 10M17 7L7 17'/%3E%3C/svg%3E")
+    center/14px no-repeat !important;
+  opacity: 0.6;
+  transition: opacity 0.15s, background-color 0.15s;
+}
+#HeaderInfoPanel a.close:hover {
+  opacity: 1;
+  background-color: rgba(12, 106, 158, 0.08) !important;
+}
+.cln-tb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 4px 18px;
+  width: 100%;
+  margin: 0;
+  padding: 8px 48px;
+  box-sizing: border-box;
+  color: var(--cln-blue-dark);
+  font-size: 13.5px;
+  line-height: 1.35;
+  text-align: center;
+}
+.cln-tb__i {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+.cln-tb__i::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--cln-green);
+  flex: 0 0 7px;
+}
+.cln-tb strong {
+  font-weight: 700;
+}
+.cln-tb a {
+  color: var(--cln-blue-dark) !important;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+@media (max-width: 720px) {
+  .cln-tb {
+    font-size: 12.5px;
+    padding: 7px 40px 7px 12px;
+    gap: 2px 12px;
+  }
+  .cln-tb__i--d {
+    display: none;
+  }
+}
+
+/* ---------------------------------------------------------------------
+   2) Hlavička – desktop
+   --------------------------------------------------------------------- */
+@media (min-width: 1025px) {
+  /* Kategorie: místo šedé #465052 klidný modrý přechod z loga */
+  #MenuCategories,
+  #MenuCategories .pivot {
+    background: linear-gradient(
+      100deg,
+      var(--cln-blue-dark) 0%,
+      var(--cln-blue) 45%,
+      var(--cln-blue-light) 100%
+    ) !important;
+  }
+  #MenuCategories .popup,
+  #MenuCategories ul.root {
+    background: transparent !important;
+  }
+  #MenuCategories ul.root > li > a,
+  #MenuCategories ul.root > li > a.name,
+  #MenuCategories ul.root > li > a span {
+    color: #fff !important;
+    letter-spacing: 0.02em;
+    transition: background-color 0.15s, box-shadow 0.15s;
+  }
+  #MenuCategories ul.root > li:hover > a.name,
+  #MenuCategories ul.root > li > a:hover,
+  #MenuCategories ul.root > li > a:focus-visible {
+    background: rgba(255, 255, 255, 0.12) !important;
+    box-shadow: inset 0 -3px 0 var(--cln-green-soft);
+  }
+  /* „Pro firmy" – zelená CTA pilulka značky místo plné zelené s černým textem */
+  #MenuCategories ul.root > li[data-cat-id="50"] {
+    background: transparent !important;
+    display: flex;
+    align-items: center;
+  }
+  #MenuCategories ul.root > li[data-cat-id="50"] > a.name {
+    height: auto !important;
+    margin: 0 4px;
+    padding: 7px 18px !important;
+    border-radius: 999px;
+    background: linear-gradient(135deg, var(--cln-green) 0%, var(--cln-green-cta) 100%) !important;
+    box-shadow: 0 4px 12px rgba(31, 60, 10, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+    line-height: 1.2 !important;
+  }
+  #MenuCategories ul.root > li[data-cat-id="50"] > a.name:hover {
+    background: linear-gradient(140deg, #8cbb45 0%, #4e6b20 100%) !important;
+    box-shadow: 0 6px 16px rgba(31, 60, 10, 0.32);
+  }
+  #MenuCategories ul.root > li[data-cat-id="50"] > a.name span {
+    color: #fff !important;
+  }
+
+  /* Vyhledávání */
+  #SimpleSearch .dcQuery {
+    border-radius: 12px !important;
+    border: 1px solid rgba(12, 106, 158, 0.22) !important;
+    background: #f6fafd !important;
+    overflow: hidden;
+    transition: border-color 0.15s, box-shadow 0.15s, background-color 0.15s;
+  }
+  #SimpleSearch input.query {
+    border: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    outline: 0;
+  }
+  #SimpleSearch .dcQuery:focus-within {
+    border-color: var(--cln-blue) !important;
+    background: #fff !important;
+    box-shadow: 0 0 0 3px rgba(15, 120, 181, 0.15);
+  }
+
+  /* Kontakty + fotka (Verča) */
+  #Contacts {
+    position: relative;
+    padding-left: 62px !important;
+  }
+  #Contacts::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 52px;
+    height: 52px;
+    margin-top: -26px;
+    border-radius: 50%;
+    background: #fff url("data:image/webp;base64,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") center/cover no-repeat;
+    box-shadow: 0 0 0 2px #fff, 0 0 0 3.5px rgba(127, 174, 59, 0.55), 0 4px 12px rgba(12, 106, 158, 0.18);
+    pointer-events: none;
+  }
+  #Contacts::after {
+    content: "";
+    position: absolute;
+    left: 40px;
+    top: 50%;
+    margin-top: 13px;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background: var(--cln-green);
+    box-shadow: 0 0 0 2px #fff;
+    pointer-events: none;
+  }
+  #Contacts a.phone,
+  #Contacts a.email,
+  #Contacts a.contacts {
+    color: var(--cln-blue-dark) !important;
+    transition: color 0.15s;
+  }
+  #Contacts a.phone {
+    font-weight: 700 !important;
+  }
+  #Contacts a.email {
+    font-weight: 600 !important;
+  }
+  #Contacts a:hover {
+    color: var(--cln-blue-light) !important;
+    text-decoration: underline;
+  }
+  #LoginUser a,
+  #LoginUser a span {
+    color: var(--cln-blue-dark) !important;
+    font-weight: 600;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1399px) {
+  #Contacts {
+    padding-left: 48px !important;
+  }
+  #Contacts::before {
+    width: 40px;
+    height: 40px;
+    margin-top: -20px;
+  }
+  #Contacts::after {
+    left: 30px;
+    margin-top: 9px;
+    width: 9px;
+    height: 9px;
+  }
+}
+
+/* Hlavička – tablet a mobil: tlačítko menu a rozbalené menu v barvě značky */
+@media (max-width: 1024px) {
+  #MenuCategories a.button.toggle {
+    border-radius: 10px;
+  }
+  #MenuCategories .popup,
+  #MenuCategories a.button.toggle,
+  #MenuCategories ul.root,
+  #MenuCategories ul.root > li,
+  #MenuCategories ul.root > li > a {
+    background-color: var(--cln-blue) !important;
+  }
+  #MenuCategories ul.root > li[data-cat-id="50"],
+  #MenuCategories ul.root > li[data-cat-id="50"] > a {
+    background-color: var(--cln-green-cta) !important;
+  }
+  #MenuCategories ul.root > li[data-cat-id="50"] > a,
+  #MenuCategories ul.root > li[data-cat-id="50"] > a span {
+    color: #fff !important;
+  }
+}
+
+/* ---------------------------------------------------------------------
+   3) Náhled košíku po přidání zboží (BasketResultDialog)
+   Desktop: karta uprostřed. Mobil: panel vyjíždějící zdola.
+   --------------------------------------------------------------------- */
+@keyframes clnBrdIn {
+  0% { opacity: 0; transform: translate(-50%, -46%); }
+  to { opacity: 1; transform: translate(-50%, -50%); }
+}
+@keyframes clnBrdUp {
+  0% { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
+#BasketResultDialog > .top .close span,
+#BasketResultDialog > .top .title:not(.count) {
+  display: none !important;
+}
+#BasketResultDialog ~ .bs-dialog-overlay,
+body .bs-dialog-overlay:has(+ #BasketResultDialog) {
+  background: rgba(12, 52, 78, 0.42) !important;
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+}
+#BasketResultDialog,
+#BasketResultDialog > .top .close {
+  top: 50% !important;
+  padding: 0 !important;
+  border: 0 !important;
+}
+#BasketResultDialog {
+  box-sizing: border-box !important;
+  width: 560px !important;
+  max-width: calc(100vw - 32px) !important;
+  max-height: calc(100vh - 48px) !important;
+  max-height: calc(100dvh - 48px) !important;
+  left: 50% !important;
+  right: auto !important;
+  bottom: auto !important;
+  transform: translate(-50%, -50%) !important;
+  border-radius: 22px !important;
+  background: #fff !important;
+  box-shadow: 0 24px 60px rgba(12, 52, 78, 0.26), 0 2px 8px rgba(12, 52, 78, 0.08) !important;
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
+  overscroll-behavior: contain;
+  font-family: inherit;
+  color: var(--cln-ink);
+  animation: clnBrdIn 0.22s ease-out;
+}
+#BasketResultDialog * {
+  box-sizing: border-box;
+}
+#BasketResultDialog > .top {
+  display: flex !important;
+  align-items: center;
+  gap: 12px;
+  position: relative;
+  height: auto !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 18px 64px 16px 22px !important;
+  background: linear-gradient(180deg, #f7fafc 0%, var(--cln-stone) 100%) !important;
+  border: 0 !important;
+  border-bottom: 1px solid #e3e9de !important;
+  border-radius: 22px 22px 0 0 !important;
+}
+#BasketResultDialog > .top .title.count {
+  display: block !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  font-size: 17px !important;
+  line-height: 1.3 !important;
+  font-weight: 700 !important;
+  color: var(--cln-ink) !important;
+  text-transform: none !important;
+  letter-spacing: 0 !important;
+  background: none !important;
+}
+#BasketResultDialog > .top::before {
+  content: "";
+  flex: 0 0 30px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--cln-green-cta)
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23fff' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5'/%3E%3C/svg%3E")
+    center/18px no-repeat;
+  box-shadow: 0 4px 10px rgba(95, 128, 39, 0.35);
+}
+#BasketResultDialog > .top .close {
+  position: absolute !important;
+  right: 16px !important;
+  left: auto !important;
+  width: 36px !important;
+  height: 36px !important;
+  margin: -18px 0 0 !important;
+  border-radius: 50% !important;
+  background: #fff
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231c2d36' stroke-width='2.4' stroke-linecap='round'%3E%3Cpath d='M6 6l12 12M18 6L6 18'/%3E%3C/svg%3E")
+    center/16px no-repeat !important;
+  box-shadow: 0 1px 3px rgba(12, 52, 78, 0.18) !important;
+  cursor: pointer;
+  transition: transform 0.15s;
+}
+#BasketResultDialog > .top .close:hover {
+  transform: scale(1.06);
+}
+#BasketResultDialog > .top .close:focus {
+  outline: 0 !important;
+}
+#BasketResultDialog > .top .close:focus-visible {
+  outline: 2px solid var(--cln-aqua) !important;
+  outline-offset: 2px;
+}
+#BasketResultDialog > .content {
+  display: grid !important;
+  grid-template-columns: 108px minmax(0, 1fr) !important;
+  grid-template-rows: none !important;
+  grid-template-areas: none !important;
+  column-gap: 18px;
+  row-gap: 6px;
+  align-items: start;
+  margin: 0 !important;
+  padding: 20px 22px 0 !important;
+  border: 0 !important;
+  background: none !important;
+}
+#BasketResultDialog > .content > * {
+  order: 0 !important;
+}
+#BasketResultDialog > .content > dc-con:first-child {
+  grid-column: 1 !important;
+  grid-row: 1 / span 3 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  width: auto !important;
+}
+#BasketResultDialog > .content .image {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  width: 108px !important;
+  height: 108px !important;
+  min-width: 0 !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 10px !important;
+  border: 1px solid var(--cln-line);
+  border-radius: 16px;
+  background: #f6fafd;
+  overflow: hidden;
+}
+#BasketResultDialog > .content .image img {
+  max-width: 100% !important;
+  max-height: 100% !important;
+  width: auto !important;
+  height: auto !important;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+}
+#BasketResultDialog > .content .mainProductName {
+  grid-column: 2 !important;
+  grid-row: 1 !important;
+  align-self: end;
+  margin: 2px 0 0 !important;
+  padding: 0 !important;
+  font-size: 16px !important;
+  line-height: 1.35 !important;
+  font-weight: 700 !important;
+  color: var(--cln-ink) !important;
+  text-transform: none !important;
+}
+#BasketResultDialog .buttons .button span,
+#BasketResultDialog > .content .mainProductName span {
+  font: inherit !important;
+  color: inherit !important;
+}
+#BasketResultDialog .availabilityCaption,
+#BasketResultDialog > .content .image .overlay,
+#BasketResultDialog > .content > .price {
+  display: none !important;
+}
+#BasketResultDialog > .content > dc-con:has(.availabilityCaption) {
+  grid-column: 2 !important;
+  grid-row: 2 !important;
+  display: flex !important;
+  align-items: center;
+  gap: 6px;
+  margin: 0 !important;
+  padding: 0 !important;
+  font-size: 13px;
+}
+#BasketResultDialog .AvailabilityView .label {
+  display: inline-block !important;
+  padding: 3px 10px !important;
+  border-radius: 999px !important;
+  background: var(--cln-stone) !important;
+  color: #4e6b20 !important;
+  font-size: 12.5px !important;
+  font-weight: 700 !important;
+  line-height: 1.4 !important;
+}
+#BasketResultDialog .addedPrices {
+  grid-column: 2 !important;
+  grid-row: 3 !important;
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: wrap;
+  justify-content: flex-start !important;
+  align-items: baseline;
+  column-gap: 8px;
+  row-gap: 0;
+  margin: 4px 0 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  background: none !important;
+  text-align: left !important;
+}
+#BasketResultDialog .addedPrices .addedItemsCaption,
+#BasketResultDialog .buttons .button::after,
+#BasketResultDialog .buttons .button::before {
+  display: none !important;
+}
+#BasketResultDialog .addedPrices .addedItemsCount {
+  order: -1;
+  flex-basis: 100%;
+  display: block !important;
+  margin: 0 !important;
+  font-size: 13px !important;
+  color: var(--cln-ink-soft) !important;
+}
+#BasketResultDialog .addedPrices .price {
+  display: inline-block !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  float: none !important;
+}
+#BasketResultDialog .addedPrices .price.vat .value {
+  font-size: 24px !important;
+  line-height: 1.2 !important;
+  font-weight: 800 !important;
+  color: var(--cln-ink) !important;
+  letter-spacing: -0.01em;
+}
+#BasketResultDialog .addedPrices .price.novat,
+#BasketResultDialog .addedPrices .price.novat * {
+  font-size: 13px !important;
+  font-weight: 400 !important;
+  color: var(--cln-ink-soft) !important;
+}
+#BasketResultDialog .totalPrices {
+  grid-column: 1 / -1 !important;
+  grid-row: 4 !important;
+  margin: 16px 0 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  background: none !important;
+}
+#BasketResultDialog .basketCompoundInfo {
+  display: flex !important;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4px;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 12px 14px 12px 44px !important;
+  border: 0 !important;
+  border-radius: 14px;
+  background: var(--cln-sky)
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230c6a9e' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='9' cy='20' r='1.4'/%3E%3Ccircle cx='18' cy='20' r='1.4'/%3E%3Cpath d='M2.5 3.5h2.6l2.5 12h11.2l2.2-8.5H6.2'/%3E%3C/svg%3E")
+    14px center/20px no-repeat;
+  color: var(--cln-blue-dark) !important;
+  font-size: 14px !important;
+  line-height: 1.4 !important;
+  text-align: left !important;
+  justify-content: flex-start !important;
+}
+#BasketResultDialog .basketCompoundInfo .price,
+#BasketResultDialog .basketCompoundInfo .price .value {
+  display: inline !important;
+  margin: 0 !important;
+  font-size: 14px !important;
+  font-weight: 800 !important;
+  color: var(--cln-ink) !important;
+}
+#BasketResultDialog .basketCompoundInfo .totalUniqueItemsWithSuffix {
+  font-weight: 700;
+}
+/* Doplněk ze skriptu: kolik zbývá do dopravy zdarma */
+#BasketResultDialog .cln-free {
+  grid-column: 1 / -1 !important;
+  grid-row: 5 !important;
+  margin: 10px 0 0 !important;
+  padding: 0 2px;
+  font-size: 13.5px;
+  line-height: 1.4;
+  color: var(--cln-ink);
+}
+#BasketResultDialog .cln-free b {
+  color: var(--cln-green-cta);
+}
+#BasketResultDialog .cln-free__bar {
+  height: 6px;
+  margin-top: 7px;
+  border-radius: 6px;
+  background: #e6ece1;
+  overflow: hidden;
+}
+#BasketResultDialog .cln-free__bar i {
+  display: block;
+  height: 100%;
+  border-radius: 6px;
+  background: linear-gradient(90deg, var(--cln-green-soft), var(--cln-green-cta));
+  transition: width 0.5s ease-out;
+}
+#BasketResultDialog .buttons {
+  grid-column: 1 / -1 !important;
+  grid-row: 7 !important;
+  display: flex !important;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 16px 0 0 !important;
+  padding: 0 0 20px !important;
+  border: 0 !important;
+  background: #fff;
+}
+#BasketResultDialog .buttons .button {
+  flex: 1 1 200px;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  min-height: 50px !important;
+  height: auto !important;
+  width: auto !important;
+  margin: 0 !important;
+  padding: 12px 18px !important;
+  float: none !important;
+  border-radius: 999px !important;
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  line-height: 1.2 !important;
+  text-transform: none !important;
+  letter-spacing: 0 !important;
+  text-align: center;
+  text-decoration: none !important;
+  white-space: normal !important;
+  transition: box-shadow 0.2s, transform 0.15s, background 0.2s;
+}
+#BasketResultDialog .buttons .button.continue {
+  background: #fff !important;
+  background-image: none !important;
+  border: 1.5px solid rgba(12, 106, 158, 0.35) !important;
+  color: var(--cln-blue-dark) !important;
+  box-shadow: none !important;
+}
+#BasketResultDialog .buttons .button.continue:hover {
+  background: #f6fafd !important;
+  border-color: var(--cln-blue-dark) !important;
+}
+#BasketResultDialog .buttons .button.goToCart {
+  order: 2;
+  background: linear-gradient(135deg, var(--cln-green) 0%, var(--cln-green-cta) 100%) !important;
+  border: 0 !important;
+  color: #fff !important;
+  box-shadow: 0 8px 20px rgba(95, 128, 39, 0.32), inset 0 1px 0 rgba(255, 255, 255, 0.25) !important;
+}
+#BasketResultDialog .buttons .button.goToCart:hover {
+  background: linear-gradient(140deg, #8cbb45 0%, #4e6b20 100%) !important;
+  transform: translateY(-1px);
+}
+#BasketResultDialog .buttons .button:focus-visible {
+  outline: 3px solid var(--cln-blue) !important;
+  outline-offset: 2px;
+}
+#BasketResultDialog .subProducts:empty,
+#BasketResultDialog .subProducts:has(> bs-empty:only-child) {
+  display: none !important;
+}
+#BasketResultDialog .subProducts {
+  grid-column: 1 / -1 !important;
+  grid-row: 6 !important;
+  margin: 8px 0 0 !important;
+}
+#BasketResultDialog .dialogProducts {
+  grid-column: 1 / -1 !important;
+  grid-row: 8 !important;
+  margin: 0 -22px !important;
+  padding: 18px 22px 22px !important;
+  border-top: 1px solid #e3e9de !important;
+  background: #f8faf6 !important;
+}
+#BasketResultDialog .BasketDialogProducts,
+#BasketResultDialog .BasketDialogProducts > .title {
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  background: none !important;
+}
+#BasketResultDialog .BasketDialogProducts > .title {
+  margin: 0 0 12px !important;
+  text-align: left !important;
+}
+#BasketResultDialog .BasketDialogProducts > .title span {
+  display: inline !important;
+  padding: 0 !important;
+  background: none !important;
+  -webkit-background-clip: border-box !important;
+  background-clip: border-box !important;
+  -webkit-text-fill-color: var(--cln-ink) !important;
+  color: var(--cln-ink) !important;
+  font-size: 15px !important;
+  font-weight: 800 !important;
+  text-transform: none !important;
+  letter-spacing: 0 !important;
+}
+#BasketResultDialog .BasketDialogProducts .items {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+#BasketResultDialog .BasketDialogProduct .button.buy::after,
+#BasketResultDialog .BasketDialogProduct .button.buy::before,
+#BasketResultDialog .BasketDialogProducts .separator {
+  display: none !important;
+}
+#BasketResultDialog .BasketDialogProducts .productHolder {
+  width: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  float: none !important;
+  border: 0 !important;
+}
+#BasketResultDialog .BasketDialogProduct {
+  display: flex !important;
+  flex-direction: column;
+  height: 100%;
+  margin: 0 !important;
+  padding: 10px !important;
+  border: 1px solid #e3e9de !important;
+  border-radius: 14px !important;
+  background: #fff !important;
+  text-align: left !important;
+}
+#BasketResultDialog .BasketDialogProduct .image {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  width: auto !important;
+  height: 84px !important;
+  margin: 0 0 8px !important;
+}
+#BasketResultDialog .BasketDialogProduct .image img {
+  max-width: 100% !important;
+  max-height: 84px !important;
+  width: auto !important;
+  height: auto !important;
+  object-fit: contain;
+}
+#BasketResultDialog .BasketDialogProduct h2 {
+  flex: 1;
+  min-height: 0 !important;
+  height: auto !important;
+  margin: 0 0 6px !important;
+  padding: 0 !important;
+  font-size: 13px !important;
+  line-height: 1.3 !important;
+  font-weight: 600 !important;
+  text-align: left !important;
+}
+#BasketResultDialog .BasketDialogProduct h2 a,
+#BasketResultDialog .BasketDialogProduct h2 span {
+  color: var(--cln-ink) !important;
+  text-decoration: none !important;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+#BasketResultDialog .BasketDialogProduct > dc-con {
+  display: flex !important;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 6px;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+#BasketResultDialog .BasketDialogProduct .price,
+#BasketResultDialog .BasketDialogProduct .price .value {
+  margin: 0 !important;
+  font-size: 15px !important;
+  font-weight: 800 !important;
+  color: var(--cln-ink) !important;
+  text-align: left !important;
+}
+#BasketResultDialog .BasketDialogProduct .AddToCartView {
+  margin: 0 !important;
+}
+#BasketResultDialog .BasketDialogProduct .button.buy {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  width: 100% !important;
+  min-height: 36px !important;
+  height: auto !important;
+  margin: 0 !important;
+  padding: 8px 10px !important;
+  border-radius: 999px !important;
+  font-size: 12.5px !important;
+  font-weight: 700 !important;
+  text-transform: none !important;
+  letter-spacing: 0 !important;
+  box-shadow: none !important;
+}
+@media (max-width: 640px) {
+  #BasketResultDialog {
+    width: 100% !important;
+    max-width: 100% !important;
+    left: 0 !important;
+    right: 0 !important;
+    top: auto !important;
+    bottom: 0 !important;
+    transform: none !important;
+    max-height: 92vh !important;
+    max-height: 92dvh !important;
+    border-radius: 22px 22px 0 0 !important;
+    animation: clnBrdUp 0.25s ease-out;
+    padding-bottom: env(safe-area-inset-bottom) !important;
+  }
+  #BasketResultDialog > .top {
+    position: sticky !important;
+    top: 0;
+    z-index: 3;
+    padding: 16px 60px 14px 18px !important;
+  }
+  #BasketResultDialog > .top::after {
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: 50%;
+    width: 40px;
+    height: 4px;
+    margin-left: -20px;
+    border-radius: 4px;
+    background: #cfd8cc;
+  }
+  #BasketResultDialog > .top .title.count {
+    font-size: 16px !important;
+  }
+  #BasketResultDialog > .content {
+    grid-template-columns: 84px minmax(0, 1fr) !important;
+    column-gap: 14px;
+    padding: 16px 18px 0 !important;
+  }
+  #BasketResultDialog > .content .image {
+    width: 84px !important;
+    height: 84px !important;
+    padding: 8px !important;
+    border-radius: 14px;
+  }
+  #BasketResultDialog > .content .mainProductName {
+    font-size: 15px !important;
+  }
+  #BasketResultDialog .addedPrices .price.vat .value {
+    font-size: 21px !important;
+  }
+  #BasketResultDialog .totalPrices {
+    display: block !important;
+    margin-top: 12px !important;
+  }
+  #BasketResultDialog .buttons {
+    position: sticky;
+    bottom: 0;
+    z-index: 3;
+    flex-direction: column;
+    gap: 10px;
+    margin: 14px -18px 0 !important;
+    padding: 12px 18px calc(14px + env(safe-area-inset-bottom)) !important;
+    box-shadow: 0 -8px 18px rgba(12, 52, 78, 0.08);
+  }
+  #BasketResultDialog .buttons .button {
+    flex: 0 0 auto;
+    width: 100% !important;
+    min-height: 52px !important;
+  }
+  #BasketResultDialog .buttons .button.goToCart {
+    order: -1;
+  }
+  #BasketResultDialog .dialogProducts {
+    margin: 0 -18px !important;
+    padding: 16px 18px 18px !important;
+  }
+  #BasketResultDialog .dialogProducts:has(.productHolder) {
+    display: block !important;
+  }
+  #BasketResultDialog .BasketDialogProducts .items {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    gap: 10px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-padding-left: 18px;
+    -webkit-overflow-scrolling: touch;
+    margin: 0 -18px !important;
+    padding: 0 18px 4px !important;
+    scrollbar-width: none;
+  }
+  #BasketResultDialog .BasketDialogProducts .items::-webkit-scrollbar {
+    display: none;
+  }
+  #BasketResultDialog .BasketDialogProducts .productHolder {
+    flex: 0 0 42% !important;
+    max-width: 42% !important;
+    scroll-snap-align: start;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  #BasketResultDialog {
+    animation: none !important;
+  }
+}
+
+/* ---------------------------------------------------------------------
+   4) Košík krok 1 – výzva, když chybí doprava / platba (vkládá skript)
+   --------------------------------------------------------------------- */
+.cln-need {
+  outline: 3px solid #e0a030;
+  outline-offset: 6px;
+  border-radius: 14px;
+}
+.cln-need-msg {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 12px;
+  padding: 10px 14px;
+  border-radius: 12px;
+  background: #fff6e5;
+  border: 1px solid #f0c98a;
+  color: #7a4a00;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 1.3;
+}
+.cln-need-msg::before {
+  content: "\2193";
+  font-size: 18px;
+  line-height: 1;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .cln-need {
+    animation: clnNeed 1s ease 2;
+  }
+}
+@keyframes clnNeed {
+  50% { outline-color: rgba(224, 160, 48, 0.25); }
+}
+
+/* Vynucené barvy (Windows High Contrast) – nic nepřebarvovat */
+@media (forced-colors: active) {
+  #Contacts::before,
+  #Contacts::after,
+  #BasketResultDialog > .top::before {
+    forced-color-adjust: auto;
+    background: none !important;
+    box-shadow: none !important;
+  }
+}
