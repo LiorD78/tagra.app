@@ -1,11 +1,12 @@
 try{!function(w,d){
 /* tmx-chat-cz.js – chat Jarabot (robot Trucky, náhrada Smartsuppu), 20. 11. 2026.
    Kontaktní centrum chat.jarabot.com, účet 118, schránka 775 truckmall.cz → robot TRUCKMALL CZ (Jarabot 6541).
-   Stejný mávající robot jako na tdt.cz / tagra.app (obrázky z tdt.cz). Dokud na stránce běží Smartsupp, nic se nevloží. */
+   Stejný mávající robot jako na tdt.cz / tagra.app (obrázky z tdt.cz).
+   Smartsupp je v BSADMIN vypnutý; dokud ho BS Shop na webu ještě vkládá, skryje se jeho okno (API chat:hide + CSS pojistka). */
 if(w.__tmxChat)return;w.__tmxChat=1;
-function smartsupp(){return !!(w.smartsupp||d.querySelector('script[src*="smartsuppchat.com"]'))}
+function hideSmartsupp(){try{if(typeof w.smartsupp==="function"){w.smartsupp("chat:hide")}}catch(e){}}
 function start(){
-if(smartsupp())return;
+hideSmartsupp();setTimeout(hideSmartsupp,1500);setTimeout(hideSmartsupp,5000);
 var IMG="https://www.tdt.cz/assets/img/chat/";
 var css="#tdt-chat{position:fixed;right:22px;bottom:22px;z-index:2147482000;display:flex;align-items:flex-end;gap:12px;cursor:pointer;border:0;background:none;padding:0;margin:0;font:inherit;font-family:inherit;transition:bottom .35s ease}"
 +"#tdt-chat .lbl{background:#fff;color:#123a6b;font-weight:600;font-size:15px;line-height:1.25;padding:10px 14px;border-radius:16px 16px 4px 16px;box-shadow:0 6px 24px rgba(16,42,80,.18);margin-bottom:10px;text-align:left;opacity:0;transform:translateX(8px);pointer-events:none;transition:opacity .3s ease,transform .3s ease;white-space:nowrap}"
@@ -22,7 +23,7 @@ var css="#tdt-chat{position:fixed;right:22px;bottom:22px;z-index:2147482000;disp
 +"@keyframes tdtBlink{0%,46%,49%,84%,87%,100%{opacity:0}46.6%,48.4%,84.6%,86.4%{opacity:1}}"
 +"@media (hover:hover){#tdt-chat:hover .av{transform:translateY(-3px)}}"
 +"#tdt-chat:focus-visible{outline:3px solid #7cc242;outline-offset:4px;border-radius:40px}"
-+".woot--bubble-holder{display:none!important}"
++".woot--bubble-holder{display:none!important}#chat-application,#chat-application-iframe{display:none!important;visibility:hidden!important}"
 +"@media (max-width:600px){#tdt-chat{right:14px;bottom:14px}#tdt-chat .lbl{display:none}#tdt-chat .av{transform:scale(.86);transform-origin:bottom right}}"
 +"@media (prefers-reduced-motion:reduce){#tdt-chat,#tdt-chat .av,#tdt-chat .lbl{transition:none}#tdt-chat .av .h,#tdt-chat .av .g{animation:none}#tdt-chat .av .e{animation:tdtBlink 6s linear infinite}}";
 var st=d.createElement("style");st.id="tmx-chat-css";st.textContent=css;(d.head||d.documentElement).appendChild(st);
