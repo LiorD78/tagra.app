@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!-- TMX-ANALYTICS START -->
+<meta content="7F7894081BE7FBB245FF03AF8810B22F" name="msvalidate.01"/>
+<!-- Consent Mode v2 defaults (deny) + gtag stub — runs BEFORE gtag.js -->
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent','default',{
+      ad_storage:'denied', ad_user_data:'denied', ad_personalization:'denied',
+      analytics_storage:'denied', functionality_storage:'denied',
+      personalization_storage:'denied', security_storage:'granted',
+      wait_for_update:500
+    });
+    gtag('set','ads_data_redaction',true);
+    gtag('set','url_passthrough',false);
+  </script>
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-92253QFBNX"></script>
+<script>
+    gtag('js', new Date());
+    gtag('config','G-92253QFBNX');
+  </script>
+<!-- Cookie consent banner (self-hosted) + Microsoft Clarity gating -->
+<style>
+    .tmx-cc{position:fixed;left:0;right:0;bottom:0;z-index:2147483000;background:linear-gradient(120deg,var(--blue-dark,#0b2c4a),var(--blue-mid,#134a8e) 62%,var(--blue-light,#1f5fa6));color:#fff;
+      font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+      padding:16px 20px;box-shadow:0 -4px 24px rgba(0,0,0,.18);display:flex;flex-wrap:wrap;
+      align-items:center;gap:14px;justify-content:center}
+    .tmx-cc__txt{flex:1 1 360px;max-width:760px}
+    .tmx-cc__txt a{color:#9ed0f5;text-decoration:underline}
+    .tmx-cc__btns{display:flex;gap:10px;flex:0 0 auto}
+    .tmx-cc__b{appearance:none;border:0;cursor:pointer;font:inherit;font-weight:600;
+      padding:10px 22px;border-radius:99px;transition:filter .15s;color:#fff}
+    .tmx-cc__b:hover{filter:brightness(1.08)}
+    .tmx-cc__b--no{background:rgba(255,255,255,.16)}
+    .tmx-cc__b--yes{background:var(--green-cta,#5C820F)}
+    @media(max-width:640px){.tmx-cc{padding:14px}.tmx-cc__btns{width:100%}.tmx-cc__b{flex:1}}
+  </style>
+<script>
+  (function(){
+    var KEY='tmx-consent-v1', CL='wt18054m0r';
+    function lc(){var l=(document.documentElement.getAttribute('lang')||'en').toLowerCase().split('-')[0];
+      var m={cz:'cs',cs:'cs',sk:'sk',de:'de',pl:'pl',gr:'el',el:'el',hu:'hu',fr:'fr',it:'it',nl:'nl',ro:'ro',es:'es',en:'en'};return m[l]||'en';}
+    var T={
+      hu:{t:'Analitikai sütiket használunk (Google Analytics, Microsoft Clarity, Smartsupp), hogy megértsük a webhely használatát. Csak az Ön hozzájárulásával töltődnek be.',a:'Elfogadom',r:'Elutasítom',p:'Adatvédelem és sütik'},
+      ro:{t:'Utilizăm module cookie de analiză (Google Analytics, Microsoft Clarity, Smartsupp) pentru a înțelege modul de utilizare a site-ului. Se încarcă doar cu consimțământul dumneavoastră.',a:'Accept',r:'Refuz',p:'Confidențialitate și cookie-uri'},
+      nl:{t:'We gebruiken analytische cookies (Google Analytics, Microsoft Clarity, Smartsupp) om het gebruik van de site te begrijpen. Ze laden alleen met uw toestemming.',a:'Accepteren',r:'Weigeren',p:'Privacy en cookies'},
+      fr:{t:'Nous utilisons des cookies analytiques (Google Analytics, Microsoft Clarity, Smartsupp) pour comprendre l’utilisation du site. Ils ne se chargent qu’avec votre consentement.',a:'Accepter',r:'Refuser',p:'Confidentialité et cookies'},
+      it:{t:'Utilizziamo cookie analitici (Google Analytics, Microsoft Clarity, Smartsupp) per capire l’utilizzo del sito. Si caricano solo con il Suo consenso.',a:'Accetta',r:'Rifiuta',p:'Privacy e cookie'},
+      en:{t:'We use analytics cookies (Google Analytics, Microsoft Clarity, Smartsupp) to understand site usage. They load only with your consent.',a:'Accept',r:'Reject',p:'Privacy &amp; cookies'},
+      cs:{t:'Používáme analytické cookies (Google Analytics, Microsoft Clarity, Smartsupp) k pochopení používání webu. Načtou se jen s vaším souhlasem.',a:'Přijmout',r:'Odmítnout',p:'Soukromí a cookies'},
+      sk:{t:'Používame analytické cookies (Google Analytics, Microsoft Clarity, Smartsupp) na pochopenie používania webu. Načítajú sa len s vaším súhlasom.',a:'Prijať',r:'Odmietnuť',p:'Súkromie a cookies'},
+      de:{t:'Wir verwenden Analyse-Cookies (Google Analytics, Microsoft Clarity, Smartsupp), um die Nutzung der Website zu verstehen. Sie werden nur mit Ihrer Einwilligung geladen.',a:'Akzeptieren',r:'Ablehnen',p:'Datenschutz &amp; Cookies'},
+      pl:{t:'Używamy plików cookie do analityki (Google Analytics, Microsoft Clarity, Smartsupp), aby zrozumieć korzystanie z witryny. Ładują się tylko za Twoją zgodą.',a:'Akceptuj',r:'Odrzuć',p:'Prywatność i cookies'},
+      es:{t:'Usamos cookies analíticas (Google Analytics, Microsoft Clarity, Smartsupp) para entender el uso del sitio. Solo se cargan con tu consentimiento.',a:'Aceptar',r:'Rechazar',p:'Privacidad y cookies'},el:{t:'Χρησιμοποιούμε cookies ανάλυσης (Google Analytics, Microsoft Clarity, Smartsupp) για να κατανοήσουμε τη χρήση. Φορτώνονται μόνο με τη συγκατάθεσή σας.',a:'Αποδοχή',r:'Απόρριψη',p:'Απόρρητο &amp; cookies'}
+    };
+    function loadClarity(){if(!CL||window.__tmxCl)return;window.__tmxCl=1;
+      (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+       t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+       y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script",CL);}
+    function grant(){try{localStorage.setItem(KEY,'granted')}catch(e){}
+      gtag('consent','update',{analytics_storage:'granted'});loadClarity();}
+    function deny(){try{localStorage.setItem(KEY,'denied')}catch(e){}}
+    var saved=null;try{saved=localStorage.getItem(KEY)}catch(e){}
+    if(saved==='granted'){grant();return;} if(saved==='denied'){return;}
+    function show(){var tx=T[lc()]||T.en;
+      var b=document.createElement('div');b.className='tmx-cc';b.setAttribute('role','dialog');b.setAttribute('aria-live','polite');
+      b.innerHTML='<div class="tmx-cc__txt">'+tx.t+' <a href="/privacy/">'+tx.p+'</a></div>'+
+        '<div class="tmx-cc__btns"><button type="button" class="tmx-cc__b tmx-cc__b--no">'+tx.r+'</button>'+
+        '<button type="button" class="tmx-cc__b tmx-cc__b--yes">'+tx.a+'</button></div>';
+      document.body.appendChild(b);
+      b.querySelector('.tmx-cc__b--yes').addEventListener('click',function(){grant();b.remove();});
+      b.querySelector('.tmx-cc__b--no').addEventListener('click',function(){deny();b.remove();});}
+    if(document.body)show();else document.addEventListener('DOMContentLoaded',show);
+  })();
+  </script>
+<!-- TMX-ANALYTICS END -->
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Fallo de tarjeta 41: error del tacógrafo | TAGRA</title>
+<meta content="El fallo de tarjeta 41 indica un problema de comunicación con la tarjeta de conductor. Descubre cómo limpiar los contactos y cuándo pedir una de sustitución." name="description"/>
+<link href="https://tagra.app/es/articulos/tacografo-error-41-fallo-de-tarjeta/" rel="canonical"/>
+<link href="https://tagra.app/de/ratgeber/tachograph-fehler-41-kartenstoerung/" hreflang="de" rel="alternate"/><link href="https://tagra.app/el/arthra/tachografos-sfalma-41-vlavi-kartas/" hreflang="el" rel="alternate"/><link href="https://tagra.app/articles/tachograph-error-41-card-fault/" hreflang="en" rel="alternate"/><link href="https://tagra.app/es/articulos/tacografo-error-41-fallo-de-tarjeta/" hreflang="es" rel="alternate"/><link href="https://tagra.app/fr/articles/tachygraphe-erreur-41-anomalie-de-carte/" hreflang="fr" rel="alternate"/><link href="https://tagra.app/hu/cikkek/tachograf-hiba-41-kartyahiba/" hreflang="hu" rel="alternate"/><link href="https://tagra.app/it/articoli/tachigrafo-errore-41-anomalia-carta/" hreflang="it" rel="alternate"/><link href="https://tagra.app/nl/artikelen/tachograaf-storing-41-kaartstoring/" hreflang="nl" rel="alternate"/><link href="https://tagra.app/pl/poradnik/tachograf-blad-41-awaria-karty/" hreflang="pl" rel="alternate"/><link href="https://tagra.app/ro/articole/tahograf-defectiune-41-eroare-card/" hreflang="ro" rel="alternate"/><link href="https://tagra.app/articles/tachograph-error-41-card-fault/" hreflang="x-default" rel="alternate"/>
+<meta content="Fallo de tarjeta 41: error del tacógrafo | TAGRA" property="og:title"/><meta content="El fallo de tarjeta 41 indica un problema de comunicación con la tarjeta de conductor. Descubre cómo limpiar los contactos y cuándo pedir una de sustitución." property="og:description"/>
+<meta content="https://tagra.app/assets/img/hero-poster.jpg" property="og:image"/>
+<meta content="es_ES" property="og:locale"/>
+<meta content="https://tagra.app/es/articulos/tacografo-error-41-fallo-de-tarjeta/" property="og:url"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    a{color:var(--blue-mid);text-decoration:none;}
+    a:hover{color:var(--blue-dark);text-decoration:underline;text-underline-offset:.18em;}
+    p+p{margin-top:14px;}
+    ul,ol{padding-left:22px;}
+    li{margin:6px 0;line-height:1.65;}
+    li::marker{color:var(--blue-mid);}
+    strong{font-weight:700;color:var(--text-strong);}
+    #scroll-progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--green-brand),var(--blue-light));width:0%;z-index:9999;pointer-events:none;}
+.nav-inner{margin:0 auto;padding:0 24px;height:100%;display:flex;align-items:center;justify-content:space-between;gap:24px;}
+    .nav-links{display:flex;align-items:center;gap:4px;list-style:none;}
+    .nav-links a{font-size:15px;font-weight:500;color:var(--text);padding:8px 12px;border-radius:8px;text-decoration:none;transition:background .15s;}
+    .nav-links a:hover{background:var(--bg-apple);color:var(--blue-mid);}
+    .nav-links .nav-cta a{background:var(--green-cta);color:#fff!important;border-radius:99px;padding:8px 18px;font-weight:600;}
+    .nav-links .nav-cta a:hover{background:var(--green-brand);text-decoration:none;}
+    .nav-lang{display:flex;align-items:center;gap:4px;font-size:14px;font-weight:600;}
+    .nav-lang a{padding:5px 8px;border-radius:6px;color:var(--text2);text-decoration:none;transition:background .15s;}
+    .nav-lang a:hover,.nav-lang a.active{background:var(--bg-apple);color:var(--blue-mid);}
+    .nav-lang span{color:var(--border);}
+    .nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:8px;}
+    .nav-toggle span{display:block;width:22px;height:2px;background:var(--text);margin:5px 0;border-radius:2px;}
+    @media(max-width:900px){.nav-links{display:none;}.nav-toggle{display:block;}.nav-links.open{display:flex;flex-direction:column;align-items:flex-start;gap:2px;position:absolute;top:var(--nav-h);left:0;right:0;background:rgba(255,255,255,.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:12px 24px 20px;}}
+    .art-hero{background:linear-gradient(180deg,var(--bg-apple) 0%,#fff 100%);padding:calc(var(--nav-h,64px) + 28px) 0 44px;}
+    .art-wrap{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 24px;}
+    .breadcrumb{font-size:14px;color:var(--text2);margin-bottom:18px;}
+    .breadcrumb a{color:var(--text2);text-decoration:none;}
+    .breadcrumb a:hover{color:var(--blue-mid);}
+    .breadcrumb span{margin:0 5px;color:var(--border);}
+    .eyebrow{font-size:14px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--green-brand);margin-bottom:10px;}
+    .art-title{font-size:38px;line-height:1.15;font-weight:800;margin-bottom:16px;letter-spacing:-.02em;padding-bottom:0.08em;color:var(--blue-dark);}
+    .art-title .grad{background:var(--heading-gradient);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;}
+    @media(max-width:700px){.art-title{font-size:26px;}}
+    .art-meta{font-size:15px;color:var(--text2);padding-bottom:24px;border-bottom:1px solid var(--border);display:flex;gap:20px;flex-wrap:wrap;}
+    .art-body{padding:44px 0 60px;}
+    .art-body h2 {
+      font-size: 36px; font-weight: 800;
+      line-height: 1.1; letter-spacing: 0;
+      text-transform: uppercase;
+      color: var(--blue-mid, #134a8e);
+      background: var(--heading-gradient);
+      -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block; max-width: 100%; margin-bottom: 14px;
+      padding: 0.12em 0.15em 0.08em 0;
+    }
+    .art-body h3{font-size:20px;font-weight:700;color:var(--text-strong);margin:28px 0 10px;}
+    .art-body p{margin-bottom:18px;}
+    .art-body ul,.art-body ol{margin-bottom:20px;}
+    /* CALLOUT */
+    .callout--blue{background:var(--bg-apple);border-left:4px solid var(--blue-mid);}
+    .callout-title{font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.07em;color:var(--blue-mid);margin-bottom:8px;}
+    .callout--green .callout-title{color:var(--green-brand);}
+    /* FAQ */
+    .faq-item{border-top:1px solid var(--border);padding:14px 0;}
+    .faq-item:last-child{border-bottom:1px solid var(--border);}
+    .faq-item summary{list-style:none;cursor:pointer;font-weight:700;font-size:18px;line-height:1.4;padding-right:32px;position:relative;color:var(--text-strong);}
+    .faq-item summary::-webkit-details-marker{display:none;}
+    .faq-item summary::after{content:"+";position:absolute;right:0;top:50%;transform:translateY(-50%);font-size:26px;font-weight:300;color:var(--green-cta);}
+    .faq-item[open] summary::after{content:"−";}
+    .faq-answer p+p{margin-top:10px;}
+    /* RELATED */
+    .related{border-top:1px solid var(--border);padding-top:36px;margin-top:36px;}
+    .related-title{font-size:20px;font-weight:800;color:var(--text-strong);margin-bottom:18px;}
+    .related-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;}
+    @media(max-width:820px){.related-grid{grid-template-columns:1fr;}}
+    .related-card{display:block;padding:20px;border:1px solid var(--border);border-radius:var(--radius);text-decoration:none!important;transition:border-color .15s,transform .15s;}
+    .related-card:hover{border-color:var(--blue-mid);transform:translateY(-2px);}
+    .related-card-eye{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--blue-mid);margin-bottom:6px;}
+    .related-card-title{font-size:16px;font-weight:700;color:var(--text-strong);line-height:1.4;}
+    /* ALSO DISPLAYED AS */
+    .lang-list{list-style:none;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:10px 24px;}
+    @media(max-width:580px){.lang-list{grid-template-columns:1fr;}}
+    .lang-list li{margin:0;padding:10px 14px;background:#fff;border:1px solid var(--border);border-radius:10px;font-size:15px;}
+    .lang-list li span{color:var(--text2);font-size:13px;}
+  </style>
+<link href="/assets/css/core.bundle.css?v=20261115" rel="stylesheet"/>
+
+
+
+<script defer="" src="/assets/js/nav.js?v=20261008a"></script><script defer="" src="/assets/js/analytics.js?v=20261103a"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Fallo de tarjeta 41 — Código de error 41 del tacógrafo","description":"El fallo de tarjeta 41 indica un problema de comunicación con la tarjeta de conductor. Descubre cómo limpiar los contactos y cuándo pedir una de sustitución.","image":"https://tagra.app/assets/img/hero-poster.jpg","author":{"@type":"Organization","@id":"https://tagra.app/#organization","name":"Truck Data Technology, s.r.o.","url":"https://www.tdt.cz"},"publisher":{"@type":"Organization","@id":"https://tagra.app/#organization","name":"Truck Data Technology, s.r.o.","logo":{"@type":"ImageObject","url":"https://tagra.app/assets/img/logo-light.svg"}},"datePublished":"2026-11-20T09:00:00+01:00","dateModified":"2026-11-20T09:00:00+01:00","inLanguage":"es","mainEntityOfPage":"https://tagra.app/es/articulos/tacografo-error-41-fallo-de-tarjeta/","articleSection":"Base de conocimiento","wordCount":1353}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"TAGRA","item":"https://tagra.app/es/"},{"@type":"ListItem","position":2,"name":"Artículos","item":"https://tagra.app/es/articulos/"},{"@type":"ListItem","position":3,"name":"Error 41","item":"https://tagra.app/es/articulos/tacografo-error-41-fallo-de-tarjeta/"}]}</script><noscript><style>.anim-up,.fly-left,.fly-right{opacity:1!important;transform:none!important}</style></noscript><script defer="" src="/assets/js/mobile-bridge.js?v=20261115a" data-tr="1"></script>
+</head>
+<body class="art-page">
+<a class="skip-link" href="#main-content">Saltar al contenido</a>
+<div aria-hidden="true" id="scroll-progress"></div>
+<nav aria-label="Navegación principal" class="site-nav" role="navigation">
+<div class="nav-inner">
+<a aria-label="TAGRA – Inicio" class="nav-logo" href="/es/"><img alt="TAGRA" height="32" src="/assets/img/logo-light.svg?v=20260513zh" style="display:block;height:32px;width:auto;" width="140"/></a>
+<ul class="nav-links" id="nav-links">
+<li><a href="/es/empresas/">Para empresas</a></li>
+<li><a href="/es/conductores/">Para conductores</a></li>
+<li><a href="/enforcement/">Control</a></li>
+<li><a aria-current="page" href="/es/articulos/">Artículos</a></li><li><a href="/manuals/">Manuales</a></li>
+<li><a href="/faq/">FAQ</a></li>
+<li><a href="/contact/">Contacto</a></li>
+<li class="nav-shop-li"><a aria-label="TAGRA Shop – compra licencias y dispositivos" class="nav-shop" data-cta="nav" href="https://shop.tagra.app/">Tienda</a></li>
+<li class="nav-cta-li"><a class="nav-cta" href="/es/prueba-gratis/?audience=driver&amp;src=error-41">Pruébalo gratis durante 30 días</a></li>
+</ul>
+<details class="nav-lang">
+<summary aria-label="Idioma: ES">ES</summary>
+<div class="nav-lang-menu" role="menu"><a href="/articles/tachograph-error-41-card-fault/" hreflang="en">English</a><a href="/de/ratgeber/tachograph-fehler-41-kartenstoerung/" hreflang="de">Deutsch</a><a href="/pl/poradnik/tachograf-blad-41-awaria-karty/" hreflang="pl">Polski</a><a href="/nl/artikelen/tachograaf-storing-41-kaartstoring/" hreflang="nl">Nederlands</a><a href="/fr/articles/tachygraphe-erreur-41-anomalie-de-carte/" hreflang="fr">Français</a><a href="/it/articoli/tachigrafo-errore-41-anomalia-carta/" hreflang="it">Italiano</a><a aria-current="page" class="active" href="/es/articulos/tacografo-error-41-fallo-de-tarjeta/" hreflang="es">Español</a><a href="/el/arthra/tachografos-sfalma-41-vlavi-kartas/" hreflang="el">Ελληνικά</a><a href="/hu/cikkek/tachograf-hiba-41-kartyahiba/" hreflang="hu">Magyar</a><a href="/ro/articole/tahograf-defectiune-41-eroare-card/" hreflang="ro">Română</a><a href="https://www.tdt.cz/" hreflang="cs" rel="noopener" target="_blank">Čeština</a><a href="https://www.tdt.sk/" hreflang="sk" rel="noopener" target="_blank">Slovenčina</a></div>
+</details>
+<a class="nav-cta-mobile" href="/es/prueba-gratis/?audience=driver&amp;src=error-41">Pruébalo gratis</a>
+<button aria-expanded="false" aria-label="Abrir o cerrar el menú" class="nav-mobile-toggle" id="nav-toggle">
+<span></span><span></span><span></span>
+</button>
+</div>
+</nav>
+<header class="art-hero">
+<div class="art-wrap">
+<nav aria-label="Breadcrumb" class="breadcrumb"><a href="/es/">TAGRA</a><span>›</span><a href="/es/articulos/">Artículos</a><span>›</span><span>Error 41</span></nav>
+<div class="eyebrow anim-up">Código de error · Stoneridge SE5000 &amp; VDO DTCO 4.1</div>
+<h1 class="art-title"><span class="grad">Fallo de tarjeta 41 — Código de error 41 del tacógrafo</span></h1>
+<div class="art-meta"><span>Truck Data Technology</span><span>Actualizado en noviembre de 2026</span><span>3 min de lectura</span></div>
+<p class="hero-lede anim-up">El código 41 significa que tu tacógrafo no puede leer o escribir de forma fiable en la tarjeta de conductor de la ranura 1: casi siempre se trata de un problema de contactos, no de una tarjeta defectuosa.</p><div class="bento--hero"><div class="hero-card"><div class="eyebrow">Gravedad</div><div class="big">Media</div><p>Confirma el mensaje, limpia los contactos y vuelve a introducir la tarjeta.</p></div><div class="hero-card hero-card--blue"><div class="eyebrow">Componente afectado</div><div class="big">Tarjeta de conductor / contactos del lector de tarjetas</div><p>Los contactos metálicos a través de los que el tacógrafo intercambia datos con tu tarjeta.</p></div><div class="hero-card"><div class="eyebrow">DTC de Stoneridge</div><div class="big">041</div><p>Error de comunicación con la tarjeta, ranura 1. En la ranura 2 (acompañante/segundo conductor) se registra como 059.</p></div></div>
+</div>
+</header>
+<main id="main-content"><section class="band"><div class="container art-body"><div class="eyebrow anim-up">Qué significa</div><h2 class="h2-grad anim-up">Qué significa este código</h2>
+<p>Los tacógrafos digitales leen y escriben continuamente en la <strong>tarjeta de conductor</strong> introducida en la ranura 1: en ella se registran las actividades, los eventos y los fallos durante el turno. El código 41, <strong>Fallo de tarjeta</strong>, significa que ha fallado un intento de lectura o escritura en la tarjeta.</p>
+<p>Según el manual de instrucciones del VDO DTCO 4.1, se muestra como <code>x1 Fallo tarjeta xx</code>: «Se ha producido un fallo de comunicación al leer o escribir en la tarjeta de conductor, normalmente debido a contactos sucios. Es posible que no se hayan grabado algunos datos del conductor». El manual clasifica la gravedad como <strong>media</strong>.</p>
+<p>En un Stoneridge SE5000, el código de diagnóstico correspondiente para el centro técnico de tacógrafos es <strong>041 — Error de comunicación con la tarjeta, ranura 1</strong> (tarjeta de conductor). Si el mismo problema afecta a la tarjeta del acompañante/segundo conductor en la ranura 2, se registra como <strong>059</strong>.</p>
+<div class="callout callout--blue anim-up">
+<div class="callout-title">No lo confundas con los códigos 50 o 44</div>
+<p style="margin:0">Fallo de tarjeta 41 significa que el tacógrafo ha tenido dificultades para comunicarse con una tarjeta que sigue introducida: limpiar los contactos suele resolver el problema. <strong>Error de tarjeta 50</strong> es más grave: la tarjeta se rechaza y se expulsa. <strong>Tarjeta no cerrada 44</strong> es algo distinto: una sesión anterior de la tarjeta no se ha cerrado correctamente; no se trata de un problema de comunicación con la tarjeta actual.</p>
+<p id="tagra-fleet-note">Si el mismo fallo se produce con varios conductores o vehículos, el <a href="/es/empresas/">programa para descargar la tarjeta de conductor</a> te muestra el error de toda la flota en un solo lugar.</p>
+</div><div class="share-box anim-up">
+<h4>Envía el código al gestor de flota o al centro técnico</h4>
+<p>Comparte este código de avería y el artículo por correo electrónico o WhatsApp.</p>
+<div class="share-btns">
+<a class="share-btn" href="mailto:?subject=Fallo%20de%20tarjeta%20%E2%80%94%20c%C3%B3digo%20de%20error%2041%20del%20tac%C3%B3grafo&amp;body=Hola%2C%20mi%20tac%C3%B3grafo%20muestra%20este%20mensaje%3A%20Fallo%20de%20tarjeta%20%E2%80%94%20c%C3%B3digo%20de%20error%2041%20del%20tac%C3%B3grafo.%20Aqu%C3%AD%20encontrar%C3%A1s%20los%20detalles%20y%20las%20indicaciones%20sobre%20c%C3%B3mo%20proceder%3A%20https%3A%2F%2Ftagra.app%2Fes%2Farticulos%2Ftacografo-error-41-fallo-de-tarjeta%2F%3Fsrc%3Dshare-41">✉ Enviar por correo electrónico</a>
+<a class="share-btn" href="https://wa.me/?text=Hola%2C%20mi%20tac%C3%B3grafo%20muestra%20este%20mensaje%3A%20Fallo%20de%20tarjeta%20%E2%80%94%20c%C3%B3digo%20de%20error%2041%20del%20tac%C3%B3grafo.%20Aqu%C3%AD%20encontrar%C3%A1s%20los%20detalles%20y%20las%20indicaciones%20sobre%20c%C3%B3mo%20proceder%3A%20https%3A%2F%2Ftagra.app%2Fes%2Farticulos%2Ftacografo-error-41-fallo-de-tarjeta%2F%3Fsrc%3Dshare-41" rel="noopener" target="_blank">💬 Enviar por WhatsApp</a>
+</div>
+</div>
+<div class="cta-box cc-top" data-cc="error-41">
+<h3>¿Has recibido este aviso en el tacógrafo?</h3>
+<p>Comprueba qué ha registrado tu tarjeta de conductor: tiempos de conducción, descanso y posibles infracciones. TAGRA TRUCKER lee tu tarjeta en un ordenador (PC con Windows), gratis durante 30 días.</p>
+<a class="cta-btn cc-desk" href="/es/prueba-gratis/?audience=driver&amp;src=error-41-top">Descarga la prueba gratuita de 30 días</a>
+<form action="/es/prueba-gratis/" class="cc-mail" data-err="Algo ha salido mal. Vuelve a intentarlo o utiliza el" data-errlink="formulario completo" data-ok="¡Listo! Revisa tu bandeja de entrada y abre el correo en el ordenador para descargar TAGRA." data-sending="Enviando…" data-try="/es/prueba-gratis/?audience=driver&amp;src=error-41-mail" method="POST">
+<p class="cc-lead">¿Estás usando un móvil? Te enviaremos por correo electrónico el enlace para descargarlo en tu ordenador.</p>
+<input name="form-name" type="hidden" value="tagra-trial"/>
+<input name="audience" type="hidden" value="driver"/>
+<input name="language" type="hidden" value="es"/>
+<input class="cc-src" name="source_url" type="hidden" value=""/>
+<input name="src" type="hidden" value=""/>
+<p class="cc-hp" hidden=""><input autocomplete="off" name="bot-field" tabindex="-1"/></p>
+<input aria-label="Nombre" autocomplete="given-name" minlength="2" name="name" placeholder="Nombre" required="" type="text"/>
+<input aria-label="Correo electrónico" autocomplete="email" inputmode="email" name="email" placeholder="Correo electrónico" required="" type="email"/>
+<label class="cc-gdpr"><input name="gdpr_consent" required="" type="checkbox" value="yes"/> <span>Consiento el tratamiento de mis datos personales para que se pongan en contacto conmigo en relación con TAGRA. Más información en la <a href="/privacy/" rel="noopener noreferrer" target="_blank">política de privacidad</a>.</span></label>
+<button class="cta-btn cc-send" type="submit">Enviar el enlace por correo electrónico</button>
+<p aria-live="polite" class="cc-msg" role="status"></p>
+</form>
+<!-- shop-cta:start --><p class="shop-cta-link" style="font-size:14px;margin:2px 0 0;color:rgba(255,255,255,.88);"><a data-cta="article_top" href="https://shop.tagra.app/tagra-software/" rel="noopener" style="color:#fff;text-decoration:underline;">Compra una licencia en TAGRA Shop (EN) →</a></p><!-- shop-cta:end --></div>
+</div></section><section class="band band--blue"><div class="container art-body"><div class="info-card anim-up">
+<span class="badge">Qué hacer ahora</span>
+<h2 class="h2-grad anim-up" style="font-size:28px;">Qué hacer ahora</h2>
+<ol>
+<li><strong>Confirma el mensaje</strong> en la pantalla del tacógrafo.</li>
+<li><strong>Limpia los contactos de la tarjeta</strong> con un paño seco y vuelve a introducirla.</li>
+<li><strong>Si el fallo se repite</strong>, conviene sustituir la tarjeta.</li>
+</ol>
+<p style="margin-top:14px;"><strong>En un Stoneridge SE5000:</strong> El mismo evento se registra como DTC 041 (ranura 1, conductor) o 059 (ranura 2, acompañante/segundo conductor). La solución es la misma en ambos casos: limpia los contactos de la tarjeta y de la ranura de la tarjeta y vuelve a introducirla.</p>
+</div>
+<div class="cta-box">
+<h3>Tu tacógrafo registra este fallo y TAGRA lo lee</h3>
+<p>TAGRA no repara un fallo de tarjeta: limpiar los contactos o sustituir la tarjeta si el fallo se repite es tarea tuya o del centro técnico de tacógrafos. Pero, en cuanto el código 41 queda registrado en la memoria del tacógrafo y en tu tarjeta de conductor, TAGRA lo encuentra en los datos descargados, lo analiza y lo documenta: justo lo que necesitas en un control en carretera para demostrar que has actuado correctamente.</p>
+<a class="cta-btn" href="/es/prueba-gratis/?audience=driver&amp;src=error-41">Deja de buscar códigos a mano: prueba TAGRA TRUCKER gratis 30 días</a>
+<p style="font-size:14px;color:rgba(255,255,255,.7);margin-top:2px;">o <a href="/es/empresas/" style="color:#fff;text-decoration:underline;">ver TAGRA para flotas</a> · <a href="/es/conductores/" style="color:#fff;text-decoration:underline;">TAGRA Trucker para conductores</a></p>
+<!-- shop-cta:start --><p class="shop-cta-link" style="font-size:14px;margin:2px 0 0;color:rgba(255,255,255,.88);"><a data-cta="article_end" href="https://shop.tagra.app/tagra-software/" rel="noopener" style="color:#fff;text-decoration:underline;">Compra una licencia en TAGRA Shop (EN) →</a></p><!-- shop-cta:end --></div>
+</div></section><section class="band"><div class="container art-body"><div class="eyebrow anim-up">Por qué ocurre</div><h2 class="h2-grad anim-up">Por qué ocurre</h2>
+<p>Según el manual, el fallo de tarjeta 41 suele deberse a:</p>
+<ul>
+<li><strong>contactos sucios u oxidados</strong> en la propia tarjeta de conductor;</li>
+<li><strong>contactos sucios o desgastados</strong> en la ranura de la tarjeta; o</li>
+<li>una tarjeta <strong>introducida incorrectamente</strong> o retirada durante una operación de lectura o escritura.</li>
+</ul>
+<p>Como el fallo interrumpe una operación de lectura o escritura, es posible que algunos datos del conductor de ese turno no se hayan guardado en la tarjeta: un motivo para comprobar la actividad de tu tarjeta al final del turno si se ha producido el fallo.</p></div></section><section class="band band--gray"><div class="container art-body"><div class="eyebrow anim-up">Gravedad</div><h2 class="h2-grad anim-up">¿Puedes seguir conduciendo?</h2>
+<p>El manual clasifica el fallo de tarjeta 41 como un fallo de <strong>prioridad media</strong>: no obliga a detenerse de inmediato. Confirma el mensaje, limpia los contactos, vuelve a introducir la tarjeta y continúa el turno.</p>
+<p>Como ha fallado el intento de lectura o escritura, pueden faltar datos de ese turno en la tarjeta: compruébalo al final del turno. Si el fallo se repite y la tarjeta ya no se puede leer de forma fiable, debes solicitar una tarjeta de sustitución, conforme al <strong>artículo 29</strong> del Reglamento (UE) n.º 165/2014, en un plazo de <strong>7 días naturales</strong> desde que se produzca el defecto; hasta recibir la nueva tarjeta, el <strong>artículo 29, apartado 5</strong> permite seguir conduciendo sin tarjeta durante un máximo de <strong>15 días naturales</strong>, siempre que realices las impresiones exigidas por el <strong>artículo 35</strong> al inicio y al final de cada turno (durante más tiempo si es necesario para que el vehículo regrese a la sede de la empresa).</p></div></section><section class="band"><div class="container art-body"><div class="eyebrow anim-up">También aparece como</div><h2 class="h2-grad anim-up">También aparece como</h2>
+<p>Los conductores de toda Europa ven el mismo fallo con distintos textos en pantalla. Estos son los términos de búsqueda reales para el código 41:</p>
+<ul class="lang-list">
+<li>Fallo de tarjeta 41 <span>— español</span></li>
+<li>Fahrerkarte Fehler 41 <span>— alemán</span></li>
+<li>Kartenstörung 41 <span>— alemán (VDO)</span></li>
+<li>Awaria karty 41 <span>— polaco</span></li>
+<li>Eroare card 41 <span>— rumano</span></li>
+<li>Kártyahiba 41 <span>— húngaro</span></li>
+<li>Card fault 59 <span>— Stoneridge, ranura 2 (acompañante/segundo conductor)</span></li>
+<li>Card fault 41 <span>— inglés</span></li>
+</ul></div></section><section class="band band--gray"><div class="container art-body"><div class="eyebrow anim-up">Códigos relacionados</div><h2 class="h2-grad anim-up">Códigos relacionados</h2>
+<div class="related-grid">
+<a class="related-card anim-up" href="/es/articulos/tacografo-error-44-tarjeta-no-cerrada/">
+<div class="related-card-eye">Evento 44</div>
+<h3 class="related-card-title">Tarjeta no cerrada 44 — Código de evento 44 del tacógrafo</h3>
+</a>
+<a class="related-card anim-up" href="/es/articulos/tacografo-error-50-error-de-tarjeta/">
+<div class="related-card-eye">Error 50</div>
+<h3 class="related-card-title">Error de tarjeta 50 — Código de error 50 del tacógrafo</h3>
+</a>
+<a class="related-card anim-up" href="/articles/digital-tachograph-symbols/">
+<div class="related-card-eye">Resumen completo</div>
+<h3 class="related-card-title">Símbolos y códigos de error del tacógrafo: guía para conductores</h3>
+</a>
+</div></div></section><section class="band"><div class="container art-body"><div class="eyebrow anim-up">Preguntas y respuestas</div><h2 class="h2-grad anim-up">Preguntas frecuentes</h2>
+<details class="faq-item"><summary>¿Qué diferencia hay entre fallo de tarjeta 41 y error de tarjeta 50?</summary>
+<div class="faq-answer"><p>Fallo de tarjeta 41 significa que el tacógrafo y una tarjeta introducida han tenido un problema de comunicación, normalmente debido a contactos sucios: limpiar la tarjeta y volver a introducirla suele resolver el problema. Error de tarjeta 50 es más grave: el tacógrafo rechaza la tarjeta y la expulsa. Si limpiar los contactos no evita que el código 41 siga apareciendo, es un indicio de que hay que sustituir la propia tarjeta.</p></div>
+</details>
+<details class="faq-item"><summary>¿Qué significa DTC 041 en un Stoneridge SE5000?</summary>
+<div class="faq-answer"><p>DTC 041 es el código del Stoneridge SE5000 que utiliza el centro técnico de tacógrafos para un error de comunicación con la tarjeta en la ranura 1, la tarjeta de conductor. El mismo fallo en la ranura 2, la tarjeta del acompañante/segundo conductor, se registra como DTC 059.</p></div>
+</details>
+<details class="faq-item"><summary>¿Puedo seguir conduciendo con el fallo de tarjeta 41?</summary>
+<div class="faq-answer"><p>Sí: el manual lo clasifica como un fallo de prioridad media. Confirma el mensaje, limpia los contactos y sigue conduciendo. Como ha fallado el intento de lectura o escritura, comprueba los datos de tu tarjeta al final del turno; si el fallo se repite, solicita una tarjeta de sustitución.</p></div>
+</details>
+<details class="faq-item"><summary>¿Qué causa el fallo de tarjeta 41 en un tacógrafo digital?</summary>
+<div class="faq-answer"><p>Según el manual, suele deberse a contactos sucios u oxidados en la propia tarjeta de conductor, contactos sucios o desgastados en la ranura de la tarjeta, o a una tarjeta introducida incorrectamente o retirada durante una operación de lectura o escritura. Consulta también <a href="/articles/tachograph-error-34-ejection-not-possible/">Expulsión no posible (código 34)</a>.</p></div>
+</details>
+</div></section></main>
+
+<footer class="site-footer" role="contentinfo">
+<div class="footer-inner">
+<div>
+<div class="footer-logo"><img alt="TAGRA" height="20" src="/assets/img/logo-dark.svg?v=20260513zh" width="88" loading="lazy"/></div>
+<p class="footer-desc">Programa profesional de análisis de tacógrafos. Descarga de datos de tarjetas de conductor, análisis de tacógrafos digitales, tiempos de conducción y descanso de la UE y Directiva 2002/15/CE sobre el tiempo de trabajo. Desarrollado por Truck Data Technology, s.r.o.</p>
+</div>
+<div class="footer-col">
+<h2 class="footer-col-title">Producto</h2>
+<ul>
+<li><a href="/es/empresas/">Para empresas de transporte</a></li>
+<li><a href="/es/conductores/">Para conductores profesionales</a></li>
+<li><a href="/enforcement/">Para autoridades de control</a></li>
+<li><a href="/how-it-works/">Cómo funciona</a></li>
+<li><a href="/for-whom/">Para quién</a></li>
+<li><a href="/faq/">FAQ</a></li>
+<li><a href="https://shop.tagra.app/" hreflang="en">TAGRA Shop</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h2 class="footer-col-title">Recursos</h2>
+<ul>
+<li><a href="/es/articulos/">Artículos</a></li><li><a href="/manuals/">Manuales</a></li>
+<li><a href="/articles/digital-tachograph-symbols/">Símbolos del tacógrafo</a></li>
+<li><a href="/integrations/dkv-live/">DKV LIVE®</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h2 class="footer-col-title">Empresa</h2>
+<ul>
+<li><a href="/contact/">Contacto</a></li>
+<li><a href="https://www.tdt.cz" rel="noopener" target="_blank">Truck Data Technology</a></li>
+<li><a href="/" hreflang="en">English</a></li><li><a href="/de/" hreflang="de">Deutsch</a></li><li><a href="/pl/" hreflang="pl">Polski</a></li><li><a href="/nl/" hreflang="nl">Nederlands</a></li><li><a href="/fr/" hreflang="fr">Français</a></li><li><a href="/it/" hreflang="it">Italiano</a></li><li><a aria-current="page" class="active" href="/es/" hreflang="es">Español</a></li><li><a href="/el/" hreflang="el">Ελληνικά</a></li><li><a href="/hu/" hreflang="hu">Magyar</a></li><li><a href="/ro/" hreflang="ro">Română</a></li><li><a href="https://www.tdt.cz/" hreflang="cs" rel="noopener" target="_blank">Čeština</a></li><li><a href="https://www.tdt.sk/" hreflang="sk" rel="noopener" target="_blank">Slovenčina</a></li></ul>
+</div>
+</div>
+<div class="footer-bottom">
+<span>© 2026 Truck Data Technology, s.r.o. Todos los derechos reservados.</span>
+<span><a href="/contact/">Contacto</a> · <a href="https://www.tdt.cz" rel="noopener" target="_blank">tdt.cz</a> · <a href="/privacy/">Privacidad y cookies</a></span>
+</div>
+</footer>
+<script>(function(){var bar=document.getElementById('scroll-progress');if(bar)window.addEventListener('scroll',function(){var t=document.documentElement.scrollTop||document.body.scrollTop;var h=document.documentElement.scrollHeight-document.documentElement.clientHeight;bar.style.width=(t/h*100)+'%';},{passive:true});var toggle=document.getElementById('nav-toggle'),links=document.getElementById('nav-links');if(toggle&&links)toggle.addEventListener('click',function(){var o=links.classList.toggle('open');toggle.setAttribute('aria-expanded',o);});})();</script><script>
+/* INTERSECTION OBSERVER – ANIMATIONS */
+if ('IntersectionObserver' in window) {
+  var io = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) {
+      if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.anim-up, .fly-left, .fly-right').forEach(function(el) { io.observe(el); });
+} else {
+  document.querySelectorAll('.anim-up, .fly-left, .fly-right').forEach(function(el) { el.classList.add('on'); });
+}
+</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Qué diferencia hay entre fallo de tarjeta 41 y error de tarjeta 50?","acceptedAnswer":{"@type":"Answer","text":"Fallo de tarjeta 41 significa que el tacógrafo y una tarjeta introducida han tenido un problema de comunicación, normalmente debido a contactos sucios: limpiar la tarjeta y volver a introducirla suele resolver el problema. Error de tarjeta 50 es más grave: el tacógrafo rechaza la tarjeta y la expulsa. Si limpiar los contactos no evita que el código 41 siga apareciendo, es un indicio de que hay que sustituir la propia tarjeta."}},{"@type":"Question","name":"¿Qué significa DTC 041 en un Stoneridge SE5000?","acceptedAnswer":{"@type":"Answer","text":"DTC 041 es el código del Stoneridge SE5000 que utiliza el centro técnico de tacógrafos para un error de comunicación con la tarjeta en la ranura 1, la tarjeta de conductor. El mismo fallo en la ranura 2, la tarjeta del acompañante/segundo conductor, se registra como DTC 059."}},{"@type":"Question","name":"¿Puedo seguir conduciendo con el fallo de tarjeta 41?","acceptedAnswer":{"@type":"Answer","text":"Sí: el manual lo clasifica como un fallo de prioridad media. Confirma el mensaje, limpia los contactos y sigue conduciendo. Como ha fallado el intento de lectura o escritura, comprueba los datos de tu tarjeta al final del turno; si el fallo se repite, solicita una tarjeta de sustitución."}},{"@type":"Question","name":"¿Qué causa el fallo de tarjeta 41 en un tacógrafo digital?","acceptedAnswer":{"@type":"Answer","text":"Según el manual, suele deberse a contactos sucios u oxidados en la propia tarjeta de conductor, contactos sucios o desgastados en la ranura de la tarjeta, o a una tarjeta introducida incorrectamente o retirada durante una operación de lectura o escritura. Consulta también Expulsión no posible (código 34)."}}]}</script>
+</body>
+</html>
