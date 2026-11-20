@@ -23,7 +23,7 @@ var css="#tdt-chat{position:fixed;right:22px;bottom:22px;z-index:2147482000;disp
 +"@keyframes tdtBlink{0%,46%,49%,84%,87%,100%{opacity:0}46.6%,48.4%,84.6%,86.4%{opacity:1}}"
 +"@media (hover:hover){#tdt-chat:hover .av{transform:translateY(-3px)}}"
 +"#tdt-chat:focus-visible{outline:3px solid #7cc242;outline-offset:4px;border-radius:40px}"
-+".woot--bubble-holder{display:none!important}#chat-application,#chat-application-iframe{display:none!important;visibility:hidden!important}"
++".woot--bubble-holder{display:none!important}#smartsupp-widget-container,#chat-application,#chat-application-iframe{display:none!important;visibility:hidden!important}"
 +"@media (max-width:600px){#tdt-chat{right:14px;bottom:14px}#tdt-chat .lbl{display:none}#tdt-chat .av{transform:scale(.86);transform-origin:bottom right}}"
 +"@media (prefers-reduced-motion:reduce){#tdt-chat,#tdt-chat .av,#tdt-chat .lbl{transition:none}#tdt-chat .av .h,#tdt-chat .av .g{animation:none}#tdt-chat .av .e{animation:tdtBlink 6s linear infinite}}";
 var st=d.createElement("style");st.id="tmx-chat-css";st.textContent=css;(d.head||d.documentElement).appendChild(st);
