@@ -55,7 +55,7 @@ The hidden duplicate form (`<form name="tagra-trial" hidden>` at top) exists so 
 4. Netlify intercepts POST, stores submission, redirects to `/try/thanks/`
 5. Thanks page JS reads `sessionStorage` → routes to correct variant:
    - **fleet** → "Your TAGRA trial is ready" + download `TAGRA_III.zip` (47 MB) — TAGRA III, program pro firmy (od 31. 10. 2026)
-   - **driver** → "Your TAGRA TRUCKER trial is ready" + download `Trucker.zip` (153 MB)
+   - **driver** → "Your TAGRA TRUCKER trial is ready" + download `TAGRA_III.zip` (47 MB) — od 20. 11. 2026 jednotná instalačka TAGRA III i pro TRUCKER
    - **enforcement** → "Request received" + no download, contact-us message
 
 The download files live on `www.tdt.cz/download/` (out of scope for this repo).
