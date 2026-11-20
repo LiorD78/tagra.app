@@ -288,7 +288,7 @@ function cikkTip(s) {
 const DL = {
   eu: 'https://www.tdt.cz/download/TAGRA_eu.zip',
   t3: 'https://www.tdt.cz/download/TAGRA_III.zip',
-  trucker: 'https://www.tdt.cz/download/Trucker.zip',
+  trucker: 'https://www.tdt.cz/download/TAGRA_III.zip',
   f: 'https://www.tdt.cz/sites/default/files/prilohy/',
 };
 const DL_TITLE = 'Letöltések: TAGRA, TAGRA III, illesztőprogramok – TAGRA';
