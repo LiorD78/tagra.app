@@ -1,6 +1,6 @@
-/* TAGRA Shop – schema v1 (21. 11. 2026, 79-6): doplňuje microdata Shoptetu na detailu produktu (brand, mpn, hasMerchantReturnPolicy jen u HW,
+/* TAGRA Shop – schema v2 (21. 11. 2026, 79-6; v2: shippingRate vždy 0.00, čtečka /smart-card-reader/ jako HW): doplňuje microdata Shoptetu na detailu produktu (brand, mpn, hasMerchantReturnPolicy jen u HW,
    kategorie bez českého kořene „Úvodní stránka“) a vkládá Organization JSON-LD na všechny stránky shopu. Nic jiného nemění,
-   druhou entitu Product nevytváří, shippingDetails neřeší. */
+   druhou entitu Product nevytváří, shippingRate value nastavuje na 0.00 (doprava po EU zdarma). */
 (function(){
   'use strict';
   if(window.tgsSchema)return;
@@ -42,13 +42,17 @@
     }
     var skuEl=root.querySelector(':scope > meta[itemprop="sku"]');
     var sku=skuEl&&skuEl.getAttribute('content');
-    var hw=b.classList.contains('in-download-devices')||b.classList.contains('id-708');
+    var urlEl=root.querySelector(':scope > meta[itemprop="url"]');
+    var pu=(urlEl&&urlEl.getAttribute('content'))||'';
+    var hw=b.classList.contains('in-download-devices')||b.classList.contains('id-708')||/\/smart-card-reader\/?$/.test(pu);
     if(!root.querySelector(':scope > [itemprop="brand"]')){
       var br=el('span',{itemprop:'brand',itemscope:'',itemtype:'https://schema.org/Brand'});
       br.appendChild(meta('name',hw?'Truck Data Technology':'TAGRA'));
       root.appendChild(br);
     }
     if(sku&&!root.querySelector(':scope > [itemprop="mpn"]'))root.appendChild(meta('mpn',sku));
+    /* doprava po EU je zdarma (Shoptet u atypické dopravy chybně uvádí 10.07) */
+    [].forEach.call(root.querySelectorAll('[itemprop="shippingDetails"] [itemprop="shippingRate"] [itemprop="value"]'),function(e){e.setAttribute('content','0.00');});
     /* return policy jen u HW; u licencí (digitální obsah) se nepřidává */
     var offer=root.querySelector('[itemprop="offers"]');
     if(hw&&offer&&!offer.querySelector('[itemprop="hasMerchantReturnPolicy"]')){
