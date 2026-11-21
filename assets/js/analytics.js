@@ -206,12 +206,11 @@
     }, { threshold: 0.5 });
     doc.querySelectorAll('[data-br-box]').forEach(function (b) { io.observe(b); });
   });
-  W.addEventListener('blur', function () {
-    setTimeout(function () {
-      var f = doc.activeElement;
-      if (f && f.tagName === 'IFRAME' && /^widget/i.test(f.id) && once('chat')) track('contact_click', { channel: 'chat' });
-    }, 0);
-  });
+  /* Chat: robot #tgs-chat (nav.js, Jarabot) – první klik = contact_click (dataLayer chat_open posílá robot sám) */
+  doc.addEventListener('click', function (e) {
+    var t = e.target;
+    if (t && t.closest && t.closest('#tgs-chat') && once('chat')) track('contact_click', { channel: 'chat' });
+  }, true);
 
   onReady(function () {
     var form = doc.getElementById('trialForm');

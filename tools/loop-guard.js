@@ -29,7 +29,7 @@ const RULES = [
   [/€|\bEUR\b|\bKč\b|\bCZK\b|\bHUF\b|\bPLN\b|zł|"price"|"lowPrice"|"highPrice"|priceCurrency/i, 'cena / měna'],
   [/165\/2014|2016\/799|561\/2006|\b(čl\.|Art\.|art\.|artikel|artykuł|cikk)\s*\d+/i, 'právní odkaz / článek nařízení'],
   [/mailto:|tel:|@tagra\.app|@tdt\.(cz|sk)|\+4[0-9]{1,2}\s?\d{3}/i, 'kontakt'],
-  [/googletagmanager|gtag\(|clarity|consent|smartsupp|dataLayer/i, 'analytika / consent'],
+  [/googletagmanager|gtag\(|clarity|consent|smartsupp|jarabot|dataLayer/i, 'analytika / consent'],
   [/TACHOCONSULTING|TACHOCONTROLL/i, 'zmínka konkurence'],
   [/aktualizační|update fee|Aktualisierungsgebühr/i, 'zakázaný termín (licenční poplatek)'],
   [/<link[^>]+rel="(canonical|alternate)"|hreflang=/i, 'canonical / hreflang'],
