@@ -1,4 +1,4 @@
-/* TAGRA Shop – lokalizace textů patičky .tgs-footer podle html[lang]. 21. 11. 2026: ES/IT texty; DE/HU jen věta o podpoře (79-8). Odkazy na /<lang>/ řeší shop.js – tady se jen opraví případné zdvojení /xx/xx/. IT: věty souhlasu u registrace, komentáře a dotazu (Shoptet je v IT nemá). Načítá se z HTML kódů (patička). */
+/* TAGRA Shop – lokalizace textů patičky .tgs-footer podle html[lang]. 21. 11. 2026: ES/IT texty; DE/HU jen věta o podpoře (79-8). Odkazy na /<lang>/ řeší shop.js – tady se jen opraví případné zdvojení /xx/xx/. IT: věty souhlasu u registrace, komentáře a dotazu (Shoptet je v IT nemá). v5: první položka drobečkové navigace PL/IT (Shoptet má „Home“ / „Casa“). Načítá se z HTML kódů (patička). */
 
 (function(){
   var D={
@@ -10,6 +10,7 @@
   var CONSENT={
     it:{"By registering you agree to the":"Registrandosi, accetta i ","and the":" e l’","By posting a comment you agree to the":"Pubblicando un commento, accetta l’","By sending a message you agree to the":"Inviando un messaggio, accetta l’"}
   };
+  var BC={pl:{"Home":"Strona główna"},it:{"Casa":"Home"}};
   var SUP=/support in English|Support auf Englisch|angol nyelvű ügyféltámogatás/;
   function lang(){ return (document.documentElement.getAttribute('lang')||'').slice(0,2).toLowerCase(); }
   function txt(){
@@ -21,6 +22,14 @@
       if(T.off&&k.indexOf('Official TAGRA Shop')===0){ n.nodeValue=s.replace(k,T.off); continue; }
       if(SUP.test(k)){ n.nodeValue=T.sup; continue; }
       if(T.hasOwnProperty(k)) n.nodeValue=s.replace(k,T[k]);
+    }
+  }
+  function crumbs(){
+    var B=BC[lang()]; if(!B) return;
+    var bs=document.querySelectorAll('.breadcrumbs, #navigationBreadcrumbs'),i,w,n,k;
+    for(i=0;i<bs.length;i++){
+      w=document.createTreeWalker(bs[i],NodeFilter.SHOW_TEXT,null,false);
+      while((n=w.nextNode())){ k=n.nodeValue.trim(); if(B.hasOwnProperty(k)) n.nodeValue=n.nodeValue.replace(k,B[k]); }
     }
   }
   function consent(){
@@ -42,6 +51,6 @@
       if(m) a[i].setAttribute('href',h.replace('/'+m[1]+'/'+m[1]+'/','/'+m[1]+'/'));
     }
   }
-  function run(){ txt(); consent(); dedupe(); setTimeout(function(){ dedupe(); consent(); },1500); }
+  function run(){ txt(); crumbs(); consent(); dedupe(); setTimeout(function(){ dedupe(); consent(); crumbs(); },1500); }
   if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',run); else run();
 })();
