@@ -1,4 +1,4 @@
-/* v7.1 (21. 11. 2026): hero obrázek Hodnocení místo Přehledu | TAGRA Shop v7.0 PL – polska wersja shop.js v7.0 (v7.0-pl1 – PL slovník, 2026-11-15; kód = shop.hu.js v7.0, přeloženy texty EN→PL přes crew GPT + kontrola GPT/Gemini/Mistral 2:1, ceny „149 €“, interní cesty shopu s prefixem /pl/, zkušební verze tagra.app/pl/wyprobuj/) */
+/* 21. 11. 2026: odrážka doprava zdarma (79-12d) | v7.1 (21. 11. 2026): hero obrázek Hodnocení místo Přehledu | TAGRA Shop v7.0 PL – polska wersja shop.js v7.0 (v7.0-pl1 – PL slovník, 2026-11-15; kód = shop.hu.js v7.0, přeloženy texty EN→PL přes crew GPT + kontrola GPT/Gemini/Mistral 2:1, ceny „149 €“, interní cesty shopu s prefixem /pl/, zkušební verze tagra.app/pl/wyprobuj/) */
 (function(){
   var TM='https://cdn.truckmall.cz/data/user-content/';
   var TA='https://tagra.app/assets/';
@@ -271,7 +271,7 @@
     var soft=/tagra/i.test((document.querySelector('.p-detail-inner-header h1')||{}).textContent||'');
     var ul=document.createElement('ul');ul.className='tgs-buytrust';
     ul.innerHTML='<li><span><b>0% VAT</b> dla firm z UE z ważnym numerem VAT UE (odwrotne obciążenie)</span></li>'+
-      (soft?'<li><span><b>Licencja wysyłana e-mailem</b> – pierwszy rok licencji w cenie</span></li>':'<li><span><b>Wysyłka na terenie całej UE</b> – 24 miesiące gwarancji</span></li>')+
+      (soft?'<li><span><b>Licencja wysyłana e-mailem</b> – pierwszy rok licencji w cenie</span></li>':'<li><span><b>Darmowa dostawa w całej UE</b> – 24 miesiące gwarancji</span></li>')+
       '<li><span><b>Bezpośrednio od producenta</b> – Truck Data Technology, na rynku od 2005 roku</span></li>'+
       '<li><span>Pytania? <a href="mailto:'+SALES+'">'+SALES+'</a> · e-mail po polsku i angielsku</span></li>';
     var ref=w.querySelector('.p-short-description');

@@ -1,4 +1,4 @@
-/* v7.1 (21. 11. 2026): hero obrázek Hodnocení místo Přehledu | v7.0-pl1 (2026-11-15): <html lang="pl"> -> shop.pl.js (PL slovník), jinak beze změny | TAGRA Shop v7.0 (9. 11. 2026: <html lang="hu"> -> shop.hu.js, like DE -> shop.de.js | one-page buying flow on the homepage – hero + fleet calculator first; carousel, hub, steps, tier cards and product grid off) | v6.1 (8. 11. 2026: entry hub, pricing facts, "Most popular" TAGRA 4, already-using-TAGRA section, licence-first carousel, GA4 events via gtag) | v6.0 – tagra.app look, crew + competitor review (2. 11. 2026) */
+/* 21. 11. 2026: odrážka doprava zdarma (79-12d) | v7.1 (21. 11. 2026): hero obrázek Hodnocení místo Přehledu | v7.0-pl1 (2026-11-15): <html lang="pl"> -> shop.pl.js (PL slovník), jinak beze změny | TAGRA Shop v7.0 (9. 11. 2026: <html lang="hu"> -> shop.hu.js, like DE -> shop.de.js | one-page buying flow on the homepage – hero + fleet calculator first; carousel, hub, steps, tier cards and product grid off) | v6.1 (8. 11. 2026: entry hub, pricing facts, "Most popular" TAGRA 4, already-using-TAGRA section, licence-first carousel, GA4 events via gtag) | v6.0 – tagra.app look, crew + competitor review (2. 11. 2026) */
 (function(){
   if(/^de/i.test(document.documentElement.lang||'')){var ds=document.createElement('script'),cs=document.currentScript;ds.src=cs&&cs.src?cs.src.replace(/shop\.js(?=[?#]|$)/,'shop.de.js'):'https://tagra.app/assets/js/shop.de.js';document.head.appendChild(ds);return;}
   if(/^hu/i.test(document.documentElement.lang||'')){var ds=document.createElement('script'),cs=document.currentScript;ds.src=cs&&cs.src?cs.src.replace(/shop\.js(?=[?#]|$)/,'shop.hu.js'):'https://tagra.app/assets/js/shop.hu.js';document.head.appendChild(ds);return;}
@@ -274,7 +274,7 @@
     var soft=/tagra/i.test((document.querySelector('.p-detail-inner-header h1')||{}).textContent||'');
     var ul=document.createElement('ul');ul.className='tgs-buytrust';
     ul.innerHTML='<li><span><b>0 % VAT</b> for EU companies with a valid VAT ID (reverse charge)</span></li>'+
-      (soft?'<li><span><b>Licence delivered by e-mail</b> – first year of the licence included</span></li>':'<li><span><b>Shipped across the EU</b> – 24-month warranty</span></li>')+
+      (soft?'<li><span><b>Licence delivered by e-mail</b> – first year of the licence included</span></li>':'<li><span><b>Free delivery across the EU</b> – 24-month warranty</span></li>')+
       '<li><span><b>Direct from the manufacturer</b> – Truck Data Technology, on the market since 2005</span></li>'+
       '<li><span>Questions? <a href="mailto:'+SALES+'">'+SALES+'</a> · support in English</span></li>';
     var ref=w.querySelector('.p-short-description');

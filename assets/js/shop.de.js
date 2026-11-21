@@ -1,4 +1,4 @@
-/* v7.1 (21. 11. 2026): hero obrázek Hodnocení místo Přehledu | v7.0 (9. 11. 2026): one-page buying flow on the homepage | TAGRA Shop v6.1 DE – německá verze shop.js (kód shodný s EN, přeloženy jen texty) | v6.1 (8. 11. 2026): port shop.js v6.1 – rozcestník, 4 fakta u ceníku, „Am beliebtesten“ jen u TAGRA + DOWNLOAD BOX II S, sekce „Sie nutzen bereits TAGRA?“, carousel licence-first, GA4 přes gtag; DE texty z crew (GPT + Gemini) */
+/* 21. 11. 2026: odrážka doprava zdarma (79-12d) | v7.1 (21. 11. 2026): hero obrázek Hodnocení místo Přehledu | v7.0 (9. 11. 2026): one-page buying flow on the homepage | TAGRA Shop v6.1 DE – německá verze shop.js (kód shodný s EN, přeloženy jen texty) | v6.1 (8. 11. 2026): port shop.js v6.1 – rozcestník, 4 fakta u ceníku, „Am beliebtesten“ jen u TAGRA + DOWNLOAD BOX II S, sekce „Sie nutzen bereits TAGRA?“, carousel licence-first, GA4 přes gtag; DE texty z crew (GPT + Gemini) */
 (function(){
   var TM='https://cdn.truckmall.cz/data/user-content/';
   var TA='https://tagra.app/assets/';
@@ -271,7 +271,7 @@
     var soft=/tagra/i.test((document.querySelector('.p-detail-inner-header h1')||{}).textContent||'');
     var ul=document.createElement('ul');ul.className='tgs-buytrust';
     ul.innerHTML='<li><span><b>0 % MwSt.</b> für EU-Unternehmen mit gültiger USt-IdNr. (Reverse-Charge)</span></li>'+
-      (soft?'<li><span><b>Lizenz per E-Mail</b> – erstes Lizenzjahr inklusive</span></li>':'<li><span><b>Versand in die gesamte EU</b> – 24 Monate Garantie</span></li>')+
+      (soft?'<li><span><b>Lizenz per E-Mail</b> – erstes Lizenzjahr inklusive</span></li>':'<li><span><b>Kostenloser Versand in die gesamte EU</b> – 24 Monate Garantie</span></li>')+
       '<li><span><b>Direkt vom Hersteller</b> – Truck Data Technology, seit 2005 am Markt</span></li>'+
       '<li><span>Fragen? <a href="mailto:'+SALES+'">'+SALES+'</a> · Support auf Englisch</span></li>';
     var ref=w.querySelector('.p-short-description');
