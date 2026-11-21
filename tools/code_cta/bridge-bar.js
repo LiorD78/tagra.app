@@ -1,7 +1,7 @@
 
 /* ─── Mobilní lišta „TRUCKER + čtečka zdarma“ (79-1, 21. 11. 2026) ───
  * Jen ≤ 720 px. Ukáže se po odscrollování horního boxu (.br-top), skrytá je, dokud
- * je vidět cookie lišta (.tmx-cc) nebo otevřené chat okno Smartsuppu. Zavření
+ * je vidět cookie lišta (.tmx-cc) nebo otevřené chat okno Jarabotu. Zavření
  * se pamatuje v sessionStorage. Žádné atributy v MutationObserveru. */
 (function () {
   'use strict';
@@ -12,7 +12,7 @@
   var top = document.querySelector('.br-top');
   var mq = window.matchMedia ? window.matchMedia('(max-width:720px)') : null;
   function chatOpen() {
-    var c = document.getElementById('chat-application');
+    var c = document.querySelector('.woot-widget-holder');
     return !!(c && c.offsetHeight > 120);
   }
   function update() {

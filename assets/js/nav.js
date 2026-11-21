@@ -54,93 +54,145 @@
   }
 })();
 
-/* Smartsupp live chat + Mira AI
-   Ucet TDT (agent Tom). Nacita se site-wide odtud, aby nebylo nutne
-   sahat na 100+ HTML souboru. Widget si jazyk navstevnika detekuje sam.
-   Souhlas: chat je sluzba, kterou navstevnik sam vyvola, proto se nacita
-   bez gatingu; v cookie liste je uvedeny mezi zpracovateli. */
+/* Jarabot chat (TDT robot) – náhrada Smartsuppu, 21. 11. 2026.
+   Nacita se site-wide odtud (schranka "tagra.app", id 951, TDT robot).
+   Misto vychozi zelene bubliny macajici robot #tgs-chat (stejny jako shop-tracking.js v1.2).
+   Loader se nacita az po prvni interakci (scroll, dotyk, mys, klavesa) nebo po 8 s necinnosti
+   kvuli INP/TBT na mobilu. Souhlas: chat je sluzba, kterou navstevnik sam vyvola, proto se
+   nacita bez gatingu (stejne jako drive Smartsupp); v cookie liste je uveden mezi zpracovateli. */
 (function () {
   'use strict';
-  if (window.smartsupp) return;
-  window._smartsupp = window._smartsupp || {};
-  window._smartsupp.key = 'e33efc5751087329b81e3e5a14c01afecafaebf9';
-  window.smartsupp = function () { window.smartsupp._.push(arguments); };
-  window.smartsupp._ = [];
+  if (window.__tgsChat) return;
+  var JB_URL = 'https://chat.jarabot.com';
+  var JB_TOKEN = 'JECBcyMMFo4GDLZ4LqfDZ879';
+  var lg = ((document.documentElement.getAttribute('lang') || 'en').slice(0, 2) || 'en').toLowerCase();
+  /* hideMessageBubble: vychozi bublinu skryt, misto ni robot; locale podle <html lang> */
+  window.jarabotSettings = window.chatwootSettings = { hideMessageBubble: true, position: 'right', locale: lg };
 
-  /* Jazyk widgetu podle jazyka stranky.
-     Ucet TDT ma lang:"cs" a vlastni preklad button.greeting = "Podpora".
-     Bez tohoto prikazu se "Podpora" ukazovala i na anglicke, nemecke,
-     polske, recke a madarske verzi. Prikaz 'language' prepne widget na
-     vestavene preklady daneho jazyka (EN/DE/PL/HU "Chat", EL "Συνομιλία").
-     Cestinu zamerne NEposilame - tam ma zustat firemni "Podpora" (a na
-     tagra.app ceska verze stejne neni, CZ vede na tdt.cz).
-     Overeno v prohlizeci pro vsech pet jazyku 16. 8. 2026. */
-  /* 8. 10. 2026: doplneny FR/IT/NL/RO (dosud tam widget ukazoval ceske "Podpora"). Overit v prohlizeci. */
-  var PODPOROVANE = { en: 1, de: 1, pl: 1, el: 1, hu: 1, sk: 1, fr: 1, it: 1, nl: 1, ro: 1, es: 1 };
-  var lg = (document.documentElement.getAttribute('lang') || '').slice(0, 2).toLowerCase();
-  if (PODPOROVANE[lg]) window.smartsupp('language', lg);
+  /* Texty robota (crew Gemini, 21. 11. 2026); cs z tdt.cz, sk zatim en */
+  var TX = {
+    cs: { t: 'Potřebujete poradit?', s: 'Asistent odpoví hned', a: 'Otevřít chat s asistentem TAGRA' },
+    en: { t: 'Need help?', s: 'Our assistant replies instantly', a: 'Open chat with the TAGRA assistant' },
+    de: { t: 'Brauchen Sie Hilfe?', s: 'Unser Assistent antwortet sofort', a: 'Chat mit dem TAGRA-Assistenten öffnen' },
+    pl: { t: 'Potrzebują Państwo pomocy?', s: 'Nasz asystent odpowiada natychmiast', a: 'Otwórz czat z asystentem TAGRA' },
+    hu: { t: 'Segítségre van szüksége?', s: 'Asszisztensünk azonnal válaszol', a: 'Csevegés megnyitása a TAGRA asszisztenssel' },
+    es: { t: '¿Necesitas ayuda?', s: 'Nuestro asistente responde al instante', a: 'Abrir chat con el asistente de TAGRA' },
+    it: { t: 'Ha bisogno di aiuto?', s: 'Il nostro assistente risponde subito', a: "Apri la chat con l'assistente TAGRA" },
+    fr: { t: "Besoin d'aide ?", s: 'Notre assistant répond instantanément', a: "Ouvrir le chat avec l'assistant TAGRA" },
+    nl: { t: 'Hulp nodig?', s: 'Onze assistent antwoordt direct', a: 'Open chat met de TAGRA-assistent' },
+    ro: { t: 'Aveți nevoie de ajutor?', s: 'Asistentul nostru răspunde instantaneu', a: 'Deschideți chatul cu asistentul TAGRA' },
+    el: { t: 'Χρειάζεστε βοήθεια;', s: 'Ο βοηθός μας απαντά αμέσως', a: 'Άνοιγμα συνομιλίας με τον βοηθό TAGRA' }
+  };
+  var tx = TX[lg] || TX.en;
+  var d = document;
+  var IMG = 'https://www.tdt.cz/assets/img/chat/';
+  var ROBOT_CSS = '#tgs-chat{position:fixed;right:22px;bottom:22px;z-index:2147482000;display:flex;align-items:flex-end;gap:12px;cursor:pointer;border:0;background:none;padding:0;margin:0;font:inherit;transition:bottom .35s ease}'
+    + '#tgs-chat .lbl{background:#fff;color:#123a6b;font-weight:600;font-size:15px;line-height:1.25;padding:10px 14px;border-radius:16px 16px 4px 16px;box-shadow:0 6px 24px rgba(16,42,80,.18);margin-bottom:10px;text-align:left;opacity:0;transform:translateX(8px);pointer-events:none;transition:opacity .3s ease,transform .3s ease;white-space:nowrap}'
+    + '#tgs-chat .lbl small{display:block;font-weight:400;color:#4b5b70;font-size:13px}'
+    + '#tgs-chat.peek .lbl,#tgs-chat:hover .lbl,#tgs-chat:focus-visible .lbl{opacity:1;transform:none}'
+    + '#tgs-chat .av{position:relative;width:96px;height:82px;flex:0 0 96px;transition:transform .2s ease;filter:drop-shadow(0 6px 14px rgba(16,42,80,.30))}'
+    + '#tgs-chat .av img{display:block;width:96px;height:auto;max-width:none;pointer-events:none;border:0;margin:0}'
+    + '#tgs-chat .av img+img{position:absolute;left:0;top:0}'
+    + '#tgs-chat .av .h{transform-origin:64.06% 65.85%;animation:tgsWave 6s ease-in-out .4s infinite}'
+    + '#tgs-chat .av .g,#tgs-chat .av .e{transform-origin:41.7% 51.8%;animation:tgsHead 6s ease-in-out .4s infinite}'
+    + '#tgs-chat .av .e{opacity:0;animation:tgsHead 6s ease-in-out .4s infinite,tgsBlink 6s linear .4s infinite}'
+    + '@keyframes tgsHead{0%,100%{transform:rotate(0)}10%{transform:rotate(-4deg)}24%{transform:rotate(3deg)}38%{transform:rotate(0)}62%{transform:rotate(-2deg)}82%{transform:rotate(2.5deg)}}'
+    + '@keyframes tgsWave{0%,36%,100%{transform:rotate(0)}5%{transform:rotate(-18deg)}11%{transform:rotate(12deg)}17%{transform:rotate(-16deg)}23%{transform:rotate(10deg)}29%{transform:rotate(-7deg)}33%{transform:rotate(3deg)}}'
+    + '@keyframes tgsBlink{0%,46%,49%,84%,87%,100%{opacity:0}46.6%,48.4%,84.6%,86.4%{opacity:1}}'
+    + '@media (hover:hover){#tgs-chat:hover .av{transform:translateY(-3px)}}'
+    + '#tgs-chat:focus-visible{outline:3px solid #7cc242;outline-offset:4px;border-radius:40px}'
+    + '.woot--bubble-holder{display:none!important}'
+    + '@media (max-width:600px){#tgs-chat{right:14px;bottom:14px}#tgs-chat .lbl{display:none}#tgs-chat .av{transform:scale(.86);transform-origin:bottom right}}'
+    + '@media (prefers-reduced-motion:reduce){#tgs-chat,#tgs-chat .av,#tgs-chat .lbl{transition:none}#tgs-chat .av .h,#tgs-chat .av .g{animation:none}#tgs-chat .av .e{animation:tgsBlink 6s linear infinite}}';
+  function robot() {
+    if (d.getElementById('tgs-chat') || !d.body) return;
+    if (!d.getElementById('tgs-chat-css')) {
+      var st = d.createElement('style'); st.id = 'tgs-chat-css'; st.textContent = ROBOT_CSS;
+      (d.head || d.documentElement).appendChild(st);
+    }
+    var b = d.createElement('button'); b.type = 'button'; b.id = 'tgs-chat'; b.setAttribute('aria-label', tx.a);
+    b.innerHTML = '<span class="lbl">' + tx.t + '<small>' + tx.s + '</small></span><span class="av" aria-hidden="true">'
+      + '<img src="' + IMG + 'robot-chat-telo5.webp" alt="" width="96" height="82">'
+      + '<img class="g" src="' + IMG + 'robot-chat-hlava2.webp" alt="" width="96" height="82">'
+      + '<img class="e" src="' + IMG + 'robot-chat-mrk2.webp" alt="" width="96" height="82">'
+      + '<img class="h" src="' + IMG + 'robot-chat-paze.webp" alt="" width="96" height="82"></span>';
+    /* bublina s textem jednou za navstevu po 6,5 s, jen na desktopu, na 8 s */
+    try {
+      if (window.matchMedia && window.matchMedia('(min-width:1024px) and (hover:hover)').matches && !sessionStorage.getItem('tgsChatPeek')) {
+        setTimeout(function () {
+          b.classList.add('peek'); try { sessionStorage.setItem('tgsChatPeek', '1'); } catch (e) {}
+          setTimeout(function () { b.classList.remove('peek'); }, 8000);
+        }, 6500);
+      }
+    } catch (e) {}
+    b.addEventListener('click', function () {
+      b.classList.remove('peek'); try { sessionStorage.setItem('tgsChatPeek', '1'); } catch (e) {}
+      if (window.$chatwoot && window.$chatwoot.toggle) window.$chatwoot.toggle();
+      (window.dataLayer = window.dataLayer || []).push({ event: 'chat_open' });
+    });
+    d.body.appendChild(b);
+  }
 
-  /* 8. 10. 2026: loader se nacita az po prvni interakci (scroll, dotyk, mys, klavesa)
-     nebo po 8 s necinnosti. Smartsupp je nejtezsi skript tretich stran a zhorsoval
-     INP/TBT na mobilu. Fronta window.smartsupp._ prikazy z mezicasu zachova. */
   var loaded = false;
   var EVENTS = ['scroll', 'pointerdown', 'mousemove', 'touchstart', 'keydown'];
   function load() {
     if (loaded) return;
     loaded = true;
+    window.__tgsChat = 1;
     EVENTS.forEach(function (ev) { window.removeEventListener(ev, load, { passive: true }); });
-    var s = document.getElementsByTagName('script')[0];
-    var c = document.createElement('script');
-    c.type = 'text/javascript';
-    c.charset = 'utf-8';
+    var s = d.getElementsByTagName('script')[0];
+    var c = d.createElement('script');
     c.async = true;
-    c.src = 'https://www.smartsuppchat.com/loader.js?';
+    c.src = JB_URL + '/packs/js/sdk.js';
+    c.onload = function () {
+      try { window.jarabotSDK.run({ websiteToken: JB_TOKEN, baseUrl: JB_URL }); } catch (e) {}
+      robot();
+    };
     s.parentNode.insertBefore(c, s);
   }
   EVENTS.forEach(function (ev) { window.addEventListener(ev, load, { passive: true, once: true }); });
   setTimeout(load, 8000);
 })();
 
-/* Odsazeni chatove bubliny nad sticky CTA listu.
-   Smartsupp si bublinu kotvi na fixed wrapper s bottom:24px. Na strankach,
-   kde je dole lista #stickyCta (10 stranek), se pres ni bublina prekryva
-   a splyva s ni. Zvedneme ji o vysku listy, jakmile lista najede, a vratime
-   dolu, kdyz ji navstevnik zavre. Vysku merime az za behu, protoze na mobilu
-   je lista nizsi nez na desktopu. Na strankach bez listy nedela nic. */
+/* Odsazeni robota #tgs-chat nad cookie listu (.tmx-cc), sticky CTA listu (#stickyCta)
+   a mobilni listu clanku (#brBar). Zvedneme ho o vysku listy, jakmile je videt,
+   a vratime dolu, kdyz zmizi. Vysku merime za behu. MutationObserver jen childList+subtree
+   (zadne attributes) + scroll/resize, aby nevznikla smycka. */
 (function () {
   'use strict';
-  var GAP = 12;    // mezera mezi listou a bublinou
-  var BASE = 24;   // vychozi odsazeni Smartsuppu
-
-  function bar()  { return document.getElementById('stickyCta') || document.getElementById('brBar'); }
-  function wrap() {
-    var f = document.getElementById('widgetButtonFrame');
-    return f && f.parentElement;
-  }
-
+  var GAP = 12;
   var last = null;
-  function apply() {
-    var w = wrap();
-    if (!w) return;
-    var b = bar();
-    var extra = (b && b.classList.contains('is-visible'))
-      ? Math.round(b.getBoundingClientRect().height) + GAP
-      : 0;
-    var val = (BASE + extra) + 'px';
-    if (val === last && w.style.bottom === val) return;  // zabrani smycce s observerem
-    last = val;
-    w.style.setProperty('bottom', val, 'important');
+  function bars() {
+    var out = [], c = document.querySelector('.tmx-cc');
+    if (c) out.push(c);
+    var ids = ['stickyCta', 'brBar'];
+    for (var i = 0; i < ids.length; i++) {
+      var e = document.getElementById(ids[i]);
+      if (e && e.classList.contains('is-visible')) out.push(e);
+    }
+    return out;
   }
-
+  function apply() {
+    var r = document.getElementById('tgs-chat');
+    if (!r) return;
+    var extra = 0, list = bars();
+    for (var i = 0; i < list.length; i++) {
+      var rect = list[i].getBoundingClientRect();
+      if (rect.height > 0 && rect.top < window.innerHeight) extra = Math.max(extra, Math.round(window.innerHeight - rect.top) + GAP);
+    }
+    var base = window.innerWidth <= 600 ? 14 : 22;
+    var val = (base + extra) + 'px';
+    if (val === last && r.style.bottom === val) return;
+    last = val;
+    r.style.setProperty('bottom', val, 'important');
+  }
   function init() {
-    var b = bar();
-    if (!b) return;                       // stranka bez listy - nic neresime
-    new MutationObserver(apply).observe(b, { attributes: true, attributeFilter: ['class'] });
-    new MutationObserver(apply).observe(document.body, { childList: true });
+    new MutationObserver(apply).observe(document.body, { childList: true, subtree: true });
     window.addEventListener('resize', apply);
+    window.addEventListener('scroll', apply, { passive: true });
+    setInterval(apply, 1000);
     apply();
   }
-
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', init);
   } else {
@@ -578,7 +630,7 @@
 
 /* ─── Mobilní lišta „TRUCKER + čtečka zdarma“ (79-1, 21. 11. 2026) ───
  * Jen ≤ 720 px. Ukáže se po odscrollování horního boxu (.br-top), skrytá je, dokud
- * je vidět cookie lišta (.tmx-cc) nebo otevřené chat okno Smartsuppu. Zavření
+ * je vidět cookie lišta (.tmx-cc) nebo otevřené chat okno Jarabotu. Zavření
  * se pamatuje v sessionStorage. Žádné atributy v MutationObserveru. */
 (function () {
   'use strict';
@@ -589,7 +641,7 @@
   var top = document.querySelector('.br-top');
   var mq = window.matchMedia ? window.matchMedia('(max-width:720px)') : null;
   function chatOpen() {
-    var c = document.getElementById('chat-application');
+    var c = document.querySelector('.woot-widget-holder');
     return !!(c && c.offsetHeight > 120);
   }
   function update() {
