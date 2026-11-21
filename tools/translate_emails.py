@@ -10,7 +10,7 @@ Segment se přeloží, jen pokud je ve slovníku; jinak zůstane (TAGRA,
 čísla kroků, telefony, e-maily, názvy sítí).
 
 CENY (roční licenční poplatek od 2. roku, bez DPH):
-  cz          TAGRA 1/2/4/6 = 1 990 Kč · MAX = 3 490 Kč · TRUCKER = 490 Kč
+  cz          TAGRA 1/2 = 1 990 Kč · TAGRA 4/6 = 2 490 Kč · MAX = 3 490 Kč · TRUCKER = 490 Kč
               (samostatný korunový ceník, NE přepočet z EUR)
   sk          TAGRA 1/2 = 79 € · TAGRA 4/6 = 99 € · MAX = 149 € · TRUCKER = 19 €
   de/pl/gr    od 79 € · MAX = 149 € · TRUCKER = 19 €
@@ -127,7 +127,7 @@ TR["cz"] = {
     "Is there anything in the trial that did not work the way you expected?":
         "Nefungovalo ve zkušební verzi něco tak, jak jste čekali?",
     "The annual licence fee starts at &euro;79 excl. VAT (TAGRA MAX &euro;149) and the first year is included in the purchase price — it covers updates and support. If something in the trial didn't work, tell me before it expires; I'd rather fix it than lose you over it. I reply personally.":
-        "Roční licenční poplatek je 1 990 Kč bez DPH (TAGRA MAX 3 490 Kč) a první rok je zahrnutý v ceně — kryje aktualizace a technickou podporu. Pokud ve zkušební verzi něco nefungovalo, napište mi dřív, než vyprší; radši to spravím, než abych o vás kvůli tomu přišel. Odpovídám osobně.",
+        "Roční licenční poplatek začíná na 1 990 Kč bez DPH (TAGRA MAX 3 490 Kč) a první rok je zahrnutý v ceně — kryje aktualizace a technickou podporu. Pokud ve zkušební verzi něco nefungovalo, napište mi dřív, než vyprší; radši to spravím, než abych o vás kvůli tomu přišel. Odpovídám osobně.",
 
     # --- email3 DRIVER ---
     "Your TAGRA TRUCKER trial ends in 5 days": "Zkušební verze TAGRA TRUCKER končí za 5 dní",
