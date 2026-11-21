@@ -1,4 +1,4 @@
-/* TAGRA Shop – schema v2 (21. 11. 2026, 79-6; v2: shippingRate vždy 0.00, čtečka /smart-card-reader/ jako HW): doplňuje microdata Shoptetu na detailu produktu (brand, mpn, hasMerchantReturnPolicy jen u HW,
+/* TAGRA Shop – schema v3 (21. 11. 2026, 79-6; v3: vlastnosti produktu se hledají i hlouběji v DOM (mimo vnořený itemscope), ne jen jako přímí potomci; v2: shippingRate vždy 0.00, čtečka /smart-card-reader/ jako HW): doplňuje microdata Shoptetu na detailu produktu (brand, mpn, hasMerchantReturnPolicy jen u HW,
    kategorie bez českého kořene „Úvodní stránka“) a vkládá Organization JSON-LD na všechny stránky shopu. Nic jiného nemění,
    druhou entitu Product nevytváří, shippingRate value nastavuje na 0.00 (doprava po EU zdarma). */
 (function(){
@@ -11,6 +11,9 @@
   function el(tag,attrs){var e=D.createElement(tag);for(var k in attrs)e.setAttribute(k,attrs[k]);return e;}
   function meta(p,c){return el('meta',{itemprop:p,content:c});}
   function link(p,h){return el('link',{itemprop:p,href:h});}
+
+  /* vlastnost patřící přímo produktu (nejbližší itemscope předek je root), ať je v DOM jakkoli hluboko */
+  function own(root,sel){var l=root.querySelectorAll(sel);for(var i=0;i<l.length;i++){var p=l[i].parentElement;if(p&&p.closest('[itemscope]')===root)return l[i];}return null;}
 
   function organization(){
     if(D.getElementById('tgs-org-ld'))return;
@@ -34,23 +37,23 @@
     if(!root||root.getAttribute('data-tgs-schema'))return;
     root.setAttribute('data-tgs-schema','1');
     /* kategorie: český kořen podle <html lang> */
-    var cat=root.querySelector(':scope > meta[itemprop="category"]');
+    var cat=own(root,'meta[itemprop="category"]');
     if(cat){
       var c=cat.getAttribute('content')||'';
       var m=c.match(/^\s*Úvodní stránka\s*(>\s*)?/);
       if(m){cat.setAttribute('content',(HOME[LG]||HOME.en)+(c.length>m[0].length?' > '+c.slice(m[0].length):''));}
     }
-    var skuEl=root.querySelector(':scope > meta[itemprop="sku"]');
+    var skuEl=own(root,'meta[itemprop="sku"]');
     var sku=skuEl&&skuEl.getAttribute('content');
-    var urlEl=root.querySelector(':scope > meta[itemprop="url"]');
+    var urlEl=own(root,'meta[itemprop="url"]');
     var pu=(urlEl&&urlEl.getAttribute('content'))||'';
     var hw=b.classList.contains('in-download-devices')||b.classList.contains('id-708')||/\/smart-card-reader\/?$/.test(pu);
-    if(!root.querySelector(':scope > [itemprop="brand"]')){
+    if(!own(root,'[itemprop="brand"]')){
       var br=el('span',{itemprop:'brand',itemscope:'',itemtype:'https://schema.org/Brand'});
       br.appendChild(meta('name',hw?'Truck Data Technology':'TAGRA'));
       root.appendChild(br);
     }
-    if(sku&&!root.querySelector(':scope > [itemprop="mpn"]'))root.appendChild(meta('mpn',sku));
+    if(sku&&!own(root,'[itemprop="mpn"]'))root.appendChild(meta('mpn',sku));
     /* doprava po EU je zdarma (Shoptet u atypické dopravy chybně uvádí 10.07) */
     [].forEach.call(root.querySelectorAll('[itemprop="shippingDetails"] [itemprop="shippingRate"] [itemprop="value"]'),function(e){e.setAttribute('content','0.00');});
     /* return policy jen u HW; u licencí (digitální obsah) se nepřidává */
