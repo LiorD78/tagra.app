@@ -1,4 +1,4 @@
-/* TAGRA Shop – lokalizace patičky .tgs-footer podle html[lang]. 21. 11. 2026: ES/IT texty + odkazy; DE/HU jen věta o podpoře (79-8). Načítá se z HTML kódů (patička). */
+/* TAGRA Shop – lokalizace textů patičky .tgs-footer podle html[lang]. 21. 11. 2026: ES/IT texty; DE/HU jen věta o podpoře (79-8). Odkazy na /<lang>/ řeší shop.js – tady se jen opraví případné zdvojení /xx/xx/. Načítá se z HTML kódů (patička). */
 
 (function(){
   var D={
@@ -8,7 +8,7 @@
     hu:{sup:" · E-mailes ügyfélszolgálat magyarul"}
   };
   var SUP=/support in English|Support auf Englisch|angol nyelvű ügyféltámogatás/;
-  function run(){
+  function txt(){
     var lg=(document.documentElement.getAttribute('lang')||'').slice(0,2).toLowerCase();
     var T=D[lg]; var f=document.querySelector('.tgs-footer'); if(!T||!f) return;
     var w=document.createTreeWalker(f,NodeFilter.SHOW_TEXT,null,false),n,s,k;
@@ -18,13 +18,15 @@
       if(SUP.test(k)){ n.nodeValue=T.sup; continue; }
       if(T.hasOwnProperty(k)) n.nodeValue=s.replace(k,T[k]);
     }
-    if(lg!=='it'&&lg!=='es') return;
-    var a=f.querySelectorAll('a[href]'),i,h;
+  }
+  function dedupe(){
+    var f=document.querySelector('.tgs-footer'); if(!f) return;
+    var a=f.querySelectorAll('a[href]'),i,h,m;
     for(i=0;i<a.length;i++){
-      h=a[i].getAttribute('href');
-      if(/^\/(?!it\/|es\/)[a-z0-9-]+\/$/.test(h)) a[i].setAttribute('href','/'+lg+h);
-      else if(h==='https://tagra.app/') a[i].setAttribute('href','https://tagra.app/'+lg+'/');
+      h=a[i].getAttribute('href'); m=h.match(/^\/([a-z]{2})\/\1\//);
+      if(m) a[i].setAttribute('href',h.replace('/'+m[1]+'/'+m[1]+'/','/'+m[1]+'/'));
     }
   }
+  function run(){ txt(); dedupe(); setTimeout(dedupe,1500); }
   if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',run); else run();
 })();
