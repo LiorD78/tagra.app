@@ -18,7 +18,7 @@ import { fileURLToPath } from 'node:url';
 
 export const ROOT = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 
-/* lang: fleet page, driver page, price format, decimal separator, inquiry base (HU = Rukon Kft., never the e-shop) */
+/* lang: fleet page, driver page, price format, decimal separator, e-shop language version */
 export const LANGS = {
   en: { fleet: 'fleet', driver: 'driver', fmt: '€{n}', dec: '.' },
   de: { fleet: 'de/fuhrpark', driver: 'de/fahrer', fmt: '{n} €', dec: ',', shop: '/de' },
@@ -26,7 +26,7 @@ export const LANGS = {
   it: { fleet: 'it/per-aziende', driver: 'it/per-autisti', fmt: '{n} €', dec: ',' },
   nl: { fleet: 'nl/voor-transportbedrijven', driver: 'nl/voor-chauffeurs', fmt: '€{n}', dec: ',' },
   pl: { fleet: 'pl/dla-przewoznikow', driver: 'pl/dla-kierowcow', fmt: '{n} €', dec: ',', shop: '/pl' },
-  hu: { fleet: 'hu/fuvarozoknak', driver: 'hu/soforoknek', fmt: '{n} €', dec: ',', base: '/hu/kapcsolat/?product=' },
+  hu: { fleet: 'hu/fuvarozoknak', driver: 'hu/soforoknek', fmt: '{n} €', dec: ',', shop: '/hu' },
   ro: { fleet: 'ro/pentru-firme', driver: 'ro/pentru-conducatori', fmt: '{n} €', dec: ',' },
   el: { fleet: 'el/stolos', driver: 'el/odigoi', fmt: '{n} €', dec: ',' },
   es: { fleet: 'es/empresas', driver: 'es/conductores', fmt: '{n} €', dec: ',' },
