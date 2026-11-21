@@ -1,4 +1,4 @@
-/* TAGRA Shop layer 3 v1.12 (21. 11. 2026: language switcher – Shoptet's fixed language name "Język polski" shown as "Polski", like the other one-word names Deutsch/English/Magyar/Español) | v1.11 (13. 11. 2026: loads shop-video.js v1 on product pages – DOWNLOAD BOX II S video instead of the still) | v1.10 (10. 11. 2026: loads shop-ai.js v1 – AI assistant in TAGRA III block on the homepage and TAGRA 1/2/4/6/MAX product pages) | v1.9 (9. 11. 2026: loads shop-dev.js v1 on every page – nav: green field only on the current item; Download devices: featured DOWNLOAD BOX II S, comparison, reviews, DKV LIVE callout) | v1.8 (8. 11. 2026: loads shop-cro.js v1 on every page – sticky buy bar, quote, add-to-cart panel, cart note, 404/search; fleet calculator v1.8, switcher v1.2) | v1.7 (7. 11. 2026: version switcher also on TAGRA TRUCKER / TRUCKER 2, fleet calculator v1.5) | v1.6 (7. 11. 2026: animovany robot v paticce) | v1.5 – program screenshots in a MacBook frame (like TRUCKMALL mac-stage) (3. 11. 2026); v1.3 loads the fleet calculator on the homepage; v1.4 loads the version switcher on TAGRA product pages; v1.5 Safari plays the coffee video in the first carousel card (6. 11. 2026) */
+/* TAGRA Shop layer 3 v1.13 (21. 11. 2026: contact page laid out as cards – sales/support + company details side by side, company table with left-aligned one-line labels, return address as a note, smaller cards for CZ/SK, Hungary, authorities; wider content on that page; empty Shoptet "Discussion" hidden under all info pages) | v1.12 (21. 11. 2026: language switcher – Shoptet's fixed language name "Język polski" shown as "Polski", like the other one-word names Deutsch/English/Magyar/Español) | v1.11 (13. 11. 2026: loads shop-video.js v1 on product pages – DOWNLOAD BOX II S video instead of the still) | v1.10 (10. 11. 2026: loads shop-ai.js v1 – AI assistant in TAGRA III block on the homepage and TAGRA 1/2/4/6/MAX product pages) | v1.9 (9. 11. 2026: loads shop-dev.js v1 on every page – nav: green field only on the current item; Download devices: featured DOWNLOAD BOX II S, comparison, reviews, DKV LIVE callout) | v1.8 (8. 11. 2026: loads shop-cro.js v1 on every page – sticky buy bar, quote, add-to-cart panel, cart note, 404/search; fleet calculator v1.8, switcher v1.2) | v1.7 (7. 11. 2026: version switcher also on TAGRA TRUCKER / TRUCKER 2, fleet calculator v1.5) | v1.6 (7. 11. 2026: animovany robot v paticce) | v1.5 – program screenshots in a MacBook frame (like TRUCKMALL mac-stage) (3. 11. 2026); v1.3 loads the fleet calculator on the homepage; v1.4 loads the version switcher on TAGRA product pages; v1.5 Safari plays the coffee video in the first carousel card (6. 11. 2026) */
 (function(){
   var l=document.createElement('link');l.rel='stylesheet';l.href='https://tagra.app/assets/css/shop3.css?v=2';document.head.appendChild(l);
   var MB='https://wuswoaicjtuodzmrjwgf.supabase.co/storage/v1/object/public/site/tagra-shop/mac/tagra3-mac-';
@@ -82,6 +82,41 @@
       if(e.getAttribute&&LANG_NAMES.hasOwnProperty(e.getAttribute('title')||''))e.setAttribute('title',LANG_NAMES[e.getAttribute('title')]);
     });
   }
-  function run(){langs();dev();imgs();gallery();zoom();topsellers();fleet();variant();cro();robot();ai();vid();if(document.body&&document.body.classList.contains('type-index'))vfix();}
+  /* v1.13: info pages – hide Shoptet's empty "Discussion" block; contact page laid out as cards (works in every language, uses the page's own h2/ul/table/p) */
+  var CT_CSS='.content-inner.tgs-info>h2,.content-inner.tgs-info>.discussionContainer{display:none!important}'
+    +'.content-inner.tgs-ct-wide{max-width:1178px}'
+    +'.tgs-ct>p:first-child{font-size:18px;line-height:1.55;color:#33475b;max-width:820px}'
+    +'.tgs-ct-grid{display:grid;gap:20px;margin:26px 0}.tgs-ct-grid--2{grid-template-columns:repeat(2,minmax(0,1fr))}.tgs-ct-grid--3{grid-template-columns:repeat(3,minmax(0,1fr));align-items:start}'
+    +'.tgs-ct-card{background:#fff;border:1px solid #e3ecf3;border-radius:20px;padding:24px 26px;box-shadow:0 10px 28px rgba(16,42,80,.07)}'
+    +'.tgs-ct-card h2{font-size:22px!important;line-height:1.2!important;margin:0 0 16px!important}'
+    +'.tgs-ct-card ul{margin:0;padding-left:20px}.tgs-ct-card li{margin:4px 0}.tgs-ct-card p{margin:12px 0 0;font-size:15px;line-height:1.55;color:#4b5b70}'
+    +'.tgs-ct-card table{width:100%;border-collapse:collapse;margin:0}'
+    +'.tgs-ct-card th{text-align:left;font-weight:600;color:#4b5b70;font-size:14px;white-space:nowrap;padding:9px 18px 9px 0;vertical-align:top;width:1%}'
+    +'.tgs-ct-card td{padding:9px 0;color:#123a6b;font-size:15px}.tgs-ct-card tr+tr th,.tgs-ct-card tr+tr td{border-top:1px solid #edf2f7}'
+    +'.tgs-ct-card .tgs-ct-note{margin-top:16px;padding:12px 14px;background:#f5f9fc;border-radius:12px;font-size:14px;color:#33475b}'
+    +'.tgs-ct-card--sm h2{font-size:18px!important}.tgs-ct-card .tgs-ct-more{font-size:14px}'
+    +'@media (max-width:900px){.tgs-ct-grid--3{grid-template-columns:1fr}}'
+    +'@media (max-width:767px){.tgs-ct-grid--2{grid-template-columns:1fr}.tgs-ct-card{padding:20px}.tgs-ct-card th,.tgs-ct-card td{display:block;width:auto;white-space:normal;padding:0}.tgs-ct-card th{padding-top:10px}.tgs-ct-card td{padding-bottom:10px}.tgs-ct-card tr+tr td{border-top:0}.tgs-ct-card tr+tr th{border-top:1px solid #edf2f7}}';
+  function info(){
+    var art=document.querySelector('article.pageArticleDetail');if(!art)return;
+    var ci=art.closest('.content-inner');
+    if(!document.getElementById('tgs-ct-css')){var st=document.createElement('style');st.id='tgs-ct-css';st.textContent=CT_CSS;document.head.appendChild(st);}
+    if(ci)ci.classList.add('tgs-info');
+    if(!/\/(contact|contacto|kontakt|kapcsolat)\/?$/.test(location.pathname))return;
+    var h2s=art.querySelectorAll('h2');if(h2s.length<2)return;
+    var box=h2s[0].parentElement;if(box.classList.contains('tgs-ct'))return;
+    box.classList.add('tgs-ct');if(ci)ci.classList.add('tgs-ct-wide');
+    var cards=[],cur=null;
+    [].slice.call(box.children).forEach(function(el){
+      if(el.tagName==='H2'){cur=document.createElement('section');cur.className='tgs-ct-card';cards.push(cur);el.parentNode.insertBefore(cur,el);cur.appendChild(el);}
+      else if(cur){cur.appendChild(el);}
+    });
+    cards.forEach(function(c){var t=c.querySelector('table');if(!t)return;var n=t.nextElementSibling;while(n){if(n.tagName==='P')n.classList.add('tgs-ct-note');n=n.nextElementSibling;}});
+    var last=cards[cards.length-1];
+    if(last){var ps=last.querySelectorAll('p');if(ps.length)ps[ps.length-1].classList.add('tgs-ct-more');}
+    if(cards.length>=2){var g1=document.createElement('div');g1.className='tgs-ct-grid tgs-ct-grid--2';cards[0].parentNode.insertBefore(g1,cards[0]);g1.appendChild(cards[0]);g1.appendChild(cards[1]);}
+    if(cards.length>2){var g2=document.createElement('div');g2.className='tgs-ct-grid tgs-ct-grid--3';cards[2].parentNode.insertBefore(g2,cards[2]);for(var i=2;i<cards.length;i++){cards[i].classList.add('tgs-ct-card--sm');g2.appendChild(cards[i]);}}
+  }
+  function run(){langs();info();dev();imgs();gallery();zoom();topsellers();fleet();variant();cro();robot();ai();vid();if(document.body&&document.body.classList.contains('type-index'))vfix();}
   if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',run);}else{run();}
 })();
