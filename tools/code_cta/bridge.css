@@ -1,0 +1,39 @@
+/* ─── Most článek → nákup (79-1, tools/code_cta/bridge.js, 21. 11. 2026) ───
+   Horní box (.br-top), koncový box (.br-end) a mobilní lišta (.br-bar).
+   Tlačítka dědí .cta-box a.cta-btn; formulář „pošlete mi odkaz na PC“ zůstává .cc-mail. */
+.br-box .br-eyebrow { font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: rgba(255,255,255,.7); }
+.br-box .br-price { font-weight: 700; color: #fff; font-size: 17px; }
+.br-box .br-perk { display: flex; align-items: center; gap: 8px; font-weight: 600; color: #fff; }
+.br-box .br-perk svg { flex: 0 0 auto; width: 22px; height: 22px; }
+.br-box a.br-buy { text-align: center; }
+.br-box a.br-trial, .br-box a.br-fleet { color: #fff; text-decoration: underline; font-size: 15px; font-weight: 600; }
+.br-box a.br-fleet { font-size: 14px; font-weight: 400; color: rgba(255,255,255,.85); }
+.br-box .br-review { margin: 6px 0 0; padding: 0 0 0 14px; border-left: 3px solid rgba(255,255,255,.35); color: rgba(255,255,255,.92); font-size: 15px; line-height: 1.5; }
+.br-box .br-review cite { display: block; margin-top: 4px; font-style: normal; font-size: 12px; color: rgba(255,255,255,.65); }
+.br-box details.br-mail { display: none; }
+.br-box details.br-mail > summary { cursor: pointer; font-weight: 600; font-size: 15px; color: #fff; text-decoration: underline; padding: 6px 0; }
+.br-box details.br-mail[open] > summary { margin-bottom: 10px; }
+.br-bar { display: none; }
+@media (max-width: 720px) {
+  .br-box a.br-buy { width: 100%; box-sizing: border-box; justify-content: center; }
+  .br-box a.br-desk { display: none; }
+  .br-box details.br-mail { display: block; width: 100%; }
+  body:has(.br-bar) { padding-bottom: 76px; }
+  .br-bar {
+    display: block; position: fixed; left: 0; right: 0; bottom: 0; z-index: 850;
+    transform: translateY(100%); opacity: 0; visibility: hidden;
+    transition: transform .3s ease, opacity .3s ease, visibility 0s linear .3s;
+    background: linear-gradient(120deg, var(--blue-dark), var(--blue-mid) 70%);
+    box-shadow: 0 -4px 24px rgba(0,0,0,.18);
+  }
+  .br-bar.is-visible { transform: translateY(0); opacity: 1; visibility: visible; transition-delay: 0s; }
+  .br-bar-inner { display: flex; align-items: center; gap: 10px; padding: 10px 8px 10px 14px; }
+  .br-bar-text { flex: 1 1 auto; min-width: 0; color: #fff; font-weight: 600; font-size: 13px; line-height: 1.3; }
+  .br-bar-btn {
+    flex: 0 0 auto; color: #fff !important; text-decoration: none !important; white-space: nowrap;
+    font-weight: 700; font-size: 14px; padding: 10px 16px; border-radius: 99px;
+    background: linear-gradient(135deg, var(--green-brand) 0%, var(--green-cta) 100%);
+    box-shadow: 0 4px 14px rgba(0,0,0,.22), 0 1px 0 rgba(255,255,255,.22) inset;
+  }
+  .br-bar-x { flex: 0 0 auto; background: none; border: 0; color: rgba(255,255,255,.75); font-size: 24px; line-height: 1; padding: 6px 10px; cursor: pointer; }
+}
