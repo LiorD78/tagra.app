@@ -41,7 +41,9 @@ const FLEET = {
   en: '/fleet/', de: '/de/fuhrpark/', pl: '/pl/dla-przewoznikow/', hu: '/hu/fuvarozoknak/', ro: '/ro/pentru-firme/',
   fr: '/fr/entreprises/', el: '/el/stolos/', it: '/it/per-aziende/', nl: '/nl/voor-transportbedrijven/', es: '/es/empresas/'
 };
-const NAV_V = '20261121a', CSS_V = '20261121';
+const NAV_V = '20261121a', CSS_V = '20261121b';
+const SPARK_ICON = '<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l1.9 6.1L20 10l-6.1 1.9L12 18l-1.9-6.1L4 10l6.1-1.9z"/><path d="M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8z"/></svg>';
+const aiRow = (lang) => `<p class="br-ai">${SPARK_ICON}<span>${esc(B[lang].ai)}</span></p>\n`;
 const READER_ICON = '<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="13" height="10" rx="2"/><path d="M16 10h3a2 2 0 0 1 2 2v0a2 2 0 0 1-2 2h-3"/><path d="M7 11h5M7 13.5h3"/></svg>';
 
 const esc = (t) => String(t).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
@@ -83,7 +85,7 @@ function topBox(lang, src, kind) {
 <p>${esc(t['text_' + kind])}</p>
 <p class="br-price">${esc(t.price)}</p>
 <p class="br-perk">${READER_ICON}<span>${esc(t.perk)}</span></p>
-${link('cta-btn br-buy', pos, 'buy', shopUrl(lang), esc(t.btn_buy))}
+${aiRow(lang)}${link('cta-btn br-buy', pos, 'buy', shopUrl(lang), esc(t.btn_buy))}
 ${link('br-trial br-desk', pos, 'trial', trialUrl(lang, src), esc(t.btn_trial))}
 <details class="br-mail">
 <summary data-bridge="${pos}" data-cta="mail">${esc(t.mail_toggle)}</summary>
@@ -140,7 +142,17 @@ for (const p of walk('.', []).map((x) => x.replace(/^\.\//, '')).sort()) {
   if (['driver', 'driver-card', 'article-shopbox'].includes(m[1]) || (!symbols && !hasCc)) continue;
   const lang = langOf(p);
   if (!B[lang] || !F[lang]) { problems.push([p, 'lang ' + lang]); continue; }
-  if (doc.includes('data-bridge-v="2"')) { skipped.push(p); continue; }
+  if (doc.includes('data-bridge-v="2"')) {
+    /* 79-10: hotové stránky jen dostanou řádek AI pod perk */
+    if (!doc.includes('class="br-ai"')) {
+      const re = /(<p class="br-perk">[\s\S]*?<\/p>\n)/;
+      if (!re.test(doc)) { problems.push([p, 'no br-perk']); continue; }
+      doc = doc.replace(re, (x) => x + aiRow(lang));
+      changed.push(p); stats[lang + '/ai'] = (stats[lang + '/ai'] || 0) + 1;
+      if (!DRY) fs.writeFileSync(p, doc);
+    } else skipped.push(p);
+    continue;
+  }
   const kind = symbols ? 'sym' : 'err';
   const src = m[1];
   const main = doc.search(/<main\b/);
