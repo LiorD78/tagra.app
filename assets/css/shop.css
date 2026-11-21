@@ -291,18 +291,18 @@ html.tgs-var-restoring .tgs-var__o{transition:none!important}
 
 /* ===== v6.2 – blue order summary in cart + checkout, same look as the fleet calculator (6. 11. 2026) ===== */
 /* cart (step 1) */
-body.in-cart .sidebar-in-cart .summary-wrapper>.box{position:relative;padding:26px 24px 22px!important;border:0!important;border-radius:20px;color:#fff;
+body:is(.in-cart,.in-warenkorb,.in-kosar,.in-koszyk,.in-carrito,.in-cesta) .sidebar-in-cart .summary-wrapper>.box{position:relative;padding:26px 24px 22px!important;border:0!important;border-radius:20px;color:#fff;
   background:linear-gradient(160deg,#0b2c4a 0%,#134a8e 70%,#1f5fa6 100%)!important;box-shadow:0 18px 40px rgba(11,44,74,.22)}
-body.in-cart .sidebar-in-cart .summary-wrapper>.box::before{content:"Your order";display:block;margin:0 0 14px;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#a9cbe8}
-body.in-cart .sidebar-in-cart .price-wrapper{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:baseline;gap:6px 12px;margin:0;padding:0;border:0;text-align:left}
-body.in-cart .sidebar-in-cart .price-wrapper>*{margin:0!important;float:none!important;width:auto!important}
-body.in-cart .sidebar-in-cart .price-wrapper .price{text-align:right}
-body.in-cart .sidebar-in-cart .price-wrapper .oss-price-notification__wrapper{order:9;grid-column:1/-1;margin:4px 0 0!important;text-align:left;font-size:12.5px;color:#a9cbe8!important}
-body.in-cart .sidebar-in-cart .price-wrapper .price-label{color:#d6e6f4!important;font-size:14px;font-weight:600}
-body.in-cart .sidebar-in-cart .price-wrapper .price-primary.price{font-size:36px;font-weight:800;letter-spacing:-.02em;line-height:1.05;color:#fff!important}
-body.in-cart .sidebar-in-cart .price-wrapper .price-label.price-secondary{font-weight:500;font-size:13px;color:#a9cbe8!important}
-body.in-cart .sidebar-in-cart .price-wrapper .price-secondary.price{font-size:14px;font-weight:600;color:#d6e6f4!important}
-body.in-cart .sidebar-in-cart .next-step{display:flex;flex-direction:column-reverse;align-items:stretch;gap:12px;margin:20px 0 0;padding:18px 0 0;border-top:1px solid rgba(255,255,255,.16)}
+body:is(.in-cart,.in-warenkorb,.in-kosar,.in-koszyk,.in-carrito,.in-cesta) .sidebar-in-cart .summary-wrapper>.box::before{content:"Your order";display:block;margin:0 0 14px;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#a9cbe8}
+body:is(.in-cart,.in-warenkorb,.in-kosar,.in-koszyk,.in-carrito,.in-cesta) .sidebar-in-cart .price-wrapper{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:baseline;gap:6px 12px;margin:0;padding:0;border:0;text-align:left}
+body:is(.in-cart,.in-warenkorb,.in-kosar,.in-koszyk,.in-carrito,.in-cesta) .sidebar-in-cart .price-wrapper>*{margin:0!important;float:none!important;width:auto!important}
+body:is(.in-cart,.in-warenkorb,.in-kosar,.in-koszyk,.in-carrito,.in-cesta) .sidebar-in-cart .price-wrapper .price{text-align:right}
+body:is(.in-cart,.in-warenkorb,.in-kosar,.in-koszyk,.in-carrito,.in-cesta) .sidebar-in-cart .price-wrapper .oss-price-notification__wrapper{order:9;grid-column:1/-1;margin:4px 0 0!important;text-align:left;font-size:12.5px;color:#a9cbe8!important}
+body:is(.in-cart,.in-warenkorb,.in-kosar,.in-koszyk,.in-carrito,.in-cesta) .sidebar-in-cart .price-wrapper .price-label{color:#d6e6f4!important;font-size:14px;font-weight:600}
+body:is(.in-cart,.in-warenkorb,.in-kosar,.in-koszyk,.in-carrito,.in-cesta) .sidebar-in-cart .price-wrapper .price-primary.price{font-size:36px;font-weight:800;letter-spacing:-.02em;line-height:1.05;color:#fff!important}
+body:is(.in-cart,.in-warenkorb,.in-kosar,.in-koszyk,.in-carrito,.in-cesta) .sidebar-in-cart .price-wrapper .price-label.price-secondary{font-weight:500;font-size:13px;color:#a9cbe8!important}
+body:is(.in-cart,.in-warenkorb,.in-kosar,.in-koszyk,.in-carrito,.in-cesta) .sidebar-in-cart .price-wrapper .price-secondary.price{font-size:14px;font-weight:600;color:#d6e6f4!important}
+body:is(.in-cart,.in-warenkorb,.in-kosar,.in-koszyk,.in-carrito,.in-cesta) .sidebar-in-cart .next-step{display:flex;flex-direction:column-reverse;align-items:stretch;gap:12px;margin:20px 0 0;padding:18px 0 0;border-top:1px solid rgba(255,255,255,.16)}
 /* checkout (steps 2 and 3): summary card + buttons below it read as one blue card */
 body.ordering-process #checkoutSidebar .order-summary-inner{padding:26px 24px 8px!important;border:0!important;border-radius:20px 20px 0 0;color:#e6f0f8;
   background:linear-gradient(180deg,#0b2c4a 0%,#134a8e 100%)!important;box-shadow:0 18px 40px rgba(11,44,74,.18)}
@@ -337,7 +337,7 @@ body.ordering-process .sidebar-in-cart .next-step .next-step-back,body.ordering-
 body.ordering-process .sidebar-in-cart .next-step .next-step-back span{color:#fff!important}
 body.ordering-process .next-step .btn-conversion span{text-transform:none!important;letter-spacing:0}
 body.ordering-process .next-step .btn-conversion .order-button-suffix{font-size:12.5px;font-weight:500;opacity:.9}
-@media (max-width:767px){body.in-cart .sidebar-in-cart .summary-wrapper>.box,body.ordering-process #checkoutSidebar .order-summary-inner{padding-left:18px!important;padding-right:18px!important}
+@media (max-width:767px){body:is(.in-cart,.in-warenkorb,.in-kosar,.in-koszyk,.in-carrito,.in-cesta) .sidebar-in-cart .summary-wrapper>.box,body.ordering-process #checkoutSidebar .order-summary-inner{padding-left:18px!important;padding-right:18px!important}
   body.ordering-process #checkoutSidebar .cart-content>.next-step{padding:14px 18px 20px}}
 
 /* ===== v6.3 – conversion pass A+B (8. 11. 2026): price excl. VAT + VAT line, terms at the button, sticky buy bar, entry hub,
@@ -353,7 +353,7 @@ body .products-block .p .price-additional::after{content:"+ VAT of your country"
 body .p-detail .p-final-price-wrapper .oss-price-notification__wrapper,body .products-block .p .oss-price-notification{display:none!important}
 /* per-product one-line terms right under Add to cart (CSS content = no layout shift, works before JS) */
 body.type-detail .p-detail .add-to-cart{flex-wrap:wrap}
-body.type-detail .p-detail .add-to-cart::after{flex:0 0 100%;order:9;display:block;margin:2px 0 0;font-size:13px;line-height:1.45;color:var(--text2);content:"Dispatched within 3 business days · delivery in 2–5 days · shipping €8.18 excl. VAT"}
+body.type-detail .p-detail .add-to-cart::after{flex:0 0 100%;order:9;display:block;margin:2px 0 0;font-size:13px;line-height:1.45;color:var(--text2);content:"Free delivery across the EU · dispatched within 3 business days · delivered in 2–5 days"}
 body.type-detail .p-detail:has(meta[itemprop="url"][content$="/tagra-1/"]) .add-to-cart::after{content:"First year included · then €79/year · no contract · 30-day free trial available"}
 body.type-detail .p-detail:has(meta[itemprop="url"][content$="/tagra-1-download-box-ii-s/"]) .add-to-cart::after{content:"First year of TAGRA included · then €79/year · no contract · device dispatched within 3 business days"}
 body.type-detail .p-detail:has(meta[itemprop="url"][content$="/tagra-2/"]) .add-to-cart::after{content:"First year included · then €79/year · no contract · 30-day free trial available"}
@@ -366,24 +366,24 @@ body.type-detail .p-detail:has(meta[itemprop="url"][content$="/tagra-max/"]) .ad
 body.type-detail .p-detail:has(meta[itemprop="url"][content$="/tagra-max-download-box-ii-s/"]) .add-to-cart::after{content:"First year of TAGRA included · then €149/year · no contract · device dispatched within 3 business days"}
 body.type-detail .p-detail:has(meta[itemprop="url"][content$="/tagra-trucker/"]) .add-to-cart::after{content:"First year included · then €19/year · no contract · USB card reader included"}
 body.type-detail .p-detail:has(meta[itemprop="url"][content$="/tagra-trucker-2/"]) .add-to-cart::after{content:"First year included · then €29/year · no contract · one USB card reader included"}
-body.type-detail .p-detail:has(meta[itemprop="url"][content$="/download-box-ii-s/"]) .add-to-cart::after{content:"No annual fees · 24-month warranty · dispatched within 3 business days"}
+body.type-detail .p-detail:has(meta[itemprop="url"][content$="/download-box-ii-s/"]) .add-to-cart::after{content:"No annual fees · 24-month warranty · free delivery across the EU"}
 /* same terms in the cart, under each item name */
-body.in-cart .cart-table td.p-name::after{display:block;margin-top:4px;font-size:12.5px;line-height:1.4;font-weight:500;color:var(--text2);content:"Dispatched within 3 business days · delivery in 2–5 days"}
-body.in-cart .cart-table td.p-name:has(a[href$="/tagra-1/"])::after{content:"Licence by e-mail · first year included · then €79/year · no contract"}
-body.in-cart .cart-table td.p-name:has(a[href$="/tagra-1-download-box-ii-s/"])::after{content:"First year of TAGRA included · then €79/year · device dispatched within 3 business days"}
-body.in-cart .cart-table td.p-name:has(a[href$="/tagra-2/"])::after{content:"Licence by e-mail · first year included · then €79/year · no contract"}
-body.in-cart .cart-table td.p-name:has(a[href$="/tagra-2-download-box-ii-s/"])::after{content:"First year of TAGRA included · then €79/year · device dispatched within 3 business days"}
-body.in-cart .cart-table td.p-name:has(a[href$="/tagra-4/"])::after{content:"Licence by e-mail · first year included · then €99/year · no contract"}
-body.in-cart .cart-table td.p-name:has(a[href$="/tagra-4-download-box-ii-s/"])::after{content:"First year of TAGRA included · then €99/year · device dispatched within 3 business days"}
-body.in-cart .cart-table td.p-name:has(a[href$="/tagra-6/"])::after{content:"Licence by e-mail · first year included · then €99/year · no contract"}
-body.in-cart .cart-table td.p-name:has(a[href$="/tagra-6-download-box-ii-s/"])::after{content:"First year of TAGRA included · then €99/year · device dispatched within 3 business days"}
-body.in-cart .cart-table td.p-name:has(a[href$="/tagra-max/"])::after{content:"Licence by e-mail · first year included · then €149/year · no contract"}
-body.in-cart .cart-table td.p-name:has(a[href$="/tagra-max-download-box-ii-s/"])::after{content:"First year of TAGRA included · then €149/year · device dispatched within 3 business days"}
-body.in-cart .cart-table td.p-name:has(a[href$="/tagra-trucker/"])::after{content:"First year included · then €19/year · no contract · USB card reader included"}
-body.in-cart .cart-table td.p-name:has(a[href$="/tagra-trucker-2/"])::after{content:"First year included · then €29/year · no contract · one USB card reader included"}
-body.in-cart .cart-table td.p-name:has(a[href$="/download-box-ii-s/"])::after{content:"No annual fees · dispatched within 3 business days · delivery in 2–5 days"}
+body:is(.in-cart,.in-warenkorb,.in-kosar,.in-koszyk,.in-carrito,.in-cesta) .cart-table td.p-name::after{display:block;margin-top:4px;font-size:12.5px;line-height:1.4;font-weight:500;color:var(--text2);content:"Free EU delivery · dispatched within 3 business days"}
+body:is(.in-cart,.in-warenkorb,.in-kosar,.in-koszyk,.in-carrito,.in-cesta) .cart-table td.p-name:has(a[href$="/tagra-1/"])::after{content:"Licence by e-mail · first year included · then €79/year · no contract"}
+body:is(.in-cart,.in-warenkorb,.in-kosar,.in-koszyk,.in-carrito,.in-cesta) .cart-table td.p-name:has(a[href$="/tagra-1-download-box-ii-s/"])::after{content:"First year of TAGRA included · then €79/year · device dispatched within 3 business days"}
+body:is(.in-cart,.in-warenkorb,.in-kosar,.in-koszyk,.in-carrito,.in-cesta) .cart-table td.p-name:has(a[href$="/tagra-2/"])::after{content:"Licence by e-mail · first year included · then €79/year · no contract"}
+body:is(.in-cart,.in-warenkorb,.in-kosar,.in-koszyk,.in-carrito,.in-cesta) .cart-table td.p-name:has(a[href$="/tagra-2-download-box-ii-s/"])::after{content:"First year of TAGRA included · then €79/year · device dispatched within 3 business days"}
+body:is(.in-cart,.in-warenkorb,.in-kosar,.in-koszyk,.in-carrito,.in-cesta) .cart-table td.p-name:has(a[href$="/tagra-4/"])::after{content:"Licence by e-mail · first year included · then €99/year · no contract"}
+body:is(.in-cart,.in-warenkorb,.in-kosar,.in-koszyk,.in-carrito,.in-cesta) .cart-table td.p-name:has(a[href$="/tagra-4-download-box-ii-s/"])::after{content:"First year of TAGRA included · then €99/year · device dispatched within 3 business days"}
+body:is(.in-cart,.in-warenkorb,.in-kosar,.in-koszyk,.in-carrito,.in-cesta) .cart-table td.p-name:has(a[href$="/tagra-6/"])::after{content:"Licence by e-mail · first year included · then €99/year · no contract"}
+body:is(.in-cart,.in-warenkorb,.in-kosar,.in-koszyk,.in-carrito,.in-cesta) .cart-table td.p-name:has(a[href$="/tagra-6-download-box-ii-s/"])::after{content:"First year of TAGRA included · then €99/year · device dispatched within 3 business days"}
+body:is(.in-cart,.in-warenkorb,.in-kosar,.in-koszyk,.in-carrito,.in-cesta) .cart-table td.p-name:has(a[href$="/tagra-max/"])::after{content:"Licence by e-mail · first year included · then €149/year · no contract"}
+body:is(.in-cart,.in-warenkorb,.in-kosar,.in-koszyk,.in-carrito,.in-cesta) .cart-table td.p-name:has(a[href$="/tagra-max-download-box-ii-s/"])::after{content:"First year of TAGRA included · then €149/year · device dispatched within 3 business days"}
+body:is(.in-cart,.in-warenkorb,.in-kosar,.in-koszyk,.in-carrito,.in-cesta) .cart-table td.p-name:has(a[href$="/tagra-trucker/"])::after{content:"First year included · then €19/year · no contract · USB card reader included"}
+body:is(.in-cart,.in-warenkorb,.in-kosar,.in-koszyk,.in-carrito,.in-cesta) .cart-table td.p-name:has(a[href$="/tagra-trucker-2/"])::after{content:"First year included · then €29/year · no contract · one USB card reader included"}
+body:is(.in-cart,.in-warenkorb,.in-kosar,.in-koszyk,.in-carrito,.in-cesta) .cart-table td.p-name:has(a[href$="/download-box-ii-s/"])::after{content:"No annual fees · free EU delivery · dispatched within 3 business days"}
 /* --- cart: Shoptet "Extras and discounts / You have free delivery!" leftover (no coupon form) -> hidden, replaced by .tgs-cartnote --- */
-body.in-cart .cart-summary:not(:has(input,select,textarea)){display:none!important}
+body:is(.in-cart,.in-warenkorb,.in-kosar,.in-koszyk,.in-carrito,.in-cesta) .cart-summary:not(:has(input,select,textarea)){display:none!important}
 .tgs-cartnote{display:flex;gap:12px;align-items:flex-start;margin:18px 0 0;padding:14px 16px;border-radius:14px;background:var(--tmx-bg-apple-light-solid);border:1px solid rgba(19,74,142,.1);font-size:14px;line-height:1.5;color:var(--text)}
 .tgs-cartnote::before{content:"";flex:0 0 22px;height:22px;border-radius:50%;background:var(--green-brand) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E") center/12px no-repeat}
 .tgs-cartnote b{color:var(--blue-dark)}
@@ -544,11 +544,11 @@ body.type-search #content:has(.tgs-srch) .search-results-groups,body.type-search
 
 /* DE shop (<html lang="de">, 8. 11. 2026): same CSS-content texts in German – texts from the crew (GPT + Gemini); EN rules above stay untouched */
 html[lang|="de"] body .products-block .p .price-final strong::after{content:"zzgl. MwSt."}
-html[lang|="de"] body.in-cart .sidebar-in-cart .summary-wrapper>.box::before{content:"Ihre Bestellung"}
+html[lang|="de"] body:is(.in-cart,.in-warenkorb,.in-kosar,.in-koszyk,.in-carrito,.in-cesta) .sidebar-in-cart .summary-wrapper>.box::before{content:"Ihre Bestellung"}
 html[lang|="de"] body .p-detail .p-final-price-wrapper .price-final-holder::after{content:"zzgl. MwSt."}
 html[lang|="de"] body .p-detail .p-final-price-wrapper .price-additional::after{content:"+ MwSt. Ihres Landes · 0 % für EU-Unternehmen mit gültiger USt-IdNr."}
 html[lang|="de"] body .products-block .p .price-additional::after{content:"+ MwSt. Ihres Landes"}
-html[lang|="de"] body.type-detail .p-detail .add-to-cart::after{content:"Versand innerhalb von 3 Werktagen · Lieferung in 2–5 Tagen · Versand 8,18 € zzgl. MwSt."}
+html[lang|="de"] body.type-detail .p-detail .add-to-cart::after{content:"Kostenloser Versand in die gesamte EU · Versand innerhalb von 3 Werktagen · Zustellung in 2–5 Tagen"}
 html[lang|="de"] body.type-detail .p-detail:has(meta[itemprop="url"][content$="/tagra-1/"]) .add-to-cart::after{content:"Erstes Jahr inklusive · danach 79 €/Jahr · keine Vertragsbindung · 30 Tage kostenlos testen"}
 html[lang|="de"] body.type-detail .p-detail:has(meta[itemprop="url"][content$="/tagra-1-download-box-ii-s/"]) .add-to-cart::after{content:"Erstes Jahr TAGRA inklusive · danach 79 €/Jahr · keine Vertragsbindung · Geräteversand innerhalb von 3 Werktagen"}
 html[lang|="de"] body.type-detail .p-detail:has(meta[itemprop="url"][content$="/tagra-2/"]) .add-to-cart::after{content:"Erstes Jahr inklusive · danach 79 €/Jahr · keine Vertragsbindung · 30 Tage kostenlos testen"}
@@ -561,30 +561,30 @@ html[lang|="de"] body.type-detail .p-detail:has(meta[itemprop="url"][content$="/
 html[lang|="de"] body.type-detail .p-detail:has(meta[itemprop="url"][content$="/tagra-max-download-box-ii-s/"]) .add-to-cart::after{content:"Erstes Jahr TAGRA inklusive · danach 149 €/Jahr · keine Vertragsbindung · Geräteversand innerhalb von 3 Werktagen"}
 html[lang|="de"] body.type-detail .p-detail:has(meta[itemprop="url"][content$="/tagra-trucker/"]) .add-to-cart::after{content:"Erstes Jahr inklusive · danach 19 €/Jahr · keine Vertragsbindung · USB-Kartenleser inklusive"}
 html[lang|="de"] body.type-detail .p-detail:has(meta[itemprop="url"][content$="/tagra-trucker-2/"]) .add-to-cart::after{content:"Erstes Jahr inklusive · danach 29 €/Jahr · keine Vertragsbindung · ein USB-Kartenleser inklusive"}
-html[lang|="de"] body.type-detail .p-detail:has(meta[itemprop="url"][content$="/download-box-ii-s/"]) .add-to-cart::after{content:"Keine jährlichen Gebühren · 24 Monate Garantie · Versand innerhalb von 3 Werktagen"}
-html[lang|="de"] body.in-cart .cart-table td.p-name::after{content:"Versand innerhalb von 3 Werktagen · Lieferung in 2–5 Tagen"}
-html[lang|="de"] body.in-cart .cart-table td.p-name:has(a[href$="/tagra-1/"])::after{content:"Lizenz per E-Mail · erstes Jahr inklusive · danach 79 €/Jahr · keine Vertragsbindung"}
-html[lang|="de"] body.in-cart .cart-table td.p-name:has(a[href$="/tagra-1-download-box-ii-s/"])::after{content:"Erstes Jahr TAGRA inklusive · danach 79 €/Jahr · Geräteversand innerhalb von 3 Werktagen"}
-html[lang|="de"] body.in-cart .cart-table td.p-name:has(a[href$="/tagra-2/"])::after{content:"Lizenz per E-Mail · erstes Jahr inklusive · danach 79 €/Jahr · keine Vertragsbindung"}
-html[lang|="de"] body.in-cart .cart-table td.p-name:has(a[href$="/tagra-2-download-box-ii-s/"])::after{content:"Erstes Jahr TAGRA inklusive · danach 79 €/Jahr · Geräteversand innerhalb von 3 Werktagen"}
-html[lang|="de"] body.in-cart .cart-table td.p-name:has(a[href$="/tagra-4/"])::after{content:"Lizenz per E-Mail · erstes Jahr inklusive · danach 99 €/Jahr · keine Vertragsbindung"}
-html[lang|="de"] body.in-cart .cart-table td.p-name:has(a[href$="/tagra-4-download-box-ii-s/"])::after{content:"Erstes Jahr TAGRA inklusive · danach 99 €/Jahr · Geräteversand innerhalb von 3 Werktagen"}
-html[lang|="de"] body.in-cart .cart-table td.p-name:has(a[href$="/tagra-6/"])::after{content:"Lizenz per E-Mail · erstes Jahr inklusive · danach 99 €/Jahr · keine Vertragsbindung"}
-html[lang|="de"] body.in-cart .cart-table td.p-name:has(a[href$="/tagra-6-download-box-ii-s/"])::after{content:"Erstes Jahr TAGRA inklusive · danach 99 €/Jahr · Geräteversand innerhalb von 3 Werktagen"}
-html[lang|="de"] body.in-cart .cart-table td.p-name:has(a[href$="/tagra-max/"])::after{content:"Lizenz per E-Mail · erstes Jahr inklusive · danach 149 €/Jahr · keine Vertragsbindung"}
-html[lang|="de"] body.in-cart .cart-table td.p-name:has(a[href$="/tagra-max-download-box-ii-s/"])::after{content:"Erstes Jahr TAGRA inklusive · danach 149 €/Jahr · Geräteversand innerhalb von 3 Werktagen"}
-html[lang|="de"] body.in-cart .cart-table td.p-name:has(a[href$="/tagra-trucker/"])::after{content:"Erstes Jahr inklusive · danach 19 €/Jahr · keine Vertragsbindung · USB-Kartenleser inklusive"}
-html[lang|="de"] body.in-cart .cart-table td.p-name:has(a[href$="/tagra-trucker-2/"])::after{content:"Erstes Jahr inklusive · danach 29 €/Jahr · keine Vertragsbindung · ein USB-Kartenleser inklusive"}
-html[lang|="de"] body.in-cart .cart-table td.p-name:has(a[href$="/download-box-ii-s/"])::after{content:"Keine jährlichen Gebühren · Versand innerhalb von 3 Werktagen · Lieferung in 2–5 Tagen"}
+html[lang|="de"] body.type-detail .p-detail:has(meta[itemprop="url"][content$="/download-box-ii-s/"]) .add-to-cart::after{content:"Keine jährlichen Gebühren · 24 Monate Garantie · kostenloser Versand in die gesamte EU"}
+html[lang|="de"] body:is(.in-cart,.in-warenkorb,.in-kosar,.in-koszyk,.in-carrito,.in-cesta) .cart-table td.p-name::after{content:"Kostenloser EU-Versand · Versand innerhalb von 3 Werktagen"}
+html[lang|="de"] body:is(.in-cart,.in-warenkorb,.in-kosar,.in-koszyk,.in-carrito,.in-cesta) .cart-table td.p-name:has(a[href$="/tagra-1/"])::after{content:"Lizenz per E-Mail · erstes Jahr inklusive · danach 79 €/Jahr · keine Vertragsbindung"}
+html[lang|="de"] body:is(.in-cart,.in-warenkorb,.in-kosar,.in-koszyk,.in-carrito,.in-cesta) .cart-table td.p-name:has(a[href$="/tagra-1-download-box-ii-s/"])::after{content:"Erstes Jahr TAGRA inklusive · danach 79 €/Jahr · Geräteversand innerhalb von 3 Werktagen"}
+html[lang|="de"] body:is(.in-cart,.in-warenkorb,.in-kosar,.in-koszyk,.in-carrito,.in-cesta) .cart-table td.p-name:has(a[href$="/tagra-2/"])::after{content:"Lizenz per E-Mail · erstes Jahr inklusive · danach 79 €/Jahr · keine Vertragsbindung"}
+html[lang|="de"] body:is(.in-cart,.in-warenkorb,.in-kosar,.in-koszyk,.in-carrito,.in-cesta) .cart-table td.p-name:has(a[href$="/tagra-2-download-box-ii-s/"])::after{content:"Erstes Jahr TAGRA inklusive · danach 79 €/Jahr · Geräteversand innerhalb von 3 Werktagen"}
+html[lang|="de"] body:is(.in-cart,.in-warenkorb,.in-kosar,.in-koszyk,.in-carrito,.in-cesta) .cart-table td.p-name:has(a[href$="/tagra-4/"])::after{content:"Lizenz per E-Mail · erstes Jahr inklusive · danach 99 €/Jahr · keine Vertragsbindung"}
+html[lang|="de"] body:is(.in-cart,.in-warenkorb,.in-kosar,.in-koszyk,.in-carrito,.in-cesta) .cart-table td.p-name:has(a[href$="/tagra-4-download-box-ii-s/"])::after{content:"Erstes Jahr TAGRA inklusive · danach 99 €/Jahr · Geräteversand innerhalb von 3 Werktagen"}
+html[lang|="de"] body:is(.in-cart,.in-warenkorb,.in-kosar,.in-koszyk,.in-carrito,.in-cesta) .cart-table td.p-name:has(a[href$="/tagra-6/"])::after{content:"Lizenz per E-Mail · erstes Jahr inklusive · danach 99 €/Jahr · keine Vertragsbindung"}
+html[lang|="de"] body:is(.in-cart,.in-warenkorb,.in-kosar,.in-koszyk,.in-carrito,.in-cesta) .cart-table td.p-name:has(a[href$="/tagra-6-download-box-ii-s/"])::after{content:"Erstes Jahr TAGRA inklusive · danach 99 €/Jahr · Geräteversand innerhalb von 3 Werktagen"}
+html[lang|="de"] body:is(.in-cart,.in-warenkorb,.in-kosar,.in-koszyk,.in-carrito,.in-cesta) .cart-table td.p-name:has(a[href$="/tagra-max/"])::after{content:"Lizenz per E-Mail · erstes Jahr inklusive · danach 149 €/Jahr · keine Vertragsbindung"}
+html[lang|="de"] body:is(.in-cart,.in-warenkorb,.in-kosar,.in-koszyk,.in-carrito,.in-cesta) .cart-table td.p-name:has(a[href$="/tagra-max-download-box-ii-s/"])::after{content:"Erstes Jahr TAGRA inklusive · danach 149 €/Jahr · Geräteversand innerhalb von 3 Werktagen"}
+html[lang|="de"] body:is(.in-cart,.in-warenkorb,.in-kosar,.in-koszyk,.in-carrito,.in-cesta) .cart-table td.p-name:has(a[href$="/tagra-trucker/"])::after{content:"Erstes Jahr inklusive · danach 19 €/Jahr · keine Vertragsbindung · USB-Kartenleser inklusive"}
+html[lang|="de"] body:is(.in-cart,.in-warenkorb,.in-kosar,.in-koszyk,.in-carrito,.in-cesta) .cart-table td.p-name:has(a[href$="/tagra-trucker-2/"])::after{content:"Erstes Jahr inklusive · danach 29 €/Jahr · keine Vertragsbindung · ein USB-Kartenleser inklusive"}
+html[lang|="de"] body:is(.in-cart,.in-warenkorb,.in-kosar,.in-koszyk,.in-carrito,.in-cesta) .cart-table td.p-name:has(a[href$="/download-box-ii-s/"])::after{content:"Keine jährlichen Gebühren · kostenloser EU-Versand · Versand innerhalb von 3 Werktagen"}
 /* DE: longer "In den Warenkorb" label – keep room for name/price in the sticky buy bar on phones */
 @media (max-width:767px){html[lang|="de"] .tgs-sb__atc{padding:0 16px!important;font-size:15px!important}}
 /* ===== HU (9. 11. 2026): the same 33 CSS texts in Hungarian (crew GPT + Gemini); prices "79 €/év", "+ ÁFA" ===== */
 html[lang|="hu"] body .products-block .p .price-final strong::after{content:"+ ÁFA"}
-html[lang|="hu"] body.in-cart .sidebar-in-cart .summary-wrapper>.box::before{content:"Az Ön rendelése"}
+html[lang|="hu"] body:is(.in-cart,.in-warenkorb,.in-kosar,.in-koszyk,.in-carrito,.in-cesta) .sidebar-in-cart .summary-wrapper>.box::before{content:"Az Ön rendelése"}
 html[lang|="hu"] body .p-detail .p-final-price-wrapper .price-final-holder::after{content:"+ ÁFA"}
 html[lang|="hu"] body .p-detail .p-final-price-wrapper .price-additional::after{content:"+ az Ön országának ÁFÁ-ja · 0% érvényes közösségi adószámmal rendelkező uniós cégeknek (fordított adózás)"}
 html[lang|="hu"] body .products-block .p .price-additional::after{content:"+ az Ön országának ÁFÁ-ja"}
-html[lang|="hu"] body.type-detail .p-detail .add-to-cart::after{content:"Feladás 3 munkanapon belül · kézbesítés 2–5 nap alatt · szállítás 8,18 € + ÁFA"}
+html[lang|="hu"] body.type-detail .p-detail .add-to-cart::after{content:"Ingyenes szállítás az EU egész területén · feladás 3 munkanapon belül · kézbesítés 2–5 nap alatt"}
 html[lang|="hu"] body.type-detail .p-detail:has(meta[itemprop="url"][content$="/tagra-1/"]) .add-to-cart::after{content:"Az első év az árban · utána 79 €/év · szerződés nélkül · 30 napos ingyenes próbaverzió elérhető"}
 html[lang|="hu"] body.type-detail .p-detail:has(meta[itemprop="url"][content$="/tagra-1-download-box-ii-s/"]) .add-to-cart::after{content:"Az első év az árban · utána 79 €/év · szerződés nélkül · az eszköz feladása 3 munkanapon belül"}
 html[lang|="hu"] body.type-detail .p-detail:has(meta[itemprop="url"][content$="/tagra-2/"]) .add-to-cart::after{content:"Az első év az árban · utána 79 €/év · szerződés nélkül · 30 napos ingyenes próbaverzió elérhető"}
@@ -598,20 +598,20 @@ html[lang|="hu"] body.type-detail .p-detail:has(meta[itemprop="url"][content$="/
 html[lang|="hu"] body.type-detail .p-detail:has(meta[itemprop="url"][content$="/tagra-trucker/"]) .add-to-cart::after{content:"Az első év az árban · utána 19 €/év · szerződés nélkül · USB-kártyaolvasóval"}
 html[lang|="hu"] body.type-detail .p-detail:has(meta[itemprop="url"][content$="/tagra-trucker-2/"]) .add-to-cart::after{content:"Az első év az árban · utána 29 €/év · szerződés nélkül · 1 db USB-kártyaolvasóval"}
 html[lang|="hu"] body.type-detail .p-detail:has(meta[itemprop="url"][content$="/download-box-ii-s/"]) .add-to-cart::after{content:"Éves díj nélkül · 24 hónap garancia · feladás 3 munkanapon belül"}
-html[lang|="hu"] body.in-cart .cart-table td.p-name::after{content:"Feladás 3 munkanapon belül · kézbesítés 2–5 nap alatt"}
-html[lang|="hu"] body.in-cart .cart-table td.p-name:has(a[href$="/tagra-1/"])::after{content:"Licenc e-mailben · az első év az árban · utána 79 €/év · szerződés nélkül"}
-html[lang|="hu"] body.in-cart .cart-table td.p-name:has(a[href$="/tagra-1-download-box-ii-s/"])::after{content:"Az első év az árban · utána 79 €/év · az eszköz feladása 3 munkanapon belül"}
-html[lang|="hu"] body.in-cart .cart-table td.p-name:has(a[href$="/tagra-2/"])::after{content:"Licenc e-mailben · az első év az árban · utána 79 €/év · szerződés nélkül"}
-html[lang|="hu"] body.in-cart .cart-table td.p-name:has(a[href$="/tagra-2-download-box-ii-s/"])::after{content:"Az első év az árban · utána 79 €/év · az eszköz feladása 3 munkanapon belül"}
-html[lang|="hu"] body.in-cart .cart-table td.p-name:has(a[href$="/tagra-4/"])::after{content:"Licenc e-mailben · az első év az árban · utána 99 €/év · szerződés nélkül"}
-html[lang|="hu"] body.in-cart .cart-table td.p-name:has(a[href$="/tagra-4-download-box-ii-s/"])::after{content:"Az első év az árban · utána 99 €/év · az eszköz feladása 3 munkanapon belül"}
-html[lang|="hu"] body.in-cart .cart-table td.p-name:has(a[href$="/tagra-6/"])::after{content:"Licenc e-mailben · az első év az árban · utána 99 €/év · szerződés nélkül"}
-html[lang|="hu"] body.in-cart .cart-table td.p-name:has(a[href$="/tagra-6-download-box-ii-s/"])::after{content:"Az első év az árban · utána 99 €/év · az eszköz feladása 3 munkanapon belül"}
-html[lang|="hu"] body.in-cart .cart-table td.p-name:has(a[href$="/tagra-max/"])::after{content:"Licenc e-mailben · az első év az árban · utána 149 €/év · szerződés nélkül"}
-html[lang|="hu"] body.in-cart .cart-table td.p-name:has(a[href$="/tagra-max-download-box-ii-s/"])::after{content:"Az első év az árban · utána 149 €/év · az eszköz feladása 3 munkanapon belül"}
-html[lang|="hu"] body.in-cart .cart-table td.p-name:has(a[href$="/tagra-trucker/"])::after{content:"Az első év az árban · utána 19 €/év · szerződés nélkül · USB-kártyaolvasóval"}
-html[lang|="hu"] body.in-cart .cart-table td.p-name:has(a[href$="/tagra-trucker-2/"])::after{content:"Az első év az árban · utána 29 €/év · szerződés nélkül · 1 db USB-kártyaolvasóval"}
-html[lang|="hu"] body.in-cart .cart-table td.p-name:has(a[href$="/download-box-ii-s/"])::after{content:"Éves díj nélkül · feladás 3 munkanapon belül · kézbesítés 2–5 nap alatt"}
+html[lang|="hu"] body:is(.in-cart,.in-warenkorb,.in-kosar,.in-koszyk,.in-carrito,.in-cesta) .cart-table td.p-name::after{content:"Feladás 3 munkanapon belül · kézbesítés 2–5 nap alatt"}
+html[lang|="hu"] body:is(.in-cart,.in-warenkorb,.in-kosar,.in-koszyk,.in-carrito,.in-cesta) .cart-table td.p-name:has(a[href$="/tagra-1/"])::after{content:"Licenc e-mailben · az első év az árban · utána 79 €/év · szerződés nélkül"}
+html[lang|="hu"] body:is(.in-cart,.in-warenkorb,.in-kosar,.in-koszyk,.in-carrito,.in-cesta) .cart-table td.p-name:has(a[href$="/tagra-1-download-box-ii-s/"])::after{content:"Az első év az árban · utána 79 €/év · az eszköz feladása 3 munkanapon belül"}
+html[lang|="hu"] body:is(.in-cart,.in-warenkorb,.in-kosar,.in-koszyk,.in-carrito,.in-cesta) .cart-table td.p-name:has(a[href$="/tagra-2/"])::after{content:"Licenc e-mailben · az első év az árban · utána 79 €/év · szerződés nélkül"}
+html[lang|="hu"] body:is(.in-cart,.in-warenkorb,.in-kosar,.in-koszyk,.in-carrito,.in-cesta) .cart-table td.p-name:has(a[href$="/tagra-2-download-box-ii-s/"])::after{content:"Az első év az árban · utána 79 €/év · az eszköz feladása 3 munkanapon belül"}
+html[lang|="hu"] body:is(.in-cart,.in-warenkorb,.in-kosar,.in-koszyk,.in-carrito,.in-cesta) .cart-table td.p-name:has(a[href$="/tagra-4/"])::after{content:"Licenc e-mailben · az első év az árban · utána 99 €/év · szerződés nélkül"}
+html[lang|="hu"] body:is(.in-cart,.in-warenkorb,.in-kosar,.in-koszyk,.in-carrito,.in-cesta) .cart-table td.p-name:has(a[href$="/tagra-4-download-box-ii-s/"])::after{content:"Az első év az árban · utána 99 €/év · az eszköz feladása 3 munkanapon belül"}
+html[lang|="hu"] body:is(.in-cart,.in-warenkorb,.in-kosar,.in-koszyk,.in-carrito,.in-cesta) .cart-table td.p-name:has(a[href$="/tagra-6/"])::after{content:"Licenc e-mailben · az első év az árban · utána 99 €/év · szerződés nélkül"}
+html[lang|="hu"] body:is(.in-cart,.in-warenkorb,.in-kosar,.in-koszyk,.in-carrito,.in-cesta) .cart-table td.p-name:has(a[href$="/tagra-6-download-box-ii-s/"])::after{content:"Az első év az árban · utána 99 €/év · az eszköz feladása 3 munkanapon belül"}
+html[lang|="hu"] body:is(.in-cart,.in-warenkorb,.in-kosar,.in-koszyk,.in-carrito,.in-cesta) .cart-table td.p-name:has(a[href$="/tagra-max/"])::after{content:"Licenc e-mailben · az első év az árban · utána 149 €/év · szerződés nélkül"}
+html[lang|="hu"] body:is(.in-cart,.in-warenkorb,.in-kosar,.in-koszyk,.in-carrito,.in-cesta) .cart-table td.p-name:has(a[href$="/tagra-max-download-box-ii-s/"])::after{content:"Az első év az árban · utána 149 €/év · az eszköz feladása 3 munkanapon belül"}
+html[lang|="hu"] body:is(.in-cart,.in-warenkorb,.in-kosar,.in-koszyk,.in-carrito,.in-cesta) .cart-table td.p-name:has(a[href$="/tagra-trucker/"])::after{content:"Az első év az árban · utána 19 €/év · szerződés nélkül · USB-kártyaolvasóval"}
+html[lang|="hu"] body:is(.in-cart,.in-warenkorb,.in-kosar,.in-koszyk,.in-carrito,.in-cesta) .cart-table td.p-name:has(a[href$="/tagra-trucker-2/"])::after{content:"Az első év az árban · utána 29 €/év · szerződés nélkül · 1 db USB-kártyaolvasóval"}
+html[lang|="hu"] body:is(.in-cart,.in-warenkorb,.in-kosar,.in-koszyk,.in-carrito,.in-cesta) .cart-table td.p-name:has(a[href$="/download-box-ii-s/"])::after{content:"Éves díj nélkül · feladás 3 munkanapon belül · kézbesítés 2–5 nap alatt"}
 /* HU: keep the sticky "Kosárba" button compact on phones, like DE */
 @media (max-width:767px){html[lang|="hu"] .tgs-sb__atc{padding:0 16px!important;font-size:15px!important}}
 /* ===== v7.0 (9. 11. 2026): homepage = one-page buying flow (hero + fleet calculator first) ===== */
@@ -636,3 +636,40 @@ body.tgs-home2 .homepage-group-title,body.tgs-home2 [id^="products-"],body.tgs-h
 @media (max-width:767px){.tgs-hero2{margin:12px 0 26px;padding:22px 16px 24px;border-radius:20px}.tgs-hero2__h{font-size:30px}.tgs-hero2__p{font-size:16px;margin-bottom:18px}.tgs-hero2__cta .tgs-pill{flex:1 1 100%}.tgs-hero2__f{grid-template-columns:1fr}.tgs-hero2__img{order:1;max-width:340px}}
 /* --- 9. 11. 2026: Download devices (id-708) – hide catalogue chrome before shop-dev.js runs (no flash / layout shift) --- */
 body.id-708.type-category .products-top-wrapper,body.id-708.type-category #category-header,body.id-708.type-category #filters-wrapper,body.id-708.type-category .filters-wrapper,body.id-708.type-category .listingControls{display:none!important}
+/* ===== v6.4 (21. 11. 2026): DOPRAVA ZDARMA po celé EU (EN/DE/HU texty), košík ve všech jazycích (body:is(.in-cart,.in-warenkorb,.in-kosar,.in-koszyk…)), PL texty (crew GPT + Gemini), HU doplněné řádky ===== */
+html[lang|="pl"] body .products-block .p .price-final strong::after{content:"netto"}
+html[lang|="pl"] body:is(.in-cart,.in-warenkorb,.in-kosar,.in-koszyk,.in-carrito,.in-cesta) .sidebar-in-cart .summary-wrapper>.box::before{content:"Podsumowanie zamówienia"}
+html[lang|="pl"] body .p-detail .p-final-price-wrapper .price-final-holder::after{content:"netto"}
+html[lang|="pl"] body .p-detail .p-final-price-wrapper .price-additional::after{content:"+ VAT według stawki kraju dostawy · 0 % dla firm z UE z ważnym numerem VAT UE"}
+html[lang|="pl"] body .products-block .p .price-additional::after{content:"+ VAT według stawki kraju dostawy"}
+html[lang|="pl"] body.type-detail .p-detail .add-to-cart::after{content:"Darmowa dostawa w całej UE · wysyłka w ciągu 3 dni roboczych · doręczenie w 2–5 dni"}
+html[lang|="pl"] body.type-detail .p-detail:has(meta[itemprop="url"][content$="/tagra-1/"]) .add-to-cart::after{content:"Pierwszy rok w cenie · następnie 79 €/rok · bez zobowiązań · 30-dniowa darmowa wersja próbna"}
+html[lang|="pl"] body.type-detail .p-detail:has(meta[itemprop="url"][content$="/tagra-1-download-box-ii-s/"]) .add-to-cart::after{content:"Pierwszy rok TAGRA w cenie · następnie 79 €/rok · bez zobowiązań · wysyłka urządzenia w ciągu 3 dni roboczych"}
+html[lang|="pl"] body.type-detail .p-detail:has(meta[itemprop="url"][content$="/tagra-2/"]) .add-to-cart::after{content:"Pierwszy rok w cenie · następnie 79 €/rok · bez zobowiązań · 30-dniowa darmowa wersja próbna"}
+html[lang|="pl"] body.type-detail .p-detail:has(meta[itemprop="url"][content$="/tagra-2-download-box-ii-s/"]) .add-to-cart::after{content:"Pierwszy rok TAGRA w cenie · następnie 79 €/rok · bez zobowiązań · wysyłka urządzenia w ciągu 3 dni roboczych"}
+html[lang|="pl"] body.type-detail .p-detail:has(meta[itemprop="url"][content$="/tagra-4/"]) .add-to-cart::after{content:"Pierwszy rok w cenie · następnie 99 €/rok · bez zobowiązań · 30-dniowa darmowa wersja próbna"}
+html[lang|="pl"] body.type-detail .p-detail:has(meta[itemprop="url"][content$="/tagra-4-download-box-ii-s/"]) .add-to-cart::after{content:"Pierwszy rok TAGRA w cenie · następnie 99 €/rok · bez zobowiązań · wysyłka urządzenia w ciągu 3 dni roboczych"}
+html[lang|="pl"] body.type-detail .p-detail:has(meta[itemprop="url"][content$="/tagra-6/"]) .add-to-cart::after{content:"Pierwszy rok w cenie · następnie 99 €/rok · bez zobowiązań · 30-dniowa darmowa wersja próbna"}
+html[lang|="pl"] body.type-detail .p-detail:has(meta[itemprop="url"][content$="/tagra-6-download-box-ii-s/"]) .add-to-cart::after{content:"Pierwszy rok TAGRA w cenie · następnie 99 €/rok · bez zobowiązań · wysyłka urządzenia w ciągu 3 dni roboczych"}
+html[lang|="pl"] body.type-detail .p-detail:has(meta[itemprop="url"][content$="/tagra-max/"]) .add-to-cart::after{content:"Pierwszy rok w cenie · następnie 149 €/rok · bez zobowiązań · duża flota? Prosimy o kontakt: +420 739 005 345"}
+html[lang|="pl"] body.type-detail .p-detail:has(meta[itemprop="url"][content$="/tagra-max-download-box-ii-s/"]) .add-to-cart::after{content:"Pierwszy rok TAGRA w cenie · następnie 149 €/rok · bez zobowiązań · wysyłka urządzenia w ciągu 3 dni roboczych"}
+html[lang|="pl"] body.type-detail .p-detail:has(meta[itemprop="url"][content$="/tagra-trucker/"]) .add-to-cart::after{content:"Pierwszy rok w cenie · następnie 19 €/rok · bez zobowiązań · czytnik kart USB w zestawie"}
+html[lang|="pl"] body.type-detail .p-detail:has(meta[itemprop="url"][content$="/tagra-trucker-2/"]) .add-to-cart::after{content:"Pierwszy rok w cenie · następnie 29 €/rok · bez zobowiązań · jeden czytnik kart USB w zestawie"}
+html[lang|="pl"] body.type-detail .p-detail:has(meta[itemprop="url"][content$="/download-box-ii-s/"]) .add-to-cart::after{content:"Bez opłat rocznych · 24 miesiące gwarancji · darmowa dostawa w całej UE"}
+html[lang|="pl"] body:is(.in-cart,.in-warenkorb,.in-kosar,.in-koszyk,.in-carrito,.in-cesta) .cart-table td.p-name::after{content:"Darmowa dostawa w UE · wysyłka w ciągu 3 dni roboczych"}
+html[lang|="pl"] body:is(.in-cart,.in-warenkorb,.in-kosar,.in-koszyk,.in-carrito,.in-cesta) .cart-table td.p-name:has(a[href$="/tagra-1/"])::after{content:"Licencja e-mailem · pierwszy rok w cenie · następnie 79 €/rok · bez zobowiązań"}
+html[lang|="pl"] body:is(.in-cart,.in-warenkorb,.in-kosar,.in-koszyk,.in-carrito,.in-cesta) .cart-table td.p-name:has(a[href$="/tagra-1-download-box-ii-s/"])::after{content:"Pierwszy rok TAGRA w cenie · następnie 79 €/rok · wysyłka urządzenia w ciągu 3 dni roboczych"}
+html[lang|="pl"] body:is(.in-cart,.in-warenkorb,.in-kosar,.in-koszyk,.in-carrito,.in-cesta) .cart-table td.p-name:has(a[href$="/tagra-2/"])::after{content:"Licencja e-mailem · pierwszy rok w cenie · następnie 79 €/rok · bez zobowiązań"}
+html[lang|="pl"] body:is(.in-cart,.in-warenkorb,.in-kosar,.in-koszyk,.in-carrito,.in-cesta) .cart-table td.p-name:has(a[href$="/tagra-2-download-box-ii-s/"])::after{content:"Pierwszy rok TAGRA w cenie · następnie 79 €/rok · wysyłka urządzenia w ciągu 3 dni roboczych"}
+html[lang|="pl"] body:is(.in-cart,.in-warenkorb,.in-kosar,.in-koszyk,.in-carrito,.in-cesta) .cart-table td.p-name:has(a[href$="/tagra-4/"])::after{content:"Licencja e-mailem · pierwszy rok w cenie · następnie 99 €/rok · bez zobowiązań"}
+html[lang|="pl"] body:is(.in-cart,.in-warenkorb,.in-kosar,.in-koszyk,.in-carrito,.in-cesta) .cart-table td.p-name:has(a[href$="/tagra-4-download-box-ii-s/"])::after{content:"Pierwszy rok TAGRA w cenie · następnie 99 €/rok · wysyłka urządzenia w ciągu 3 dni roboczych"}
+html[lang|="pl"] body:is(.in-cart,.in-warenkorb,.in-kosar,.in-koszyk,.in-carrito,.in-cesta) .cart-table td.p-name:has(a[href$="/tagra-6/"])::after{content:"Licencja e-mailem · pierwszy rok w cenie · następnie 99 €/rok · bez zobowiązań"}
+html[lang|="pl"] body:is(.in-cart,.in-warenkorb,.in-kosar,.in-koszyk,.in-carrito,.in-cesta) .cart-table td.p-name:has(a[href$="/tagra-6-download-box-ii-s/"])::after{content:"Pierwszy rok TAGRA w cenie · następnie 99 €/rok · wysyłka urządzenia w ciągu 3 dni roboczych"}
+html[lang|="pl"] body:is(.in-cart,.in-warenkorb,.in-kosar,.in-koszyk,.in-carrito,.in-cesta) .cart-table td.p-name:has(a[href$="/tagra-max/"])::after{content:"Licencja e-mailem · pierwszy rok w cenie · następnie 149 €/rok · bez zobowiązań"}
+html[lang|="pl"] body:is(.in-cart,.in-warenkorb,.in-kosar,.in-koszyk,.in-carrito,.in-cesta) .cart-table td.p-name:has(a[href$="/tagra-max-download-box-ii-s/"])::after{content:"Pierwszy rok TAGRA w cenie · następnie 149 €/rok · wysyłka urządzenia w ciągu 3 dni roboczych"}
+html[lang|="pl"] body:is(.in-cart,.in-warenkorb,.in-kosar,.in-koszyk,.in-carrito,.in-cesta) .cart-table td.p-name:has(a[href$="/tagra-trucker/"])::after{content:"Pierwszy rok w cenie · następnie 19 €/rok · bez zobowiązań · czytnik kart USB w zestawie"}
+html[lang|="pl"] body:is(.in-cart,.in-warenkorb,.in-kosar,.in-koszyk,.in-carrito,.in-cesta) .cart-table td.p-name:has(a[href$="/tagra-trucker-2/"])::after{content:"Pierwszy rok w cenie · następnie 29 €/rok · bez zobowiązań · jeden czytnik kart USB w zestawie"}
+html[lang|="pl"] body:is(.in-cart,.in-warenkorb,.in-kosar,.in-koszyk,.in-carrito,.in-cesta) .cart-table td.p-name:has(a[href$="/download-box-ii-s/"])::after{content:"Bez opłat rocznych · darmowa dostawa w UE · wysyłka w ciągu 3 dni roboczych"}
+html[lang|="hu"] body.type-detail .p-detail:has(meta[itemprop="url"][content$="/download-box-ii-s/"]) .add-to-cart::after{content:"Nincs éves díj · 24 hónap garancia · ingyenes szállítás az EU egész területén"}
+html[lang|="hu"] body:is(.in-cart,.in-warenkorb,.in-kosar,.in-koszyk,.in-carrito,.in-cesta) .cart-table td.p-name::after{content:"Ingyenes EU-s szállítás · feladás 3 munkanapon belül"}
+html[lang|="hu"] body:is(.in-cart,.in-warenkorb,.in-kosar,.in-koszyk,.in-carrito,.in-cesta) .cart-table td.p-name:has(a[href$="/download-box-ii-s/"])::after{content:"Nincs éves díj · ingyenes EU-s szállítás · feladás 3 munkanapon belül"}
