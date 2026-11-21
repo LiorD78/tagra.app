@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<!-- TMX-ANALYTICS START -->
+<meta content="7F7894081BE7FBB245FF03AF8810B22F" name="msvalidate.01"/>
+<!-- Consent Mode v2 defaults (deny) + gtag stub — runs BEFORE gtag.js -->
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent','default',{
+      ad_storage:'denied', ad_user_data:'denied', ad_personalization:'denied',
+      analytics_storage:'denied', functionality_storage:'denied',
+      personalization_storage:'denied', security_storage:'granted',
+      wait_for_update:500
+    });
+    gtag('set','ads_data_redaction',true);
+    gtag('set','url_passthrough',false);
+  </script>
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-92253QFBNX"></script>
+<script>
+    gtag('js', new Date());
+    gtag('config','G-92253QFBNX');
+  </script>
+<!-- Cookie consent banner (self-hosted) + Microsoft Clarity gating -->
+<style>
+    .tmx-cc{position:fixed;left:0;right:0;bottom:0;z-index:2147483000;background:linear-gradient(120deg,var(--blue-dark,#0b2c4a),var(--blue-mid,#134a8e) 62%,var(--blue-light,#1f5fa6));color:#fff;
+      font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+      padding:16px 20px;box-shadow:0 -4px 24px rgba(0,0,0,.18);display:flex;flex-wrap:wrap;
+      align-items:center;gap:14px;justify-content:center}
+    .tmx-cc__txt{flex:1 1 360px;max-width:760px}
+    .tmx-cc__txt a{color:#9ed0f5;text-decoration:underline}
+    .tmx-cc__btns{display:flex;gap:10px;flex:0 0 auto}
+    .tmx-cc__b{appearance:none;border:0;cursor:pointer;font:inherit;font-weight:600;
+      padding:10px 22px;border-radius:99px;transition:filter .15s;color:#fff}
+    .tmx-cc__b:hover{filter:brightness(1.08)}
+    .tmx-cc__b--no{background:rgba(255,255,255,.16)}
+    .tmx-cc__b--yes{background:var(--green-cta,#5C820F)}
+    @media(max-width:640px){.tmx-cc{padding:14px}.tmx-cc__btns{width:100%}.tmx-cc__b{flex:1}}
+  </style>
+<script>
+  (function(){
+    var KEY='tmx-consent-v1', CL='wt18054m0r';
+    function lc(){var l=(document.documentElement.getAttribute('lang')||'en').toLowerCase().split('-')[0];
+      var m={cz:'cs',cs:'cs',sk:'sk',de:'de',pl:'pl',gr:'el',el:'el',hu:'hu',fr:'fr',it:'it',nl:'nl',ro:'ro',en:'en'};return m[l]||'en';}
+    var T={
+      hu:{t:'Analitikai s\u00fctiket haszn\u00e1lunk (Google Analytics, Microsoft Clarity, Jarabot), hogy meg\u00e9rts\u00fck a webhely haszn\u00e1lat\u00e1t. Csak az \u00d6n hozz\u00e1j\u00e1rul\u00e1s\u00e1val t\u00f6lt\u0151dnek be.',a:'Elfogadom',r:'Elutas\u00edtom',p:'Adatv\u00e9delem \u00e9s s\u00fctik'},
+      ro:{t:'Utilizăm module cookie de analiză (Google Analytics, Microsoft Clarity, Jarabot) pentru a înțelege modul de utilizare a site-ului. Se încarcă doar cu consimțământul dumneavoastră.',a:'Accept',r:'Refuz',p:'Confidențialitate și cookie-uri'},
+      nl:{t:'We gebruiken analytische cookies (Google Analytics, Microsoft Clarity, Jarabot) om het gebruik van de site te begrijpen. Ze laden alleen met uw toestemming.',a:'Accepteren',r:'Weigeren',p:'Privacy en cookies'},
+      fr:{t:'Nous utilisons des cookies analytiques (Google Analytics, Microsoft Clarity, Jarabot) pour comprendre l’utilisation du site. Ils ne se chargent qu’avec votre consentement.',a:'Accepter',r:'Refuser',p:'Confidentialité et cookies'},
+      it:{t:'Utilizziamo cookie analitici (Google Analytics, Microsoft Clarity, Jarabot) per capire l’utilizzo del sito. Si caricano solo con il Suo consenso.',a:'Accetta',r:'Rifiuta',p:'Privacy e cookie'},
+      en:{t:'We use analytics cookies (Google Analytics, Microsoft Clarity, Jarabot) to understand site usage. They load only with your consent.',a:'Accept',r:'Reject',p:'Privacy &amp; cookies'},
+      cs:{t:'Pou\u017e\u00edv\u00e1me analytick\u00e9 cookies (Google Analytics, Microsoft Clarity, Jarabot) k pochopen\u00ed pou\u017e\u00edv\u00e1n\u00ed webu. Na\u010dtou se jen s va\u0161\u00edm souhlasem.',a:'P\u0159ijmout',r:'Odm\u00edtnout',p:'Soukrom\u00ed a cookies'},
+      sk:{t:'Pou\u017e\u00edvame analytick\u00e9 cookies (Google Analytics, Microsoft Clarity, Jarabot) na pochopenie pou\u017e\u00edvania webu. Na\u010d\u00edtaj\u00fa sa len s va\u0161\u00edm s\u00fahlasom.',a:'Prija\u0165',r:'Odmietnu\u0165',p:'S\u00fakromie a cookies'},
+      de:{t:'Wir verwenden Analyse-Cookies (Google Analytics, Microsoft Clarity, Jarabot), um die Nutzung der Website zu verstehen. Sie werden nur mit Ihrer Einwilligung geladen.',a:'Akzeptieren',r:'Ablehnen',p:'Datenschutz &amp; Cookies'},
+      pl:{t:'U\u017cywamy plik\u00f3w cookie do analityki (Google Analytics, Microsoft Clarity, Jarabot), aby zrozumie\u0107 korzystanie z witryny. \u0141aduj\u0105 si\u0119 tylko za Twoj\u0105 zgod\u0105.',a:'Akceptuj',r:'Odrzu\u0107',p:'Prywatno\u015b\u0107 i cookies'},
+      el:{t:'\u03a7\u03c1\u03b7\u03c3\u03b9\u03bc\u03bf\u03c0\u03bf\u03b9\u03bf\u03cd\u03bc\u03b5 cookies \u03b1\u03bd\u03ac\u03bb\u03c5\u03c3\u03b7\u03c2 (Google Analytics, Microsoft Clarity, Jarabot) \u03b3\u03b9\u03b1 \u03bd\u03b1 \u03ba\u03b1\u03c4\u03b1\u03bd\u03bf\u03ae\u03c3\u03bf\u03c5\u03bc\u03b5 \u03c4\u03b7 \u03c7\u03c1\u03ae\u03c3\u03b7. \u03a6\u03bf\u03c1\u03c4\u03ce\u03bd\u03bf\u03bd\u03c4\u03b1\u03b9 \u03bc\u03cc\u03bd\u03bf \u03bc\u03b5 \u03c4\u03b7 \u03c3\u03c5\u03b3\u03ba\u03b1\u03c4\u03ac\u03b8\u03b5\u03c3\u03ae \u03c3\u03b1\u03c2.',a:'\u0391\u03c0\u03bf\u03b4\u03bf\u03c7\u03ae',r:'\u0391\u03c0\u03cc\u03c1\u03c1\u03b9\u03c8\u03b7',p:'\u0391\u03c0\u03cc\u03c1\u03c1\u03b7\u03c4\u03bf &amp; cookies'}
+    };
+    function loadClarity(){if(!CL||window.__tmxCl)return;window.__tmxCl=1;
+      (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+       t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+       y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script",CL);}
+    function grant(){try{localStorage.setItem(KEY,'granted')}catch(e){}
+      gtag('consent','update',{analytics_storage:'granted'});loadClarity();}
+    function deny(){try{localStorage.setItem(KEY,'denied')}catch(e){}}
+    var saved=null;try{saved=localStorage.getItem(KEY)}catch(e){}
+    if(saved==='granted'){grant();return;} if(saved==='denied'){return;}
+    function show(){var tx=T[lc()]||T.en;
+      var b=document.createElement('div');b.className='tmx-cc';b.setAttribute('role','dialog');b.setAttribute('aria-live','polite');
+      b.innerHTML='<div class="tmx-cc__txt">'+tx.t+' <a href="/de/datenschutz/">'+tx.p+'</a></div>'+
+        '<div class="tmx-cc__btns"><button type="button" class="tmx-cc__b tmx-cc__b--no">'+tx.r+'</button>'+
+        '<button type="button" class="tmx-cc__b tmx-cc__b--yes">'+tx.a+'</button></div>';
+      document.body.appendChild(b);
+      b.querySelector('.tmx-cc__b--yes').addEventListener('click',function(){grant();b.remove();});
+      b.querySelector('.tmx-cc__b--no').addEventListener('click',function(){deny();b.remove();});}
+    if(document.body)show();else document.addEventListener('DOMContentLoaded',show);
+  })();
+  </script>
+<!-- TMX-ANALYTICS END -->
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Fahrerkarte auslesen Software | TAGRA für Windows</title>
+<meta content="Fahrerkarte auslesen mit TAGRA für Windows 10/11: Lenk- und Ruhezeiten prüfen, Tachodaten archivieren. Jetzt 30 Tage kostenlos testen – ohne Kreditkarte." name="description"/>
+<meta content="#0b2c4a" name="theme-color"/>
+<link href="/manifest.json" rel="manifest"/>
+<link href="https://tagra.app/de/fahrerkarte-auslesen-software/" rel="canonical"/>
+<link href="https://tagra.app/de/fahrerkarte-auslesen-software/" hreflang="de" rel="alternate"/>
+<link href="https://tagra.app/pl/program-do-odczytu-karty-kierowcy/" hreflang="pl" rel="alternate"/>
+<meta content="website" property="og:type"/>
+<meta content="de_DE" property="og:locale"/>
+<meta content="TAGRA" property="og:site_name"/>
+<meta content="Fahrerkarte auslesen Software | TAGRA für Windows" property="og:title"/>
+<meta content="Fahrerkarte auslesen mit TAGRA für Windows 10/11: Lenk- und Ruhezeiten prüfen, Tachodaten archivieren. Jetzt 30 Tage kostenlos testen – ohne Kreditkarte." property="og:description"/>
+<meta content="https://tagra.app/de/fahrerkarte-auslesen-software/" property="og:url"/>
+<meta content="https://tagra.app/assets/img/shop/tagra3-mac-evaluation-1600.webp" property="og:image"/>
+<meta content="TAGRA III – Programm zum Auslesen der Fahrerkarte unter Windows" property="og:image:alt"/>
+<meta content="https://tagra.app/assets/img/shop/tagra3-mac-evaluation-1600.webp" name="twitter:image"/>
+<meta content="TAGRA III – Programm zum Auslesen der Fahrerkarte unter Windows" name="twitter:image:alt"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Fahrerkarte auslesen Software | TAGRA für Windows" name="twitter:title"/>
+<meta content="Fahrerkarte auslesen mit TAGRA für Windows 10/11: Lenk- und Ruhezeiten prüfen, Tachodaten archivieren. Jetzt 30 Tage kostenlos testen – ohne Kreditkarte." name="twitter:description"/>
+<style>
+    /* ─── TOKENS ────────────────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    a { color: var(--green-brand); text-decoration: none; }
+    a:hover { color: var(--green-cta); text-decoration: underline; text-underline-offset: .18em; }
+    img { max-width: 100%; height: auto; display: block; }
+    ul { list-style: none; }
+    p + p { margin-top: 12px; }
+    p:empty { display: none; }
+
+    /* ─── SCROLL PROGRESS ───────────────────────────────────────────── */
+    #scroll-progress { position: fixed; top: 0; left: 0; height: 3px; background: linear-gradient(90deg, var(--green-brand), var(--blue-light)); width: 0%; z-index: 9999; pointer-events: none; transition: width .1s ease-out; }
+
+    /* ─── NAV ───────────────────────────────────────────────────────── */
+.nav-inner { margin: 0 auto; padding: 0 24px; height: 100%; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .nav-links { display: flex; align-items: center; gap: 4px; list-style: none; }
+    .nav-links li a { font-size: 15px; font-weight: 500; color: var(--text); padding: 8px 12px; border-radius: 8px; transition: background .15s, color .15s; text-decoration: none; }
+    .nav-links li a:hover { background: var(--bg-apple-solid); color: var(--blue-mid); }
+    .nav-links .nav-cta a { background: var(--green-cta); color: #fff !important; border-radius: 99px; padding: 8px 18px; font-weight: 600; }
+    .nav-links .nav-cta a:hover { background: var(--green-brand); text-decoration: none; }
+    .nav-lang { display: flex; align-items: center; gap: 4px; font-size: 14px; font-weight: 600; }
+    .nav-lang a { padding: 5px 8px; border-radius: 6px; color: var(--text2); text-decoration: none; transition: background .15s; }
+    .nav-lang a:hover, .nav-lang a.active { background: var(--bg-apple-solid); color: var(--blue-mid); }
+    .nav-lang span { color: var(--border); }
+    .nav-mobile-toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
+    .nav-mobile-toggle span { display: block; width: 22px; height: 2px; background: var(--text); margin: 5px 0; border-radius: 2px; transition: .3s; }
+    @media (max-width: 900px) {
+      .nav-links { display: none; }
+      .nav-mobile-toggle { display: block; }
+      .nav-links.open { display: flex; flex-direction: column; align-items: flex-start; gap: 2px; position: absolute; top: var(--nav-h); left: 0; right: 0; background: rgba(255,255,255,0.97); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 12px 24px 20px; }
+    }
+
+    /* ─── LAYOUT ────────────────────────────────────────────────────── */
+    
+    
+    
+    
+    .band--green { background: var(--green-bg); }
+    @media (max-width: 768px) { .band { padding: 50px 0; } }
+    /* ─── TYPOGRAPHY ────────────────────────────────────────────────── */
+    h2 {
+      font-size: 36px; font-weight: 800;
+      line-height: 1.1; letter-spacing: 0;
+      text-transform: uppercase;
+      color: var(--blue-mid, #134a8e);
+      background: var(--heading-gradient);
+      -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block; max-width: 100%; margin-bottom: 14px;
+      padding: 0.12em 0.15em 0.08em 0;
+    }
+    @media (max-width: 768px) { h2 {
+      font-size: 36px; font-weight: 800;
+      line-height: 1.1; letter-spacing: 0;
+      text-transform: uppercase;
+      color: var(--blue-mid, #134a8e);
+      background: var(--heading-gradient);
+      -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block; max-width: 100%; margin-bottom: 14px;
+      padding: 0.12em 0.15em 0.08em 0;
+    } }
+    h2
+    @media (max-width: 768px) { h2 }
+    .eyebrow { font-size: 15px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--green-brand); margin-bottom: 12px; }
+
+    /* ─── BUTTONS ───────────────────────────────────────────────────── */
+    
+    .btn-cta:hover { background: var(--green-brand); transform: scale(1.02); color: #fff !important; }
+    
+
+    /* ─── BENTO ─────────────────────────────────────────────────────── */
+    
+    .bc { background: #fff; border-radius: var(--radius); padding: 32px; border: 1px solid var(--border); position: relative; overflow: hidden; }
+    
+    
+    
+    
+    
+    
+    @media (max-width: 900px) { .bento { grid-template-columns: 1fr 1fr; } .bc.s7, .bc.s5 { grid-column: span 2; } .bc.s4, .bc.s6 { grid-column: span 1; } }
+    @media (max-width: 600px) { .bento { grid-template-columns: 1fr; } .bc { grid-column: span 1 !important; } }
+    
+    
+    .bignum { font-size: 110px; font-weight: 800; line-height: 1; letter-spacing: -.04em; color: rgba(19,74,142,.06); position: absolute; bottom: -16px; right: 16px; pointer-events: none; }
+
+    /* ─── 2-COL ─────────────────────────────────────────────────────── */
+    
+    
+    @media (max-width: 900px) { .g2 { grid-template-columns: 1fr; gap: 40px; } }
+
+    /* ─── FEATURES ──────────────────────────────────────────────────── */
+    
+    
+    
+
+    /* ─── REVIEWS ───────────────────────────────────────────────────── */
+    .rev-rail-wrap { overflow: hidden; margin-top: 24px; mask-image: linear-gradient(to right, transparent 0%,black 6%,black 94%,transparent 100%); }
+    
+    .rev-rail::-webkit-scrollbar { display: none; }
+    .rev-rail:active { cursor: grabbing; }
+    
+    
+    
+    
+
+    /* ─── MEDIA ─────────────────────────────────────────────────────── */
+    .media-frame { width: 100%; border-radius: var(--radius); overflow: hidden; -webkit-mask-image: -webkit-radial-gradient(#fff,#000); }
+    .media-frame img, .media-frame video { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+    /* ─── MAC STAGE ─────────────────────────────────────────────────── */
+    .mac-stage { position: relative; width: 100%; line-height: 0; }
+    .mac-stage img { width: 100%; display: block; object-fit: contain; transform-origin: center center; filter: drop-shadow(0 30px 70px rgba(0,0,0,.16)); will-change: transform; }
+    .mac-stage::after { content: ""; position: absolute; left: 50%; bottom: 5%; transform: translateX(-50%); width: 80%; height: 60px; background: radial-gradient(50% 50%,rgba(0,0,0,.16) 0%,transparent 70%); filter: blur(15px); opacity: .6; pointer-events: none; z-index: -1; }
+
+    /* ─── NOTE BOX ──────────────────────────────────────────────────── */
+    .note-box { position: relative; background: linear-gradient(180deg,var(--green-bg) 0%,#fff 100%); border: 2px solid var(--green-brand); border-radius: var(--radius); padding: 36px 28px 28px; margin-top: 40px; box-shadow: 0 10px 26px rgba(110,155,18,.08); }
+    .note-badge { position: absolute; top: -16px; left: 24px; background: var(--green-brand); color: #fff; font-size: 14px; font-weight: 800; text-transform: uppercase; padding: 5px 14px; border-radius: 999px; box-shadow: 0 6px 14px rgba(110,155,18,.22); }
+    .note-title { font-size: 24px; font-weight: 800; line-height: 1.2; margin: 10px 0 12px; color: var(--text-strong); }
+    .note-box p { font-size: 17px; line-height: 1.6; color: var(--text2); margin-bottom: 12px; }
+
+    /* ─── 3-STEP ────────────────────────────────────────────────────── */
+    
+    @media (max-width: 860px) { .three-col { grid-template-columns: 1fr; } }
+    @media (min-width: 600px) and (max-width: 860px) { .three-col { grid-template-columns: 1fr 1fr; } }
+
+    /* ─── FAQ ───────────────────────────────────────────────────────── */
+    
+    
+    .faq summary { list-style: none; cursor: pointer; padding: 18px 40px 18px 0; font-weight: 800; font-size: 18px; line-height: 1.4; position: relative; color: var(--text-strong); }
+    
+    .faq summary::after { content: "+"; position: absolute; right: 4px; top: 50%; transform: translateY(-50%); font-size: 26px; font-weight: 300; color: var(--green-brand); }
+    
+    
+
+    /* ─── FOOTER ────────────────────────────────────────────────────── */
+
+    /* ─── ANIMATIONS ────────────────────────────────────────────────── */
+    .anim-up { opacity: 0; transform: translateY(28px); transition: opacity .8s cubic-bezier(.16,1,.3,1), transform .8s cubic-bezier(.16,1,.3,1); }
+    .fly-left { opacity: 0; transform: translateX(-80px); transition: opacity 2.8s cubic-bezier(.16,1,.3,1), transform 2.8s cubic-bezier(.16,1,.3,1); }
+    .fly-right { opacity: 0; transform: translateX(80px); transition: opacity 2.8s cubic-bezier(.16,1,.3,1), transform 2.8s cubic-bezier(.16,1,.3,1); }
+    .anim-up.on, .fly-left.on, .fly-right.on { opacity: 1; transform: none; }
+    @media (prefers-reduced-motion: reduce) { .anim-up, .fly-left, .fly-right { transition: none !important; opacity: 1 !important; transform: none !important; } }
+  </style>
+<style>
+.lp-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;margin-top:28px}
+.lp-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:24px}
+.lp-card h3{font-size:19px;font-weight:800;margin:0 0 10px;color:var(--text-strong)}
+.lp-card p{margin:0;color:var(--text2);line-height:1.55}
+.lp-price{font-size:26px;font-weight:800;margin:6px 0 10px;color:var(--text-strong)}
+.lp-list{margin:20px 0 0;padding-left:22px;line-height:1.7;font-size:18px}
+.lp-img{display:block;margin:40px auto 0;max-width:100%;height:auto;border-radius:20px;box-shadow:0 20px 40px rgba(0,0,0,.08)}
+.lp-cta-row{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin:24px 0}
+</style>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Startseite",
+      "item": "https://tagra.app/de/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Fahrerkarte auslesen Software: TAGRA für Fahrer und Unternehmen",
+      "item": "https://tagra.app/de/fahrerkarte-auslesen-software/"
+    }
+  ]
+}</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "inLanguage": "de",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Fahrerkarte auslesen Software kostenlos: Ist TAGRA dauerhaft gratis?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nein. Sie können TAGRA III 30 Tage kostenlos mit vollem Funktionsumfang testen, ohne eine Kreditkarte anzugeben. Danach benötigen Sie eine kostenpflichtige Lizenz; TAGRA TRUCKER für einen Fahrer kostet 49 € zzgl. MwSt. inklusive des ersten Jahres, anschließend 19 € pro Jahr zzgl. MwSt."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Welchen Kartenleser benötige ich?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Zum Auslesen Ihrer Fahrerkarte benötigen Sie einen USB-Fahrerkartenleser. Beim Kauf einer TAGRA-TRUCKER-Lizenz erhalten Sie einen solchen Leser kostenlos dazu. Die Lieferung ist in alle EU-Länder kostenlos."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Kann TAGRA Dateien im Format .DDD einlesen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja. TAGRA liest Fahrerkartendaten im Format .DDD über einen USB-Fahrerkartenleser ein. Das Programm verarbeitet außerdem Dateien aus der Fahrzeugeinheit."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Läuft TAGRA auf einem Mac?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "TAGRA III unterstützt ausschließlich Windows 10 und Windows 11. Eine native Mac-Version wird nicht unterstützt."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Wie oft muss ich meine Fahrerkarte auslesen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nach Verordnung (EU) Nr. 581/2010 müssen Sie die Daten Ihrer Fahrerkarte spätestens alle 28 Tage herunterladen. Für den Massenspeicher der Fahrzeugeinheit gilt eine Frist von höchstens 90 Tagen."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Was ist der Unterschied zwischen Fahrerkarte und Unternehmenskarte?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Die Fahrerkarte enthält die personenbezogenen Aufzeichnungen des Fahrers und wird mit einem USB-Fahrerkartenleser ausgelesen. Die Unternehmenskarte dient dem Unternehmen beim Herunterladen der Daten aus der Fahrzeugeinheit, beispielsweise mit der DOWNLOAD BOX II S; sie ersetzt die Fahrerkarte nicht."
+      }
+    }
+  ]
+}</script>
+<link href="/assets/css/core-sel.bundle.css?v=20261121" rel="stylesheet"/>
+<link rel="stylesheet" href="/assets/css/t3-ai.css?v=20261110"/>
+
+
+
+<script defer="" src="/assets/js/nav.js?v=20261008a"></script><script defer="" src="/assets/js/analytics.js?v=20261103a"></script>
+<script defer="" src="/assets/js/tagra-prices.js?v=20261107"></script><script defer="" src="/assets/js/tagra-selector.js?v=20261107"></script></head>
+<body>
+<a class="skip-link" href="#main-content">Zum Inhalt springen</a>
+<div aria-hidden="true" id="scroll-progress"></div>
+<!-- ═══ NAVIGATION ════════════════════════════════════════════════════ -->
+<nav aria-label="Hauptnavigation" class="site-nav" role="navigation">
+<div class="nav-inner">
+<a aria-label="TAGRA Trucker – Startseite" class="nav-logo" href="/de/"><img alt="TAGRA" height="32" src="/assets/img/logo-light.svg?v=20260513zh" style="display:block;height:32px;width:auto;" width="140"/><span class="nav-logo-variant">Trucker</span></a>
+<ul class="nav-links" id="nav-links">
+<li><a href="/de/fuhrpark/">Für Unternehmen</a></li>
+<li><a href="/de/fahrer/">Für Fahrer</a></li>
+<li><a href="/de/kontrollbehoerden/">Kontrollbehörden</a></li>
+<li><a href="/de/ratgeber/">Artikel</a></li><li><a href="/de/anleitungen/">Anleitungen</a></li>
+<li><a href="/de/faq/">FAQ</a></li>
+<li><a href="/de/kontakt/">Kontakt</a></li>
+<li class="nav-shop-li"><a aria-label="TAGRA Shop – Lizenzen und Geräte kaufen" class="nav-shop" data-cta="nav" href="https://shop.tagra.app/de/">Shop</a></li>
+<li class="nav-cta-li"><a class="nav-cta" href="/de/testen/?audience=driver">30 Tage kostenlos testen</a></li>
+</ul>
+<details class="nav-lang">
+<summary aria-label="Language: DE">DE</summary>
+<div class="nav-lang-menu" role="menu"><a href="/driver/" hreflang="en">English</a><a aria-current="page" class="active" href="/de/fahrerkarte-auslesen-software/" hreflang="de">Deutsch</a><a href="/pl/program-do-odczytu-karty-kierowcy/" hreflang="pl">Polski</a><a href="/nl/voor-chauffeurs/" hreflang="nl">Nederlands</a><a href="/fr/conducteurs/" hreflang="fr">Français</a><a href="/it/per-autisti/" hreflang="it">Italiano</a><a href="/es/" hreflang="es">Español</a><a href="/el/odigoi/" hreflang="el">Ελληνικά</a><a href="/hu/soforoknek/" hreflang="hu">Magyar</a><a href="/ro/pentru-conducatori/" hreflang="ro">Română</a><a href="https://www.tdt.cz/" hreflang="cs" rel="noopener" target="_blank">Čeština</a><a href="https://www.tdt.sk/" hreflang="sk" rel="noopener" target="_blank">Slovenčina</a></div>
+</details>
+<a class="nav-cta-mobile" href="/de/testen/?audience=driver">Kostenlos testen</a>
+<button aria-expanded="false" aria-label="Menü umschalten" class="nav-mobile-toggle" id="nav-toggle">
+<span></span><span></span><span></span>
+</button>
+</div>
+</nav>
+<!-- ═══ HERO ═════════════════════════════════════════════════════════ -->
+<section id="main-content" aria-label="Fahrerkarte auslesen Software: TAGRA für Fahrer und Unternehmen" class="band band--hero band--hero--green">
+<div class="container">
+<h1 class="anim-up" style="transition-delay:.05s">Fahrerkarte auslesen Software: TAGRA für Fahrer und Unternehmen</h1>
+<p class="lead anim-up" style="transition-delay:.1s">Mit TAGRA III lesen Sie Fahrerkartendaten ein, werten Lenk- und Ruhezeiten aus und archivieren Ihre Tachodaten sicher unter Windows 10/11. Testen Sie das Programm von Truck Data Technology, s.r.o. aus Prag – seit 2005 – volle 30 Tage kostenlos und ohne Kreditkarte.</p>
+<div class="lp-cta-row anim-up" style="transition-delay:.15s">
+<a class="btn-cta" data-bridge="lp" data-cta="buy" data-pos="hero" href="https://shop.tagra.app/de/tagra-trucker/" rel="noopener">TAGRA TRUCKER mit Gratis-Kartenleser kaufen</a>
+<a class="btn-outline" href="/de/testen/?src=lp-fahrerkarte-software" rel="noopener">30 Tage kostenlos testen</a>
+</div>
+<img class="lp-img anim-up" src="/assets/img/shop/tagra3-mac-evaluation-1600.webp" srcset="/assets/img/shop/tagra3-mac-evaluation-800.webp 800w, /assets/img/shop/tagra3-mac-evaluation-1600.webp 1600w" sizes="(max-width:1180px) 100vw, 1100px" width="1600" alt="TAGRA III – Programm zum Auslesen der Fahrerkarte unter Windows" fetchpriority="high"/>
+</div>
+</section>
+<section aria-label="Fahrerkarte auslesen: Was benötigen Sie?" class="band">
+<div class="container">
+<div class="eyebrow anim-up">Voraussetzungen</div>
+<h2 class="anim-up">Fahrerkarte auslesen: Was benötigen Sie?</h2>
+<ul class="lp-list anim-up">
+<li>Einen PC mit Windows 10/11 und TAGRA III.</li>
+<li>Ihre Fahrerkarte und einen USB-Fahrerkartenleser – beim Kauf von TAGRA TRUCKER kostenlos dabei.</li>
+</ul>
+</div>
+</section>
+<section aria-label="Tachodaten auslesen und archivieren: in drei Schritten" class="band band--gray">
+<div class="container">
+<div class="eyebrow anim-up">So geht es</div>
+<h2 class="anim-up">Tachodaten auslesen und archivieren: in drei Schritten</h2>
+<div class="lp-grid">
+<div class="lp-card anim-up"><h3>1. Programm installieren</h3><p>Installieren Sie TAGRA III auf Ihrem Windows-PC und starten Sie den 30-tägigen Test mit vollem Funktionsumfang.</p></div>
+<div class="lp-card anim-up"><h3>2. Fahrerkarte einlesen</h3><p>Verbinden Sie Ihren USB-Fahrerkartenleser mit dem PC und lesen Sie die Daten Ihrer Fahrerkarte mit TAGRA ein.</p></div>
+<div class="lp-card anim-up"><h3>3. Daten auswerten und archivieren</h3><p>Prüfen Sie Aktivitäten und mögliche Verstöße, erstellen Sie Berichte und archivieren Sie Ihre Dateien sicher im Programm.</p></div>
+</div>
+</div>
+</section>
+<section aria-label="Tachograph Software für Auswertung, Berichte und Archiv" class="band">
+<div class="container">
+<div class="eyebrow anim-up">Funktionen</div>
+<h2 class="anim-up">Tachograph Software für Auswertung, Berichte und Archiv</h2>
+<div class="lp-grid">
+<div class="lp-card anim-up"><h3>Lenk- und Ruhezeiten auswerten</h3><p>TAGRA prüft Lenkzeiten, Fahrtunterbrechungen und Ruhezeiten auf Verstöße nach Verordnung (EG) Nr. 561/2006 und AETR.</p></div>
+<div class="lp-card anim-up"><h3>Fahrer- und Fahrzeugdaten einlesen</h3><p>Lesen Sie Fahrerkartendaten im Format .DDD über einen USB-Kartenleser ein und verarbeiten Sie Dateien aus der Fahrzeugeinheit.</p></div>
+<div class="lp-card anim-up"><h3>Dateien sicher archivieren</h3><p>Bewahren Sie Ihre eingelesenen Dateien im sicheren Archiv des Programms auf und halten Sie Tachodaten für Kontrollen verfügbar.</p></div>
+<div class="lp-card anim-up"><h3>Aktivitäten, Arbeitszeiten und Spesen dokumentieren</h3><p>Erstellen Sie Aktivitäts- und Arbeitszeitberichte. Für Fahrer stehen zusätzlich Spesenberichte zur Verfügung.</p></div>
+<div class="lp-card anim-up"><h3>Fragen direkt im Programm klären</h3><p>Der integrierte KI-Assistent in TAGRA III beantwortet Fragen zum Programm, zu Lenkzeiten und zu Tachographenregeln in der Programmsprache. Persönliche Fahrerdaten werden nicht an den Assistenten gesendet; KI-Antworten können Fehler enthalten.</p></div>
+</div>
+</div>
+</section>
+<section aria-label="Den digitalen Tachographen mit Unternehmenskarte auslesen" class="band band--gray">
+<div class="container">
+<div class="eyebrow anim-up">Für Unternehmen</div>
+<h2 class="anim-up">Den digitalen Tachographen mit Unternehmenskarte auslesen</h2>
+<p class="anim-up" style="max-width:860px;font-size:18px;line-height:1.6">Wenn Sie den digitalen Tachographen auslesen möchten, lädt die DOWNLOAD BOX II S mit Ihrer Unternehmenskarte die Daten der Fahrzeugeinheit beziehungsweise des Massenspeichers herunter; anschließend verarbeiten Sie die Dateien in TAGRA. Für Unternehmen stehen TAGRA 1, 2, 4 und 6 nach Fahrzeuganzahl sowie TAGRA MAX für unbegrenzt viele Fahrzeuge zur Wahl. Für ein Fahrzeug erhalten Sie TAGRA 1 zusammen mit der DOWNLOAD BOX II S als Paket für 399 € zzgl. MwSt.</p>
+<div style="margin-top:24px"><a class="btn-cta" data-bridge="lp" data-cta="fleet" data-pos="fleet" href="https://shop.tagra.app/de/tagra-software/" rel="noopener">TAGRA für Ihren Fuhrpark auswählen</a></div>
+</div>
+</section>
+<section aria-label="TAGRA-Lizenzen: Preise für Fahrer und Unternehmen" class="band" id="pricing">
+<div class="container">
+<div class="eyebrow anim-up">Preise</div>
+<h2 class="anim-up">TAGRA-Lizenzen: Preise für Fahrer und Unternehmen</h2>
+<div class="lp-grid">
+<div class="lp-card anim-up"><h3><a data-bridge="lp" data-cta="price" data-pos="price1" href="https://shop.tagra.app/de/tagra-trucker/" rel="noopener">TAGRA TRUCKER</a></h3><div class="lp-price">49 € zzgl. MwSt.</div><p>Für einen Fahrer. Erstes Jahr inklusive, danach 19 € pro Jahr zzgl. MwSt. Ein USB-Fahrerkartenleser ist beim Lizenzkauf kostenlos enthalten; kostenlose Lieferung in alle EU-Länder.</p></div>
+<div class="lp-card anim-up"><h3><a data-bridge="lp" data-cta="price" data-pos="price2" href="https://shop.tagra.app/de/tagra-1/" rel="noopener">TAGRA 1</a></h3><div class="lp-price">149 € zzgl. MwSt.</div><p>Für ein Fahrzeug. Erstes Jahr inklusive, danach 79 € pro Jahr zzgl. MwSt.</p></div>
+<div class="lp-card anim-up"><h3><a data-bridge="lp" data-cta="price" data-pos="price3" href="https://shop.tagra.app/de/tagra-1-download-box-ii-s/" rel="noopener">TAGRA 1 + DOWNLOAD BOX II S</a></h3><div class="lp-price">399 € zzgl. MwSt.</div><p>Paket für ein Fahrzeug mit Gerät zum Herunterladen des Massenspeichers mit Unternehmenskarte. Erstes Jahr der TAGRA-1-Lizenz inklusive, danach 79 € pro Jahr zzgl. MwSt.</p></div>
+<div class="lp-card anim-up"><h3><a data-bridge="lp" data-cta="price" data-pos="price4" href="https://shop.tagra.app/de/tagra-max/" rel="noopener">TAGRA MAX</a></h3><div class="lp-price">749 € zzgl. MwSt.</div><p>Für unbegrenzt viele Fahrzeuge. Erstes Jahr inklusive, danach 149 € pro Jahr zzgl. MwSt.</p></div>
+</div>
+</div>
+</section>
+<section aria-label="Auslesefristen und Pflichten im Blick behalten" class="band band--gray">
+<div class="container">
+<div class="eyebrow anim-up">Gesetzliche Fristen</div>
+<h2 class="anim-up">Auslesefristen und Pflichten im Blick behalten</h2>
+<p class="anim-up" style="max-width:860px;font-size:18px;line-height:1.6">Nach Verordnung (EU) Nr. 581/2010 müssen Fahrerkartendaten spätestens alle 28 Tage und Daten der Fahrzeugeinheit spätestens alle 90 Tage heruntergeladen werden. Die Daten müssen für Kontrollen verfügbar gehalten werden. Seit dem 1. Juli 2026 gilt die Tachographenpflicht auch für Transporter von 2,5 bis 3,5 t im grenzüberschreitenden Güterverkehr und bei Kabotage.</p>
+</div>
+</section>
+<section aria-label="Häufige Fragen zu TAGRA" class="band band--blue">
+<div class="container">
+<div class="eyebrow anim-up">FAQ</div>
+<h2 class="anim-up">Häufige Fragen zu TAGRA</h2>
+<div class="faq anim-up" style="transition-delay:.05s">
+<details>
+<summary>Fahrerkarte auslesen Software kostenlos: Ist TAGRA dauerhaft gratis?</summary>
+<div class="faq-a">Nein. Sie können TAGRA III 30 Tage kostenlos mit vollem Funktionsumfang testen, ohne eine Kreditkarte anzugeben. Danach benötigen Sie eine kostenpflichtige Lizenz; TAGRA TRUCKER für einen Fahrer kostet 49 € zzgl. MwSt. inklusive des ersten Jahres, anschließend 19 € pro Jahr zzgl. MwSt.</div>
+</details>
+<details>
+<summary>Welchen Kartenleser benötige ich?</summary>
+<div class="faq-a">Zum Auslesen Ihrer Fahrerkarte benötigen Sie einen USB-Fahrerkartenleser. Beim Kauf einer TAGRA-TRUCKER-Lizenz erhalten Sie einen solchen Leser kostenlos dazu. Die Lieferung ist in alle EU-Länder kostenlos.</div>
+</details>
+<details>
+<summary>Kann TAGRA Dateien im Format .DDD einlesen?</summary>
+<div class="faq-a">Ja. TAGRA liest Fahrerkartendaten im Format .DDD über einen USB-Fahrerkartenleser ein. Das Programm verarbeitet außerdem Dateien aus der Fahrzeugeinheit.</div>
+</details>
+<details>
+<summary>Läuft TAGRA auf einem Mac?</summary>
+<div class="faq-a">TAGRA III unterstützt ausschließlich Windows 10 und Windows 11. Eine native Mac-Version wird nicht unterstützt.</div>
+</details>
+<details>
+<summary>Wie oft muss ich meine Fahrerkarte auslesen?</summary>
+<div class="faq-a">Nach Verordnung (EU) Nr. 581/2010 müssen Sie die Daten Ihrer Fahrerkarte spätestens alle 28 Tage herunterladen. Für den Massenspeicher der Fahrzeugeinheit gilt eine Frist von höchstens 90 Tagen.</div>
+</details>
+<details>
+<summary>Was ist der Unterschied zwischen Fahrerkarte und Unternehmenskarte?</summary>
+<div class="faq-a">Die Fahrerkarte enthält die personenbezogenen Aufzeichnungen des Fahrers und wird mit einem USB-Fahrerkartenleser ausgelesen. Die Unternehmenskarte dient dem Unternehmen beim Herunterladen der Daten aus der Fahrzeugeinheit, beispielsweise mit der DOWNLOAD BOX II S; sie ersetzt die Fahrerkarte nicht.</div>
+</details>
+</div>
+</div>
+</section>
+<section aria-label="Testen Sie TAGRA mit Ihren Tachodaten" class="band">
+<div class="container" style="text-align:center">
+<h2 class="anim-up">Testen Sie TAGRA mit Ihren Tachodaten</h2>
+<p class="anim-up" style="max-width:760px;margin:0 auto;font-size:18px;line-height:1.6">Starten Sie Ihren kostenlosen 30-Tage-Test ohne Kreditkarte – bei Fragen unterstützt Sie unser Team per E-Mail und Chat in Ihrer Sprache sowie telefonisch auf Englisch, Tschechisch und Slowakisch.</p>
+<div class="lp-cta-row">
+<a class="btn-cta" data-bridge="lp" data-cta="buy" data-pos="final" href="https://shop.tagra.app/de/tagra-trucker/" rel="noopener">TAGRA TRUCKER mit Gratis-Kartenleser kaufen</a>
+<a class="btn-outline" href="/de/testen/?src=lp-fahrerkarte-software" rel="noopener">30 Tage kostenlos testen</a>
+</div>
+</div>
+</section>
+<!-- ═══ FOOTER ════════════════════════════════════════════════════════ -->
+<footer class="site-footer" role="contentinfo">
+<div class="footer-inner">
+<div>
+<div class="footer-logo"><img alt="TAGRA" height="20" src="/assets/img/logo-dark.svg?v=20260513zh" width="88" loading="lazy"/></div>
+<p class="footer-desc">Professionelle Software zur Tachographenauswertung. Auslesen von Fahrerkarten, Auswertung digitaler Tachographendaten, EU-Lenk- und Ruhezeiten sowie Arbeitszeitrichtlinie für den Straßentransport. Entwickelt von Truck Data Technology, s.r.o.</p>
+</div>
+<div class="footer-col">
+<h2 class="footer-col-title">Produkt</h2>
+<ul>
+<li><a href="/de/fuhrpark/">Für Fuhrparkbetreiber</a></li>
+<li><a href="/de/fahrer/">Für Berufskraftfahrer</a></li>
+<li><a href="/de/kontrollbehoerden/">Für Kontrollbehörden</a></li>
+<li><a href="/de/so-funktioniert-es/">So funktioniert es</a></li>
+<li><a href="/de/fuer-wen/">Für wen</a></li>
+<li><a href="/de/faq/">FAQ</a></li>
+<li><a href="https://shop.tagra.app/de/">TAGRA Shop</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h2 class="footer-col-title">Ressourcen</h2>
+<ul>
+<li><a href="/de/ratgeber/">Artikel</a></li><li><a href="/de/anleitungen/">Anleitungen</a></li>
+<li><a href="/de/ratgeber/tachographen-symbole/">Tachographen-Symbole</a></li>
+<li><a href="/de/schnittstellen/dkv-live/">DKV LIVE®</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h2 class="footer-col-title">Unternehmen</h2>
+<ul>
+<li><a href="/de/kontakt/">Kontakt</a></li>
+<li><a href="https://www.tdt.cz" rel="noopener" target="_blank">Truck Data Technology</a></li>
+<li><a href="/" hreflang="en">English</a></li><li><a aria-current="page" class="active" href="/de/" hreflang="de">Deutsch</a></li><li><a href="/pl/" hreflang="pl">Polski</a></li><li><a href="/nl/" hreflang="nl">Nederlands</a></li><li><a href="/fr/" hreflang="fr">Français</a></li><li><a href="/it/" hreflang="it">Italiano</a></li><li><a href="/es/" hreflang="es">Español</a></li><li><a href="/el/" hreflang="el">Ελληνικά</a></li><li><a href="/hu/" hreflang="hu">Magyar</a></li><li><a href="/ro/" hreflang="ro">Română</a></li><li><a href="https://www.tdt.cz/" hreflang="cs" rel="noopener" target="_blank">Čeština</a></li><li><a href="https://www.tdt.sk/" hreflang="sk" rel="noopener" target="_blank">Slovenčina</a></li></ul>
+</div>
+</div>
+<div class="footer-bottom">
+<span>© 2026 Truck Data Technology, s.r.o. Alle Rechte vorbehalten.</span>
+<span><a href="/de/kontakt/">Kontakt</a> · <a href="https://www.tdt.cz" rel="noopener" target="_blank">tdt.cz</a> · <a href="/de/datenschutz/">Datenschutz &amp; Cookies</a> · <a href="/de/impressum/">Impressum</a></span>
+</div>
+</footer>
+<!-- ═══ JAVASCRIPT ════════════════════════════════════════════════════ -->
+<script>
+(function() {
+  /* SCROLL PROGRESS */
+  var bar = document.getElementById('scroll-progress');
+  if (bar) {
+    window.addEventListener('scroll', function() {
+      var top = document.documentElement.scrollTop || document.body.scrollTop;
+      var h = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      bar.style.width = (top / h * 100) + '%';
+    }, { passive: true });
+  }
+  /* MOBILE NAV */
+  var toggle = document.getElementById('nav-toggle');
+  var links = document.getElementById('nav-links');
+  if (toggle && links) {
+    toggle.addEventListener('click', function() {
+      var open = links.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open);
+    });
+  }
+  /* ANIMATIONS */
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) { if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); } });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.anim-up, .fly-left, .fly-right').forEach(function(el) { io.observe(el); });
+  } else {
+    document.querySelectorAll('.anim-up, .fly-left, .fly-right').forEach(function(el) { el.classList.add('on'); });
+  }
+  /* REVIEWS SLIDER */
+  var rail = document.getElementById('rev-rail');
+  if (rail) {
+    rail.innerHTML += rail.innerHTML + rail.innerHTML;
+    var speed = 0.9, busy = false, pos = 0, isDown = false, startX, startScroll, resumeTimer;
+    function tick() { if (!busy) { pos += speed; if (pos >= 1) { rail.scrollLeft += Math.floor(pos); pos -= Math.floor(pos); } if (rail.scrollLeft >= rail.scrollWidth / 3) rail.scrollLeft = 0; } requestAnimationFrame(tick); }
+    function pause() { busy = true; clearTimeout(resumeTimer); }
+    function resume() { resumeTimer = setTimeout(function() { busy = false; }, 2000); }
+    rail.addEventListener('mousedown', function(e) { isDown = true; pause(); startX = e.pageX - rail.offsetLeft; startScroll = rail.scrollLeft; });
+    rail.addEventListener('mouseleave', function() { isDown = false; resume(); });
+    rail.addEventListener('mouseup', function() { isDown = false; resume(); });
+    rail.addEventListener('mousemove', function(e) { if (!isDown) return; e.preventDefault(); rail.scrollLeft = startScroll - (e.pageX - rail.offsetLeft - startX) * 1.5; });
+    rail.addEventListener('touchstart', pause, { passive: true });
+    rail.addEventListener('touchend', resume, { passive: true });
+    tick();
+  }
+  /* MAC STAGE ZOOM */
+  var macImg = document.getElementById('mac-img');
+  if (macImg) {
+    var ticking = false;
+    function zoom() { var r = macImg.getBoundingClientRect(); var dist = Math.abs(window.innerHeight / 2 - (r.top + r.height / 2)); var prog = Math.max(0, 1 - dist / (window.innerHeight * 0.65)); var eased = Math.sin(prog * Math.PI / 2); var s = 1 + eased * (window.innerWidth < 768 ? 0.2 : 0.38); macImg.style.transform = 'scale(' + s.toFixed(3) + ')'; ticking = false; }
+    function onScroll() { if (!ticking) { requestAnimationFrame(zoom); ticking = true; } }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll, { passive: true });
+    setTimeout(zoom, 150);
+  }
+  /* HERO VIDEO */
+  var heroVid = document.getElementById('hero-vid');
+  if (heroVid && 'IntersectionObserver' in window) {
+    var hvObs = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) { if (e.isIntersecting) { heroVid.play().catch(function(){}); } else { heroVid.pause(); } });
+    }, { threshold: 0.1 });
+    hvObs.observe(heroVid);
+    document.addEventListener('touchstart', function() { if (heroVid.paused) heroVid.play().catch(function(){}); }, { once: true, passive: true });
+  }
+})();
+</script>
+</body>
+</html>
