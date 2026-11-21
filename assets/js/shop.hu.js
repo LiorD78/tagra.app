@@ -1,4 +1,4 @@
-/* TAGRA Shop v7.0 HU – maďarská verze shop.js v7.0 (9. 11. 2026; kód shodný s EN, přeloženy texty, ceny „149 €“, interní cesty shopu s prefixem /hu/, zkušební verze tagra.app/hu/ingyenes-probaverzio/); texty z crew (GPT + Gemini) */
+/* v7.1 (21. 11. 2026): hero obrázek Hodnocení místo Přehledu | TAGRA Shop v7.0 HU – maďarská verze shop.js v7.0 (9. 11. 2026; kód shodný s EN, přeloženy texty, ceny „149 €“, interní cesty shopu s prefixem /hu/, zkušební verze tagra.app/hu/ingyenes-probaverzio/); texty z crew (GPT + Gemini) */
 (function(){
   var TM='https://cdn.truckmall.cz/data/user-content/';
   var TA='https://tagra.app/assets/';
@@ -55,13 +55,13 @@
   var HOME2=true;
   function hero(){
     if(!isHP()||document.querySelector('.tgs-hero2'))return;
-    var MB='https://wuswoaicjtuodzmrjwgf.supabase.co/storage/v1/object/public/site/tagra-shop/mac/tagra3-mac-overview-';
+    var MB='https://wuswoaicjtuodzmrjwgf.supabase.co/storage/v1/object/public/site/tagra-shop/mac/tagra3-mac-evaluation-';
     var F=['149 €-tól + ÁFA','Licenc e-mailben, általában még aznap','0% ÁFA uniós cégeknek','2005 óta a piacon'];
     var s=document.createElement('section');s.className='tgs-hero2';
     s.innerHTML='<div class="tgs-hero2__txt"><span class="tgs-label">TAGRA · tachográfelemző program</span><p class="tgs-hero2__h">Tárja fel a szabálysértéseket még az ellenőrzés előtt.</p><p class="tgs-hero2__p">Windows-program fuvarozóknak és járművezetőknek. Adatai az Ön saját számítógépén maradnak. A licenc első éve benne van az árban.</p>'+
       '<div class="tgs-hero2__cta"><a class="tgs-pill" href="#tgs-pricing" data-hero="choose">Válasszon TAGRA programot</a><a class="tgs-pill tgs-pill--ghost" href="https://tagra.app/hu/ingyenes-probaverzio/?audience=fleet&src=shop_hero" target="_blank" rel="noopener" data-hero="trial">Próbálja ki 30 napig ingyen</a></div>'+
       '<small class="tgs-hero2__small">Bankkártya nélkül · Windows 10/11</small><ul class="tgs-hero2__f">'+F.map(function(f){return '<li>'+f+'</li>';}).join('')+'</ul></div>'+
-      '<div class="tgs-hero2__img"><img src="'+MB+'1600.webp" srcset="'+MB+'800.webp 800w, '+MB+'1600.webp 1600w" sizes="(max-width: 767px) 92vw, 620px" width="1600" height="1407" alt="TAGRA program – flottaáttekintés" fetchpriority="high" decoding="async"></div>';
+      '<div class="tgs-hero2__img"><img src="'+MB+'1600.webp" srcset="'+MB+'800.webp 800w, '+MB+'1600.webp 1600w" sizes="(max-width: 767px) 92vw, 620px" width="1600" height="1407" alt="TAGRA program – járművezető-értékelés tevékenységi idővonallal és szabálysértésekkel" fetchpriority="high" decoding="async"></div>';
     var slot=document.querySelector('.banners-row .wide-carousel');
     if(slot){slot.appendChild(s);slot.closest('.banners-row').classList.add('tgs-has-car');}
     else{var c=document.getElementById('content');if(!c)return;c.insertBefore(s,c.firstElementChild);}
