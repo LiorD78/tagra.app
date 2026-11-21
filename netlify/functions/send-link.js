@@ -54,6 +54,7 @@ const LINKS = {
   fr: { trial: "/fr/essai-gratuit/",             guide: "/fr/manuels/installer-tagra/" },
   nl: { trial: "/nl/gratis-proefversie/",        guide: "/nl/handleidingen/tagra-installeren/" },
   ro: { trial: "/ro/incercare-gratuita/",        guide: "/ro/manuale/instalare-tagra/" },
+  es: { trial: "/es/prueba-gratis/",             guide: "/manuals/how-to-install-tagra/" },
 };
 
 // Texty doslova z brain/fronta/2026-11-15-42-mobil-i18n.json (crew GPT, kontrola Gemini);
