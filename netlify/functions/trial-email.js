@@ -89,7 +89,7 @@ const FOLLOWUP_SCHEDULE = [
 const SEQUENCE_AUDIENCES = ["fleet", "driver"];
 
 const VALID_AUDIENCES = ["fleet", "driver", "enforcement"];
-const VALID_LANGS     = ["en", "de", "pl", "cz", "sk", "gr", "hu", "it", "fr", "ro", "nl"];
+const VALID_LANGS     = ["en", "de", "pl", "cz", "sk", "gr", "hu", "it", "fr", "ro", "nl", "es"];
 
 // Jednorázové / testovací e-mailové domény — odeslání se tiše ignoruje.
 const DISPOSABLE_DOMAINS = [
@@ -107,7 +107,7 @@ const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[a-z]{2,}$/i;
 // Segment v source_url → jazyk šablony. Rozhoduje první výskyt zleva
 // (source_url má tvar "referrer → cílová URL", jazyk stránky odkud
 // návštěvník přišel je spolehlivější než jazyk cílové stránky).
-const LANG_URL_SEGMENTS = { de: "de", pl: "pl", el: "gr", hu: "hu", cz: "cz", sk: "sk", it: "it", fr: "fr", ro: "ro", nl: "nl" };
+const LANG_URL_SEGMENTS = { de: "de", pl: "pl", el: "gr", hu: "hu", cz: "cz", sk: "sk", it: "it", fr: "fr", ro: "ro", nl: "nl", es: "es" };
 
 // Předměty uvítacího mailu (#1). U #2/#3 se čtou z <title> šablony.
 const SUBJECTS = {
@@ -165,6 +165,11 @@ const SUBJECTS = {
     fleet:       "Uw TAGRA-proefversie is klaar — downloadlink in deze e-mail",
     driver:      "Uw TAGRA TRUCKER-proefversie is klaar — downloadlink in deze e-mail",
     enforcement: "Bedankt voor uw interesse in TAGRA Control",
+  },
+  es: {
+    fleet:       "Su prueba de TAGRA está lista — Enlace de descarga incluido",
+    driver:      "Su prueba de TAGRA TRUCKER está lista — Enlace de descarga incluido",
+    enforcement: "Gracias por su interés en TAGRA Control",
   },
 };
 
@@ -503,7 +508,7 @@ const TEST_EMAIL_RE = /^test\+.*@tagra\.app$/i;
 const RUKON_ROLE    = { fleet: "Dopravce / správce vozového parku", driver: "Profesionální řidič", enforcement: "Kontrolní orgán" };
 const RUKON_PROGRAM = { fleet: "TAGRA (pro dopravce)", driver: "TAGRA TRUCKER (pro řidiče)", enforcement: "TAGRA Control" };
 const RUKON_LANG    = { hu: "maďarština", en: "angličtina", de: "němčina", pl: "polština", cz: "čeština", sk: "slovenština",
-                        gr: "řečtina", it: "italština", fr: "francouzština", ro: "rumunština", nl: "nizozemština" };
+                        gr: "řečtina", it: "italština", fr: "francouzština", ro: "rumunština", nl: "nizozemština", es: "španělština" };
 
 /** Čas v Budapešti česky (kopie pro Rukon je česky). */
 function formatBudapestCs(iso) {
