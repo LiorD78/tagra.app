@@ -24,5 +24,5 @@ window.TAGRA_PRICES=/*JSON*/{
   "trucker":  {"id": "tr1", "key": "tagra-trucker",   "name": "TAGRA TRUCKER",   "drivers": 1, "price": 49,    "fee": 19, "priceId": 45,   "path": "/tagra-trucker/"},
   "trucker2": {"id": "tr2", "key": "tagra-trucker-2", "name": "TAGRA TRUCKER 2", "drivers": 2, "price": 88.62, "fee": 29, "priceId": 93,   "path": "/tagra-trucker-2/", "href": "/go/tagra-trucker-2/"},
   "box": {"name": "DOWNLOAD BOX II S", "price": 299, "path": "/download-box-ii-s/"},
-  "shipping": 9.90
+  "shipping": 0
 }/*JSON*/;
