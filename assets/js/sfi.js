@@ -1,4 +1,4 @@
-/* TAGRA Shop – lokalizace textů patičky .tgs-footer podle html[lang]. 21. 11. 2026: ES/IT texty; DE/HU jen věta o podpoře (79-8). Odkazy na /<lang>/ řeší shop.js – tady se jen opraví případné zdvojení /xx/xx/. Načítá se z HTML kódů (patička). */
+/* TAGRA Shop – lokalizace textů patičky .tgs-footer podle html[lang]. 21. 11. 2026: ES/IT texty; DE/HU jen věta o podpoře (79-8). Odkazy na /<lang>/ řeší shop.js – tady se jen opraví případné zdvojení /xx/xx/. IT: věty souhlasu u registrace, komentáře a dotazu (Shoptet je v IT nemá). Načítá se z HTML kódů (patička). */
 
 (function(){
   var D={
@@ -7,9 +7,13 @@
     de:{sup:" · E-Mail-Support auf Deutsch"},
     hu:{sup:" · E-mailes ügyfélszolgálat magyarul"}
   };
+  var CONSENT={
+    it:{"By registering you agree to the":"Registrandosi, accetta i ","and the":" e l’","By posting a comment you agree to the":"Pubblicando un commento, accetta l’","By sending a message you agree to the":"Inviando un messaggio, accetta l’"}
+  };
   var SUP=/support in English|Support auf Englisch|angol nyelvű ügyféltámogatás/;
+  function lang(){ return (document.documentElement.getAttribute('lang')||'').slice(0,2).toLowerCase(); }
   function txt(){
-    var lg=(document.documentElement.getAttribute('lang')||'').slice(0,2).toLowerCase();
+    var lg=lang();
     var T=D[lg]; var f=document.querySelector('.tgs-footer'); if(!T||!f) return;
     var w=document.createTreeWalker(f,NodeFilter.SHOW_TEXT,null,false),n,s,k;
     while((n=w.nextNode())){
@@ -17,6 +21,17 @@
       if(T.off&&k.indexOf('Official TAGRA Shop')===0){ n.nodeValue=s.replace(k,T.off); continue; }
       if(SUP.test(k)){ n.nodeValue=T.sup; continue; }
       if(T.hasOwnProperty(k)) n.nodeValue=s.replace(k,T[k]);
+    }
+  }
+  function consent(){
+    var C=CONSENT[lang()]; if(!C) return;
+    var ps=document.querySelectorAll('form p, .consents p, p'),i,j,p,c,k;
+    for(i=0;i<ps.length;i++){
+      p=ps[i]; if(p.textContent.indexOf('you agree to the')<0) continue;
+      for(j=0;j<p.childNodes.length;j++){
+        c=p.childNodes[j]; if(c.nodeType!==3) continue;
+        k=c.nodeValue.trim(); if(C.hasOwnProperty(k)) c.nodeValue=C[k];
+      }
     }
   }
   function dedupe(){
@@ -27,6 +42,6 @@
       if(m) a[i].setAttribute('href',h.replace('/'+m[1]+'/'+m[1]+'/','/'+m[1]+'/'));
     }
   }
-  function run(){ txt(); dedupe(); setTimeout(dedupe,1500); }
+  function run(){ txt(); consent(); dedupe(); setTimeout(function(){ dedupe(); consent(); },1500); }
   if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',run); else run();
 })();
