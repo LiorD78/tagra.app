@@ -1,4 +1,4 @@
-/* 21. 11. 2026: odrážka doprava zdarma (79-12d) | v7.1 (21. 11. 2026): hero obrázek Hodnocení místo Přehledu | TAGRA Shop v7.0 PL – polska wersja shop.js v7.0 (v7.0-pl1 – PL slovník, 2026-11-15; kód = shop.hu.js v7.0, přeloženy texty EN→PL přes crew GPT + kontrola GPT/Gemini/Mistral 2:1, ceny „149 €“, interní cesty shopu s prefixem /pl/, zkušební verze tagra.app/pl/wyprobuj/) */
+/* 21. 11. 2026: 79-7 LCP – hero obrázek z tagra.app + preload + srcset 400/560 |  21. 11. 2026: odrážka doprava zdarma (79-12d) | v7.1 (21. 11. 2026): hero obrázek Hodnocení místo Přehledu | TAGRA Shop v7.0 PL – polska wersja shop.js v7.0 (v7.0-pl1 – PL slovník, 2026-11-15; kód = shop.hu.js v7.0, přeloženy texty EN→PL přes crew GPT + kontrola GPT/Gemini/Mistral 2:1, ceny „149 €“, interní cesty shopu s prefixem /pl/, zkušební verze tagra.app/pl/wyprobuj/) */
 (function(){
   var TM='https://cdn.truckmall.cz/data/user-content/';
   var TA='https://tagra.app/assets/';
@@ -55,13 +55,13 @@
   var HOME2=true;
   function hero(){
     if(!isHP()||document.querySelector('.tgs-hero2'))return;
-    var MB='https://wuswoaicjtuodzmrjwgf.supabase.co/storage/v1/object/public/site/tagra-shop/mac/tagra3-mac-evaluation-';
+    var MB='https://tagra.app/assets/img/shop/tagra3-mac-evaluation-';
     var F=['Od 149 € netto','Licencja e-mailem, zwykle tego samego dnia','0% VAT dla firm z UE','Na rynku od 2005 roku'];
     var s=document.createElement('section');s.className='tgs-hero2';
     s.innerHTML='<div class="tgs-hero2__txt"><span class="tgs-label">TAGRA · program do analizy danych z tachografów</span><p class="tgs-hero2__h">Wykryj naruszenia przed kontrolą.</p><p class="tgs-hero2__p">Program dla systemu Windows dla przedsiębiorstw transportowych i kierowców. Państwa dane pozostają na Państwa komputerze. Pierwszy rok licencji w cenie.</p>'+
       '<div class="tgs-hero2__cta"><a class="tgs-pill" href="#tgs-pricing" data-hero="choose">Wybierz TAGRA</a><a class="tgs-pill tgs-pill--ghost" href="https://tagra.app/pl/wyprobuj/?audience=fleet&src=shop_hero" target="_blank" rel="noopener" data-hero="trial">Wypróbuj bezpłatnie przez 30 dni</a></div>'+
       '<small class="tgs-hero2__small">Bez karty płatniczej · Windows 10/11</small><ul class="tgs-hero2__f">'+F.map(function(f){return '<li>'+f+'</li>';}).join('')+'</ul></div>'+
-      '<div class="tgs-hero2__img"><img src="'+MB+'1600.webp" srcset="'+MB+'800.webp 800w, '+MB+'1600.webp 1600w" sizes="(max-width: 767px) 92vw, 620px" width="1600" height="1407" alt="Program TAGRA – ocena kierowcy z osią czasu aktywności i naruszeniami" fetchpriority="high" decoding="async"></div>';
+      '<div class="tgs-hero2__img"><img src="'+MB+'1600.webp" srcset="'+MB+'400.webp 400w, '+MB+'560.webp 560w, '+MB+'800.webp 800w, '+MB+'1600.webp 1600w" sizes="(max-width: 767px) 92vw, 620px" width="1600" height="1407" alt="Program TAGRA – ocena kierowcy z osią czasu aktywności i naruszeniami" fetchpriority="high" decoding="async"></div>';
     var slot=document.querySelector('.banners-row .wide-carousel');
     if(slot){slot.appendChild(s);slot.closest('.banners-row').classList.add('tgs-has-car');}
     else{var c=document.getElementById('content');if(!c)return;c.insertBefore(s,c.firstElementChild);}
