@@ -1,4 +1,4 @@
-/* v7.1 (21. 11. 2026): hero obrázek Hodnocení místo Přehledu | TAGRA Shop v7.0 HU – maďarská verze shop.js v7.0 (9. 11. 2026; kód shodný s EN, přeloženy texty, ceny „149 €“, interní cesty shopu s prefixem /hu/, zkušební verze tagra.app/hu/ingyenes-probaverzio/); texty z crew (GPT + Gemini) */
+/* 21. 11. 2026: odrážka doprava zdarma (79-12d) | v7.1 (21. 11. 2026): hero obrázek Hodnocení místo Přehledu | TAGRA Shop v7.0 HU – maďarská verze shop.js v7.0 (9. 11. 2026; kód shodný s EN, přeloženy texty, ceny „149 €“, interní cesty shopu s prefixem /hu/, zkušební verze tagra.app/hu/ingyenes-probaverzio/); texty z crew (GPT + Gemini) */
 (function(){
   var TM='https://cdn.truckmall.cz/data/user-content/';
   var TA='https://tagra.app/assets/';
@@ -271,7 +271,7 @@
     var soft=/tagra/i.test((document.querySelector('.p-detail-inner-header h1')||{}).textContent||'');
     var ul=document.createElement('ul');ul.className='tgs-buytrust';
     ul.innerHTML='<li><span><b>0% ÁFA</b> érvényes közösségi adószámmal rendelkező uniós cégeknek (fordított adózás)</span></li>'+
-      (soft?'<li><span><b>Licenc e-mailben</b> – az első év az árban</span></li>':'<li><span><b>Szállítás az EU egész területére</b> – 24 hónap garancia</span></li>')+
+      (soft?'<li><span><b>Licenc e-mailben</b> – az első év az árban</span></li>':'<li><span><b>Ingyenes szállítás az EU egész területén</b> – 24 hónap garancia</span></li>')+
       '<li><span><b>Közvetlenül a gyártótól</b> – Truck Data Technology, 2005 óta a piacon</span></li>'+
       '<li><span>Kérdése van? <a href="mailto:'+SALES+'">'+SALES+'</a> · támogatás angolul</span></li>';
     var ref=w.querySelector('.p-short-description');
