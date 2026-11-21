@@ -1,4 +1,4 @@
-/* TAGRA Shop layer 3 v1.11 (13. 11. 2026: loads shop-video.js v1 on product pages – DOWNLOAD BOX II S video instead of the still) | v1.10 (10. 11. 2026: loads shop-ai.js v1 – AI assistant in TAGRA III block on the homepage and TAGRA 1/2/4/6/MAX product pages) | v1.9 (9. 11. 2026: loads shop-dev.js v1 on every page – nav: green field only on the current item; Download devices: featured DOWNLOAD BOX II S, comparison, reviews, DKV LIVE callout) | v1.8 (8. 11. 2026: loads shop-cro.js v1 on every page – sticky buy bar, quote, add-to-cart panel, cart note, 404/search; fleet calculator v1.8, switcher v1.2) | v1.7 (7. 11. 2026: version switcher also on TAGRA TRUCKER / TRUCKER 2, fleet calculator v1.5) | v1.6 (7. 11. 2026: animovany robot v paticce) | v1.5 – program screenshots in a MacBook frame (like TRUCKMALL mac-stage) (3. 11. 2026); v1.3 loads the fleet calculator on the homepage; v1.4 loads the version switcher on TAGRA product pages; v1.5 Safari plays the coffee video in the first carousel card (6. 11. 2026) */
+/* TAGRA Shop layer 3 v1.12 (21. 11. 2026: language switcher – Shoptet's fixed language name "Język polski" shown as "Polski", like the other one-word names Deutsch/English/Magyar/Español) | v1.11 (13. 11. 2026: loads shop-video.js v1 on product pages – DOWNLOAD BOX II S video instead of the still) | v1.10 (10. 11. 2026: loads shop-ai.js v1 – AI assistant in TAGRA III block on the homepage and TAGRA 1/2/4/6/MAX product pages) | v1.9 (9. 11. 2026: loads shop-dev.js v1 on every page – nav: green field only on the current item; Download devices: featured DOWNLOAD BOX II S, comparison, reviews, DKV LIVE callout) | v1.8 (8. 11. 2026: loads shop-cro.js v1 on every page – sticky buy bar, quote, add-to-cart panel, cart note, 404/search; fleet calculator v1.8, switcher v1.2) | v1.7 (7. 11. 2026: version switcher also on TAGRA TRUCKER / TRUCKER 2, fleet calculator v1.5) | v1.6 (7. 11. 2026: animovany robot v paticce) | v1.5 – program screenshots in a MacBook frame (like TRUCKMALL mac-stage) (3. 11. 2026); v1.3 loads the fleet calculator on the homepage; v1.4 loads the version switcher on TAGRA product pages; v1.5 Safari plays the coffee video in the first carousel card (6. 11. 2026) */
 (function(){
   var l=document.createElement('link');l.rel='stylesheet';l.href='https://tagra.app/assets/css/shop3.css?v=2';document.head.appendChild(l);
   var MB='https://wuswoaicjtuodzmrjwgf.supabase.co/storage/v1/object/public/site/tagra-shop/mac/tagra3-mac-';
@@ -72,6 +72,16 @@
     if(window.tgsAi||document.getElementById('tgs-ai-js'))return;
     var s=document.createElement('script');s.id='tgs-ai-js';s.src='https://tagra.app/assets/js/shop-ai.js?v=1';s.async=true;document.head.appendChild(s);
   }
-  function run(){dev();imgs();gallery();zoom();topsellers();fleet();variant();cro();robot();ai();vid();if(document.body&&document.body.classList.contains('type-index'))vfix();}
+  /* v1.12: Shoptet has a fixed, non-editable language name "Język polski"; show one word like the other languages */
+  var LANG_NAMES={'Język polski':'Polski'};
+  function langs(){
+    [].forEach.call(document.querySelectorAll('.languagesMenu__list__name, .languagesMenu a, .languagesMenu span, [class*="language"] a, [class*="language"] span, [class*="language"] option'),function(e){
+      if(e.children.length)return;
+      var t=(e.textContent||'').trim();
+      if(LANG_NAMES.hasOwnProperty(t))e.textContent=LANG_NAMES[t];
+      if(e.getAttribute&&LANG_NAMES.hasOwnProperty(e.getAttribute('title')||''))e.setAttribute('title',LANG_NAMES[e.getAttribute('title')]);
+    });
+  }
+  function run(){langs();dev();imgs();gallery();zoom();topsellers();fleet();variant();cro();robot();ai();vid();if(document.body&&document.body.classList.contains('type-index'))vfix();}
   if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',run);}else{run();}
 })();
