@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- TMX-ANALYTICS START -->
+<meta content="7F7894081BE7FBB245FF03AF8810B22F" name="msvalidate.01"/>
+<!-- Consent Mode v2 defaults (deny) + gtag stub — runs BEFORE gtag.js -->
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent','default',{
+      ad_storage:'denied', ad_user_data:'denied', ad_personalization:'denied',
+      analytics_storage:'denied', functionality_storage:'denied',
+      personalization_storage:'denied', security_storage:'granted',
+      wait_for_update:500
+    });
+    gtag('set','ads_data_redaction',true);
+    gtag('set','url_passthrough',false);
+  </script>
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-92253QFBNX"></script>
+<script>
+    gtag('js', new Date());
+    gtag('config','G-92253QFBNX');
+  </script>
+<!-- Cookie consent banner (self-hosted) + Microsoft Clarity gating -->
+<style>
+    .tmx-cc{position:fixed;left:0;right:0;bottom:0;z-index:2147483000;background:linear-gradient(120deg,var(--blue-dark,#0b2c4a),var(--blue-mid,#134a8e) 62%,var(--blue-light,#1f5fa6));color:#fff;
+      font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+      padding:16px 20px;box-shadow:0 -4px 24px rgba(0,0,0,.18);display:flex;flex-wrap:wrap;
+      align-items:center;gap:14px;justify-content:center}
+    .tmx-cc__txt{flex:1 1 360px;max-width:760px}
+    .tmx-cc__txt a{color:#9ed0f5;text-decoration:underline}
+    .tmx-cc__btns{display:flex;gap:10px;flex:0 0 auto}
+    .tmx-cc__b{appearance:none;border:0;cursor:pointer;font:inherit;font-weight:600;
+      padding:10px 22px;border-radius:99px;transition:filter .15s;color:#fff}
+    .tmx-cc__b:hover{filter:brightness(1.08)}
+    .tmx-cc__b--no{background:rgba(255,255,255,.16)}
+    .tmx-cc__b--yes{background:var(--green-cta,#5C820F)}
+    @media(max-width:640px){.tmx-cc{padding:14px}.tmx-cc__btns{width:100%}.tmx-cc__b{flex:1}}
+  </style>
+<script>
+  (function(){
+    var KEY='tmx-consent-v1', CL='wt18054m0r';
+    function lc(){var l=(document.documentElement.getAttribute('lang')||'en').toLowerCase().split('-')[0];
+      var m={cz:'cs',cs:'cs',sk:'sk',de:'de',pl:'pl',gr:'el',el:'el',hu:'hu',fr:'fr',it:'it',nl:'nl',ro:'ro',en:'en'};return m[l]||'en';}
+    var T={
+      hu:{t:'Analitikai s\u00fctiket haszn\u00e1lunk (Google Analytics, Microsoft Clarity, Jarabot), hogy meg\u00e9rts\u00fck a webhely haszn\u00e1lat\u00e1t. Csak az \u00d6n hozz\u00e1j\u00e1rul\u00e1s\u00e1val t\u00f6lt\u0151dnek be.',a:'Elfogadom',r:'Elutas\u00edtom',p:'Adatv\u00e9delem \u00e9s s\u00fctik'},
+      ro:{t:'Utilizăm module cookie de analiză (Google Analytics, Microsoft Clarity, Jarabot) pentru a înțelege modul de utilizare a site-ului. Se încarcă doar cu consimțământul dumneavoastră.',a:'Accept',r:'Refuz',p:'Confidențialitate și cookie-uri'},
+      nl:{t:'We gebruiken analytische cookies (Google Analytics, Microsoft Clarity, Jarabot) om het gebruik van de site te begrijpen. Ze laden alleen met uw toestemming.',a:'Accepteren',r:'Weigeren',p:'Privacy en cookies'},
+      fr:{t:'Nous utilisons des cookies analytiques (Google Analytics, Microsoft Clarity, Jarabot) pour comprendre l’utilisation du site. Ils ne se chargent qu’avec votre consentement.',a:'Accepter',r:'Refuser',p:'Confidentialité et cookies'},
+      it:{t:'Utilizziamo cookie analitici (Google Analytics, Microsoft Clarity, Jarabot) per capire l’utilizzo del sito. Si caricano solo con il Suo consenso.',a:'Accetta',r:'Rifiuta',p:'Privacy e cookie'},
+      en:{t:'We use analytics cookies (Google Analytics, Microsoft Clarity, Jarabot) to understand site usage. They load only with your consent.',a:'Accept',r:'Reject',p:'Privacy &amp; cookies'},
+      cs:{t:'Pou\u017e\u00edv\u00e1me analytick\u00e9 cookies (Google Analytics, Microsoft Clarity, Jarabot) k pochopen\u00ed pou\u017e\u00edv\u00e1n\u00ed webu. Na\u010dtou se jen s va\u0161\u00edm souhlasem.',a:'P\u0159ijmout',r:'Odm\u00edtnout',p:'Soukrom\u00ed a cookies'},
+      sk:{t:'Pou\u017e\u00edvame analytick\u00e9 cookies (Google Analytics, Microsoft Clarity, Jarabot) na pochopenie pou\u017e\u00edvania webu. Na\u010d\u00edtaj\u00fa sa len s va\u0161\u00edm s\u00fahlasom.',a:'Prija\u0165',r:'Odmietnu\u0165',p:'S\u00fakromie a cookies'},
+      de:{t:'Wir verwenden Analyse-Cookies (Google Analytics, Microsoft Clarity, Jarabot), um die Nutzung der Website zu verstehen. Sie werden nur mit Ihrer Einwilligung geladen.',a:'Akzeptieren',r:'Ablehnen',p:'Datenschutz &amp; Cookies'},
+      pl:{t:'U\u017cywamy plik\u00f3w cookie do analityki (Google Analytics, Microsoft Clarity, Jarabot), aby zrozumie\u0107 korzystanie z witryny. \u0141aduj\u0105 si\u0119 tylko za Twoj\u0105 zgod\u0105.',a:'Akceptuj',r:'Odrzu\u0107',p:'Prywatno\u015b\u0107 i cookies'},
+      el:{t:'\u03a7\u03c1\u03b7\u03c3\u03b9\u03bc\u03bf\u03c0\u03bf\u03b9\u03bf\u03cd\u03bc\u03b5 cookies \u03b1\u03bd\u03ac\u03bb\u03c5\u03c3\u03b7\u03c2 (Google Analytics, Microsoft Clarity, Jarabot) \u03b3\u03b9\u03b1 \u03bd\u03b1 \u03ba\u03b1\u03c4\u03b1\u03bd\u03bf\u03ae\u03c3\u03bf\u03c5\u03bc\u03b5 \u03c4\u03b7 \u03c7\u03c1\u03ae\u03c3\u03b7. \u03a6\u03bf\u03c1\u03c4\u03ce\u03bd\u03bf\u03bd\u03c4\u03b1\u03b9 \u03bc\u03cc\u03bd\u03bf \u03bc\u03b5 \u03c4\u03b7 \u03c3\u03c5\u03b3\u03ba\u03b1\u03c4\u03ac\u03b8\u03b5\u03c3\u03ae \u03c3\u03b1\u03c2.',a:'\u0391\u03c0\u03bf\u03b4\u03bf\u03c7\u03ae',r:'\u0391\u03c0\u03cc\u03c1\u03c1\u03b9\u03c8\u03b7',p:'\u0391\u03c0\u03cc\u03c1\u03c1\u03b7\u03c4\u03bf &amp; cookies'}
+    };
+    function loadClarity(){if(!CL||window.__tmxCl)return;window.__tmxCl=1;
+      (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+       t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+       y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script",CL);}
+    function grant(){try{localStorage.setItem(KEY,'granted')}catch(e){}
+      gtag('consent','update',{analytics_storage:'granted'});loadClarity();}
+    function deny(){try{localStorage.setItem(KEY,'denied')}catch(e){}}
+    var saved=null;try{saved=localStorage.getItem(KEY)}catch(e){}
+    if(saved==='granted'){grant();return;} if(saved==='denied'){return;}
+    function show(){var tx=T[lc()]||T.en;
+      var b=document.createElement('div');b.className='tmx-cc';b.setAttribute('role','dialog');b.setAttribute('aria-live','polite');
+      b.innerHTML='<div class="tmx-cc__txt">'+tx.t+' <a href="/de/datenschutz/">'+tx.p+'</a></div>'+
+        '<div class="tmx-cc__btns"><button type="button" class="tmx-cc__b tmx-cc__b--no">'+tx.r+'</button>'+
+        '<button type="button" class="tmx-cc__b tmx-cc__b--yes">'+tx.a+'</button></div>';
+      document.body.appendChild(b);
+      b.querySelector('.tmx-cc__b--yes').addEventListener('click',function(){grant();b.remove();});
+      b.querySelector('.tmx-cc__b--no').addEventListener('click',function(){deny();b.remove();});}
+    if(document.body)show();else document.addEventListener('DOMContentLoaded',show);
+  })();
+  </script>
+<!-- TMX-ANALYTICS END -->
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Digital tachograph software | TAGRA</title>
+<meta content="Digital tachograph software for Windows 10/11. Analyse driving and rest times, archive .DDD files and try TAGRA free for 30 days. No credit card required." name="description"/>
+<meta content="#0b2c4a" name="theme-color"/>
+<link href="/manifest.json" rel="manifest"/>
+<link href="https://tagra.app/digital-tachograph-software/" rel="canonical"/>
+<link href="https://tagra.app/de/fahrerkarte-auslesen-software/" hreflang="de" rel="alternate"/>
+<link href="https://tagra.app/pl/program-do-odczytu-karty-kierowcy/" hreflang="pl" rel="alternate"/>
+<link href="https://tagra.app/it/software-analisi-tachigrafo/" hreflang="it" rel="alternate"/>
+<link href="https://tagra.app/fr/logiciel-analyse-tachygraphe/" hreflang="fr" rel="alternate"/>
+<link href="https://tagra.app/digital-tachograph-software/" hreflang="en" rel="alternate"/>
+<link href="https://tagra.app/digital-tachograph-software/" hreflang="x-default" rel="alternate"/>
+<meta content="website" property="og:type"/>
+<meta content="en_US" property="og:locale"/>
+<meta content="TAGRA" property="og:site_name"/>
+<meta content="Digital tachograph software | TAGRA" property="og:title"/>
+<meta content="Digital tachograph software for Windows 10/11. Analyse driving and rest times, archive .DDD files and try TAGRA free for 30 days. No credit card required." property="og:description"/>
+<meta content="https://tagra.app/digital-tachograph-software/" property="og:url"/>
+<meta content="https://tagra.app/assets/img/shop/tagra3-mac-evaluation-1600.webp" property="og:image"/>
+<meta content="TAGRA III – digital tachograph software for Windows" property="og:image:alt"/>
+<meta content="https://tagra.app/assets/img/shop/tagra3-mac-evaluation-1600.webp" name="twitter:image"/>
+<meta content="TAGRA III – digital tachograph software for Windows" name="twitter:image:alt"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Digital tachograph software | TAGRA" name="twitter:title"/>
+<meta content="Digital tachograph software for Windows 10/11. Analyse driving and rest times, archive .DDD files and try TAGRA free for 30 days. No credit card required." name="twitter:description"/>
+<style>
+    /* ─── TOKENS ────────────────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    a { color: var(--green-brand); text-decoration: none; }
+    a:hover { color: var(--green-cta); text-decoration: underline; text-underline-offset: .18em; }
+    img { max-width: 100%; height: auto; display: block; }
+    ul { list-style: none; }
+    p + p { margin-top: 12px; }
+    p:empty { display: none; }
+
+    /* ─── SCROLL PROGRESS ───────────────────────────────────────────── */
+    #scroll-progress { position: fixed; top: 0; left: 0; height: 3px; background: linear-gradient(90deg, var(--green-brand), var(--blue-light)); width: 0%; z-index: 9999; pointer-events: none; transition: width .1s ease-out; }
+
+    /* ─── NAV ───────────────────────────────────────────────────────── */
+.nav-inner { margin: 0 auto; padding: 0 24px; height: 100%; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .nav-links { display: flex; align-items: center; gap: 4px; list-style: none; }
+    .nav-links li a { font-size: 15px; font-weight: 500; color: var(--text); padding: 8px 12px; border-radius: 8px; transition: background .15s, color .15s; text-decoration: none; }
+    .nav-links li a:hover { background: var(--bg-apple-solid); color: var(--blue-mid); }
+    .nav-links .nav-cta a { background: var(--green-cta); color: #fff !important; border-radius: 99px; padding: 8px 18px; font-weight: 600; }
+    .nav-links .nav-cta a:hover { background: var(--green-brand); text-decoration: none; }
+    .nav-lang { display: flex; align-items: center; gap: 4px; font-size: 14px; font-weight: 600; }
+    .nav-lang a { padding: 5px 8px; border-radius: 6px; color: var(--text2); text-decoration: none; transition: background .15s; }
+    .nav-lang a:hover, .nav-lang a.active { background: var(--bg-apple-solid); color: var(--blue-mid); }
+    .nav-lang span { color: var(--border); }
+    .nav-mobile-toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
+    .nav-mobile-toggle span { display: block; width: 22px; height: 2px; background: var(--text); margin: 5px 0; border-radius: 2px; transition: .3s; }
+    @media (max-width: 900px) {
+      .nav-links { display: none; }
+      .nav-mobile-toggle { display: block; }
+      .nav-links.open { display: flex; flex-direction: column; align-items: flex-start; gap: 2px; position: absolute; top: var(--nav-h); left: 0; right: 0; background: rgba(255,255,255,0.97); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 12px 24px 20px; }
+    }
+
+    /* ─── LAYOUT ────────────────────────────────────────────────────── */
+    
+    
+    
+    
+    .band--green { background: var(--green-bg); }
+    @media (max-width: 768px) { .band { padding: 50px 0; } }
+    /* ─── TYPOGRAPHY ────────────────────────────────────────────────── */
+    h2 {
+      font-size: 36px; font-weight: 800;
+      line-height: 1.1; letter-spacing: 0;
+      text-transform: uppercase;
+      color: var(--blue-mid, #134a8e);
+      background: var(--heading-gradient);
+      -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block; max-width: 100%; margin-bottom: 14px;
+      padding: 0.12em 0.15em 0.08em 0;
+    }
+    @media (max-width: 768px) { h2 {
+      font-size: 36px; font-weight: 800;
+      line-height: 1.1; letter-spacing: 0;
+      text-transform: uppercase;
+      color: var(--blue-mid, #134a8e);
+      background: var(--heading-gradient);
+      -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block; max-width: 100%; margin-bottom: 14px;
+      padding: 0.12em 0.15em 0.08em 0;
+    } }
+    h2
+    @media (max-width: 768px) { h2 }
+    .eyebrow { font-size: 15px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--green-brand); margin-bottom: 12px; }
+
+    /* ─── BUTTONS ───────────────────────────────────────────────────── */
+    
+    .btn-cta:hover { background: var(--green-brand); transform: scale(1.02); color: #fff !important; }
+    
+
+    /* ─── BENTO ─────────────────────────────────────────────────────── */
+    
+    .bc { background: #fff; border-radius: var(--radius); padding: 32px; border: 1px solid var(--border); position: relative; overflow: hidden; }
+    
+    
+    
+    
+    
+    
+    @media (max-width: 900px) { .bento { grid-template-columns: 1fr 1fr; } .bc.s7, .bc.s5 { grid-column: span 2; } .bc.s4, .bc.s6 { grid-column: span 1; } }
+    @media (max-width: 600px) { .bento { grid-template-columns: 1fr; } .bc { grid-column: span 1 !important; } }
+    
+    
+    .bignum { font-size: 110px; font-weight: 800; line-height: 1; letter-spacing: -.04em; color: rgba(19,74,142,.06); position: absolute; bottom: -16px; right: 16px; pointer-events: none; }
+
+    /* ─── 2-COL ─────────────────────────────────────────────────────── */
+    
+    
+    @media (max-width: 900px) { .g2 { grid-template-columns: 1fr; gap: 40px; } }
+
+    /* ─── FEATURES ──────────────────────────────────────────────────── */
+    
+    
+    
+
+    /* ─── REVIEWS ───────────────────────────────────────────────────── */
+    .rev-rail-wrap { overflow: hidden; margin-top: 24px; mask-image: linear-gradient(to right, transparent 0%,black 6%,black 94%,transparent 100%); }
+    
+    .rev-rail::-webkit-scrollbar { display: none; }
+    .rev-rail:active { cursor: grabbing; }
+    
+    
+    
+    
+
+    /* ─── MEDIA ─────────────────────────────────────────────────────── */
+    .media-frame { width: 100%; border-radius: var(--radius); overflow: hidden; -webkit-mask-image: -webkit-radial-gradient(#fff,#000); }
+    .media-frame img, .media-frame video { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+    /* ─── MAC STAGE ─────────────────────────────────────────────────── */
+    .mac-stage { position: relative; width: 100%; line-height: 0; }
+    .mac-stage img { width: 100%; display: block; object-fit: contain; transform-origin: center center; filter: drop-shadow(0 30px 70px rgba(0,0,0,.16)); will-change: transform; }
+    .mac-stage::after { content: ""; position: absolute; left: 50%; bottom: 5%; transform: translateX(-50%); width: 80%; height: 60px; background: radial-gradient(50% 50%,rgba(0,0,0,.16) 0%,transparent 70%); filter: blur(15px); opacity: .6; pointer-events: none; z-index: -1; }
+
+    /* ─── NOTE BOX ──────────────────────────────────────────────────── */
+    .note-box { position: relative; background: linear-gradient(180deg,var(--green-bg) 0%,#fff 100%); border: 2px solid var(--green-brand); border-radius: var(--radius); padding: 36px 28px 28px; margin-top: 40px; box-shadow: 0 10px 26px rgba(110,155,18,.08); }
+    .note-badge { position: absolute; top: -16px; left: 24px; background: var(--green-brand); color: #fff; font-size: 14px; font-weight: 800; text-transform: uppercase; padding: 5px 14px; border-radius: 999px; box-shadow: 0 6px 14px rgba(110,155,18,.22); }
+    .note-title { font-size: 24px; font-weight: 800; line-height: 1.2; margin: 10px 0 12px; color: var(--text-strong); }
+    .note-box p { font-size: 17px; line-height: 1.6; color: var(--text2); margin-bottom: 12px; }
+
+    /* ─── 3-STEP ────────────────────────────────────────────────────── */
+    
+    @media (max-width: 860px) { .three-col { grid-template-columns: 1fr; } }
+    @media (min-width: 600px) and (max-width: 860px) { .three-col { grid-template-columns: 1fr 1fr; } }
+
+    /* ─── FAQ ───────────────────────────────────────────────────────── */
+    
+    
+    .faq summary { list-style: none; cursor: pointer; padding: 18px 40px 18px 0; font-weight: 800; font-size: 18px; line-height: 1.4; position: relative; color: var(--text-strong); }
+    
+    .faq summary::after { content: "+"; position: absolute; right: 4px; top: 50%; transform: translateY(-50%); font-size: 26px; font-weight: 300; color: var(--green-brand); }
+    
+    
+
+    /* ─── FOOTER ────────────────────────────────────────────────────── */
+
+    /* ─── ANIMATIONS ────────────────────────────────────────────────── */
+    .anim-up { opacity: 0; transform: translateY(28px); transition: opacity .8s cubic-bezier(.16,1,.3,1), transform .8s cubic-bezier(.16,1,.3,1); }
+    .fly-left { opacity: 0; transform: translateX(-80px); transition: opacity 2.8s cubic-bezier(.16,1,.3,1), transform 2.8s cubic-bezier(.16,1,.3,1); }
+    .fly-right { opacity: 0; transform: translateX(80px); transition: opacity 2.8s cubic-bezier(.16,1,.3,1), transform 2.8s cubic-bezier(.16,1,.3,1); }
+    .anim-up.on, .fly-left.on, .fly-right.on { opacity: 1; transform: none; }
+    @media (prefers-reduced-motion: reduce) { .anim-up, .fly-left, .fly-right { transition: none !important; opacity: 1 !important; transform: none !important; } }
+  </style>
+<style>
+.lp-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;margin-top:28px}
+.lp-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:24px}
+.lp-card h3{font-size:19px;font-weight:800;margin:0 0 10px;color:var(--text-strong)}
+.lp-card p{margin:0;color:var(--text2);line-height:1.55}
+.lp-price{font-size:26px;font-weight:800;margin:6px 0 10px;color:var(--text-strong)}
+.lp-list{margin:20px 0 0;padding-left:22px;line-height:1.7;font-size:18px}
+.lp-img{display:block;margin:40px auto 0;max-width:100%;height:auto;border-radius:20px;box-shadow:0 20px 40px rgba(0,0,0,.08)}
+.lp-cta-row{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin:24px 0}
+</style>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://tagra.app/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Digital tachograph software for drivers and fleets",
+      "item": "https://tagra.app/digital-tachograph-software/"
+    }
+  ]
+}</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "inLanguage": "en",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is TAGRA free tachograph software?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "TAGRA III offers a 30-day free trial with full functionality and no credit card required. After the trial, you need a paid licence to continue using it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which card reader do I need?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You need a USB driver card reader to read your driver card with TAGRA. A USB driver card reader is included free when you purchase a TAGRA TRUCKER licence, with free delivery to all EU countries."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does TAGRA read .DDD files?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. TAGRA reads driver card files in .DDD format from a USB card reader and also works with vehicle unit files."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does TAGRA run on Mac?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Only Windows 10 and Windows 11 are supported. TAGRA III does not have a supported native Mac version."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How often must I download my driver card?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Driver card data must be downloaded at least every 28 days under Regulation (EU) No 581/2010. The downloaded data must be kept available for inspections."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between a company card and a driver card?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A driver card holds the individual driver's tachograph activity data and is read using a driver card reader. A company card is used when downloading vehicle unit mass memory with a device such as DOWNLOAD BOX II S; it does not replace the driver card."
+      }
+    }
+  ]
+}</script>
+<link href="/assets/css/core-sel.bundle.css?v=20261121" rel="stylesheet"/>
+<link rel="stylesheet" href="/assets/css/t3-ai.css?v=20261110"/>
+
+
+
+<script defer="" src="/assets/js/nav.js?v=20261008a"></script><script defer="" src="/assets/js/analytics.js?v=20261103a"></script>
+<script defer="" src="/assets/js/tagra-prices.js?v=20261107"></script><script defer="" src="/assets/js/tagra-selector.js?v=20261107"></script></head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+<div aria-hidden="true" id="scroll-progress"></div>
+<!-- ═══ NAVIGATION ════════════════════════════════════════════════════ -->
+<nav aria-label="Main navigation" class="site-nav" role="navigation">
+<div class="nav-inner">
+<a aria-label="TAGRA Trucker – Home" class="nav-logo" href="/"><img alt="TAGRA" height="32" src="/assets/img/logo-light.svg?v=20260513zh" style="display:block;height:32px;width:auto;" width="140"/><span class="nav-logo-variant">Trucker</span></a>
+<ul class="nav-links" id="nav-links">
+<li><a href="/fleet/">For companies</a></li>
+<li><a aria-current="page" href="/driver/">For drivers</a></li>
+<li><a href="/enforcement/">Enforcement</a></li>
+<li><a href="/articles/">Articles</a></li><li><a href="/manuals/">Manuals</a></li>
+<li><a href="/faq/">FAQ</a></li>
+<li><a href="/contact/">Contact</a></li>
+<li class="nav-shop-li"><a aria-label="TAGRA Shop – buy licences and devices" class="nav-shop" data-cta="nav" href="https://shop.tagra.app/">Shop</a></li>
+<li class="nav-cta-li"><a class="nav-cta" href="/try/?audience=driver">Try 30 days free</a></li>
+</ul>
+<details class="nav-lang">
+<summary aria-label="Language: EN">EN</summary>
+<div class="nav-lang-menu" role="menu"><a aria-current="page" class="active" href="/digital-tachograph-software/" hreflang="en">English</a><a href="/de/fahrer/" hreflang="de">Deutsch</a><a href="/pl/dla-kierowcow/" hreflang="pl">Polski</a><a href="/nl/voor-chauffeurs/" hreflang="nl">Nederlands</a><a href="/fr/conducteurs/" hreflang="fr">Français</a><a href="/it/per-autisti/" hreflang="it">Italiano</a><a href="/es/" hreflang="es">Español</a><a href="/el/odigoi/" hreflang="el">Ελληνικά</a><a href="/hu/soforoknek/" hreflang="hu">Magyar</a><a href="/ro/pentru-conducatori/" hreflang="ro">Română</a><a href="https://www.tdt.cz/" hreflang="cs" rel="noopener" target="_blank">Čeština</a><a href="https://www.tdt.sk/" hreflang="sk" rel="noopener" target="_blank">Slovenčina</a></div>
+</details>
+<a class="nav-cta-mobile" href="/try/?audience=driver">Try free</a>
+<button aria-expanded="false" aria-label="Toggle menu" class="nav-mobile-toggle" id="nav-toggle">
+<span></span><span></span><span></span>
+</button>
+</div>
+</nav>
+<!-- ═══ HERO ═════════════════════════════════════════════════════════ -->
+<section id="main-content" aria-label="Digital tachograph software for drivers and fleets" class="band band--hero band--hero--green">
+<div class="container">
+<h1 class="anim-up" style="transition-delay:.05s">Digital tachograph software for drivers and fleets</h1>
+<p class="lead anim-up" style="transition-delay:.1s">Read tachograph files, check driving and rest times, and keep your records ready for inspection with TAGRA III for Windows 10/11. Made by Truck Data Technology, s.r.o., in Prague since 2005, TAGRA offers licences for individual drivers and company fleets.</p>
+<div class="lp-cta-row anim-up" style="transition-delay:.15s">
+<a class="btn-cta" data-bridge="lp" data-cta="buy" data-pos="hero" href="https://shop.tagra.app/tagra-trucker/" rel="noopener">Buy TAGRA TRUCKER + free USB reader</a>
+<a class="btn-outline" href="/try/?src=lp-digital-tachograph-software" rel="noopener">Try free for 30 days</a>
+</div>
+<img class="lp-img anim-up" src="/assets/img/shop/tagra3-mac-evaluation-1600.webp" srcset="/assets/img/shop/tagra3-mac-evaluation-800.webp 800w, /assets/img/shop/tagra3-mac-evaluation-1600.webp 1600w" sizes="(max-width:1180px) 100vw, 1100px" width="1600" alt="TAGRA III – digital tachograph software for Windows" fetchpriority="high"/>
+</div>
+</section>
+<section aria-label="What do you need to get started?" class="band">
+<div class="container">
+<div class="eyebrow anim-up">Requirements</div>
+<h2 class="anim-up">What do you need to get started?</h2>
+<ul class="lp-list anim-up">
+<li>For driver cards: a Windows 10/11 PC, TAGRA and a USB driver card reader.</li>
+<li>For vehicle unit downloads: a company card and a download device such as DOWNLOAD BOX II S.</li>
+</ul>
+</div>
+</section>
+<section aria-label="From tachograph files to clear reports" class="band band--gray">
+<div class="container">
+<div class="eyebrow anim-up">How it works</div>
+<h2 class="anim-up">From tachograph files to clear reports</h2>
+<div class="lp-grid">
+<div class="lp-card anim-up"><h3>1. Start your free trial</h3><p>Install TAGRA III on Windows 10/11 and explore all functions free for 30 days, with no credit card.</p></div>
+<div class="lp-card anim-up"><h3>2. Read your tachograph files</h3><p>Use a USB card reader to read driver card data, or import files downloaded from the vehicle unit.</p></div>
+<div class="lp-card anim-up"><h3>3. Analyse and archive</h3><p>Review infringements, create activity and working-time reports, and securely archive your files.</p></div>
+</div>
+</div>
+</section>
+<section aria-label="Tachograph analysis software for everyday work" class="band">
+<div class="container">
+<div class="eyebrow anim-up">Features</div>
+<h2 class="anim-up">Tachograph analysis software for everyday work</h2>
+<div class="lp-grid">
+<div class="lp-card anim-up"><h3>Driver card and vehicle unit files</h3><p>Use TAGRA as driver card reader software to read .DDD files from a USB card reader and work with vehicle unit files in the same program.</p></div>
+<div class="lp-card anim-up"><h3>Driving and rest times analysis</h3><p>Evaluate infringements of driving times, breaks and rest periods under Regulation (EC) No 561/2006 and AETR.</p></div>
+<div class="lp-card anim-up"><h3>Secure file archive</h3><p>Keep all your tachograph files in a secure archive so records remain available for inspections.</p></div>
+<div class="lp-card anim-up"><h3>Reports for drivers and companies</h3><p>Create activity and working-time reports, with travel allowance reports also available for drivers.</p></div>
+<div class="lp-card anim-up"><h3>Built-in AI assistant</h3><p>Ask questions about TAGRA, drivers' hours and tachograph rules in the program language. No drivers' personal data is sent to the assistant, but AI answers may contain mistakes. For further help, contact support by e-mail or chat in your language, or by phone in English, Czech or Slovak.</p></div>
+</div>
+</div>
+</section>
+<section aria-label="Download vehicle unit data with your company card" class="band band--gray">
+<div class="container">
+<div class="eyebrow anim-up">For fleets</div>
+<h2 class="anim-up">Download vehicle unit data with your company card</h2>
+<p class="anim-up" style="max-width:860px;font-size:18px;line-height:1.6">To download tachograph data from the vehicle unit's mass memory, use DOWNLOAD BOX II S with your company card. The TAGRA 1 + DOWNLOAD BOX II S bundle combines the download device with tachograph software for one vehicle for €399 excl. VAT. For larger fleets, choose TAGRA 2, 4, 6 or MAX according to your vehicle count.</p>
+<div style="margin-top:24px"><a class="btn-cta" data-bridge="lp" data-cta="fleet" data-pos="fleet" href="https://shop.tagra.app/tagra-software/" rel="noopener">Choose a fleet licence or bundle</a></div>
+</div>
+</section>
+<section aria-label="Choose your TAGRA licence" class="band" id="pricing">
+<div class="container">
+<div class="eyebrow anim-up">Pricing</div>
+<h2 class="anim-up">Choose your TAGRA licence</h2>
+<div class="lp-grid">
+<div class="lp-card anim-up"><h3><a data-bridge="lp" data-cta="price" data-pos="price1" href="https://shop.tagra.app/tagra-trucker/" rel="noopener">TAGRA TRUCKER</a></h3><div class="lp-price">€49 excl. VAT</div><p>For one driver. First year included, then €19/year excl. VAT. A USB driver card reader is included free with the purchased licence, with free delivery to all EU countries.</p></div>
+<div class="lp-card anim-up"><h3><a data-bridge="lp" data-cta="price" data-pos="price2" href="https://shop.tagra.app/tagra-1/" rel="noopener">TAGRA 1</a></h3><div class="lp-price">€149 excl. VAT</div><p>For one vehicle. First year included, then €79/year excl. VAT.</p></div>
+<div class="lp-card anim-up"><h3><a data-bridge="lp" data-cta="price" data-pos="price3" href="https://shop.tagra.app/tagra-1-download-box-ii-s/" rel="noopener">TAGRA 1 + DOWNLOAD BOX II S</a></h3><div class="lp-price">€399 excl. VAT</div><p>TAGRA 1 for one vehicle plus a device to download vehicle unit mass memory using the company card. TAGRA 1 includes the first year, then costs €79/year excl. VAT.</p></div>
+<div class="lp-card anim-up"><h3><a data-bridge="lp" data-cta="price" data-pos="price4" href="https://shop.tagra.app/tagra-max/" rel="noopener">TAGRA MAX</a></h3><div class="lp-price">€749 excl. VAT</div><p>For unlimited vehicles. First year included, then €149/year excl. VAT.</p></div>
+</div>
+</div>
+</section>
+<section aria-label="Know your tachograph download obligations" class="band band--gray">
+<div class="container">
+<div class="eyebrow anim-up">Legal deadlines</div>
+<h2 class="anim-up">Know your tachograph download obligations</h2>
+<p class="anim-up" style="max-width:860px;font-size:18px;line-height:1.6">Under Regulation (EU) No 581/2010, driver card data must be downloaded at least every 28 days and vehicle unit data at least every 90 days. Keep the data available for inspections. Since 1 July 2026, tachographs are also required in vans of 2.5–3.5 t used in international transport of goods and cabotage.</p>
+</div>
+</section>
+<section aria-label="Questions about TAGRA tachograph software" class="band band--blue">
+<div class="container">
+<div class="eyebrow anim-up">FAQ</div>
+<h2 class="anim-up">Questions about TAGRA tachograph software</h2>
+<div class="faq anim-up" style="transition-delay:.05s">
+<details>
+<summary>Is TAGRA free tachograph software?</summary>
+<div class="faq-a">TAGRA III offers a 30-day free trial with full functionality and no credit card required. After the trial, you need a paid licence to continue using it.</div>
+</details>
+<details>
+<summary>Which card reader do I need?</summary>
+<div class="faq-a">You need a USB driver card reader to read your driver card with TAGRA. A USB driver card reader is included free when you purchase a TAGRA TRUCKER licence, with free delivery to all EU countries.</div>
+</details>
+<details>
+<summary>Does TAGRA read .DDD files?</summary>
+<div class="faq-a">Yes. TAGRA reads driver card files in .DDD format from a USB card reader and also works with vehicle unit files.</div>
+</details>
+<details>
+<summary>Does TAGRA run on Mac?</summary>
+<div class="faq-a">Only Windows 10 and Windows 11 are supported. TAGRA III does not have a supported native Mac version.</div>
+</details>
+<details>
+<summary>How often must I download my driver card?</summary>
+<div class="faq-a">Driver card data must be downloaded at least every 28 days under Regulation (EU) No 581/2010. The downloaded data must be kept available for inspections.</div>
+</details>
+<details>
+<summary>What is the difference between a company card and a driver card?</summary>
+<div class="faq-a">A driver card holds the individual driver's tachograph activity data and is read using a driver card reader. A company card is used when downloading vehicle unit mass memory with a device such as DOWNLOAD BOX II S; it does not replace the driver card.</div>
+</details>
+</div>
+</div>
+</section>
+<section aria-label="Get started with TAGRA" class="band">
+<div class="container" style="text-align:center">
+<h2 class="anim-up">Get started with TAGRA</h2>
+<p class="anim-up" style="max-width:760px;margin:0 auto;font-size:18px;line-height:1.6">Try every TAGRA III function free for 30 days, or buy TAGRA TRUCKER with a free USB reader and free delivery across the EU.</p>
+<div class="lp-cta-row">
+<a class="btn-cta" data-bridge="lp" data-cta="buy" data-pos="final" href="https://shop.tagra.app/tagra-trucker/" rel="noopener">Buy TAGRA TRUCKER + free USB reader</a>
+<a class="btn-outline" href="/try/?src=lp-digital-tachograph-software" rel="noopener">Try free for 30 days</a>
+</div>
+</div>
+</section>
+<footer class="site-footer" role="contentinfo">
+<div class="footer-inner">
+<div>
+<div class="footer-logo"><img alt="TAGRA" height="20" src="/assets/img/logo-dark.svg?v=20260513zh" width="88" loading="lazy"/></div>
+<p class="footer-desc">Professional tachograph analysis software. Driver card download, digital tachograph analysis, EU drivers' hours and HGV Working Time Directive. Developed by Truck Data Technology, s.r.o.</p>
+</div>
+<div class="footer-col">
+<h2 class="footer-col-title">Product</h2>
+<ul>
+<li><a href="/fleet/">For fleet operators</a></li>
+<li><a href="/driver/">For professional drivers</a></li>
+<li><a href="/enforcement/">For enforcement</a></li>
+<li><a href="/how-it-works/">How it works</a></li>
+<li><a href="/for-whom/">For whom</a></li>
+<li><a href="/faq/">FAQ</a></li>
+<li><a href="https://shop.tagra.app/" hreflang="en">TAGRA Shop</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h2 class="footer-col-title">Resources</h2>
+<ul>
+<li><a href="/articles/">Articles</a></li><li><a href="/manuals/">Manuals</a></li>
+<li><a href="/articles/digital-tachograph-symbols/">Tachograph symbols</a></li>
+<li><a href="/integrations/dkv-live/">DKV LIVE®</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h2 class="footer-col-title">Company</h2>
+<ul>
+<li><a href="/contact/">Contact</a></li>
+<li><a href="https://www.tdt.cz" rel="noopener" target="_blank">Truck Data Technology</a></li>
+<li><a aria-current="page" class="active" href="/" hreflang="en">English</a></li><li><a href="/de/" hreflang="de">Deutsch</a></li><li><a href="/pl/" hreflang="pl">Polski</a></li><li><a href="/nl/" hreflang="nl">Nederlands</a></li><li><a href="/fr/" hreflang="fr">Français</a></li><li><a href="/it/" hreflang="it">Italiano</a></li><li><a href="/es/" hreflang="es">Español</a></li><li><a href="/el/" hreflang="el">Ελληνικά</a></li><li><a href="/hu/" hreflang="hu">Magyar</a></li><li><a href="/ro/" hreflang="ro">Română</a></li><li><a href="https://www.tdt.cz/" hreflang="cs" rel="noopener" target="_blank">Čeština</a></li><li><a href="https://www.tdt.sk/" hreflang="sk" rel="noopener" target="_blank">Slovenčina</a></li></ul>
+</div>
+</div>
+<div class="footer-bottom">
+<span>© 2026 Truck Data Technology, s.r.o. All rights reserved.</span>
+<span><a href="/contact/">Contact</a> · <a href="https://www.tdt.cz" rel="noopener" target="_blank">tdt.cz</a> · <a href="/privacy/">Privacy &amp; cookies</a></span>
+</div>
+</footer>
+<!-- ═══ JAVASCRIPT ════════════════════════════════════════════════════ -->
+<script>
+(function() {
+  /* SCROLL PROGRESS */
+  var bar = document.getElementById('scroll-progress');
+  if (bar) {
+    window.addEventListener('scroll', function() {
+      var top = document.documentElement.scrollTop || document.body.scrollTop;
+      var h = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      bar.style.width = (top / h * 100) + '%';
+    }, { passive: true });
+  }
+  /* MOBILE NAV */
+  var toggle = document.getElementById('nav-toggle');
+  var links = document.getElementById('nav-links');
+  if (toggle && links) {
+    toggle.addEventListener('click', function() {
+      var open = links.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open);
+    });
+  }
+  /* ANIMATIONS */
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) { if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); } });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.anim-up, .fly-left, .fly-right').forEach(function(el) { io.observe(el); });
+  } else {
+    document.querySelectorAll('.anim-up, .fly-left, .fly-right').forEach(function(el) { el.classList.add('on'); });
+  }
+  /* REVIEWS SLIDER */
+  var rail = document.getElementById('rev-rail');
+  if (rail) {
+    rail.innerHTML += rail.innerHTML + rail.innerHTML;
+    var speed = 0.9, busy = false, pos = 0, isDown = false, startX, startScroll, resumeTimer;
+    function tick() { if (!busy) { pos += speed; if (pos >= 1) { rail.scrollLeft += Math.floor(pos); pos -= Math.floor(pos); } if (rail.scrollLeft >= rail.scrollWidth / 3) rail.scrollLeft = 0; } requestAnimationFrame(tick); }
+    function pause() { busy = true; clearTimeout(resumeTimer); }
+    function resume() { resumeTimer = setTimeout(function() { busy = false; }, 2000); }
+    rail.addEventListener('mousedown', function(e) { isDown = true; pause(); startX = e.pageX - rail.offsetLeft; startScroll = rail.scrollLeft; });
+    rail.addEventListener('mouseleave', function() { isDown = false; resume(); });
+    rail.addEventListener('mouseup', function() { isDown = false; resume(); });
+    rail.addEventListener('mousemove', function(e) { if (!isDown) return; e.preventDefault(); rail.scrollLeft = startScroll - (e.pageX - rail.offsetLeft - startX) * 1.5; });
+    rail.addEventListener('touchstart', pause, { passive: true });
+    rail.addEventListener('touchend', resume, { passive: true });
+    tick();
+  }
+  /* MAC STAGE ZOOM */
+  var macImg = document.getElementById('mac-img');
+  if (macImg) {
+    var ticking = false;
+    function zoom() { var r = macImg.getBoundingClientRect(); var dist = Math.abs(window.innerHeight / 2 - (r.top + r.height / 2)); var prog = Math.max(0, 1 - dist / (window.innerHeight * 0.65)); var eased = Math.sin(prog * Math.PI / 2); var s = 1 + eased * (window.innerWidth < 768 ? 0.2 : 0.38); macImg.style.transform = 'scale(' + s.toFixed(3) + ')'; ticking = false; }
+    function onScroll() { if (!ticking) { requestAnimationFrame(zoom); ticking = true; } }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll, { passive: true });
+    setTimeout(zoom, 150);
+  }
+  /* HERO VIDEO */
+  var heroVid = document.getElementById('hero-vid');
+  if (heroVid && 'IntersectionObserver' in window) {
+    var hvObs = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) { if (e.isIntersecting) { heroVid.play().catch(function(){}); } else { heroVid.pause(); } });
+    }, { threshold: 0.1 });
+    hvObs.observe(heroVid);
+    document.addEventListener('touchstart', function() { if (heroVid.paused) heroVid.play().catch(function(){}); }, { once: true, passive: true });
+  }
+})();
+</script>
+</body>
+</html>
