@@ -143,6 +143,14 @@ for (const p of walk('.', []).map((x) => x.replace(/^\.\//, '')).sort()) {
   const lang = langOf(p);
   if (!B[lang] || !F[lang]) { problems.push([p, 'lang ' + lang]); continue; }
   if (doc.includes('data-bridge-v="2"')) {
+    /* 79-12: perk se přepisuje i v hotových boxech (idempotentní – shodný text se nemění) */
+    const perkRe = /(<p class="br-perk">[\s\S]*?<span>)([^<]*)(<\/span>)/g;
+    const want = esc(B[lang].perk);
+    const upd = doc.replace(perkRe, (x, a1, cur, a3) => (cur === want ? x : a1 + want + a3));
+    if (upd !== doc) {
+      doc = upd; changed.push(p); stats[lang + '/perk'] = (stats[lang + '/perk'] || 0) + 1;
+      if (!DRY) fs.writeFileSync(p, doc);
+    }
     /* 79-10: hotové stránky jen dostanou řádek AI pod perk */
     if (!doc.includes('class="br-ai"')) {
       const re = /(<p class="br-perk">[\s\S]*?<\/p>\n)/;
