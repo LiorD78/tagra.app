@@ -1,4 +1,4 @@
-/* TAGRA Shop layer 3 v1.16 (21. 11. 2026: shop-schema.js v3 – sku/url/brand/mpn also found nested in the DOM) | v1.15 (21. 11. 2026: shop-schema.js v2 – shippingRate 0.00, smart card reader as HW) | v1.14 (21. 11. 2026: loads shop-schema.js v1 – Organization JSON-LD on every page, brand/mpn/return policy microdata + category root on product pages) | v1.13 (21. 11. 2026: contact page laid out as cards – sales/support + company details side by side, company table with left-aligned one-line labels, return address as a note, smaller cards for CZ/SK, Hungary, authorities; wider content on that page; empty Shoptet "Discussion" hidden under all info pages) | v1.12 (21. 11. 2026: language switcher – Shoptet's fixed language name "Język polski" shown as "Polski", like the other one-word names Deutsch/English/Magyar/Español) | v1.11 (13. 11. 2026: loads shop-video.js v1 on product pages – DOWNLOAD BOX II S video instead of the still) | v1.10 (10. 11. 2026: loads shop-ai.js v1 – AI assistant in TAGRA III block on the homepage and TAGRA 1/2/4/6/MAX product pages) | v1.9 (9. 11. 2026: loads shop-dev.js v1 on every page – nav: green field only on the current item; Download devices: featured DOWNLOAD BOX II S, comparison, reviews, DKV LIVE callout) | v1.8 (8. 11. 2026: loads shop-cro.js v1 on every page – sticky buy bar, quote, add-to-cart panel, cart note, 404/search; fleet calculator v1.8, switcher v1.2) | v1.7 (7. 11. 2026: version switcher also on TAGRA TRUCKER / TRUCKER 2, fleet calculator v1.5) | v1.6 (7. 11. 2026: animovany robot v paticce) | v1.5 – program screenshots in a MacBook frame (like TRUCKMALL mac-stage) (3. 11. 2026); v1.3 loads the fleet calculator on the homepage; v1.4 loads the version switcher on TAGRA product pages; v1.5 Safari plays the coffee video in the first carousel card (6. 11. 2026) */
+/* TAGRA Shop layer 3 v1.17 (21. 11. 2026: support languages – phone EN/CZ/SK + email/chat in customer's language in header (phone_langs, chat_line opens Jarabot) and on contact page (contact_lang)) | v1.16 (21. 11. 2026: shop-schema.js v3 – sku/url/brand/mpn also found nested in the DOM) | v1.15 (21. 11. 2026: shop-schema.js v2 – shippingRate 0.00, smart card reader as HW) | v1.14 (21. 11. 2026: loads shop-schema.js v1 – Organization JSON-LD on every page, brand/mpn/return policy microdata + category root on product pages) | v1.13 (21. 11. 2026: contact page laid out as cards – sales/support + company details side by side, company table with left-aligned one-line labels, return address as a note, smaller cards for CZ/SK, Hungary, authorities; wider content on that page; empty Shoptet "Discussion" hidden under all info pages) | v1.12 (21. 11. 2026: language switcher – Shoptet's fixed language name "Język polski" shown as "Polski", like the other one-word names Deutsch/English/Magyar/Español) | v1.11 (13. 11. 2026: loads shop-video.js v1 on product pages – DOWNLOAD BOX II S video instead of the still) | v1.10 (10. 11. 2026: loads shop-ai.js v1 – AI assistant in TAGRA III block on the homepage and TAGRA 1/2/4/6/MAX product pages) | v1.9 (9. 11. 2026: loads shop-dev.js v1 on every page – nav: green field only on the current item; Download devices: featured DOWNLOAD BOX II S, comparison, reviews, DKV LIVE callout) | v1.8 (8. 11. 2026: loads shop-cro.js v1 on every page – sticky buy bar, quote, add-to-cart panel, cart note, 404/search; fleet calculator v1.8, switcher v1.2) | v1.7 (7. 11. 2026: version switcher also on TAGRA TRUCKER / TRUCKER 2, fleet calculator v1.5) | v1.6 (7. 11. 2026: animovany robot v paticce) | v1.5 – program screenshots in a MacBook frame (like TRUCKMALL mac-stage) (3. 11. 2026); v1.3 loads the fleet calculator on the homepage; v1.4 loads the version switcher on TAGRA product pages; v1.5 Safari plays the coffee video in the first carousel card (6. 11. 2026) */
 (function(){
   var l=document.createElement('link');l.rel='stylesheet';l.href='https://tagra.app/assets/css/shop3.css?v=2';document.head.appendChild(l);
   var MB='https://wuswoaicjtuodzmrjwgf.supabase.co/storage/v1/object/public/site/tagra-shop/mac/tagra3-mac-';
@@ -121,6 +121,57 @@
     if(cards.length>=2){var g1=document.createElement('div');g1.className='tgs-ct-grid tgs-ct-grid--2';cards[0].parentNode.insertBefore(g1,cards[0]);g1.appendChild(cards[0]);g1.appendChild(cards[1]);}
     if(cards.length>2){var g2=document.createElement('div');g2.className='tgs-ct-grid tgs-ct-grid--3';cards[2].parentNode.insertBefore(g2,cards[2]);for(var i=2;i<cards.length;i++){cards[i].classList.add('tgs-ct-card--sm');g2.appendChild(cards[i]);}}
   }
-  function run(){langs();info();dev();imgs();gallery();zoom();topsellers();fleet();variant();cro();robot();ai();vid();schema();if(document.body&&document.body.classList.contains('type-index'))vfix();}
+  /* v1.17: jazyky podpory – hlavička (phone_langs + chat_line) a kontaktní stránka (contact_lang); texty podle <html lang>, neznámý jazyk = en */
+  var SL={"en":{"phone_langs":"Phone: English · Czech · Slovak","chat_line":"Email & 24/7 chat in your language","contact_lang":"Phone in English, Czech and Slovak. Email and chat replies in your language."},
+"de":{"phone_langs":"Telefon: Englisch · Tschechisch · Slowakisch","chat_line":"E-Mail & 24/7-Chat in Ihrer Sprache","contact_lang":"Telefonisch auf Englisch, Tschechisch und Slowakisch. E-Mail und Chat in Ihrer Sprache."},
+"pl":{"phone_langs":"Telefon: angielski · czeski · słowacki","chat_line":"E-mail i czat 24/7 w Twoim języku","contact_lang":"Telefon po angielsku, czesku i słowacku. E-mail i czat w Twoim języku."},
+"hu":{"phone_langs":"Telefon: angol · cseh · szlovák","chat_line":"E-mail és 0–24 chat az Ön nyelvén","contact_lang":"Telefonon angolul, csehül és szlovákul. E-mailben és chaten az Ön nyelvén válaszolunk."},
+"es":{"phone_langs":"Tel.: inglés · checo · eslovaco","chat_line":"Email y chat 24/7 en tu idioma","contact_lang":"Teléfono en inglés, checo y eslovaco. Respuestas por email y chat en tu idioma."},
+"it":{"phone_langs":"Tel.: inglese · ceco · slovacco","chat_line":"Email e chat 24/7 nella tua lingua","contact_lang":"Telefono in inglese, ceco e slovacco. Risposte via email e chat nella tua lingua."}};
+  function sl(k){var l=((document.documentElement.getAttribute('lang')||'en').toLowerCase().split(/[-_]/)[0]);return (SL[l]||SL.en)[k];}
+  var SL_CSS='.tgs-sl{grid-column:2;display:block;padding-left:28px;font-size:11px;line-height:1.3;font-weight:400;color:#5b6773;margin:0;background:none;border:0;text-align:left;font-family:inherit}'
+    +'button.tgs-sl--chat{cursor:pointer;text-decoration:underline;text-decoration-color:rgba(91,103,115,.4);text-underline-offset:2px}button.tgs-sl--chat:hover,button.tgs-sl--chat:focus-visible{color:#134a8e}'
+    +''
+    +'@media (max-width:767px){.tgs-sl--phone,.tgs-sl--chat{display:none!important}}';
+  function openChat(){
+    var b=document.getElementById('tgs-chat');
+    if(b){b.click();return;}
+    if(window.$chatwoot&&window.$chatwoot.toggle){window.$chatwoot.toggle();(window.dataLayer=window.dataLayer||[]).push({event:'chat_open'});}
+  }
+  function slCss(){if(document.getElementById('tgs-sl-css'))return;var st=document.createElement('style');st.id='tgs-sl-css';st.textContent=SL_CSS;document.head.appendChild(st);}
+  function hdrLines(){
+    var h=document.querySelector('#header .tgs-hdr');if(!h||h.querySelector('[data-tgs-sl]'))return !!h;
+    slCss();
+    var p=document.createElement('span');p.className='tgs-sl tgs-sl--phone';p.setAttribute('data-tgs-sl','phone_langs');p.textContent=sl('phone_langs');
+    var c=document.createElement('button');c.type='button';c.className='tgs-sl tgs-sl--chat';c.setAttribute('data-tgs-sl','chat_line');c.textContent=sl('chat_line');
+    c.addEventListener('click',openChat);
+    h.appendChild(p);h.appendChild(c);return true;
+  }
+  /* hlavičku staví shop2.js (až od 768 px) – počkáme na ni max. ~6 s */
+  function hdrWait(){var n=0;(function t(){if(hdrLines()||++n>30)return;setTimeout(t,200);})();}
+  var LANG_ROW=/^\s*(Language|Sprache|Jazyk|Język|Jezyk|Nyelv|Idioma|Lingua)\b/i;
+  function contactLang(){
+    if(!/\/(contact|contacto|contatti|kontakt|kapcsolat)\/?$/.test(location.pathname))return;
+    var art=document.querySelector('article.pageArticleDetail');if(!art||art.querySelector('[data-tgs-sl="contact_lang"]'))return;
+    var txt=sl('contact_lang'),row=null;
+    [].some.call(art.querySelectorAll('li,tr,p'),function(e){
+      if(e.querySelector('li,tr,p'))return false;
+      if(LANG_ROW.test((e.tagName==='TR'?(e.children[0]||{}).textContent:e.textContent)||'')){row=e;return true;}return false;
+    });
+    if(row){
+      if(row.tagName==='TR'){var cells=row.children;for(var i=cells.length-1;i>=0;i--){cells[i].textContent='';}var td=document.createElement('td');td.colSpan=2;td.textContent=txt;row.innerHTML='';row.appendChild(td);}
+      else row.textContent=txt;
+      row.setAttribute('data-tgs-sl','contact_lang');return;
+    }
+    var tel=art.querySelector('a[href^="tel:"]');
+    var anchor=tel?(tel.closest('li')||tel.closest('tr')||tel.closest('p')||tel):null;
+    var card=(anchor&&anchor.closest('.tgs-ct-card'))||art.querySelector('.tgs-ct-card')||art;
+    var n;
+    if(anchor&&anchor.tagName==='LI'){n=document.createElement('li');anchor.parentNode.insertBefore(n,anchor.nextSibling);}
+    else if(anchor&&anchor.tagName==='TR'){n=document.createElement('p');anchor.closest('table').insertAdjacentElement('afterend',n);}
+    else{n=document.createElement('p');if(anchor&&anchor!==tel&&anchor.parentNode)anchor.parentNode.insertBefore(n,anchor.nextSibling);else card.appendChild(n);}
+    n.textContent=txt;n.setAttribute('data-tgs-sl','contact_lang');
+  }
+  function run(){langs();info();contactLang();hdrWait();dev();imgs();gallery();zoom();topsellers();fleet();variant();cro();robot();ai();vid();schema();if(document.body&&document.body.classList.contains('type-index'))vfix();}
   if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',run);}else{run();}
 })();
