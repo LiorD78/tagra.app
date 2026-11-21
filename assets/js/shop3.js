@@ -39,13 +39,13 @@
   }
   function fleet(){
     if(!document.body||!document.body.classList.contains('type-index')||window.tgsFleetCalc||document.getElementById('tgs-fleet-js'))return;
-    var s=document.createElement('script');s.id='tgs-fleet-js';s.src='https://tagra.app/assets/js/shop-fleet.js?v=10';s.async=true;document.head.appendChild(s);
+    var s=document.createElement('script');s.id='tgs-fleet-js';s.src='https://tagra.app/assets/js/shop-fleet.js?v=11';s.async=true;document.head.appendChild(s);
   }
   function variant(){
     if(!document.body||!document.body.classList.contains('type-detail')||window.tgsVariant||document.getElementById('tgs-variant-js'))return;
     var m=document.querySelector('.p-detail meta[itemprop="url"]'),u=m?m.getAttribute('content')||'':'';
     if(!/\/tagra-((1|2|4|6|max)(-download-box-ii-s)?|trucker(-2)?)\/$/.test(u))return;
-    var s=document.createElement('script');s.id='tgs-variant-js';s.src='https://tagra.app/assets/js/shop-variant.js?v=4';document.head.appendChild(s);
+    var s=document.createElement('script');s.id='tgs-variant-js';s.src='https://tagra.app/assets/js/shop-variant.js?v=5';document.head.appendChild(s);
   }
   function vfix(){
     /* first homepage card: WebM with Vorbis audio does not play in Safari -> drop that source so Safari takes the MP4 */
@@ -62,15 +62,15 @@
     if(!document.body||!document.body.classList.contains('type-detail')||window.tgsVid||document.getElementById('tgs-vid-js'))return;
     var s=document.createElement('script');s.id='tgs-vid-js';s.src='https://tagra.app/assets/js/shop-video.js?v=1';s.async=true;document.head.appendChild(s);
   }
-  function cro(){if(window.tgsCro||document.getElementById('tgs-cro-js'))return;var s=document.createElement('script');s.id='tgs-cro-js';s.src='https://tagra.app/assets/js/shop-cro.js?v=1';s.async=true;document.head.appendChild(s);}
+  function cro(){if(window.tgsCro||document.getElementById('tgs-cro-js'))return;var s=document.createElement('script');s.id='tgs-cro-js';s.src='https://tagra.app/assets/js/shop-cro.js?v=2';s.async=true;document.head.appendChild(s);}
   function robot(){if(document.getElementById('tm-robot-js'))return;var s=document.createElement('script');s.id='tm-robot-js';s.src='https://tagra.app/assets/js/tm-robot.js?v=1';s.async=true;document.head.appendChild(s);}
   function dev(){
     if(window.tgsDev||document.getElementById('tgs-dev-js'))return;
-    var s=document.createElement('script');s.id='tgs-dev-js';s.src='https://tagra.app/assets/js/shop-dev.js?v=1';s.async=true;document.head.appendChild(s);
+    var s=document.createElement('script');s.id='tgs-dev-js';s.src='https://tagra.app/assets/js/shop-dev.js?v=2';s.async=true;document.head.appendChild(s);
   }
   function ai(){
     if(window.tgsAi||document.getElementById('tgs-ai-js'))return;
-    var s=document.createElement('script');s.id='tgs-ai-js';s.src='https://tagra.app/assets/js/shop-ai.js?v=1';s.async=true;document.head.appendChild(s);
+    var s=document.createElement('script');s.id='tgs-ai-js';s.src='https://tagra.app/assets/js/shop-ai.js?v=2';s.async=true;document.head.appendChild(s);
   }
   /* v1.12: Shoptet has a fixed, non-editable language name "Język polski"; show one word like the other languages */
   var LANG_NAMES={'Język polski':'Polski'};
