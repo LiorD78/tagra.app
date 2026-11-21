@@ -1,4 +1,4 @@
-/* 79-2d (21. 11. 2026): shop.es.js = shop.js (EN) + ES literály z es_final.json (crew GPT + Gemini); načítá shop.js při <html lang="es"> */
+/* 21. 11. 2026: 79-7 LCP – hero obrázek z tagra.app + preload + srcset 400/560 |  79-2d (21. 11. 2026): shop.es.js = shop.js (EN) + ES literály z es_final.json (crew GPT + Gemini); načítá shop.js při <html lang="es"> */
 /* 21. 11. 2026: odrážka doprava zdarma (79-12d) | v7.1 (21. 11. 2026): hero obrázek Hodnocení místo Přehledu | v7.0-pl1 (2026-11-15): <html lang="pl"> -> shop.pl.js (PL slovník), jinak beze změny | TAGRA Shop v7.0 (9. 11. 2026: <html lang="hu"> -> shop.hu.js, like DE -> shop.de.js | one-page buying flow on the homepage – hero + fleet calculator first; carousel, hub, steps, tier cards and product grid off) | v6.1 (8. 11. 2026: entry hub, pricing facts, "Most popular" TAGRA 4, already-using-TAGRA section, licence-first carousel, GA4 events via gtag) | v6.0 – tagra.app look, crew + competitor review (2. 11. 2026) */
 (function(){
   var TM='https://cdn.truckmall.cz/data/user-content/';
@@ -56,13 +56,13 @@
   var HOME2=true;
   function hero(){
     if(!isHP()||document.querySelector('.tgs-hero2'))return;
-    var MB='https://wuswoaicjtuodzmrjwgf.supabase.co/storage/v1/object/public/site/tagra-shop/mac/tagra3-mac-evaluation-';
+    var MB='https://tagra.app/assets/img/shop/tagra3-mac-evaluation-';
     var F=['Desde 149 € sin IVA','Licencia por correo electrónico, normalmente el mismo día','IVA del 0 % para empresas de la UE','En el mercado desde 2005'];
     var s=document.createElement('section');s.className='tgs-hero2';
     s.innerHTML='<div class="tgs-hero2__txt"><span class="tgs-label">TAGRA · programa de análisis de datos del tacógrafo</span><p class="tgs-hero2__h">Detecta las infracciones antes de que lo haga la inspección.</p><p class="tgs-hero2__p">Programa para Windows para empresas de transporte y conductores. Tus datos permanecen en tu propio ordenador. El primer año de licencia está incluido.</p>'+
       '<div class="tgs-hero2__cta"><a class="tgs-pill" href="#tgs-pricing" data-hero="choose">Elige tu TAGRA</a><a class="tgs-pill tgs-pill--ghost" href="https://tagra.app/es/prueba-gratis/?audience=fleet&src=shop_hero" target="_blank" rel="noopener" data-hero="trial">Pruébalo gratis durante 30 días</a></div>'+
       '<small class="tgs-hero2__small">Sin tarjeta de crédito · Windows 10/11</small><ul class="tgs-hero2__f">'+F.map(function(f){return '<li>'+f+'</li>';}).join('')+'</ul></div>'+
-      '<div class="tgs-hero2__img"><img src="'+MB+'1600.webp" srcset="'+MB+'800.webp 800w, '+MB+'1600.webp 1600w" sizes="(max-width: 767px) 92vw, 620px" width="1600" height="1407" alt="Programa TAGRA – análisis del conductor con cronología de actividades e infracciones" fetchpriority="high" decoding="async"></div>';
+      '<div class="tgs-hero2__img"><img src="'+MB+'1600.webp" srcset="'+MB+'400.webp 400w, '+MB+'560.webp 560w, '+MB+'800.webp 800w, '+MB+'1600.webp 1600w" sizes="(max-width: 767px) 92vw, 620px" width="1600" height="1407" alt="Programa TAGRA – análisis del conductor con cronología de actividades e infracciones" fetchpriority="high" decoding="async"></div>';
     var slot=document.querySelector('.banners-row .wide-carousel');
     if(slot){slot.appendChild(s);slot.closest('.banners-row').classList.add('tgs-has-car');}
     else{var c=document.getElementById('content');if(!c)return;c.insertBefore(s,c.firstElementChild);}
