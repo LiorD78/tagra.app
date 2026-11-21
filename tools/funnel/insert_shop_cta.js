@@ -22,7 +22,7 @@ if (!lang) { console.error('Chybí --lang <kód>'); process.exit(1); }
 
 const texts = JSON.parse(fs.readFileSync(path.join(__dirname, 'cta_texts.json'), 'utf8'));
 const map = JSON.parse(fs.readFileSync(path.join(__dirname, 'article_map.json'), 'utf8'));
-if (lang === 'hu' || lang === 'es') for (const k in URLS) URLS[k] = URLS[k].replace('shop.tagra.app/', 'shop.tagra.app/' + lang + '/');
+if (lang === 'hu' || lang === 'es' || lang === 'it') for (const k in URLS) URLS[k] = URLS[k].replace('shop.tagra.app/', 'shop.tagra.app/' + lang + '/');
 if (!map[lang]) { console.error('Jazyk není v article_map.json: ' + lang); process.exit(1); }
 const T = (k) => {
   const v = texts[k] && texts[k][lang];
@@ -46,7 +46,7 @@ function shopBox(type, trialHref) {
   let h, p, btn, btnHref, secLabel, secHref, secRel;
   if (type === 'card') {
     h = T('card_h'); p = T('card_p'); btn = T('card_btn'); btnHref = URLS.card;
-    secLabel = T('card_link'); secHref = 'https://shop.tagra.app/' + (lang === 'es' ? 'es/' : '') + 'smart-card-reader/'; secRel = ' rel="noopener"';
+    secLabel = T('card_link'); secHref = 'https://shop.tagra.app/' + (lang === 'es' || lang === 'it' ? lang + '/' : '') + 'smart-card-reader/'; secRel = ' rel="noopener"';
   } else {
     h = T('dl_h'); p = T('dl_p'); btn = T('dl_btn'); btnHref = URLS.dl;
     secLabel = T('trial') + ' →'; secHref = trialHref; secRel = '';
