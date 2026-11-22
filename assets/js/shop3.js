@@ -1,4 +1,4 @@
-/* TAGRA Shop layer 3 v1.19 (21. 11. 2026: IT formal address "nella Sua lingua", "E-mail e chat") | v1.18 (21. 11. 2026: 79-3 IT – child ?v= fleet 12, variant 6, cro 3, dev 3, ai 3) | v1.17 (21. 11. 2026: support languages – phone EN/CZ/SK + email/chat in customer's language in header (phone_langs, chat_line opens Jarabot) and on contact page (contact_lang)) | v1.16 (21. 11. 2026: shop-schema.js v3 – sku/url/brand/mpn also found nested in the DOM) | v1.15 (21. 11. 2026: shop-schema.js v2 – shippingRate 0.00, smart card reader as HW) | v1.14 (21. 11. 2026: loads shop-schema.js v1 – Organization JSON-LD on every page, brand/mpn/return policy microdata + category root on product pages) | v1.13 (21. 11. 2026: contact page laid out as cards – sales/support + company details side by side, company table with left-aligned one-line labels, return address as a note, smaller cards for CZ/SK, Hungary, authorities; wider content on that page; empty Shoptet "Discussion" hidden under all info pages) | v1.12 (21. 11. 2026: language switcher – Shoptet's fixed language name "Język polski" shown as "Polski", like the other one-word names Deutsch/English/Magyar/Español) | v1.11 (13. 11. 2026: loads shop-video.js v1 on product pages – DOWNLOAD BOX II S video instead of the still) | v1.10 (10. 11. 2026: loads shop-ai.js v1 – AI assistant in TAGRA III block on the homepage and TAGRA 1/2/4/6/MAX product pages) | v1.9 (9. 11. 2026: loads shop-dev.js v1 on every page – nav: green field only on the current item; Download devices: featured DOWNLOAD BOX II S, comparison, reviews, DKV LIVE callout) | v1.8 (8. 11. 2026: loads shop-cro.js v1 on every page – sticky buy bar, quote, add-to-cart panel, cart note, 404/search; fleet calculator v1.8, switcher v1.2) | v1.7 (7. 11. 2026: version switcher also on TAGRA TRUCKER / TRUCKER 2, fleet calculator v1.5) | v1.6 (7. 11. 2026: animovany robot v paticce) | v1.5 – program screenshots in a MacBook frame (like TRUCKMALL mac-stage) (3. 11. 2026); v1.3 loads the fleet calculator on the homepage; v1.4 loads the version switcher on TAGRA product pages; v1.5 Safari plays the coffee video in the first carousel card (6. 11. 2026) */
+/* TAGRA Shop layer 3 v1.20 (22. 11. 2026: 82 FR – child ?v= fleet 13, variant 7, cro 4, dev 4, ai 4) | v1.19 (21. 11. 2026: IT formal address "nella Sua lingua", "E-mail e chat") | v1.18 (21. 11. 2026: 79-3 IT – child ?v= fleet 12, variant 6, cro 3, dev 3, ai 3) | v1.17 (21. 11. 2026: support languages – phone EN/CZ/SK + email/chat in customer's language in header (phone_langs, chat_line opens Jarabot) and on contact page (contact_lang)) | v1.16 (21. 11. 2026: shop-schema.js v3 – sku/url/brand/mpn also found nested in the DOM) | v1.15 (21. 11. 2026: shop-schema.js v2 – shippingRate 0.00, smart card reader as HW) | v1.14 (21. 11. 2026: loads shop-schema.js v1 – Organization JSON-LD on every page, brand/mpn/return policy microdata + category root on product pages) | v1.13 (21. 11. 2026: contact page laid out as cards – sales/support + company details side by side, company table with left-aligned one-line labels, return address as a note, smaller cards for CZ/SK, Hungary, authorities; wider content on that page; empty Shoptet "Discussion" hidden under all info pages) | v1.12 (21. 11. 2026: language switcher – Shoptet's fixed language name "Język polski" shown as "Polski", like the other one-word names Deutsch/English/Magyar/Español) | v1.11 (13. 11. 2026: loads shop-video.js v1 on product pages – DOWNLOAD BOX II S video instead of the still) | v1.10 (10. 11. 2026: loads shop-ai.js v1 – AI assistant in TAGRA III block on the homepage and TAGRA 1/2/4/6/MAX product pages) | v1.9 (9. 11. 2026: loads shop-dev.js v1 on every page – nav: green field only on the current item; Download devices: featured DOWNLOAD BOX II S, comparison, reviews, DKV LIVE callout) | v1.8 (8. 11. 2026: loads shop-cro.js v1 on every page – sticky buy bar, quote, add-to-cart panel, cart note, 404/search; fleet calculator v1.8, switcher v1.2) | v1.7 (7. 11. 2026: version switcher also on TAGRA TRUCKER / TRUCKER 2, fleet calculator v1.5) | v1.6 (7. 11. 2026: animovany robot v paticce) | v1.5 – program screenshots in a MacBook frame (like TRUCKMALL mac-stage) (3. 11. 2026); v1.3 loads the fleet calculator on the homepage; v1.4 loads the version switcher on TAGRA product pages; v1.5 Safari plays the coffee video in the first carousel card (6. 11. 2026) */
 (function(){
   var l=document.createElement('link');l.rel='stylesheet';l.href='https://tagra.app/assets/css/shop3.css?v=2';document.head.appendChild(l);
   var MB='https://wuswoaicjtuodzmrjwgf.supabase.co/storage/v1/object/public/site/tagra-shop/mac/tagra3-mac-';
@@ -39,13 +39,13 @@
   }
   function fleet(){
     if(!document.body||!document.body.classList.contains('type-index')||window.tgsFleetCalc||document.getElementById('tgs-fleet-js'))return;
-    var s=document.createElement('script');s.id='tgs-fleet-js';s.src='https://tagra.app/assets/js/shop-fleet.js?v=12';s.async=true;document.head.appendChild(s);
+    var s=document.createElement('script');s.id='tgs-fleet-js';s.src='https://tagra.app/assets/js/shop-fleet.js?v=13';s.async=true;document.head.appendChild(s);
   }
   function variant(){
     if(!document.body||!document.body.classList.contains('type-detail')||window.tgsVariant||document.getElementById('tgs-variant-js'))return;
     var m=document.querySelector('.p-detail meta[itemprop="url"]'),u=m?m.getAttribute('content')||'':'';
     if(!/\/tagra-((1|2|4|6|max)(-download-box-ii-s)?|trucker(-2)?)\/$/.test(u))return;
-    var s=document.createElement('script');s.id='tgs-variant-js';s.src='https://tagra.app/assets/js/shop-variant.js?v=6';document.head.appendChild(s);
+    var s=document.createElement('script');s.id='tgs-variant-js';s.src='https://tagra.app/assets/js/shop-variant.js?v=7';document.head.appendChild(s);
   }
   function vfix(){
     /* first homepage card: WebM with Vorbis audio does not play in Safari -> drop that source so Safari takes the MP4 */
@@ -62,15 +62,15 @@
     if(!document.body||!document.body.classList.contains('type-detail')||window.tgsVid||document.getElementById('tgs-vid-js'))return;
     var s=document.createElement('script');s.id='tgs-vid-js';s.src='https://tagra.app/assets/js/shop-video.js?v=1';s.async=true;document.head.appendChild(s);
   }
-  function cro(){if(window.tgsCro||document.getElementById('tgs-cro-js'))return;var s=document.createElement('script');s.id='tgs-cro-js';s.src='https://tagra.app/assets/js/shop-cro.js?v=3';s.async=true;document.head.appendChild(s);}
+  function cro(){if(window.tgsCro||document.getElementById('tgs-cro-js'))return;var s=document.createElement('script');s.id='tgs-cro-js';s.src='https://tagra.app/assets/js/shop-cro.js?v=4';s.async=true;document.head.appendChild(s);}
   function robot(){if(document.getElementById('tm-robot-js'))return;var s=document.createElement('script');s.id='tm-robot-js';s.src='https://tagra.app/assets/js/tm-robot.js?v=1';s.async=true;document.head.appendChild(s);}
   function dev(){
     if(window.tgsDev||document.getElementById('tgs-dev-js'))return;
-    var s=document.createElement('script');s.id='tgs-dev-js';s.src='https://tagra.app/assets/js/shop-dev.js?v=3';s.async=true;document.head.appendChild(s);
+    var s=document.createElement('script');s.id='tgs-dev-js';s.src='https://tagra.app/assets/js/shop-dev.js?v=4';s.async=true;document.head.appendChild(s);
   }
   function ai(){
     if(window.tgsAi||document.getElementById('tgs-ai-js'))return;
-    var s=document.createElement('script');s.id='tgs-ai-js';s.src='https://tagra.app/assets/js/shop-ai.js?v=3';s.async=true;document.head.appendChild(s);
+    var s=document.createElement('script');s.id='tgs-ai-js';s.src='https://tagra.app/assets/js/shop-ai.js?v=4';s.async=true;document.head.appendChild(s);
   }
   function schema(){
     if(window.tgsSchema||document.getElementById('tgs-schema-js'))return;
