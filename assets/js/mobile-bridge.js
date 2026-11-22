@@ -127,7 +127,7 @@
   // Shop: en/de/pl/hu/es/it mají vlastní jazykovou verzi; ostatní → EN shop s poznámkou „(EN)".
   var SHOP = { en: 'https://shop.tagra.app/tagra-trucker/', de: 'https://shop.tagra.app/de/tagra-trucker/',
     pl: 'https://shop.tagra.app/pl/tagra-trucker/', hu: 'https://shop.tagra.app/hu/tagra-trucker/',
-    es: 'https://shop.tagra.app/es/tagra-trucker/', it: 'https://shop.tagra.app/it/tagra-trucker/' };
+    es: 'https://shop.tagra.app/es/tagra-trucker/', it: 'https://shop.tagra.app/it/tagra-trucker/', fr: 'https://shop.tagra.app/fr/tagra-trucker/' };
   var shopHref = SHOP[lang] || SHOP.en;
   var shopNote = SHOP[lang] ? '' : ' (EN)';
   var main = D.getElementById('main-content');
