@@ -8,7 +8,13 @@
  *   #1  hned      uvítací mail (odkaz ke stažení / potvrzení poptávky)
  *               Jméno je od 7. 11. 2026 nepovinné — viz fillName().
  *   #2  +3 dny    quick start — jak naimportovat data a spustit výkaz
- *   #3  +25 dní   "zkušební verze končí za 5 dní" (z 30denního trialu)
+ *   #3  +7 dní    (email4, od 22. 11. 2026) doporučení licence – ceny shopu, 1. rok v ceně
+ *   #4  +21 dní   (email3) "zkušební verze končí za 9 dní"
+ *   #5  +28 dní   (email5) "zbývají 2 dny"
+ *   (číslování = názvy šablon: email2 D3, email4 D7, email3 D21, email5 D28)
+ *   CZ/SK: beze změny jen email2 D3 + email3 D25 ("za 5 dní"); email4/email5
+ *   se pro cz/sk neplánují (skipLangs, daysByLang) — rozhodnutí 22. 11. 2026.
+ *   Už naplánované maily se nemění (Resend má HTML uložené při plánování).
  *
  * ENFORCEMENT je z #2 a #3 VYLOUČEN. Kontrolní orgány si Control verzi
  * nestahují samy — musí kontaktovat Ivana a ten jim pošle odkaz. Trial
@@ -26,7 +32,9 @@
  * ── ŠABLONY ──────────────────────────────────────────────────────────
  *   /try/email-preview/{lang}-{audience}.html            → #1
  *   /try/email-preview/email2-{audience}-{lang}.html     → #2
- *   /try/email-preview/email3-{audience}-{lang}.html     → #3
+ *   /try/email-preview/email3-{audience}-{lang}.html     → D21 (cz/sk D25)
+ *   /try/email-preview/email4-{audience}-{lang}.html     → D7
+ *   /try/email-preview/email5-{audience}-{lang}.html     → D28
  * Načítají se runtime přes HTTPS ze stejného deploye, {NAME} se dosadí.
  * Předmět #2/#3 se bere z <title> šablony — jediný zdroj pravdy, žádný drift.
  *
@@ -82,7 +90,9 @@ const NOTIFY_TO_DEFAULT  = "libor.dospel@gmail.com";
 // Kdy odeslat navazující maily (dny od registrace)
 const FOLLOWUP_SCHEDULE = [
   { mail: "email2", days: 3,  campaign: "trial-followup-2", idPrefix: "trial2" },
-  { mail: "email3", days: 25, campaign: "trial-followup-3", idPrefix: "trial3" },
+  { mail: "email4", days: 7,  campaign: "trial-followup-d7",  idPrefix: "trial4", skipLangs: ["cz", "sk"] },
+  { mail: "email3", days: 21, campaign: "trial-followup-3",   idPrefix: "trial3", daysByLang: { cz: 25, sk: 25 } },
+  { mail: "email5", days: 28, campaign: "trial-followup-d28", idPrefix: "trial5", skipLangs: ["cz", "sk"] },
 ];
 
 // Publika, kterým sekvence běží. Enforcement úmyslně chybí — viz hlavička.
@@ -739,8 +749,10 @@ exports.handler = async (event) => {
   // Enforcement přeskakujeme: trial jim začíná až Ivanovým mailem s odkazem.
   if (scheduleSeq) {
     for (const step of FOLLOWUP_SCHEDULE) {
+      if (step.skipLangs && step.skipLangs.includes(lang)) continue;
+      const days        = (step.daysByLang && step.daysByLang[lang]) || step.days;
       const tplUrl      = `${TEMPLATE_BASE}/${step.mail}-${aud}-${lang}.html`;
-      const scheduledAt = new Date(now + step.days * DAY_MS).toISOString();
+      const scheduledAt = new Date(now + days * DAY_MS).toISOString();
 
       try {
         const html    = await fetchTemplate(tplUrl);
