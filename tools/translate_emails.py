@@ -9,12 +9,6 @@ Princip: deterministický walk přes textové uzly + <title> + alt="".
 Segment se přeloží, jen pokud je ve slovníku; jinak zůstane (TAGRA,
 čísla kroků, telefony, e-maily, názvy sítí).
 
-CENY (roční licenční poplatek od 2. roku, bez DPH):
-  cz          TAGRA 1/2/4/6 = 1 990 Kč · MAX = 3 490 Kč · TRUCKER = 490 Kč
-              (samostatný korunový ceník, NE přepočet z EUR)
-  sk          TAGRA 1/2 = 79 € · TAGRA 4/6 = 99 € · MAX = 149 € · TRUCKER = 19 €
-  de/pl/gr    od 79 € · MAX = 149 € · TRUCKER = 19 €
-
 SK GATE: žádné ř / ě / ů. Kontroluje se automaticky na konci.
 """
 import re
@@ -105,8 +99,8 @@ TR["cz"] = {
     # --- email3 FLEET ---
     "Your TAGRA trial ends in 5 days — here is how to keep your data":
         "Zkušební verze programu TAGRA končí za 5 dní — o data nepřijdete",
-    "Your licence activates inside the same software — nothing you imported gets lost. From €79 a year.":
-        "Licenci aktivujete přímo v programu — nic z naimportovaných dat neztratíte. Od 1 990 Kč ročně.",
+    "Your licence activates inside the same software — nothing you imported gets lost.":
+        "Licenci aktivujete přímo v programu — nic z naimportovaných dat neztratíte.",
     "Your trial is ending": "Zkušební verze končí",
     "{NAME}, your trial ends in 5 days": "{NAME}, zkušební verze končí za 5 dní",
     "Your 30-day TAGRA trial expires in 5 days. If it has been doing its job, you don't need to reinstall anything or import your files again — the licence activates inside the same software you are already using, and everything you have imported stays where it is. It takes about two minutes:":
@@ -126,13 +120,13 @@ TR["cz"] = {
         "Neplaťte zbytečně — verzi určuje počet vozidel. Odpovězte na tyto dvě otázky a řeknu vám, kterou zvolit:",
     "Is there anything in the trial that did not work the way you expected?":
         "Nefungovalo ve zkušební verzi něco tak, jak jste čekali?",
-    "The annual licence fee starts at &euro;79 excl. VAT (TAGRA MAX &euro;149) and the first year is included in the purchase price — it covers updates and support. If something in the trial didn't work, tell me before it expires; I'd rather fix it than lose you over it. I reply personally.":
-        "Roční licenční poplatek je 1 990 Kč bez DPH (TAGRA MAX 3 490 Kč) a první rok je zahrnutý v ceně — kryje aktualizace a technickou podporu. Pokud ve zkušební verzi něco nefungovalo, napište mi dřív, než vyprší; radši to spravím, než abych o vás kvůli tomu přišel. Odpovídám osobně.",
+    "The first year is included in the purchase price — it covers updates and support. If something in the trial didn't work, tell me before it expires; I'd rather fix it than lose you over it. I reply personally.":
+        "První rok je zahrnutý v ceně — kryje aktualizace a technickou podporu. Pokud ve zkušební verzi něco nefungovalo, napište mi dřív, než vyprší; radši to spravím, než abych o vás kvůli tomu přišel. Odpovídám osobně.",
 
     # --- email3 DRIVER ---
     "Your TAGRA TRUCKER trial ends in 5 days": "Zkušební verze TAGRA TRUCKER končí za 5 dní",
-    "Your licence activates inside the same software — your archived card data stays. €19 a year from year two.":
-        "Licenci aktivujete přímo v programu — zálohovaná data z karty zůstanou. Od druhého roku 490 Kč ročně.",
+    "Your licence activates inside the same software — your archived card data stays.":
+        "Licenci aktivujete přímo v programu — zálohovaná data z karty zůstanou.",
     "Your 30-day TAGRA TRUCKER trial expires in 5 days. The archive you have built up over the past weeks is the thing that covers you at a roadside check — and you keep it. The licence activates inside the same software, so nothing is reinstalled and nothing is re-read. It takes about two minutes:":
         "Vaše 30denní zkušební verze TAGRA TRUCKER vyprší za 5 dní. Právě záloha, kterou jste za poslední týdny nasbírali, vás kryje při silniční kontrole — a zůstane vám. Licenci aktivujete přímo v programu, takže se nic nepřeinstalovává ani znovu nenačítá. Zabere to asi dvě minuty:",
     "You are already inside the program — no new download and no reinstall.":
@@ -146,8 +140,8 @@ TR["cz"] = {
     "Before it expires — one question": "Než vyprší — jedna otázka",
     "Did anything in the trial not work the way you expected — reading the card, an infringement you disagree with, or the archive? Reply and tell me before it expires. I would rather fix it than have you leave over something that takes me five minutes to solve.":
         "Nefungovalo ve zkušební verzi něco tak, jak jste čekali — načtení karty, přestupek, se kterým nesouhlasíte, nebo záloha? Napište mi to, než vyprší. Radši to spravím, než abyste odešli kvůli něčemu, co mi zabere pět minut.",
-    "TAGRA TRUCKER costs &euro;19 excl. VAT per year from the second year — the first year is included in the purchase price, and it covers updates and support. You get the USB card reader free when you buy a licence. Delivery to all EU countries is free.":
-        "TAGRA TRUCKER stojí 1 232 Kč bez DPH a USB čtečka karet je součástí balení. První rok licence je zahrnutý — kryje aktualizace i technickou podporu; od druhého roku platíte 490 Kč ročně. Pokud ve zkušební verzi něco nefungovalo, napište mi dřív, než vyprší; radši to spravím, než abych o vás kvůli tomu přišel.",
+    "The first year is included in the purchase price, and it covers updates and support. You get the USB card reader free when you buy a licence. Delivery to all EU countries is free.":
+        "TAGRA TRUCKER stojí 1 232 Kč bez DPH a USB čtečka karet je součástí balení. První rok licence je zahrnutý — kryje aktualizace i technickou podporu. Pokud ve zkušební verzi něco nefungovalo, napište mi dřív, než vyprší; radši to spravím, než abych o vás kvůli tomu přišel.",
 }
 
 # ─────────────────────────────── SLOVENŠTINA ───────────────────────────
@@ -217,8 +211,8 @@ TR["sk"] = {
 
     "Your TAGRA trial ends in 5 days — here is how to keep your data":
         "Skúšobná verzia programu TAGRA končí o 5 dní — o dáta neprídete",
-    "Your licence activates inside the same software — nothing you imported gets lost. From €79 a year.":
-        "Licenciu aktivujete priamo v programe — nič z naimportovaných dát nestratíte. Od 79 EUR ročne.",
+    "Your licence activates inside the same software — nothing you imported gets lost.":
+        "Licenciu aktivujete priamo v programe — nič z naimportovaných dát nestratíte.",
     "Your trial is ending": "Skúšobná verzia sa končí",
     "{NAME}, your trial ends in 5 days": "{NAME}, skúšobná verzia končí o 5 dní",
     "Your 30-day TAGRA trial expires in 5 days. If it has been doing its job, you don't need to reinstall anything or import your files again — the licence activates inside the same software you are already using, and everything you have imported stays where it is. It takes about two minutes:":
@@ -238,12 +232,12 @@ TR["sk"] = {
         "Neplaťte zbytočne — verziu určuje počet vozidiel. Odpovedzte na tieto dve otázky a poviem vám, ktorú zvoliť:",
     "Is there anything in the trial that did not work the way you expected?":
         "Nefungovalo v skúšobnej verzii niečo tak, ako ste čakali?",
-    "The annual licence fee starts at &euro;79 excl. VAT (TAGRA MAX &euro;149) and the first year is included in the purchase price — it covers updates and support. If something in the trial didn't work, tell me before it expires; I'd rather fix it than lose you over it. I reply personally.":
-        "Ročný licenčný poplatok je 79 EUR bez DPH (TAGRA MAX 149 EUR) a prvý rok je zahrnutý v cene — kryje aktualizácie a technickú podporu. Ak v skúšobnej verzii niečo nefungovalo, napíšte mi skôr, než vyprší; radšej to opravím, než by som o vás kvôli tomu prišiel. Odpovedám osobne.",
+    "The first year is included in the purchase price — it covers updates and support. If something in the trial didn't work, tell me before it expires; I'd rather fix it than lose you over it. I reply personally.":
+        "Prvý rok je zahrnutý v cene — kryje aktualizácie a technickú podporu. Ak v skúšobnej verzii niečo nefungovalo, napíšte mi skôr, než vyprší; radšej to opravím, než by som o vás kvôli tomu prišiel. Odpovedám osobne.",
 
     "Your TAGRA TRUCKER trial ends in 5 days": "Skúšobná verzia TAGRA TRUCKER končí o 5 dní",
-    "Your licence activates inside the same software — your archived card data stays. €19 a year from year two.":
-        "Licenciu aktivujete priamo v programe — zálohované dáta z karty zostanú. Od druhého roka 19 EUR ročne.",
+    "Your licence activates inside the same software — your archived card data stays.":
+        "Licenciu aktivujete priamo v programe — zálohované dáta z karty zostanú.",
     "Your 30-day TAGRA TRUCKER trial expires in 5 days. The archive you have built up over the past weeks is the thing that covers you at a roadside check — and you keep it. The licence activates inside the same software, so nothing is reinstalled and nothing is re-read. It takes about two minutes:":
         "Vaša 30-dňová skúšobná verzia TAGRA TRUCKER vyprší o 5 dní. Práve záloha, ktorú ste za posledné týždne nazbierali, vás kryje pri cestnej kontrole — a zostane vám. Licenciu aktivujete priamo v programe, takže sa nič nepreinštalováva ani znovu nenačítava. Zaberie to asi dve minúty:",
     "You are already inside the program — no new download and no reinstall.":
@@ -257,8 +251,8 @@ TR["sk"] = {
     "Before it expires — one question": "Skôr než vyprší — jedna otázka",
     "Did anything in the trial not work the way you expected — reading the card, an infringement you disagree with, or the archive? Reply and tell me before it expires. I would rather fix it than have you leave over something that takes me five minutes to solve.":
         "Nefungovalo v skúšobnej verzii niečo tak, ako ste čakali — načítanie karty, priestupok, s ktorým nesúhlasíte, alebo záloha? Napíšte mi to skôr, než vyprší. Radšej to opravím, než by ste odišli kvôli niečomu, čo mi zaberie päť minút.",
-    "TAGRA TRUCKER costs &euro;19 excl. VAT per year from the second year — the first year is included in the purchase price, and it covers updates and support. You get the USB card reader free when you buy a licence. Delivery to all EU countries is free.":
-        "TAGRA TRUCKER stojí 49 EUR bez DPH a USB čítačka kariet je súčasťou balenia. Prvý rok licencie je zahrnutý — kryje aktualizácie aj technickú podporu; od druhého roka platíte 19 EUR ročne. Ak v skúšobnej verzii niečo nefungovalo, napíšte mi skôr, než vyprší; radšej to opravím, než by som o vás kvôli tomu prišiel.",
+    "The first year is included in the purchase price, and it covers updates and support. You get the USB card reader free when you buy a licence. Delivery to all EU countries is free.":
+        "TAGRA TRUCKER stojí 49 EUR bez DPH a USB čítačka kariet je súčasťou balenia. Prvý rok licencie je zahrnutý — kryje aktualizácie aj technickú podporu. Ak v skúšobnej verzii niečo nefungovalo, napíšte mi skôr, než vyprší; radšej to opravím, než by som o vás kvôli tomu prišiel.",
 }
 
 # ─────────────────────────────── NĚMČINA ───────────────────────────────
@@ -328,8 +322,8 @@ TR["de"] = {
 
     "Your TAGRA trial ends in 5 days — here is how to keep your data":
         "Ihre TAGRA-Testversion endet in 5 Tagen — so behalten Sie Ihre Daten",
-    "Your licence activates inside the same software — nothing you imported gets lost. From €79 a year.":
-        "Die Lizenz aktivieren Sie direkt in der Software — nichts von Ihren importierten Daten geht verloren. Ab 79 € pro Jahr.",
+    "Your licence activates inside the same software — nothing you imported gets lost.":
+        "Die Lizenz aktivieren Sie direkt in der Software — nichts von Ihren importierten Daten geht verloren.",
     "Your trial is ending": "Ihre Testversion endet",
     "{NAME}, your trial ends in 5 days": "{NAME}, Ihre Testversion endet in 5 Tagen",
     "Your 30-day TAGRA trial expires in 5 days. If it has been doing its job, you don't need to reinstall anything or import your files again — the licence activates inside the same software you are already using, and everything you have imported stays where it is. It takes about two minutes:":
@@ -349,12 +343,12 @@ TR["de"] = {
         "Zahlen Sie nicht zu viel — die Version richtet sich nach der Fahrzeuganzahl. Antworten Sie auf diese beiden Fragen und ich sage Ihnen, welche Sie wählen sollten:",
     "Is there anything in the trial that did not work the way you expected?":
         "Hat in der Testversion etwas nicht so funktioniert, wie Sie es erwartet haben?",
-    "The annual licence fee starts at &euro;79 excl. VAT (TAGRA MAX &euro;149) and the first year is included in the purchase price — it covers updates and support. If something in the trial didn't work, tell me before it expires; I'd rather fix it than lose you over it. I reply personally.":
-        "Die jährliche Lizenzgebühr beginnt bei 79 € zzgl. MwSt. (TAGRA MAX 149 €), das erste Jahr ist im Kaufpreis enthalten — sie deckt Updates und Support ab. Wenn in der Testversion etwas nicht funktioniert hat, schreiben Sie mir, bevor sie abläuft; ich behebe es lieber, als Sie deswegen zu verlieren. Ich antworte persönlich.",
+    "The first year is included in the purchase price — it covers updates and support. If something in the trial didn't work, tell me before it expires; I'd rather fix it than lose you over it. I reply personally.":
+        "Das erste Jahr ist im Kaufpreis enthalten — sie deckt Updates und Support ab. Wenn in der Testversion etwas nicht funktioniert hat, schreiben Sie mir, bevor sie abläuft; ich behebe es lieber, als Sie deswegen zu verlieren. Ich antworte persönlich.",
 
     "Your TAGRA TRUCKER trial ends in 5 days": "Ihre TAGRA-TRUCKER-Testversion endet in 5 Tagen",
-    "Your licence activates inside the same software — your archived card data stays. €19 a year from year two.":
-        "Die Lizenz aktivieren Sie direkt in der Software — Ihre archivierten Kartendaten bleiben erhalten. Ab dem zweiten Jahr 19 € jährlich.",
+    "Your licence activates inside the same software — your archived card data stays.":
+        "Die Lizenz aktivieren Sie direkt in der Software — Ihre archivierten Kartendaten bleiben erhalten.",
     "Your 30-day TAGRA TRUCKER trial expires in 5 days. The archive you have built up over the past weeks is the thing that covers you at a roadside check — and you keep it. The licence activates inside the same software, so nothing is reinstalled and nothing is re-read. It takes about two minutes:":
         "Ihre 30-tägige TAGRA-TRUCKER-Testversion läuft in 5 Tagen ab. Genau das Archiv, das Sie in den letzten Wochen aufgebaut haben, sichert Sie bei einer Straßenkontrolle ab — und es bleibt Ihnen erhalten. Die Lizenz aktivieren Sie in derselben Software, es wird also nichts neu installiert und nichts erneut ausgelesen. Das dauert etwa zwei Minuten:",
     "You are already inside the program — no new download and no reinstall.":
@@ -368,8 +362,8 @@ TR["de"] = {
     "Before it expires — one question": "Bevor sie abläuft — eine Frage",
     "Did anything in the trial not work the way you expected — reading the card, an infringement you disagree with, or the archive? Reply and tell me before it expires. I would rather fix it than have you leave over something that takes me five minutes to solve.":
         "Hat in der Testversion etwas nicht so funktioniert, wie Sie es erwartet haben — das Auslesen der Karte, ein Verstoß, den Sie anders sehen, oder das Archiv? Schreiben Sie mir, bevor sie abläuft. Ich behebe es lieber, als dass Sie wegen etwas gehen, das mich fünf Minuten kostet.",
-    "TAGRA TRUCKER costs &euro;19 excl. VAT per year from the second year — the first year is included in the purchase price, and it covers updates and support. You get the USB card reader free when you buy a licence. Delivery to all EU countries is free.":
-        "TAGRA TRUCKER kostet ab dem zweiten Jahr 19 € zzgl. MwSt. jährlich — das erste Jahr ist im Kaufpreis enthalten und deckt Updates und Support ab. Den USB-Kartenleser erhalten Sie beim Kauf einer Lizenz kostenlos. Der Versand in alle EU-Länder ist kostenlos.",
+    "The first year is included in the purchase price, and it covers updates and support. You get the USB card reader free when you buy a licence. Delivery to all EU countries is free.":
+        "Das erste Jahr ist im Kaufpreis enthalten und deckt Updates und Support ab. Den USB-Kartenleser erhalten Sie beim Kauf einer Lizenz kostenlos. Der Versand in alle EU-Länder ist kostenlos.",
 }
 
 # ─────────────────────────────── POLŠTINA ──────────────────────────────
@@ -439,8 +433,8 @@ TR["pl"] = {
 
     "Your TAGRA trial ends in 5 days — here is how to keep your data":
         "Wersja próbna TAGRA kończy się za 5 dni — nie stracisz danych",
-    "Your licence activates inside the same software — nothing you imported gets lost. From €79 a year.":
-        "Licencję aktywujesz w tym samym programie — nic z zaimportowanych danych nie przepadnie. Od 79 € rocznie.",
+    "Your licence activates inside the same software — nothing you imported gets lost.":
+        "Licencję aktywujesz w tym samym programie — nic z zaimportowanych danych nie przepadnie.",
     "Your trial is ending": "Wersja próbna się kończy",
     "{NAME}, your trial ends in 5 days": "{NAME}, wersja próbna kończy się za 5 dni",
     "Your 30-day TAGRA trial expires in 5 days. If it has been doing its job, you don't need to reinstall anything or import your files again — the licence activates inside the same software you are already using, and everything you have imported stays where it is. It takes about two minutes:":
@@ -460,12 +454,12 @@ TR["pl"] = {
         "Nie przepłacaj — wersję wyznacza liczba pojazdów. Odpowiedz na te dwa pytania, a powiem Ci, którą wybrać:",
     "Is there anything in the trial that did not work the way you expected?":
         "Czy coś w wersji próbnej nie zadziałało tak, jak oczekiwałeś?",
-    "The annual licence fee starts at &euro;79 excl. VAT (TAGRA MAX &euro;149) and the first year is included in the purchase price — it covers updates and support. If something in the trial didn't work, tell me before it expires; I'd rather fix it than lose you over it. I reply personally.":
-        "Roczna opłata licencyjna zaczyna się od 79 € netto (TAGRA MAX 149 €), a pierwszy rok jest wliczony w cenę zakupu — obejmuje aktualizacje i wsparcie techniczne. Jeśli coś w wersji próbnej nie działało, napisz do mnie, zanim wygaśnie; wolę to naprawić, niż stracić Cię z tego powodu. Odpowiadam osobiście.",
+    "The first year is included in the purchase price — it covers updates and support. If something in the trial didn't work, tell me before it expires; I'd rather fix it than lose you over it. I reply personally.":
+        "Pierwszy rok jest wliczony w cenę zakupu — obejmuje aktualizacje i wsparcie techniczne. Jeśli coś w wersji próbnej nie działało, napisz do mnie, zanim wygaśnie; wolę to naprawić, niż stracić Cię z tego powodu. Odpowiadam osobiście.",
 
     "Your TAGRA TRUCKER trial ends in 5 days": "Wersja próbna TAGRA TRUCKER kończy się za 5 dni",
-    "Your licence activates inside the same software — your archived card data stays. €19 a year from year two.":
-        "Licencję aktywujesz w tym samym programie — zarchiwizowane dane z karty zostają. Od drugiego roku 19 € rocznie.",
+    "Your licence activates inside the same software — your archived card data stays.":
+        "Licencję aktywujesz w tym samym programie — zarchiwizowane dane z karty zostają.",
     "Your 30-day TAGRA TRUCKER trial expires in 5 days. The archive you have built up over the past weeks is the thing that covers you at a roadside check — and you keep it. The licence activates inside the same software, so nothing is reinstalled and nothing is re-read. It takes about two minutes:":
         "Twoja 30-dniowa wersja próbna TAGRA TRUCKER wygasa za 5 dni. To właśnie archiwum, które zbudowałeś przez ostatnie tygodnie, zabezpiecza Cię podczas kontroli drogowej — i zostaje przy Tobie. Licencję aktywujesz w tym samym programie, więc nic nie jest instalowane od nowa ani ponownie odczytywane. Zajmie to około dwóch minut:",
     "You are already inside the program — no new download and no reinstall.":
@@ -479,8 +473,8 @@ TR["pl"] = {
     "Before it expires — one question": "Zanim wygaśnie — jedno pytanie",
     "Did anything in the trial not work the way you expected — reading the card, an infringement you disagree with, or the archive? Reply and tell me before it expires. I would rather fix it than have you leave over something that takes me five minutes to solve.":
         "Czy coś w wersji próbnej nie zadziałało tak, jak oczekiwałeś — odczyt karty, naruszenie, z którym się nie zgadzasz, albo archiwum? Napisz do mnie, zanim wygaśnie. Wolę to naprawić, niż stracić Cię przez coś, co zajmie mi pięć minut.",
-    "TAGRA TRUCKER costs &euro;19 excl. VAT per year from the second year — the first year is included in the purchase price, and it covers updates and support. You get the USB card reader free when you buy a licence. Delivery to all EU countries is free.":
-        "TAGRA TRUCKER kosztuje od drugiego roku 19 € netto rocznie — pierwszy rok jest wliczony w cenę zakupu i obejmuje aktualizacje oraz wsparcie techniczne. Czytnik kart USB otrzymujesz bezpłatnie przy zakupie licencji. Dostawa do wszystkich krajów UE jest bezpłatna.",
+    "The first year is included in the purchase price, and it covers updates and support. You get the USB card reader free when you buy a licence. Delivery to all EU countries is free.":
+        "Pierwszy rok jest wliczony w cenę zakupu i obejmuje aktualizacje oraz wsparcie techniczne. Czytnik kart USB otrzymujesz bezpłatnie przy zakupie licencji. Dostawa do wszystkich krajów UE jest bezpłatna.",
 }
 
 # ─────────────────────────────── ŘEČTINA ───────────────────────────────
@@ -550,8 +544,8 @@ TR["gr"] = {
 
     "Your TAGRA trial ends in 5 days — here is how to keep your data":
         "Η δοκιμαστική έκδοση TAGRA λήγει σε 5 ημέρες — δεν θα χάσετε τα δεδομένα σας",
-    "Your licence activates inside the same software — nothing you imported gets lost. From €79 a year.":
-        "Η άδεια ενεργοποιείται μέσα στο ίδιο πρόγραμμα — τίποτα από όσα εισαγάγατε δεν χάνεται. Από 79 € τον χρόνο.",
+    "Your licence activates inside the same software — nothing you imported gets lost.":
+        "Η άδεια ενεργοποιείται μέσα στο ίδιο πρόγραμμα — τίποτα από όσα εισαγάγατε δεν χάνεται.",
     "Your trial is ending": "Η δοκιμαστική σας έκδοση λήγει",
     "{NAME}, your trial ends in 5 days": "{NAME}, η δοκιμαστική σας έκδοση λήγει σε 5 ημέρες",
     "Your 30-day TAGRA trial expires in 5 days. If it has been doing its job, you don't need to reinstall anything or import your files again — the licence activates inside the same software you are already using, and everything you have imported stays where it is. It takes about two minutes:":
@@ -571,12 +565,12 @@ TR["gr"] = {
         "Μην πληρώσετε παραπάνω — την έκδοση την καθορίζει ο αριθμός των οχημάτων. Απαντήστε σε αυτά τα δύο και θα σας πω ποια να επιλέξετε:",
     "Is there anything in the trial that did not work the way you expected?":
         "Υπήρξε κάτι στη δοκιμαστική έκδοση που δεν λειτούργησε όπως περιμένατε;",
-    "The annual licence fee starts at &euro;79 excl. VAT (TAGRA MAX &euro;149) and the first year is included in the purchase price — it covers updates and support. If something in the trial didn't work, tell me before it expires; I'd rather fix it than lose you over it. I reply personally.":
-        "Η ετήσια άδεια ξεκινά από 79 € χωρίς ΦΠΑ (TAGRA MAX 149 €) και ο πρώτος χρόνος περιλαμβάνεται στην τιμή αγοράς — καλύπτει ενημερώσεις και τεχνική υποστήριξη. Αν κάτι στη δοκιμαστική έκδοση δεν λειτούργησε, πείτε μου πριν λήξει· προτιμώ να το διορθώσω παρά να σας χάσω γι' αυτό. Απαντώ προσωπικά.",
+    "The first year is included in the purchase price — it covers updates and support. If something in the trial didn't work, tell me before it expires; I'd rather fix it than lose you over it. I reply personally.":
+        "Ο πρώτος χρόνος περιλαμβάνεται στην τιμή αγοράς — καλύπτει ενημερώσεις και τεχνική υποστήριξη. Αν κάτι στη δοκιμαστική έκδοση δεν λειτούργησε, πείτε μου πριν λήξει· προτιμώ να το διορθώσω παρά να σας χάσω γι' αυτό. Απαντώ προσωπικά.",
 
     "Your TAGRA TRUCKER trial ends in 5 days": "Η δοκιμαστική έκδοση TAGRA TRUCKER λήγει σε 5 ημέρες",
-    "Your licence activates inside the same software — your archived card data stays. €19 a year from year two.":
-        "Η άδεια ενεργοποιείται μέσα στο ίδιο πρόγραμμα — τα αρχειοθετημένα δεδομένα της κάρτας σας παραμένουν. Από τον δεύτερο χρόνο 19 € ετησίως.",
+    "Your licence activates inside the same software — your archived card data stays.":
+        "Η άδεια ενεργοποιείται μέσα στο ίδιο πρόγραμμα — τα αρχειοθετημένα δεδομένα της κάρτας σας παραμένουν.",
     "Your 30-day TAGRA TRUCKER trial expires in 5 days. The archive you have built up over the past weeks is the thing that covers you at a roadside check — and you keep it. The licence activates inside the same software, so nothing is reinstalled and nothing is re-read. It takes about two minutes:":
         "Η 30ήμερη δοκιμαστική σας έκδοση TAGRA TRUCKER λήγει σε 5 ημέρες. Ακριβώς το αρχείο που χτίσατε τις τελευταίες εβδομάδες είναι αυτό που σας καλύπτει σε έναν οδικό έλεγχο — και σας μένει. Η άδεια ενεργοποιείται μέσα στο ίδιο πρόγραμμα, οπότε τίποτα δεν εγκαθίσταται ξανά και τίποτα δεν διαβάζεται ξανά. Χρειάζονται περίπου δύο λεπτά:",
     "You are already inside the program — no new download and no reinstall.":
@@ -590,8 +584,8 @@ TR["gr"] = {
     "Before it expires — one question": "Πριν λήξει — μία ερώτηση",
     "Did anything in the trial not work the way you expected — reading the card, an infringement you disagree with, or the archive? Reply and tell me before it expires. I would rather fix it than have you leave over something that takes me five minutes to solve.":
         "Υπήρξε κάτι στη δοκιμαστική έκδοση που δεν λειτούργησε όπως περιμένατε — η ανάγνωση της κάρτας, μια παράβαση με την οποία διαφωνείτε ή η αρχειοθέτηση; Πείτε μου πριν λήξει. Προτιμώ να το διορθώσω παρά να φύγετε για κάτι που μου παίρνει πέντε λεπτά.",
-    "TAGRA TRUCKER costs &euro;19 excl. VAT per year from the second year — the first year is included in the purchase price, and it covers updates and support. You get the USB card reader free when you buy a licence. Delivery to all EU countries is free.":
-        "Το TAGRA TRUCKER κοστίζει από τον δεύτερο χρόνο 19 € χωρίς ΦΠΑ ετησίως — ο πρώτος χρόνος περιλαμβάνεται στην τιμή αγοράς και καλύπτει ενημερώσεις και υποστήριξη. Ο αναγνώστης καρτών USB παρέχεται δωρεάν με την αγορά άδειας χρήσης. Η παράδοση σε όλες τις χώρες της ΕΕ είναι δωρεάν.",
+    "The first year is included in the purchase price, and it covers updates and support. You get the USB card reader free when you buy a licence. Delivery to all EU countries is free.":
+        "Ο πρώτος χρόνος περιλαμβάνεται στην τιμή αγοράς και καλύπτει ενημερώσεις και υποστήριξη. Ο αναγνώστης καρτών USB παρέχεται δωρεάν με την αγορά άδειας χρήσης. Η παράδοση σε όλες τις χώρες της ΕΕ είναι δωρεάν.",
 }
 
 # ═══════════════════════════════════════════════════════════════════════

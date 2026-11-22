@@ -10,8 +10,7 @@ Klíčová fakta (ověřena na tagra.app/faq/ a /fleet/):
   - nákup probíhá UVNITŘ programu: licenční menu → edice → QR/převod
   - licence aktivní okamžitě, pokračuje se ve stejném prostředí
     → uživatel NEPŘIJDE o data naimportovaná během trialu
-  - roční poplatek od 2. roku (bez DPH): Trucker 19 €, TAGRA 1-2 79 €,
-    TAGRA 4-6 99 €, MAX 149 €; první rok je v ceně
+  - první rok licence je v ceně (roční poplatek se v e-mailech neuvádí)
 """
 import re
 import sys
@@ -39,7 +38,7 @@ FLEET = [
 
     ("preheader",
      "  Three steps to your first infringement report \u2014 and two quick questions so I can recommend the right setup.\n",
-     "  Your licence activates inside the same software \u2014 nothing you imported gets lost. From \u20ac79 a year.\n"),
+     "  Your licence activates inside the same software \u2014 nothing you imported gets lost.\n"),
 
     ("badge",
      ">\n                  30-day trial\n                </td>",
@@ -100,7 +99,7 @@ FLEET = [
 
     ("closing",
      "              I will suggest the right TAGRA edition and compatible hardware, so you don't pay for more than you need. I reply personally. If you manage a larger fleet, I can also arrange a guided setup consultation for you.\n",
-     "              The annual licence fee starts at &euro;79 excl. VAT (TAGRA MAX &euro;149) and the first year is included in the purchase price — it covers updates and support. If something in the trial didn't work, tell me before it expires; I'd rather fix it than lose you over it. I reply personally.\n"),
+     "              The first year is included in the purchase price — it covers updates and support. If something in the trial didn't work, tell me before it expires; I'd rather fix it than lose you over it. I reply personally.\n"),
 ]
 
 # ─────────────────────────────────────────────────────────────
@@ -113,7 +112,7 @@ DRIVER = [
 
     ("preheader",
      "  Three simple steps to read your driver card \u2014 and one quick question about your card reader.\n",
-     "  Your licence activates inside the same software \u2014 your archived card data stays. \u20ac19 a year from year two.\n"),
+     "  Your licence activates inside the same software \u2014 your archived card data stays.\n"),
 
     ("badge",
      ">\n                  30-day trial\n                </td>",
@@ -168,7 +167,7 @@ DRIVER = [
 
     ("closing",
      "              If you have any questions, please reply to this email. I read and answer every one.\n",
-     "              TAGRA TRUCKER costs &euro;19 excl. VAT per year from the second year — the first year is included in the purchase price, and it covers updates and support. You get the USB card reader free when you buy a licence. Delivery to all EU countries is free.\n"),
+     "              The first year is included in the purchase price, and it covers updates and support. You get the USB card reader free when you buy a licence. Delivery to all EU countries is free.\n"),
 ]
 
 
