@@ -523,6 +523,7 @@ var tagraGuessCountry = (function () {
               form_variant: 'mobile-send', method: 'mobile_send'
             });
           }
+          if (typeof window.tmxFbq === 'function') window.tmxFbq('track', 'Lead', { content_name: aud });
           if (typeof window.clarity === 'function') {
             window.clarity('event', 'trial_lead');
             window.clarity('set', 'audience', aud);

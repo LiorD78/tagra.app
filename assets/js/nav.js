@@ -333,6 +333,10 @@
       try { window.gtag('event', name, params); } catch (e) { /* měření nesmí rozbít stránku */ }
     }
   }
+  // Meta pixel jen se souhlasem s marketingem — tmxFbq (consent.js) bez souhlasu tiše nic nedělá
+  function metaTrack(type, name, params) {
+    if (typeof window.tmxFbq === 'function') window.tmxFbq(type, name, params);
+  }
   function clar() {
     if (typeof window.clarity === 'function') {
       try { window.clarity.apply(null, arguments); } catch (e) { /* viz výše */ }
@@ -357,6 +361,7 @@
     });
     clar('event', 'trial_lead');
     if (audience) clar('set', 'audience', audience);
+    metaTrack('track', 'Lead', { content_name: audience || '' });
   };
 
   function init() {
@@ -381,6 +386,7 @@
       if (dl) {
         track('trial_download', { product: /Trucker/i.test(dl.href) ? 'trucker' : (/TAGRA_eu\.zip/i.test(dl.href) ? 'tagra_current' : 'tagra') });
         clar('event', 'trial_download');
+        metaTrack('trackCustom', 'TrialDownload');
         if (window.tagraDownloadNote) window.tagraDownloadNote(dl);
       }
     });

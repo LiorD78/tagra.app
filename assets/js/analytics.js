@@ -169,6 +169,7 @@
       };
       if (a.target !== '_blank') params.transport_type = 'beacon';
       W.gtag('event', 'shop_click', params);
+      if (typeof W.tmxFbq === 'function') W.tmxFbq('trackCustom', 'ShopClick', { product: slug });
     } catch (x) {}
   }, true);
 
@@ -257,10 +258,14 @@
     };
     doc.head.appendChild(s);
   }
+  // souhlas s analytikou: tmx-consent-v2 {a:1} (nebo migrovaný v1 'granted'); nový souhlas hlásí consent.js eventem
   var granted = false;
-  try { granted = localStorage.getItem('tmx-consent-v1') === 'granted'; } catch (e) {}
+  try {
+    var cs = JSON.parse(localStorage.getItem('tmx-consent-v2') || 'null');
+    granted = cs ? !!cs.a : localStorage.getItem('tmx-consent-v1') === 'granted';
+  } catch (e) {}
   if (granted) onReady(loadVitals);
-  else doc.addEventListener('click', function (e) {
-    if (e.target.closest && e.target.closest('.tmx-cc__b--yes')) loadVitals();
+  else doc.addEventListener('tmx-consent', function (e) {
+    if (e.detail && e.detail.a) loadVitals();
   });
 })();

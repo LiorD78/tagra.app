@@ -22,60 +22,14 @@
     gtag('js', new Date());
     gtag('config','G-92253QFBNX');
   </script>
-<!-- Cookie consent banner (self-hosted) + Microsoft Clarity gating -->
-<style>
-    .tmx-cc{position:fixed;left:0;right:0;bottom:0;z-index:2147483000;background:linear-gradient(120deg,var(--blue-dark,#0b2c4a),var(--blue-mid,#134a8e) 62%,var(--blue-light,#1f5fa6));color:#fff;
-      font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
-      padding:16px 20px;box-shadow:0 -4px 24px rgba(0,0,0,.18);display:flex;flex-wrap:wrap;
-      align-items:center;gap:14px;justify-content:center}
-    .tmx-cc__txt{flex:1 1 360px;max-width:760px}
-    .tmx-cc__txt a{color:#9ed0f5;text-decoration:underline}
-    .tmx-cc__btns{display:flex;gap:10px;flex:0 0 auto}
-    .tmx-cc__b{appearance:none;border:0;cursor:pointer;font:inherit;font-weight:600;
-      padding:10px 22px;border-radius:99px;transition:filter .15s;color:#fff}
-    .tmx-cc__b:hover{filter:brightness(1.08)}
-    .tmx-cc__b--no{background:rgba(255,255,255,.16)}
-    .tmx-cc__b--yes{background:var(--green-cta,#5C820F)}
-    @media(max-width:640px){.tmx-cc{padding:14px}.tmx-cc__btns{width:100%}.tmx-cc__b{flex:1}}
-  </style>
+<!-- Cookie consent v2 (Analytika / Marketing) — banner a nastavení v /assets/js/consent.js -->
 <script>
-  (function(){
-    var KEY='tmx-consent-v1', CL='wt18054m0r';
-    function lc(){var l=(document.documentElement.getAttribute('lang')||'en').toLowerCase().split('-')[0];
-      var m={cz:'cs',cs:'cs',sk:'sk',de:'de',pl:'pl',gr:'el',el:'el',hu:'hu',fr:'fr',it:'it',nl:'nl',ro:'ro',en:'en'};return m[l]||'en';}
-    var T={
-      hu:{t:'Analitikai s\u00fctiket haszn\u00e1lunk (Google Analytics, Microsoft Clarity, Jarabot), hogy meg\u00e9rts\u00fck a webhely haszn\u00e1lat\u00e1t. Csak az \u00d6n hozz\u00e1j\u00e1rul\u00e1s\u00e1val t\u00f6lt\u0151dnek be.',a:'Elfogadom',r:'Elutas\u00edtom',p:'Adatv\u00e9delem \u00e9s s\u00fctik'},
-      ro:{t:'Utilizăm module cookie de analiză (Google Analytics, Microsoft Clarity, Jarabot) pentru a înțelege modul de utilizare a site-ului. Se încarcă doar cu consimțământul dumneavoastră.',a:'Accept',r:'Refuz',p:'Confidențialitate și cookie-uri'},
-      nl:{t:'We gebruiken analytische cookies (Google Analytics, Microsoft Clarity, Jarabot) om het gebruik van de site te begrijpen. Ze laden alleen met uw toestemming.',a:'Accepteren',r:'Weigeren',p:'Privacy en cookies'},
-      fr:{t:'Nous utilisons des cookies analytiques (Google Analytics, Microsoft Clarity, Jarabot) pour comprendre l’utilisation du site. Ils ne se chargent qu’avec votre consentement.',a:'Accepter',r:'Refuser',p:'Confidentialité et cookies'},
-      it:{t:'Utilizziamo cookie analitici (Google Analytics, Microsoft Clarity, Jarabot) per capire l’utilizzo del sito. Si caricano solo con il Suo consenso.',a:'Accetta',r:'Rifiuta',p:'Privacy e cookie'},
-      en:{t:'We use analytics cookies (Google Analytics, Microsoft Clarity, Jarabot) to understand site usage. They load only with your consent.',a:'Accept',r:'Reject',p:'Privacy &amp; cookies'},
-      cs:{t:'Pou\u017e\u00edv\u00e1me analytick\u00e9 cookies (Google Analytics, Microsoft Clarity, Jarabot) k pochopen\u00ed pou\u017e\u00edv\u00e1n\u00ed webu. Na\u010dtou se jen s va\u0161\u00edm souhlasem.',a:'P\u0159ijmout',r:'Odm\u00edtnout',p:'Soukrom\u00ed a cookies'},
-      sk:{t:'Pou\u017e\u00edvame analytick\u00e9 cookies (Google Analytics, Microsoft Clarity, Jarabot) na pochopenie pou\u017e\u00edvania webu. Na\u010d\u00edtaj\u00fa sa len s va\u0161\u00edm s\u00fahlasom.',a:'Prija\u0165',r:'Odmietnu\u0165',p:'S\u00fakromie a cookies'},
-      de:{t:'Wir verwenden Analyse-Cookies (Google Analytics, Microsoft Clarity, Jarabot), um die Nutzung der Website zu verstehen. Sie werden nur mit Ihrer Einwilligung geladen.',a:'Akzeptieren',r:'Ablehnen',p:'Datenschutz &amp; Cookies'},
-      pl:{t:'U\u017cywamy plik\u00f3w cookie do analityki (Google Analytics, Microsoft Clarity, Jarabot), aby zrozumie\u0107 korzystanie z witryny. \u0141aduj\u0105 si\u0119 tylko za Twoj\u0105 zgod\u0105.',a:'Akceptuj',r:'Odrzu\u0107',p:'Prywatno\u015b\u0107 i cookies'},
-      el:{t:'\u03a7\u03c1\u03b7\u03c3\u03b9\u03bc\u03bf\u03c0\u03bf\u03b9\u03bf\u03cd\u03bc\u03b5 cookies \u03b1\u03bd\u03ac\u03bb\u03c5\u03c3\u03b7\u03c2 (Google Analytics, Microsoft Clarity, Jarabot) \u03b3\u03b9\u03b1 \u03bd\u03b1 \u03ba\u03b1\u03c4\u03b1\u03bd\u03bf\u03ae\u03c3\u03bf\u03c5\u03bc\u03b5 \u03c4\u03b7 \u03c7\u03c1\u03ae\u03c3\u03b7. \u03a6\u03bf\u03c1\u03c4\u03ce\u03bd\u03bf\u03bd\u03c4\u03b1\u03b9 \u03bc\u03cc\u03bd\u03bf \u03bc\u03b5 \u03c4\u03b7 \u03c3\u03c5\u03b3\u03ba\u03b1\u03c4\u03ac\u03b8\u03b5\u03c3\u03ae \u03c3\u03b1\u03c2.',a:'\u0391\u03c0\u03bf\u03b4\u03bf\u03c7\u03ae',r:'\u0391\u03c0\u03cc\u03c1\u03c1\u03b9\u03c8\u03b7',p:'\u0391\u03c0\u03cc\u03c1\u03c1\u03b7\u03c4\u03bf &amp; cookies'}
-    };
-    function loadClarity(){if(!CL||window.__tmxCl)return;window.__tmxCl=1;
-      (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-       t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-       y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script",CL);}
-    function grant(){try{localStorage.setItem(KEY,'granted')}catch(e){}
-      gtag('consent','update',{analytics_storage:'granted'});loadClarity();}
-    function deny(){try{localStorage.setItem(KEY,'denied')}catch(e){}}
-    var saved=null;try{saved=localStorage.getItem(KEY)}catch(e){}
-    if(saved==='granted'){grant();return;} if(saved==='denied'){return;}
-    function show(){var tx=T[lc()]||T.en;
-      var b=document.createElement('div');b.className='tmx-cc';b.setAttribute('role','dialog');b.setAttribute('aria-live','polite');
-      b.innerHTML='<div class="tmx-cc__txt">'+tx.t+' <a href="/fr/confidentialite/">'+tx.p+'</a></div>'+
-        '<div class="tmx-cc__btns"><button type="button" class="tmx-cc__b tmx-cc__b--no">'+tx.r+'</button>'+
-        '<button type="button" class="tmx-cc__b tmx-cc__b--yes">'+tx.a+'</button></div>';
-      document.body.appendChild(b);
-      b.querySelector('.tmx-cc__b--yes').addEventListener('click',function(){grant();b.remove();});
-      b.querySelector('.tmx-cc__b--no').addEventListener('click',function(){deny();b.remove();});}
-    if(document.body)show();else document.addEventListener('DOMContentLoaded',show);
-  })();
-  </script>
+(function(){try{var u={},s=JSON.parse(localStorage.getItem('tmx-consent-v2')||'null');
+if(s){if(s.a)u.analytics_storage='granted';if(s.m){u.ad_storage='granted';u.ad_user_data='granted';u.ad_personalization='granted';}}
+else if(localStorage.getItem('tmx-consent-v1')==='granted')u.analytics_storage='granted';
+for(var k in u){gtag('consent','update',u);break;}}catch(e){}})();
+</script>
+<script defer src="/assets/js/consent.js?v=20261123a"></script>
 <!-- TMX-ANALYTICS END -->
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
@@ -174,7 +128,7 @@
 
 
 
-<script defer="" src="/assets/js/nav.js?v=20261008a"></script><script defer="" src="/assets/js/analytics.js?v=20261103a"></script>
+<script defer="" src="/assets/js/nav.js?v=20261123a"></script><script defer="" src="/assets/js/analytics.js?v=20261123a"></script>
 </head>
 <body>
 <a class="skip-link" href="#main-content">Passer au contenu</a>
@@ -210,7 +164,7 @@
 <p class="anim-up" style="font-size:19px;color:var(--text2);max-width:640px;margin:12px auto 0;transition-delay:.1s">
       Comment nous traitons vos données sur tagra.app — ce que nous collectons, les cookies que nous utilisons et les droits dont vous disposez au titre du RGPD.
     </p>
-<p class="legal-updated anim-up" style="transition-delay:.15s">Dernière mise à jour : 30 juin 2026</p>
+<p class="legal-updated anim-up" style="transition-delay:.15s">Dernière mise à jour : 23 novembre 2026</p>
 </div>
 </section>
 <!-- CONTENT -->
@@ -235,6 +189,7 @@
 <tbody>
 <tr><td>Nom et adresse e-mail que vous saisissez dans le formulaire d’essai</td><td>Vous envoyer le lien de téléchargement de l’essai et répondre à votre demande concernant TAGRA</td><td>Mesures prises à votre demande avant la conclusion d’un contrat et votre consentement — article 6, paragraphe 1, points b) et a).</td></tr>
 <tr><td>Statistiques d’utilisation via les cookies analytiques (Google Analytics 4, Microsoft Clarity)</td><td>Comprendre comment le site est utilisé et l’améliorer</td><td>Votre consentement — article 6, paragraphe 1, point a). Désactivés par défaut ; chargés uniquement après avoir cliqué sur « Accepter ».</td></tr>
+<tr><td>Mesure des performances publicitaires au moyen de cookies marketing (Meta Pixel, Google Ads)</td><td>Mesurer les résultats de nos publicités et présenter des publicités pertinentes aux personnes ayant visité le site</td><td>Votre consentement — art. 6, par. 1, point a) RGPD. Désactivé par défaut ; chargé uniquement si vous autorisez les cookies marketing.</td></tr>
 <tr><td>Journaux du serveur et de sécurité (adresse IP, données relatives aux requêtes) collectés par notre hébergeur</td><td>Exploiter le site, garantir la sécurité et prévenir les abus</td><td>Notre intérêt légitime — article 6, paragraphe 1, point f)</td></tr>
 <tr><td>Correspondance par e-mail que vous nous envoyez</td><td>Traiter votre demande</td><td>Intérêt légitime / mesures précontractuelles</td></tr>
 </tbody>
@@ -244,17 +199,22 @@
 <table>
 <thead><tr><th>Nom / stockage</th><th>Défini par</th><th>Finalité</th><th>Chargement</th></tr></thead>
 <tbody>
-<tr><td>tmx-consent-v1</td><td>tagra.app (localStorage)</td><td>Mémorise votre choix de cookies</td><td>Toujours (strictement nécessaire)</td></tr>
+<tr><td>tmx-consent-v2</td><td>tagra.app (localStorage)</td><td>Mémorise votre choix de cookies</td><td>Toujours (strictement nécessaire)</td></tr>
 <tr><td>_ga, _ga_&lt;id&gt;</td><td>Google Analytics 4</td><td>Distinguer les utilisateurs et les sessions, statistiques d’utilisation</td><td>Uniquement après consentement (jusqu’à 2 ans)</td></tr>
 <tr><td>_clck, _clsk, CLID, MUID, ANONCHK, SM</td><td>Microsoft Clarity</td><td>Informations agrégées sur les sessions et cartes de chaleur</td><td>Uniquement après consentement (jusqu’à 1 an)</td></tr>
+<tr><td>_fbp, fr</td><td>Meta Pixel</td><td>Mesure les résultats publicitaires et crée des audiences publicitaires</td><td>Uniquement après consentement au marketing (jusqu’à 90 jours)</td></tr>
+<tr><td>_gcl_au</td><td>Google Ads</td><td>Mesure les conversions issues des annonces Google</td><td>Uniquement après consentement au marketing (jusqu’à 90 jours)</td></tr>
 </tbody>
 </table>
 <p>Vous pouvez modifier votre décision à tout moment :</p>
-<button class="btn-prefs" onclick="try{localStorage.removeItem('tmx-consent-v1')}catch(e){};location.reload();" type="button">Modifier les préférences de cookies</button>
+<button class="btn-prefs" onclick="if(window.tmxConsentOpen)tmxConsentOpen()" type="button">Modifier les préférences de cookies</button>
+<p>Dans les paramètres des cookies, vous pouvez autoriser séparément l’analyse d’audience et le marketing.</p>
 <h3>5. Avec qui nous partageons vos données (sous-traitants)</h3>
 <p>Nous ne vendons pas vos données à caractère personnel. Nous les partageons uniquement avec des prestataires de services (« sous-traitants ») qui agissent selon nos instructions :</p>
 <ul class="legal-list">
 <li><strong>Google Ireland Ltd.</strong> — Google Analytics 4 (analyse du site), uniquement avec votre consentement.</li>
+<li><strong>Meta Platforms Ireland Ltd.</strong> — Meta Pixel (mesure des performances publicitaires), uniquement avec votre consentement.</li>
+<li><strong>Google Ireland Ltd.</strong> — Google Ads (mesure des conversions), uniquement avec votre consentement.</li>
 <li><strong>Microsoft Ireland Operations Ltd.</strong> — Microsoft Clarity (informations sur les sessions), uniquement avec votre consentement.</li>
 <li><strong>Resend (Plus Five Five, Inc.)</strong> — envoi de l’e-mail d’essai que vous demandez.</li>
 <li><strong>Netlify, Inc.</strong> — hébergement du site et diffusion du contenu (journaux du serveur et de sécurité).</li>
@@ -266,6 +226,7 @@
 <ul class="legal-list">
 <li><strong>Demandes d’essai</strong> — (nom, e-mail, correspondance) : jusqu’à 24 mois à compter de notre dernier contact, sauf si vous nous demandez de les supprimer plus tôt.</li>
 <li><strong>Analyse</strong> — conservées conformément aux paramètres de Google et de Microsoft (Google Analytics : jusqu’à 14 mois).</li>
+<li><strong>Marketing</strong> — conservation selon les paramètres de Meta et de Google (jusqu’à 90 jours dans nos cookies).</li>
 <li><strong>Votre choix de cookies</strong> — stocké sur votre appareil jusqu’à ce que vous l’effaciez ou le modifiiez.</li>
 </ul>
 <h3>8. Vos droits</h3>

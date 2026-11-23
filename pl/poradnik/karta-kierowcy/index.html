@@ -22,60 +22,14 @@
     gtag('js', new Date());
     gtag('config','G-92253QFBNX');
   </script>
-<!-- Cookie consent banner (self-hosted) + Microsoft Clarity gating -->
-<style>
-    .tmx-cc{position:fixed;left:0;right:0;bottom:0;z-index:2147483000;background:linear-gradient(120deg,var(--blue-dark,#0b2c4a),var(--blue-mid,#134a8e) 62%,var(--blue-light,#1f5fa6));color:#fff;
-      font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
-      padding:16px 20px;box-shadow:0 -4px 24px rgba(0,0,0,.18);display:flex;flex-wrap:wrap;
-      align-items:center;gap:14px;justify-content:center}
-    .tmx-cc__txt{flex:1 1 360px;max-width:760px}
-    .tmx-cc__txt a{color:#9ed0f5;text-decoration:underline}
-    .tmx-cc__btns{display:flex;gap:10px;flex:0 0 auto}
-    .tmx-cc__b{appearance:none;border:0;cursor:pointer;font:inherit;font-weight:600;
-      padding:10px 22px;border-radius:99px;transition:filter .15s;color:#fff}
-    .tmx-cc__b:hover{filter:brightness(1.08)}
-    .tmx-cc__b--no{background:rgba(255,255,255,.16)}
-    .tmx-cc__b--yes{background:var(--green-cta,#5C820F)}
-    @media(max-width:640px){.tmx-cc{padding:14px}.tmx-cc__btns{width:100%}.tmx-cc__b{flex:1}}
-  </style>
+<!-- Cookie consent v2 (Analytika / Marketing) — banner a nastavení v /assets/js/consent.js -->
 <script>
-  (function(){
-    var KEY='tmx-consent-v1', CL='wt18054m0r';
-    function lc(){var l=(document.documentElement.getAttribute('lang')||'en').toLowerCase().split('-')[0];
-      var m={cz:'cs',cs:'cs',sk:'sk',de:'de',pl:'pl',gr:'el',el:'el',hu:'hu',fr:'fr',it:'it',nl:'nl',ro:'ro',en:'en'};return m[l]||'en';}
-    var T={
-      hu:{t:'Analitikai sütiket használunk (Google Analytics, Microsoft Clarity, Jarabot), hogy megértsük a webhely használatát. Csak az Ön hozzájárulásával töltődnek be.',a:'Elfogadom',r:'Elutasítom',p:'Adatvédelem és sütik'},
-      ro:{t:'Utilizăm module cookie de analiză (Google Analytics, Microsoft Clarity, Jarabot) pentru a înțelege modul de utilizare a site-ului. Se încarcă doar cu consimțământul dumneavoastră.',a:'Accept',r:'Refuz',p:'Confidențialitate și cookie-uri'},
-      nl:{t:'We gebruiken analytische cookies (Google Analytics, Microsoft Clarity, Jarabot) om het gebruik van de site te begrijpen. Ze laden alleen met uw toestemming.',a:'Accepteren',r:'Weigeren',p:'Privacy en cookies'},
-      fr:{t:'Nous utilisons des cookies analytiques (Google Analytics, Microsoft Clarity, Jarabot) pour comprendre l’utilisation du site. Ils ne se chargent qu’avec votre consentement.',a:'Accepter',r:'Refuser',p:'Confidentialité et cookies'},
-      it:{t:'Utilizziamo cookie analitici (Google Analytics, Microsoft Clarity, Jarabot) per capire l’utilizzo del sito. Si caricano solo con il Suo consenso.',a:'Accetta',r:'Rifiuta',p:'Privacy e cookie'},
-      en:{t:'We use analytics cookies (Google Analytics, Microsoft Clarity, Jarabot) to understand site usage. They load only with your consent.',a:'Accept',r:'Reject',p:'Privacy &amp; cookies'},
-      cs:{t:'Používáme analytické cookies (Google Analytics, Microsoft Clarity, Jarabot) k pochopení používání webu. Načtou se jen s vaším souhlasem.',a:'Přijmout',r:'Odmítnout',p:'Soukromí a cookies'},
-      sk:{t:'Používame analytické cookies (Google Analytics, Microsoft Clarity, Jarabot) na pochopenie používania webu. Načítajú sa len s vaším súhlasom.',a:'Prijať',r:'Odmietnuť',p:'Súkromie a cookies'},
-      de:{t:'Wir verwenden Analyse-Cookies (Google Analytics, Microsoft Clarity, Jarabot), um die Nutzung der Website zu verstehen. Sie werden nur mit Ihrer Einwilligung geladen.',a:'Akzeptieren',r:'Ablehnen',p:'Datenschutz &amp; Cookies'},
-      pl:{t:'Używamy plików cookie do analityki (Google Analytics, Microsoft Clarity, Jarabot), aby zrozumieć korzystanie z witryny. Ładują się tylko za Twoją zgodą.',a:'Akceptuj',r:'Odrzuć',p:'Prywatność i cookies'},
-      el:{t:'Χρησιμοποιούμε cookies ανάλυσης (Google Analytics, Microsoft Clarity, Jarabot) για να κατανοήσουμε τη χρήση. Φορτώνονται μόνο με τη συγκατάθεσή σας.',a:'Αποδοχή',r:'Απόρριψη',p:'Απόρρητο &amp; cookies'}
-    };
-    function loadClarity(){if(!CL||window.__tmxCl)return;window.__tmxCl=1;
-      (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-       t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-       y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script",CL);}
-    function grant(){try{localStorage.setItem(KEY,'granted')}catch(e){}
-      gtag('consent','update',{analytics_storage:'granted'});loadClarity();}
-    function deny(){try{localStorage.setItem(KEY,'denied')}catch(e){}}
-    var saved=null;try{saved=localStorage.getItem(KEY)}catch(e){}
-    if(saved==='granted'){grant();return;} if(saved==='denied'){return;}
-    function show(){var tx=T[lc()]||T.en;
-      var b=document.createElement('div');b.className='tmx-cc';b.setAttribute('role','dialog');b.setAttribute('aria-live','polite');
-      b.innerHTML='<div class="tmx-cc__txt">'+tx.t+' <a href="/pl/polityka-prywatnosci/">'+tx.p+'</a></div>'+
-        '<div class="tmx-cc__btns"><button type="button" class="tmx-cc__b tmx-cc__b--no">'+tx.r+'</button>'+
-        '<button type="button" class="tmx-cc__b tmx-cc__b--yes">'+tx.a+'</button></div>';
-      document.body.appendChild(b);
-      b.querySelector('.tmx-cc__b--yes').addEventListener('click',function(){grant();b.remove();});
-      b.querySelector('.tmx-cc__b--no').addEventListener('click',function(){deny();b.remove();});}
-    if(document.body)show();else document.addEventListener('DOMContentLoaded',show);
-  })();
-  </script>
+(function(){try{var u={},s=JSON.parse(localStorage.getItem('tmx-consent-v2')||'null');
+if(s){if(s.a)u.analytics_storage='granted';if(s.m){u.ad_storage='granted';u.ad_user_data='granted';u.ad_personalization='granted';}}
+else if(localStorage.getItem('tmx-consent-v1')==='granted')u.analytics_storage='granted';
+for(var k in u){gtag('consent','update',u);break;}}catch(e){}})();
+</script>
+<script defer src="/assets/js/consent.js?v=20261123a"></script>
 <!-- TMX-ANALYTICS END -->
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
@@ -174,7 +128,7 @@
 
 
 
-<script defer="" src="/assets/js/nav.js?v=20261008a"></script><script defer="" src="/assets/js/analytics.js?v=20261103a"></script>
+<script defer="" src="/assets/js/nav.js?v=20261123a"></script><script defer="" src="/assets/js/analytics.js?v=20261123a"></script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Karta kierowcy do tachografu – wniosek, wyrobienie online, przedłużenie i utrata", "description": "Karta kierowcy do tachografu: wniosek online w info-car.pl lub pocztą, opłata 172,20 zł, przedłużenie, utrata karty i kary. Stan prawny 2026.", "image": "https://tagra.app/assets/img/hero-poster.jpg", "author": {"@type": "Organization", "@id": "https://tagra.app/#organization", "name": "Truck Data Technology, s.r.o.", "url": "https://www.tdt.cz"}, "publisher": {"@type": "Organization", "@id": "https://tagra.app/#organization", "name": "Truck Data Technology, s.r.o.", "logo": {"@type": "ImageObject", "url": "https://tagra.app/assets/img/logo-light.svg"}}, "datePublished": "2026-09-03T09:00:00+02:00", "dateModified": "2026-10-09T09:00:00+02:00", "inLanguage": "pl", "mainEntityOfPage": "https://tagra.app/pl/poradnik/karta-kierowcy/", "articleSection": "Baza wiedzy dla kierowców", "wordCount": 1480}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "TAGRA", "item": "https://tagra.app/pl/"}, {"@type": "ListItem", "position": 2, "name": "Artykuły", "item": "https://tagra.app/pl/poradnik/"}, {"@type": "ListItem", "position": 3, "name": "Karta kierowcy", "item": "https://tagra.app/pl/poradnik/karta-kierowcy/"}]}</script><noscript><style>.anim-up,.fly-left,.fly-right{opacity:1!important;transform:none!important}</style></noscript><script defer="" src="/assets/js/mobile-bridge.js?v=20261115a" data-tr="1"></script>
 </head>
 <body class="art-page">
