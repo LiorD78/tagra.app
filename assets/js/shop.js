@@ -28,7 +28,7 @@
     var S=[
       {v:[TM+'Comp_2.webm',TM+'Comp_2.mp4'],p:TM+'bannery%20HP/01b-vyhodnoceni-dat.webp',e:'TAGRA program',t:'Find infringements before the inspection does.',c:'Choose by fleet size',h:'#tgs-pricing'},
       {v:[TA+'video/hero-720.mp4'],p:TA+'img/hero-poster.jpg',e:'Free 30-day trial',t:'Try TAGRA free. No card, no commitment.',c:'Start free trial',h:'https://tagra.app/try/'},
-      {v:[TM+'terminy-hero.webm',TM+'terminy-hero.mp4'],p:TM+'DBII_kabina.webp',e:'Vans 2.5–3.5 t',t:'International transport with vans: tachograph from July 2026.',c:'Bundles – save €49',h:'/software-device-bundles/'},
+      {v:[TM+'terminy-hero.webm',TM+'terminy-hero.mp4'],p:TM+'DBII_kabina.webp',e:'Vans over 2.5 t',t:'International transport with vans: tachograph from July 2026.',c:'Bundles – save €49',h:'/software-device-bundles/'},
       {v:[TM+'DBIIS-kancelar.webm',TM+'DBIIS-office2.mp4'],p:TM+'Download_Box_II_S_kafe.webp',e:'DOWNLOAD BOX II S',t:'Download in seconds. Evaluate over coffee.',c:'Shop download devices',h:'/download-devices/'}
     ];
     var sec=document.createElement('section');sec.className='tgs-car';sec.setAttribute('aria-label','TAGRA Shop highlights');
@@ -138,7 +138,7 @@
     if(!isHP()||document.querySelector('.tgs-vans'))return;
     var t=anchor();if(!t)return;
     var s=document.createElement('div');s.className='tgs-vans';
-    s.innerHTML='<img class="tgs-ico" src="'+IC+'firma.webp" alt="" width="56" height="56" loading="lazy"><div class="tgs-vans__txt"><span class="tgs-label">International van transport</span><p class="tgs-vans__h">Tachographs for 2.5–3.5 t vans from 1 July 2026</p><p class="tgs-vans__p">Vans of 2.5–3.5 tonnes used in international transport must have a tachograph – and their data must be downloaded, evaluated and archived like any truck.</p></div><a class="tgs-vans__a" href="#tgs-help">Ask which licence you need</a>';
+    s.innerHTML='<img class="tgs-ico" src="'+IC+'firma.webp" alt="" width="56" height="56" loading="lazy"><div class="tgs-vans__txt"><span class="tgs-label">International van transport</span><p class="tgs-vans__h">Tachographs for vans over 2.5 t from 1 July 2026</p><p class="tgs-vans__p">Vans over 2.5 tonnes used in international transport must have a tachograph – and their data must be downloaded, evaluated and archived like any truck.</p></div><a class="tgs-vans__a" href="#tgs-help">Ask which licence you need</a>';
     t.parentNode.insertBefore(s,t);
   }
 

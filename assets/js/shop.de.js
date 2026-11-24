@@ -19,7 +19,7 @@
     var S=[
       {v:[TM+'Comp_2.webm',TM+'Comp_2.mp4'],p:TM+'bannery%20HP/01b-vyhodnoceni-dat.webp',e:'TAGRA Programm',t:'Finden Sie Verstöße, bevor die Behörden es tun.',c:'Nach Fuhrparkgröße wählen',h:'#tgs-pricing'},
       {v:[TA+'video/hero-720.mp4'],p:TA+'img/hero-poster.jpg',e:'30 Tage kostenlos testen',t:'TAGRA kostenlos testen. Ohne Kreditkarte, ohne Verpflichtung.',c:'Kostenlose Testversion starten',h:'https://tagra.app/try/'},
-      {v:[TM+'terminy-hero.webm',TM+'terminy-hero.mp4'],p:TM+'DBII_kabina.webp',e:'Transporter über 2,5–3,5 t',t:'Grenzüberschreitender Verkehr mit Transportern: Fahrtenschreiberpflicht ab Juli 2026.',c:'Bundles – 49 € sparen',h:'/de/software-device-bundles/'},
+      {v:[TM+'terminy-hero.webm',TM+'terminy-hero.mp4'],p:TM+'DBII_kabina.webp',e:'Transporter über 2,5 t',t:'Grenzüberschreitender Verkehr mit Transportern: Fahrtenschreiberpflicht ab Juli 2026.',c:'Bundles – 49 € sparen',h:'/de/software-device-bundles/'},
       {v:[TM+'DBIIS-kancelar.webm',TM+'DBIIS-office2.mp4'],p:TM+'Download_Box_II_S_kafe.webp',e:'DOWNLOAD BOX II S',t:'Daten in Sekunden herunterladen. Bei einem Kaffee auswerten.',c:'Download-Geräte im Shop ansehen',h:'/de/download-devices/'}
     ];
     var sec=document.createElement('section');sec.className='tgs-car';sec.setAttribute('aria-label','Highlights im TAGRA Shop');
@@ -129,7 +129,7 @@
     if(!isHP()||document.querySelector('.tgs-vans'))return;
     var t=anchor();if(!t)return;
     var s=document.createElement('div');s.className='tgs-vans';
-    s.innerHTML='<img class="tgs-ico" src="'+IC+'firma.webp" alt="" width="56" height="56" loading="lazy"><div class="tgs-vans__txt"><span class="tgs-label">Internationaler Transporterverkehr</span><p class="tgs-vans__h">Fahrtenschreiber für Transporter über 2,5 bis 3,5 t ab 1. Juli 2026</p><p class="tgs-vans__p">Transporter über 2,5 bis 3,5 Tonnen im grenzüberschreitenden Güterverkehr müssen mit einem Fahrtenschreiber ausgerüstet sein – und ihre Daten müssen wie bei jedem Lkw heruntergeladen, ausgewertet und archiviert werden.</p></div><a class="tgs-vans__a" href="#tgs-help">Fragen Sie nach der passenden Lizenz</a>';
+    s.innerHTML='<img class="tgs-ico" src="'+IC+'firma.webp" alt="" width="56" height="56" loading="lazy"><div class="tgs-vans__txt"><span class="tgs-label">Internationaler Transporterverkehr</span><p class="tgs-vans__h">Fahrtenschreiber für Transporter über 2,5 t ab 1. Juli 2026</p><p class="tgs-vans__p">Transporter über 2,5 Tonnen im grenzüberschreitenden Güterverkehr müssen mit einem Fahrtenschreiber ausgerüstet sein – und ihre Daten müssen wie bei jedem Lkw heruntergeladen, ausgewertet und archiviert werden.</p></div><a class="tgs-vans__a" href="#tgs-help">Fragen Sie nach der passenden Lizenz</a>';
     t.parentNode.insertBefore(s,t);
   }
 

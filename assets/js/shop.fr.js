@@ -20,7 +20,7 @@
     var S=[
       {v:[TM+'Comp_2.webm',TM+'Comp_2.mp4'],p:TM+'bannery%20HP/01b-vyhodnoceni-dat.webp',e:'programme TAGRA',t:'Repérez les infractions avant les contrôleurs.',c:'Choisissez selon la taille de votre flotte',h:'#tgs-pricing'},
       {v:[TA+'video/hero-720.mp4'],p:TA+'img/hero-poster.jpg',e:'Essai gratuit de 30 jours',t:'Essayez TAGRA gratuitement. Sans carte bancaire ni engagement.',c:'Démarrer l’essai gratuit',h:'https://tagra.app/fr/essai-gratuit/'},
-      {v:[TM+'terminy-hero.webm',TM+'terminy-hero.mp4'],p:TM+'DBII_kabina.webp',e:'Utilitaires de 2,5 à 3,5 t',t:'Transport international en utilitaires\u00a0: tachygraphe obligatoire depuis juillet 2026.',c:'Packs – économisez 49\u00a0€',h:'/fr/software-device-bundles/'},
+      {v:[TM+'terminy-hero.webm',TM+'terminy-hero.mp4'],p:TM+'DBII_kabina.webp',e:'Utilitaires de plus de 2,5 t',t:'Transport international en utilitaires\u00a0: tachygraphe obligatoire depuis juillet 2026.',c:'Packs – économisez 49\u00a0€',h:'/fr/software-device-bundles/'},
       {v:[TM+'DBIIS-kancelar.webm',TM+'DBIIS-office2.mp4'],p:TM+'Download_Box_II_S_kafe.webp',e:'DOWNLOAD BOX II S',t:'Téléchargez les données en quelques secondes. Analysez-les autour d’un café.',c:'Acheter des appareils de téléchargement',h:'/fr/download-devices/'}
     ];
     var sec=document.createElement('section');sec.className='tgs-car';sec.setAttribute('aria-label','À la une sur TAGRA Shop');
@@ -130,7 +130,7 @@
     if(!isHP()||document.querySelector('.tgs-vans'))return;
     var t=anchor();if(!t)return;
     var s=document.createElement('div');s.className='tgs-vans';
-    s.innerHTML='<img class="tgs-ico" src="'+IC+'firma.webp" alt="" width="56" height="56" loading="lazy"><div class="tgs-vans__txt"><span class="tgs-label">Transport international en utilitaires</span><p class="tgs-vans__h">Tachygraphes pour les utilitaires de 2,5 à 3,5 t depuis le 1er juillet 2026</p><p class="tgs-vans__p">Les utilitaires de 2,5 à 3,5 t utilisés pour le transport international doivent être équipés d’un tachygraphe depuis le 1er juillet 2026 et leurs données doivent être téléchargées, analysées et archivées comme pour tout poids lourd.</p></div><a class="tgs-vans__a" href="#tgs-help">Demander quelle licence choisir</a>';
+    s.innerHTML='<img class="tgs-ico" src="'+IC+'firma.webp" alt="" width="56" height="56" loading="lazy"><div class="tgs-vans__txt"><span class="tgs-label">Transport international en utilitaires</span><p class="tgs-vans__h">Tachygraphes pour les utilitaires de plus de 2,5 t depuis le 1er juillet 2026</p><p class="tgs-vans__p">Les utilitaires de plus de 2,5 t utilisés pour le transport international doivent être équipés d’un tachygraphe depuis le 1er juillet 2026 et leurs données doivent être téléchargées, analysées et archivées comme pour tout poids lourd.</p></div><a class="tgs-vans__a" href="#tgs-help">Demander quelle licence choisir</a>';
     t.parentNode.insertBefore(s,t);
   }
 

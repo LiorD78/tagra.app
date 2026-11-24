@@ -20,7 +20,7 @@
     var S=[
       {v:[TM+'Comp_2.webm',TM+'Comp_2.mp4'],p:TM+'bannery%20HP/01b-vyhodnoceni-dat.webp',e:'Programa TAGRA',t:'Detecta las infracciones antes de que lo haga la inspección.',c:'Elige según el tamaño de tu flota',h:'#tgs-pricing'},
       {v:[TA+'video/hero-720.mp4'],p:TA+'img/hero-poster.jpg',e:'Prueba gratuita de 30 días',t:'Prueba TAGRA gratis. Sin tarjeta ni compromiso.',c:'Empieza la prueba gratuita',h:'https://tagra.app/es/prueba-gratis/'},
-      {v:[TM+'terminy-hero.webm',TM+'terminy-hero.mp4'],p:TM+'DBII_kabina.webp',e:'Furgonetas de 2,5–3,5 t',t:'Transporte internacional con furgonetas: tacógrafo a partir de julio de 2026.',c:'Packs – ahorra 49 €',h:'/es/software-device-bundles/'},
+      {v:[TM+'terminy-hero.webm',TM+'terminy-hero.mp4'],p:TM+'DBII_kabina.webp',e:'Furgonetas de más de 2,5 t',t:'Transporte internacional con furgonetas: tacógrafo a partir de julio de 2026.',c:'Packs – ahorra 49 €',h:'/es/software-device-bundles/'},
       {v:[TM+'DBIIS-kancelar.webm',TM+'DBIIS-office2.mp4'],p:TM+'Download_Box_II_S_kafe.webp',e:'DOWNLOAD BOX II S',t:'Descarga en segundos. Analiza mientras te tomas un café.',c:'Comprar dispositivos de descarga',h:'/es/download-devices/'}
     ];
     var sec=document.createElement('section');sec.className='tgs-car';sec.setAttribute('aria-label','Lo más destacado de TAGRA Shop');
@@ -130,7 +130,7 @@
     if(!isHP()||document.querySelector('.tgs-vans'))return;
     var t=anchor();if(!t)return;
     var s=document.createElement('div');s.className='tgs-vans';
-    s.innerHTML='<img class="tgs-ico" src="'+IC+'firma.webp" alt="" width="56" height="56" loading="lazy"><div class="tgs-vans__txt"><span class="tgs-label">Transporte internacional con furgonetas</span><p class="tgs-vans__h">Tacógrafos para furgonetas de 2,5–3,5 t desde el 1 de julio de 2026</p><p class="tgs-vans__p">Las furgonetas de 2,5–3,5 toneladas utilizadas en el transporte internacional deben llevar un tacógrafo, y sus datos deben descargarse, analizarse y archivarse como los de cualquier camión.</p></div><a class="tgs-vans__a" href="#tgs-help">Consulta qué licencia necesitas</a>';
+    s.innerHTML='<img class="tgs-ico" src="'+IC+'firma.webp" alt="" width="56" height="56" loading="lazy"><div class="tgs-vans__txt"><span class="tgs-label">Transporte internacional con furgonetas</span><p class="tgs-vans__h">Tacógrafos para furgonetas de más de 2,5 t desde el 1 de julio de 2026</p><p class="tgs-vans__p">Las furgonetas de más de 2,5 toneladas utilizadas en el transporte internacional deben llevar un tacógrafo, y sus datos deben descargarse, analizarse y archivarse como los de cualquier camión.</p></div><a class="tgs-vans__a" href="#tgs-help">Consulta qué licencia necesitas</a>';
     t.parentNode.insertBefore(s,t);
   }
 

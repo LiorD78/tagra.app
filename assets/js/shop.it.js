@@ -20,7 +20,7 @@
     var S=[
       {v:[TM+'Comp_2.webm',TM+'Comp_2.mp4'],p:TM+'bannery%20HP/01b-vyhodnoceni-dat.webp',e:'programma TAGRA',t:'Individui le infrazioni prima che lo faccia il controllo.',c:'Scelga in base alle dimensioni della flotta',h:'#tgs-pricing'},
       {v:[TA+'video/hero-720.mp4'],p:TA+'img/hero-poster.jpg',e:'Prova gratuita di 30 giorni',t:'Provi TAGRA gratis. Senza carta di credito né impegno.',c:'Avvii la prova gratuita',h:'https://tagra.app/it/prova-gratuita/'},
-      {v:[TM+'terminy-hero.webm',TM+'terminy-hero.mp4'],p:TM+'DBII_kabina.webp',e:'Furgoni da 2,5–3,5 t',t:'Trasporto internazionale con furgoni: tachigrafo da luglio 2026.',c:'Pacchetti – risparmi 49\u00a0€',h:'/it/software-device-bundles/'},
+      {v:[TM+'terminy-hero.webm',TM+'terminy-hero.mp4'],p:TM+'DBII_kabina.webp',e:'Furgoni oltre 2,5 t',t:'Trasporto internazionale con furgoni: tachigrafo da luglio 2026.',c:'Pacchetti – risparmi 49\u00a0€',h:'/it/software-device-bundles/'},
       {v:[TM+'DBIIS-kancelar.webm',TM+'DBIIS-office2.mp4'],p:TM+'Download_Box_II_S_kafe.webp',e:'DOWNLOAD BOX II S',t:'Scarichi in pochi secondi. Analizzi davanti a un caffè.',c:'Acquisti dispositivi di scarico',h:'/it/download-devices/'}
     ];
     var sec=document.createElement('section');sec.className='tgs-car';sec.setAttribute('aria-label','In evidenza su TAGRA Shop');
@@ -130,7 +130,7 @@
     if(!isHP()||document.querySelector('.tgs-vans'))return;
     var t=anchor();if(!t)return;
     var s=document.createElement('div');s.className='tgs-vans';
-    s.innerHTML='<img class="tgs-ico" src="'+IC+'firma.webp" alt="" width="56" height="56" loading="lazy"><div class="tgs-vans__txt"><span class="tgs-label">Trasporto internazionale con furgoni</span><p class="tgs-vans__h">Tachigrafi per furgoni da 2,5–3,5 t dal 1° luglio 2026</p><p class="tgs-vans__p">I furgoni da 2,5–3,5 tonnellate utilizzati nel trasporto internazionale devono essere dotati di tachigrafo dal 1° luglio 2026 e i loro dati devono essere scaricati, valutati e archiviati come per qualsiasi autocarro.</p></div><a class="tgs-vans__a" href="#tgs-help">Chieda quale licenza Le serve</a>';
+    s.innerHTML='<img class="tgs-ico" src="'+IC+'firma.webp" alt="" width="56" height="56" loading="lazy"><div class="tgs-vans__txt"><span class="tgs-label">Trasporto internazionale con furgoni</span><p class="tgs-vans__h">Tachigrafi per furgoni oltre 2,5 t dal 1° luglio 2026</p><p class="tgs-vans__p">I furgoni oltre 2,5 tonnellate utilizzati nel trasporto internazionale devono essere dotati di tachigrafo dal 1° luglio 2026 e i loro dati devono essere scaricati, valutati e archiviati come per qualsiasi autocarro.</p></div><a class="tgs-vans__a" href="#tgs-help">Chieda quale licenza Le serve</a>';
     t.parentNode.insertBefore(s,t);
   }
 

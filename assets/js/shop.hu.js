@@ -19,7 +19,7 @@
     var S=[
       {v:[TM+'Comp_2.webm',TM+'Comp_2.mp4'],p:TM+'bannery%20HP/01b-vyhodnoceni-dat.webp',e:'TAGRA program',t:'Tárja fel a szabálysértéseket még az ellenőrzés előtt.',c:'Válasszon flottaméret szerint',h:'#tgs-pricing'},
       {v:[TA+'video/hero-720.mp4'],p:TA+'img/hero-poster.jpg',e:'30 napos ingyenes próbaverzió',t:'Próbálja ki ingyen a TAGRA programot. Bankkártya és kötöttség nélkül.',c:'Próbálja ki 30 napig ingyen',h:'https://tagra.app/hu/ingyenes-probaverzio/'},
-      {v:[TM+'terminy-hero.webm',TM+'terminy-hero.mp4'],p:TM+'DBII_kabina.webp',e:'2,5–3,5 tonnás furgonok',t:'Nemzetközi fuvarozás furgonnal: tachográf 2026 júliusától.',c:'Csomagok – 49 € megtakarítás',h:'/hu/software-device-bundles/'},
+      {v:[TM+'terminy-hero.webm',TM+'terminy-hero.mp4'],p:TM+'DBII_kabina.webp',e:'2,5 tonna feletti furgonok',t:'Nemzetközi fuvarozás furgonnal: tachográf 2026 júliusától.',c:'Csomagok – 49 € megtakarítás',h:'/hu/software-device-bundles/'},
       {v:[TM+'DBIIS-kancelar.webm',TM+'DBIIS-office2.mp4'],p:TM+'Download_Box_II_S_kafe.webp',e:'DOWNLOAD BOX II S',t:'Letöltés másodpercek alatt. Kiértékelés egy kávé mellett.',c:'Letöltőeszközök',h:'/hu/download-devices/'}
     ];
     var sec=document.createElement('section');sec.className='tgs-car';sec.setAttribute('aria-label','A TAGRA webáruház kiemelt ajánlatai');
@@ -129,7 +129,7 @@
     if(!isHP()||document.querySelector('.tgs-vans'))return;
     var t=anchor();if(!t)return;
     var s=document.createElement('div');s.className='tgs-vans';
-    s.innerHTML='<img class="tgs-ico" src="'+IC+'firma.webp" alt="" width="56" height="56" loading="lazy"><div class="tgs-vans__txt"><span class="tgs-label">Nemzetközi kisteherautós fuvarozás</span><p class="tgs-vans__h">Tachográf a 2,5–3,5 tonnás kisteherautókban 2026. július 1-jétől</p><p class="tgs-vans__p">A nemzetközi fuvarozásban használt 2,5–3,5 tonnás kisteherautókat tachográffal kell felszerelni, adataikat pedig ugyanúgy le kell tölteni, ki kell értékelni és archiválni kell, mint a teherautókét.</p></div><a class="tgs-vans__a" href="#tgs-help">Kérdezze meg, melyik licenc szükséges</a>';
+    s.innerHTML='<img class="tgs-ico" src="'+IC+'firma.webp" alt="" width="56" height="56" loading="lazy"><div class="tgs-vans__txt"><span class="tgs-label">Nemzetközi kisteherautós fuvarozás</span><p class="tgs-vans__h">Tachográf a 2,5 tonna feletti kisteherautókban 2026. július 1-jétől</p><p class="tgs-vans__p">A nemzetközi fuvarozásban használt 2,5 tonna feletti kisteherautókat tachográffal kell felszerelni, adataikat pedig ugyanúgy le kell tölteni, ki kell értékelni és archiválni kell, mint a teherautókét.</p></div><a class="tgs-vans__a" href="#tgs-help">Kérdezze meg, melyik licenc szükséges</a>';
     t.parentNode.insertBefore(s,t);
   }
 
