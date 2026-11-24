@@ -7,12 +7,12 @@
 param([string]$mode,[string]$lang)
 $ErrorActionPreference='Stop'
 function D($s){[Text.Encoding]::UTF8.GetString([Convert]::FromBase64String($s))}
-function H($s){$h=[Security.Cryptography.SHA256]::Create();(($h.ComputeHash([Text.Encoding]::UTF8.GetBytes($s))|ForEach-Object{$_.ToString('x2')}) -join '')}
+function Hq($s){$h=[Security.Cryptography.SHA256]::Create();(($h.ComputeHash([Text.Encoding]::UTF8.GetBytes($s))|ForEach-Object{$_.ToString('x2')}) -join '')}
 function C($t,$p){([regex]::Matches($t,[regex]::Escape($p))).Count}
 $utf8=New-Object Text.UTF8Encoding($false)
 $in=Get-Clipboard -Raw
 if(-not $in){'STOP: schranka je prazdna';exit 1}
-'IN  delka '+$in.Length+' sha '+(H $in)
+'IN  delka '+$in.Length+' sha '+(Hq $in)
 [IO.File]::WriteAllText((Join-Path $PWD ('zaloha-'+$mode+'-'+$lang+'.txt')),$in,$utf8)
 $out=$null
 if($mode -eq 'lista'){
@@ -36,7 +36,7 @@ elseif($mode -eq 'perex' -and $lang -eq 'cz'){
   $out=$in.Replace($po,'')
 }
 else{'STOP: neznamy rezim (lista cz|lista sk|perex cz)';exit 1}
-'OUT delka '+$out.Length+' sha '+(H $out)
+'OUT delka '+$out.Length+' sha '+(Hq $out)
 [IO.File]::WriteAllText((Join-Path $PWD ('out-'+$mode+'-'+$lang+'.txt')),$out,$utf8)
 Set-Clipboard -Value $out
 'OUT OK - vysledek je ve schrance'
