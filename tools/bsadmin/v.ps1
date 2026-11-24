@@ -7,8 +7,8 @@
 #        cl <alias|soubor> = soubor -> schranka
 #        ps <alias|skript> [arg...] = spusti PowerShell skript balicku v jeho slozce
 #        ll            = seznam souboru aktualniho balicku + sha
-#        fd <text>     = najde soubory pod %TEMP%\7\oci, jejichz nazev obsahuje text (velikost, cas, sha)
-#        cp <text>     = presne 1 nalezeny soubor -> schranka (vypise radek 2 a sha); jinak jen seznam
+#        fd <text> [text2] [text3] = najde soubory pod %TEMP%\7\oci, jejichz nazev obsahuje vsechny texty (velikost, cas, sha)
+#        cp <text> [text2] [text3] = presne 1 nalezeny soubor -> schranka (vypise radek 1-2 a sha); jinak jen seznam
 param([string]$akce = 'll', [string]$a1 = '', [string]$a2 = '', [string]$a3 = '')
 $ErrorActionPreference = 'Stop'
 $ref = 'main'
@@ -31,6 +31,7 @@ function Res([string]$x) {
   if (Test-Path $m) { foreach ($l in Get-Content $m) { $p = $l.Trim() -split '\s+', 2; if ($p.Count -eq 2 -and $p[0] -eq $x) { return $p[1] } } }
   return $x
 }
+function Fnd { $w = @(@($a1, $a2, $a3) | Where-Object { $_ }); return @(Get-ChildItem $root -Recurse -File | Where-Object { $n = $_.Name; @($w | Where-Object { $n.IndexOf($_, [StringComparison]::OrdinalIgnoreCase) -lt 0 }).Count -eq 0 }) }
 function Sha([string]$f) { return (Get-FileHash $f -Algorithm SHA256).Hash.ToLower() }
 switch ($akce) {
   'init' {
@@ -71,9 +72,9 @@ switch ($akce) {
   'cl' { $d = Dir2; $f = Res $a1; Set-Clipboard -Value ([IO.File]::ReadAllText((Resolve-Path $f), $utf8)); Write-Host ('schranka = ' + $f + ' ' + (Get-Item $f).Length + ' B sha ' + (Sha $f).Substring(0, 12)) }
   'ps' { $d = Dir2; $f = Res $a1; $args2 = @(@($a2, $a3) | Where-Object { $_ }); & powershell -NoProfile -ExecutionPolicy Bypass -File (Join-Path $d $f) @args2 }
   'll' { $d = Dir2; Write-Host ('balicek ' + (Cur)); Get-ChildItem -File | ForEach-Object { $_.Name + ' ' + $_.Length + ' ' + (Sha $_.Name).Substring(0, 12) } }
-  'fd' { Get-ChildItem $root -Recurse -File | Where-Object { $_.Name -like ('*' + $a1 + '*') } | Sort-Object LastWriteTime | ForEach-Object { $_.FullName.Substring($root.Length + 1) + ' ' + $_.Length + ' ' + $_.LastWriteTime.ToString('dd.MM HH:mm') + ' ' + (Sha $_.FullName).Substring(0, 12) } }
+  'fd' { Fnd | Sort-Object LastWriteTime | ForEach-Object { $_.FullName.Substring($root.Length + 1) + ' ' + $_.Length + ' ' + $_.LastWriteTime.ToString('dd.MM HH:mm') + ' ' + (Sha $_.FullName).Substring(0, 12) } }
   'cp' {
-    $m = @(Get-ChildItem $root -Recurse -File | Where-Object { $_.Name -like ('*' + $a1 + '*') })
+    $m = @(Fnd)
     if ($m.Count -ne 1) { Write-Host ('STOP: nalezeno ' + $m.Count + ' souboru, schranka beze zmeny'); $m | ForEach-Object { Write-Host ('  ' + $_.FullName.Substring($root.Length + 1)) }; break }
     $t = [IO.File]::ReadAllText($m[0].FullName, $utf8); Set-Clipboard -Value $t
     $l = $t -split "`n"; $r2 = ''; if ($l.Count -gt 1) { $r2 = $l[1].Trim() }
