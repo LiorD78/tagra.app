@@ -60,7 +60,7 @@ switch ($akce) {
   }
   'sv' { $d = Dir2; $f = Res $a1; (Get-Clipboard -Raw) | Set-Content -Encoding UTF8 $f; $t = [IO.File]::ReadAllText((Resolve-Path $f), $utf8); $z = $t.Substring(0, [Math]::Min(60, $t.Length)).Replace("`r", ' ').Replace("`n", ' '); Write-Host ('ulozeno ' + $f + ' znaku ' + $t.Length + ' | ' + $z) }
   'cl' { $d = Dir2; $f = Res $a1; Set-Clipboard -Value ([IO.File]::ReadAllText((Resolve-Path $f), $utf8)); Write-Host ('schranka = ' + $f + ' ' + (Get-Item $f).Length + ' B sha ' + (Sha $f).Substring(0, 12)) }
-  'ps' { $d = Dir2; $f = Res $a1; $args2 = @($a2, $a3) | Where-Object { $_ }; & powershell -NoProfile -ExecutionPolicy Bypass -File (Join-Path $d $f) @args2 }
+  'ps' { $d = Dir2; $f = Res $a1; $args2 = @(@($a2, $a3) | Where-Object { $_ }); & powershell -NoProfile -ExecutionPolicy Bypass -File (Join-Path $d $f) @args2 }
   'll' { $d = Dir2; Write-Host ('balicek ' + (Cur)); Get-ChildItem -File | ForEach-Object { $_.Name + ' ' + $_.Length + ' ' + (Sha $_.Name).Substring(0, 12) } }
   default { Write-Host ('neznama akce ' + $akce) }
 }
