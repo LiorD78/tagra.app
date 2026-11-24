@@ -19,7 +19,7 @@
     var S=[
       {v:[TM+'Comp_2.webm',TM+'Comp_2.mp4'],p:TM+'bannery%20HP/01b-vyhodnoceni-dat.webp',e:'TAGRA program',t:'Wykryj naruszenia przed kontrolą.',c:'Wybierz według wielkości floty',h:'#tgs-pricing'},
       {v:[TA+'video/hero-720.mp4'],p:TA+'img/hero-poster.jpg',e:'Bezpłatna 30-dniowa wersja próbna',t:'Wypróbuj TAGRA bezpłatnie. Bez karty i zobowiązań.',c:'Rozpocznij bezpłatny okres próbny',h:'https://tagra.app/pl/wyprobuj/'},
-      {v:[TM+'terminy-hero.webm',TM+'terminy-hero.mp4'],p:TM+'DBII_kabina.webp',e:'Busy 2,5–3,5 t',t:'Międzynarodowy transport busami: tachograf od lipca 2026 r.',c:'Zestawy – oszczędź 49 €',h:'/pl/software-device-bundles/'},
+      {v:[TM+'terminy-hero.webm',TM+'terminy-hero.mp4'],p:TM+'DBII_kabina.webp',e:'Busy powyżej 2,5 t',t:'Międzynarodowy transport busami: tachograf od lipca 2026 r.',c:'Zestawy – oszczędź 49 €',h:'/pl/software-device-bundles/'},
       {v:[TM+'DBIIS-kancelar.webm',TM+'DBIIS-office2.mp4'],p:TM+'Download_Box_II_S_kafe.webp',e:'DOWNLOAD BOX II S',t:'Pobierz dane w kilka sekund. Przeanalizuj przy kawie.',c:'Kup urządzenia do pobierania danych',h:'/pl/download-devices/'}
     ];
     var sec=document.createElement('section');sec.className='tgs-car';sec.setAttribute('aria-label','Polecane w sklepie TAGRA');
@@ -129,7 +129,7 @@
     if(!isHP()||document.querySelector('.tgs-vans'))return;
     var t=anchor();if(!t)return;
     var s=document.createElement('div');s.className='tgs-vans';
-    s.innerHTML='<img class="tgs-ico" src="'+IC+'firma.webp" alt="" width="56" height="56" loading="lazy"><div class="tgs-vans__txt"><span class="tgs-label">Międzynarodowy transport busami</span><p class="tgs-vans__h">Tachografy w busach 2,5–3,5 t od 1 lipca 2026 r.</p><p class="tgs-vans__p">Busy o masie 2,5–3,5 tony używane w transporcie międzynarodowym muszą mieć tachograf – a dane z nich trzeba pobierać, analizować i archiwizować tak jak w przypadku samochodów ciężarowych.</p></div><a class="tgs-vans__a" href="#tgs-help">Zapytaj o odpowiednią licencję</a>';
+    s.innerHTML='<img class="tgs-ico" src="'+IC+'firma.webp" alt="" width="56" height="56" loading="lazy"><div class="tgs-vans__txt"><span class="tgs-label">Międzynarodowy transport busami</span><p class="tgs-vans__h">Tachografy w busach powyżej 2,5 t od 1 lipca 2026 r.</p><p class="tgs-vans__p">Busy o masie powyżej 2,5 tony używane w transporcie międzynarodowym muszą mieć tachograf – a dane z nich trzeba pobierać, analizować i archiwizować tak jak w przypadku samochodów ciężarowych.</p></div><a class="tgs-vans__a" href="#tgs-help">Zapytaj o odpowiednią licencję</a>';
     t.parentNode.insertBefore(s,t);
   }
 

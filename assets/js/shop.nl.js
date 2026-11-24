@@ -20,7 +20,7 @@
     var S=[
       {v:[TM+'Comp_2.webm',TM+'Comp_2.mp4'],p:TM+'bannery%20HP/01b-vyhodnoceni-dat.webp',e:'TAGRA-programma',t:'Ontdek overtredingen voordat controleurs dat doen.',c:'Kies op basis van de omvang van uw wagenpark',h:'#tgs-pricing'},
       {v:[TA+'video/hero-720.mp4'],p:TA+'img/hero-poster.jpg',e:'30 dagen gratis proberen',t:'Probeer TAGRA gratis. Zonder creditcard en vrijblijvend.',c:'Gratis proefversie starten',h:'https://tagra.app/nl/gratis-proefversie/'},
-      {v:[TM+'terminy-hero.webm',TM+'terminy-hero.mp4'],p:TM+'DBII_kabina.webp',e:'Bestelwagens van 2,5 tot 3,5 ton',t:'Internationaal vervoer met bestelwagens: tachograaf verplicht sinds juli 2026.',c:'Bundels – bespaar 49 €',h:'/nl/software-device-bundles/'},
+      {v:[TM+'terminy-hero.webm',TM+'terminy-hero.mp4'],p:TM+'DBII_kabina.webp',e:'Bestelwagens boven 2,5 ton',t:'Internationaal vervoer met bestelwagens: tachograaf verplicht sinds juli 2026.',c:'Bundels – bespaar 49 €',h:'/nl/software-device-bundles/'},
       {v:[TM+'DBIIS-kancelar.webm',TM+'DBIIS-office2.mp4'],p:TM+'Download_Box_II_S_kafe.webp',e:'DOWNLOAD BOX II S',t:'Download gegevens in enkele seconden. Analyseer ze onder het genot van een kop koffie.',c:'Downloadapparaten kopen',h:'/nl/download-devices/'}
     ];
     var sec=document.createElement('section');sec.className='tgs-car';sec.setAttribute('aria-label','Uitgelicht in TAGRA Shop');
@@ -130,7 +130,7 @@
     if(!isHP()||document.querySelector('.tgs-vans'))return;
     var t=anchor();if(!t)return;
     var s=document.createElement('div');s.className='tgs-vans';
-    s.innerHTML='<img class="tgs-ico" src="'+IC+'firma.webp" alt="" width="56" height="56" loading="lazy"><div class="tgs-vans__txt"><span class="tgs-label">Internationaal vervoer met bestelwagens</span><p class="tgs-vans__h">Tachografen voor bestelwagens van 2,5 tot 3,5 ton sinds 1 juli 2026</p><p class="tgs-vans__p">Bestelwagens van 2,5 tot 3,5 ton die worden gebruikt voor internationaal vervoer moeten sinds 1 juli 2026 zijn uitgerust met een tachograaf. De gegevens moeten worden gedownload, geanalyseerd en gearchiveerd, net als bij elke vrachtwagen.</p></div><a class="tgs-vans__a" href="#tgs-help">Vraag welke licentie u nodig hebt</a>';
+    s.innerHTML='<img class="tgs-ico" src="'+IC+'firma.webp" alt="" width="56" height="56" loading="lazy"><div class="tgs-vans__txt"><span class="tgs-label">Internationaal vervoer met bestelwagens</span><p class="tgs-vans__h">Tachografen voor bestelwagens boven 2,5 ton sinds 1 juli 2026</p><p class="tgs-vans__p">Bestelwagens boven 2,5 ton die worden gebruikt voor internationaal vervoer moeten sinds 1 juli 2026 zijn uitgerust met een tachograaf. De gegevens moeten worden gedownload, geanalyseerd en gearchiveerd, net als bij elke vrachtwagen.</p></div><a class="tgs-vans__a" href="#tgs-help">Vraag welke licentie u nodig hebt</a>';
     t.parentNode.insertBefore(s,t);
   }
 
