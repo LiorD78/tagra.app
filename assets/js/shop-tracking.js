@@ -114,15 +114,7 @@
       + '<img class="g" src="' + IMG + 'robot-chat-hlava2.webp" alt="" width="96" height="82">'
       + '<img class="e" src="' + IMG + 'robot-chat-mrk2.webp" alt="" width="96" height="82">'
       + '<img class="h" src="' + IMG + 'robot-chat-paze.webp" alt="" width="96" height="82"></span>';
-    /* bublina s textem jednou za návštěvu po 6,5 s, jen na desktopu, na 8 s */
-    try {
-      if (w.matchMedia && w.matchMedia('(min-width:1024px) and (hover:hover)').matches && !sessionStorage.getItem('tgsChatPeek')) {
-        setTimeout(function () {
-          b.classList.add('peek'); try { sessionStorage.setItem('tgsChatPeek', '1'); } catch (e) {}
-          setTimeout(function () { b.classList.remove('peek'); }, 8000);
-        }, 6500);
-      }
-    } catch (e) {}
+    /* bez automaticke bubliny (24. 11. 2026) – text jen pri najeti mysi */
     b.addEventListener('click', function () {
       b.classList.remove('peek'); try { sessionStorage.setItem('tgsChatPeek', '1'); } catch (e) {}
       if (w.$chatwoot && w.$chatwoot.toggle) w.$chatwoot.toggle();
