@@ -22,7 +22,7 @@
   function tf(k,o){var r=I[k]||'',x;for(x in o)r=r.split('{'+x+'}').join(o[x]);return r;}
   var SHIP=tx('ship',"EU delivery: free");
   var IC='https://cdn.truckmall.cz/data/user-content/cfg-ico-';
-  var PRICES_JS='https://tagra.app/assets/js/tagra-prices.js?v=20261107';
+  var PRICES_JS='https://tagra.app/assets/js/tagra-prices.js?v=20261124';
   var CAP={t1:tx('cap1','1 vehicle'),t2:tx('cap2','2 vehicles'),t4:tx('cap4','3–4 vehicles'),t6:tx('cap6','5–6 vehicles'),max:tx('capmax','unlimited vehicles')};
   var RULES=null,SAVE='';
   function rules(P){
