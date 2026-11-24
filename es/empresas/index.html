@@ -790,6 +790,29 @@ for(var k in u){gtag('consent','update',u);break;}}catch(e){}})();
 </div>
 </div>
 </section>
+<!-- ═══ 56 DAYS (roadside check window) ═══ -->
+<section class="band tg56-band" aria-label="Los controles en carretera abarcan hoy y los 56 días anteriores"><div class="container">
+<div class="tg56" id="tg56">
+<h2 class="tg56-h"><span class="tg56-gt">Controles en carretera: hoy +</span></h2>
+<div class="tg56-hero"><div class="tg56-num tg56-gt" aria-hidden="true"><span data-n>56</span></div><div class="tg56-pill">días<br/>anteriores</div></div>
+<div class="tg56-days" aria-hidden="true"></div>
+<div class="tg56-axis" aria-hidden="true"><span class="tg56-gt">56 días anteriores</span><span class="tg56-t">hoy</span></div>
+<p class="tg56-claim"><span class="tg56-gt">TAGRA muestra las infracciones de tus conductores antes de que las detecte un control en carretera –</span></p>
+<div class="tg56-stamp">comprueba primero tus datos.</div>
+<p class="tg56-src">Desde el 31 de diciembre de 2024, los controles en carretera abarcan el día en curso y los 56 días anteriores (Reglamento (UE) n.º 165/2014, art. 36).</p>
+</div>
+<script>
+(function(){var root=document.getElementById('tg56');if(!root)return;
+var wrap=root.querySelector('.tg56-days'),numEl=root.querySelector('[data-n]'),today=root.querySelector('.tg56-t'),claim=root.querySelector('.tg56-claim'),stamp=root.querySelector('.tg56-stamp');
+var N=56,STEP=26,bars=[];for(var i=0;i<=N;i++){var b=document.createElement('span');b.className='tg56-d'+(i===N?' today':'');wrap.appendChild(b);bars.push(b);}
+var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;root.classList.add('tg56-js');
+function fin(){bars.forEach(function(b){b.classList.add('on')});numEl.textContent=N;root.classList.add('go');today.classList.add('on');claim.classList.add('on');stamp.classList.add('on');}
+function play(){root.classList.add('go');bars.forEach(function(b,i){setTimeout(function(){b.classList.add('on');if(i<N)numEl.textContent=i+1;if(i===N)today.classList.add('on');},300+i*STEP+(i===N?260:0));});
+var end=300+N*STEP+260;setTimeout(function(){claim.classList.add('on')},end+350);setTimeout(function(){stamp.classList.add('on')},end+1000);}
+if('IntersectionObserver' in window&&!reduce){numEl.textContent='0';var io=new IntersectionObserver(function(en){if(en[0].isIntersecting){play();io.disconnect();}},{threshold:.35});io.observe(root);}else{fin();}
+})();
+</script>
+</div></section>
 <!-- ═══ COMPARISON TABLE ══════════════════════════════════════════ -->
 <section aria-label="Comparativa de soluciones" class="band">
 <div class="container anim-up">
@@ -855,29 +878,6 @@ for(var k in u){gtag('consent','update',u);break;}}catch(e){}})();
 </div>
 </div>
 </section>
-<!-- ═══ 56 DAYS (roadside check window) ═══ -->
-<section class="band tg56-band" aria-label="Los controles en carretera abarcan hoy y los 56 días anteriores"><div class="container">
-<div class="tg56" id="tg56">
-<h2 class="tg56-h"><span class="tg56-gt">Controles en carretera: hoy +</span></h2>
-<div class="tg56-hero"><div class="tg56-num tg56-gt" aria-hidden="true"><span data-n>56</span></div><div class="tg56-pill">días<br/>anteriores</div></div>
-<div class="tg56-days" aria-hidden="true"></div>
-<div class="tg56-axis" aria-hidden="true"><span class="tg56-gt">56 días anteriores</span><span class="tg56-t">hoy</span></div>
-<p class="tg56-claim"><span class="tg56-gt">TAGRA muestra las infracciones de tus conductores antes de que las detecte un control en carretera –</span></p>
-<div class="tg56-stamp">comprueba primero tus datos.</div>
-<p class="tg56-src">Desde el 31 de diciembre de 2024, los controles en carretera abarcan el día en curso y los 56 días anteriores (Reglamento (UE) n.º 165/2014, art. 36).</p>
-</div>
-<script>
-(function(){var root=document.getElementById('tg56');if(!root)return;
-var wrap=root.querySelector('.tg56-days'),numEl=root.querySelector('[data-n]'),today=root.querySelector('.tg56-t'),claim=root.querySelector('.tg56-claim'),stamp=root.querySelector('.tg56-stamp');
-var N=56,STEP=26,bars=[];for(var i=0;i<=N;i++){var b=document.createElement('span');b.className='tg56-d'+(i===N?' today':'');wrap.appendChild(b);bars.push(b);}
-var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;root.classList.add('tg56-js');
-function fin(){bars.forEach(function(b){b.classList.add('on')});numEl.textContent=N;root.classList.add('go');today.classList.add('on');claim.classList.add('on');stamp.classList.add('on');}
-function play(){root.classList.add('go');bars.forEach(function(b,i){setTimeout(function(){b.classList.add('on');if(i<N)numEl.textContent=i+1;if(i===N)today.classList.add('on');},300+i*STEP+(i===N?260:0));});
-var end=300+N*STEP+260;setTimeout(function(){claim.classList.add('on')},end+350);setTimeout(function(){stamp.classList.add('on')},end+1000);}
-if('IntersectionObserver' in window&&!reduce){numEl.textContent='0';var io=new IntersectionObserver(function(en){if(en[0].isIntersecting){play();io.disconnect();}},{threshold:.35});io.observe(root);}else{fin();}
-})();
-</script>
-</div></section>
 
 <!-- ═══ HOW TO GET DATA ═══════════════════════════════════════════ -->
 <!--  DKV LIVE INTEGRATION CALLOUT (added 2026-05-11)  -->
