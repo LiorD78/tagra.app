@@ -9,6 +9,12 @@
 #        ll            = seznam souboru aktualniho balicku + sha
 param([string]$akce = 'll', [string]$a1 = '', [string]$a2 = '', [string]$a3 = '')
 $ErrorActionPreference = 'Stop'
+$ref = 'main'
+function SetBase {
+  try { $script:ref = (Invoke-RestMethod 'https://api.github.com/repos/LiorD78/tagra.app/commits/main' -Headers @{ 'Accept' = 'application/vnd.github.sha'; 'User-Agent' = 'bsadmin-v' } -UseBasicParsing).ToString().Trim() } catch { }
+  if ($script:ref -notmatch '^[0-9a-f]{40}$') { $script:ref = 'main' }
+  $script:base = 'https://raw.githubusercontent.com/LiorD78/tagra.app/' + $script:ref + '/tools/bsadmin/'
+}
 $base = 'https://raw.githubusercontent.com/LiorD78/tagra.app/main/tools/bsadmin/'
 $root = Join-Path $env:TEMP '7\oci'
 New-Item -ItemType Directory -Force $root | Out-Null
@@ -29,9 +35,10 @@ switch ($akce) {
     Set-Content -Path (Join-Path $env:USERPROFILE 'b.bat') -Encoding ASCII -Value '@powershell -NoProfile -ExecutionPolicy Bypass -File "%USERPROFILE%\v.ps1" %*'
     Write-Host 'OK b.bat -> v.ps1'
   }
-  'up' { Dl ($base + 'v.ps1') (Join-Path $env:USERPROFILE 'v.ps1'); Write-Host ('OK v.ps1 aktualizovan ' + (Sha (Join-Path $env:USERPROFILE 'v.ps1')).Substring(0, 12)) }
+  'up' { SetBase; Dl ($base + 'v.ps1') (Join-Path $env:USERPROFILE 'v.ps1'); Write-Host ('OK v.ps1 aktualizovan ' + (Sha (Join-Path $env:USERPROFILE 'v.ps1')).Substring(0, 12)) }
   'pkg' {
     if (-not $a1) { throw 'chybi nazev balicku' }
+    SetBase
     $d = Join-Path $root $a1
     New-Item -ItemType Directory -Force $d | Out-Null
     Set-Location $d
@@ -56,7 +63,7 @@ switch ($akce) {
       }
     }
     Get-Content 'files.txt' | ForEach-Object { Write-Host ('  ' + $_) }
-    if ($ok) { Write-Host ('OK balicek ' + $a1 + ' v ' + $d) } else { Write-Host 'CHYBA: sha nesedi - NIC NEVKLADAT' }
+    if ($ok) { Write-Host ('OK balicek ' + $a1 + ' v ' + $d + ' (commit ' + $ref.Substring(0, [Math]::Min(7, $ref.Length)) + ')') } else { Write-Host 'CHYBA: sha nesedi - NIC NEVKLADAT' }
   }
   'sv' { $d = Dir2; $f = Res $a1; (Get-Clipboard -Raw) | Set-Content -Encoding UTF8 $f; $t = [IO.File]::ReadAllText((Resolve-Path $f), $utf8); $z = $t.Substring(0, [Math]::Min(60, $t.Length)).Replace("`r", ' ').Replace("`n", ' '); Write-Host ('ulozeno ' + $f + ' znaku ' + $t.Length + ' | ' + $z) }
   'cl' { $d = Dir2; $f = Res $a1; Set-Clipboard -Value ([IO.File]::ReadAllText((Resolve-Path $f), $utf8)); Write-Host ('schranka = ' + $f + ' ' + (Get-Item $f).Length + ' B sha ' + (Sha $f).Substring(0, 12)) }
