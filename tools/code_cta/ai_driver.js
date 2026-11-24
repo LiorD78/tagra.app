@@ -6,7 +6,7 @@ const fs = require('fs');
 const DRY = process.argv.includes('--dry-run');
 const F = JSON.parse(fs.readFileSync('tools/code_cta/strings.json', 'utf8'));
 const TRY = { en: '/try/', es: '/es/prueba-gratis/' };
-const SHOP = { de: 'https://shop.tagra.app/de/tagra-trucker/', pl: 'https://shop.tagra.app/pl/tagra-trucker/', hu: 'https://shop.tagra.app/hu/tagra-trucker/', es: 'https://shop.tagra.app/es/tagra-trucker/', it: 'https://shop.tagra.app/it/tagra-trucker/', fr: 'https://shop.tagra.app/fr/tagra-trucker/' };
+const SHOP = { de: 'https://shop.tagra.app/de/tagra-trucker/', pl: 'https://shop.tagra.app/pl/tagra-trucker/', hu: 'https://shop.tagra.app/hu/tagra-trucker/', es: 'https://shop.tagra.app/es/tagra-trucker/', it: 'https://shop.tagra.app/it/tagra-trucker/', fr: 'https://shop.tagra.app/fr/tagra-trucker/', nl: 'https://shop.tagra.app/nl/tagra-trucker/' };
 const PAGES = { en: ['index.html', 'driver/index.html'], de: ['de/index.html', 'de/fahrer/index.html'], pl: ['pl/index.html', 'pl/dla-kierowcow/index.html'],
   hu: ['hu/index.html', 'hu/soforoknek/index.html'], ro: ['ro/index.html', 'ro/pentru-conducatori/index.html'], fr: ['fr/index.html', 'fr/conducteurs/index.html'],
   el: ['el/index.html', 'el/odigoi/index.html'], it: ['it/index.html', 'it/per-autisti/index.html'], nl: ['nl/index.html', 'nl/voor-chauffeurs/index.html'],

@@ -36,7 +36,8 @@ const SHOP = {
   hu: 'https://shop.tagra.app/hu/tagra-trucker/',
   es: 'https://shop.tagra.app/es/tagra-trucker/',
   it: 'https://shop.tagra.app/it/tagra-trucker/',
-  fr: 'https://shop.tagra.app/fr/tagra-trucker/'
+  fr: 'https://shop.tagra.app/fr/tagra-trucker/',
+  nl: 'https://shop.tagra.app/nl/tagra-trucker/'
 };
 const SHOP_DEFAULT = 'https://shop.tagra.app/tagra-trucker/';
 /* Stránka pro firmy v jazyce (z navigace jazyka) — jen pro fleet_link u symbolů. */
