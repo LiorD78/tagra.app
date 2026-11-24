@@ -1,7 +1,7 @@
 /* TRUCKMALL – animovaná sekce „Silniční kontrola: dnešek + 56 předchozích dní“ (CZ + SK)
  * Vzor: tagra.app (.tg56), zde scope .tmx-56. Načítá se z Horní informační lišty BSADMIN
  * (<script src="https://tagra.app/assets/truckmall/tmx-56.js?v=..." defer>), sekci vkládá jen
- * na stránky z PAGES (kategorie program TAGRA c5720 = dopravci, TAGRA TRUCKER p212497 = řidiči).
+ * na stránky z PAGES (kategorie program TAGRA c5720 = dopravci, pod výpis produktů; TAGRA TRUCKER p212497 = řidiči).
  * Fakt: čl. 36 nařízení (EU) 165/2014 ve znění 2020/1054, od 31. 12. 2024 dnešek + 56 předchozích dní.
  * Texty CZ/SK: crew (GPT + Gemini) 24. 11. 2026. Bez JS / prefers-reduced-motion = hotový stav. */
 (function () {
@@ -28,7 +28,8 @@
 
   // where: 'before' = vložit před nalezenou sekci, 'after' = za ni
   var PAGES = [
-    { re: /-c5720\/?$/i, audience: 'fleet', find: function () { return document.getElementById('vystupy-tagra'); }, where: 'before' },
+    // kategorie: pod výpis produktů (popis kategorie je sbalený pod „Zobrazit podrobnosti“, tam by ji nikdo neviděl)
+    { re: /-c5720\/?$/i, audience: 'fleet', find: function () { return document.getElementById('CompoundPagingBottom') || document.getElementById('ProductsHost'); }, where: 'after' },
     { re: /-p212497\/?$/i, audience: 'driver', find: function () {
         var s = document.querySelectorAll('section[aria-label]');
         for (var i = 0; i < s.length; i++) { if (/^Funkc(e|ie) programu TAGRA/.test(s[i].getAttribute('aria-label'))) return s[i]; }
