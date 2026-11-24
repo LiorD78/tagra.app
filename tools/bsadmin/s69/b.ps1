@@ -21,7 +21,8 @@ for ($k = $s; $k -le $e; $k++) {
   $x = $it[3]
   [Windows.Forms.Clipboard]::SetText($x)
   Write-Host ('[' + $k + '] ' + $it[0] + ' ' + $it[1] + ' ' + $it[2] + ' : ' + $x)
-  do { Start-Sleep -Milliseconds 200; $c2 = $x ; try { $c2 = [Windows.Forms.Clipboard]::GetText() } catch { } } while ($c2 -eq $x)
+  $mk = $x + ' '
+  do { Start-Sleep -Milliseconds 200; $c2 = $x ; try { $c2 = [Windows.Forms.Clipboard]::GetText() } catch { }; if ($c2 -ne $x -and $c2 -ne $mk) { try { [Windows.Forms.Clipboard]::SetText($x) } catch { } } } while ($c2 -ne $mk)
   Write-Host '   ok'
   Start-Sleep -Milliseconds 300
 }
