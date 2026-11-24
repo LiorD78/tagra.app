@@ -1,7 +1,7 @@
 /* TRUCKMALL – animovaná sekce „Silniční kontrola: dnešek + 56 předchozích dní“ (CZ + SK)
  * Vzor: tagra.app (.tg56), zde scope .tmx-56. Načítá se z Horní informační lišty BSADMIN
  * (<script src="https://tagra.app/assets/truckmall/tmx-56.js?v=..." defer>), sekci vkládá jen
- * na stránky z PAGES (kategorie program TAGRA c5720 = dopravci, pod výpis produktů; TAGRA TRUCKER p212497 = řidiči).
+ * na stránky z PAGES (kategorie program TAGRA c5720 = dopravci, pod výpis produktů; TAGRA TRUCKER p212497 = řidiči, za sekcí „používají i ti, co vás kontrolují“).
  * Fakt: čl. 36 nařízení (EU) 165/2014 ve znění 2020/1054, od 31. 12. 2024 dnešek + 56 předchozích dní.
  * Texty CZ/SK: crew (GPT + Gemini) 24. 11. 2026. Bez JS / prefers-reduced-motion = hotový stav. */
 (function () {
@@ -30,7 +30,15 @@
   var PAGES = [
     // kategorie: pod výpis produktů (popis kategorie je sbalený pod „Zobrazit podrobnosti“, tam by ji nikdo neviděl)
     { re: /-c5720\/?$/i, audience: 'fleet', find: function () { return document.getElementById('CompoundPagingBottom') || document.getElementById('ProductsHost'); }, where: 'after' },
+    // TAGRA TRUCKER: hned za sekci „TAGRA je nástroj, který používají i ti, co vás kontrolují“ (Libor 24. 11. 2026)
     { re: /-p212497\/?$/i, audience: 'driver', find: function () {
+        var h = document.querySelectorAll('h2');
+        for (var j = 0; j < h.length; j++) {
+          if (/POU[ŽZ][ÍI]VAJ[ÍIÚU]\s+(I|AJ)\s+T[IÍ],?\s+[CČ]O\s+V[ÁA]S\s+KONTROLUJ/i.test(h[j].textContent)) {
+            var sec = h[j].closest ? h[j].closest('section') : null;
+            if (sec) return sec;
+          }
+        }
         var s = document.querySelectorAll('section[aria-label]');
         for (var i = 0; i < s.length; i++) { if (/^Funkc(e|ie) programu TAGRA/.test(s[i].getAttribute('aria-label'))) return s[i]; }
         return null;
