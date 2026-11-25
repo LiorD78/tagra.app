@@ -33,7 +33,7 @@
     s=s.replace('.',el.getAttribute('data-dec')||'.');
     return (el.getAttribute('data-fmt')||'€{n}').replace('{n}',s);
   }
-  var SHOPL={de:'/de',pl:'/pl',es:'/es',it:'/it',fr:'/fr',nl:'/nl'};   /* languages that have their own shop.tagra.app version – add 'xx':'/xx' when it goes live */
+  var SHOPL={de:'/de',pl:'/pl',es:'/es',it:'/it',fr:'/fr',nl:'/nl',ro:'/ro'};   /* languages that have their own shop.tagra.app version – add 'xx':'/xx' when it goes live */
   function fill(tpl,o){return String(tpl||'').replace(/\{(\w+)\}/g,function(m,k){return o.hasOwnProperty(k)?o[k]:m;});}
   /* product key (analytics id) and link for a choice */
   function key(type,k,dev){var t=tiers[k];if(!t)return '';return (type==='fleet'&&dev==='box')?t.bundle.key:t.key;}
