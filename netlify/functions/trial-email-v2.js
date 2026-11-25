@@ -16,7 +16,7 @@ const CONTENT = {
   de: require("../lib/tagra-email/content-de.json"),
 };
 const TOKEN = "tg3-v2-test-8p2m";
-const ALLOWED_TO = ["libor.dospel@tdt.cz", "libor.dospel@gmail.com"];
+const ALLOWED_TO = ["libor.dospel@tdt.cz", "libor.dospel@gmail.com", "ivan.szabo@tdt.cz"];
 
 function names() {
   const out = [];
