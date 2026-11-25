@@ -1,35 +1,26 @@
 /**
- * Netlify Function: trial-email-v2 – nové šablony e-mailů zkušební verze tagra.app (TAGRA III).
- * Zatím jen NÁHLED a TEST, ostré odesílání dál dělá trial-email.js se starými šablonami
- * z /try/email-preview/. Po schválení Liborem se nové šablony přepnou do ostrého provozu.
+ * Netlify Function: trial-email-v2 – náhled a testovací odeslání nových šablon e-mailů
+ * zkušební verze (tagra.app v2 i tdt.cz/tdt.sk).
+ * Ostré odesílání: tagra.app = trial-email.js (nové šablony mu servíruje trial-templates.mjs),
+ * tdt.cz/tdt.sk = tdt-trial-email.js.
  *
  *   GET ?preview=list                       seznam šablon
- *   GET ?preview=en-fleet[&name=Libor]      náhled v prohlížeči
+ *   GET ?preview=en-fleet[&name=Libor]      náhled v prohlížeči (i cz-fleet, sk-driver …)
  *   GET ?send=en-fleet&token=…&to=…         testovací odeslání (jen povolené adresy)
- *
- * Texty: netlify/lib/tagra-email/content-{lang}.json, vzhled: render.js.
  */
-const { renderMail } = require("../lib/tagra-email/render.js");
+const tpl = require("../lib/tagra-email/templates.js");
+const tdt = require("../lib/tdt-email/render.js");
 
-const CONTENT = {
-  en: require("../lib/tagra-email/content-en.json"),
-  de: require("../lib/tagra-email/content-de.json"),
-};
 const TOKEN = "tg3-v2-test-8p2m";
 const ALLOWED_TO = ["libor.dospel@tdt.cz", "libor.dospel@gmail.com", "ivan.szabo@tdt.cz"];
 
-function names() {
-  const out = [];
-  for (const [lang, c] of Object.entries(CONTENT)) for (const k of Object.keys(c.mails)) out.push(k.replace("{lang}", lang));
-  return out;
-}
+const names = () => tpl.names().concat(tdt.names());
 
 function find(name) {
-  for (const [lang, c] of Object.entries(CONTENT)) {
-    for (const [k, m] of Object.entries(c.mails)) {
-      if (k.replace("{lang}", lang) === name) return { html: renderMail(m, c.common), title: m.title };
-    }
-  }
+  const t = tpl.renderTemplate(name);
+  if (t) return t;
+  const html = tdt.render(name);
+  if (html) return { html, title: ((/<title>([\s\S]*?)<\/title>/.exec(html) || [])[1] || name) };
   return null;
 }
 
@@ -42,7 +33,7 @@ exports.handler = async (event) => {
   if (q.preview) {
     if (q.preview === "list") {
       const links = names().map((n) => `<li><a href="?preview=${n}">${n}</a></li>`).join("");
-      return { statusCode: 200, headers: { "Content-Type": "text/html; charset=utf-8" }, body: `<!DOCTYPE html><meta charset="utf-8"><title>TAGRA e-maily v2</title><ul>${links}</ul>` };
+      return { statusCode: 200, headers: { "Content-Type": "text/html; charset=utf-8" }, body: `<!DOCTYPE html><meta charset="utf-8"><title>E-maily v2</title><ul>${links}</ul>` };
     }
     const t = find(String(q.preview));
     if (!t) return { statusCode: 404, body: "unknown template" };
