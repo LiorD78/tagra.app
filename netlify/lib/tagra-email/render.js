@@ -36,7 +36,7 @@ const IMG = (p, q) => `https://www.tdt.cz/.netlify/images?url=${p}&amp;${q}`;
 const A = {
   logoTdt: "https://tagra.app/assets/img/logo-tdt-email-v2.png",
   logoTagra: "https://tagra.app/assets/img/logo-email-white.png",
-  hero: "https://tagra.app/assets/img/email-hero-tdt.jpg",
+  hero: "https://tagra.app/assets/img/email-hero-tdt.jpg?v=2",
   team: (n) => IMG(`/assets/img/team/${n}.webp`, "fm=png&amp;w=160"),
   px: (n) => `https://tagra.app/.netlify/functions/email-logo/${n}.png`,
 };
@@ -109,14 +109,18 @@ function prices(rows, note) {
   return `<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin:0 0 10px;">${tr}</table>${note ? P(note, { size: 13, mb: 4 }) : ""}`;
 }
 
-function card(b) {
-  const icon = ICONS[b.icon];
-  const body = b.body.map((x, i) => `<p class="t-muted" style="margin:${i ? "10px" : "0"} 0 0;font-family:${FONT};font-size:15px;line-height:1.6;color:${MUTED};">${x}</p>`).join("");
-  return `<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="${APPLE_BG}" class="b-box" style="background-color:${APPLE_BG};border:1px solid #d6e6f1;border-radius:16px;margin:0 0 14px;">
+// Karta: tmavě modrá jako hlavička a patička, světlý text. Univerzální pro den i noc
+// (Libor 25. 11. 2026): pozadí drží obrázková dlaždice band-navy, kterou Outlook nepřebarví,
+// a světlý text Outlook nechává světlý. Žádné přepínání barev podle režimu.
+const onNavy = (s) => s.replace(/color:#134a8e;/g, "color:#8cc3ff;").replace(/color:#0b2c4a;/g, "color:#ffffff;");
+function card(b, iconArg) {
+  const icon = iconArg !== undefined ? iconArg : ICONS[b.icon];
+  const body = b.body.map((x, i) => `<p class="t-onnavy" style="margin:${i ? "10px" : "0"} 0 0;font-family:${FONT};font-size:15px;line-height:1.6;color:#dbe6f2;">${onNavy(x)}</p>`).join("");
+  return `<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="${NAVY}" background="${A.px("band-navy")}" class="b-navy" style="background-color:${NAVY};${NAVY_BAND}border-radius:16px;margin:0 0 14px;">
   <tr>
     ${icon ? `<td width="72" valign="top" class="ico" style="padding:20px 0 20px 20px;"><img src="${icon}" width="56" height="56" alt="" style="display:block;width:56px;height:56px;border:0;" /></td>` : ""}
     <td valign="top" style="padding:20px 22px 20px ${icon ? "8px" : "22px"};">
-      <p class="t-head" style="margin:0 0 6px;font-family:${FONT};font-size:14px;font-weight:800;letter-spacing:0.05em;text-transform:uppercase;color:${NAVY};">${b.eyebrow}</p>
+      <p class="t-onnavy" style="margin:0 0 6px;font-family:${FONT};font-size:14px;font-weight:800;letter-spacing:0.05em;text-transform:uppercase;color:#a8d14a;">${b.eyebrow}</p>
       ${body}
     </td>
   </tr>
@@ -192,7 +196,7 @@ function renderMail(m, common) {
   if (m.steps) parts.push((m.steps_title ? heading(m.steps_title, 22) : "") + steps(m.steps));
   if (m.cta2) parts.push(`<div style="margin:4px 0 0;">${button(m.cta2.label, m.cta2.url, { light: true })}</div>`);
   if ((m.boxes && m.boxes.length) || (m.outro && m.outro.length)) {
-    parts.push((m.boxes || []).map(card).join("\n") + (m.outro || []).map((x) => P(x, { size: 15, mb: 10 })).join(""));
+    parts.push((m.boxes || []).map((b) => card(b)).join("\n") + (m.outro || []).map((x) => P(x, { size: 15, mb: 10 })).join(""));
   }
   const sig = common.signatures[m.sign];
   if (sig) parts.push(`<p class="t-muted" style="margin:0 0 4px;font-family:${FONT};font-size:15px;line-height:1.5;color:${MUTED};">${sig.greeting}</p>
