@@ -32,8 +32,8 @@ const FONT = "-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial
 const NAVY = "#0b2c4a";
 const NAVY_DEEP = "#062035";
 const BLUE = "#134a8e";
-const GREEN = "#5c820f";
-const GREEN_LIGHT = "#6e9b12";
+const GREEN = "#6e9b12"; // stejná zelená jako loga TAGRA a TDT (Outlook zahazuje gradient → plná barva)
+const GREEN_LIGHT = "#7fb317";
 const GREEN_TEXT = "#52760c";
 const INK = "#1d1d1f";
 const MUTED = "#515154";
@@ -42,7 +42,7 @@ const APPLE_BG = "#eaf3f8";
 
 const IMG = (p, q) => `https://www.tdt.cz/.netlify/images?url=${p}&amp;${q}`;
 const A = {
-  logoTdt: "https://tagra.app/assets/img/logo-tdt-email-white.png",
+  logoTdt: "https://tagra.app/assets/img/logo-tdt-email-v2.png", // zelená jako logo TAGRA
   logoTagra: "https://tagra.app/assets/img/logo-email-white.png",
   hero: "https://tagra.app/assets/img/email-hero-tdt.jpg", // překryv zapečený v JPG (Outlook zahazuje CSS gradient)
   icoLicence: IMG("/assets/img/ikony/qz-aktivace-licence.webp", "fm=png&amp;w=112"),
