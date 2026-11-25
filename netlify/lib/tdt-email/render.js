@@ -22,6 +22,7 @@ const FONT = "-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial
 const GREEN = "#5C820F";
 const BG = "#eaf3f8";
 const LOGO = "https://tagra.app/assets/img/logo-tdt-email-white.png";
+const LOGO_TAGRA = "https://tagra.app/assets/img/logo-email-white.png"; // logo TAGRA vpravo v hlavičce (25. 11. 2026)
 
 const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#x27;");
 
@@ -189,7 +190,9 @@ ${signature(sig)}
                     <img src="${LOGO}" alt="Truck Data Technology" width="121" height="34" style="display:block;height:34px;width:121px;border:0;" />
                   </a>
                 </td>
-                <td align="right" style="vertical-align:middle;font-size:13px;color:#a9c4e6;font-weight:500;letter-spacing:0.05em;text-transform:uppercase;">${m.strip}</td>
+                <td align="right" style="vertical-align:middle;">
+                  <img src="${LOGO_TAGRA}" alt="TAGRA" width="120" height="27" style="display:inline-block;height:27px;width:120px;border:0;" />
+                </td>
               </tr>
             </table>
           </td>
