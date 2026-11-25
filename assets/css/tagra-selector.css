@@ -85,3 +85,15 @@ a.tsel__o:focus-visible{outline:3px solid rgba(19,74,142,.35);outline-offset:2px
 /* /driver/ hero: one line about TAGRA TRUCKER 2 */
 .tsel-t2line{max-width:620px;margin:2px auto 14px;font-size:15.5px;line-height:1.45;color:var(--text2,#515154)}
 .tsel-t2line a{font-weight:700;color:var(--blue-mid,#134a8e)}
+
+/* 25. 11. 2026 (Libor): homepage – dvě karty výběru vedle sebe; modrá pole začínají ve stejné výšce,
+   jsou stejně vysoká a cenovka je v obou nahoře ve stejné úrovni (CSS subgrid; bez podpory zůstává původní vzhled). */
+@supports (grid-template-rows:subgrid){
+  @media (min-width:1000px){
+    .tsel-home{grid-template-rows:repeat(6,auto);row-gap:0}
+    .tsel-home .tsel{display:grid;grid-template-rows:subgrid;grid-row:span 6;row-gap:0;align-content:start}
+    .tsel-home .tsel>*{min-width:0}
+    .tsel-home .tsel__res{grid-row:6;align-self:stretch;align-content:start}
+    .tsel-home .tsel__price{align-self:start}
+  }
+}

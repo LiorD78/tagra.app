@@ -415,7 +415,7 @@
               fr: 'À votre écoute', it: 'Felici di aiutarti', el: 'Στη διάθεσή σας', ro: 'Vă stăm la dispoziție', hu: 'Szívesen segítünk', es: 'Encantados de ayudarte' };
     var lang = (document.documentElement.lang || 'en').slice(0, 2).toLowerCase();
     var label = L[lang] || L.en;
-    var tel = '+420739005345', telTxt = '+420 739 005 345';
+    var tel = '+420739005345', telTxt = '+420 739 005 345', mail = 'sales@tagra.app';
     var css = ''
       + '.nav-contact{display:flex;align-items:center;gap:10px;text-decoration:none!important;flex-shrink:0;margin-left:auto}'
       + '.nav-contact__ph{width:52px;height:52px;flex:0 0 52px;border-radius:50%;background:#fff url(/assets/img/team/ivan-szabo.webp) center bottom/cover no-repeat;box-shadow:0 4px 12px rgba(11,44,74,.18);border:2px solid #fff}'
@@ -423,6 +423,10 @@
       + '.nav-contact__t small{font-size:12px;font-weight:600;color:#5b6773}'
       + '.nav-contact__t b{font-size:17px;font-weight:800;color:#134a8e;white-space:nowrap}'
       + '.nav-contact:hover .nav-contact__t b{color:#0b2c4a}'
+      + '.nav-contact__t a{text-decoration:none!important;white-space:nowrap;color:#134a8e}'
+      + '.nav-contact__em{font-size:17px;font-weight:800}'
+      + '.nav-contact__tel{font-size:14px;font-weight:700}'
+      + '.nav-contact__t a:hover{color:#0b2c4a}'
       + '@media (min-width:1281px){'
       + ':root{--nav-h:120px}'
       + '.site-nav .nav-inner{flex-wrap:wrap;align-content:flex-start;row-gap:0}'
@@ -438,8 +442,12 @@
     var hasCss = false;
     try { hasCss = !!getComputedStyle(document.documentElement).getPropertyValue('--nav-contact-css').trim(); } catch (e) { /* bez getComputedStyle */ }
     if (!hasCss) { var st = document.createElement('style'); st.id = 'nav-contact-css'; st.textContent = css; document.head.appendChild(st); }
-    var a = document.createElement('a'); a.className = 'nav-contact'; a.href = 'tel:' + tel; a.setAttribute('aria-label', label + ' ' + telTxt);
-    a.innerHTML = '<span class="nav-contact__ph" aria-hidden="true"></span><span class="nav-contact__t"><small>' + label + '</small><b>' + telTxt + '</b></span>';
+    // 25. 11. 2026 (Libor): na prvním místě e-mail sales@tagra.app, pod ním telefon (fotka = volání, na mobilu jen ona)
+    var a = document.createElement('div'); a.className = 'nav-contact';
+    a.innerHTML = '<a class="nav-contact__ph" href="tel:' + tel + '" aria-label="' + label + ' ' + telTxt + '"></a>'
+      + '<span class="nav-contact__t"><small>' + label + '</small>'
+      + '<a class="nav-contact__em" href="mailto:' + mail + '">' + mail + '</a>'
+      + '<a class="nav-contact__tel" href="tel:' + tel + '">' + telTxt + '</a></span>';
     var lg = inner.querySelector('details.nav-lang');
     inner.insertBefore(a, lg || null);
   })();
