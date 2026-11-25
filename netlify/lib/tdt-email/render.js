@@ -12,7 +12,8 @@
  * VZOR NEWSLETTERU TDT (25. 11. 2026, Libor + crew GPT/Gemini/Grok)
  * Korporátní identita webu tdt.cz, pásy přes celou šířku, obsah v safe zóně 600 px:
  *   1. kontaktní pruh + hlavička (tmavě modrý gradient, bílá loga TDT + TAGRA)
- *   2. hero (fotka kamionu s tmavým překryvem, fallback #0b2c4a, VML pro Outlook):
+ *   2. hero (fotka kamionu s tmavým překryvem ZAPEČENÝM v JPG – funkce email-hero;
+ *      Outlook zahazuje CSS gradient, bílý text pak nebyl čitelný; fallback #0b2c4a, VML):
  *      zelený pill štítek, bílý nadpis VERZÁLKAMI, úvod, JEDNO zelené pill tlačítko
  *   3. obsah na bílé (kroky, karty s ikonami, světle modré infoboxy)
  *   4. „Potřebujete poradit?“ – lidé s fotkou (obchod + helpdesk), klikací tel/mail
@@ -43,7 +44,7 @@ const IMG = (p, q) => `https://www.tdt.cz/.netlify/images?url=${p}&amp;${q}`;
 const A = {
   logoTdt: "https://tagra.app/assets/img/logo-tdt-email-white.png",
   logoTagra: "https://tagra.app/assets/img/logo-email-white.png",
-  hero: IMG("/assets/img/hero-poster.avif", "fm=jpg&amp;w=1200&amp;h=520&amp;fit=cover&amp;q=62"),
+  hero: "https://tagra.app/assets/img/email-hero-tdt.jpg", // překryv zapečený v JPG (Outlook zahazuje CSS gradient)
   icoLicence: IMG("/assets/img/ikony/qz-aktivace-licence.webp", "fm=png&amp;w=112"),
   icoKontakt: IMG("/assets/img/ikony/qz-kontakty.webp", "fm=png&amp;w=112"),
   icoStazeni: IMG("/assets/img/ikony/qz-ke-stazeni.webp", "fm=png&amp;w=112"),
@@ -217,7 +218,7 @@ function renderMail(m, common, lang) {
         ${cta ? `<div style="margin:6px 0 0;">${button(cta.label, cta.url)}</div>` : ""}
         ${cta && cta.note ? `<p class="t-onhero" style="margin:14px 0 0;font-family:${FONT};font-size:13px;line-height:1.55;color:#bfd0e3;">${cta.note}</p>` : ""}`;
   const hero = `<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="${NAVY}" class="b-navy" style="background-color:${NAVY};">
-  <tr><td align="center" background="${A.hero}" bgcolor="${NAVY}" style="background-color:${NAVY};background-image:linear-gradient(180deg,rgba(6,32,53,0.86) 0%,rgba(11,44,74,0.78) 55%,rgba(11,44,74,0.92) 100%),url('${A.hero}');background-size:cover;background-position:center 60%;padding:0 12px;">
+  <tr><td align="center" background="${A.hero}" bgcolor="${NAVY}" style="background-color:${NAVY};background-image:url('${A.hero}');background-size:cover;background-position:center 60%;padding:0 12px;">
     <!--[if gte mso 9]>
     <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:640px;">
     <v:fill type="frame" src="${A.hero}" color="${NAVY}" />

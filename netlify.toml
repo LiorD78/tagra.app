@@ -14,6 +14,13 @@
   status = 200
   force = true
 
+# Hero fotka pro HTML e-maily tdt.cz/tdt.sk se zapečeným překryvem (JPG z funkce email-hero)
+[[redirects]]
+  from = "/assets/img/email-hero-tdt.jpg"
+  to = "/.netlify/functions/email-hero"
+  status = 200
+  force = true
+
 # Favicons (TRUCKMALL green #6E9B12) - rendered by netlify/functions/favicon.js
 [[redirects]]
   from = "/favicon.ico"
