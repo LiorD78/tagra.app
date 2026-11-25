@@ -18,7 +18,7 @@
  *   3. obsah na bílé (kroky, karty s ikonami, světle modré infoboxy)
  *   4. „Potřebujete poradit?“ – lidé s fotkou (obchod + helpdesk), klikací tel/mail
  *   5. patička (tmavě modrý gradient, bílé logo, adresa, IČO/DIČ, sociální sítě, důvod e-mailu)
- * Denní i noční režim: v nočním černé pozadí a bílý text (Libor 25. 11. 2026). Apple Mail/iOS přes
+ * Denní i noční režim: v nočním tmavě šedé pozadí #1e1e1e jako okolí v Outlooku a bílý text (Libor 25. 11. 2026). Apple Mail/iOS přes
  * @media (prefers-color-scheme: dark), Outlook přes [data-ogsb]/[data-ogsc] + obrázkové dlaždice
  * (Outlook přebarvuje i barvy v CSS, obrázky ne). Zelená tlačítka, štítek a navy pásy jsou taky
  * dlaždice, aby je Outlook neztmavil/nezesvětlil.
@@ -55,6 +55,7 @@ const A = {
   team: (n) => IMG(`/assets/img/team/${n}.webp`, "fm=png&amp;w=160"),
   // Barevné dlaždice: Outlook v nočním režimu přebarvuje barvy, obrázky ne (funkce email-logo)
   px: (n) => `https://tagra.app/.netlify/functions/email-logo/${n}.png`,
+  tile: (n) => `https://tagra.app/.netlify/functions/email-px/${n}.png`,
 };
 const GREEN_IMG = `background-image:url('${A.px("px-green")}');`;
 const NAVY_BAND = `background-image:url('${A.px("band-navy")}');background-size:100% 100%;background-repeat:repeat-y;`;
@@ -322,11 +323,11 @@ function renderMail(m, common, lang) {
     .btn { display: block !important; padding: 0 20px !important; }
     .ico { display: none !important; }
   }
-  /* Noční režim (Libor 25. 11. 2026): černé pozadí, tmavé karty, bílý text.
+  /* Noční režim (Libor 25. 11. 2026): pozadí #1e1e1e (splývá s Outlookem), karty #2a2a2a, bílý text.
      Apple Mail, iOS, část Androidu */
   @media (prefers-color-scheme: dark) {
-    .b-white, .b-apple { background-color: #000000 !important; }
-    .b-box, .b-card { background-color: #15191f !important; border-color: #2a3038 !important; }
+    .b-white, .b-apple { background-color: #1e1e1e !important; }
+    .b-box, .b-card { background-color: #2a2a2a !important; border-color: #3a3a3a !important; }
     .t-head { color: #ffffff !important; }
     .t-muted { color: #d0d6de !important; }
     .t-eb { color: #a8d14a !important; }
@@ -336,8 +337,8 @@ function renderMail(m, common, lang) {
   /* Outlook.com a nový Outlook: barvy z CSS taky přebarvuje (černá by zešedla na modrošedou),
      proto podklad jako obrázková dlaždice – obrázky Outlook nemění. Atribut data-ogsb/ogsc
      dává Outlook přímo na prvek i na obal, proto obě varianty selektoru. */
-  [data-ogsb].b-white, [data-ogsb] .b-white, [data-ogsb].b-apple, [data-ogsb] .b-apple { background-color: #000000 !important; background-image: url('${A.px("px-black")}') !important; }
-  [data-ogsb].b-box, [data-ogsb] .b-box, [data-ogsb].b-card, [data-ogsb] .b-card { background-color: #15191f !important; background-image: url('${A.px("px-card")}') !important; border-color: #2a3038 !important; }
+  [data-ogsb].b-white, [data-ogsb] .b-white, [data-ogsb].b-apple, [data-ogsb] .b-apple { background-color: #1e1e1e !important; background-image: url('${A.tile("dark")}') !important; }
+  [data-ogsb].b-box, [data-ogsb] .b-box, [data-ogsb].b-card, [data-ogsb] .b-card { background-color: #2a2a2a !important; background-image: url('${A.tile("card")}') !important; border-color: #3a3a3a !important; }
   [data-ogsc].t-head, [data-ogsc] .t-head { color: #ffffff !important; }
   [data-ogsc].t-muted, [data-ogsc] .t-muted { color: #d0d6de !important; }
   [data-ogsc].t-eb, [data-ogsc] .t-eb { color: #a8d14a !important; }
