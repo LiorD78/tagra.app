@@ -18,9 +18,10 @@
  *   3. obsah na bílé (kroky, karty s ikonami, světle modré infoboxy)
  *   4. „Potřebujete poradit?“ – lidé s fotkou (obchod + helpdesk), klikací tel/mail
  *   5. patička (tmavě modrý gradient, bílé logo, adresa, IČO/DIČ, sociální sítě, důvod e-mailu)
- * Denní i noční režim: explicitní tmavá paleta přes @media (prefers-color-scheme: dark)
- * (Apple Mail, iOS) a [data-ogsc]/[data-ogsb] (Outlook.com, nový Outlook), každý text
- * i podklad má vlastní barvu i třídu – nic se nepřebarví napůl.
+ * Denní i noční režim: v nočním černé pozadí a bílý text (Libor 25. 11. 2026). Apple Mail/iOS přes
+ * @media (prefers-color-scheme: dark), Outlook přes [data-ogsb]/[data-ogsc] + obrázkové dlaždice
+ * (Outlook přebarvuje i barvy v CSS, obrázky ne). Zelená tlačítka, štítek a navy pásy jsou taky
+ * dlaždice, aby je Outlook neztmavil/nezesvětlil.
  * Obrázky jako PNG/JPG přes Netlify Image CDN na tdt.cz (Outlook neumí WebP/SVG).
  */
 const CONTENT = {
@@ -52,7 +53,11 @@ const A = {
   icoDotazy: IMG("/assets/img/ikony/qz-caste-dotazy.webp", "fm=png&amp;w=112"),
   social: (n) => IMG(`/assets/img/social/${n}.webp`, "fm=png&amp;w=64"),
   team: (n) => IMG(`/assets/img/team/${n}.webp`, "fm=png&amp;w=160"),
+  // Barevné dlaždice: Outlook v nočním režimu přebarvuje barvy, obrázky ne (funkce email-logo)
+  px: (n) => `https://tagra.app/.netlify/functions/email-logo/${n}.png`,
 };
+const GREEN_IMG = `background-image:url('${A.px("px-green")}');`;
+const NAVY_BAND = `background-image:url('${A.px("band-navy")}');background-size:100% 100%;background-repeat:repeat-y;`;
 const SOCIAL = [
   ["youtube", "YouTube", "https://www.youtube.com/@truckmall"],
   ["facebook", "Facebook", "https://www.facebook.com/truckmall.cz.truck.data.technology"],
@@ -101,7 +106,7 @@ function button(label, url, { w = 300, light = false } = {}) {
 <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="${u}" style="height:52px;v-text-anchor:middle;width:${w}px;" arcsize="50%" stroke="f" fillcolor="${bg}">
 <w:anchorlock/><center style="color:${fg};font-family:Arial,sans-serif;font-size:17px;font-weight:bold;">${label}</center>
 </v:roundrect>
-<![endif]--><!--[if !mso]><!-- --><a href="${u}" target="_blank" rel="noopener" class="btn${light ? " btn-light" : ""}" style="display:inline-block;background-color:${bg};background-image:${light ? "none" : `linear-gradient(135deg,${GREEN_LIGHT} 0%,${GREEN} 100%)`};color:${fg};font-family:${FONT};font-size:17px;font-weight:700;line-height:52px;text-align:center;text-decoration:none;border-radius:99px;padding:0 34px;mso-hide:all;">${label}</a><!--<![endif]-->`;
+<![endif]--><!--[if !mso]><!-- --><a href="${u}" target="_blank" rel="noopener" class="btn${light ? " btn-light" : ""}" style="display:inline-block;background-color:${bg};${light ? "background-image:none;" : GREEN_IMG}color:${fg};font-family:${FONT};font-size:17px;font-weight:700;line-height:52px;text-align:center;text-decoration:none;border-radius:99px;padding:0 34px;mso-hide:all;">${label}</a><!--<![endif]-->`;
 }
 
 const P = (s, { size = 16, mb = 14, cls = "t-muted", color = MUTED } = {}) =>
@@ -134,7 +139,7 @@ function steps(list) {
   <tr>
     <td width="44" valign="top" style="padding-right:14px;">
       <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr>
-        <td width="36" height="36" align="center" bgcolor="${GREEN}" style="background-color:${GREEN};border-radius:50%;font-family:${FONT};font-size:16px;font-weight:800;line-height:36px;color:#ffffff;">${i + 1}</td>
+        <td width="36" height="36" align="center" bgcolor="${GREEN}" style="background-color:${GREEN};${GREEN_IMG}border-radius:50%;font-family:${FONT};font-size:16px;font-weight:800;line-height:36px;color:#ffffff;">${i + 1}</td>
       </tr></table>
     </td>
     <td valign="top">
@@ -189,7 +194,7 @@ function renderMail(m, common, lang) {
   const greeting = intro.length > 1 ? intro.shift() : "";
 
   // 1) kontaktní pruh + hlavička
-  const top = `<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="${NAVY}" class="b-navy" style="background-color:${NAVY};background-image:linear-gradient(90deg,${NAVY_DEEP} 0%,${NAVY} 35%,${BLUE} 100%);">
+  const top = `<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="${NAVY}" background="${A.px("band-navy")}" class="b-navy" style="background-color:${NAVY};${NAVY_BAND}">
   <tr><td align="center" style="padding:0 12px;">
     <!--[if mso]><table role="presentation" width="600" align="center" cellpadding="0" cellspacing="0" border="0"><tr><td><![endif]-->
     <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="max-width:600px;margin:0 auto;">
@@ -211,7 +216,7 @@ function renderMail(m, common, lang) {
 
   // 2) hero s fotkou (VML pro Outlook)
   const heroInner = `
-        <span class="pill" style="display:inline-block;background-color:${GREEN};color:#ffffff;font-family:${FONT};font-size:12px;font-weight:800;letter-spacing:0.08em;text-transform:uppercase;border-radius:99px;padding:6px 14px;margin:0 0 16px;">${m.strip}</span>
+        <span class="pill" style="display:inline-block;background-color:${GREEN};${GREEN_IMG}color:#ffffff;font-family:${FONT};font-size:12px;font-weight:800;letter-spacing:0.08em;text-transform:uppercase;border-radius:99px;padding:6px 14px;margin:0 0 16px;">${m.strip}</span>
         <h1 class="h1" style="margin:0 0 16px;font-family:${FONT};font-size:34px;line-height:1.12;font-weight:800;text-transform:uppercase;letter-spacing:-0.01em;color:#ffffff;">${m.h1}</h1>
         ${greeting ? `<p class="t-onhero" style="margin:0 0 6px;font-family:${FONT};font-size:17px;line-height:1.6;color:#ffffff;font-weight:600;">${greeting}</p>` : ""}
         ${intro.map((x) => `<p class="t-onhero" style="margin:0 0 22px;font-family:${FONT};font-size:17px;line-height:1.6;color:#e3ecf6;">${x}</p>`).join("")}
@@ -260,7 +265,7 @@ function renderMail(m, common, lang) {
   // 5) patička
   const social = SOCIAL.map(([n, alt, url]) => `<a href="${url}" target="_blank" style="text-decoration:none;"><img src="${A.social(n)}" width="32" height="32" alt="${alt}" style="display:inline-block;width:32px;height:32px;border:0;margin:0 8px 0 0;" /></a>`).join("");
   const links = [[f.web_label, f.web], ...ui.links, [f.privacy_label, f.privacy]].map(([t, u]) => `<a href="${u}" target="_blank" style="color:#ffffff;text-decoration:none;white-space:nowrap;">${t}</a>`).join(`<span style="color:#4d6f96;">&nbsp;&nbsp;&middot;&nbsp;&nbsp;</span>`);
-  const foot = `<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="${NAVY}" class="b-navy" style="background-color:${NAVY};background-image:linear-gradient(90deg,${NAVY_DEEP} 0%,${NAVY} 35%,${BLUE} 100%);">
+  const foot = `<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="${NAVY}" background="${A.px("band-navy")}" class="b-navy" style="background-color:${NAVY};${NAVY_BAND}">
   <tr><td align="center" style="padding:0 12px;">
     <!--[if mso]><table role="presentation" width="600" align="center" cellpadding="0" cellspacing="0" border="0"><tr><td><![endif]-->
     <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="max-width:600px;margin:0 auto;">
@@ -307,26 +312,26 @@ function renderMail(m, common, lang) {
     .btn { display: block !important; padding: 0 20px !important; }
     .ico { display: none !important; }
   }
-  /* Noční režim – Apple Mail, iOS, část Androidu */
+  /* Noční režim (Libor 25. 11. 2026): černé pozadí, tmavé karty, bílý text.
+     Apple Mail, iOS, část Androidu */
   @media (prefers-color-scheme: dark) {
-    .b-white { background-color: #0f1d2c !important; }
-    .b-card { background-color: #13263a !important; border-color: #234262 !important; }
-    .b-apple { background-color: #0b1825 !important; }
-    .b-box { background-color: #13263a !important; border-color: #234262 !important; }
+    .b-white, .b-apple { background-color: #000000 !important; }
+    .b-box, .b-card { background-color: #15191f !important; border-color: #2a3038 !important; }
     .t-head { color: #ffffff !important; }
-    .t-muted { color: #c3cfdc !important; }
+    .t-muted { color: #d0d6de !important; }
     .t-eb { color: #a8d14a !important; }
     .t-link, .t-muted a, .b-box a { color: #8cc3ff !important; }
     .t-muted strong { color: #ffffff !important; }
   }
-  /* Noční režim – Outlook.com a nový Outlook */
-  [data-ogsb] .b-white { background-color: #0f1d2c !important; }
-  [data-ogsb] .b-card, [data-ogsb] .b-box { background-color: #13263a !important; border-color: #234262 !important; }
-  [data-ogsb] .b-apple { background-color: #0b1825 !important; }
-  [data-ogsc] .t-head { color: #ffffff !important; }
-  [data-ogsc] .t-muted { color: #c3cfdc !important; }
-  [data-ogsc] .t-eb { color: #a8d14a !important; }
-  [data-ogsc] .t-link, [data-ogsc] .t-muted a, [data-ogsc] .b-box a { color: #8cc3ff !important; }
+  /* Outlook.com a nový Outlook: barvy z CSS taky přebarvuje (černá by zešedla na modrošedou),
+     proto podklad jako obrázková dlaždice – obrázky Outlook nemění. Atribut data-ogsb/ogsc
+     dává Outlook přímo na prvek i na obal, proto obě varianty selektoru. */
+  [data-ogsb].b-white, [data-ogsb] .b-white, [data-ogsb].b-apple, [data-ogsb] .b-apple { background-color: #000000 !important; background-image: url('${A.px("px-black")}') !important; }
+  [data-ogsb].b-box, [data-ogsb] .b-box, [data-ogsb].b-card, [data-ogsb] .b-card { background-color: #15191f !important; background-image: url('${A.px("px-card")}') !important; border-color: #2a3038 !important; }
+  [data-ogsc].t-head, [data-ogsc] .t-head { color: #ffffff !important; }
+  [data-ogsc].t-muted, [data-ogsc] .t-muted { color: #d0d6de !important; }
+  [data-ogsc].t-eb, [data-ogsc] .t-eb { color: #a8d14a !important; }
+  [data-ogsc].t-link, [data-ogsc] .t-link, [data-ogsc] .t-muted a, [data-ogsc] .b-box a { color: #8cc3ff !important; }
   [data-ogsc] .t-muted strong { color: #ffffff !important; }
 </style>
 </head>
