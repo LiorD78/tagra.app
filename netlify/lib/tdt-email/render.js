@@ -8,6 +8,10 @@
  *   email2-{aud}-{lang}        #2 rychlý start (+3 dny)
  *   email3-{aud}-{lang}        #3 zkušební verze brzy končí
  * Předmět = <title>. Náhled: https://tagra.app/.netlify/functions/tdt-trial-email?preview=cz-fleet
+ *
+ * Vzhled (25. 11. 2026, Libor): pozadí jako ostatní newslettery – Apple light blue
+ * token #eaf3f8, bílá karta. Bez tmavého režimu (color-scheme: light only),
+ * aby se e-mail v tmavém režimu klienta nepřebarvoval na tmavě modrou.
  */
 const CONTENT = {
   cz: require("./content-cz.json"),
@@ -16,6 +20,7 @@ const CONTENT = {
 
 const FONT = "-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif";
 const GREEN = "#5C820F";
+const BG = "#eaf3f8";
 const LOGO = "https://tagra.app/assets/img/logo-tdt-email-white.png";
 
 const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#x27;");
@@ -33,8 +38,8 @@ function stepRows(steps, lastMargin = 24) {
                   </table>
                 </td>
                 <td style="vertical-align:top;">
-                  <p class="dm-text" style="margin:4px 0 4px;font-size:16px;font-weight:600;color:#0b2c4a;">${t}</p>
-                  <p class="dm-muted" style="margin:0;font-size:14.5px;line-height:1.5;color:#515154;">${d}</p>
+                  <p style="margin:4px 0 4px;font-size:16px;font-weight:600;color:#0b2c4a;">${t}</p>
+                  <p style="margin:0;font-size:14.5px;line-height:1.5;color:#515154;">${d}</p>
                 </td>
               </tr>
             </table>`;
@@ -53,13 +58,13 @@ function button(label, url, size = 17) {
             </table>`;
 }
 
-const pMuted = (s, mb = 10) => `<p class="dm-muted" style="margin:0 0 ${mb}px;font-size:14px;line-height:1.55;color:#515154;">${s}</p>`;
+const pMuted = (s, mb = 10) => `<p style="margin:0 0 ${mb}px;font-size:14px;line-height:1.55;color:#515154;">${s}</p>`;
 
 function box(eyebrow, body) {
-  return `            <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" class="dm-compliance-bg" style="background:#f4f8fc;border:1px solid #e1ebf6;border-radius:12px;margin-bottom:16px;">
+  return `            <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="background:#f4f8fc;border:1px solid #e1ebf6;border-radius:12px;margin-bottom:16px;" bgcolor="#f4f8fc">
               <tr>
                 <td class="px-mob" style="padding:18px 22px;">
-                  <p class="dm-compliance-eb" style="margin:0 0 6px;font-size:13px;font-weight:700;color:#0b2c4a;letter-spacing:0.04em;text-transform:uppercase;">${eyebrow}</p>
+                  <p style="margin:0 0 6px;font-size:13px;font-weight:700;color:#0b2c4a;letter-spacing:0.04em;text-transform:uppercase;">${eyebrow}</p>
                   ${body.map((x, i) => pMuted(x, i === body.length - 1 ? 0 : 10)).join("")}
                 </td>
               </tr>
@@ -69,10 +74,10 @@ function box(eyebrow, body) {
 function signature(sig) {
   const lines = sig.lines.map((l) => `
               <tr><td style="padding:0 0 2px 0;font-size:15px;line-height:1.6;color:#1f2d3d;">${l}</td></tr>`).join("");
-  return `            <p class="dm-muted" style="margin:0 0 10px;font-size:15px;line-height:1.55;color:#515154;">${sig.greeting}</p>
+  return `            <p style="margin:0 0 10px;font-size:15px;line-height:1.55;color:#515154;">${sig.greeting}</p>
             <table cellpadding="0" cellspacing="0" border="0" role="presentation" style="border-collapse:collapse;font-family:Arial,Helvetica,sans-serif;color:#1f2d3d;">
-              <tr><td class="dm-text" style="padding:0 0 2px 0;font-size:16px;font-weight:700;line-height:1.5;color:#0b2c4a;">${sig.name}</td></tr>
-              <tr><td class="dm-muted" style="padding:0 0 8px 0;font-size:14px;line-height:1.5;color:#515154;">${sig.role}</td></tr>${lines}
+              <tr><td style="padding:0 0 2px 0;font-size:16px;font-weight:700;line-height:1.5;color:#0b2c4a;">${sig.name}</td></tr>
+              <tr><td style="padding:0 0 8px 0;font-size:14px;line-height:1.5;color:#515154;">${sig.role}</td></tr>${lines}
               <tr><td style="padding:8px 0 0 0;font-size:12px;line-height:1.5;color:#5a6b7b;">${sig.company}</td></tr>
             </table>`;
 }
@@ -81,25 +86,25 @@ function renderMail(m, common) {
   const sig = common.signatures[m.sign];
   const blocks = [];
   blocks.push(`        <tr>
-          <td class="dm-card px-mob" style="background:#ffffff;padding:40px 40px 24px;">
+          <td class="px-mob" bgcolor="#ffffff" style="background:#ffffff;padding:40px 40px 24px;">
             <p style="margin:0 0 12px;font-size:14px;color:${GREEN};font-weight:600;letter-spacing:0.06em;text-transform:uppercase;">${m.eyebrow}</p>
-            <h1 class="h1-mob dm-text" style="margin:0 0 16px;font-size:30px;line-height:1.2;font-weight:700;color:#0b2c4a;letter-spacing:-0.02em;">${m.h1}</h1>
-            ${m.intro.map((x) => `<p class="dm-muted" style="margin:0 0 12px;font-size:16px;line-height:1.55;color:#515154;">${x}</p>`).join("")}
+            <h1 class="h1-mob" style="margin:0 0 16px;font-size:30px;line-height:1.2;font-weight:700;color:#0b2c4a;letter-spacing:-0.02em;">${m.h1}</h1>
+            ${m.intro.map((x) => `<p style="margin:0 0 12px;font-size:16px;line-height:1.55;color:#515154;">${x}</p>`).join("")}
           </td>
         </tr>`);
   if (m.download) {
     const d = m.download;
     blocks.push(`        <tr>
-          <td class="dm-card px-mob" style="background:#ffffff;padding:0 40px 28px;">
+          <td class="px-mob" bgcolor="#ffffff" style="background:#ffffff;padding:0 40px 28px;">
 ${button(d.label, d.url, 18)}
-            <p class="dm-muted" style="margin:14px 0 0;font-size:13px;line-height:1.5;color:#86868b;">${d.note}</p>
+            <p style="margin:14px 0 0;font-size:13px;line-height:1.5;color:#86868b;">${d.note}</p>
           </td>
         </tr>`);
   }
   if (m.steps) {
-    const head = m.steps_title ? `<p class="dm-text" style="margin:0 0 18px;font-size:18px;font-weight:700;color:#0b2c4a;">${m.steps_title}</p>` : "";
+    const head = m.steps_title ? `<p style="margin:0 0 18px;font-size:18px;font-weight:700;color:#0b2c4a;">${m.steps_title}</p>` : "";
     blocks.push(`        <tr>
-          <td class="dm-card px-mob" style="background:#ffffff;padding:8px 40px 8px;">
+          <td class="px-mob" bgcolor="#ffffff" style="background:#ffffff;padding:8px 40px 8px;">
             ${head}
 ${stepRows(m.steps)}
           </td>
@@ -107,9 +112,9 @@ ${stepRows(m.steps)}
   }
   if (m.cta) {
     const c = m.cta;
-    const note = c.note ? `<p class="dm-muted" style="margin:14px 0 0;font-size:14px;line-height:1.5;color:#515154;">${c.note}</p>` : "";
+    const note = c.note ? `<p style="margin:14px 0 0;font-size:14px;line-height:1.5;color:#515154;">${c.note}</p>` : "";
     blocks.push(`        <tr>
-          <td class="dm-card px-mob" style="background:#ffffff;padding:0 40px 32px;">
+          <td class="px-mob" bgcolor="#ffffff" style="background:#ffffff;padding:0 40px 32px;">
 ${button(c.label, c.url)}
             ${note}
           </td>
@@ -117,22 +122,22 @@ ${button(c.label, c.url)}
   }
   if ((m.boxes && m.boxes.length) || (m.outro && m.outro.length)) {
     const inner = (m.boxes || []).map((b) => box(b.eyebrow, b.body)).join("\n");
-    const outro = (m.outro || []).map((x) => `<p class="dm-muted" style="margin:12px 0 0;font-size:14.5px;line-height:1.55;color:#515154;">${x}</p>`).join("");
+    const outro = (m.outro || []).map((x) => `<p style="margin:12px 0 0;font-size:14.5px;line-height:1.55;color:#515154;">${x}</p>`).join("");
     blocks.push(`        <tr>
-          <td class="dm-card" style="background:#ffffff;padding:0 40px;">
-            <div class="dm-border" style="height:1px;background:#e6edf5;line-height:1px;font-size:1px;">&nbsp;</div>
+          <td bgcolor="#ffffff" style="background:#ffffff;padding:0 40px;">
+            <div style="height:1px;background:#e6edf5;line-height:1px;font-size:1px;">&nbsp;</div>
           </td>
         </tr>
         <tr>
-          <td class="dm-card px-mob" style="background:#ffffff;padding:28px 40px 24px;">
+          <td class="px-mob" bgcolor="#ffffff" style="background:#ffffff;padding:28px 40px 24px;">
 ${inner}
             ${outro}
           </td>
         </tr>`);
   }
   blocks.push(`        <tr>
-          <td class="dm-card px-mob" style="background:#ffffff;padding:8px 40px 40px;border-radius:0 0 16px 16px;">
-            <div class="dm-border" style="height:1px;background:#e6edf5;line-height:1px;font-size:1px;margin-bottom:24px;">&nbsp;</div>
+          <td class="px-mob" bgcolor="#ffffff" style="background:#ffffff;padding:8px 40px 40px;border-radius:0 0 16px 16px;">
+            <div style="height:1px;background:#e6edf5;line-height:1px;font-size:1px;margin-bottom:24px;">&nbsp;</div>
 ${signature(sig)}
           </td>
         </tr>`);
@@ -143,11 +148,12 @@ ${signature(sig)}
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="x-apple-disable-message-reformatting" />
-<meta name="color-scheme" content="light dark" />
-<meta name="supported-color-schemes" content="light dark" />
+<meta name="color-scheme" content="light only" />
+<meta name="supported-color-schemes" content="light only" />
 <meta name="robots" content="noindex, nofollow" />
 <title>${m.title}</title>
 <style type="text/css">
+  :root { color-scheme: light only; supported-color-schemes: light only; }
   body, table, td, a { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
   table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
   img { -ms-interpolation-mode: bicubic; border: 0; outline: none; text-decoration: none; }
@@ -161,30 +167,21 @@ ${signature(sig)}
     .h1-mob { font-size: 25px !important; line-height: 1.25 !important; }
     .btn-mob { padding: 14px 28px !important; font-size: 16px !important; }
   }
-  @media (prefers-color-scheme: dark) {
-    .dm-bg { background: #0b1422 !important; }
-    .dm-card { background: #14213a !important; }
-    .dm-text { color: #e6ecf3 !important; }
-    .dm-muted { color: #a9b4c5 !important; }
-    .dm-border { border-color: #22324f !important; }
-    .dm-compliance-bg { background: #1a2942 !important; border-color: #2b3d5c !important; }
-    .dm-compliance-eb { color: #7fb3f0 !important; }
-  }
 </style>
 </head>
-<body style="margin:0;padding:0;background:#eef4fa;font-family:${FONT};color:#0b0b0c;" class="dm-bg">
+<body style="margin:0;padding:0;background:${BG};background-color:${BG};font-family:${FONT};color:#0b0b0c;">
 
-<div style="display:none;max-height:0;overflow:hidden;mso-hide:all;font-size:1px;line-height:1px;color:#eef4fa;">
+<div style="display:none;max-height:0;overflow:hidden;mso-hide:all;font-size:1px;line-height:1px;color:${BG};">
   ${m.preheader}
 </div>
 
-<table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" class="dm-bg" style="background:#eef4fa;">
+<table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="${BG}" style="background:${BG};background-color:${BG};">
   <tr>
     <td align="center" style="padding:32px 16px;">
       <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="600" class="email-container" style="max-width:600px;width:100%;">
 
         <tr>
-          <td style="background:linear-gradient(135deg,#0b2c4a 0%,#134a8e 100%);background-color:#134a8e;padding:24px 40px;border-radius:16px 16px 0 0;" class="px-mob">
+          <td style="background:linear-gradient(135deg,#0b2c4a 0%,#134a8e 100%);background-color:#134a8e;padding:24px 40px;border-radius:16px 16px 0 0;" bgcolor="#134a8e" class="px-mob">
             <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
               <tr>
                 <td style="vertical-align:middle;">
