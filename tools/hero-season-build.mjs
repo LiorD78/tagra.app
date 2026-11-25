@@ -3,7 +3,8 @@
  * hero-season-build.mjs – sezónní hero video BEZ zátěže pro návštěvníka (tagra.app, tdt.cz, tdt.sk)
  *
  * Spouští se jako build command na Netlify (ne v prohlížeči, ne při každém požadavku):
- *   node tools/hero-season-build.mjs [publishDir]      (výchozí ".")
+ *   node tools/hero-season-build.mjs [publishDir]      (výchozí "."; tagra.app)
+ *   node hero-season-build.mjs . --self-delete        (tdt.cz / tdt.sk – skript je v dist/<web>/ a po běhu se smaže)
  *
  * Co dělá:
  *  1. Spočítá aktuální roční období přesně podle okamžiku rovnodennosti / slunovratu
@@ -17,7 +18,8 @@
  *
  * Soubory v gitu zůstávají letní; přepis se děje jen v sestaveném webu. Test: HERO_SEASON=zima node tools/hero-season-build.mjs
  */
-import { readdirSync, readFileSync, writeFileSync, statSync, mkdirSync } from "node:fs";
+import { readdirSync, readFileSync, writeFileSync, statSync, mkdirSync, unlinkSync } from "node:fs";
+import { fileURLToPath } from "node:url";
 import { join } from "node:path";
 
 const TERMS = [
@@ -89,6 +91,8 @@ function main() {
   mkdirSync(join(root, "assets"), { recursive: true });
   writeFileSync(join(root, "assets", "hero-season.json"),
     JSON.stringify({ season, next: new Date(now.next).toISOString(), built: new Date().toISOString() }) + "\n");
+  // tdt.cz/tdt.sk: skript leží v publikované složce → po doběhnutí se smaže, aby se nepublikoval
+  if (process.argv.includes("--self-delete")) { try { unlinkSync(fileURLToPath(import.meta.url)); } catch {} }
   console.log(`hero-season: ${season} (další změna ${new Date(now.next).toISOString()}), upraveno stránek: ${changed}`);
 }
 
