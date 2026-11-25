@@ -173,8 +173,10 @@ function iconFor(eb) {
   return A.icoDotazy;
 }
 
+// Kontakt: obsah karty. Rámeček (pozadí, okraj) je přímo na buňce tabulky,
+// takže obě karty v řádku mají vždy stejnou výšku (Libor 25. 11. 2026).
 function person(p) {
-  return `<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#ffffff" class="b-white b-card" style="background-color:#ffffff;border:1px solid ${LINE};border-radius:16px;">
+  return `<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr>
     <td width="84" valign="top" style="padding:18px 0 18px 18px;"><img src="${A.team(p.photo)}" width="66" height="66" alt="${p.name}" style="display:block;width:66px;height:66px;border-radius:50%;border:0;background-color:#dfe9f2;" /></td>
     <td valign="top" style="padding:18px 18px 18px 14px;">
@@ -185,6 +187,7 @@ function person(p) {
   </tr>
 </table>`;
 }
+const CARD_TD = `bgcolor="#ffffff" class="col b-white b-card" style="background-color:#ffffff;border:1px solid ${LINE};border-radius:16px;"`;
 
 function renderMail(m, common, lang) {
   const ui = UI[lang];
@@ -199,9 +202,9 @@ function renderMail(m, common, lang) {
     <!--[if mso]><table role="presentation" width="600" align="center" cellpadding="0" cellspacing="0" border="0"><tr><td><![endif]-->
     <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="max-width:600px;margin:0 auto;">
       <tr><td class="px topbar" align="right" style="padding:10px 32px 0;font-family:${FONT};font-size:12px;line-height:1.5;color:#c9d8ea;">
-        <span class="t-onnavy" style="color:#c9d8ea;">${ui.obchod}&nbsp;</span><a href="tel:${ui.top_tel[0]}" style="color:#ffffff;text-decoration:none;font-weight:700;">${ui.top_tel[1]}</a>
-        <span style="color:#4d6f96;">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
-        <span class="t-onnavy" style="color:#c9d8ea;">${ui.helpdesk}&nbsp;</span><a href="tel:${ui.top_help[0]}" style="color:#ffffff;text-decoration:none;font-weight:700;">${ui.top_help[1]}</a>
+        <span style="white-space:nowrap;"><span class="t-onnavy" style="color:#c9d8ea;">${ui.obchod}&nbsp;</span><a href="tel:${ui.top_tel[0]}" style="color:#ffffff;text-decoration:none;font-weight:700;">${ui.top_tel[1]}</a></span>
+        <span class="sep" style="color:#4d6f96;"> &nbsp;| </span>
+        <span style="white-space:nowrap;"><span class="t-onnavy" style="color:#c9d8ea;">${ui.helpdesk}&nbsp;</span><a href="tel:${ui.top_help[0]}" style="color:#ffffff;text-decoration:none;font-weight:700;">${ui.top_help[1]}</a></span>
       </td></tr>
       <tr><td class="px" style="padding:14px 32px 18px;">
         <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr>
@@ -258,13 +261,14 @@ function renderMail(m, common, lang) {
   // 4) lidé
   const help = band(`${eyebrow(ui.help_eb)}${heading(ui.help_h, 24)}${P(ui.help_p, { size: 15, mb: 20 })}
         <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr>
-          <td class="col" width="50%" valign="top" style="padding:0 7px 0 0;">${person(ui.people[0])}</td>
-          <td class="col" width="50%" valign="top" style="padding:0 0 0 7px;">${person(ui.people[1])}</td>
+          <td width="49%" valign="top" ${CARD_TD}>${person(ui.people[0])}</td>
+          <td class="gap" width="2%" style="font-size:1px;line-height:1px;">&nbsp;</td>
+          <td width="49%" valign="top" ${CARD_TD}>${person(ui.people[1])}</td>
         </tr></table>`, { bg: APPLE_BG, cls: "b-apple", pad: "40px 32px 44px" });
 
   // 5) patička
   const social = SOCIAL.map(([n, alt, url]) => `<a href="${url}" target="_blank" style="text-decoration:none;"><img src="${A.social(n)}" width="32" height="32" alt="${alt}" style="display:inline-block;width:32px;height:32px;border:0;margin:0 8px 0 0;" /></a>`).join("");
-  const links = [[f.web_label, f.web], ...ui.links, [f.privacy_label, f.privacy]].map(([t, u]) => `<a href="${u}" target="_blank" style="color:#ffffff;text-decoration:none;white-space:nowrap;">${t}</a>`).join(`<span style="color:#4d6f96;">&nbsp;&nbsp;&middot;&nbsp;&nbsp;</span>`);
+  const links = [[f.web_label, f.web], ...ui.links, [f.privacy_label, f.privacy]].map(([t, u]) => `<a href="${u}" target="_blank" style="color:#ffffff;text-decoration:none;white-space:nowrap;">${t}</a>`).join(`<span style="color:#4d6f96;">&nbsp;&nbsp;&middot;&nbsp;</span> `); // mezera za tečkou = smí se zalomit (jinak mobil přetékal)
   const foot = `<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="${NAVY}" background="${A.px("band-navy")}" class="b-navy" style="background-color:${NAVY};${NAVY_BAND}">
   <tr><td align="center" style="padding:0 12px;">
     <!--[if mso]><table role="presentation" width="600" align="center" cellpadding="0" cellspacing="0" border="0"><tr><td><![endif]-->
@@ -307,8 +311,10 @@ function renderMail(m, common, lang) {
     .px { padding-left: 20px !important; padding-right: 20px !important; }
     .hero { padding-top: 36px !important; padding-bottom: 40px !important; }
     .h1 { font-size: 26px !important; line-height: 1.15 !important; }
-    .col { display: block !important; width: 100% !important; padding: 0 0 12px 0 !important; }
+    .col { display: block !important; width: auto !important; }
+    .gap { display: block !important; width: 100% !important; height: 12px !important; }
     .topbar { text-align: left !important; font-size: 11px !important; }
+    .sep { display: none !important; }
     .btn { display: block !important; padding: 0 20px !important; }
     .ico { display: none !important; }
   }
