@@ -39,6 +39,7 @@ const A = {
   hero: "https://tagra.app/assets/img/email-hero-tdt.jpg?v=2",
   team: (n) => IMG(`/assets/img/team/${n}.webp`, "fm=png&amp;w=160"),
   px: (n) => `https://tagra.app/.netlify/functions/email-logo/${n}.png`,
+  tile: (n) => `https://tagra.app/.netlify/functions/email-px/${n}.png`,
 };
 const ICONS = {
   licence: IMG("/assets/img/ikony/qz-aktivace-licence.webp", "fm=png&amp;w=112"),
@@ -263,17 +264,17 @@ function renderMail(m, common) {
     .ico { display: none !important; }
   }
   @media (prefers-color-scheme: dark) {
-    .b-white, .b-apple { background-color: #000000 !important; }
-    .b-box, .b-card { background-color: #15191f !important; border-color: #2a3038 !important; }
+    .b-white, .b-apple { background-color: #1e1e1e !important; }
+    .b-box, .b-card { background-color: #2a2a2a !important; border-color: #3a3a3a !important; }
     .t-head { color: #ffffff !important; }
     .t-muted { color: #d0d6de !important; }
     .t-eb { color: #a8d14a !important; }
     .t-link, .t-muted a, .b-box a { color: #8cc3ff !important; }
     .t-muted strong { color: #ffffff !important; }
-    .btn-light { background-color: #000000 !important; color: #ffffff !important; }
+    .btn-light { background-color: #1e1e1e !important; color: #ffffff !important; }
   }
-  [data-ogsb].b-white, [data-ogsb] .b-white, [data-ogsb].b-apple, [data-ogsb] .b-apple { background-color: #000000 !important; background-image: url('${A.px("px-black")}') !important; }
-  [data-ogsb].b-box, [data-ogsb] .b-box, [data-ogsb].b-card, [data-ogsb] .b-card { background-color: #15191f !important; background-image: url('${A.px("px-card")}') !important; border-color: #2a3038 !important; }
+  [data-ogsb].b-white, [data-ogsb] .b-white, [data-ogsb].b-apple, [data-ogsb] .b-apple { background-color: #1e1e1e !important; background-image: url('${A.tile("dark")}') !important; }
+  [data-ogsb].b-box, [data-ogsb] .b-box, [data-ogsb].b-card, [data-ogsb] .b-card { background-color: #2a2a2a !important; background-image: url('${A.tile("card")}') !important; border-color: #3a3a3a !important; }
   [data-ogsc].t-head, [data-ogsc] .t-head { color: #ffffff !important; }
   [data-ogsc].t-muted, [data-ogsc] .t-muted { color: #d0d6de !important; }
   [data-ogsc].t-eb, [data-ogsc] .t-eb { color: #a8d14a !important; }
