@@ -5,16 +5,21 @@
  * takže bílý text ležel na světlé fotce a nebyl čitelný. Překryv je proto přímo v JPG.
  *
  * v2 (25. 11. 2026, Libor): světlejší překryv – fotka víc prosvítá, text zůstává čitelný.
- * Fotku si funkce bere z Netlify Image CDN webu tdt.cz (hero-poster, 760×329, JPG) a překryv
- * dopočítá sama (jpeg-js) – žádné base64 v repozitáři. Výsledek drží v paměti instance
- * a klienti ho mají v mezipaměti natrvalo; šablony volají /assets/img/email-hero-tdt.jpg?v=2.
+ * v3 (25. 11. 2026, Libor): SEZÓNNÍ – pozadí odpovídá hero videu daného období (jaro / léto / podzim / zima).
+ *   Šablony volají /assets/img/email-hero-tdt.jpg?v=2-<obdobi> podle data odeslání (netlify/lib/season.js),
+ *   takže každý odeslaný e-mail si svůj obrázek drží natrvalo. Bez období (staré e-maily ?v=2) = léto.
+ * Fotku si funkce bere z Netlify Image CDN webu tdt.cz (hero-poster daného období, 760×329, JPG) a překryv
+ * dopočítá sama (jpeg-js) – žádné base64 v repozitáři. Výsledek drží v paměti instance (zvlášť pro každé období)
+ * a klienti ho mají v mezipaměti natrvalo.
  * Překryv: rgb(8,36,60), krytí shora dolů 0,62 → 0,52 (v 55 %) → 0,70, vpravo o 18 % slabší.
  */
 const jpeg = require("jpeg-js");
 
-const SRC = "https://www.tdt.cz/.netlify/images?url=/assets/img/hero-poster.avif&fm=jpg&w=760&h=329&fit=cover&q=85";
+const SEASONS = ["jaro", "leto", "podzim", "zima"];
+const poster = (s) => (s === "leto" ? "/assets/img/hero-poster.avif" : `/assets/img/${s}/hero-poster.avif`);
+const srcFor = (s) => `https://www.tdt.cz/.netlify/images?url=${poster(s)}&fm=jpg&w=760&h=329&fit=cover&q=85`;
 const TINT = [8, 36, 60];
-let cached = null;
+const cached = {};
 
 function alphaAt(x, y, W, H) {
   const t = y / H;
@@ -22,9 +27,9 @@ function alphaAt(x, y, W, H) {
   return v * (1 - 0.18 * (x / W));
 }
 
-async function build() {
-  const res = await fetch(SRC);
-  if (!res.ok) throw new Error(`source ${res.status}`);
+async function build(season) {
+  const res = await fetch(srcFor(season));
+  if (!res.ok) throw new Error(`source ${season} ${res.status}`);
   const img = jpeg.decode(Buffer.from(await res.arrayBuffer()), { useTArray: true, formatAsRGBA: true });
   const { width: W, height: H, data } = img;
   for (let y = 0; y < H; y++) {
@@ -37,9 +42,12 @@ async function build() {
   return jpeg.encode({ data, width: W, height: H }, 62).data.toString("base64");
 }
 
-exports.handler = async () => {
+exports.handler = async (event) => {
+  const v = String((event && event.queryStringParameters && event.queryStringParameters.v) || "");
+  const m = v.match(/(jaro|leto|podzim|zima)$/);
+  const season = m && SEASONS.includes(m[1]) ? m[1] : "leto";
   try {
-    if (!cached) cached = await build();
+    if (!cached[season]) cached[season] = await build(season);
     return {
       statusCode: 200,
       headers: {
@@ -47,11 +55,11 @@ exports.handler = async () => {
         "Cache-Control": "public, max-age=31536000, immutable",
         "Access-Control-Allow-Origin": "*",
       },
-      body: cached,
+      body: cached[season],
       isBase64Encoded: true,
     };
   } catch (e) {
     console.error("email-hero:", e.message);
-    return { statusCode: 302, headers: { Location: SRC, "Cache-Control": "no-store" }, body: "" };
+    return { statusCode: 302, headers: { Location: srcFor(season), "Cache-Control": "no-store" }, body: "" };
   }
 };

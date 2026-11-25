@@ -1,6 +1,9 @@
 [build]
   publish = "."
   functions = "netlify/functions"
+  # Sezónní hero video (25. 11. 2026): při sestavení přepíše cesty hero videa/posteru na aktuální roční období
+  # (přesně od rovnodennosti/slunovratu). Návštěvník dostane hotové statické HTML – žádný kód navíc za běhu.
+  command = "node tools/hero-season-build.mjs ."
 
 [functions]
   node_bundler = "esbuild"
@@ -62,3 +65,7 @@
 # Denní úklid e-mailů zkušební verze tdt.cz/tdt.sk (ruší #2/#3 po nákupu licence)
 [functions."tdt-trial-sweep"]
   schedule = "17 6 * * *"
+
+# Sezónní hero video: každých 10 min zkontroluje tagra.app, tdt.cz a tdt.sk a po změně období spustí build hook (env HERO_HOOK_*)
+[functions."hero-season-check"]
+  schedule = "*/10 * * * *"

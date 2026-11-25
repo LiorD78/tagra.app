@@ -24,6 +24,7 @@
  * dlaždice, aby je Outlook neztmavil/nezesvětlil.
  * Obrázky jako PNG/JPG přes Netlify Image CDN na tdt.cz (Outlook neumí WebP/SVG).
  */
+const { seasonAt } = require("../season.js");
 const CONTENT = {
   cz: require("./content-cz.json"),
   sk: require("./content-sk.json"),
@@ -45,7 +46,8 @@ const IMG = (p, q) => `https://www.tdt.cz/.netlify/images?url=${p}&amp;${q}`;
 const A = {
   logoTdt: "https://tagra.app/assets/img/logo-tdt-email-v2.png", // zelená jako logo TAGRA
   logoTagra: "https://tagra.app/assets/img/logo-email-white.png",
-  hero: "https://tagra.app/assets/img/email-hero-tdt.jpg?v=2", // překryv zapečený v JPG (Outlook zahazuje CSS gradient)
+  // sezónní pozadí podle data odeslání (jaro/léto/podzim/zima přesně od rovnodennosti/slunovratu, 25. 11. 2026); překryv zapečený v JPG (Outlook zahazuje CSS gradient)
+  get hero() { return `https://tagra.app/assets/img/email-hero-tdt.jpg?v=2-${seasonAt()}`; },
   icoLicence: IMG("/assets/img/ikony/qz-aktivace-licence.webp", "fm=png&amp;w=112"),
   icoKontakt: IMG("/assets/img/ikony/qz-kontakty.webp", "fm=png&amp;w=112"),
   icoStazeni: IMG("/assets/img/ikony/qz-ke-stazeni.webp", "fm=png&amp;w=112"),

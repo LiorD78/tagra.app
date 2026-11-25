@@ -23,6 +23,7 @@
  *   email5-{aud}-{lang}     #5 +28 dní
  * {NAME} dosazuje netlify/functions/trial-email.js (fillName), bez jména ho čistě odstraní.
  */
+const { seasonAt } = require("../season.js");
 const FONT = "-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif";
 const NAVY = "#0b2c4a";
 const BLUE = "#134a8e";
@@ -36,7 +37,8 @@ const IMG = (p, q) => `https://www.tdt.cz/.netlify/images?url=${p}&amp;${q}`;
 const A = {
   logoTdt: "https://tagra.app/assets/img/logo-tdt-email-v2.png",
   logoTagra: "https://tagra.app/assets/img/logo-email-white.png",
-  hero: "https://tagra.app/assets/img/email-hero-tdt.jpg?v=2",
+  // sezónní pozadí podle data odeslání (jaro/léto/podzim/zima přesně od rovnodennosti/slunovratu, 25. 11. 2026); překryv zapečený v JPG (Outlook zahazuje CSS gradient)
+  get hero() { return `https://tagra.app/assets/img/email-hero-tdt.jpg?v=2-${seasonAt()}`; },
   team: (n) => IMG(`/assets/img/team/${n}.webp`, "fm=png&amp;w=160"),
   px: (n) => `https://tagra.app/.netlify/functions/email-logo/${n}.png`,
   tile: (n) => `https://tagra.app/.netlify/functions/email-px/${n}.png`,
