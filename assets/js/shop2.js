@@ -10,7 +10,7 @@
   function tx(k,en){return I.hasOwnProperty(k)?I[k]:en;}
   /* html.tgs-l2 once both stylesheets are in: shop.css keeps the rebuilt homepage hidden until then (no layout shift) */
   var nl=0;function ld(){if(++nl>=2)document.documentElement.classList.add('tgs-l2');}
-  var l=document.createElement('link');l.rel='stylesheet';l.onload=l.onerror=ld;l.href='https://tagra.app/assets/css/shop2.css?v=4';document.head.appendChild(l);
+  var l=document.createElement('link');l.rel='stylesheet';l.onload=l.onerror=ld;l.href='https://tagra.app/assets/css/shop2.css?v=5';document.head.appendChild(l);
   var l2=document.createElement('link');l2.rel='stylesheet';l2.onload=l2.onerror=ld;l2.href='https://tagra.app/assets/css/shop2b.css?v=2';document.head.appendChild(l2);
   /* v3.5 (26. 11. 2026): hlavička = fotka + e-mail + telefon (bez popisků); přepínač jazyků (hreflang) i na mobilu */
   var LNAME={en:'English',de:'Deutsch',es:'Español',fr:'Français',hu:'Magyar',it:'Italiano',nl:'Nederlands',pl:'Polski',ro:'Română'};
